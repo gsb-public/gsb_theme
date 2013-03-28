@@ -66,8 +66,7 @@ a.no-border
 .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
-.pane-gsb-event-sidebar,
-.span4 .cp-block
+.pane-gsb-event-sidebar
   margin-bottom: 30px
   padding: 26px
   border: 2px solid $white
@@ -82,11 +81,8 @@ a.green-rounded-button
   border: none
   +border-radius(20px)
   background: #6c7200
-  background-image: -moz-linear-gradient(bottom, #6c7200 100%, $green-light 0%)
-  background-image: -ms-linear-gradient(bottom, #6c7200 100%, $green-light 0%)
-  background-image: -o-linear-gradient(bottom, #6c7200 100%, $green-light 0%)
-  background-image: -webkit-linear-gradient(bottom, #6c7200 100%, $green-light 0%)
-  background-image: linear-gradient(bottom, #6c7200 100%, $green-light 0%)
+  +background(linear-gradient(bottom, #6c7200, $green-light))
+
   color: $white
   font-size: 16px
   font-family: $font-bold

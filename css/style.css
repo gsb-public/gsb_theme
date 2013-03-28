@@ -1282,8 +1282,7 @@ a.no-border:hover {
 .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
-.pane-gsb-event-sidebar,
-.span4 .cp-block {
+.pane-gsb-event-sidebar {
   margin-bottom: 30px;
   padding: 26px;
   border: 2px solid white;
@@ -1310,11 +1309,12 @@ a.green-rounded-button {
   -o-border-radius: 20px;
   border-radius: 20px;
   background: #6c7200;
-  background-image: -moz-linear-gradient(bottom, #6c7200 100%, #bac405 0%);
-  background-image: -ms-linear-gradient(bottom, #6c7200 100%, #bac405 0%);
-  background-image: -o-linear-gradient(bottom, #6c7200 100%, #bac405 0%);
-  background-image: -webkit-linear-gradient(bottom, #6c7200 100%, #bac405 0%);
-  background-image: linear-gradient(bottom, #6c7200 100%, #bac405 0%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #6c7200), color-stop(100%, #bac405));
+  background: -webkit-linear-gradient(bottom, #6c7200, #bac405);
+  background: -moz-linear-gradient(bottom, #6c7200, #bac405);
+  background: -o-linear-gradient(bottom, #6c7200, #bac405);
+  background: -ms-linear-gradient(bottom, #6c7200, #bac405);
+  background: linear-gradient(bottom, #6c7200, #bac405);
   color: white;
   font-size: 16px;
   font-family: "NewsGothicBT-Bold";
@@ -3028,11 +3028,11 @@ a.mm-featured-title {
   font-family: "NewsGothicBT-Bold";
 }
 
-.cta-block {
-  margin-bottom: 30px;
+.pane-bundle-gsb-image-cta-fpp h2.pane-title {
+  display: none;
 }
 
-a.cta-link {
+.field-name-field-image-cta-link a {
   position: relative;
   display: block;
   border: none;
@@ -3046,51 +3046,32 @@ a.cta-link {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 24px;
 }
-a.cta-link:hover {
-  position: relative;
-  display: block;
-  border: none;
-  border-top: 1px white solid;
-  border-bottom: 1px #eeeeee solid;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  color: #990000;
-  font-size: 18px;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 24px;
-}
-a.cta-link:first-child {
+.field-name-field-image-cta-link a:first-child {
   border-top: 0;
 }
-a.cta-link i {
-  position: absolute;
-  top: 50%;
-  right: 25px;
+
+.field-name-field-image-cta-link a {
   display: block;
   margin-top: -7px;
   width: 13px;
   height: 15px;
-  background: url('../images/arrows-icons.png') no-repeat 0 -20px;
 }
-a.cta-red.cta-link i {
+.field-name-field-image-cta-link a.cta-red.cta-link i, .field-name-field-image-cta-link a.cta-green.cta-link i {
   right: 18px;
   margin-top: -14px;
   width: 26px;
   height: 27px;
+}
+.field-name-field-image-cta-link a.cta-red.cta-link i {
   background: url('../images/cta_red_icon.png') no-repeat top left;
 }
-a.cta-red.cta-link:hover i {
+.field-name-field-image-cta-link a.cta-red.cta-link:hover i {
   background: url('../images/cta_red_icon_hover.png');
 }
-a.cta-green.cta-link i {
-  right: 18px;
-  margin-top: -14px;
-  width: 26px;
-  height: 27px;
+.field-name-field-image-cta-link a.cta-green.cta-link i {
   background: url('../images/cta_green_icon.png') no-repeat top left;
 }
-a.cta-green.cta-link:hover i {
+.field-name-field-image-cta-link a.cta-green.cta-link:hover i {
   background: url('../images/cta_green_icon_hover.png');
 }
 
@@ -3105,15 +3086,13 @@ a.cta-green.cta-link:hover i {
   line-height: 24px;
 }
 
-a.cta-green {
-  color: #bac405;
-}
-a.cta-green:hover, a.cta-green .cta-title {
+a.cta-green,
+a.cta-green:hover,
+a.cta-green .cta-title {
   color: #bac405;
 }
 
 .cta-link b {
-  font-weight: 400;
   font-size: 14px;
   font-family: "NewsGothicBT-Bold";
   line-height: 1.3em;
@@ -3147,50 +3126,42 @@ a.cta-green:hover, a.cta-green .cta-title {
   margin-bottom: 30px;
 }
 
-a.cta-red-gradient {
-  margin-bottom: 5px;
-  border: 0;
-  background-color: #c50000;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  color: white;
-}
+a.cta-red-gradient,
 a.cta-red-gradient:hover {
   margin-bottom: 5px;
   border: 0;
-  background-color: #c50000;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  background-color: #990000;
+  -webkit-box-shadow: black, 0.45, 1px 1px 1px;
+  -moz-box-shadow: black, 0.45, 1px 1px 1px;
+  box-shadow: black, 0.45, 1px 1px 1px;
   color: white;
 }
 
 .item-0.cta-red-gradient {
-  background-image: -moz-linear-gradient(bottom, #860000 100%, #950000 0%);
-  background-image: -ms-linear-gradient(bottom, #860000 100%, #950000 0%);
-  background-image: -o-linear-gradient(bottom, #860000 100%, #950000 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #860000), color-stop(0, #950000));
-  background-image: -webkit-linear-gradient(bottom, #860000 100%, #950000 0%);
-  background-image: linear-gradient(bottom, #860000 100%, #950000 0%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #860000), color-stop(100%, #950000));
+  background: -webkit-linear-gradient(bottom, #860000, #950000);
+  background: -moz-linear-gradient(bottom, #860000, #950000);
+  background: -o-linear-gradient(bottom, #860000, #950000);
+  background: -ms-linear-gradient(bottom, #860000, #950000);
+  background: linear-gradient(bottom, #860000, #950000);
 }
 
 .item-1.cta-red-gradient {
-  background-image: -moz-linear-gradient(bottom, #950000 100%, #b00000 0%);
-  background-image: -ms-linear-gradient(bottom, #950000 100%, #b00000 0%);
-  background-image: -o-linear-gradient(bottom, #950000 100%, #b00000 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #950000), color-stop(0, #b00000));
-  background-image: -webkit-linear-gradient(bottom, #950000 100%, #b00000 0%);
-  background-image: linear-gradient(bottom, #950000 100%, #b00000 0%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #950000), color-stop(100%, #b00000));
+  background: -webkit-linear-gradient(bottom, #950000, #b00000);
+  background: -moz-linear-gradient(bottom, #950000, #b00000);
+  background: -o-linear-gradient(bottom, #950000, #b00000);
+  background: -ms-linear-gradient(bottom, #950000, #b00000);
+  background: linear-gradient(bottom, #950000, #b00000);
 }
 
 .item-2.cta-red-gradient {
-  background-image: -moz-linear-gradient(bottom, #b00000 100%, #c50000 0%);
-  background-image: -ms-linear-gradient(bottom, #b00000 100%, #c50000 0%);
-  background-image: -o-linear-gradient(bottom, #b00000 100%, #c50000 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #b00000), color-stop(0, #c50000));
-  background-image: -webkit-linear-gradient(bottom, #b00000 100%, #c50000 0%);
-  background-image: linear-gradient(bottom, #b00000 100%, #c50000 0%);
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #b00000), color-stop(100%, #c50000));
+  background-image: -webkit-linear-gradient(bottom, #b00000, #c50000);
+  background-image: -moz-linear-gradient(bottom, #b00000, #c50000);
+  background-image: -o-linear-gradient(bottom, #b00000, #c50000);
+  background-image: -ms-linear-gradient(bottom, #b00000, #c50000);
+  background-image: linear-gradient(bottom, #b00000, #c50000);
 }
 
 a.cta-get-directions {
@@ -3250,22 +3221,22 @@ a.cta-virtual-tour .virtual-tour-btn i {
   background: url('../images/cta-visit-icon.png') no-repeat top left;
 }
 a.cta-virtual-tour:hover .virtual-tour-btn {
-  background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000));
-  background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: linear-gradient(bottom, #870000 100%, #c40000 0%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
+  background: -webkit-linear-gradient(bottom, #870000, #c40000);
+  background: -moz-linear-gradient(bottom, #870000, #c40000);
+  background: -o-linear-gradient(bottom, #870000, #c40000);
+  background: -ms-linear-gradient(bottom, #870000, #c40000);
+  background: linear-gradient(bottom, #870000, #c40000);
   color: white;
 }
 
 .cta-rethink {
-  background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000));
-  background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%);
-  background-image: linear-gradient(bottom, #870000 100%, #c40000 0%);
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
+  background: -webkit-linear-gradient(bottom, #870000, #c40000);
+  background: -moz-linear-gradient(bottom, #870000, #c40000);
+  background: -o-linear-gradient(bottom, #870000, #c40000);
+  background: -ms-linear-gradient(bottom, #870000, #c40000);
+  background: linear-gradient(bottom, #870000, #c40000);
   color: white;
 }
 
@@ -3308,7 +3279,6 @@ a.cta-rethink:hover {
   line-height: 1.5em;
 }
 .cta-rethink .cta-description b {
-  font-weight: 400;
   font-family: "NewsGothicBT-Bold";
 }
 

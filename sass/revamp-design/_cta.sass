@@ -1,62 +1,47 @@
 // CALL TO ACTION STYLES - CTA
 
-.cta-block
-  margin-bottom: 30px
+.pane-bundle-gsb-image-cta-fpp
+  h2.pane-title
+    display: none
 
-a
-  &.cta-link
-    position: relative
-    display: block
-    border: none
-    border-top: 1px $white solid
-    border-bottom: 1px #eee solid
-    -webkit-box-shadow: none
-    -moz-box-shadow: none
-    box-shadow: none
-    color: $red
-    font-size: 18px
-    font-family: $font-sans
-    line-height: 24px
-    &:hover
-      position: relative
-      display: block
-      border: none
-      border-top: 1px $white solid
-      border-bottom: 1px #eee solid
-      -webkit-box-shadow: none
-      -moz-box-shadow: none
-      box-shadow: none
-      color: $red
-      font-size: 18px
-      font-family: $font-sans
-      line-height: 24px
-    &:first-child
-      border-top: 0
-    i
-      position: absolute
-      top: 50%
-      right: 25px
-      display: block
-      margin-top: -7px
-      width: 13px
-      height: 15px
-      background: image_url('arrows-icons.png') no-repeat 0 -20px
+.field-name-field-image-cta-link a
+  position: relative
+  display: block
+  border: none
+  border-top: 1px $white solid
+  border-bottom: 1px $grey-e solid
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  color: $red
+  font-size: 18px
+  font-family: $font-sans
+  line-height: 24px
+  &:first-child
+    border-top: 0
 
-  &.cta-red.cta-link
-    i
-      right: 18px
-      margin-top: -14px
-      width: 26px
-      height: 27px
-      background: image_url('cta_red_icon.png') no-repeat top left
-    &:hover i
-      background: image_url('cta_red_icon_hover.png')
+.field-name-field-image-cta-link a
+  display: block
+  margin-top: -7px
+  width: 13px
+  height: 15px
+
+  &.cta-red.cta-link,
   &.cta-green.cta-link
     i
       right: 18px
       margin-top: -14px
       width: 26px
       height: 27px
+
+  &.cta-red.cta-link
+    i
+      background: image_url('cta_red_icon.png') no-repeat top left
+    &:hover i
+      background: image_url('cta_red_icon_hover.png')
+
+  &.cta-green.cta-link
+    i
       background: image_url('cta_green_icon.png') no-repeat top left
     &:hover i
       background: image_url('cta_green_icon_hover.png')
@@ -70,14 +55,13 @@ a
   font-size: 18px
   line-height: 24px
 
-a.cta-green
+a.cta-green,
+a.cta-green:hover,
+a.cta-green .cta-title
   color: $green-light
-  &:hover, .cta-title
-    color: $green-light
 
 .cta-link
   b
-    font-weight: 400
     font-size: 14px
     font-family: $font-bold
     line-height: 1.3em
@@ -106,46 +90,23 @@ a.cta-green
 .separated-box
   margin-bottom: 30px
 
-a.cta-red-gradient
+a.cta-red-gradient,
+a.cta-red-gradient:hover
   margin-bottom: 5px
   border: 0
-  background-color: #c50000
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+  background-color: $red
+  +box-shadow($black, 0.45, 1px 1px 1px)
   color: $white
-  &:hover
-    margin-bottom: 5px
-    border: 0
-    background-color: #c50000
-    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
-    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
-    color: $white
+
 
 .item-0.cta-red-gradient
-  background-image: -moz-linear-gradient(bottom, #860000 100%, #950000 0%)
-  background-image: -ms-linear-gradient(bottom, #860000 100%, #950000 0%)
-  background-image: -o-linear-gradient(bottom, #860000 100%, #950000 0%)
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #860000), color-stop(0, #950000))
-  background-image: -webkit-linear-gradient(bottom, #860000 100%, #950000 0%)
-  background-image: linear-gradient(bottom, #860000 100%, #950000 0%)
+  +background(linear-gradient(bottom, #860000, #950000))
 
 .item-1.cta-red-gradient
-  background-image: -moz-linear-gradient(bottom, #950000 100%, #b00000 0%)
-  background-image: -ms-linear-gradient(bottom, #950000 100%, #b00000 0%)
-  background-image: -o-linear-gradient(bottom, #950000 100%, #b00000 0%)
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #950000), color-stop(0, #b00000))
-  background-image: -webkit-linear-gradient(bottom, #950000 100%, #b00000 0%)
-  background-image: linear-gradient(bottom, #950000 100%, #b00000 0%)
+  +background(linear-gradient(bottom, #950000, #b00000))
 
 .item-2.cta-red-gradient
-  background-image: -moz-linear-gradient(bottom, #b00000 100%, #c50000 0%)
-  background-image: -ms-linear-gradient(bottom, #b00000 100%, #c50000 0%)
-  background-image: -o-linear-gradient(bottom, #b00000 100%, #c50000 0%)
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #b00000), color-stop(0, #c50000))
-  background-image: -webkit-linear-gradient(bottom, #b00000 100%, #c50000 0%)
-  background-image: linear-gradient(bottom, #b00000 100%, #c50000 0%)
+  +background-image(linear-gradient(bottom, #b00000, #c50000))
 
 
 a
@@ -198,21 +159,11 @@ a
         height: 14px
         background: image_url('cta-visit-icon.png') no-repeat top left
     &:hover .virtual-tour-btn
-      background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%)
-      background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%)
-      background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%)
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000))
-      background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%)
-      background-image: linear-gradient(bottom, #870000 100%, #c40000 0%)
+      +background(linear-gradient(bottom, #870000, #c40000))
       color: $white
 
 .cta-rethink
-  background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%)
-  background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%)
-  background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%)
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000))
-  background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%)
-  background-image: linear-gradient(bottom, #870000 100%, #c40000 0%)
+  +background(linear-gradient(bottom, #870000, #c40000))
   color: $white
 
 a
@@ -249,7 +200,6 @@ a
     font-size: 20px
     line-height: 1.5em
     b
-      font-weight: 400
       font-family: $font-bold
 
 .cta-follow-us
