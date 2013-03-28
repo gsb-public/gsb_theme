@@ -1,34 +1,40 @@
-// GENERAL STYLES
+// @TODO Remove this before deploying
+.messages
+  display: none
 
+// GENERAL STYLES
 #page
-  margin: 0 auto
-  max-width: $max-width
 
 #page-wrapper
+
+#header-wrapper
   border-top: 10px $red solid
+  #header
+    margin: 0 auto
+    max-width: $max-width
+#main-wrapper
+  +box-shadow( -1px 0 5px inset)
+  +background(image_url("bg-front-courtyard.png") top center no-repeat, linear-gradient(bottom, $grey-f 14%, $white 79%), $white )
+  #main
+    margin: 0 auto
+    max-width: $max-width
+#footer-wrapper
+  background: $grey-f
+  #footer
+    margin: 0 auto
+    max-width: $max-width
 
-.page-container
-  +background(linear-gradient(bottom, #f5f5f5 14%, $white 79%))
-
-.background-container
-  background: image_url("body-background-transparent-not-front.png") no-repeat bottom center
-  opacity: 1
-
-#header
-  margin: 0
-  height: 146px
-  // +box-shadow(rgba(0, 0, 0, 0.5) 0 0 4px)
+#navigation
+  display: inline-block
+  float: right
 
 #logo
   display: inline-block
-  margin: 24px 0
-
-// SITE NAME
-#site-name
-  +hidden-text
+  margin: 24px 0 0 0
 
 // SITE SLOGAN
 #site-slogan
+  float: right
   font-size: 22px
 
 // main content
@@ -36,7 +42,6 @@
   margin-bottom: 0
 
 .main-content
-  margin-top: 27px
   a
     border-bottom: 1px dashed $green-light
     color: $green-light

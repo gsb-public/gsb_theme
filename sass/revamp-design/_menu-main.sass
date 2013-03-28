@@ -4,32 +4,27 @@
     +hidden-text
 
 #main-menu
-  .content
+  position: relative
+  top: -10px
+  li
     float: left
-    ul li
-      float: left
+    margin: 0
+    padding: 0
+    max-width: 120px
+    border-right: 1px solid red
+    background-color: $red
+    +background(linear-gradient(bottom, red, $red))
+    list-style-type: none
+    list-style-image: none
+    font-size: 17px
+    &:hover,
+    &.active
+      background: $black
+    a
+      display: block
       margin: 0
-      padding: 0
-      width: 121px
-      border-right: 1px solid red
-      background-color: $red
-      +background(linear-gradient(bottom, red, $red))
-      list-style-type: none
-      list-style-image: none
-      font-size: 17px
-      &:hover, &.active
-        background: $black
-      a
-        display: block
-        margin: 0
-        padding: 18px 10px
-        min-height: 80px
-        background: image_url("navigation-arrow.png") no-repeat 100px 60px
-        color: $white
-        line-height: 18px
-
-    .btn-navbar
-      display: none
-
-body .header-region div.main-menu
-  margin-top: -10px
+      padding: 18px 10px
+      min-height: 80px
+      background: image_url("navigation-arrow.png") no-repeat 100px 60px
+      color: $white
+      line-height: 18px
