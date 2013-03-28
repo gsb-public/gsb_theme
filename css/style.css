@@ -1223,12 +1223,17 @@ div.label-inline {
   -webkit-box-shadow: -1px 0 5px inset;
   -moz-box-shadow: -1px 0 5px inset;
   box-shadow: -1px 0 5px inset;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(14%, #f2f2f2), color-stop(79%, #ffffff)), white;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, -webkit-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, -moz-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, -o-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, -ms-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
-  background: url('../images/bg-front-courtyard.png') top center no-repeat, linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+  background: white;
+}
+@media (min-width: 48em) {
+  #main-wrapper {
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(14%, #f2f2f2), color-stop(79%, #ffffff)), white;
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, -webkit-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, -moz-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, -o-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, -ms-linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+    background: url('../images/bg-front-courtyard.png') top center no-repeat, linear-gradient(bottom, #f2f2f2 14%, #ffffff 79%), white;
+  }
 }
 #main-wrapper #main {
   margin: 0 auto;
