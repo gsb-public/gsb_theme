@@ -1,0 +1,44 @@
+small
+  +adjust-font-size-to(ms(-1))
+
+cite
+  @extend %italic
+
+q
+  color: $blue
+  font-family: $font-light
+  font-size: 26px
+
+dfn
+  @extend %bold
+  @extend %italic
+
+abbr, acronym
+  border-bottom: 1px dotted
+  cursor: help
+
+code
+  @extend %mono
+
+kbd
+  @extend %mono
+
+tt
+  @extend %mono
+
+sup, sub
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+mark
+  background: $red
+  background-color: rgba($yellow, 0.5)
+  text-shadow: none

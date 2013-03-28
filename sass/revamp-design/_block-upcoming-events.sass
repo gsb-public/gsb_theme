@@ -1,0 +1,112 @@
+// upcoming events (ue)
+
+.cp-event .blue-small-border
+  display: none
+
+.event-sidebar .cp-adress
+  margin-bottom: 5px
+  color: #666
+  font-size: 13px
+  font-family: $font-demi
+
+.pane-gsb-event-sidebar
+  .cp-title a
+    color: $green-light
+  .blue-small-border, .cp-date
+    display: block
+  .cp-image img
+    width: 170px
+
+.span8 .pane-gsb-event-sidebar .cp-block
+  min-height: 115px
+
+.pane-gsb-event-sidebar h2, .pane-gsb-event-frontpage h2
+  margin: 0
+  margin-bottom: 18px
+  color: $red
+  font-weight: 400
+  font-size: 14px
+  font-family: $font-sans
+  line-height: 1em
+
+.pane-gsb-event-sidebar .views-row
+  position: relative
+  > div
+    max-width: 580px
+
+.span8 .pane-gsb-event-sidebar .views-row > div
+  max-width: 320px
+
+.event-sidebar .views-field-body a
+  border: none
+  &:hover
+    border: none
+
+.pane-gsb-event-sidebar img
+  position: absolute
+  top: 12px
+  right: 0
+
+.blue-small-border
+  display: block
+  margin-bottom: 5px
+  margin-left: -27px
+  width: 26px
+  height: 9px
+  background: #aac4bf
+
+.pane-gsb-event-frontpage
+  h2
+    font-weight: 700
+    font-size: 15px
+    font-family: $font-demi
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      margin-bottom: 10px
+      margin-left: 0
+  .views-field-field-event-date
+    display: inline
+    color: #3d3738
+    font-size: 16px
+    font-family: $font-sans
+    div
+      display: inline
+      color: #3d3738
+      font-size: 16px
+      font-family: $font-sans
+  .views-field-title
+    display: inline
+    color: #3d3738
+    font-size: 16px
+    font-family: $font-sans
+  .views-field-field-event-date div
+    color: #555
+  .views-field-title a
+    border: 0
+    color: #231f20
+    font-family: $font-bold
+    &:hover
+      border: 0
+  .views-field-field-address
+    display: inline
+    color: $black
+    font-size: 16px
+    div
+      display: inline
+      color: $black
+      font-size: 16px
+
+// responsive part
+
+.span4 .pane-gsb-event-sidebar
+  .views-field-field-event-date span, img
+    display: none
+
+.span8 .pane-gsb-event-sidebar img
+  top: 16px
+
+.span4 .pane-gsb-event-sidebar .cp-date span
+  display: none

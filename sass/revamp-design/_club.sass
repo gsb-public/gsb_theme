@@ -1,0 +1,255 @@
+// clubs
+
+.view-club-filters
+  .views-row
+    margin-bottom: 19px
+  .views-row-1:first-child
+    margin-top: -26px
+  clear: both
+
+.club-row
+  .blue-small-border
+    margin-left: 0
+  h4
+    margin-bottom: 5px
+    font-weight: 400
+    font-size: 20px
+    font-family: $font-bold
+  p
+    margin-bottom: 0
+    color: #383838
+    font-size: 17px
+    font-family: $font-sans
+    line-height: 24px
+
+.clib-link i
+  margin-left: 7px
+  padding: 0 13px 0 0
+  background: image_url('external_link.png') no-repeat 0 3px
+
+.clubs-filter-exposed
+  overflow: hidden
+  margin-bottom: 2px
+  padding: 6px 22px 10px 25px
+  .views-exposed-widget
+    float: none
+    padding: 0
+  .form-item label
+    margin-bottom: 1px
+    padding-right: 9px
+    padding-left: 23px
+    height: 40px
+    color: #565656
+    font-weight: 400
+    font-size: 16px
+    font-family: $font-sans
+  .fieldset-title
+    position: relative
+    left: -24px
+    padding-left: 24px
+    border: none
+    color: #333
+    font-weight: 400
+    font-size: 16px
+    font-family: $font-bold
+    &:hover
+      border: 0 none
+  legend
+    margin-bottom: 12px
+    color: #231f20
+    font-size: 16px
+    line-height: 1em
+
+.collapsible
+  legend
+    i
+      position: relative
+      top: 2px
+      margin-right: 9px
+      padding: 0 15px 0 0
+      background: image_url('accordion-icons.png') 0 -16px no-repeat
+      line-height: 10px
+    &:hover i
+      background-position: -15px -16px
+  &.collapsed legend
+    i
+      background-position: 0 0
+    &:hover i
+      background-position: -15px 0
+
+.clubs-filter-exposed
+  .fieldset-wrapper
+    overflow: hidden
+    padding-top: 5px
+  .bef-checkboxes .form-item
+    float: left
+    margin-bottom: 3px
+    width: 33%
+    &:nth-child(3n+1)
+      clear: both
+
+legend
+  border: 0
+
+fieldset.collapsible .fieldset-legend
+  display: inline
+
+.js body fieldset.collapsible .fieldset-legend
+  padding: 0
+  background: none
+
+#views-exposed-form-club-filters-club-list
+  float: left
+  margin-bottom: 27px
+  width: 646px
+
+#views-exposed-form-search-clubs-club-search
+  float: right
+  width: 200px
+
+// club search
+
+.views-widget-filter-search_api_views_fulltext .form-text
+  padding: 9px 38px 4px 13px
+  width: 147px
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  -ms-border-radius: 0
+  border-radius: 0
+  background: #e4e4e4
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  -ms-box-shadow: none
+  box-shadow: none
+  font-size: 17px
+  font-family: $font-sans
+  line-height: 1em
+
+#views-exposed-form-search-clubs-club-search
+  position: relative
+  .ajax-progress
+    display: none
+  .form-submit
+    float: left
+    overflow: hidden
+    margin: 0 0 0 -38px
+    width: 38px
+    height: 38px
+    border: 0
+    line-height: 100px
+    &.progress-disabled
+      margin-top: 9px
+      margin-bottom: 14px
+      margin-left: -24px
+      width: 15px
+      height: 15px
+      cursor: default
+  label
+    position: absolute
+    top: 9px
+    left: 14px
+    color: #444
+    text-transform: lowercase
+    font-weight: 400
+    font-size: 17px
+    font-family: $font-sans
+  .views-exposed-widget
+    padding: 0
+
+// pager
+
+.view-club-filters
+  position: relative
+  .pager
+    position: absolute
+    right: 22px
+    bottom: 0
+    margin: 0
+    width: 94.5%
+  .pager-next
+    float: left
+    a
+      padding: 0 16px 0 33px
+      height: 29px
+      border: 0
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      border-radius: 0
+      +background($green-light, image_url('navigation-arrow.png') no-repeat 10px 11px)
+      color: $white
+      text-transform: uppercase
+      font-size: 13px
+      font-family: $font-bold
+      line-height: 36px
+      -ms-border-radius: 0
+      &:hover
+        padding: 0 16px 0 33px
+        height: 29px
+        border: 0
+        -webkit-border-radius: 0
+        -moz-border-radius: 0
+        border-radius: 0
+        +background($green-light, image_url('navigation-arrow.png') no-repeat 10px 11px)
+        color: $white
+        text-transform: uppercase
+        font-size: 13px
+        font-family: $font-bold
+        line-height: 36px
+        -ms-border-radius: 0
+
+a.go-to-top-link
+  position: absolute
+  right: 24px
+  bottom: 0
+  display: block
+  padding: 0 16px
+  height: 29px
+  border: 0
+  background: $black
+  color: $white
+  font-family: $font-bold
+  line-height: 36px
+  &:hover
+    position: absolute
+    right: 24px
+    bottom: 0
+    display: block
+    padding: 0 16px
+    height: 29px
+    border: 0
+    background: $black
+    color: $white
+    font-family: $font-bold
+    line-height: 36px
+
+// checkboxer
+
+div.checker
+  width: 13px
+  height: 13px
+  span, input
+    width: 13px
+    height: 13px
+  position: relative
+  float: left
+  margin-top: 0
+  margin-right: 10px
+  span
+    display: -moz-inline-box
+    display: inline-block
+    background: image_url('checkbox_icon.png') 0 0 no-repeat
+    text-align: center
+    zoom: 1
+    *display: inline
+  input
+    float: left
+    border: none
+    background: none
+    opacity: 0
+    -moz-opacity: 0
+    filter: alpha(opacity = 0)
+    zoom: 1
+  &:active span, &.active span
+    background-position: 0 0
+  &.focus:active span, &:active:hover span, &.active:hover span, &.focus.active span, .checked
+    background-position: 0 -13px

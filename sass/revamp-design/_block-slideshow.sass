@@ -1,0 +1,157 @@
+// slideshow block
+
+.page-node #content-body .field
+  &.field-type-gsb-slideshow, &.field-name-field-gsb-video-media, &.field-name-field-gsb-spotlight-media
+    margin-bottom: 0
+
+.field-type-gsb-slideshow .field-items
+  position: relative
+  > .field-item
+    float: left
+
+.pane-bundle-gsb-slideshow-fpp
+  margin-bottom: 20px
+  border: 1px #e4e4e4 solid
+  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15)
+  -moz-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15)
+  -o-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15)
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15)
+  font-family: $font-sans
+  .field-label
+    display: none
+
+.field-type-gsb-slideshow
+  position: relative
+  overflow: hidden
+  border: 2px $white solid
+  background: $white
+
+// responsive part
+
+.span12 .field-type-gsb-slideshow
+  .field-item img
+    float: left
+    width: 623px
+    height: auto
+  .panopoly-spotlight-wrapper
+    float: left
+    margin-left: -124px
+    padding: 0 25px 57px
+    width: 315px
+    height: 308px
+    background: image_url('slider_style1.png') repeat-y top right
+    background: #cce0dc
+    background: rgba(177, 209, 202, 0.5)
+    &.style-2
+      background: image_url('slider_style2.png') repeat-y top right
+  height: 365px
+
+.span8
+  .field-type-gsb-slideshow .panopoly-spotlight-wrapper
+    margin-top: 138px
+    margin-left: -565px
+    padding: 0 25px 57px
+    width: 515px
+    height: 170px
+    background-color: #b1d1ca
+    background-color: rgba(177, 209, 202, 0.5)
+  .panopoly-spotlight-info
+    bottom: 47px
+    width: 91%
+    a.slider-btn
+      width: 50%
+  .field-type-gsb-slideshow
+    overflow: hidden
+    height: 350px
+    .panopoly-spotlight-wrapper.style-2
+      background-color: #b1d1ca
+      background-color: rgba(177, 209, 202, 0.7)
+    .field-item img
+      width: 100%
+      height: auto
+
+.span4
+  .field-type-gsb-slideshow
+    .field-item img
+      width: auto
+      height: auto
+    .panopoly-spotlight-wrapper
+      display: none
+  .slider-navigation li a
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    -ms-box-shadow: none
+  .field-type-gsb-slideshow
+    height: 216px
+
+// slider navigation
+
+.nav-circles
+  display: none
+
+// .slider-navigation
+//   float: left
+//   margin: 0 16px 0 0
+//   li
+//     float: left
+//     list-style: none
+//     a
+//       display: block
+//       overflow: hidden
+//       margin-left: 16px
+//       width:17px
+//       height:17px
+//       border: 0 none
+//       -webkit-border-radius: 10px
+//       -moz-border-radius: 10px
+//       border-radius: 10px
+//       background: #c2b7a1
+//       box-shadow: 0 2px 1px rgba(255,255,255,0.75)
+//       text-decoration: none
+//       line-height: 60px
+//       -ms-border-radius: 10px
+//       &:hover,.slider-navigation li.active a
+//         border: none
+//         background: #887e6e
+
+.slide-arrow
+  float: left
+  margin-top: 2px
+  width: 11px
+  height: 14px
+  background: image_url('slider_arrows_small.png') no-repeat top left
+  cursor: pointer
+  &.slider-right
+    background-position: top right
+  &.slider-left:hover
+    background-position: bottom left
+  &.slider-right:hover
+    background-position: bottom right
+
+.large-slide-left, .large-slide-right
+  position: absolute
+  top: 50%
+  z-index: 120
+  margin-top: -30px
+  width: 60px
+  height: 60px
+  background: image_url('slider_arrow_left.png') no-repeat top left
+  cursor: pointer
+
+.large-slide-left
+  left: 20px
+
+.large-slide-right
+  right: 20px
+  background: image_url('slider_arrow_right.png') no-repeat top left
+
+.field-name-field-gsb-slideshow
+  .field-name-field-gsb-spotlight-media
+    float: left
+    overflow: hidden
+  .video-play-icon
+    margin-left: -84px
+
+.slider-sharpy
+  display: none

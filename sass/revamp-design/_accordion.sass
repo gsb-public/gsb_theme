@@ -1,0 +1,88 @@
+// accordion
+
+.pane-bundle-gsb-accordion
+  &.designed-box
+    padding: 10px 26px
+  .field-name-field-description p
+    color: #555
+    &:last-child
+      margin-bottom: 5px
+
+.content
+  .acc-title, .acc-body
+    position: relative
+    margin-bottom: 0
+
+.accordion-toggle
+  display: none
+
+.content
+  .accordion-body-wrap
+    display: none
+  .accordion-toggle
+    display: block
+    float: left
+    margin-top: 9px
+    width: 15px
+    height: 15px
+    background: image_url("accordion-icons.png") no-repeat 0 0
+  .acc-title .accordion-toggle
+    position: absolute
+    top: 9px
+    left: 0
+    margin-top: 0
+
+.accordion-toggle.opened, .opened .accordion-toggle
+  background-position: 0 -16px
+
+.accordion-toggle
+  &:hover
+    background-position: -15px 0
+  &.opened:hover
+    background-position: -15px -16px
+
+.opened .accordion-toggle:hover
+  background-position: -15px -16px
+
+.page-node #content-body .field-name-field-accordion-item .field
+  margin-bottom: 0
+  font-size: 18px
+  line-height: 24px
+
+.content
+  .field-name-field-accordion-item .field-name-field-description
+    display: none
+    margin-top: 0
+    padding-left: 45px
+    font-family: $font-sans
+  .accordion-body-wrap .acc-body
+    margin-top: 0
+    padding-left: 45px
+  .acc-body
+    margin-bottom: 10px
+  .field-name-field-accordion-item .field-name-field-header, .acc-title
+    border-top: 2px #e1e5e4 solid
+    font-family: $font-demi
+    cursor: pointer
+  .field-name-field-accordion-item
+    .field-item:first-child .field-name-field-header
+      border-top: 0
+    .field-name-field-header .field-items
+      margin-left: 40px
+      padding: 8px 8px 8px 5px
+  .acc-title
+    margin-left: 40px
+    padding: 8px 8px 8px 5px
+    margin-left: 0
+    padding-left: 40px
+
+p.acc-title + p
+  margin-top: 15px
+
+.accordion-body-wrap + p
+  margin-top: 15px
+  &.acc-title
+    margin-top: 0
+
+.accordion-body
+  padding-bottom: 12px

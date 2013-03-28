@@ -1,0 +1,439 @@
+// BUSINESS INSIGHTS SECTION - BI OR BIZIN
+
+// LAYOUT
+
+// .gsb-bizin-sidebar
+//   padding-left: 34px
+
+// .gsb-bizin-content > .span12 > .span4
+//   margin-left: 3.45%
+//   width: 270px
+//   &:first-child
+//     margin-left: 0
+
+// // business insights menu
+
+// .view-business-insights-sidebar
+//   margin-bottom: 30px
+//   h3
+//     display: none
+//   .views-row
+//     margin: 0
+//   .views-row-last
+//     margin-bottom: 10px
+//   .field-content a
+//     display: block
+//     padding: 6px 0 6px 15px
+//     border: none
+//     background: #272727
+//     color: $white
+//     font-family: $font-sans
+//     line-height: 18px
+//     &:hover
+//       background: #607c8c
+
+// // business insights
+
+// .pane-gsb-business-insight-business-insights
+//   h2.pane-title
+//     float: left
+//     margin: 0
+//     padding: 15px 40px 15px 26px
+//     background: #739d95
+//     color: $white
+//     font-size: 14px
+//     font-family: $font-demi
+//     line-height: 1em
+//   .pane-content
+//     clear: both
+
+// .view-gsb-business-insight
+//   overflow: hidden
+//   padding-bottom: 5px
+//   .views-row, .blue-small-border
+//     margin-bottom: 10px
+//   .views-row-last
+//     margin-bottom: 0
+
+// .page-node #content-body .view-gsb-business-insight .field
+//   margin-bottom: 0
+
+// .view-gsb-business-insight
+//   .bi-author div
+//     display: inline-block
+//   .bi-body p, .bi-author .author-by-title:first-child
+//     display: inline
+
+// .business-insights-content .bi-author
+//   font-family: $font-bold
+//   line-height: 1.1em
+
+// .view-gsb-business-insight
+//   .bi-author
+//     .author-by-title, .node-gsb-person h2
+//       display: none
+//     .field-name-field-first-name
+//       padding-right: 4px
+//   .views-field-field-content-image
+//     float: left
+//     margin-right: 27px
+
+// .business-insights-content
+//   float: left
+//   width: 265px
+
+// .span4 .business-insights-content
+//   margin: 12px 0 0
+//   width: 222px
+
+// .business-insights-content
+//   h4
+//     margin: 0 0 3px
+//     font-weight: 400
+//     font-family: $font-bold
+//     line-height: 1.2em
+//     a
+//       border: none
+//       color: $red
+//       font-size: 20px
+//       &:hover
+//         border: none
+//         color: $red
+//         font-size: 20px
+//   .bi-body
+//     margin-top: 6px
+//     font-size: 14px
+//     font-family: $font-demi
+//     p
+//       font-size: 14px
+//   .date-display-single
+//     color: #656162
+//   .news-sep
+//     position: relative
+//     top: -1px
+//     color: #887e6e
+//   .bi-terms
+//     margin-top: 3px
+//     a
+//       border: none
+//       color: $red
+//       font-size: 14px
+//       font-family: $font-sans
+//       &:hover
+//         border: none
+//         color: $red
+//         font-size: 14px
+//         font-family: $font-sans
+
+// // business insights detailed
+
+// .bi-date, .tags
+//   margin: 0
+//   color: #656162
+//   font-size: 14px
+//   line-height: 18px
+
+// .bi-date
+//   margin-top: 10px
+
+// .tags
+//   margin-bottom: 15px
+//   a
+//     border: none
+//     color: $red
+//     &:hover
+//       border: none
+
+// .bizin-header
+//   overflow: hidden
+//   padding-top: 1px
+//   padding-bottom: 30px
+//   border-top: 3px #231f20 solid
+
+// .bizin-image
+//   float: right
+
+// .bi-image-title
+//   margin: 5px 0 0
+//   color: #887e6e
+//   font-size: 14px
+//   line-height: 18px
+
+// .bizin-title
+//   float: left
+//   width: 550px
+
+// .bi-title
+//   margin: 0
+//   margin-top: 22px
+//   color: #231f20
+//   font-size: 36px
+//   line-height: 42px
+
+// .bi-editorial
+//   margin-bottom: 15px
+//   font-size: 26px
+//   font-family: $font-bold
+//   line-height: 32px
+
+// .bi-body p
+//   margin-bottom: 10px
+//   line-height: 24px
+
+// .bizin-authors
+//   margin-bottom: 50px
+
+// // business insights related (bri)
+
+// .related-business-insights
+//   .span4
+//     padding-right: 30px
+//   .cp-block
+//     margin-bottom: 0
+//   .cp-date
+//     display: block
+//     margin-top: 15px
+//   .cp-title
+//     margin-bottom: 5px
+//     a
+//       font-size: 25px
+//       line-height: 30px
+//   .cp-taxonomy
+//     display: none
+//   .span4
+//     float: left
+//     clear: none
+//     margin-left: 2%
+//   .blue-small-border
+//     display: none
+//   .cp-image img
+//     margin-bottom: 0
+//     width: 241px
+
+// .panel-pane.related_business_insights h2
+//   margin: 70px 0 0
+//   padding: 15px 0 35px
+//   border-top: 3px #231f20 solid
+//   color: #231f20
+//   font-size: 26px
+//   font-family: $font-bold
+//   line-height: 1em
+
+// // business insights taxonomy listing
+
+// .business-insights-list
+//   border-top: 3px $black solid
+//   .views-row
+//     position: relative
+//     padding: 26px
+//     min-height: 99px
+//     border-top: 1px #c4c4c4 solid
+//   .views-row-first
+//     border-top: 0
+//   .cp-content
+//     width: 380px
+//   .cp-image, .cp-video
+//     position: absolute
+//     top: 26px
+//     right: 26px
+//   .cp-image img, .cp-video img
+//     width: 170px
+//   .video-play-icon
+//     -webkit-transform: scale(0.7)
+//   // replace with icon
+//   .blue-small-border, .cp-author
+//     display: none
+//   .cp-title
+//     a
+//       font-size: 24px
+//       line-height: 1.3em
+//     display: block
+//     margin: 8px 0 7px
+
+// // quote
+
+// .quote-wrapper
+//   margin-bottom: 20px
+
+// a.quote-link
+//   border: none
+//   &:hover
+//     border: none
+
+// .quote-link
+//   display: block
+//   margin-left: 35px
+//   .quote-text
+//     display: inline
+//     margin: 0
+
+// .quote-text
+//   margin: 0
+//   font-size: 35px
+//   font-family: $font-bold
+//   line-height: 1.2em
+//   p
+//     margin: 0
+//     font-size: 35px
+//     font-family: $font-bold
+//     line-height: 1.2em
+//     display: inline
+//     border: none
+//   position: relative
+//   margin-left: 35px
+//   i
+//     border: none
+//     color: $black
+//     font-style: normal
+//     font-size: 38px
+//     &:hover
+//       border: none
+//       color: $black
+//       font-style: normal
+//       font-size: 38px
+//     &.last
+//       position: relative
+//       left: -10px
+//     &.first
+//       font-size: 58px
+//       position: absolute
+//       top: 13px
+//       left: -30px
+
+// .quote-link i.arrow
+//   position: relative
+//   top: -2px
+//   left: -3px
+//   display: inline-block
+//   width: 18px
+//   height: 21px
+//   border: none
+//   background: image_url('arrows-icons.png') no-repeat 0 -100px
+//   &:hover
+//     position: relative
+//     top: -2px
+//     left: -3px
+//     display: inline-block
+//     width: 18px
+//     height: 21px
+//     border: none
+//     background: image_url('arrows-icons.png') no-repeat 0 -100px
+
+// .quote-person
+//   padding-top: 10px
+//   padding-left: 35px
+//   a
+//     border: none
+//     &:hover
+//       border: none
+
+// // icons
+
+// .span4 a.bi-section-link
+//   position: relative
+//   z-index: 100
+//   display: block
+//   margin-top: -48px
+//   margin-bottom: 12px
+//   margin-left: -26px
+//   padding: 0 26px
+//   width: 214px
+//   border: none
+//   background: rgba(0, 0, 0, 0.5)
+//   color: $white
+//   font-size: 15px
+//   font-family: $font-sans
+//   line-height: 36px
+//   &:hover
+//     position: relative
+//     z-index: 100
+//     display: block
+//     margin-top: -48px
+//     margin-bottom: 12px
+//     margin-left: -26px
+//     padding: 0 26px
+//     width: 214px
+//     border: none
+//     background: rgba(0, 0, 0, 0.5)
+//     color: $white
+//     font-size: 15px
+//     font-family: $font-sans
+//     line-height: 36px
+
+// .page-business-insights .span4
+//   a.bi-section-link
+//     display: none
+//   .cp-title a
+//     font-size: 22px
+//   .no-image .cp-title a
+//     font-size: 30px
+//   .cp-event .cp-title i
+//     display: inline-block
+//     margin-right: 5px
+//     width: 21px
+//     height: 18px
+//     background: image_url('bi_event_icon.png') no-repeat center left
+//   .cp-video-block .cp-title i
+//     position: relative
+//     top: 1px
+//     display: inline-block
+//     margin-right: 5px
+//     width: 24px
+//     height: 17px
+//     background: image_url('bi_video_icon.png') no-repeat center left
+
+// .bizin-image
+//   width: 270px
+//   p
+//     margin-top: 11px
+
+// Business insight Full node
+.node-business-insight.view-mode-full
+
+  // Date
+  .field-name-field-date-published,
+  .field-name-field-tag,
+  .field-name-field-content-image-caption
+    color: $grey-8
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 35px
+
+  // Editorial Summary
+  .field-name-field-editorial-summary
+    font-size: 22px
+    line-height: 28px
+    margin-bottom: 42px
+
+  // Tag
+  .field-name-field-tag
+    margin-bottom: 24px
+    a
+      color: $red
+
+  // Image
+  .field-name-field-content-image
+    margin-bottom: 12px
+
+  // Image caption
+
+
+  // Intro Copy
+  .field-name-body
+    p:first-of-type
+      font-family: $font-bold
+      font-size: 26px
+      line-height: 32px
+      margin-bottom: 35px
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 35px
+
+  // Author
+  .field-name-author
+    .label-inline
+      display: inline-block
+      margin-right: 5px
+    a
+      color: $green-light
+      font-family: $font-bold

@@ -1,0 +1,112 @@
+// gsb person list
+
+.view-id-gsb_person_fpp_view
+  overflow: hidden
+
+.pane-bundle-gsb-person-fpp .pane-title
+  margin: 10px 0 30px
+  color: #222
+  font-size: 25px
+  font-family: $font-demi
+
+.person-list-view
+  position: relative
+  .pane-title
+    margin: 0 0 18px
+    font-size: 20px
+    font-family: $font-bold
+
+.view-id-gsb_person_fpp_view
+  &.view-display-id-grid .views-row
+    float: left
+    clear: none
+    &:nth-child(3n+1)
+      clear: both
+  &.view-display-id-block_list .views-row
+    margin-bottom: 0
+
+.views-row:nth-child(3n) .gsb-person-teaser
+  margin-right: 0
+
+.gsb-person-teaser
+  float: left
+  margin: 0 31px 20px 0
+  width: 170px
+  font-family: $font-sans
+
+.gsb-person-featured
+  overflow: hidden
+  margin-bottom: 20px
+  padding-top: 17px
+  border-top: 1px #e4e4e4 solid
+  font-size: 17px
+  font-family: $font-demi
+
+.gsb-person-teaser img
+  max-width: 170px
+  width: 170px
+  height: auto
+
+.gsb-person-featured
+  img
+    max-width: 170px
+    width: 170px
+    height: auto
+  .person-image
+    float: left
+    margin-right: 21px
+
+.gsb-person-teaser a, .gsb-person-featured a
+  display: block
+  border: 0
+  color: $red
+
+.gsb-person-teaser a:hover, .gsb-person-featured a:hover
+  border: 0
+
+.gsb-person-teaser a.person-teaser-name
+  display: block
+  margin-top: 13px
+  margin-bottom: 3px
+  font-size: 16px
+  font-family: $font-demi
+
+.gsb-person-featured a.person-teaser-name
+  display: block
+  margin-top: 13px
+  margin-bottom: 3px
+  font-size: 16px
+  font-family: $font-demi
+  margin-top: 0
+  font-size: 18px
+  font-family: $font-bold
+
+.gsb-person-teaser .person-title
+  display: block
+  margin-bottom: -2px
+  color: #444
+
+.gsb-person-featured
+  .person-title
+    display: block
+    margin: 1px 0 15px
+    font-size: 18px
+  .person-quote
+    margin-bottom: 0
+    padding-left: 190px
+    color: #333
+    font-size: 16px
+    font-family: $font-sans
+    line-height: 22px
+
+.top-blue-long-border
+  position: absolute
+  top: 0
+  left: 26px
+  display: block
+  width: 90.5%
+  height: 9px
+  background: #aac4bf
+
+.views-row-last .gsb-person-featured
+  margin-bottom: 0

@@ -1,0 +1,74 @@
+////////////////////////////
+// Default Variables
+////////////////////////////
+
+$base-font-size: 16px
+$base-line-height: $base-font-size * 1.5
+
+// --- Modular SCALE (used by _defaults.sass) -----------
+// values used to determine modular scale values
+// see: src/common/mixins/_modular-scale.sass
+// and http://modularscale.com/
+$base-size: $base-font-size
+
+// Dimensions
+// basic values, independent of any css framework
+$kit-baseline: $base-line-height
+$kit-baseline-half: $kit-baseline * 0.5
+$kit-baseline-neg: $kit-baseline * -1
+$kit-gutter: ms(2)
+$kit-gutter-half: $kit-gutter * 0.5
+$kit-gutter-neg: $kit-gutter * -1
+
+$pixel-normalize: true
+
+$init-type: normalize
+
+// Grid Variables
+
+$show-grid: true
+$show-baseline: false
+
+// use the Compass baseline system
+$establish-baseline: true
+
+
+////////////////////////////
+// Singularity Grids
+////////////////////////////
+
+// Basis
+$columns: 12
+$gutter: 65
+$max-width: 1170px
+
+// HOMEPAGE
+$front-main: 870 270
+$front-main-inner: 570 270
+$front-footer: 270 270 270 270
+
+// BUSINESS INSIGHTS
+
+// BI Main, right sidebar (1,2)
+$bi-main-rs: 870 235
+
+// BI Left sidebar, Main (2,1)
+$bi-ls-main: 235 870
+
+// BI Main inner, right sidebar
+$bi-rs-main-inner: 570 270
+
+@function calc-max-width($columns, $unit: px)
+  $max-width: 0
+  @for $i from 1 through length($columns)
+    $max-width: $max-width + nth($columns, $i)
+  @return $max-width + $unit
+
+////////////////////////////
+// Breakpoint Variables
+// +breakpoint($VARIABLE)
+////////////////////////////
+$breakpoint-to-ems: true
+
+$bp-mobile: 480px max-width
+$bp-portrait: 768px max-width

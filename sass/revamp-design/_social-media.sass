@@ -1,0 +1,63 @@
+// social feed
+
+.twitter-feed
+  position: relative
+  background: #c1dbd9
+  &.bg
+    background: image_url('homepage-social-block-background-full.png') no-repeat bottom right
+  h5
+    margin: 0
+    color: $red
+    font-size: 17px
+  .twitter-feed-source
+    margin: 0
+    color: $red
+    font-size: 17px
+    font-size: 16px
+  h5
+    font-weight: 400
+    font-family: $font-bold
+
+.tweet
+  margin-top: 20px
+  a
+    border: none
+    color: $red
+    &:hover
+      border: none
+  .time
+    margin-top: 7px
+    font-size: 13px
+    font-family: $font-sans
+
+a
+  &.social-block-link
+    display: block
+    padding-left: 15px
+    height: 29px
+    border: none
+    background: #754760
+    color: $white
+    font-family: $font-bold
+    line-height: 29px
+    &:hover
+      display: block
+      padding-left: 15px
+      height: 29px
+      border: none
+      background: #754760
+      color: $white
+      font-family: $font-bold
+      line-height: 29px
+  &.social-icon
+    display: block
+    width: 40px
+    height: 41px
+    border: none
+    background-image: image_url('social-icons.png') no-repeat
+    text-indent: -10000px
+  &.twitter-icon
+    background-position: 0 0
+    &:hover
+      border: 0
+      background-position: 0 -41px

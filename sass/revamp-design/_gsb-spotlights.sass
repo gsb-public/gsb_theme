@@ -1,0 +1,159 @@
+// spotlights
+
+.page-node #content-body
+  .spotlight .field
+    margin-bottom: 0
+  .span8 .spotlight .field
+    float: left
+
+.spotlight
+  position: relative
+  clear: both
+
+.spotlight-content
+  float: left
+  width: 222px
+
+.spotlight
+  .spotlight-border
+    position: absolute
+    top: 0
+    left: 25px
+    display: block
+    width: 95px
+    height: 10px
+    background: $red
+  .spotlight-type
+    display: block
+    margin-bottom: 12px
+    color: #666
+    font-size: 13px
+    font-family: $font-sans
+    line-height: 1em
+  h4
+    margin: 0 0 2px
+    color: $red
+  h5
+    margin: 0 0 4px
+    font-size: 20px
+    font-family: $font-light
+    line-height: 1.2em
+  p
+    margin: 0
+    color: #555
+    font-size: 14px
+    line-height: 18px
+  .spotlight-story
+    clear: both
+    overflow: hidden
+    max-height: 72px
+  a.show-more
+    display: block
+    margin-top: 8px
+    border: 0
+    font-family: $font-bold
+    span
+      padding-left: 16px
+      background: image_url('spotlight-arrow.png') no-repeat 0 2px
+    &:hover span
+      background-position: 0 -13px
+    &.active
+      span
+        background: image_url('spotlight-arrow-reversed.png') -1px -13px
+      &:hover span
+        background-position: 0 2px
+
+  .field-name-field-gsb-spotlight-image-video
+    overflow: hidden
+
+.span8 .spotlight, .span12 .spotlight
+  overflow: hidden
+
+.span8 .spotlight img, .span12 .spotlight img
+  float: left
+  margin-right: 24px
+
+.person-thumb
+  display: block
+  margin-bottom: 5px
+
+.spotlight .field-name-field-gsb-spotlight-media
+  position: relative
+  overflow: hidden
+  margin-bottom: 10px
+
+// responsive part
+
+.span8
+  .span6 .spotlight
+    min-height: 342px
+  .spotlight
+    .spotlight-story
+      clear: none
+    .spotlight-image
+      float: left
+  .span6 .spotlight
+    .spotlight-story
+      clear: both
+    .spotlight-image
+      float: none
+
+.span4 .spotlight-image
+  overflow: hidden
+  margin-bottom: 10px
+
+.span8 .span6 .spotlight-image
+  overflow: hidden
+  margin-bottom: 10px
+  img
+    min-height: 130px
+
+
+// spotlight
+
+.panopoly-spotlight-wrapper
+  position: relative
+  z-index: 101
+
+.panopoly-spotlight-info
+  position: absolute
+  right: 25px
+  bottom: 57px
+  width: 315px
+  h2
+    margin: 0 0 12px
+    line-height: 32px
+    a
+      display: block
+      border: none
+      color: $black
+      font-size: 26px
+      line-height: 37px
+      &:hover
+        border: none
+  p
+    color: #333
+    font-size: 16px
+    line-height: 20px
+  a.slider-btn
+    display: block
+    padding-left: 13px
+    height: 30px
+    border: none
+    background: #754760
+    color: $white
+    font-weight: 700
+    line-height: 35px
+    &.style-1, &.style-2:hover
+      background: #754760
+    &.style-1:hover, &.style-2
+      background: #739d95
+  h2 a
+    i
+      margin-left: 5px
+      padding: 1px 9px
+      width: 10px
+      height: 10px
+      background: image_url('slider_double_red.png') no-repeat 0 4px
+    &:hover i
+      background: image_url('slider_double_blue.png') no-repeat 0 4px

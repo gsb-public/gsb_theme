@@ -1,0 +1,93 @@
+// see: elements-ui-patterns-drupal.html for markup
+
+// MENUS
+ul.menu
+  margin: 0
+  padding: 0
+  li
+    margin: 0
+    padding: 0
+
+ul li.leaf
+  list-style-image: none
+  list-style-type: none
+
+// SEARCH FIELD
+.views-exposed-widgets
+  margin: 0
+.views-exposed-form .views-exposed-widget
+  padding: 0
+  .form-submit
+    margin: 0
+
+// MESSAGES
+div.messages
+  border: 0 !important
+  padding: $kit-baseline-half 0.5em
+  p:last-child
+    margin-bottom: 0
+  a
+    display: block
+div.status, div.warning, div.error
+  @extend .messages
+  background-image: none
+div.status
+  color: $green
+div.warning
+  color: $orange
+div.error
+  color: $red
+
+// BLOCK
+
+// TABS
+// ul.tabs
+
+// NEW USER FORM
+.form-required
+  color: $red
+
+// NEW PASSWORD FORM
+
+// PAGERS
+ul.pager
+  +horizontal-list(0.5em)
+  a
+    +remove-link-underlines
+
+// RSS LINK
+a.feed-icon
+  +remove-link-underlines
+
+// INLINE LINKS
+ul.inline
+  +inline-list
+
+// INLINE LABELS
+div.label-inline
+  display: inline-block
+
+// TAXONOMY LIST
+.field-type-taxonomy-term-reference
+  .field-item
+    display: inline
+
+// FIELDS
+.field-label-above
+  .field-label
+    display: block
+
+// NODE PAGE
+
+// COMMENTS
+#comments
+  .comment
+    +vertical-separation
+    &:last-child
+      +un-vertical-separation
+  .indented
+    padding-left: 1em
+
+// VIEWS
+.views-row-last
+  border-bottom: 0 !important

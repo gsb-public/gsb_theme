@@ -1,0 +1,99 @@
+// custom preview (cp) block
+
+.span4 .cp-block
+  margin-bottom: 25px
+
+.cp-block
+  font-family: $font-sans
+
+.cp-body
+  word-wrap: break-word
+  font-size: 16px
+  p
+    color: #333
+    font-size: 16px
+    font-family: $font-sans
+    line-height: 18px
+
+.cp-title
+  margin: 0
+  a
+    border-bottom: 1px transparent solid
+    color: $red
+    font-weight: 400
+    font-size: 19px
+    font-family: $font-bold
+    &:hover
+      border-bottom-style: dashed
+      color: #005580
+
+.cp-date
+  margin-bottom: 11px
+  color: #666
+  span
+    display: none
+
+.cp-adress
+  display: block
+  margin-bottom: 5px
+  color: #232332
+  font-size: 13px
+  font-family: $font-bold
+
+.cp-body p:last-child
+  margin-bottom: 0
+
+.cp-image img
+  width: 100%
+
+.cp-image-large
+  display: none
+  img
+    display: none
+
+.cp-video
+  position: relative
+
+.cp-author
+  display: block
+  margin-bottom: 5px
+  color: #666
+
+.cp-taxonomy
+  display: block
+  margin-top: 8px
+  font-size: 14px
+  line-height: 18px
+  a
+    border-bottom: 1px transparent solid
+    color: $red
+    &:hover
+      border-bottom-style: dashed
+
+.no-image .cp-title
+  margin: 8px 0 5px
+  a
+    font-size: 130%
+    line-height: 1.2em
+
+// responsive stuff
+
+.span4
+  .cp-image img
+    margin: -26px 0 12px -26px
+    max-width: 150%
+    width: 266px
+  .cp-video a
+    display: block
+    margin: -26px 0 12px -26px
+    width: 266px
+    border: none
+    &:hove
+      border: none
+    img
+      max-width: 150%
+      width: 266px
+  .blue-small-border, .cp-author
+    display: none
+  .cp-title
+    margin: 5px 0

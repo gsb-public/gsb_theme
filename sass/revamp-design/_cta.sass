@@ -1,0 +1,289 @@
+// CALL TO ACTION STYLES - CTA
+
+.cta-block
+  margin-bottom: 30px
+
+a
+  &.cta-link
+    position: relative
+    display: block
+    border: none
+    border-top: 1px $white solid
+    border-bottom: 1px #eee solid
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    color: $red
+    font-size: 18px
+    font-family: $font-sans
+    line-height: 24px
+    &:hover
+      position: relative
+      display: block
+      border: none
+      border-top: 1px $white solid
+      border-bottom: 1px #eee solid
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+      color: $red
+      font-size: 18px
+      font-family: $font-sans
+      line-height: 24px
+    &:first-child
+      border-top: 0
+    i
+      position: absolute
+      top: 50%
+      right: 25px
+      display: block
+      margin-top: -7px
+      width: 13px
+      height: 15px
+      background: image_url('arrows-icons.png') no-repeat 0 -20px
+
+  &.cta-red.cta-link
+    i
+      right: 18px
+      margin-top: -14px
+      width: 26px
+      height: 27px
+      background: image_url('cta_red_icon.png') no-repeat top left
+    &:hover i
+      background: image_url('cta_red_icon_hover.png')
+  &.cta-green.cta-link
+    i
+      right: 18px
+      margin-top: -14px
+      width: 26px
+      height: 27px
+      background: image_url('cta_green_icon.png') no-repeat top left
+    &:hover i
+      background: image_url('cta_green_icon_hover.png')
+
+.cta-wrapper
+  padding: 0
+
+.cta-title
+  margin-top: -2px
+  color: $red
+  font-size: 18px
+  line-height: 24px
+
+a.cta-green
+  color: $green-light
+  &:hover, .cta-title
+    color: $green-light
+
+.cta-link
+  b
+    font-weight: 400
+    font-size: 14px
+    font-family: $font-bold
+    line-height: 1.3em
+  span
+    padding-right: 6px
+
+.cta-red .cta-title
+  display: block
+
+.cta-green .cta-title
+  padding-right: 3px
+
+.cta-block .description
+  margin-top: 8px
+
+.cta-link
+  margin-bottom: 0
+  padding: 13px 55px 13px 22px
+
+.designed-box.cta-link.cta-green
+  padding-right: 22px
+
+
+// cta gradients
+
+.separated-box
+  margin-bottom: 30px
+
+a.cta-red-gradient
+  margin-bottom: 5px
+  border: 0
+  background-color: #c50000
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+  color: $white
+  &:hover
+    margin-bottom: 5px
+    border: 0
+    background-color: #c50000
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45)
+    color: $white
+
+.item-0.cta-red-gradient
+  background-image: -moz-linear-gradient(bottom, #860000 100%, #950000 0%)
+  background-image: -ms-linear-gradient(bottom, #860000 100%, #950000 0%)
+  background-image: -o-linear-gradient(bottom, #860000 100%, #950000 0%)
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #860000), color-stop(0, #950000))
+  background-image: -webkit-linear-gradient(bottom, #860000 100%, #950000 0%)
+  background-image: linear-gradient(bottom, #860000 100%, #950000 0%)
+
+.item-1.cta-red-gradient
+  background-image: -moz-linear-gradient(bottom, #950000 100%, #b00000 0%)
+  background-image: -ms-linear-gradient(bottom, #950000 100%, #b00000 0%)
+  background-image: -o-linear-gradient(bottom, #950000 100%, #b00000 0%)
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #950000), color-stop(0, #b00000))
+  background-image: -webkit-linear-gradient(bottom, #950000 100%, #b00000 0%)
+  background-image: linear-gradient(bottom, #950000 100%, #b00000 0%)
+
+.item-2.cta-red-gradient
+  background-image: -moz-linear-gradient(bottom, #b00000 100%, #c50000 0%)
+  background-image: -ms-linear-gradient(bottom, #b00000 100%, #c50000 0%)
+  background-image: -o-linear-gradient(bottom, #b00000 100%, #c50000 0%)
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #b00000), color-stop(0, #c50000))
+  background-image: -webkit-linear-gradient(bottom, #b00000 100%, #c50000 0%)
+  background-image: linear-gradient(bottom, #b00000 100%, #c50000 0%)
+
+
+a
+  &.cta-get-directions
+    display: block
+    overflow: hidden
+    padding-bottom: 1px
+    border: 2px $white solid
+    background: image_url('cta-map.png') repeat-x top left
+    &:hover
+      display: block
+      overflow: hidden
+      padding-bottom: 1px
+      border: 2px $white solid
+      background: image_url('cta-map.png') repeat-x top left
+    .cta-body
+      padding: 13px 15px
+      background: rgba(30, 82, 109, 0.7)
+      color: $white
+      font-size: 21px
+      line-height: 1.5em
+    &:hover .cta-body
+      background: rgba(123, 130, 1, 0.8)
+  &.cta-virtual-tour
+    display: block
+    overflow: hidden
+    border: 2px $white solid
+    &:hover
+      display: block
+      overflow: hidden
+      border: 2px $white solid
+      background: image_url('cta-visit.png') repeat-x top left
+    background: image_url('cta-visit-blured.png') repeat-x top left
+    .virtual-tour-btn
+      position: relative
+      display: block
+      padding: 0 15px
+      height: 35px
+      background: $white
+      color: $red
+      font-size: 18px
+      font-family: $font-bold
+      line-height: 35px
+      i
+        position: absolute
+        top: 50%
+        right: 14px
+        margin-top: -7px
+        width: 13px
+        height: 14px
+        background: image_url('cta-visit-icon.png') no-repeat top left
+    &:hover .virtual-tour-btn
+      background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%)
+      background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%)
+      background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%)
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000))
+      background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%)
+      background-image: linear-gradient(bottom, #870000 100%, #c40000 0%)
+      color: $white
+
+.cta-rethink
+  background-image: -moz-linear-gradient(bottom, #870000 100%, #c40000 0%)
+  background-image: -ms-linear-gradient(bottom, #870000 100%, #c40000 0%)
+  background-image: -o-linear-gradient(bottom, #870000 100%, #c40000 0%)
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #870000), color-stop(0, #c40000))
+  background-image: -webkit-linear-gradient(bottom, #870000 100%, #c40000 0%)
+  background-image: linear-gradient(bottom, #870000 100%, #c40000 0%)
+  color: $white
+
+a
+  &.cta-virtual-tour
+    &:hover .virtual-tour-btn i
+      background: image_url('cta-visit-icon-hover.png') no-repeat top left
+    .virtual-tour-cover
+      display: block
+      height: 120px
+      border: 1px $white solid
+      background: image_url('cta-visit.png') no-repeat -27px -62px
+    &:hover .virtual-tour-cover
+      border: 1px transparent solid
+      background: none
+  &.cta-rethink
+    display: block
+    overflow: hidden
+    color: $white
+    border: 2px $white solid
+    &:hover
+      border: 2px $white solid
+
+.cta-rethink
+  .cta-title
+    margin: 0
+    color: $white
+    font-size: 40px
+    line-height: 1em
+  a.cta-title:hover
+    color: $white
+  .cta-description
+    margin: 8px 0 0
+    color: $white
+    font-size: 20px
+    line-height: 1.5em
+    b
+      font-weight: 400
+      font-family: $font-bold
+
+.cta-follow-us
+  position: relative
+  padding-top: 75px
+  height: 35px
+  background: image_url('cta-follow-us-bg.png') repeat-x top left
+  a
+    border: none
+    color: $white
+    &:hover
+      border: none
+      color: $white
+  .cta-title
+    position: absolute
+    top: 2px
+    left: 0
+    display: block
+    padding: 0 26px
+    width: 81%
+    height: 49px
+    background: image_url('cta-follow-us-title-bg.png') repeat-x top left
+    color: $white
+    font-family: $font-bold
+    line-height: 49px
+    i
+      position: absolute
+      top: 50%
+      right: 143px
+      margin-top: -7px
+      width: 14px
+      height: 15px
+      background: image_url('arrows-icons.png') no-repeat 0 -20px
+  .circle
+    margin-left: 17px
+  .social-block-twitter
+    margin-left: 0

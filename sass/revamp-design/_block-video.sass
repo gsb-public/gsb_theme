@@ -1,0 +1,65 @@
+// video block
+
+.gsb-video .designed-box > p:last-child
+  margin-bottom: 0
+
+a.video-title
+  border: none
+  &:hover
+    border: none
+
+.gsb-video
+  h4
+    margin: 0 0 6px
+    font-weight: 400
+    font-family: $font-bold
+  p
+    color: #444
+    font-size: 14px
+
+a.video-btn
+  display: block
+  padding-left: 14px
+  height: 29px
+  border: 0
+  background: #739d95
+  color: $white
+  font-family: $font-bold
+  line-height: 33px
+  &:hover
+    border: none
+    color: $white
+
+.field-name-field-gsb-video-media, .field-name-field-gsb-spotlight-media
+  position: relative
+
+.video-play-icon
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -30px
+  margin-left: -30px
+  width: 60px
+  height: 60px
+  background: image_url('video_play.png') no-repeat top left
+  cursor: pointer
+
+// responsive stuff
+
+.span12 a.video-btn
+  max-width: 205px
+
+.span4 .gsb-video .gsb-video-image
+  margin: -26px 0 15px -26px
+  width: 271px
+  img
+    display: block
+    width: 271px
+
+.span8 .media-youtube-outer-wrapper
+  margin: -26px 0 15px -26px
+  width: 568px !important
+  height: auto !important
+
+.span4 .media-youtube-outer-wrapper, .span8 .gsb-video .gsb-video-image
+  display: none
