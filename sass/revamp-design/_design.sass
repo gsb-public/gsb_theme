@@ -6,10 +6,10 @@
 
 #header-wrapper
   border-top: 10px $red solid
-
   #header
     margin: 0 auto
     max-width: $max-width
+
 #main-wrapper
   +box-shadow( -1px 0 5px inset)
   background: $white
@@ -69,10 +69,7 @@ a.no-border
 .pane-gsb-event-sidebar
   margin-bottom: 30px
   padding: 26px
-  border: 2px solid $white
-  background-color: $grey-c
-  +background(linear-gradient(bottom, #ededed 25%, #fbfaf8 63%))
-  +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
+  @extend %designed-box
 
 a.green-rounded-button
   float: left
@@ -82,7 +79,6 @@ a.green-rounded-button
   +border-radius(20px)
   background: #6c7200
   +background(linear-gradient(bottom, #6c7200, $green-light))
-
   color: $white
   font-size: 16px
   font-family: $font-bold
