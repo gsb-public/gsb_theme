@@ -25,64 +25,30 @@
   border: 2px $white solid
   background: $white
 
-// responsive part
 
-.span12 .field-type-gsb-slideshow
-  .field-item img
-    float: left
-    width: 623px
-    height: auto
-  .panopoly-spotlight-wrapper
-    float: left
-    margin-left: -124px
-    padding: 0 25px 57px
-    width: 315px
-    height: 308px
-    background: image_url('slider_style1.png') repeat-y top right
-    background: #cce0dc
-    background: rgba(177, 209, 202, 0.5)
-    &.style-2
-      background: image_url('slider_style2.png') repeat-y top right
-  height: 365px
 
-.span8
-  .field-type-gsb-slideshow .panopoly-spotlight-wrapper
-    margin-top: 138px
-    margin-left: -565px
-    padding: 0 25px 57px
-    width: 515px
-    height: 170px
+.field-type-gsb-slideshow .panopoly-spotlight-wrapper
+  margin-top: 138px
+  margin-left: -565px
+  padding: 0 25px 57px
+  width: 515px
+  height: 170px
+  background-color: #b1d1ca
+  background-color: rgba(177, 209, 202, 0.5)
+.panopoly-spotlight-info
+  bottom: 47px
+  width: 91%
+  a.slider-btn
+    width: 50%
+.field-type-gsb-slideshow
+  overflow: hidden
+  height: 350px
+  .panopoly-spotlight-wrapper.style-2
     background-color: #b1d1ca
-    background-color: rgba(177, 209, 202, 0.5)
-  .panopoly-spotlight-info
-    bottom: 47px
-    width: 91%
-    a.slider-btn
-      width: 50%
-  .field-type-gsb-slideshow
-    overflow: hidden
-    height: 350px
-    .panopoly-spotlight-wrapper.style-2
-      background-color: #b1d1ca
-      background-color: rgba(177, 209, 202, 0.7)
-    .field-item img
-      width: 100%
-      height: auto
-
-.span4
-  .field-type-gsb-slideshow
-    .field-item img
-      width: auto
-      height: auto
-    .panopoly-spotlight-wrapper
-      display: none
-  .slider-navigation li a
-    -webkit-box-shadow: none
-    -moz-box-shadow: none
-    box-shadow: none
-    -ms-box-shadow: none
-  .field-type-gsb-slideshow
-    height: 216px
+    background-color: rgba(177, 209, 202, 0.7)
+  .field-item img
+    width: 100%
+    height: auto
 
 // slider navigation
 
