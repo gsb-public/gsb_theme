@@ -4,13 +4,12 @@
     +hidden-text
 
 #main-menu
-  position: relative
-  top: -10px
+  display: block
   li
     float: left
     margin: 0
     padding: 0
-    max-width: 120px
+    max-width: 122px
     border-right: 1px solid red
     background-color: $red
     +background(linear-gradient(bottom, red, $red))
@@ -28,6 +27,7 @@
       background: image_url("navigation-arrow.png") no-repeat 100px 60px
       color: $white
       line-height: 18px
+      font-weight: 600
 
 // @TODO resolve this link item
 // Event menu link

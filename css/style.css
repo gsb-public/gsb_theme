@@ -344,7 +344,7 @@ table {
   font-family: "NewsGothicBT";
   src: url('../fonts/236F40_2_0.eot');
   src: url('../fonts/236F40_2_0.eot?#iefix') format('eot'), url('../fonts/236F40_2_0.woff') format('woff'), url('../fonts/236F40_2_0.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -352,7 +352,23 @@ table {
   font-family: "NewsGothicBT";
   src: url('../fonts/236F40_3_0.eot');
   src: url('../fonts/236F40_3_0.eot?#iefix') format('eot'), url('../fonts/236F40_3_0.woff') format('woff'), url('../fonts/236F40_3_0.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "NewsGothicBT";
+  src: url('../fonts/236F40_C_0.eot');
+  src: url('../fonts/236F40_C_0.eot?#iefix') format('eot'), url('../fonts/236F40_C_0.woff') format('woff'), url('../fonts/236F40_C_0.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NewsGothicBT";
+  src: url('../fonts/236F40_D_0.eot');
+  src: url('../fonts/236F40_D_0.eot?#iefix') format('eot'), url('../fonts/236F40_D_0.woff') format('woff'), url('../fonts/236F40_D_0.ttf') format('truetype');
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -417,22 +433,6 @@ table {
   src: url('../fonts/236F40_B_0.eot');
   src: url('../fonts/236F40_B_0.eot?#iefix') format('eot'), url('../fonts/236F40_B_0.woff') format('woff'), url('../fonts/236F40_B_0.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NewsGothicBT-Demi";
-  src: url('../fonts/236F40_C_0.eot');
-  src: url('../fonts/236F40_C_0.eot?#iefix') format('eot'), url('../fonts/236F40_C_0.woff') format('woff'), url('../fonts/236F40_C_0.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NewsGothicBT-DemiItalic";
-  src: url('../fonts/236F40_D_0.eot');
-  src: url('../fonts/236F40_D_0.eot?#iefix') format('eot'), url('../fonts/236F40_D_0.woff') format('woff'), url('../fonts/236F40_D_0.ttf') format('truetype');
-  font-weight: italic;
   font-style: normal;
 }
 
@@ -1003,6 +1003,71 @@ del {
   margin-left: 79.91453%;
 }
 
+#block-gsb-public-custom-blocks-gpcb-follow-us {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 21.17647%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 0;
+  margin-left: 0%;
+}
+
+#block-menu-menu-footer-1 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 21.17647%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 26.27451%;
+}
+
+#block-menu-menu-footer-2 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 21.17647%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 52.54902%;
+}
+
+#block-gsb-public-custom-blocks-gpcb-enews-signup {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 21.17647%;
+  float: right;
+  margin-right: 0;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 78.82353%;
+}
+
 .offscreenText {
   text-indent: 110%;
   white-space: nowrap;
@@ -1277,8 +1342,9 @@ div.label-inline {
 }
 
 #navigation {
-  display: inline-block;
   float: right;
+  position: relative;
+  top: -10px;
 }
 
 #logo {
@@ -1372,14 +1438,13 @@ h1.title {
 }
 
 #main-menu {
-  position: relative;
-  top: -10px;
+  display: block;
 }
 #main-menu li {
   float: left;
   margin: 0;
   padding: 0;
-  max-width: 120px;
+  max-width: 122px;
   border-right: 1px solid red;
   background-color: #990000;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ff0000), color-stop(100%, #990000));
@@ -1403,6 +1468,7 @@ h1.title {
   background: url('../images/navigation-arrow.png') no-repeat 100px 60px;
   color: white;
   line-height: 18px;
+  font-weight: 600;
 }
 
 .event-and-search {
@@ -1503,7 +1569,8 @@ h1.title {
   float: left;
   width: 40px;
   height: 41px;
-  background: url('../images/social-icons.png') no-repeat;
+  background-image: url('../images/social-icons.png');
+  background-repeat: no-repeat;
   text-indent: -10000px;
 }
 
@@ -1521,6 +1588,145 @@ h1.title {
 
 .social-block-linkedin {
   background-position: -83px 0;
+}
+
+.footer-social .cta-follow-us {
+  background: none;
+  padding-left: 0;
+  padding-top: 50px;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  box-shadow: none;
+  width: 270px;
+}
+.footer-social .cta-follow-us .cta-title {
+  background: none;
+  color: #990000;
+  padding: 0;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px #cccccc solid;
+  font-size: 19px;
+}
+.footer-social .cta-follow-us .cta-title i {
+  right: 135px;
+  margin-top: -12px;
+  background-image: url("../images/cta-visit-icon.png");
+  background-position: 0 2px;
+}
+
+.footer-links {
+  margin-left: 30px;
+  width: 600px;
+  margin-bottom: 10px;
+}
+.footer-links .menu {
+  float: left;
+  width: 200px;
+  padding-right: 100px;
+  margin: 0;
+  padding-top: 5px;
+}
+.footer-links .menu li {
+  list-style: none;
+  list-style-type: none;
+  line-height: 1.3em;
+  color: #990000;
+  margin-bottom: 8px;
+  margin-left: 0;
+  padding-left: 0;
+}
+.footer-links .menu li a {
+  color: #990000;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-family: NewsGothicBT-Demi, sans-serif;
+}
+
+.footer-newsletter,
+.footer__signup {
+  width: 205px;
+}
+
+.footer__signup {
+  padding-top: 5px;
+}
+
+.footer__signup__label {
+  color: #990000;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.footer__signup__description {
+  font-size: 15px;
+  width: 185px;
+  margin-bottom: 0.9em;
+}
+
+input.footer__signup__email {
+  border: 1px #cccccc solid;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  line-height: 1em;
+  padding: 8px 14px;
+  width: 130px;
+  float: left;
+}
+input.footer__signup__email:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px #990000 solid;
+}
+
+input.footer__signup__submit,
+input.footer__signup__submit:hover {
+  margin: 0;
+  margin-left: -1px;
+  float: left;
+  width: 41px;
+  text-align: center;
+  line-height: 38px;
+  height: 38px;
+  background: #990000;
+  color: white;
+  border: none;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
+  -ms-border-radius: 0 20px 20px 0;
+  -o-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.region-footer-copyrights .menu {
+  float: left;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+.region-footer-copyrights .menu li {
+  list-style: none;
+  list-style-type: none;
+  color: #990000;
+  margin-right: 40px;
+  float: left;
+}
+.region-footer-copyrights .menu li a {
+  color: #990000;
 }
 
 .gsb-video .designed-box > p:last-child {
@@ -3076,6 +3282,59 @@ a.cta-rethink:hover {
 }
 .cta-follow-us .social-block-twitter {
   margin-left: 0;
+}
+
+.image-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-cta__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.image-cta__image img {
+  width: 100%;
+  height: auto;
+}
+
+.image-cta__title,
+.image-cta__summary {
+  z-index: 15;
+  position: relative;
+  padding: 0 30px;
+}
+.image-cta__title a,
+.image-cta__title a:hover,
+.image-cta__summary a,
+.image-cta__summary a:hover {
+  border: none;
+  color: white;
+}
+
+.image-cta__title {
+  padding-top: 25px;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.image-cta__summary {
+  font-family: NewsGothicBT-Bold, sans-serif;
+  font-size: 27px;
+  line-height: 1.25em;
+}
+.image-cta__summary i {
+  background: url('../images/arrows-icons.png') no-repeat 1px -102px;
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  margin-left: 4px;
+  position: relative;
+  top: 2px;
 }
 
 .front-slider-pane .field-type-gsb-slideshow {
