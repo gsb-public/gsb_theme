@@ -157,3 +157,39 @@
       background: image_url('slider_double_red.png') no-repeat 0 4px
     &:hover i
       background: image_url('slider_double_blue.png') no-repeat 0 4px
+
+// Spotlight FPP styling
+.pane-bundle-gsb-spotlight .view-mode-full
+  @extend %border-and-box-shadow
+  padding: 0 26px
+
+  // Box Label
+  .field-name-field-gsb-spotlight-person-type
+    border-top: 10px solid $red
+    color: $grey-6
+    display: inline-block
+    font-size: 14px
+    margin-bottom: 18px
+
+  // Name
+  .group-wrapper-name
+    +clearfix
+  .field-name-field-first-name,
+  .field-name-field-last-name,
+  .field-name-field-title-position
+    font-size: 20px
+    line-height: 26px
+  .field-name-field-first-name,
+  .field-name-field-last-name
+    color: $red
+    display: inline-block
+    font-family: $font-demi
+  .field-name-field-first-name
+    float: left
+    margin-right: 6px
+  .field-name-field-title-position
+    color: $grey-2
+    margin-bottom: 12px
+  .field-name-field-gsb-spotlight-body
+    font-size: 14px
+    line-height: 18px
