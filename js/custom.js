@@ -1,33 +1,47 @@
 (function ($) {
 
+  /**
+   * Functionallity for Spotlight block show more/less link
+   */
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
+      // Check if spotlight exists.
       if ($('.spotlight').length>0) {
         var spotlightShowMore = $('.spotlight a.show-more'),
+            // Define visible lines.
             visibleLines = 4,
             visibleHeight = visibleLines * parseInt(spotlightShowMore.siblings('.spotlight-story').children('p').css('line-height'));
+        // Add behavior for every .show-more link.
         spotlightShowMore.each(function() {
           var visHeight = visibleHeight,
             $this = $(this);
+          // Add once behavior.
           if ( !$this.hasClass('showmore-processed') ) {
             $this.addClass('showmore-processed');
             var spotlightStory = $this.siblings('.spotlight-story'),
                 storyContent = spotlightStory.children('p').height();
-
-             if ( spotlightStory.position().top > 285 && spotlightStory.children('p').height() > 57 && spotlightStory.parents('.span4').length == 0 ) { // >276 means description is lower 
-               spotlightStory.css('max-height', 35); // set height to 2 lines
-               visHeight = parseInt(visHeight / visibleLines * visibleLines/2);
+            // Check for description position in spotlight container.
+            if ( spotlightStory.position().top > 285 && spotlightStory.children('p').height() > 57 && spotlightStory.parents('.span4').length == 0 ) { // >276 means description is lower 
+              // Set height fo description to 2 lines.
+              spotlightStory.css('max-height', 35); 
+              visHeight = parseInt(visHeight / visibleLines * visibleLines/2);
              }
+            // Remove .show-more if the description is
+            // less than defined max height.
             if ( storyContent <= visHeight ) {
               $this.remove();
             } else {
               $this.click(function() {
                 var $this = $(this);
                 if ( !$this.hasClass('active') ) {
+                  // Change link text.
                   $this.html('<span>Show Less</span>');
+                  // Expand description to its real height
                   spotlightStory.animate({'max-height' : storyContent}, 350);
                 } else {
+                  // Change link text.
                   $this.html('<span>Show More</span>');
+                  // Collapse description to defined max height
                   spotlightStory.animate({'max-height' : visHeight}, 300);
                 }
                 $this.toggleClass('active');
@@ -39,7 +53,11 @@
     }
   }
 
-  Drupal.behaviors.button_behavior = {
+  /**
+   * Make a click on the video image,
+   * when clicking the video icon.
+   */
+  Drupal.behaviors.video_button_behavior = {
     attach: function (context, settings) {
       $('.video-play-icon').click(function () {
         $(this).prev().click();
@@ -47,17 +65,20 @@
     }
   }
 
+  /**
+   * Add accordion functionality for both
+   * fieldable panel pane and WYSIWYG.
+   */
   Drupal.behaviors.accordion = {
     attach: function (context, settings) {
-
-      // Define accordion title
+      // Define accordion title.
       var acctitle = $('.acc-title');
       if ( acctitle.length > 0 ) {
         acctitle.each(function () {
           var $this = $(this);
           if (!$this.hasClass('header-processed')) {
             $this.addClass('header-processed');
-            // find body container next to accordion title
+            // Find body container next to accordion title.
             var next = $this.next('.acc-body');
             // If there are more than 1 body alement after title 
             // wrap them all into accordion-body-wrap class
@@ -98,10 +119,10 @@
       }
 
       /**
-      * A recursive function that checks elements next neighbour,
-      * and if it has className or ClassName2 from arguments,
-      * insert the it after checked element and repeat function.
-      */
+       * A recursive function that checks elements next neighbour,
+       * and if it has className or ClassName2 from arguments,
+       * insert the it after checked element and repeat function.
+       */
       function touchNeighbour(e, className, className2) {
         var next = e.parent().next();     
         if ( next.hasClass(className) || next.hasClass(className2) ) {
@@ -114,7 +135,9 @@
     }
   }
 
-  // Use uniform.js to style checkboxes for club filters
+  /**
+   * Use uniform.js to style checkboxes for club filters
+   */
   Drupal.behaviors.theme_checkboxes = {
     attach: function (context, settings) {
       if ($('.clubs-filter-exposed').length > 0) {
@@ -123,7 +146,9 @@
     }
   }
 
-  // Club search placeholder fallback
+  /** 
+   * Club search placeholder fallback
+   */
   Drupal.behaviors.search_autocomplete = {
     attach: function (context, settings) {
       if ($('.views-widget-filter-search_api_views_fulltext').length > 0) {
@@ -154,10 +179,10 @@
   }
   
   /**
-  * Check for social field fpp, if it exists, check the sourse.
-  * If the source is twitter, grab the values from fields and
-  * transmit them to gsb_tweetfeed function.
-  */
+   * Check for social field fpp, if it exists, check the sourse.
+   * If the source is twitter, grab the values from fields and
+   * transmit them to gsb_tweetfeed function.
+   */
   Drupal.behaviors.social_feed = {
     attach: function (context, settings) {
       if ($('.pane-bundle-social-feed').length > 0 && !$('.pane-bundle-social-feed').hasClass('processed')) {
@@ -172,7 +197,7 @@
             .append('<div clas="twitter-feed"/></div>');
           // Add background only if tweets qty less than 3.
           if (_length < 3) { socialWrapper.addClass('bg'); }
-          // Initialize twitterfeed.js function
+          // Initialize twitterfeed.js function.
           gsb_tweetfeed.init({
             search: _search,
             numTweets: _length,
