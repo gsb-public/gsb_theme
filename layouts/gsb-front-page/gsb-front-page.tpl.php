@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-front-page clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display gsb-front-page clearfix <?php if (!empty($class)) { print $class; } ?>">
   <div class="front-panel-header-row">
     <div class="front-slider-pane">
       <?php print $content['contentslider']; ?>
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="front-panel-feature-row">
-    <div class="front-feature-one">
+    <div class="front-panel-feature-one">
       <?php print $content['featuredcolone']; ?>
     </div>
     <div class="front-panel-feature-two">
@@ -30,7 +30,7 @@
       <?php print $content['featuredcolthree']; ?>
     </div>
   </div>
-  <div class="front-panel-footer-two">
+  <div class="front-panel-footer-row">
     <div class="front-panel-footer-one">
       <?php print $content['footercolone']; ?>
     </div>
