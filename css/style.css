@@ -1138,6 +1138,33 @@ del {
   float: right;
 }
 
+.panel-display.gsb-business-insights .gsb-bizin-header,
+.panel-display.gsb-business-insights .gsb-bizin-quote,
+.panel-display.gsb-business-insights .gsb-bizin-3col {
+  max-width: 870px;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col {
+  *zoom: 1;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col .column {
+  width: 30%;
+  max-width: 270px;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col .column.first {
+  float: left;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col .column.second {
+  margin: 0 auto;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col .column.third {
+  float: right;
+}
+
 .offscreenText {
   text-indent: 110%;
   white-space: nowrap;
@@ -3634,4 +3661,13 @@ a.cta-rethink:hover {
 }
 .node-gsb-event.view-mode-full .group-footer .field-name-field-body p {
   line-height: 28px;
+}
+
+.panel-display.gsb-business-insights h2.pane-title {
+  color: #990000;
+  padding: 25px;
+}
+
+.node-teaser {
+  padding: 25px;
 }

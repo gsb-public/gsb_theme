@@ -20,13 +20,13 @@
       </div>
 
       <div class="gsb-bizin-3col">
-        <div>
+        <div class="column first">
           <?php print $content['contenttwoone']; ?>
         </div>
-        <div>
+        <div class="column second">
           <?php print $content['contenttwotwo']; ?>
         </div>
-        <div>
+        <div class="column third">
           <?php print $content['contenttwothree']; ?>
         </div>
       </div>
@@ -36,13 +36,13 @@
       </div>
 
       <div class="gsb-bizin-3col">
-        <div>
+        <div class="column first">
           <?php print $content['contentfourone']; ?>
         </div>
-        <div>
+        <div class="column second">
           <?php print $content['contentfourtwo']; ?>
         </div>
-        <div>
+        <div class="column third">
           <?php print $content['contentfourthree']; ?>
         </div>
       </div>
