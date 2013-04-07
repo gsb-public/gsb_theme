@@ -1,0 +1,10 @@
+// CSS to handle the Preview and Video switching
+.field-type-file
+  .file-video--default
+    display: none
+    +breakpoint($bp-video)
+      display: block
+  .file-video--preview
+    +breakpoint($bp-video)
+      display: none
+
