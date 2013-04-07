@@ -10,37 +10,45 @@
  */
 ?>
 
-<div class="panel-display gsb-landing-page-one clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display gsb-landing-page-one <?php if (!empty($class)) { print $class; } ?>">
 
-          <div id="main-upper">
-            <?php print $content['contentheader']; ?>
-          </div>
+  <div class="full-header">
+    <?php print $content['fullheader']; ?>
+  </div>
 
-          <div id="content-below-wrapper">
-              <div id="content-upper-main">
-                <?php print $content['contentuppermain']; ?>
-              </div>
-              <div id="content-upper-sidebar">
-                <?php print $content['contentuppersidebar']; ?>
-              </div>
-              <div id="content-middle-left" class="">
-                <div id="content-upper-middle-column1">
-                  <?php print $content['contentmiddlecolumn1']; ?>
-                </div>
-                <div id="content-upper-middle-column2">
-                  <?php print $content['contentmiddlecolumn2']; ?>
-                </div>
+  <div class="content-wrapper">
 
-                <div id="content-upper-middle-sidebar">
-                  <?php print $content['contentmiddlesidebar']; ?>
-                </div>
-              </div>
+    <div class="main-wrapper">
 
-          </div>
+      <div class="main-header">
+        <?php print $content['maintop']; ?>
+      </div>
 
-          <div id="content-lower">
-            <?php print $content['contentlowerfooter']; ?>
+      <div class="main-middle">
+        <div class="column-first">
+          <?php print $content['mainmiddlefirst']; ?>
+        </div>
 
-          </div>
+        <div class="column-second">
+          <?php print $content['mainmiddlesecond']; ?>
+        </div>
+      </div><!-- /.main-middle -->
+
+      <div class="main-footer">
+        <?php print $content['mainbottom']; ?>
+      </div>
+
+    </div><!-- /.main-wrapper -->
+
+    <div class="sidebar-wrapper">
+      <div id="quicklinks">
+        <?php print $content['quicklinks']; ?>
+      </div>
+      <div class="sidebar-inner">
+        <?php print $content['sidebar']; ?>
+      </div>
+    </div><!-- /.sidebar-wrapper -->
+
+  </div><!-- /.content-wrapper -->
 
 </div><!-- /.gsb-landing-page-one -->
