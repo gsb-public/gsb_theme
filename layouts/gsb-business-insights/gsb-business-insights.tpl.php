@@ -10,44 +10,52 @@
  */
 ?>
 
-<div class="panel-display gsb-business-insights clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-          <div class="gsb-bizin-wrapper">
-              <div class="gsb-bizin-content">
-                <div class="gsb-bizin-header">
-                  <?php print $content['contentoneone']; ?>
-                </div>
-                <div>
-                  <div>
-                    <?php print $content['contenttwoone']; ?>
-                  </div>
-                  <div>
-                    <?php print $content['contenttwotwo']; ?>
-                  </div>
-                  <div>
-                    <?php print $content['contenttwothree']; ?>
-                  </div>
-                </div>
-                <div class="gsb-bizin-quote">
-                  <?php print $content['contentthreeone']; ?>
-                </div>
-                <div>
-                  <div>
-                    <?php print $content['contentfourone']; ?>
-                  </div>
-                  <div>
-                    <?php print $content['contentfourtwo']; ?>
-                  </div>
-                  <div>
-                    <?php print $content['contentfourthree']; ?>
-                  </div>
-                </div>
-                <div class="gsb-bizin-footer">
-                  <?php print $content['contentfiveone']; ?>
-                </div>
-              </div>
-              <div  class="gsb-bizin-sidebar">
-                <?php print $content['contentrightone']; ?>
-              </div>
-          </div>
+<div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>">
+  <div class="gsb-bizin-wrapper">
+
+    <div class="gsb-bizin-content">
+
+      <div class="gsb-bizin-header">
+        <?php print $content['contentoneone']; ?>
+      </div>
+
+      <div class="gsb-bizin-3col">
+        <div>
+          <?php print $content['contenttwoone']; ?>
+        </div>
+        <div>
+          <?php print $content['contenttwotwo']; ?>
+        </div>
+        <div>
+          <?php print $content['contenttwothree']; ?>
+        </div>
+      </div>
+
+      <div class="gsb-bizin-quote">
+        <?php print $content['contentthreeone']; ?>
+      </div>
+
+      <div class="gsb-bizin-3col">
+        <div>
+          <?php print $content['contentfourone']; ?>
+        </div>
+        <div>
+          <?php print $content['contentfourtwo']; ?>
+        </div>
+        <div>
+          <?php print $content['contentfourthree']; ?>
+        </div>
+      </div>
+
+      <div class="gsb-bizin-footer">
+        <?php print $content['contentfiveone']; ?>
+      </div>
+
+    </div><!-- /.gsb-business-content -->
+
+    <div class="gsb-bizin-sidebar">
+      <?php print $content['contentrightone']; ?>
+    </div><!-- /.gsb-bizin-sidebar -->
+  </div>
 
 </div><!-- /.gsb-business-insights -->
