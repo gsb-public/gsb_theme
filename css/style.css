@@ -3062,10 +3062,6 @@ a.mm-featured-title {
   font-weight: bold;
 }
 
-.pane-bundle-gsb-image-cta-fpp h2.pane-title {
-  display: none;
-}
-
 .field-name-field-image-cta-link a {
   position: relative;
   display: block;
@@ -3111,6 +3107,9 @@ a.mm-featured-title {
 .cta-wrapper {
   padding: 0;
 }
+.cta-wrapper a {
+  display: block;
+}
 
 .cta-title {
   margin-top: -2px;
@@ -3125,9 +3124,11 @@ a.cta-green .cta-title {
   color: #bac405;
 }
 
+.cta-link {
+  margin-bottom: 0;
+  padding: 13px 55px 13px 22px;
+}
 .cta-link b {
-  font-size: 14px;
-  font-weight: bold;
   line-height: 1.3em;
 }
 .cta-link span {
@@ -3146,13 +3147,12 @@ a.cta-green .cta-title {
   margin-top: 8px;
 }
 
-.cta-link {
-  margin-bottom: 0;
-  padding: 13px 55px 13px 22px;
-}
-
 .designed-box.cta-link.cta-green {
   padding-right: 22px;
+}
+
+.cta-red {
+  color: #990000;
 }
 
 .separated-box {
@@ -3168,6 +3168,7 @@ a.cta-red-gradient:hover {
   -moz-box-shadow: black, 0.45, 1px 1px 1px;
   box-shadow: black, 0.45, 1px 1px 1px;
   color: white;
+  font-weight: bold;
 }
 
 .item-0.cta-red-gradient {

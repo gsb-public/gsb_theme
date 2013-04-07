@@ -1,8 +1,5 @@
 // CALL TO ACTION STYLES - CTA
 
-.pane-bundle-gsb-image-cta-fpp
-  h2.pane-title
-    display: none
 
 .field-name-field-image-cta-link a
   position: relative
@@ -47,6 +44,8 @@
 
 .cta-wrapper
   padding: 0
+  a
+    display: block
 
 .cta-title
   margin-top: -2px
@@ -60,9 +59,9 @@ a.cta-green .cta-title
   color: $green-light
 
 .cta-link
+  margin-bottom: 0
+  padding: 13px 55px 13px 22px
   b
-    font-size: 14px
-    font-weight: bold
     line-height: 1.3em
   span
     padding-right: 6px
@@ -76,13 +75,11 @@ a.cta-green .cta-title
 .cta-block .description
   margin-top: 8px
 
-.cta-link
-  margin-bottom: 0
-  padding: 13px 55px 13px 22px
-
 .designed-box.cta-link.cta-green
   padding-right: 22px
 
+.cta-red
+  color: $red
 
 // cta gradients
 
@@ -96,6 +93,7 @@ a.cta-red-gradient:hover
   background-color: $red
   +box-shadow($black, 0.45, 1px 1px 1px)
   color: $white
+  font-weight: bold
 
 
 .item-0.cta-red-gradient
