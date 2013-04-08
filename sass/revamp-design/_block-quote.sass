@@ -1,0 +1,52 @@
+/* quote */
+
+.pane-bundle-quote
+  margin-bottom: 20px 
+  padding-left: 35px
+  .field-name-field-body 
+    font-weight: bold
+    font-size: 35px
+    line-height: 1.2em
+    margin: 0
+    position: relative
+    display: inline
+    &:before
+      content: '“'
+      font-size: 58px
+      position: absolute
+      left: -30px
+      top: 13px
+      display: block
+      color: #000
+      font-weight: bold
+    &:after
+      content: '”'
+      font-size: 38px
+      color: #000
+      display: inline
+      font-weight: bold
+  .field-name-field-link-single
+    display: inline
+    a
+      display: inline-block
+      overflow: hidden
+      text-indent: 1000px
+      width: 18px
+      background: image_url('arrows-icons.png') no-repeat 0 -100px
+      height: 21px
+      position: relative
+      top: -6px
+      margin-left: 6px
+  .group_author
+    font-size: 18px
+    .field-name-field-quote-author-name-title
+      display: inline
+      &:before
+        content: "—"
+      & + .field-name-field-quote-link-company:before
+        content: " of "
+    .field-name-field-quote-link-company
+      display: inline
+      a
+        color: $green-light
+

@@ -1,6 +1,6 @@
 // video block
 
-.gsb-video .designed-box > p:last-child
+.pane-bundle-video .cp-content > p:last-child
   margin-bottom: 0
 
 a.video-title
@@ -8,7 +8,7 @@ a.video-title
   &:hover
     border: none
 
-.gsb-video
+.pane-bundle-video
   h4
     margin: 0 0 6px
     font-weight: bold
@@ -16,20 +16,7 @@ a.video-title
     color: #444
     font-size: 14px
 
-a.video-btn
-  display: block
-  padding-left: 14px
-  height: 29px
-  border: 0
-  background: #739d95
-  color: $white
-  font-weight: bold
-  line-height: 33px
-  &:hover
-    border: none
-    color: $white
-
-.field-name-field-gsb-video-media, .field-name-field-gsb-spotlight-media
+.video-image, .field-name-field-gsb-spotlight-media
   position: relative
 
 .video-play-icon
@@ -42,3 +29,11 @@ a.video-btn
   height: 60px
   background: image_url('video_play.png') no-repeat top left
   cursor: pointer
+
+.main-wrapper .video-image .fancybox,
+.sidebar-wrapper .video-image > div
+  display: none
+  img
+    width: 100%
+    height: auto
+

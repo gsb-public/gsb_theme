@@ -28,7 +28,7 @@ pre, code, kbd, tt {
   box-shadow: #ababab 0 2px 4px;
 }
 
-.designed-box,
+.shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
 .pane-gsb-event-sidebar, .pane-bundle-gsb-spotlight .view-mode-full {
@@ -1474,6 +1474,14 @@ a.no-border:hover {
   border: 0;
 }
 
+.shadowed-box {
+  margin-bottom: 30px;
+  padding: 1px;
+}
+.shadowed-box .cp-content {
+  padding: 24px;
+}
+
 .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
@@ -1823,7 +1831,7 @@ input.footer__signup__submit:hover {
   color: #990000;
 }
 
-.gsb-video .designed-box > p:last-child {
+.pane-bundle-video .cp-content > p:last-child {
   margin-bottom: 0;
 }
 
@@ -1834,31 +1842,16 @@ a.video-title:hover {
   border: none;
 }
 
-.gsb-video h4 {
+.pane-bundle-video h4 {
   margin: 0 0 6px;
   font-weight: bold;
 }
-.gsb-video p {
+.pane-bundle-video p {
   color: #444444;
   font-size: 14px;
 }
 
-a.video-btn {
-  display: block;
-  padding-left: 14px;
-  height: 29px;
-  border: 0;
-  background: #739d95;
-  color: white;
-  font-weight: bold;
-  line-height: 33px;
-}
-a.video-btn:hover {
-  border: none;
-  color: white;
-}
-
-.field-name-field-gsb-video-media, .field-name-field-gsb-spotlight-media {
+.video-image, .field-name-field-gsb-spotlight-media {
   position: relative;
 }
 
@@ -1872,6 +1865,16 @@ a.video-btn:hover {
   height: 60px;
   background: url('../images/video_play.png') no-repeat top left;
   cursor: pointer;
+}
+
+.main-wrapper .video-image .fancybox,
+.sidebar-wrapper .video-image > div {
+  display: none;
+}
+.main-wrapper .video-image .fancybox img,
+.sidebar-wrapper .video-image > div img {
+  width: 100%;
+  height: auto;
 }
 
 .cp-body {
@@ -2186,6 +2189,69 @@ a.video-btn:hover {
 
 .slider-sharpy {
   display: none;
+}
+
+/* quote */
+.pane-bundle-quote {
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+.pane-bundle-quote .field-name-field-body {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 1.2em;
+  margin: 0;
+  position: relative;
+  display: inline;
+}
+.pane-bundle-quote .field-name-field-body:before {
+  content: "“";
+  font-size: 58px;
+  position: absolute;
+  left: -30px;
+  top: 13px;
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+.pane-bundle-quote .field-name-field-body:after {
+  content: "”";
+  font-size: 38px;
+  color: black;
+  display: inline;
+  font-weight: bold;
+}
+.pane-bundle-quote .field-name-field-link-single {
+  display: inline;
+}
+.pane-bundle-quote .field-name-field-link-single a {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 1000px;
+  width: 18px;
+  background: url('../images/arrows-icons.png') no-repeat 0 -100px;
+  height: 21px;
+  position: relative;
+  top: -6px;
+  margin-left: 6px;
+}
+.pane-bundle-quote .group_author {
+  font-size: 18px;
+}
+.pane-bundle-quote .group_author .field-name-field-quote-author-name-title {
+  display: inline;
+}
+.pane-bundle-quote .group_author .field-name-field-quote-author-name-title:before {
+  content: "—";
+}
+.pane-bundle-quote .group_author .field-name-field-quote-author-name-title + .field-name-field-quote-link-company:before {
+  content: " of ";
+}
+.pane-bundle-quote .group_author .field-name-field-quote-link-company {
+  display: inline;
+}
+.pane-bundle-quote .group_author .field-name-field-quote-link-company a {
+  color: #bac405;
 }
 
 .page-node #content-body .spotlight .field {
