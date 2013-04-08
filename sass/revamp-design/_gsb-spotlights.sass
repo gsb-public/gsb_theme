@@ -44,25 +44,30 @@
   .field-name-field-body
     margin: 0
     color: #555
-    font-size: 14px
-    line-height: 18px
-  .spotlight-story
-    clear: both
     overflow: hidden
     max-height: 72px
-  a.show-more
+    p
+      margin-bottom: 0
+      font-size: 14px
+      line-height: 18px
+  .show-more
     display: block
     margin-top: 8px
     border: 0
-    font-weight: bold
+    font-weight: 500
+    line-height: 1em
+    margin: 7px 0 0 0
+    color: $green-light
+    cursor: pointer
     span
+      font-size: 14px 
       padding-left: 16px
       background: image_url('spotlight-arrow.png') no-repeat 0 2px
     &:hover span
       background-position: 0 -13px
     &.active
       span
-        background: image_url('spotlight-arrow-reversed.png') -1px -13px
+        background: image_url('spotlight-arrow-reversed.png') no-repeat -1px -13px
       &:hover span
         background-position: 0 2px
 

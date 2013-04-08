@@ -6,11 +6,12 @@
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
       // Check if spotlight exists.
-      if ($('.spotlight').length>0) {
-        var spotlightShowMore = $('.spotlight a.show-more'),
-            // Define visible lines.
+      if ($('.pane-bundle-spotlight').length) {
+        var spotlightContainer = $('.pane-bundle-spotlight');
+        spotlightContainer.find('.group_content_wrapper').append('<p class="show-more"><span>Show More</span></p>');
+        var spotlightShowMore = spotlightContainer.find('.show-more'),
             visibleLines = 4,
-            visibleHeight = visibleLines * parseInt(spotlightShowMore.siblings('.spotlight-story').children('p').css('line-height'));
+            visibleHeight = visibleLines * parseInt(spotlightShowMore.siblings('.field-name-field-body').find('p').css('line-height'));
         // Add behavior for every .show-more link.
         spotlightShowMore.each(function() {
           var visHeight = visibleHeight,
@@ -18,10 +19,12 @@
           // Add once behavior.
           if ( !$this.hasClass('showmore-processed') ) {
             $this.addClass('showmore-processed');
-            var spotlightStory = $this.siblings('.spotlight-story'),
-                storyContent = spotlightStory.children('p').height();
+            var spotlightStory = $this.siblings('.field-name-field-body'),
+                spotlightStoryText = spotlightStory.find('p'),
+                storyContent = spotlightStoryText.height();
             // Check for description position in spotlight container.
-            if ( spotlightStory.position().top > 285 && spotlightStory.children('p').height() > 57 && spotlightStory.parents('.span4').length == 0 ) { // >276 means description is lower 
+            if ( spotlightStory.position().top > 285 && spotlightStoryText.height() > 57) { 
+              // >276 means description is lower 
               // Set height fo description to 2 lines.
               spotlightStory.css('max-height', 35); 
               visHeight = parseInt(visHeight / visibleLines * visibleLines/2);
