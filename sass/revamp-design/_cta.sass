@@ -1,6 +1,5 @@
 // CALL TO ACTION STYLES - CTA
 
-
 .field-name-field-image-cta-link a
   position: relative
   display: block
@@ -235,46 +234,53 @@ a
   .social-block-twitter
     margin-left: 0
 
-.image-cta 
-  position: relative
-  overflow: hidden
- 
-.image-cta__image 
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  z-index: 10
-  img 
-    width: 100%
-    height: auto
- 
-.image-cta__title,
-.image-cta__summary 
-  z-index: 15
-  position: relative
-  padding: 0 30px
-  a,
-  a:hover
-    border: none
-    color: #fff
- 
-.image-cta__title 
-  padding-top: 25px
-  line-height: 1em
-  text-transform: uppercase
-  font-size: 15px
- 
-.image-cta__summary 
-  font-family: NewsGothicBT-Bold, sans-serif
-  font-size: 27px
-  line-height: 1.25em
-  i 
-    background: image_url('arrows-icons.png') no-repeat 1px -102px
-    display: inline-block
-    width: 20px
-    height: 21px
-    margin-left: 4px
+// IMAGE CTA
+.pane-bundle-image-cta
+  .pane-title
+    color: $white
+    font-size: 16px
+    font-weight: normal
+    line-height: 1
+    padding-top: 25px
+    text-transform: uppercase
     position: relative
-    top: 2px
- 
+    top: 46px
+    z-index: 1
+    right: -30px
+
+  .fieldable-panels-pane.view-mode-full
+    position: relative
+    top: 0
+    .group-left,
+    .group-right
+      float: none
+      width: 100%
+    .group-left img
+      +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
+      border: 2px solid $white
+    .group-right
+      color: $white
+      padding: 30px
+      position: absolute
+      top: 35px
+
+    // Description
+    .field-name-field-body
+      font-size: 28px
+      font-weight: bold
+      line-height: 1.2
+
+    // Double arrow link
+    .field-name-field-link-single
+      display: inline-block
+      margin-left: 10px
+      overflow: hidden
+      position: relative
+      top: 3px
+      width: 20px
+
+      a:before
+        color: $green-light
+        content: "\f100"
+        font-family: "arrow-double"
+        font-size: 33px
