@@ -1,20 +1,10 @@
 // spotlights
 
-.page-node #content-body
-  .spotlight .field
-    margin-bottom: 0
-  .span8 .spotlight .field
-    float: left
-
-.spotlight
+.pane-bundle-spotlight
+  @extend %border-and-box-shadow
   position: relative
-  clear: both
-
-.spotlight-content
-  float: left
-  width: 222px
-
-.spotlight
+  .group_content_wrapper
+    padding: 26px
   .spotlight-border
     position: absolute
     top: 0
@@ -23,20 +13,35 @@
     width: 95px
     height: 10px
     background: $red
-  .spotlight-type
-    display: block
-    margin-bottom: 12px
+  .field-name-field-spotlight-person-type
+    float: left
+    margin-bottom: 5px
     color: #666
-    font-size: 13px
+    font-size: 14px
     line-height: 1em
-  h4
-    margin: 0 0 2px
+    div
+      float: right
+      padding-left: 5px
+  .field-name-field-file-single-public,
+  .field-name-field-use-profile-img
+    clear: both
+    margin-bottom: 10px
+  .field-name-field-first-name,
+  .field-name-field-last-name
+    font-size: 20px
+    font-weight: bold
+    display: inline
+    padding-right: 4px
     color: $red
-  h5
+  .field-name-field-title-position-single,
+  .field-name-field-year
+    font-weight: bold
     margin: 0 0 4px
     font-size: 20px
     line-height: 1.2em
-  p
+  .field-name-field-year
+    margin-top: 3px 
+  .field-name-field-body
     margin: 0
     color: #555
     font-size: 14px
@@ -64,96 +69,3 @@
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
 
-.person-thumb
-  display: block
-  margin-bottom: 5px
-
-.spotlight .field-name-field-gsb-spotlight-media
-  position: relative
-  overflow: hidden
-  margin-bottom: 10px
-
-// spotlight
-
-.panopoly-spotlight-wrapper
-  position: relative
-  z-index: 101
-
-.panopoly-spotlight-info
-  position: absolute
-  right: 25px
-  bottom: 57px
-  width: 315px
-  h2
-    margin: 0 0 12px
-    line-height: 32px
-    a
-      display: block
-      border: none
-      color: $black
-      font-size: 26px
-      line-height: 37px
-      &:hover
-        border: none
-  p
-    color: #333
-    font-size: 16px
-    line-height: 20px
-  a.slider-btn
-    display: block
-    padding-left: 13px
-    height: 30px
-    border: none
-    background: #754760
-    color: $white
-    font-weight: 700
-    line-height: 35px
-    &.style-1, &.style-2:hover
-      background: #754760
-    &.style-1:hover, &.style-2
-      background: #739d95
-  h2 a
-    i
-      margin-left: 5px
-      padding: 1px 9px
-      width: 10px
-      height: 10px
-      background: image_url('slider_double_red.png') no-repeat 0 4px
-    &:hover i
-      background: image_url('slider_double_blue.png') no-repeat 0 4px
-
-// Spotlight FPP styling
-.pane-bundle-gsb-spotlight .view-mode-full
-  @extend %border-and-box-shadow
-  padding: 0 26px
-
-  // Box Label
-  .field-name-field-gsb-spotlight-person-type
-    border-top: 10px solid $red
-    color: $grey-6
-    display: inline-block
-    font-size: 14px
-    margin-bottom: 18px
-
-  // Name
-  .group-wrapper-name
-    +clearfix
-  .field-name-field-first-name,
-  .field-name-field-last-name,
-  .field-name-field-title-position
-    font-size: 20px
-    line-height: 26px
-  .field-name-field-first-name,
-  .field-name-field-last-name
-    color: $red
-    display: inline-block
-    font-weight: 500
-  .field-name-field-first-name
-    float: left
-    margin-right: 6px
-  .field-name-field-title-position
-    color: $grey-2
-    margin-bottom: 12px
-  .field-name-field-gsb-spotlight-body
-    font-size: 14px
-    line-height: 18px
