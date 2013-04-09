@@ -90,19 +90,7 @@ a.no-border
 a.green-rounded-button
   float: left
   margin-right: 15px
-  padding: 0 17px
-  border: none
-  +border-radius(20px)
-  background: #6c7200
-  +background(linear-gradient(bottom, #6c7200, $green-light))
-  color: $white
-  font-size: 16px
-  font-weight: bold
-  line-height: 36px
-  +border-radius(20px)
-  &:hover
-    border: 0
-    color: $white
+  @extend %green-button
 
 h1.title
   font-weight: bold

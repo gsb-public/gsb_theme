@@ -28,6 +28,36 @@ pre, code, kbd, tt {
   box-shadow: #ababab 0 2px 4px;
 }
 
+a.green-rounded-button, .node-event.view-mode-full .group-left .field-name-field-register-url a {
+  padding: 10px 16px;
+  border: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background: #7b8201;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c7200), color-stop(100%, #7d8401));
+  background: -webkit-linear-gradient(top, #6c7200, #7d8401);
+  background: -moz-linear-gradient(top, #6c7200, #7d8401);
+  background: -o-linear-gradient(top, #6c7200, #7d8401);
+  background: -ms-linear-gradient(top, #6c7200, #7d8401);
+  background: linear-gradient(top, #6c7200, #7d8401);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+a.green-rounded-button:hover, .node-event.view-mode-full .group-left .field-name-field-register-url a:hover {
+  border: 0;
+  color: white;
+}
+
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
@@ -1209,7 +1239,7 @@ div.status, div.warning, div.error {
 }
 
 div.status {
-  color: #076d54;
+  color: #7b8201;
 }
 
 div.warning {
@@ -1493,33 +1523,6 @@ a.no-border:hover {
 a.green-rounded-button {
   float: left;
   margin-right: 15px;
-  padding: 0 17px;
-  border: none;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-  background: #6c7200;
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #6c7200), color-stop(100%, #bac405));
-  background: -webkit-linear-gradient(bottom, #6c7200, #bac405);
-  background: -moz-linear-gradient(bottom, #6c7200, #bac405);
-  background: -o-linear-gradient(bottom, #6c7200, #bac405);
-  background: -ms-linear-gradient(bottom, #6c7200, #bac405);
-  background: linear-gradient(bottom, #6c7200, #bac405);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 36px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-}
-a.green-rounded-button:hover {
-  border: 0;
-  color: white;
 }
 
 h1.title {
@@ -3573,6 +3576,7 @@ a.cta-rethink:hover {
 }
 
 .node-event.view-mode-full {
+  border-top: 3px solid black;
   padding-top: 0;
   padding-left: 0;
 }
@@ -3580,7 +3584,7 @@ a.cta-rethink:hover {
   border-bottom: 0;
 }
 .node-event.view-mode-full .group-left {
-  padding-top: 30px;
+  padding: 30px 0;
 }
 .node-event.view-mode-full .group-left h1 {
   font-weight: bold;
@@ -3590,9 +3594,54 @@ a.cta-rethink:hover {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.node-event.view-mode-full .group-left .field-name-field-person-or-other {
+  display: none;
+}
+.node-event.view-mode-full .group-left .field-name-title,
+.node-event.view-mode-full .group-left .field-name-field-person-other {
+  margin-bottom: 25px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-event.view-mode-full .group-left .field-name-title .speaker-name,
+.node-event.view-mode-full .group-left .field-name-field-person-other .speaker-name {
+  display: inline;
+  float: left;
+  margin-right: 7px;
+}
+.node-event.view-mode-full .group-left .field-name-title .speaker-name a,
+.node-event.view-mode-full .group-left .field-name-field-person-other .speaker-name a {
+  color: #bac405;
+}
+.node-event.view-mode-full .group-left .field-name-field-first-name {
+  margin-right: 5px;
+}
+.node-event.view-mode-full .group-left .field-name-field-first-name,
+.node-event.view-mode-full .group-left .field-name-field-last-name,
+.node-event.view-mode-full .group-left .field-name-field-person-ref a {
+  font-size: 22px;
+}
+.node-event.view-mode-full .group-left .field-name-field-address .thoroughfare {
+  font-weight: bold;
+}
+.node-event.view-mode-full .group-left .field-name-field-link-map {
+  margin-bottom: 30px;
+}
+.node-event.view-mode-full .group-left .field-name-field-link-map a,
+.node-event.view-mode-full .group-left .field-name-field-link-map a:visited {
+  color: #7b8201;
+  font-weight: bold;
+}
 .node-event.view-mode-full .group-right {
   max-width: 270px;
-  text-align: right;
+}
+.node-event.view-mode-full .field-name-field-target-audience {
+  font-size: 14px;
+  margin-top: 35px;
+  max-width: 225px;
+}
+.node-event.view-mode-full .field-name-field-target-audience .field-label {
+  font-weight: normal;
 }
 .node-event.view-mode-full .group-footer {
   border-top: 1px solid #cccccc;

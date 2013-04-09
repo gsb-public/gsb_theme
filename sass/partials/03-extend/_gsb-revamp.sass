@@ -4,6 +4,21 @@
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
 
+%green-button
+  padding: 10px 16px
+  border: none
+  +border-radius(20px)
+  background: $green
+  +background(linear-gradient(top, #6c7200, #7d8401))
+  color: $white
+  font-size: 16px
+  font-weight: bold
+  line-height: 1
+  +border-radius(20px)
+  &:hover
+    border: 0
+    color: $white
+
 %border-and-box-shadow
   background-color: $grey-c
   +background(linear-gradient(bottom, #ededed 25%, #fbfaf8 63%))
