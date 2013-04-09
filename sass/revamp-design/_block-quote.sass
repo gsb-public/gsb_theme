@@ -1,9 +1,9 @@
-/* quote */
+// Quote FPP styling
 
 .pane-bundle-quote
-  margin-bottom: 20px 
+  margin-bottom: 20px
   padding-left: 35px
-  .field-name-field-body 
+  .field-name-field-body
     font-weight: bold
     font-size: 35px
     line-height: 1.2em
@@ -17,12 +17,12 @@
       left: -30px
       top: 13px
       display: block
-      color: #000
+      color: $black
       font-weight: bold
     &:after
       content: '”'
       font-size: 38px
-      color: #000
+      color: $black
       display: inline
       font-weight: bold
   .field-name-field-link-single
@@ -39,14 +39,14 @@
       margin-left: 6px
   .group_author
     font-size: 18px
-    .field-name-field-quote-author-name-title
-      display: inline
-      &:before
-        content: "—"
-      & + .field-name-field-quote-link-company:before
-        content: " of "
-    .field-name-field-quote-link-company
-      display: inline
-      a
-        color: $green-light
+  .field-name-field-quote-author-name-title
+    float: left
+    margin-right: 5px
+  .field-name-field-quote-link-company
+    float: left
+    .label-inline
+      margin-right: 7px
+    a,
+    a:visited
+      color: $green-light
 
