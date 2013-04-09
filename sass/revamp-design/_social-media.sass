@@ -1,10 +1,17 @@
-// social feed
+// Social feed
 
 .twitter-feed
   position: relative
   background: #c1dbd9
-  &.bg
-    background: image_url('homepage-social-block-background-full.png') no-repeat bottom right
+  padding: 28px
+  top: 0
+  +background((image_url('bg-social-feed.png') no-repeat bottom right), #c1dbd9)
+  .pane-content
+    &:after
+      content: image_url("icon-twitter.png")
+      position: absolute
+      top: 25px
+      right: 20px
   .field-name-field-feed-source
     margin: 0
     color: $red
@@ -25,6 +32,7 @@
   .time
     margin-top: 7px
     font-size: 13px
+    margin-bottom: 0
 
 a
   &.social-block-link

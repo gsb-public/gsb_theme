@@ -2750,9 +2750,15 @@ div.checker.focus:active span, div.checker:active:hover span, div.checker.active
 .twitter-feed {
   position: relative;
   background: #c1dbd9;
+  padding: 28px;
+  top: 0;
+  background: url('../images/bg-social-feed.png') no-repeat bottom right, #c1dbd9;
 }
-.twitter-feed.bg {
-  background: url('../images/homepage-social-block-background-full.png') no-repeat bottom right;
+.twitter-feed .pane-content:after {
+  content: url('../images/icon-twitter.png');
+  position: absolute;
+  top: 25px;
+  right: 20px;
 }
 .twitter-feed .field-name-field-feed-source {
   margin: 0;
@@ -2779,6 +2785,7 @@ div.checker.focus:active span, div.checker:active:hover span, div.checker.active
 .tweet .time {
   margin-top: 7px;
   font-size: 13px;
+  margin-bottom: 0;
 }
 
 a.social-block-link {
@@ -3696,7 +3703,8 @@ a.cta-rethink:hover {
   font-size: 14px;
   margin-bottom: 20px;
 }
-.group-wrapper-teaser h2 {
+.group-wrapper-teaser h2,
+.group-wrapper-teaser h2 a {
   color: #990000;
   font-size: 26px;
   line-height: 30px;
