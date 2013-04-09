@@ -62,11 +62,16 @@
    */
   Drupal.behaviors.video_button_behavior = {
     attach: function (context, settings) {
-      $('.video-play-icon').click(function () {
+      var videopreview = $('.file-video--preview'); 
+      if (videopreview.length > 0 && videopreview.find('.video-play-icon').length === 0) {
+        videopreview.find('.content').append('<span class="video-play-icon"/>');
+      }
+      videopreview.find('.video-play-icon').click(function () {
         $(this).prev().click();
-      })
+      });
     }
   }
+
 
   /**
    * Add accordion functionality for both

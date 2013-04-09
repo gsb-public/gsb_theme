@@ -31,7 +31,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-frontpage,
-.pane-gsb-event-sidebar, .pane-bundle-spotlight {
+.pane-gsb-event-sidebar, .pane-bundle-video, .pane-bundle-spotlight {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(25%, #ededed), color-stop(63%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 25%, #fbfaf8 63%);
@@ -1484,6 +1484,9 @@ a.no-border:hover {
 .pane-gsb-event-frontpage,
 .pane-gsb-event-sidebar {
   margin-bottom: 30px;
+}
+
+.group_content_wrapper {
   padding: 26px;
 }
 
@@ -1828,31 +1831,29 @@ input.footer__signup__submit:hover {
   color: #990000;
 }
 
-.pane-bundle-video .cp-content > p:last-child {
-  margin-bottom: 0;
+.pane-bundle-video .group_content_wrapper {
+  padding: 16px 26px;
 }
-
-a.video-title {
-  border: none;
-}
-a.video-title:hover {
-  border: none;
-}
-
 .pane-bundle-video h4 {
-  margin: 0 0 6px;
+  margin: 0 0 -5px;
   font-weight: bold;
+  text-transform: none;
 }
 .pane-bundle-video p {
   color: #444444;
   font-size: 14px;
+  line-height: 1.2em;
+  margin: 10px 0 0 0;
 }
-
-.video-image, .field-name-field-gsb-spotlight-media {
+.pane-bundle-video .file-video--preview {
   position: relative;
+  float: left;
 }
-
-.video-play-icon {
+.pane-bundle-video .file-video--default {
+  clear: both;
+}
+.pane-bundle-video .video-play-icon {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1862,16 +1863,6 @@ a.video-title:hover {
   height: 60px;
   background: url('../images/video_play.png') no-repeat top left;
   cursor: pointer;
-}
-
-.main-wrapper .video-image .fancybox,
-.sidebar-wrapper .video-image > div {
-  display: none;
-}
-.main-wrapper .video-image .fancybox img,
-.sidebar-wrapper .video-image > div img {
-  width: 100%;
-  height: auto;
 }
 
 .cp-body {
@@ -2253,9 +2244,6 @@ a.video-title:hover {
 
 .pane-bundle-spotlight {
   position: relative;
-}
-.pane-bundle-spotlight .group_content_wrapper {
-  padding: 26px;
 }
 .pane-bundle-spotlight .spotlight-border {
   position: absolute;

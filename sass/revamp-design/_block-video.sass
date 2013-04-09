@@ -1,39 +1,32 @@
 // video block
 
-.pane-bundle-video .cp-content > p:last-child
-  margin-bottom: 0
-
-a.video-title
-  border: none
-  &:hover
-    border: none
-
 .pane-bundle-video
+  @extend %border-and-box-shadow
+  .group_content_wrapper
+    padding: 16px 26px
   h4
-    margin: 0 0 6px
+    margin: 0 0 -5px
     font-weight: bold
+    text-transform: none
   p
     color: #444
     font-size: 14px
-
-.video-image, .field-name-field-gsb-spotlight-media
-  position: relative
-
-.video-play-icon
-  position: absolute
-  top: 50%
-  left: 50%
-  margin-top: -30px
-  margin-left: -30px
-  width: 60px
-  height: 60px
-  background: image_url('video_play.png') no-repeat top left
-  cursor: pointer
-
-.main-wrapper .video-image .fancybox,
-.sidebar-wrapper .video-image > div
-  display: none
-  img
-    width: 100%
-    height: auto
+    line-height: 1.2em
+    margin: 10px 0 0 0
+  .file-video--preview
+    position: relative
+    float: left
+  .file-video--default
+    clear: both
+  .video-play-icon
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -30px
+    margin-left: -30px
+    width: 60px
+    height: 60px
+    background: image_url('video_play.png') no-repeat top left
+    cursor: pointer
 
