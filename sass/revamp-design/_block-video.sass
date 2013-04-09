@@ -1,6 +1,7 @@
 // video block
 
-.pane-bundle-video
+.pane-bundle-video,
+.node-gsb-video
   @extend %border-and-box-shadow
   .group_content_wrapper
     padding: 16px 26px
@@ -8,11 +9,14 @@
     margin: 0 0 -5px
     font-weight: bold
     text-transform: none
-  p
-    color: #444
-    font-size: 14px
+  p,
+  .field-type-datetime
+    color: $grey-3
+    font-size: 15px
     line-height: 1.2em
     margin: 10px 0 0 0
+  .field-type-datetime
+    color: $grey-6
   .file-video--preview
     position: relative
     float: left
