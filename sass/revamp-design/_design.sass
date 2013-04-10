@@ -96,3 +96,50 @@ h1.title
   font-weight: bold
   font-size: 48px
   line-height: 56px
+
+//////////////////////
+// Related Links FPP
+//////////////////////
+.pane-bundle-links
+  background-color: $grey-e
+  padding: 0 24px 24px 24px
+  // Pane title
+  .field-name-field-title
+    border-top: 10px $red solid
+    font-size: 18px
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 16px
+    padding-top: 16px
+  // Links
+  .field-type-link-field
+    .field-item
+      line-height: 2
+    a
+      color: $red
+      font-weight: bold
+      text-transform: uppercase
+
+//////////////////////
+// Text FPP
+//////////////////////
+.pane-bundle-text
+  // Pane title
+  .field-name-field-title
+    font-size: 20px
+    font-weight: bold
+    padding-bottom: 12px
+    a
+      color: $red
+      &:after
+        color: $grey-med
+        content: "\f100"
+        font-family: "arrow-double"
+        font-size: 22px
+        margin-left: 10px
+  .field-name-field-body
+    padding-top: 12px
+    border-top: 1px solid $grey-e
+    p
+      font-size: 16px
+      line-height: 20px
