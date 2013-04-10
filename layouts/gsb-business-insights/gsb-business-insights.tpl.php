@@ -11,9 +11,9 @@
 ?>
 
 <div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="gsb-bizin-wrapper">
+  <div class="content-wrapper gsb-bizin-content">
 
-    <div class="gsb-bizin-content">
+    <div class="main-wrapper gsb-bizin-main">
 
       <div class="gsb-bizin-header">
         <?php print $content['contentoneone']; ?>
@@ -53,7 +53,7 @@
 
     </div><!-- /.gsb-business-content -->
 
-    <div class="gsb-bizin-sidebar">
+    <div class="sidebar-wrapper gsb-bizin-sidebar">
       <?php print $content['contentrightone']; ?>
     </div><!-- /.gsb-bizin-sidebar -->
   </div>
