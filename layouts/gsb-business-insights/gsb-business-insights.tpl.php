@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>">
+<div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <div class="gsb-bizin-wrapper">
 
     <div class="gsb-bizin-content">
