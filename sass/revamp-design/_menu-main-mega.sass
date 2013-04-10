@@ -36,45 +36,36 @@
 
 // megamenu featured
 
-.mm-featured-header
-  margin-top: 3px
-  margin-bottom: -3px
-  color: #aaa
-
-.mm-featured
+.view-mode-megamenu
   overflow: hidden
-  margin-top: 16px
+  margin: 16px 0 10px
   border-top: 8px #100f0f solid
+  img
+    opacity: .55
   &:hover
-    .mm-featured-date, a.mm-featured-title
+    .field-name-field-event-date, 
+    .field-name-title, 
+    .field-name-field-date-published,
+    .field-name-post-date
       color: $white
     img
       opacity: 1
-  &:first-child
-    margin-top: 0
 
-.mm-featured-image
-  float: left
-  img
-    opacity: .7
-
-.mm-featured-content
-  float: right
-  width: 220px
-
-.mm-featured-date
-  display: block
-  margin-top: 9px
-  color: #aaa
-  font-size: 13px
-
-a.mm-featured-title
-  display: block
-  margin-top: 6px
-  color: #aaa
-  font-size: 25px
-  font-weight: bold
-  line-height: 28px
-
-.mm-featured a.mm-featured-title:hover
-  color: #63acd5
+  .group-right
+    padding-left: 10px
+  .field-name-field-event-date, 
+  .field-name-field-date-published,
+  .field-name-post-date
+    margin-top: 9px
+    color: #aaa
+    font-size: 13px
+  .field-name-title a
+    display: block
+    margin-top: 6px
+    color: #aaa
+    font-size: 25px
+    font-weight: bold
+    line-height: 28px
+    text-transform: none
+    &:hover
+      color: #63acd5

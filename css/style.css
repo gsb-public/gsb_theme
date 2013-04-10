@@ -2746,56 +2746,43 @@ p.acc-title + p {
   color: #63acd5;
 }
 
-.mm-featured-header {
-  margin-top: 3px;
-  margin-bottom: -3px;
-  color: #aaaaaa;
-}
-
-.mm-featured {
+.view-mode-megamenu {
   overflow: hidden;
-  margin-top: 16px;
+  margin: 16px 0 10px;
   border-top: 8px #100f0f solid;
 }
-.mm-featured:hover .mm-featured-date, .mm-featured:hover a.mm-featured-title {
+.view-mode-megamenu img {
+  opacity: 0.55;
+}
+.view-mode-megamenu:hover .field-name-field-event-date,
+.view-mode-megamenu:hover .field-name-title,
+.view-mode-megamenu:hover .field-name-field-date-published,
+.view-mode-megamenu:hover .field-name-post-date {
   color: white;
 }
-.mm-featured:hover img {
+.view-mode-megamenu:hover img {
   opacity: 1;
 }
-.mm-featured:first-child {
-  margin-top: 0;
+.view-mode-megamenu .group-right {
+  padding-left: 10px;
 }
-
-.mm-featured-image {
-  float: left;
-}
-.mm-featured-image img {
-  opacity: 0.7;
-}
-
-.mm-featured-content {
-  float: right;
-  width: 220px;
-}
-
-.mm-featured-date {
-  display: block;
+.view-mode-megamenu .field-name-field-event-date,
+.view-mode-megamenu .field-name-field-date-published,
+.view-mode-megamenu .field-name-post-date {
   margin-top: 9px;
   color: #aaaaaa;
   font-size: 13px;
 }
-
-a.mm-featured-title {
+.view-mode-megamenu .field-name-title a {
   display: block;
   margin-top: 6px;
   color: #aaaaaa;
   font-size: 25px;
   font-weight: bold;
   line-height: 28px;
+  text-transform: none;
 }
-
-.mm-featured a.mm-featured-title:hover {
+.view-mode-megamenu .field-name-title a:hover {
   color: #63acd5;
 }
 
