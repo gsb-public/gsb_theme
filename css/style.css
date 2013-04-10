@@ -28,7 +28,7 @@ pre, code, kbd, tt {
   box-shadow: #ababab 0 2px 4px;
 }
 
-a.green-rounded-button, .node-event.view-mode-full .group-left .field-name-field-register-url a {
+a.green-rounded-button, .node-event.view-mode-full .group-left .event-register-link a {
   padding: 10px 16px;
   border: none;
   -webkit-border-radius: 20px;
@@ -53,7 +53,7 @@ a.green-rounded-button, .node-event.view-mode-full .group-left .field-name-field
   -o-border-radius: 20px;
   border-radius: 20px;
 }
-a.green-rounded-button:hover, .node-event.view-mode-full .group-left .field-name-field-register-url a:hover {
+a.green-rounded-button:hover, .node-event.view-mode-full .group-left .event-register-link a:hover {
   border: 0;
   color: white;
 }
@@ -3337,7 +3337,7 @@ a.cta-rethink:hover {
   border-bottom: 0;
 }
 .node-event.view-mode-full .group-left {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 .node-event.view-mode-full .group-left h1 {
   font-weight: bold;
@@ -3355,11 +3355,14 @@ a.cta-rethink:hover {
   margin-bottom: 25px;
   overflow: hidden;
   *zoom: 1;
+  position: relative;
+  top: 0;
 }
 .node-event.view-mode-full .group-left .field-name-title .speaker-name,
 .node-event.view-mode-full .group-left .field-name-field-person-other .speaker-name {
   display: inline;
   float: left;
+  line-height: 24px;
   margin-right: 7px;
 }
 .node-event.view-mode-full .group-left .field-name-title .speaker-name a,
@@ -3384,6 +3387,17 @@ a.cta-rethink:hover {
 .node-event.view-mode-full .group-left .field-name-field-link-map a:visited {
   color: #7b8201;
   font-weight: bold;
+}
+.node-event.view-mode-full .group-left .group-wrapper-buttons {
+  line-height: 36px;
+  margin: 35px 0;
+}
+.node-event.view-mode-full .group-left .event-register-link,
+.node-event.view-mode-full .group-left .event-ical-link {
+  display: inline;
+}
+.node-event.view-mode-full .group-left .event-ical-link {
+  margin: 0 14px;
 }
 .node-event.view-mode-full .group-right {
   max-width: 270px;

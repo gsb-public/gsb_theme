@@ -11,7 +11,7 @@
   a
     border-bottom: 0
   .group-left
-    padding: 30px 0
+    padding-top: 30px
     h1
       font-weight: bold
 
@@ -28,9 +28,12 @@
     .field-name-field-person-other
       margin-bottom: 25px
       +clearfix
+      position: relative
+      top: 0
       .speaker-name
         display: inline
         float: left
+        line-height: 24px
         margin-right: 7px
         a
           color: $green-light
@@ -55,10 +58,20 @@
         color: $green
         font-weight: bold
 
+    // Buttons
+    .group-wrapper-buttons
+      line-height: 36px
+      margin: 35px 0
+    .event-register-link,
+    .event-ical-link
+      display: inline
     // Register Link
-    .field-name-field-register-url
+    .event-register-link
       a
         @extend %green-button
+    .event-ical-link
+      margin: 0 14px
+
   .group-right
     max-width: 270px
   .field-name-field-target-audience
