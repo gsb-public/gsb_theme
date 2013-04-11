@@ -28,7 +28,7 @@ pre, code, kbd, tt {
   box-shadow: #ababab 0 2px 4px;
 }
 
-a.green-rounded-button, .node-event.view-mode-full .group-left .event-register-link a {
+.green-rounded-button, .node-event.view-mode-full .group-left .event-register-link a {
   padding: 10px 16px;
   border: none;
   -webkit-border-radius: 20px;
@@ -53,7 +53,7 @@ a.green-rounded-button, .node-event.view-mode-full .group-left .event-register-l
   -o-border-radius: 20px;
   border-radius: 20px;
 }
-a.green-rounded-button:hover, .node-event.view-mode-full .group-left .event-register-link a:hover {
+.green-rounded-button:hover, .node-event.view-mode-full .group-left .event-register-link a:hover {
   border: 0;
   color: white;
 }
@@ -2200,7 +2200,7 @@ ul.slideshow-items {
   color: #231f20;
   font-size: 26px;
   line-height: 32px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   text-transform: none;
 }
 .slide-title:after {
@@ -2217,7 +2217,7 @@ ul.slideshow-items {
   color: #231f20;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .slide-cta {
@@ -2251,6 +2251,65 @@ ul.slideshow-items {
 }
 .blue-button-on-orange .slide-cta {
   background-color: #739d95;
+}
+
+.slideshow-simple .slideshow-slide:hover .slide-title,
+.front .slideshow-slide:hover .slide-title {
+  color: #990000;
+}
+.slideshow-simple .slide-text,
+.front .slide-text {
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(25%, rgba(255, 255, 255, 0)), color-stop(50%, #ffffff));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
+  background: linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
+  padding: 0 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 367px;
+  z-index: 2;
+  width: 100%;
+}
+.slideshow-simple .slide-text .inner,
+.front .slide-text .inner {
+  right: 30px;
+  top: 30px;
+  width: 50%;
+}
+.slideshow-simple .slide-title,
+.front .slide-title {
+  font-size: 16px;
+  color: #990000;
+}
+.slideshow-simple .slide-title:after,
+.front .slide-title:after {
+  content: "";
+}
+.slideshow-simple .slide-description,
+.front .slide-description {
+  font-size: 38px;
+  line-height: 44px;
+}
+.slideshow-simple .slide-description a,
+.front .slide-description a {
+  color: #990000;
+}
+.slideshow-simple .slide-description:after,
+.front .slide-description:after {
+  color: #bac405;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 38px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
+.slideshow-simple .slide-cta,
+.front .slide-cta {
+  display: none;
 }
 
 .pane-bundle-quote {
