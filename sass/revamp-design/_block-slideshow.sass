@@ -10,6 +10,15 @@ ul.slideshow-items
 
 .flex-direction-nav a
   opacity: 1
+  width: 60px
+  height: 60px
+  &.flex-prev
+    left: 28px
+    background: image_url("prev-arrow.png") no-repeat
+  &.flex-next
+    right: 28px
+    background: image_url("next-arrow.png") no-repeat
+
 
 // Slideshow wrapper
 .slideshow-wrapper
@@ -27,6 +36,13 @@ ul.slideshow-items
   top: 0
   &:hover
     cursor: pointer
+    .slide-title
+      color: $text-blue
+      &:after
+        color: $text-blue
+    .slide-cta
+      background-color: #739d95
+
   .slide-text
     padding: 0 25px
     position: absolute
@@ -46,6 +62,14 @@ ul.slideshow-items
   line-height: 32px
   margin-bottom: 28px
   text-transform: none
+  &:after
+    color: $red
+    content: "\f100"
+    font-family: "arrow-double"
+    font-size: 36px
+    position: relative
+    top: 2px
+    left: 5px
 
 // Slide description
 .slide-description
@@ -60,6 +84,7 @@ ul.slideshow-items
   font-size: 14px
   font-weight: bold
   line-height: 18px
+  width: 318px
   padding: 10px 0 10px 16px
 
 // Color picker styling
@@ -68,11 +93,6 @@ ul.slideshow-items
     +background(linear-gradient( left, rgba(#cce0dc, 0.6) 18%, rgba(#cce0dc, 1)))
   .slide-cta
     background-color: #754760
-  &:hover
-    .slide-title
-      color: $text-blue
-    .slide-cta
-      background-color: #739d95
 
 .blue-button-on-orange
   .slide-text
