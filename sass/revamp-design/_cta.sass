@@ -107,15 +107,16 @@ a.cta-red-gradient:hover
 
 a
   &.cta-get-directions
+    clear: both
     display: block
     overflow: hidden
     padding-bottom: 1px
     border: 2px $white solid
     background: image_url('cta-map.png') repeat-x top left
+    padding: 20px
     &:hover
       display: block
       overflow: hidden
-      padding-bottom: 1px
       border: 2px $white solid
       background: image_url('cta-map.png') repeat-x top left
     .cta-body
@@ -124,6 +125,7 @@ a
       color: $white
       font-size: 21px
       line-height: 1.5em
+      margin-bottom: 0
     &:hover .cta-body
       background: rgba(123, 130, 1, 0.8)
   &.cta-virtual-tour
@@ -159,11 +161,13 @@ a
       color: $white
 
 .cta-rethink
+  padding: 26px
   +background(linear-gradient(bottom, #870000, #c40000))
   color: $white
 
 a
   &.cta-virtual-tour
+    padding: 26px
     &:hover .virtual-tour-btn i
       background: image_url('cta-visit-icon-hover.png') no-repeat top left
     .virtual-tour-cover
@@ -199,9 +203,12 @@ a
       font-weight: bold
 
 .cta-follow-us
+  display: block
+  clear: both
   position: relative
   padding-top: 75px
-  height: 35px
+  height: 140px
+  overflow: hidden
   background: image_url('cta-follow-us-bg.png') repeat-x top left
   a
     border: none
@@ -215,7 +222,7 @@ a
     left: 0
     display: block
     padding: 0 26px
-    width: 81%
+    width: 100%
     height: 49px
     background: image_url('cta-follow-us-title-bg.png') repeat-x top left
     color: $white
@@ -225,14 +232,12 @@ a
       position: absolute
       top: 50%
       right: 143px
-      margin-top: -7px
+      margin-top: -10px
       width: 14px
       height: 15px
       background: image_url('arrows-icons.png') no-repeat 0 -20px
   .circle
     margin-left: 17px
-  .social-block-twitter
-    margin-left: 0
 
 // IMAGE CTA
 .pane-bundle-image-cta

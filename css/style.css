@@ -2977,16 +2977,17 @@ a.cta-red-gradient:hover {
 }
 
 a.cta-get-directions {
+  clear: both;
   display: block;
   overflow: hidden;
   padding-bottom: 1px;
   border: 2px white solid;
   background: url('../images/cta-map.png') repeat-x top left;
+  padding: 20px;
 }
 a.cta-get-directions:hover {
   display: block;
   overflow: hidden;
-  padding-bottom: 1px;
   border: 2px white solid;
   background: url('../images/cta-map.png') repeat-x top left;
 }
@@ -2996,6 +2997,7 @@ a.cta-get-directions .cta-body {
   color: white;
   font-size: 21px;
   line-height: 1.5em;
+  margin-bottom: 0;
 }
 a.cta-get-directions:hover .cta-body {
   background: rgba(123, 130, 1, 0.8);
@@ -3043,6 +3045,7 @@ a.cta-virtual-tour:hover .virtual-tour-btn {
 }
 
 .cta-rethink {
+  padding: 26px;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
   background: -webkit-linear-gradient(bottom, #870000, #c40000);
   background: -moz-linear-gradient(bottom, #870000, #c40000);
@@ -3052,6 +3055,9 @@ a.cta-virtual-tour:hover .virtual-tour-btn {
   color: white;
 }
 
+a.cta-virtual-tour {
+  padding: 26px;
+}
 a.cta-virtual-tour:hover .virtual-tour-btn i {
   background: url('../images/cta-visit-icon-hover.png') no-repeat top left;
 }
@@ -3095,9 +3101,12 @@ a.cta-rethink:hover {
 }
 
 .cta-follow-us {
+  display: block;
+  clear: both;
   position: relative;
   padding-top: 75px;
-  height: 35px;
+  height: 140px;
+  overflow: hidden;
   background: url('../images/cta-follow-us-bg.png') repeat-x top left;
 }
 .cta-follow-us a {
@@ -3114,7 +3123,7 @@ a.cta-rethink:hover {
   left: 0;
   display: block;
   padding: 0 26px;
-  width: 81%;
+  width: 100%;
   height: 49px;
   background: url('../images/cta-follow-us-title-bg.png') repeat-x top left;
   color: white;
@@ -3125,16 +3134,13 @@ a.cta-rethink:hover {
   position: absolute;
   top: 50%;
   right: 143px;
-  margin-top: -7px;
+  margin-top: -10px;
   width: 14px;
   height: 15px;
   background: url('../images/arrows-icons.png') no-repeat 0 -20px;
 }
 .cta-follow-us .circle {
   margin-left: 17px;
-}
-.cta-follow-us .social-block-twitter {
-  margin-left: 0;
 }
 
 .pane-bundle-image-cta .group-left,
