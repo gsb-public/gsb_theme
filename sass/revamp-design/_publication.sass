@@ -1,0 +1,118 @@
+.field-name-field-person-other
+  margin-bottom: -3px
+  *
+    display: inline-block
+    line-height: 1em
+    font-weight: bold
+    font-size: 18px
+  a
+    color: $red
+  .field-name-field-first-name
+    padding-right: 4px
+  .field-label,
+  .field-name-field-person-or-other
+    display: none
+  .separator
+    position: relative
+    left: -5px
+    top: -5px
+
+.node-publication
+  border-top: 3px $black solid
+  .field.field-name-title h2
+    text-transform: none
+    color: $blue-dark
+    font-size: 31px
+    line-height: 1.15em
+    margin: 0 0 10px 0
+    padding-top: 15px
+    font-weight: 500
+  .field-name-field-date-published
+    font-size: 16px
+    margin-top: 4px
+    margin-bottom: 8px
+    position: relative
+    top: -4px
+    .label-inline
+      font-weight: normal
+  .group_tags_wrapper
+    margin-top: 13px
+    font-size: 14px
+    color: $grey-a
+    h3
+      font-size: 14px
+      margin: 0
+      line-height: 1em
+      text-transform: none
+    a
+      color: $red
+  .field-name-field-publisher
+    font-size: 14px
+    color: $grey-5
+  .field-name-field-body
+    border-top: 1px $grey-b solid
+    border-bottom: 1px $grey-b solid
+    padding: 20px 0
+    margin: 20px 0
+    color: $grey-2
+  .green-rounded-button
+    float: left
+    overflow: hidden
+    margin-top: 5px
+    margin-bottom: 25px
+    img
+      float: right
+      margin-left: 2px
+      position: relative
+      top: -1px
+    a
+      width: 0px
+      overflow: hidden
+      font-weight: bold
+    img + a
+      color: transparent
+      font-size: 0
+      &:before
+        content: 'View Sample'
+        font-size: 16px
+        color: $white
+  .group-footer
+    margin-top: 15px
+    .field-name-field-publication-reviews
+      margin-bottom: 20px
+      .label-above
+        font-weight: bold
+        font-size: 18px
+      .field-name-field-body
+        border: none
+        margin: 0
+        padding: 20px 0 0
+        .field-item
+          &:before
+            content: '“'
+          &:after
+            content: '”'
+      .field-label
+        display: none
+      .field-name-field-publication-reviewer
+        .field-item
+          font-size: 15px
+          color: $grey-4
+          &:before
+            content: '— '
+
+  .group-right
+    max-width: 180px
+    text-align: right
+  .group-left
+    max-width: 370px
+.group_publication_details 
+  *
+    display: inline-block
+    line-height: 1em
+    font-size: 14px
+    color: $grey-5
+  .field-name-field-issue-number,
+  .field-name-field-pages 
+    .field-item:before
+      content: ', '
