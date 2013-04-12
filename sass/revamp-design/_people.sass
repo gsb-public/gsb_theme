@@ -1,6 +1,19 @@
 // People FPP
 
 .pane-bundle-people
+  padding: 0 24px
+  @extend %border-and-box-shadow
+  // Title styling
+  .field-name-field-title
+    border-top: 10px $blue-light solid
+    border-bottom: 1px solid $grey-e
+    font-size: 18px
+    font-weight: bold
+    line-height: 1
+    margin-top: -2px
+    padding-top: 16px
+    padding-bottom: 30px
+  // Person in list styling
   .person-name
     .name-first,
     .name-middle,
@@ -9,11 +22,32 @@
       font-size: 18px
       font-weight: bold
       margin-right: 5px
+  .person-position
+    font-size: 18px
+    margin-bottom: 24px
     .person-title
-      font-size: 18px
+      margin-right: 5px
+    .person-area
+      .label-inline
+        font-weight: normal
+        margin-right: 5px
 
   .person-quote
     font-size: 16px
     line-height: 22px
     &:before
       content: "“"
+
+// Person field collection for people styling
+.field-collection-item-field-person-description
+  border-bottom: 1px solid $grey-e
+  padding: 30px 0
+  min-height: 304px
+  +clearfix
+  .field-name-field-person-ref
+    float: left
+    width: 100%
+  .field-name-field-image-single-public
+    position: absolute
+  .person-quote
+    margin-left: 190px
