@@ -62,7 +62,7 @@ pre, code, kbd, tt {
 .person-list-view,
 .pane-gsb-event-frontpage,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video,
-.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people {
+.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .view-mode-teaser.node-media-mention {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -3665,6 +3665,44 @@ a.cta-rethink:hover {
   content: "Download Electronic Copy";
   font-size: 16px;
   color: white;
+}
+
+.view-mode-teaser.node-media-mention {
+  max-width: 270px;
+}
+.view-mode-teaser.node-media-mention .field-name-title h2 {
+  color: #990000;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 26px;
+  display: block;
+  margin-top: -9px;
+  margin-bottom: 4px;
+}
+.view-mode-teaser.node-media-mention .field-name-field-date-published,
+.view-mode-teaser.node-media-mention .field-name-field-publisher {
+  color: #666666;
+  font-size: 14px;
+}
+.view-mode-teaser.node-media-mention .field-name-author {
+  font-weight: bold;
+  font-size: 14px;
+  color: #222222;
+}
+.view-mode-teaser.node-media-mention .group_tags_wrapper {
+  margin-top: 13px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.view-mode-teaser.node-media-mention .group_tags_wrapper h3 {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1em;
+  text-transform: none;
+}
+.view-mode-teaser.node-media-mention .group_tags_wrapper a {
+  color: #990000;
 }
 
 .field-name-field-person-other {
