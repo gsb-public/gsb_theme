@@ -1,3 +1,16 @@
+.node-research-paper
+  .field-name-field-research-paper-number
+    color: $grey-5
+  .field-name-field-body
+    margin-top: 20px
+    color: $grey-2
+
+.node-case-study.view-mode-full,
+.node-research-paper.view-mode-full
+  .field.field-name-title 
+    h2
+      border-top: 3px $black solid
+
 .field-name-field-person-fac-student-other
   & > div.field-label
     display: inline
@@ -16,10 +29,11 @@
     display: none
   .separator
     position: relative
-    left: -5px
+    left: -6px
     top: -5px
 
-.node-case-study 
+.node-case-study,
+.node-research-paper
   .field.field-name-title h2
     text-transform: none
     color: $blue-dark
@@ -27,15 +41,17 @@
     line-height: 1.15em
     margin: 0 0 10px 0
     padding-top: 15px
-    border-top: 3px $black solid
     font-weight: 500
   .field-name-field-date-published
-    font-size: 16px
+    font-size: 15px
     color: $grey-4
     margin-top: 4px
     margin-bottom: -5px
     position: relative
     top: -5px
+    .field-label
+      font-size: 15px
+      font-weight: normal
     .label-inline
       font-weight: normal
       padding-right: 4px
@@ -45,22 +61,8 @@
     .label-inline
       font-weight: normal
       padding-right: 4px
-  .group_tags_wrapper
-    margin-top: 13px
-    font-size: 14px
-    color: $grey-a
-    h3
-      font-size: 14px
-      margin: 0
-      line-height: 1em
-      text-transform: none
-    a
-      color: $red
   .field-name-field-research-paper-number
     color: $grey-5
-  .field-name-field-body
-    margin-top: 20px
-    color: $grey-2
   .green-rounded-button
     float: left
     overflow: hidden
@@ -81,3 +83,49 @@
         content: 'Download Electronic Copy'
         font-size: 16px
         color: $white
+
+.node-case-study.view-mode-teaser,
+.node-research-paper.view-mode-teaser
+  .field-name-title,
+  .field-name-title *,
+  .field-name-field-case-study-number,
+  .field-name-field-research-paper-number
+    display: inline-block
+  .field-name-title h2
+    color: $red
+    font-size: 26px
+    padding-right: 6px
+    border: none
+    padding: 0 6px 0 0
+    margin-bottom: 8px
+  .field-name-field-case-study-number,
+  .field-name-field-research-paper-number 
+    font-size: 20px
+    padding-left: 4px
+    border-left: 1px $grey-a solid
+    position: relative
+    top: -2px
+    color: $grey-3
+  .field-name-field-date-published 
+    margin-bottom: 1px
+
+.view-mode-full,
+.node-research-paper
+  .field-name-field-person-fac-student-other
+    .separator
+      left: -6px
+      top: -10px
+
+.node-research-paper.view-mode-full
+  .field-name-field-person-fac-student-other
+    .separator
+      left: -6px
+      top: -5px
+
+.node-research-paper.view-mode-teaser,
+.node-case-study.view-mode-teaser
+  .field-name-field-body
+    margin-top: 2px
+    p
+      margin-bottom: 8px
+      margin-top: 3px

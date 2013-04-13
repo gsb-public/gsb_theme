@@ -1,11 +1,13 @@
 .view-mode-teaser
   &.node-media-mention
-    @extend %border-and-box-shadow
-    max-width: 270px
+    .group_content_wrapper
+      padding: 10px 0 0 26px
+    .group-left
+      max-width: 220px
     .field-name-title
       h2
         color: $red
-        font-weight: bold
+        font-weight: normal
         text-transform: none
         font-size: 20px
         line-height: 26px
@@ -20,14 +22,5 @@
       font-weight: bold
       font-size: 14px
       color: $grey-2
-    .group_tags_wrapper
-      margin-top: 13px
-      font-size: 14px
-      color: $grey-a
-      h3
-        font-size: 14px
-        margin: 0
-        line-height: 1em
-        text-transform: none
-      a
-        color: $red
+      .label-inline
+        padding-right: 4px

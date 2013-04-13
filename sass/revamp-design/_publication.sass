@@ -4,7 +4,7 @@
     display: inline-block
     line-height: 1em
     font-weight: bold
-    font-size: 18px
+    font-size: 15px
   a
     color: $red
   .field-name-field-first-name
@@ -18,14 +18,12 @@
     top: -5px
 
 .node-publication
-  border-top: 3px $black solid
   .field.field-name-title h2
     text-transform: none
     color: $blue-dark
     font-size: 31px
     line-height: 1.15em
     margin: 0 0 10px 0
-    padding-top: 15px
     font-weight: 500
   .field-name-field-date-published
     font-size: 16px
@@ -35,26 +33,18 @@
     top: -4px
     .label-inline
       font-weight: normal
-  .group_tags_wrapper
-    margin-top: 13px
-    font-size: 14px
-    color: $grey-a
-    h3
-      font-size: 14px
-      margin: 0
-      line-height: 1em
-      text-transform: none
-    a
-      color: $red
   .field-name-field-publisher
     font-size: 14px
     color: $grey-5
   .field-name-field-body
-    border-top: 1px $grey-b solid
-    border-bottom: 1px $grey-b solid
-    padding: 20px 0
-    margin: 20px 0
     color: $grey-2
+    margin-top: 4px
+    p
+      font-size: 16px
+      margin: 0
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
   .green-rounded-button
     float: left
     overflow: hidden
@@ -101,11 +91,6 @@
           &:before
             content: '— '
 
-  .group-right
-    max-width: 180px
-    text-align: right
-  .group-left
-    max-width: 370px
 .group_publication_details 
   *
     display: inline-block
@@ -116,3 +101,23 @@
   .field-name-field-pages 
     .field-item:before
       content: ', '
+
+.node-publication.view-mode-full
+  border-top: 3px $black solid
+  .field.field-name-title h2
+    padding-top: 15px
+  .group-right
+    max-width: 180px
+    text-align: right
+  .group-left
+    max-width: 370px
+  .field-name-field-body
+    border-top: 1px $grey-b solid
+    border-bottom: 1px $grey-b solid
+    padding: 20px 0
+    margin: 20px 0
+    p
+      font-size: 18px
+      margin-bottom: 20px
+    .field-name-field-person-other *
+      font-size: 17px
