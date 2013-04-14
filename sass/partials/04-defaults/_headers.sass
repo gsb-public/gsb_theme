@@ -4,20 +4,21 @@
   line-height: 1
   margin: 0
   text-rendering: optimizeLegibility
-  text-transform: uppercase
+  // text-transform: uppercase (don't want this on h1 or h2 of nodes)
 
 %h1
   font-size: 48px
   line-height: 56px
-  font-weight: 500
+  font-weight: bold
 
 %h2
   font-size: 34px
+  font-weight: normal
   line-height: 40px
 
 %h3
   font-size: 26px
-  font-weight: 500
+  font-weight: bold
   line-height: 30px
 
 %h4
@@ -32,7 +33,7 @@
 
 %h6
   font-size: 18px
-  font-weight: 500
+  font-weight: bold
   line-height: 14px
 
 h1
@@ -48,9 +49,19 @@ h5
 h6
   @extend %h6
 
-// h1 styling
+// h1 title styling
 h1.title
   font-weight: bold
   font-size: 48px
   line-height: 56px
   text-transform: none
+
+// On node pages
+.view-mode-full
+  h1.full-title
+    font-size: 36px
+    line-height: 42px
+    margin-bottom: 30px
+  h2.editorial-summary
+    font-size: 22px
+    line-height: 28px
