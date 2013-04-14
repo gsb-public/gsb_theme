@@ -12,42 +12,86 @@
     line-height: 1
     margin-top: -2px
     padding-top: 16px
-    padding-bottom: 30px
-  // Person in list styling
+    padding-bottom: 24px
+
+// General people styling
+.person-name
+  .name-first,
+  .name-middle,
+  .name-last
+    color: $black
+    font-weight: bold
+    margin-right: 5px
+    a
+      color: $red
+
+.person-position
+  .person-area
+    a
+      color: $red
+
+// People FPP list styling (with quote)
+.people-list
+  // Person Name
   .person-name
     .name-first,
     .name-middle,
     .name-last
-      color: $red
       font-size: 18px
-      font-weight: bold
       margin-right: 5px
+  // Person Position
   .person-position
     font-size: 18px
-    margin-bottom: 24px
+    margin-bottom: 16px
     .person-title
       margin-right: 5px
     .person-area
       .label-inline
         font-weight: normal
         margin-right: 5px
-
+  // Quote
   .person-quote
     font-size: 16px
     line-height: 22px
     &:before
       content: "“"
+  // Quote positiong
+  .views-row
+    border-bottom: 1px solid $grey-e
+    padding: 24px 0
+    min-height: 304px
+    &:last-of-type
+      border-bottom: 0
+    +clearfix
+    .person-name
+      float: left
+      width: 100%
+    .field-name-field-image-single-public
+      position: absolute
+    .person-quote
+      margin-left: 190px
 
-// Person field collection for people styling
-.field-collection-item-field-person-description
-  border-bottom: 1px solid $grey-e
-  padding: 30px 0
-  min-height: 304px
-  +clearfix
-  .field-name-field-person-ref
-    float: left
-    width: 100%
+// People FPP grid styling
+.people-grid
+  .col-1,
+  .col-2,
+  .col-3
+    display: inline-block
+    vertical-align: top
+  .col-1,
+  .col-2
+    margin-right: 30px
+
+// People teaser styling
+.node-alumni.node-teaser,
+.node-staff.node-teaser,
+.node-faculty.node-teaser
+  // Image
   .field-name-field-image-single-public
-    position: absolute
-  .person-quote
-    margin-left: 190px
+    margin-bottom: 16px
+  // Person Position
+  .person-position
+    font-size: 14px
+  .person-title,
+  .person-area
+    line-height: 1.3
