@@ -194,7 +194,8 @@
 
 #views-exposed-form-research-papers-filters-research-list,
 #views-exposed-form-case-study-filters-case-study-list,
-#views-exposed-form-media-mention-filters-medai-mention-list
+#views-exposed-form-media-mention-filters-medai-mention-list,
+#views-exposed-form-publications-filters-publications-list
   @extend %border-and-box-shadow
   .views-exposed-widget
     float: left
@@ -216,13 +217,16 @@
     margin-top: -15px
 
 .view-media-mention-filters,
-.view-media-mention
+.view-media-mention,
+.view-publications
   .views-row
     @extend %border-and-box-shadow
     padding: 26px
 
 
-.view-media-mention 
+.view-media-mention,
+.view-publications-filters,
+.view-publications
   .views-row 
     position: relative
   img 
@@ -243,9 +247,10 @@
     margin-bottom: 8px
     position: relative
     top: -4px
+    color: $grey-4
   .views-field-sm-field-body-apachesolr 
     font-size: 14px
-    color: $grey-6
+    color: $grey-3
     span
       font-size: 16px
       margin: 0
@@ -254,3 +259,31 @@
         margin-top: 0
     a
       color: $red
+  .views-field-sm-field-tags-apachesolr
+    color: $red
+    font-size: 15px
+
+.view-case-study-filters,
+.view-research-papers-filters,
+.view-publications-filters,
+.view-publications
+  clear: both
+  .views-row 
+    width: 100%
+    height: auto
+
+#views-exposed-form-research-papers-filters-research-list,
+#views-exposed-form-publications-filters-publications-list,
+#views-exposed-form-case-study-filters-case-study-list,
+#views-exposed-form-media-mention-filters-medai-mention-list
+  float: left
+  width: 75%
+  margin-top: 12px
+
+
+#views-exposed-form-research-papers-panel-pane-1,
+#views-exposed-form-search-case-study-panel-pane-,
+#views-exposed-form-media-mention-media-mention-solr,
+#views-exposed-form-publications-publications-solr
+  float: right
+  width: 20%
