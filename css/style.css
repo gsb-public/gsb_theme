@@ -3691,6 +3691,11 @@ a.cta-rethink:hover {
 .node-research-paper.view-mode-full .name-first {
   margin-right: 5px;
 }
+.node-case-study.view-mode-full .field-name-field-person-fac-student-other,
+.node-research-paper.view-mode-full .field-name-field-person-fac-student-other {
+  overflow: hidden;
+  *zoom: 1;
+}
 .node-case-study.view-mode-full .field-name-field-person-fac-student-other .label-inline,
 .node-research-paper.view-mode-full .field-name-field-person-fac-student-other .label-inline {
   float: left;
@@ -3725,14 +3730,22 @@ a.cta-rethink:hover {
   color: #555555;
 }
 .node-case-study.view-mode-full .group-tags-wrapper.case-study,
-.node-research-paper.view-mode-full .group-tags-wrapper.case-study {
+.node-case-study.view-mode-full .group-tags-wrapper.research-paper,
+.node-case-study.view-mode-full .green-rounded-button,
+.node-research-paper.view-mode-full .group-tags-wrapper.case-study,
+.node-research-paper.view-mode-full .group-tags-wrapper.research-paper,
+.node-research-paper.view-mode-full .green-rounded-button {
   margin-bottom: 30px;
+}
+.node-case-study.view-mode-full .group-tags-wrapper.research-paper .separator,
+.node-research-paper.view-mode-full .group-tags-wrapper.research-paper .separator {
+  float: none;
 }
 .node-case-study.view-mode-full .green-rounded-button,
 .node-research-paper.view-mode-full .green-rounded-button {
-  float: left;
+  display: inline-block;
   overflow: hidden;
-  margin-bottom: 25px;
+  *zoom: 1;
 }
 .node-case-study.view-mode-full .green-rounded-button img,
 .node-research-paper.view-mode-full .green-rounded-button img {

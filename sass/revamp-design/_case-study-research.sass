@@ -7,8 +7,8 @@
     padding-top: 14px
     .label-inline
       font-weight: normal
-    // Author names
 
+    // Author names
     .field-collection-item-field-person-fac-student-other,
     .group-wrapper-name
       display: inline
@@ -22,6 +22,7 @@
       margin-right: 5px
 
     .field-name-field-person-fac-student-other
+      +clearfix
       .label-inline
         float: left
         font-weight: bold
@@ -48,12 +49,17 @@
     .field-name-field-research-paper-number
       color: $grey-5
     // Tags
-    .group-tags-wrapper.case-study
-      margin-bottom: 30px
+    .group-tags-wrapper.case-study,
+    .group-tags-wrapper.research-paper,
     .green-rounded-button
-      float: left
-      overflow: hidden
-      margin-bottom: 25px
+      margin-bottom: 30px
+    .group-tags-wrapper.research-paper
+      .separator
+        float: none
+    // Button
+    .green-rounded-button
+      display: inline-block
+      +clearfix
       img
         float: right
         margin-left: 2px
