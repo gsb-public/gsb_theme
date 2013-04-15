@@ -3506,10 +3506,6 @@ a.cta-rethink:hover {
   margin-right: 6%;
 }
 
-.page-events .form-item label {
-  display: inline;
-}
-
 .page-events .view-gsb-event .view-filters {
   display: inline-block;
 }
@@ -3526,32 +3522,41 @@ a.cta-rethink:hover {
   padding: 0;
   margin-bottom: 20px;
 }
-.page-events .node-gsb-event.node-teaser {
+
+.view-gsb-event .node-event.node-teaser {
   border-top: 1px #231f20 solid;
   padding: 24px;
+  overflow: hidden;
+  *zoom: 1;
 }
-.page-events .node-gsb-event.node-teaser .group-left {
-  width: 79%;
-}
-.page-events .node-gsb-event.node-teaser .group-right {
+.view-gsb-event .node-event.node-teaser .field-name-field-image-single-public {
   float: right;
-  width: auto;
 }
-.page-events .node-gsb-event.node-teaser .group-left a {
-  border-bottom: 0;
-  color: #990000;
+.view-gsb-event .node-event.node-teaser .field-name-field-event-date {
+  color: black;
+  font-size: 18px;
+  margin-left: -24px;
+  font-weight: bold;
 }
-.page-events .node-gsb-event.node-teaser .group-right .field-type-image {
-  text-align: right;
+.view-gsb-event .node-event.node-teaser .group-wrapper-teaser h2,
+.view-gsb-event .node-event.node-teaser .group-wrapper-teaser h2 a {
+  margin-bottom: 16px;
 }
-.page-events .node-gsb-event.node-teaser .group-left .field-name-field-address, .page-events .node-gsb-event.node-teaser .group-left .field-name-field-editorial-summary {
-  margin-bottom: 18px;
+.view-gsb-event .node-event.node-teaser .field-name-field-address,
+.view-gsb-event .node-event.node-teaser .field-name-field-editorial-summary {
+  margin-bottom: 16px;
 }
-.page-events .node-gsb-event.node-teaser .group-left .field-type-taxonomy-term-reference {
-  display: inline-block;
-  float: left;
-  font-size: 12px;
-  margin-right: 5px;
+.view-gsb-event .node-event.node-teaser .locality-block {
+  font-size: 14px;
+  font-weight: bold;
+}
+.view-gsb-event .node-event.node-teaser .locality:after {
+  content: ",";
+}
+.view-gsb-event .node-event.node-teaser .street-block,
+.view-gsb-event .node-event.node-teaser .postal-code,
+.view-gsb-event .node-event.node-teaser .country {
+  display: none;
 }
 
 .node-event #page-title {

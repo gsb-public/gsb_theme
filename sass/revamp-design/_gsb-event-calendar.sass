@@ -1,9 +1,5 @@
 // Styling for the Calendar and Events Listing pages
 
-.page-events
-  .form-item label
-    display: inline
-
 // Lay out the filters with calendar
 .page-events
   .view-gsb-event
@@ -19,24 +15,41 @@
     .views-exposed-widget
       padding: 0
       margin-bottom: 20px
-  .node-gsb-event.node-teaser
+
+  // Event teaser styling
+.view-gsb-event
+  .node-event.node-teaser
     border-top: 1px $text-grey solid
     padding: 24px
-    .group-left
-      width: 79%
-    .group-right
+    +clearfix
+    // Image position
+    .field-name-field-image-single-public
       float: right
-      width: auto
-    .group-left a
-      border-bottom: 0
-      color: $red
-    .group-right .field-type-image
-      text-align: right
-    .group-left
-      .field-name-field-address, .field-name-field-editorial-summary
-        margin-bottom: 18px
-      .field-type-taxonomy-term-reference
-        display: inline-block
-        float: left
-        font-size: 12px
-        margin-right: 5px
+    // Date styling
+    .field-name-field-event-date
+      color: $black
+      font-size: 18px
+      margin-left: -24px
+      font-weight: bold
+    // Title
+    .group-wrapper-teaser h2,
+    .group-wrapper-teaser h2 a
+      margin-bottom: 16px
+    .field-name-field-address,
+    .field-name-field-editorial-summary
+      margin-bottom: 16px
+    // Address
+    .locality-block
+      font-size: 14px
+      font-weight: bold
+    .locality
+      &:after
+        content: ","
+    .street-block,
+    .postal-code,
+    .country
+      display: none
+
+
+// Calendar page
+// .page-events-calendar
