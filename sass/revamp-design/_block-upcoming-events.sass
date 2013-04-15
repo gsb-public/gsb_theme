@@ -1,59 +1,15 @@
-// upcoming events (ue)
-
-.cp-event .blue-small-border
-  display: none
-
-.event-sidebar .cp-adress
-  margin-bottom: 5px
-  color: #666
-  font-size: 13px
-  font-weight: 500
-
-.pane-gsb-event-sidebar
-  .cp-title a
-    color: $green-light
-  .blue-small-border, .cp-date
-    display: block
-  .cp-image img
-    width: 170px
-
-.span8 .pane-gsb-event-sidebar .cp-block
-  min-height: 115px
-
-.pane-gsb-event-sidebar h2, .pane-gsb-event-frontpage h2
-  margin: 0
-  margin-bottom: 18px
-  color: $red
-  font-size: 14px
-  line-height: 1em
-
-.pane-gsb-event-sidebar .views-row
-  position: relative
-  > div
-    max-width: 580px
-
-.event-sidebar .views-field-body a
-  border: none
-  &:hover
-    border: none
-
-.pane-gsb-event-sidebar img
-  position: absolute
-  top: 12px
-  right: 0
-
-.blue-small-border
-  display: block
-  margin-bottom: 5px
-  margin-left: -27px
-  width: 26px
-  height: 9px
-  background: $blue-light
+// Upcoming events on homepage
 
 .pane-gsb-event-frontpage
-  h2
-    font-size: 15px
-    font-weight: 500
+  padding: 26px
+  @extend %border
+  background: image_url("bg-homepage-events.png") no-repeat
+  h2.pane-title
+    color: $red
+    font-size: 16px
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 28px
   ul
     margin: 0
     padding: 0
@@ -61,31 +17,21 @@
     li
       margin-bottom: 10px
       margin-left: 0
-  .views-field-field-event-date
-    display: inline
-    color: #3d3738
+  .views-field-field-event-date,
+  .views-field-title,
+  .views-field-field-address
+    color: $black
     font-size: 16px
-    div
-      display: inline
-      color: #3d3738
-      font-size: 16px
-  .views-field-title
-    display: inline
-    color: #3d3738
-    font-size: 16px
-  .views-field-field-event-date div
-    color: #555
   .views-field-title a
     border: 0
-    color: #231f20
+    color: $black
     font-weight: bold
     &:hover
       border: 0
   .views-field-field-address
-    display: inline
-    color: $black
-    font-size: 16px
-    div
-      display: inline
-      color: $black
-      font-size: 16px
+    .locality
+      &:after
+        content: ","
+    .thoroughfare,
+    .country
+      display: none
