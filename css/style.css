@@ -3056,7 +3056,7 @@ a.cta-green .cta-title {
 
 .cta-link {
   margin-bottom: 0;
-  padding: 13px 55px 13px 22px;
+  padding: 13px 22px;
 }
 .cta-link b {
   line-height: 1.3em;
@@ -3089,8 +3089,8 @@ a.cta-green .cta-title {
   margin-bottom: 30px;
 }
 
-a.cta-red-gradient,
-a.cta-red-gradient:hover {
+.cta-red-gradient,
+.cta-red-gradient:hover {
   margin-bottom: 5px;
   border: 0;
   background-color: #990000;
@@ -3099,6 +3099,15 @@ a.cta-red-gradient:hover {
   box-shadow: black, 0.45, 1px 1px 1px;
   color: white;
   font-weight: bold;
+}
+.cta-red-gradient:after,
+.cta-red-gradient:hover:after {
+  color: white;
+  content: "\f100";
+  float: right;
+  font-family: "arrow-double";
+  font-size: 28px;
+  font-weight: normal;
 }
 
 .item-0.cta-red-gradient {
