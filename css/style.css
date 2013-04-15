@@ -67,7 +67,8 @@ pre, code, kbd, tt {
 .view-research-papers .views-row, #views-exposed-form-research-papers-filters-research-list,
 #views-exposed-form-case-study-filters-case-study-list,
 #views-exposed-form-media-mention-filters-medai-mention-list,
-#views-exposed-form-publications-filters-publications-list, .view-media-mention-filters .views-row,
+#views-exposed-form-publications-filters-publications-list,
+#views-exposed-form-search-news-news-list, .view-media-mention-filters .views-row,
 .view-media-mention .views-row,
 .view-publications .views-row {
   background-color: #cccccc;
@@ -3996,7 +3997,8 @@ a.cta-rethink:hover {
 #views-exposed-form-research-papers-filters-research-list .views-exposed-widget,
 #views-exposed-form-case-study-filters-case-study-list .views-exposed-widget,
 #views-exposed-form-media-mention-filters-medai-mention-list .views-exposed-widget,
-#views-exposed-form-publications-filters-publications-list .views-exposed-widget {
+#views-exposed-form-publications-filters-publications-list .views-exposed-widget,
+#views-exposed-form-search-news-news-list .views-exposed-widget {
   float: left;
   width: 33%;
   border-right: 1px #dddddd solid;
@@ -4005,20 +4007,23 @@ a.cta-rethink:hover {
 #views-exposed-form-research-papers-filters-research-list fieldset,
 #views-exposed-form-case-study-filters-case-study-list fieldset,
 #views-exposed-form-media-mention-filters-medai-mention-list fieldset,
-#views-exposed-form-publications-filters-publications-list fieldset {
+#views-exposed-form-publications-filters-publications-list fieldset,
+#views-exposed-form-search-news-news-list fieldset {
   border: none;
 }
 #views-exposed-form-research-papers-filters-research-list .fieldset-title,
 #views-exposed-form-case-study-filters-case-study-list .fieldset-title,
 #views-exposed-form-media-mention-filters-medai-mention-list .fieldset-title,
-#views-exposed-form-publications-filters-publications-list .fieldset-title {
+#views-exposed-form-publications-filters-publications-list .fieldset-title,
+#views-exposed-form-search-news-news-list .fieldset-title {
   color: #990000;
   font-weight: bold;
 }
 #views-exposed-form-research-papers-filters-research-list .collapsed,
 #views-exposed-form-case-study-filters-case-study-list .collapsed,
 #views-exposed-form-media-mention-filters-medai-mention-list .collapsed,
-#views-exposed-form-publications-filters-publications-list .collapsed {
+#views-exposed-form-publications-filters-publications-list .collapsed,
+#views-exposed-form-search-news-news-list .collapsed {
   height: auto;
   padding: 0 0 0 10px;
   margin-bottom: 0;
@@ -4026,13 +4031,15 @@ a.cta-rethink:hover {
 #views-exposed-form-research-papers-filters-research-list .form-item,
 #views-exposed-form-case-study-filters-case-study-list .form-item,
 #views-exposed-form-media-mention-filters-medai-mention-list .form-item,
-#views-exposed-form-publications-filters-publications-list .form-item {
+#views-exposed-form-publications-filters-publications-list .form-item,
+#views-exposed-form-search-news-news-list .form-item {
   margin: 10px 0;
 }
 #views-exposed-form-research-papers-filters-research-list .fieldset-wrapper,
 #views-exposed-form-case-study-filters-case-study-list .fieldset-wrapper,
 #views-exposed-form-media-mention-filters-medai-mention-list .fieldset-wrapper,
-#views-exposed-form-publications-filters-publications-list .fieldset-wrapper {
+#views-exposed-form-publications-filters-publications-list .fieldset-wrapper,
+#views-exposed-form-search-news-news-list .fieldset-wrapper {
   margin-top: -15px;
 }
 
@@ -4044,12 +4051,14 @@ a.cta-rethink:hover {
 
 .view-media-mention .views-row,
 .view-publications-filters .views-row,
-.view-publications .views-row {
+.view-publications .views-row,
+.view-search-news .views-row {
   position: relative;
 }
 .view-media-mention img,
 .view-publications-filters img,
-.view-publications img {
+.view-publications img,
+.view-search-news img {
   max-width: 180px;
   position: absolute;
   top: 26px;
@@ -4057,12 +4066,14 @@ a.cta-rethink:hover {
 }
 .view-media-mention .views-field,
 .view-publications-filters .views-field,
-.view-publications .views-field {
+.view-publications .views-field,
+.view-search-news .views-field {
   margin-left: 200px;
 }
 .view-media-mention .views-field a,
 .view-publications-filters .views-field a,
-.view-publications .views-field a {
+.view-publications .views-field a,
+.view-search-news .views-field a {
   color: #990000;
   font-size: 19px;
   line-height: 1.15em;
@@ -4070,7 +4081,8 @@ a.cta-rethink:hover {
 }
 .view-media-mention .views-field-sm-field-date-published-format-month-day,
 .view-publications-filters .views-field-sm-field-date-published-format-month-day,
-.view-publications .views-field-sm-field-date-published-format-month-day {
+.view-publications .views-field-sm-field-date-published-format-month-day,
+.view-search-news .views-field-sm-field-date-published-format-month-day {
   font-size: 16px;
   margin-top: 4px;
   margin-bottom: 8px;
@@ -4080,32 +4092,42 @@ a.cta-rethink:hover {
 }
 .view-media-mention .views-field-sm-field-body-apachesolr,
 .view-publications-filters .views-field-sm-field-body-apachesolr,
-.view-publications .views-field-sm-field-body-apachesolr {
+.view-publications .views-field-sm-field-body-apachesolr,
+.view-search-news .views-field-sm-field-body-apachesolr {
   font-size: 14px;
   color: #333333;
 }
 .view-media-mention .views-field-sm-field-body-apachesolr span,
 .view-publications-filters .views-field-sm-field-body-apachesolr span,
-.view-publications .views-field-sm-field-body-apachesolr span {
+.view-publications .views-field-sm-field-body-apachesolr span,
+.view-search-news .views-field-sm-field-body-apachesolr span {
   font-size: 16px;
   margin: 0;
   margin-top: 10px;
 }
 .view-media-mention .views-field-sm-field-body-apachesolr span:first-child,
 .view-publications-filters .views-field-sm-field-body-apachesolr span:first-child,
-.view-publications .views-field-sm-field-body-apachesolr span:first-child {
+.view-publications .views-field-sm-field-body-apachesolr span:first-child,
+.view-search-news .views-field-sm-field-body-apachesolr span:first-child {
   margin-top: 0;
 }
 .view-media-mention .views-field-sm-field-body-apachesolr a,
 .view-publications-filters .views-field-sm-field-body-apachesolr a,
-.view-publications .views-field-sm-field-body-apachesolr a {
+.view-publications .views-field-sm-field-body-apachesolr a,
+.view-search-news .views-field-sm-field-body-apachesolr a {
   color: #990000;
 }
 .view-media-mention .views-field-sm-field-tags-apachesolr,
 .view-publications-filters .views-field-sm-field-tags-apachesolr,
-.view-publications .views-field-sm-field-tags-apachesolr {
+.view-publications .views-field-sm-field-tags-apachesolr,
+.view-search-news .views-field-sm-field-tags-apachesolr {
   color: #990000;
   font-size: 15px;
+}
+
+.view-news-list,
+.view-search-news {
+  padding: 26px;
 }
 
 .view-case-study-filters,
@@ -4125,7 +4147,8 @@ a.cta-rethink:hover {
 #views-exposed-form-research-papers-filters-research-list,
 #views-exposed-form-publications-filters-publications-list,
 #views-exposed-form-case-study-filters-case-study-list,
-#views-exposed-form-media-mention-filters-medai-mention-list {
+#views-exposed-form-media-mention-filters-medai-mention-list,
+#views-exposed-form-search-news-news-list {
   float: left;
   width: 75%;
   margin-top: 12px;
@@ -4134,7 +4157,8 @@ a.cta-rethink:hover {
 #views-exposed-form-research-papers-panel-pane-1,
 #views-exposed-form-search-case-study-panel-pane-,
 #views-exposed-form-media-mention-media-mention-solr,
-#views-exposed-form-publications-publications-solr {
+#views-exposed-form-publications-publications-solr,
+#views-exposed-form-news-list-news-list {
   float: right;
   width: 20%;
 }
@@ -4822,7 +4846,8 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-search-case-study-panel-pane-1 .views-exposed-form .form-item,
 #views-exposed-form-research-papers-panel-pane-1 .views-exposed-form .form-item,
 #views-exposed-form-media-mention-media-mention-solr .views-exposed-form .form-item,
-#views-exposed-form-publications-publications-solr .views-exposed-form .form-item {
+#views-exposed-form-publications-publications-solr .views-exposed-form .form-item,
+#views-exposed-form-news-list-news-list .views-exposed-form .form-item {
   margin: 5px 0 0;
   float: left;
   width: 100%;
@@ -4834,7 +4859,8 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-search-case-study-panel-pane-1 .views-exposed-form .form-text,
 #views-exposed-form-research-papers-panel-pane-1 .views-exposed-form .form-text,
 #views-exposed-form-media-mention-media-mention-solr .views-exposed-form .form-text,
-#views-exposed-form-publications-publications-solr .views-exposed-form .form-text {
+#views-exposed-form-publications-publications-solr .views-exposed-form .form-text,
+#views-exposed-form-news-list-news-list .views-exposed-form .form-text {
   width: 100%;
   border: none;
   border: 1px #d0d0d0 solid;
@@ -4851,7 +4877,8 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-search-case-study-panel-pane-1 .views-exposed-form .form-submit,
 #views-exposed-form-research-papers-panel-pane-1 .views-exposed-form .form-submit,
 #views-exposed-form-media-mention-media-mention-solr .views-exposed-form .form-submit,
-#views-exposed-form-publications-publications-solr .views-exposed-form .form-submit {
+#views-exposed-form-publications-publications-solr .views-exposed-form .form-submit,
+#views-exposed-form-news-list-news-list .views-exposed-form .form-submit {
   float: left;
   width: 45px;
   height: 36px;
