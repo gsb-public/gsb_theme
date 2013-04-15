@@ -1,20 +1,30 @@
 // Styling for the Calendar and Events Listing pages
 
 // Lay out the filters with calendar
-.page-events
+.page-events .pane-content
   .view-gsb-event
-    .view-filters
-      display: inline-block
     .view-content
       display: inline-block
-      max-width: 958px
-      width: 79%
+      width: 74.4%
+      float: right
     .view-filters
+      @extend %black-border-top
+      background-color: $grey-f
+      display: inline-block
       vertical-align: top
       width: 20%
+      padding: 24px
+      label
+        font-size: 16px
+        font-weight: normal
     .views-exposed-widget
+      border-bottom: 1px solid $grey-c
       padding: 0
       margin-bottom: 20px
+    .views-widget label.option
+      font-size: 13px
+      font-weight: bold
+      text-transform: uppercase
 
   // Event teaser styling
 .view-gsb-event

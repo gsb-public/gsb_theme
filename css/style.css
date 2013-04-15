@@ -77,6 +77,19 @@ pre, code, kbd, tt {
   margin-bottom: 30px;
 }
 
+.page-events .pane-content .view-gsb-event .view-filters {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, rgba(242, 242, 242, 0)));
+  background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
+  background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
+  background: -o-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
+  background: -ms-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
+  background: linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
+}
+
+.page-events .pane-content .view-gsb-event .view-filters {
+  border-top: 10px black solid;
+}
+
 article,
 aside,
 details,
@@ -924,7 +937,7 @@ textarea, input[type=text], input[type=password], input[type=email], input[type=
   padding: 0.3125em;
   border-width: 1px;
   border-color: #c2b7a1;
-  height: 36px;
+  height: 24px;
   margin-top: 0;
 }
 
@@ -3506,21 +3519,31 @@ a.cta-rethink:hover {
   margin-right: 6%;
 }
 
-.page-events .view-gsb-event .view-filters {
+.page-events .pane-content .view-gsb-event .view-content {
   display: inline-block;
+  width: 74.4%;
+  float: right;
 }
-.page-events .view-gsb-event .view-content {
+.page-events .pane-content .view-gsb-event .view-filters {
+  background-color: #f2f2f2;
   display: inline-block;
-  max-width: 958px;
-  width: 79%;
-}
-.page-events .view-gsb-event .view-filters {
   vertical-align: top;
   width: 20%;
+  padding: 24px;
 }
-.page-events .view-gsb-event .views-exposed-widget {
+.page-events .pane-content .view-gsb-event .view-filters label {
+  font-size: 16px;
+  font-weight: normal;
+}
+.page-events .pane-content .view-gsb-event .views-exposed-widget {
+  border-bottom: 1px solid #cccccc;
   padding: 0;
   margin-bottom: 20px;
+}
+.page-events .pane-content .view-gsb-event .views-widget label.option {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .view-gsb-event .node-event.node-teaser {
