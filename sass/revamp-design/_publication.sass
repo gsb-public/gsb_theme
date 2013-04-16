@@ -1,123 +1,92 @@
-.field-name-field-person-other
-  margin-bottom: -3px
-  *
-    display: inline-block
-    line-height: 1em
-    font-weight: bold
-    font-size: 15px
-  a
-    color: $red
-  .field-name-field-first-name
-    padding-right: 4px
-  .field-label,
-  .field-name-field-person-or-other
-    display: none
-  .separator
-    position: relative
-    left: -5px
-    top: -5px
-
+// Publication detail page
 .node-publication
-  .field.field-name-title h2
-    text-transform: none
-    color: $blue-dark
-    font-size: 31px
-    line-height: 1.15em
-    margin: 0 0 10px 0
-    font-weight: 500
-  .field-name-field-date-published
-    font-size: 16px
-    margin-top: 4px
-    margin-bottom: 8px
-    position: relative
-    top: -4px
+  &.view-mode-full
+    border-top: 3px $black solid
     .label-inline
       font-weight: normal
-  .field-name-field-publisher
-    font-size: 14px
-    color: $grey-5
-  .field-name-field-body
-    color: $grey-2
-    margin-top: 4px
-    p
-      font-size: 16px
-      margin: 0
-      margin-top: 10px
-      &:first-child
-        margin-top: 0
-  .green-rounded-button
-    float: left
-    overflow: hidden
-    margin-top: 5px
-    margin-bottom: 25px
-    img
+    // Publication image
+    .field-name-field-image-single-public
       float: right
-      margin-left: 2px
-      position: relative
-      top: -1px
-    a
-      width: 0px
-      overflow: hidden
+
+    // Title
+    .field-name-title
+      margin-top: 14px
+      h2
+        color: $blue-dark
+        font-size: 30px
+        line-height: 1.15em
+        margin: 0 0 10px 0
+
+    // Author names
+    .field-name-field-person-other
+      +clearfix
+      a
+        color: $red
+    .label-inline.research-paper
+      float: left
       font-weight: bold
-    img + a
-      color: transparent
-      font-size: 0
-      &:before
-        content: 'View Sample'
-        font-size: 16px
-        color: $white
-  .group-footer
-    margin-top: 15px
-    .field-name-field-publication-reviews
-      margin-bottom: 20px
-      .label-above
-        font-weight: bold
-        font-size: 18px
-      .field-name-field-body
-        border: none
-        margin: 0
-        padding: 20px 0 0
-        .field-item
-          &:before
-            content: '“'
-          &:after
-            content: '”'
-      .field-label
-        display: none
-      .field-name-field-publication-reviewer
-        .field-item
-          font-size: 15px
-          color: $grey-4
-          &:before
-            content: '— '
+    .field-collection-item-field-person-other,
+    .group-wrapper-name
+      font-weight: bold
+    .field-collection-item-field-person-other,
+    .separator
+      display: inline
+      float: left
+    .separator,
+    .label-inline,
+    .name-first
+      margin-right: 5px
 
-.group_publication_details 
-  *
-    display: inline-block
-    line-height: 1em
-    font-size: 14px
-    color: $grey-5
-  .field-name-field-issue-number,
-  .field-name-field-pages 
-    .field-item:before
-      content: ', '
+    // Date published
+    .field-name-field-date-published
+      color: $grey-4
+      line-height: 1
+      margin-bottom: 30px
+    // Case number
+    .field-name-field-case-study-number
+      color: $grey-6
+    .field-name-field-research-paper-number
+      color: $grey-5
+    // Tags
+    .group-tags-wrapper.case-study,
+    .group-tags-wrapper.research-paper,
+    .green-rounded-button
+      margin-bottom: 30px
+    .group-tags-wrapper.research-paper
+      .separator
+        float: none
+    .field-name-field-business-insight-topic
+      float: left
 
-.node-publication.view-mode-full
-  border-top: 3px $black solid
-  .field.field-name-title h2
-    padding-top: 15px
-  .group-right
-    max-width: 180px
-    text-align: right
-  .group-left
-    max-width: 370px
-  .field-name-field-body
-    border-top: 1px $grey-b solid
-    border-bottom: 1px $grey-b solid
-    padding: 20px 0
-    margin: 20px 0
-    p
+  // Publication details
+  .group-publication-details
+    +clearfix
+    & > span
+      +float-left
+      margin-right: 5px
+
+  // Body text
+  .publication-description
+    border-top: 1px $grey-c solid
+    border-bottom: 1px $grey-c solid
+    margin-top: 30px
+    padding: 30px 0
+
+  // Reviews
+  .field-name-field-publication-reviews
+    .label-above
+      font-weight: bold
+      margin: 30px 0
+    .publication-review
       font-size: 18px
-      margin-bottom: 20px
-    .field-name-field-person-other *
-      font-size: 17px
+      &:before
+        display: inline
+        content: "“"
+      &:after
+        display: inline
+        content: "”"
+    .publication-reviewer
+      font-style: italic
+      font-size: 14px
+  .field-collection-item-field-publication-reviews
+    margin-bottom: 30px
