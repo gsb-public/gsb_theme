@@ -79,7 +79,7 @@ gsb_tweetfeed = {
                     if (i == 0 ) {
                       var title = $(tempAppendTo).find('.field-name-field-feed-source'),
                           ovverideTitle = $(tempAppendTo).find('.field-name-field-social-twitter-title .field-item').text();
-                      if (ovverideTitle != '' || ovverideTitle != ' ') {
+                      if (ovverideTitle != '' && ovverideTitle != ' ') {
                         title.text(ovverideTitle);
                       } else {
                         title.text(data[0].user.name);
