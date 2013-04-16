@@ -55,6 +55,7 @@ gsb_tweetfeed = {
 
     // core function of gsb_tweetfeed
     loadTweets: function() {
+      var numTweets = gsb_tweetfeed.numTweets;
       tempAppendTo = gsb_tweetfeed.appendTo;
         $.ajax({
             url: 'https://api.twitter.com/1/statuses/user_timeline.json',
@@ -62,7 +63,7 @@ gsb_tweetfeed = {
             dataType: 'jsonp',
             data: {
                 screen_name: gsb_tweetfeed.search,
-                count: gsb_tweetfeed.numTweets,
+                count: numTweets,
                 include_entities: true
             },
             success: function(data, textStatus, xhr) {
