@@ -3236,7 +3236,7 @@ p.acc-title + p {
 }
 
 .cta-virtual-tour {
-  background: url('../images/cta-visit-blured.png') repeat-x top left;
+  background: url('../images/cta-visit-blured.png') repeat-x 1px 0;
   display: block;
   overflow: hidden;
   border: 2px white solid;
@@ -3249,7 +3249,6 @@ p.acc-title + p {
   background: url('../images/cta-visit.png') repeat-x top left;
 }
 .cta-virtual-tour .virtual-tour-btn {
-  position: relative;
   display: block;
   padding: 0 15px;
   height: 35px;
@@ -3257,16 +3256,15 @@ p.acc-title + p {
   color: #990000;
   font-size: 18px;
   font-weight: bold;
-  line-height: 35px;
+  line-height: 38px;
 }
-.cta-virtual-tour .virtual-tour-btn i {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  margin-top: -7px;
-  width: 13px;
-  height: 14px;
-  background: url('../images/cta-visit-icon.png') no-repeat top left;
+.cta-virtual-tour .virtual-tour-btn:after {
+  color: #c2b7a1;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 22px;
+  font-weight: normal;
+  float: right;
 }
 .cta-virtual-tour:hover .virtual-tour-btn {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
@@ -3277,8 +3275,8 @@ p.acc-title + p {
   background: linear-gradient(bottom, #870000, #c40000);
   color: white;
 }
-.cta-virtual-tour:hover .virtual-tour-btn i {
-  background: url('../images/cta-visit-icon-hover.png') no-repeat top left;
+.cta-virtual-tour:hover .virtual-tour-btn:after {
+  color: white;
 }
 .cta-virtual-tour .virtual-tour-cover {
   display: block;
@@ -3367,6 +3365,16 @@ p.acc-title + p {
   color: white;
   font-weight: bold;
   line-height: 49px;
+}
+.cta-follow-us .cta-title:after {
+  color: white;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 22px;
+  font-weight: normal;
+  position: relative;
+  top: 2px;
+  left: 12px;
 }
 .cta-follow-us .cta-title:hover {
   background: #990000;

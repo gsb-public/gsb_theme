@@ -28,7 +28,7 @@
 
 // Virtual tour
 .cta-virtual-tour
-  background: image_url('cta-visit-blured.png') repeat-x top left
+  background: image_url('cta-visit-blured.png') repeat-x 1px 0
   display: block
   overflow: hidden
   border: 2px $white solid
@@ -39,7 +39,6 @@
     border: 2px $white solid
     background: image_url('cta-visit.png') repeat-x top left
   .virtual-tour-btn
-    position: relative
     display: block
     padding: 0 15px
     height: 35px
@@ -47,20 +46,20 @@
     color: $red
     font-size: 18px
     font-weight: bold
-    line-height: 35px
-    i
-      position: absolute
-      top: 50%
-      right: 14px
-      margin-top: -7px
-      width: 13px
-      height: 14px
-      background: image_url('cta-visit-icon.png') no-repeat top left
-  &:hover .virtual-tour-btn
-    +background(linear-gradient(bottom, #870000, #c40000))
-    color: $white
-    i
-      background: image_url('cta-visit-icon-hover.png') no-repeat top left
+    line-height: 38px
+    &:after
+      color: $grey-med
+      content: "\f100"
+      font-family: "arrow-double"
+      font-size: 22px
+      font-weight: normal
+      float: right
+  &:hover
+    .virtual-tour-btn
+      +background(linear-gradient(bottom, #870000, #c40000))
+      color: $white
+      &:after
+        color: $white
   .virtual-tour-cover
     display: block
     height: 120px
@@ -130,6 +129,15 @@
     color: $white
     font-weight: bold
     line-height: 49px
+    &:after
+      color: $white
+      content: "\f100"
+      font-family: "arrow-double"
+      font-size: 22px
+      font-weight: normal
+      position: relative
+      top: 2px
+      left: 12px
     &:hover
       background: $red
 
