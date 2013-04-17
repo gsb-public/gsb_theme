@@ -1,0 +1,135 @@
+//////////////////
+// IMAGE CTA FPP
+//////////////////
+.pane-bundle-image-cta
+  .group-left,
+  .group-right
+    float: none
+    width: 100%
+  .group-left img
+    +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
+    border: 2px solid $white
+  .group-right
+    color: $white
+    padding: 30px
+    position: absolute
+  .image-cta-position-top .group-right
+    top: 0
+  .image-cta-position-bottom .group-right
+    bottom: 0
+
+  // Title
+  .field-name-field-title
+    color: $white
+    font-size: 15px
+    font-weight: normal
+    line-height: 1
+    text-transform: uppercase
+  // Description
+  .field-name-field-link-single a
+    font-size: 28px
+    font-weight: bold
+    line-height: 1.15em
+    color: #fff
+  // Double arrow link
+  .field-name-field-link-single
+    display: inline-block
+    position: relative
+    top: 6px
+    width: 100%
+    word-wrap: break-word
+    a:after
+      color: $green-light
+      content: "\f100"
+      font-family: "arrow-double"
+      font-size: 33px
+      position: relative
+      top: 4px
+      left: 5px
+  .fieldable-panels-pane
+    position: relative
+    top: 0
+
+
+.field-name-field-image-cta-link a
+  position: relative
+  display: block
+  border: none
+  border-top: 1px $white solid
+  border-bottom: 1px $grey-e solid
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  color: $red
+  font-size: 18px
+  line-height: 24px
+  &:first-child
+    border-top: 0
+
+.field-name-field-image-cta-link a
+  display: block
+  margin-top: -7px
+  width: 13px
+  height: 15px
+
+  &.cta-red.cta-link,
+  &.cta-green.cta-link
+    i
+      right: 18px
+      margin-top: -14px
+      width: 26px
+      height: 27px
+
+  &.cta-red.cta-link
+    i
+      background: image_url('cta_red_icon.png') no-repeat top left
+    &:hover i
+      background: image_url('cta_red_icon_hover.png')
+
+  &.cta-green.cta-link
+    i
+      background: image_url('cta_green_icon.png') no-repeat top left
+    &:hover i
+      background: image_url('cta_green_icon_hover.png')
+
+.small
+  .image-cta-position-top,
+  .image-cta-position-bottom
+    &.image-cta-color-purple
+      background: #754760
+    &.image-cta-color-green
+      background: #076D54
+    &.image-cta-color-blue
+      background: #607C8C
+    &.image-cta-color-dark-teal
+      background: #739D95
+  .image-cta-position-top
+    .group-left
+      display: none
+    .group-right
+      padding: 18px 26px
+      position: relative
+      .field-name-field-link-single
+        width: 100%
+        a
+          font-size: 20px
+          line-height: 1.1em
+          &:after
+            color: #fff
+  .image-cta-position-bottom
+    .group-left img
+      border-bottom: 0
+    .group-right
+      padding: 18px 26px
+      position: relative
+      top: -2px
+      +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
+      border: 2px solid $white
+      border-top: 0
+      .field-name-field-link-single
+        width: 100%
+        a
+          font-size: 20px
+          line-height: 1.1em
+          &:after
+            color: #fff
