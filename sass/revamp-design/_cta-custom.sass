@@ -32,6 +32,7 @@
   display: block
   overflow: hidden
   border: 2px $white solid
+  padding: 26px
   &:hover
     display: block
     overflow: hidden
@@ -58,18 +59,17 @@
   &:hover .virtual-tour-btn
     +background(linear-gradient(bottom, #870000, #c40000))
     color: $white
-.cta-virtual-tour
-  padding: 26px
-  &:hover .virtual-tour-btn i
-    background: image_url('cta-visit-icon-hover.png') no-repeat top left
+    i
+      background: image_url('cta-visit-icon-hover.png') no-repeat top left
   .virtual-tour-cover
     display: block
     height: 120px
     border: 1px $white solid
     background: image_url('cta-visit.png') no-repeat -27px -62px
-  &:hover .virtual-tour-cover
-    border: 1px transparent solid
-    background: none
+  &:hover
+    .virtual-tour-cover
+      border: 1px transparent solid
+      background: none
 
 // Rethink CTA
 .cta-rethink
@@ -132,3 +132,35 @@
     line-height: 49px
     &:hover
       background: $red
+
+// Social icons
+.cta-follow-us,
+.follow-us-circles
+  .circle
+    float: left
+    width: 41px
+    height: 41px
+    margin: 0 6px
+
+.icon-wrapper
+  padding: 0 26px
+
+.social-block-youtube
+  background: image_url("icon-youtube.png") no-repeat
+  &:hover
+    background: image_url("icon-youtube-hover.png") no-repeat
+
+.social-block-twitter
+  background: image_url("icon-twitter.png") no-repeat
+  &:hover
+    background: image_url("icon-twitter-hover.png") no-repeat
+
+.social-block-facebook
+  background: image_url("icon-fb.png") no-repeat
+  &:hover
+    background: image_url("icon-fb-hover.png") no-repeat
+
+.social-block-linkedin
+  background: image_url("icon-linkedin.png") no-repeat
+  &:hover
+    background: image_url("icon-linkedin-hover.png") no-repeat

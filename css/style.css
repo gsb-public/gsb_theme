@@ -1791,31 +1791,6 @@ a.no-border:hover {
   width: 1170px;
 }
 
-.cta-follow-us a.circle, .follow-us-circles a.circle {
-  float: left;
-  width: 40px;
-  height: 41px;
-  background-image: url('../images/social-icons.png');
-  background-repeat: no-repeat;
-  text-indent: -10000px;
-}
-
-.social-block-youtube {
-  background-position: -41px 0;
-}
-
-.social-block-twitter {
-  background-position: 0 0;
-}
-
-.social-block-facebook {
-  background-position: right top;
-}
-
-.social-block-linkedin {
-  background-position: -83px 0;
-}
-
 .region-footer .cta-follow-us {
   background: none;
   padding-left: 0;
@@ -3256,6 +3231,7 @@ p.acc-title + p {
   display: block;
   overflow: hidden;
   border: 2px white solid;
+  padding: 26px;
 }
 .cta-virtual-tour:hover {
   display: block;
@@ -3291,10 +3267,6 @@ p.acc-title + p {
   background: -ms-linear-gradient(bottom, #870000, #c40000);
   background: linear-gradient(bottom, #870000, #c40000);
   color: white;
-}
-
-.cta-virtual-tour {
-  padding: 26px;
 }
 .cta-virtual-tour:hover .virtual-tour-btn i {
   background: url('../images/cta-visit-icon-hover.png') no-repeat top left;
@@ -3364,7 +3336,7 @@ p.acc-title + p {
   padding-top: 75px;
   height: 140px;
   overflow: hidden;
-  background: url('../images/cta-follow-us-bg.png') repeat-x top left;
+  background: url('../images/cta-follow-us-bg.png') no-repeat top left;
 }
 .cta-follow-us a {
   border: none;
@@ -3390,17 +3362,45 @@ p.acc-title + p {
 .cta-follow-us .cta-title:hover {
   background: #990000;
 }
-.cta-follow-us .cta-title i {
-  position: absolute;
-  top: 50%;
-  right: 143px;
-  margin-top: -10px;
-  width: 14px;
-  height: 15px;
-  background: url('../images/arrows-icons.png') no-repeat 0 -20px;
+
+.cta-follow-us .circle,
+.follow-us-circles .circle {
+  float: left;
+  width: 41px;
+  height: 41px;
+  margin: 0 6px;
 }
-.cta-follow-us .circle {
-  margin-left: 17px;
+
+.icon-wrapper {
+  padding: 0 26px;
+}
+
+.social-block-youtube {
+  background: url('../images/icon-youtube.png') no-repeat;
+}
+.social-block-youtube:hover {
+  background: url('../images/icon-youtube-hover.png') no-repeat;
+}
+
+.social-block-twitter {
+  background: url('../images/icon-twitter.png') no-repeat;
+}
+.social-block-twitter:hover {
+  background: url('../images/icon-twitter-hover.png') no-repeat;
+}
+
+.social-block-facebook {
+  background: url('../images/icon-fb.png') no-repeat;
+}
+.social-block-facebook:hover {
+  background: url('../images/icon-fb-hover.png') no-repeat;
+}
+
+.social-block-linkedin {
+  background: url('../images/icon-linkedin.png') no-repeat;
+}
+.social-block-linkedin:hover {
+  background: url('../images/icon-linkedin-hover.png') no-repeat;
 }
 
 .front-slider-pane .field-type-gsb-slideshow {
