@@ -2,72 +2,81 @@
 
 // General CTA style
 .cta-wrapper
-  padding: 0
+  margin: 0 1px 8px 1px
   a
     display: block
 
-
-
-
-.cta-title
-  margin-top: -2px
-  color: $red
-  font-size: 18px
-  line-height: 24px
-
-a.cta-green,
-a.cta-green:hover,
-a.cta-green .cta-title
-  color: $green-light
-
 .cta-link
-  margin-bottom: 0
-  padding: 13px 22px
-  b
-    line-height: 1.3em
+  padding: 14px 22px
+  font-size: 18px
+  &:hover
+    cursor: pointer
   span
-    padding-right: 6px
+    display: block
+    &:after
+      content: "\f100"
+      float: right
+      font-family: "arrow-double"
+      font-size: 36px
+      font-weight: normal
 
-.cta-red .cta-title
-  display: block
+// CTA Green
+.cta-green
+  border-bottom: 1px solid $grey-c
+  border-top: 1px solid $white
+  color: $green-light
+  &:first-of-type
+    border-top: 0
+  &:last-of-type
+    border-bottom: 0
+  span
+    &:after
+      color: #e3e3e3
+  &:hover
+    color: $text-blue
+    span
+      &:after
+        color: $blue-light
 
-.cta-green .cta-title
-  padding-right: 3px
-
-.cta-block .description
-  margin-top: 8px
-
-.designed-box.cta-link.cta-green
-  padding-right: 22px
-
+// CTA Red
 .cta-red
   color: $red
+  span
+    &:after
+      color: $grey-med
+  &:hover
+    background-color: #edeae5
+    color: $red
+    span
+      &:after
+        color: $red
 
-// Red Gradient
-.separated-box
-  margin-bottom: 30px
-
-.cta-red-gradient,
-.cta-red-gradient:hover
+// CTA Red Gradient
+.cta-red-gradient
   margin-bottom: 5px
   border: 0
-  background-color: $red
+  background-color: #c60000
   +box-shadow($black, 0.45, 1px 1px 1px)
   color: $white
   font-weight: bold
   &:after
     color: $white
-    content: "\f100"
-    float: right
-    font-family: "arrow-double"
-    font-size: 28px
-    font-weight: normal
+  &:hover
+    +background(linear-gradient(top, #184660, #2d6281))
+    color: $white
+
 
 .item-0.cta-red-gradient
-  +background(linear-gradient(bottom, #860000, #950000))
+  +background(linear-gradient(top, #860000, #960000))
+  &:hover
+    +background(linear-gradient(top, #184660, #2d6281))
 
 .item-1.cta-red-gradient
-  +background(linear-gradient(bottom, #950000, #b00000))
+  +background(linear-gradient(top, #960000, #aa0000))
+  &:hover
+    +background(linear-gradient(top, #184660, #2d6281))
 
 .item-2.cta-red-gradient
-  +background-image(linear-gradient(bottom, #b00000, #c50000))
+  +background-image(linear-gradient(top, #aa0000, #c60000))
+  &:hover
+    +background(linear-gradient(top, #184660, #2d6281))
