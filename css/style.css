@@ -3848,49 +3848,75 @@ p.acc-title + p {
   color: white;
 }
 
-.node-case-study.view-mode-teaser .field-name-title,
-.node-case-study.view-mode-teaser .field-name-title *,
-.node-case-study.view-mode-teaser .field-name-field-case-study-number,
-.node-case-study.view-mode-teaser .field-name-field-research-paper-number,
-.node-research-paper.view-mode-teaser .field-name-title,
-.node-research-paper.view-mode-teaser .field-name-title *,
-.node-research-paper.view-mode-teaser .field-name-field-case-study-number,
-.node-research-paper.view-mode-teaser .field-name-field-research-paper-number {
-  display: inline-block;
-}
-.node-case-study.view-mode-teaser .field-name-title h2,
-.node-research-paper.view-mode-teaser .field-name-title h2 {
-  color: #990000;
-  font-size: 26px;
-  padding-right: 6px;
-  border: none;
-  padding: 0 6px 0 0;
-  margin-bottom: 8px;
-}
-.node-case-study.view-mode-teaser .field-name-field-case-study-number,
-.node-case-study.view-mode-teaser .field-name-field-research-paper-number,
-.node-research-paper.view-mode-teaser .field-name-field-case-study-number,
-.node-research-paper.view-mode-teaser .field-name-field-research-paper-number {
-  font-size: 20px;
-  padding-left: 4px;
-  border-left: 1px #aaaaaa solid;
-  position: relative;
-  top: -2px;
-  color: #333333;
-}
 .node-case-study.view-mode-teaser .field-name-field-date-published,
 .node-research-paper.view-mode-teaser .field-name-field-date-published {
-  margin-bottom: 1px;
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.node-case-study.view-mode-teaser .field-name-field-date-published .label-inline,
+.node-research-paper.view-mode-teaser .field-name-field-date-published .label-inline {
+  font-weight: normal;
+  margin-right: 5px;
+}
+.node-case-study.view-mode-teaser .field-name-title,
+.node-research-paper.view-mode-teaser .field-name-title {
+  display: inline;
+  float: left;
+  line-height: 32px;
+}
+.node-case-study.view-mode-teaser .field-name-title a,
+.node-research-paper.view-mode-teaser .field-name-title a {
+  color: #990000;
+}
+.node-case-study.view-mode-teaser .paper-code,
+.node-research-paper.view-mode-teaser .paper-code {
+  color: #231f20;
+  font-size: 26px;
+  line-height: 32px;
+}
+.node-case-study.view-mode-teaser .paper-code:before,
+.node-research-paper.view-mode-teaser .paper-code:before {
+  content: "| ";
+  margin-left: 8px;
+}
+.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other,
+.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other {
+  overflow: hidden;
+  *zoom: 1;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 18px 0;
+}
+.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other .name-first,
+.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other .name-first {
+  margin-right: 5px;
+}
+.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other a,
+.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other a {
+  color: #990000;
+  font-weight: bold;
+}
+.node-case-study.view-mode-teaser .field-collection-item-field-person-fac-student-other,
+.node-case-study.view-mode-teaser .separator,
+.node-research-paper.view-mode-teaser .field-collection-item-field-person-fac-student-other,
+.node-research-paper.view-mode-teaser .separator {
+  float: left;
+}
+.node-case-study.view-mode-teaser .separator,
+.node-research-paper.view-mode-teaser .separator {
+  margin-right: 5px;
 }
 
-.node-research-paper.view-mode-teaser .field-name-field-body,
-.node-case-study.view-mode-teaser .field-name-field-body {
-  margin-top: 2px;
+.group-tags-wrapper {
+  overflow: hidden;
+  *zoom: 1;
 }
-.node-research-paper.view-mode-teaser .field-name-field-body p,
-.node-case-study.view-mode-teaser .field-name-field-body p {
-  margin-bottom: 8px;
-  margin-top: 3px;
+.group-tags-wrapper .field {
+  display: inline;
+  float: left;
 }
 
 .view-research-papers-filters .views-row,
@@ -4160,6 +4186,10 @@ p.acc-title + p {
 #views-exposed-form-news-list-news-list {
   float: right;
   width: 20%;
+}
+
+.view-list-teaser .views-row {
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .view-mode-teaser.node-media-mention .group_content_wrapper {

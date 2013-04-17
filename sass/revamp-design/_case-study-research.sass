@@ -77,36 +77,56 @@
           font-size: 16px
           color: $white
 
-// Teaser styling
+// Teaser styling for case studies and research papers
 .node-case-study.view-mode-teaser,
 .node-research-paper.view-mode-teaser
-  .field-name-title,
-  .field-name-title *,
-  .field-name-field-case-study-number,
-  .field-name-field-research-paper-number
-    display: inline-block
-  .field-name-title h2
-    color: $red
-    font-size: 26px
-    padding-right: 6px
-    border: none
-    padding: 0 6px 0 0
-    margin-bottom: 8px
-  .field-name-field-case-study-number,
-  .field-name-field-research-paper-number
-    font-size: 20px
-    padding-left: 4px
-    border-left: 1px $grey-a solid
-    position: relative
-    top: -2px
-    color: $grey-3
-  .field-name-field-date-published
-    margin-bottom: 1px
 
-.node-research-paper.view-mode-teaser,
-.node-case-study.view-mode-teaser,
-  .field-name-field-body
-    margin-top: 2px
-    p
-      margin-bottom: 8px
-      margin-top: 3px
+  // Date styling
+  .field-name-field-date-published
+    color: $grey-6
+    font-size: 14px
+    margin-bottom: 18px
+    text-transform: uppercase
+    .label-inline
+      font-weight: normal
+      margin-right: 5px
+
+  // Title
+  .field-name-title
+    +float-left
+    line-height: 32px
+    a
+      color: $red
+
+  // Paper code
+  .paper-code
+    color: $text-grey
+    font-size: 26px
+    line-height: 32px
+    &:before
+      content: "| "
+      margin-left: 8px
+
+  // Authors
+  .field-name-field-person-fac-student-other
+    +clearfix
+    font-size: 18px
+    font-weight: bold
+    line-height: 24px
+    margin: 18px 0
+    .name-first
+      margin-right: 5px
+    a
+      color: $red
+      font-weight: bold
+  .field-collection-item-field-person-fac-student-other,
+  .separator
+    float: left
+  .separator
+    margin-right: 5px
+
+// Tags
+.group-tags-wrapper
+  +clearfix
+  .field
+    +float-left
