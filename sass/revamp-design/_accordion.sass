@@ -8,21 +8,19 @@
     &:last-child
       margin-bottom: 5px
 
-.content
-  .acc-title, .acc-body
-    position: relative
-    margin-bottom: 0
-
 .accordion-toggle
   display: none
 
 .content
+  .acc-title, .acc-body
+    position: relative
+    margin-bottom: 0
   .accordion-body-wrap
     display: none
   .accordion-toggle
     display: block
     float: left
-    margin-top: 9px
+    margin-top: 8px
     width: 15px
     height: 15px
     background: image_url("accordion-icons.png") no-repeat 0 0
@@ -53,27 +51,31 @@
   .field-name-field-accordion-item .field-name-field-body
     display: none
     margin-top: 0
-    padding-left: 45px
+    padding-left: 36px
   .accordion-body-wrap .acc-body
     margin-top: 0
-    padding-left: 40px
+    padding-left: 30px
   .acc-body
     margin-bottom: 10px
-  .field-name-field-accordion-item .field-name-field-title, .acc-title
+  // Title styling
+  .field-name-field-accordion-item .field-name-field-title,
+  .acc-title
     border-top: 2px #e1e5e4 solid
-    font-weight: 500
+    font-size: 26px
+    font-weight: bold
     cursor: pointer
+
   .field-name-field-accordion-item
-    .entity-field-collection-item:first-child .field-name-field-title
+    .entity-field-collection-item:first-of-type
       border-top: 0
     .field-name-field-title .field-items
-      margin-left: 40px
+      margin-left: 30px
       padding: 8px 8px 8px 5px
   .acc-title
-    margin-left: 40px
+    margin-left: 30px
     padding: 8px 8px 8px 5px
     margin-left: 0
-    padding-left: 40px
+    padding-left: 30px
 
 p.acc-title + p
   margin-top: 15px
