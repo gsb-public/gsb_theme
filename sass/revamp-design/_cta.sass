@@ -1,343 +1,89 @@
 // CALL TO ACTION STYLES - CTA
 
-.field-name-field-image-cta-link a
-  position: relative
-  display: block
-  border: none
-  border-top: 1px $white solid
-  border-bottom: 1px $grey-e solid
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  box-shadow: none
-  color: $red
-  font-size: 18px
-  line-height: 24px
-  &:first-child
-    border-top: 0
-
-.field-name-field-image-cta-link a
-  display: block
-  margin-top: -7px
-  width: 13px
-  height: 15px
-
-  &.cta-red.cta-link,
-  &.cta-green.cta-link
-    i
-      right: 18px
-      margin-top: -14px
-      width: 26px
-      height: 27px
-
-  &.cta-red.cta-link
-    i
-      background: image_url('cta_red_icon.png') no-repeat top left
-    &:hover i
-      background: image_url('cta_red_icon_hover.png')
-
-  &.cta-green.cta-link
-    i
-      background: image_url('cta_green_icon.png') no-repeat top left
-    &:hover i
-      background: image_url('cta_green_icon_hover.png')
-
+// General CTA style
 .cta-wrapper
-  padding: 0
+  margin: 0 1px 8px 1px
   a
     display: block
 
-.cta-title
-  margin-top: -2px
-  color: $red
-  font-size: 18px
-  line-height: 24px
-
-a.cta-green,
-a.cta-green:hover,
-a.cta-green .cta-title
-  color: $green-light
-
 .cta-link
-  margin-bottom: 0
-  padding: 13px 22px
-  b
-    line-height: 1.3em
+  padding: 14px 22px
+  font-size: 18px
+  &:hover
+    cursor: pointer
+  span, b
+    line-height: 1
   span
-    padding-right: 6px
+    display: block
+    &:after
+      content: "\f100"
+      float: right
+      font-family: "arrow-double"
+      font-size: 36px
+      font-weight: normal
+      line-height: 0.5
 
-.cta-red .cta-title
-  display: block
+.cta-action
+  line-height: 1
+  vertical-align: text-top
 
-.cta-green .cta-title
-  padding-right: 3px
+// CTA Green
+.cta-green
+  border-bottom: 1px solid $grey-c
+  border-top: 1px solid $white
+  color: $green-light
+  &:first-of-type
+    border-top: 0
+  &:last-of-type
+    border-bottom: 0
+  span
+    &:after
+      color: #e3e3e3
+  &:hover
+    color: $text-blue
+    span
+      &:after
+        color: $blue-light
 
-.cta-block .description
-  margin-top: 8px
-
-.designed-box.cta-link.cta-green
-  padding-right: 22px
-
+// CTA Red
 .cta-red
   color: $red
+  span
+    &:after
+      color: $grey-med
+  &:hover
+    background-color: #edeae5
+    color: $red
+    span
+      &:after
+        color: $red
 
-// Red Gradient
-.separated-box
-  margin-bottom: 30px
-
-.cta-red-gradient,
-.cta-red-gradient:hover
+// CTA Red Gradient
+.cta-red-gradient
   margin-bottom: 5px
   border: 0
-  background-color: $red
+  background-color: #c60000
   +box-shadow($black, 0.45, 1px 1px 1px)
   color: $white
   font-weight: bold
   &:after
     color: $white
-    content: "\f100"
-    float: right
-    font-family: "arrow-double"
-    font-size: 28px
-    font-weight: normal
+  &:hover
+    +background(linear-gradient(top, #194560, #2c6180))
+    color: $white
+
 
 .item-0.cta-red-gradient
-  +background(linear-gradient(bottom, #860000, #950000))
+  +background(linear-gradient(top, #860000, #960000))
+  &:hover
+    +background(linear-gradient(top, #194560, #2c6180))
 
 .item-1.cta-red-gradient
-  +background(linear-gradient(bottom, #950000, #b00000))
+  +background(linear-gradient(top, #960000, #aa0000))
+  &:hover
+    +background(linear-gradient(top, #194560, #2c6180))
 
 .item-2.cta-red-gradient
-  +background-image(linear-gradient(bottom, #b00000, #c50000))
-
-
-a
-  &.cta-get-directions
-    clear: both
-    display: block
-    overflow: hidden
-    padding-bottom: 1px
-    border: 2px $white solid
-    background: image_url('cta-map.png') repeat-x top left
-    padding: 20px
-    &:hover
-      display: block
-      overflow: hidden
-      border: 2px $white solid
-      background: image_url('cta-map.png') repeat-x top left
-    .cta-body
-      padding: 13px 15px
-      background: rgba(30, 82, 109, 0.7)
-      color: $white
-      font-size: 21px
-      line-height: 1.5em
-      margin-bottom: 0
-    &:hover .cta-body
-      background: rgba(123, 130, 1, 0.8)
-  &.cta-virtual-tour
-    display: block
-    overflow: hidden
-    border: 2px $white solid
-    &:hover
-      display: block
-      overflow: hidden
-      border: 2px $white solid
-      background: image_url('cta-visit.png') repeat-x top left
-    background: image_url('cta-visit-blured.png') repeat-x top left
-    .virtual-tour-btn
-      position: relative
-      display: block
-      padding: 0 15px
-      height: 35px
-      background: $white
-      color: $red
-      font-size: 18px
-      font-weight: bold
-      line-height: 35px
-      i
-        position: absolute
-        top: 50%
-        right: 14px
-        margin-top: -7px
-        width: 13px
-        height: 14px
-        background: image_url('cta-visit-icon.png') no-repeat top left
-    &:hover .virtual-tour-btn
-      +background(linear-gradient(bottom, #870000, #c40000))
-      color: $white
-
-// Rethink CTA
-.cta-rethink
-  padding: 26px
-  +background(linear-gradient(bottom, #870000, #c40000))
-  color: $white
-
-// Virtual tour CTA
-a
-  &.cta-virtual-tour
-    padding: 26px
-    &:hover .virtual-tour-btn i
-      background: image_url('cta-visit-icon-hover.png') no-repeat top left
-    .virtual-tour-cover
-      display: block
-      height: 120px
-      border: 1px $white solid
-      background: image_url('cta-visit.png') no-repeat -27px -62px
-    &:hover .virtual-tour-cover
-      border: 1px transparent solid
-      background: none
-  &.cta-rethink
-    display: block
-    overflow: hidden
-    color: $white
-    border: 2px $white solid
-    &:hover
-      border: 2px $white solid
-
-.cta-rethink
-  .cta-title
-    margin: 0
-    color: $white
-    font-size: 40px
-    line-height: 1em
-  a.cta-title:hover
-    color: $white
-  .cta-description
-    margin: 8px 0 0
-    color: $white
-    font-size: 20px
-    line-height: 1.5em
-    b
-      font-weight: bold
-
-// Follow Us
-.cta-follow-us
-  display: block
-  clear: both
-  position: relative
-  padding-top: 75px
-  height: 140px
-  overflow: hidden
-  background: image_url('cta-follow-us-bg.png') repeat-x top left
-  a
-    border: none
-    color: $white
-    &:hover
-      border: none
-      color: $white
-  .cta-title
-    position: absolute
-    top: 2px
-    left: 0
-    display: block
-    padding: 0 26px
-    width: 100%
-    height: 49px
-    background: image_url('cta-follow-us-title-bg.png') repeat-x top left
-    color: $white
-    font-weight: bold
-    line-height: 49px
-    i
-      position: absolute
-      top: 50%
-      right: 143px
-      margin-top: -10px
-      width: 14px
-      height: 15px
-      background: image_url('arrows-icons.png') no-repeat 0 -20px
-  .circle
-    margin-left: 17px
-
-//////////////////
-// IMAGE CTA FPP
-//////////////////
-.pane-bundle-image-cta
-  .group-left,
-  .group-right
-    float: none
-    width: 100%
-  .group-left img
-    +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
-    border: 2px solid $white
-  .group-right
-    color: $white
-    padding: 30px
-    position: absolute
-  .image-cta-position-top .group-right
-    top: 0
-  .image-cta-position-bottom .group-right
-    bottom: 0
-
-  // Title
-  .field-name-field-title
-    color: $white
-    font-size: 15px
-    font-weight: normal
-    line-height: 1
-    text-transform: uppercase
-  // Description
-  .field-name-field-link-single a
-    font-size: 28px
-    font-weight: bold
-    line-height: 1.15em
-    color: #fff
-  // Double arrow link
-  .field-name-field-link-single
-    display: inline-block
-    position: relative
-    top: 6px
-    width: 100%
-    word-wrap: break-word
-    a:after
-      color: $green-light
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 33px
-      position: relative
-      top: 4px
-      left: 5px
-  .fieldable-panels-pane
-    position: relative
-    top: 0
-
-
-.small
-  .image-cta-position-top,
-  .image-cta-position-bottom
-    &.image-cta-color-purple
-      background: #754760
-    &.image-cta-color-green
-      background: #076D54
-    &.image-cta-color-blue
-      background: #607C8C
-    &.image-cta-color-dark-teal
-      background: #739D95
-  .image-cta-position-top
-    .group-left
-      display: none
-    .group-right
-      padding: 18px 26px
-      position: relative
-      .field-name-field-link-single
-        width: 100%
-        a
-          font-size: 20px
-          line-height: 1.1em
-          &:after
-            color: #fff
-  .image-cta-position-bottom
-    .group-left img
-      border-bottom: 0
-    .group-right
-      padding: 18px 26px
-      position: relative
-      top: -2px
-      +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
-      border: 2px solid $white
-      border-top: 0
-      .field-name-field-link-single
-        width: 100%
-        a
-          font-size: 20px
-          line-height: 1.1em
-          &:after
-            color: #fff
+  +background-image(linear-gradient(top, #aa0000, #c60000))
+  &:hover
+    +background(linear-gradient(top, #194560, #2c6180))
