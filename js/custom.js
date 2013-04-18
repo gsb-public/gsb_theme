@@ -6,55 +6,44 @@
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
       // Check if spotlight exists.
-      if ($('.pane-bundle-spotlight').length) {
-        var spotlightContainer = $('.pane-bundle-spotlight');
-        spotlightContainer.find('.group_content_wrapper').append('<p class="show-more"><span>Show More</span></p>');
-        var spotlightShowMore = spotlightContainer.find('.show-more'),
-            visibleLines = 4,
-            visibleHeight = visibleLines * parseInt(spotlightShowMore.siblings('.field-name-field-body').find('p').css('line-height'));
+      var $spotlight = $('.pane-bundle-spotlight');
+      if ($spotlight.length) {
+        // If the line height of the body text changes, adjust this.
+        var visibleHeight = 18 * 4;
+
+        $spotlight.find('.pane-content > div').append('<p class="show-more"><span>Show More</span></p>');
         // Add behavior for every .show-more link.
-        spotlightShowMore.each(function() {
-          var visHeight = visibleHeight,
-            $this = $(this);
-          // Add once behavior.
-          if ( !$this.hasClass('showmore-processed') ) {
-            $this.addClass('showmore-processed');
-            var spotlightStory = $this.siblings('.field-name-field-body'),
-                spotlightStoryText = spotlightStory.find('p'),
-                storyContent = spotlightStoryText.height();
-            // Check for description position in spotlight container.
-            if ( spotlightStory.position().top > 285 && spotlightStoryText.height() > 57) { 
-              // >276 means description is lower 
-              // Set height fo description to 2 lines.
-              spotlightStory.css('max-height', 35); 
-              visHeight = parseInt(visHeight / visibleLines * visibleLines/2);
-             }
-            // Remove .show-more if the description is
-            // less than defined max height.
-            if ( storyContent <= visHeight ) {
-              $this.remove();
-            } else {
-              $this.click(function() {
-                var $this = $(this);
-                if ( !$this.hasClass('active') ) {
-                  // Change link text.
-                  $this.html('<span>Show Less</span>');
-                  // Expand description to its real height
-                  spotlightStory.animate({'max-height' : storyContent}, 350);
-                } else {
-                  // Change link text.
-                  $this.html('<span>Show More</span>');
-                  // Collapse description to defined max height
-                  spotlightStory.animate({'max-height' : visHeight}, 300);
-                }
-                $this.toggleClass('active');
-              });
-            }
+        $spotlight.find('.show-more').once('showmore', function () {
+          var $this = $(this),
+            $spotlightContent = $this.siblings('.field-name-field-body'),
+            contentHeight = $spotlightContent.find('p').height();
+          // Remove .show-more if the body is less than the defined max height.
+          if (contentHeight <= visibleHeight) {
+            $this.remove();
+          }
+          else {
+            $this.click(function() {
+              var $this = $(this), text, height;
+              // Expand description to its real height.
+              if (!$this.hasClass('active')) {
+                text = Drupal.t('Show Less');
+                height = contentHeight;
+              }
+              // Collapse description to defined max height.
+              else {
+                text = Drupal.t('Show More');
+                height = visibleHeight;
+              }
+              $spotlightContent.animate({'max-height' : height}, 300);
+              $this
+                .toggleClass('active')
+                .html('<span>' + text + '</span>');
+            });
           }
         });
       }
     }
-  }
+  };
 
   /**
    * Make a click on the video image,
