@@ -16,7 +16,7 @@
     <?php print $content['fullheader']; ?>
   </div>
 
-  <div class="content-wrapper">
+  <div class="inner-content-wrapper">
 
     <div class="main-wrapper">
 
@@ -40,7 +40,7 @@
 
     </div><!-- /.main-wrapper -->
 
-    <div class="sidebar-wrapper">
+    <div class="inner-sidebar-wrapper">
       <div id="quicklinks">
         <?php print $content['quicklinks']; ?>
       </div>
