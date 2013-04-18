@@ -3,7 +3,7 @@
 $plugin = array(
   'title' => t('GSB Business insights'),
   'icon' => 'gsb-business-insights.png',
-  'category' => t('Panopoly'),
+  'category' => t('GSB'),
   'theme' => 'gsb-business-insights',
   'css' => 'gsb-business-insights.css',
   'regions' => array(

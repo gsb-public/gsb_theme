@@ -2,7 +2,7 @@
 // Plugin definition
 $plugin = array(
   'title' => t('GSB Landing Standard Page One'),
-  'icon' => 'gsb-landing-page-one.png',
+  'icon' => 'gsb-landing_standard-page-one.png',
   'category' => t('GSB'),
   'theme' => 'gsb-landing_standard-page-one',
   'css' => 'gsb-landing_standard-page-one.css',

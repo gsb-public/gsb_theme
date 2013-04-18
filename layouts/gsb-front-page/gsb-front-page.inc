@@ -2,7 +2,7 @@
 $plugin = array(
   'title' => t('GSB Front page'),
   'icon' => 'gsb-front-page.png',
-  'category' => t('Panopoly'),
+  'category' => t('GSB'),
   'theme' => 'gsb-front-page',
   'css' => 'gsb-front-page.css',
   'regions' => array(
