@@ -68,9 +68,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video,
-.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .view-research-papers-filters .views-row,
-.view-search-case-study .views-row,
-.view-research-papers .views-row, #views-exposed-form-research-papers-filters-research-list,
+.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, #views-exposed-form-research-papers-filters-research-list,
 #views-exposed-form-case-study-filters-case-study-list,
 #views-exposed-form-media-mention-filters-medai-mention-list,
 #views-exposed-form-publications-filters-publications-list,
@@ -1650,6 +1648,15 @@ a.no-border:hover {
 
 .view-mode-teaser .group_tags_wrapper {
   margin-top: 0;
+}
+
+.group-tags-wrapper {
+  overflow: hidden;
+  *zoom: 1;
+}
+.group-tags-wrapper .field {
+  display: inline;
+  float: left;
 }
 
 #navigation h2 {
@@ -3917,21 +3924,6 @@ p.acc-title + p {
   margin-right: 5px;
 }
 
-.group-tags-wrapper {
-  overflow: hidden;
-  *zoom: 1;
-}
-.group-tags-wrapper .field {
-  display: inline;
-  float: left;
-}
-
-.view-research-papers-filters .views-row,
-.view-search-case-study .views-row,
-.view-research-papers .views-row {
-  padding: 26px;
-}
-
 .view-research-papers-filters .views-row .views-field-im-field-date-published-format-year,
 .view-search-case-study .views-row .views-field-im-field-date-published-format-year,
 .view-research-papers .views-row .views-field-im-field-date-published-format-year,
@@ -4197,6 +4189,7 @@ p.acc-title + p {
 
 .view-list-teaser .views-row {
   border-bottom: 1px solid #e4e4e4;
+  padding: 26px 0;
 }
 
 .view-mode-teaser.node-media-mention .group_content_wrapper {
