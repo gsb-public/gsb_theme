@@ -1,7 +1,12 @@
 // Variables come from partials/00-variables/_base.sass
 
+////////////////
+// PAGE LAYOUT
+////////////////
+
+
 ////////////////////////////
-// FULL WIDTH LAYOUTS
+// FULL WIDTH PANELS LAYOUTS
 ////////////////////////////
 
 // GSB
@@ -35,15 +40,15 @@
     +grid-span(1, 3, $front-main-inner)
 
 
-// Landing 1 Page Layout
+// Landing Standard 1 Page layout
 .panel-display.gsb-landing_standard-page-one
   .full-header,
-  .content-wrapper
+  .inner-content-wrapper
     max-width: $max-width
     +clearfix
   .main-wrapper
     +grid-span(1, 1, $columns: $landing-one-content)
-  .sidebar-wrapper
+  .inner-sidebar-wrapper
     +grid-span(1, 2, $columns: $landing-one-content)
   .main-middle
     +pie-clearfix
@@ -55,7 +60,7 @@
     .column-second
       float: right
 
-// Business Insights Layouts
+// Business Insights landing layout
 .panel-display.gsb-business-insights
   .gsb-bizin-header,
   .gsb-bizin-quote,

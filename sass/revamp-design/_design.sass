@@ -6,7 +6,7 @@
     margin: 0 auto
     max-width: $max-width
 
-#main-wrapper
+#content-wrapper
   +box-shadow( -1px 0 5px inset)
   background: $white
   #main
@@ -16,12 +16,12 @@
     max-width: $max-width
 
 // Front page courtyard image
-.front #main-wrapper
+.front #content-wrapper
   +breakpoint($bp-portrait-min)
     +background(image_url("bg-front-courtyard.png") top center no-repeat, linear-gradient(bottom, $grey-f 14%, $white 79%), $white)
 
 // Inner page courtyard image
-.not-front #main-wrapper
+.not-front #content-wrapper
   +breakpoint($bp-portrait-min)
     +background(image_url("bg-notfront-courtyard.png") bottom center no-repeat)
 
