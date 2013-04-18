@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-landing_standard-page-one <?php if (!empty($class)) { print $class; } ?>">
+<div class="panel-display gsb-landing-standard-page-one <?php if (!empty($class)) { print $class; } ?>">
 
   <div class="full-header">
     <?php print $content['fullheader']; ?>
