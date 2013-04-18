@@ -969,6 +969,15 @@ del {
 }
 
 /* SINGULARITY -- http://singularity.gs/ */
+#main {
+  *zoom: 1;
+}
+#main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #sidebar {
   float: left;
 }
@@ -979,7 +988,7 @@ del {
 }
 
 #content {
-  float: left;
+  overflow: hidden;
 }
 
 .gsb-bizin-content {

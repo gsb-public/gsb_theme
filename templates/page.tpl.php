@@ -117,14 +117,14 @@
     <?php print $messages; ?>
 
 
-    <div id="content-wrapper">
+    <div id="content-wrapper" class="clearfix">
 
       <div id="main" class="clearfix">
 
         <div id="sidebar" class="clearfix">
 
           <?php if ($page['sidebar_first']): ?>
-            <div id="sidebar-first" class="column sidebar"><div class="section">
+            <div class="column sidebar"><div class="section">
               <?php print render($page['sidebar_first']); ?>
             </div></div> <!-- /.section, /#sidebar-first -->
           <?php endif; ?>
