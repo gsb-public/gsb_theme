@@ -3,6 +3,7 @@
 .pane-bundle-spotlight
   @extend %border-and-box-shadow
   position: relative
+  padding: 0 26px
   .spotlight-border
     position: absolute
     top: 0
@@ -13,48 +14,69 @@
     background: $red
   .feature-spotlight-label
     margin-bottom: 5px
-    color: $grey-6
+    color: $text-grey
     font-size: 14px
-    line-height: 1em
+    line-height: 18px
+    display: inline-block
+    border-top: 10px solid $red
+    padding-top: 5px
   .field-name-field-file-single-public,
   .field-name-field-use-profile-img
     clear: both
     margin-bottom: 10px
+
+  // Name styling
+  .group-name-wrapper
+    +clearfix
+    margin: 12px 0
+    .field
+      +float-left
+      color: $red
+      font-size: 20px
+      font-weight: bold
+      line-height: 26px
+      margin-right: 5px
   .field-name-field-first-name,
   .field-name-field-last-name
+    color: $red
+    display: inline
     font-size: 20px
     font-weight: bold
-    display: inline
     padding-right: 4px
-    color: $red
+
+  // Image styling
+  .field-name-field-spotlight-person-fid,
+  .field-name-field-use-profile-img
+    +float-left
+    margin-right: 12px
   .field-name-field-title-position-single,
   .field-name-field-year
-    font-weight: bold
-    margin: 0 0 4px
     font-size: 20px
-    line-height: 1.2em
+    font-weight: bold
+    line-height: 26px
+    margin: 0 0 4px
   .field-name-field-year
-    margin-top: 3px 
+    margin-top: 3px
   .field-name-field-body
+    color: $grey-5
     margin: 0
-    color: #555
-    overflow: hidden
     max-height: 72px
+    overflow: hidden
     p
-      margin-bottom: 0
       font-size: 14px
       line-height: 18px
+      margin-bottom: 0
   .show-more
-    display: block
-    margin-top: 8px
     border: 0
+    color: $green-light
+    cursor: pointer
+    display: block
     font-weight: 500
     line-height: 1em
     margin: 7px 0 0 0
-    color: $green-light
-    cursor: pointer
+
     span
-      font-size: 14px 
+      font-size: 14px
       padding-left: 16px
       background: image_url('spotlight-arrow.png') no-repeat 0 2px
     &:hover span
@@ -67,4 +89,3 @@
 
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
-

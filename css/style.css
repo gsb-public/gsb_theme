@@ -2371,6 +2371,7 @@ ul.slideshow-items {
 
 .pane-bundle-spotlight {
   position: relative;
+  padding: 0 26px;
 }
 .pane-bundle-spotlight .spotlight-border {
   position: absolute;
@@ -2383,53 +2384,75 @@ ul.slideshow-items {
 }
 .pane-bundle-spotlight .feature-spotlight-label {
   margin-bottom: 5px;
-  color: #666666;
+  color: #231f20;
   font-size: 14px;
-  line-height: 1em;
+  line-height: 18px;
+  display: inline-block;
+  border-top: 10px solid #990000;
+  padding-top: 5px;
 }
 .pane-bundle-spotlight .field-name-field-file-single-public,
 .pane-bundle-spotlight .field-name-field-use-profile-img {
   clear: both;
   margin-bottom: 10px;
 }
-.pane-bundle-spotlight .field-name-field-first-name,
-.pane-bundle-spotlight .field-name-field-last-name {
+.pane-bundle-spotlight .group-name-wrapper {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 12px 0;
+}
+.pane-bundle-spotlight .group-name-wrapper .field {
+  display: inline;
+  float: left;
+  color: #990000;
   font-size: 20px;
   font-weight: bold;
-  display: inline;
-  padding-right: 4px;
+  line-height: 26px;
+  margin-right: 5px;
+}
+.pane-bundle-spotlight .field-name-field-first-name,
+.pane-bundle-spotlight .field-name-field-last-name {
   color: #990000;
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 4px;
+}
+.pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+.pane-bundle-spotlight .field-name-field-use-profile-img {
+  display: inline;
+  float: left;
+  margin-right: 12px;
 }
 .pane-bundle-spotlight .field-name-field-title-position-single,
 .pane-bundle-spotlight .field-name-field-year {
-  font-weight: bold;
-  margin: 0 0 4px;
   font-size: 20px;
-  line-height: 1.2em;
+  font-weight: bold;
+  line-height: 26px;
+  margin: 0 0 4px;
 }
 .pane-bundle-spotlight .field-name-field-year {
   margin-top: 3px;
 }
 .pane-bundle-spotlight .field-name-field-body {
-  margin: 0;
   color: #555555;
-  overflow: hidden;
+  margin: 0;
   max-height: 72px;
+  overflow: hidden;
 }
 .pane-bundle-spotlight .field-name-field-body p {
-  margin-bottom: 0;
   font-size: 14px;
   line-height: 18px;
+  margin-bottom: 0;
 }
 .pane-bundle-spotlight .show-more {
-  display: block;
-  margin-top: 8px;
   border: 0;
+  color: #bac405;
+  cursor: pointer;
+  display: block;
   font-weight: 500;
   line-height: 1em;
   margin: 7px 0 0 0;
-  color: #bac405;
-  cursor: pointer;
 }
 .pane-bundle-spotlight .show-more span {
   font-size: 14px;
