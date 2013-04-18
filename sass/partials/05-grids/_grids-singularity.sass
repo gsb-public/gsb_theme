@@ -7,18 +7,17 @@
 
 // REGIONS
 #main
-  +pie-clearfix
+  // +pie-clearfix
 // First sidebar region
 #sidebar
-  float: left
   .sidebar
-    margin-right: 60px
-    max-width: 235px
-    width: 235px
+    +grid-span(1, 1, $columns: $regions)
+    width: 20.1%
 
 // Content region
 #content
-  overflow: hidden
+  // +grid-span(1, 2, $columns: $regions)
+  // width: 74.4%
 
 
 ////////////////////////////
@@ -93,3 +92,9 @@
       margin: 0 2.5%
 
 // Standard landing
+.panel-display.gsb-standard-page-two
+  .main-wrapper
+    +grid-span(1, 1, $columns: $standard)
+  .sidebar-wrapper
+    +grid-span(1, 2, $columns: $standard)
+    max-width: 270px

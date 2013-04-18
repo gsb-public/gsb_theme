@@ -41,6 +41,9 @@ $establish-baseline: true
 $columns: 12
 $gutter: 30
 $max-width: 1170px
+$regions: 235 870
+
+$output: isolation
 
 // HOMEPAGE
 $front-main: 870 270
@@ -51,6 +54,10 @@ $footer-grid: 270 270 270 270
 // LANDING 1
 $landing-one-content: 870 270
 $landing-one-main-inner: 270 270
+
+// STANDARD 2
+$standard-with-region: 570 270
+$standard: 870 270
 
 // BUSINESS INSIGHTS
 
@@ -68,6 +75,10 @@ $bi-rs-main-inner: 570 270
   @for $i from 1 through length($columns)
     $max-width: $max-width + nth($columns, $i)
   @return $max-width + $unit
+
+// .override-gutter
+//   +grid-span(1, 2, $gutter: .25)
+
 
 ////////////////////////////
 // Breakpoint Variables

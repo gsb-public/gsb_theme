@@ -8,6 +8,7 @@ $plugin = array(
   'css' => 'gsb-standard-page-two.css',
   'regions' => array(
     'main' => t('Content Main Column'),
+    'quicklinks' => t('Quicklinks'),
     'sidebar' => t('Content Sidebar'),
   ),
 );

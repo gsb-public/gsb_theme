@@ -121,7 +121,7 @@
 
       <div id="main" class="clearfix">
 
-        <div id="sidebar" class="clearfix">
+        <div id="sidebar">
 
           <?php if ($page['sidebar_first']): ?>
             <div class="column sidebar"><div class="section">
