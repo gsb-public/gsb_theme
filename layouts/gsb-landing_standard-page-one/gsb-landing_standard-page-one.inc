@@ -1,11 +1,11 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('GSB Landing Page One'),
+  'title' => t('GSB Landing Standard Page One'),
   'icon' => 'gsb-landing-page-one.png',
-  'category' => t('Panopoly'),
-  'theme' => 'gsb-landing-page-one',
-  'css' => 'gsb-landing-page-one.css',
+  'category' => t('GSB'),
+  'theme' => 'gsb-landing_standard-page-one',
+  'css' => 'gsb-landing_standard-page-one.css',
   'regions' => array(
     'fullheader' => t('Full Header'),
     'maintop' => t('Main Top'),

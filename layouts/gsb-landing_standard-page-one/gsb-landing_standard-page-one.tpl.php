@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for Panopoly Selby Flipped.
+ * Template for GSB Landing Standard Page 1.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-landing-page-one <?php if (!empty($class)) { print $class; } ?>">
+<div class="panel-display gsb-landing_standard-page-one <?php if (!empty($class)) { print $class; } ?>">
 
   <div class="full-header">
     <?php print $content['fullheader']; ?>
