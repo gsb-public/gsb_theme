@@ -1,10 +1,10 @@
-// accordion
+// ACCORDION FPP
 
 .pane-bundle-accordion
   @extend %border-and-box-shadow
   padding: 10px 26px
   .field-name-field-body p
-    color: #555
+    color: $text-grey
     &:last-child
       margin-bottom: 5px
 
@@ -20,7 +20,7 @@
   .accordion-toggle
     display: block
     float: left
-    margin-top: 8px
+    margin-top: 10px
     width: 15px
     height: 15px
     background: image_url("accordion-icons.png") no-repeat 0 0
@@ -52,18 +52,25 @@
     display: none
     margin-top: 0
     padding-left: 36px
+    color: $text-grey
+    font-size: 18px
+    padding-bottom: 12px
+
   .accordion-body-wrap .acc-body
     margin-top: 0
     padding-left: 30px
   .acc-body
     margin-bottom: 10px
-  // Title styling
   .field-name-field-accordion-item .field-name-field-title,
   .acc-title
     border-top: 2px #e1e5e4 solid
+  // Title styling
+  .field-name-field-accordion-item .field-name-field-title .field-item,
+  .acc-title
     font-size: 26px
     font-weight: bold
     cursor: pointer
+    line-height: 1.1
 
   .field-name-field-accordion-item
     .entity-field-collection-item:first-of-type
@@ -85,5 +92,8 @@ p.acc-title + p
   &.acc-title
     margin-top: 0
 
-.accordion-body
+.accordion-body,
+.acc-body
+  color: $text-grey
+  font-size: 18px
   padding-bottom: 12px

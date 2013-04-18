@@ -1612,6 +1612,14 @@ a.no-border:hover {
   font-size: 16px;
   line-height: 20px;
 }
+.pane-bundle-text p.acc-title {
+  font-size: 26px;
+  line-height: 1.1;
+}
+.pane-bundle-text p.acc-body {
+  color: #231f20;
+  font-size: 18px;
+}
 
 .field-group-gsb_field_formatter_group_comma_separator .field,
 .field-group-gsb_field_formatter_group_comma_separator .separator,
@@ -2651,7 +2659,7 @@ a.twitter-icon:hover {
   padding: 10px 26px;
 }
 .pane-bundle-accordion .field-name-field-body p {
-  color: #555555;
+  color: #231f20;
 }
 .pane-bundle-accordion .field-name-field-body p:last-child {
   margin-bottom: 5px;
@@ -2671,7 +2679,7 @@ a.twitter-icon:hover {
 .content .accordion-toggle {
   display: block;
   float: left;
-  margin-top: 8px;
+  margin-top: 10px;
   width: 15px;
   height: 15px;
   background: url('../images/accordion-icons.png') no-repeat 0 0;
@@ -2708,6 +2716,9 @@ a.twitter-icon:hover {
   display: none;
   margin-top: 0;
   padding-left: 36px;
+  color: #231f20;
+  font-size: 18px;
+  padding-bottom: 12px;
 }
 .content .accordion-body-wrap .acc-body {
   margin-top: 0;
@@ -2719,9 +2730,13 @@ a.twitter-icon:hover {
 .content .field-name-field-accordion-item .field-name-field-title,
 .content .acc-title {
   border-top: 2px #e1e5e4 solid;
+}
+.content .field-name-field-accordion-item .field-name-field-title .field-item,
+.content .acc-title {
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
+  line-height: 1.1;
 }
 .content .field-name-field-accordion-item .entity-field-collection-item:first-of-type {
   border-top: 0;
@@ -2748,7 +2763,10 @@ p.acc-title + p {
   margin-top: 0;
 }
 
-.accordion-body {
+.accordion-body,
+.acc-body {
+  color: #231f20;
+  font-size: 18px;
   padding-bottom: 12px;
 }
 
