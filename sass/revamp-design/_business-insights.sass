@@ -59,12 +59,22 @@
 // Business Insights listing
 .view-business-insights-by-tag
   +clearfix
-  .node-business-insight.node-teaser
+  .node-business-insight.node-teaser,
+  .node-event.node-teaser
     margin-bottom: 20px
+.view-mode-teaser
+  padding: 26px
   .field-name-field-file-single-public,
-  .group-wrapper-teaser
-    display: inline-block
-  .field-name-field-file-single-public
+  .field-name-field-image-single-public
     float: right
-    margin-left: 20px
     vertical-align: top
+    .pane-bundle-existing-node &
+      margin-left: -26px
+      margin-right: -26px
+      margin-top: -26px
+      float: none
+
+// Views listing styling
+.view-list-teaser
+  .views-row
+    border-bottom: 1px solid #e4e4e4

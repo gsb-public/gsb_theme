@@ -1,4 +1,4 @@
-// EXISTING NODE STYLES
+// EXISTING NODE STYLES, also the same as teasers
 
 // Hide sections field in display
 .field-name-field-sections
@@ -7,7 +7,7 @@
     display: none
 
 // Teaser Content styling
-.group-wrapper-teaser
+.view-mode-teaser
 
   // Date
   .field-name-field-date-published,
@@ -29,3 +29,26 @@
   // Editorial Summary
   .field-name-field-editorial-summary
     font-size: 18px
+    margin: 12px 0
+
+  // Address
+  .street-block,
+  .postal-code,
+  .country
+    display: none
+  .locality-block
+    font-weight: bold
+    .locality
+      &:after
+        content: ","
+
+// Event icon
+.node-event.node-teaser
+  .field-name-title
+    &:before
+      content: image_url("icon-event.png")
+      display: inline
+      float: left
+      margin-right: 5px
+      position: relative
+      top: 3px
