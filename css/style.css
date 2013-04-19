@@ -987,14 +987,14 @@ del {
   width: 20.1%;
 }
 
-.gsb-bizin-content {
+.panel-display .main-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 76.65198%;
+  width: 74.35897%;
   margin-right: -100%;
   float: left;
   clear: right;
@@ -1003,21 +1003,77 @@ del {
   margin-left: 0;
   margin-left: 0%;
 }
-
-.gsb-bizin-sidebar {
+.panel-display .sidebar-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 20.70485%;
+  width: 23.07692%;
   float: right;
   margin-right: 0;
   clear: right;
   overflow: hidden;
   *zoom: 1;
-  margin-left: 79.29515%;
+  margin-left: 76.92308%;
+  max-width: 270px;
+}
+.panel-display .full-header,
+.panel-display .inner-content-wrapper {
+  max-width: 1170px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.panel-display .main-wrapper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 74.35897%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 0;
+  margin-left: 0%;
+}
+.panel-display .inner-sidebar-wrapper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 76.92308%;
+}
+
+.panel-display.gsb-landing-standard-page-one .main-middle {
+  *zoom: 1;
+}
+.panel-display.gsb-landing-standard-page-one .main-middle:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel-display.gsb-landing-standard-page-one .main-middle .column-first,
+.panel-display.gsb-landing-standard-page-one .main-middle .column-second {
+  width: 49%;
+}
+.panel-display.gsb-landing-standard-page-one .main-middle .column-first {
+  float: left;
+}
+.panel-display.gsb-landing-standard-page-one .main-middle .column-second {
+  float: right;
 }
 
 .panel-display.gsb-front-page .front-panel-header-row,
@@ -1108,20 +1164,25 @@ del {
   margin-left: 76.92308%;
 }
 
-.panel-display.gsb-landing-standard-page-one .full-header,
-.panel-display.gsb-landing-standard-page-one .inner-content-wrapper {
-  max-width: 1170px;
-  overflow: hidden;
+.panel-display.gsb-business-insights .gsb-bizin-3col-top,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom {
   *zoom: 1;
 }
-.panel-display.gsb-landing-standard-page-one .main-wrapper {
+.panel-display.gsb-business-insights .gsb-bizin-3col-top:after,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel-display.gsb-business-insights .gsb-bizin-3col-top .column.first,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column.first {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 74.35897%;
+  width: 31.03448%;
   margin-right: -100%;
   float: left;
   clear: right;
@@ -1129,96 +1190,39 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
+  margin-left: -100%;
 }
-.panel-display.gsb-landing-standard-page-one .inner-sidebar-wrapper {
+.panel-display.gsb-business-insights .gsb-bizin-3col-top .column.second,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column.second {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 23.07692%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 76.92308%;
-}
-.panel-display.gsb-landing-standard-page-one .main-middle {
-  *zoom: 1;
-}
-.panel-display.gsb-landing-standard-page-one .main-middle:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.panel-display.gsb-landing-standard-page-one .main-middle .column-first,
-.panel-display.gsb-landing-standard-page-one .main-middle .column-second {
-  width: 49%;
-}
-.panel-display.gsb-landing-standard-page-one .main-middle .column-first {
-  float: left;
-}
-.panel-display.gsb-landing-standard-page-one .main-middle .column-second {
-  float: right;
-}
-
-.panel-display.gsb-business-insights .gsb-bizin-header,
-.panel-display.gsb-business-insights .gsb-bizin-quote,
-.panel-display.gsb-business-insights .gsb-bizin-3col {
-  max-width: 870px;
-}
-.panel-display.gsb-business-insights .gsb-bizin-3col {
-  *zoom: 1;
-}
-.panel-display.gsb-business-insights .gsb-bizin-3col:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.panel-display.gsb-business-insights .gsb-bizin-3col .column {
-  float: left;
-  max-width: 270px;
-}
-.panel-display.gsb-business-insights .gsb-bizin-3col .column.first {
-  float: left;
-}
-.panel-display.gsb-business-insights .gsb-bizin-3col .column.second {
-  margin: 0 2.5%;
-}
-
-.panel-display.gsb-standard-page-two .main-wrapper {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url("../behaviors/box-sizing/boxsizing.php");
-  overflow: hidden;
-  *zoom: 1;
-  width: 74.35897%;
+  width: 31.03448%;
   margin-right: -100%;
   float: left;
   clear: right;
   overflow: hidden;
   *zoom: 1;
-  margin-left: 0;
-  margin-left: 0%;
+  margin-left: 34.48276%;
 }
-.panel-display.gsb-standard-page-two .sidebar-wrapper {
+.panel-display.gsb-business-insights .gsb-bizin-3col-top .column.third,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column.third {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 23.07692%;
+  width: 31.03448%;
   float: right;
   margin-right: 0;
   clear: right;
   overflow: hidden;
   *zoom: 1;
-  margin-left: 76.92308%;
-  max-width: 270px;
+  margin-left: 68.96552%;
 }
 
 .offscreenText {

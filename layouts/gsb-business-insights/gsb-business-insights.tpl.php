@@ -11,15 +11,20 @@
 ?>
 
 <div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="layout-wrapper gsb-bizin-content">
 
-    <div class="main-wrapper gsb-bizin-main">
+  <div class="full-header">
+    <?php print $content['fullheader']; ?>
+  </div>
 
-      <div class="gsb-bizin-header">
-        <?php print $content['contentoneone']; ?>
+  <div class="inner-content-wrapper">
+
+    <div class="main-wrapper">
+
+      <div class="main-header">
+        <?php print $content['maintop']; ?>
       </div>
 
-      <div class="gsb-bizin-3col">
+      <div class="gsb-bizin-3col-top">
         <div class="column first">
           <?php print $content['contenttwoone']; ?>
         </div>
@@ -32,10 +37,10 @@
       </div>
 
       <div class="gsb-bizin-quote">
-        <?php print $content['contentthreeone']; ?>
+        <?php print $content['mainquote']; ?>
       </div>
 
-      <div class="gsb-bizin-3col">
+      <div class="gsb-bizin-3col-bottom">
         <div class="column first">
           <?php print $content['contentfourone']; ?>
         </div>
@@ -47,15 +52,21 @@
         </div>
       </div>
 
-      <div class="gsb-bizin-footer">
-        <?php print $content['contentfiveone']; ?>
+      <div class="main-footer">
+        <?php print $content['mainbottom']; ?>
       </div>
 
-    </div><!-- /.gsb-business-content -->
+    </div><!-- /.main-wrapper -->
 
-    <div class="sidebar-wrapper gsb-bizin-sidebar">
-      <?php print $content['contentrightone']; ?>
-    </div><!-- /.gsb-bizin-sidebar -->
-  </div>
+    <div class="inner-sidebar-wrapper">
+      <div id="quicklinks">
+        <?php print $content['quicklinks']; ?>
+      </div>
+      <div class="sidebar-inner">
+        <?php print $content['sidebar']; ?>
+      </div>
+    </div><!-- /.sidebar-wrapper -->
+
+  </div><!-- /.content-wrapper -->
 
 </div><!-- /.gsb-business-insights -->
