@@ -2393,8 +2393,6 @@ a .slideshow-slide:hover .slide-cta {
   padding-top: 5px;
 }
 .pane-bundle-spotlight .group-name-wrapper {
-  overflow: hidden;
-  *zoom: 1;
   margin: 12px 0;
 }
 .pane-bundle-spotlight .group-name-wrapper .field {
@@ -2447,7 +2445,7 @@ a .slideshow-slide:hover .slide-cta {
   content: ", ";
 }
 .pane-bundle-spotlight .field-name-field-body {
-  margin: 12px 0 0 0;
+  margin: 12px 0;
   max-height: 72px;
   overflow: hidden;
 }
@@ -2482,6 +2480,24 @@ a .slideshow-slide:hover .slide-cta {
 }
 .pane-bundle-spotlight .field-name-field-gsb-spotlight-image-video {
   overflow: hidden;
+}
+
+.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper {
+  *zoom: 1;
+}
+.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper,
+.sidebar-wrapper .pane-bundle-spotlight .field-name-field-body {
+  clear: both;
+}
+
+.main-wrapper .pane-bundle-spotlight .group-name-wrapper {
+  overflow: hidden;
+  *zoom: 1;
 }
 
 .pane-bundle-people {

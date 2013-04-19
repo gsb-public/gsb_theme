@@ -23,7 +23,6 @@
 
   // Name styling
   .group-name-wrapper
-    +clearfix
     margin: 12px 0
     .field
       +float-left
@@ -69,7 +68,7 @@
       content: ", "
 
   .field-name-field-body
-    margin: 12px 0 0 0
+    margin: 12px 0
     max-height: 72px
     overflow: hidden
     p
@@ -101,14 +100,15 @@
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
 
-// Styling for the widest pane
-.pane-bundle-spotlight
-  .main-header &
-    .group-name-wrapper,
-    .field-name-field-title-position-single,
-    .field-name-field-program-single,
-    .spotlight-year,
-    .field-name-field-body,
-    .show-more
+// Clearfixes in Sidebar
+.sidebar-wrapper .pane-bundle-spotlight
+  .group-name-wrapper
+    +pie-clearfix
+  .group-name-wrapper,
+  .field-name-field-body
+    clear: both
 
-
+// Clearfixes in main
+.main-wrapper .pane-bundle-spotlight
+  .group-name-wrapper
+    +clearfix
