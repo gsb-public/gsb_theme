@@ -1,17 +1,17 @@
 // CSS to handle the Preview and Video switching
 .field-type-file
-  .gsb-responsive-main
+  .gsb-responsive-main .file-video
     display: none
     +breakpoint($bp-video)
       display: block
-  .gsb-responsive-preview
+  .gsb-responsive-preview .file-video
     +breakpoint($bp-video)
       display: none
 
 // Fix only for the landing one layout in sidebar
 .sidebar-wrapper
   .field-type-file
-    .gsb-responsive-main
+    .gsb-responsive-main .file-video
       display: none
-    .gsb-responsive-preview
+    .gsb-responsive-preview .file-video
       display: block

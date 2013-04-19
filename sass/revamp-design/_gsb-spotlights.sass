@@ -13,17 +13,13 @@
     height: 10px
     background: $red
   .feature-spotlight-label
-    margin-bottom: 5px
+    border-top: 10px solid $red
     color: $text-grey
     font-size: 14px
-    line-height: 18px
     display: inline-block
-    border-top: 10px solid $red
+    line-height: 18px
+    margin-bottom: 18px
     padding-top: 5px
-  .field-name-field-file-single-public,
-  .field-name-field-use-profile-img
-    clear: both
-    margin-bottom: 10px
 
   // Name styling
   .group-name-wrapper
@@ -45,25 +41,39 @@
     padding-right: 4px
 
   // Image styling
-  .field-name-field-spotlight-person-fid,
-  .field-name-field-use-profile-img
-    +float-left
-    img
+  .field-name-field-use-profile-img,
+  .field-name-field-file-single-public
+    clear: both
+    margin-bottom: 10px
+    .field-items
+      +float-left
+    img,
+    .gsb-responsive-main
       margin-right: 18px
+
+  .field-name-field-sections
+    display: none
+
+
+  // Title, program and year
   .field-name-field-title-position-single,
-  .field-name-field-year
+  .field-name-field-program-single,
+  .spotlight-year
     font-size: 20px
     font-weight: bold
     line-height: 26px
-    margin: 0 0 4px
-  .field-name-field-year
-    margin-top: 3px
+
+  .field-name-field-program-single
+    display: inline
+    &:after
+      content: ", "
+
   .field-name-field-body
-    color: $grey-5
-    margin: 0
+    margin: 12px 0 0 0
     max-height: 72px
     overflow: hidden
     p
+      color: $grey-5
       font-size: 14px
       line-height: 18px
       margin-bottom: 0
@@ -90,3 +100,15 @@
 
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
+
+// Styling for the widest pane
+.pane-bundle-spotlight
+  .main-header &
+    .group-name-wrapper,
+    .field-name-field-title-position-single,
+    .field-name-field-program-single,
+    .spotlight-year,
+    .field-name-field-body,
+    .show-more
+
+
