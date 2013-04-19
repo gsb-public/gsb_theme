@@ -1563,6 +1563,7 @@ a.no-border:hover {
 .field-group-gsb_field_formatter_group_comma_separator .separator,
 .field-group-gsb_field_formatter_group_comma_separator .field-items {
   display: inline-block;
+  line-height: 1;
 }
 .field-group-gsb_field_formatter_group_comma_separator .separator {
   margin-right: 5px;
@@ -1575,28 +1576,21 @@ a.no-border:hover {
   margin-bottom: -6px;
 }
 .group_tags_wrapper h3 {
-  font-size: 14px;
-  margin: 0;
-  line-height: 1em;
-  text-transform: none;
+  color: #888888;
   display: inline-block;
-  margin-right: 3px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 5px 0 0;
+  text-transform: none;
 }
 .group_tags_wrapper a {
   color: #990000;
+  font-size: 14px;
 }
 
 .view-mode-teaser .group_tags_wrapper {
   margin-top: 0;
-}
-
-.group-tags-wrapper {
-  overflow: hidden;
-  *zoom: 1;
-}
-.group-tags-wrapper .field {
-  display: inline;
-  float: left;
 }
 
 #navigation h2 {
@@ -3624,8 +3618,8 @@ p.acc-title + p {
   margin-left: -24px;
   font-weight: bold;
 }
-.view-gsb-event .node-event.node-teaser .group-wrapper-teaser h2,
-.view-gsb-event .node-event.node-teaser .group-wrapper-teaser h2 a {
+.view-gsb-event .node-event.node-teaser .view-mode-teaser h2,
+.view-gsb-event .node-event.node-teaser .view-mode-teaser h2 a {
   margin-bottom: 16px;
 }
 .view-gsb-event .node-event.node-teaser .field-name-field-address,
@@ -3735,27 +3729,10 @@ p.acc-title + p {
   border-top: 1px solid #cccccc;
   padding: 30px 0;
 }
-.node-event.view-mode-full .group-footer .field-type-taxonomy-term-reference {
-  display: inline;
-}
-.node-event.view-mode-full .group-footer .field-type-taxonomy-term-reference a {
-  color: #990000;
-  font-size: 14px;
-}
 .node-event.view-mode-full .group-footer .field-name-field-editorial-summary,
 .node-event.view-mode-full .group-footer .field-name-field-body p {
   font-size: 18px;
   line-height: 28px;
-}
-.node-event.view-mode-full .group-event-wrapper h3 {
-  color: #888888;
-  display: inline-block;
-  float: left;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 26px;
-  margin-right: 5px;
-  text-transform: none;
 }
 
 .node-case-study.view-mode-full,
@@ -4348,21 +4325,6 @@ p.acc-title + p {
 .node-news .field-name-field-research-paper-number .label-inline {
   font-weight: normal;
 }
-.node-news .group-tags-wrapper {
-  margin-top: 13px;
-  font-size: 14px;
-  color: #aaaaaa;
-}
-.node-news .group-tags-wrapper h3 {
-  font-size: 14px;
-  margin: 0;
-  line-height: 1em;
-  text-transform: none;
-  font-weight: normal;
-}
-.node-news .group-tags-wrapper a {
-  color: #990000;
-}
 .node-news .field-name-field-research-paper-number {
   color: #555555;
 }
@@ -4425,13 +4387,6 @@ p.acc-title + p {
   color: #666666;
   margin-top: 3px;
 }
-.node-news.view-mode-full .group-footer .field-type-taxonomy-term-reference {
-  display: inline;
-}
-.node-news.view-mode-full .group-footer .field-type-taxonomy-term-reference a {
-  color: #990000;
-  font-size: 14px;
-}
 .node-news.view-mode-full .group-footer .field-name-field-news-byline {
   margin-top: 10px;
   display: block;
@@ -4455,16 +4410,6 @@ p.acc-title + p {
   font-size: 25px;
   line-height: 32px;
   font-weight: bold;
-}
-.node-news.view-mode-full .group-event-wrapper h3 {
-  color: #888888;
-  display: inline-block;
-  float: left;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 26px;
-  margin-right: 5px;
-  text-transform: none;
 }
 
 .view-mode-media_contact {
