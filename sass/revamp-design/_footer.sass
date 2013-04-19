@@ -1,88 +1,109 @@
-.footer
-  clear: both
-  margin-top: 0
-  padding-top: 35px
-  background-color: $white
-  background: image_url('footer-background.png') repeat-x
-  h2
-    display: none
-    text-indent: -10000px
-  .block
-    float: left
+// FOOTER
 
-.footer-container
-  margin: auto
-  width: 1170px
+// Footer columns
+#block-gsb-public-custom-blocks-gpcb-follow-us,
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2,
+#block-gsb-public-custom-blocks-gpcb-enews-signup
+  display: inline-block
+  margin-right: 30px
+  vertical-align: top
+  width: 270px
 
-// footer  ----------------------------------
+// General footer menu styles
+#block-gsb-public-custom-blocks-gpcb-follow-us,
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2
+  a
+    color: $red
+    display: block
+    font-weight: bold
+    line-height: 1.3
+    max-width: 200px
+    text-transform: uppercase
+    &:hover
+      color: $text-blue
+  li
+    margin-bottom: 20px
+    &:last-of-type
+      a
+        margin-bottom: 0
+
+#footer-wrapper
+  border-top: 1px solid $white
+  +background(linear-gradient(top, #f0efef, $white))
 
 .region-footer
+  padding-top: 35px
+
+// FOLLOW US
+#block-gsb-public-custom-blocks-gpcb-follow-us
   .cta-follow-us
     background: none
-    padding-left: 0
-    padding-top: 50px
     border: none
     +box-shadow(none)
-    box-shadow: none
-    width: 270px
-    .cta-title 
+    height: auto
+    padding-left: 0
+    a.cta-title
       width: 100%
       background: none
-      color: #900
+      color: $red
       padding: 0
       height: 35px
       line-height: 35px
-      border-bottom: 1px #ccc solid
-      font-size: 19px
-      i 
-        right: 165px
-        margin-top: -11px
-        background-image: image_url('cta-visit-icon.png')
-        background-position: 0 2px
-  .block-menu
-    margin-bottom: 10px
-    h2
-      display: none
-    .menu 
-      float: left
-      width: 200px
-      padding-right: 100px
-      margin: 0
-      padding-top: 5px
-      li 
-        list-style: none
-        list-style-type: none
-        line-height: 1.3em
-        color: #900
-        margin-bottom: 8px
-        margin-left: 0
-        padding-left: 0
-        a 
-          color: #900
-          text-transform: uppercase
-          margin-bottom: 6px
-          font-size: 17px
-          font-weight: 500
- 
+      border-bottom: 1px $grey-c solid
+      font-size: 20px
+      text-transform: none
+      &:after
+        color: $grey-med
+        font-size: 24px
+      &:hover
+        background: transparent
+    .icon-wrapper
+      padding: 0
+      margin-top: 56px
+
+    .social-block-youtube:hover
+      background: image_url("icon-youtube.png") no-repeat
+
+    .social-block-twitter:hover
+      background: image_url("icon-twitter.png") no-repeat
+
+    .social-block-facebook:hover
+      background: image_url("icon-fb.png") no-repeat
+
+    .social-block-linkedin:hover
+      background: image_url("icon-linkedin.png") no-repeat
+
+// COPYRIGHT
+#block-menu-menu-footer-3
+  border-top: 1px $grey-c solid
+  li
+    display: inline-block
+    a
+      color: $red
+      font-size: 14px
+
+// NEWSLETTER SIGNUP
 .footer-newsletter,
-.footer__signup  
+.footer__signup
   width: 205px
- 
-.footer__signup 
+
+.footer__signup
   padding-top: 5px
- 
-.footer__signup__label 
+
+.footer__signup__label
   color: #900
   font-weight: bold
   font-size: 15px
   margin-bottom: 0
- 
-.footer__signup__description 
+
+.footer__signup__description
   font-size: 15px
   width: 185px
   margin-bottom: 0.9em
- 
-input.footer__signup__email 
+
+input.footer__signup__email
   border: 1px #ccc solid
   +box-shadow(none)
   +border-radius(0)
@@ -90,13 +111,13 @@ input.footer__signup__email
   padding: 8px 14px
   width: 130px
   float: left
-  &:focus 
+  &:focus
     outline: none
     +box-shadow(none)
     border: 1px #900 solid
- 
+
 input.footer__signup__submit,
-input.footer__signup__submit:hover 
+input.footer__signup__submit:hover
   margin: 0
   margin-left: -1px
   float: left
@@ -110,18 +131,16 @@ input.footer__signup__submit:hover
   +border-radius(0 20px 20px 0)
   font-weight: bold
   font-size: 13px
- 
-.region-footer-copyrights .menu 
+
+// Copyrights
+.region-footer-copyrights .menu
   float: left
   width: 600px
   margin: 0
   padding: 0
-  li 
+  li
     list-style: none
     list-style-type: none
     color: #900
     margin-right: 40px
     float: left
-    a 
-      color: #900  
- 
