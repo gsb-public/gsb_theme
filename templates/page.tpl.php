@@ -147,6 +147,7 @@
 
     <div id="footer-wrapper"><div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
-    </div></div></div> <!-- /.section, /#footer, /#footer-wrapper -->
+      <div class="gsb-copyright">Copyright © Stanford Graduate School of Business</div>
+    </div></div> <!-- /.section, /#footer, /#footer-wrapper -->
 
   </div></div> <!-- /#page, /#page-wrapper -->

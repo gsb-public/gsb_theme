@@ -79,17 +79,6 @@
     .social-block-linkedin:hover
       background: image_url("icon-linkedin.png") no-repeat
 
-// COPYRIGHT
-#block-menu-menu-footer-3
-  border-top: 1px $grey-c solid
-  .menu
-    padding-top: 12px
-  li
-    display: inline-block
-    margin-right: 44px
-    a
-      color: $red
-      font-size: 14px
 
 // NEWSLETTER SIGNUP
 .footer__signup__label
@@ -133,15 +122,20 @@ input.footer__signup__submit:hover
   font-weight: bold
   font-size: 13px
 
-// Copyrights
-.region-footer-copyrights .menu
-  float: left
-  width: 600px
-  margin: 0
-  padding: 0
+// Privacy menu
+#block-menu-menu-footer-3
+  float: right
+  padding: 12px 0
   li
-    list-style: none
-    list-style-type: none
-    color: #900
-    margin-right: 40px
-    float: left
+    display: inline-block
+    margin-right: 44px
+    a
+      color: $red
+      font-size: 14px
+
+// Copyright
+.gsb-copyright
+  color: $grey-6
+  font-size: 14px
+  border-top: 1px $grey-c solid
+  padding: 12px 0
