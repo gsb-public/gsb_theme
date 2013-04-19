@@ -2942,6 +2942,79 @@ p.acc-title + p {
   border-bottom: 1px solid #e4e4e4;
 }
 
+.view-business-insights-sidebar {
+  margin-bottom: 30px;
+}
+
+.view-business-insights-sidebar .menu_region {
+  display: none;
+}
+
+.view-business-insights-sidebar .views-row {
+  margin: 0;
+}
+
+.view-business-insights-sidebar .views-row-last {
+  margin-bottom: 10px;
+}
+
+.view-business-insights-sidebar .field-content a, .bi-map__tex {
+  display: block;
+  border: none;
+  line-height: 18px;
+  padding: 6px 0 6px 15px;
+  background: #272727;
+  color: white;
+}
+
+.view-business-insights-sidebar .field-content a:hover, .view-business-insights-sidebar .field-content a.active, .bi-map__text {
+  background: #607c8c;
+}
+
+.bi-map {
+  position: relative;
+  background: url("../images/businessinsights_region_map.png") no-repeat top left;
+  display: none;
+}
+
+.bi-map__image {
+  z-index: 15;
+  position: relative;
+  opacity: 0;
+}
+
+.bi-map__overlay {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 235px;
+  height: 150px;
+  background-position: 0 0;
+  background-repeat: 0;
+  display: block;
+}
+
+.bi-map__overlay.americas {
+  background-image: url("../images/map_americas.png");
+}
+
+.bi-map__overlay.africa {
+  background-image: url("../images/map_africa.png");
+}
+
+.bi-map__overlay.asia {
+  background-image: url("../images/map_asia.png");
+}
+
+.bi-map__overlay.europe {
+  background-image: url("../images/map_europe.png");
+}
+
+.bi-map__overlay.oceania {
+  background-image: url("../images/map_oceania.png");
+}
+
 .cta-wrapper {
   margin: 0 1px 8px 1px;
 }
