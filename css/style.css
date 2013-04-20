@@ -969,6 +969,15 @@ del {
 }
 
 /* SINGULARITY -- http://singularity.gs/ */
+#main {
+  *zoom: 1;
+}
+#main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #sidebar .sidebar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -984,24 +993,24 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
-  width: 20.1%;
+  margin-right: 65px;
+  width: 235px;
 }
 
-.panel-display .main-wrapper {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+#content {
+  overflow: hidden;
+}
+
+.panel-display .main-wrapper,
+.panel-display .panels-ipe-regionid-main {
   box-sizing: border-box;
-  *behavior: url("../behaviors/box-sizing/boxsizing.php");
-  overflow: hidden;
-  *zoom: 1;
-  width: 74.35897%;
-  margin-right: -100%;
-  float: left;
   clear: right;
-  overflow: hidden;
-  *zoom: 1;
+  float: left;
   margin-left: 0;
-  margin-left: 0%;
+  margin-right: -100%;
+  overflow: hidden;
+  width: 65.46%;
+  max-width: 74.4%;
 }
 .panel-display .sidebar-wrapper {
   -webkit-box-sizing: border-box;
@@ -1018,28 +1027,14 @@ del {
   *zoom: 1;
   margin-left: 76.92308%;
   max-width: 270px;
+  margin-left: 30px;
+  width: 31.07692%;
 }
 .panel-display .full-header,
 .panel-display .inner-content-wrapper {
   max-width: 1170px;
   overflow: hidden;
   *zoom: 1;
-}
-.panel-display .main-wrapper {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url("../behaviors/box-sizing/boxsizing.php");
-  overflow: hidden;
-  *zoom: 1;
-  width: 74.35897%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 0;
-  margin-left: 0%;
 }
 .panel-display .inner-sidebar-wrapper {
   -webkit-box-sizing: border-box;
@@ -1055,6 +1050,8 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 76.92308%;
+  max-width: 270px;
+  width: 31.07692% !important;
 }
 
 .panel-display.gsb-landing-standard-page-one .main-middle {
@@ -1190,6 +1187,7 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
+  width: 35.3%;
   clear: both;
 }
 .panel-display.gsb-business-insights .gsb-bizin-3col-top .column.second,
@@ -1207,6 +1205,7 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 34.48276%;
+  width: 35.3%;
   clear: right;
 }
 .panel-display.gsb-business-insights .gsb-bizin-3col-top .column.third,
@@ -1224,6 +1223,7 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 68.96552%;
+  width: 35.3%;
   float: none;
 }
 

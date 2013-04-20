@@ -7,17 +7,17 @@
 
 // REGIONS
 #main
-  // +pie-clearfix
+  +pie-clearfix
 // First sidebar region
 #sidebar
   .sidebar
     +grid-span(1, 1, $columns: $regions)
-    width: 20.1%
+    margin-right: 65px
+    width: 235px
 
 // Content region
 #content
-  // +grid-span(1, 2, $columns: $regions)
-  // width: 74.4%
+  overflow: hidden
 
 
 ////////////////////////////
@@ -26,19 +26,31 @@
 
 // Standard landing an (.gsb-standard-page-two)
 .panel-display
-  .main-wrapper
-    +grid-span(1, 1, $columns: $standard)
+  .main-wrapper,
+  .panels-ipe-regionid-main
+    box-sizing: border-box
+    clear: right
+    float: left
+    margin-left: 0
+    margin-right: -100%
+    overflow: hidden
+    width: 65.46%
+    max-width: 74.4%
+    // For layout with not left region
+    // width: auto
   .sidebar-wrapper
     +grid-span(1, 2, $columns: $standard)
     max-width: 270px
+    margin-left: 30px
+    width: 31.07692%
   .full-header,
   .inner-content-wrapper
     max-width: $max-width
     +clearfix
-  .main-wrapper
-    +grid-span(1, 1, $columns: $landing-one-content)
   .inner-sidebar-wrapper
     +grid-span(1, 2, $columns: $landing-one-content)
+    max-width: 270px
+    width: 31.07692% !important
 
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
@@ -51,7 +63,6 @@
       float: left
     .column-second
       float: right
-
 
 // Front page panel layout
 .panel-display.gsb-front-page
@@ -75,7 +86,6 @@
   .front-panel-footer-three
     +grid-span(1, 3, $columns: $front-main-inner)
 
-
 // Business Insights landing layout
 .panel-display.gsb-business-insights
   .gsb-bizin-3col-top,
@@ -83,10 +93,13 @@
     +pie-clearfix
     .column.first
       +grid-span(1, 1, $columns: $business-insight)
+      width: 35.3%
       clear: both
     .column.second
       +grid-span(1, 2, $columns: $business-insight)
+      width: 35.3%
       clear: right
     .column.third
       +grid-span(1, 3, $columns: $business-insight)
+      width: 35.3%
       float: none
