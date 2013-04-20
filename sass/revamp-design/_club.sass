@@ -1,4 +1,7 @@
 // Club teaser styling
+.view-club-filters
+  @extend %border-and-box-shadow
+
 .node-club.node-teaser
   padding: 0 24px
   .club-title
@@ -8,6 +11,8 @@
     &:first-letter
       border-top: 10px solid $blue-light
       padding-top: 12px
+    a
+      color: $green-light
   .field-name-field-body
     font-size: 18px
     line-height: 24px
