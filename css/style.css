@@ -1374,10 +1374,6 @@ div.label-inline {
   padding-left: 1em;
 }
 
-.views-row-last {
-  border-bottom: 0 !important;
-}
-
 /* Print Defaults -------------------------------------------------------------- */
 @media print {
   * {
@@ -4998,4 +4994,17 @@ fieldset.collapsible .fieldset-legend {
 .view-business-insights-by-tag .node-business-insight.node-teaser,
 .view-business-insights-by-tag .node-event.node-teaser {
   margin-bottom: 20px;
+}
+
+.view-gsb-event .view-content {
+  border-bottom: 3px solid black;
+}
+.view-gsb-event .view-content h3 > .date-display-single {
+  display: block;
+  border-top: 1px solid black;
+  padding-top: 30px;
+}
+.view-gsb-event .view-content .views-row {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 30px;
 }
