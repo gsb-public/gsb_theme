@@ -1616,23 +1616,27 @@ a.no-border:hover {
   font-size: 18px;
 }
 
+.gsb_field_formatter_field_collection_separator .entity,
+.gsb_field_formatter_field_collection_separator .field,
+.gsb_field_formatter_field_collection_separator .separator,
+.field-group-gsb_field_formatter_group_comma_separator .entity,
 .field-group-gsb_field_formatter_group_comma_separator .field,
-.field-group-gsb_field_formatter_group_comma_separator .separator,
-.field-group-gsb_field_formatter_group_comma_separator .field-items {
+.field-group-gsb_field_formatter_group_comma_separator .separator {
   display: inline-block;
   line-height: 1;
 }
+.gsb_field_formatter_field_collection_separator .separator,
 .field-group-gsb_field_formatter_group_comma_separator .separator {
   margin-right: 5px;
 }
 
-.group_tags_wrapper {
+.group-tags-wrapper {
   margin-top: 13px;
   font-size: 14px;
   color: #aaaaaa;
   margin-bottom: -6px;
 }
-.group_tags_wrapper h3 {
+.group-tags-wrapper h3 {
   color: #888888;
   display: inline-block;
   font-size: 14px;
@@ -1641,12 +1645,12 @@ a.no-border:hover {
   margin: 0 5px 0 0;
   text-transform: none;
 }
-.group_tags_wrapper a {
+.group-tags-wrapper a {
   color: #990000;
   font-size: 14px;
 }
 
-.view-mode-teaser .group_tags_wrapper {
+.view-mode-teaser .group-tags-wrapper {
   margin-top: 0;
 }
 
@@ -3872,10 +3876,6 @@ p.acc-title + p {
 .node-research-paper.view-mode-full .field-name-field-person-fac-student-other a {
   color: #990000;
 }
-.node-case-study.view-mode-full .field-collection-item-field-person-fac-student-other .group-wrapper-tags,
-.node-research-paper.view-mode-full .field-collection-item-field-person-fac-student-other .group-wrapper-tags {
-  display: inline;
-}
 .node-case-study.view-mode-full .field-name-title h2,
 .node-research-paper.view-mode-full .field-name-title h2 {
   color: #2c627c;
@@ -3903,10 +3903,6 @@ p.acc-title + p {
 .node-research-paper.view-mode-full .group-tags-wrapper.research-paper,
 .node-research-paper.view-mode-full .green-rounded-button {
   margin-bottom: 30px;
-}
-.node-case-study.view-mode-full .group-tags-wrapper.research-paper .separator,
-.node-research-paper.view-mode-full .group-tags-wrapper.research-paper .separator {
-  float: none;
 }
 .node-case-study.view-mode-full .green-rounded-button,
 .node-research-paper.view-mode-full .green-rounded-button {
@@ -4314,24 +4310,6 @@ p.acc-title + p {
 .node-publication.view-mode-full .field-name-field-person-other a {
   color: #990000;
 }
-.node-publication.view-mode-full .label-inline.research-paper {
-  float: left;
-  font-weight: bold;
-}
-.node-publication.view-mode-full .field-collection-item-field-person-other,
-.node-publication.view-mode-full .group-wrapper-name {
-  font-weight: bold;
-}
-.node-publication.view-mode-full .field-collection-item-field-person-other,
-.node-publication.view-mode-full .separator {
-  display: inline;
-  float: left;
-}
-.node-publication.view-mode-full .separator,
-.node-publication.view-mode-full .label-inline,
-.node-publication.view-mode-full .name-first {
-  margin-right: 5px;
-}
 .node-publication.view-mode-full .field-name-field-date-published {
   color: #444444;
   line-height: 1;
@@ -4348,47 +4326,41 @@ p.acc-title + p {
 .node-publication.view-mode-full .green-rounded-button {
   margin-bottom: 30px;
 }
-.node-publication.view-mode-full .group-tags-wrapper.research-paper .separator {
-  float: none;
-}
-.node-publication.view-mode-full .field-name-field-business-insight-topic {
-  float: left;
-}
-.node-publication .group-publication-details {
+.node-publication.view-mode-full .group-publication-details {
   overflow: hidden;
   *zoom: 1;
 }
-.node-publication .group-publication-details > span {
+.node-publication.view-mode-full .group-publication-details > span {
   display: inline;
   float: left;
   margin-right: 5px;
 }
-.node-publication .publication-description {
+.node-publication.view-mode-full .publication-description {
   border-top: 1px #cccccc solid;
   border-bottom: 1px #cccccc solid;
   margin-top: 30px;
   padding: 30px 0;
 }
-.node-publication .field-name-field-publication-reviews .label-above {
+.node-publication.view-mode-full .field-name-field-publication-reviews .label-above {
   font-weight: bold;
   margin: 30px 0;
 }
-.node-publication .field-name-field-publication-reviews .publication-review {
+.node-publication.view-mode-full .field-name-field-publication-reviews .publication-review {
   font-size: 18px;
 }
-.node-publication .field-name-field-publication-reviews .publication-review:before {
+.node-publication.view-mode-full .field-name-field-publication-reviews .publication-review:before {
   display: inline;
   content: "“";
 }
-.node-publication .field-name-field-publication-reviews .publication-review:after {
+.node-publication.view-mode-full .field-name-field-publication-reviews .publication-review:after {
   display: inline;
   content: "”";
 }
-.node-publication .field-name-field-publication-reviews .publication-reviewer {
+.node-publication.view-mode-full .field-name-field-publication-reviews .publication-reviewer {
   font-style: italic;
   font-size: 14px;
 }
-.node-publication .field-collection-item-field-publication-reviews {
+.node-publication.view-mode-full .field-collection-item-field-publication-reviews {
   margin-bottom: 30px;
 }
 
@@ -4522,27 +4494,6 @@ p.acc-title + p {
 }
 .view-mode-media_contact a {
   color: #7b8201;
-}
-
-.node-teaser.node-news .group-left, .node-teaser.node-publication .group-left {
-  max-width: 220px;
-  margin-right: 25px;
-}
-.node-teaser.node-news .group-left, .node-teaser.node-publication .group-left {
-  text-align: left;
-}
-.node-teaser.node-news .field.field-name-title h2, .node-teaser.node-publication .field.field-name-title h2 {
-  color: #990000;
-  font-size: 19px;
-  line-height: 1.15em;
-  margin-bottom: 10px;
-}
-.node-teaser.node-news span.date-display-single, .node-teaser.node-publication span.date-display-single {
-  font-size: 15px;
-  color: #555555;
-}
-.node-teaser.node-news .group-tags-wrapper, .node-teaser.node-publication .group-tags-wrapper {
-  margin-top: 2px;
 }
 
 .view-club-filters .views-row,
