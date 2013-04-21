@@ -1,3 +1,12 @@
+///////////////
+// PUBLICATION
+//////////////
+
+
+// Hide publication title
+.node-type-publication #page-title
+  display: none
+
 // Publication detail page
 .node-publication.view-mode-full
   border-top: 3px $black solid
@@ -19,9 +28,15 @@
   // Author names
   .field-name-field-person-other
     +clearfix
+    font-size: 18px
+    font-weight: bold
+    .label-inline
+      font-weight: bold
+      margin-right: 5px
     a
       color: $red
-
+  .field-name-field-first-name
+    margin-right: 5px
 
   // Date published
   .field-name-field-date-published

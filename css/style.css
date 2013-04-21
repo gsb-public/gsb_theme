@@ -1660,6 +1660,11 @@ a.no-border:hover {
   left: -4px;
 }
 
+.field-name-field-person-other .separator {
+  position: relative;
+  left: -4px;
+}
+
 #navigation h2 {
   text-indent: 110%;
   white-space: nowrap;
@@ -3848,28 +3853,14 @@ p.acc-title + p {
   display: inline;
   font-weight: bold;
 }
-.node-case-study.view-mode-full .field-collection-item-field-person-fac-student-other,
-.node-case-study.view-mode-full .separator,
-.node-research-paper.view-mode-full .field-collection-item-field-person-fac-student-other,
-.node-research-paper.view-mode-full .separator {
-  float: left;
-}
-.node-case-study.view-mode-full .separator,
 .node-case-study.view-mode-full .label-inline,
 .node-case-study.view-mode-full .name-first,
-.node-research-paper.view-mode-full .separator,
 .node-research-paper.view-mode-full .label-inline,
 .node-research-paper.view-mode-full .name-first {
   margin-right: 5px;
 }
-.node-case-study.view-mode-full .field-name-field-person-fac-student-other,
-.node-research-paper.view-mode-full .field-name-field-person-fac-student-other {
-  overflow: hidden;
-  *zoom: 1;
-}
 .node-case-study.view-mode-full .field-name-field-person-fac-student-other .label-inline,
 .node-research-paper.view-mode-full .field-name-field-person-fac-student-other .label-inline {
-  float: left;
   font-weight: bold;
 }
 .node-case-study.view-mode-full .field-name-field-person-fac-student-other a,
@@ -4285,6 +4276,10 @@ p.acc-title + p {
   padding-right: 4px;
 }
 
+.node-type-publication #page-title {
+  display: none;
+}
+
 .node-publication.view-mode-full {
   border-top: 3px black solid;
 }
@@ -4306,9 +4301,18 @@ p.acc-title + p {
 .node-publication.view-mode-full .field-name-field-person-other {
   overflow: hidden;
   *zoom: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+.node-publication.view-mode-full .field-name-field-person-other .label-inline {
+  font-weight: bold;
+  margin-right: 5px;
 }
 .node-publication.view-mode-full .field-name-field-person-other a {
   color: #990000;
+}
+.node-publication.view-mode-full .field-name-field-first-name {
+  margin-right: 5px;
 }
 .node-publication.view-mode-full .field-name-field-date-published {
   color: #444444;
