@@ -21,17 +21,23 @@
 
     </div><!-- /.main-wrapper -->
 
-    <div class="sidebar-wrapper">
+    <?php if ($content['quicklinks'] || $content['sidebar']): ?>
+      <div class="sidebar-wrapper">
 
-      <div id="quicklinks">
-        <?php print $content['quicklinks']; ?>
-      </div>
+        <?php if ($content['quicklinks']): ?>
+          <div id="quicklinks">
+            <?php print $content['quicklinks']; ?>
+          </div>
+        <?php endif; ?>
 
-      <div class="sidebar-inner">
-        <?php print $content['sidebar']; ?>
-      </div>
+        <?php if ($content['sidebar']): ?>
+          <div class="sidebar-inner">
+            <?php print $content['sidebar']; ?>
+          </div>
+        <?php endif; ?>
 
-    </div><!-- /.sidebar-wrapper -->
+      </div><!-- /.sidebar-wrapper -->
+    <?php endif; ?>
 
   </div><!-- /.content-wrapper -->
 
