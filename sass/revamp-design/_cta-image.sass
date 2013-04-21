@@ -66,43 +66,27 @@
   &:first-child
     border-top: 0
 
-.field-name-field-image-cta-link a
-  display: block
-  margin-top: -7px
-  width: 13px
-  height: 15px
-
-  &.cta-red.cta-link,
-  &.cta-green.cta-link
-    i
-      right: 18px
-      margin-top: -14px
-      width: 26px
-      height: 27px
-
-  &.cta-red.cta-link
-    i
-      background: image_url('cta_red_icon.png') no-repeat top left
-    &:hover i
-      background: image_url('cta_red_icon_hover.png')
-
-  &.cta-green.cta-link
-    i
-      background: image_url('cta_green_icon.png') no-repeat top left
-    &:hover i
-      background: image_url('cta_green_icon_hover.png')
-
-.small
+// Side styling with old stuff @TODO clean up
+.inner-sidebar-wrapper
   .image-cta-position-top,
   .image-cta-position-bottom
     &.image-cta-color-purple
-      background: #754760
+      background: $purple
+      &:hover
+        background: $teal-dark
     &.image-cta-color-green
-      background: #076D54
+      background: $green-dark
+      &:hover
+        background: $blue
     &.image-cta-color-blue
-      background: #607C8C
+      background: $blue
+      &:hover
+        background: $green-dark
     &.image-cta-color-dark-teal
-      background: #739D95
+      background: $teal-dark
+      &:hover
+        background: $purple
+  // Top text CTA
   .image-cta-position-top
     .group-left
       display: none
@@ -116,15 +100,14 @@
           line-height: 1.1em
           &:after
             color: #fff
+  // Bottom text CTA
   .image-cta-position-bottom
+    +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
+    border: 2px solid $white
     .group-left img
       border-bottom: 0
     .group-right
       padding: 18px 26px
-      position: relative
-      top: -2px
-      +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
-      border: 2px solid $white
       border-top: 0
       .field-name-field-link-single
         width: 100%
@@ -133,3 +116,35 @@
           line-height: 1.1em
           &:after
             color: #fff
+
+// Image CTA in sidebar styling
+.inner-sidebar-wrapper
+  // Top text
+  .image-cta-position-top
+    .group-left
+      display: none
+  // Bottom text
+  .image-cta-position-bottom
+    .field-name-field-title
+      display: none
+    .group-right
+      display: block
+      position: absolute
+      bottom: 0
+      z-index: 4
+    &.image-cta-color-purple .group-right
+      background: rgba($purple, 0.8)
+      &:hover
+        background: rgba($teal-dark, 0.8)
+    &.image-cta-color-green .group-right
+      background: rgba($green-dark, 0.8)
+      &:hover
+        background: rgba($blue, 0.8)
+    &.image-cta-color-blue .group-right
+      background: rgba($blue, 0.8)
+      &:hover
+        background: rgba($green-dark, 0.8)
+    &.image-cta-color-dark-teal .group-right
+      background: rgba($teal-dark, 0.8)
+      &:hover
+        background: rgba($purple, 0.8)
