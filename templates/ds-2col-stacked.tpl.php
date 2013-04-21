@@ -3,9 +3,12 @@
 /**
  * @file
  * Display Suite 2 column stacked template.
+ *
+ * CHANGES:
+ *  - Removed clearfix
  */
 ?>
-<<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-2col-stacked <?php print $classes;?> clearfix">
+<<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-2col-stacked <?php print $classes;?>">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
