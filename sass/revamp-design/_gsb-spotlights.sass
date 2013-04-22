@@ -103,15 +103,17 @@
     overflow: hidden
 
 // Clearfixes in Sidebar
-.sidebar-wrapper .pane-bundle-spotlight
-  .group-name-wrapper
-    +pie-clearfix
-  .group-name-wrapper,
-  .field-name-field-body,
-  .field-name-field-title-position-single
-    clear: both
-  .field-name-field-body
-    max-height: 72px
+.sidebar-wrapper,
+.inner-sidebar-wrapper
+  .pane-bundle-spotlight
+    .group-name-wrapper
+      +pie-clearfix
+    .group-name-wrapper,
+    .field-name-field-body,
+    .field-name-field-title-position-single
+      clear: both
+    .field-name-field-body
+      max-height: 72px
 
 // Clearfixes in main
 .main-wrapper .pane-bundle-spotlight

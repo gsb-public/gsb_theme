@@ -6,7 +6,7 @@
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
       // Check if spotlight exists.
-      var $spotlight = $('.sidebar-wrapper .pane-bundle-spotlight');
+      var $spotlight = $('.inner-sidebar-wrapper .pane-bundle-spotlight');
       if ($spotlight.length) {
         // If the line height of the body text changes, adjust this.
         var visibleHeight = 18 * 4;
