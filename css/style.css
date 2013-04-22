@@ -89,7 +89,7 @@ pre, code, kbd, tt {
   margin: 1px;
 }
 
-.region-sidebar-first, .page-events .pane-content .view-gsb-event .view-filters {
+.region-sidebar-first, .view-gsb-event .view-filters {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, rgba(242, 242, 242, 0)));
   background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
@@ -98,7 +98,7 @@ pre, code, kbd, tt {
   background: linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
 }
 
-.region-sidebar-first, .page-events .pane-content .view-gsb-event .view-filters {
+.region-sidebar-first, .view-gsb-event .view-filters {
   border-top: 10px black solid;
 }
 
@@ -1022,12 +1022,6 @@ del {
   margin-bottom: 28px;
 }
 
-.panel-display .full-header,
-.panel-display .inner-content-wrapper {
-  max-width: 1170px;
-  overflow: hidden;
-  *zoom: 1;
-}
 .panel-display .main-wrapper,
 .panel-display .panels-ipe-regionid-main {
   box-sizing: border-box;
@@ -2597,25 +2591,19 @@ a .slideshow-slide:hover .slide-cta {
   overflow: hidden;
 }
 
-.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper,
 .inner-sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper {
   *zoom: 1;
 }
-.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper:after,
 .inner-sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
-.sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper,
-.sidebar-wrapper .pane-bundle-spotlight .field-name-field-body,
-.sidebar-wrapper .pane-bundle-spotlight .field-name-field-title-position-single,
 .inner-sidebar-wrapper .pane-bundle-spotlight .group-name-wrapper,
 .inner-sidebar-wrapper .pane-bundle-spotlight .field-name-field-body,
 .inner-sidebar-wrapper .pane-bundle-spotlight .field-name-field-title-position-single {
   clear: both;
 }
-.sidebar-wrapper .pane-bundle-spotlight .field-name-field-body,
 .inner-sidebar-wrapper .pane-bundle-spotlight .field-name-field-body {
   max-height: 72px;
 }
@@ -3829,33 +3817,6 @@ p.acc-title + p {
   margin-right: 6%;
 }
 
-.page-events .pane-content .view-gsb-event .view-content {
-  display: inline-block;
-  width: 74.4%;
-  float: right;
-}
-.page-events .pane-content .view-gsb-event .view-filters {
-  background-color: #f2f2f2;
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  padding: 24px;
-}
-.page-events .pane-content .view-gsb-event .view-filters label {
-  font-size: 16px;
-  font-weight: normal;
-}
-.page-events .pane-content .view-gsb-event .views-exposed-widget {
-  border-bottom: 1px solid #cccccc;
-  padding: 0;
-  margin-bottom: 20px;
-}
-.page-events .pane-content .view-gsb-event .views-widget label.option {
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 .node-type-event #page-title {
   display: none;
 }
@@ -4781,7 +4742,7 @@ fieldset.collapsible .fieldset-legend {
 .view-mode-teaser .field-name-field-event-date {
   color: #666666;
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
 }
 .view-mode-teaser h2,
 .view-mode-teaser h2 a {
@@ -5089,16 +5050,43 @@ fieldset.collapsible .fieldset-legend {
 
 .view-gsb-event .view-content {
   border-bottom: 3px solid black;
+  display: inline-block;
+  width: 74.4%;
+  float: right;
 }
-.view-gsb-event .view-content h3 > .date-display-single {
+.view-gsb-event .view-content .view-mode-teaser {
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+}
+.view-gsb-event .view-content h5 {
   display: block;
   border-top: 1px solid black;
-  padding-top: 30px;
+  padding-top: 1em;
 }
 .view-gsb-event .view-content .views-row {
   border-bottom: 1px solid #ededed;
-  padding-bottom: 30px;
 }
 .view-gsb-event .view-content .views-row-last {
   border-bottom: 0;
+}
+.view-gsb-event .view-filters {
+  background-color: #f2f2f2;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding: 24px;
+}
+.view-gsb-event .view-filters label {
+  font-size: 16px;
+  font-weight: normal;
+}
+.view-gsb-event .views-exposed-widget {
+  border-bottom: 1px solid #cccccc;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.view-gsb-event .views-widget label.option {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

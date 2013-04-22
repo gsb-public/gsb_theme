@@ -13,18 +13,43 @@
     margin-bottom: 20px
 
 // Event listing
-.view-gsb-event .view-content
-  border-bottom: 3px solid $black
+.view-gsb-event
+  .view-content
+    border-bottom: 3px solid $black
+    display: inline-block
+    width: 74.4%
+    float: right
 
-  // Day separation
-  h3 > .date-display-single
-    display: block
-    border-top: 1px solid $black
-    padding-top: 30px
+    .view-mode-teaser
+      padding-top: 1em
+      padding-bottom: 1.5em
 
-  // Event separation
-  .views-row
-    border-bottom: 1px solid $grey-e
-    padding-bottom: 30px
-  .views-row-last
-    border-bottom: 0
+    // Day separation
+    h5
+      display: block
+      border-top: 1px solid $black
+      padding-top: 1em
+
+    // Event separation
+    .views-row
+      border-bottom: 1px solid $grey-e
+    .views-row-last
+      border-bottom: 0
+  .view-filters
+    @extend %black-border-top
+    background-color: $grey-f
+    display: inline-block
+    vertical-align: top
+    width: 20%
+    padding: 24px
+    label
+      font-size: 16px
+      font-weight: normal
+  .views-exposed-widget
+    border-bottom: 1px solid $grey-c
+    padding: 0
+    margin-bottom: 20px
+  .views-widget label.option
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
