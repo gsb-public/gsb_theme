@@ -44,6 +44,7 @@
     background: image_url('video_play.png') no-repeat top left
     cursor: pointer
 
+
 // CSS to handle the Preview and Video switching
 .field-type-file
   .gsb-responsive-main .file-video
@@ -61,3 +62,13 @@
       display: none
     .gsb-responsive-preview .file-video
       display: block
+
+
+// Always hide the main video for spotlight, always show preview
+.pane-bundle-spotlight
+  .gsb-responsive-main .file-video
+    display: none !important
+  .gsb-responsive-preview .file-video
+    display: block !important
+  .video-play-icon
+    display: none
