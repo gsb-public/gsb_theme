@@ -2476,27 +2476,18 @@ a .slideshow-slide:hover .slide-cta {
 }
 .pane-bundle-spotlight .group-name-wrapper {
   margin: 12px 0;
+  color: black;
+}
+.pane-bundle-spotlight .group-name-wrapper a {
+  color: #990000;
 }
 .pane-bundle-spotlight .group-name-wrapper .field {
   display: inline;
   float: left;
-  color: #990000;
   font-size: 20px;
   font-weight: bold;
   line-height: 26px;
   margin-right: 5px;
-}
-.pane-bundle-spotlight .field-name-field-first-name,
-.pane-bundle-spotlight .field-name-field-last-name {
-  color: black;
-  display: inline;
-  font-size: 20px;
-  font-weight: bold;
-  padding-right: 4px;
-}
-.pane-bundle-spotlight .field-name-field-first-name a,
-.pane-bundle-spotlight .field-name-field-last-name a {
-  color: #990000;
 }
 .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
 .pane-bundle-spotlight .field-name-field-use-profile-img,
@@ -2563,31 +2554,45 @@ a .slideshow-slide:hover .slide-cta {
   overflow: hidden;
 }
 
-.narrow-view .pane-bundle-spotlight .group-name-wrapper {
-  *zoom: 1;
-}
-.narrow-view .pane-bundle-spotlight .group-name-wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.narrow-view .pane-bundle-spotlight .group-name-wrapper,
-.narrow-view .pane-bundle-spotlight .field-name-field-body,
-.narrow-view .pane-bundle-spotlight .field-name-field-title-position-single {
-  clear: both;
-}
-.narrow-view .pane-bundle-spotlight .field-name-field-body {
-  max-height: 72px;
-}
-
+.full-view .pane-bundle-spotlight .group-name-wrapper,
 .wide-view .pane-bundle-spotlight .group-name-wrapper,
 .middle-view .pane-bundle-spotlight .group-name-wrapper {
   overflow: hidden;
   *zoom: 1;
 }
+.full-view .pane-bundle-spotlight .gsb-responsive-main,
+.full-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
+.full-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img,
 .wide-view .pane-bundle-spotlight .gsb-responsive-main,
-.middle-view .pane-bundle-spotlight .gsb-responsive-main {
+.wide-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
+.wide-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img,
+.middle-view .pane-bundle-spotlight .gsb-responsive-main,
+.middle-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
+.middle-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img {
   margin-right: 18px;
+}
+
+.sidebar-first .middle-view .pane-bundle-spotlight .group-name-wrapper,
+.narrow-view .pane-bundle-spotlight .group-name-wrapper {
+  *zoom: 1;
+}
+.sidebar-first .middle-view .pane-bundle-spotlight .group-name-wrapper:after,
+.narrow-view .pane-bundle-spotlight .group-name-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.sidebar-first .middle-view .pane-bundle-spotlight .group-name-wrapper,
+.sidebar-first .middle-view .pane-bundle-spotlight .field-name-field-body,
+.sidebar-first .middle-view .pane-bundle-spotlight .field-name-field-title-position-single,
+.narrow-view .pane-bundle-spotlight .group-name-wrapper,
+.narrow-view .pane-bundle-spotlight .field-name-field-body,
+.narrow-view .pane-bundle-spotlight .field-name-field-title-position-single {
+  clear: both;
+}
+.sidebar-first .middle-view .pane-bundle-spotlight .field-name-field-body,
+.narrow-view .pane-bundle-spotlight .field-name-field-body {
+  max-height: 72px;
 }
 
 .pane-bundle-people {
