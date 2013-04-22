@@ -89,7 +89,7 @@ pre, code, kbd, tt {
   margin: 1px;
 }
 
-.page-events .pane-content .view-gsb-event .view-filters {
+.region-sidebar-first, .page-events .pane-content .view-gsb-event .view-filters {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, rgba(242, 242, 242, 0)));
   background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
@@ -98,7 +98,7 @@ pre, code, kbd, tt {
   background: linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
 }
 
-.page-events .pane-content .view-gsb-event .view-filters {
+.region-sidebar-first, .page-events .pane-content .view-gsb-event .view-filters {
   border-top: 10px black solid;
 }
 
@@ -1254,7 +1254,9 @@ ul.menu li {
   padding: 0;
 }
 
-ul li.leaf {
+ul li.leaf,
+ul li.expanded,
+ul.menu li.collapsed {
   list-style-image: none;
   list-style-type: none;
 }
@@ -1662,6 +1664,55 @@ a.no-border:hover {
 .field-name-field-person-other .separator {
   position: relative;
   left: -4px;
+}
+
+.region-sidebar-first {
+  padding: 20px 20px 0 20px;
+}
+.region-sidebar-first ul li {
+  color: #990000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+.region-sidebar-first ul li a {
+  color: #990000;
+  line-height: 1.2;
+}
+.region-sidebar-first ul li ul {
+  margin-top: 16px;
+  padding-left: 16px;
+  position: relative;
+  left: 0;
+}
+.region-sidebar-first ul li ul li {
+  color: black;
+  margin-bottom: 16px;
+  text-transform: none;
+}
+.region-sidebar-first ul li ul li a {
+  color: black;
+}
+.region-sidebar-first ul li ul li ul li {
+  font-weight: normal;
+}
+.region-sidebar-first ul li ul li ul li a {
+  font-weight: normal;
+}
+.region-sidebar-first ul li ul a.active {
+  color: #2d6280;
+}
+.region-sidebar-first ul li ul a.active:before {
+  color: #2d6280;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 16px;
+  position: absolute;
+  left: 2px;
+}
+.region-sidebar-first ul li ul a.active a {
+  color: #2d6280;
 }
 
 #navigation h2 {

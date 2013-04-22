@@ -198,3 +198,48 @@ a.no-border
   .separator
     position: relative
     left: -4px
+
+// Menus in the sidebar-first region
+.region-sidebar-first
+  @extend %black-border-top
+  padding: 20px 20px 0 20px
+  // Menu styling
+  ul
+    li
+      color: $red
+      font-size: 14px
+      font-weight: bold
+      margin-bottom: 22px
+      text-transform: uppercase
+      a
+        color: $red
+        line-height: 1.2
+      // Secondary children
+      ul
+        margin-top: 16px
+        padding-left: 16px
+        position: relative
+        left: 0
+        li
+          color: $black
+          margin-bottom: 16px
+          text-transform: none
+          a
+            color: $black
+          // Terciary children
+          ul
+            li
+              font-weight: normal
+              a
+                font-weight: normal
+        a.active
+          color: $text-blue
+          &:before
+            color: $text-blue
+            content: "\f100"
+            font-family: "arrow-double"
+            font-size: 16px
+            position: absolute
+            left: 2px
+          a
+            color: $text-blue
