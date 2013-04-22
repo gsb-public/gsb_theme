@@ -1,11 +1,12 @@
-// EXISTING NODE STYLES, also the same as teasers
+/////////////////////////////
+// TEASER AND EXISTING NODE
+/////////////////////////////
 
 // Hide sections field in display
 .field-name-field-sections
   .field-label,
   .field-items
     display: none
-
 
 // Teaser Content styling
 .view-mode-teaser
@@ -55,3 +56,13 @@
         margin-right: 5px
         position: relative
         top: 3px
+
+/////////////////
+// EXISTING NODE
+/////////////////
+.pane-bundle-existing-node .view-mode-teaser
+  @extend %border-and-box-shadow
+  .field-name-field-file-single-public,
+  .field-name-field-image-single-public
+    position: relative
+    top: -6px

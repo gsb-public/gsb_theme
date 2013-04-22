@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 #views-exposed-form-publications-filters-publications-list,
 #views-exposed-form-search-news-news-list, .view-media-mention-filters .views-row,
 .view-media-mention .views-row,
-.view-publications .views-row {
+.view-publications .views-row, .pane-bundle-existing-node .view-mode-teaser {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -4747,6 +4747,12 @@ fieldset.collapsible .fieldset-legend {
   margin-right: 5px;
   position: relative;
   top: 3px;
+}
+
+.pane-bundle-existing-node .view-mode-teaser .field-name-field-file-single-public,
+.pane-bundle-existing-node .view-mode-teaser .field-name-field-image-single-public {
+  position: relative;
+  top: -6px;
 }
 
 #views-exposed-form-faculty-filters-faculty-list,
