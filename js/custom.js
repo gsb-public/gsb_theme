@@ -6,7 +6,7 @@
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
       // Check if spotlight exists.
-      var $spotlight = $('.pane-bundle-spotlight');
+      var $spotlight = $('.sidebar-wrapper .pane-bundle-spotlight');
       if ($spotlight.length) {
         // If the line height of the body text changes, adjust this.
         var visibleHeight = 18 * 4;
@@ -44,22 +44,6 @@
       }
     }
   };
-
-  /**
-   * Make a click on the video image,
-   * when clicking the video icon.
-   */
-  Drupal.behaviors.video_button_behavior = {
-    attach: function (context, settings) {
-      var videopreview = $('.file-video--preview'); 
-      if (videopreview.length > 0 && videopreview.find('.video-play-icon').length === 0) {
-        videopreview.find('.content').append('<span class="video-play-icon"/>');
-      }
-      videopreview.find('.video-play-icon').click(function () {
-        $(this).prev().click();
-      });
-    }
-  }
 
 
   /**
