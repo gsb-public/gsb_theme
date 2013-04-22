@@ -107,6 +107,12 @@
     .field-name-field-spotlight-person-fid img
       margin-right: 18px
 
+// Clear the image/video on full and wide modes
+.full-view,
+.wide-view
+  .pane-bundle-spotlight
+    +clearfix
+
 // Clearfixes in narrow and faked for middle when there is a sidebar
 .sidebar-first .middle-view,
 .narrow-view
