@@ -93,9 +93,13 @@ ul
   list-style: none
   li &
     list-style-type: circle
-  li:before
-    content: "• "
-    color: $text-blue
+
+// Custom bullets
+.field-name-field-body
+  ul
+    li:before
+      content: "• "
+      color: $text-blue
 
 label,
 .label-inline
