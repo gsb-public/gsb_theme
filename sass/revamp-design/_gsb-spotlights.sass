@@ -51,9 +51,6 @@
     margin-bottom: 10px
     .field-items
       +float-left
-    img,
-    .gsb-responsive-main
-      margin-right: 18px
 
   .field-name-field-sections
     display: none
@@ -104,8 +101,8 @@
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
 
-// Clearfixes in Sidebar
-.inner-sidebar-wrapper
+// Clearfixes in narrow
+.narrow-view
   .pane-bundle-spotlight
     .group-name-wrapper
       +pie-clearfix
@@ -116,7 +113,11 @@
     .field-name-field-body
       max-height: 72px
 
-// Clearfixes in main
-.main-wrapper .pane-bundle-spotlight
-  .group-name-wrapper
-    +clearfix
+// Clearfixes in wide and middle
+.wide-view,
+.middle-view
+  .pane-bundle-spotlight
+    .group-name-wrapper
+      +clearfix
+    .gsb-responsive-main
+      margin-right: 18px

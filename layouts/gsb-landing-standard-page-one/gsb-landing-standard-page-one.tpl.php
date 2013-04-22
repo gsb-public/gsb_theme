@@ -30,11 +30,11 @@
 
       <?php if ($content['mainmiddlefirst'] || $content['mainmiddlesecond']): ?>
         <div class="main-middle">
-          <div class="column-first narrow-view">
+          <div class="column-first middle-view">
             <?php print $content['mainmiddlefirst']; ?>
           </div>
 
-          <div class="column-second narrow-view">
+          <div class="column-second middle-view">
             <?php print $content['mainmiddlesecond']; ?>
           </div>
         </div><!-- /.main-middle -->

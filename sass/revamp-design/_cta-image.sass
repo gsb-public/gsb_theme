@@ -66,8 +66,10 @@
   &:first-child
     border-top: 0
 
-// Side styling with old stuff @TODO clean up
-.inner-sidebar-wrapper
+//////////////////
+// NARROW STYLING
+//////////////////
+.narrow-view
   .image-cta-position-top,
   .image-cta-position-bottom
     &.image-cta-color-purple
@@ -86,6 +88,7 @@
       background: $teal-dark
       &:hover
         background: $purple
+
   // Top text CTA
   .image-cta-position-top
     .group-left
@@ -116,15 +119,6 @@
           line-height: 1.1em
           &:after
             color: #fff
-
-// Image CTA in sidebar styling
-.inner-sidebar-wrapper
-  // Top text
-  .image-cta-position-top
-    .group-left
-      display: none
-  // Bottom text
-  .image-cta-position-bottom
     .field-name-field-title
       display: none
     .group-right
