@@ -3041,27 +3041,37 @@ p.acc-title + p {
 }
 
 .view-business-insights-sidebar {
+  max-width: 235px;
   margin-bottom: 30px;
 }
-
+.view-business-insights-sidebar .view-header {
+  background-color: #272727;
+}
+.view-business-insights-sidebar .view-header ul {
+  margin: 0;
+  padding: 15px;
+}
+.view-business-insights-sidebar .view-header li {
+  display: inline-block;
+}
+.view-business-insights-sidebar .view-content {
+  background-color: #272727;
+}
 .view-business-insights-sidebar .menu_region {
   display: none;
 }
-
 .view-business-insights-sidebar .views-row {
   margin: 0;
 }
-
 .view-business-insights-sidebar .views-row-last {
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
-
-.view-business-insights-sidebar .field-content a, .bi-map__tex {
+.view-business-insights-sidebar .field-content a,
+.view-business-insights-sidebar .bi-map__tex {
   display: block;
   border: none;
   line-height: 18px;
   padding: 6px 0 6px 15px;
-  background: #272727;
   color: white;
 }
 
@@ -3071,8 +3081,7 @@ p.acc-title + p {
 
 .bi-map {
   position: relative;
-  background: url("../images/businessinsights_region_map.png") no-repeat top left;
-  display: none;
+  background: url('../images/businessinsights_region_map.png') no-repeat top left;
 }
 
 .bi-map__image {

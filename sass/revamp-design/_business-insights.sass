@@ -1,6 +1,6 @@
 // BUSINESS INSIGHTS SECTION - BI OR BIZIN
 
-// Business insights Full node
+// Business insights full node
 .node-business-insight.view-mode-full
   border-top: 3px solid $black
   padding-left: 30px
@@ -28,11 +28,6 @@
 
   // Intro copy and body
   .field-name-field-body
-    // p:first-of-type
-    //   font-weight: bold
-    //   font-size: 26px
-    //   line-height: 32px
-    //   margin-bottom: 35px
     font-size: 18px
     line-height: 24px
     margin-top: 24px
@@ -59,34 +54,39 @@
 ////////////////////////
 // BUSINESS INSIGHT MAP
 ////////////////////////
-
 .view-business-insights-sidebar
+  max-width: 235px
   margin-bottom: 30px
+  .view-header
+    background-color: #272727
+    ul
+      margin: 0
+      padding: 15px
+    li
+      display: inline-block
 
-.view-business-insights-sidebar .menu_region
-  display: none
-
-.view-business-insights-sidebar .views-row
-  margin: 0
-
-.view-business-insights-sidebar .views-row-last
-  margin-bottom: 10px
-
-.view-business-insights-sidebar .field-content a, .bi-map__tex
-  display: block
-  border: none
-  line-height: 18px
-  padding: 6px 0 6px 15px
-  background: #272727
-  color: #fff
+  .view-content
+    background-color: #272727
+  .menu_region
+    display: none
+  .views-row
+    margin: 0
+  .views-row-last
+    margin-bottom: 1px
+  .field-content a,
+  .bi-map__tex
+    display: block
+    border: none
+    line-height: 18px
+    padding: 6px 0 6px 15px
+    color: $white
 
 .view-business-insights-sidebar .field-content a:hover, .view-business-insights-sidebar .field-content a.active, .bi-map__text
   background: #607c8c
 
 .bi-map
   position: relative
-  background: url('../images/businessinsights_region_map.png') no-repeat top left
-  display: none
+  background: image_url('businessinsights_region_map.png') no-repeat top left
 
 .bi-map__image
   z-index: 15
