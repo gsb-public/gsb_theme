@@ -3,7 +3,7 @@ img, textarea, input[type=text], input[type=password], input[type=email], input[
   max-width: 100%;
 }
 
-address, cite, dfn {
+cite, dfn {
   font-style: italic;
 }
 
@@ -414,18 +414,18 @@ table {
 }
 
 @font-face {
-  font-family: "NewsGothicBT";
+  font-family: "NewsGothicBT-Demi";
   src: url('../fonts/236F40_C_0.eot');
   src: url('../fonts/236F40_C_0.eot?#iefix') format('eot'), url('../fonts/236F40_C_0.woff') format('woff'), url('../fonts/236F40_C_0.ttf') format('truetype');
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "NewsGothicBT";
+  font-family: "NewsGothicBT-Demi";
   src: url('../fonts/236F40_D_0.eot');
   src: url('../fonts/236F40_D_0.eot?#iefix') format('eot'), url('../fonts/236F40_D_0.woff') format('woff'), url('../fonts/236F40_D_0.ttf') format('truetype');
-  font-weight: 500;
+  font-weight: normal;
   font-style: italic;
 }
 
@@ -559,12 +559,13 @@ p {
   margin-bottom: 24px;
 }
 p a {
-  border-bottom: none;
-  color: #2d6280;
+  border-bottom: dashed 1px #7d8401;
+  color: #7d8401;
   text-decoration: none;
 }
 p a:hover {
-  border-bottom: 1px solid #2d6280;
+  color: #2d6280;
+  border-bottom: 0;
 }
 
 dl {
@@ -576,10 +577,14 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
 }
 li ul {
   list-style-type: circle;
+}
+ul li:before {
+  content: "• ";
+  color: #2d6280;
 }
 
 label,
@@ -589,9 +594,17 @@ label,
 
 small {
   font-size: 14px;
+  line-height: 18px;
+}
+
+.intro-copy {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 32px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
   margin: 0;
@@ -605,6 +618,8 @@ h1 {
 }
 
 h2 {
+  color: #2d6280;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 34px;
   font-weight: normal;
   line-height: 40px;
@@ -629,9 +644,10 @@ h5 {
 }
 
 h6 {
+  color: #2d6280;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-weight: bold;
-  line-height: 14px;
+  line-height: 24px;
 }
 
 h1.title {

@@ -74,11 +74,12 @@ p
   line-height: 24px
   margin-bottom: 24px
   a
-    border-bottom: none
-    color: $link-blue
+    border-bottom: dashed 1px $text-green
+    color: $text-green
     text-decoration: none
     &:hover
-      border-bottom: 1px solid $link-blue
+      color: $link-blue
+      border-bottom: 0
 
 // Lists --------------------------------------------------------------
 
@@ -89,12 +90,12 @@ ol
   list-style: decimal
 
 ul
-  list-style: disc
+  list-style: none
   li &
     list-style-type: circle
-
-address
-  @extend %italic
+  li:before
+    content: "• "
+    color: $text-blue
 
 label,
 .label-inline
@@ -102,3 +103,10 @@ label,
 
 small
   font-size: 14px
+  line-height: 18px
+
+// WYSIWYG Styles
+.intro-copy
+  font-size: 26px
+  font-weight: bold
+  line-height: 32px
