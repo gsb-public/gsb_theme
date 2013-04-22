@@ -13,7 +13,7 @@
 <div class="panel-display gsb-business-insights <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <?php if ($content['fullheader']): ?>
-    <div class="full-header">
+    <div class="full-header full-view">
       <?php print $content['fullheader']; ?>
     </div>
   <?php endif; ?>
@@ -23,47 +23,47 @@
     <div class="main-wrapper"><div class="inner-main-wrapper">
 
       <?php if ($content['maintop']): ?>
-        <div class="main-header">
+        <div class="main-header wide-view">
           <?php print $content['maintop']; ?>
         </div>
       <?php endif; ?>
 
       <?php if ($content['contenttwoone'] || $content['contenttwotwo'] || $content['contenttwothree']): ?>
         <div class="gsb-bizin-3col-top">
-          <div class="column first">
+          <div class="column first narrow-view">
             <?php print $content['contenttwoone']; ?>
           </div>
-          <div class="column second">
+          <div class="column second narrow-view">
             <?php print $content['contenttwotwo']; ?>
           </div>
-          <div class="column third">
+          <div class="column third narrow-view">
             <?php print $content['contenttwothree']; ?>
           </div>
         </div>
       <?php endif; ?>
 
       <?php if ($content['mainquote']): ?>
-        <div class="gsb-bizin-quote">
+        <div class="gsb-bizin-quote wide-view">
           <?php print $content['mainquote']; ?>
         </div>
       <?php endif; ?>
 
       <?php if ($content['contentfourone'] || $content['contentfourtwo'] || $content['contentfourthree']): ?>
         <div class="gsb-bizin-3col-bottom">
-          <div class="column first">
+          <div class="column first narrow-view">
             <?php print $content['contentfourone']; ?>
           </div>
-          <div class="column second">
+          <div class="column second narrow-view">
             <?php print $content['contentfourtwo']; ?>
           </div>
-          <div class="column third">
+          <div class="column third narrow-view">
             <?php print $content['contentfourthree']; ?>
           </div>
         </div>
       <?php endif; ?>
 
       <?php if ($content['mainbottom']): ?>
-        <div class="main-footer">
+        <div class="main-footer wide-view">
           <?php print $content['mainbottom']; ?>
         </div>
       <?php endif; ?>
@@ -71,7 +71,7 @@
     </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
-      <div class="inner-sidebar-wrapper">
+      <div class="inner-sidebar-wrapper narrow-view">
 
         <?php if ($content['quicklinks']): ?>
           <div id="quicklinks">

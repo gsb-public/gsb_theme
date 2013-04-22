@@ -15,12 +15,12 @@
 
   <div class="content-wrapper">
 
-    <div class="main-wrapper"><div class="inner-main-wrapper">
+    <div class="main-wrapper"><div class="inner-main-wrapper wide-view">
       <?php print $content['main']; ?>
     </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
-      <div class="inner-sidebar-wrapper">
+      <div class="inner-sidebar-wrapper narrow-view">
 
         <?php if ($content['quicklinks']): ?>
           <div id="quicklinks">

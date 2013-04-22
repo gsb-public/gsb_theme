@@ -13,7 +13,7 @@
 <div class="panel-display gsb-landing-standard-page-one <?php if (!empty($class)) { print $class; } ?>">
 
   <?php if ($content['fullheader']): ?>
-    <div class="full-header">
+    <div class="full-header full-view">
       <?php print $content['fullheader']; ?>
     </div>
   <?php endif; ?>
@@ -23,25 +23,25 @@
     <div class="main-wrapper"><div class="inner-main-wrapper">
 
       <?php if ($content['maintop']): ?>
-        <div class="main-header">
+        <div class="main-header wide-view">
           <?php print $content['maintop']; ?>
         </div>
       <?php endif; ?>
 
       <?php if ($content['mainmiddlefirst'] || $content['mainmiddlesecond']): ?>
         <div class="main-middle">
-          <div class="column-first">
+          <div class="column-first narrow-view">
             <?php print $content['mainmiddlefirst']; ?>
           </div>
 
-          <div class="column-second">
+          <div class="column-second narrow-view">
             <?php print $content['mainmiddlesecond']; ?>
           </div>
         </div><!-- /.main-middle -->
       <?php endif; ?>
 
       <?php if ($content['mainbottom']): ?>
-        <div class="main-footer">
+        <div class="main-footer wide-view">
           <?php print $content['mainbottom']; ?>
         </div>
       <?php endif; ?>
@@ -49,7 +49,7 @@
     </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
-      <div class="inner-sidebar-wrapper">
+      <div class="inner-sidebar-wrapper narrow-view">
 
       <?php if ($content['quicklinks']): ?>
         <div id="quicklinks">
