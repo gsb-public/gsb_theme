@@ -15,14 +15,12 @@
 
   <div class="content-wrapper">
 
-    <div class="main-wrapper">
+    <div class="main-wrapper"><div class="inner-main-wrapper">
       <?php print $content['main']; ?>
-    </div>
-
-    </div><!-- /.main-wrapper -->
+    </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
-      <div class="sidebar-wrapper">
+      <div class="inner-sidebar-wrapper">
 
         <?php if ($content['quicklinks']): ?>
           <div id="quicklinks">
@@ -36,7 +34,7 @@
           </div>
         <?php endif; ?>
 
-      </div><!-- /.sidebar-wrapper -->
+      </div><!-- /.inner-sidebar-wrapper -->
     <?php endif; ?>
 
   </div><!-- /.content-wrapper -->

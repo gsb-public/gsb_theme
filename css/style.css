@@ -1022,56 +1022,23 @@ del {
   margin-bottom: 28px;
 }
 
-.panel-display .main-wrapper,
-.panel-display .panels-ipe-regionid-main {
-  box-sizing: border-box;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: -100%;
-  overflow: hidden;
-  max-width: 74.4%;
-}
-.panel-display .sidebar-wrapper {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url("../behaviors/box-sizing/boxsizing.php");
-  overflow: hidden;
-  *zoom: 1;
-  width: 23.07692%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 76.92308%;
-  max-width: 270px;
-  margin-left: 30px;
-  width: 31.07692%;
-}
 .panel-display .full-header,
 .panel-display .inner-content-wrapper {
   max-width: 1170px;
   overflow: hidden;
   *zoom: 1;
 }
+.panel-display .main-wrapper {
+  float: left;
+  margin-right: -300px;
+  width: 100%;
+}
+.panel-display .inner-main-wrapper {
+  margin-right: 300px;
+}
 .panel-display .inner-sidebar-wrapper {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url("../behaviors/box-sizing/boxsizing.php");
-  overflow: hidden;
-  *zoom: 1;
-  width: 23.07692%;
   float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 76.92308%;
-  max-width: 270px;
-  width: 31.07692% !important;
+  width: 270px;
 }
 
 .panel-display.gsb-landing-standard-page-one .main-middle {
@@ -1250,7 +1217,12 @@ del {
 .panels-ipe-editing .main-wrapper {
   display: block;
   float: left;
-  width: 100%;
+}
+.no-sidebars .panels-ipe-editing .main-wrapper {
+  width: 870px;
+}
+.no-sidebars .panels-ipe-editing .inner-main-wrapper {
+  margin-right: 0;
 }
 .panels-ipe-editing .panel-display .inner-sidebar-wrapper {
   margin-left: 0;

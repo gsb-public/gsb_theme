@@ -20,7 +20,7 @@
 
   <div class="inner-content-wrapper">
 
-    <div class="main-wrapper">
+    <div class="main-wrapper"><div class="inner-main-wrapper">
 
       <?php if ($content['maintop']): ?>
         <div class="main-header">
@@ -46,8 +46,7 @@
         </div>
       <?php endif; ?>
 
-    </div><!-- /.main-wrapper -->
-
+    </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
       <div class="inner-sidebar-wrapper">
@@ -64,7 +63,7 @@
       </div>
       <?php endif; ?>
 
-      </div><!-- /.sidebar-wrapper -->
+      </div><!-- /.inner-sidebar-wrapper -->
     <?php endif; ?>
 
   </div><!-- /.content-wrapper -->
