@@ -61,10 +61,10 @@
             $this.addClass('header-processed');
             // Find body container next to accordion title.
             var next = $this.next('.acc-body');
-            // If there are more than 1 body alement after title 
+            // If there are more than 1 body alement after title
             // wrap them all into accordion-body-wrap class
             // by calling touchNeighbour recursive function.
-            if ( next.length > 0 ) {              
+            if ( next.length > 0 ) {
               next.wrapAll('<div class="accordion-body-wrap" />');
               touchNeighbour(next, 'acc-body');
             } else {
@@ -94,7 +94,7 @@
                   // If it's inside WYSIWYG toggle body wrapper.
                   $this.toggleClass('opened').next('.accordion-body-wrap').slideToggle(250);
                 }
-            }); 
+            });
           }
         });
       }
@@ -105,7 +105,7 @@
        * insert the it after checked element and repeat function.
        */
       function touchNeighbour(e, className, className2) {
-        var next = e.parent().next();     
+        var next = e.parent().next();
         if ( next.hasClass(className) || next.hasClass(className2) ) {
           next.insertAfter(e);
           touchNeighbour(next, className, className2);
@@ -127,38 +127,6 @@
     }
   }
 
-  /** 
-   * Club search placeholder fallback
-   */
-  Drupal.behaviors.search_autocomplete = {
-    attach: function (context, settings) {
-      if ($('.views-widget-filter-search_api_views_fulltext').length > 0) {
-        var searhBox = $('.views-widget-filter-search_api_views_fulltext input'),
-            searchLabel = searhBox.closest('.views-widget-filter-search_api_views_fulltext').children('label');
-         if (searhBox.val() != '') {
-           searchLabel.hide();
-         }
-         searhBox.focus(function () {
-           searchLabel.hide();
-         });
-         searhBox.blur(function() {
-           toggleLabel ($(this));
-          });
-         searhBox.change(function() {
-           toggleLabel ($(this));
-         });
-         function toggleLabel (e) {
-           var $this = e;
-           if ($this.val() == '') {
-             searchLabel.show();
-           } else {
-             searchLabel.hide();
-           }
-         }
-      }
-    }
-  }
-  
   /**
    * Check for social field fpp, if it exists, check the sourse.
    * If the source is twitter, grab the values from fields and

@@ -4573,6 +4573,10 @@ p.acc-title + p {
   color: #383838;
 }
 
+#edit-field-club-category-tid-wrapper {
+  padding: 24px;
+}
+
 #views-exposed-form-club-filters-club-list legend {
   padding: 0;
 }
@@ -4588,17 +4592,11 @@ p.acc-title + p {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-#views-exposed-form-club-filters-club-list .views-exposed-widget {
-  padding: 0;
-  float: none;
-}
 #views-exposed-form-club-filters-club-list .form-item label {
-  color: #565656;
-  font-size: 16px;
-  font-weight: normal;
-  padding-right: 9px;
-  height: 40px;
-  margin-bottom: 1px;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 #views-exposed-form-club-filters-club-list .fieldset-title {
   border: none;
@@ -4611,27 +4609,28 @@ p.acc-title + p {
   margin: 0;
 }
 
-.collapsible legend span {
+.collapsible .fieldset-title {
+  text-indent: 20px;
   padding: 0;
   line-height: 10px;
-  width: 14px;
   position: relative;
   top: 1px;
-  background-image: url("../images/accordion-icons.png");
-  background-position: 0 -16px;
+  background-image: url("../images/filter-icons.png");
+  background-position: -15px -15px;
   background-repeat: no-repeat;
   display: inline-block;
   height: 1em;
-  left: 4px;
+  width: 15px;
+  text-transform: none;
 }
-.collapsible legend:hover span {
-  background-position: -15px -16px;
+.collapsible .fieldset-title:hover {
+  background-position: 0 -15px;
 }
-.collapsible.collapsed legend span {
-  background-position: 0 0;
-}
-.collapsible.collapsed legend:hover span {
+.collapsible.collapsed .fieldset-title {
   background-position: -15px 0;
+}
+.collapsible.collapsed .fieldset-title:hover {
+  background-position: 0 0;
 }
 
 fieldset.collapsible .fieldset-legend {

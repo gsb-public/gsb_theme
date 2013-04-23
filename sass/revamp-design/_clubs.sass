@@ -23,6 +23,8 @@
   color: #383838
 
 // Clubs filtering
+#edit-field-club-category-tid-wrapper
+  padding: 24px
 #views-exposed-form-club-filters-club-list
   @extend %border-and-box-shadow
   legend
@@ -33,21 +35,17 @@
   .fieldset-wrapper
     padding: 24px
 
-
   .form-item
     font-weight: bold
     margin-bottom: 20px
     text-transform: uppercase
-  .views-exposed-widget
-    padding: 0
-    float: none
+
   .form-item label
-    color: #565656
-    font-size: 16px
-    font-weight: normal
-    padding-right: 9px
-    height: 40px
-    margin-bottom: 1px
+    color: $black
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
+
   .fieldset-title
     border: none
     font-weight: bold
@@ -59,24 +57,26 @@
 
 // Filter toggle
 .collapsible
-  legend span
+  .fieldset-title
+    text-indent: 20px
     padding: 0
     line-height: 10px
-    width: 14px
     position: relative
     top: 1px
-    background-image: url('../images/accordion-icons.png')
-    background-position: 0 -16px
+    background-image: url('../images/filter-icons.png')
+    background-position: -15px -15px
     background-repeat: no-repeat
     display: inline-block
     height: 1em
-    left: 4px
-  legend:hover span
-    background-position: -15px -16px
-  &.collapsed legend span
-    background-position: 0 0
-  &.collapsed legend:hover span
-    background-position: -15px 0
+    width: 15px
+    text-transform: none
+    &:hover
+      background-position: 0 -15px
+  &.collapsed
+    .fieldset-title
+      background-position: -15px 0
+      &:hover
+        background-position: 0 0
 
 fieldset.collapsible .fieldset-legend
   display: inline
