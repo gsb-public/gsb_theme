@@ -231,4 +231,14 @@
     }
   }
 
+  /**
+   * Prevent form submit on chosing an autocomplete suggestion
+   */
+  Drupal.behaviors.prevent_submit_on_autocomplete = {
+    attach: function (context, settings) {
+      $('input.form-text.form-autocomplete').keypress(function(event) {
+        return event.keyCode != 13;
+      });
+    }
+  }
 }(jQuery));
