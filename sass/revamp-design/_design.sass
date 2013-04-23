@@ -245,3 +245,31 @@ a.no-border
             left: 2px
           a
             color: $text-blue
+
+////////////////////
+// SHOW MORE LINK
+////////////////////
+.item-list .pager li
+  padding: 0
+
+ul.pager-load-more
+  border-top: 3px solid $black
+  padding-left: 25px
+  li
+    margin: 0
+    padding: 0
+    a
+      color: $white
+      font-size: 14px
+      line-height: 2
+      padding: 10px 14px
+    &:first-of-type
+      a
+        background: $text-green
+        font-weight: bold
+        text-transform: uppercase
+        &:before
+          content: image_url("arrow-down.png")
+          margin-right: 10px
+    &:nth-of-type(2n)
+      background: $black
