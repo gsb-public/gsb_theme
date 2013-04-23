@@ -3393,10 +3393,21 @@ p.acc-title + p {
 }
 .narrow-view .image-cta-position-bottom .group-left img {
   border-bottom: 0;
+  vertical-align: bottom;
+}
+.narrow-view .image-cta-position-bottom .field-name-field-title {
+  display: none;
 }
 .narrow-view .image-cta-position-bottom .group-right {
-  padding: 18px 26px;
   border-top: 0;
+  border-bottom: 2px solid white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-left: 2px;
+  padding: 18px 26px;
+  width: 262px;
+  z-index: 4;
 }
 .narrow-view .image-cta-position-bottom .group-right .field-name-field-link-single {
   width: 100%;
@@ -3407,15 +3418,6 @@ p.acc-title + p {
 }
 .narrow-view .image-cta-position-bottom .group-right .field-name-field-link-single a:after {
   color: white;
-}
-.narrow-view .image-cta-position-bottom .field-name-field-title {
-  display: none;
-}
-.narrow-view .image-cta-position-bottom .group-right {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  z-index: 4;
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-purple .group-right {
   background: rgba(117, 71, 96, 0.8);

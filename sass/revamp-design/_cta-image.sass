@@ -110,9 +110,19 @@
     border: 2px solid $white
     .group-left img
       border-bottom: 0
+      vertical-align: bottom
+    .field-name-field-title
+      display: none
     .group-right
-      padding: 18px 26px
       border-top: 0
+      border-bottom: 2px solid $white
+      display: block
+      position: absolute
+      bottom: 0
+      margin-left: 2px
+      padding: 18px 26px
+      width: 262px
+      z-index: 4
       .field-name-field-link-single
         width: 100%
         a
@@ -120,13 +130,6 @@
           line-height: 1.1em
           &:after
             color: #fff
-    .field-name-field-title
-      display: none
-    .group-right
-      display: block
-      position: absolute
-      bottom: 0
-      z-index: 4
     &.image-cta-color-purple .group-right
       background: rgba($purple, 0.8)
       &:hover
