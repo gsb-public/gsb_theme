@@ -68,13 +68,13 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video,
-.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .view-club-filters, .pane-bundle-accordion, .cta-red .field-item, #views-exposed-form-research-papers-filters-research-list,
+.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, #views-exposed-form-research-papers-filters-research-list,
 #views-exposed-form-case-study-filters-case-study-list,
 #views-exposed-form-media-mention-filters-media-mention-list,
 #views-exposed-form-publications-filters-publications-list,
 #views-exposed-form-search-news-news-list, .view-media-mention-filters .views-row,
 .view-media-mention .views-row,
-.view-publications .views-row, .pane-bundle-existing-node .view-mode-teaser {
+.view-publications .views-row, .view-club-filters, .pane-bundle-existing-node .view-mode-teaser {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -2707,27 +2707,6 @@ a .slideshow-slide:hover .slide-cta {
   line-height: 1.3;
 }
 
-.node-club.node-teaser {
-  padding: 0 24px;
-}
-.node-club.node-teaser .club-title {
-  margin-bottom: 24px;
-  padding-top: 20px;
-  text-transform: none;
-}
-.node-club.node-teaser .club-title:first-letter {
-  border-top: 10px solid #aac4bf;
-  padding-top: 12px;
-}
-.node-club.node-teaser .club-title a {
-  color: #bac405;
-}
-.node-club.node-teaser .field-name-field-body {
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-
 .twitter-feed {
   position: relative;
   background: #c1dbd9;
@@ -4601,7 +4580,7 @@ p.acc-title + p {
   color: #383838;
 }
 
-.clib-link i {
+.club-link i {
   padding: 0 13px 0 0;
   margin-left: 7px;
   background: url("../images/external_link.png") no-repeat 0 3px;
@@ -4709,6 +4688,27 @@ fieldset.collapsible .fieldset-legend {
 .js body fieldset.collapsible .fieldset-legend {
   background: none;
   padding: 0;
+}
+
+.node-club.node-teaser {
+  padding: 0 24px;
+}
+.node-club.node-teaser .club-title {
+  margin-bottom: 24px;
+  padding-top: 20px;
+  text-transform: none;
+}
+.node-club.node-teaser .club-title:first-letter {
+  border-top: 10px solid #aac4bf;
+  padding-top: 12px;
+}
+.node-club.node-teaser .club-title a {
+  color: #bac405;
+}
+.node-club.node-teaser .field-name-field-body {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 24px;
 }
 
 .field-name-field-sections .field-label,

@@ -1,31 +1,37 @@
+///////////
+// CLUBS
+//////////
+
+
+// @TODO refactor this code
 .view-club-filters .views-row,
-.view-clubs-search .views-row 
+.view-clubs-search .views-row
   margin-bottom: 19px
   margin-left: 20px
 .view-club-filters,
-.view-clubs-search 
+.view-clubs-search
   clear: both
   margin-top: 10px
 .view-club-filters .views-row
-  .blue-small-border 
+  .blue-small-border
     margin-left: 0
 .view-club-filters .views-row .views-field-title,
-.view-clubs-search .views-row .views-field-label 
+.view-clubs-search .views-row .views-field-label
   font-weight: bold
   font-size: 20px
   margin-bottom: 5px
 .club-row .field-content,
-.view-clubs-search .views-row .views-field-ts-field-body 
+.view-clubs-search .views-row .views-field-ts-field-body
   font-size: 17px
   line-height: 24px
   margin-bottom: 0
   color: #383838
-.clib-link i	
+.club-link i
   padding: 0 13px 0 0
   margin-left: 7px
   background: url('../images/external_link.png') no-repeat 0 3px
 
-#views-exposed-form-club-filters-club-list 
+#views-exposed-form-club-filters-club-list
   overflow: hidden
   padding: 6px 22px 10px 25px
   margin-bottom: 2px
@@ -43,27 +49,27 @@
   float: left
   width: 646px
   margin-bottom: 27px
-  .fieldset-wrapper 
+  .fieldset-wrapper
     overflow: hidden
     padding-top: 5px
-  .bef-checkboxes 
-    .form-item 
+  .bef-checkboxes
+    .form-item
       float: left
       width: 33%
       margin-bottom: 3px
-    .form-item: nth-child(3n+1) 
+    .form-item: nth-child(3n+1)
       clear: both
-  .views-exposed-widget 
+  .views-exposed-widget
     padding: 0
     float: none
-  .form-item label 
+  .form-item label
     color: #565656
     font-size: 16px
     font-weight: normal
     padding-right: 9px
     height: 40px
     margin-bottom: 1px
-  .fieldset-title 
+  .fieldset-title
     border: none
     color: #333
     font-size: 16px
@@ -71,23 +77,23 @@
     padding-left: 24px
     position: relative
     left: -10px
-    &:hover 
+    &:hover
       border: 0 none
-  legend 
+  legend
     font-size: 16px
     line-height: 1em
     color: #231f20
     margin-bottom: 3px
     padding: 0
-  .form-item.form-type-select 
+  .form-item.form-type-select
     margin: 0
-  fieldset 
+  fieldset
     border: none
     padding: 0
     margin: 0
 
-.collapsible 
-  legend span  
+.collapsible
+  legend span
     padding: 0
     line-height: 10px
     width: 14px
@@ -99,17 +105,38 @@
     display: inline-block
     height: 1em
     left: 4px
-  legend:hover span 
+  legend:hover span
     background-position: -15px -16px
-  &.collapsed legend span 
+  &.collapsed legend span
     background-position: 0 0
-  &.collapsed legend:hover span 
+  &.collapsed legend:hover span
     background-position: -15px 0
 
-fieldset.collapsible .fieldset-legend 
+fieldset.collapsible .fieldset-legend
   display: inline
 
-.js body fieldset.collapsible .fieldset-legend 
+.js body fieldset.collapsible .fieldset-legend
   background: none
   padding: 0
 
+//////////////////////
+// Club listing styling
+////////////////////////
+.view-club-filters
+  @extend %border-and-box-shadow
+
+.node-club.node-teaser
+  padding: 0 24px
+  .club-title
+    margin-bottom: 24px
+    padding-top: 20px
+    text-transform: none
+    &:first-letter
+      border-top: 10px solid $blue-light
+      padding-top: 12px
+    a
+      color: $green-light
+  .field-name-field-body
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 24px
