@@ -258,18 +258,24 @@ ul.pager-load-more
   li
     margin: 0
     padding: 0
-    a
-      color: $white
-      font-size: 14px
-      line-height: 2
-      padding: 10px 14px
-    &:first-of-type
-      a
-        background: $text-green
-        font-weight: bold
-        text-transform: uppercase
-        &:before
-          content: image_url("arrow-down.png")
-          margin-right: 10px
-    &:nth-of-type(2n)
-      background: $black
+    margin-right: 2px
+  a
+    color: $white
+    font-size: 14px
+    line-height: 2
+    padding: 10px 14px
+    background: $text-green
+    font-weight: bold
+    text-transform: uppercase
+    &:before
+      content: image_url("arrow-down.png")
+      margin-right: 10px
+
+// Back to top link
+.go-to-top-link
+  background: $black
+  color: $white
+  font-size: 14px
+  font-weight: bold
+  line-height: 2
+  padding: 10px 14px

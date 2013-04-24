@@ -1727,24 +1727,29 @@ ul.pager-load-more {
 ul.pager-load-more li {
   margin: 0;
   padding: 0;
+  margin-right: 2px;
 }
-ul.pager-load-more li a {
+ul.pager-load-more a {
   color: white;
   font-size: 14px;
   line-height: 2;
   padding: 10px 14px;
-}
-ul.pager-load-more li:first-of-type a {
   background: #7d8401;
   font-weight: bold;
   text-transform: uppercase;
 }
-ul.pager-load-more li:first-of-type a:before {
+ul.pager-load-more a:before {
   content: url('../images/arrow-down.png');
   margin-right: 10px;
 }
-ul.pager-load-more li:nth-of-type(2n) {
+
+.go-to-top-link {
   background: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  padding: 10px 14px;
 }
 
 #navigation h2 {
