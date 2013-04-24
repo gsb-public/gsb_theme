@@ -119,6 +119,16 @@
 
     <div id="content-wrapper" class="clearfix">
 
+      <div id="banner" class="clearfix">
+
+        <?php if ($page['banner']): ?>
+          <div class="banner-content"><div class="section">
+            <?php print render($page['banner']); ?>
+          </div></div> <!-- /.section, /.banner-content -->
+        <?php endif; ?>
+
+      </div> <!-- /#banner -->
+
       <div id="main" class="clearfix">
 
         <div id="sidebar">
@@ -126,7 +136,7 @@
           <?php if ($page['sidebar_first']): ?>
             <div class="column sidebar"><div class="section">
               <?php print render($page['sidebar_first']); ?>
-            </div></div> <!-- /.section, /#sidebar-first -->
+            </div></div> <!-- /.section, /.sidebar -->
           <?php endif; ?>
 
         </div> <!-- /#sidebar -->
