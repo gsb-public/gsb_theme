@@ -1166,6 +1166,14 @@ del {
   display: table;
   clear: both;
 }
+.panel-display.gsb-business-insights .gsb-bizin-3col-top .column,
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column {
+  width: 35.3%;
+}
+.panels-ipe-editing .panel-display.gsb-business-insights .gsb-bizin-3col-top .column, .panels-ipe-editing
+.panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column {
+  width: 31.03448%;
+}
 .panel-display.gsb-business-insights .gsb-bizin-3col-top .column.first,
 .panel-display.gsb-business-insights .gsb-bizin-3col-bottom .column.first {
   -webkit-box-sizing: border-box;
@@ -1182,7 +1190,6 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
-  width: 35.3%;
   clear: both;
 }
 .panel-display.gsb-business-insights .gsb-bizin-3col-top .column.second,
@@ -1200,7 +1207,6 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 34.48276%;
-  width: 35.3%;
   clear: right;
 }
 .panel-display.gsb-business-insights .gsb-bizin-3col-top .column.third,
@@ -1218,7 +1224,6 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 68.96552%;
-  width: 35.3%;
   float: none;
 }
 
@@ -1498,6 +1503,10 @@ div.label-inline {
   .not-front #content-wrapper {
     background: url('../images/bg-notfront-courtyard.png') bottom center no-repeat;
   }
+}
+
+.page-business-insights #content-wrapper {
+  background-image: none;
 }
 
 #footer-wrapper {
@@ -3073,18 +3082,46 @@ p.acc-title + p {
 }
 
 .view-business-insights-sidebar {
-  max-width: 235px;
+  max-width: 237px;
   margin-bottom: 30px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  position: absolute;
+  top: 223px;
+  margin-left: 33px;
+}
+.panels-ipe-editing .view-business-insights-sidebar {
+  margin-left: 0;
+  position: initial;
 }
 .view-business-insights-sidebar .view-header {
   background-color: #272727;
+  border-bottom: 1px solid white;
 }
 .view-business-insights-sidebar .view-header ul {
   margin: 0;
-  padding: 15px;
+  padding: 0;
 }
 .view-business-insights-sidebar .view-header li {
   display: inline-block;
+  height: 50px;
+  overflow: hidden;
+  padding: 15px;
+  width: 115px;
+}
+.view-business-insights-sidebar .view-header li a {
+  display: inline-block;
+  width: 100%;
+  text-indent: 130%;
+}
+.view-business-insights-sidebar .view-header li:first-of-type {
+  border-right: 1px solid #555555;
+}
+.view-business-insights-sidebar .view-header li:first-of-type a {
+  background: url('../images/icon-bizin-video.png') no-repeat 50% 50%;
+}
+.view-business-insights-sidebar .view-header li:last-of-type a {
+  background: url('../images/icon-bizin-cal.png') no-repeat 43% 50%;
 }
 .view-business-insights-sidebar .view-content {
   background-color: #272727;

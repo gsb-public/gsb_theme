@@ -93,18 +93,19 @@
   .gsb-bizin-3col-top,
   .gsb-bizin-3col-bottom
     +pie-clearfix
-    .column.first
-      +grid-span(1, 1, $columns: $business-insight)
+    .column
       width: 35.3%
-      clear: both
-    .column.second
-      +grid-span(1, 2, $columns: $business-insight)
-      width: 35.3%
-      clear: right
-    .column.third
-      +grid-span(1, 3, $columns: $business-insight)
-      width: 35.3%
-      float: none
+      .panels-ipe-editing &
+        width: 31.03448%
+      &.first
+        +grid-span(1, 1, $columns: $business-insight)
+        clear: both
+      &.second
+        +grid-span(1, 2, $columns: $business-insight)
+        clear: right
+      &.third
+        +grid-span(1, 3, $columns: $business-insight)
+        float: none
 
 // EDITING LAYOUTS
 .panels-ipe-editing

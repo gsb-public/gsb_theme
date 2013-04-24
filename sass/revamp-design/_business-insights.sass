@@ -55,16 +55,43 @@
 // BUSINESS INSIGHT MAP
 ////////////////////////
 .view-business-insights-sidebar
-  max-width: 235px
+  max-width: 237px
   margin-bottom: 30px
+  border-left: 1px solid $white
+  border-right: 1px solid $white
+  position: absolute
+  top: 223px
+  margin-left: 33px
+  // Editing change
+  .panels-ipe-editing &
+    margin-left: 0
+    position: initial
+
   .view-header
     background-color: #272727
+    border-bottom: 1px solid $white
     ul
       margin: 0
-      padding: 15px
+      padding: 0
     li
       display: inline-block
-
+      height: 50px
+      overflow: hidden
+      padding: 15px
+      width: 115px
+      a
+        display: inline-block
+        width: 100%
+        text-indent: 130%
+    // Video link
+    li:first-of-type
+      border-right: 1px solid $grey-5
+      a
+        background: image_url("icon-bizin-video.png") no-repeat 50% 50%
+    // Event link
+    li:last-of-type
+      a
+        background: image_url("icon-bizin-cal.png") no-repeat 43% 50%
   .view-content
     background-color: #272727
   .menu_region
@@ -73,6 +100,7 @@
     margin: 0
   .views-row-last
     margin-bottom: 1px
+
   .field-content a,
   .bi-map__tex
     display: block
@@ -118,3 +146,12 @@
 
 .bi-map__overlay.oceania
   background-image: url('../images/map_oceania.png')
+
+// LANDING
+// .page-business-insights
+//   #page-title
+//     font-size: 56px
+//     color: $white
+//     font-weight: bold
+//     line-height: 210px
+//     background-color: #272727
