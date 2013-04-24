@@ -119,29 +119,25 @@
 
     <div id="content-wrapper" class="clearfix">
 
-      <div id="banner" class="clearfix">
-
-        <?php if ($page['banner']): ?>
-          <div class="banner-content"><div class="section">
+      <?php if ($page['banner']): ?>
+        <div id="banner" class="clearfix"><div class="section">
+          <div class="banner-content">
             <?php print render($page['banner']); ?>
-          </div></div> <!-- /.section, /.banner-content -->
+          </div> <!-- /.banner-content -->
+        </div></div> <!-- /.section, /#banner -->
+      <?php endif; ?>
+
+      <div id="content" class="clearfix">
+
+        <?php if ($page['sidebar_first']): ?>
+          <div id="sidebar" class="column"><div class="section">
+            <div class="sidebar">
+              <?php print render($page['sidebar_first']); ?>
+            </div> <!-- /.sidebar -->
+          </div></div> <!-- /.section, /#sidebar -->
         <?php endif; ?>
 
-      </div> <!-- /#banner -->
-
-      <div id="main" class="clearfix">
-
-        <div id="sidebar">
-
-          <?php if ($page['sidebar_first']): ?>
-            <div class="column sidebar"><div class="section">
-              <?php print render($page['sidebar_first']); ?>
-            </div></div> <!-- /.section, /.sidebar -->
-          <?php endif; ?>
-
-        </div> <!-- /#sidebar -->
-
-        <div id="content" class="column"><div class="section">
+        <div id="main" class="column"><div class="section">
           <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
@@ -151,9 +147,9 @@
           <?php print render($page['help']); ?>
           <?php print render($page['content']); ?>
           <?php print $feed_icons; ?>
-        </div></div> <!-- /.section, /#content -->
+        </div></div> <!-- /.section, /#main -->
 
-      </div> <!-- /#main -->
+      </div> <!-- /#content -->
 
     </div> <!-- /#content-wrapper -->
 
