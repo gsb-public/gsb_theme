@@ -1725,36 +1725,39 @@ a.no-border:hover {
   padding: 0;
 }
 
-ul.pager-load-more {
+.pager-region {
   border-top: 3px solid black;
   padding-left: 25px;
 }
-ul.pager-load-more li {
+.pager-region .item-list {
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: top;
+}
+.pager-region .item-list ul,
+.pager-region .item-list ul li {
   margin: 0;
   padding: 0;
-  margin-right: 2px;
 }
-ul.pager-load-more .pager-next a {
+.pager-region .item-list a {
   color: white;
   font-size: 14px;
-  line-height: 2;
-  padding: 10px 14px;
-  background: #7d8401;
   font-weight: bold;
+  line-height: 2.2;
+  padding: 17px;
+}
+
+.pager-load-more .pager-next a {
+  background: #7d8401;
   text-transform: uppercase;
 }
-ul.pager-load-more .pager-next a:before {
+.pager-load-more .pager-next a:before {
   content: url('../images/arrow-down.png');
   margin-right: 10px;
 }
 
-.go-to-top-link {
+.additional-links {
   background: black;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 2;
-  padding: 10px 14px;
 }
 
 #navigation h2 {

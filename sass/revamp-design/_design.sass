@@ -258,35 +258,37 @@ a.no-border
             color: $text-blue
 
 ////////////////////
-// SHOW MORE LINK
+// PAGER
 ////////////////////
 .item-list .pager li
   padding: 0
 
-ul.pager-load-more
+.pager-region
   border-top: 3px solid $black
   padding-left: 25px
-  li
-    margin: 0
-    padding: 0
+  .item-list
+    display: inline-block
     margin-right: 2px
+    vertical-align: top
+    ul,
+    ul li
+      margin: 0
+      padding: 0
+    a
+      color: $white
+      font-size: 14px
+      font-weight: bold
+      line-height: 2.2
+      padding: 17px
+
+.pager-load-more
   .pager-next a
-    color: $white
-    font-size: 14px
-    line-height: 2
-    padding: 10px 14px
     background: $text-green
-    font-weight: bold
     text-transform: uppercase
     &:before
       content: image_url("arrow-down.png")
       margin-right: 10px
 
 // Back to top link
-.go-to-top-link
+.additional-links
   background: $black
-  color: $white
-  font-size: 14px
-  font-weight: bold
-  line-height: 2
-  padding: 10px 14px
