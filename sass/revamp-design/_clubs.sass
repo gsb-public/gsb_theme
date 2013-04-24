@@ -2,26 +2,6 @@
 // CLUBS
 //////////
 
-
-// @TODO refactor this code
-.view-clubs-search .views-row
-  margin-bottom: 19px
-  margin-left: 20px
-.view-clubs-search
-  clear: both
-  margin-top: 10px
-
-.view-clubs-search .views-row .views-field-label
-  font-weight: bold
-  font-size: 20px
-  margin-bottom: 5px
-.club-row .field-content,
-.view-clubs-search .views-row .views-field-ts-field-body
-  font-size: 17px
-  line-height: 24px
-  margin-bottom: 0
-  color: #383838
-
 // Clubs filtering
 #edit-field-club-category-tid-wrapper
   padding: 24px
@@ -95,9 +75,9 @@ fieldset.collapsible .fieldset-legend
     color: $text-blue
     margin-bottom: 18px
 
-//////////////////////
-// Club listing
-////////////////////////
+/////////////////////////////////
+// Club listing with ds teasers
+/////////////////////////////////
 .view-club-filters.view-list-teaser
   .view-content
     @extend %border-and-box-shadow
@@ -125,3 +105,35 @@ fieldset.collapsible .fieldset-legend
     font-size: 18px
     line-height: 24px
     margin-bottom: 24px
+
+/////////////////////////////////
+// Club listing with solr fields
+/////////////////////////////////
+.view-clubs-search
+  .view-content
+    @extend %border-and-box-shadow
+  .views-row
+    padding: 0 24px
+    position: relative
+    top: 0
+    // Title
+    .views-field-label
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+      margin-bottom: 18px
+      padding-top: 20px
+      &:before
+        content: image_url("tab-club.png")
+        position: absolute
+        top: -8px
+      a
+        color: $text-green
+        &:after
+          content: image_url('external_link.png')
+          margin-left: 5px
+    // Body
+    .views-field-ts-field-body
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 24px
