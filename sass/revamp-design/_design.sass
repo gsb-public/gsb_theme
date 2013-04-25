@@ -204,11 +204,36 @@ a.no-border
 
 // Bizin detail authors
 // Publications authors
+// Case study authors
 .field-name-field-person-fac-staff-other,
-.field-name-field-person-other
+.field-name-field-person-other,
+.field-name-field-person-fac-student-other
   .separator
     position: relative
     left: -4px
+
+// Kill random field.css float for this fc
+.field-name-field-person-fac-student-ref
+  .field-items
+    float: none
+
+/////////////////
+// Author names
+/////////////////
+.field-name-field-person-other,
+.field-name-field-person-fac-student-other
+  +clearfix
+  color: $black
+  font-size: 18px
+  font-weight: bold
+  .label-inline
+    font-weight: bold
+    margin-right: 5px
+  a
+    color: $red
+  .field-name-field-first-name
+    margin-right: 5px
+
 
 ///////////////////////////
 // Menus in sidebar-first

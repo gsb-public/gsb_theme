@@ -1681,9 +1681,36 @@ a.no-border:hover {
 }
 
 .field-name-field-person-fac-staff-other .separator,
-.field-name-field-person-other .separator {
+.field-name-field-person-other .separator,
+.field-name-field-person-fac-student-other .separator {
   position: relative;
   left: -4px;
+}
+
+.field-name-field-person-fac-student-ref .field-items {
+  float: none;
+}
+
+.field-name-field-person-other,
+.field-name-field-person-fac-student-other {
+  overflow: hidden;
+  *zoom: 1;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.field-name-field-person-other .label-inline,
+.field-name-field-person-fac-student-other .label-inline {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.field-name-field-person-other a,
+.field-name-field-person-fac-student-other a {
+  color: #990000;
+}
+.field-name-field-person-other .field-name-field-first-name,
+.field-name-field-person-fac-student-other .field-name-field-first-name {
+  margin-right: 5px;
 }
 
 .region-sidebar-first {
@@ -3991,30 +4018,11 @@ p.acc-title + p {
   border-top: 3px black solid;
   padding-top: 14px;
 }
-.node-case-study.view-mode-full .label-inline,
-.node-research-paper.view-mode-full .label-inline {
+.node-case-study.view-mode-full .field-name-field-date-published .label-inline,
+.node-case-study.view-mode-full .field-name-field-case-study-number .label-inline,
+.node-research-paper.view-mode-full .field-name-field-date-published .label-inline,
+.node-research-paper.view-mode-full .field-name-field-case-study-number .label-inline {
   font-weight: normal;
-}
-.node-case-study.view-mode-full .field-collection-item-field-person-fac-student-other,
-.node-case-study.view-mode-full .group-wrapper-name,
-.node-research-paper.view-mode-full .field-collection-item-field-person-fac-student-other,
-.node-research-paper.view-mode-full .group-wrapper-name {
-  display: inline;
-  font-weight: bold;
-}
-.node-case-study.view-mode-full .label-inline,
-.node-case-study.view-mode-full .name-first,
-.node-research-paper.view-mode-full .label-inline,
-.node-research-paper.view-mode-full .name-first {
-  margin-right: 5px;
-}
-.node-case-study.view-mode-full .field-name-field-person-fac-student-other .label-inline,
-.node-research-paper.view-mode-full .field-name-field-person-fac-student-other .label-inline {
-  font-weight: bold;
-}
-.node-case-study.view-mode-full .field-name-field-person-fac-student-other a,
-.node-research-paper.view-mode-full .field-name-field-person-fac-student-other a {
-  color: #990000;
 }
 .node-case-study.view-mode-full .field-name-title h2,
 .node-research-paper.view-mode-full .field-name-title h2 {
@@ -4107,34 +4115,6 @@ p.acc-title + p {
 .node-research-paper.view-mode-teaser .paper-code:before {
   content: "| ";
   margin-left: 8px;
-}
-.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other,
-.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other {
-  overflow: hidden;
-  *zoom: 1;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  margin: 18px 0;
-}
-.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other .name-first,
-.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other .name-first {
-  margin-right: 5px;
-}
-.node-case-study.view-mode-teaser .field-name-field-person-fac-student-other a,
-.node-research-paper.view-mode-teaser .field-name-field-person-fac-student-other a {
-  color: #990000;
-  font-weight: bold;
-}
-.node-case-study.view-mode-teaser .field-collection-item-field-person-fac-student-other,
-.node-case-study.view-mode-teaser .separator,
-.node-research-paper.view-mode-teaser .field-collection-item-field-person-fac-student-other,
-.node-research-paper.view-mode-teaser .separator {
-  float: left;
-}
-.node-case-study.view-mode-teaser .separator,
-.node-research-paper.view-mode-teaser .separator {
-  margin-right: 5px;
 }
 
 .gsb-views-exposed-search {
@@ -4315,24 +4295,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-publication.view-mode-full .field-collection-item-field-publication-reviews {
   margin-bottom: 30px;
-}
-
-.field-name-field-person-other {
-  overflow: hidden;
-  *zoom: 1;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-.field-name-field-person-other .label-inline {
-  font-weight: bold;
-  margin-right: 5px;
-}
-.field-name-field-person-other a {
-  color: #990000;
-}
-.field-name-field-person-other .field-name-field-first-name {
-  margin-right: 5px;
 }
 
 .node-news .field.field-name-title h2 {
