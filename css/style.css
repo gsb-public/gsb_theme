@@ -4018,12 +4018,6 @@ p.acc-title + p {
   border-top: 3px black solid;
   padding-top: 14px;
 }
-.node-case-study.view-mode-full .field-name-field-date-published .label-inline,
-.node-case-study.view-mode-full .field-name-field-case-study-number .label-inline,
-.node-research-paper.view-mode-full .field-name-field-date-published .label-inline,
-.node-research-paper.view-mode-full .field-name-field-case-study-number .label-inline {
-  font-weight: normal;
-}
 .node-case-study.view-mode-full .field-name-title h2,
 .node-research-paper.view-mode-full .field-name-title h2 {
   color: #2c627c;
@@ -4031,18 +4025,23 @@ p.acc-title + p {
   line-height: 1.15em;
   margin: 0 0 10px 0;
 }
+.node-case-study.view-mode-full .field-name-field-date-published .label-inline,
+.node-case-study.view-mode-full .field-name-field-case-study-number .label-inline,
+.node-case-study.view-mode-full .field-name-field-research-paper-number .label-inline,
+.node-research-paper.view-mode-full .field-name-field-date-published .label-inline,
+.node-research-paper.view-mode-full .field-name-field-case-study-number .label-inline,
+.node-research-paper.view-mode-full .field-name-field-research-paper-number .label-inline {
+  font-weight: normal;
+}
 .node-case-study.view-mode-full .field-name-field-date-published,
 .node-research-paper.view-mode-full .field-name-field-date-published {
-  color: #444444;
-  line-height: 1;
+  color: #231f20;
 }
 .node-case-study.view-mode-full .field-name-field-case-study-number,
-.node-research-paper.view-mode-full .field-name-field-case-study-number {
-  color: #666666;
-}
 .node-case-study.view-mode-full .field-name-field-research-paper-number,
+.node-research-paper.view-mode-full .field-name-field-case-study-number,
 .node-research-paper.view-mode-full .field-name-field-research-paper-number {
-  color: #555555;
+  color: #656162;
 }
 .node-case-study.view-mode-full .group-tags-wrapper.case-study,
 .node-case-study.view-mode-full .group-tags-wrapper.research-paper,
@@ -4081,6 +4080,10 @@ p.acc-title + p {
   content: "Download Electronic Copy";
   font-size: 16px;
   color: white;
+}
+
+.node-research-paper.view-mode-full .field-name-field-research-paper-number .label-inline {
+  margin-right: 5px;
 }
 
 .node-case-study.view-mode-teaser .field-name-field-date-published,
@@ -4885,41 +4888,39 @@ fieldset.collapsible .fieldset-legend {
 .view-mode-business_insight .field-name-field-person-fac-student-other .field-item {
   margin-bottom: 18px;
 }
-.view-mode-business_insight .group-right {
-  font-size: 14px;
-}
-.view-mode-business_insight .group-right span.field,
-.view-mode-business_insight .group-right .field-name-field-date-published {
-  display: inline;
-}
-.view-mode-business_insight .group-right span.field:after,
-.view-mode-business_insight .group-right .field-name-field-date-published:after {
-  content: ",";
-  display: inline;
-  margin-right: 5px;
-}
-.view-mode-business_insight .group-right span.field-name-title:after {
-  content: "";
-}
-.view-mode-business_insight .group-right span.field.field-name-field-pages:after,
-.view-mode-business_insight .group-right span.field-name-field-case-study-number:after {
-  content: ".";
-}
 .view-mode-business_insight .field-name-field-image-single-public {
   display: inline;
   float: left;
   margin-right: 24px;
 }
-.view-mode-business_insight .field-name-title {
+.view-mode-business_insight .group-right {
+  font-size: 14px;
+}
+.view-mode-business_insight .group-right .field,
+.view-mode-business_insight .group-right .field-name-field-date-published {
+  display: inline;
+}
+.view-mode-business_insight .group-right .field:after,
+.view-mode-business_insight .group-right .field-name-field-date-published:after {
+  content: ",";
+  display: inline;
+  margin-right: 5px;
+}
+.view-mode-business_insight .group-right .field-name-title {
   font-weight: bold;
 }
-.view-mode-business_insight .field-name-title span:before {
+.view-mode-business_insight .group-right .field-name-title:before {
   content: "“";
   display: inline;
 }
-.view-mode-business_insight .field-name-title span:after {
+.view-mode-business_insight .group-right .field-name-title:after {
   content: "”";
   display: inline;
+}
+.view-mode-business_insight .group-right .field-name-field-pages:after,
+.view-mode-business_insight .group-right .field-name-field-case-study-number:after,
+.view-mode-business_insight .group-right .field-name-field-research-paper-number:after {
+  content: ".";
 }
 .view-mode-business_insight .field-name-field-publisher {
   font-style: italic;
@@ -4931,4 +4932,8 @@ fieldset.collapsible .fieldset-legend {
   display: inline;
   font-weight: normal;
   margin-right: 5px;
+}
+.view-mode-business_insight .field.field-name-field-citation {
+  display: block;
+  margin-top: 1em;
 }

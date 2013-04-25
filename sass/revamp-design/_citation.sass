@@ -20,10 +20,14 @@
     .field-item
       margin-bottom: 18px
 
+  // Image
+  .field-name-field-image-single-public
+    +float-left
+    margin-right: 24px
   // Fields on right
   .group-right
     font-size: 14px
-    span.field,
+    .field,
     .field-name-field-date-published
       display: inline
       &:after
@@ -31,29 +35,23 @@
         display: inline
         margin-right: 5px
     // Title
-    span.field-name-title
-      &:after
-        content: ""
-    // Pages
-    span.field.field-name-field-pages,
-    span.field-name-field-case-study-number
-      &:after
-        content: "."
-  // Image
-  .field-name-field-image-single-public
-    +float-left
-    margin-right: 24px
-
-  // Title
-  .field-name-title
-    font-weight: bold
-    span
+    .field-name-title
+      font-weight: bold
       &:before
         content: "“"
         display: inline
       &:after
         content: "”"
         display: inline
+
+    // Pages
+    .field-name-field-pages,
+    .field-name-field-case-study-number,
+    .field-name-field-research-paper-number
+      &:after
+        content: "."
+
+
 
   // Journal
   .field-name-field-publisher
@@ -66,3 +64,8 @@
       display: inline
       font-weight: normal
       margin-right: 5px
+
+  // Citation
+  .field.field-name-field-citation
+    display: block
+    margin-top: 1em
