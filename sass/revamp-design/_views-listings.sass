@@ -1,9 +1,14 @@
 // Teaser listings created by views
 
-// Views listing styling
+// Views listing styling no background
 .view-list-teaser
   .views-row
     border-bottom: 1px solid #e4e4e4
+
+// Views listing styling background
+.view-club-filters.view-list-teaser
+  .view-content
+    @extend %border-and-box-shadow
 
 // Business Insights listing
 .view-business-insights-by-tag
@@ -54,3 +59,35 @@
     font-size: 13px
     font-weight: bold
     text-transform: uppercase
+
+/////////////////////////////////
+// Listing with solr fields
+/////////////////////////////////
+.view-list-search
+  .view-content
+    @extend %border-and-box-shadow
+  .views-row
+    padding: 0 24px
+    position: relative
+    top: 0
+    // Title
+    .views-field-label
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+      margin-bottom: 18px
+      padding-top: 20px
+      &:before
+        content: image_url("tab-club.png")
+        position: absolute
+        top: -8px
+      a
+        color: $text-green
+        &:after
+          content: image_url('external_link.png')
+          margin-left: 5px
+    // Body
+    .views-field-ts-field-body
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 24px
