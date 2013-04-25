@@ -2,3 +2,64 @@
 // CITATION
 // BI view mode for case studies, research papers, and publications
 /////////////////
+.view-mode-business_insight
+  +clearfix
+  @extend %bg-and-box-shadow
+  padding: 0 24px 24px 24px
+  &:before
+    content: "Citation"
+    +border-label
+
+  .group-left,
+  .group-right
+    margin-top: 60px
+
+  // Authors
+  .field-name-field-person-other .field-item
+    margin-bottom: 18px
+
+  // Fields on right
+  .group-right
+    font-size: 14px
+    span.field,
+    .field-name-field-date-published
+      display: inline
+      &:after
+        content: ","
+        display: inline
+        margin-right: 5px
+    // Title
+    span.field-name-title
+      &:after
+        content: ""
+    // Pages
+    span.field.field-name-field-pages
+      &:after
+        content: "."
+  // Image
+  .field-name-field-image-single-public
+    +float-left
+    margin-right: 24px
+
+  // Title
+  .field-name-title
+    font-weight: bold
+    span
+      &:before
+        content: "“"
+        display: inline
+      &:after
+        content: "”"
+        display: inline
+
+  // Journal
+  .field-name-field-publisher
+    font-style: italic
+
+  // Volume
+  .field-name-field-volume-number
+    display: inline
+    .label-inline
+      display: inline
+      font-weight: normal
+      margin-right: 5px
