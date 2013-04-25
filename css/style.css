@@ -68,15 +68,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video,
-.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, #views-exposed-form-clubs-search-search-club,
-#views-exposed-form-search-news-news-list,
-#views-exposed-form-media-mention-media-mention-solr,
-#views-exposed-form-publications-publications-solr, #views-exposed-form-research-papers-filters-research-list,
-#views-exposed-form-case-study-filters-case-study-list,
-#views-exposed-form-media-mention-filters-media-mention-list,
-#views-exposed-form-publications-filters-publication-list,
-#views-exposed-form-club-filters-club-list,
-#views-exposed-form-news-list-news-list, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content, .view-list-search .view-content {
+.node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content, .view-list-search .view-content {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -4125,17 +4117,11 @@ p.acc-title + p {
   margin-right: 5px;
 }
 
-#views-exposed-form-clubs-search-search-club,
-#views-exposed-form-search-news-news-list,
-#views-exposed-form-media-mention-media-mention-solr,
-#views-exposed-form-publications-publications-solr {
+.gsb-views-exposed-search {
   padding: 18px 24px 24px 24px;
   width: 268px;
 }
-#views-exposed-form-clubs-search-search-club label,
-#views-exposed-form-search-news-news-list label,
-#views-exposed-form-media-mention-media-mention-solr label,
-#views-exposed-form-publications-publications-solr label {
+.gsb-views-exposed-search label {
   color: #2d6280;
   margin-bottom: 18px;
 }
@@ -4176,64 +4162,28 @@ fieldset.collapsible .fieldset-legend {
   padding: 24px;
 }
 
-#views-exposed-form-research-papers-filters-research-list legend,
-#views-exposed-form-case-study-filters-case-study-list legend,
-#views-exposed-form-media-mention-filters-media-mention-list legend,
-#views-exposed-form-publications-filters-publication-list legend,
-#views-exposed-form-search-news-news-list legend,
-#views-exposed-form-club-filters-club-list legend,
-#views-exposed-form-news-list-news-list legend {
+.gsb-views-exposed-filter legend {
   padding: 0;
 }
-#views-exposed-form-research-papers-filters-research-list fieldset,
-#views-exposed-form-case-study-filters-case-study-list fieldset,
-#views-exposed-form-media-mention-filters-media-mention-list fieldset,
-#views-exposed-form-publications-filters-publication-list fieldset,
-#views-exposed-form-search-news-news-list fieldset,
-#views-exposed-form-club-filters-club-list fieldset,
-#views-exposed-form-news-list-news-list fieldset {
+.gsb-views-exposed-filter fieldset {
   border: 0;
   padding: 0;
 }
-#views-exposed-form-research-papers-filters-research-list .fieldset-wrapper,
-#views-exposed-form-case-study-filters-case-study-list .fieldset-wrapper,
-#views-exposed-form-media-mention-filters-media-mention-list .fieldset-wrapper,
-#views-exposed-form-publications-filters-publication-list .fieldset-wrapper,
-#views-exposed-form-search-news-news-list .fieldset-wrapper,
-#views-exposed-form-club-filters-club-list .fieldset-wrapper,
-#views-exposed-form-news-list-news-list .fieldset-wrapper {
+.gsb-views-exposed-filter .fieldset-wrapper {
   padding: 24px;
 }
-#views-exposed-form-research-papers-filters-research-list .form-item,
-#views-exposed-form-case-study-filters-case-study-list .form-item,
-#views-exposed-form-media-mention-filters-media-mention-list .form-item,
-#views-exposed-form-publications-filters-publication-list .form-item,
-#views-exposed-form-search-news-news-list .form-item,
-#views-exposed-form-club-filters-club-list .form-item,
-#views-exposed-form-news-list-news-list .form-item {
+.gsb-views-exposed-filter .form-item {
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-#views-exposed-form-research-papers-filters-research-list .form-item label,
-#views-exposed-form-case-study-filters-case-study-list .form-item label,
-#views-exposed-form-media-mention-filters-media-mention-list .form-item label,
-#views-exposed-form-publications-filters-publication-list .form-item label,
-#views-exposed-form-search-news-news-list .form-item label,
-#views-exposed-form-club-filters-club-list .form-item label,
-#views-exposed-form-news-list-news-list .form-item label {
+.gsb-views-exposed-filter .form-item label {
   color: black;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
 }
-#views-exposed-form-research-papers-filters-research-list .fieldset-title,
-#views-exposed-form-case-study-filters-case-study-list .fieldset-title,
-#views-exposed-form-media-mention-filters-media-mention-list .fieldset-title,
-#views-exposed-form-publications-filters-publication-list .fieldset-title,
-#views-exposed-form-search-news-news-list .fieldset-title,
-#views-exposed-form-club-filters-club-list .fieldset-title,
-#views-exposed-form-news-list-news-list .fieldset-title {
+.gsb-views-exposed-filter .fieldset-title {
   border: none;
   font-weight: bold;
   font-size: 20px;

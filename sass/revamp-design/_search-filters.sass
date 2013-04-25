@@ -5,11 +5,10 @@
 ////////////////////
 // Search box
 /////////////////////
-#views-exposed-form-clubs-search-search-club,
-#views-exposed-form-search-news-news-list,
-#views-exposed-form-media-mention-media-mention-solr,
-#views-exposed-form-publications-publications-solr
+.gsb-views-exposed-form
   @extend %border-and-box-shadow
+
+.gsb-views-exposed-search
   padding: 18px 24px 24px 24px
   width: 268px
   label
@@ -51,17 +50,9 @@ fieldset.collapsible .fieldset-legend
 #edit-field-club-category-tid-wrapper,
 #edit-field-business-insight-topic-tid-wrapper,
 #edit-field-region-tid-wrapper
-
   padding: 24px
 
-#views-exposed-form-research-papers-filters-research-list,
-#views-exposed-form-case-study-filters-case-study-list,
-#views-exposed-form-media-mention-filters-media-mention-list,
-#views-exposed-form-publications-filters-publication-list,
-#views-exposed-form-search-news-news-list,
-#views-exposed-form-club-filters-club-list,
-#views-exposed-form-news-list-news-list
-  @extend %border-and-box-shadow
+.gsb-views-exposed-filter
   legend
     padding: 0
   fieldset
