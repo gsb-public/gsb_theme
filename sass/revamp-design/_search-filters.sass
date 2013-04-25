@@ -28,19 +28,17 @@
     line-height: 10px
     position: relative
     top: 1px
-    background-image: url('../images/filter-icons.png')
-    background-position: -15px -15px
-    background-repeat: no-repeat
+    background: image_url('toggle-open.png') no-repeat
     display: inline-block
     height: 1em
     text-transform: none
     &:hover
-      background-position: 0 -15px
+      background: image_url('toggle-open-hover.png') no-repeat
   &.collapsed
     .fieldset-title
-      background-position: -15px 0
+      background: image_url('toggle-close.png') no-repeat
       &:hover
-        background-position: 0 0
+        background: image_url('toggle-close-hover.png') no-repeat
 
 fieldset.collapsible .fieldset-legend
   display: inline
