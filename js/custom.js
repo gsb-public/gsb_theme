@@ -11,7 +11,7 @@
         // If the line height of the body text changes, adjust this.
         var visibleHeight = 18 * 4;
 
-        $spotlight.find('.pane-content > div').append('<p class="show-more"><span>Show More</span></p>');
+        $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>');
         // Add behavior for every .show-more link.
         $spotlight.find('.show-more').once('showmore', function () {
           var $this = $(this),
