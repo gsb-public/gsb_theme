@@ -1,29 +1,29 @@
-.view-mode-teaser
-  &.node-media-mention
-    .group_content_wrapper
-      padding: 10px 0 0 26px
-    .group-left
-      max-width: 220px
-    .field-name-title
-      h2
-        color: $red
-        font-weight: normal
-        text-transform: none
-        font-size: 20px
-        line-height: 26px
-        display: block
-        margin-top: -9px
-        margin-bottom: 4px
-    .field-name-field-date-published,
-    .field-name-field-publisher
-      color: $grey-6
-      font-size: 14px
-    .field-name-author
-      font-weight: bold
-      font-size: 14px
-      color: $grey-2
-      .label-inline
-        padding-right: 4px
-    .field-name-field-link-single
-      a
-        color: $red
+/////////////////
+// MEDIA MENTION
+/////////////////
+.node-media-mention
+  // Title
+  .field-name-title
+    h4
+      color: $red
+
+  // Date and publisher
+  .field-name-field-date-published,
+  .field-name-field-publisher
+    font-size: 14px
+
+  .field-name-field-date-published
+    color: $grey-6
+  .field-name-field-publisher
+    color: $red
+
+  // Author
+  .field-name-author
+    font-weight: bold
+    font-size: 14px
+    color: $text-grey
+    .label-inline
+      margin-right: 5px
+  .field-name-field-link-single
+    a
+      color: $red
