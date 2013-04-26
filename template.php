@@ -28,13 +28,15 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-search-news-news-list',
     'views-exposed-form-media-mention-media-mention-solr',
     'views-exposed-form-publications-publications-solr',
+    'views-exposed-form-research-papers-panel-pane-1'
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
     'views-exposed-form-club-filters-club-list',
     'views-exposed-form-news-list-news-list',
     'views-exposed-form-media-mention-filters-media-mention-list',
-    'views-exposed-form-publications-filters-publication-list'
+    'views-exposed-form-publications-filters-publication-list',
+    'views-exposed-form-research-paper-filters-research-paper-list'
   );
 
   if ($is_search_form = in_array($form['#id'], $search_form_ids)) {
