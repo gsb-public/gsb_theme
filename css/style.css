@@ -3171,8 +3171,6 @@ p.acc-title + p {
   margin-bottom: 30px;
   border-left: 1px solid white;
   border-right: 1px solid white;
-  position: absolute;
-  top: 193px;
   margin-left: 33px;
 }
 .panels-ipe-editing .view-business-insights-sidebar {
@@ -3277,8 +3275,25 @@ p.acc-title + p {
 }
 
 .page-business-insights #banner {
-  background-color: #272727;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #272727), color-stop(100%, #1b1b1b));
+  background: -webkit-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -moz-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -o-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -ms-linear-gradient(bottom, #272727, #1b1b1b);
+  background: linear-gradient(bottom, #272727, #1b1b1b);
   height: 210px;
+}
+.page-business-insights .banner-title,
+.page-business-insights .banner-subtitle {
+  color: white;
+}
+.page-business-insights .banner-title {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 2.3em;
+}
+.page-business-insights .banner-subtitle {
+  font-size: 42px;
 }
 
 .page-business-insights .pane-fieldable-panels-pane {
