@@ -117,27 +117,24 @@ a.no-border
 //////////////////////
 // Links FPP
 //////////////////////
+%related-links
+  padding: 0 24px 24px 24px
+  // Links
+  .field-type-link-field .field-item
+    line-height: 1.3
+    padding-bottom: 20px
+    a
+      color: $red
+      font-size: 14px
+      font-weight: bold
+      text-transform: uppercase
+
 .pane-bundle-links
   @extend %border-and-box-shadow
-  padding: 0 24px 24px 24px
+  @extend %related-links
   // Pane title
   .field-name-field-title
-    border-top: 10px $red solid
-    display: inline-block
-    font-size: 18px
-    font-weight: bold
-    line-height: 1
-    margin-bottom: 16px
-    padding-top: 16px
-  // Links
-  .field-type-link-field
-    .field-item
-      line-height: 1.3
-      padding-bottom: 20px
-      a
-        color: $red
-        font-weight: bold
-        text-transform: uppercase
+    +pane-title
 
 //////////////////////
 // Text FPP

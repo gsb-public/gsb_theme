@@ -1,102 +1,69 @@
-.node-news
-  .field.field-name-title h2
-    text-transform: none
-    color: $blue-dark
-    font-size: 31px
-    line-height: 1.15em
-    margin: 5px 0 0
-    font-weight: 500
-  .field-name-field-date-published,
-  .field-name-field-research-paper-number
-    font-size: 18px
-    .label-inline
-      font-weight: normal
-  .field-name-field-research-paper-number
-    color: $grey-5
-  .field-name-field-body
-    margin-top: 20px
-    color: $grey-2
-  .green-rounded-button
-    float: left
-    overflow: hidden
-    margin-bottom: 25px
-    img
-      float: right
-      margin-left: 2px
-      position: relative
-      top: -1px
-    a
-      width: 0px
-      overflow: hidden
-      font-weight: bold
-    img + a
-      color: transparent
-      font-size: 0
-      &:before
-        content: 'Download Electronic Copy'
-        font-size: 16px
-        color: $white
+//////////////////
+// NEWS
+// School stories
+// Press releases
+//////////////////
 
+// DETAIL
 .node-news.view-mode-full
   border-top: 3px solid $black
-  padding-top: 0
-  padding-left: 0
-  a
-    border-bottom: 0
-  .group-left
-    padding-top: 20px
-    h1
-      font-weight: bold
-    .date-display-single
-      font-size: 16px
-      color: $grey-4
-  .group-right
-    max-width: 220px
-  .field-name-field-image-single-public
+  +clearfix
+  .field-name-field-date-published
+    font-size: 18px
+    padding-top: 24px
+    padding-bottom: 24px
+  .field-name-title
+    color: $text-blue
+
+  .field-name-field-image-single-public,
+  .field-name-field-file-single-public
+    float: right
     margin-bottom: 35px
-  .field-name-field-image-caption 
+  .field-name-field-image-caption
+    float: right
     font-size: 14px
     color: $grey-6
-    margin-top: 3px
 
-  .group-footer
-    .field-name-field-news-byline
-      margin-top: 10px
-      display: block
-      .label-inline
-        padding-right: 3px
-        font-weight: normal
-    .field-name-field-editorial-summary,
-    .field-name-field-body p
-      font-size: 18px
-      line-height: 1.3em
-      margin: 20px 0 0 0
-      &:first-child
-        margin-top: 0
-    .field-name-field-editorial-summary
-      margin: 20px 0
-      font-size: 25px
-      line-height: 32px
-      font-weight: bold
+  .group-left
+    margin-bottom: 24px
 
-.view-mode-media_contact 
+  .field-name-field-news-byline
+    margin-top: 24px
+    .label-inline
+      margin-right: 5px
+      font-weight: normal
+  .field-name-field-editorial-summary
+    font-size: 25px
+    line-height: 32px
+    font-weight: bold
+
+// Related links in sidebar
+.pane-node-field-link-unlimited
+  @extend %related-links
+  background-color: $grey-e
+  +background(linear-gradient(top, #e7e7e7, #f0f0f0))
+  h2.pane-title
+    +pane-title
+
+// PR CONTACT
+.view-mode-media_contact
   margin-top: 25px
   padding-top: 20px
   border-top: 1px $grey-b solid
   font-size: 15px
   padding-bottom: 20px
-  .field-name-field-title-position-unlimited  
+  .field-name-field-title-position-unlimited
     font-size: 14px
     margin-bottom: 12px
-    .label-inline 
+    .label-inline
       padding-right: 3px
       font-weight: normal
-  .group_name_wrapper 
+  .group_name_wrapper
     font-weight: bold
     font-size: 17px
-    div 
+    div
       display: inline-block
-    .field-items 
+    .field-items
       padding-right: 4px
   a
     color: $green
