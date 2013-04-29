@@ -42,23 +42,35 @@
 
 // PR CONTACT
 .view-mode-media_contact
-  margin-top: 25px
-  padding-top: 20px
-  border-top: 1px $grey-b solid
-  font-size: 15px
+  margin-top: 24px
+  padding-top: 24px
+  @extend %divider-top
   padding-bottom: 20px
-  .field-name-field-title-position-unlimited
-    font-size: 14px
-    margin-bottom: 12px
-    .label-inline
-      padding-right: 3px
-      font-weight: normal
-  .group_name_wrapper
-    font-weight: bold
-    font-size: 17px
-    div
-      display: inline-block
-    .field-items
-      padding-right: 4px
   a
-    color: $green
+    color: $text-green
+  // Name
+  .group-wrapper-name
+    // Group label
+    h2
+      color: $text-black
+      font-size: 14px
+      font-weight: normal
+
+    .field
+      margin-right: 5px
+    color: $black
+    font-size: 18px
+    font-weight: bold
+
+  // Email
+  .field-name-field-email
+    font-size: 14px
+    font-weight: bold
+  // Phone
+  .field-name-field-phone
+    color: $text-black
+    font-size: 13px
+    .label-inline
+      margin-right: 5px
+    a
+      color: $text-black

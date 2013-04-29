@@ -67,11 +67,15 @@ pre, code, kbd, tt {
   background: linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
 }
 
+.view-mode-media_contact {
+  border-top: 1px #cccccc solid;
+}
+
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video,
 .node-gsb-video, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content, .view-list-search .view-content, .pane-gsb-event-frontpage {
-  border: 2px solid white;
+  border: 2px white solid;
 }
 
 .region-sidebar-first, .view-gsb-event .view-filters {
@@ -4379,32 +4383,39 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .view-mode-media_contact {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px #bbbbbb solid;
-  font-size: 15px;
+  margin-top: 24px;
+  padding-top: 24px;
   padding-bottom: 20px;
 }
-.view-mode-media_contact .field-name-field-title-position-unlimited {
-  font-size: 14px;
-  margin-bottom: 12px;
+.view-mode-media_contact a {
+  color: #7d8401;
 }
-.view-mode-media_contact .field-name-field-title-position-unlimited .label-inline {
-  padding-right: 3px;
+.view-mode-media_contact .group-wrapper-name {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.view-mode-media_contact .group-wrapper-name h2 {
+  color: #231f20;
+  font-size: 14px;
   font-weight: normal;
 }
-.view-mode-media_contact .group_name_wrapper {
+.view-mode-media_contact .group-wrapper-name .field {
+  margin-right: 5px;
+}
+.view-mode-media_contact .field-name-field-email {
+  font-size: 14px;
   font-weight: bold;
-  font-size: 17px;
 }
-.view-mode-media_contact .group_name_wrapper div {
-  display: inline-block;
+.view-mode-media_contact .field-name-field-phone {
+  color: #231f20;
+  font-size: 13px;
 }
-.view-mode-media_contact .group_name_wrapper .field-items {
-  padding-right: 4px;
+.view-mode-media_contact .field-name-field-phone .label-inline {
+  margin-right: 5px;
 }
-.view-mode-media_contact a {
-  color: #7b8201;
+.view-mode-media_contact .field-name-field-phone a {
+  color: #231f20;
 }
 
 .view-club-filters.view-list-teaser {
