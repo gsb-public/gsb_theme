@@ -3,6 +3,7 @@
 
 table
   @extend %constrain-to-parent
+  border: 0 !important
 
 tbody
   border-top: 0
@@ -16,6 +17,9 @@ th
   color: $text-black
   font-weight: bold
 
+th[scope="row"]
+  font-weight: normal !important
+
 caption
   font-size: 20px
   line-height: 26px
@@ -26,10 +30,11 @@ td
   font-size: 14px
   line-height: 18px
   text-align: center
+  vertical-align: top
 
 tbody
   tr
-    border-top: 1px solid #e4e4e4
+    border-top: 1px solid #9ac7c0
 
   tr:nth-of-type(even)
     background-color: $white
