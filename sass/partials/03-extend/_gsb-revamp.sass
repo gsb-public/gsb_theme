@@ -59,6 +59,13 @@
   @extend %border
   margin: 1px
 
+%bg-border-and-box-shadow
+  background-color: $grey-c
+  +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
+  @extend %box-shadow
+  @extend %border
+  margin: 1px
+
 %bg-and-box-shadow
   background-color: $grey-c
   +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
