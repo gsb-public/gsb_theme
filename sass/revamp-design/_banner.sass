@@ -2,6 +2,32 @@
 // BANNERS
 ///////////
 
-// EVENT
+// GENERAL
+#banner
+  +background(linear-gradient(bottom, #272727, #1b1b1b))
+  overflow: hidden
+  .banner-title,
+  .banner-subtitle
+    color: $white
 
-// BI
+// EVENT LANDING
+.page-events
+  #banner
+    min-height: 170px
+    .section
+      background: image_url("bg-banner-events-landing.png") no-repeat 50% 0
+  .banner-title
+    font-size: 48px
+    line-height: 3.5em
+
+
+// BI LANDING
+.page-business-insights
+  #banner
+    height: 210px
+  .banner-title
+    font-size: 56px
+    font-weight: bold
+    line-height: 2.3em
+  .banner-subtitle
+    font-size: 42px

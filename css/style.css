@@ -3293,28 +3293,6 @@ p.acc-title + p {
   padding: 3px 20px;
 }
 
-.page-business-insights #banner {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #272727), color-stop(100%, #1b1b1b));
-  background: -webkit-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -moz-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -o-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -ms-linear-gradient(bottom, #272727, #1b1b1b);
-  background: linear-gradient(bottom, #272727, #1b1b1b);
-  height: 210px;
-}
-.page-business-insights .banner-title,
-.page-business-insights .banner-subtitle {
-  color: white;
-}
-.page-business-insights .banner-title {
-  font-size: 56px;
-  font-weight: bold;
-  line-height: 2.3em;
-}
-.page-business-insights .banner-subtitle {
-  font-size: 42px;
-}
-
 .page-business-insights .pane-fieldable-panels-pane {
   margin-bottom: 30px;
 }
@@ -4089,6 +4067,9 @@ p.acc-title + p {
   line-height: 28px;
 }
 
+.page-events #page-title {
+  display: none;
+}
 .page-events .view-content,
 .page-events .view-empty {
   display: inline-block;
@@ -5053,4 +5034,41 @@ fieldset.collapsible .fieldset-legend {
 .page-taxonomy-term .content .view-mode-teaser {
   border-bottom: 1px solid #e4e4e4;
   min-height: 260px;
+}
+
+#banner {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #272727), color-stop(100%, #1b1b1b));
+  background: -webkit-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -moz-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -o-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -ms-linear-gradient(bottom, #272727, #1b1b1b);
+  background: linear-gradient(bottom, #272727, #1b1b1b);
+  overflow: hidden;
+}
+#banner .banner-title,
+#banner .banner-subtitle {
+  color: white;
+}
+
+.page-events #banner {
+  min-height: 170px;
+}
+.page-events #banner .section {
+  background: url('../images/bg-banner-events-landing.png') no-repeat 50% 0;
+}
+.page-events .banner-title {
+  font-size: 48px;
+  line-height: 3.5em;
+}
+
+.page-business-insights #banner {
+  height: 210px;
+}
+.page-business-insights .banner-title {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 2.3em;
+}
+.page-business-insights .banner-subtitle {
+  font-size: 42px;
 }
