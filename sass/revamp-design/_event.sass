@@ -91,16 +91,52 @@
       line-height: 28px
 
 ///////////////////
-// Event landing
+// Events landing
 ///////////////////
 .page-events
   .view-content,
   .view-empty
     display: inline-block
+    margin-top: 80px
     width: 74.4%
   .view-empty
     padding-left: 2em
-    padding-top: 2em
+  // Filter styles
+  div.tabs
+    height: 0
+    text-align: right
+  ul.tabs
+    border: 0
+    display: block
+    height: 50px
+    margin: 0
+    padding: 0
+    li
+      border: 0
+      display: inline-block
+      margin: 0
+      overflow: hidden
+      padding: 0
+      +background(linear-gradient(bottom, #c50000, $red))
+      &:hover,
+      &.active
+        background: $grey-1
+        a
+          border: 0
+    li:first-of-type
+      a
+        background: image_url("icon-event-list.png") no-repeat 50% 50%
+    // Event link
+    li:last-of-type
+      a
+        background: image_url("icon-event-cal.png") no-repeat 50% 50%
+    a
+      border: 0
+      display: inline-block
+      margin: 0
+      height: 50px
+      width: 80px
+      text-indent: 130%
 
 ///////////////////
 // Event listing
@@ -177,3 +213,7 @@
     background: transparent url(../images/search-magnifying-glass.png) no-repeat center center
     text-indent: 1000px
     padding: 0
+
+// Remove table border on fullcalendar
+.fullcalendar tbody tr
+  border: 0

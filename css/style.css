@@ -4086,11 +4086,55 @@ p.acc-title + p {
 .page-events .view-content,
 .page-events .view-empty {
   display: inline-block;
+  margin-top: 80px;
   width: 74.4%;
 }
 .page-events .view-empty {
   padding-left: 2em;
-  padding-top: 2em;
+}
+.page-events div.tabs {
+  height: 0;
+  text-align: right;
+}
+.page-events ul.tabs {
+  border: 0;
+  display: block;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.page-events ul.tabs li {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c50000), color-stop(100%, #990000));
+  background: -webkit-linear-gradient(bottom, #c50000, #990000);
+  background: -moz-linear-gradient(bottom, #c50000, #990000);
+  background: -o-linear-gradient(bottom, #c50000, #990000);
+  background: -ms-linear-gradient(bottom, #c50000, #990000);
+  background: linear-gradient(bottom, #c50000, #990000);
+}
+.page-events ul.tabs li:hover, .page-events ul.tabs li.active {
+  background: #1c1c1c;
+}
+.page-events ul.tabs li:hover a, .page-events ul.tabs li.active a {
+  border: 0;
+}
+.page-events ul.tabs li:first-of-type a {
+  background: url('../images/icon-event-list.png') no-repeat 50% 50%;
+}
+.page-events ul.tabs li:last-of-type a {
+  background: url('../images/icon-event-cal.png') no-repeat 50% 50%;
+}
+.page-events ul.tabs a {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  height: 50px;
+  width: 80px;
+  text-indent: 130%;
 }
 
 .view-gsb-event .view-content .view-mode-teaser {
@@ -4169,6 +4213,10 @@ p.acc-title + p {
   background: transparent url(../images/search-magnifying-glass.png) no-repeat center center;
   text-indent: 1000px;
   padding: 0;
+}
+
+.fullcalendar tbody tr {
+  border: 0;
 }
 
 .node-case-study.view-mode-full,
