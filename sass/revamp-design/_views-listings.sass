@@ -14,11 +14,15 @@
   .view-content
     @extend %border-and-box-shadow
 
+///////////////////
 // Research Paper listing
+///////////////////
 .view-research-paper-filters
   border-top: 3px solid $black
 
-// Business Insights listing
+///////////////////
+// BI listing
+///////////////////
 .view-business-insights-by-tag
   border-top: 3px solid $black
   margin-top: 30px
@@ -26,55 +30,6 @@
   .node-business-insight.node-teaser,
   .node-event.node-teaser
     margin-bottom: 20px
-
-// Event listing
-.page-events
-  .view-content,
-  .view-empty
-    display: inline-block
-    width: 74.4%
-  .view-empty
-    padding-left: 2em
-    padding-top: 2em
-
-.view-gsb-event
-  .view-content
-
-    .view-mode-teaser
-      padding-top: 1em
-      padding-bottom: 1.5em
-      +clearfix
-
-    // Day separation
-    h5
-      display: block
-      border-top: 1px solid $black
-      padding-top: 1em
-
-    // Event separation
-    .views-row
-      border-bottom: 1px solid $grey-e
-    .views-row-last
-      border-bottom: 0
-  .view-filters
-    @extend %black-border-top
-    @extend %bg-grey-gradient
-    background-color: $grey-f
-    display: inline-block
-    vertical-align: top
-    width: 20%
-    padding: 24px
-    label
-      font-size: 16px
-      font-weight: normal
-  .views-exposed-widget
-    border-bottom: 1px solid $grey-c
-    padding: 0
-    margin-bottom: 20px
-  .views-widget label.option
-    font-size: 13px
-    font-weight: bold
-    text-transform: uppercase
 
 /////////////////////////////////
 // Listing with solr fields

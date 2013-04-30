@@ -44,6 +44,9 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-faculty-filters-faculty-list'
 
   );
+  if ($form['#id'] == 'views-exposed-form-gsb-event-panel-pane-2') {
+    $form['search']['#attributes']['placeholder'] = t('search within');
+  }
 
   if ($is_search_form = in_array($form['#id'], $search_form_ids)) {
     // Add placeholder text.
