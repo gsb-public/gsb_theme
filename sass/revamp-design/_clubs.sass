@@ -2,25 +2,21 @@
 // CLUBS
 //////////
 
-/////////////////////////////////
-// Club listing with ds teasers customizations
-/////////////////////////////////
-.view-club-filters.view-list-teaser
+// General
+.view-display-id-club_list.view-list-teaser,
+.view-display-id-club_list.view-list-search
   margin-bottom: 30px
+  .view-content
+    @extend %bg-border-and-box-shadow
   .views-row
     border-bottom: none
-  .more-link
-    padding-left: 25px
-    text-align: left
-    a
-      background: $text-green
-      color: $white
-      font-size: 14px
-      font-weight: bold
-      line-height: 2.2
-      padding: 8px 17px
-      text-transform: uppercase
+    padding: 0 24px
+    position: relative
+    top: 0
 
+////////////////
+// DS Listing
+////////////////
 .node-club.node-teaser
   position: relative
   top: 0
@@ -43,16 +39,9 @@
     margin-bottom: 24px
 
 /////////////////
-// Listing
+// Solr Listing
 //////////////////
-.view-display-id-club_list.view-list-teaser,
 .view-display-id-club_list.view-list-search
-  .view-content
-    @extend %bg-border-and-box-shadow
-  .views-row
-    padding: 0 24px
-    position: relative
-    top: 0
   // Title
   .views-field-label
     font-size: 18px

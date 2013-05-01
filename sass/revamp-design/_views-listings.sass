@@ -4,15 +4,11 @@
 /////////////////////
 
 // Views listing styling no background
-.view-list-teaser
+.view-list-teaser,
+.view-list-search
   .views-row
     border-bottom: 1px solid #e4e4e4
     min-height: 260px
-
-// Views listing styling background
-.view-club-filters.view-list-teaser
-  .view-content
-    @extend %bg-border-and-box-shadow
 
 ///////////////////
 // Research Paper listing
@@ -35,7 +31,12 @@
 // Listing with solr fields
 /////////////////////////////////
 .view-list-search
+  // Date
+  .views-field-sm-field-date-published-format-month-day
   // Title
   .views-field-label
   // Body
-  .views-field-ts-field-body
+  .views-field-ts-field-body,
+  .views-field-sm-field-body-apachesolr
+  // Tags
+  .views-field-sm-field-tags-apachesolr

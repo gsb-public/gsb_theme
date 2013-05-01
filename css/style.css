@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content, .pane-gsb-event-frontpage {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-event-frontpage {
   border: 2px white solid;
 }
 
@@ -93,7 +93,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .pane-gsb-event-frontpage, .pane-media-toolkit {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -102,14 +102,14 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser {
   margin: 1px;
 }
 
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .view-club-filters.view-list-teaser .view-content {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -4716,24 +4716,16 @@ fieldset.collapsible .fieldset-legend {
   border-top: 1px solid #e4e4e4;
 }
 
-.view-club-filters.view-list-teaser {
+.view-display-id-club_list.view-list-teaser,
+.view-display-id-club_list.view-list-search {
   margin-bottom: 30px;
 }
-.view-club-filters.view-list-teaser .views-row {
+.view-display-id-club_list.view-list-teaser .views-row,
+.view-display-id-club_list.view-list-search .views-row {
   border-bottom: none;
-}
-.view-club-filters.view-list-teaser .more-link {
-  padding-left: 25px;
-  text-align: left;
-}
-.view-club-filters.view-list-teaser .more-link a {
-  background: #7d8401;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 2.2;
-  padding: 8px 17px;
-  text-transform: uppercase;
+  padding: 0 24px;
+  position: relative;
+  top: 0;
 }
 
 .node-club.node-teaser {
@@ -4763,13 +4755,6 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 24px;
 }
 
-.view-display-id-club_list.view-list-teaser .views-row,
-.view-display-id-club_list.view-list-search .views-row {
-  padding: 0 24px;
-  position: relative;
-  top: 0;
-}
-.view-display-id-club_list.view-list-teaser .views-field-label,
 .view-display-id-club_list.view-list-search .views-field-label {
   font-size: 18px;
   font-weight: bold;
@@ -4777,22 +4762,18 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 18px;
   padding-top: 20px;
 }
-.view-display-id-club_list.view-list-teaser .views-field-label:before,
 .view-display-id-club_list.view-list-search .views-field-label:before {
   content: url('../images/tab-club.png');
   position: absolute;
   top: -8px;
 }
-.view-display-id-club_list.view-list-teaser .views-field-label a,
 .view-display-id-club_list.view-list-search .views-field-label a {
   color: #7d8401;
 }
-.view-display-id-club_list.view-list-teaser .views-field-label a:after,
 .view-display-id-club_list.view-list-search .views-field-label a:after {
   content: url('../images/external_link.png');
   margin-left: 5px;
 }
-.view-display-id-club_list.view-list-teaser .views-field-ts-field-body,
 .view-display-id-club_list.view-list-search .views-field-ts-field-body {
   font-size: 18px;
   line-height: 24px;
@@ -5043,7 +5024,8 @@ fieldset.collapsible .fieldset-legend {
   padding-bottom: 0;
 }
 
-.view-list-teaser .views-row {
+.view-list-teaser .views-row,
+.view-list-search .views-row {
   border-bottom: 1px solid #e4e4e4;
   min-height: 260px;
 }
