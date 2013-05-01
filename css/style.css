@@ -78,6 +78,10 @@ pre, code, kbd, tt {
   border: 2px white solid;
 }
 
+.pane-media-toolkit {
+  border: 1px solid #e4e4e4;
+}
+
 .region-sidebar-first, .view-gsb-event .view-filters {
   border-top: 10px black solid;
 }
@@ -1079,7 +1083,8 @@ del {
   overflow: hidden;
 }
 
-.inner-sidebar-wrapper .panels-ipe-portlet-content {
+.inner-sidebar-wrapper .panels-ipe-portlet-content,
+.inner-sidebar-wrapper .panel-pane {
   margin-bottom: 28px;
 }
 
@@ -2350,7 +2355,7 @@ input.footer__signup__submit:hover {
   color: #990000;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .pane-gsb-event-upcoming-events .view-gsb-event .view-content .views-row {
   border: 0;
@@ -4661,6 +4666,41 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-mode-media_contact .field-name-field-phone a {
   color: #231f20;
+}
+
+.pane-media-toolkit {
+  background: #f2f2f2;
+  padding: 0 24px 24px 24px;
+}
+.pane-media-toolkit h2.pane-title {
+  color: #656162;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 24px;
+  padding-top: 5px;
+  position: absolute;
+  color: #990000;
+}
+.pane-media-toolkit h2.pane-title:after {
+  color: #c2b7a1;
+  content: "\f100";
+  display: block;
+  font-family: "arrow-double";
+  font-size: 17px;
+  position: relative;
+  top: -40px;
+  left: 85px;
+}
+.pane-media-toolkit .pane-content {
+  margin-top: 60px;
+}
+.pane-media-toolkit .pane-content ul {
+  margin: 0;
+  padding: 0;
+}
+.pane-media-toolkit .pane-content li {
+  line-height: 30px;
+  border-top: 1px solid #e4e4e4;
 }
 
 .view-club-filters.view-list-teaser {
