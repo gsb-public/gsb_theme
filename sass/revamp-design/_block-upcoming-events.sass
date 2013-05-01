@@ -35,8 +35,36 @@
 
 //  GSB Experience
 .pane-gsb-event-upcoming-events
-
+  @extend %bg-border-and-box-shadow
+  padding: 20px 24px 24px 24px
   h2.pane-title
     color: $red
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 20px
+  .view-gsb-event .view-content .views-row
+    border: 0
+    padding: 14px 0
+    position: relative
+    top: 0
+  .view-mode-event_upcoming
+    &:before
+      content: image_url("tab-club.png")
+      display: block
+      left: -24px
+      position: absolute
+      top: -8px
+  .field-name-field-event-date,
+  .field-name-field-address
+    color: $text-grey-light
+    font-size: 14px
+    margin-bottom: 12px
+  .field-name-title h2
+    font-size: 20px
+    line-height: 26px
+    a
+      color: $text-green
+  .field-name-field-editorial-summary
+    color: $text-black
     font-size: 14px
     line-height: 18px
