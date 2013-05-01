@@ -4827,7 +4827,8 @@ fieldset.collapsible .fieldset-legend {
 .view-mode-teaser .group-tags-wrapper h3 {
   display: none;
 }
-.view-mode-teaser .field-name-field-editorial-summary {
+.view-mode-teaser .field-name-field-editorial-summary,
+.view-mode-teaser .field-name-field-body {
   font-size: 18px;
   margin: 12px 0;
   max-width: 600px;
@@ -5024,18 +5025,17 @@ fieldset.collapsible .fieldset-legend {
   padding-bottom: 0;
 }
 
+.view-list-teaser,
+.view-list-search {
+  border-top: 3px solid black;
+}
 .view-list-teaser .views-row,
 .view-list-search .views-row {
   border-bottom: 1px solid #e4e4e4;
   min-height: 260px;
 }
 
-.view-research-paper-filters {
-  border-top: 3px solid black;
-}
-
 .view-business-insights-by-tag {
-  border-top: 3px solid black;
   margin-top: 30px;
   overflow: hidden;
   *zoom: 1;
@@ -5043,6 +5043,69 @@ fieldset.collapsible .fieldset-legend {
 .view-business-insights-by-tag .node-business-insight.node-teaser,
 .view-business-insights-by-tag .node-event.node-teaser {
   margin-bottom: 20px;
+}
+
+.view-list-search .views-field-ss-field-image-apachesolr {
+  float: right;
+  vertical-align: top;
+}
+.view-list-search .views-field-sm-field-date-published-format-month-day,
+.view-list-search .views-field-im-field-date-published-format-year {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+.view-list-search .views-field-sm-field-number-apachesolr {
+  color: #231f20;
+  display: inline-block;
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 18px;
+}
+.view-list-search .views-field-sm-field-number-apachesolr:before {
+  content: "| ";
+  margin-left: 8px;
+}
+.view-list-search .views-field-label {
+  color: #231f20;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+.view-list-search .views-field-label a {
+  color: #990000;
+}
+.view-list-search .views-field-sm-field-body-apachesolr,
+.view-list-search .views-field-ss-field-editorial-summary {
+  font-size: 18px;
+  margin: 12px 0;
+  max-width: 600px;
+}
+.view-list-search .views-label-sm-field-tags-apachesolr {
+  display: none;
+}
+.view-list-search .views-field-sm-field-authors-apachesolr,
+.view-list-search .views-field-sm-field-authors-custom-id-apachesolr,
+.view-list-search .views-field-sm-field-publisher-apachesolr {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.view-list-search .views-field-sm-field-authors-apachesolr .views-label,
+.view-list-search .views-field-sm-field-authors-custom-id-apachesolr .views-label,
+.view-list-search .views-field-sm-field-publisher-apachesolr .views-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.view-list-search .views-field-sm-field-authors-apachesolr a,
+.view-list-search .views-field-sm-field-authors-custom-id-apachesolr a,
+.view-list-search .views-field-sm-field-publisher-apachesolr a {
+  color: #990000;
+}
+.view-list-search .field-name-field-first-name {
+  margin-right: 5px;
 }
 
 .view-mode-business_insight {

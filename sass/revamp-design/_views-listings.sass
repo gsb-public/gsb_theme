@@ -6,21 +6,15 @@
 // Views listing styling no background
 .view-list-teaser,
 .view-list-search
+  border-top: 3px solid $black
   .views-row
     border-bottom: 1px solid #e4e4e4
     min-height: 260px
 
 ///////////////////
-// Research Paper listing
-///////////////////
-.view-research-paper-filters
-  border-top: 3px solid $black
-
-///////////////////
 // BI listing
 ///////////////////
 .view-business-insights-by-tag
-  border-top: 3px solid $black
   margin-top: 30px
   +clearfix
   .node-business-insight.node-teaser,
@@ -31,12 +25,56 @@
 // Listing with solr fields
 /////////////////////////////////
 .view-list-search
-  // Date
-  .views-field-sm-field-date-published-format-month-day
+  // Image
+  .views-field-ss-field-image-apachesolr
+    float: right
+    vertical-align: top
+  // Date and case number
+  .views-field-sm-field-date-published-format-month-day,
+  .views-field-im-field-date-published-format-year
+    color: $grey-6
+    font-size: 14px
+    margin-bottom: 1em
+  // Case number
+  .views-field-sm-field-number-apachesolr
+    color: $text-grey
+    display: inline-block
+    font-size: 26px
+    line-height: 32px
+    margin-bottom: 18px
+    &:before
+      content: "| "
+      margin-left: 8px
   // Title
   .views-field-label
-  // Body
-  .views-field-ts-field-body,
-  .views-field-sm-field-body-apachesolr
-  // Tags
-  .views-field-sm-field-tags-apachesolr
+    color: $text-black
+    font-size: 26px
+    font-weight: bold
+    line-height: 30px
+    margin-bottom: 20px
+    text-transform: none
+    a
+      color: $red
+  // Body or editorial summary
+  .views-field-sm-field-body-apachesolr,
+  .views-field-ss-field-editorial-summary
+    font-size: 18px
+    margin: 12px 0
+    max-width: 600px
+  // Tags label
+  .views-label-sm-field-tags-apachesolr
+    display: none
+  // Authors and publisher
+  .views-field-sm-field-authors-apachesolr,
+  .views-field-sm-field-authors-custom-id-apachesolr,
+  .views-field-sm-field-publisher-apachesolr
+    color: $black
+    font-size: 18px
+    font-weight: bold
+    .views-label
+      font-weight: bold
+      margin-right: 5px
+    a
+      color: $red
+  .field-name-field-first-name
+    margin-right: 5px
