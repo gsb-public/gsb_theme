@@ -42,6 +42,10 @@
 %border
   border: 2px $white solid
 
+// Grey border
+%border-grey
+  border: 1px solid #e4e4e4
+
 // Black top border
 %black-border-top
   border-top: 10px $black solid
@@ -53,18 +57,14 @@
   +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
 
 %border-and-box-shadow
-  background-color: $grey-c
-  +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
   @extend %box-shadow
   @extend %border
   margin: 1px
 
 %bg-border-and-box-shadow
+  @extend %border-and-box-shadow
   background-color: $grey-c
   +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
-  @extend %box-shadow
-  @extend %border
-  margin: 1px
 
 %bg-and-box-shadow
   background-color: $grey-c
