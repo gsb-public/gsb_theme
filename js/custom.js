@@ -183,6 +183,10 @@
         /* change map image on region hover */
         $('.bi-map-area').find('area').mouseover(function() {change_map($(this).attr('alt'));})
           .mouseout(function() {revert_map();});
+        $('.bi-map')
+          .mouseleave(function() {
+            biMaptext.hide();
+          });
       }
 
       /* change map background on hover */
@@ -194,7 +198,6 @@
       /* return default map background */
       function revert_map(t) {
         biMapOverlay.removeClass();
-        biMaptext.text();
       }
     }
   }
