@@ -17,6 +17,7 @@
 
 .banner-subtitle
   font-size: 42px
+  line-height: 1em
 
 .banner-content
   margin: 0 auto
@@ -24,6 +25,9 @@
   padding-top: 30px
   +breakpoint($bp-wide-min)
     min-height: 170px
+
+#block-gsb-public-custom-blocks-gpcb-banner-title
+  padding-bottom: 20px
 
 // BREADCRUMBS
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
@@ -42,8 +46,9 @@
 // BI LANDING
 .page-business-insights
   #banner
-    height: 210px
+    min-height: 210px
+  .banner-content
+    padding: 40px 0
   .banner-title
     font-size: 56px
     font-weight: bold
-    line-height: 2.3em
