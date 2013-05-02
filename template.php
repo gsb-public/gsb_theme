@@ -20,6 +20,22 @@ function gsb_theme_date_display_range($variables) {
 }
 
 /**
+ * Overrides theme_breadcrumb().
+ */
+function gsb_theme_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+
+  if (!empty($breadcrumb)) {
+    // Provide a navigational heading to give context for breadcrumb links to
+    // screen-reader users. Make the heading invisible with .element-invisible.
+    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+
+    $output .= '<div class="breadcrumb">' . implode(' &rsaquo; ', $breadcrumb) . '</div>';
+    return $output;
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter() for views_exposed_form().
  */
 function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
