@@ -82,14 +82,15 @@ fieldset.collapsible .fieldset-legend
   padding: 24px
 
 .gsb-views-exposed-filter
-  padding-left: 24px
   legend
+    margin-left: 4em
     padding: 0
   fieldset
     border: 0
+    margin: 0
     padding: 0
   .fieldset-wrapper
-    padding: 24px
+    margin-left: 22.5%
 
   .form-item
     font-weight: bold
@@ -107,4 +108,17 @@ fieldset.collapsible .fieldset-legend
     font-weight: bold
     font-size: 20px
     line-height: 1em
-    color: $text-grey
+    color: $red
+
+  .views-exposed-widget
+    display: inline-block
+    float: left
+    width: 32.9%
+    vertical-align: top
+    border-right: 1px solid #e4e4e4
+    border-left: 1px solid $white
+    &:first-of-type
+      border-left: 0
+    &:last-of-type,
+    &:nth-of-type(3n)
+      border-right: 0
