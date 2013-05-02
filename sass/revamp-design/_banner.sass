@@ -1,29 +1,43 @@
-///////////
-// BANNERS
-///////////
+/////////////////
+// BANNER REGION
+/////////////////
 
 // GENERAL
 #banner
   +background(linear-gradient(bottom, #272727, #1b1b1b))
   overflow: hidden
-  .banner-title,
-  .banner-subtitle
-    color: $white
+
+.banner-title,
+.banner-subtitle
+  color: $white
+
+.banner-title
+  font-size: 48px
+  line-height: 1em
+
+.banner-subtitle
+  font-size: 42px
 
 .banner-content
+  margin: 0 auto
+  max-width: $max-width
   padding-top: 30px
-  min-height: 170px
+  +breakpoint($bp-wide-min)
+    min-height: 170px
+
+// BREADCRUMBS
+#block-gsb-public-custom-blocks-gpcb-breadcrumbs
+  color: $grey-6
+  font-size: 14px
+  margin-bottom: 30px
+  a
+    color: $white
 
 // EVENT LANDING
 .page-events
   #banner
-    min-height: 170px
     .section
       background: image_url("bg-banner-events-landing.png") no-repeat 50% 0
-  .banner-title
-    font-size: 48px
-    line-height: 1em
-
 
 // BI LANDING
 .page-business-insights
@@ -33,13 +47,3 @@
     font-size: 56px
     font-weight: bold
     line-height: 2.3em
-  .banner-subtitle
-    font-size: 42px
-
-// BREADCRUMBS
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs
-  color: $grey-6
-  font-size: 14px
-  margin-bottom: 30px
-  a
-    color: $white
