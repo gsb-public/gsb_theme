@@ -2,19 +2,18 @@
 // A week in the life page
 /////////////////
 
-
 .group_witl_photo_info,
 .group_witl_group_days
   +clearfix
-  
+
 .group_witl_photo_info
   margin-bottom: 2em
-  border: 1px solid #e6e5e5
-  
+  border: 1px solid $grey-e
+
   .field-type-datetime
     margin: 0 !important
-    
-  h2 
+
+  h2
     padding: 30px 0 16px
 
 .group_witl_photo_wrap_mba
@@ -23,20 +22,19 @@
     position: absolute
     bottom: 0
     right: 0
-    background-color: #887e6e
-    color: #fff
+    background-color: $grey-dark
+    color: $white
     text-transform: uppercase
     font-size: 14px
     padding: 10px 27px 3px
     &:before
       content: 'MBA '
 
-
 .field-name-field-witl-under-photo-facts
-  +background(linear-gradient(top, #1b1b1b, #272727)) 
-  color: #fff
+  +background(linear-gradient(top, $grey-1, #272727))
+  color: $white
   padding: 20px
-  
+
   .field-item
     font-size: .8em
     line-height: 1.25
@@ -50,13 +48,12 @@
       margin-right: 0
       position: absolute
       margin-left: -1em
-            
 
 .node-type-week-in-the-life
-  h1.title 
-    display: none 
+  h1.title
+    display: none
     overflow: hidden
-  
+
 .node-week-in-the-life
   .field-name-title
     +background(linear-gradient(top, #fbfaf8, #f3f2f2))
@@ -65,66 +62,61 @@
   .field-type-text-long,
   .field-type-datetime
     padding: 0 20px
-    color: #231f20
+    color: $text-black
     margin: 10px 0
 
   .field-type-text-long
     //font-size: 14px
- 
 
   .field-type-datetime
     font-weight: bold
-    font-size: 18px  
+    font-size: 18px
     margin-top: 0
 
   .group_witl_photo_wrap
     float: left
     margin-right: 3.5%
     width: 31%
-    img 
+    img
       display: block
 
-  
   .witl-days
     float: left
     width: 31%
     margin-right: 3.5%
     border: 1px solid #e5e5e5
-    background-color: #fff
-    
+    background-color: $white
+
     &:last-of-type
       margin-right: 0
-      
+
     .field-type-list-text
       .field-item
-        padding: .8em 1em .6em
-    
+        padding: 0.8em 1em 0.6em
+
     .field-collection-view
       padding: 0
       margin: 0
       border: 0 none
-      
-    .field-collection-container 
+
+    .field-collection-container
       border: 0 none
       margin: 0
-      
-    
+
   .field-type-list-text
     background-color: #607c8c
-    color: #fff
+    color: $white
     font-weight: bold
     text-transform: uppercase
-    
-.field-name-field-witl-facts 
+
+.field-name-field-witl-facts
   .field-item
     &:before
       content: '•'
-      color: #2d6280
+      color: $text-blue
       margin-right: 5px
-   
-  
-  
-.field-name-field-witl-facts-title 
+
+.field-name-field-witl-facts-title
   margin-bottom: 7px
   .field-item
     font-weight: bold
@@ -134,5 +126,3 @@
     &:before
       content: 'Post Grad Goals:'
       font-weight: bold
-
-  
