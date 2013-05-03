@@ -40,6 +40,12 @@
   overflow: hidden
   margin: 0px 0 10px
   border-top: 8px #100f0f solid
+  &.node-event
+    h4 a
+      padding-left: 30px
+      background: url('../images/icon-event-cal.png') no-repeat left top
+      &:hover
+        background: url('../images/icon-event.png') no-repeat left top
   img
     opacity: .55
   &:hover
@@ -62,7 +68,7 @@
   .field-name-title a
     display: block
     margin-top: 6px
-    color: #aaa
+    color: lighten(#aaa, 10%)
     font-size: 25px
     font-weight: bold
     line-height: 28px
