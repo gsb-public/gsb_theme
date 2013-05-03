@@ -5279,12 +5279,6 @@ fieldset.collapsible .fieldset-legend {
 }
 
 #banner {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #272727), color-stop(100%, #1b1b1b));
-  background: -webkit-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -moz-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -o-linear-gradient(bottom, #272727, #1b1b1b);
-  background: -ms-linear-gradient(bottom, #272727, #1b1b1b);
-  background: linear-gradient(bottom, #272727, #1b1b1b);
   overflow: hidden;
 }
 
@@ -5306,12 +5300,7 @@ fieldset.collapsible .fieldset-legend {
 .banner-content {
   margin: 0 auto;
   max-width: 1170px;
-  padding-top: 30px;
-}
-@media (min-width: 48.0625em) {
-  .banner-content {
-    min-height: 170px;
-  }
+  padding: 30px 0;
 }
 
 #block-gsb-public-custom-blocks-gpcb-banner-title {
@@ -5327,16 +5316,20 @@ fieldset.collapsible .fieldset-legend {
   color: white;
 }
 
+.page-events #banner,
+.page-business-insights #banner {
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #272727), color-stop(100%, #1b1b1b));
+  background: -webkit-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -moz-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -o-linear-gradient(bottom, #272727, #1b1b1b);
+  background: -ms-linear-gradient(bottom, #272727, #1b1b1b);
+  background: linear-gradient(bottom, #272727, #1b1b1b);
+}
+
 .page-events #banner .section {
   background: url('../images/bg-banner-events-landing.png') no-repeat 50% 0;
 }
 
-.page-business-insights #banner {
-  min-height: 210px;
-}
-.page-business-insights .banner-content {
-  padding: 40px 0;
-}
 .page-business-insights .banner-title {
   font-size: 56px;
   font-weight: bold;

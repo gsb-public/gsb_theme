@@ -4,7 +4,6 @@
 
 // GENERAL
 #banner
-  +background(linear-gradient(bottom, #272727, #1b1b1b))
   overflow: hidden
 
 .banner-title,
@@ -22,9 +21,7 @@
 .banner-content
   margin: 0 auto
   max-width: $max-width
-  padding-top: 30px
-  +breakpoint($bp-wide-min)
-    min-height: 170px
+  padding: 30px 0
 
 #block-gsb-public-custom-blocks-gpcb-banner-title
   padding-bottom: 20px
@@ -37,18 +34,19 @@
   a
     color: $white
 
+// BLACK BACKGROUND
+.page-events,
+.page-business-insights
+  #banner
+    +background(linear-gradient(bottom, #272727, #1b1b1b))
+
 // EVENT LANDING
 .page-events
-  #banner
-    .section
-      background: image_url("bg-banner-events-landing.png") no-repeat 50% 0
+  #banner .section
+    background: image_url("bg-banner-events-landing.png") no-repeat 50% 0
 
 // BI LANDING
 .page-business-insights
-  #banner
-    min-height: 210px
-  .banner-content
-    padding: 40px 0
   .banner-title
     font-size: 56px
     font-weight: bold
