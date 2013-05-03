@@ -141,6 +141,14 @@
 
     </div> <!-- /#content-wrapper -->
 
+    <?php if ($page['content_bottom']): ?>
+      <div id="bottom" class="clearfix"><div class="section">
+        <div class="bottom-content">
+          <?php print render($page['content_bottom']); ?>
+        </div> <!-- /.bottom-content -->
+      </div></div> <!-- /.section, /#bottom -->
+    <?php endif; ?>
+
     <div id="footer-wrapper"><div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
       <div class="gsb-copyright">Copyright © Stanford Graduate School of Business</div>
