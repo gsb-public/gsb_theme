@@ -41,13 +41,46 @@
   float: left
   font-size: 13px
 
+// UPCOMING EVENTS
+.pane-gsb-event-frontpage
+  padding: 26px
+  @extend %box-shadow
+  background: image_url("bg-homepage-events.png") no-repeat
+  height: 402px
+  .view-gsb-event .view-content .views-row
+    border-bottom: 0
+  h2.pane-title
+    color: $red
+    font-size: 16px
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 28px
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      margin-bottom: 10px
+      margin-left: 0
+  .views-field-field-event-date,
+  .views-field-title,
+  .views-field-field-address
+    color: $text-black
+    font-size: 16px
+  .views-field-title a
+    border: 0
+    color: $black
+    font-weight: bold
+    &:hover
+      border: 0
+  .views-field-field-event-date
+    color: $grey-6
 
 // FOOTER
 .front-panel-footer-row
   background-color: $white
   margin-top: 30px
   padding-top: 30px
-
 
 // FOOTER TITLES
 .pane-business-insights-by-tag-panel-pane-1 h2.pane-title,
@@ -59,37 +92,27 @@
   padding-bottom: 12px
 
 // LATEST ARTICLES
-.pane-business-insights-by-tag-panel-pane-1
-  h2.pane-title
-    font-family: $font-headline
-    font-size: 20px
-    font-weight: bold
-  .homepage-latest-articles
-    margin-top: 0
-    border-top: 0
+.pane-business-insights-by-tag-panel-pane-1 h2.pane-title
+  font-family: $font-headline
+  font-size: 20px
+  font-weight: bold
 
-// ALUMNI NEWS
-.front-panel-footer-two
-  h2
-    margin: 0
-    margin-bottom: 10px
-    padding-bottom: 10px
-    border-bottom: 1px solid #cdcdcd
-    color: $red
-    font-weight: bold
-    font-size: 20px
-  p, .field-content
-    font-size: 15px
-  .views-field-title a
-    color: $black
+.homepage-latest-articles
+  margin-top: 0
+  border-top: 0
+  .views-row
+    max-width: 270px
+    margin-bottom: 27px
+  .views-row-odd
+    float: left
+  .views-row-even
+    float: right
+  // Title
+  .views-field-title
     font-size: 16px
     font-weight: bold
-  .views-field-field-date-published .date-display-single
-    color: #666
-    font-size: 13px
-  .views-row
-    float: left
-    clear: none
-    width: 47%
-  .views-row-1, .views-row-3
-    margin-right: 6%
+  // Date
+  .views-field-field-date-published
+    color: $grey-6
+    font-size: 16px
+
