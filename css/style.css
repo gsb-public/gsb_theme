@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-event-frontpage {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser {
   border: 2px white solid;
 }
 
@@ -2362,6 +2362,10 @@ input.footer__signup__submit:hover {
 .pane-gsb-event-frontpage {
   padding: 26px;
   background: url('../images/bg-homepage-events.png') no-repeat;
+  height: 402px;
+}
+.pane-gsb-event-frontpage .view-gsb-event .view-content .views-row {
+  border-bottom: 0;
 }
 .pane-gsb-event-frontpage h2.pane-title {
   color: #990000;
@@ -2382,7 +2386,7 @@ input.footer__signup__submit:hover {
 .pane-gsb-event-frontpage .views-field-field-event-date,
 .pane-gsb-event-frontpage .views-field-title,
 .pane-gsb-event-frontpage .views-field-field-address {
-  color: black;
+  color: #231f20;
   font-size: 16px;
 }
 .pane-gsb-event-frontpage .views-field-title a {
@@ -2392,6 +2396,9 @@ input.footer__signup__submit:hover {
 }
 .pane-gsb-event-frontpage .views-field-title a:hover {
   border: 0;
+}
+.pane-gsb-event-frontpage .views-field-field-event-date {
+  color: #666666;
 }
 
 .pane-gsb-event-upcoming-events {

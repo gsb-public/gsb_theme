@@ -5,9 +5,11 @@
  // Homepage
 .pane-gsb-event-frontpage
   padding: 26px
-  @extend %border
   @extend %box-shadow
   background: image_url("bg-homepage-events.png") no-repeat
+  height: 402px
+  .view-gsb-event .view-content .views-row
+    border-bottom: 0
   h2.pane-title
     color: $red
     font-size: 16px
@@ -24,7 +26,7 @@
   .views-field-field-event-date,
   .views-field-title,
   .views-field-field-address
-    color: $black
+    color: $text-black
     font-size: 16px
   .views-field-title a
     border: 0
@@ -32,6 +34,8 @@
     font-weight: bold
     &:hover
       border: 0
+  .views-field-field-event-date
+    color: $grey-6
 
 //  GSB Experience
 .pane-gsb-event-upcoming-events
