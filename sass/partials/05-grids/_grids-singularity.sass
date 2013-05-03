@@ -69,8 +69,7 @@
 // Front page panel layout
 .panel-display.gsb-front-page
   .front-panel-header-row,
-  .front-panel-feature-row,
-  .front-panel-footer-row
+  .front-panel-feature-row
     +clearfix
   .front-slider-pane
     +grid-span(1, 1, $columns: $front-main)
@@ -78,14 +77,20 @@
   .front-sidebar-pane
     +grid-span(1, 2, $columns: $front-main)
 
-  .front-panel-feature-one,
-  .front-panel-footer-one
+  .front-panel-feature-one
     +grid-span(1, 1, $columns: $front-main-inner)
-  .front-panel-feature-two,
-  .front-panel-footer-two
+  .front-panel-feature-two
     +grid-span(1, 2, $columns: $front-main-inner)
-  .front-panel-feature-three,
-  .front-panel-footer-three
+  .front-panel-feature-three
+    +grid-span(1, 3, $columns: $front-main-inner)
+
+#bottom
+  .block-views
+    +grid-span(1, 1, $columns: $front-main-inner)
+  .block-block:nth-of-type(1n)
+    +grid-span(1, 2, $columns: $front-main-inner)
+    clear: none
+  .block-block:nth-of-type(2n)
     +grid-span(1, 3, $columns: $front-main-inner)
 
 // Business Insights landing layout

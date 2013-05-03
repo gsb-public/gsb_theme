@@ -2,6 +2,8 @@
 // FRONT PAGE
 ///////////////
 
+.gsb-front-page
+  margin-bottom: 30px
 
 // TWITTER FEED
 .twitter-feed
@@ -58,28 +60,29 @@
   .views-field-field-event-date
     color: $grey-6
 
-// FOOTER
-.front-panel-footer-row
+// BOTTOM
+#bottom
+  +clearfix
   background-color: $white
-  margin-top: 30px
   padding-top: 30px
+  .block-block
+    vertical-align: top
+    p
+      font-size: 16px
 
-// FOOTER TITLES
-.pane-business-insights-by-tag-panel-pane-1 h2.pane-title,
-.front-panel-footer-row .pane-bundle-text .field-name-field-title
+// BOTTOM TITLES
+h2
   border-bottom: 1px solid #e5e5e5
   color: $text-black
   line-height: 1em
   margin-bottom: 12px
   padding-bottom: 12px
-
-// LATEST ARTICLES
-.pane-business-insights-by-tag-panel-pane-1 h2.pane-title
   font-family: $font-headline
   font-size: 20px
   font-weight: bold
 
-.homepage-latest-articles
+// LATEST ARTICLES
+.front-latest-articles
   margin-top: 0
   border-top: 0
   +clearfix

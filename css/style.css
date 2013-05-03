@@ -1131,8 +1131,7 @@ del {
 }
 
 .panel-display.gsb-front-page .front-panel-header-row,
-.panel-display.gsb-front-page .front-panel-feature-row,
-.panel-display.gsb-front-page .front-panel-footer-row {
+.panel-display.gsb-front-page .front-panel-feature-row {
   overflow: hidden;
   *zoom: 1;
 }
@@ -1168,8 +1167,7 @@ del {
   *zoom: 1;
   margin-left: 76.92308%;
 }
-.panel-display.gsb-front-page .front-panel-feature-one,
-.panel-display.gsb-front-page .front-panel-footer-one {
+.panel-display.gsb-front-page .front-panel-feature-one {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1185,8 +1183,7 @@ del {
   margin-left: 0;
   margin-left: 0%;
 }
-.panel-display.gsb-front-page .front-panel-feature-two,
-.panel-display.gsb-front-page .front-panel-footer-two {
+.panel-display.gsb-front-page .front-panel-feature-two {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1201,8 +1198,55 @@ del {
   *zoom: 1;
   margin-left: 51.28205%;
 }
-.panel-display.gsb-front-page .front-panel-feature-three,
-.panel-display.gsb-front-page .front-panel-footer-three {
+.panel-display.gsb-front-page .front-panel-feature-three {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 76.92308%;
+}
+
+#bottom .block-views {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 48.71795%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 0;
+  margin-left: 0%;
+}
+#bottom .block-block:nth-of-type(1n) {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 23.07692%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 51.28205%;
+  clear: none;
+}
+#bottom .block-block:nth-of-type(2n) {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1555,6 +1599,14 @@ div.label-inline {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 12px;
+  max-width: 1170px;
+}
+
+#bottom {
+  background: white;
+}
+#bottom .bottom-content {
+  margin: 0 auto;
   max-width: 1170px;
 }
 
@@ -3923,6 +3975,10 @@ p.acc-title + p {
   background: url('../images/icon-linkedin-hover.png') no-repeat;
 }
 
+.gsb-front-page {
+  margin-bottom: 30px;
+}
+
 .twitter-feed {
   padding: 24px;
 }
@@ -3988,45 +4044,48 @@ p.acc-title + p {
   color: #666666;
 }
 
-.front-panel-footer-row {
+#bottom {
+  overflow: hidden;
+  *zoom: 1;
   background-color: white;
-  margin-top: 30px;
   padding-top: 30px;
 }
+#bottom .block-block {
+  vertical-align: top;
+}
+#bottom .block-block p {
+  font-size: 16px;
+}
 
-.pane-business-insights-by-tag-panel-pane-1 h2.pane-title,
-.front-panel-footer-row .pane-bundle-text .field-name-field-title {
+h2 {
   border-bottom: 1px solid #e5e5e5;
   color: #231f20;
   line-height: 1em;
   margin-bottom: 12px;
   padding-bottom: 12px;
-}
-
-.pane-business-insights-by-tag-panel-pane-1 h2.pane-title {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
 
-.homepage-latest-articles {
+.front-latest-articles {
   margin-top: 0;
   border-top: 0;
   overflow: hidden;
   *zoom: 1;
 }
-.homepage-latest-articles .views-row {
+.front-latest-articles .views-row {
   display: inline;
   float: left;
   max-width: 270px;
   margin-bottom: 27px;
   margin-right: 15px;
 }
-.homepage-latest-articles .views-field-title {
+.front-latest-articles .views-field-title {
   font-size: 16px;
   font-weight: bold;
 }
-.homepage-latest-articles .views-field-field-date-published {
+.front-latest-articles .views-field-field-date-published {
   color: #666666;
   font-size: 16px;
 }
