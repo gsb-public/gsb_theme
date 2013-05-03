@@ -163,7 +163,7 @@
   Drupal.behaviors.map_hover = {
     attach: function (context, settings) {
       if ($('.bi-map').length) {
-        var sidebar = $('.sidebar-inner'),
+        var sidebar = $('#quicklinks'),
           biMenu = sidebar.find('.view-business-insights-sidebar'),
           biMap = sidebar.find('.bi-map'),
           biMaptext = biMap.find('.bi-map__text'),
