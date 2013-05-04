@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .slideshow-wrapper {
   border: 2px white solid;
 }
 
@@ -93,17 +93,11 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .pane-gsb-event-frontpage, .pane-media-toolkit {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .slideshow-wrapper, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-}
-
-.shadowed-box, .designed-box,
-.person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser {
-  margin: 1px;
+  margin: 0 2px 2px 0;
 }
 
 .shadowed-box, .designed-box,
@@ -1150,7 +1144,6 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
-  margin-bottom: 60px;
 }
 .panel-display.gsb-front-page .front-sidebar-pane {
   -webkit-box-sizing: border-box;
@@ -2494,11 +2487,6 @@ ul.slideshow-items {
 }
 
 .slideshow-wrapper {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 2px solid white;
-  margin: 2px;
   position: relative;
   top: 0;
 }
@@ -2592,7 +2580,7 @@ a .slideshow-slide:hover .slide-cta {
 
 .slideshow-simple .slideshow-slide,
 .front .slideshow-slide {
-  height: 267px;
+  height: 258px;
 }
 .slideshow-simple .slideshow-slide:hover .slide-title,
 .front .slideshow-slide:hover .slide-title {
@@ -3621,12 +3609,6 @@ p.acc-title + p {
   float: none;
   width: 100%;
 }
-.pane-bundle-image-cta .group-left img {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  border: 2px solid white;
-}
 .pane-bundle-image-cta .group-right {
   color: white;
   padding: 30px;
@@ -4008,7 +3990,8 @@ p.acc-title + p {
   background: url('../images/icon-linkedin-hover.png') no-repeat;
 }
 
-.gsb-front-page {
+.gsb-front-page,
+.front-panel-header-row {
   margin-bottom: 30px;
 }
 
@@ -4034,33 +4017,39 @@ p.acc-title + p {
   max-height: 50px;
 }
 
-.twitter-feed {
+.pane-homepage-social-feed .twitter-feed {
   padding: 24px;
 }
-.twitter-feed h5 {
+.pane-homepage-social-feed .twitter-feed h5 {
   font-size: 16px;
   line-height: 1em;
 }
-.twitter-feed .follow-us-circles {
+.pane-homepage-social-feed .twitter-feed .follow-us-circles {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 24px;
 }
-.twitter-feed .follow-us-circles a {
+.pane-homepage-social-feed .twitter-feed .follow-us-circles a {
   display: block;
   float: left;
   width: 41px;
   height: 41px;
   margin: 0 6px;
 }
-.twitter-feed .tweet {
+.pane-homepage-social-feed .twitter-feed .tweet {
+  font-size: 14px;
   line-height: 20px;
+  margin-top: 0;
+}
+
+#fpp-tweets-front {
+  margin-top: 24px;
 }
 
 .pane-gsb-event-frontpage {
   padding: 26px;
   background: url('../images/bg-homepage-events.png') no-repeat;
-  height: 402px;
+  height: 401px;
 }
 .pane-gsb-event-frontpage .view-gsb-event .view-content .views-row {
   border-bottom: 0;

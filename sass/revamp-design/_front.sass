@@ -2,7 +2,8 @@
 // FRONT PAGE
 ///////////////
 
-.gsb-front-page
+.gsb-front-page,
+.front-panel-header-row
   margin-bottom: 30px
 
 // PROGRAMS LINKS
@@ -24,9 +25,8 @@
     margin-bottom: 4px
     max-height: 50px
 
-
 // TWITTER FEED
-.twitter-feed
+.pane-homepage-social-feed .twitter-feed
   padding: 24px
   // Title
   h5
@@ -43,14 +43,19 @@
       margin: 0 6px
   // Tweet
   .tweet
+    font-size: 14px
     line-height: 20px
+    margin-top: 0
+
+#fpp-tweets-front
+  margin-top: 24px
 
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage
   padding: 26px
   @extend %box-shadow
   background: image_url("bg-homepage-events.png") no-repeat
-  height: 402px
+  height: 401px
   .view-gsb-event .view-content .views-row
     border-bottom: 0
   h2.pane-title

@@ -23,9 +23,8 @@ ul.slideshow-items
 
 // Slideshow wrapper
 .slideshow-wrapper
-  +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px)
-  border: 2px solid $white
-  margin: 2px
+  @extend %box-shadow
+  @extend %border
   position: relative
   top: 0
 
@@ -107,7 +106,7 @@ ul.slideshow-items
 .slideshow-simple,
 .front
   .slideshow-slide
-    height: 267px
+    height: 258px
     &:hover
       .slide-title
         color: $red
