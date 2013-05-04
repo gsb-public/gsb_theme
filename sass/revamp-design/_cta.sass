@@ -67,9 +67,9 @@
 // CTA Red Gradient
 .cta-red-gradient
   .field-item
-    margin-bottom: 5px
+    margin-bottom: 4px
     border: 0
-    background-color: #c60000
+    background-color: $red
     +box-shadow($black, 0.45, 1px 1px 1px)
     a
       color: $white
@@ -81,16 +81,26 @@
       color: $white
 
   .item-0
-    +background(linear-gradient(top, #860000, #960000))
+    +background(linear-gradient(top, #860000, #8f0000))
     &:hover
       +background(linear-gradient(top, #194560, #2c6180))
 
   .item-1
-    +background(linear-gradient(top, #960000, #aa0000))
+    +background(linear-gradient(top, #900000, #9d0000))
     &:hover
       +background(linear-gradient(top, #194560, #2c6180))
 
   .item-2
-    +background-image(linear-gradient(top, #aa0000, #c60000))
+    +background-image(linear-gradient(top, #9e0000, #ac0000))
+    &:hover
+      +background(linear-gradient(top, #194560, #2c6180))
+
+  .item-3
+    +background(linear-gradient(top, #ae0000, #bb0000))
+    &:hover
+      +background(linear-gradient(top, #194560, #2c6180))
+
+  .item-4
+    +background(linear-gradient(top, #bc0000, #c50000))
     &:hover
       +background(linear-gradient(top, #194560, #2c6180))

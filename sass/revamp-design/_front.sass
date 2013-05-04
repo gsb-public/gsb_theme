@@ -7,8 +7,23 @@
 
 // PROGRAMS LINKS
 .pane-program-links
+  .cta-link
+    padding: 14px 26px
+  ul
+    margin: 0
+    padding: 0
+  li.last
+    a
+      margin-bottom: 0
   a
+    background-color: #c60000
+    +box-shadow($black, 0.45, 1px 1px 1px)
+    color: $white
     display: block
+    font-weight: bold
+    margin-bottom: 4px
+    max-height: 50px
+
 
 // TWITTER FEED
 .twitter-feed
@@ -91,7 +106,7 @@
         color: $grey-med
         content: "\f100"
         font-family: "arrow-double"
-        font-size: 23px
+        font-size: 24px
         font-weight: normal
         position: relative
         left: 12px
