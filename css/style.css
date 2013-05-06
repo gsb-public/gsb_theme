@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .slideshow-wrapper {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .learn-about-campus, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink {
   border: 2px white solid;
 }
 
@@ -93,7 +93,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-people, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .view-display-id-club_list.view-list-teaser .view-content,
-.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .slideshow-wrapper, .pane-gsb-event-frontpage, .pane-media-toolkit {
+.view-display-id-club_list.view-list-search .view-content, .pane-bundle-existing-node .view-mode-teaser, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -3816,13 +3816,11 @@ p.acc-title + p {
   background: url('../images/cta-visit-blured.png') repeat-x 1px 0;
   display: block;
   overflow: hidden;
-  border: 2px white solid;
   padding: 26px;
 }
 .cta-virtual-tour:hover {
   display: block;
   overflow: hidden;
-  border: 2px white solid;
   background: url('../images/cta-visit.png') repeat-x top left;
 }
 .cta-virtual-tour .virtual-tour-btn {
@@ -3866,6 +3864,48 @@ p.acc-title + p {
   background: none;
 }
 
+.learn-about-campus {
+  background: url('../images/cta-about-blurred.png') repeat-x 0 0;
+  display: block;
+  height: 215px;
+  overflow: hidden;
+  padding: 24px;
+}
+.learn-about-campus:hover {
+  display: block;
+  overflow: hidden;
+  background: url('../images/cta-about.png') repeat-x top left;
+}
+.learn-about-campus .about-campus-btn {
+  display: block;
+  padding: 12px 15px;
+  height: 60px;
+  background: #7d8401;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-top: 1px;
+}
+.learn-about-campus .about-campus-btn:after {
+  color: white;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 22px;
+  font-weight: normal;
+  float: right;
+  position: relative;
+  top: -11px;
+}
+.learn-about-campus:hover .about-campus-btn {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
+  background: -webkit-linear-gradient(top, #194560, #2c6180);
+  background: -moz-linear-gradient(top, #194560, #2c6180);
+  background: -o-linear-gradient(top, #194560, #2c6180);
+  background: -ms-linear-gradient(top, #194560, #2c6180);
+  background: linear-gradient(top, #194560, #2c6180);
+}
+
 .cta-rethink {
   background-color: #c30000;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #c30000));
@@ -3874,7 +3914,6 @@ p.acc-title + p {
   background: -o-linear-gradient(top, #860000, #c30000);
   background: -ms-linear-gradient(top, #860000, #c30000);
   background: linear-gradient(top, #860000, #c30000);
-  border: 2px white solid;
   color: white;
   display: block;
   padding: 26px;
@@ -4138,9 +4177,9 @@ p.acc-title + p {
 .front-latest-articles .views-row {
   display: inline;
   float: left;
-  max-width: 270px;
   margin-bottom: 27px;
   margin-right: 15px;
+  width: 270px;
 }
 .front-latest-articles .views-row-3 {
   clear: both;

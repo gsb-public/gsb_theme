@@ -31,12 +31,12 @@
   background: image_url('cta-visit-blured.png') repeat-x 1px 0
   display: block
   overflow: hidden
-  border: 2px $white solid
+  @extend %box-shadow
   padding: 26px
   &:hover
     display: block
     overflow: hidden
-    border: 2px $white solid
+    @extend %border
     background: image_url('cta-visit.png') repeat-x top left
   .virtual-tour-btn
     display: block
@@ -70,11 +70,46 @@
       border: 1px transparent solid
       background: none
 
+// Learn about Campus
+.learn-about-campus
+  background: image_url('cta-about-blurred.png') repeat-x 0 0
+  @extend %border-and-box-shadow
+  display: block
+  height: 215px
+  overflow: hidden
+  padding: 24px
+  &:hover
+    display: block
+    overflow: hidden
+    background: image_url('cta-about.png') repeat-x top left
+  .about-campus-btn
+    display: block
+    padding: 12px 15px
+    height: 60px
+    background: $text-green
+    color: $white
+    font-size: 18px
+    font-weight: bold
+    line-height: 1.2em
+    margin-top: 1px
+    &:after
+      color: $white
+      content: "\f100"
+      font-family: "arrow-double"
+      font-size: 22px
+      font-weight: normal
+      float: right
+      position: relative
+      top: -11px
+  &:hover
+    .about-campus-btn
+      +background(linear-gradient(top, #194560, #2c6180))
+
 // Rethink CTA
 .cta-rethink
   background-color: #c30000
   +background(linear-gradient(top, #860000, #c30000))
-  border: 2px $white solid
+  @extend %border
   color: $white
   display: block
   padding: 26px
