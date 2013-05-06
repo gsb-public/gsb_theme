@@ -39,27 +39,18 @@
     @extend %border
     background: image_url('cta-visit.png') repeat-x top left
   .virtual-tour-btn
+    +background(image_url('arrow-cta-tan-small.png') no-repeat 93% 50%, $white)
     display: block
     padding: 0 15px
     height: 35px
-    background: $white
     color: $red
     font-size: 18px
     font-weight: bold
     line-height: 38px
-    &:after
-      color: $grey-med
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 22px
-      font-weight: normal
-      float: right
   &:hover
     .virtual-tour-btn
-      +background(linear-gradient(bottom, #870000, #c40000))
+      +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(bottom, #870000, #c40000))
       color: $white
-      &:after
-        color: $white
   .virtual-tour-cover
     display: block
     height: 120px
@@ -83,27 +74,18 @@
     overflow: hidden
     background: image_url('cta-about.png') repeat-x top left
   .about-campus-btn
+    +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, $text-green)
     display: block
     padding: 12px 15px
     height: 60px
-    background: $text-green
     color: $white
     font-size: 18px
     font-weight: bold
     line-height: 1.2em
     margin-top: 1px
-    &:after
-      color: $white
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 22px
-      font-weight: normal
-      float: right
-      position: relative
-      top: -11px
   &:hover
     .about-campus-btn
-      +background(linear-gradient(top, #194560, #2c6180))
+      +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(top, #194560, #2c6180))
 
 // Rethink CTA
 .cta-rethink

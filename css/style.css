@@ -3438,20 +3438,9 @@ p.acc-title + p {
 .cta-wrapper a {
   display: block;
 }
-.cta-wrapper .field-item:before {
-  content: "\f100";
-  float: right;
-  font-family: "arrow-double";
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 0.5;
-  position: relative;
-  top: 16px;
-  right: 7px;
-}
 
 .cta-link {
-  padding: 14px 35px 14px 22px;
+  padding: 14px 50px 14px 22px;
   font-size: 18px;
 }
 .cta-link span, .cta-link b {
@@ -3469,6 +3458,7 @@ p.acc-title + p {
 .cta-green .field-item {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
+  background: url('../images/arrow-cta-grey.png') no-repeat 93% 50%;
 }
 .cta-green .field-item a {
   color: #bac405;
@@ -3482,135 +3472,145 @@ p.acc-title + p {
 .cta-green .field-item:last-of-type {
   border-bottom: 0;
 }
-.cta-green .field-item:before {
-  color: #e3e3e3;
+.cta-green .field-item:hover {
+  background: url('../images/arrow-cta-blue.png') no-repeat 93% 50%;
 }
 .cta-green .field-item:hover a {
   color: #2d6280;
 }
-.cta-green .field-item:hover:before {
-  color: #aac4bf;
-}
 
 .cta-red .field-item {
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbfaf8), color-stop(100%, #ededed));
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, -webkit-linear-gradient(#fbfaf8, #ededed);
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, -moz-linear-gradient(#fbfaf8, #ededed);
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, -o-linear-gradient(#fbfaf8, #ededed);
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, -ms-linear-gradient(#fbfaf8, #ededed);
+  background: url('../images/arrow-cta-tan.png') no-repeat 93% 50%, linear-gradient(#fbfaf8, #ededed);
   margin-bottom: 5px;
-}
-.cta-red .field-item:before {
-  color: #c2b7a1;
 }
 .cta-red .field-item a {
   color: #990000;
 }
 .cta-red .field-item:hover {
   background: #edeae5;
-}
-.cta-red .field-item:hover:before {
-  color: #990000;
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f1ea), color-stop(100%, #ece9e4));
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, -webkit-linear-gradient(#f4f1ea, #ece9e4);
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, -moz-linear-gradient(#f4f1ea, #ece9e4);
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, -o-linear-gradient(#f4f1ea, #ece9e4);
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, -ms-linear-gradient(#f4f1ea, #ece9e4);
+  background: url('../images/arrow-cta-red.png') no-repeat 93% 50%, linear-gradient(#f4f1ea, #ece9e4);
 }
 
 .cta-red-gradient .field-item {
   margin-bottom: 4px;
   border: 0;
-  background-color: #990000;
   -webkit-box-shadow: black, 0.45, 1px 1px 1px;
   -moz-box-shadow: black, 0.45, 1px 1px 1px;
   box-shadow: black, 0.45, 1px 1px 1px;
 }
-.cta-red-gradient .field-item a {
+.cta-red-gradient a {
   color: white;
   font-weight: bold;
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, #c50000;
 }
-.cta-red-gradient .field-item:before {
-  color: white;
+.front .cta-red-gradient a {
+  background: #c50000;
 }
-.cta-red-gradient .field-item:hover {
+.cta-red-gradient a:hover {
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#194560, #2c6180);
+}
+.front .cta-red-gradient a:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
-  color: white;
+  background: -webkit-linear-gradient(#194560, #2c6180);
+  background: -moz-linear-gradient(#194560, #2c6180);
+  background: -o-linear-gradient(#194560, #2c6180);
+  background: -ms-linear-gradient(#194560, #2c6180);
+  background: linear-gradient(#194560, #2c6180);
 }
 .cta-red-gradient .item-0 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #8f0000));
-  background: -webkit-linear-gradient(top, #860000, #8f0000);
-  background: -moz-linear-gradient(top, #860000, #8f0000);
-  background: -o-linear-gradient(top, #860000, #8f0000);
-  background: -ms-linear-gradient(top, #860000, #8f0000);
-  background: linear-gradient(top, #860000, #8f0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #8f0000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#860000, #8f0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#860000, #8f0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#860000, #8f0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#860000, #8f0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#860000, #8f0000);
 }
-.cta-red-gradient .item-0:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+.front .cta-red-gradient .item-0 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #8f0000));
+  background: -webkit-linear-gradient(#860000, #8f0000);
+  background: -moz-linear-gradient(#860000, #8f0000);
+  background: -o-linear-gradient(#860000, #8f0000);
+  background: -ms-linear-gradient(#860000, #8f0000);
+  background: linear-gradient(#860000, #8f0000);
 }
 .cta-red-gradient .item-1 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #900000), color-stop(100%, #9d0000));
-  background: -webkit-linear-gradient(top, #900000, #9d0000);
-  background: -moz-linear-gradient(top, #900000, #9d0000);
-  background: -o-linear-gradient(top, #900000, #9d0000);
-  background: -ms-linear-gradient(top, #900000, #9d0000);
-  background: linear-gradient(top, #900000, #9d0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #900000), color-stop(100%, #9d0000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#900000, #9d0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#900000, #9d0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#900000, #9d0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#900000, #9d0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#900000, #9d0000);
 }
-.cta-red-gradient .item-1:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+.front .cta-red-gradient .item-1 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #900000), color-stop(100%, #9d0000));
+  background: -webkit-linear-gradient(#900000, #9d0000);
+  background: -moz-linear-gradient(#900000, #9d0000);
+  background: -o-linear-gradient(#900000, #9d0000);
+  background: -ms-linear-gradient(#900000, #9d0000);
+  background: linear-gradient(#900000, #9d0000);
 }
 .cta-red-gradient .item-2 {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9e0000), color-stop(100%, #ac0000));
-  background-image: -webkit-linear-gradient(top, #9e0000, #ac0000);
-  background-image: -moz-linear-gradient(top, #9e0000, #ac0000);
-  background-image: -o-linear-gradient(top, #9e0000, #ac0000);
-  background-image: -ms-linear-gradient(top, #9e0000, #ac0000);
-  background-image: linear-gradient(top, #9e0000, #ac0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9e0000), color-stop(100%, #ac0000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#9e0000, #ac0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#9e0000, #ac0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#9e0000, #ac0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#9e0000, #ac0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#9e0000, #ac0000);
 }
-.cta-red-gradient .item-2:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+.front .cta-red-gradient .item-2 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9e0000), color-stop(100%, #ac0000));
+  background: -webkit-linear-gradient(#9e0000, #ac0000);
+  background: -moz-linear-gradient(#9e0000, #ac0000);
+  background: -o-linear-gradient(#9e0000, #ac0000);
+  background: -ms-linear-gradient(#9e0000, #ac0000);
+  background: linear-gradient(#9e0000, #ac0000);
 }
 .cta-red-gradient .item-3 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ae0000), color-stop(100%, #bb0000));
-  background: -webkit-linear-gradient(top, #ae0000, #bb0000);
-  background: -moz-linear-gradient(top, #ae0000, #bb0000);
-  background: -o-linear-gradient(top, #ae0000, #bb0000);
-  background: -ms-linear-gradient(top, #ae0000, #bb0000);
-  background: linear-gradient(top, #ae0000, #bb0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ae0000), color-stop(100%, #bb0000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#ae0000, #bb0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#ae0000, #bb0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#ae0000, #bb0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#ae0000, #bb0000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#ae0000, #bb0000);
 }
-.cta-red-gradient .item-3:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+.front .cta-red-gradient .item-3 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ae0000), color-stop(100%, #bb0000));
+  background: -webkit-linear-gradient(#ae0000, #bb0000);
+  background: -moz-linear-gradient(#ae0000, #bb0000);
+  background: -o-linear-gradient(#ae0000, #bb0000);
+  background: -ms-linear-gradient(#ae0000, #bb0000);
+  background: linear-gradient(#ae0000, #bb0000);
 }
 .cta-red-gradient .item-4 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bc0000), color-stop(100%, #c50000));
-  background: -webkit-linear-gradient(top, #bc0000, #c50000);
-  background: -moz-linear-gradient(top, #bc0000, #c50000);
-  background: -o-linear-gradient(top, #bc0000, #c50000);
-  background: -ms-linear-gradient(top, #bc0000, #c50000);
-  background: linear-gradient(top, #bc0000, #c50000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bc0000), color-stop(100%, #c50000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(#bc0000, #c50000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(#bc0000, #c50000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(#bc0000, #c50000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(#bc0000, #c50000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#bc0000, #c50000);
 }
-.cta-red-gradient .item-4:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+.front .cta-red-gradient .item-4 {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bc0000), color-stop(100%, #c50000));
+  background: -webkit-linear-gradient(#bc0000, #c50000);
+  background: -moz-linear-gradient(#bc0000, #c50000);
+  background: -o-linear-gradient(#bc0000, #c50000);
+  background: -ms-linear-gradient(#bc0000, #c50000);
+  background: linear-gradient(#bc0000, #c50000);
 }
 
 .pane-bundle-image-cta {
@@ -3830,33 +3830,22 @@ p.acc-title + p {
   background: url('../images/cta-visit.png') repeat-x top left;
 }
 .cta-virtual-tour .virtual-tour-btn {
+  background: url('../images/arrow-cta-tan-small.png') no-repeat 93% 50%, white;
   display: block;
   padding: 0 15px;
   height: 35px;
-  background: white;
   color: #990000;
   font-size: 18px;
   font-weight: bold;
   line-height: 38px;
 }
-.cta-virtual-tour .virtual-tour-btn:after {
-  color: #c2b7a1;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 22px;
-  font-weight: normal;
-  float: right;
-}
 .cta-virtual-tour:hover .virtual-tour-btn {
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
-  background: -webkit-linear-gradient(bottom, #870000, #c40000);
-  background: -moz-linear-gradient(bottom, #870000, #c40000);
-  background: -o-linear-gradient(bottom, #870000, #c40000);
-  background: -ms-linear-gradient(bottom, #870000, #c40000);
-  background: linear-gradient(bottom, #870000, #c40000);
-  color: white;
-}
-.cta-virtual-tour:hover .virtual-tour-btn:after {
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #870000), color-stop(100%, #c40000));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(bottom, #870000, #c40000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(bottom, #870000, #c40000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(bottom, #870000, #c40000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(bottom, #870000, #c40000);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(bottom, #870000, #c40000);
   color: white;
 }
 .cta-virtual-tour .virtual-tour-cover {
@@ -3883,33 +3872,23 @@ p.acc-title + p {
   background: url('../images/cta-about.png') repeat-x top left;
 }
 .learn-about-campus .about-campus-btn {
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, #7d8401;
   display: block;
   padding: 12px 15px;
   height: 60px;
-  background: #7d8401;
   color: white;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.2em;
   margin-top: 1px;
 }
-.learn-about-campus .about-campus-btn:after {
-  color: white;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 22px;
-  font-weight: normal;
-  float: right;
-  position: relative;
-  top: -11px;
-}
 .learn-about-campus:hover .about-campus-btn {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
-  background: -webkit-linear-gradient(top, #194560, #2c6180);
-  background: -moz-linear-gradient(top, #194560, #2c6180);
-  background: -o-linear-gradient(top, #194560, #2c6180);
-  background: -ms-linear-gradient(top, #194560, #2c6180);
-  background: linear-gradient(top, #194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #194560), color-stop(100%, #2c6180));
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -webkit-linear-gradient(top, #194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -moz-linear-gradient(top, #194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -o-linear-gradient(top, #194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, -ms-linear-gradient(top, #194560, #2c6180);
+  background: url('../images/arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(top, #194560, #2c6180);
 }
 
 .cta-rethink {
