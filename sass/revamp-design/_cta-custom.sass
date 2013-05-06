@@ -28,7 +28,7 @@
 
 // Virtual tour
 .cta-virtual-tour
-  background: image_url('cta-visit-blured.png') repeat-x 1px 0
+  background: image_url('cta-visit-blurred.png') repeat-x 1px 0
   display: block
   overflow: hidden
   @extend %box-shadow
@@ -39,6 +39,7 @@
     @extend %border
     background: image_url('cta-visit.png') repeat-x top left
   .virtual-tour-btn
+    background: $white
     +background(image_url('arrow-cta-tan-small.png') no-repeat 93% 50%, $white)
     display: block
     padding: 0 15px
@@ -49,6 +50,7 @@
     line-height: 38px
   &:hover
     .virtual-tour-btn
+      background: $red
       +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(bottom, #870000, #c40000))
       color: $white
   .virtual-tour-cover
@@ -74,6 +76,7 @@
     overflow: hidden
     background: image_url('cta-about.png') repeat-x top left
   .about-campus-btn
+    background: $text-green
     +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, $text-green)
     display: block
     padding: 12px 15px
@@ -85,19 +88,20 @@
     margin-top: 1px
   &:hover
     .about-campus-btn
+      background: $blue-dark
       +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(top, #194560, #2c6180))
 
 // Rethink CTA
 .cta-rethink
-  background-color: #c30000
-  +background(linear-gradient(top, #860000, #c30000))
+  background: #c30000
+  +background(linear-gradient(#860000, #c50000))
   @extend %border
   color: $white
   display: block
   padding: 26px
   &:hover
-    background-color: #c30000
-    +background(linear-gradient(top, #194560, #2c6180))
+    background: #c30000
+    +background(linear-gradient(#18455f, #2d6280))
   .cta-title
     margin: 0
     color: $white
