@@ -100,7 +100,7 @@
       }
 
       /**
-       * A recursive function that checks elements next neighbour,
+       * A recursive function that checks elements next touchNeighbourr,
        * and if it has className or ClassName2 from arguments,
        * insert the it after checked element and repeat function.
        */
@@ -117,18 +117,7 @@
   }
 
   /**
-   * Use uniform.js to style checkboxes for club filters
-   */
-  Drupal.behaviors.theme_checkboxes = {
-    attach: function (context, settings) {
-      if ($('.clubs-filter-exposed').length > 0) {
-        $(".clubs-filter-exposed .bef-checkboxes .form-item input").uniform();
-      }
-    }
-  }
-
-  /**
-   * Check for social field fpp, if it exists, check the sourse.
+   * Check for social field fpp, if it exists, check the source.
    * If the source is twitter, grab the values from fields and
    * transmit them to gsb_tweetfeed function.
    */
