@@ -2859,7 +2859,19 @@ a .slideshow-slide:hover .slide-cta {
   clear: both;
 }
 
+.person-name {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1em;
+}
+.person-name .name-first,
+.person-name .name-middle {
+  margin-right: 0.3em;
+}
+
 .pane-bundle-people {
+  margin-bottom: 50px;
   padding: 0 24px;
 }
 .pane-bundle-people .field-name-field-title {
@@ -2871,15 +2883,6 @@ a .slideshow-slide:hover .slide-cta {
   margin-top: -2px;
   padding-top: 16px;
   padding-bottom: 24px;
-}
-.pane-bundle-people .person-name .name-first,
-.pane-bundle-people .person-name .name-middle,
-.pane-bundle-people .person-name .name-last {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  margin-right: 5px;
 }
 .pane-bundle-people .people-list .views-row {
   border-bottom: 1px solid #e4e4e4;
@@ -2907,22 +2910,65 @@ a .slideshow-slide:hover .slide-cta {
 .pane-bundle-people .people-list .person-quote {
   font-size: 16px;
   line-height: 22px;
-  margin-top: 35px;
+  margin-top: 24px;
 }
 
-.node-staff.view-mode--teaser .field-name-field-image-single-public,
+.node-staff.view-mode-teaser,
+.node-faculty.view-mode-teaser {
+  padding: 16px;
+}
+.node-staff.view-mode-teaser .field-name-field-image-single-public,
 .node-faculty.view-mode-teaser .field-name-field-image-single-public {
-  margin-bottom: 16px;
+  float: none;
+  margin: -16px -16px auto -16px;
 }
-.node-staff.view-mode--teaser .person-position,
-.node-faculty.view-mode-teaser .person-position {
-  font-size: 14px;
+.node-staff.view-mode-teaser .person-name,
+.node-faculty.view-mode-teaser .person-name {
+  font-size: 16px;
+  line-height: 3em;
 }
-.node-staff.view-mode--teaser .person-title,
-.node-staff.view-mode--teaser .person-area,
-.node-faculty.view-mode-teaser .person-title,
+.node-staff.view-mode-teaser .person-position,
+.node-staff.view-mode-teaser .person-area,
+.node-faculty.view-mode-teaser .person-position,
 .node-faculty.view-mode-teaser .person-area {
-  line-height: 1.3;
+  font-size: 14px;
+  color: #231f20;
+  line-height: 1em;
+}
+.node-staff.view-mode-teaser .person-position:after,
+.node-faculty.view-mode-teaser .person-position:after {
+  content: ", ";
+}
+
+.pane-faculty-filters-faculty-list .view-content,
+.people-grid .view-content {
+  overflow: hidden;
+  *zoom: 1;
+}
+.pane-faculty-filters-faculty-list .views-row,
+.people-grid .views-row {
+  float: left;
+  height: 280px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  width: 170px;
+}
+.pane-faculty-filters-faculty-list .views-row:nth-of-type(3n),
+.people-grid .views-row:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.pane-faculty-filters-faculty-list .views-row {
+  background: #f2f2f2;
+}
+
+.people-grid .node-staff.view-mode-teaser,
+.people-grid .node-faculty.view-mode-teaser {
+  padding: 0;
+}
+.people-grid .node-staff.view-mode-teaser .field-name-field-image-single-public,
+.people-grid .node-faculty.view-mode-teaser .field-name-field-image-single-public {
+  margin: auto;
 }
 
 .twitter-feed {
@@ -5014,47 +5060,8 @@ fieldset.collapsible .fieldset-legend {
   text-shadow: 1px 1px 0 white;
 }
 
-.pane-faculty-filters-faculty-list .view-content {
-  overflow: hidden;
-  *zoom: 1;
-}
-.pane-faculty-filters-faculty-list .views-row {
-  background: #f2f2f2;
-  float: left;
-  height: 280px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  width: 170px;
-}
-.pane-faculty-filters-faculty-list .views-row:nth-of-type(3n) {
-  margin-right: 0;
-}
-.pane-faculty-filters-faculty-list .field-name-field-image-single-public {
-  margin: -30px -24px;
-}
-.pane-faculty-filters-faculty-list .group-wrapper-name {
-  font-weight: bold;
-}
-.pane-faculty-filters-faculty-list .group-wrapper-name a {
-  color: #990000;
-}
-.pane-faculty-filters-faculty-list .field-name-field-first-name,
-.pane-faculty-filters-faculty-list .field-name-field-middle-name {
-  margin-right: 5px;
-}
-.pane-faculty-filters-faculty-list .field-name-field-rank,
-.pane-faculty-filters-faculty-list .field-name-field-academic-area-single {
-  font-size: 14px;
-  color: #231f20;
-}
-.pane-faculty-filters-faculty-list .field-name-field-rank a,
-.pane-faculty-filters-faculty-list .field-name-field-academic-area-single a {
-  color: #990000;
-}
-.pane-faculty-filters-faculty-list .field-name-field-rank:after {
-  content: ",";
-  display: inline;
-  margin-right: 5px;
+.view-display-id-faculty_list.view-list-teaser {
+  border-top: 0;
 }
 
 .modal-content .form-item-view-mode {
