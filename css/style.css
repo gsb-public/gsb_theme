@@ -3321,11 +3321,9 @@ p.acc-title + p {
 }
 
 .view-business-insights-sidebar {
-  max-width: 237px;
   margin-bottom: 30px;
   border-left: 1px solid white;
   border-right: 1px solid white;
-  margin-left: 33px;
 }
 .panels-ipe-editing .view-business-insights-sidebar {
   margin-left: 0;
@@ -3387,6 +3385,9 @@ p.acc-title + p {
 .view-business-insights-sidebar .views-row-last {
   margin-bottom: 1px;
 }
+.view-business-insights-sidebar .view-footer {
+  background-color: #404040;
+}
 .view-business-insights-sidebar .field-content a {
   color: white;
   display: block;
@@ -3399,7 +3400,7 @@ p.acc-title + p {
 }
 
 .bi-map {
-  background: url('../images/businessinsights_region_map.png') no-repeat top left;
+  background: url('../images/businessinsights_region_map.png') no-repeat top center;
   position: relative;
 }
 
@@ -3411,11 +3412,11 @@ p.acc-title + p {
 
 .bi-map__overlay {
   background-position: 0 0;
-  background-repeat: 0;
+  background-repeat: no-repeat;
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 17px;
   width: 235px;
   height: 150px;
   z-index: 11;

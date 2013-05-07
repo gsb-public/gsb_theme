@@ -55,11 +55,9 @@
 // SIDEBAR
 ////////////////////////
 .view-business-insights-sidebar
-  max-width: 237px
   margin-bottom: 30px
   border-left: 1px solid $white
   border-right: 1px solid $white
-  margin-left: 33px
   // Editing change
   .panels-ipe-editing &
     margin-left: 0
@@ -110,6 +108,9 @@
   .views-row-last
     margin-bottom: 1px
 
+  .view-footer
+    background-color: #404040
+
   // Menu links
   .field-content a
     color: $white
@@ -125,8 +126,9 @@
 // BUSINESS INSIGHT MAP
 ////////////////////////
 .bi-map
-  background: image_url('businessinsights_region_map.png') no-repeat top left
+  background: image_url('businessinsights_region_map.png') no-repeat top center
   position: relative
+
 
 .bi-map__image
   opacity: 0
@@ -135,11 +137,11 @@
 
 .bi-map__overlay
   background-position: 0 0
-  background-repeat: 0
+  background-repeat: no-repeat
   display: block
   position: absolute
   top: 0
-  left: 0
+  left: 17px
   width: 235px
   height: 150px
   z-index: 11
