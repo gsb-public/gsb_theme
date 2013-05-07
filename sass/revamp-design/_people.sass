@@ -1,5 +1,6 @@
+///////////////
 // People FPP
-
+///////////////
 .pane-bundle-people
   padding: 0 24px
   @extend %bg-border-and-box-shadow
@@ -14,78 +15,50 @@
     padding-top: 16px
     padding-bottom: 24px
 
-// General people styling
-.person-name
-  .name-first,
-  .name-middle,
-  .name-last
-    color: $black
-    font-weight: bold
-    margin-right: 5px
-    a
-      color: $red
 
-.person-position
-  .person-area
-    a
-      color: $red
-
-// People FPP list styling (with quote)
-.people-list
-  // Person Name
+  // General person name
   .person-name
     .name-first,
     .name-middle,
     .name-last
+      color: $black
       font-size: 18px
+      font-weight: bold
+      line-height: 24px
       margin-right: 5px
-  // Person Position
-  .person-position
-    font-size: 18px
-    margin-bottom: 16px
-    .person-title
-      margin-right: 5px
+
+  // People FPP list styling (with quote)
+  .people-list
+    .views-row
+      border-bottom: 1px solid #e4e4e4
+      padding: 24px 0
+      min-height: 218px
+      &:last-of-type
+        border-bottom: 0
+      +clearfix
+      .field-name-field-image-single-public
+        +float-left
+        margin-right: 24px
+    // Position
+    .person-position
+      font-size: 18px
+      margin-right: 0.3em
+    // Area
     .person-area
       .label-inline
         font-weight: normal
-        margin-right: 5px
-  // Quote
-  .person-quote
-    font-size: 16px
-    line-height: 22px
-    &:before
-      content: "“"
-  // Quote positiong
-  .views-row
-    border-bottom: 1px solid $grey-e
-    padding: 24px 0
-    min-height: 304px
-    &:last-of-type
-      border-bottom: 0
-    +clearfix
-    .person-name
-      float: left
-      width: 100%
-    .field-name-field-image-single-public
-      position: absolute
+        margin-right: 0.3em
+    // Quote
     .person-quote
-      margin-left: 190px
+      font-size: 16px
+      line-height: 22px
+      margin-top: 35px
 
-// People FPP grid styling
-.people-grid
-  .col-1,
-  .col-2,
-  .col-3
-    display: inline-block
-    vertical-align: top
-  .col-1,
-  .col-2
-    margin-right: 30px
-
-// People teaser styling
-.node-alumni.node-teaser,
-.node-staff.node-teaser,
-.node-faculty.node-teaser
+////////////
+// TEASER
+///////////
+.node-staff.view-mode--teaser,
+.node-faculty.view-mode-teaser
   // Image
   .field-name-field-image-single-public
     margin-bottom: 16px
