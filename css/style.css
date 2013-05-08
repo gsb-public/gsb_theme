@@ -662,6 +662,40 @@ small {
   margin-left: 30px;
 }
 
+.callout {
+  color: #739d95;
+  float: left;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 20px 20px 20px 0;
+  max-width: 430px;
+}
+.callout:before {
+  display: inline;
+  content: "“";
+  position: relative;
+  top: 2px;
+}
+.callout:after {
+  display: inline;
+  content: "”";
+  position: relative;
+  top: 2px;
+}
+
+.callout-author {
+  font-size: 18px;
+  line-height: 1em;
+  text-align: right;
+}
+.callout-author:before {
+  content: "– ";
+  display: inline;
+}
+.callout-author:after {
+  content: url('../images/tab-club.png');
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
