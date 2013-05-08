@@ -22,6 +22,7 @@ th[scope="row"]
 
 caption
   font-size: 20px
+  font-weight: normal
   line-height: 26px
   text-align: left
 
@@ -38,3 +39,29 @@ tbody
 
   tr:nth-of-type(even)
     background-color: $white
+
+// WYSIWYG Table
+.field-name-field-body
+  table
+    margin: 20px 0
+
+  caption
+    color: $text-blue
+    font-size: 18px
+    line-height: 1em
+    margin-bottom: 20px
+
+  tbody
+    border-bottom: 1px solid $teal-light
+    tr
+      background: #f5f5f5
+      border-top: 1px solid $teal-light
+      &:nth-of-type(odd)
+        background-color: $white
+    td
+      padding: 16px 24px
+      &:first-of-type
+        font-weight: bold
+      a
+        color: $text-green
+        font-weight: bold
