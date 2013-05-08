@@ -113,8 +113,34 @@ small
   font-size: 14px
   line-height: 18px
 
+////////////////////
 // WYSIWYG Styles
+////////////////////
+
+// Intro copy
 .intro-copy
   font-size: 26px
   font-weight: bold
   line-height: 32px
+
+// Inset images with captions
+.caption-right,
+.caption-left
+  background: #f4eede
+  margin: 30px 0
+  img
+    display: block
+    line-height: 0 !important
+  p
+    color: $grey-dark
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 0
+    padding: 20px
+
+.caption-left
+  float: left
+  margin-right: 30px
+.caption-right
+  float: right
+  margin-left: 30px
