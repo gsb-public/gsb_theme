@@ -54,30 +54,36 @@
 ////////////////////////
 // SIDEBAR
 ////////////////////////
-.view-business-insights-sidebar
-  margin-bottom: 30px
-  border-left: 1px solid $white
-  border-right: 1px solid $white
+.pane-business-insights-sidebar-business-insights-menu
+  position: absolute
+  top: 203px
   // Editing change
   .panels-ipe-editing &
     margin-left: 0
     position: initial
 
+.view-business-insights-sidebar
+  border-left: 1px solid $white
+  border-right: 1px solid $white
+
   // Event and video icons
   .view-header
     border-bottom: 1px solid $white
-    height: 50px
+    height: 51px
     ul
       margin: 0
       padding: 0
       +clearfix
-      background-color: $grey-5
     li
-      background-color: #272727
+      background-color: transparent
       display: inline-block
+      float: left
       overflow: hidden
-      padding: 12.5px 13px
-      width: 49.9%
+      padding: 13px
+      width: 134px
+      .panels-ipe-editing &
+        background-color: #272727
+        width: 129px
       &:hover
         background-color: $blue
       a
@@ -86,14 +92,14 @@
         text-indent: 130%
     // Video link
     li:first-of-type
-      float: left
+      border-right: 1px solid $grey-5
       .page-business-insights-video &
         background-color: $blue
       a
         background: image_url("icon-bizin-video.png") no-repeat 50% 50%
     // Event link
     li:last-of-type
-      float: right
+      border-left: 1px solid $grey-5
       .page-business-insights-event &
         background-color: $blue
       a
@@ -128,7 +134,6 @@
 .bi-map
   background: image_url('businessinsights_region_map.png') no-repeat top center
   position: relative
-
 
 .bi-map__image
   opacity: 0
@@ -165,5 +170,8 @@
   padding: 3px 20px
 
 // Landing page content spacing
-.page-business-insights .pane-fieldable-panels-pane
-  margin-bottom: 30px
+.page-business-insights
+  .sidebar-inner
+    margin-top: 795px
+  .pane-fieldable-panels-pane
+    margin-bottom: 30px

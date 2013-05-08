@@ -1367,6 +1367,10 @@ ul.menu li.collapsed {
   list-style-type: none;
 }
 
+.breadcrumb {
+  padding-bottom: 0;
+}
+
 .views-exposed-widgets {
   margin: 0;
 }
@@ -3320,32 +3324,40 @@ p.acc-title + p {
   font-weight: bold;
 }
 
-.view-business-insights-sidebar {
-  margin-bottom: 30px;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+.pane-business-insights-sidebar-business-insights-menu {
+  position: absolute;
+  top: 203px;
 }
-.panels-ipe-editing .view-business-insights-sidebar {
+.panels-ipe-editing .pane-business-insights-sidebar-business-insights-menu {
   margin-left: 0;
   position: initial;
 }
+
+.view-business-insights-sidebar {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
 .view-business-insights-sidebar .view-header {
   border-bottom: 1px solid white;
-  height: 50px;
+  height: 51px;
 }
 .view-business-insights-sidebar .view-header ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
   *zoom: 1;
-  background-color: #555555;
 }
 .view-business-insights-sidebar .view-header li {
-  background-color: #272727;
+  background-color: transparent;
   display: inline-block;
+  float: left;
   overflow: hidden;
-  padding: 12.5px 13px;
-  width: 49.9%;
+  padding: 13px;
+  width: 134px;
+}
+.panels-ipe-editing .view-business-insights-sidebar .view-header li {
+  background-color: #272727;
+  width: 129px;
 }
 .view-business-insights-sidebar .view-header li:hover {
   background-color: #607c8c;
@@ -3356,7 +3368,7 @@ p.acc-title + p {
   text-indent: 130%;
 }
 .view-business-insights-sidebar .view-header li:first-of-type {
-  float: left;
+  border-right: 1px solid #555555;
 }
 .page-business-insights-video .view-business-insights-sidebar .view-header li:first-of-type {
   background-color: #607c8c;
@@ -3365,7 +3377,7 @@ p.acc-title + p {
   background: url('../images/icon-bizin-video.png') no-repeat 50% 50%;
 }
 .view-business-insights-sidebar .view-header li:last-of-type {
-  float: right;
+  border-left: 1px solid #555555;
 }
 .page-business-insights-event .view-business-insights-sidebar .view-header li:last-of-type {
   background-color: #607c8c;
@@ -3446,6 +3458,9 @@ p.acc-title + p {
   padding: 3px 20px;
 }
 
+.page-business-insights .sidebar-inner {
+  margin-top: 795px;
+}
 .page-business-insights .pane-fieldable-panels-pane {
   margin-bottom: 30px;
 }
@@ -5397,29 +5412,29 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .banner-title {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 48px;
-  line-height: 1em;
+  line-height: 1.85em;
 }
 
 .banner-subtitle {
   font-size: 42px;
-  line-height: 1em;
+  line-height: 2em;
 }
 
 .banner-content {
   margin: 0 auto;
   max-width: 1170px;
-  padding: 30px 0;
-}
-
-#block-gsb-public-custom-blocks-gpcb-banner-title {
-  padding-bottom: 20px;
+  padding-top: 18px;
 }
 
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs {
   color: #666666;
   font-size: 14px;
-  margin-bottom: 30px;
+}
+#block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
+  line-height: 1em;
+  padding-bottom: 18px;
 }
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs a {
   color: white;
@@ -5438,10 +5453,18 @@ fieldset.collapsible .fieldset-legend {
 .page-events #banner .section {
   background: url('../images/bg-banner-events-landing.png') no-repeat 50% 0;
 }
+.page-events .banner-title {
+  padding-bottom: 30px;
+}
 
 .page-business-insights .banner-title {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 56px;
   font-weight: bold;
+}
+.page-business-insights .banner-subtitle {
+  margin-top: -24px;
+  padding-bottom: 27px;
 }
 
 .group_witl_photo_info,

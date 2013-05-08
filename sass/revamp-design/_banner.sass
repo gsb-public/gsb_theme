@@ -11,26 +11,26 @@
   color: $white
 
 .banner-title
+  font-family: $font-demi
   font-size: 48px
-  line-height: 1em
+  line-height: 1.85em
 
 .banner-subtitle
   font-size: 42px
-  line-height: 1em
+  line-height: 2em
 
 .banner-content
   margin: 0 auto
   max-width: $max-width
-  padding: 30px 0
-
-#block-gsb-public-custom-blocks-gpcb-banner-title
-  padding-bottom: 20px
+  padding-top: 18px
 
 // BREADCRUMBS
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
   color: $grey-6
   font-size: 14px
-  margin-bottom: 30px
+  .breadcrumb
+    line-height: 1em
+    padding-bottom: 18px
   a
     color: $white
 
@@ -44,9 +44,15 @@
 .page-events
   #banner .section
     background: image_url("bg-banner-events-landing.png") no-repeat 50% 0
+  .banner-title
+    padding-bottom: 30px
 
 // BI LANDING
 .page-business-insights
   .banner-title
+    font-family: $font-sans
     font-size: 56px
     font-weight: bold
+  .banner-subtitle
+    margin-top: -24px
+    padding-bottom: 27px
