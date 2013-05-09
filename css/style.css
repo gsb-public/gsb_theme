@@ -2773,24 +2773,25 @@ a .slideshow-slide:hover .slide-cta {
   line-height: 1.2em;
   margin: 0;
   position: relative;
+  top: 0;
   display: inline;
+}
+.pane-bundle-quote .field-name-field-body:before, .pane-bundle-quote .field-name-field-body:after {
+  color: black;
+  font-weight: bold;
 }
 .pane-bundle-quote .field-name-field-body:before {
   content: "“";
   font-size: 58px;
   position: absolute;
   left: -30px;
-  top: 13px;
-  display: block;
-  color: black;
-  font-weight: bold;
+  top: 7px;
 }
 .pane-bundle-quote .field-name-field-body:after {
   content: "”";
   font-size: 38px;
-  color: black;
-  display: inline;
-  font-weight: bold;
+  position: relative;
+  right: 9px;
 }
 .pane-bundle-quote .field-name-field-link-single {
   display: inline;
@@ -2817,6 +2818,7 @@ a .slideshow-slide:hover .slide-cta {
   float: left;
 }
 .pane-bundle-quote .field-name-field-quote-link-company .label-inline {
+  font-weight: normal;
   margin-right: 7px;
 }
 .pane-bundle-quote .field-name-field-quote-link-company a {

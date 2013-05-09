@@ -9,22 +9,23 @@
     line-height: 1.2em
     margin: 0
     position: relative
+    top: 0
     display: inline
+    &:before,
+    &:after
+      color: $black
+      font-weight: bold
     &:before
       content: '“'
       font-size: 58px
       position: absolute
       left: -30px
-      top: 13px
-      display: block
-      color: $black
-      font-weight: bold
+      top: 7px
     &:after
       content: '”'
       font-size: 38px
-      color: $black
-      display: inline
-      font-weight: bold
+      position: relative
+      right: 9px
   .field-name-field-link-single
     display: inline
     a
@@ -45,6 +46,7 @@
   .field-name-field-quote-link-company
     float: left
     .label-inline
+      font-weight: normal
       margin-right: 7px
     a
       color: $green-light
