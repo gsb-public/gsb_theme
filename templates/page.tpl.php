@@ -87,11 +87,11 @@
         <div id="navigation"><div class="section">
           <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
         </div><div class="se">
-			<a href="#" class="event-calendar">Event Calendar</a>
-			<?php
-				//Search input goes here
-			?>
-		</div></div><!-- /.section, /#navigation -->
+      <a href="/events" class="event-calendar">Event Calendar</a>
+      <?php
+        //Search input goes here
+      ?>
+    </div></div><!-- /.section, /#navigation -->
       <?php endif; ?>
 
       <?php if ($site_slogan): ?>
