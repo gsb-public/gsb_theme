@@ -148,29 +148,28 @@ small
 
 // Callout
 .callout
-  color: $teal-dark
   float: left
-  font-size: 26px
-  line-height: 32px
   margin: 20px 20px 20px 0
   max-width: 430px
+  &:after
+    content: image_url("tab-club.png")
+
+.callout-text
+  color: $teal-dark
+  font-size: 26px
+  line-height: 32px
   &:before
     display: inline
     content: "“"
-    position: relative
-    top: 2px
   &:after
     display: inline
     content: "”"
-    position: relative
-    top: 2px
 
 .callout-author
+  color: $teal-dark
   font-size: 18px
   line-height: 1em
   text-align: right
   &:before
-    content: "– "
+    content: "— "
     display: inline
-  &:after
-    content: image_url("tab-club.png")
