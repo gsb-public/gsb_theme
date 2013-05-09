@@ -11,6 +11,7 @@ tbody
 th,
 td
   border: 0
+  padding: 0
 
 caption,
 th
@@ -33,6 +34,12 @@ td
   text-align: left
   vertical-align: top
 
+// Table header
+thead
+  tr
+    background: $white
+
+// Table body
 tbody
   tr
     border-top: 1px solid $teal-light
@@ -59,10 +66,15 @@ tbody
       border-top: 1px solid $teal-light
       &:nth-of-type(odd)
         background-color: $white
+    tr th
+      background: #d5e7e4
+      padding: 16px 26px
     td
       padding: 16px 26px
       &:first-of-type
         font-weight: bold
+        min-width: 180px
+
       a
         color: $text-green
         font-weight: bold

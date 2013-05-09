@@ -605,17 +605,6 @@ li ul {
   list-style-type: circle;
 }
 
-.field-name-field-body ul {
-  position: relative;
-  left: 0;
-}
-.field-name-field-body ul li:before {
-  content: "• ";
-  color: #2d6280;
-  position: absolute;
-  left: 24px;
-}
-
 label,
 .label-inline {
   font-weight: bold;
@@ -694,6 +683,21 @@ small {
 .callout-author:before {
   content: "— ";
   display: inline;
+}
+
+.field-name-field-body ul {
+  position: relative;
+  left: 0;
+  margin: 0;
+}
+.field-name-field-body ul li:before {
+  content: "• ";
+  color: #2d6280;
+  position: absolute;
+  left: 24px;
+}
+.field-name-field-body table ul {
+  left: -26px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1064,6 +1068,7 @@ tbody {
 th,
 td {
   border: 0;
+  padding: 0;
 }
 
 caption,
@@ -1089,6 +1094,10 @@ td {
   line-height: 18px;
   text-align: left;
   vertical-align: top;
+}
+
+thead tr {
+  background: white;
 }
 
 tbody tr {
@@ -1118,11 +1127,16 @@ tbody tr:nth-of-type(even) {
 .field-name-field-body tbody tr:nth-of-type(odd) {
   background-color: white;
 }
+.field-name-field-body tbody tr th {
+  background: #d5e7e4;
+  padding: 16px 26px;
+}
 .field-name-field-body tbody td {
   padding: 16px 26px;
 }
 .field-name-field-body tbody td:first-of-type {
   font-weight: bold;
+  min-width: 180px;
 }
 .field-name-field-body tbody td a {
   color: #7d8401;
