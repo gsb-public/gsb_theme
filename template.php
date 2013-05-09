@@ -76,3 +76,21 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'gsb-views-exposed-form';
   }
 }
+
+/**
+ * Preprocess html.
+ *
+ * Load slectivizr library for support IE 8,7 pseudo classes.
+ */
+function gsb_theme_preprocess_html(&$variables) {
+  global $base_url;
+  $selectivizr = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => $base_url . '/' . drupal_get_path('theme', 'gsb_theme') . '/js/libs/selectivizr-min.js', 
+    ),
+    '#prefix' => '<!--[if lt IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+  drupal_add_html_head($selectivizr, 'selectivzr');
+}
