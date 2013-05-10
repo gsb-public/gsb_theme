@@ -7,6 +7,8 @@
   #header
     margin: 0 auto
     max-width: $max-width
+    +breakpoint($bp-mobile-max)
+      min-height: 135px
 
 // CONTENT
 #content-wrapper
@@ -17,6 +19,9 @@
     padding-top: 30px
     padding-bottom: 12px
     max-width: $max-width
+    +breakpoint($bp-mobile-max)
+      padding-left: 16px
+      padding-right: 16px
 
 // BOTTOM
 #bottom
@@ -27,12 +32,12 @@
 
 // Front page courtyard image
 .front #content-wrapper
-  +breakpoint($bp-portrait-min)
+  +breakpoint($bp-portrait)
     +background(image_url("bg-front-courtyard.png") top center no-repeat, linear-gradient(bottom, $grey-f 14%, $white 79%), $white)
 
 // Inner page courtyard image
 .not-front #content-wrapper
-  +breakpoint($bp-portrait-min)
+  +breakpoint($bp-portrait)
     +background(image_url("bg-notfront-courtyard.png") bottom center no-repeat)
 
 // No courtyard on BI
@@ -53,16 +58,30 @@
   +breakpoint($logo-portrait)
     img
       max-width: 230px
-  +breakpoint($bp-portrait-max)
+  +breakpoint($bp-portrait)
     padding: 30px 0
+  +breakpoint($bp-mobile-max)
+    display: block
+    padding: 21px 0 18px 15px
+    img
+      max-width: 150px
 
 // SITE SLOGAN
 #site-slogan
   font-size: 22px
   float: right
   line-height: 4em
-  +breakpoint($bp-portrait-max)
+  +breakpoint($bp-portrait)
     font-size: 18px
+  +breakpoint($bp-mobile-max)
+    color: $white
+    float: none
+    font-size: 14px
+    line-height: 1
+    padding: 0 6px
+    position: absolute
+    top: 20px
+    right: 0
 
 .main-content
   a
@@ -164,6 +183,7 @@ a.no-border
 //////////////////////
 .pane-bundle-text
   @extend %bg-border-and-box-shadow
+  padding: 30px 24px
   // Pane title
   .field-name-field-title
     font-size: 20px

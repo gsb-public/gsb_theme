@@ -11,6 +11,9 @@
 // MAIN MENU
 #main-menu
   float: left
+  +breakpoint($bp-mobile-max)
+    float: none
+    display: block
   li
     border-right: 1px solid #FF0000
     background-color: $red-light
@@ -26,17 +29,41 @@
     &.active
       background: $black
     a
-      background: image_url("navigation-arrow.png") no-repeat 100px 60px
       color: $white
       font-weight: bold
       display: block
       margin: 0
-      // IPAD
-      +breakpoint($bp-portrait-max)
+    // IPAD
+    +breakpoint($bp-portrait)
+      a
         background: image_url("navigation-arrow.png") no-repeat 95% 50%
         font-size: 15px
         line-height: 14px
         padding: 10px 30px 10px 9px
+    +breakpoint($bp-mobile-max)
+      border: 0
+      border-bottom: 1px solid #d5d5d5
+      float: none
+      display: block
+      background: $white
+      width: 100%
+      &:hover,
+      &.active
+        background: $white
+      a
+        &:before
+          content: image_url("toggle-close.png")
+          display: inline
+          position: relative
+          left: -35px
+        color: $red
+        padding: 15px 0 15px 55px
+      &.active
+        a
+          &:before
+            content: image_url("toggle-open.png")
+
+
   // FULL
   +breakpoint($bp-wide-min)
     li
@@ -45,17 +72,23 @@
         a
           padding: 12px 7px 18px
       a
+        background: image_url("navigation-arrow.png") no-repeat 100px 60px
         min-height: 80px
         padding: 12px 8px 18px
 
 
 //Search and event calendar wrapper
 .se
-  float: left
   +breakpoint($bp-wide-min)
+    float: left
     width: 200px
+  +breakpoint($bp-portrait)
+    float: left
   .event-calendar
     width: 100%
+    +breakpoint($bp-mobile-max)
+      line-height: 1
+      padding: 15px 0 15px 70px
 
 // Event calendar
 .event-calendar
@@ -64,10 +97,61 @@
   font-size: 18px
   display: inline-block
   font-weight: bold
-  +breakpoint($bp-portrait-max)
+  +breakpoint($bp-portrait)
     font-size: 15px
     line-height: 14px
     padding: 10px 8px
   +breakpoint($bp-wide-min)
     line-height: 40px
     padding: 0 0 0 16px
+  +breakpoint($bp-mobile-max)
+    +background(linear-gradient($grey-e, $white))
+    border-bottom: 1px solid #d5d5d5
+    color: $red
+    display: block
+    float: none
+    padding: 18px
+
+////////////////////////////
+// MENU BUTTON
+////////////////////////////
+#nav-touch-wrapper
+  #nav-touch-button
+    +breakpoint($bp-mobile-max)
+      cursor: pointer
+      display: inline-block
+      padding: 15px 18px 9px
+      vertical-align: top
+    &:after
+      .svg &
+        content: image_url("mobile/icon-hamburger-main.png")
+      .no-js &, .no-svg &
+        content: image_url("mobile/icon-hamburger-main.png")
+
+// Menu toggle functionality
+#nav-touch-wrapper
+  +breakpoint($bp-mobile-max)
+    +background(linear-gradient(bottom, $red-light, $red-dark))
+    max-height: 50px
+    #navigation
+      display: none
+  &.open
+    +breakpoint($bp-mobile-max)
+      #nav-touch-button
+        background: $white
+        +background(linear-gradient($grey-e, $white))
+        &:after
+          .svg &
+            content: image_url("mobile/icon-hamburger-main-red.png")
+          .no-js &, .no-svg &
+            content: image_url("mobile/icon-hamburger-main-red.png")
+      #navigation
+        display: block
+        position: absolute
+        width: 100%
+
+// REMOVE THIS
+// #admin-menu
+//   display: none
+// body.admin-menu
+//   margin-top: 0 !important
