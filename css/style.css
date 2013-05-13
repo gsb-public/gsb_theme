@@ -2108,14 +2108,8 @@ a.no-border:hover {
     min-width: 688px;
   }
 }
-#navigation h2 {
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  width: 0;
+#navigation .section {
+  border-bottom: 10px solid #990000;
 }
 
 #main-menu {
@@ -2263,6 +2257,31 @@ a.no-border:hover {
   }
 }
 
+#menu-main-footer {
+  display: none;
+}
+@media (max-width: 30em) {
+  #menu-main-footer {
+    display: block;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ededed), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(#ededed, #ffffff);
+    background: -moz-linear-gradient(#ededed, #ffffff);
+    background: -o-linear-gradient(#ededed, #ffffff);
+    background: -ms-linear-gradient(#ededed, #ffffff);
+    background: linear-gradient(#ededed, #ffffff);
+    padding: 24px 0 24px 70px;
+  }
+  #menu-main-footer li {
+    line-height: 16px;
+    padding-bottom: 12px;
+  }
+  #menu-main-footer a {
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+
 @media (max-width: 30em) {
   #nav-touch-wrapper #nav-touch-button {
     cursor: pointer;
@@ -2312,6 +2331,7 @@ a.no-border:hover {
     display: block;
     position: absolute;
     width: 100%;
+    z-index: 2;
   }
 }
 

@@ -5,8 +5,8 @@
     position: relative
     top: -10px
     min-width: 688px
-  h2
-    +hidden-text
+  .section
+    border-bottom: 10px solid $red
 
 // MAIN MENU
 #main-menu
@@ -90,7 +90,7 @@
       line-height: 1
       padding: 15px 0 15px 70px
 
-// Event calendar
+// Event calendar link
 .event-calendar
   +background(linear-gradient(top, #880000, #b40000))
   color: #fff
@@ -111,6 +111,25 @@
     display: block
     float: none
     padding: 18px
+
+////////////////////////////////
+// Mobile footer duplicate menu
+////////////////////////////////
+#menu-main-footer
+  display: none
+  +breakpoint($bp-mobile-max)
+    display: block
+    +background(linear-gradient($grey-e, $white))
+    padding: 24px 0 24px 70px
+    li
+      line-height: 16px
+      padding-bottom: 12px
+    a
+      font-weight: bold
+      font-size: 13px
+      text-transform: uppercase
+
+
 
 ////////////////////////////
 // MENU BUTTON
@@ -149,9 +168,4 @@
         display: block
         position: absolute
         width: 100%
-
-// REMOVE THIS
-// #admin-menu
-//   display: none
-// body.admin-menu
-//   margin-top: 0 !important
+        z-index: 2

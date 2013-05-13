@@ -81,12 +81,24 @@
         <div id="nav-touch-wrapper">
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
-            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
+            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
             <div class="se">
               <a href="/events" class="event-calendar">Event Calendar</a>
               <!-- Search input goes here -->
             </div><!-- /.se -->
-          </div></div><!-- /.section, /#navigation -->
+            <div id="menu-main-footer">
+              <ul class="menu">
+                <li class="first"><a href="/admin" title="">Alumni</a></li>
+                <li><a href="/admin" title="">Giving</a></li>
+                <li><a href="/admin" title="">Recruiters &amp; Corporate Partners</a></li>
+                <li><a href="/admin" title="">Stanford University Partners</a></li>
+                <li><a href="/" title="">Newsroom</a></li>
+                <li><a href="/" title="">Visit Us</a></li>
+                <li><a href="/" title="">Contact Us</a></li>
+                <li><a href="/user" title="">Jobs</a></li>
+                <li class="last"><a href="/" title="">Log In</a></li>
+              </ul>
+          </div></div></div><!-- /#menu-main-footer, /.section, /#navigation -->
       <?php endif; ?>
 
       <?php if ($site_slogan): ?>
