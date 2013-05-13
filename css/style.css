@@ -4915,22 +4915,26 @@ p.acc-title + p {
   margin-top: 24px;
 }
 
-.gsb-views-exposed-search {
+.gsb-views-exposed-search,
+#edit-search-wrapper {
   padding: 18px 24px 24px 24px;
   width: 268px;
 }
-.gsb-views-exposed-search label {
+.gsb-views-exposed-search label,
+#edit-search-wrapper label {
   color: #2d6280;
   margin-bottom: 18px;
 }
-.gsb-views-exposed-search .views-exposed-form .form-item {
+.gsb-views-exposed-search .views-exposed-form .form-item,
+#edit-search-wrapper .views-exposed-form .form-item {
   margin: 5px 0 0;
   float: left;
   width: 100%;
   margin-right: -45px;
   margin-top: 0;
 }
-.gsb-views-exposed-search .views-exposed-form .form-text {
+.gsb-views-exposed-search .views-exposed-form .form-text,
+#edit-search-wrapper .views-exposed-form .form-text {
   width: 100%;
   border: none;
   border: 1px #d0d0d0 solid;
@@ -4941,7 +4945,8 @@ p.acc-title + p {
   color: #666666;
   font-size: 16px;
 }
-.gsb-views-exposed-search .views-exposed-form .form-submit {
+.gsb-views-exposed-search .views-exposed-form .form-submit,
+#edit-search-wrapper .views-exposed-form .form-submit {
   float: left;
   width: 45px;
   height: 36px;
@@ -5021,7 +5026,7 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1em;
   color: #990000;
 }
-.gsb-views-exposed-filter .views-exposed-widget {
+.gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2 {
   display: inline-block;
   float: left;
   width: 32.9%;
@@ -5029,10 +5034,10 @@ fieldset.collapsible .fieldset-legend {
   border-right: 1px solid #e4e4e4;
   border-left: 1px solid white;
 }
-.gsb-views-exposed-filter .views-exposed-widget:first-of-type {
+.gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:first-of-type {
   border-left: 0;
 }
-.gsb-views-exposed-filter .views-exposed-widget:last-of-type, .gsb-views-exposed-filter .views-exposed-widget:nth-of-type(3n) {
+.gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:last-of-type, .gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:nth-of-type(3n) {
   border-right: 0;
 }
 
@@ -5637,6 +5642,13 @@ fieldset.collapsible .fieldset-legend {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
+}
+
+.inner-sidebar-wrapper #views-exposed-form-club-filters-club-list #edit-term-node-tid-depth-2-wrapper {
+  display: none;
+}
+.inner-main-wrapper #views-exposed-form-club-filters-club-list #edit-search-wrapper {
+  display: none;
 }
 
 .view-mode-business_insight {
