@@ -1,3 +1,74 @@
 ////////////////////
 // Program Finder
 ////////////////////
+
+// Programs landing
+.pane-program-finder
+  .field-group-tab-wrapper
+    @extend %border-and-box-shadow
+    +background-image(linear-gradient(right, #355567, #7390a1))
+    .page-programs &
+      background: image_url("bg-program-finder.png") no-repeat
+    padding: 10px
+  div.vertical-tabs
+    @extend %border
+    background: linear-gradient(#f4f4f4, $grey-d)
+    margin: 0 0 0 15em
+    fieldset.vertical-tabs-pane
+      border: 0
+      padding: 24px
+      padding-bottom: 0
+    .fieldset-wrapper
+      a
+        color: $text-green
+        font:
+          size: 16px
+          weight: bold
+        line-height: 20px
+        &:after
+          color: $grey-med
+          content: "\f100"
+          font-family: "arrow-double"
+          font-size: 18px
+          font-weight: normal
+          position: relative
+          left: 7px
+        &:hover
+          color: $text-blue
+
+    ul.vertical-tabs-list
+      border-top: 0
+      margin: -2px 0 -2px -15em
+      width: 238px
+      li
+        +background(image_url("arrow-program-white.png") no-repeat 94% 50%, transparent)
+        border-left: 0
+        border-top: 1px solid #8aa5b4
+        border-bottom: 1px solid #647f8f
+        border-right: 1px solid $text-blue
+        &:first-of-type
+          border-top: 2px solid transparent
+        &:last-of-type
+          border-bottom: 2px solid transparent
+
+        &.selected
+          +background(image_url("arrow-program-tan.png") no-repeat 94% 50%, #f4f4f4)
+          width: 240px
+          &:first-of-type
+            border-top: 2px solid $white
+          &:last-of-type
+            border-bottom: 2px solid $white
+        a
+          color: $white
+          font-size: 20px
+          line-height: 24px
+          padding: 15px 24px 14px 12px
+          &:hover
+            outline: 0
+            strong
+              text-decoration: none
+      .selected
+        @extend %border
+        border-right: 2px solid transparent
+        strong
+          color: $grey-dark

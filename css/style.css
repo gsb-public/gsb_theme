@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink {
+.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
 
@@ -93,7 +93,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
+.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -6132,4 +6132,90 @@ fieldset.collapsible .fieldset-legend {
 }
 .views-responsive-grid.views-columns-5 > div > div.views-column-last {
   margin-right: 0;
+}
+
+.pane-program-finder .field-group-tab-wrapper {
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #355567), color-stop(100%, #7390a1));
+  background-image: -webkit-linear-gradient(right, #355567, #7390a1);
+  background-image: -moz-linear-gradient(right, #355567, #7390a1);
+  background-image: -o-linear-gradient(right, #355567, #7390a1);
+  background-image: -ms-linear-gradient(right, #355567, #7390a1);
+  background-image: linear-gradient(right, #355567, #7390a1);
+  padding: 10px;
+}
+.page-programs .pane-program-finder .field-group-tab-wrapper {
+  background: url('../images/bg-program-finder.png') no-repeat;
+}
+.pane-program-finder div.vertical-tabs {
+  background: linear-gradient(#f4f4f4, #dddddd);
+  margin: 0 0 0 15em;
+}
+.pane-program-finder div.vertical-tabs fieldset.vertical-tabs-pane {
+  border: 0;
+  padding: 24px;
+  padding-bottom: 0;
+}
+.pane-program-finder div.vertical-tabs .fieldset-wrapper a {
+  color: #7d8401;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.pane-program-finder div.vertical-tabs .fieldset-wrapper a:after {
+  color: #c2b7a1;
+  content: "\f100";
+  font-family: "arrow-double";
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  left: 7px;
+}
+.pane-program-finder div.vertical-tabs .fieldset-wrapper a:hover {
+  color: #2d6280;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list {
+  border-top: 0;
+  margin: -2px 0 -2px -15em;
+  width: 238px;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li {
+  background: url('../images/arrow-program-white.png') no-repeat 94% 50%, transparent;
+  border-left: 0;
+  border-top: 1px solid #8aa5b4;
+  border-bottom: 1px solid #647f8f;
+  border-right: 1px solid #2d6280;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:first-of-type {
+  border-top: 2px solid transparent;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:last-of-type {
+  border-bottom: 2px solid transparent;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected {
+  background: url('../images/arrow-program-tan.png') no-repeat 94% 50%, #f4f4f4;
+  width: 240px;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected:first-of-type {
+  border-top: 2px solid white;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected:last-of-type {
+  border-bottom: 2px solid white;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li a {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 15px 24px 14px 12px;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li a:hover {
+  outline: 0;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li a:hover strong {
+  text-decoration: none;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
+  border-right: 2px solid transparent;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected strong {
+  color: #887e6e;
 }
