@@ -30,15 +30,4 @@
       <?php print $content['featuredcolthree']; ?>
     </div>
   </div>
-  <div class="front-panel-footer-row">
-    <div class="front-panel-footer-one">
-      <?php print $content['footercolone']; ?>
-    </div>
-    <div class="front-panel-footer-two narrow-view">
-      <?php print $content['footercoltwo']; ?>
-    </div>
-    <div class="front-panel-footer-three narrow-view">
-      <?php print $content['footercolthree']; ?>
-    </div>
-  </div>
 </div><!-- /.gsb-front-page -->
