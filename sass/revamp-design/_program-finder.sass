@@ -47,9 +47,9 @@
         border-bottom: 1px solid #647f8f
         border-right: 1px solid $text-blue
         &:first-of-type
-          border-top: 2px solid transparent
+          border-top: 1px solid transparent
         &:last-of-type
-          border-bottom: 2px solid transparent
+          border-bottom: 1px solid transparent
 
         &.selected
           +background(image_url("arrow-program-tan.png") no-repeat 94% 50%, #f4f4f4)
@@ -69,6 +69,6 @@
               text-decoration: none
       .selected
         @extend %border
-        border-right: 2px solid transparent
+        border-right: 1px solid transparent
         strong
           color: $grey-dark
