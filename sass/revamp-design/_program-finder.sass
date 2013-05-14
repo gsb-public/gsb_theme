@@ -9,6 +9,7 @@
     +background-image(linear-gradient(right, #355567, #7390a1))
     .page-programs &
       background: image_url("bg-program-finder.png") no-repeat
+    height: 466px
     padding: 10px
   div.vertical-tabs
     @extend %border
@@ -16,15 +17,16 @@
     margin: 0 0 0 15em
     fieldset.vertical-tabs-pane
       border: 0
-      padding: 24px
-      padding-bottom: 0
+      padding: 40px
     .fieldset-wrapper
       a
         color: $text-green
+        display: block
         font:
           size: 16px
           weight: bold
         line-height: 20px
+        margin-bottom: 14px
         &:after
           color: $grey-med
           content: "\f100"
@@ -72,3 +74,16 @@
         border-right: 1px solid transparent
         strong
           color: $grey-dark
+
+  // Split columns
+  .program-columns
+    +clearfix
+    .column-a,
+    .column-b
+      width: 221px
+      float: left
+    .column-a
+      margin-right: 55px
+    p
+      font-size: 14px
+      line-height: 18px
