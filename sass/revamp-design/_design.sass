@@ -32,12 +32,12 @@
 
 // Front page courtyard image
 .front #content-wrapper
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-portrait-min)
     +background(image_url("bg-front-courtyard.png") top center no-repeat, linear-gradient(bottom, $grey-f 14%, $white 79%), $white)
 
 // Inner page courtyard image
 .not-front #content-wrapper
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-portrait-min)
     +background(image_url("bg-notfront-courtyard.png") bottom center no-repeat)
 
 // No courtyard on BI
