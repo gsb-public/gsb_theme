@@ -35,13 +35,13 @@ ul.slideshow-items
   height: 367px
   position: relative
   top: 0
-  a &:hover
+  a:hover
     .slide-title
       color: $text-blue
       &:after
         color: $text-blue
     .slide-cta
-      background-color: #739d95
+      background-color: $teal-dark
 
   .slide-text
     padding: 0 25px
@@ -73,7 +73,7 @@ ul.slideshow-items
 
 // Slide description
 .slide-description
-  color: #231f20
+  color: $text-black
   font-size: 16px
   line-height: 20px
   margin-bottom: 30px
@@ -92,21 +92,22 @@ ul.slideshow-items
   .slide-text
     +background(linear-gradient(left, rgba(#cce0dc, 0.6) 18%, rgba(#cce0dc, 1)))
   .slide-cta
-    background-color: #754760
+    background-color: $purple
 
 .blue-button-on-orange
   .slide-text
     +background(linear-gradient(left, rgba(#fbe1a8, 0.6) 18%, rgba(#fbe1a8, 1)))
   .slide-cta
-    background-color: #739d95
+    background-color: $teal-dark
 
 ////////////////////
 // SIMPLE SLIDESHOW
 ////////////////////
-.slideshow-simple,
-.front
+.slideshow-simple
   .slideshow-slide
     height: 262px
+    +breakpoint($bp-portrait)
+      height: 204px
     &:hover
       .slide-title
         color: $red
@@ -133,6 +134,9 @@ ul.slideshow-items
   .slide-description
     font-size: 36px
     line-height: 40px
+    +breakpoint($bp-portrait)
+      font-size: 26px
+      line-height: 28px
     a
       color: $red
     &:after

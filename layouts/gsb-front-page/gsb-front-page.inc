@@ -10,6 +10,6 @@ $plugin = array(
     'sidebarnavigation' => t('Sidebar Navigation'),
     'featuredcolone' => t('Featured column 1'),
     'featuredcoltwo' => t('Featured column 2'),
-    'featuredcolthree' => t('Featured column 3')
+    'featuredcolthree' => t('Featured column 3'),
   ),
 );
