@@ -47,7 +47,10 @@
   // Position
   .person-position
     font-size: 18px
-    margin-right: 0.3em
+  span.person-position
+    &:after
+      content: ', '
+      margin-right: 0.3em
   // Area
   .person-area
     .label-inline
@@ -73,15 +76,17 @@
   .person-name
     font-size: 16px
     line-height: 3em
+
   // Rank/Title/Position and Academic Area
   .person-position,
   .person-area
     font-size: 14px
     color: $text-black
     line-height: 1em
+    display: inline 
   .person-position
     &:after
-      content: ", "
+      content: ", "    
 
 // Faculty Search and People Grid layouts
 .pane-faculty-filters-faculty-list,

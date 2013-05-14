@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
+.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
 
@@ -93,7 +93,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
+.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -103,7 +103,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content {
+.view-display-id-search_club .view-content, .pane-lastname-az-links {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
   background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
@@ -3175,6 +3175,9 @@ a .slideshow-slide:hover .slide-cta {
 }
 .person-list-view .person-position {
   font-size: 18px;
+}
+.person-list-view span.person-position:after {
+  content: ", ";
   margin-right: 0.3em;
 }
 .person-list-view .person-area .label-inline {
@@ -3208,6 +3211,7 @@ a .slideshow-slide:hover .slide-cta {
   font-size: 14px;
   color: #231f20;
   line-height: 1em;
+  display: inline;
 }
 .node-staff.view-mode-teaser .person-position:after,
 .node-faculty.view-mode-teaser .person-position:after {
@@ -6127,7 +6131,6 @@ fieldset.collapsible .fieldset-legend {
   display: inline-block;
   float: left;
   width: 18.6%;
-  min-width: 170px;
   margin-right: 1.75%;
 }
 .views-responsive-grid.views-columns-5 > div > div.views-column-last {
@@ -6218,4 +6221,98 @@ fieldset.collapsible .fieldset-legend {
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected strong {
   color: #887e6e;
+}
+
+.pane-lastname-az-links {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+  margin-bottom: 30px;
+}
+.pane-lastname-az-links .item-list {
+  display: block;
+  padding: 0 75px;
+  height: 65px;
+  overflow: hidden;
+}
+.pane-lastname-az-links .item-list ul {
+  margin: 0;
+}
+.pane-lastname-az-links .item-list li {
+  float: left;
+  margin: 1.6em 0 1em;
+  padding: 0;
+  width: 40px;
+  text-align: center;
+}
+.pane-lastname-az-links .item-list li a {
+  font-size: 20px;
+}
+.pane-lastname-az-links .item-list li a.active {
+  color: #231f20;
+}
+.pane-lastname-az-links .item-list li a.active:hover {
+  color: #2d6280;
+}
+.pane-lastname-az-links .item-list li a:hover {
+  color: #2d6280;
+}
+.pane-lastname-az-links .next, .pane-lastname-az-links .prev {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 65px;
+  height: 65px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #c50000));
+  background: -webkit-linear-gradient(top, #860000, #c50000);
+  background: -moz-linear-gradient(top, #860000, #c50000);
+  background: -o-linear-gradient(top, #860000, #c50000);
+  background: -ms-linear-gradient(top, #860000, #c50000);
+  background: linear-gradient(top, #860000, #c50000);
+  text-align: center;
+  line-height: 1;
+}
+.pane-lastname-az-links .next:before, .pane-lastname-az-links .prev:before {
+  content: "\f100";
+  color: white;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 65px;
+}
+.pane-lastname-az-links .next.disabled, .pane-lastname-az-links .prev.disabled {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4e4e4), color-stop(100%, #e9e9e9));
+  background: -webkit-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -moz-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -o-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -ms-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: linear-gradient(top, #e4e4e4, #e9e9e9);
+  cursor: default;
+}
+.pane-lastname-az-links .next.disabled:hover, .pane-lastname-az-links .prev.disabled:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4e4e4), color-stop(100%, #e9e9e9));
+  background: -webkit-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -moz-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -o-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: -ms-linear-gradient(top, #e4e4e4, #e9e9e9);
+  background: linear-gradient(top, #e4e4e4, #e9e9e9);
+}
+.pane-lastname-az-links .next:hover, .pane-lastname-az-links .prev:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #18455f), color-stop(100%, #2d6280));
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -ms-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(top, #18455f, #2d6280);
+}
+.pane-lastname-az-links .next {
+  right: 0;
+}
+.pane-lastname-az-links .next:before {
+  font-family: "arrow-double";
+}
+.pane-lastname-az-links .prev {
+  left: 0;
+}
+.pane-lastname-az-links .prev:before {
+  font-family: "arrow-double-left";
 }
