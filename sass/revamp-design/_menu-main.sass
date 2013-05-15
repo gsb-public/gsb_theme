@@ -37,8 +37,6 @@
       margin: 0
     // IPAD
     +breakpoint($bp-portrait)
-      .menu
-        display: block
       a
         background: image_url("navigation-arrow.png") no-repeat 95% 50%
         font-size: 15px
@@ -166,6 +164,7 @@
   +breakpoint($bp-mobile-max)
     display: block
   #nav-touch-button
+    display: none
     +breakpoint($bp-mobile-max)
       cursor: pointer
       display: inline-block

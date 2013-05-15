@@ -1777,6 +1777,11 @@ div.label-inline {
   margin: 0 auto;
   max-width: 1170px;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #bottom .bottom-content {
+    padding: 0 20px;
+  }
+}
 
 @media (min-width: 30.0625em) {
   .front #content-wrapper {
@@ -2205,9 +2210,6 @@ a.no-border:hover {
   margin: 0;
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
-  #block-system-main-menu li .menu {
-    display: block;
-  }
   #block-system-main-menu li a {
     background: url('../images/navigation-arrow.png') no-repeat 95% 50%;
     font-size: 15px;
@@ -2384,6 +2386,9 @@ a.no-border:hover {
   #nav-touch-wrapper {
     display: block;
   }
+}
+#nav-touch-wrapper #nav-touch-button {
+  display: none;
 }
 @media (max-width: 30em) {
   #nav-touch-wrapper #nav-touch-button {
@@ -2622,6 +2627,11 @@ input.footer__signup__email {
   line-height: 1em;
   width: 160px;
   float: left;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  input.footer__signup__email {
+    width: 130px;
+  }
 }
 input.footer__signup__email:focus {
   outline: none;
