@@ -9,7 +9,7 @@
     border-bottom: 10px solid $red
 
 // MAIN MENU
-#main-menu
+#block-system-main-menu
   float: left
   +breakpoint($bp-mobile-max)
     float: none
@@ -25,6 +25,8 @@
     list-style-image: none
     margin: 0
     padding: 0
+    .menu
+      display: none
     &:hover,
     &.active
       background: $black
@@ -35,6 +37,8 @@
       margin: 0
     // IPAD
     +breakpoint($bp-portrait)
+      .menu
+        display: block
       a
         background: image_url("navigation-arrow.png") no-repeat 95% 50%
         font-size: 15px
@@ -47,6 +51,8 @@
       display: block
       background: $white
       width: 100%
+      .menu
+        display: block
       &:hover,
       &.active
         background: $white
@@ -139,6 +145,7 @@
 // MENU BUTTON
 ////////////////////////////
 #nav-touch-wrapper
+  display: inline
   #nav-touch-button
     +breakpoint($bp-mobile-max)
       cursor: pointer

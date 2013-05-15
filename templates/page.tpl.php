@@ -77,11 +77,11 @@
 
     <div id="header-wrapper"><div id="header"><div class="section clearfix">
 
-      <?php if ($main_menu): ?>
+      <?php if ($page['navigation']): ?>
         <div id="nav-touch-wrapper">
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
-            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+            <?php print render($page['navigation']); ?>
             <div class="se">
               <a href="/events" class="event-calendar">Event Calendar</a>
               <!-- Search input goes here -->

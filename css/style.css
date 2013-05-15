@@ -1814,7 +1814,7 @@ div.label-inline {
 
 #logo {
   display: inline-block;
-  padding: 35px 0;
+  padding-top: 35px;
 }
 @media (max-width: 60.875em) {
   #logo img {
@@ -2166,16 +2166,16 @@ a.no-border:hover {
   border-bottom: 10px solid #990000;
 }
 
-#main-menu {
+#block-system-main-menu {
   float: left;
 }
 @media (max-width: 30em) {
-  #main-menu {
+  #block-system-main-menu {
     float: none;
     display: block;
   }
 }
-#main-menu li {
+#block-system-main-menu li {
   border-right: 1px solid red;
   background-color: #c50000;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c50000), color-stop(100%, #860000));
@@ -2192,17 +2192,23 @@ a.no-border:hover {
   margin: 0;
   padding: 0;
 }
-#main-menu li:hover, #main-menu li.active {
+#block-system-main-menu li .menu {
+  display: none;
+}
+#block-system-main-menu li:hover, #block-system-main-menu li.active {
   background: black;
 }
-#main-menu li a {
+#block-system-main-menu li a {
   color: white;
   font-weight: bold;
   display: block;
   margin: 0;
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
-  #main-menu li a {
+  #block-system-main-menu li .menu {
+    display: block;
+  }
+  #block-system-main-menu li a {
     background: url('../images/navigation-arrow.png') no-repeat 95% 50%;
     font-size: 15px;
     line-height: 14px;
@@ -2210,7 +2216,7 @@ a.no-border:hover {
   }
 }
 @media (max-width: 30em) {
-  #main-menu li {
+  #block-system-main-menu li {
     border: 0;
     border-bottom: 1px solid #d5d5d5;
     float: none;
@@ -2218,31 +2224,34 @@ a.no-border:hover {
     background: white;
     width: 100%;
   }
-  #main-menu li:hover, #main-menu li.active {
+  #block-system-main-menu li .menu {
+    display: block;
+  }
+  #block-system-main-menu li:hover, #block-system-main-menu li.active {
     background: white;
   }
-  #main-menu li a {
+  #block-system-main-menu li a {
     color: #990000;
     padding: 15px 0 15px 55px;
   }
-  #main-menu li a:before {
+  #block-system-main-menu li a:before {
     content: url('../images/toggle-close.png');
     display: inline;
     position: relative;
     left: -35px;
   }
-  #main-menu li.active a:before {
+  #block-system-main-menu li.active a:before {
     content: url('../images/toggle-open.png');
   }
 }
 @media (min-width: 48.0625em) {
-  #main-menu li {
+  #block-system-main-menu li {
     max-width: 122px;
   }
-  #main-menu li:first-of-type a {
+  #block-system-main-menu li:first-of-type a {
     padding: 12px 7px 18px;
   }
-  #main-menu li a {
+  #block-system-main-menu li a {
     background: url('../images/navigation-arrow.png') no-repeat 100px 60px;
     min-height: 80px;
     padding: 12px 8px 18px;
@@ -2345,6 +2354,9 @@ a.no-border:hover {
   }
 }
 
+#nav-touch-wrapper {
+  display: inline;
+}
 @media (max-width: 30em) {
   #nav-touch-wrapper #nav-touch-button {
     cursor: pointer;
