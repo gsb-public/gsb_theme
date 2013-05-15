@@ -52,22 +52,17 @@
 // Filter toggle
 .collapsible
   .fieldset-title
-    text-indent: 20px
-    padding: 0
-    line-height: 10px
-    position: relative
-    top: 1px
-    background: image_url('toggle-open.png') no-repeat
+    padding: 0 0 0 25px
+    font-weight: bold
+    background: image_url('toggle-open.png') no-repeat left 2px
     display: inline-block
-    height: 1em
-    text-transform: none
     &:hover
-      background: image_url('toggle-open-hover.png') no-repeat
+      background: image_url('toggle-open-hover.png') no-repeat left 2px
   &.collapsed
     .fieldset-title
-      background: image_url('toggle-close.png') no-repeat
+      background: image_url('toggle-close.png') no-repeat left 1px
       &:hover
-        background: image_url('toggle-close-hover.png') no-repeat
+        background: image_url('toggle-close-hover.png') no-repeat left 1px
 
 fieldset.collapsible .fieldset-legend
   display: inline
@@ -125,6 +120,32 @@ fieldset.collapsible .fieldset-legend
       border-right: 0
 
 //Parent class to exposed, colapsable filter
-//.exposed_filter_widget
+.exposed_filter_widget
+  > div
+    @extend %bg-border-and-box-shadow
+    padding: 3px
+    margin-top: 1px !important
+    > strong 
+      border-bottom: 1px solid #e4e4e4
+      display: block
+      width: 100%%
+      font-size: 20px
+      padding: 20px 20px 15px 20px
+    
+  .views-exposed-widget
+    &:first-child,
+    &:nth-child(2n+2)
+      width: 50%
+      float: left
+    &:first-child
+      border-right: 1px solid #e4e4e4
+    &:nth-child(2n+2)
+      border-left: 1px solid #e4e4e4
+      margin-left: -1px
+    fieldset
+      border: 0 none
+      padding: 14px
+  .fieldset-wrapper
+    padding-left: 8px
   
 

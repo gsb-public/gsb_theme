@@ -201,4 +201,20 @@
       });
     }
   }
+  
+  /**
+   * Modify colapsable functional for Filter regions and industry or anything else taxonomy
+   */
+  Drupal.behaviors.colapsable_patch = {
+    attach: function (context, settings) {
+      $('.exposed_filter_widget a.fieldset-title').click(function(e){
+          e.preventDefault()
+          e.stopPropagation()
+          //return false
+        //$('.exposed_filter_widget').find('.fieldset-wrapper').css('display','block')
+        console.log('test')
+      })
+    }
+  }  
+  
 }(jQuery));

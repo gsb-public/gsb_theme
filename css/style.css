@@ -73,7 +73,7 @@ pre, code, kbd, tt {
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
@@ -92,7 +92,7 @@ pre, code, kbd, tt {
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-gsb-event-frontpage, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -102,7 +102,7 @@ pre, code, kbd, tt {
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
@@ -4947,24 +4947,19 @@ p.acc-title + p {
 }
 
 .collapsible .fieldset-title {
-  text-indent: 20px;
-  padding: 0;
-  line-height: 10px;
-  position: relative;
-  top: 1px;
-  background: url('../images/toggle-open.png') no-repeat;
+  padding: 0 0 0 25px;
+  font-weight: bold;
+  background: url('../images/toggle-open.png') no-repeat left 2px;
   display: inline-block;
-  height: 1em;
-  text-transform: none;
 }
 .collapsible .fieldset-title:hover {
-  background: url('../images/toggle-open-hover.png') no-repeat;
+  background: url('../images/toggle-open-hover.png') no-repeat left 2px;
 }
 .collapsible.collapsed .fieldset-title {
-  background: url('../images/toggle-close.png') no-repeat;
+  background: url('../images/toggle-close.png') no-repeat left 1px;
 }
 .collapsible.collapsed .fieldset-title:hover {
-  background: url('../images/toggle-close-hover.png') no-repeat;
+  background: url('../images/toggle-close-hover.png') no-repeat left 1px;
 }
 
 fieldset.collapsible .fieldset-legend {
@@ -5025,6 +5020,36 @@ fieldset.collapsible .fieldset-legend {
 }
 .gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:last-of-type, .gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:nth-of-type(3n) {
   border-right: 0;
+}
+
+.exposed_filter_widget > div {
+  padding: 3px;
+  margin-top: 1px !important;
+}
+.exposed_filter_widget > div > strong {
+  border-bottom: 1px solid #e4e4e4;
+  display: block;
+  width: 100%%;
+  font-size: 20px;
+  padding: 20px 20px 15px 20px;
+}
+.exposed_filter_widget .views-exposed-widget:first-child, .exposed_filter_widget .views-exposed-widget:nth-child(2n+2) {
+  width: 50%;
+  float: left;
+}
+.exposed_filter_widget .views-exposed-widget:first-child {
+  border-right: 1px solid #e4e4e4;
+}
+.exposed_filter_widget .views-exposed-widget:nth-child(2n+2) {
+  border-left: 1px solid #e4e4e4;
+  margin-left: -1px;
+}
+.exposed_filter_widget .views-exposed-widget fieldset {
+  border: 0 none;
+  padding: 14px;
+}
+.exposed_filter_widget .fieldset-wrapper {
+  padding-left: 8px;
 }
 
 .node-media-mention .field-name-title,
