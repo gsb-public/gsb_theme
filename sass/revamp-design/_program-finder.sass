@@ -7,21 +7,22 @@
   .field-group-tab-wrapper
     @extend %border-and-box-shadow
     +background-image(linear-gradient(right, #355567, #7390a1))
-    .page-programs &
-      background: image_url("bg-program-finder.png") no-repeat
-    height: 466px
+    // .page-programs &
+    background: image_url("bg-program-finder.png") no-repeat
+    height: 476px
     padding: 10px
   div.vertical-tabs
     @extend %border
     background: linear-gradient(#f4f4f4, $grey-d)
+    height: 450px
     margin: 0 0 0 15em
     fieldset.vertical-tabs-pane
       border: 0
-      padding: 40px
+      padding: 36px 40px
     .fieldset-wrapper
       a
         color: $text-green
-        display: block
+        display: inline-block
         font:
           size: 16px
           weight: bold
@@ -37,7 +38,9 @@
           left: 7px
         &:hover
           color: $text-blue
-
+    .vertical-tabs-panes
+      height: 438px
+      overflow: hidden
     ul.vertical-tabs-list
       border-top: 0
       margin: -2px 0 -2px -15em
@@ -63,8 +66,8 @@
         a
           color: $white
           font-size: 20px
-          line-height: 24px
-          padding: 15px 24px 14px 12px
+          line-height: 1
+          padding: 17px 24px 17px 12px
           &:hover
             outline: 0
             strong
