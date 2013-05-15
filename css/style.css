@@ -6319,11 +6319,14 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1;
 }
 .pane-lastname-az-links .next:before, .pane-lastname-az-links .prev:before {
-  content: "\f100";
-  color: white;
-  font-size: 26px;
-  font-weight: normal;
-  line-height: 65px;
+  content: "";
+  width: 21px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -11px;
 }
 .pane-lastname-az-links .next.disabled, .pane-lastname-az-links .prev.disabled {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4e4e4), color-stop(100%, #e9e9e9));
@@ -6354,11 +6357,11 @@ fieldset.collapsible .fieldset-legend {
   right: 0;
 }
 .pane-lastname-az-links .next:before {
-  font-family: "arrow-double";
+  background: url('../images/arrow-next.png') no-repeat center center;
 }
 .pane-lastname-az-links .prev {
   left: 0;
 }
 .pane-lastname-az-links .prev:before {
-  font-family: "arrow-double-left";
+  background: url('../images/arrow-prev.png') no-repeat center center;
 }
