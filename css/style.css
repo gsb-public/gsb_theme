@@ -5205,6 +5205,7 @@ fieldset.collapsible .fieldset-legend {
 .exposed_filter_widget > div {
   padding: 3px;
   margin-top: 1px !important;
+  position: relative;
 }
 .exposed_filter_widget > div > strong {
   border-bottom: 1px solid #e4e4e4;
@@ -5213,9 +5214,35 @@ fieldset.collapsible .fieldset-legend {
   font-size: 20px;
   padding: 20px 20px 15px 20px;
 }
+.exposed_filter_widget .views-exposed-widget > label {
+  font-weight: bold;
+  padding-bottom: 8px;
+  color: #990000;
+  padding-left: 25px;
+  background: url('../images/toggle-close.png') no-repeat left 1px;
+}
+.exposed_filter_widget .views-exposed-widget > label:hover {
+  background: url('../images/toggle-close-hover.png') no-repeat left 1px;
+}
+.exposed_filter_widget .views-exposed-widget.collapsed > label {
+  background: url('../images/toggle-open.png') no-repeat left 2px;
+}
+.exposed_filter_widget .views-exposed-widget.collapsed > label:hover {
+  background: url('../images/toggle-open-hover.png') no-repeat left 2px;
+}
+.exposed_filter_widget .views-exposed-widget .views-widget {
+  display: none;
+  padding-left: 3px;
+}
+.exposed_filter_widget .views-exposed-widget .views-widget .bef-checkboxes label {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+}
 .exposed_filter_widget .views-exposed-widget:first-child, .exposed_filter_widget .views-exposed-widget:nth-child(2n+2) {
   width: 50%;
   float: left;
+  padding: 16px 20px 0;
 }
 .exposed_filter_widget .views-exposed-widget:first-child {
   border-right: 1px solid #e4e4e4;
@@ -5230,6 +5257,14 @@ fieldset.collapsible .fieldset-legend {
 }
 .exposed_filter_widget .fieldset-wrapper {
   padding-left: 8px;
+}
+.exposed_filter_widget .views-submit-button {
+  padding: 0 !important;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  border: 0 none !important;
+  margin-left: -10px !important;
 }
 
 .node-media-mention .field-name-title,

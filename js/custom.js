@@ -207,13 +207,43 @@
    */
   Drupal.behaviors.colapsable_patch = {
     attach: function (context, settings) {
-      $('.exposed_filter_widget a.fieldset-title').click(function(e){
-          e.preventDefault()
-          e.stopPropagation()
+     // $('.exposed_filter_widget').find('.fieldset-wrapper').css({'display':'none', 'overflow':'hidden'})
+      //$('.exposed_filter_widget').find('fieldset').addClass('collapsed')
+      
+      //$('.exposed_filter_widget').find('.fieldset-wrapper').css({'overflow':'hidden','display':'none'})
+      //$('.exposed_filter_widget').find('fieldset').addClass('collapsed')
+      
+      //$('.exposed_filter_widget a.fieldset-title').click(function(e){
+          //$('.exposed_filter_widget').find('fieldset').toggleClass('collapsed')
+          //e.preventDefault()
+          //e.stopPropagation()
           //return false
-        //$('.exposed_filter_widget').find('.fieldset-wrapper').css('display','block')
-        console.log('test')
-      })
+        //$('.exposed_filter_widget').find('.fieldset-wrapper').toggle()
+         
+         //$('.views-exposed-form .views-exposed-widget .views-widget').hide()
+         
+
+
+                 
+         $('.exposed_filter_widget .views-exposed-widget').children('label').click(function(){
+           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed')
+           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle() //.stop().slideToggle()
+         })
+         
+         /*
+        $('.exposed_filter_widget .views-exposed-form label').toggle(function(){
+          $('.views-exposed-form .views-exposed-widget').addClass('collapsed')
+          $('.views-exposed-form .views-exposed-widget .views-widget').css({'display':'block'})
+        }, function(){
+          $('.views-exposed-form .views-exposed-widget').removeClass('collapsed')
+          $('.views-exposed-form .views-exposed-widget .views-widget').css({'display':'none'})
+        })
+
+          */
+        
+         
+         
+     // })
     }
   }  
   
