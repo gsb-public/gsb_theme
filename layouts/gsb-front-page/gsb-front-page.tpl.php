@@ -20,14 +20,14 @@
     </div>
   </div>
   <div class="front-panel-feature-row">
+    <div class="front-panel-feature-three">
+      <?php print $content['featuredcolthree']; ?>
+    </div>
     <div class="front-panel-feature-one">
       <?php print $content['featuredcolone']; ?>
     </div>
     <div class="front-panel-feature-two narrow-view">
       <?php print $content['featuredcoltwo']; ?>
-    </div>
-    <div class="front-panel-feature-three narrow-view">
-      <?php print $content['featuredcolthree']; ?>
     </div>
   </div>
 </div><!-- /.gsb-front-page -->

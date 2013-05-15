@@ -1285,6 +1285,7 @@ del {
   *zoom: 1;
   margin-left: 0;
   margin-left: 0%;
+  clear: left;
 }
 .panel-display.gsb-front-page .front-panel-feature-two {
   -webkit-box-sizing: border-box;
@@ -1300,6 +1301,7 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 51.28205%;
+  clear: none;
 }
 .panel-display.gsb-front-page .front-panel-feature-three {
   -webkit-box-sizing: border-box;
@@ -1315,6 +1317,46 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 76.92308%;
+}
+
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .panel-display.gsb-front-page .front-panel-feature-one {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url("../behaviors/box-sizing/boxsizing.php");
+    overflow: hidden;
+    *zoom: 1;
+    width: 59.02307%;
+    margin-right: -100%;
+    float: left;
+    clear: right;
+    overflow: hidden;
+    *zoom: 1;
+    margin-left: 0;
+    margin-left: 0%;
+  }
+  .panel-display.gsb-front-page .front-panel-feature-two {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url("../behaviors/box-sizing/boxsizing.php");
+    overflow: hidden;
+    *zoom: 1;
+    width: 36.90638%;
+    float: right;
+    margin-right: 0;
+    clear: right;
+    overflow: hidden;
+    *zoom: 1;
+    margin-left: 63.09362%;
+  }
+  .panel-display.gsb-front-page .front-panel-feature-three {
+    width: 727px;
+    float: none;
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
 
 #bottom .block-views {
@@ -1763,6 +1805,11 @@ div.label-inline {
 #footer-wrapper #footer {
   margin: 0 auto;
   max-width: 1170px;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #footer-wrapper #footer {
+    padding: 0 20px;
+  }
 }
 
 #logo {
@@ -2360,6 +2407,15 @@ a.no-border:hover {
   vertical-align: top;
   width: 270px;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us,
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-2,
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    margin-right: 16px;
+    width: 170px;
+  }
+}
 
 #block-menu-menu-footer-2,
 #block-gsb-public-custom-blocks-gpcb-enews-signup {
@@ -2380,6 +2436,13 @@ a.no-border:hover {
 #block-menu-menu-footer-1 a:hover,
 #block-menu-menu-footer-2 a:hover {
   color: #2d6280;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us a,
+  #block-menu-menu-footer-1 a,
+  #block-menu-menu-footer-2 a {
+    font-size: 13px;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us li,
 #block-menu-menu-footer-1 li,
@@ -2435,20 +2498,54 @@ a.no-border:hover {
   padding: 27px 0 0 0;
   margin-top: 38px;
 }
-#block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle {
-  margin: 0 9px;
-}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-youtube:hover {
   background: url('../images/icon-youtube.png') no-repeat;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-youtube:hover {
+    background-size: 33px 33px;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-twitter:hover {
   background: url('../images/icon-twitter.png') no-repeat;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-twitter:hover {
+    background-size: 33px 33px;
+  }
+}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-facebook:hover {
   background: url('../images/icon-fb.png') no-repeat;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-facebook:hover {
+    background-size: 33px 33px;
+  }
+}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-linkedin:hover {
   background: url('../images/icon-linkedin.png') no-repeat;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-linkedin:hover {
+    background-size: 33px 33px;
+  }
+}
+#block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle {
+  margin: 0 9px;
+}
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle {
+    background-size: 33px 33px;
+    height: 33px;
+    margin: 0 5px;
+    width: 33px;
+  }
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle.social-block-twitter {
+    margin-left: 0;
+  }
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle.social-block-facebook {
+    margin-right: 0;
+  }
 }
 
 .footer__signup__label {
@@ -4435,9 +4532,16 @@ p.acc-title + p {
 }
 
 .pane-gsb-event-frontpage {
-  padding: 26px;
   background: url('../images/bg-homepage-events.png') no-repeat;
   height: 401px;
+  margin-right: 0;
+  padding: 26px;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .pane-gsb-event-frontpage {
+    background: url('../images/bg-homepage-events-wide.png') no-repeat;
+    height: 201px;
+  }
 }
 .pane-gsb-event-frontpage .view-gsb-event .view-content .views-row {
   border-bottom: 0;
@@ -4464,6 +4568,13 @@ p.acc-title + p {
   color: #231f20;
   font-size: 16px;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .pane-gsb-event-frontpage .views-field-field-event-date > div,
+  .pane-gsb-event-frontpage .views-field-title > div,
+  .pane-gsb-event-frontpage .views-field-field-address > div {
+    display: inline;
+  }
+}
 .pane-gsb-event-frontpage .views-field-title a {
   border: 0;
   font-weight: bold;
@@ -4473,6 +4584,11 @@ p.acc-title + p {
 }
 .pane-gsb-event-frontpage .views-field-field-event-date {
   color: #666666;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .pane-gsb-event-frontpage .views-field-field-address:after {
+    content: " - ";
+  }
 }
 
 #bottom {

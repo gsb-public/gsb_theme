@@ -9,6 +9,9 @@
   margin-right: 30px
   vertical-align: top
   width: 270px
+  +breakpoint($bp-portrait)
+    margin-right: 16px
+    width: 170px
 #block-menu-menu-footer-2,
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   margin-right: 0
@@ -26,6 +29,8 @@
     text-transform: uppercase
     &:hover
       color: $text-blue
+    +breakpoint($bp-portrait)
+      font-size: 13px
   li
     margin-bottom: 20px
     &:last-of-type
@@ -63,22 +68,33 @@
       border-top: 1px $grey-c solid
       padding: 27px 0 0 0
       margin-top: 38px
-
-    .circle
-      margin: 0 9px
-
     .social-block-youtube:hover
       background: image_url("icon-youtube.png") no-repeat
-
+      +breakpoint($bp-portrait)
+        background-size: 33px 33px
     .social-block-twitter:hover
       background: image_url("icon-twitter.png") no-repeat
-
+      +breakpoint($bp-portrait)
+        background-size: 33px 33px
     .social-block-facebook:hover
       background: image_url("icon-fb.png") no-repeat
-
+      +breakpoint($bp-portrait)
+        background-size: 33px 33px
     .social-block-linkedin:hover
       background: image_url("icon-linkedin.png") no-repeat
-
+      +breakpoint($bp-portrait)
+        background-size: 33px 33px
+    .circle
+      margin: 0 9px
+      +breakpoint($bp-portrait-max)
+        background-size: 33px 33px
+        height: 33px
+        margin: 0 5px
+        width: 33px
+        &.social-block-twitter
+          margin-left: 0
+        &.social-block-facebook
+          margin-right: 0
 
 // NEWSLETTER SIGNUP
 .footer__signup__label

@@ -66,10 +66,14 @@
 
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage
-  padding: 26px
   @extend %box-shadow
   background: image_url("bg-homepage-events.png") no-repeat
   height: 401px
+  margin-right: 0
+  padding: 26px
+  +breakpoint($bp-portrait)
+    background: image_url("bg-homepage-events-wide.png") no-repeat
+    height: 201px
   .view-gsb-event .view-content .views-row
     border-bottom: 0
   h2.pane-title
@@ -90,6 +94,9 @@
   .views-field-field-address
     color: $text-black
     font-size: 16px
+    +breakpoint($bp-portrait)
+      & > div
+        display: inline
   .views-field-title a
     border: 0
     font-weight: bold
@@ -97,6 +104,10 @@
       border: 0
   .views-field-field-event-date
     color: $grey-6
+  .views-field-field-address
+    +breakpoint($bp-portrait)
+      &:after
+        content: " - "
 
 // BOTTOM
 #bottom

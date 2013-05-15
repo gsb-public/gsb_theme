@@ -77,10 +77,24 @@
     +grid-span(1, 2, $columns: $front-main)
   .front-panel-feature-one
     +grid-span(1, 1, $columns: $front-main-inner)
+    clear: left
   .front-panel-feature-two
     +grid-span(1, 2, $columns: $front-main-inner)
+    clear: none
   .front-panel-feature-three
     +grid-span(1, 3, $columns: $front-main-inner)
+// Front page panel layout on iPad
+.panel-display.gsb-front-page
+  +breakpoint($bp-portrait)
+    .front-panel-feature-one
+      +grid-span(1, 1, $columns: $ipad-columns)
+    .front-panel-feature-two
+      +grid-span(1, 2, $columns: $ipad-columns)
+    .front-panel-feature-three
+      width: $ipad-full
+      float: none
+      margin: 0
+      margin-bottom: 30px
 
 #bottom
   .block-views
