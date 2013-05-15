@@ -118,9 +118,15 @@
 #menu-main-footer
   display: none
   +breakpoint($bp-mobile-max)
+    +clearfix
     display: block
     +background(linear-gradient($grey-e, $white))
     padding: 24px 0 24px 70px
+    .menu
+      float: left
+      width: 160px
+    .menu-1
+      margin-right: 25px
     li
       line-height: 16px
       padding-bottom: 12px
@@ -128,8 +134,6 @@
       font-weight: bold
       font-size: 13px
       text-transform: uppercase
-
-
 
 ////////////////////////////
 // MENU BUTTON
@@ -168,4 +172,4 @@
         display: block
         position: absolute
         width: 100%
-        z-index: 2
+        z-index: 11

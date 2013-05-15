@@ -87,16 +87,18 @@
               <!-- Search input goes here -->
             </div><!-- /.se -->
             <div id="menu-main-footer">
-              <ul class="menu">
-                <li class="first"><a href="/admin" title="">Alumni</a></li>
-                <li><a href="/admin" title="">Giving</a></li>
-                <li><a href="/admin" title="">Recruiters &amp; Corporate Partners</a></li>
-                <li><a href="/admin" title="">Stanford University Partners</a></li>
-                <li><a href="/" title="">Newsroom</a></li>
+              <ul class="menu menu-1">
+                <li class="first"><a href="/" title="">Alumni</a></li>
+                <li><a href="/" title="">Giving</a></li>
+                <li><a href="/" title="">Recruiters &amp; Corporate Partners</a></li>
+                <li class="last"><a href="/" title="">Stanford University Partners</a></li>
+              </ul>
+              <ul class="menu menu-2">
+                <li class="first"><a href="/" title="">Newsroom</a></li>
                 <li><a href="/" title="">Visit Us</a></li>
                 <li><a href="/" title="">Contact Us</a></li>
-                <li><a href="/user" title="">Jobs</a></li>
-                <li class="last"><a href="/" title="">Log In</a></li>
+                <li><a href="/" title="">Jobs</a></li>
+                <li class="last"><a href="/user" title="">Log In</a></li>
               </ul>
           </div></div></div><!-- /#menu-main-footer, /.section, /#navigation -->
       <?php endif; ?>

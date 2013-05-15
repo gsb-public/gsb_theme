@@ -2269,6 +2269,8 @@ a.no-border:hover {
 }
 @media (max-width: 30em) {
   #menu-main-footer {
+    overflow: hidden;
+    *zoom: 1;
     display: block;
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ededed), color-stop(100%, #ffffff));
     background: -webkit-linear-gradient(#ededed, #ffffff);
@@ -2277,6 +2279,13 @@ a.no-border:hover {
     background: -ms-linear-gradient(#ededed, #ffffff);
     background: linear-gradient(#ededed, #ffffff);
     padding: 24px 0 24px 70px;
+  }
+  #menu-main-footer .menu {
+    float: left;
+    width: 160px;
+  }
+  #menu-main-footer .menu-1 {
+    margin-right: 25px;
   }
   #menu-main-footer li {
     line-height: 16px;
@@ -2338,7 +2347,7 @@ a.no-border:hover {
     display: block;
     position: absolute;
     width: 100%;
-    z-index: 2;
+    z-index: 11;
   }
 }
 
