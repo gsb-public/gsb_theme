@@ -2872,8 +2872,8 @@ ul.slideshow-items {
   height: 262px;
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
-  .slideshow-simple .slideshow-slide {
-    height: 204px;
+  .front .slideshow-simple .slideshow-slide {
+    height: 205px;
   }
 }
 .slideshow-simple .slideshow-slide:hover .slide-title {
@@ -3970,6 +3970,11 @@ p.acc-title + p {
   line-height: 1.15em;
   color: white;
 }
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .front .pane-bundle-image-cta .field-name-field-link-single a {
+    font-size: 24px;
+  }
+}
 .pane-bundle-image-cta .field-name-field-link-single {
   display: inline-block;
   position: relative;
@@ -4355,16 +4360,19 @@ p.acc-title + p {
 }
 
 .pane-program-links .cta-link {
-  padding: 14px 26px;
+  padding: 16px 26px;
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
   .pane-program-links .cta-link {
-    padding: 8px 12px;
+    padding: 13px 12px;
   }
 }
 .pane-program-links ul {
   margin: 0;
   padding: 0;
+}
+.pane-program-links li {
+  line-height: 1;
 }
 .pane-program-links li.last a {
   margin-bottom: 0;
@@ -4384,6 +4392,16 @@ p.acc-title + p {
   .pane-program-links a {
     font-size: 16px;
     margin-bottom: 2px;
+  }
+}
+@media (max-width: 57.375em) {
+  .pane-program-links .executive-education a {
+    padding-top: 9px;
+  }
+}
+@media (max-width: 50.0625em) {
+  .pane-program-links .all-programs a {
+    padding-top: 9px;
   }
 }
 

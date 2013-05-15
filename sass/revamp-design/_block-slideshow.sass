@@ -107,7 +107,8 @@ ul.slideshow-items
   .slideshow-slide
     height: 262px
     +breakpoint($bp-portrait)
-      height: 204px
+      .front &
+        height: 205px
     &:hover
       .slide-title
         color: $red

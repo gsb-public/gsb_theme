@@ -31,6 +31,9 @@
     font-weight: bold
     line-height: 1.15em
     color: $white
+    +breakpoint($bp-portrait)
+      .front &
+        font-size: 24px
   // Double arrow link
   .field-name-field-link-single
     display: inline-block
