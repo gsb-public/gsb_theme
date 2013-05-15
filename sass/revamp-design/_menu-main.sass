@@ -44,31 +44,48 @@
         font-size: 15px
         line-height: 14px
         padding: 10px 30px 10px 9px
+    // Mobile
     +breakpoint($bp-mobile-max)
+      background: $white
       border: 0
       border-bottom: 1px solid #d5d5d5
-      float: none
       display: block
-      background: $white
+      float: none
+      min-height: 50px
       width: 100%
-      .menu
-        display: block
       &:hover,
       &.active
         background: $white
+      &:hover
+        .menu
+          display: block
       a
+        color: $red
+        padding: 15px 0 15px 55px
         &:before
           content: image_url("toggle-close.png")
           display: inline
           position: relative
           left: -35px
-        color: $red
-        padding: 15px 0 15px 55px
-      &.active
+  +breakpoint($bp-mobile-max)
+    li.active,
+    li:hover
+      a
+        &:before
+          content: image_url("toggle-open.png")
+      li
+        border-bottom: 0
         a
+          font-size: 14px
+          padding-left: 70px
+          text-transform: uppercase
           &:before
-            content: image_url("toggle-open.png")
-
+            content: ""
+        &.active,
+        &:hover
+          a
+            &:before
+              content: ""
 
   // FULL
   +breakpoint($bp-wide-min)
@@ -146,6 +163,8 @@
 ////////////////////////////
 #nav-touch-wrapper
   display: inline
+  +breakpoint($bp-mobile-max)
+    display: block
   #nav-touch-button
     +breakpoint($bp-mobile-max)
       cursor: pointer
@@ -180,3 +199,7 @@
         position: absolute
         width: 100%
         z-index: 11
+
+.qtip-megamenu
+  +breakpoint($bp-mobile-max)
+    display: none !important

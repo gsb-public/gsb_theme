@@ -2217,18 +2217,19 @@ a.no-border:hover {
 }
 @media (max-width: 30em) {
   #block-system-main-menu li {
+    background: white;
     border: 0;
     border-bottom: 1px solid #d5d5d5;
+    display: block;
     float: none;
-    display: block;
-    background: white;
+    min-height: 50px;
     width: 100%;
-  }
-  #block-system-main-menu li .menu {
-    display: block;
   }
   #block-system-main-menu li:hover, #block-system-main-menu li.active {
     background: white;
+  }
+  #block-system-main-menu li:hover .menu {
+    display: block;
   }
   #block-system-main-menu li a {
     color: #990000;
@@ -2240,8 +2241,30 @@ a.no-border:hover {
     position: relative;
     left: -35px;
   }
-  #block-system-main-menu li.active a:before {
+}
+@media (max-width: 30em) {
+  #block-system-main-menu li.active a:before,
+  #block-system-main-menu li:hover a:before {
     content: url('../images/toggle-open.png');
+  }
+  #block-system-main-menu li.active li,
+  #block-system-main-menu li:hover li {
+    border-bottom: 0;
+  }
+  #block-system-main-menu li.active li a,
+  #block-system-main-menu li:hover li a {
+    font-size: 14px;
+    padding-left: 70px;
+    text-transform: uppercase;
+  }
+  #block-system-main-menu li.active li a:before,
+  #block-system-main-menu li:hover li a:before {
+    content: "";
+  }
+  #block-system-main-menu li.active li.active a:before, #block-system-main-menu li.active li:hover a:before,
+  #block-system-main-menu li:hover li.active a:before,
+  #block-system-main-menu li:hover li:hover a:before {
+    content: "";
   }
 }
 @media (min-width: 48.0625em) {
@@ -2358,6 +2381,11 @@ a.no-border:hover {
   display: inline;
 }
 @media (max-width: 30em) {
+  #nav-touch-wrapper {
+    display: block;
+  }
+}
+@media (max-width: 30em) {
   #nav-touch-wrapper #nav-touch-button {
     cursor: pointer;
     display: inline-block;
@@ -2407,6 +2435,12 @@ a.no-border:hover {
     position: absolute;
     width: 100%;
     z-index: 11;
+  }
+}
+
+@media (max-width: 30em) {
+  .qtip-megamenu {
+    display: none !important;
   }
 }
 
