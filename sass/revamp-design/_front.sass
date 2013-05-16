@@ -5,6 +5,8 @@
 .gsb-front-page,
 .front-panel-header-row
   margin-bottom: 30px
+  +breakpoint($bp-mobile-max)
+    margin-bottom: 0
 
 // PROGRAMS LINKS
 .pane-program-links
@@ -46,6 +48,8 @@
   h5
     font-size: 16px
     line-height: 1em
+    +breakpoint($bp-mobile-max)
+      display: inline
   .follow-us-circles
     +clearfix
     margin-bottom: 24px
@@ -71,9 +75,13 @@
   height: 401px
   margin-right: 0
   padding: 26px
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-portrait-max)
     background: image_url("bg-homepage-events-wide.png") no-repeat
     height: 201px
+  +breakpoint($bp-mobile-max)
+    background: image_url("bg-homepage-events-narrow.png") no-repeat
+    height: 258px
+    max-width: 450px
   .view-gsb-event .view-content .views-row
     border-bottom: 0
   h2.pane-title
@@ -94,7 +102,7 @@
   .views-field-field-address
     color: $text-black
     font-size: 16px
-    +breakpoint($bp-portrait)
+    +breakpoint($bp-portrait-max)
       & > div
         display: inline
   .views-field-title a
@@ -105,7 +113,7 @@
   .views-field-field-event-date
     color: $grey-6
   .views-field-field-address
-    +breakpoint($bp-portrait)
+    +breakpoint($bp-portrait-max)
       &:after
         content: " - "
 

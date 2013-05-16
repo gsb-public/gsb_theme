@@ -15,7 +15,7 @@
     <div class="front-slider-pane wide-view">
       <?php print $content['contentslider']; ?>
     </div>
-    <div class="front-sidebar-pane narrow-view">
+    <div id="quicklinks" class="front-sidebar-pane narrow-view">
       <?php print $content['sidebarnavigation']; ?>
     </div>
   </div>

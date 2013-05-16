@@ -13,12 +13,20 @@ ul.slideshow-items
   opacity: 1
   width: 60px
   height: 60px
+  +breakpoint($bp-mobile-max)
+    top: 37%
+    width: 40px
+    height: 40px
   &.flex-prev
     left: 28px
     background: image_url("prev-arrow.png") no-repeat
+    +breakpoint($bp-mobile-max)
+      background: image_url("prev-arrow-small.png") no-repeat
   &.flex-next
     right: 28px
     background: image_url("next-arrow.png") no-repeat
+    +breakpoint($bp-mobile-max)
+      background: image_url("next-arrow-small.png") no-repeat
 
 
 // Slideshow wrapper
@@ -57,7 +65,7 @@ ul.slideshow-items
 
 // Slide title
 .slide-title
-  color: #231f20
+  color: $text-black
   font-size: 26px
   line-height: 32px
   margin-bottom: 30px
@@ -91,12 +99,16 @@ ul.slideshow-items
 .purple-button-on-blue
   .slide-text
     +background(linear-gradient(left, rgba(#cce0dc, 0.6) 18%, rgba(#cce0dc, 1)))
+    +breakpoint($bp-mobile-max)
+      background: none
   .slide-cta
     background-color: $purple
 
 .blue-button-on-orange
   .slide-text
     +background(linear-gradient(left, rgba(#fbe1a8, 0.6) 18%, rgba(#fbe1a8, 1)))
+    +breakpoint($bp-mobile-max)
+      background: none
   .slide-cta
     background-color: $teal-dark
 
@@ -109,6 +121,9 @@ ul.slideshow-items
     +breakpoint($bp-portrait)
       .front &
         height: 205px
+    +breakpoint($bp-mobile-max)
+      .front &
+        height: 385px
     &:hover
       .slide-title
         color: $red
@@ -121,10 +136,18 @@ ul.slideshow-items
     height: 267px
     z-index: 2
     width: 100%
+    +breakpoint($bp-mobile-max)
+      background: none
     .inner
       right: 30px
       top: 30px
       width: 50%
+      +breakpoint($bp-mobile-max)
+        background: none
+        padding: 0 10px
+        right: 0
+        top: 270px
+        width: 100%
   .slide-title
     font-size: 16px
     color: $red
@@ -135,7 +158,7 @@ ul.slideshow-items
   .slide-description
     font-size: 36px
     line-height: 40px
-    +breakpoint($bp-portrait)
+    +breakpoint($bp-portrait-max)
       font-size: 26px
       line-height: 28px
     a
