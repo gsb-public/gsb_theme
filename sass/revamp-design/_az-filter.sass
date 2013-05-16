@@ -16,7 +16,8 @@
       margin: 0
     li
       float: left
-      margin: 1.60em 0 1em
+      margin: 0
+      line-height: 75px
       padding: 0
       width: 40px
       text-align: center
@@ -30,6 +31,9 @@
           color: $text-blue
         
   .next, .prev
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
     cursor: pointer
     position: absolute
     top: 0
