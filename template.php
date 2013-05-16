@@ -49,6 +49,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-faculty-search-solr-search',
     'views-exposed-form-search-case-study-panel-pane-1',
     'views-exposed-form-case-study-search-solr-search',
+    'views-exposed-form-club-filters-club-list',
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
