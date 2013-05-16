@@ -517,6 +517,11 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
   font-family: "arrow-double";
 }
 
+.icon-external-link:before {
+  content: "\f100";
+  font-family: "external-link";
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6048,7 +6053,10 @@ fieldset.collapsible .fieldset-legend {
   color: #7d8401;
 }
 .node-club.view-mode-teaser h5 a:after {
-  content: url('../images/external_link.png');
+  color: #bac405;
+  content: "\f100";
+  font-family: "external-link";
+  font-size: 14px;
   margin-left: 5px;
 }
 .node-club.view-mode-teaser .field-name-field-body {
