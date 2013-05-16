@@ -70,17 +70,17 @@
 
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage
-  @extend %box-shadow
+  @extend %border-and-box-shadow
   background: image_url("bg-homepage-events.png") no-repeat
-  height: 401px
-  margin-right: 0
+  height: 397px
   padding: 26px
   +breakpoint($bp-portrait-max)
     background: image_url("bg-homepage-events-wide.png") no-repeat
-    height: 201px
+    height: 199px
+    margin-right: 4px
   +breakpoint($bp-mobile-max)
     background: image_url("bg-homepage-events-narrow.png") no-repeat
-    height: 258px
+    height: 256px
     max-width: 450px
   .view-gsb-event .view-content .views-row
     border-bottom: 0
