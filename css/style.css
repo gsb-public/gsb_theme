@@ -1386,6 +1386,14 @@ del {
   margin-left: 0%;
   clear: none;
 }
+@media (max-width: 30em) {
+  #bottom .block-views {
+    float: none;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
 #bottom .block-block:nth-of-type(1n) {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1402,6 +1410,14 @@ del {
   margin-left: 51.28205%;
   clear: none;
 }
+@media (max-width: 30em) {
+  #bottom .block-block:nth-of-type(1n) {
+    float: none;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
 #bottom .block-block:nth-of-type(2n) {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1416,6 +1432,13 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 76.92308%;
+}
+@media (max-width: 30em) {
+  #bottom .block-block:nth-of-type(2n) {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .panel-display.gsb-business-insights .gsb-bizin-3col-top,
@@ -1830,6 +1853,12 @@ div.label-inline {
   background-image: none;
 }
 
+@media (min-width: 30.0625em) {
+  .page-stanford-gsb-experience #content-wrapper {
+    background: url('../images/bg-landing-whitetitlebar.png') center top no-repeat, white;
+  }
+}
+
 #footer-wrapper {
   background: #f2f2f2;
 }
@@ -1840,6 +1869,11 @@ div.label-inline {
 @media (min-width: 30.0625em) and (max-width: 48em) {
   #footer-wrapper #footer {
     padding: 0 20px;
+  }
+}
+@media (max-width: 30em) {
+  #footer-wrapper #footer {
+    padding: 0 35px;
   }
 }
 
@@ -2493,10 +2527,24 @@ a.no-border:hover {
     width: 170px;
   }
 }
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us,
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-2,
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    width: 100%;
+  }
+}
 
 #block-menu-menu-footer-2,
 #block-gsb-public-custom-blocks-gpcb-enews-signup {
   margin-right: 0;
+}
+
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    margin-bottom: 24px;
+  }
 }
 
 #block-gsb-public-custom-blocks-gpcb-follow-us a,
@@ -2555,6 +2603,12 @@ a.no-border:hover {
   height: auto;
   padding-left: 0;
 }
+@media (max-width: 30em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us {
+    border-bottom: 1px #cccccc solid;
+    margin-bottom: 24px;
+  }
+}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us a.cta-title {
   width: 270px;
   background: none;
@@ -2562,6 +2616,11 @@ a.no-border:hover {
   padding: 0;
   font-size: 20px;
   text-transform: none;
+}
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us a.cta-title {
+    float: left;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us a.cta-title:after {
   color: #c2b7a1;
@@ -2574,6 +2633,15 @@ a.no-border:hover {
   border-top: 1px #cccccc solid;
   padding: 27px 0 0 0;
   margin-top: 38px;
+}
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .icon-wrapper {
+    border-top: 0;
+    float: right;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 24px;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-youtube:hover {
   background: url('../images/icon-youtube.png') no-repeat;
@@ -2638,6 +2706,11 @@ a.no-border:hover {
   width: 185px;
   margin-bottom: 20px;
 }
+@media (max-width: 48em) {
+  .footer__signup__description {
+    width: 295px;
+  }
+}
 
 input.footer__signup__email {
   border: 1px #cccccc solid;
@@ -2649,14 +2722,19 @@ input.footer__signup__email {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+  float: left;
   height: 36px;
   line-height: 1em;
   width: 160px;
-  float: left;
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
   input.footer__signup__email {
     width: 130px;
+  }
+}
+@media (max-width: 30em) {
+  input.footer__signup__email {
+    width: 247px;
   }
 }
 input.footer__signup__email:focus {
@@ -2692,9 +2770,19 @@ input.footer__signup__submit:hover {
   float: right;
   padding: 12px 0;
 }
+@media (max-width: 30em) {
+  #block-menu-menu-footer-3 {
+    float: left;
+  }
+}
 #block-menu-menu-footer-3 li {
   display: inline-block;
   margin-right: 44px;
+}
+@media (max-width: 30em) {
+  #block-menu-menu-footer-3 li {
+    margin-right: 40px;
+  }
 }
 #block-menu-menu-footer-3 li a {
   color: #990000;

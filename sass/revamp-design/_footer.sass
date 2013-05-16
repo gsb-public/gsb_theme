@@ -12,9 +12,15 @@
   +breakpoint($bp-portrait)
     margin-right: 16px
     width: 170px
+  +breakpoint($bp-portrait-max)
+    width: 100%
 #block-menu-menu-footer-2,
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   margin-right: 0
+
+#block-gsb-public-custom-blocks-gpcb-enews-signup
+  +breakpoint($bp-portrait-max)
+    margin-bottom: 24px
 
 // General footer menu styles
 #block-gsb-public-custom-blocks-gpcb-follow-us,
@@ -52,6 +58,9 @@
     +box-shadow(none)
     height: auto
     padding-left: 0
+    +breakpoint($bp-mobile-max)
+      border-bottom: 1px $grey-c solid
+      margin-bottom: 24px
     a.cta-title
       width: 270px
       background: none
@@ -59,6 +68,8 @@
       padding: 0
       font-size: 20px
       text-transform: none
+      +breakpoint($bp-portrait-max)
+        float: left
       &:after
         color: $grey-med
         font-size: 24px
@@ -68,6 +79,12 @@
       border-top: 1px $grey-c solid
       padding: 27px 0 0 0
       margin-top: 38px
+      +breakpoint($bp-portrait-max)
+        border-top: 0
+        float: right
+        margin: 0
+        padding: 0
+        padding-bottom: 24px
     .social-block-youtube:hover
       background: image_url("icon-youtube.png") no-repeat
       +breakpoint($bp-portrait)
@@ -108,17 +125,21 @@
   line-height: 1.2
   width: 185px
   margin-bottom: 20px
+  +breakpoint($bp-portrait-max)
+    width: 295px
 
 input.footer__signup__email
   border: 1px $grey-c solid
   +box-shadow(none)
   +border-radius(0)
+  float: left
   height: 36px
   line-height: 1em
   width: 160px
   +breakpoint($bp-portrait)
     width: 130px
-  float: left
+  +breakpoint($bp-mobile-max)
+    width: 247px
   &:focus
     outline: none
     +box-shadow(none)
@@ -144,9 +165,13 @@ input.footer__signup__submit:hover
 #block-menu-menu-footer-3
   float: right
   padding: 12px 0
+  +breakpoint($bp-mobile-max)
+    float: left
   li
     display: inline-block
     margin-right: 44px
+    +breakpoint($bp-mobile-max)
+      margin-right: 40px
     a
       color: $red
       font-size: 14px

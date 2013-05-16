@@ -50,6 +50,11 @@
 .page-business-insights #content-wrapper
   background-image: none
 
+// Special landing pages
+.page-stanford-gsb-experience #content-wrapper
+  +breakpoint($bp-portrait-min)
+    +background(image_url("bg-landing-whitetitlebar.png") center top no-repeat, $white)
+
 // FOOTER
 #footer-wrapper
   background: $grey-f
@@ -58,6 +63,9 @@
     max-width: $max-width
     +breakpoint($bp-portrait)
       padding: 0 20px
+    +breakpoint($bp-mobile-max)
+      padding: 0 35px
+
 // LOGO
 #logo
   display: inline-block
