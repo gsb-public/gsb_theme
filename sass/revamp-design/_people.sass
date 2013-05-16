@@ -83,24 +83,10 @@
     font-size: 14px
     color: $text-black
     line-height: 1em
-    display: inline 
+    display: inline
   .person-position
     &:after
-      content: ", "    
-
-// Faculty Search and People Grid layouts
-.pane-faculty-filters-faculty-list,
-.person-grid-view
-  .view-content
-    +clearfix
-  .views-row
-    float: left
-    height: 280px
-    margin-bottom: 30px
-    margin-right: 30px
-    width: 170px
-    &:nth-of-type(3n)
-      margin-right: 0
+      content: ", "
 
 // Faculty list
 .pane-faculty-filters-faculty-list
@@ -112,10 +98,9 @@
   .node-staff.view-mode-teaser,
   .node-faculty.view-mode-teaser
     padding: 0
+    // Image
     .field-name-field-image-single-public
-      margin: auto
-
-  .field-name-field-title
-    font-size: 26px
-    font-family: $font-demi
-    margin-bottom: 40px
+      margin: 0
+    // Name
+    .person-name
+      line-height: 22px

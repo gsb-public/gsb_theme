@@ -3572,24 +3572,6 @@ ul.slideshow-items {
   content: ", ";
 }
 
-.pane-faculty-filters-faculty-list .view-content,
-.person-grid-view .view-content {
-  overflow: hidden;
-  *zoom: 1;
-}
-.pane-faculty-filters-faculty-list .views-row,
-.person-grid-view .views-row {
-  float: left;
-  height: 280px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  width: 170px;
-}
-.pane-faculty-filters-faculty-list .views-row:nth-of-type(3n),
-.person-grid-view .views-row:nth-of-type(3n) {
-  margin-right: 0;
-}
-
 .pane-faculty-filters-faculty-list .views-row {
   background: #f2f2f2;
 }
@@ -3600,12 +3582,11 @@ ul.slideshow-items {
 }
 .person-grid-view .node-staff.view-mode-teaser .field-name-field-image-single-public,
 .person-grid-view .node-faculty.view-mode-teaser .field-name-field-image-single-public {
-  margin: auto;
+  margin: 0;
 }
-.person-grid-view .field-name-field-title {
-  font-size: 26px;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 40px;
+.person-grid-view .node-staff.view-mode-teaser .person-name,
+.person-grid-view .node-faculty.view-mode-teaser .person-name {
+  line-height: 22px;
 }
 
 .twitter-feed {
