@@ -73,7 +73,7 @@ pre, code, kbd, tt {
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
@@ -86,13 +86,13 @@ pre, code, kbd, tt {
   border-top: 10px black solid;
 }
 
-.pane-bundle-links .field-name-field-title, .pane-node-field-link-unlimited h2.pane-title, .pane-media-toolkit h2.pane-title, .view-mode-business_insight:before {
+.pane-bundle-links .red-bar .field-name-field-title, .pane-node-field-link-unlimited h2.pane-title, .pane-media-toolkit h2.pane-title, .view-mode-business_insight:before {
   border-top: 10px #990000 solid;
 }
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -102,7 +102,7 @@ pre, code, kbd, tt {
 
 .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-lastname-az-links {
   background-color: #cccccc;
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(20%, #ededed), color-stop(100%, #fbfaf8));
@@ -2010,21 +2010,26 @@ a.no-border:hover {
   margin-bottom: 30px;
 }
 
-.pane-bundle-links, .pane-node-field-link-unlimited {
+.pane-node-field-link-unlimited {
   padding: 0 24px 24px 24px;
 }
-.pane-bundle-links .field-type-link-field .field-item, .pane-node-field-link-unlimited .field-type-link-field .field-item {
+.pane-node-field-link-unlimited .field-type-link-field .field-item {
   line-height: 1.3;
   padding-bottom: 20px;
 }
-.pane-bundle-links .field-type-link-field .field-item a, .pane-node-field-link-unlimited .field-type-link-field .field-item a {
+.pane-node-field-link-unlimited .field-type-link-field .field-item a {
   color: #990000;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.pane-bundle-links .field-name-field-title {
+.pane-bundle-links .red-bar {
+  background-color: #f0f0f0;
+  padding: 0 22px 18px 22px;
+}
+.pane-bundle-links .red-bar .field-name-field-title {
+  margin-top: -3px;
   color: #231f20;
   display: inline-block;
   font-size: 18px;
@@ -2033,6 +2038,98 @@ a.no-border:hover {
   line-height: 1;
   margin-bottom: 16px;
   padding-top: 16px;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited .field-item {
+  line-height: 1.3;
+  padding-bottom: 9px;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited .field-item:last-of-type {
+  padding-bottom: 0;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a {
+  color: #990000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
+  content: "\f100";
+  font-family: "external-link";
+  margin-left: 5px;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a:hover {
+  color: #2d6280;
+}
+.pane-bundle-links .green-bar {
+  padding: 0 22px 12px 22px;
+}
+.pane-bundle-links .green-bar .field-name-field-title {
+  color: #231f20;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 18px 0 11px 0;
+  line-height: 1.3;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 4px;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a {
+  color: #7d8401;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
+  content: "\f100";
+  font-family: "external-link";
+  margin-left: 5px;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover {
+  color: #2d6280;
+}
+.pane-bundle-links .stanford-links {
+  position: relative;
+  padding: 6px 25px 12px 25px;
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, #f0f0f0;
+}
+.pane-bundle-links .stanford-links:before {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 3px;
+  top: -6px;
+  position: relative;
+  background-color: #c2b7a1;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited {
+  padding-right: 30%;
+  padding-top: 13px;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-item {
+  line-height: 1.3;
+  padding-bottom: 9px;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-item:last-of-type {
+  padding-bottom: 0;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a {
+  color: #990000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
+  content: "\f100";
+  color: #c2b7a1;
+  font-family: "external-link";
+  margin-left: 5px;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover {
+  color: #2d6280;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover[target=_blank]:after {
+  color: #887e6e;
+}
+.pane-bundle-links .stanford-links .field-name-field-title {
+  display: none;
 }
 
 .pane-bundle-text {
