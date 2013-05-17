@@ -4840,6 +4840,35 @@ p.acc-title + p {
   }
 }
 
+#program-links-title {
+  display: none;
+}
+@media (max-width: 30em) {
+  #program-links-title {
+    background: url('../images/plus.png') no-repeat 0 10px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 11px 0;
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 30em) {
+  .pane-program-links .links {
+    display: none;
+  }
+  .pane-program-links .cta-red-gradient.open #program-links-title {
+    background: url('../images/minus.png') no-repeat 0 17px;
+  }
+  .pane-program-links .cta-red-gradient.open .links {
+    display: block;
+  }
+}
+
 @media (max-width: 30em) {
   #quicklinks {
     float: none;

@@ -8,7 +8,7 @@
   +breakpoint($bp-mobile-max)
     margin-bottom: 0
 
-// PROGRAMS LINKS
+// PROGRAM LINKS
 .pane-program-links
   .cta-link
     padding: 16px 26px
@@ -44,6 +44,31 @@
     +breakpoint($bp-mobile-max)
       padding-top: 13px
 
+// Program links title
+#program-links-title
+  display: none
+  +breakpoint($bp-mobile-max)
+    background: image_url('plus.png') no-repeat 0 10px
+    color: $white
+    cursor: pointer
+    display: block
+    font-size: 22px
+    font-weight: bold
+    line-height: 1
+    padding: 11px 0
+    padding-left: 24px
+
+// Mobile 480 show/hide
+.pane-program-links
+  +breakpoint($bp-mobile-max)
+    .links
+      display: none
+    .cta-red-gradient.open
+      #program-links-title
+        background: image_url('minus.png') no-repeat 0 17px
+      .links
+        display: block
+
 //////////////////////
 // QUICKLINKS
 // Special mobile positioning
@@ -61,6 +86,7 @@
         background: transparent
       li
         border-top: 2px solid #f10000
+
 
 
 // TWITTER FEED

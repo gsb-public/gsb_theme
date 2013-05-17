@@ -9,4 +9,12 @@ Drupal.behaviors.responsiveMenu = {
   }
 };
 
+Drupal.behaviors.responsivePrograms = {
+  attach: function (context, settings) {
+    $(context).find('#program-links-title').click(function() {
+      $(this).parent().toggleClass('open');
+    });
+  }
+};
+
 }(jQuery));
