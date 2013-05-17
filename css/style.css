@@ -1539,12 +1539,6 @@ del {
   margin-left: 0;
 }
 
-@media (max-width: 30em) {
-  #quicklinks {
-    display: none;
-  }
-}
-
 .offscreenText {
   text-indent: 110%;
   white-space: nowrap;
@@ -4830,9 +4824,43 @@ p.acc-title + p {
     padding-top: 9px;
   }
 }
+@media (max-width: 30em) {
+  .pane-program-links .executive-education a {
+    padding-top: 13px;
+  }
+}
 @media (max-width: 50.0625em) {
   .pane-program-links .all-programs a {
     padding-top: 9px;
+  }
+}
+@media (max-width: 30em) {
+  .pane-program-links .all-programs a {
+    padding-top: 13px;
+  }
+}
+
+@media (max-width: 30em) {
+  #quicklinks {
+    float: none;
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .front #quicklinks {
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #860000), color-stop(100%, #c50000));
+    background: -webkit-linear-gradient(#860000, #c50000);
+    background: -moz-linear-gradient(#860000, #c50000);
+    background: -o-linear-gradient(#860000, #c50000);
+    background: -ms-linear-gradient(#860000, #c50000);
+    background: linear-gradient(#860000, #c50000);
+    margin-bottom: 30px;
+  }
+  .front #quicklinks .cta-link {
+    background: transparent;
+  }
+  .front #quicklinks li {
+    border-top: 2px solid #f10000;
   }
 }
 

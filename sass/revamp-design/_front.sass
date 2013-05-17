@@ -14,7 +14,6 @@
     padding: 16px 26px
     +breakpoint($bp-portrait)
       padding: 13px 12px
-
   ul
     margin: 0
     padding: 0
@@ -37,9 +36,32 @@
   .executive-education a
     +breakpoint(918px max-width)
       padding-top: 9px
+    +breakpoint($bp-mobile-max)
+      padding-top: 13px
   .all-programs a
     +breakpoint(801px max-width)
       padding-top: 9px
+    +breakpoint($bp-mobile-max)
+      padding-top: 13px
+
+//////////////////////
+// QUICKLINKS
+// Special mobile positioning
+//////////////////////
+#quicklinks
+  +breakpoint($bp-mobile-max)
+    float: none
+    margin: 0
+    padding: 0 20px
+    width: 100%
+    .front &
+      +background(linear-gradient($red-dark, $red-light))
+      margin-bottom: 30px
+      .cta-link
+        background: transparent
+      li
+        border-top: 2px solid #f10000
+
 
 // TWITTER FEED
 .pane-homepage-social-feed .twitter-feed
