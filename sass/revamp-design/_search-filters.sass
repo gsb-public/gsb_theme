@@ -133,6 +133,8 @@ fieldset.collapsible .fieldset-legend
       box-shadow: 0 0 0 #fff
     .views-exposed-widget
       border: 0 none !important
+      > label
+        margin-bottom: 6px
   form.gsb-views-exposed-search
     padding: 0
     width: auto
@@ -155,6 +157,9 @@ fieldset.collapsible .fieldset-legend
       color: $red
       padding-left: 25px
       background: image_url('toggle-close.png') no-repeat left 1px
+      -moz-user-select: none
+      -webkit-user-select: none
+      -ms-user-select: none      
       &:hover
         background: image_url('toggle-close-hover.png') no-repeat left 1px
     &.collapsed

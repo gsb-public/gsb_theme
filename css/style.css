@@ -5592,6 +5592,9 @@ fieldset.collapsible .fieldset-legend {
 .exposed_filter_widget.exposed_filter_widget_one_column .views-exposed-widget {
   border: 0 none !important;
 }
+.exposed_filter_widget.exposed_filter_widget_one_column .views-exposed-widget > label {
+  margin-bottom: 6px;
+}
 .exposed_filter_widget form.gsb-views-exposed-search {
   padding: 0;
   width: auto;
@@ -5614,6 +5617,9 @@ fieldset.collapsible .fieldset-legend {
   color: #990000;
   padding-left: 25px;
   background: url('../images/toggle-close.png') no-repeat left 1px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .exposed_filter_widget .views-exposed-widget > label:hover {
   background: url('../images/toggle-close-hover.png') no-repeat left 1px;
