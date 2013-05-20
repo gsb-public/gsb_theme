@@ -50,6 +50,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-search-case-study-panel-pane-1',
     'views-exposed-form-case-study-search-solr-search',
     'views-exposed-form-club-filters-club-list',
+    'views-exposed-form-gsb-event-panel-pane-2',
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
@@ -61,13 +62,16 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-faculty-filters-faculty-list'
 
   );
-  if ($form['#id'] == 'views-exposed-form-gsb-event-panel-pane-2') {
-    $form['search']['#attributes']['placeholder'] = t('search within');
-  }
 
   if ($is_search_form = in_array($form['#id'], $search_form_ids)) {
     // Add placeholder text.
-    $form['keyword']['#attributes']['placeholder'] = t('search within');
+    if (!empty($form['keyword'])) {
+      $form['keyword']['#attributes']['placeholder'] = t('search within');
+    }
+    else if (!empty($form['search'])) {
+      $form['search']['#attributes']['placeholder'] = t('search within');
+    }
+
     $form['#attributes']['class'][] = 'gsb-views-exposed-search';
   }
   if ($is_filter_form = in_array($form['#id'], $filter_form_ids)) {
@@ -88,7 +92,7 @@ function gsb_theme_preprocess_html(&$variables) {
   $selectivizr = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => $base_url . '/' . drupal_get_path('theme', 'gsb_theme') . '/js/libs/selectivizr-min.js', 
+      'src' => $base_url . '/' . drupal_get_path('theme', 'gsb_theme') . '/js/libs/selectivizr-min.js',
     ),
     '#prefix' => '<!--[if lt IE 9]>',
     '#suffix' => '</script><![endif]-->',
