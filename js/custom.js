@@ -207,10 +207,10 @@
    */
   Drupal.behaviors.colapsable_patch = {
     attach: function (context, settings) {
-         $('.exposed_filter_widget .views-exposed-widget').children('label').click(function(){
+         $('.exposed_filter_widget .views-exposed-widget').children('label:not(.colapsable_processed)').click(function(){
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed')
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle()
-         })
+         }).addClass('colapsable_processed')
     }
   }
 
