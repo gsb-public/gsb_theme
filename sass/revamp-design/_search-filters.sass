@@ -45,6 +45,36 @@
       text-indent: 1000px
       overflow: hidden
 
+.grey-search-box
+  .form-item
+    margin: 5px 0 0
+    float: left
+    width: 100%
+    margin-right: -45px
+    margin-top: 0
+    .form-text
+      width: 100%
+      border: none
+      border: 1px #d0d0d0 solid
+      background: #e4e4e4
+      line-height: 1em
+      height: auto
+      padding: 6px 50px 6px 10px
+      color: $grey-6
+      font-size: 16px
+  .form-submit
+    float: left
+    width: 45px
+    height: 36px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border: none
+    background: transparent url(../images/search-magnifying-glass.png) no-repeat center center
+    text-indent: 1000px
+    overflow: hidden
+
 ///////////////////
 // Search filters
 ///////////////////
@@ -143,13 +173,13 @@ fieldset.collapsible .fieldset-legend
     padding: 3px
     margin-top: 1px !important
     position: relative
-    > strong 
+    > strong
       border-bottom: 1px solid #e4e4e4
       display: block
       width: 100%%
       font-size: 20px
       padding: 20px 20px 15px 20px
-    
+
   .views-exposed-widget
     > label
       font-weight: bold
@@ -159,23 +189,23 @@ fieldset.collapsible .fieldset-legend
       background: image_url('toggle-close.png') no-repeat left 1px
       -moz-user-select: none
       -webkit-user-select: none
-      -ms-user-select: none      
+      -ms-user-select: none
       &:hover
         background: image_url('toggle-close-hover.png') no-repeat left 1px
     &.collapsed
       > label
-        background: image_url('toggle-open.png') no-repeat left 2px      
+        background: image_url('toggle-open.png') no-repeat left 2px
         &:hover
-          background: image_url('toggle-open-hover.png') no-repeat left 2px        
+          background: image_url('toggle-open-hover.png') no-repeat left 2px
     .views-widget
       display: none
       padding-left: 3px
-      
+
       .bef-checkboxes label
         font-weight: bold
         font-size: 13px
         text-transform: uppercase
-             
+
     &:first-child,
     &:nth-child(2n+2)
       width: 50%
@@ -191,7 +221,7 @@ fieldset.collapsible .fieldset-legend
       padding: 14px
   .fieldset-wrapper
     padding-left: 8px
-    
+
   .views-submit-button
     padding: 0 !important
     position: absolute
@@ -199,7 +229,3 @@ fieldset.collapsible .fieldset-legend
     left: 50%
     border: 0 none !important
     margin-left: -10px !important
-    
-
-    
-

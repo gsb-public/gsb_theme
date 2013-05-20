@@ -2518,7 +2518,7 @@ a.no-border:hover {
 @media (min-width: 48.0625em) {
   .event-calendar {
     line-height: 40px;
-    padding: 0 0 0 16px;
+    padding: 7px 0 0 16px;
   }
 }
 @media (max-width: 30em) {
@@ -5490,6 +5490,38 @@ p.acc-title + p {
 }
 .gsb-views-exposed-search .views-exposed-form .form-submit,
 #edit-search-wrapper .views-exposed-form .form-submit {
+  float: left;
+  width: 45px;
+  height: 36px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent url(../images/search-magnifying-glass.png) no-repeat center center;
+  text-indent: 1000px;
+  overflow: hidden;
+}
+
+.grey-search-box .form-item {
+  margin: 5px 0 0;
+  float: left;
+  width: 100%;
+  margin-right: -45px;
+  margin-top: 0;
+}
+.grey-search-box .form-item .form-text {
+  width: 100%;
+  border: none;
+  border: 1px #d0d0d0 solid;
+  background: #e4e4e4;
+  line-height: 1em;
+  height: auto;
+  padding: 6px 50px 6px 10px;
+  color: #666666;
+  font-size: 16px;
+}
+.grey-search-box .form-submit {
   float: left;
   width: 45px;
   height: 36px;
