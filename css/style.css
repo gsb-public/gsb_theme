@@ -86,7 +86,7 @@ pre, code, kbd, tt {
   border-top: 10px black solid;
 }
 
-.pane-bundle-links .red-bar .field-name-field-title, .pane-node-field-link-unlimited h2.pane-title, .pane-media-toolkit h2.pane-title, .view-mode-business_insight:before {
+.pane-node-field-link-unlimited h2.pane-title, .pane-media-toolkit h2.pane-title, .view-mode-business_insight:before {
   border-top: 10px #990000 solid;
 }
 
@@ -2019,18 +2019,30 @@ a.no-border:hover {
 }
 
 .pane-bundle-links .red-bar {
-  background-color: #f0f0f0;
-  padding: 0 25px 18px 25px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e7e7e7), color-stop(100%, #f0f0f0));
+  background: -webkit-linear-gradient(#e7e7e7, #f0f0f0);
+  background: -moz-linear-gradient(#e7e7e7, #f0f0f0);
+  background: -o-linear-gradient(#e7e7e7, #f0f0f0);
+  background: -ms-linear-gradient(#e7e7e7, #f0f0f0);
+  background: linear-gradient(#e7e7e7, #f0f0f0);
+  padding: 13px 25px 18px 25px;
+}
+.pane-bundle-links .red-bar:before {
+  content: "";
+  width: 120px;
+  display: block;
+  height: 10px;
+  top: -13px;
+  position: relative;
+  background-color: #990000;
 }
 .pane-bundle-links .red-bar .field-name-field-title {
   color: #231f20;
-  display: inline-block;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -1px;
-  line-height: 1;
-  margin-bottom: 16px;
-  padding-top: 16px;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 .pane-bundle-links .red-bar .field-name-field-link-unlimited .field-item {
   line-height: 1.3;
@@ -2081,7 +2093,12 @@ a.no-border:hover {
 .pane-bundle-links .stanford-links {
   position: relative;
   padding: 6px 25px 12px 25px;
-  background: url('../images/stanford_logo.png') 87% 17px no-repeat, #f0f0f0;
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e3dac7), color-stop(100%, #ebe5d9));
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, -webkit-linear-gradient(bottom, #e3dac7, #ebe5d9);
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, -moz-linear-gradient(bottom, #e3dac7, #ebe5d9);
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, -o-linear-gradient(bottom, #e3dac7, #ebe5d9);
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, -ms-linear-gradient(bottom, #e3dac7, #ebe5d9);
+  background: url('../images/stanford_logo.png') 87% 17px no-repeat, linear-gradient(bottom, #e3dac7, #ebe5d9);
   min-height: 75px;
 }
 .pane-bundle-links .stanford-links:before {

@@ -202,11 +202,24 @@ a.no-border
 
 .pane-bundle-links
   .red-bar
+    &:before
+      content: ""
+      width: 120px
+      display: block
+      height: 10px
+      top: -13px
+      position: relative      
+      background-color: $red  
     //@extend %bg-border-and-box-shadow
-    background-color: $grey-light
-    padding: 0 25px 18px 25px
+    +background(linear-gradient(#e7e7e7, #f0f0f0))
+    padding: 13px 25px 18px 25px
     .field-name-field-title
-      +pane-title
+      color: $text-grey
+      font-size: 18px
+      font-weight: bold
+      letter-spacing: -1px
+      line-height: 1.3
+      margin-bottom: 8px
     .field-name-field-link-unlimited 
       .field-item
         line-height: 1.3
@@ -255,7 +268,7 @@ a.no-border
   .stanford-links
     position: relative
     padding: 6px 25px 12px 25px
-    +background(image_url("stanford_logo.png") 87% 17px no-repeat, $grey-light)
+    +background(image_url("stanford_logo.png") 87% 17px no-repeat, linear-gradient(bottom, #e3dac7, #ebe5d9))
     min-height: 75px
     &:before
       content: ""
