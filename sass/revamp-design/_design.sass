@@ -197,7 +197,7 @@ a.no-border
 //  @extend %bg-border-and-box-shadow
 //  @extend %related-links
   // Pane title
-//  .field-name-field-title 
+//  .field-name-field-title
 //    +pane-title
 
 .pane-bundle-links
@@ -208,8 +208,8 @@ a.no-border
       display: block
       height: 10px
       top: -13px
-      position: relative      
-      background-color: $red  
+      position: relative
+      background-color: $red
     //@extend %bg-border-and-box-shadow
     +background(linear-gradient(#e7e7e7, #f0f0f0))
     padding: 13px 25px 18px 25px
@@ -220,30 +220,30 @@ a.no-border
       letter-spacing: -1px
       line-height: 1.3
       margin-bottom: 8px
-    .field-name-field-link-unlimited 
+    .field-name-field-link-unlimited
       .field-item
         line-height: 1.3
         padding-bottom: 9px
         &:last-of-type
           padding-bottom: 0
-             
+
       a
-        color: $red 
+        color: $red
         font-size: 14px
         font-weight: bold
         text-transform: uppercase
         &[target=_blank]
           &:after
             content: "\f100"
-            font-family: "external-link"            
+            font-family: "external-link"
             margin-left: 5px
-        
+
         &:hover
           color: $text-blue
   .green-bar
     @extend %bg-border-and-box-shadow
-    padding: 0 22px 12px 22px  
-    
+    padding: 0 22px 12px 22px
+
     .field-name-field-title
       color: $text-black
       font-size: 20px
@@ -255,16 +255,16 @@ a.no-border
         border-top: 1px solid #e4e4e4
         padding-top: 4px
         a
-          color: $text-green 
+          color: $text-green
           &[target=_blank]
             &:after
               content: "\f100"
-              font-family: "external-link"            
-              margin-left: 5px          
+              font-family: "external-link"
+              margin-left: 5px
           &:hover
             color: $text-blue
-    
-    
+
+
   .stanford-links
     position: relative
     padding: 6px 25px 12px 25px
@@ -276,10 +276,10 @@ a.no-border
       display: block
       height: 3px
       top: -6px
-      position: relative      
+      position: relative
       background-color: $grey-med
-      
-    .field-name-field-link-unlimited 
+
+    .field-name-field-link-unlimited
       padding-right: 30%
       padding-top: 13px
       .field-item
@@ -287,7 +287,7 @@ a.no-border
         padding-bottom: 9px
         &:last-of-type
           padding-bottom: 0
-             
+
       a
         color: $red
         font-size: 14px
@@ -297,15 +297,15 @@ a.no-border
           &:after
             content: "\f100"
             color: $grey-med
-            font-family: "external-link"            
+            font-family: "external-link"
             margin-left: 5px
-        
+
         &:hover
           color: $text-blue
           &[target=_blank]
             &:after
               color: $grey-dark
-              
+
     .field-name-field-title
       display: none
 //////////////////////
@@ -343,6 +343,11 @@ a.no-border
   p.acc-body
     color: $text-grey
     font-size: 18px
+  // mba highlighted
+  .mba-highlighted-block
+    border-top: 9px solid $teal-light
+    padding-top: 20px
+    margin-top: -32px
 
 ///////////////////////////////////
 // Comma separator styling on tags
