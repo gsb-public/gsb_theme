@@ -1,0 +1,122 @@
+/////////////////
+// Diptych
+/////////////////
+
+
+.pane-bundle-diptych
+  margin-bottom: 30px
+  +background(linear-gradient(top,  $grey-1, #272727))
+  position: relative
+  +clearfix
+  .ds-2col
+    > .group-left
+      width: 69%
+    > .group-right
+      width: 31%
+      
+    &.diptych-blue
+      .group-left .field-type-image .field-item
+        &:after
+          +background(linear-gradient(top, rgba(45,98,128,0) 0%, rgba(45,98,128,0) 10%, rgba(45,98,128,1) 80%, rgba(45,98,128,1) 100%)) 
+          
+    &.diptych-purple
+      .group-left .field-type-image .field-item
+        &:after
+          +background(linear-gradient(top,  rgba(117,71,96,0) 0%, rgba(117,71,96,0) 10%, rgba(117,71,96,1) 80%, rgba(117,71,96,1) 100%))   
+
+                 
+  .group-left, .group-right
+    padding: 0 26px
+    .field-type-link-field
+      padding: 10px 35px 7px 15px
+      line-height: 1.35
+      > div
+        position: relative
+      a
+        color: #fff
+        font-weight: bold
+        &:after
+          content: "\f100"
+          color: #fff
+          font-family: "arrow-double"
+          font-size: 26px
+          font-weight: normal
+          line-height: 0.5
+          position: absolute
+          right: -22px
+          margin-top: -7px
+          top: 50%
+        
+    .field-type-image, .field-type-file
+      margin: 0 -26px    
+    
+  //Right group
+  .group-right
+    .group-diptych-txt-block
+      position: absolute
+      bottom: 28px
+      padding-right: 26px
+      
+    .gsb-responsive-main
+      display: none
+      visibility: hidden
+      
+    .gsb-responsive-preview
+      .file-video
+        display: block
+        
+    .field-type-text-long
+      color: #fff
+      font-size: 18px
+      line-height: 1.3
+      margin-bottom: 15px   
+           
+    .field-type-link-field
+      background-color: $grey-1
+      a
+        color: $text-blue
+        &:after
+          color: $text-blue
+      &:hover
+        background-color: $text-blue
+        a
+          color: #fff
+          &:after
+            color: #fff       
+       
+        
+  //Left group    
+  .group-left
+    position: relative  
+    .field-type-image
+      .field-item
+        position: relative
+        &:after
+          content: ''
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+    .diptych-txt-block
+      position: absolute
+      bottom: 28px
+      padding-right: 26px
+      
+    .field-type-text-long, .field-type-link-field
+      color: #fff
+      .field-items
+        //padding: 0 26px
+     
+    .field-type-text-long
+      font-weight: bold
+      font-size: 26px
+      line-height: 1.3
+      margin-bottom: 15px
+      
+    .field-type-link-field
+      background-color: $teal-dark
+      width: 218px
+      &:hover
+        background-color: $purple
+    
