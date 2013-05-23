@@ -2,13 +2,16 @@
 // IMAGE CTA FPP
 //////////////////
 .pane-bundle-image-cta
+  img
+    display: block
+  @extend %border-and-box-shadow
   max-width: 566px
   .group-left,
   .group-right
     float: none
     width: 100%
   .group-left img
-    @extend %border-and-box-shadow
+    //@extend %border-and-box-shadow
   .group-right
     color: $white
     padding: 30px
@@ -112,22 +115,23 @@
             color: $white
   // Bottom text CTA
   .image-cta-position-bottom
-    +box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
-    border: 2px solid $white
+    //+box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
+    //border: 2px solid $white
     .group-left img
-      border-bottom: 0
-      vertical-align: bottom
+      //display: block
+      //border-bottom: 0
+      //vertical-align: bottom
     .field-name-field-title
       display: none
     .group-right
-      border-top: 0
-      border-bottom: 2px solid $white
+      //border-top: 0
+      //border-bottom: 2px solid $white
       display: block
       position: absolute
       bottom: 0
-      margin-left: 2px
+      //margin-left: 2px
       padding: 18px 26px
-      width: 262px
+      //width: 262px
       z-index: 4
       .field-name-field-link-single
         width: 100%

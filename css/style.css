@@ -74,7 +74,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
+.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .cta-rethink, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
 
@@ -93,7 +93,7 @@ pre, code, kbd, tt {
 .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text, .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-red .field-item, .gsb-views-exposed-form, .exposed_filter_widget > div, .pane-bundle-existing-node .view-mode-teaser, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta .group-left img, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
+.view-display-id-search_club .view-content, .pane-lastname-az-links, .pane-bundle-image-cta, .learn-about-campus, .pane-gsb-event-frontpage, .pane-program-finder .field-group-tab-wrapper, .view-mode-business_insight, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -4395,6 +4395,9 @@ p.acc-title + p {
 .pane-bundle-image-cta {
   max-width: 566px;
 }
+.pane-bundle-image-cta img {
+  display: block;
+}
 .pane-bundle-image-cta .group-left,
 .pane-bundle-image-cta .group-right {
   float: none;
@@ -4522,28 +4525,14 @@ p.acc-title + p {
 .narrow-view .image-cta-position-top .group-right .field-name-field-link-single a:after {
   color: white;
 }
-.narrow-view .image-cta-position-bottom {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
-  border: 2px solid white;
-}
-.narrow-view .image-cta-position-bottom .group-left img {
-  border-bottom: 0;
-  vertical-align: bottom;
-}
 .narrow-view .image-cta-position-bottom .field-name-field-title {
   display: none;
 }
 .narrow-view .image-cta-position-bottom .group-right {
-  border-top: 0;
-  border-bottom: 2px solid white;
   display: block;
   position: absolute;
   bottom: 0;
-  margin-left: 2px;
   padding: 18px 26px;
-  width: 262px;
   z-index: 4;
 }
 .narrow-view .image-cta-position-bottom .group-right .field-name-field-link-single {
