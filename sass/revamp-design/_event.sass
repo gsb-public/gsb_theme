@@ -248,6 +248,10 @@
     text-indent: 1000px
     padding: 0
 
-// Remove table border on fullcalendar
-.fullcalendar tbody tr
-  border: 0
+//  Fullcalendar table border
+.fullcalendar table.fc-border-separate
+  border-collapse: collapse
+  thead
+    border: 1px solid #666
+  tbody td
+    border: 1px solid #ccc

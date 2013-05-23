@@ -5348,8 +5348,14 @@ p.acc-title + p {
   padding: 0;
 }
 
-.fullcalendar tbody tr {
-  border: 0;
+.fullcalendar table.fc-border-separate {
+  border-collapse: collapse;
+}
+.fullcalendar table.fc-border-separate thead {
+  border: 1px solid #666666;
+}
+.fullcalendar table.fc-border-separate tbody td {
+  border: 1px solid #cccccc;
 }
 
 .node-case-study.view-mode-full,
