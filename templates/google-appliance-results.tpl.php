@@ -27,7 +27,7 @@
 
   <div class="google-appliance-results-control-bar clearfix">
     <?php print $search_stats; ?>
-    <?php print $sort_headers; ?>
+    <?php //print $sort_headers; ?>
   </div>
 
   <?php if (!empty($keymatch_results)) : ?>
