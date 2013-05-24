@@ -5,43 +5,46 @@
    */
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
-      // Check if spotlight exists.
-      var $spotlight = $('.pane-bundle-spotlight');
-      if ($spotlight.length) {
-        // If the line height of the body text changes, adjust this.
-        var visibleHeight = 18 * 4;
-
-        $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>');
-        // Add behavior for every .show-more link.
-        $spotlight.find('.show-more').once('showmore', function () {
-          var $this = $(this),
-            $spotlightContent = $this.siblings('.field-name-field-body'),
-            contentHeight = $spotlightContent.find('p').height();
-          // Remove .show-more if the body is less than the defined max height.
-          if (contentHeight <= visibleHeight) {
-            $this.remove();
-          }
-          else {
-            $this.click(function() {
-              var $this = $(this), text, height;
-              // Expand description to its real height.
-              if (!$this.hasClass('active')) {
-                text = Drupal.t('Show Less');
-                height = contentHeight;
-              }
-              // Collapse description to defined max height.
-              else {
-                text = Drupal.t('Show More');
-                height = visibleHeight;
-              }
-              $spotlightContent.animate({'max-height' : height}, 300);
-              $this
-                .toggleClass('active')
-                .html('<span>' + text + '</span>');
-            });
-          }
-        });
-      }
+      $(window).bind('load ready resize', function(){
+        // Check if spotlight exists.
+        var $spotlight = $('.pane-bundle-spotlight')
+        if ($spotlight.length) {
+          // If the line height of the body text changes, adjust this.
+          var visibleHeight = 18 * 4
+          $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>')
+          // Add behavior for every .show-more link.
+          $spotlight.find('.show-more').once('showmore', function () {
+            var $this = $(this),
+              $spotlightContent = $this.siblings('.field-name-field-body'),
+              contentHeight = $spotlightContent.find('p').height()
+            // Remove .show-more if the body is less than the defined max height.
+            $spotlightContent.css('height',visibleHeight)
+            if (contentHeight <= visibleHeight) {
+              $this.remove()
+            }
+            else {
+              $this.click(function() {
+                var $this = $(this), text, height
+                // Expand description to its real height.
+                if (!$this.hasClass('active')) {
+                  text = Drupal.t('Show Less')
+                  height = contentHeight
+                }
+                // Collapse description to defined max height.
+                else {
+                  text = Drupal.t('Show More')
+                  height = visibleHeight
+                }
+                //$spotlightContent.removeAttr('style')
+                $spotlightContent.animate({'height' : height}, 300)
+                $this
+                  .toggleClass('active')
+                  .html('<span>' + text + '</span>')
+              })
+            }
+          })
+        }
+      })
     }
   };
 
