@@ -22,7 +22,7 @@
   </div>
  <?php endif; ?>
 
-<h2 id="search-results-heading"><?php print $results_heading; ?></h2>
+<h2 id="search-results-heading" style="display: none"><?php print $results_heading; ?></h2>
 <?php if (!isset($response_data['error'])) : ?>
 
   <div class="google-appliance-results-control-bar clearfix">
@@ -42,7 +42,7 @@
 
   <div class="google-appliance-results-control-bar clearfix">
     <?php print $search_stats; ?>
-    <?php print $sort_headers; ?>
+    <?php //print $sort_headers; ?>
   </div>
 
   <div class="google-appliance-pager"><?php print $pager; ?></div>
