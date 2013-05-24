@@ -211,6 +211,18 @@
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed')
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle()
          }).addClass('colapsable_processed')
+         
+         //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
+         var checkedInput = false
+        $('.exposed_filter_widget .bef-checkboxes input').each(function(index, val){
+          if($(this).attr('checked')) 
+              checkedInput = true
+        })
+        
+        if(checkedInput){
+          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').addClass('collapsed')
+          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').show()
+        }
     }
   }
 
