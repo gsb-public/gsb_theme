@@ -7251,3 +7251,27 @@ body.page-programs-msx h1 {
 .google-appliance-pager ul.pager li.pager-last, .google-appliance-pager ul.pager li.pager-first {
   display: none;
 }
+
+.fake-input-wrapper {
+  display: inline-block;
+  height: 33px;
+  position: relative;
+}
+.fake-input-wrapper .arrows-wrapper .up {
+  top: 2px;
+  background-position: center 4px;
+}
+.fake-input-wrapper .arrows-wrapper .down {
+  bottom: 2px;
+  background-position: center -14px;
+}
+.fake-input-wrapper .arrows-wrapper .up,
+.fake-input-wrapper .arrows-wrapper .down {
+  height: 14px;
+  position: absolute;
+  right: 2px;
+  background: transparent url('../images/input-arrows.png') no-repeat center center;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}

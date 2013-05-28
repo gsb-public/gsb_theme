@@ -214,14 +214,14 @@
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed')
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle()
          }).addClass('colapsable_processed')
-         
+
          //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
          var checkedInput = false
         $('.exposed_filter_widget .bef-checkboxes input').each(function(index, val){
-          if($(this).attr('checked')) 
+          if($(this).attr('checked'))
               checkedInput = true
         })
-        
+
         if(checkedInput){
           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').addClass('collapsed')
           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').show()
@@ -237,6 +237,45 @@
       var mq = window.matchMedia( "(max-width: 480px)" );
       if (mq.matches) {
         $('#quicklinks').insertBefore($('#top-content'));
+      }
+    }
+  }
+  
+    // input type number alternative
+  Drupal.behaviors.spinner ={
+    attach: function (context, settings) {
+      if (!Modernizr.inputtypes.number) {
+        $('.form-number').wrap('<span class="fake-input-wrapper" />')
+        .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
+
+        $('.fake-input-wrapper').each(function(){
+          var numberInput = $(this).find('.form-number'),
+          min = parseInt(numberInput.attr('min')),
+          max = parseInt(numberInput.attr('max')),
+          step = parseInt(numberInput.attr('step'));
+
+          $(this).find('button').click(function(e){
+            e.preventDefault();
+            $(this).parent().prev().trigger('focus');
+            var direction = $(this).data('dir'),
+            val =  parseInt(numberInput.val());
+            if (!numberInput.val()) {
+              numberInput.val(min);
+              return;
+            } else {
+              var mod = (val-min) % step;
+              // increase or decrease depending on the button
+              if(mod === 0) {
+                ( direction === 'up' ) ?  val+=step: val-=step;
+              } else {
+                ( direction === 'up' ) ?  val+=step-mod: val-=step - step + mod;
+              }
+              if (val >=min && val < max ) {
+                numberInput.val(val);
+              }
+            }
+          });
+        });
       }
     }
   }
