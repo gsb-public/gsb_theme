@@ -84,9 +84,9 @@
             <?php print render($page['navigation']); ?>
             <div class="se">
               <a href="/events" class="event-calendar">Event Calendar</a>
-              <?php $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form'); ?>
-              <?php print render($search_block['content']); ?>
             </div><!-- /.se -->
+            <?php $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form'); ?>
+            <?php print render($search_block['content']); ?>
             <div id="menu-main-footer">
               <ul class="menu menu-1">
                 <li class="first"><a href="/" title="">Alumni</a></li>
