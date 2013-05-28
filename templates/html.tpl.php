@@ -41,10 +41,12 @@
  * @see template_process()
  */
 ?><!DOCTYPE html>
-<!--[if IE 8 ]><html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?> class="no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?> class="no-js ie9"> <![endif]-->
-
-<head profile="<?php print $grddl_profile; ?>">
+<!--[if IE 8 ]> <html lang="<?php print $language->language; ?>" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="<?php print $language->language; ?>" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
   <?php print $head; ?>
   <!-- TODO: add the following meta tags to $head via theme_settings -->
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
