@@ -2,19 +2,18 @@
   display: inline-block
   height: 33px
   position: relative
-  .arrows-wrapper .up
+  .arrows-wrapper .up,
+  .arrows-wrapper .down
+    height: 14px
+    position: absolute
+    right: 2px
+    background: transparent image_url('input-arrows.png') no-repeat center center
+    border-radius: 0
+    -moz-border-radius: 0
+    -webkit-border-radius: 0
+  .arrows-wrapper button.up
     top: 2px
     background-position: center 4px
-  .arrows-wrapper .down
+  .arrows-wrapper button.down
     bottom: 2px
     background-position: center -14px
-
-.arrows-wrapper .up,
-.arrows-wrapper .down
-  height: 14px
-  position: absolute
-  right: 2px
-  background: transparent image_url('input-arrows.png') no-repeat center center
-  border-radius: 0
-  -moz-border-radius: 0
-  -webkit-border-radius: 0
