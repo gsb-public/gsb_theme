@@ -1927,7 +1927,9 @@ div.label-inline {
 }
 @media (min-width: 30.0625em) and (max-width: 48em) {
   #site-slogan {
+    clear: both;
     font-size: 18px;
+    line-height: 1;
     padding-right: 20px;
   }
 }
@@ -5543,6 +5545,13 @@ p.acc-title + p {
 
 .grey-search-box {
   float: right;
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .grey-search-box {
+    margin-bottom: 14px;
+    margin-top: 30px;
+    padding-right: 20px;
+  }
 }
 .grey-search-box .form-item {
   float: left;
