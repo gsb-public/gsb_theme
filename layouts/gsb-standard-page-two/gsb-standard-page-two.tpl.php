@@ -13,7 +13,7 @@
 <div class="panel-display gsb-standard-page-two clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
 
-  <div class="content-wrapper">
+  <div id="top-content" class="content-wrapper">
 
     <div class="main-wrapper"><div class="inner-main-wrapper wide-view">
       <?php print $content['main']; ?>

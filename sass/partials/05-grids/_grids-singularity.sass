@@ -13,6 +13,10 @@
     +grid-span(1, 1, $columns: $regions)
     margin-right: 65px
     width: 235px
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
+      width: 100%
 
 // Main region
 #main
@@ -40,14 +44,22 @@
     float: left
     margin-right: -300px
     width: 100%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
 
   .inner-main-wrapper
     margin-right: 300px
+    +breakpoint($bp-mobile-max)
+      margin: 0
 
   // Right sidebar
   .inner-sidebar-wrapper
     float: right
     width: 270px
+    +breakpoint($bp-mobile-max)
+      float: none
+      width: 100%
 
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
