@@ -262,20 +262,21 @@
         $('.form-number').wrap('<span class="fake-input-wrapper" />')
         .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
 
-        $('.fake-input-wrapper').each(function(){
-          var numberInput = $(this).find('.form-number'),
-          min = parseInt(numberInput.attr('min')),
-          max = parseInt(numberInput.attr('max')),
-          step = parseInt(numberInput.attr('step'));
+        $('.fake-input-wrapper').each(function() {
+          var numberInput = $(this).find('.form-number').attr('autocomplete','off'),
+                min = parseInt(numberInput.attr('min')),
+                max = parseInt(numberInput.attr('max')),
+                step = parseInt(numberInput.attr('step'));
 
-          $(this).find('button').click(function(e){
+          $(this).find('button').click(function(e) {
             e.preventDefault();
             $(this).parent().prev().trigger('focus');
             var direction = $(this).data('dir'),
             val =  parseInt(numberInput.val());
-            if (!numberInput.val()) {
+            if (!val) {
               numberInput.val(min);
-              return;
+            } else if (val > max) {
+              numberInput.val(max);
             } else {
               var mod = (val-min) % step;
               // increase or decrease depending on the button
@@ -289,6 +290,14 @@
               }
             }
           });
+        });
+        $('.form-number').keydown(function(e) {
+          if (e.which === 38) {
+            $(this).next().find('.up').trigger('click');
+          }
+          if (e.which === 40) {
+            $(this).next().find('.down').trigger('click');
+          }
         });
       }
     }
