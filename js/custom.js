@@ -230,7 +230,7 @@
   }
 
   /**
-   * Move quicklinks to top of page in mobile context.
+   * Move quicklinks to top of page in 480 mobile context.
    */
   Drupal.behaviors.quicklinks ={
     attach: function (context, settings) {
@@ -240,8 +240,22 @@
       }
     }
   }
-  
-    // input type number alternative
+
+  /**
+   * Move search to top of page in 480 mobile context.
+   */
+  Drupal.behaviors.searchblock ={
+    attach: function (context, settings) {
+      var mq = window.matchMedia( "(max-width: 480px)" );
+      if (mq.matches) {
+        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
+      }
+    }
+  }
+
+  /**
+   * Input type number alternative for spinner
+   */
   Drupal.behaviors.spinner ={
     attach: function (context, settings) {
       if (!Modernizr.inputtypes.number) {

@@ -4,7 +4,7 @@
     float: right
     position: relative
     top: -10px
-    min-width: 690px 
+    min-width: 690px
   .section
     border-bottom: 10px solid $red
 
@@ -166,12 +166,15 @@
   #nav-touch-button
     display: none
     +breakpoint($bp-mobile-max)
+      border-right: 1px solid red
       cursor: pointer
       display: inline-block
       padding: 15px 18px 9px
       vertical-align: top
+  #nav-touch-button
     &:after
       .svg &
+        // @TODO export svg version and replace
         content: image_url("mobile/icon-hamburger-main.png")
       .no-js &, .no-svg &
         content: image_url("mobile/icon-hamburger-main.png")
@@ -202,3 +205,24 @@
 .qtip-megamenu
   +breakpoint($bp-mobile-max)
     display: none !important
+
+// Search toggle functionality
+#search-touch-button
+  display: none
+  +breakpoint($bp-mobile-max)
+    border-right: 1px solid red
+    cursor: pointer
+    display: inline-block
+    left: 57px
+    padding: 15px 18px 6px
+    position: absolute
+    &:after
+      // @TODO export svg version and replace
+      .svg &
+        content: image_url("mobile/icon-search-magnifying-glass.png")
+      .no-js &, .no-svg &
+        content: image_url("mobile/icon-search-magnifying-glass.png")
+
+.grey-search-box.open
+  +breakpoint($bp-mobile-max)
+    display: block

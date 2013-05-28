@@ -76,7 +76,7 @@
   <div id="page-wrapper"><div id="page">
 
     <div id="header-wrapper"><div id="header"><div class="section clearfix">
-
+      <a id="search-touch-button"></a>
       <?php if ($page['navigation']): ?>
         <div id="nav-touch-wrapper">
           <a id="nav-touch-button"></a>

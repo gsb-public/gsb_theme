@@ -2614,6 +2614,7 @@ a.no-border:hover {
 }
 @media (max-width: 30em) {
   #nav-touch-wrapper #nav-touch-button {
+    border-right: 1px solid red;
     cursor: pointer;
     display: inline-block;
     padding: 15px 18px 9px;
@@ -2670,6 +2671,32 @@ a.no-border:hover {
 @media (max-width: 30em) {
   .qtip-megamenu {
     display: none !important;
+  }
+}
+
+#search-touch-button {
+  display: none;
+}
+@media (max-width: 30em) {
+  #search-touch-button {
+    border-right: 1px solid red;
+    cursor: pointer;
+    display: inline-block;
+    left: 57px;
+    padding: 15px 18px 6px;
+    position: absolute;
+  }
+  .svg #search-touch-button:after {
+    content: url('../images/mobile/icon-search-magnifying-glass.png');
+  }
+  .no-js #search-touch-button:after, .no-svg #search-touch-button:after {
+    content: url('../images/mobile/icon-search-magnifying-glass.png');
+  }
+}
+
+@media (max-width: 30em) {
+  .grey-search-box.open {
+    display: block;
   }
 }
 
@@ -5601,6 +5628,16 @@ p.acc-title + p {
     padding-right: 20px;
   }
 }
+@media (max-width: 30em) {
+  .grey-search-box {
+    display: none;
+    float: none;
+    left: 57px;
+    position: absolute;
+    width: 423px;
+    z-index: 1;
+  }
+}
 .grey-search-box .form-item {
   float: left;
   width: 100%;
@@ -5619,6 +5656,11 @@ p.acc-title + p {
   color: #666666;
   font-size: 16px;
 }
+@media (max-width: 30em) {
+  .grey-search-box .form-item .form-text {
+    padding: 15px 50px 15px 10px;
+  }
+}
 .grey-search-box .form-submit {
   float: left;
   width: 45px;
@@ -5632,8 +5674,18 @@ p.acc-title + p {
   text-indent: 1000px;
   overflow: hidden;
 }
+@media (max-width: 30em) {
+  .grey-search-box .form-submit {
+    background-position: center 12px;
+  }
+}
 .grey-search-box .form-submit:hover {
   background-position: center -27px;
+}
+@media (max-width: 30em) {
+  .grey-search-box .form-submit:hover {
+    background: transparent url(../images/search.png) no-repeat center 12px;
+  }
 }
 
 .collapsible .fieldset-title {

@@ -53,6 +53,13 @@
     margin-bottom: 14px
     margin-top: 30px
     padding-right: 20px
+  +breakpoint($bp-mobile-max)
+    display: none
+    float: none
+    left: 57px
+    position: absolute
+    width: 423px
+    z-index: 1
   .form-item
     float: left
     width: 100%
@@ -67,6 +74,8 @@
       line-height: 1em
       height: auto
       padding: 7px 50px 6px 10px
+      +breakpoint($bp-mobile-max)
+        padding: 15px 50px 15px 10px
       color: $grey-6
       font-size: 16px
   .form-submit
@@ -79,10 +88,14 @@
     border-radius: 0
     border: none
     background: transparent url(../images/search.png) no-repeat center 6px
+    +breakpoint($bp-mobile-max)
+      background-position: center 12px
     text-indent: 1000px
     overflow: hidden
     &:hover
       background-position: center -27px
+      +breakpoint($bp-mobile-max)
+        background: transparent url(../images/search.png) no-repeat center 12px
 
 ///////////////////
 // Search filters

@@ -17,4 +17,12 @@ Drupal.behaviors.responsivePrograms = {
   }
 };
 
+Drupal.behaviors.responsiveSearch = {
+  attach: function (context, settings) {
+    $(context).find('#search-touch-button').click(function() {
+      $('#google-appliance-block-form').toggleClass('open');
+    });
+  }
+};
+
 }(jQuery));
