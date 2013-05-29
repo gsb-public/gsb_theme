@@ -61,7 +61,7 @@
   <?php print $scripts; ?>
 <!--[if gte IE 9]>
   <style type="text/css">
-    * {
+    .designed-box {
        filter: none !important;
     }
   </style>
