@@ -59,6 +59,13 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    * {
+       filter: none !important;
+    }
+  </style>
+<![endif]-->  
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
