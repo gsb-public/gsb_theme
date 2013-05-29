@@ -2707,12 +2707,6 @@ a.no-border:hover {
   }
 }
 
-@media (max-width: 30em) {
-  .qtip-megamenu {
-    display: none !important;
-  }
-}
-
 #search-touch-button {
   display: none;
 }
@@ -3276,6 +3270,7 @@ ul.slideshow-items {
   opacity: 1;
   width: 60px;
   height: 60px;
+  outline: none;
 }
 @media (max-width: 30em) {
   .flex-direction-nav a {
@@ -4113,6 +4108,24 @@ p.acc-title + p {
   margin-bottom: 11px;
   text-transform: uppercase;
   width: 193px;
+}
+
+@media (max-width: 30em) {
+  .qtip-megamenu {
+    display: none !important;
+  }
+}
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .qtip-megamenu {
+    top: 34px !important;
+  }
+}
+
+@media (min-width: 30.0625em) and (max-width: 48em) {
+  .qtip-contentWrapper {
+    float: none;
+    width: 100%;
+  }
 }
 
 .node-business-insight.view-mode-full {
