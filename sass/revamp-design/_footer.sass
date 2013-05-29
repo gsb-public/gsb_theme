@@ -11,15 +11,16 @@
   width: 270px
   +breakpoint($bp-portrait)
     margin-right: 16px
-    width: 170px
-  +breakpoint($bp-portrait-max)
+    width: 165px
+  +breakpoint($bp-mobile-max)
     width: 100%
-#block-gsb-public-custom-blocks-gpcb-enews-signup
-  margin-right: 0
 
 #block-gsb-public-custom-blocks-gpcb-enews-signup
+  margin-right: 0
   +breakpoint($bp-portrait-max)
     margin-bottom: 24px
+  +breakpoint($bp-portrait)
+    width: 170px
 
 // General footer menu styles
 #block-gsb-public-custom-blocks-gpcb-follow-us,
@@ -68,7 +69,7 @@
       padding: 0
       font-size: 20px
       text-transform: none
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-mobile-max)
         float: left
       &:after
         color: $grey-med
@@ -79,7 +80,7 @@
       border-top: 1px $grey-c solid
       padding: 27px 0 0 0
       margin-top: 38px
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-mobile-max)
         border-top: 0
         float: right
         margin: 0
@@ -130,7 +131,7 @@
   line-height: 1.2
   width: 185px
   margin-bottom: 20px
-  +breakpoint($bp-portrait-max)
+  +breakpoint($bp-mobile-max)
     width: 295px
 
 input.footer__signup__email
