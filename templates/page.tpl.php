@@ -74,7 +74,6 @@
 ?>
 
   <div id="page-wrapper"><div id="page">
-
     <div id="header-wrapper"><div id="header"><div class="section clearfix">
       <a id="search-touch-button"></a>
       <?php if ($page['navigation']): ?>
@@ -167,7 +166,7 @@
 
     <div id="footer-wrapper"><div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
-      <div class="gsb-copyright">Copyright © Stanford Graduate School of Business</div>
+      <div class="gsb-copyright">Copyright &copy; Stanford Graduate School of Business</div>
     </div></div> <!-- /.section, /#footer, /#footer-wrapper -->
 
-  </div></div> <!-- /#page, /#page-wrapper -->
+  </div></div></div></div> <!-- /#page, /#page-wrapper -->
