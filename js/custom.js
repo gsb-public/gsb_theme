@@ -254,6 +254,18 @@
   }
 
   /**
+   * Move search to top of page in mobile landscape context.
+   */
+  Drupal.behaviors.footerblock ={
+    attach: function (context, settings) {
+      var mq = window.matchMedia( "(max-width: 568px)" );
+      if (mq.matches) {
+        $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
+      }
+    }
+  }
+
+  /**
    * Input type number alternative for spinner
    */
   Drupal.behaviors.spinner ={

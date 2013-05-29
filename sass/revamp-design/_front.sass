@@ -139,7 +139,8 @@
     margin-right: 4px
   +breakpoint($bp-mobile-max)
     background: image_url("bg-homepage-events-narrow.png") no-repeat
-    height: 256px
+    max-height: 256px
+    height: auto
     max-width: 450px
   .view-gsb-event .view-content .views-row
     border-bottom: 0
@@ -185,6 +186,8 @@
     vertical-align: top
     p
       font-size: 16px
+      +breakpoint($bp-mobile-max)
+        line-height: 20px
 
   // BOTTOM TITLES
   h2

@@ -1491,7 +1491,6 @@ del {
   #bottom .block-block:nth-of-type(1n) {
     float: none;
     margin: 0;
-    margin-bottom: 30px;
     width: 100%;
   }
 }
@@ -1531,6 +1530,7 @@ del {
   #bottom .block-block:nth-of-type(2n) {
     float: none;
     margin: 0;
+    margin-bottom: 30px;
     width: 100%;
   }
 }
@@ -2021,11 +2021,13 @@ div.label-inline {
     color: white;
     float: none;
     font-size: 14px;
+    height: 50px;
     line-height: 1;
-    padding: 0 6px;
+    padding: 6px;
     position: absolute;
-    top: 20px;
-    right: 16px;
+    top: 0;
+    margin-left: 120px;
+    vertical-align: middle;
   }
 }
 
@@ -2704,7 +2706,7 @@ a.no-border:hover {
     border-right: 1px solid red;
     cursor: pointer;
     display: inline-block;
-    padding: 15px 18px 9px;
+    padding: 14px 18px 9px;
     vertical-align: top;
     position: relative;
     z-index: 12;
@@ -2766,7 +2768,7 @@ a.no-border:hover {
     cursor: pointer;
     display: inline-block;
     left: 57px;
-    padding: 15px 18px 6px;
+    padding: 14px 18px 6px;
     position: absolute;
   }
   .svg #search-touch-button:after {
@@ -4635,11 +4637,6 @@ p.acc-title + p {
     font-size: 24px;
   }
 }
-@media (max-width: 35.5em) {
-  .front .pane-bundle-image-cta .field-name-field-link-single a {
-    font-size: 22px;
-  }
-}
 .pane-bundle-image-cta .field-name-field-link-single {
   display: inline-block;
   position: relative;
@@ -4656,6 +4653,9 @@ p.acc-title + p {
   font-weight: normal;
   top: 1px;
   left: 5px;
+}
+.front .pane-bundle-image-cta .field-name-field-link-single a:after {
+  font-size: 26px;
 }
 .pane-bundle-image-cta .fieldable-panels-pane {
   position: relative;
@@ -5207,7 +5207,8 @@ p.acc-title + p {
 @media (max-width: 35.5em) {
   .pane-gsb-event-frontpage {
     background: url('../images/bg-homepage-events-narrow.png') no-repeat;
-    height: 256px;
+    max-height: 256px;
+    height: auto;
     max-width: 450px;
   }
 }
@@ -5270,6 +5271,11 @@ p.acc-title + p {
 }
 #bottom .block-block p {
   font-size: 16px;
+}
+@media (max-width: 35.5em) {
+  #bottom .block-block p {
+    line-height: 20px;
+  }
 }
 #bottom h2 {
   border-bottom: 1px solid #e5e5e5;

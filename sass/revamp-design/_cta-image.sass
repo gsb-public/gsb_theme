@@ -37,9 +37,6 @@
     +breakpoint($bp-portrait)
       .front &
         font-size: 24px
-    +breakpoint($bp-mobile-max)
-      .front &
-        font-size: 22px
   // Double arrow link
   .field-name-field-link-single
     display: inline-block
@@ -56,6 +53,9 @@
       font-weight: normal
       top: 1px
       left: 5px
+      +breakpoint($bp-mobile-max)
+      .front &
+        font-size: 26px
   .fieldable-panels-pane
     position: relative
     top: 0
