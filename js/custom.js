@@ -230,11 +230,11 @@
   }
 
   /**
-   * Move quicklinks to top of page in 480 mobile context.
+   * Move quicklinks to top of page in mobile landscape context.
    */
   Drupal.behaviors.quicklinks ={
     attach: function (context, settings) {
-      var mq = window.matchMedia( "(max-width: 480px)" );
+      var mq = window.matchMedia( "(max-width: 568px)" );
       if (mq.matches) {
         $('#quicklinks').insertBefore($('#top-content'));
       }
@@ -242,11 +242,11 @@
   }
 
   /**
-   * Move search to top of page in 480 mobile context.
+   * Move search to top of page in mobile landscape context.
    */
   Drupal.behaviors.searchblock ={
     attach: function (context, settings) {
-      var mq = window.matchMedia( "(max-width: 480px)" );
+      var mq = window.matchMedia( "(max-width: 568px)" );
       if (mq.matches) {
         $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
       }
