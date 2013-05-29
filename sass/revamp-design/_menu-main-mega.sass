@@ -80,3 +80,19 @@
     margin-bottom: 11px
     text-transform: uppercase
     width: 193px
+
+///////////////////////
+// RESPONSIVE MEGAMENU
+///////////////////////
+
+.qtip-megamenu
+  +breakpoint($bp-mobile-max)
+    display: none !important
+  +breakpoint($bp-portrait)
+    top: 34px !important
+
+// MEGAMENU AT 768
+.qtip-contentWrapper
+  +breakpoint($bp-portrait)
+    float: none
+    width: 100%
