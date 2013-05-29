@@ -48,15 +48,15 @@
 #program-links-title
   display: none
   +breakpoint($bp-mobile-max)
-    background: image_url('plus.png') no-repeat 0 10px
+    background: image_url('plus.png') no-repeat 0 14px
     color: $white
     cursor: pointer
     display: block
     font-size: 22px
     font-weight: bold
     line-height: 1
-    padding: 11px 0
-    padding-left: 24px
+    padding: 16px 0
+    padding-left: 33px
 
 // Mobile 480 show/hide
 .pane-program-links
@@ -65,7 +65,7 @@
       display: none
     .cta-red-gradient.open
       #program-links-title
-        background: image_url('minus.png') no-repeat 0 17px
+        background: image_url('minus.png') no-repeat 0 20px
       .links
         display: block
 
@@ -81,9 +81,11 @@
     width: 100%
     .front &
       +background(linear-gradient($red-dark, $red-light))
-      margin-bottom: 30px
+      +box-shadow
+      margin-bottom: 15px
       .cta-link
         background: transparent
+        padding: 16px 33px
       li
         border-top: 2px solid #f10000
 
@@ -92,6 +94,8 @@
 // TWITTER FEED
 .pane-homepage-social-feed .twitter-feed
   padding: 24px
+  +breakpoint($bp-mobile-max)
+    +background((image_url('bg-social-feed.png') no-repeat bottom right), #c1dbd9)
   // Title
   h5
     font-size: 16px
@@ -115,6 +119,13 @@
 
 #fpp-tweets-front
   margin-top: 24px
+  +breakpoint($bp-mobile-max)
+    margin-top: 18px
+    .tweet
+      margin-bottom: 18px
+      &:last-of-type
+        margin-bottom: 0
+
 
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage

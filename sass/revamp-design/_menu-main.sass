@@ -7,6 +7,8 @@
     min-width: 690px
   .section
     border-bottom: 10px solid $red
+    +breakpoint($bp-mobile-max)
+      +box-shadow($black 0 -1px 3px)
 
 // MAIN MENU
 #block-system-main-menu
@@ -171,6 +173,8 @@
       display: inline-block
       padding: 15px 18px 9px
       vertical-align: top
+      position: relative
+      z-index: 12
   #nav-touch-button
     &:after
       .svg &

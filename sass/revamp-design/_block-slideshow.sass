@@ -129,6 +129,7 @@ ul.slideshow-items
         height: 205px
     +breakpoint($bp-mobile-max)
       .front &
+        +background(linear-gradient(bottom, #ededed, #fbfaf8 20%))
         height: 385px
     &:hover
       .slide-title
@@ -167,6 +168,7 @@ ul.slideshow-items
     +breakpoint($bp-portrait-max)
       font-size: 26px
       line-height: 28px
+      width: 100%
     a
       color: $red
     &:after
@@ -177,5 +179,7 @@ ul.slideshow-items
       position: relative
       top: 2px
       left: 5px
+      +breakpoint($bp-mobile-max)
+        font-size: 26px
   .slide-cta
     display: none
