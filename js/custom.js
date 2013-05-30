@@ -229,15 +229,18 @@
     }
   }
 
+
   /**
    * Move quicklinks to top of page in mobile landscape context.
    */
   Drupal.behaviors.quicklinks ={
     attach: function (context, settings) {
-      var mq = window.matchMedia( "(max-width: 568px)" );
-      if (mq.matches) {
-        $('#quicklinks').insertBefore($('#top-content'));
-      }
+      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
+          var mq = window.matchMedia( "(max-width: 568px)" );
+          if (mq.matches) {
+            $('#quicklinks').insertBefore($('#top-content'));
+          }
+      }      
     }
   }
 
@@ -246,9 +249,11 @@
    */
   Drupal.behaviors.searchblock ={
     attach: function (context, settings) {
-      var mq = window.matchMedia( "(max-width: 568px)" );
-      if (mq.matches) {
-        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
+      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
+        var mq = window.matchMedia( "(max-width: 568px)" );
+        if (mq.matches) {
+          $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
+        }
       }
     }
   }
@@ -258,9 +263,11 @@
    */
   Drupal.behaviors.footerblock ={
     attach: function (context, settings) {
-      var mq = window.matchMedia( "(max-width: 568px)" );
-      if (mq.matches) {
-        $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
+      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
+        var mq = window.matchMedia( "(max-width: 568px)" );
+        if (mq.matches) {
+          $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
+        }
       }
     }
   }
