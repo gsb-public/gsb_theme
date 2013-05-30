@@ -270,7 +270,11 @@
    */
   Drupal.behaviors.spinner ={
     attach: function (context, settings) {
-      if (!Modernizr.inputtypes.number) {
+      // detect IE 10
+      if (Function('/*@cc_on return document.documentMode===10@*/')()){
+        var isIE10 = true;
+      }
+      if (!Modernizr.inputtypes.number || isIE10) {
         $('.form-number').wrap('<span class="fake-input-wrapper" />')
         .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
 
