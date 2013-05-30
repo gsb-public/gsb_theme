@@ -14,9 +14,10 @@
 // MAIN MENU
 #block-system-main-menu
   float: left
+  +breakpoint($bp-portrait)
+    float: none
   +breakpoint($bp-mobile-max)
     float: none
-    display: block
   li
     border-right: 1px solid #FF0000
     background-color: $red-light
@@ -40,11 +41,19 @@
       margin: 0
     // IPAD
     +breakpoint($bp-portrait)
+      +background(image_url("navigation-arrow.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
+      width: 21.1%
+      &:hover,
+      &.active
+        +background(image_url("navigation-arrow.png") no-repeat 95% 75%, $black)
       a
-        background: image_url("navigation-arrow.png") no-repeat 95% 50%
         font-size: 15px
         line-height: 14px
+        max-width: 128px
         padding: 10px 30px 10px 9px
+      &:first-of-type
+        a
+          padding-right: 18px
     // Mobile
     +breakpoint($bp-mobile-max)
       background: $white
@@ -107,24 +116,24 @@
     float: left
     width: 202px
   +breakpoint($bp-portrait)
-    float: left
-  .event-calendar
-    width: 100%
-    +breakpoint($bp-mobile-max)
-      line-height: 1
-      padding: 15px 0 15px 70px
+    float: right
+    width: 15.6%
 
 // Event calendar link
-.event-calendar
+a.event-calendar
+  width: 100%
   +background(linear-gradient(top, #880000, #b40000))
   color: #fff
   font-size: 18px
   display: inline-block
   font-weight: bold
+  &:hover
+    background: $black
   +breakpoint($bp-portrait)
     font-size: 15px
     line-height: 14px
-    padding: 10px 8px
+    max-width: 115px
+    padding: 10px 9px
   +breakpoint($bp-wide-min)
     line-height: 40px
     padding: 7px 0 0 16px
@@ -134,7 +143,10 @@
     color: $red
     display: block
     float: none
+    line-height: 1
     padding: 18px
+    &:hover
+      +background(linear-gradient($grey-e, $white))
 
 ////////////////////////////////
 // Mobile footer duplicate menu
