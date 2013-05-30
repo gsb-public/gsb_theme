@@ -12,13 +12,15 @@
 
 <div class="panel-display gsb-landing-standard-page-one <?php if (!empty($class)) { print $class; } ?>">
 
+  <div id="top-content"></div>
+
   <?php if ($content['fullheader']): ?>
-    <div id="top-content" class="full-header full-view">
+    <div class="full-header full-view">
       <?php print $content['fullheader']; ?>
     </div>
   <?php endif; ?>
 
-  <div id="top-content" class="inner-content-wrapper">
+  <div class="inner-content-wrapper">
 
     <div class="main-wrapper"><div class="inner-main-wrapper">
 

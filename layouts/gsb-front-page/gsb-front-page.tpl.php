@@ -11,7 +11,8 @@
 ?>
 
 <div class="panel-display gsb-front-page clearfix <?php if (!empty($class)) { print $class; } ?>">
-  <div id="top-content" class="front-panel-header-row">
+  <div id="top-content"></div>
+  <div class="front-panel-header-row">
     <div class="front-slider-pane wide-view">
       <?php print $content['contentslider']; ?>
     </div>
