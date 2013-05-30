@@ -61,6 +61,25 @@
       float: none
       width: 100%
 
+// Events landing (.gsb-landing-events inverse of standard landing)
+.panel-display.gsb-landing-events
+  // Main section
+  .main-wrapper
+    float: right
+    margin-left: -300px
+    width: 100%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
+
+  // Left sidebar
+  .inner-sidebar-wrapper
+    float: left
+    +breakpoint($bp-mobile-max)
+      float: none
+      width: 100%
+
+
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
   .main-header,

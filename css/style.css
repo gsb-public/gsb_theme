@@ -58,7 +58,8 @@ pre, code, kbd, tt {
   color: white;
 }
 
-.region-sidebar-first, .view-gsb-event .view-filters {
+.region-sidebar-first, .pane-views-exp-gsb-event-panel-pane-1,
+.pane-views-exp-gsb-event-panel-pane-2 {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, rgba(242, 242, 242, 0)));
   background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
@@ -82,7 +83,8 @@ pre, code, kbd, tt {
   border: 1px solid #e4e4e4;
 }
 
-.region-sidebar-first, .view-gsb-event .view-filters {
+.region-sidebar-first, .pane-views-exp-gsb-event-panel-pane-1,
+.pane-views-exp-gsb-event-panel-pane-2 {
   border-top: 10px black solid;
 }
 
@@ -1258,6 +1260,27 @@ del {
 }
 @media (max-width: 35.5em) {
   .panel-display .inner-sidebar-wrapper {
+    float: none;
+    width: 100%;
+  }
+}
+
+.panel-display.gsb-landing-events .main-wrapper {
+  float: right;
+  margin-left: -300px;
+  width: 100%;
+}
+@media (max-width: 35.5em) {
+  .panel-display.gsb-landing-events .main-wrapper {
+    float: none;
+    margin: 0;
+  }
+}
+.panel-display.gsb-landing-events .inner-sidebar-wrapper {
+  float: left;
+}
+@media (max-width: 35.5em) {
+  .panel-display.gsb-landing-events .inner-sidebar-wrapper {
     float: none;
     width: 100%;
   }
@@ -5446,10 +5469,7 @@ p.acc-title + p {
   *zoom: 1;
 }
 .page-events .view-gsb-event .view-content {
-  display: inline-block;
-  float: right;
   margin-top: 80px;
-  width: 74.4%;
 }
 .page-events .view-gsb-event .view-empty {
   display: inline-block;
@@ -5521,11 +5541,6 @@ p.acc-title + p {
   height: 50px;
   width: 80px;
 }
-.page-events .pager-region {
-  width: 74.4%;
-  float: right;
-  margin-right: 36px;
-}
 
 .view-gsb-event .view-content .view-mode-teaser {
   padding-top: 1em;
@@ -5544,17 +5559,6 @@ p.acc-title + p {
 .view-gsb-event .view-content .views-row-last {
   border-bottom: 0;
 }
-.view-gsb-event .view-filters {
-  background-color: #f2f2f2;
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  padding: 24px;
-}
-.view-gsb-event .view-filters label {
-  font-size: 16px;
-  font-weight: normal;
-}
 .view-gsb-event .views-exposed-widget {
   border-bottom: 1px solid #cccccc;
   padding: 0;
@@ -5565,15 +5569,42 @@ p.acc-title + p {
   font-weight: bold;
   text-transform: uppercase;
 }
-.view-gsb-event #edit-search-wrapper {
-  border-bottom: 0;
-  padding: 0;
-  width: 186px;
+
+.fullcalendar table.fc-border-separate {
+  border-collapse: collapse;
 }
-.view-gsb-event #edit-search-wrapper .form-item {
+.fullcalendar table.fc-border-separate thead {
+  border: 1px solid #666666;
+}
+.fullcalendar table.fc-border-separate tbody td {
+  border: 1px solid #cccccc;
+}
+
+.pane-views-exp-gsb-event-panel-pane-1,
+.pane-views-exp-gsb-event-panel-pane-2 {
+  background-color: #f2f2f2;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 270px;
+  padding: 24px;
+}
+.pane-views-exp-gsb-event-panel-pane-1 label,
+.pane-views-exp-gsb-event-panel-pane-2 label {
+  font-size: 16px;
+  font-weight: normal;
+}
+.pane-views-exp-gsb-event-panel-pane-1 #edit-search-wrapper,
+.pane-views-exp-gsb-event-panel-pane-2 #edit-search-wrapper {
+  border-bottom: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.pane-views-exp-gsb-event-panel-pane-1 #edit-search-wrapper .form-item,
+.pane-views-exp-gsb-event-panel-pane-2 #edit-search-wrapper .form-item {
   margin: 0;
 }
-.view-gsb-event #edit-search-wrapper #edit-search {
+.pane-views-exp-gsb-event-panel-pane-1 #edit-search-wrapper #edit-search,
+.pane-views-exp-gsb-event-panel-pane-2 #edit-search-wrapper #edit-search {
   width: 100%;
   border: none;
   border: 1px #d0d0d0 solid;
@@ -5583,18 +5614,21 @@ p.acc-title + p {
   color: #666666;
   font-size: 16px;
 }
-.view-gsb-event #edit-search-wrapper label {
+.pane-views-exp-gsb-event-panel-pane-1 #edit-search-wrapper label,
+.pane-views-exp-gsb-event-panel-pane-2 #edit-search-wrapper label {
   display: none;
 }
-.view-gsb-event .views-exposed-widget.views-submit-button {
+.pane-views-exp-gsb-event-panel-pane-1 .views-exposed-widget.views-submit-button,
+.pane-views-exp-gsb-event-panel-pane-2 .views-exposed-widget.views-submit-button {
   border-bottom: 0;
   display: inline-block;
   float: right;
   margin-bottom: 0;
   position: relative;
-  top: -57px;
+  top: -50px;
 }
-.view-gsb-event #edit-submit-gsb-event {
+.pane-views-exp-gsb-event-panel-pane-1 #edit-submit-gsb-event,
+.pane-views-exp-gsb-event-panel-pane-2 #edit-submit-gsb-event {
   width: 31px;
   height: 36px;
   -webkit-border-radius: 0;
@@ -5605,16 +5639,6 @@ p.acc-title + p {
   background: transparent url(../images/search-magnifying-glass.png) no-repeat center center;
   text-indent: 1000px;
   padding: 0;
-}
-
-.fullcalendar table.fc-border-separate {
-  border-collapse: collapse;
-}
-.fullcalendar table.fc-border-separate thead {
-  border: 1px solid #666666;
-}
-.fullcalendar table.fc-border-separate tbody td {
-  border: 1px solid #cccccc;
 }
 
 .node-case-study.view-mode-full,
