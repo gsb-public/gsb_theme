@@ -62,7 +62,7 @@
 <!--[if gte IE 9]>
   <style type="text/css">
     .designed-box {
-       filter: none !important;
+       filter: none 
     }
   </style>
 <![endif]-->  
