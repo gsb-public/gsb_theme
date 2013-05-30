@@ -27,6 +27,9 @@
 
 // CTA Green
 .cta-green
+  &.designed-box
+    @include filter-gradient(#fbfaf8, #ededed, vertical)
+    $experimental-support-for-svg: true  
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white

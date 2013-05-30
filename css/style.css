@@ -2512,10 +2512,14 @@ a.no-border:hover {
 #block-system-main-menu {
   float: left;
 }
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  #block-system-main-menu {
+    float: none;
+  }
+}
 @media (max-width: 35.5em) {
   #block-system-main-menu {
     float: none;
-    display: block;
   }
 }
 #block-system-main-menu li {
@@ -2549,11 +2553,27 @@ a.no-border:hover {
   margin: 0;
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
+  #block-system-main-menu li {
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1MDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2MDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c50000), color-stop(100%, #860000));
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, -webkit-linear-gradient(bottom, #c50000, #860000);
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, -moz-linear-gradient(bottom, #c50000, #860000);
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, -o-linear-gradient(bottom, #c50000, #860000);
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, -ms-linear-gradient(bottom, #c50000, #860000);
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, linear-gradient(bottom, #c50000, #860000);
+    width: 21.1%;
+  }
+  #block-system-main-menu li:hover, #block-system-main-menu li.active {
+    background: url('../images/navigation-arrow.png') no-repeat 95% 75%, black;
+  }
   #block-system-main-menu li a {
-    background: url('../images/navigation-arrow.png') no-repeat 95% 50%;
     font-size: 15px;
     line-height: 14px;
+    max-width: 128px;
     padding: 10px 30px 10px 9px;
+  }
+  #block-system-main-menu li:first-of-type a {
+    padding-right: 18px;
   }
 }
 @media (max-width: 35.5em) {
@@ -2630,20 +2650,13 @@ a.no-border:hover {
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
   .se {
-    float: left;
-  }
-}
-.se .event-calendar {
-  width: 100%;
-}
-@media (max-width: 35.5em) {
-  .se .event-calendar {
-    line-height: 1;
-    padding: 15px 0 15px 70px;
+    float: right;
+    width: 15.6%;
   }
 }
 
-.event-calendar {
+a.event-calendar {
+  width: 100%;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg4MDAwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I0MDAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #880000), color-stop(100%, #b40000));
   background: -webkit-linear-gradient(top, #880000, #b40000);
@@ -2656,21 +2669,25 @@ a.no-border:hover {
   display: inline-block;
   font-weight: bold;
 }
+a.event-calendar:hover {
+  background: black;
+}
 @media (min-width: 35.5625em) and (max-width: 48em) {
-  .event-calendar {
+  a.event-calendar {
     font-size: 15px;
     line-height: 14px;
-    padding: 10px 8px;
+    max-width: 115px;
+    padding: 10px 9px;
   }
 }
 @media (min-width: 48.0625em) {
-  .event-calendar {
+  a.event-calendar {
     line-height: 40px;
     padding: 7px 0 0 16px;
   }
 }
 @media (max-width: 35.5em) {
-  .event-calendar {
+  a.event-calendar {
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ededed), color-stop(100%, #ffffff));
     background: -webkit-linear-gradient(#ededed, #ffffff);
@@ -2682,7 +2699,17 @@ a.no-border:hover {
     color: #990000;
     display: block;
     float: none;
+    line-height: 1;
     padding: 18px;
+  }
+  a.event-calendar:hover {
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ededed), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(#ededed, #ffffff);
+    background: -moz-linear-gradient(#ededed, #ffffff);
+    background: -o-linear-gradient(#ededed, #ffffff);
+    background: -ms-linear-gradient(#ededed, #ffffff);
+    background: linear-gradient(#ededed, #ffffff);
   }
 }
 
@@ -4461,6 +4488,10 @@ p.acc-title + p {
   vertical-align: text-top;
 }
 
+.cta-green.designed-box {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBFAF8', endColorstr='#FFEDEDED');
+}
 .cta-green .field-item {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
@@ -4669,7 +4700,6 @@ p.acc-title + p {
 }
 .pane-bundle-image-cta .field-name-field-link-single a {
   font-size: 28px;
-  font-weight: bold;
   line-height: 1.15em;
   color: white;
 }
@@ -4689,7 +4719,7 @@ p.acc-title + p {
   color: #bac405;
   content: "\f100";
   font-family: "arrow-double";
-  font-size: 33px;
+  font-size: 23px;
   position: relative;
   font-weight: normal;
   top: 1px;
