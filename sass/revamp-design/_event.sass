@@ -101,10 +101,10 @@
   .view-gsb-event
     +clearfix
     .view-content
-      display: inline-block
-      float: right
+      // display: inline-block
+      // float: right
       margin-top: 80px
-      width: 74.4%
+      // width: 74.4%
     .view-empty
       display: inline-block
       margin-top: 80px
@@ -165,7 +165,7 @@
       height: 50px
       width: 80px
   // Pager
-  .pager-region
+  // .pager-region
     width: 74.4%
     float: right
     margin-right: 36px
@@ -189,17 +189,6 @@
       border-bottom: 1px solid $grey-e
     .views-row-last
       border-bottom: 0
-  .view-filters
-    @extend %black-border-top
-    @extend %bg-grey-gradient
-    background-color: $grey-f
-    display: inline-block
-    vertical-align: top
-    width: 20%
-    padding: 24px
-    label
-      font-size: 16px
-      font-weight: normal
   .views-exposed-widget
     border-bottom: 1px solid $grey-c
     padding: 0
@@ -209,11 +198,32 @@
     font-weight: bold
     text-transform: uppercase
 
+//  Fullcalendar table border
+.fullcalendar table.fc-border-separate
+  border-collapse: collapse
+  thead
+    border: 1px solid #666
+  tbody td
+    border: 1px solid #ccc
+
+// New filters
+.pane-views-exp-gsb-event-panel-pane-1,
+.pane-views-exp-gsb-event-panel-pane-2
+  @extend %black-border-top
+  @extend %bg-grey-gradient
+  background-color: $grey-f
+  display: inline-block
+  vertical-align: top
+  max-width: 270px
+  padding: 24px
+  label
+    font-size: 16px
+    font-weight: normal
   // SEARCH BOX
   #edit-search-wrapper
     border-bottom: 0
+    margin-bottom: 15px
     padding: 0
-    width: 186px
     .form-item
       margin: 0
     #edit-search
@@ -233,7 +243,7 @@
     float: right
     margin-bottom: 0
     position: relative
-    top: -57px
+    top: -50px
 
   // Submit button
   #edit-submit-gsb-event
@@ -247,11 +257,3 @@
     background: transparent url(../images/search-magnifying-glass.png) no-repeat center center
     text-indent: 1000px
     padding: 0
-
-//  Fullcalendar table border
-.fullcalendar table.fc-border-separate
-  border-collapse: collapse
-  thead
-    border: 1px solid #666
-  tbody td
-    border: 1px solid #ccc

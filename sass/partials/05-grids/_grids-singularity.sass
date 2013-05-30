@@ -22,17 +22,16 @@
 #main
   overflow: hidden
 
-// Bottom spacing for items in sidebar
+// Bottom spacing for items in sidebars
 .inner-sidebar-wrapper
-  .panels-ipe-portlet-content,
   .panel-pane
-    margin-bottom: 28px
+    margin-bottom: 30px
 
 ////////////////////////////
 // FULL WIDTH PANELS LAYOUTS
 ////////////////////////////
 
-// Standard landing (.gsb-standard-page-two)
+// General styles
 .panel-display
   .full-header,
   .inner-content-wrapper
@@ -61,8 +60,35 @@
       float: none
       width: 100%
 
+// Standard landing (.gsb-standard-page-two)
+.panel-display.gsb-standard-page-two
+  // Specific pane spacing for this layout
+  .inner-main-wrapper
+    .panel-pane
+      margin-bottom: 30px
+
+// Events landing (.gsb-landing-events inverse of standard landing)
+.panel-display.gsb-landing-events
+  // Main section
+  .main-wrapper
+    float: right
+    margin-left: -300px
+    width: 100%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
+
+  // Left sidebar
+  .inner-sidebar-wrapper
+    float: left
+    +breakpoint($bp-mobile-max)
+      float: none
+      width: 100%
+
+
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
+  .full-header,
   .main-header,
   .main-middle
     margin-bottom: 30px
