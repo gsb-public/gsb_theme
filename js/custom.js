@@ -120,6 +120,37 @@
   }
 
   /**
+   * Placeholder for IE9-
+   */
+  
+  Drupal.behaviors.placeholder = {
+    attach: function (context, settings) {
+      if(!Modernizr.input.placeholder){
+        $('[placeholder]').focus(function() {
+          var input = $(this);
+          if (input.val() == input.attr('placeholder')) {
+          input.val('');
+          input.removeClass('placeholder');
+          }
+        }).blur(function() {
+          var input = $(this);
+          if (input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+          }
+        }).blur();
+        $('[placeholder]').parents('form').submit(function() {
+          $(this).find('[placeholder]').each(function() {
+          var input = $(this);
+          if (input.val() == input.attr('placeholder')) {
+            input.val('');
+          }
+          })
+        });
+      }      
+    }}
+
+  /**
    * Check for social field fpp, if it exists, check the source.
    * If the source is twitter, grab the values from fields and
    * transmit them to gsb_tweetfeed function.
