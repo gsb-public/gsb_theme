@@ -81,12 +81,10 @@
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
             <?php print render($page['navigation']); ?>
-            <div class="se">
-              <a href="/events" class="event-calendar">Event Calendar</a>
-            </div><!-- /.se -->
-            <?php $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form'); ?>
-            <?php print render($search_block['content']); ?>
-            <div id="menu-main-footer">
+            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a><?php 
+              $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
+              print render($search_block['content']);
+             ?></div><div id="menu-main-footer">
               <ul class="menu menu-1">
                 <li class="first"><a href="/" title="">Alumni</a></li>
                 <li><a href="/" title="">Giving</a></li>
@@ -100,16 +98,13 @@
                 <li><a href="/" title="">Jobs</a></li>
                 <li class="last"><a href="/user" title="">Log In</a></li>
               </ul>
-          </div></div></div><!-- /#menu-main-footer, /.section, /#navigation -->
-      <?php endif; ?>
-
-      <?php if ($site_slogan): ?>
+          </div></div></div>
+      <?php endif;
+        if ($site_slogan): ?>
         <div id="site-slogan"><?php print $site_slogan; ?></div>
-      <?php endif; ?>
-
-      <?php print render($page['header']); ?>
-
-      <?php if ($logo): ?>
+      <?php endif;
+        print render($page['header']);
+        if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
