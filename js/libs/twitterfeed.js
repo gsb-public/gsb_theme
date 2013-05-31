@@ -34,7 +34,7 @@ gsb_tweetfeed = {
       this.format = config.format == null ? 'l, M j | a' : config.format;
 
       this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dev'],
-      this.weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+      this.weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
       this.checkTweets();
 		},
 
@@ -121,7 +121,7 @@ gsb_tweetfeed = {
           
         if ($.browser.msie) {
             // IE can't parse these crazy Ruby dates
-            then = Date.parse(dateString.replace(/( \+)/, ' UTC_8'));
+            //then = Date.parse(dateString.replace(/( \+)/, ' UTC_8'));
         }
 
         var tweetmonth = gsb_tweetfeed.months[then.getMonth()],
