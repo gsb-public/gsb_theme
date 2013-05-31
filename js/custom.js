@@ -232,43 +232,17 @@
 
   /**
    * Move quicklinks to top of page in mobile landscape context.
-   */
-  Drupal.behaviors.quicklinks ={
-    attach: function (context, settings) {
-      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
-          var mq = window.matchMedia( "(max-width: 568px)" );
-          if (mq.matches) {
-            $('#quicklinks').insertBefore($('#top-content'));
-          }
-      }      
-    }
-  }
-
-  /**
+   * Move search to top of page in mobile landscape context.
    * Move search to top of page in mobile landscape context.
    */
-  Drupal.behaviors.searchblock ={
-    attach: function (context, settings) {
-      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
-        var mq = window.matchMedia( "(max-width: 568px)" );
-        if (mq.matches) {
-          $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
-        }
-      }
-    }
-  }
 
-  /**
-   * Move search to top of page in mobile landscape context.
-   */
-  Drupal.behaviors.footerblock ={
+  Drupal.behaviors.mainmenu_mobile ={
     attach: function (context, settings) {
-      if (!$.browser.msie  && parseInt($.browser.version) < 10) {
-        var mq = window.matchMedia( "(max-width: 568px)" );
-        if (mq.matches) {
-          $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
-        }
-      }
+      if (Modernizr.mq('(max-width: 568px)')) {
+        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
+        $('#quicklinks').insertBefore($('#top-content'));
+        $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
+      }  
     }
   }
 
