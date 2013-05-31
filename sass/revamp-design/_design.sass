@@ -30,6 +30,7 @@
   .bottom-content
     margin: 0 auto
     max-width: $max-width
+
     +breakpoint($bp-portrait)
       padding: 0 20px
     +breakpoint($bp-mobile-max)
@@ -85,6 +86,9 @@
     padding: 21px 0 18px 15px
     img
       max-width: 150px
+  +breakpoint(769px 919px)
+    padding-top: 0
+    padding-bottom: 36px
 
 // SITE SLOGAN
 #site-slogan
@@ -96,6 +100,8 @@
     font-size: 18px
     line-height: 1
     padding-right: 20px
+  +breakpoint(705px max-width)
+    max-width: 300px
   +breakpoint($bp-mobile-max)
     display: none
 
