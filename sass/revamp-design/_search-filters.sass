@@ -57,7 +57,7 @@
     float: none
     left: 57px
     position: absolute
-    width: 423px
+    width: 85%
     z-index: 1
   .form-item
     float: left
@@ -78,6 +78,7 @@
       .svg &
         padding-right: 40px
       +breakpoint($bp-mobile-max)
+        height: 50px
         padding: 15px 50px 15px 10px
       color: $grey-6
       font-size: 16px
@@ -92,6 +93,8 @@
         top: 4px
         right: -16px
         +text-shadow($white -1px 1px)
+        +breakpoint($bp-mobile-max)
+          top: 10px
     &:hover
       .svg &
         &:before
@@ -115,6 +118,8 @@
       right: -5px
       top: -26px
       width: 40px
+      +breakpoint($bp-mobile-max)
+        top: -20px
     .no-js &, .no-svg &
       background: transparent url(../images/search.png) no-repeat center 12px
     &:hover

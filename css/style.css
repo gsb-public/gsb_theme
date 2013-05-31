@@ -5882,7 +5882,7 @@ p.acc-title + p {
     float: none;
     left: 57px;
     position: absolute;
-    width: 423px;
+    width: 85%;
     z-index: 1;
   }
 }
@@ -5912,6 +5912,7 @@ p.acc-title + p {
 }
 @media (max-width: 35.5em) {
   .grey-search-box .form-item .form-text {
+    height: 50px;
     padding: 15px 50px 15px 10px;
   }
 }
@@ -5924,6 +5925,11 @@ p.acc-title + p {
   top: 4px;
   right: -16px;
   text-shadow: white -1px 1px;
+}
+@media (max-width: 35.5em) {
+  .svg .grey-search-box #edit-actions:before {
+    top: 10px;
+  }
 }
 .svg .grey-search-box #edit-actions:hover:before {
   color: #2d6280;
@@ -5948,6 +5954,11 @@ p.acc-title + p {
   right: -5px;
   top: -26px;
   width: 40px;
+}
+@media (max-width: 35.5em) {
+  .svg .grey-search-box .form-submit {
+    top: -20px;
+  }
 }
 .no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
   background: transparent url(../images/search.png) no-repeat center 12px;
