@@ -490,6 +490,14 @@ table {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "search";
+  src: url('../fonts/search.eot');
+  src: url('../fonts/search.eot?#iefix') format('eot'), url('../fonts/search.woff') format('woff'), url('../fonts/search.ttf') format('truetype'), url('../fonts/search.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-weight: normal;
   font-style: normal;
@@ -543,6 +551,11 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
 .icon-external-link:before {
   content: "\f100";
   font-family: "external-link";
+}
+
+.icon-search:before {
+  content: "\f100";
+  font-family: "search";
 }
 
 * {
@@ -5874,40 +5887,65 @@ p.acc-title + p {
   border: 1px #d0d0d0 solid;
   background: #e4e4e4;
   line-height: 1em;
-  height: auto;
   padding: 7px 50px 6px 10px;
   color: #666666;
   font-size: 16px;
+}
+.grey-search-box .form-item .form-text:focus {
+  border-color: #d0d0d0 !important;
+  box-shadow: none;
+}
+.svg .grey-search-box .form-item .form-text {
+  padding-right: 40px;
 }
 @media (max-width: 35.5em) {
   .grey-search-box .form-item .form-text {
     padding: 15px 50px 15px 10px;
   }
 }
+.svg .grey-search-box #edit-actions:before {
+  color: #990000;
+  content: "\f100";
+  font-family: "search";
+  font-size: 21px;
+  position: relative;
+  top: 4px;
+  right: -16px;
+  text-shadow: white -1px 1px;
+}
+.svg .grey-search-box #edit-actions:hover:before {
+  color: #2d6280;
+}
 .grey-search-box .form-submit {
+  display: inline-block;
   float: left;
   width: 45px;
   height: 36px;
+  background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
   border: none;
-  background: transparent url(../images/search.png) no-repeat center 6px;
   text-indent: 1000px;
   overflow: hidden;
 }
-@media (max-width: 35.5em) {
-  .grey-search-box .form-submit {
-    background-position: center 12px;
-  }
+.svg .grey-search-box .form-submit {
+  height: 33px;
+  position: relative;
+  right: -5px;
+  top: -26px;
+  width: 40px;
 }
-.grey-search-box .form-submit:hover {
+.no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
+  background: transparent url(../images/search.png) no-repeat center 12px;
+}
+.no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
   background-position: center -27px;
 }
 @media (max-width: 35.5em) {
-  .grey-search-box .form-submit:hover {
-    background: transparent url(../images/search.png) no-repeat center 12px;
+  .no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
+    background: transparent url(../images/search.png) no-repeat center -27px;
   }
 }
 

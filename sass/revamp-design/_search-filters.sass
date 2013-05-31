@@ -72,30 +72,57 @@
       border: 1px #d0d0d0 solid
       background: #e4e4e4
       line-height: 1em
-      height: auto
       padding: 7px 50px 6px 10px
+      &:focus
+        border-color: #d0d0d0 !important
+        box-shadow: none
+      .svg &
+        padding-right: 40px
       +breakpoint($bp-mobile-max)
         padding: 15px 50px 15px 10px
       color: $grey-6
       font-size: 16px
+  #edit-actions
+    .svg &
+      &:before
+        color: $red
+        content: "\f100"
+        font-family: "search"
+        font-size: 21px
+        position: relative
+        top: 4px
+        right: -16px
+        +text-shadow($white -1px 1px)
+    &:hover
+      .svg &
+        &:before
+          color: $text-blue
   .form-submit
+    display: inline-block
     float: left
     width: 45px
     height: 36px
+    background: transparent
     -webkit-border-radius: 0
     -moz-border-radius: 0
     -ms-border-radius: 0
     border-radius: 0
     border: none
-    background: transparent url(../images/search.png) no-repeat center 6px
-    +breakpoint($bp-mobile-max)
-      background-position: center 12px
     text-indent: 1000px
     overflow: hidden
+    .svg &
+      height: 33px
+      position: relative
+      right: -5px
+      top: -26px
+      width: 40px
+    .no-js &, .no-svg &
+      background: transparent url(../images/search.png) no-repeat center 12px
     &:hover
-      background-position: center -27px
-      +breakpoint($bp-mobile-max)
-        background: transparent url(../images/search.png) no-repeat center 12px
+      .no-js &, .no-svg &
+        background-position: center -27px
+        +breakpoint($bp-mobile-max)
+          background: transparent url(../images/search.png) no-repeat center -27px
 
 ///////////////////
 // Search filters
