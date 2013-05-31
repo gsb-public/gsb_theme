@@ -86,9 +86,14 @@ ul.slideshow-items
   font-size: 16px
   line-height: 20px
   margin-bottom: 30px
-.slide-title,
-.slide-description
-  width: 250px
+
+/////////////////
+// CTA SLIDESHOW
+/////////////////
+.slideshow-cta
+  .slide-title,
+  .slide-description
+    width: 250px
 
 // Slide CTA text
 .slide-cta
@@ -130,7 +135,8 @@ ul.slideshow-items
     +breakpoint($bp-mobile-max)
       .front &
         +background(linear-gradient(bottom, #ededed, #fbfaf8 20%))
-        height: 385px
+        height: auto
+        min-height: 425px
     &:hover
       .slide-title
         color: $red
@@ -160,15 +166,19 @@ ul.slideshow-items
     color: $red
     line-height: 1em
     margin-bottom: 20px
+    +breakpoint($bp-portrait-max)
+      margin-bottom: 12px
     &:after
       content: ""
   .slide-description
     font-size: 36px
     line-height: 40px
+    width: 360px
     +breakpoint($bp-portrait-max)
-      font-size: 26px
-      line-height: 28px
-      width: 100%
+      font-size: 20px
+      line-height: 22px
+      overflow: hidden
+      width: 315px
     a
       color: $red
     &:after
