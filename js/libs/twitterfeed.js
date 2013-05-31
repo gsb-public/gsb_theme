@@ -121,7 +121,7 @@ gsb_tweetfeed = {
           
         if ($.browser.msie) {
             // IE can't parse these crazy Ruby dates
-            //then = Date.parse(dateString.replace(/( \+)/, ' UTC_8'));
+            then = new Date(dateString.replace('+', 'UTC+'));
         }
 
         var tweetmonth = gsb_tweetfeed.months[then.getMonth()],
