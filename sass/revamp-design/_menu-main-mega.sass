@@ -89,10 +89,14 @@
   +breakpoint($bp-mobile-max)
     display: none !important
   +breakpoint($bp-portrait)
-    top: 34px !important
+    top: 48px !important
 
-// MEGAMENU AT 768
+// MEGAMENU AT TABLET SIZE
 .qtip-contentWrapper
   +breakpoint($bp-portrait)
     float: none
     width: 100%
+
+.qtip-wrapper
+  +breakpoint($bp-portrait)
+    max-width: 99.9% !important
