@@ -2525,10 +2525,6 @@ a.no-border:hover {
     box-shadow: black 0 -1px 3px;
   }
 }
-#navigation .grey-search-box {
-  width: 100%;
-  float: none;
-}
 
 #block-system-main-menu {
   float: left;
@@ -5894,14 +5890,14 @@ p.acc-title + p {
   margin-bottom: 0;
 }
 .grey-search-box .form-item .form-text {
+  color: #666666;
+  font-size: 16px;
   width: 100%;
   border: none;
   border: 1px #d0d0d0 solid;
   background: #e4e4e4;
   line-height: 1em;
   padding: 7px 50px 6px 10px;
-  color: #666666;
-  font-size: 16px;
 }
 .grey-search-box .form-item .form-text:focus {
   border-color: #d0d0d0 !important;
@@ -5914,6 +5910,11 @@ p.acc-title + p {
   .grey-search-box .form-item .form-text {
     height: 50px;
     padding: 15px 50px 15px 10px;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  .grey-search-box .form-item .form-text {
+    width: 218px;
   }
 }
 .svg .grey-search-box #edit-actions:before {
