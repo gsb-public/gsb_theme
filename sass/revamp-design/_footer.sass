@@ -15,6 +15,12 @@
   +breakpoint($bp-mobile-max)
     width: 100%
 
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2
+  +breakpoint(801px max-width)
+    width: 100%
+    max-width: 165px
+
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   margin-right: 0
   +breakpoint($bp-portrait-max)
@@ -35,7 +41,7 @@
     text-transform: uppercase
     &:hover
       color: $text-blue
-    +breakpoint($bp-portrait)
+    +breakpoint(895px max-width)
       font-size: 13px
   li
     margin-bottom: 20px
@@ -49,6 +55,8 @@
 
 .region-footer
   padding-top: 35px
+  position: relative
+  top: 0
 
 // FOLLOW US
 #block-gsb-public-custom-blocks-gpcb-follow-us
@@ -173,13 +181,23 @@ input.footer__signup__submit:hover
 #block-menu-menu-footer-3
   float: right
   padding: 12px 0
-  +breakpoint($bp-mobile-max)
-    float: left
+  +breakpoint(801px max-width)
+    float: none
+    position: relative
+    top: 24px
+    +breakpoint(714px max-width)
+      top: 0
+    .menu
+      float: right
+      +breakpoint(714px max-width)
+        float: none
   li
     display: inline-block
     margin-right: 44px
     +breakpoint($bp-mobile-max)
       margin-right: 40px
+    +breakpoint($bp-portrait)
+      margin-right: 18px
     a
       color: $red
       font-size: 14px

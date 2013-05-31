@@ -2886,6 +2886,14 @@ a.event-calendar:hover {
   }
 }
 
+@media (max-width: 50.0625em) {
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-2 {
+    width: 100%;
+    max-width: 165px;
+  }
+}
+
 #block-gsb-public-custom-blocks-gpcb-enews-signup {
   margin-right: 0;
 }
@@ -2915,7 +2923,7 @@ a.event-calendar:hover {
 #block-menu-menu-footer-2 a:hover {
   color: #2d6280;
 }
-@media (min-width: 35.5625em) and (max-width: 48em) {
+@media (max-width: 55.9375em) {
   #block-gsb-public-custom-blocks-gpcb-follow-us a,
   #block-menu-menu-footer-1 a,
   #block-menu-menu-footer-2 a {
@@ -2946,6 +2954,8 @@ a.event-calendar:hover {
 
 .region-footer {
   padding-top: 35px;
+  position: relative;
+  top: 0;
 }
 
 #block-gsb-public-custom-blocks-gpcb-follow-us {
@@ -3137,9 +3147,24 @@ input.footer__signup__submit:hover {
   float: right;
   padding: 12px 0;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 50.0625em) {
   #block-menu-menu-footer-3 {
-    float: left;
+    float: none;
+    position: relative;
+    top: 24px;
+  }
+  #block-menu-menu-footer-3 .menu {
+    float: right;
+  }
+}
+@media (max-width: 50.0625em) and (max-width: 44.625em) {
+  #block-menu-menu-footer-3 {
+    top: 0;
+  }
+}
+@media (max-width: 50.0625em) and (max-width: 44.625em) {
+  #block-menu-menu-footer-3 .menu {
+    float: none;
   }
 }
 #block-menu-menu-footer-3 li {
@@ -3149,6 +3174,11 @@ input.footer__signup__submit:hover {
 @media (max-width: 35.5em) {
   #block-menu-menu-footer-3 li {
     margin-right: 40px;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  #block-menu-menu-footer-3 li {
+    margin-right: 18px;
   }
 }
 #block-menu-menu-footer-3 li a {
