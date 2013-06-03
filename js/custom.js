@@ -286,7 +286,11 @@
       if (Function('/*@cc_on return document.documentMode===10@*/')()){
         var isIE10 = true;
       }
-      if (!Modernizr.inputtypes.number || isIE10) {
+      // detect IE 9
+      if (Function('/*@cc_on return document.documentMode===9@*/')()){
+        var isIE9 = true;
+      }
+      if (!Modernizr.inputtypes.number || isIE10 || isIE9) {
         $('.form-number').wrap('<span class="fake-input-wrapper" />')
         .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
 
@@ -309,9 +313,9 @@
               var mod = (val-min) % step;
               // increase or decrease depending on the button
               if(mod === 0) {
-                ( direction === 'up' ) ?  val+=step: val-=step;
+                ( direction === 'up' ) ?  val += step: val -= step;
               } else {
-                ( direction === 'up' ) ?  val+=step-mod: val-=step - step + mod;
+                ( direction === 'up' ) ?  val += step-mod: val -= mod;
               }
               if (val >=min && val < max ) {
                 numberInput.val(val);
