@@ -30,7 +30,6 @@
   .bottom-content
     margin: 0 auto
     max-width: $max-width
-
     +breakpoint($bp-portrait)
       padding: 0 20px
     +breakpoint($bp-mobile-max)
@@ -70,6 +69,17 @@
       padding: 0 20px
     +breakpoint($bp-mobile-max)
       padding: 0 15px
+
+// LEGAL REGION
+#legal
+  .region
+    border-top: 1px $grey-c solid
+    margin: 0 auto
+    max-width: $max-width
+  +breakpoint($bp-portrait)
+    padding: 0 20px
+  +breakpoint($bp-mobile-max)
+    padding: 0 15px
 
 // LOGO
 #logo

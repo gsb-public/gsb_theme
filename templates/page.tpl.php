@@ -81,7 +81,7 @@
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
             <?php print render($page['navigation']); ?>
-            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a><?php 
+            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a><?php
               $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
               print render($search_block['content']);
              ?></div><div id="menu-main-footer">
@@ -161,7 +161,12 @@
 
     <div id="footer-wrapper"><div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
-      <div class="gsb-copyright">Copyright &copy; Stanford Graduate School of Business</div>
     </div></div> <!-- /.section, /#footer, /#footer-wrapper -->
+
+    <?php if ($page['legal']): ?>
+      <div id="legal" class="clearfix"><div class="section">
+        <?php print render($page['legal']); ?>
+      </div></div> <!-- /.section, /#legal -->
+    <?php endif; ?>
 
   </div></div></div></div> <!-- /#page, /#page-wrapper -->
