@@ -5,17 +5,19 @@
  */
 Drupal.behaviors.megamenuexit = {
   attach: function (context, settings) {
-    $('a.menu-minipanel').click(function(e) {
-      if (!$(this).hasClass('qtip-hover')) {
-        e.stopPropagation();
-        e.preventDefault();
+    // Loop through each menu-minipanel and add a close button on hover.
+    for (var i in settings.menuMinipanels.panels) {
+      if (settings.menuMinipanels.panels.hasOwnProperty(i)) {
+        $('a.menu-minipanel-' + settings.menuMinipanels.panels[i].mlid)
+          .hover(function () {
+            $('.qtip-content')
+              .once('menu-minipanel-close')
+              .before('<a href="#" class="qtip-close">Close</a>');
+          });
       }
-    });
-    $(document).on('hover', '.qtip-wrapper', function() {
-      $(this).find('.qtip-content').once().before('<a href="#" class="qtip-close">Close</a>');
-    });
+    }
     $(document).on('click', 'a.qtip-close', function() {
-      $('.qtip-megamenu').hide();
+      $('.qtip-megamenu').slideUp();
     });
   }
 };
