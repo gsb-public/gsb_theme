@@ -60,12 +60,15 @@
       float: none
       width: 100%
 
-// Standard landing (.gsb-standard-page-two)
+// Standard 2 (.gsb-standard-page-two)
 .panel-display.gsb-standard-page-two
   // Specific pane spacing for this layout
   .inner-main-wrapper
     .panel-pane
       margin-bottom: 30px
+  +breakpoint($bp-mobile-max)
+    #quicklinks
+      margin-bottom: 14px
 
 // Events landing (.gsb-landing-events inverse of standard landing)
 .panel-display.gsb-landing-events
