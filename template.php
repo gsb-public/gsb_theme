@@ -52,6 +52,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-club-filters-club-list',
     'views-exposed-form-gsb-event-panel-pane-2',
     'views-exposed-form-gsb-event-event-listing-pane',
+    'views-exposed-form-gsb-event-event-calendar-pane',
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
@@ -62,6 +63,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-research-paper-filters-research-paper-list',
     'views-exposed-form-faculty-filters-faculty-list'
 
+  );
+  
+  $events_search_ids = array(
+    'views-exposed-form-gsb-event-event-calendar-pane',
+    'views-exposed-form-gsb-event-event-listing-pane',
   );
 
   if ($is_search_form = in_array($form['#id'], $search_form_ids)) {
