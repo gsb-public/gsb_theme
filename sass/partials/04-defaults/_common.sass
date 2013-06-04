@@ -134,29 +134,18 @@ small
   float: left
   margin: 20px 20px 20px 0
   max-width: 430px
-  &:after
-    content: image_url("tab-club.png")
-
-.callout-text
   color: $teal-dark
   font-size: 26px
   line-height: 32px
-  &:before
-    display: inline
-    content: "“"
   &:after
-    display: inline
-    content: "”"
+    display: block
+    content: image_url("tab-club.png")
 
-.callout-author
-  color: $teal-dark
-  font-size: 18px
-  line-height: 1em
-  text-align: right
-  &:before
-    content: "— "
-    display: inline
+  br
+    line-height: 2em
+    vertical-align: top
 
+  
 // Custom list
 .field-name-field-body
   ul

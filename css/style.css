@@ -697,34 +697,17 @@ small {
   float: left;
   margin: 20px 20px 20px 0;
   max-width: 430px;
-}
-.callout:after {
-  content: url('../images/tab-club.png');
-}
-
-.callout-text {
   color: #739d95;
   font-size: 26px;
   line-height: 32px;
 }
-.callout-text:before {
-  display: inline;
-  content: "“";
+.callout:after {
+  display: block;
+  content: url('../images/tab-club.png');
 }
-.callout-text:after {
-  display: inline;
-  content: "”";
-}
-
-.callout-author {
-  color: #739d95;
-  font-size: 18px;
-  line-height: 1em;
-  text-align: right;
-}
-.callout-author:before {
-  content: "— ";
-  display: inline;
+.callout br {
+  line-height: 2em;
+  vertical-align: top;
 }
 
 .field-name-field-body ul {
