@@ -1,5 +1,16 @@
 // CUSTOM GSB REVAMP EXTENDS
 
+/*Clearfix 2*/
+%clearfix2
+  *zoom: 1
+  &:before,
+  &:after 
+    display: table
+    content: ""
+    line-height: 0
+  &:after 
+    clear: both
+
 // BUTTONS
 %red-button-gradient
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))

@@ -16,6 +16,7 @@ pre, code, kbd, tt {
   _font-family: Consolas, Menlo, "Courier New", monospace, monospace;
 }
 
+/*Clearfix 2 */
 .red-button-gradient {
   background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(40%, #c50000), color-stop(90%, #860000));
   background: -webkit-linear-gradient(bottom, #c50000 40%, #860000 90%);
@@ -59,7 +60,7 @@ pre, code, kbd, tt {
 }
 
 .region-sidebar-first, .pane-views-exp-gsb-event-panel-pane-1,
-.pane-views-exp-gsb-event-panel-pane-2 {
+.pane-views-exp-gsb-event-panel-pane-2, .search-wrap-events {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, rgba(242, 242, 242, 0)));
   background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
@@ -5578,6 +5579,9 @@ p.acc-title + p {
   line-height: 28px;
 }
 
+.page-events #main {
+  position: relative;
+}
 .page-events #page-title {
   display: none;
 }
@@ -5609,7 +5613,8 @@ p.acc-title + p {
   font-size: 18px;
 }
 .page-events div.tabs {
-  height: 0;
+  position: absolute;
+  right: 0;
   text-align: right;
 }
 .page-events ul.tabs {
@@ -5772,6 +5777,12 @@ p.acc-title + p {
   background: transparent url(../images/search-magnifying-glass.png) no-repeat center center;
   text-indent: 1000px;
   padding: 0;
+}
+
+/* Admission Events TABLE
+ */
+.view-admission-events tbody a {
+  color: #bac405;
 }
 
 .node-case-study.view-mode-full,
@@ -6216,6 +6227,64 @@ fieldset.collapsible .fieldset-legend {
   left: 50%;
   border: 0 none !important;
   margin-left: -10px !important;
+}
+
+/*  Filter for Events page 
+ */
+#views-exposed-form-gsb-event-event-listing-pane .views-widget-filter-field_search_field_value .form-text {
+  padding: 14px 50px 15px 10px;
+}
+#views-exposed-form-gsb-event-event-listing-pane .views-widget-filter-field_search_field_value label {
+  display: none;
+}
+
+.page-events .gsb-views-exposed-form {
+  background: none !important;
+  margin: 0;
+  -webkit-box-shadow: 0px 0px 0px white;
+  -moz-box-shadow: 0px 0px 0px white;
+  box-shadow: 0px 0px 0px white;
+  border: 0 none;
+}
+.page-events .gsb-views-exposed-form .form-submit {
+  margin: 7px 0 0 0;
+}
+.page-events .gsb-views-exposed-search {
+  padding: 0;
+}
+
+.search-wrap-events {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 10px 10px 10px;
+  margin-top: 28px;
+}
+.search-wrap-events:before, .search-wrap-events:after {
+  content: "";
+}
+.search-wrap-events:before {
+  display: block;
+  padding-top: 20px;
+}
+.search-wrap-events:after {
+  width: 100%;
+  height: 10px;
+  display: inline-block;
+  background-color: #231f20;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.search-wrap-events > div {
+  border-bottom: 1px solid #c4c4c4;
+}
+.search-wrap-events > div > label {
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.search-wrap-events .form-item {
+  float: none !important;
 }
 
 .node-media-mention .field-name-title,

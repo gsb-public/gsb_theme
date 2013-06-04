@@ -94,6 +94,8 @@
 // Events landing
 ///////////////////
 .page-events
+  #main
+    position: relative
   #page-title
     display: none
   .view-filters
@@ -124,8 +126,10 @@
         font-size: 18px
 
   // Filter styles
+
   div.tabs
-    height: 0
+    position: absolute
+    right: 0
     text-align: right
   ul.tabs
     border: 0
@@ -272,3 +276,14 @@
     background: transparent url(../images/search-magnifying-glass.png) no-repeat center center
     text-indent: 1000px
     padding: 0
+
+
+
+/*
+ * Admission Events TABLE
+ */
+.view-admission-events
+  tbody
+    a
+      color: $green-light
+  
