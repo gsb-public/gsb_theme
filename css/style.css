@@ -1306,13 +1306,15 @@ del {
 
 .panel-display.gsb-landing-standard-page-one .full-header .panel-pane,
 .panel-display.gsb-landing-standard-page-one .main-header .panel-pane,
-.panel-display.gsb-landing-standard-page-one .main-middle .panel-pane {
+.panel-display.gsb-landing-standard-page-one .main-middle .panel-pane,
+.panel-display.gsb-landing-standard-page-one .main-footer .panel-pane {
   margin-bottom: 30px;
   margin-top: 1px;
 }
 .panels-ipe-editing .panel-display.gsb-landing-standard-page-one .full-header, .panels-ipe-editing
 .panel-display.gsb-landing-standard-page-one .main-header, .panels-ipe-editing
-.panel-display.gsb-landing-standard-page-one .main-middle {
+.panel-display.gsb-landing-standard-page-one .main-middle, .panels-ipe-editing
+.panel-display.gsb-landing-standard-page-one .main-footer {
   margin-bottom: 0;
 }
 .panel-display.gsb-landing-standard-page-one .main-middle {
@@ -1332,6 +1334,16 @@ del {
 }
 .panel-display.gsb-landing-standard-page-one .main-middle .column-second {
   float: right;
+}
+@media (max-width: 48em) {
+  .panel-display.gsb-landing-standard-page-one .main-middle .column-second {
+    float: left;
+  }
+}
+@media (max-width: 35.5em) {
+  .panel-display.gsb-landing-standard-page-one #quicklinks {
+    margin-bottom: 14px;
+  }
 }
 
 .panel-display.gsb-front-page .front-panel-header-row,
@@ -3186,14 +3198,14 @@ input.footer__signup__submit:hover {
   display: inline-block;
   margin-right: 44px;
 }
-@media (max-width: 35.5em) {
-  #block-menu-menu-footer-3 li {
-    margin-right: 40px;
-  }
-}
 @media (min-width: 35.5625em) and (max-width: 48em) {
   #block-menu-menu-footer-3 li {
     margin-right: 18px;
+  }
+}
+@media (max-width: 35.5em) {
+  #block-menu-menu-footer-3 li {
+    margin-right: 25px;
   }
 }
 #block-menu-menu-footer-3 li a {

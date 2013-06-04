@@ -93,7 +93,8 @@
 .panel-display.gsb-landing-standard-page-one
   .full-header,
   .main-header,
-  .main-middle
+  .main-middle,
+  .main-footer
     .panel-pane
       margin-bottom: 30px
       margin-top: 1px
@@ -108,6 +109,11 @@
       float: left
     .column-second
       float: right
+      +breakpoint($bp-portrait-max)
+        float: left
+  +breakpoint($bp-mobile-max)
+    #quicklinks
+      margin-bottom: 14px
 
 // Front page panel layout
 .panel-display.gsb-front-page
