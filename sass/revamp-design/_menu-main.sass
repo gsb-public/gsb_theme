@@ -1,4 +1,6 @@
+//////////////
 // NAVIGATION
+//////////////
 #navigation
   +breakpoint($bp-wide-min)
     float: right
@@ -9,7 +11,10 @@
     border-bottom: 10px solid $red
     +breakpoint($bp-mobile-max)
       +box-shadow($black 0 -1px 3px)
+
+///////////////
 // MAIN MENU
+///////////////
 #block-system-main-menu
   float: left
   +breakpoint($bp-portrait)
@@ -36,6 +41,8 @@
       color: $white
       font-weight: bold
       display: block
+      +breakpoint($bp-mobile-max)
+        display: inline-block
       margin: 0
     // IPAD
     +breakpoint($bp-portrait)
@@ -64,38 +71,29 @@
       &:hover,
       &.active
         background: $white
-      &:hover
-        .menu
-          display: block
       a
         color: $red
-        padding: 15px 0 15px 55px
-        &:before
-          content: image_url("toggle-close.png")
-          display: inline
-          position: relative
-          left: -35px
-  +breakpoint($bp-mobile-max)
-    li.active,
-    li:hover
-      a
+        padding: 15px 0
+        position: relative
+        left: 55px
+      &:before
+        content: image_url("toggle-close.png")
+        display: inline
+        position: relative
+        right: -20px
+      &.open
         &:before
           content: image_url("toggle-open.png")
+        .menu
+          display: block
       li
         border-bottom: 0
         a
           font-size: 14px
-          padding-left: 70px
+          padding-left: 40px
           text-transform: uppercase
-          &:before
-            content: ""
-        &.active,
-        &:hover
-          a
-            &:before
-              content: ""
-
-  // FULL
+        &:before
+          content: ""
   +breakpoint($bp-wide-min)
     li
       max-width: 122px
@@ -107,8 +105,9 @@
         min-height: 80px
         padding: 12px 8px 18px
 
-
-//Search and event calendar wrapper
+/////////////////////////
+//Event calendar link
+////////////////////////
 .se
   +breakpoint($bp-wide-min)
     float: left
@@ -116,8 +115,6 @@
   +breakpoint($bp-portrait)
     float: right
     width: 15.6%
-
-// Event calendar link
 a.event-calendar
   width: 100%
   +background(linear-gradient(top, #880000, #b40000))
@@ -142,11 +139,12 @@ a.event-calendar
     float: none
     line-height: 1
     padding: 18px
+    padding-left: 70px
     &:hover
       +background(linear-gradient($grey-e, $white))
 
 ////////////////////////////////
-// Mobile footer duplicate menu
+// Mobile footer menu
 ////////////////////////////////
 #menu-main-footer
   display: none

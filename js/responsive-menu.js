@@ -25,4 +25,12 @@ Drupal.behaviors.responsiveSearch = {
   }
 };
 
+Drupal.behaviors.responsiveMenutoggle = {
+  attach: function (context, settings) {
+    $(context).find('#block-system-main-menu li').click(function() {
+      $(this).toggleClass('open');
+    });
+  }
+};
+
 }(jQuery));
