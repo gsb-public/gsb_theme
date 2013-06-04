@@ -61,6 +61,7 @@
     border-bottom: 1px solid #e6e5e5
     margin-bottom: 18px
 
+
   .field-type-text-long,
   .field-type-datetime
     padding: 0 20px
@@ -145,7 +146,9 @@ $width: 100%
     border-bottom: 1px solid #e6e5e5
     padding: 23px 20px 13px    
     line-height: 1.25
-
+    a:hover
+      color: $text-blue
+      
   .field-name-field-year
     font-weight: bold
     margin-top: 0
@@ -155,12 +158,12 @@ $width: 100%
   .date-display-single
     position: absolute
     bottom: 1px
-    right: 0
+    right: -1px
     background-color: $grey-dark
     color: $white
     text-transform: uppercase
     font-size: 14px
-    padding: 10px 27px 3px
+    padding: 9px 27px 4px
     &:before
       content: 'MBA '
 
@@ -173,24 +176,31 @@ $width: 100%
         
   .view-mode-teaser
     padding: 0 0 30px 0
-    border: 1px solid #e5e5e5
     position: relative
     height: 600px
     background: #fff
+    +box-shadow(0px 1px 2px #d4d4d4)
+    margin: 0 2px 2px 2px
+    //border: 1px solid #d4d4d4
       
   .field-name-field-image-single-public
+    margin: -1px -1px 0 -1px
     float: none
+    img
+      vertical-align: top
   .field-name-node-link
     position: absolute
     bottom: 0
     width: 100%
     padding: 0 20px 26px
     a
-      background: #739d95
+      background: $teal-dark
       display: block
-      padding: 13px 16px 8px
+      padding: 11px 16px 10px
       color: #fff
       font-weight: bold
+      &:hover
+        background: $purple
       &:before
         content: "\f100"
         float: right
@@ -200,7 +210,7 @@ $width: 100%
         font-weight: normal
         line-height: 0.5
         position: relative
-        top: 0px
+        top: 4px
         right: 2px      
     
   .view-footer

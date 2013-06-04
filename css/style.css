@@ -7248,6 +7248,9 @@ fieldset.collapsible .fieldset-legend {
   padding: 23px 20px 13px;
   line-height: 1.25;
 }
+.view-week-in-the-life .field-name-title a:hover {
+  color: #2d6280;
+}
 .view-week-in-the-life .field-name-field-year {
   font-weight: bold;
   margin-top: 0;
@@ -7257,12 +7260,12 @@ fieldset.collapsible .fieldset-legend {
 .view-week-in-the-life .date-display-single {
   position: absolute;
   bottom: 1px;
-  right: 0;
+  right: -1px;
   background-color: #887e6e;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
-  padding: 10px 27px 3px;
+  padding: 9px 27px 4px;
 }
 .view-week-in-the-life .date-display-single:before {
   content: "MBA ";
@@ -7276,13 +7279,20 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-week-in-the-life .view-mode-teaser {
   padding: 0 0 30px 0;
-  border: 1px solid #e5e5e5;
   position: relative;
   height: 600px;
   background: white;
+  -webkit-box-shadow: 0px 1px 2px #d4d4d4;
+  -moz-box-shadow: 0px 1px 2px #d4d4d4;
+  box-shadow: 0px 1px 2px #d4d4d4;
+  margin: 0 2px 2px 2px;
 }
 .view-week-in-the-life .field-name-field-image-single-public {
+  margin: -1px -1px 0 -1px;
   float: none;
+}
+.view-week-in-the-life .field-name-field-image-single-public img {
+  vertical-align: top;
 }
 .view-week-in-the-life .field-name-node-link {
   position: absolute;
@@ -7293,9 +7303,12 @@ fieldset.collapsible .fieldset-legend {
 .view-week-in-the-life .field-name-node-link a {
   background: #739d95;
   display: block;
-  padding: 13px 16px 8px;
+  padding: 11px 16px 10px;
   color: white;
   font-weight: bold;
+}
+.view-week-in-the-life .field-name-node-link a:hover {
+  background: #754760;
 }
 .view-week-in-the-life .field-name-node-link a:before {
   content: "\f100";
@@ -7306,7 +7319,7 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   line-height: 0.5;
   position: relative;
-  top: 0px;
+  top: 4px;
   right: 2px;
 }
 .view-week-in-the-life .view-footer {
