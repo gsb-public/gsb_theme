@@ -504,8 +504,9 @@ a.no-border
   padding: 0
 
 .pager-region
-  border-top: 3px solid $black
+  border-top: 3px solid $text-black
   padding-left: 25px
+  margin-bottom: 30px
   .item-list
     display: inline-block
     margin-right: 2px
@@ -525,6 +526,8 @@ a.no-border
   .pager-next a
     background: $text-green
     text-transform: uppercase
+    &:hover
+      background: $blue
     &:before
       content: image_url("arrow-down.png")
       margin-right: 10px
@@ -532,6 +535,10 @@ a.no-border
 // Back to top link
 .additional-links
   background: $text-black
+  &:hover
+    background: $blue
+  a
+    text-transform: uppercase 
 
 // NO RESULTS TEXT
 .view-empty
