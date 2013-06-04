@@ -64,11 +64,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-faculty-filters-faculty-list'
 
   );
-  
-  $events_search_ids = array(
-    'views-exposed-form-gsb-event-event-calendar-pane',
-    'views-exposed-form-gsb-event-event-listing-pane',
-  );
+
 
   if ($is_search_form = in_array($form['#id'], $search_form_ids)) {
     // Add placeholder text.
