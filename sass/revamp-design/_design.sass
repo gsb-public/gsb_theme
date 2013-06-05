@@ -231,7 +231,7 @@ a.no-border
       background-color: $red
     //@extend %bg-border-and-box-shadow
     +background(linear-gradient(#e7e7e7, #f0f0f0))
-    padding: 13px 25px 18px 25px
+    padding: 13px 25px 20px 25px
     .field-name-field-title
       color: $text-grey
       font-size: 18px
@@ -254,11 +254,15 @@ a.no-border
         &[target=_blank]
           &:after
             content: "\f100"
+            color: #b1aeaf
             font-family: "external-link"
             margin-left: 5px
-
+            top: -2px
+            position: relative
         &:hover
           color: $text-blue
+          &:after
+            color: $teal-light
   .green-bar
     @extend %bg-border-and-box-shadow
     padding: 0 22px 12px 22px
@@ -272,7 +276,8 @@ a.no-border
     .field-name-field-link-unlimited
       .field-item
         border-top: 1px solid #e4e4e4
-        padding-top: 4px
+        padding-top: 6px
+        padding-bottom: 5px
         a
           padding-right: 10px
           color: $text-green
@@ -280,15 +285,18 @@ a.no-border
             &:after
               content: "\f100"
               font-family: "external-link"
+              color: #b1aeaf
               margin-left: 5px
-
+              top: -2px
+              position: relative              
           &:hover
             color: $text-blue
-
+            &:after
+              color: $teal-light
 
   .stanford-links
     position: relative
-    padding: 6px 25px 12px 25px
+    padding: 6px 25px 20px 25px
     +background(linear-gradient(top, #e3dac7, #ebe5d9))
     @include filter-gradient(#ebe5d9, #e3dac7, vertical)
     $experimental-support-for-svg: true
