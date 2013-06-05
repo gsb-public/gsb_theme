@@ -2637,6 +2637,9 @@ a.no-border:hover {
     background: url('../images/navigation-arrow.png') no-repeat 95% 75%, linear-gradient(bottom, #c50000, #860000);
     width: 21.1%;
   }
+  #block-system-main-menu li:last-of-type {
+    border-right: 0;
+  }
   #block-system-main-menu li:hover, #block-system-main-menu li.active {
     background: url('../images/navigation-arrow.png') no-repeat 95% 75%, black;
   }
@@ -2717,6 +2720,9 @@ a.no-border:hover {
 @media (min-width: 35.5625em) and (max-width: 48em) {
   .se {
     float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 15.65%;
   }
 }
@@ -2740,9 +2746,10 @@ a.event-calendar:hover {
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
   a.event-calendar {
+    border-left: 1px solid red;
     font-size: 15px;
     line-height: 14px;
-    padding: 10px 11px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 48.0625em) {

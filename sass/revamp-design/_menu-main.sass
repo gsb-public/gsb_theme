@@ -48,6 +48,8 @@
     +breakpoint($bp-portrait)
       +background(image_url("navigation-arrow.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
       width: 21.1%
+      &:last-of-type
+        border-right: 0
       &:hover,
       &.active
         +background(image_url("navigation-arrow.png") no-repeat 95% 75%, $black)
@@ -115,6 +117,9 @@
     width: 202px
   +breakpoint($bp-portrait)
     float: right
+    position: absolute
+    top: 0
+    right: 0
     width: 15.65%
 a.event-calendar
   width: 100%
@@ -126,9 +131,10 @@ a.event-calendar
   &:hover
     background: $black
   +breakpoint($bp-portrait)
+    border-left: 1px solid #FF0000
     font-size: 15px
     line-height: 14px
-    padding: 10px 11px
+    padding: 10px 12px
   +breakpoint($bp-wide-min)
     line-height: 40px
     padding: 7px 0 0 16px
