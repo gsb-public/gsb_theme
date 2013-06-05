@@ -104,14 +104,12 @@ function gsb_theme_preprocess_html(&$variables) {
 
   // Normally template_preprocess_html() will add classes based on the URL, but
   // if this is a node page we have to check the request_uri() directly.
-  if (arg(0) == 'node') {
-    $arg = explode('/', trim(request_uri(), '/'));
-    if ($suggestions = theme_get_suggestions($arg, 'page', '-')) {
-      foreach ($suggestions as $suggestion) {
-        if ($suggestion != 'page-front') {
-          $variables['classes_array'][] = drupal_html_class($suggestion);
-        }
-      }
-    }
+  $allowed_paths = array(
+    'programs',
+  );
+  $normalized_arg = arg(0);
+  $args = explode('/', trim(request_uri(), '/'));
+  if (isset($args[0]) && in_array($args[0], $allowed_paths) && $normalized_arg == 'node') {
+    $variables['classes_array'][] = 'page-' . $args[0];
   }
 }
