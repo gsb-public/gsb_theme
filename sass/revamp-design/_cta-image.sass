@@ -158,3 +158,22 @@
       background: rgba($teal-dark, 0.8)
       &:hover
         background: rgba($purple, 0.8)
+
+//////////////////
+// Wide view
+// Gradient overlay
+/////////////////
+.front-panel-feature-one,
+.wide-view
+  .image-cta-color-purple .group-right
+    +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
+    height: 393px
+  .image-cta-color-green .group-right
+    +background(linear-gradient(left top, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
+    height: 393px
+  .image-cta-color-blue .group-right
+    +background(linear-gradient(left top, rgba(#395d72, 0.9), rgba(#395d72, 0)))
+    height: 393px
+  .image-cta-color-dark-teal .group-right
+    +background(linear-gradient(left top, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
+    height: 393px
