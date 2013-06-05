@@ -4324,17 +4324,19 @@ p.acc-title + p {
   padding-left: 30px;
   background: url('../images/icon-event-white.png') no-repeat left top;
 }
-.view-mode-megamenu.node-event h4 a:hover {
-  background: url('../images/icon-event.png') no-repeat left top;
-}
 .view-mode-megamenu img {
   opacity: 0.55;
 }
 .view-mode-megamenu:hover .field-name-field-event-date,
-.view-mode-megamenu:hover .field-name-title,
 .view-mode-megamenu:hover .field-name-field-date-published,
 .view-mode-megamenu:hover .field-name-post-date {
   color: white;
+}
+.view-mode-megamenu:hover .field-name-title a {
+  color: #63acd5;
+}
+.view-mode-megamenu:hover.node-event h4 a {
+  background: url('../images/icon-event.png') no-repeat left top;
 }
 .view-mode-megamenu:hover img {
   opacity: 1;

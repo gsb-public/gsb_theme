@@ -33,16 +33,18 @@
     h4 a
       padding-left: 30px
       background: image_url('icon-event-white.png') no-repeat left top
-      &:hover
-        background: image_url('icon-event.png') no-repeat left top
   img
     opacity: 0.55
   &:hover
     .field-name-field-event-date,
-    .field-name-title,
     .field-name-field-date-published,
     .field-name-post-date
       color: $white
+    .field-name-title a
+      color: #63acd5
+    &.node-event
+      h4 a
+        background: image_url('icon-event.png') no-repeat left top
     img
       opacity: 1
 
