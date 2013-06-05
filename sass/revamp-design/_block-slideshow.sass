@@ -10,24 +10,19 @@ ul.slideshow-items
   display: none
 
 .flex-direction-nav a
+  width: 40px
+  height: 40px
   opacity: 1
-  width: 60px
-  height: 60px
   outline: none
   +breakpoint($bp-mobile-max)
     top: 37%
-    width: 40px
-    height: 40px
+
   &.flex-prev
     left: 28px
-    background: image_url("prev-arrow.png") no-repeat
-    +breakpoint($bp-mobile-max)
-      background: image_url("prev-arrow-small.png") no-repeat
+    background: image_url("prev-arrow-small.png") no-repeat
   &.flex-next
     right: 28px
-    background: image_url("next-arrow.png") no-repeat
-    +breakpoint($bp-mobile-max)
-      background: image_url("next-arrow-small.png") no-repeat
+    background: image_url("next-arrow-small.png") no-repeat
 
 
 // Slideshow wrapper
@@ -94,6 +89,8 @@ ul.slideshow-items
   .slide-title,
   .slide-description
     width: 250px
+  .slide-title
+    font-family: $font-demi
 
 // Slide CTA text
 .slide-cta
@@ -107,7 +104,7 @@ ul.slideshow-items
 // Color picker styling
 .purple-button-on-blue
   .slide-text
-    +background(linear-gradient(left, rgba(#cce0dc, 0.6) 18%, rgba(#cce0dc, 1)))
+    +background(linear-gradient(left, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
     +breakpoint($bp-mobile-max)
       background: none
   .slide-cta
@@ -115,7 +112,7 @@ ul.slideshow-items
 
 .blue-button-on-orange
   .slide-text
-    +background(linear-gradient(left, rgba(#fbe1a8, 0.6) 18%, rgba(#fbe1a8, 1)))
+    +background(linear-gradient(left, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
     +breakpoint($bp-mobile-max)
       background: none
   .slide-cta
