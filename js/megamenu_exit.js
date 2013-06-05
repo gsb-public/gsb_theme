@@ -5,6 +5,11 @@
  */
 Drupal.behaviors.megamenuexit = {
   attach: function (context, settings) {
+    // Ensure menu-minipanel is active.
+    if (!settings.hasOwnProperty('menuMinipanels')) {
+      return;
+    }
+
     // Loop through each menu-minipanel and add a close button on hover.
     for (var i in settings.menuMinipanels.panels) {
       if (settings.menuMinipanels.panels.hasOwnProperty(i)) {
