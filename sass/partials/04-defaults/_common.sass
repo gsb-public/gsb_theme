@@ -175,4 +175,16 @@ small
     padding-bottom: 12px
   h3
     font-size: 20px
-    line-height: 24px      
+    line-height: 24px
+  h2 a, h3 a
+    color: $text-black
+    border: none
+    &:after
+      color: $green-light
+      content: "\f100"
+      font-family: "arrow-double"
+      margin-left: 3px
+    &:hover
+      border: none
+      &:after
+        color: $text-blue
