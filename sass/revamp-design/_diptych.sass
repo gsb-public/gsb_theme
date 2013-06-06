@@ -34,7 +34,7 @@
         position: relative
       a
         color: #fff
-        font-weight: bold
+        //font-weight: bold
         &:after
           content: "\f100"
           color: #fff
@@ -53,9 +53,10 @@
   //Right group
   .group-right
     .group-diptych-txt-block
-      position: absolute
-      bottom: 28px
-      padding-right: 26px
+      margin-top: 20px
+      //position: absolute
+      //bottom: 28px
+      //padding-right: 26px
       
     .gsb-responsive-main
       display: none
@@ -74,11 +75,11 @@
     .field-type-link-field
       background-color: $grey-1
       a
-        color: $text-blue
+        color: #63Acd5
         &:after
           color: $text-blue
       &:hover
-        background-color: $text-blue
+        background-color: #63Acd5
         a
           color: #fff
           &:after
@@ -109,7 +110,7 @@
         //padding: 0 26px
      
     .field-type-text-long
-      font-weight: bold
+      //font-weight: bold
       font-size: 26px
       line-height: 1.3
       margin-bottom: 15px
@@ -119,4 +120,24 @@
       width: 218px
       &:hover
         background-color: $blue //$purple
+        
+.wide-view
+  .pane-bundle-diptych       
+    .ds-2col
+      > .group-left
+        width: 100%
+      > .group-right
+        width: 100%
+        padding: 26px
+        .field-type-file,
+        .group-diptych-txt-block
+          display: block
+          float: left          
+        .field-type-file
+          margin: 0
+          width: 53%
+        .group-diptych-txt-block
+          width: 42%
+          margin-left: 5%
+          margin-top: 0                    
     
