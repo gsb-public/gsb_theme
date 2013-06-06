@@ -349,17 +349,23 @@ a.no-border
 
     .field-name-field-title
       display: none
+
 //////////////////////
 // Text FPP
 //////////////////////
 .pane-bundle-text
   @extend %bg-border-and-box-shadow
-  padding: 30px 24px
+  padding: 26px
   // Pane title
   .field-name-field-title
+    font-family: $font-demi
     font-size: 20px
     font-weight: bold
-    padding-bottom: 12px
+    line-height: 26px
+    padding-bottom: 14px
+    .wide-view &
+      font-size: 26px
+      line-height: 30px
     a
       color: $red
       &:after
@@ -371,9 +377,17 @@ a.no-border
   .field-name-field-body
     font-size: 14px
     line-height: 18px
+    .wide-view &
+      font-size: 18px
+      line-height: 24px
     p
       font-size: 14px
       line-height: 18px
+      margin-bottom: 0
+      // WPBQA-77
+      .wide-view &
+        font-size: 18px
+        line-height: 24px
   // Accordion in a text bundle
   p.acc-title,
   p.acc-body
@@ -388,7 +402,7 @@ a.no-border
   .mba-highlighted-block
     border-top: 9px solid $teal-light
     padding-top: 20px
-    margin-top: -32px
+    margin-top: -28px
 
 ///////////////////////////////////
 // Comma separator styling on tags
