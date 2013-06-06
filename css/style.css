@@ -575,6 +575,14 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
   font-family: "search";
 }
 
+body a[href$=".pdf"] {
+  background: url('../images/pdficons.png') no-repeat 0 -78px;
+  padding-left: 15px;
+}
+body a[href$=".pdf"]:hover {
+  background-position: 0 -38px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -753,6 +761,13 @@ div.callout br {
 .field-name-field-body a:hover {
   color: #2d6280;
   border-bottom: solid 1px #2d6280;
+}
+.field-name-field-body a[href$=".pdf"] {
+  background-position: 0 0;
+  border: none;
+}
+.field-name-field-body a[href$=".pdf"]:hover {
+  border: none;
 }
 .field-name-field-body h2 {
   font-size: 28px;
