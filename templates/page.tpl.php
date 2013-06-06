@@ -89,7 +89,7 @@
                 <li class="first"><a href="/" title="">Alumni</a></li>
                 <li><a href="/" title="">Giving</a></li>
                 <li><a href="/" title="">Recruiters &amp; Corporate Partners</a></li>
-                <li class="last"><a href="/" title="">Stanford University Partners</a></li>
+                <li class="last"><a href="/" title="">Stanford University Community</a></li>
               </ul>
               <ul class="menu menu-2">
                 <li class="first"><a href="/" title="">Newsroom</a></li>
