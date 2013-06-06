@@ -709,19 +709,23 @@ small {
   margin-left: 30px;
 }
 
-.callout {
+div.callout {
   float: left;
-  margin: 20px 20px 20px 0;
+  margin: 0 20px 20px 0;
   max-width: 430px;
+  width: 60%;
   color: #739d95;
   font-size: 26px;
   line-height: 32px;
 }
-.callout:after {
+div.callout:after {
   display: block;
   content: url('../images/tab-club.png');
 }
-.callout br {
+.pane-bundle-text div.callout {
+  margin-top: 20px;
+}
+div.callout br {
   line-height: 2em;
   vertical-align: top;
 }
@@ -775,6 +779,9 @@ small {
 }
 .field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after {
   color: #2d6280;
+}
+.pane-bundle-text .field-name-field-body {
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -130,16 +130,19 @@ small
   margin-left: 30px
 
 // Callout
-.callout
+div.callout
   float: left
-  margin: 20px 20px 20px 0
+  margin: 0 20px 20px 0
   max-width: 430px
+  width: 60%
   color: $teal-dark
   font-size: 26px
   line-height: 32px
   &:after
     display: block
     content: image_url("tab-club.png")
+  .pane-bundle-text &
+    margin-top: 20px
 
   br
     line-height: 2em
@@ -188,3 +191,6 @@ small
       border: none
       &:after
         color: $text-blue
+  // Clearing the float
+  .pane-bundle-text &
+    overflow: hidden
