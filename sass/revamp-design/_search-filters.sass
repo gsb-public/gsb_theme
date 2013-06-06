@@ -257,18 +257,37 @@ fieldset.collapsible .fieldset-legend
       padding-bottom: 8px
       color: $red
       padding-left: 25px
-      background: image_url('toggle-close.png') no-repeat left 1px
+      position: relative
+      line-height: normal
+      height: auto
       -moz-user-select: none
       -webkit-user-select: none
       -ms-user-select: none
+      &:before
+        content: ''
+        display: block
+        background: image_url('toggle-close.png') no-repeat 0 0
+        width: 15px
+        height: 15px
+        position: absolute
+        top: 3px
+        left: 0
+
+      
+      
       &:hover
-        background: image_url('toggle-close-hover.png') no-repeat left 1px
         color: $text-blue
+        &:before
+          background: image_url('toggle-close-hover.png') no-repeat 0 0
+        
     &.collapsed
       > label
-        background: image_url('toggle-open.png') no-repeat left 2px
+        &:before
+          background: image_url('toggle-open.png') no-repeat 0 0
+        
         &:hover
-          background: image_url('toggle-open-hover.png') no-repeat left 2px
+          &:before
+            background: image_url('toggle-open-hover.png') no-repeat 0 0
     .views-widget
       display: none
       padding-left: 3px

@@ -6352,20 +6352,34 @@ fieldset.collapsible .fieldset-legend {
   padding-bottom: 8px;
   color: #990000;
   padding-left: 25px;
-  background: url('../images/toggle-close.png') no-repeat left 1px;
+  position: relative;
+  line-height: normal;
+  height: auto;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.exposed_filter_widget .views-exposed-widget > label:before {
+  content: "";
+  display: block;
+  background: url('../images/toggle-close.png') no-repeat 0 0;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
 .exposed_filter_widget .views-exposed-widget > label:hover {
-  background: url('../images/toggle-close-hover.png') no-repeat left 1px;
   color: #2d6280;
 }
-.exposed_filter_widget .views-exposed-widget.collapsed > label {
-  background: url('../images/toggle-open.png') no-repeat left 2px;
+.exposed_filter_widget .views-exposed-widget > label:hover:before {
+  background: url('../images/toggle-close-hover.png') no-repeat 0 0;
 }
-.exposed_filter_widget .views-exposed-widget.collapsed > label:hover {
-  background: url('../images/toggle-open-hover.png') no-repeat left 2px;
+.exposed_filter_widget .views-exposed-widget.collapsed > label:before {
+  background: url('../images/toggle-open.png') no-repeat 0 0;
+}
+.exposed_filter_widget .views-exposed-widget.collapsed > label:hover:before {
+  background: url('../images/toggle-open-hover.png') no-repeat 0 0;
 }
 .exposed_filter_widget .views-exposed-widget .views-widget {
   display: none;
