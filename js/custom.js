@@ -7,7 +7,7 @@
     attach: function (context, settings) {
       $(window).bind('load ready resize', function(){
         // Check if spotlight exists.
-        var $spotlight = $('.pane-bundle-spotlight')
+        var $spotlight = $('.pane-bundle-spotlight, .pane-bundle-house-ads');
         if ($spotlight.length) {
           // If the line height of the body text changes, adjust this.
           var visibleHeight = 18 * 4
