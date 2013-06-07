@@ -83,7 +83,7 @@
         padding: 15px 50px 15px 10px
       +breakpoint($bp-portrait)
         width: 218px
-  #edit-actions
+  .form-actions
     .svg &
       &:before
         color: $red
@@ -128,6 +128,14 @@
         background-position: center -27px
         +breakpoint($bp-mobile-max)
           background: transparent url(../images/search.png) no-repeat center -27px
+
+  .page-gsearch #content &
+    width: 40%
+    height: 33px
+    .form-text
+      padding-left: 0.6em
+      border-color: #d6d6d6
+      margin-bottom: 20px
 
 ///////////////////
 // Search filters
@@ -411,4 +419,15 @@ fieldset.collapsible .fieldset-legend
       margin-bottom: 10px
       display: block
 
+// Search results
+.page-gsearch
+  .search-results .title a,
+  .google-appliance-pager a
+    color: $text-green
+    &:hover
+      color: $text-blue
 
+  .google-appliance-pager
+    margin-bottom: 20px
+  .google-appliance-results-control-bar
+    clear: left

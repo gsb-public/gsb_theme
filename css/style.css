@@ -6265,7 +6265,7 @@ p.acc-title + p {
     width: 218px;
   }
 }
-.svg .grey-search-box #edit-actions:before {
+.svg .grey-search-box .form-actions:before {
   color: #990000;
   content: "\f100";
   font-family: "search";
@@ -6276,11 +6276,11 @@ p.acc-title + p {
   text-shadow: white -1px 1px;
 }
 @media (max-width: 35.5em) {
-  .svg .grey-search-box #edit-actions:before {
+  .svg .grey-search-box .form-actions:before {
     top: 10px;
   }
 }
-.svg .grey-search-box #edit-actions:hover:before {
+.svg .grey-search-box .form-actions:hover:before {
   color: #2d6280;
 }
 .grey-search-box .form-submit {
@@ -6319,6 +6319,15 @@ p.acc-title + p {
   .no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
     background: transparent url(../images/search.png) no-repeat center -27px;
   }
+}
+.page-gsearch #content .grey-search-box {
+  width: 40%;
+  height: 33px;
+}
+.page-gsearch #content .grey-search-box .form-text {
+  padding-left: 0.6em;
+  border-color: #d6d6d6;
+  margin-bottom: 20px;
 }
 
 .collapsible .fieldset-title {
@@ -6602,6 +6611,21 @@ fieldset.collapsible .fieldset-legend {
 .search-wrap-events .form-item .bef-toggle {
   margin-bottom: 10px;
   display: block;
+}
+
+.page-gsearch .search-results .title a,
+.page-gsearch .google-appliance-pager a {
+  color: #7d8401;
+}
+.page-gsearch .search-results .title a:hover,
+.page-gsearch .google-appliance-pager a:hover {
+  color: #2d6280;
+}
+.page-gsearch .google-appliance-pager {
+  margin-bottom: 20px;
+}
+.page-gsearch .google-appliance-results-control-bar {
+  clear: left;
 }
 
 .node-media-mention .field-name-title,
