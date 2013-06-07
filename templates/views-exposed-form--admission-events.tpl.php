@@ -54,6 +54,8 @@
       <div class="views-exposed-widget views-widget-sort-by">
         <?php print $sort_by; ?>
       </div>
+    <?php endif; ?>
+    <?php if (!empty($sort_order)): ?>
       <div class="views-exposed-widget views-widget-sort-order">
         <?php print $sort_order; ?>
       </div>
