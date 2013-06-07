@@ -22,6 +22,8 @@
     max-width: $max-width
     +breakpoint($bp-portrait)
       padding: 30px 20px 12px
+    +breakpoint($bp-mobile-max)
+      padding-top: 0
 
 #main
   +breakpoint($bp-mobile-max)
@@ -52,7 +54,7 @@
 .page-business-insights #content-wrapper
   background-image: none
 
-// Special landing pages with what titles
+// Special landing pages with white titles
 .page-stanford-gsb-experience,
 .page-programs-mba-student-life,
 .page-programs-msx-student-life,
@@ -164,9 +166,18 @@ a.no-border
 .page-business-insights,
 .node-type-news,
 .node-type-event,
-.page-programs
+.page-programs,
+.page-events
   #page-title
     display: none
+
+// Show page titles again for mobile if they were in the banner
+.page-programs,
+.page-business-insights,
+.page-events
+  #page-title
+    +breakpoint($bp-mobile-max)
+      display: block
 
 // @TODO make this better
 // BI HACK for Landings titles

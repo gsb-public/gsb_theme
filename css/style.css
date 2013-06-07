@@ -2023,6 +2023,11 @@ div.label-inline {
     padding: 30px 20px 12px;
   }
 }
+@media (max-width: 35.5em) {
+  #content-wrapper #content {
+    padding-top: 0;
+  }
+}
 
 @media (max-width: 35.5em) {
   #main {
@@ -2232,8 +2237,17 @@ a.no-border:hover {
 .page-business-insights #page-title,
 .node-type-news #page-title,
 .node-type-event #page-title,
-.page-programs #page-title {
+.page-programs #page-title,
+.page-events #page-title {
   display: none;
+}
+
+@media (max-width: 35.5em) {
+  .page-programs #page-title,
+  .page-business-insights #page-title,
+  .page-events #page-title {
+    display: block;
+  }
 }
 
 .page-business-insights-business--society #page-title,
@@ -5531,7 +5545,6 @@ p.acc-title + p {
   #quicklinks {
     float: none;
     margin: 0;
-    padding: 0 20px;
     width: 100%;
   }
   .front #quicklinks {
@@ -5841,9 +5854,6 @@ p.acc-title + p {
 
 .page-events #main {
   position: relative;
-}
-.page-events #page-title {
-  display: none;
 }
 .page-events .view-filters {
   margin-right: 30px;
