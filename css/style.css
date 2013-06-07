@@ -2077,8 +2077,25 @@ div.label-inline {
 }
 
 @media (min-width: 35.5625em) {
-  .page-stanford-gsb-experience #content-wrapper {
+  .page-stanford-gsb-experience #content-wrapper,
+  .page-programs-mba-student-life #content-wrapper,
+  .page-programs-msx-student-life #content-wrapper,
+  .page-faculty-research #content-wrapper {
     background: url('../images/bg-landing-whitetitlebar.png') center top no-repeat, white;
+  }
+  .page-stanford-gsb-experience #content-wrapper #page-title,
+  .page-programs-mba-student-life #content-wrapper #page-title,
+  .page-programs-msx-student-life #content-wrapper #page-title,
+  .page-faculty-research #content-wrapper #page-title {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px white solid;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 35.5625em) {
+  .page-faculty-research-faculty #content-wrapper {
+    background: url('../images/bg-facultygrid.png') center top no-repeat, white;
   }
 }
 

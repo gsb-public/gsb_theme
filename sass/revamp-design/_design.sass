@@ -52,10 +52,24 @@
 .page-business-insights #content-wrapper
   background-image: none
 
-// Special landing pages
-.page-stanford-gsb-experience #content-wrapper
-  +breakpoint($bp-portrait-min)
-    +background(image_url("bg-landing-whitetitlebar.png") center top no-repeat, $white)
+// Special landing pages with what titles
+.page-stanford-gsb-experience,
+.page-programs-mba-student-life,
+.page-programs-msx-student-life,
+.page-faculty-research
+  #content-wrapper
+    +breakpoint($bp-portrait-min)
+      +background(image_url("bg-landing-whitetitlebar.png") center top no-repeat, $white)
+      #page-title
+        background: rgba($white, 0.6)
+        border: 2px $white solid
+        padding: 20px
+
+// Faculty grid
+.page-faculty-research-faculty
+  #content-wrapper
+    +breakpoint($bp-portrait-min)
+      +background(image_url("bg-facultygrid.png") center top no-repeat, $white)
 
 // Clubs is different
 .page-stanford-gsb-experience-life-stanford-club-activities #content-wrapper
