@@ -33,4 +33,12 @@ Drupal.behaviors.responsiveMenutoggle = {
   }
 };
 
+Drupal.behaviors.responsiveSectionmenu = {
+  attach: function (context, settings) {
+    $(context).find('#sidebar h2').click(function() {
+      $(this).parent().toggleClass('open');
+    });
+  }
+};
+
 }(jQuery));

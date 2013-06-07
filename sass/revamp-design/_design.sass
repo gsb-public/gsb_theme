@@ -22,8 +22,10 @@
     max-width: $max-width
     +breakpoint($bp-portrait)
       padding: 30px 20px 12px
-    +breakpoint($bp-mobile-max)
-      padding: 15px
+
+#main
+  +breakpoint($bp-mobile-max)
+    padding: 15px
 
 // BOTTOM
 #bottom
@@ -488,6 +490,9 @@ a.no-border
   @extend %black-border-top
   @extend %bg-grey-gradient
   padding: 20px 20px 0 20px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding: 0
   // Menu styling
   ul
     li

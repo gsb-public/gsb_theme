@@ -9,6 +9,8 @@
 .banner-title,
 .banner-subtitle
   color: $white
+  +breakpoint($bp-mobile-max)
+    display: none
 
 .banner-title
   font-family: $font-demi
@@ -31,6 +33,8 @@
   .breadcrumb
     line-height: 1em
     padding-bottom: 18px
+    +breakpoint($bp-mobile-max)
+      padding-left: 16px
   a
     color: $white
     position: relative
@@ -43,7 +47,7 @@
         content: ""
         position: absolute
         left: 0
-        bottom: 1px      
+        bottom: 1px
 
 // BLACK BACKGROUND
 .page-events,
@@ -73,3 +77,62 @@
   #banner
     +background(linear-gradient(#4c697a, #607c8c))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+
+///////////////////
+// First Sidebar
+///////////////////
+// First sidebar region
+#sidebar
+  .sidebar
+    h2
+      display: none
+  +breakpoint($bp-mobile-max)
+    float: right
+    position: absolute
+    top: 184px
+    width: 100%
+    .menu
+      display: none
+    .sidebar
+      .block-menu
+      // Mobile menu trigger
+      h2
+        border-left: 1px solid rgba($white, 0.3)
+        color: $white
+        cursor: pointer
+        display: block
+        font-size: 14px
+        line-height: 1
+        margin-top: -55px
+        padding-left: 35px
+        padding-bottom: 7px
+        position: absolute
+        right: 0
+        text-transform: uppercase
+        width: 108px
+        &:before
+          content: image_url("plus.png")
+          display: inline
+          position: relative
+          right: 24px
+          top: 22px
+    .block-menu.open
+      .content
+        position: relative
+        z-index: 1
+      h2
+        +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
+        color: $red
+        +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
+        padding-right: 73px
+        top: 6px
+        &:before
+          content: image_url("toggle-open.png")
+          top: 20px
+      .menu
+        +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
+        border-bottom: 10px solid $black
+        display: block
+        margin-top: 1px
+        padding-left: 36px
+        padding-top: 26px
