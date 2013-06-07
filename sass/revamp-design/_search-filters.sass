@@ -203,18 +203,24 @@ fieldset.collapsible .fieldset-legend
     &:nth-of-type(3n)
       border-right: 0
 
+//EXCEPTIONS
+.pane-views-exp-club-filters-club-list
+  .gsb-views-exposed-search
+    background: none
+    border: none
+    box-shadow: 0 0 0 #fff
+    margin: -2px
+
+
+
+
 //Parent class to exposed, colapsable filter
 .exposed_filter_widget
   //Reset style for case when filter and search are placed in one class
   &.exposed_filter_widget_one_column
     .ajax-progress
       display: none
-    > div
-      background: none
-      padding: 0
-      border: 0
-      margin: 0
-      box-shadow: 0 0 0 #fff
+
     .views-exposed-widget
       border: 0 none !important
       width: 100% !important
