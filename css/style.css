@@ -1765,6 +1765,15 @@ ul.menu li.collapsed {
 
 .breadcrumb {
   padding-bottom: 0;
+  position: relative;
+  top: -4px;
+  margin-bottom: 15px;
+}
+.breadcrumb a {
+  font-size: 14px;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 .views-exposed-widgets {
@@ -7247,6 +7256,8 @@ fieldset.collapsible .fieldset-legend {
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
   line-height: 1em;
   padding-bottom: 18px;
+  top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 35.5em) {
   #block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
@@ -7255,17 +7266,9 @@ fieldset.collapsible .fieldset-legend {
 }
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs a {
   color: white;
-  position: relative;
 }
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs a:hover:after {
-  border-bottom: 1px solid;
-  width: 100%;
-  height: 1px;
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 1px;
+#block-gsb-public-custom-blocks-gpcb-breadcrumbs a:hover {
+  text-decoration: underline;
 }
 
 .page-events #banner,
