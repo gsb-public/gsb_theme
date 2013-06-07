@@ -33,6 +33,17 @@
     padding-bottom: 18px
   a
     color: $white
+    position: relative
+    &:hover
+      &:after
+        border-bottom: 1px solid
+        width: 100%
+        height: 1px
+        display: block
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 1px      
 
 // BLACK BACKGROUND
 .page-events,
