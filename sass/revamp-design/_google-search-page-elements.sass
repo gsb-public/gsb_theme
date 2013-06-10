@@ -2,10 +2,29 @@
 // Google search page results elements.
 /////////////////
 
+.page-gsearch
+  .search-results .title a,
+  .google-appliance-pager a
+    color: $text-green
+    &:hover
+      color: $text-blue
+  .google-appliance-results-control-bar
+    clear: left
+
 .google-appliance-pager
-  ul.pager
-    li
-      margin: 0 3px
-      padding: 0 3px
-      &.pager-last, &.pager-first
-        display: none
+  margin-bottom: 20px
+  .pager li
+    margin: 0
+    padding: 0 3px
+    &.first
+      padding-left: 0
+    &.pager-next
+      padding-right: 0
+    &.pager-last, &.pager-first
+      display: none
+    &.pager-ellipsis
+      padding: 0
+    +breakpoint($bp-portrait-max)
+      font-size: 1.5em
+      line-height: 2
+      padding: 0 1em
