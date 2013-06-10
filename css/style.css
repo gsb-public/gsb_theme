@@ -680,131 +680,6 @@ small {
   line-height: 18px;
 }
 
-.intro-copy {
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 32px;
-}
-
-.caption-right,
-.caption-left {
-  background: #f4eede;
-  display: inline-block;
-  margin: 2px 0 15px 0;
-  max-width: 100%;
-}
-.caption-right img,
-.caption-left img {
-  display: block;
-  line-height: 0 !important;
-}
-.caption-right .caption-text,
-.caption-left .caption-text {
-  color: #887e6e;
-  font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 0;
-  padding: 20px;
-}
-
-.caption-left {
-  float: left;
-  margin-right: 30px;
-}
-
-.caption-right {
-  float: right;
-  margin-left: 30px;
-}
-
-div.callout {
-  float: left;
-  margin: 0 20px 20px 0;
-  max-width: 430px;
-  width: 60%;
-  color: #739d95;
-  font-size: 26px;
-  line-height: 32px;
-}
-div.callout:after {
-  display: block;
-  content: url('../images/tab-club.png');
-}
-.pane-bundle-text div.callout {
-  margin-top: 20px;
-}
-div.callout br {
-  line-height: 2em;
-  vertical-align: top;
-}
-
-.field-name-field-body ul, .field-name-field-body ol {
-  margin: 0 0 24px 0;
-  font-size: 18px;
-  line-height: 24px;
-}
-.field-name-field-body ul {
-  position: relative;
-  left: 0;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-.field-name-field-body ul li:before {
-  content: "• ";
-  color: #2d6280;
-}
-.field-name-field-body ol {
-  padding-left: 26px;
-}
-.field-name-field-body table ul {
-  left: -26px;
-}
-.field-name-field-body a {
-  border-bottom: dashed 1px #7d8401;
-  color: #7d8401;
-  text-decoration: none;
-}
-.field-name-field-body a:hover {
-  color: #2d6280;
-  border-bottom: solid 1px #2d6280;
-}
-.field-name-field-body a[href$=".pdf"] {
-  background-position: 0 0;
-  border: none;
-}
-.field-name-field-body a[href$=".pdf"]:hover {
-  border: none;
-}
-.field-name-field-body h2 {
-  font-size: 28px;
-  line-height: 32px;
-  color: #231f20;
-  padding-bottom: 12px;
-}
-.field-name-field-body h3 {
-  font-size: 20px;
-  line-height: 24px;
-}
-.field-name-field-body h2 a, .field-name-field-body h3 a {
-  color: #231f20;
-  border: none;
-}
-.field-name-field-body h2 a:after, .field-name-field-body h3 a:after {
-  color: #bac405;
-  content: "\f100";
-  font-family: "arrow-double";
-  margin-left: 3px;
-}
-.field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover {
-  border: none;
-}
-.field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after {
-  color: #2d6280;
-}
-.pane-bundle-text .field-name-field-body {
-  overflow: hidden;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2427,7 +2302,7 @@ a.no-border:hover {
   line-height: 26px;
   padding-bottom: 14px;
 }
-.wide-view .pane-bundle-text .field-name-field-title {
+.wide-view .pane-bundle-text .field-name-field-title, .full-view .pane-bundle-text .field-name-field-title {
   font-size: 26px;
   line-height: 30px;
 }
@@ -2445,16 +2320,15 @@ a.no-border:hover {
   font-size: 14px;
   line-height: 18px;
 }
-.wide-view .pane-bundle-text .field-name-field-body {
+.wide-view .pane-bundle-text .field-name-field-body, .full-view .pane-bundle-text .field-name-field-body {
   font-size: 18px;
   line-height: 24px;
 }
 .pane-bundle-text .field-name-field-body p {
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 0;
 }
-.wide-view .pane-bundle-text .field-name-field-body p {
+.wide-view .pane-bundle-text .field-name-field-body p, .full-view .pane-bundle-text .field-name-field-body p {
   font-size: 18px;
   line-height: 24px;
 }
@@ -8311,4 +8185,129 @@ fieldset.collapsible .fieldset-legend {
 .fake-input-wrapper .arrows-wrapper button.down {
   bottom: 2px;
   background-position: center -14px;
+}
+
+.intro-copy {
+  font-size: 26px !important;
+  font-weight: bold;
+  line-height: 32px !important;
+}
+
+.caption-right,
+.caption-left {
+  background: #f4eede;
+  display: inline-block;
+  margin: 2px 0 15px 0;
+  max-width: 100%;
+}
+.caption-right img,
+.caption-left img {
+  display: block;
+  line-height: 0 !important;
+}
+.caption-right .caption-text,
+.caption-left .caption-text {
+  color: #887e6e;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.caption-left {
+  float: left;
+  margin-right: 30px;
+}
+
+.caption-right {
+  float: right;
+  margin-left: 30px;
+}
+
+div.callout {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 430px;
+  width: 60%;
+  color: #739d95;
+  font-size: 26px;
+  line-height: 32px;
+}
+div.callout:after {
+  display: block;
+  content: url('../images/tab-club.png');
+}
+.pane-bundle-text div.callout {
+  margin-top: 20px;
+}
+div.callout br {
+  line-height: 2em;
+  vertical-align: top;
+}
+
+.field-name-field-body ul, .field-name-field-body ol {
+  margin: 0 0 24px 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+.field-name-field-body ul {
+  position: relative;
+  left: 0;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.field-name-field-body ul li:before {
+  content: "• ";
+  color: #2d6280;
+}
+.field-name-field-body ol {
+  padding-left: 26px;
+}
+.field-name-field-body table ul {
+  left: -26px;
+}
+.field-name-field-body a {
+  border-bottom: dashed 1px #7d8401;
+  color: #7d8401;
+  text-decoration: none;
+}
+.field-name-field-body a:hover {
+  color: #2d6280;
+  border-bottom: solid 1px #2d6280;
+}
+.field-name-field-body a[href$=".pdf"] {
+  background-position: 0 0;
+  border: none;
+}
+.field-name-field-body a[href$=".pdf"]:hover {
+  border: none;
+}
+.field-name-field-body h2 {
+  font-size: 28px;
+  line-height: 32px;
+  color: #231f20;
+  padding-bottom: 12px;
+}
+.field-name-field-body h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+.field-name-field-body h2 a, .field-name-field-body h3 a {
+  color: #231f20;
+  border: none;
+}
+.field-name-field-body h2 a:after, .field-name-field-body h3 a:after {
+  color: #bac405;
+  content: "\f100";
+  font-family: "arrow-double";
+  margin-left: 3px;
+}
+.field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover {
+  border: none;
+}
+.field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after {
+  color: #2d6280;
+}
+.pane-bundle-text .field-name-field-body {
+  overflow: hidden;
 }

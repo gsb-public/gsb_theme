@@ -1,0 +1,109 @@
+////////////////////
+// WYSIWYG Styles
+////////////////////
+
+// Intro copy
+.intro-copy
+  font-size: 26px !important
+  font-weight: bold
+  line-height: 32px !important
+
+// Inset images with captions
+.caption-right,
+.caption-left
+  background: #f4eede
+  display: inline-block
+  margin: 2px 0 15px 0
+  max-width: 100%
+  img
+    display: block
+    line-height: 0 !important
+  .caption-text
+    color: $grey-dark
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 0
+    padding: 20px
+
+.caption-left
+  float: left
+  margin-right: 30px
+.caption-right
+  float: right
+  margin-left: 30px
+
+// Callout
+div.callout
+  float: left
+  margin: 0 20px 20px 0
+  max-width: 430px
+  width: 60%
+  color: $teal-dark
+  font-size: 26px
+  line-height: 32px
+  &:after
+    display: block
+    content: image_url("tab-club.png")
+  .pane-bundle-text &
+    margin-top: 20px
+
+  br
+    line-height: 2em
+    vertical-align: top
+
+
+// Custom list
+.field-name-field-body
+  ul, ol
+    margin: 0 0 24px 0
+    font-size: 18px
+    line-height: 24px
+  ul
+    position: relative
+    left: 0
+    text-indent: -1em
+    padding-left: 1em
+    li:before
+      content: "• "
+      color: $text-blue
+  ol
+    padding-left: 26px
+  table ul
+    left: -26px
+  a
+    border-bottom: dashed 1px $text-green
+    color: $text-green
+    text-decoration: none
+    &:hover
+      color: $link-blue
+      border-bottom: solid 1px $link-blue
+    &[href$=".pdf"]
+      background-position: 0 0
+      border: none
+      &:hover
+        border: none
+
+  // Headers
+  h2
+    font-size: 28px
+    line-height: 32px
+    color: $text-black
+    padding-bottom: 12px
+  h3
+    font-size: 20px
+    line-height: 24px
+  h2 a, h3 a
+    color: $text-black
+    border: none
+    &:after
+      color: $green-light
+      content: "\f100"
+      font-family: "arrow-double"
+      margin-left: 3px
+    &:hover
+      border: none
+      &:after
+        color: $text-blue
+  // Clearing the float
+  .pane-bundle-text &
+    overflow: hidden
