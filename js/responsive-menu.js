@@ -41,4 +41,12 @@ Drupal.behaviors.responsiveSectionmenu = {
   }
 };
 
+Drupal.behaviors.responsiveEventsfilter = {
+  attach: function (context, settings) {
+    $(context).find('.pane-views-exp-gsb-event-panel-pane-2 h2.pane-title').click(function() {
+      $(this).parent().toggleClass('open');
+    });
+  }
+};
+
 }(jQuery));

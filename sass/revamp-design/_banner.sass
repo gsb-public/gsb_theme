@@ -52,6 +52,8 @@
 .page-events
   #banner .section
     background: image_url("bg-banner-eventcal.png") no-repeat -70% 40%
+    +breakpoint($bp-mobile-max)
+      height: 50px
   .banner-title
     padding-bottom: 30px
 
@@ -74,7 +76,6 @@
 ///////////////////
 // First Sidebar
 ///////////////////
-// First sidebar region
 #sidebar
   .sidebar
     h2
@@ -129,3 +130,65 @@
         margin-top: 1px
         padding-left: 36px
         padding-top: 26px
+
+//////////////////
+// Mobile events filters
+//////////////////
+.inner-sidebar-wrapper
+  h2
+    display: none
+  +breakpoint($bp-mobile-max)
+    width: 100%
+    .pane-views-exp-gsb-event-panel-pane-2
+      background: transparent
+      display: block
+      border: 0
+      margin: 0
+      max-width: 100%
+      padding: 0
+    .pane-content
+      display: none
+      margin-top: -24px
+    // Mobile menu trigger
+    h2
+      border-left: 1px solid rgba($white, 0.3)
+      color: $white
+      cursor: pointer
+      display: inline-block
+      font-size: 14px
+      line-height: 1
+      margin-top: -56px
+      padding-left: 35px
+      padding-bottom: 7px
+      padding-right: 11px
+      position: absolute
+      right: 0
+      text-transform: uppercase
+      width: 108px
+      &:before
+        content: image_url("plus.png")
+        display: inline
+        position: relative
+        right: 24px
+        top: 22px
+    .panel-pane.open
+      h2
+        +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
+        color: $red
+        +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
+        margin-top: -51px
+        padding-right: 73px
+        padding-bottom: 8px
+        &:before
+          content: image_url("toggle-open.png")
+          top: 20px
+      .pane-content
+        +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
+        border-bottom: 10px solid $black
+        display: block
+        margin-top: 1px
+        padding-left: 36px
+        padding-top: 26px
+        position: relative
+        width: 100%
+        z-index: 1
