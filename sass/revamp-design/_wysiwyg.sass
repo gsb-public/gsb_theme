@@ -78,10 +78,11 @@ div.callout
       color: $link-blue
       border-bottom: solid 1px $link-blue
     &[href$=".pdf"]
-      background-position: 0 0
       border: none
-      &:hover
-        border: none
+      &:before
+        content: image_url("pdficon-green.png")
+    &:hover
+      border: none
 
   // Headers
   h2

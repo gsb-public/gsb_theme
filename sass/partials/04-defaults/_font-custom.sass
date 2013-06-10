@@ -54,7 +54,9 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before
     font-family: "search"
 
 body a[href$=".pdf"]
-  background: image_url("pdficons.png") no-repeat 0 -78px
-  padding-left: 15px
+  &:before
+    content: image_url("pdficon-red.png")
+    margin-right: 3px
   &:hover
-    background-position: 0 -38px
+    &:before
+      content: image_url("pdficon-blue.png")

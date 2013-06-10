@@ -575,12 +575,12 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
   font-family: "search";
 }
 
-body a[href$=".pdf"] {
-  background: url('../images/pdficons.png') no-repeat 0 -78px;
-  padding-left: 15px;
+body a[href$=".pdf"]:before {
+  content: url('../images/pdficon-red.png');
+  margin-right: 3px;
 }
-body a[href$=".pdf"]:hover {
-  background-position: 0 -38px;
+body a[href$=".pdf"]:hover:before {
+  content: url('../images/pdficon-blue.png');
 }
 
 * {
@@ -8489,10 +8489,12 @@ div.callout br {
   border-bottom: solid 1px #2d6280;
 }
 .field-name-field-body a[href$=".pdf"] {
-  background-position: 0 0;
   border: none;
 }
-.field-name-field-body a[href$=".pdf"]:hover {
+.field-name-field-body a[href$=".pdf"]:before {
+  content: url('../images/pdficon-green.png');
+}
+.field-name-field-body a:hover {
   border: none;
 }
 .field-name-field-body h2 {
