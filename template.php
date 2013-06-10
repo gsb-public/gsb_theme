@@ -112,4 +112,7 @@ function gsb_theme_preprocess_html(&$variables) {
   if (isset($args[0]) && in_array($args[0], $allowed_paths) && $normalized_arg == 'node') {
     $variables['classes_array'][] = 'page-' . $args[0];
   }
+  if (user_access('administer panelizer node page content')) {
+    drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
+  }
 }
