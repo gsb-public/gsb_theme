@@ -270,18 +270,108 @@
     padding: 0
 
 
-
-/*
- * Admission Events TABLE
- */
+// Admission events
 .view-admission-events
+  table
+    +box-shadow(0px 1px 1px rgba($black, 0.1))
+    border: 1px solid #e4e4e4 !important
+    margin-bottom: 30px
+    width: 100%
+    tr
+      &.odd,
+      &.even
+        background-color: transparent
+        
+      td,
+      th
+        &:first-of-type
+          position: relative
+          left: 2px
+        //background-color: transparent
+        &:nth-child(2n+1)
+          background-color: #f8f7f6
+          &.active
+            background-color: #f8f7f6
+        
+    td
+      padding: 0.9em 1em 0.5em
+      background-color: $white
+                
+    tbody
+      a
+        color: $text-green
+      tr
+        border-top: transparent
+        border-bottom: 1px solid #e4e4e4
+    thead
+      th
+        padding: 1.6em 1em 0.7em
+        border-bottom: 1px solid #e4e4e4
+        font-size: 16px
+    
+      a
+        color: $text-black
+        
+        &.currentFilter
+          position: relative
+          color: $text-green
+          padding-right: 30px
+          &:after
+            width: 0
+            height: 0      
+            display: inline-block
+            position: absolute
+            content: ''         
+            right: -2px
+            border-style: solid
+            border-width: 7px
+            border-color: transparent               
+          &[href*='desc']:after
+            bottom: -2px
+            border-top-color: $text-green              
+            border-top-width: 9px
+          &[href*='asc']:after
+            bottom: 7px
+            border-bottom-color: $text-green              
+            border-bottom-width: 9px
+            
+        img
+          display: none
+
+  .view-filters
+    margin-bottom: 30px
+
   .event-buttons
     +clearfix
     .event-button
       +float-left
       cursor: pointer
       padding: 0.5em 1em
-  tbody
-    a
-      color: $green-light
+
+  
+  .event-button
+    background-color: #fbfaf8
+    +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
+    margin: 2px 7px 0px 1px
+    border: 2px $white solid
+    border-bottom: 0 none
+    &:hover
+      color: $blue-dark
+      background-color: $grey-c
+      +background(linear-gradient(top, #ededed 20%, #fbfaf8 100%))
+      @include filter-gradient(#fbfaf8, #ededed, vertical)
+      $experimental-support-for-svg: true      
+    &.active
+      background-color: $grey-c
+      +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
+      @include filter-gradient(#fbfaf8, #ededed, vertical)
+      $experimental-support-for-svg: true
+      color: $red-dark
+      
+    
+      
+      
+      
+
+
 
