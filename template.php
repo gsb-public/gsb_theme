@@ -116,3 +116,6 @@ function gsb_theme_preprocess_html(&$variables) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
 }
+function gsb_theme_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+ $form['buttons']['#weight'] = 99;
+}
