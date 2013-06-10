@@ -139,6 +139,12 @@
     display: none
   +breakpoint($bp-mobile-max)
     width: 100%
+    .gsb-views-exposed-search
+      width: 100%
+      label
+        margin-bottom: 0
+      .views-exposed-form .form-item
+        float: none
     .pane-views-exp-gsb-event-panel-pane-2
       background: transparent
       display: block
@@ -157,7 +163,7 @@
       display: inline-block
       font-size: 14px
       line-height: 1
-      margin-top: -56px
+      margin-top: -86px
       padding-left: 35px
       padding-bottom: 7px
       padding-right: 11px
@@ -187,8 +193,59 @@
         border-bottom: 10px solid $black
         display: block
         margin-top: 1px
-        padding-left: 36px
-        padding-top: 26px
+        padding: 15px
         position: relative
         width: 100%
         z-index: 1
+      .views-exposed-widget
+        margin-bottom: 5px
+        label
+          background-color: $grey-c
+          +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
+          border: 2px $white solid
+          +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
+          color: $red
+          display: block
+          font-family: $font-demi
+          font-size: 18px
+          height: 44px
+          margin: 1px 2px 2px 1px
+          padding: 10px 0 10px 10px
+          // &:after
+          //   +background(linear-gradient($red, red))
+          //   content: image_url("arrow-down.png")
+          //   float: right
+          //   height: 40px
+          //   width: 40px
+          //   position: relative
+          //   top: -10px
+          //   line-height: 2.3
+        label.option
+          background: none
+          border: 0
+          box-shadow: 0 0
+          -webkit-box-shadow: 0 0
+          -moz-box-shadow: 0 0
+          color: $black
+          display: inline
+          font-family: $font-sans
+          font-size: 14px
+          height: auto
+          margin: 0
+          padding: 0
+          // &:after
+          //   content: ""
+        .views-widget
+          display: none
+        &.open
+          .views-widget
+            display: block
+            padding-left: 10px
+            background: #ededed
+            border: 2px $white solid
+            +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
+            border-top: 0
+            margin-right: 2px
+            margin-left: 1px
+      #edit-search-wrapper .views-widget
+        display: block

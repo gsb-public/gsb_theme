@@ -274,6 +274,7 @@
         $('#quicklinks').insertBefore($('#top-content'));
         $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
         $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
+        $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
       }
     }
   }
@@ -287,7 +288,7 @@
       $('.view-admission-events table thead a').has('img').addClass('currentFilter')
     }
   }
-  
+
 
 
   /*
