@@ -278,30 +278,29 @@ fieldset.collapsible .fieldset-legend
       -webkit-user-select: none
       -ms-user-select: none
       &:before
-        content: ''
+        content: "+"
         display: block
-        background: image_url('toggle-close.png') no-repeat 0 0
-        width: 15px
-        height: 15px
         position: absolute
-        top: 3px
+        top: 1px
+        font-family: Verdana
+        font-size: 18px
+        line-height: 1
         left: 0
-
-
 
       &:hover
         color: $text-blue
-        &:before
-          background: image_url('toggle-close-hover.png') no-repeat 0 0
+
 
     &.collapsed
       > label
         &:before
-          background: image_url('toggle-open.png') no-repeat 0 0
+          content: '-'
+
 
         &:hover
           &:before
-            background: image_url('toggle-open-hover.png') no-repeat 0 0
+            color: $text-blue
+
     .views-widget
       display: none
       padding-left: 3px

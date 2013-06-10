@@ -6421,26 +6421,23 @@ fieldset.collapsible .fieldset-legend {
   -ms-user-select: none;
 }
 .exposed_filter_widget .views-exposed-widget > label:before {
-  content: "";
+  content: "+";
   display: block;
-  background: url('../images/toggle-close.png') no-repeat 0 0;
-  width: 15px;
-  height: 15px;
   position: absolute;
-  top: 3px;
+  top: 1px;
+  font-family: Verdana;
+  font-size: 18px;
+  line-height: 1;
   left: 0;
 }
 .exposed_filter_widget .views-exposed-widget > label:hover {
   color: #2d6280;
 }
-.exposed_filter_widget .views-exposed-widget > label:hover:before {
-  background: url('../images/toggle-close-hover.png') no-repeat 0 0;
-}
 .exposed_filter_widget .views-exposed-widget.collapsed > label:before {
-  background: url('../images/toggle-open.png') no-repeat 0 0;
+  content: "-";
 }
 .exposed_filter_widget .views-exposed-widget.collapsed > label:hover:before {
-  background: url('../images/toggle-open-hover.png') no-repeat 0 0;
+  color: #2d6280;
 }
 .exposed_filter_widget .views-exposed-widget .views-widget {
   display: none;
