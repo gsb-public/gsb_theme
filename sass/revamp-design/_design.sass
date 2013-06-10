@@ -5,7 +5,8 @@
   +breakpoint($bp-wide-min)
     border-top: 10px $red-dark solid
   #header
-    height: 152px
+    +breakpoint($bp-wide-min)
+      height: 152px
     margin: 0 auto
     max-width: $max-width
     +breakpoint($bp-mobile-max)
