@@ -11,21 +11,32 @@
     background: image_url("bg-program-finder.png") no-repeat
     height: 476px
     padding: 10px
+    +breakpoint($bp-portrait-max)
+      height: auto
+      +background-image(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
     @extend %border
     background: linear-gradient(#f4f4f4, $grey-d)
     height: 450px
     margin: 0 0 0 15em
+    +breakpoint($bp-portrait-max)
+      height: auto
+      margin: 0
+      background: transparent
+      border: 0
     fieldset.vertical-tabs-pane
       border: 0
       padding: 36px 40px
+      +breakpoint($bp-portrait-max)
+        padding: 14px
+        background: linear-gradient(#f4f4f4, $grey-d)
     .fieldset-wrapper
       a
         color: $text-green
         display: inline-block
         font-size: 20px
         line-height: 24px
-        margin-bottom: 14px      
+        margin-bottom: 14px
         &:after
           color: $grey-med
           content: "\f100"
@@ -39,6 +50,8 @@
     .vertical-tabs-panes
       height: 438px
       overflow: hidden
+      +breakpoint($bp-portrait-max)
+        height: auto
     ul.vertical-tabs-list
       border-top: 0
       margin: -2px 0 -2px -15em
@@ -87,8 +100,89 @@
     .column-b
       width: 221px
       float: left
+      +breakpoint($bp-portrait-max)
+        width: auto
+        float: none
     .column-a
       margin-right: 55px
+      +breakpoint($bp-portrait-max)
+        margin-right: 0
     p
       font-size: 14px
       line-height: 18px
+      +breakpoint($bp-portrait-max)
+        font-size: 18px
+        line-height: 24px
+
+////////////////////////
+// Reponsive behavior
+///////////////////////
++breakpoint($bp-portrait-max)
+  ul.vertical-tabs-list
+    margin: 0px
+    padding: 0px
+
+  .vertical-tabs-list li
+    display: inline-block
+    padding: 14px
+    margin: 0
+    list-style: none
+    cursor: pointer
+    float: left
+
+  .vertical-tabs-panes
+    padding: 0px
+    clear: left
+
+  h2.resp-accordion
+    background: image_url("arrow-down.png") no-repeat 95% 50%
+    color: $white
+    cursor: pointer
+    margin: 0
+    display: none
+    font-size: 24px
+    font-family: $font-sans
+    border-top: 1px solid #8aa5b4
+    border-bottom: 1px solid #647f8f
+    padding-left: 14px
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
+    &:hover
+      +background(image_url("arrow-program-tan-down.png") no-repeat 95% 50%, #f4f4f4)
+      color: $text-blue
+
+  .resp-tab-content
+    display: none
+    padding: 15px
+
+  h2.resp-tab-active
+    border-bottom: none
+    margin-bottom: -1px !important
+    +background(image_url("arrow-program-tan-up.png") no-repeat 95% 50%, #f4f4f4)
+    color: $text-blue
+
+
+  .resp-content-active,
+  .resp-accordion-active,
+  .resp-easy-accordion  h2.resp-accordion,
+  .resp-tab-content-active
+    display: block
+
+  .resp-jfit
+    width: 100%
+    margin: 0px
+
+  ul.vertical-tabs-list
+    display: none
+
+  .resp-vtabs .vertical-tabs-panes
+    border: none
+    float: none
+    width: 100%
+    min-height: initial
+    clear: none
+
+  .resp-accordion-closed
+    display: none !important

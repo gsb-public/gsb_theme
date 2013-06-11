@@ -8195,14 +8195,41 @@ fieldset.collapsible .fieldset-legend {
   height: 476px;
   padding: 10px;
 }
+@media (max-width: 48em) {
+  .pane-program-finder .field-group-tab-wrapper {
+    height: auto;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjEwMCUiIHkxPSI1MCUiIHgyPSIwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM1NTU2NyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzczOTBhMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #355567), color-stop(100%, #7390a1));
+    background-image: -webkit-linear-gradient(right, #355567, #7390a1);
+    background-image: -moz-linear-gradient(right, #355567, #7390a1);
+    background-image: -o-linear-gradient(right, #355567, #7390a1);
+    background-image: -ms-linear-gradient(right, #355567, #7390a1);
+    background-image: linear-gradient(right, #355567, #7390a1);
+  }
+}
 .pane-program-finder div.vertical-tabs {
   background: linear-gradient(#f4f4f4, #dddddd);
   height: 450px;
   margin: 0 0 0 15em;
 }
+@media (max-width: 48em) {
+  .pane-program-finder div.vertical-tabs {
+    height: auto;
+    margin: 0;
+    background: transparent;
+    border: 0;
+  }
+}
 .pane-program-finder div.vertical-tabs fieldset.vertical-tabs-pane {
   border: 0;
   padding: 36px 40px;
+}
+@media (max-width: 48em) {
+  .pane-program-finder div.vertical-tabs fieldset.vertical-tabs-pane {
+    padding: 14px;
+    background: linear-gradient(#f4f4f4, #dddddd);
+  }
 }
 .pane-program-finder div.vertical-tabs .fieldset-wrapper a {
   color: #7d8401;
@@ -8226,6 +8253,11 @@ fieldset.collapsible .fieldset-legend {
 .pane-program-finder div.vertical-tabs .vertical-tabs-panes {
   height: 438px;
   overflow: hidden;
+}
+@media (max-width: 48em) {
+  .pane-program-finder div.vertical-tabs .vertical-tabs-panes {
+    height: auto;
+  }
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list {
   border-top: 0;
@@ -8288,14 +8320,115 @@ fieldset.collapsible .fieldset-legend {
   width: 221px;
   float: left;
 }
+@media (max-width: 48em) {
+  .pane-program-finder .program-columns .column-a,
+  .pane-program-finder .program-columns .column-b {
+    width: auto;
+    float: none;
+  }
+}
 .pane-program-finder .program-columns .column-a {
   margin-right: 55px;
+}
+@media (max-width: 48em) {
+  .pane-program-finder .program-columns .column-a {
+    margin-right: 0;
+  }
 }
 .pane-program-finder .program-columns p {
   font-size: 14px;
   line-height: 18px;
 }
+@media (max-width: 48em) {
+  .pane-program-finder .program-columns p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 
+@media (max-width: 48em) {
+  ul.vertical-tabs-list {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .vertical-tabs-list li {
+    display: inline-block;
+    padding: 14px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+  }
+
+  .vertical-tabs-panes {
+    padding: 0px;
+    clear: left;
+  }
+
+  h2.resp-accordion {
+    background: url('../images/arrow-down.png') no-repeat 95% 50%;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    display: none;
+    font-size: 24px;
+    font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-top: 1px solid #8aa5b4;
+    border-bottom: 1px solid #647f8f;
+    padding-left: 14px;
+  }
+  h2.resp-accordion:first-of-type {
+    border-top: 0;
+  }
+  h2.resp-accordion:last-of-type {
+    border-bottom: 0;
+  }
+  h2.resp-accordion:hover {
+    background: url('../images/arrow-program-tan-down.png') no-repeat 95% 50%, #f4f4f4;
+    color: #2d6280;
+  }
+
+  .resp-tab-content {
+    display: none;
+    padding: 15px;
+  }
+
+  h2.resp-tab-active {
+    border-bottom: none;
+    margin-bottom: -1px !important;
+    background: url('../images/arrow-program-tan-up.png') no-repeat 95% 50%, #f4f4f4;
+    color: #2d6280;
+  }
+
+  .resp-content-active,
+  .resp-accordion-active,
+  .resp-easy-accordion h2.resp-accordion,
+  .resp-tab-content-active {
+    display: block;
+  }
+
+  .resp-jfit {
+    width: 100%;
+    margin: 0px;
+  }
+
+  ul.vertical-tabs-list {
+    display: none;
+  }
+
+  .resp-vtabs .vertical-tabs-panes {
+    border: none;
+    float: none;
+    width: 100%;
+    min-height: initial;
+    clear: none;
+  }
+
+  .resp-accordion-closed {
+    display: none !important;
+  }
+}
 .pane-lastname-az-links {
   overflow: hidden;
   *zoom: 1;
