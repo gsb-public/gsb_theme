@@ -264,7 +264,6 @@
   /**
    * Move quicklinks to top of page in mobile landscape context.
    * Move search to top of page in mobile landscape context.
-   * Move search to top of page in mobile landscape context.
    */
 
   Drupal.behaviors.mainmenu_mobile ={
@@ -274,7 +273,7 @@
         $('#quicklinks').insertBefore($('#top-content'));
         $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
         $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
-        $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
+        $('.page-events .inner-sidebar-wrapper .pane-bundle-links').insertAfter($('.page-events .inner-sidebar-wrapper .pane-views-exp-gsb-event-panel-pane-2 .pane-content'));
       }
     }
   }

@@ -141,7 +141,7 @@
 //////////////////
 // Mobile events filters
 //////////////////
-.inner-sidebar-wrapper
+.page-events .inner-sidebar-wrapper
   h2
     display: none
   +breakpoint($bp-mobile-max)
@@ -184,7 +184,12 @@
         position: relative
         right: 24px
         top: 22px
+    .panel-pane
+      margin-bottom: 0
     .panel-pane.open
+      +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
+      border-bottom: 10px solid $black
+      padding: 0 15px 15px 15px
       h2
         +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
         color: $red
@@ -196,12 +201,10 @@
           content: image_url("toggle-open.png")
           top: 20px
       .pane-content
-        +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
-        border-bottom: 10px solid $black
         display: block
         margin-top: 1px
-        padding: 15px
         position: relative
+        top: 15px
         width: 100%
         z-index: 1
       .views-exposed-widget
@@ -256,3 +259,22 @@
             margin-left: 1px
       #edit-search-wrapper .views-widget
         display: block
+  // Additional calendars
+  .pane-bundle-links .green-bar
+    background: transparent
+    border: 0
+    padding: 0
+    margin: 0
+    box-shadow: 0 0
+    -webkit-box-shadow: 0 0
+    -moz-box-shadow: 0 0
+    .field-name-field-title
+      background: $grey-e
+      border-top: 1px solid $grey-c
+      margin: 20px -14px 0
+      padding: 14px 30px
+    .field-name-field-link-unlimited .field-item
+      border-top: 0
+      padding-left: 15px
+      a
+        font-weight: bold
