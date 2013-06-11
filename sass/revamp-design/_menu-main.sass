@@ -44,6 +44,8 @@
       +breakpoint($bp-mobile-max)
         display: inline-block
       margin: 0
+      &.active-trail
+        background: $black      
     // IPAD
     +breakpoint($bp-portrait)
       +background(image_url("navigation-arrow.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
