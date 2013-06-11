@@ -33,6 +33,16 @@
     </div>
   <?php endif; ?>
 
+  <?php if (!empty($first_page)): ?>
+    <div class="panels-categories-first-page">
+      <ul class="" id="first-page-links">
+        <?php print $root_content; ?>
+        <?php foreach ($first_page_links as $key => $value): ?>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+
   <?php if (!empty($columns)): ?>
   <div class="panels-section-columns">
     <?php foreach ($columns as $column_id => $column): ?>
@@ -44,6 +54,7 @@
     <?php endforeach; ?>
   </div>
   <?php endif; ?>
+
 </div>
 
 
