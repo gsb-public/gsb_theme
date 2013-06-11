@@ -1,0 +1,120 @@
+///////////////////
+// House ads
+///////////////////
+
+.pane-bundle-house-ads
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding: 26px
+  > div
+    +clearfix
+    
+  //COLOR STYLES
+  &.white
+    .field-name-field-title-link a
+      color: $text-green  
+  
+  &.taupe
+    background: $grey-dark
+
+  //&.white
+  &.grey
+    background: $text-black
+
+  &.grey,
+  &.taupe
+    background-image: none
+    .field-name-field-body
+      p
+        color: $white   
+    .show-more
+      color: $white
+
+  .field-name-field-house-ads-image
+    float: left
+    margin-right: 26px
+
+
+  .field-name-field-title-link a
+    font-weight: bold
+    font-size: 20px
+    color: $white
+  
+  // Title, program and year
+  .field-name-field-title-position-single,
+  .field-name-field-program-single,
+  .spotlight-year
+    font-size: 20px
+    font-weight: bold
+    line-height: 26px
+
+  .field-name-field-program-single
+    display: inline
+    margin-right: 0.3em
+
+  .field-name-field-body
+    font-size: 14px
+    margin: 12px 0
+    overflow: hidden
+    p
+      color: $grey-5
+      font-size: 14px
+      line-height: 18px
+      margin-bottom: 0
+  .show-more
+    border: 0
+    color: $text-green 
+    cursor: pointer
+    display: block
+    font-weight: bold
+    line-height: 1em
+    margin: 5px 0
+    text-align: right
+    span
+      font-size: 14px
+      padding-left: 16px
+      background: image_url('spotlight-arrow.png') no-repeat 0 2px
+    &:hover
+      color: $text-blue 
+      span
+        background-position: 0 -13px
+    &.active
+      span
+        background: image_url('spotlight-arrow-reversed.png') no-repeat -1px -13px
+      &:hover span
+        background-position: 0 2px
+
+  .field-name-field-gsb-spotlight-image-video
+    overflow: hidden
+
+
+// Clearfixes in wide and middle
+.full-view,
+.wide-view,
+.middle-view
+  .pane-bundle-spotlight
+    .group-name-wrapper
+      +clearfix
+    .gsb-responsive-main,
+    .gsb-responsive-preview .file-video,
+    .field-name-field-spotlight-person-fid img
+      margin-right: 18px
+
+// Clear the image/video on full and wide modes
+.full-view,
+.wide-view
+  .pane-bundle-spotlight
+    +clearfix
+
+// Clearfixes in narrow and faked for middle when there is a sidebar
+.sidebar-first .middle-view,
+.narrow-view
+  .pane-bundle-house-ads
+    padding-top: 0
+    > div
+      overflow: visible 
+  .field-name-field-title-link
+    display: inline-block
+    margin-top: 10px 
+  .field-name-field-house-ads-image
+    margin: 0 -26px 0 -26px
