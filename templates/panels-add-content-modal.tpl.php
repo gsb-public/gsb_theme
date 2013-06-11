@@ -35,11 +35,16 @@
 
   <?php if (!empty($first_page)): ?>
     <div class="panels-categories-first-page">
-      <ul class="" id="first-page-links">
+      <ul class="" id="first-page-root-links"> Elements
         <?php print $root_content; ?>
-        <?php foreach ($first_page_links as $key => $value): ?>
-        <?php endforeach; ?>
       </ul>
+      <?php foreach (array_keys($first_page_links) as $key): ?>
+        <ul class="" id="first-page-links"> <?php print $key; ?>
+          <?php foreach ($first_page_links[$key] as $page_link_key => $page_link_value): ?>
+            <?php print $page_link_value['link']; ?>
+          <?php endforeach; ?>
+        </ul>
+      <?php endforeach; ?>
     </div>
   <?php endif; ?>
 
