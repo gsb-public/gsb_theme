@@ -106,6 +106,7 @@ function gsb_theme_preprocess_html(&$variables) {
   // if this is a node page we have to check the request_uri() directly.
   $allowed_paths = array(
     'programs',
+    'stanford-gsb-experience',
   );
   $normalized_arg = arg(0);
   $args = explode('/', trim(request_uri(), '/'));
@@ -116,6 +117,10 @@ function gsb_theme_preprocess_html(&$variables) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form().
+ */
 function gsb_theme_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
  $form['buttons']['#weight'] = 99;
 }
