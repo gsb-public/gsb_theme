@@ -13,7 +13,8 @@
   &.white
     .field-name-field-title-link a
       color: $text-green  
-  
+      &:after
+        color: $text-green 
   &.taupe
     background: $grey-dark
 
@@ -33,12 +34,28 @@
   .field-name-field-house-ads-image
     float: left
     margin-right: 26px
+    width: 218px
+    > img
+      vertical-align: top
 
 
   .field-name-field-title-link a
     font-weight: bold
     font-size: 20px
     color: $white
+    padding-right: 20px
+    position: relative
+    &:after
+      content: "\f100"
+      color: $white
+      font-family: "arrow-double"
+      font-size: 26px
+      font-weight: normal
+      line-height: 0.5
+      position: absolute
+      top: 3px
+      right: 0
+    
   
   // Title, program and year
   .field-name-field-title-position-single,
@@ -68,7 +85,7 @@
     display: block
     font-weight: bold
     line-height: 1em
-    margin: 5px 0
+    margin: 5px 0 0
     text-align: right
     span
       font-size: 14px
@@ -118,3 +135,4 @@
     margin-top: 10px 
   .field-name-field-house-ads-image
     margin: 0 -26px 0 -26px
+    width: auto

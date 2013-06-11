@@ -3981,6 +3981,9 @@ ul.slideshow-items {
 .pane-bundle-house-ads.white .field-name-field-title-link a {
   color: #7d8401;
 }
+.pane-bundle-house-ads.white .field-name-field-title-link a:after {
+  color: #7d8401;
+}
 .pane-bundle-house-ads.taupe {
   background: #887e6e;
 }
@@ -3999,11 +4002,28 @@ ul.slideshow-items {
 .pane-bundle-house-ads .field-name-field-house-ads-image {
   float: left;
   margin-right: 26px;
+  width: 218px;
+}
+.pane-bundle-house-ads .field-name-field-house-ads-image > img {
+  vertical-align: top;
 }
 .pane-bundle-house-ads .field-name-field-title-link a {
   font-weight: bold;
   font-size: 20px;
   color: white;
+  padding-right: 20px;
+  position: relative;
+}
+.pane-bundle-house-ads .field-name-field-title-link a:after {
+  content: "\f100";
+  color: white;
+  font-family: "arrow-double";
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 0.5;
+  position: absolute;
+  top: 3px;
+  right: 0;
 }
 .pane-bundle-house-ads .field-name-field-title-position-single,
 .pane-bundle-house-ads .field-name-field-program-single,
@@ -4034,7 +4054,7 @@ ul.slideshow-items {
   display: block;
   font-weight: bold;
   line-height: 1em;
-  margin: 5px 0;
+  margin: 5px 0 0;
   text-align: right;
 }
 .pane-bundle-house-ads .show-more span {
@@ -4098,6 +4118,7 @@ ul.slideshow-items {
 .sidebar-first .middle-view .field-name-field-house-ads-image,
 .narrow-view .field-name-field-house-ads-image {
   margin: 0 -26px 0 -26px;
+  width: auto;
 }
 
 .person-name {
