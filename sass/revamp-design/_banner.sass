@@ -106,19 +106,20 @@
         display: block
         font-size: 14px
         line-height: 1
-        margin-top: -55px
-        padding-left: 35px
-        padding-bottom: 7px
+        margin-top: -50px
+        padding: 14px 0 8px 35px
         position: absolute
         right: 0
         text-transform: uppercase
         width: 108px
         &:before
-          content: image_url("plus.png")
-          display: inline
-          position: relative
-          right: 24px
-          top: 22px
+          color: $white
+          content: "➕"
+          font-family: "entypo"
+          font-size: 36px
+          position: absolute
+          left: 12px
+          top: 8px
     .block-menu.open
       .content
         position: relative
@@ -128,10 +129,9 @@
         color: $red
         +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
         padding-right: 73px
-        top: 6px
         &:before
-          content: image_url("toggle-open.png")
-          top: 20px
+          color: $red
+          content: "➖"
       .menu
         +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
         border-bottom: 10px solid $black
@@ -172,20 +172,20 @@
       display: inline-block
       font-size: 14px
       line-height: 1
-      margin-top: -86px
-      padding-left: 35px
-      padding-bottom: 7px
-      padding-right: 11px
+      margin-top: -80px
+      padding: 14px 11px 7px 35px
       position: absolute
       right: 0
       text-transform: uppercase
       width: 108px
       &:before
-        content: image_url("plus.png")
-        display: inline
-        position: relative
-        right: 24px
-        top: 22px
+        color: $white
+        content: "➕"
+        font-family: "entypo"
+        font-size: 36px
+        position: absolute
+        left: 12px
+        top: 8px
     .panel-pane
       margin-bottom: 0
     .panel-pane.open
@@ -200,8 +200,8 @@
         padding-right: 73px
         padding-bottom: 8px
         &:before
-          content: image_url("toggle-open.png")
-          top: 20px
+          color: $red
+          content: "➖"
       .pane-content
         display: block
         margin-top: 1px
@@ -223,15 +223,6 @@
           height: 44px
           margin: 1px 2px 2px 1px
           padding: 10px 0 10px 10px
-          // &:after
-          //   +background(linear-gradient($red, red))
-          //   content: image_url("arrow-down.png")
-          //   float: right
-          //   height: 40px
-          //   width: 40px
-          //   position: relative
-          //   top: -10px
-          //   line-height: 2.3
         label.option
           background: none
           border: 0

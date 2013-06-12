@@ -57,7 +57,16 @@
       margin: -2px 0 -2px -15em
       width: 238px
       li
-        +background(image_url("arrow-program-white.png") no-repeat 94% 50%, transparent)
+        background-color: transparent
+        &:after
+          color: $white
+          content: ""
+          float: right
+          font-family: "entypo"
+          font-size: 30px
+          position: relative
+          top: -40px
+          right: 6px
         border-left: 0
         border-top: 1px solid #8aa5b4
         border-bottom: 1px solid #647f8f
@@ -70,7 +79,9 @@
           border-bottom: 1px solid transparent
 
         &.selected
-          +background(image_url("arrow-program-tan.png") no-repeat 94% 50%, #f4f4f4)
+          background-color: #f4f4f4
+          &:after
+            color: $grey-med
           width: 240px
           &:first-of-type
             border-top: 2px solid $white
@@ -135,7 +146,6 @@
     clear: left
 
   h2.resp-accordion
-    background: image_url("arrow-down.png") no-repeat 95% 50%
     color: $white
     cursor: pointer
     margin: 0
@@ -150,7 +160,7 @@
     &:last-of-type
       border-bottom: 0
     &:hover
-      +background(image_url("arrow-program-tan-down.png") no-repeat 95% 50%, #f4f4f4)
+      background-color: #f4f4f4
       color: $text-blue
 
   .resp-tab-content
@@ -160,7 +170,7 @@
   h2.resp-tab-active
     border-bottom: none
     margin-bottom: -1px !important
-    +background(image_url("arrow-program-tan-up.png") no-repeat 95% 50%, #f4f4f4)
+    background-color: #f4f4f4
     color: $text-blue
 
 

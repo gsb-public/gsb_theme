@@ -2693,9 +2693,17 @@ a.no-border:hover {
     padding: 12px 7px 18px;
   }
   #block-system-main-menu li a {
-    background: url('../images/arrow-down.png') no-repeat 100px 60px;
     min-height: 80px;
     padding: 12px 8px 18px;
+  }
+  #block-system-main-menu li a:after {
+    color: white;
+    content: "";
+    float: right;
+    font-family: "entypo";
+    font-size: 30px;
+    position: relative;
+    top: 22px;
   }
 }
 
@@ -7621,20 +7629,21 @@ fieldset.collapsible .fieldset-legend {
     display: block;
     font-size: 14px;
     line-height: 1;
-    margin-top: -55px;
-    padding-left: 35px;
-    padding-bottom: 7px;
+    margin-top: -50px;
+    padding: 14px 0 8px 35px;
     position: absolute;
     right: 0;
     text-transform: uppercase;
     width: 108px;
   }
   #sidebar .sidebar h2:before {
-    content: url('../images/plus.png');
-    display: inline;
-    position: relative;
-    right: 24px;
-    top: 22px;
+    color: white;
+    content: "➕";
+    font-family: "entypo";
+    font-size: 36px;
+    position: absolute;
+    left: 12px;
+    top: 8px;
   }
   #sidebar .block-menu.open .content {
     position: relative;
@@ -7653,11 +7662,10 @@ fieldset.collapsible .fieldset-legend {
     background: -ms-linear-gradient(#e6e5e5, #f3f3f3) bottom center;
     background: linear-gradient(#e6e5e5, #f3f3f3) bottom center;
     padding-right: 73px;
-    top: 6px;
   }
   #sidebar .block-menu.open h2:before {
-    content: url('../images/toggle-open.png');
-    top: 20px;
+    color: #990000;
+    content: "➖";
   }
   #sidebar .block-menu.open .menu {
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyMzEsIDIzMSwgMjMxLCAwLjUpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), white;
@@ -7710,21 +7718,21 @@ fieldset.collapsible .fieldset-legend {
     display: inline-block;
     font-size: 14px;
     line-height: 1;
-    margin-top: -86px;
-    padding-left: 35px;
-    padding-bottom: 7px;
-    padding-right: 11px;
+    margin-top: -80px;
+    padding: 14px 11px 7px 35px;
     position: absolute;
     right: 0;
     text-transform: uppercase;
     width: 108px;
   }
   .page-events .inner-sidebar-wrapper h2:before {
-    content: url('../images/plus.png');
-    display: inline;
-    position: relative;
-    right: 24px;
-    top: 22px;
+    color: white;
+    content: "➕";
+    font-family: "entypo";
+    font-size: 36px;
+    position: absolute;
+    left: 12px;
+    top: 8px;
   }
   .page-events .inner-sidebar-wrapper .panel-pane {
     margin-bottom: 0;
@@ -7757,8 +7765,8 @@ fieldset.collapsible .fieldset-legend {
     padding-bottom: 8px;
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open h2:before {
-    content: url('../images/toggle-open.png');
-    top: 20px;
+    color: #990000;
+    content: "➖";
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open .pane-content {
     display: block;
@@ -8367,11 +8375,21 @@ fieldset.collapsible .fieldset-legend {
   width: 238px;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li {
-  background: url('../images/arrow-program-white.png') no-repeat 94% 50%, transparent;
+  background-color: transparent;
   border-left: 0;
   border-top: 1px solid #8aa5b4;
   border-bottom: 1px solid #647f8f;
   border-right: 1px solid #2d6280;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:after {
+  color: white;
+  content: "";
+  float: right;
+  font-family: "entypo";
+  font-size: 30px;
+  position: relative;
+  top: -40px;
+  right: 6px;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:focus {
   outline: 0;
@@ -8383,8 +8401,11 @@ fieldset.collapsible .fieldset-legend {
   border-bottom: 1px solid transparent;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected {
-  background: url('../images/arrow-program-tan.png') no-repeat 94% 50%, #f4f4f4;
+  background-color: #f4f4f4;
   width: 240px;
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected:after {
+  color: #c2b7a1;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li.selected:first-of-type {
   border-top: 2px solid white;
@@ -8469,7 +8490,6 @@ fieldset.collapsible .fieldset-legend {
   }
 
   h2.resp-accordion {
-    background: url('../images/arrow-down.png') no-repeat 95% 50%;
     color: white;
     cursor: pointer;
     margin: 0;
@@ -8487,7 +8507,7 @@ fieldset.collapsible .fieldset-legend {
     border-bottom: 0;
   }
   h2.resp-accordion:hover {
-    background: url('../images/arrow-program-tan-down.png') no-repeat 95% 50%, #f4f4f4;
+    background-color: #f4f4f4;
     color: #2d6280;
   }
 
@@ -8499,7 +8519,7 @@ fieldset.collapsible .fieldset-legend {
   h2.resp-tab-active {
     border-bottom: none;
     margin-bottom: -1px !important;
-    background: url('../images/arrow-program-tan-up.png') no-repeat 95% 50%, #f4f4f4;
+    background-color: #f4f4f4;
     color: #2d6280;
   }
 

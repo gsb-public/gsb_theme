@@ -105,7 +105,14 @@
         a
           padding: 12px 7px 18px
       a
-        background: image_url("arrow-down.png") no-repeat 100px 60px
+        &:after
+          color: $white
+          content: ""
+          float: right
+          font-family: "entypo"
+          font-size: 30px
+          position: relative
+          top: 22px
         min-height: 80px
         padding: 12px 8px 18px
 
