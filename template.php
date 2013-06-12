@@ -124,3 +124,13 @@ function gsb_theme_preprocess_html(&$variables) {
 function gsb_theme_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
  $form['buttons']['#weight'] = 99;
 }
+
+/**
+ * Implements hook_form_alter()
+ * adds class for add contet forms
+ */
+function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_content_views_panes_content_type_edit_form' || $form_id == 'ctools_block_content_type_edit_form' || $form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
+    $form['#attributes']['class'][] = 'modal-add-content-form'; 
+  }
+}
