@@ -408,6 +408,9 @@
     color: #63acd5
     line-height: 1.3
     margin-bottom: 5px
+    a
+      color: inherit
+
     &:after
       content: "\f100"
       color: #63acd5
@@ -419,7 +422,13 @@
       position: relative
       top: 2px
       display: inline-block
-      margin-top: -5px      
+      margin-top: -5px 
+      
+    &:hover
+      color: $white
+      &:after
+        color: $white      
+           
   .group_ft_evnt_wrp
     float: left
     width: 510px
