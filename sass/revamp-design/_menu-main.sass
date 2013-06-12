@@ -45,16 +45,16 @@
         display: inline-block
       margin: 0
       &.active-trail
-        background: $black      
+        background: $black
     // IPAD
     +breakpoint($bp-portrait)
-      +background(image_url("navigation-arrow.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
+      +background(image_url("arrow-down.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
       width: 21.1%
       &:last-of-type
         border-right: 0
       &:hover,
       &.active
-        +background(image_url("navigation-arrow.png") no-repeat 95% 75%, $black)
+        +background(image_url("arrow-down.png") no-repeat 95% 75%, $black)
       a
         font-size: 15px
         line-height: 14px
@@ -105,7 +105,7 @@
         a
           padding: 12px 7px 18px
       a
-        background: image_url("navigation-arrow.png") no-repeat 100px 60px
+        background: image_url("arrow-down.png") no-repeat 100px 60px
         min-height: 80px
         padding: 12px 8px 18px
 
