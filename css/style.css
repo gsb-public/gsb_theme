@@ -2904,15 +2904,17 @@ a.event-calendar:hover {
     border-right: 1px solid red;
     cursor: pointer;
     display: inline-block;
+    height: 50px;
     left: 55px;
     padding: 14px 18px 6px;
     position: absolute;
   }
-  .svg #search-touch-button:after {
-    content: url('../images/mobile/icon-search-magnifying-glass.png');
-  }
-  .no-js #search-touch-button:after, .no-svg #search-touch-button:after {
-    content: url('../images/mobile/icon-search-magnifying-glass.png');
+  #search-touch-button:after {
+    color: white;
+    content: "\f100";
+    font-family: "search";
+    font-size: 21px;
+    position: relative;
   }
 }
 

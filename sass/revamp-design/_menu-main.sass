@@ -246,15 +246,17 @@ a.event-calendar
     border-right: 1px solid red
     cursor: pointer
     display: inline-block
+    height: 50px
     left: 55px
     padding: 14px 18px 6px
     position: absolute
     &:after
-      // @TODO export svg version and replace
-      .svg &
-        content: image_url("mobile/icon-search-magnifying-glass.png")
-      .no-js &, .no-svg &
-        content: image_url("mobile/icon-search-magnifying-glass.png")
+      color: $white
+      content: "\f100"
+      font-family: "search"
+      font-size: 21px
+      position: relative
+
 
 .grey-search-box.open
   +breakpoint($bp-mobile-max)
