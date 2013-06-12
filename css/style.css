@@ -7122,9 +7122,11 @@ fieldset.collapsible .fieldset-legend {
 .modal-content .form-text.throbbing {
   background-position: 99% -14px;
 }
-.modal-content label {
-  font-size: 15px;
+.modal-content label,
+.modal-content .field-prefix {
   color: #333333;
+  font-size: 15px;
+  margin-top: 0;
 }
 .modal-content .form-item {
   margin: 0 0 10px 0;
@@ -7151,13 +7153,13 @@ fieldset.collapsible .fieldset-legend {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RmZTZlNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dfe6e6), color-stop(100%, #ffffff));
-  background: -webkit-linear-gradient(bottom, #dfe6e6, #ffffff);
-  background: -moz-linear-gradient(bottom, #dfe6e6, #ffffff);
-  background: -o-linear-gradient(bottom, #dfe6e6, #ffffff);
-  background: -ms-linear-gradient(bottom, #dfe6e6, #ffffff);
-  background: linear-gradient(bottom, #dfe6e6, #ffffff);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #dddddd), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(bottom, #dddddd, #ffffff);
+  background: -moz-linear-gradient(bottom, #dddddd, #ffffff);
+  background: -o-linear-gradient(bottom, #dddddd, #ffffff);
+  background: -ms-linear-gradient(bottom, #dddddd, #ffffff);
+  background: linear-gradient(bottom, #dddddd, #ffffff);
   text-shadow: white 1px 1px 1px;
 }
 .modal-content a.button:hover {
@@ -7175,6 +7177,9 @@ fieldset.collapsible .fieldset-legend {
 
 #modal-content fieldset {
   padding-bottom: 0;
+}
+#modal-content .general-settings-fieldset label.option {
+  float: none;
 }
 
 .view-list-teaser,
