@@ -51,7 +51,6 @@
 #program-links-title
   display: none
   +breakpoint($bp-mobile-max)
-    background: image_url('plus.png') no-repeat 10px 14px
     color: $white
     cursor: pointer
     display: block
@@ -60,6 +59,16 @@
     line-height: 1
     padding: 16px 0
     padding-left: 33px
+    &:before
+      color: $white
+      content: "➕"
+      float: left
+      font-family: "entypo"
+      font-size: 50px
+      line-height: 0
+      position: relative
+      top: 10px
+      left: -25px
 
 // Mobile 480 show/hide
 .pane-program-links
@@ -68,7 +77,8 @@
       display: none
     .cta-red-gradient.open
       #program-links-title
-        background: image_url('minus.png') no-repeat 10px 20px
+        &:before
+          content: "➖"
       .links
         display: block
 

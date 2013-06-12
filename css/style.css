@@ -5505,7 +5505,6 @@ p.acc-title + p {
 }
 @media (max-width: 35.5em) {
   #program-links-title {
-    background: url('../images/plus.png') no-repeat 10px 14px;
     color: white;
     cursor: pointer;
     display: block;
@@ -5515,14 +5514,25 @@ p.acc-title + p {
     padding: 16px 0;
     padding-left: 33px;
   }
+  #program-links-title:before {
+    color: white;
+    content: "➕";
+    float: left;
+    font-family: "entypo";
+    font-size: 50px;
+    line-height: 0;
+    position: relative;
+    top: 10px;
+    left: -25px;
+  }
 }
 
 @media (max-width: 35.5em) {
   .pane-program-links .links {
     display: none;
   }
-  .pane-program-links .cta-red-gradient.open #program-links-title {
-    background: url('../images/minus.png') no-repeat 10px 20px;
+  .pane-program-links .cta-red-gradient.open #program-links-title:before {
+    content: "➖";
   }
   .pane-program-links .cta-red-gradient.open .links {
     display: block;
