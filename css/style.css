@@ -1159,7 +1159,7 @@ del {
 #sidebar .sidebar h2 {
   display: none;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   #sidebar .sidebar {
     float: none;
     margin: 0;
@@ -2089,7 +2089,7 @@ a.no-border:hover {
   display: none;
 }
 
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   .page-programs #page-title,
   .page-business-insights #page-title,
   .page-events #page-title {
@@ -2434,7 +2434,7 @@ a.no-border:hover {
 .region-sidebar-first {
   padding: 20px 20px 0 20px;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   .region-sidebar-first {
     border-top: 0;
     padding: 0;
@@ -7562,7 +7562,7 @@ fieldset.collapsible .fieldset-legend {
 .banner-subtitle {
   color: white;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   .banner-title,
   .banner-subtitle {
     display: none;
@@ -7584,6 +7584,11 @@ fieldset.collapsible .fieldset-legend {
   margin: 0 auto;
   max-width: 1170px;
   padding-top: 18px;
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  .banner-content {
+    padding-left: 20px;
+  }
 }
 
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs {
@@ -7624,7 +7629,7 @@ fieldset.collapsible .fieldset-legend {
   overflow: hidden;
   *zoom: 1;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   .page-events #banner .section {
     height: 50px;
   }
@@ -7672,11 +7677,21 @@ fieldset.collapsible .fieldset-legend {
 #sidebar .sidebar h2 {
   display: none;
 }
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  #sidebar {
+    top: 236px;
+    right: 0;
+  }
+}
 @media (max-width: 35.5em) {
+  #sidebar {
+    top: 184px;
+  }
+}
+@media (max-width: 48em) {
   #sidebar {
     float: right;
     position: absolute;
-    top: 184px;
     width: 100%;
   }
   #sidebar .menu {

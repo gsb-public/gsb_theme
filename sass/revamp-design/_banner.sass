@@ -9,7 +9,7 @@
 .banner-title,
 .banner-subtitle
   color: $white
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-portrait-max)
     display: none
 
 .banner-title
@@ -25,6 +25,8 @@
   margin: 0 auto
   max-width: $max-width
   padding-top: 18px
+  +breakpoint($bp-portrait)
+    padding-left: 20px
 
 
 // BREADCRUMBS
@@ -54,7 +56,7 @@
   #banner .section
     background: image_url("bg-banner-eventcal.png") no-repeat -70% 40%
     +clearfix
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-portrait-max)
       height: 50px
   .banner-title
     padding-bottom: 30px
@@ -89,10 +91,14 @@
   .sidebar
     h2
       display: none
+  +breakpoint($bp-portrait)
+    top: 236px
+    right: 0
   +breakpoint($bp-mobile-max)
+    top: 184px
+  +breakpoint($bp-portrait-max)
     float: right
     position: absolute
-    top: 184px
     width: 100%
     .menu
       display: none
