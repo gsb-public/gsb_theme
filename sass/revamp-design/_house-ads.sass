@@ -12,9 +12,18 @@
   //COLOR STYLES
   &.white
     .field-name-field-link-single a
-      color: $text-green  
+      color: $text-green
+      &:hover
+        color: #2d6280
+        &:after
+          color: #2d6280 
+      
       &:after
         color: $text-green 
+    .show-more
+      color: #7d8401
+      &:hover
+        color: #2d6280        
   &.taupe
     background: $grey-dark
 
@@ -30,6 +39,8 @@
         color: $white   
     .show-more
       color: $white
+      &:hover
+        color: #63acd5
 
   .field-name-field-image-single-public
     float: left
@@ -43,6 +54,10 @@
     font-weight: bold
     font-size: 20px
     color: $white
+    &:hover
+      color: #63acd5
+      &:after
+        color: #63acd5
     &:after
       content: "\f100"
       color: $white
