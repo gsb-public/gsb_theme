@@ -70,27 +70,7 @@
       line-height: 18px
       margin-bottom: 0
   .show-more
-    border: 0
-    color: $text-green 
-    cursor: pointer
-    display: block
-    font-weight: bold
-    line-height: 1em
-    margin: 5px 0
-    text-align: right
-    span
-      font-size: 14px
-      padding-left: 16px
-      background: image_url('spotlight-arrow.png') no-repeat 0 2px
-    &:hover
-      color: $text-blue 
-      span
-        background-position: 0 -13px
-    &.active
-      span
-        background: image_url('spotlight-arrow-reversed.png') no-repeat -1px -13px
-      &:hover span
-        background-position: 0 2px
+    @extend .show-more-button    
 
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden

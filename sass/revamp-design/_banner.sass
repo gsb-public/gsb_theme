@@ -25,6 +25,8 @@
   margin: 0 auto
   max-width: $max-width
   padding-top: 18px
+  > div
+    +clearfix
 
 // BREADCRUMBS
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
@@ -95,7 +97,7 @@
     .menu
       display: none
     .sidebar
-      .block-menu
+      //.block-menu 
       // Mobile menu trigger
       h2
         border-left: 1px solid rgba($white, 0.3)

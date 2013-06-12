@@ -29,6 +29,34 @@ pre, code, kbd, tt {
   box-shadow: #ababab 0 2px 4px;
 }
 
+.show-more-button, .pane-bundle-spotlight .show-more, .pane-bundle-house-ads .show-more {
+  border: 0;
+  color: #7d8401;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 5px 0 0;
+  text-align: right;
+}
+.show-more-button span, .pane-bundle-spotlight .show-more span, .pane-bundle-house-ads .show-more span {
+  font-size: 14px;
+  padding-left: 16px;
+  background: url('../images/spotlight-arrow.png') no-repeat 0 2px;
+}
+.show-more-button:hover, .pane-bundle-spotlight .show-more:hover, .pane-bundle-house-ads .show-more:hover {
+  color: #2d6280;
+}
+.show-more-button:hover span, .pane-bundle-spotlight .show-more:hover span, .pane-bundle-house-ads .show-more:hover span {
+  background-position: 0 -13px;
+}
+.show-more-button.active span, .pane-bundle-spotlight .active.show-more span, .pane-bundle-house-ads .active.show-more span {
+  background: url('../images/spotlight-arrow-reversed.png') no-repeat -1px -13px;
+}
+.show-more-button.active:hover span, .pane-bundle-spotlight .active.show-more:hover span, .pane-bundle-house-ads .active.show-more:hover span {
+  background-position: 0 2px;
+}
+
 .green-rounded-button, .node-event.view-mode-full .group-left .event-register-link a {
   padding: 10px 16px;
   border: none;
@@ -3906,33 +3934,6 @@ ul.slideshow-items {
   line-height: 18px;
   margin-bottom: 0;
 }
-.pane-bundle-spotlight .show-more {
-  border: 0;
-  color: #7d8401;
-  cursor: pointer;
-  display: block;
-  font-weight: bold;
-  line-height: 1em;
-  margin: 5px 0;
-  text-align: right;
-}
-.pane-bundle-spotlight .show-more span {
-  font-size: 14px;
-  padding-left: 16px;
-  background: url('../images/spotlight-arrow.png') no-repeat 0 2px;
-}
-.pane-bundle-spotlight .show-more:hover {
-  color: #2d6280;
-}
-.pane-bundle-spotlight .show-more:hover span {
-  background-position: 0 -13px;
-}
-.pane-bundle-spotlight .show-more.active span {
-  background: url('../images/spotlight-arrow-reversed.png') no-repeat -1px -13px;
-}
-.pane-bundle-spotlight .show-more.active:hover span {
-  background-position: 0 2px;
-}
 .pane-bundle-spotlight .field-name-field-gsb-spotlight-image-video {
   overflow: hidden;
 }
@@ -4021,8 +4022,6 @@ ul.slideshow-items {
   font-weight: bold;
   font-size: 20px;
   color: white;
-  padding-right: 20px;
-  position: relative;
 }
 .pane-bundle-house-ads .field-name-field-link-single a:after {
   content: "\f100";
@@ -4030,10 +4029,12 @@ ul.slideshow-items {
   font-family: "arrow-double";
   font-size: 26px;
   font-weight: normal;
-  line-height: 0.5;
-  position: absolute;
-  top: 3px;
-  right: 0;
+  margin-left: 6px;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-top: -5px;
 }
 .pane-bundle-house-ads .field-name-field-title-position-single,
 .pane-bundle-house-ads .field-name-field-program-single,
@@ -4057,59 +4058,8 @@ ul.slideshow-items {
   line-height: 18px;
   margin-bottom: 0;
 }
-.pane-bundle-house-ads .show-more {
-  border: 0;
-  color: #7d8401;
-  cursor: pointer;
-  display: block;
-  font-weight: bold;
-  line-height: 1em;
-  margin: 5px 0 0;
-  text-align: right;
-}
-.pane-bundle-house-ads .show-more span {
-  font-size: 14px;
-  padding-left: 16px;
-  background: url('../images/spotlight-arrow.png') no-repeat 0 2px;
-}
-.pane-bundle-house-ads .show-more:hover {
-  color: #2d6280;
-}
-.pane-bundle-house-ads .show-more:hover span {
-  background-position: 0 -13px;
-}
-.pane-bundle-house-ads .show-more.active span {
-  background: url('../images/spotlight-arrow-reversed.png') no-repeat -1px -13px;
-}
-.pane-bundle-house-ads .show-more.active:hover span {
-  background-position: 0 2px;
-}
 .pane-bundle-house-ads .field-name-field-gsb-spotlight-image-video {
   overflow: hidden;
-}
-
-.full-view .pane-bundle-spotlight .group-name-wrapper,
-.wide-view .pane-bundle-spotlight .group-name-wrapper,
-.middle-view .pane-bundle-spotlight .group-name-wrapper {
-  overflow: hidden;
-  *zoom: 1;
-}
-.full-view .pane-bundle-spotlight .gsb-responsive-main,
-.full-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
-.full-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img,
-.wide-view .pane-bundle-spotlight .gsb-responsive-main,
-.wide-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
-.wide-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img,
-.middle-view .pane-bundle-spotlight .gsb-responsive-main,
-.middle-view .pane-bundle-spotlight .gsb-responsive-preview .file-video,
-.middle-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid img {
-  margin-right: 18px;
-}
-
-.full-view .pane-bundle-spotlight,
-.wide-view .pane-bundle-spotlight {
-  overflow: hidden;
-  *zoom: 1;
 }
 
 .sidebar-first .middle-view .pane-bundle-house-ads,
@@ -6228,6 +6178,45 @@ p.acc-title + p {
   font-weight: bold;
 }
 
+#block-gsb-public-custom-blocks-gpcb-banner-title {
+  float: left;
+}
+
+#block-gsb-public-custom-blocks-gsb-featured-event {
+  margin-bottom: 40px;
+  float: right;
+  width: 780px;
+  position: relative;
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .group_ft_evnt_wrp {
+  float: left;
+  width: 510px;
+  padding-left: 165px;
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .field-name-field-image-single-public {
+  float: right;
+  width: 270px;
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured {
+  background: url('../images/blue_box_event_f.png') no-repeat 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  width: 143px;
+  height: 128px;
+  padding: 30px 12px 15px;
+  text-align: center;
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured ins,
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured b,
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured span {
+  display: block;
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured ins {
+  text-decoration: none;
+}
+
 .node-case-study.view-mode-full,
 .node-research-paper.view-mode-full {
   border-top: 3px black solid;
@@ -7488,6 +7477,10 @@ fieldset.collapsible .fieldset-legend {
   margin: 0 auto;
   max-width: 1170px;
   padding-top: 18px;
+}
+.banner-content > div {
+  overflow: hidden;
+  *zoom: 1;
 }
 
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs {

@@ -16,6 +16,31 @@
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
 
+//SHOW More extend
+.show-more-button
+  border: 0
+  color: $text-green 
+  cursor: pointer
+  display: block
+  font-weight: bold
+  line-height: 1em
+  margin: 5px 0 0
+  text-align: right
+  span
+    font-size: 14px
+    padding-left: 16px
+    background: image_url('spotlight-arrow.png') no-repeat 0 2px
+  &:hover
+    color: $text-blue 
+    span
+      background-position: 0 -13px
+  &.active
+    span
+      background: image_url('spotlight-arrow-reversed.png') no-repeat -1px -13px
+    &:hover span
+      background-position: 0 2px
+
+
 %green-button
   padding: 10px 16px
   border: none
