@@ -46,13 +46,21 @@
       margin: 0
     // IPAD
     +breakpoint($bp-portrait)
-      +background(image_url("arrow-down.png") no-repeat 95% 75%, linear-gradient(bottom, $red-light, $red-dark))
+      +background(linear-gradient(bottom, $red-light, $red-dark))
+      &:after
+        color: $white
+        content: ""
+        float: right
+        font-family: "entypo"
+        font-size: 30px
+        position: relative
+        top: 22px
       width: 21.1%
       &:last-of-type
         border-right: 0
       &:hover,
       &.active
-        +background(image_url("arrow-down.png") no-repeat 95% 75%, $black)
+        background-color: $black
       a
         font-size: 15px
         line-height: 14px
@@ -77,15 +85,19 @@
         color: $red
         padding: 15px 0
         position: relative
-        left: 55px
+        left: 50px
       &:before
-        content: image_url("toggle-close.png")
-        display: inline
+        color: $red
+        content: "➕"
+        float: left
+        font-family: "entypo"
+        font-size: 50px
         position: relative
-        right: -20px
+        top: 15px
+        left: 18px
       &.open
         &:before
-          content: image_url("toggle-open.png")
+          content: "➖"
         .menu
           display: block
       li
