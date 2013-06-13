@@ -8451,6 +8451,7 @@ fieldset.collapsible .fieldset-legend {
   .pane-program-finder div.vertical-tabs fieldset.vertical-tabs-pane {
     padding: 14px;
     background: linear-gradient(#f4f4f4, #dddddd);
+    width: 100%;
   }
 }
 .pane-program-finder div.vertical-tabs .fieldset-wrapper a {
@@ -8602,7 +8603,6 @@ fieldset.collapsible .fieldset-legend {
   }
 
   h2.resp-accordion {
-    color: white;
     cursor: pointer;
     margin: 0;
     display: none;
@@ -8610,7 +8610,17 @@ fieldset.collapsible .fieldset-legend {
     font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-top: 1px solid #8aa5b4;
     border-bottom: 1px solid #647f8f;
-    padding-left: 14px;
+    padding: 10px 14px;
+  }
+  h2.resp-accordion a {
+    color: white;
+  }
+  h2.resp-accordion:after {
+    color: white;
+    content: "";
+    float: right;
+    font-family: "entypo";
+    font-size: 30px;
   }
   h2.resp-accordion:first-of-type {
     border-top: 0;
@@ -8620,7 +8630,12 @@ fieldset.collapsible .fieldset-legend {
   }
   h2.resp-accordion:hover {
     background-color: #f4f4f4;
-    color: #2d6280;
+  }
+  h2.resp-accordion:hover a {
+    color: #887e6e;
+  }
+  h2.resp-accordion:hover:after {
+    color: #887e6e;
   }
 
   .resp-tab-content {
@@ -8632,7 +8647,13 @@ fieldset.collapsible .fieldset-legend {
     border-bottom: none;
     margin-bottom: -1px !important;
     background-color: #f4f4f4;
-    color: #2d6280;
+  }
+  h2.resp-tab-active a {
+    color: #887e6e;
+  }
+  h2.resp-tab-active:after {
+    color: #887e6e;
+    content: "";
   }
 
   .resp-content-active,
