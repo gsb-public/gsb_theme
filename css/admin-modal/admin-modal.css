@@ -47,15 +47,21 @@
   width: 60px;
 }
 .modal-add-content-form {
-  padding: 0 0 0 1.2em;
+  padding: 1em 0 0 1.2em;
   width: 745px;
+  line-height: normal;
 }
 .modal-add-content-form #back-link {
   position: absolute;
   right: 5px;
+  top: 3px;
 }
-.modal-add-content-form .launcher {
+.modal-content .modal-add-content-form .launcher {
   color: #444;
+}
+.modal-content .modal-add-content-form > div > .description {
+  padding-bottom: 20px;
+  line-height: 13px;
 }
 .modal-add-content-form .counter {
   font-size: 0.85em;
@@ -106,8 +112,12 @@
 .modal-add-content-form .draggable .delta-order .form-select {
   width: 70px;
 }
-#modal-content .modal-add-content-form .form-item {
-  margin-bottom: 1em;
+#modal-content .modal-add-content-form .form-item,
+#modal-content .modal-add-content-form .launcher {
+  margin-bottom: 20px;
+}
+#modal-content .modal-add-content-form .media-widget .form-item {
+  margin-bottom: 0;
 }
 #modal-content .modal-add-content-form label {
   width: auto;
@@ -116,13 +126,16 @@
 .modal-add-content-form .link-field-subrow {
   width: 620px;
 }
-.modal-add-content-form .form-type-link-field > label {
+.modal-add-content-form #field-diptych-right-cta-link-add-more-wrapper .form-type-link-field > label,
+.modal-add-content-form #field-link-single-add-more-wrapper .form-type-link-field > label,
+.modal-add-content-form #field-cta-item-und-0-field-link-single-add-more-wrapper .form-type-link-field > label {
  margin-bottom: 9px;
 }
 .modal-add-content-form .link-field-subrow label {
   font-weight: normal;
+  line-height: 15px;
 }
-.modal-add-content-form .form-type-link-field {
+#modal-content .modal-add-content-form .form-type-link-field {
   margin-bottom: 0;
 }
 .modal-add-content-form .link-field-subrow .form-select,
@@ -133,6 +146,12 @@
 .modal-add-content-form .form-textarea,
 .modal-add-content-form .resizable-textarea .grippie {
   width: 572px;
+}
+#modal-content .modal-add-content-form .form-item-reusable {
+  margin-bottom: 0;
+}
+.modal-add-content-form .form-item-reusable .form-checkbox {
+  margin-top: -4px;
 }
 #modal-content .modal-add-content-form .form-actions {
   text-align: left;
