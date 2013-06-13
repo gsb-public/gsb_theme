@@ -11,7 +11,7 @@
     background: image_url("bg-program-finder.png") no-repeat
     height: 476px
     padding: 10px
-    +breakpoint($bp-portrait-max)
+    +breakpoint($bp-tablet-port-max)
       height: auto
       +background-image(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
@@ -19,7 +19,7 @@
     background: linear-gradient(#f4f4f4, $grey-d)
     height: 450px
     margin: 0 0 0 15em
-    +breakpoint($bp-portrait-max)
+    +breakpoint($bp-tablet-port-max)
       height: auto
       margin: 0
       background: transparent
@@ -27,7 +27,7 @@
     fieldset.vertical-tabs-pane
       border: 0
       padding: 36px 40px
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         padding: 14px
         background: linear-gradient(#f4f4f4, $grey-d)
     .fieldset-wrapper
@@ -50,7 +50,7 @@
     .vertical-tabs-panes
       height: 438px
       overflow: hidden
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         height: auto
     ul.vertical-tabs-list
       border-top: 0
@@ -111,24 +111,24 @@
     .column-b
       width: 221px
       float: left
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         width: auto
         float: none
     .column-a
       margin-right: 55px
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         margin-right: 0
     p
       font-size: 14px
       line-height: 18px
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         font-size: 18px
         line-height: 24px
 
 ////////////////////////
 // Reponsive behavior
 ///////////////////////
-+breakpoint($bp-portrait-max)
++breakpoint($bp-tablet-port-max)
   ul.vertical-tabs-list
     margin: 0px
     padding: 0px

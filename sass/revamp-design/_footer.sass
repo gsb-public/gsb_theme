@@ -9,7 +9,7 @@
   margin-right: 30px
   vertical-align: top
   width: 270px
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     margin-right: 16px
     width: 165px
   +breakpoint($bp-mobile-max)
@@ -23,9 +23,9 @@
 
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   margin-right: 0
-  +breakpoint($bp-portrait-max)
+  +breakpoint($bp-tablet-port-max)
     margin-bottom: 24px
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     width: 170px
 
 // General footer menu styles
@@ -94,25 +94,24 @@
         margin: 0
         padding: 0
         padding-bottom: 24px
+    .social-block-youtube,
+    .social-block-twitter,
+    .social-block-facebook,
+    .social-block-linkedin
+      &:hover
+        +breakpoint($bp-tablet-port)
+          background-size: 33px 33px
     .social-block-youtube:hover
       background: image_url("icon-youtube.png") no-repeat
-      +breakpoint($bp-portrait)
-        background-size: 33px 33px
     .social-block-twitter:hover
       background: image_url("icon-twitter.png") no-repeat
-      +breakpoint($bp-portrait)
-        background-size: 33px 33px
     .social-block-facebook:hover
       background: image_url("icon-fb.png") no-repeat
-      +breakpoint($bp-portrait)
-        background-size: 33px 33px
     .social-block-linkedin:hover
       background: image_url("icon-linkedin.png") no-repeat
-      +breakpoint($bp-portrait)
-        background-size: 33px 33px
     .circle
       margin: 0 18px 0 0
-      +breakpoint($bp-portrait-max)
+      +breakpoint($bp-tablet-port-max)
         background-size: 33px 33px
         height: 33px
         margin: 0 5px
@@ -151,7 +150,7 @@ input.footer__signup__email
   line-height: 1em
   width: 160px
   padding-left: 7px
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     width: 130px
   +breakpoint($bp-mobile-max)
     width: 247px
@@ -194,7 +193,7 @@ input.footer__signup__submit:hover
   li
     display: inline-block
     margin-right: 44px
-    +breakpoint($bp-portrait)
+    +breakpoint($bp-tablet-port)
       margin-right: 18px
     +breakpoint($bp-mobile-max)
       margin-right: 25px

@@ -17,7 +17,7 @@
 ///////////////
 #block-system-main-menu
   float: left
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     float: none
   +breakpoint($bp-mobile-max)
     float: none
@@ -45,7 +45,7 @@
         display: inline-block
       margin: 0
     // IPAD
-    +breakpoint($bp-portrait)
+    +breakpoint($bp-tablet-port)
       +background(linear-gradient(bottom, $red-light, $red-dark))
       &:after
         color: $white
@@ -134,7 +134,7 @@
     float: left
     height: 0
     width: 202px
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     float: right
     position: absolute
     top: 0
@@ -148,7 +148,7 @@ a.event-calendar
   display: inline-block
   &:hover
     background: $black
-  +breakpoint($bp-portrait)
+  +breakpoint($bp-tablet-port)
     border-left: 1px solid #FF0000
     font-size: 15px
     line-height: 14px
