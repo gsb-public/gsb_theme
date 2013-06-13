@@ -277,15 +277,17 @@ fieldset.collapsible .fieldset-legend
       -moz-user-select: none
       -webkit-user-select: none
       -ms-user-select: none
+      font-family: Arial
       &:before
-        content: "+"
-        display: block
-        position: absolute
-        top: 1px
-        font-family: Verdana
-        font-size: 18px
+        content: "➕"
+        font-family: "entypo"
+        font-size: 2.3em
         line-height: 1
-        left: 0
+        margin-left: -20px
+        margin-top: 3px
+        top: 3px
+        position: relative
+        padding-right: 5px
 
       &:hover
         color: $text-blue
@@ -294,7 +296,7 @@ fieldset.collapsible .fieldset-legend
     &.collapsed
       > label
         &:before
-          content: '-'
+          content: '➖'
 
 
         &:hover

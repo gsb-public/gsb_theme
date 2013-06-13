@@ -6737,22 +6737,24 @@ fieldset.collapsible .fieldset-legend {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  font-family: Arial;
 }
 .exposed_filter_widget .views-exposed-widget > label:before {
-  content: "+";
-  display: block;
-  position: absolute;
-  top: 1px;
-  font-family: Verdana;
-  font-size: 18px;
+  content: "➕";
+  font-family: "entypo";
+  font-size: 2.3em;
   line-height: 1;
-  left: 0;
+  margin-left: -20px;
+  margin-top: 3px;
+  top: 3px;
+  position: relative;
+  padding-right: 5px;
 }
 .exposed_filter_widget .views-exposed-widget > label:hover {
   color: #2d6280;
 }
 .exposed_filter_widget .views-exposed-widget.collapsed > label:before {
-  content: "-";
+  content: "➖";
 }
 .exposed_filter_widget .views-exposed-widget.collapsed > label:hover:before {
   color: #2d6280;
