@@ -29,14 +29,22 @@
   span
     font-size: 14px
     padding-left: 16px
-    background: image_url('spotlight-arrow.png') no-repeat 0 2px
-  &:hover
+    //background: image_url('spotlight-arrow.png') no-repeat 0 2px
+    &:before
+      font-size: 4em
+      content: ''
+      font-family: "entypo"
+      position: relative
+      top: 10px
+      margin-right: 5px     
+  &:hover 
     color: $text-blue 
     span
       background-position: 0 -13px
-  &.active
+  &.active 
     span
-      background: image_url('spotlight-arrow-reversed.png') no-repeat -1px -13px
+      &:before
+        content: ''
     &:hover span
       background-position: 0 2px
 

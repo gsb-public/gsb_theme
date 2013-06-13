@@ -42,7 +42,14 @@ pre, code, kbd, tt {
 .show-more-button span, .pane-bundle-spotlight .show-more span, .pane-bundle-house-ads .show-more span {
   font-size: 14px;
   padding-left: 16px;
-  background: url('../images/spotlight-arrow.png') no-repeat 0 2px;
+}
+.show-more-button span:before, .pane-bundle-spotlight .show-more span:before, .pane-bundle-house-ads .show-more span:before {
+  font-size: 4em;
+  content: "";
+  font-family: "entypo";
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
 }
 .show-more-button:hover, .pane-bundle-spotlight .show-more:hover, .pane-bundle-house-ads .show-more:hover {
   color: #2d6280;
@@ -50,8 +57,8 @@ pre, code, kbd, tt {
 .show-more-button:hover span, .pane-bundle-spotlight .show-more:hover span, .pane-bundle-house-ads .show-more:hover span {
   background-position: 0 -13px;
 }
-.show-more-button.active span, .pane-bundle-spotlight .active.show-more span, .pane-bundle-house-ads .active.show-more span {
-  background: url('../images/spotlight-arrow-reversed.png') no-repeat -1px -13px;
+.show-more-button.active span:before, .pane-bundle-spotlight .active.show-more span:before, .pane-bundle-house-ads .active.show-more span:before {
+  content: "";
 }
 .show-more-button.active:hover span, .pane-bundle-spotlight .active.show-more:hover span, .pane-bundle-house-ads .active.show-more:hover span {
   background-position: 0 2px;
@@ -3992,7 +3999,13 @@ ul.slideshow-items {
 .pane-bundle-house-ads.white .show-more {
   color: #7d8401;
 }
+.pane-bundle-house-ads.white .show-more span:before {
+  color: #bac405;
+}
 .pane-bundle-house-ads.white .show-more:hover {
+  color: #2d6280;
+}
+.pane-bundle-house-ads.white .show-more:hover span:before {
   color: #2d6280;
 }
 .pane-bundle-house-ads.taupe {

@@ -22,8 +22,14 @@
         color: $text-green 
     .show-more
       color: #7d8401
+      span
+        &:before
+          color: #bac405
       &:hover
-        color: #2d6280        
+        color: #2d6280
+        span 
+          &:before
+            color: #2d6280               
   &.taupe
     background: $grey-dark
 
