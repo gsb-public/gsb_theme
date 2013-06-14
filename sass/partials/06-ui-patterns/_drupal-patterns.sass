@@ -20,8 +20,12 @@ ul.menu li.collapsed
   position: relative
   top: -4px
   margin-bottom: 15px
+  +breakpoint(601px max-width)
+    font-size: 10px
   a
     font-size: 14px
+    +breakpoint(601px max-width)
+      font-size: 10px
     &:hover
       text-decoration: underline
 
