@@ -6,9 +6,12 @@
 #block-menu-menu-footer-2,
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   display: inline-block
-  margin-right: 30px
+  margin-right: 15px
   vertical-align: top
-  width: 270px
+  width: 256px
+  +breakpoint(1024px min-width)
+    margin-right: 30px
+    width: 270px
   +breakpoint($bp-tablet-port-max)
     margin-right: 16px
     width: 165px
@@ -17,9 +20,11 @@
 
 #block-menu-menu-footer-1,
 #block-menu-menu-footer-2
-  +breakpoint(801px max-width)
+  +breakpoint($bp-tablet-land-max)
     width: 100%
     max-width: 165px
+  +breakpoint(601px 767px)
+    max-width: 81px
 
 #block-gsb-public-custom-blocks-gpcb-enews-signup
   margin-right: 0
