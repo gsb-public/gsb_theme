@@ -25,7 +25,12 @@ function gsb_theme_date_display_range($variables) {
 function gsb_theme_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
-  if (count($breadcrumb) > 1) {
+  // We can't implement hook_menu_breadcrumb_alter because breadcrumbs_by_path
+  // are loaded on page_build.
+  // We assume that Home link is first and remove it.
+  array_shift($breadcrumb);
+
+  if (!empty($breadcrumb)) {
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
