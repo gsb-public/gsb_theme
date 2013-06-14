@@ -10,7 +10,7 @@
       <div class="clearfix">
         <ul class="sf-menu sf-vertical" id="add-fpp-content-menu">
           <li>
-            <a href="#">Add New Element</a>
+            <a href="#">Add Element</a>
             <ul>
               <?php print $root_content; ?>
             </ul>
