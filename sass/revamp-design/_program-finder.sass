@@ -6,17 +6,17 @@
 .pane-program-finder
   .field-group-tab-wrapper
     @extend %border-and-box-shadow
-    +background-image(linear-gradient(right, #355567, #7390a1))
+    +background(linear-gradient(right, #355567, #7390a1))
     // .page-programs &
     background: image_url("bg-program-finder.png") no-repeat
     height: 476px
     padding: 10px
     +breakpoint($bp-tablet-port-max)
       height: auto
-      +background-image(linear-gradient(right, #355567, #7390a1))
+      +background(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
     @extend %border
-    background: linear-gradient(#f4f4f4, $grey-d)
+    +background(linear-gradient(#f4f4f4, $grey-d))
     height: 450px
     margin: 0 0 0 15em
     +breakpoint($bp-tablet-port-max)
@@ -29,7 +29,7 @@
       padding: 36px 40px
       +breakpoint($bp-tablet-port-max)
         padding: 14px
-        background: linear-gradient(#f4f4f4, $grey-d)
+        +background(linear-gradient(#f4f4f4, $grey-d))
         width: 100%
     .fieldset-wrapper
       a
