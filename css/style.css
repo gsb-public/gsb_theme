@@ -2469,6 +2469,26 @@ a.no-border:hover {
   margin-bottom: 22px;
   text-transform: uppercase;
 }
+@media (max-width: 48em) {
+  .region-sidebar-first ul li.collapsed:before {
+    color: #990000;
+    content: "➕";
+    font-family: "entypo";
+    font-size: 36px;
+    position: absolute;
+    left: 12px;
+  }
+}
+@media (max-width: 48em) {
+  .region-sidebar-first ul li.active-trail:before {
+    color: #990000;
+    content: "➖";
+    font-family: "entypo";
+    font-size: 36px;
+    position: absolute;
+    left: 12px;
+  }
+}
 .region-sidebar-first ul li a {
   color: #990000;
   line-height: 1.2;
@@ -8079,23 +8099,15 @@ fieldset.collapsible .fieldset-legend {
     -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
     box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
   }
-  .page-stanford-gsb-experience .page-node-300216 #sidebar, .page-programs .page-node-300216 #sidebar, .page-stanford-gsb-experience
-  .page-node-301056 #sidebar, .page-programs
-  .page-node-301056 #sidebar {
-    position: inherit;
-  }
-  .page-stanford-gsb-experience .page-node-300216 #sidebar .sidebar h2, .page-programs .page-node-300216 #sidebar .sidebar h2, .page-stanford-gsb-experience
-  .page-node-301056 #sidebar .sidebar h2, .page-programs
+  .page-node-300216 #sidebar .sidebar h2,
   .page-node-301056 #sidebar .sidebar h2 {
     margin-top: 0;
   }
-  .page-stanford-gsb-experience .page-node-300216 #sidebar .block.open h2, .page-programs .page-node-300216 #sidebar .block.open h2, .page-stanford-gsb-experience
-  .page-node-301056 #sidebar .block.open h2, .page-programs
+  .page-node-300216 #sidebar .block.open h2,
   .page-node-301056 #sidebar .block.open h2 {
     margin-top: -50px;
   }
-  .page-stanford-gsb-experience .page-node-300216 #sidebar .block.open .content, .page-programs .page-node-300216 #sidebar .block.open .content, .page-stanford-gsb-experience
-  .page-node-301056 #sidebar .block.open .content, .page-programs
+  .page-node-300216 #sidebar .block.open .content,
   .page-node-301056 #sidebar .block.open .content {
     margin-top: 50px;
   }

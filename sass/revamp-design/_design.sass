@@ -529,11 +529,20 @@ a.no-border
       font-weight: bold
       margin-bottom: 22px
       text-transform: uppercase
-      //&.collapsed
+      &.collapsed
         +breakpoint($bp-tablet-port-max)
           &:before
             color: $red
             content: "➕"
+            font-family: "entypo"
+            font-size: 36px
+            position: absolute
+            left: 12px
+      &.active-trail
+        +breakpoint($bp-tablet-port-max)
+          &:before
+            color: $red
+            content: "➖"
             font-family: "entypo"
             font-size: 36px
             position: absolute
