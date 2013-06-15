@@ -197,3 +197,40 @@
   background: image_url("icon-linkedin.png") no-repeat
   &:hover
     background: image_url("icon-linkedin-hover.png") no-repeat
+
+// GSB Around the Globe
+.cta-around-globe
+  .around-globe-link
+    width: 100%
+    display: block
+    padding: 25px
+    &:hover
+      background: rgba($white, 0.7)
+      .link-inner
+        border: 1px solid $white
+      .link-title
+        background: $purple
+    .link-inner
+      background-position: -27px -27px
+      height: 163px
+      border: 1px solid transparent
+    .link-title
+      position: relative
+      font-size: 18px
+      line-height: 20px
+      font-weight: bold
+      color: $white
+      padding: 1em 0.6em
+      background: $teal-darker
+      &:after
+        color: $white
+        content: "\f100"
+        font-family: "arrow-double"
+        font-size: 26px
+        font-weight: normal
+        position: absolute
+        top: 34%
+        right: 5%
+.cta-around-globe,
+.link-inner
+  background: image_url('cta-world-map.png') no-repeat
