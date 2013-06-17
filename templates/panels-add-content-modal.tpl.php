@@ -8,14 +8,16 @@
   <div class="panels-section-column panels-section-column-categories">
     <div class="inside">
       <div class="clearfix">
-        <ul class="sf-menu sf-vertical" id="add-fpp-content-menu">
-          <li>
-            <a href="#">Add Element</a>
-            <ul>
-              <?php print $root_content; ?>
-            </ul>
-          </li>
-        </ul>
+        <?php if (!empty($root_content)): ?>
+          <ul class="sf-menu sf-vertical" id="add-fpp-content-menu">
+            <li>
+              <a href="#">Add Element</a>
+              <ul>
+                <?php print $root_content; ?>
+              </ul>
+            </li>
+          </ul>
+        <?php endif; ?>
       </div>
       <div class="panels-categories-box">
       <?php foreach ($categories_array as $category): ?>
