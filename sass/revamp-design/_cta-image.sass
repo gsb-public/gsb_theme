@@ -38,6 +38,9 @@
     +breakpoint($bp-tablet-port)
       .front &
         font-size: 24px
+    +breakpoint($bp-mobile)
+      .front &
+        font-size: 16px
   // Double arrow link
   .field-name-field-link-single
     display: inline-block
@@ -55,8 +58,11 @@
       top: 1px
       left: 5px
       +breakpoint($bp-mobile-max)
-      .front &
-        font-size: 26px
+        .front &
+          font-size: 26px
+      +breakpoint($bp-mobile)
+        .front &
+          font-size: 16px
   .fieldable-panels-pane
     position: relative
     top: 0
@@ -172,6 +178,8 @@
     height: 393px
     +breakpoint($bp-tablet-port-max)
       height: 310px
+    +breakpoint($bp-mobile)
+      height: 198px
   .image-cta-color-purple .group-right
     +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
   .image-cta-color-green .group-right

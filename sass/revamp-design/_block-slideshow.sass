@@ -18,7 +18,8 @@ ul.slideshow-items
     top: 30%
   +breakpoint($bp-mobile-max)
     top: 37%
-
+  +breakpoint($bp-mobile)
+    top: 20%
   &.flex-prev
     left: 28px
     background: image_url("prev-arrow-small.png") no-repeat
@@ -184,6 +185,8 @@ ul.slideshow-items
         right: 0
         top: 270px
         width: 100%
+      +breakpoint($bp-mobile)
+        top: 191px
   .slide-title
     font-size: 16px
     color: $red

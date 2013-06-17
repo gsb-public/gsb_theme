@@ -158,12 +158,18 @@
     .front-panel-feature-two,
     .front-panel-feature-three
       margin-bottom: 14px
-      width: $mobile-480
+      width: 450px
     .front-panel-feature-two
       clear: left
       float: none
       margin: 0 0 14px 0
-
+  +breakpoint($bp-mobile)
+    .front-slider-pane
+      width: 292px
+    .front-panel-feature-one,
+    .front-panel-feature-two,
+    .front-panel-feature-three
+      width: 290px
 #bottom
   .block-views
     +grid-span(1, 1, $columns: $front-main-inner)
