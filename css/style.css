@@ -7931,11 +7931,13 @@ fieldset.collapsible .fieldset-legend {
     left: 12px;
     top: 8px;
   }
-  #sidebar .block-menu.open .content {
+  #sidebar .block-menu.open .content,
+  #sidebar .block-menu-block.open .content {
     position: relative;
     z-index: 11;
   }
-  #sidebar .block-menu.open h2 {
+  #sidebar .block-menu.open h2,
+  #sidebar .block-menu-block.open h2 {
     -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
     -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
@@ -7949,11 +7951,13 @@ fieldset.collapsible .fieldset-legend {
     background: linear-gradient(#e6e5e5, #f3f3f3) bottom center;
     padding-right: 73px;
   }
-  #sidebar .block-menu.open h2:before {
+  #sidebar .block-menu.open h2:before,
+  #sidebar .block-menu-block.open h2:before {
     color: #990000;
     content: "➖";
   }
-  #sidebar .block-menu.open .menu {
+  #sidebar .block-menu.open .menu,
+  #sidebar .block-menu-block.open .menu {
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyMzEsIDIzMSwgMjMxLCAwLjUpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA='), white;
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(231, 231, 231, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5))), white;
     background: -webkit-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
@@ -7967,7 +7971,8 @@ fieldset.collapsible .fieldset-legend {
     padding-left: 36px;
     padding-top: 26px;
   }
-  #sidebar .block-menu.open .menu .menu {
+  #sidebar .block-menu.open .menu .menu,
+  #sidebar .block-menu-block.open .menu .menu {
     background: transparent;
     border-bottom: 0;
   }
@@ -7989,7 +7994,7 @@ fieldset.collapsible .fieldset-legend {
   .page-events .inner-sidebar-wrapper .gsb-views-exposed-search .views-exposed-form .form-item {
     float: none;
   }
-  .page-events .inner-sidebar-wrapper .pane-views-exp-gsb-event-panel-pane-2 {
+  .page-events .inner-sidebar-wrapper .pane-block {
     background: transparent;
     display: block;
     border: 0;
@@ -8008,7 +8013,7 @@ fieldset.collapsible .fieldset-legend {
     display: inline-block;
     font-size: 14px;
     line-height: 1;
-    margin-top: -80px;
+    margin-top: -50px;
     padding: 14px 11px 7px 35px;
     position: absolute;
     right: 0;
