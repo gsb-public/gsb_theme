@@ -94,10 +94,8 @@
     h2
       display: none
   +breakpoint($bp-tablet-port)
-    top: 236px
+    top: 187px
     right: 0
-  +breakpoint($bp-mobile-max)
-    top: 184px
   +breakpoint($bp-tablet-port-max)
     float: right
     position: absolute
@@ -324,9 +322,13 @@
   +breakpoint($bp-tablet-port-max)
     #sidebar
       +background(linear-gradient(#756b5a, #887e6e))
+    #main
+      padding-top: 40px
 
 // Programs landing
 .page-node-301056
   +breakpoint($bp-tablet-port-max)
     #sidebar
       +background(linear-gradient(#4c697a, #607c8c))
+    #main
+      padding-top: 40px
