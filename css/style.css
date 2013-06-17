@@ -2674,8 +2674,10 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 #block-system-main-menu li .menu {
   display: none;
 }
-#block-system-main-menu li:hover, #block-system-main-menu li.active, #block-system-main-menu li.active-trail {
-  background: black;
+@media (min-width: 48.0625em) {
+  #block-system-main-menu li:hover, #block-system-main-menu li.active, #block-system-main-menu li.active-trail {
+    background: black;
+  }
 }
 #block-system-main-menu li a {
   color: white;
@@ -5559,6 +5561,11 @@ p.acc-title + p {
   position: absolute;
   top: 34%;
   right: 5%;
+}
+
+.cta-around-globe,
+.link-inner {
+  background: url('../images/cta-world-map.png') no-repeat;
 }
 
 .gsb-front-page,

@@ -34,10 +34,11 @@
     padding: 0
     .menu
       display: none
-    &:hover,
-    &.active,
-    &.active-trail
-      background: $black
+    +breakpoint($bp-wide-min)
+      &:hover,
+      &.active,
+      &.active-trail
+        background: $black
     a
       color: $white
       display: block
