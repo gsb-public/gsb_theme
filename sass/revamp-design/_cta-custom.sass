@@ -210,6 +210,9 @@
         border: 1px solid $white
       .link-title
         background: $purple
+        box-shadow: none
+        -webkit-box-shadow: none
+        -moz-box-shadow: none
     .link-inner
       background-position: -27px -27px
       height: 163px
@@ -222,7 +225,7 @@
       color: $white
       padding: 1em 0.6em
       background: $teal-darker
-      +box-shadow(rgba($black, 0.25) 2px 2px 0)
+      +box-shadow(rgba($black, 0.25) 0 2px 2px)
       &:after
         color: $white
         content: "\f100"
