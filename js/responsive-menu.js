@@ -51,7 +51,7 @@ Drupal.behaviors.responsiveEventsfilter = {
 
 Drupal.behaviors.responsiveEventsfacet = {
   attach: function (context, settings) {
-    $(context).find('#views-exposed-form-gsb-event-panel-pane-2 .views-exposed-widget label').click(function() {
+    $(context).find('#views-exposed-form-gsb-event-event-listing-pane .views-exposed-widget label').click(function() {
       $(this).parent().toggleClass('open');
     });
   }
