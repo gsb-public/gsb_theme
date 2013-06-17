@@ -42,6 +42,9 @@ ul.slideshow-items
   height: 367px
   .wide-view &
     height: 500px
+  .full-view &
+    +breakpoint($bp-mobile-max)
+      height: 500px
   position: relative
   top: 0
   a:hover
@@ -66,6 +69,14 @@ ul.slideshow-items
       position: absolute
       top: initial
       width: 100%
+    .full-view &
+      +breakpoint($bp-mobile-max)
+        bottom: 0
+        height: auto
+        padding: 26px
+        position: absolute
+        top: initial
+        width: 100%
     z-index: 2
     .inner
       position: absolute
@@ -73,6 +84,10 @@ ul.slideshow-items
       .wide-view &
         position: initial
         max-width: 510px
+      .full-view &
+        +breakpoint($bp-mobile-max)
+          position: initial
+          max-width: 510px
 
 // Slide title
 .slide-title
@@ -106,6 +121,9 @@ ul.slideshow-items
     width: 250px
     .wide-view &
       width: 100%
+    .full-view &
+      +breakpoint($bp-mobile-max)
+        width: 100%
   .slide-title
     font-family: $font-demi
 
@@ -130,8 +148,9 @@ ul.slideshow-items
     +background(linear-gradient(left, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
     .wide-view &
       +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
-    +breakpoint($bp-mobile-max)
-      background: none
+    .full-view &
+      +breakpoint($bp-mobile-max)
+        +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
   .slide-cta
     background-color: $purple
 
@@ -140,8 +159,9 @@ ul.slideshow-items
     +background(linear-gradient(left, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
     .wide-view &
       +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
-    +breakpoint($bp-mobile-max)
-      background: none
+    .full-view &
+      +breakpoint($bp-mobile-max)
+        +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
   .slide-cta
     background-color: $teal-dark
 
