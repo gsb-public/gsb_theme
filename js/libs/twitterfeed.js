@@ -3,10 +3,10 @@
 /*
 * Description:
 *   gsb_tweetfeed returns tweets for user/hashtag.
-* 
+*
 * Usage:
 *   on page load run:
-*     with comments: 
+*     with comments:
 *     gsb_tweetfeed.init({
 *       search: '@username',       // for user tweets or hashtag
 *       numTweets: 5,           // number of tweets, default equeals to 3
@@ -40,7 +40,7 @@ gsb_tweetfeed = {
 
     // checking for user or hastag
 		checkTweets: function () {
-			if (this.search[0] == '@') { 
+			if (this.search[0] == '@') {
         this.search = this.search.split('@')[1];
 				this.loadTweets();
 			} else if (this.search[0] != '#' && this.search.length > 0){
@@ -57,9 +57,9 @@ gsb_tweetfeed = {
     loadTweets: function() {
       tempAppendTo = gsb_tweetfeed.appendTo;
         $.ajax({
-            url: 'https://api.twitter.com/1/statuses/user_timeline.json',
+            url: '/gfsf_user_timeline',
             type: 'GET',
-            dataType: 'jsonp',
+            dataType: 'json',
             data: {
                 screen_name: gsb_tweetfeed.search,
                 count: gsb_tweetfeed.numTweets,
@@ -83,32 +83,32 @@ gsb_tweetfeed = {
                         title.text(ovverideTitle);
                       } else {
                         title.text(data[0].user.name);
-                      }                        
+                      }
                     }
-                 }                  
-            }   
- 
+                 }
+            }
+
         });
-         
-    }, 
+
+    },
 
     loadHashtagTweets: function() {
       var tempAppendTo = gsb_tweetfeed.appendTo,
-          hashtagurl = 'http://search.twitter.com/search.json?q=' + gsb_tweetfeed.search + '&callback=?';
+          hashtagurl = '/gfsf_search_tweets?search=' + gsb_tweetfeed.search;
 			$.getJSON( hashtagurl, function( data ) {
 				 var html = '<div class="tweet"><span class="tweet-from-user">FROM-USER: </span>TWEET_TEXT<div class="time">tweetime</div>',
-				 data = data['results'];
+				 data = data['statuses'];
         for (var i = 0; i < gsb_tweetfeed.numTweets; i++) {
         	$(tempAppendTo).append(
             html.replace('TWEET_TEXT', gsb_tweetfeed.ify.clean(data[i].text) )
-              .replace('FROM-USER', data[i].from_user)
+              .replace('FROM-USER', data[i].user.screen_name)
               .replace('tweetime', gsb_tweetfeed.tweetime(data[i].created_at) )
             );
-          }    
+          }
 			});
 
 		},
-         
+
     /**
       * relative time calculator FROM TWITTER
       * @param {string} twitter date string returned from Twitter API
@@ -118,7 +118,7 @@ gsb_tweetfeed = {
     tweetime: function(dateString) {
         var rightNow = new Date(),
           then = new Date(dateString);
-          
+
         if ($.browser.msie) {
             // IE can't parse these crazy Ruby dates
             then = new Date(dateString.replace('+', 'UTC+'));
@@ -128,50 +128,50 @@ gsb_tweetfeed = {
             tweetweekday = gsb_tweetfeed.weekDays[then.getDay()],
             tweetday = then.getDate(),
             ago = '';
- 
+
         var diff = rightNow - then,
             second = 1000,
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
- 
+
         if (isNaN(diff) || diff < 0) {
           ago = ""; // return blank string if unknown
-        } 
- 
+        }
+
         else if (diff < second * 2) {
           // within 2 seconds
           ago = "right now";
         }
- 
+
         else if (diff < minute) {
           ago = Math.floor(diff / second) + " seconds ago";
         }
- 
+
         else if (diff < minute * 2) {
           ago = "1 minute ago";
         }
- 
+
         else if (diff < hour) {
           ago = Math.floor(diff / minute) + " minutes ago";
         }
- 
+
         else if (diff < hour * 2) {
           ago = "1 hour ago";
         }
- 
+
         else if (diff < day) {
           ago =  Math.floor(diff / hour) + " hours ago";
         }
- 
+
         else if (diff > day && diff < day * 2) {
           ago = "yesterday";
         }
- 
+
         else if (diff < day * 365) {
           ago = Math.floor(diff / day) + " days ago";
         }
- 
+
         else {
           ago = "over a year ago";
         }
@@ -184,8 +184,8 @@ gsb_tweetfeed = {
 
         return output;
     }, // tweetime()
-     
-     
+
+
     /**
       * The Twitalinkahashifyer!
       * http://www.dustindiaz.com/basement/ify.html
@@ -198,31 +198,31 @@ gsb_tweetfeed = {
           return '<a class="twtr-hyperlink" target="_blank" href="' + http + m1 + '">' + ((m1.length > 25) ? m1.substr(0, 24) + '...' : m1) + '</a>' + m4;
         });
       },
- 
+
       at: function(tweet) {
         return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20})/g, function(m, username) {
           return '<a target="_blank" class="twtr-atreply" href="http://twitter.com/intent/user?screen_name=' + username + '">@' + username + '</a>';
         });
       },
- 
+
       list: function(tweet) {
         return tweet.replace(/\B[@＠]([a-zA-Z0-9_]{1,20}\/\w+)/g, function(m, userlist) {
           return '<a target="_blank" class="twtr-atreply" href="http://twitter.com/' + userlist + '">@' + userlist + '</a>';
         });
       },
- 
+
       hash: function(tweet) {
         return tweet.replace(/(^|\s+)#(\w+)/gi, function(m, before, hash) {
           return before + '<a target="_blank" class="twtr-hashtag" href="http://twitter.com/search?q=%23' + hash + '">#' + hash + '</a>';
         });
       },
- 
+
       clean: function(tweet) {
         return this.hash(this.at(this.list(this.link(tweet))));
       }
     } // ify
- 
-     
+
+
 };
 
 }(jQuery));
