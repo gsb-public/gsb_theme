@@ -568,13 +568,14 @@ a.no-border
             font-weight: normal
         a.active
           color: $text-blue
-          &:before
-            color: $text-blue
-            content: "\f100"
-            font-family: "arrow-double"
-            font-size: 16px
-            position: absolute
-            left: 2px
+          +breakpoint($bp-wide-min)
+            &:before
+              color: $text-blue
+              content: "\f100"
+              font-family: "arrow-double"
+              font-size: 16px
+              position: absolute
+              left: 2px
           a
             color: $text-blue
 

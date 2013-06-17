@@ -2514,13 +2514,15 @@ a.no-border:hover {
 .region-sidebar-first ul li ul a.active {
   color: #2d6280;
 }
-.region-sidebar-first ul li ul a.active:before {
-  color: #2d6280;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 16px;
-  position: absolute;
-  left: 2px;
+@media (min-width: 48.0625em) {
+  .region-sidebar-first ul li ul a.active:before {
+    color: #2d6280;
+    content: "\f100";
+    font-family: "arrow-double";
+    font-size: 16px;
+    position: absolute;
+    left: 2px;
+  }
 }
 .region-sidebar-first ul li ul a.active a {
   color: #2d6280;
