@@ -4132,6 +4132,26 @@ ul.slideshow-items {
   overflow: hidden;
   *zoom: 1;
 }
+@media (max-width: 30em) {
+  .full-view .pane-bundle-spotlight .group-name-wrapper,
+  .wide-view .pane-bundle-spotlight .group-name-wrapper {
+    *zoom: 1;
+  }
+  .full-view .pane-bundle-spotlight .group-name-wrapper:after,
+  .wide-view .pane-bundle-spotlight .group-name-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .full-view .pane-bundle-spotlight .group-name-wrapper,
+  .full-view .pane-bundle-spotlight .field-name-field-body,
+  .full-view .pane-bundle-spotlight .field-name-field-title-position-single,
+  .wide-view .pane-bundle-spotlight .group-name-wrapper,
+  .wide-view .pane-bundle-spotlight .field-name-field-body,
+  .wide-view .pane-bundle-spotlight .field-name-field-title-position-single {
+    clear: both;
+  }
+}
 
 .narrow-view .pane-bundle-spotlight .group-name-wrapper {
   *zoom: 1;
