@@ -89,8 +89,7 @@
       margin-right: 18px
 
 // Clear the image/video on full and wide modes
-.full-view,
-.wide-view
+.full-view
   .pane-bundle-spotlight
     +clearfix
     +breakpoint(480px max-width)
@@ -101,7 +100,18 @@
       .field-name-field-title-position-single
         clear: both
 
-// Clearfixes in narrow and faked for middle when there is a sidebar
+.wide-view
+  .pane-bundle-spotlight
+    +clearfix
+    +breakpoint($bp-tablet-port-max)
+      .group-name-wrapper
+        +pie-clearfix
+      .group-name-wrapper,
+      .field-name-field-body,
+      .field-name-field-title-position-single
+        clear: both
+
+// Clearfixes in narrow
 .narrow-view
   .pane-bundle-spotlight
     .group-name-wrapper

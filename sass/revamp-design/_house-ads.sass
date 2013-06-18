@@ -106,17 +106,33 @@
     overflow: hidden
 
 
-// Clearfixes in narrow and faked for middle when there is a sidebar
+// Clearfixes in narrow
 .narrow-view
   .pane-bundle-house-ads
     padding-top: 0
     > div
-      overflow: visible 
+      overflow: visible
   //.field-name-field-link-single
     //display: inline-block
-    //margin-top: 10px 
+    //margin-top: 10px
   .field-name-field-image-single-public
     margin: 0 -26px 0 -26px
     width: auto
     img
       width: 100%
+
+// Responsive for full
+.full-view
+  .pane-bundle-house-ads
+    +breakpoint(480px max-width)
+      .field-name-field-body,
+      .field-name-field-link-single
+        clear: both
+
+// Responsive for wide
+.wide-view
+  .pane-bundle-house-ads
+    +breakpoint($bp-tablet-port-max)
+      .field-name-field-body,
+      .field-name-field-link-single
+        clear: both
