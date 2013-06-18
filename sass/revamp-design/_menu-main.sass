@@ -35,7 +35,8 @@
     .menu
       display: none
     +breakpoint($bp-wide-min)
-      &:hover,
+      &:hover
+        background: $grey-29
       &.active,
       &.active-trail
         background: $black
@@ -153,7 +154,7 @@ a.event-calendar
   font-size: 18px
   display: inline-block
   &:hover
-    background: $black
+    background: $grey-29
   +breakpoint($bp-tablet-port)
     border-left: 1px solid #FF0000
     font-size: 15px
