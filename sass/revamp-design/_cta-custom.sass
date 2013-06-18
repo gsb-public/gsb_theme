@@ -202,14 +202,11 @@
     display: block
     padding: 25px
     &:hover
-      background: rgba($white, 0.7)
+      background: rgba($black, 0.55)
       .link-inner
-        border: 1px solid $white
+        border: 1px solid #5c8a81
       .link-title
-        background: $purple
-        box-shadow: none
-        -webkit-box-shadow: none
-        -moz-box-shadow: none
+        +background(linear-gradient(top, #5c8a81, #739d95))
     .link-inner
       background-position: -27px -27px
       height: 163px
@@ -220,8 +217,8 @@
       line-height: 20px
       font-weight: bold
       color: $white
-      padding: 1em 0.6em
-      background: $teal-darker
+      padding: 0.9em 0.6em 0.6em 0.6em
+      +background(linear-gradient(top, #683651, #814d69))
       +box-shadow(rgba($black, 0.25) 0 2px 2px)
       &:after
         color: $white
@@ -234,7 +231,7 @@
         right: 5%
 .cta-around-globe,
 .link-inner
-  background: image_url('cta-world-map.png') no-repeat
+  background: image_url('gsbaroundtheglobe.jpg') no-repeat
   
 .social-block-youtube
   &:after
