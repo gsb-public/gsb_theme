@@ -68,6 +68,15 @@ gsb_tweetfeed = {
             },
             success: function(data, textStatus, xhr) {
                  var html = '<div class="tweet">TWEET_TEXT<p class="time">tweetime</p>';
+                 var title = $(tempAppendTo).find('.field-name-field-feed-source'),
+                     ovverideTitle = $(tempAppendTo).find('.field-name-field-social-twitter-title .field-item').text();
+                 if (ovverideTitle != '' && ovverideTitle != ' ') {
+                   title.text(ovverideTitle);
+                 } else {
+                   title.text(data[0].user.name);
+                 }
+                 title.wrap('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">');
+                 $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">' + data[0].user.screen_name + '</a>');
                  // append tweets into page
                  for (var i = 0; i < data.length; i++) {
                     $(tempAppendTo).append(
@@ -75,16 +84,6 @@ gsb_tweetfeed = {
                             .replace(/USER/g, data[i].user.screen_name)
                             .replace('tweetime', gsb_tweetfeed.tweetime(data[i].created_at) )
                     );
-
-                    if (i == 0 ) {
-                      var title = $(tempAppendTo).find('.field-name-field-feed-source'),
-                          ovverideTitle = $(tempAppendTo).find('.field-name-field-social-twitter-title .field-item').text();
-                      if (ovverideTitle != '' && ovverideTitle != ' ') {
-                        title.text(ovverideTitle);
-                      } else {
-                        title.text(data[0].user.name);
-                      }
-                    }
                  }
             }
 
@@ -98,6 +97,7 @@ gsb_tweetfeed = {
 			$.getJSON( hashtagurl, function( data ) {
 				 var html = '<div class="tweet"><span class="tweet-from-user">FROM-USER: </span>TWEET_TEXT<div class="time">tweetime</div>',
 				 data = data['statuses'];
+         $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/#' + gsb_tweetfeed.search +'">#' + gsb_tweetfeed.search + '</a>');
         for (var i = 0; i < gsb_tweetfeed.numTweets; i++) {
         	$(tempAppendTo).append(
             html.replace('TWEET_TEXT', gsb_tweetfeed.ify.clean(data[i].text) )
