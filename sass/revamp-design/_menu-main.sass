@@ -43,6 +43,7 @@
       color: $white
       display: block
       font-family: $font-light
+      position: relative
       +breakpoint($bp-mobile-max)
         display: inline-block
       margin: 0
@@ -51,9 +52,9 @@
       +background(linear-gradient(bottom, $red-light, $red-dark))
       &:after
         color: $white
-        content: ""
+        content: "."
         float: right
-        font-family: "entypo"
+        font-family: "gsb"
         font-size: 30px
         position: relative
         right: 9px
@@ -119,12 +120,15 @@
       a
         &:after
           color: $white
-          content: ""
+          content: "."
           float: right
-          font-family: "entypo"
+          font-family: "gsb"
           font-size: 30px
-          position: relative
-          top: 22px
+          position: absolute
+          line-height: 1
+          font-weight: normal
+          right: 0
+          bottom: 7px
         min-height: 80px
         padding: 12px 8px 18px
 

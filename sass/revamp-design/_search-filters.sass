@@ -87,12 +87,11 @@
     .svg &
       &:before
         color: $red
-        content: "\f100"
-        font-family: "search"
-        font-size: 21px
+        content: 'a'
+        font-family: "gsb"
+        font-size: 30px
         position: relative
-        top: 4px
-        right: -16px
+        right: -10px
         +text-shadow($white -1px 1px)
         +breakpoint($bp-mobile-max)
           top: 10px
@@ -279,13 +278,12 @@ fieldset.collapsible .fieldset-legend
       -ms-user-select: none
       font-family: Arial
       &:before
-        content: "➕"
-        font-family: "entypo"
-        font-size: 2.3em
+        content: "c"
+        font-family: "gsb"
+        font-size: 26px
         line-height: 1
         margin-left: -20px
-        margin-top: 3px
-        top: 3px
+        top: 0px
         position: relative
         padding-right: 5px
 
@@ -296,7 +294,7 @@ fieldset.collapsible .fieldset-legend
     &.collapsed
       > label
         &:before
-          content: '➖'
+          content: 'd'
 
 
         &:hover

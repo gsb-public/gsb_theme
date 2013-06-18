@@ -7,11 +7,27 @@
   top: 0
   +background((image_url('bg-social-feed.png') no-repeat bottom right), #d3eaeb)
   .pane-content
-    &:after
-      content: image_url("icon-twitter.png")
+    &:before, &:after
       position: absolute
-      top: 25px
-      right: 20px
+      
+    &:before
+      display: block
+      content: ''
+      width: 41px
+      height: 41px
+      +border-radius(20px)
+      background-color: #c50000
+      +background(linear-gradient(bottom, #c50000 0%, #860000 100%))    
+      top: 27px
+      right: 20px   
+    &:after
+      //content: image_url("icon-twitter.png")
+      color: white
+      font-family: "gsb"
+      font-size: 24px
+      content: "r"
+      top: 34px
+      right: 28px
   .field-name-field-feed-source
     margin: 0
     color: $red

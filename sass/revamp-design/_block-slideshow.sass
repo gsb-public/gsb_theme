@@ -10,22 +10,55 @@ ul.slideshow-items
   display: none
 
 .flex-direction-nav a
-  width: 40px
-  height: 40px
   opacity: 1
   outline: none
+  background-image: none
+  width: 39px
+  height: 39px
+  &:before, &:after
+    font-family: "gsb"
+    line-height: 1
+    text-indent: 0 
+       
+  &:before
+    position: absolute
+    font-size: 40px
+    line-height: 1
+    top: 0
+    left: 0
+    content: "~"
+    color: #887e6e
+    opacity: .5
+    
+  &:after
+    font-size: 37px
+    color: $white
+    position: absolute
+    top: 11px
+    line-height: 0
+    left: 0
+    opacity: 1
   .wide-view &
     top: 30%
   +breakpoint($bp-mobile-max)
     top: 37%
   +breakpoint($bp-mobile)
     top: 20%
-  &.flex-prev
+
+
+
+  &.flex-prev     
     left: 28px
-    background: image_url("prev-arrow-small.png") no-repeat
+    &:after
+      content: '['   
+    //background: image_url("prev-arrow-small.png") no-repeat
   &.flex-next
     right: 28px
-    background: image_url("next-arrow-small.png") no-repeat
+    &:after
+      content: 'z'
+      left: 2px      
+    //background: image_url("next-arrow-small.png") no-repeat
+    
 
 
 // Slideshow wrapper
@@ -229,11 +262,13 @@ ul.slideshow-items
       color: $red
     &:after
       color: $green-light
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 38px
+      content: "w"
+      font-family: "gsb"
+      font-size: 32px
       position: relative
-      top: 2px
+      line-height: 0
+      font-weight: bold
+      top: 0
       left: 5px
       +breakpoint($bp-mobile-max)
         font-size: 26px

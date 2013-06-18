@@ -602,17 +602,25 @@ a.no-border
       font-size: 14px
       font-weight: bold
       line-height: 2.2
-      padding: 17px
+      padding: 17px 17px 17px 37px
 
 .pager-load-more
   .pager-next a
     background: $text-green
     text-transform: uppercase
+    position: relative
     &:hover
       background: $blue
     &:before
-      content: image_url("arrow-down.png")
-      margin-right: 10px
+      //content: image_url("arrow-down.png")
+      content: "k"
+      font-family: "gsb"
+      text-transform: lowercase
+      font-size: 18px
+      line-height: 1
+      top: 10px
+      position: absolute
+      margin-left: -20px
 
 // Back to top link
 .additional-links

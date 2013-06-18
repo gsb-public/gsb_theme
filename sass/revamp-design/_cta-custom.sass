@@ -152,11 +152,11 @@
     font-size: 18px
     &:after
       color: $white
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 22px
-      font-weight: normal
+      content: "w"
+      font-family: "gsb"
       position: relative
+      line-height: 0
+      font-weight: bold
       top: 2px
       left: 12px
     &:hover
@@ -165,10 +165,24 @@
 // Social icons
 .cta-follow-us
   .circle
+    display: block
+    text-align: center
     float: left
     width: 41px
     height: 41px
-    margin: 0 6px
+    margin: 0 5px
+    +border-radius(20px)
+    background-color: #c50000
+    +background(linear-gradient(bottom, #c50000 0%, #860000 100%))
+
+    &:after
+      text-transform: lowercase
+      color: $white
+      font-family: 'gsb'
+      font-size: 24px
+      position: relative
+      top: 3px      
+    
     &:last-of-type
       margin-right: 0
     &:first-of-type
@@ -178,25 +192,8 @@
   margin-top: 75px
   padding: 0 26px
 
-.social-block-youtube
-  background: image_url("icon-youtube.png") no-repeat
-  &:hover #content &
-    background: image_url("icon-youtube-hover.png") no-repeat
 
-.social-block-twitter
-  background: image_url("icon-twitter.png") no-repeat
-  &:hover #content &
-    background: image_url("icon-twitter-hover.png") no-repeat
 
-.social-block-facebook
-  background: image_url("icon-fb.png") no-repeat
-  &:hover #content &
-    background: image_url("icon-fb-hover.png") no-repeat
-
-.social-block-linkedin
-  background: image_url("icon-linkedin.png") no-repeat
-  &:hover #content &
-    background: image_url("icon-linkedin-hover.png") no-repeat
 
 // GSB Around the Globe
 .cta-around-globe
@@ -238,3 +235,32 @@
 .cta-around-globe,
 .link-inner
   background: image_url('cta-world-map.png') no-repeat
+  
+.social-block-youtube
+  &:after
+    content: 'p'
+  //background: image_url("icon-youtube.png") no-repeat
+  //&:hover
+    //background: image_url("icon-youtube-hover.png") no-repeat
+
+.social-block-twitter
+  //background: image_url("icon-twitter.png") no-repeat
+  &:after
+    content: 'r'
+  //&:hover
+    //background: image_url("icon-twitter-hover.png") no-repeat
+
+.social-block-facebook
+  &:after
+    content: 's'
+  //background: image_url("icon-fb.png") no-repeat
+  //&:hover
+    //background: image_url("icon-fb-hover.png") no-repeat
+
+.social-block-linkedin
+  &:after
+    content: 'n'
+  //background: image_url("icon-linkedin.png") no-repeat
+  //&:hover
+    //background: image_url("icon-linkedin-hover.png") no-repeat
+
