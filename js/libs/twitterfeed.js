@@ -76,7 +76,7 @@ gsb_tweetfeed = {
                    title.text(data[0].user.name);
                  }
                  title.wrap('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">');
-                 $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">' + data[0].user.screen_name + '</a>');
+                 $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">' +  $('.field-name-field-twitter-search').text() + '</a>');
                  // append tweets into page
                  for (var i = 0; i < data.length; i++) {
                     $(tempAppendTo).append(
