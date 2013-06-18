@@ -105,7 +105,7 @@
     .social-block-linkedin
       &:hover
         +breakpoint($bp-tablet-port)
-          background-size: 33px 33px
+          //background-size: 33px 33px
  
     //.social-block-youtube:hover
       //background: image_url("icon-youtube.png") no-repeat
@@ -120,10 +120,13 @@
       margin: 0 18px 0 0
       font-weight: normal 
       +breakpoint($bp-tablet-port-max)
-        background-size: 33px 33px
+        //background-size: 33px 33px
         height: 33px
         margin: 0 5px
         width: 33px
+        &:after
+          font-size: 17px
+          top: 3px
         &.social-block-twitter
           margin-left: 0
         &.social-block-facebook

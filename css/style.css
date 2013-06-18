@@ -2735,6 +2735,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     font-family: "gsb";
     font-size: 30px;
     position: relative;
+    top: -4px;
     right: 9px;
   }
   #block-system-main-menu li:last-of-type {
@@ -2774,16 +2775,17 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   }
   #block-system-main-menu li:before {
     color: #990000;
-    content: "➕";
+    content: "c";
     float: left;
-    font-family: "entypo";
-    font-size: 50px;
+    font-family: "gsb";
+    font-size: 25px;
     position: relative;
-    top: 15px;
-    left: 18px;
+    line-height: 1;
+    top: 4px;
+    left: 14px;
   }
   #block-system-main-menu li.open:before {
-    content: "➖";
+    content: "d";
   }
   #block-system-main-menu li.open .menu {
     display: block;
@@ -2952,7 +2954,7 @@ a.event-calendar:hover {
     cursor: pointer;
     display: inline-block;
     height: 50px;
-    padding: 14px 15px 9px;
+    padding: 3px 12px 9px;
     vertical-align: top;
     position: relative;
     z-index: 12;
@@ -2960,10 +2962,11 @@ a.event-calendar:hover {
 }
 #nav-touch-wrapper #nav-touch-button:after {
   color: white;
-  content: "☰";
+  content: "f";
   float: right;
-  font-family: "entypo";
-  font-size: 53px;
+  line-height: 1;
+  font-family: "gsb";
+  font-size: 30px;
   position: relative;
 }
 
@@ -3014,15 +3017,16 @@ a.event-calendar:hover {
     display: inline-block;
     height: 50px;
     left: 55px;
-    padding: 14px 18px 6px;
+    padding: 8px 11px 6px;
     position: absolute;
   }
   #search-touch-button:after {
     color: white;
-    content: "\f100";
-    font-family: "search";
-    font-size: 21px;
+    content: "a";
+    font-family: "gsb";
+    font-size: 31px;
     position: relative;
+    line-height: 1;
   }
 }
 
@@ -3198,24 +3202,19 @@ a.event-calendar:hover {
     padding-bottom: 24px;
   }
 }
-@media (min-width: 35.5625em) and (max-width: 48em) {
-  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-youtube:hover,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-twitter:hover,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-facebook:hover,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .social-block-linkedin:hover {
-    background-size: 33px 33px;
-  }
-}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle {
   margin: 0 18px 0 0;
   font-weight: normal;
 }
 @media (max-width: 48em) {
   #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle {
-    background-size: 33px 33px;
     height: 33px;
     margin: 0 5px;
     width: 33px;
+  }
+  #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle:after {
+    font-size: 17px;
+    top: 3px;
   }
   #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us .circle.social-block-twitter {
     margin-left: 0;
@@ -3776,8 +3775,8 @@ ul.slideshow-items {
   padding: 10px 16px;
 }
 .slide-cta:after {
-  content: "\f100";
-  font-family: "arrow-double";
+  content: "w";
+  font-family: "gsb";
   font-weight: normal;
   position: relative;
   left: 3px;
@@ -5859,14 +5858,14 @@ p.acc-title + p {
   }
   #program-links-title:before {
     color: white;
-    content: "➕";
+    content: "c";
     float: left;
-    font-family: "entypo";
-    font-size: 50px;
+    font-family: "gsb";
+    font-size: 28px;
     line-height: 0;
     position: relative;
-    top: 10px;
-    left: -25px;
+    top: 6px;
+    left: -29px;
   }
 }
 
@@ -5875,7 +5874,7 @@ p.acc-title + p {
     display: none;
   }
   .pane-program-links .cta-red-gradient.open #program-links-title:before {
-    content: "➖";
+    content: "d";
   }
   .pane-program-links .cta-red-gradient.open .links {
     display: block;
@@ -9199,11 +9198,11 @@ div.modal-content a.button.remove {
   font-family: "gsb";
   font-size: 31px;
   color: white;
-  line-height: 1;
+  line-height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -17px;
+  margin-top: -5px;
   margin-left: -15px;
 }
 .pane-lastname-az-links .next.disabled, .pane-lastname-az-links .prev.disabled {
