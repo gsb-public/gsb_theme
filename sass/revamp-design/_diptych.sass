@@ -13,18 +13,18 @@
       width: 69%
     > .group-right
       width: 31%
-      
+
     &.diptych-blue
       .group-left .field-type-image .field-item
         &:after
-          +background(linear-gradient(top, rgba(45,98,128,0) 0%, rgba(45,98,128,0) 10%, rgba(45,98,128,1) 80%, rgba(45,98,128,1) 100%)) 
-          
+          +background(linear-gradient(top, rgba(45,98,128,0) 0%, rgba(45,98,128,0) 10%, rgba(45,98,128,1) 80%, rgba(45,98,128,1) 100%))
+
     &.diptych-purple
       .group-left .field-type-image .field-item
         &:after
-          +background(linear-gradient(top,  rgba(117,71,96,0) 0%, rgba(117,71,96,0) 10%, rgba(117,71,96,1) 80%, rgba(117,71,96,1) 100%))   
+          +background(linear-gradient(top,  rgba(117,71,96,0) 0%, rgba(117,71,96,0) 10%, rgba(117,71,96,1) 80%, rgba(117,71,96,1) 100%))
 
-                 
+
   .group-left, .group-right
     padding: 0 26px
     .field-type-link-field
@@ -57,21 +57,23 @@
       //position: absolute
       //bottom: 28px
       //padding-right: 26px
-      
+
     .gsb-responsive-main
       display: none
       visibility: hidden
-      
+
     .gsb-responsive-preview
       .file-video
         display: block
-        
+
     .field-type-text-long
       color: #fff
       font-size: 18px
       line-height: 1.3
-      margin-bottom: 15px   
-           
+      margin-bottom: 15px
+      +breakpoint($bp-mobile)
+        margin-top: 15px
+
     .field-type-link-field
       background-color: $grey-1
       a
@@ -103,27 +105,51 @@
       position: absolute
       bottom: 28px
       padding-right: 26px
-      
+
     .field-type-text-long, .field-type-link-field
       color: #fff
       .field-items
         //padding: 0 26px
-     
+
     .field-type-text-long
       //font-weight: bold
       font-size: 26px
       line-height: 1.3
       margin-bottom: 15px
-      
+
     .field-type-link-field
       background-color: $teal-dark
       width: 218px
       &:hover
         background-color: $blue //$purple
-        
+
 .wide-view
-  .pane-bundle-diptych       
-    .ds-2col
+  .pane-bundle-diptych .ds-2col
+    > .group-left
+      width: 100%
+    > .group-right
+      width: 100%
+      padding: 26px
+      .field-type-file,
+      .group-diptych-txt-block
+        display: block
+        float: left
+      .field-type-file
+        margin: 0
+        width: 53%
+        +breakpoint($bp-mobile)
+          width: 100%
+      .group-diptych-txt-block
+        width: 42%
+        margin-left: 5%
+        margin-top: 0
+        +breakpoint($bp-mobile)
+          width: 100%
+          margin-left: 0
+
+.full-view
+  +breakpoint($bp-tablet-port-max)
+    .pane-bundle-diptych  .ds-2col
       > .group-left
         width: 100%
       > .group-right
@@ -132,12 +158,16 @@
         .field-type-file,
         .group-diptych-txt-block
           display: block
-          float: left          
+          float: left
         .field-type-file
           margin: 0
           width: 53%
+          +breakpoint($bp-mobile)
+            width: 100%
         .group-diptych-txt-block
           width: 42%
           margin-left: 5%
-          margin-top: 0                    
-    
+          margin-top: 0
+          +breakpoint($bp-mobile)
+            margin-left: 0
+            width: 100%
