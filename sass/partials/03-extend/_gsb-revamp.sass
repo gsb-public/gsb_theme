@@ -15,6 +15,24 @@
 %red-button-gradient
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
+  
+%chevron-big
+  content: "w"
+  font-family: "gsb"
+  position: absolute
+  font-size: 40px
+  font-weight: normal !important
+  text-transform: lowercase
+  right: 6%
+  top: 50%
+  margin-top: -6px
+  line-height: 0
+
+%chevron-small
+  @extend %chevron-big
+  font-size: 20px
+
+
 
 //SHOW More extend
 .show-more-button

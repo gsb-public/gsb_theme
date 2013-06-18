@@ -21,10 +21,14 @@
   .accordion-toggle
     display: block
     float: left
-    margin-top: 10px
-    width: 15px
-    height: 15px
-    background: image_url("accordion-icons.png") no-repeat 0 0
+    position: relative
+    //background: image_url("accordion-icons.png") no-repeat 0 0
+    &:after
+      content: 'c'
+      font-family: 'gsb'
+      font-size: 26px
+      color: $red
+      line-height: 1
   .acc-title .accordion-toggle
     position: absolute
     top: 9px
@@ -32,13 +36,16 @@
     margin-top: 0
 
 .accordion-toggle.opened, .opened .accordion-toggle
-  background-position: 0 -16px
+  &:after
+    content: 'd'
 
 .accordion-toggle
   &:hover
-    background-position: -15px 0
+    //background-position: -15px 0
+    &:after
+      color: $text-blue
   &.opened:hover
-    background-position: -15px -16px
+    //background-position: -15px -16px
 
 .opened .accordion-toggle:hover
   background-position: -15px -16px

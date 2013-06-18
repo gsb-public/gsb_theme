@@ -242,13 +242,6 @@ a.no-border
       font-weight: bold
       text-transform: uppercase
 
-//.pane-bundle-links
-//  @extend %bg-border-and-box-shadow
-//  @extend %related-links
-  // Pane title
-//  .field-name-field-title
-//    +pane-title
-
 .pane-bundle-links
   .red-bar
     &:before
@@ -259,7 +252,6 @@ a.no-border
       top: -13px
       position: relative
       background-color: $red
-    //@extend %bg-border-and-box-shadow
     +background(linear-gradient(#e7e7e7, #f0f0f0))
     padding: 13px 25px 20px 25px
     .field-name-field-title
@@ -283,12 +275,12 @@ a.no-border
         text-transform: uppercase
         &[target=_blank]
           &:after
-            content: "\f100"
+            content: 'i'
             color: #b1aeaf
-            font-family: "external-link"
+            text-transform: lowercase
+            font-family: "gsb"
             margin-left: 5px
-            top: -2px
-            position: relative
+
         &:hover
           color: $text-blue
           &:after
@@ -311,14 +303,15 @@ a.no-border
         a
           padding-right: 10px
           color: $text-green
-          &[target=_blank]
+          &[target=_blank]          
             &:after
-              content: "\f100"
-              font-family: "external-link"
+              content: 'i'
               color: #b1aeaf
+              text-transform: lowercase
+              font-family: "gsb"
+              font-size: 18px
               margin-left: 5px
-              top: -2px
-              position: relative
+              
           &:hover
             color: $text-blue
             &:after
@@ -365,9 +358,10 @@ a.no-border
         text-transform: uppercase
         &[target=_blank]
           &:after
-            content: "\f100"
-            color: $grey-med
-            font-family: "external-link"
+            content: 'i'
+            color: #b1aeaf
+            text-transform: lowercase
+            font-family: "gsb"
             margin-left: 5px
 
         &:hover

@@ -16,6 +16,7 @@
 .cta-link
   padding: 14px 50px 11px 22px
   font-size: 16px
+  position: relative
   span, b
     line-height: 1
   span
@@ -33,21 +34,14 @@
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white
-    position: relative
-    &:after
-      content: "w"
-      font-family: "gsb"
-      font-size: 43px
-      position: absolute
-      line-height: 0
-      margin-top: -8px
-      top: 50%
-      right: 16px
-      font-weight: normal
-      color: #e3e3e3
       //background: image_url('arrow-cta-grey.png') no-repeat 93% 50%
     a
       color: $text-green
+      position: relative
+      &:after
+        @extend %chevron-big 
+        font-weight: bold
+        color: #e3e3e3      
       //CTA green in mega menu
       .supermenu-pane &
         color: $text-green
@@ -55,24 +49,33 @@
       border-top: 0
     &:last-of-type
       border-bottom: 0
-    &:hover
-      &:after
-        color: #aac4bf    
+    &:hover    
       //background: image_url('arrow-cta-blue.png') no-repeat 93% 50%
       a
         color: $text-blue
+        &:after
+          color: $teal-light        
 
 // CTA Red
 .cta-red
   .field-item
     @extend %bg-border-and-box-shadow
-    +background(image_url('arrow-cta-tan.png') no-repeat 93% 50%, linear-gradient(#fbfaf8, $grey-e))
+    //+background(image_url('arrow-cta-tan.png') no-repeat 93% 50%, linear-gradient(#fbfaf8, $grey-e))
+    +background(linear-gradient(#fbfaf8, $grey-e))
     margin-bottom: 5px
+    color: $grey-med
+   
     a
       color: $red
+      position: relative
+      &:after
+        @extend %chevron-big
+        color: $grey-med
     &:hover
       background: #edeae5
-      +background(image_url('arrow-cta-red.png') no-repeat 93% 50%, linear-gradient(#f4f1ea, #ece9e4))
+      a:after
+        color: $red
+      //+background(image_url('arrow-cta-red.png') no-repeat 93% 50%, linear-gradient(#f4f1ea, #ece9e4))
 
 
 // CTA Red Gradient
@@ -81,30 +84,29 @@
     margin-bottom: 4px
     border: 0
     +box-shadow($black, 0.45, 1px 1px 1px)
+    position: relative
+    color: $white
+  
   a
     color: $white
     position: relative
     font-family: $font-light
-
-    +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, #c50000)
-    padding-bottom: 14px
+    position: relative
+    &:after
+      @extend %chevron-small
+      color: $white    
 
     //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, #c50000)
-    &:after
-      content: 'w'
-      font-family: 'gsb'
-      color: $white
-      position: absolute
-      margin-top: -5px
-      font-size: 21px
-      top: 50%
-      right: 17px
-      line-height: 0 
+    padding-bottom: 14px
+
+
     b
       font-weight: normal
     .front &
       +background(#c50000)
     &:hover
+      a:after
+        color: $white
       //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#194560, #2c6180))
       +background(linear-gradient(#194560, #2c6180))
       .front &
