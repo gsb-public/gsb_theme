@@ -170,20 +170,18 @@
 /////////////////
 .front-panel-feature-one,
 .wide-view
-  .image-cta-color-purple .group-right,
-  .image-cta-color-green .group-right,
-  .image-cta-color-blue .group-right,
-  .image-cta-color-dark-teal .group-right
-    height: 393px
-    +breakpoint($bp-tablet-port-max)
-      height: 310px
-    +breakpoint($bp-mobile)
-      height: 198px
-  .image-cta-color-purple .group-right
-    +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
-  .image-cta-color-green .group-right
-    +background(linear-gradient(left top, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
-  .image-cta-color-blue .group-right
-    +background(linear-gradient(left top, rgba(#395d72, 0.9), rgba(#395d72, 0)))
-  .image-cta-color-dark-teal .group-right
-    +background(linear-gradient(left top, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
+  .image-cta-position-top
+    .group-right
+      height: 393px
+      +breakpoint($bp-tablet-port-max)
+        height: 310px
+      +breakpoint($bp-mobile)
+        height: 198px
+    &.image-cta-color-purple .group-right
+      +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
+    &.image-cta-color-green .group-right
+      +background(linear-gradient(left top, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
+    &.image-cta-color-blue .group-right
+      +background(linear-gradient(left top, rgba(#395d72, 0.9), rgba(#395d72, 0)))
+    &.image-cta-color-dark-teal .group-right
+      +background(linear-gradient(left top, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
