@@ -2,6 +2,14 @@
 // People
 //////////////
 
+
+.group_wrapper_position
+  .person-position
+    &:after
+      content: ','
+      margin-right: 5px 
+
+ 
 // General person name
 .person-name
   color: $black
@@ -11,6 +19,14 @@
   .name-first,
   .name-middle
     margin-right: 0.3em
+
+.person-area 
+  line-height: 1em
+
+.person-position 
+  line-height: 1
+  font-family: $font-demi
+
 
 ///////////////
 // People FPP List
@@ -99,13 +115,13 @@
   .node-faculty.view-mode-teaser
     padding: 0
     // Image
-    .field-name-field-image-single-public
-      margin: 0
-      img
-        margin: 0 0 7.6% 0
-    // Name
-    .person-name
-      line-height: 22px
+  .field-name-field-image-single-public
+    margin: 0
+    img
+      margin: 0 0 7.6% 0
+  // Name
+  .person-name
+    line-height: 22px
   // Grid title
   .field-name-field-title
     font-size: 26px

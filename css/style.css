@@ -4335,6 +4335,11 @@ ul.slideshow-items {
   }
 }
 
+.group_wrapper_position .person-position:after {
+  content: ",";
+  margin-right: 5px;
+}
+
 .person-name {
   color: black;
   font-size: 18px;
@@ -4344,6 +4349,15 @@ ul.slideshow-items {
 .person-name .name-first,
 .person-name .name-middle {
   margin-right: 0.3em;
+}
+
+.person-area {
+  line-height: 1em;
+}
+
+.person-position {
+  line-height: 1;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .person-list-view {
@@ -4431,16 +4445,13 @@ ul.slideshow-items {
 .person-grid-view .node-faculty.view-mode-teaser {
   padding: 0;
 }
-.person-grid-view .node-staff.view-mode-teaser .field-name-field-image-single-public,
-.person-grid-view .node-faculty.view-mode-teaser .field-name-field-image-single-public {
+.person-grid-view .field-name-field-image-single-public {
   margin: 0;
 }
-.person-grid-view .node-staff.view-mode-teaser .field-name-field-image-single-public img,
-.person-grid-view .node-faculty.view-mode-teaser .field-name-field-image-single-public img {
+.person-grid-view .field-name-field-image-single-public img {
   margin: 0 0 7.6% 0;
 }
-.person-grid-view .node-staff.view-mode-teaser .person-name,
-.person-grid-view .node-faculty.view-mode-teaser .person-name {
+.person-grid-view .person-name {
   line-height: 22px;
 }
 .person-grid-view .field-name-field-title {
@@ -4593,7 +4604,7 @@ a.twitter-icon:hover {
   font-family: "gsb";
   font-size: 26px;
   color: #990000;
-  line-height: 1;
+  line-height: 0;
 }
 .content .acc-title .accordion-toggle {
   position: absolute;
