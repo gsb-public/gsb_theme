@@ -85,19 +85,12 @@
               $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
               print render($search_block['content']);
              ?></div><div id="menu-main-footer">
-              <ul class="menu menu-1">
-                <li class="first"><a href="/" title="">Alumni</a></li>
-                <li><a href="/" title="">Giving</a></li>
-                <li><a href="/" title="">Recruiters &amp; Corporate Partners</a></li>
-                <li class="last"><a href="/stanford-university-community" title="">Stanford University Community</a></li>
-              </ul>
-              <ul class="menu menu-2">
-                <li class="first"><a href="/" title="">Newsroom</a></li>
-                <li><a href="/" title="">Visit Us</a></li>
-                <li><a href="/" title="">Contact Us</a></li>
-                <li><a href="/" title="">Jobs</a></li>
-                <li class="last"><a href="/user" title="">Log In</a></li>
-              </ul>
+              <?php 
+                $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
+                $footer_2 = module_invoke('menu', 'block_view', 'menu-footer-2');
+                print render($footer_1['content']);
+                print render($footer_2['content']);
+              ?>
           </div></div></div>
       <?php endif;
         if ($site_slogan): ?>
