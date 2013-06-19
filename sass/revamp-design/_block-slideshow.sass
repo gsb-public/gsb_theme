@@ -38,11 +38,10 @@ ul.slideshow-items
     line-height: 0
     left: 0
     opacity: 1
+  .full-view &
+    +breakpoint($bp-mobile-max)
+      top: 20%
   .wide-view &
-    top: 30%
-  +breakpoint($bp-mobile-max)
-    top: 37%
-  +breakpoint($bp-mobile)
     top: 20%
 
 
@@ -97,7 +96,9 @@ ul.slideshow-items
     width: 367px
     .wide-view &
       bottom: 0
-      height: auto
+      height: 62%
+      +breakpoint($bp-mobile)
+        height: 70%
       padding: 26px
       position: absolute
       top: initial
@@ -105,7 +106,7 @@ ul.slideshow-items
     .full-view &
       +breakpoint($bp-mobile-max)
         bottom: 0
-        height: auto
+        height: 70%
         padding: 26px
         position: absolute
         top: initial
@@ -181,9 +182,10 @@ ul.slideshow-items
     +background(linear-gradient(left, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
     .wide-view &
       +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
-    .full-view &
+    .full-view &,
+    .wide-view &
       +breakpoint($bp-mobile-max)
-        +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
+        +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 5%, #cce0dc))
   .slide-cta
     background-color: $purple
 
@@ -192,9 +194,10 @@ ul.slideshow-items
     +background(linear-gradient(left, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
     .wide-view &
       +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
-    .full-view &
+    .full-view &,
+    .wide-view &
       +breakpoint($bp-mobile-max)
-        +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
+        +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 5%))
   .slide-cta
     background-color: $teal-dark
 
@@ -207,13 +210,11 @@ ul.slideshow-items
   .slideshow-slide
     height: 262px
     +breakpoint($bp-tablet-port)
-      .front &
-        height: 205px
+      height: 205px
     +breakpoint($bp-mobile-max)
-      .front &
-        +background(linear-gradient(bottom, #ededed, #fbfaf8 20%))
-        height: auto
-        min-height: 425px
+      +background(linear-gradient(bottom, #ededed, #fbfaf8 20%))
+      height: auto
+      min-height: 425px
     &:hover
       .slide-title
         color: $red
@@ -234,7 +235,6 @@ ul.slideshow-items
       width: 50%
       +breakpoint($bp-mobile-max)
         background: none
-        padding: 0 26px
         right: 0
         top: 270px
         width: 100%
@@ -258,6 +258,8 @@ ul.slideshow-items
       line-height: 22px
       overflow: hidden
       width: 225px
+    +breakpoint($bp-mobile-max)
+      width: 100%
     a
       color: $red
     &:after
