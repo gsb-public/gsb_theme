@@ -76,19 +76,6 @@
       top: 1px
       display: inline-block
       margin-top: -5px
-    
-  
-  // Title, program and year
-  .field-name-field-title-position-single,
-  .field-name-field-program-single,
-  .spotlight-year
-    font-size: 20px
-    font-weight: bold
-    line-height: 26px
-
-  .field-name-field-program-single
-    display: inline
-    margin-right: 0.3em
 
   .field-name-field-body
     font-size: 14px
@@ -102,37 +89,59 @@
   .show-more
     @extend .show-more-button
 
-  .field-name-field-gsb-spotlight-image-video
-    overflow: hidden
-
 
 // Clearfixes in narrow
 .narrow-view
   .pane-bundle-house-ads
     padding-top: 0
+    +breakpoint($bp-mobile-max)
+      padding-top: 26px
     > div
       overflow: visible
-  //.field-name-field-link-single
-    //display: inline-block
-    //margin-top: 10px
+  .field-name-field-link-single,
+  .field-name-field-image-single-public,
+  .field-name-field-body
+    clear: both
+    +breakpoint($bp-mobile-max)
+      clear: none
   .field-name-field-image-single-public
     margin: 0 -26px 0 -26px
     width: auto
+    +breakpoint($bp-mobile-max)
+      float: left
+      margin: 0
+      margin-right: 26px
+      width: 218px
     img
       width: 100%
 
-// Responsive for full
-.full-view
+//////////////////////
+// Responsive changes
+//////////////////////
+.full-view,
+.wide-view,
+.narrow-view
   .pane-bundle-house-ads
-    +breakpoint(480px max-width)
+    +breakpoint($bp-mobile-480)
       .field-name-field-body,
       .field-name-field-link-single
         clear: both
+    .field-name-field-image-single-public
+      +breakpoint($bp-mobile)
+        margin-right: 0
+        width: auto
 
-// Responsive for wide
 .wide-view
   .pane-bundle-house-ads
     +breakpoint($bp-tablet-port-max)
-      .field-name-field-body,
-      .field-name-field-link-single
+      .field-name-field-link-single,
+      .field-name-field-body
+        clear: both
+    +breakpoint($bp-mobile-max)
+      .field-name-field-link-single,
+      .field-name-field-body
+        clear: none
+    +breakpoint($bp-mobile-480)
+      .field-name-field-link-single,
+      .field-name-field-body
         clear: both

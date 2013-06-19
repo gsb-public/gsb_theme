@@ -4285,17 +4285,6 @@ ul.slideshow-items {
   display: inline-block;
   margin-top: -5px;
 }
-.pane-bundle-house-ads .field-name-field-title-position-single,
-.pane-bundle-house-ads .field-name-field-program-single,
-.pane-bundle-house-ads .spotlight-year {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 26px;
-}
-.pane-bundle-house-ads .field-name-field-program-single {
-  display: inline;
-  margin-right: 0.3em;
-}
 .pane-bundle-house-ads .field-name-field-body {
   font-size: 14px;
   margin: 12px 0;
@@ -4307,19 +4296,41 @@ ul.slideshow-items {
   line-height: 18px;
   margin-bottom: 0;
 }
-.pane-bundle-house-ads .field-name-field-gsb-spotlight-image-video {
-  overflow: hidden;
-}
 
 .narrow-view .pane-bundle-house-ads {
   padding-top: 0;
 }
+@media (max-width: 35.5em) {
+  .narrow-view .pane-bundle-house-ads {
+    padding-top: 26px;
+  }
+}
 .narrow-view .pane-bundle-house-ads > div {
   overflow: visible;
+}
+.narrow-view .field-name-field-link-single,
+.narrow-view .field-name-field-image-single-public,
+.narrow-view .field-name-field-body {
+  clear: both;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .field-name-field-link-single,
+  .narrow-view .field-name-field-image-single-public,
+  .narrow-view .field-name-field-body {
+    clear: none;
+  }
 }
 .narrow-view .field-name-field-image-single-public {
   margin: 0 -26px 0 -26px;
   width: auto;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .field-name-field-image-single-public {
+    float: left;
+    margin: 0;
+    margin-right: 26px;
+    width: 218px;
+  }
 }
 .narrow-view .field-name-field-image-single-public img {
   width: 100%;
@@ -4327,14 +4338,38 @@ ul.slideshow-items {
 
 @media (max-width: 30em) {
   .full-view .pane-bundle-house-ads .field-name-field-body,
-  .full-view .pane-bundle-house-ads .field-name-field-link-single {
+  .full-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-body,
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .narrow-view .pane-bundle-house-ads .field-name-field-body,
+  .narrow-view .pane-bundle-house-ads .field-name-field-link-single {
     clear: both;
+  }
+}
+@media (max-width: 20em) {
+  .full-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .wide-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public {
+    margin-right: 0;
+    width: auto;
   }
 }
 
 @media (max-width: 48em) {
-  .wide-view .pane-bundle-house-ads .field-name-field-body,
-  .wide-view .pane-bundle-house-ads .field-name-field-link-single {
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-body {
+    clear: both;
+  }
+}
+@media (max-width: 35.5em) {
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-body {
+    clear: none;
+  }
+}
+@media (max-width: 30em) {
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-body {
     clear: both;
   }
 }
@@ -9718,21 +9753,23 @@ div.callout br {
   overflow: hidden;
 }
 
-.narrow-view .field-name-field-title {
-  font-size: 22px;
-  line-height: 26px;
-}
-.narrow-view .field-name-field-body h2 {
-  font-size: 22px;
-  line-height: 26px;
-}
-.narrow-view .field-name-field-body h3 {
-  font-size: 18px;
-  line-height: 24px;
-}
-.narrow-view .field-name-field-body p, .narrow-view .field-name-field-body ul, .narrow-view .field-name-field-body ol {
-  font-size: 16px;
-  line-height: 20px;
+@media (min-width: 48.0625em) {
+  .narrow-view .field-name-field-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .narrow-view .field-name-field-body h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .narrow-view .field-name-field-body h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .narrow-view .field-name-field-body p, .narrow-view .field-name-field-body ul, .narrow-view .field-name-field-body ol {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .field-name-field-body table {
