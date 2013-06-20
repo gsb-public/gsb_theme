@@ -31,16 +31,22 @@
       right: -4px
   .field-name-field-link-single
     display: inline
-    a
-      display: inline-block
-      overflow: hidden
-      text-indent: 1000px
-      width: 18px
-      background: image_url('arrows-icons.png') no-repeat 0 -100px
-      height: 21px
+    a      
+      text-indent: -1000px
       position: relative
-      top: -6px
-      margin-left: 9px
+      display: inline-block
+      &:after
+        content: "w"
+        color: $green-light
+        font-family: "gsb"
+        left: 0
+        line-height: 0
+        font-size: 29px
+        font-weight: bold
+        top: 0
+        position: absolute
+        text-indent: 0
+      
   .group_author
     font-size: 18px
   .field-name-field-quote-author-name-title

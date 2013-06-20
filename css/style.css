@@ -4026,15 +4026,21 @@ ul.slideshow-items {
   display: inline;
 }
 .pane-bundle-quote .field-name-field-link-single a {
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 1000px;
-  width: 18px;
-  background: url('../images/arrows-icons.png') no-repeat 0 -100px;
-  height: 21px;
+  text-indent: -1000px;
   position: relative;
-  top: -6px;
-  margin-left: 9px;
+  display: inline-block;
+}
+.pane-bundle-quote .field-name-field-link-single a:after {
+  content: "w";
+  color: #bac405;
+  font-family: "gsb";
+  left: 0;
+  line-height: 0;
+  font-size: 29px;
+  font-weight: bold;
+  top: 0;
+  position: absolute;
+  text-indent: 0;
 }
 .pane-bundle-quote .group_author {
   font-size: 18px;
@@ -7607,12 +7613,16 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .page-business-insights .node-event.node-teaser .field-name-title:before {
-  content: url('../images/icon-event.png');
+  color: #607c8c;
+  content: "5";
+  font-family: gsb;
+  line-height: 1;
+  font-size: 27px;
   display: inline;
   float: left;
   margin-right: 5px;
   position: relative;
-  top: 3px;
+  top: -6px;
 }
 
 .pane-bundle-existing-node .view-mode-teaser .field-name-field-file-single-public,
