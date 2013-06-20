@@ -16,6 +16,11 @@
   .pager li
     margin: 0
     padding: 0 3px
+    &.pager-item,
+    &.pager-current,
+    &.pager-ellipsis
+      +breakpoint($bp-mobile-max)
+        display: none
     &.first
       padding-left: 0
     &.pager-next
@@ -24,7 +29,12 @@
       display: none
     &.pager-ellipsis
       padding: 0
+
     +breakpoint($bp-tablet-port-max)
       font-size: 1.5em
       line-height: 2
       padding: 0 1em
+
+ol.search-results
+  +breakpoint($bp-mobile-max)
+    padding: 0
