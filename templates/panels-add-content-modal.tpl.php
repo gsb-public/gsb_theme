@@ -53,6 +53,18 @@
     </div>
   <?php endif; ?>
 
+  <?php if (!empty($stock_content_page)): ?>
+    <div class="panels-categories-stock-content-page">
+      <?php foreach (array_keys($stock_content_page_links) as $key): ?>
+        <ul class="" id="stock-content-page-links"> <h3><?php print $key; ?></h3>
+          <?php foreach ($stock_content_page_links[$key] as $page_link_key => $page_link_value): ?>
+            <?php print $page_link_value['link']; ?>
+          <?php endforeach; ?>
+        </ul>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+
   <?php if (!empty($columns)): ?>
   <div class="panels-section-columns">
     <?php foreach ($columns as $column_id => $column): ?>
