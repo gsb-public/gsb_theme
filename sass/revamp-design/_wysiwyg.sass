@@ -41,6 +41,10 @@ div.callout
   color: $teal-dark
   font-size: 26px
   line-height: 32px
+  .narrow-view &
+    width: 100%
+  +breakpoint($bp-mobile-max)
+    width: 100%
   &:after
     display: block
     content: image_url("tab-club.png")
