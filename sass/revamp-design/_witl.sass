@@ -5,12 +5,17 @@
 .group_witl_photo_info,
 .group_witl_group_days
   +clearfix
+  +breakpoint($bp-mobile-max)
+    margin: 0 auto
+    max-width: 270px
+
 
 .group_witl_photo_info
   margin-bottom: 2em
   border: 1px solid $grey-e
   +box-shadow(0px 1px 2px #d4d4d4)
-
+  +breakpoint($bp-mobile-max)
+    padding-bottom: 20px
   .field-type-datetime
     margin: 0 !important
 
@@ -36,6 +41,8 @@
   +background(linear-gradient(top, $grey-1, #272727))
   color: $white
   padding: 20px
+  +breakpoint($bp-mobile-max)
+    margin-bottom: 15px
 
   .field-item
     font-size: 1em
@@ -54,15 +61,23 @@
       margin-left: -1em
 
 .node-type-week-in-the-life
-  h1.title
+  #page-title
     display: none
-    overflow: hidden
+    +breakpoint($bp-mobile-max)
+      display: block
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
 
 .node-week-in-the-life
   .field-name-title
     +background(linear-gradient(top, #fbfaf8, #f3f2f2))
     border-bottom: 1px solid #e6e5e5
     margin-bottom: 18px
+    +breakpoint($bp-mobile-max)
+      display: none
 
 
   .field-type-text-long,
@@ -82,6 +97,10 @@
     float: left
     margin-right: 3.5%
     width: 31%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin-right: 0
+      width: 100%
     img
       display: block
 
@@ -91,6 +110,11 @@
     margin-right: 3.5%
     border: 1px solid #e5e5e5
     background-color: $white
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin-bottom: 15px
+      margin-right: 0
+      width: 100%
 
     &:last-of-type
       margin-right: 0
@@ -119,14 +143,15 @@
   .field-item
     font-weight: bold
 
+.field-name-field-witl-facts-title,
+.field-name-field-witl-facts
+  +breakpoint($bp-mobile-max)
+    padding: 0 20px
 
 //LISTING PAGE
 
 .group_witl_listing_wrap
   position: relative
-
-
-$width: 100%
 
 .field-name-field-witl-post-mba-goals
   line-height: 1.3

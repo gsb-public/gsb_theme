@@ -2142,7 +2142,9 @@ a.no-border:hover {
 .node-type-news #page-title,
 .node-type-event #page-title,
 .page-programs #page-title,
-.page-events #page-title {
+.page-events #page-title,
+.node-type-week-in-the-life #page-title,
+.node-type-msx-fellows #page-title {
   display: none;
 }
 
@@ -8533,6 +8535,13 @@ div.modal-content a.button.remove {
   overflow: hidden;
   *zoom: 1;
 }
+@media (max-width: 35.5em) {
+  .group_witl_photo_info,
+  .group_witl_group_days {
+    margin: 0 auto;
+    max-width: 270px;
+  }
+}
 
 .group_witl_photo_info {
   margin-bottom: 2em;
@@ -8540,6 +8549,11 @@ div.modal-content a.button.remove {
   -webkit-box-shadow: 0px 1px 2px #d4d4d4;
   -moz-box-shadow: 0px 1px 2px #d4d4d4;
   box-shadow: 0px 1px 2px #d4d4d4;
+}
+@media (max-width: 35.5em) {
+  .group_witl_photo_info {
+    padding-bottom: 20px;
+  }
 }
 .group_witl_photo_info .field-type-datetime {
   margin: 0 !important;
@@ -8577,6 +8591,11 @@ div.modal-content a.button.remove {
   color: white;
   padding: 20px;
 }
+@media (max-width: 35.5em) {
+  .field-name-field-witl-under-photo-facts {
+    margin-bottom: 15px;
+  }
+}
 .field-name-field-witl-under-photo-facts .field-item {
   font-size: 1em;
   line-height: 1.25;
@@ -8596,9 +8615,18 @@ div.modal-content a.button.remove {
   margin-left: -1em;
 }
 
-.node-type-week-in-the-life h1.title {
+.node-type-week-in-the-life #page-title {
   display: none;
-  overflow: hidden;
+}
+@media (max-width: 35.5em) {
+  .node-type-week-in-the-life #page-title {
+    display: block;
+    color: #2d6280;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 40px;
+  }
 }
 
 .node-week-in-the-life .field-name-title {
@@ -8611,6 +8639,11 @@ div.modal-content a.button.remove {
   background: linear-gradient(top, #fbfaf8, #f3f2f2);
   border-bottom: 1px solid #e6e5e5;
   margin-bottom: 18px;
+}
+@media (max-width: 35.5em) {
+  .node-week-in-the-life .field-name-title {
+    display: none;
+  }
 }
 .node-week-in-the-life .field-type-text-long,
 .node-week-in-the-life .field-type-datetime {
@@ -8630,6 +8663,13 @@ div.modal-content a.button.remove {
   margin-right: 3.5%;
   width: 31%;
 }
+@media (max-width: 35.5em) {
+  .node-week-in-the-life .group_witl_photo_wrap {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
 .node-week-in-the-life .group_witl_photo_wrap img {
   display: block;
 }
@@ -8639,6 +8679,14 @@ div.modal-content a.button.remove {
   margin-right: 3.5%;
   border: 1px solid #e5e5e5;
   background-color: white;
+}
+@media (max-width: 35.5em) {
+  .node-week-in-the-life .witl-days {
+    float: none;
+    margin-bottom: 15px;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 .node-week-in-the-life .witl-days:last-of-type {
   margin-right: 0;
@@ -8667,6 +8715,13 @@ div.modal-content a.button.remove {
 }
 .field-name-field-witl-facts-title .field-item {
   font-weight: bold;
+}
+
+@media (max-width: 35.5em) {
+  .field-name-field-witl-facts-title,
+  .field-name-field-witl-facts {
+    padding: 0 20px;
+  }
 }
 
 .group_witl_listing_wrap {
@@ -8807,9 +8862,6 @@ div.modal-content a.button.remove {
   right: 2px;
 }
 
-.node-type-msx-fellows #page-title {
-  display: none;
-}
 @media (max-width: 35.5em) {
   .node-type-msx-fellows #page-title {
     display: block;
