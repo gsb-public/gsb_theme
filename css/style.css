@@ -8812,9 +8812,29 @@ div.modal-content a.button.remove {
   right: 2px;
 }
 
+.node-type-msx-fellows #page-title {
+  display: none;
+}
+@media (max-width: 35.5em) {
+  .node-type-msx-fellows #page-title {
+    display: block;
+    color: #2d6280;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 40px;
+  }
+}
+
 .node-msx-fellows {
   border-top: 3px solid #231f20;
   padding-top: 2px;
+}
+@media (max-width: 35.5em) {
+  .node-msx-fellows {
+    border-top: 0;
+    padding-top: 0;
+  }
 }
 .node-msx-fellows .field-name-field-title-position-unlimited,
 .node-msx-fellows .field-name-field-company-organization,
@@ -8848,6 +8868,11 @@ div.modal-content a.button.remove {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+@media (max-width: 35.5em) {
+  .node-msx-fellows .field-name-title {
+    display: none;
+  }
+}
 .node-msx-fellows .field-name-field-year {
   background: #887e6e;
   text-transform: uppercase;
@@ -8866,10 +8891,21 @@ div.modal-content a.button.remove {
 .node-msx-fellows.ds-2col > .group-left img {
   display: block;
 }
+@media (max-width: 35.5em) {
+  .node-msx-fellows.ds-2col > .group-left {
+    margin-bottom: 20px;
+  }
+}
 .node-msx-fellows.ds-2col > .group-right {
   float: none;
   width: auto;
   padding-left: 300px;
+}
+@media (max-width: 35.5em) {
+  .node-msx-fellows.ds-2col > .group-right {
+    float: left;
+    padding-left: 0;
+  }
 }
 
 /*Listing page 

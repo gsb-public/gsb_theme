@@ -2,9 +2,23 @@
 // MSx Fellow Style
 /////////////////
 
+.node-type-msx-fellows
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
+
 .node-msx-fellows
   border-top: 3px solid $text-black
   padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
 
   .field-name-field-title-position-unlimited,
   .field-name-field-company-organization,
@@ -35,7 +49,9 @@
   .field-name-title
     margin-top: 25px
     margin-bottom: 25px
-    
+    +breakpoint($bp-mobile-max)
+      display: none
+
   .field-name-field-year
     background: $grey-dark
     text-transform: uppercase
@@ -54,12 +70,17 @@
     width: 270px
     img
       display: block
-    
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+
   &.ds-2col > .group-right
     float: none
     width: auto
-    padding-left: 300px 
-    
+    padding-left: 300px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0
+
 
 /*
  *Listing page 
