@@ -45,25 +45,33 @@
     margin-bottom: 24px
 
 .pane-club-filters-club-by-id-or-tag
+  @extend %bg-border-and-box-shadow
+  padding: 26px
+  overflow: hidden
   h2
     margin-bottom: 18px
   .view-club-filters
     .more-link
-      border-top: 3px solid $text-black
-      padding-left: 25px
-      margin-bottom: 30px
+      @extend %bg-border-and-box-shadow
+      @include filter-gradient(#fbfaf8, #ededed, vertical)
+      $experimental-support-for-svg: true
+      width: 50%
+      float: right
       text-align: left
-      overflow: hidden
       a
-        color: $white
-        font-size: 14px
-        font-weight: bold
-        line-height: 2.2
-        padding: 17px
-        background: $text-green
-        text-transform: uppercase
+        display: block
+        padding: 14px 50px 11px 22px
+        font-size: 16px
+        color: $text-green
+        position: relative
+        &:after
+          @extend %chevron-big
+          font-weight: bold
+          color: #e3e3e3
         &:hover
-          background: $blue
+          color: $text-blue
+          &:after
+            color: $teal-light
 
 // Hide duplicate search and filter
 #views-exposed-form-club-filters-club-list
