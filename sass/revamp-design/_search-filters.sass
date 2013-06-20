@@ -172,6 +172,8 @@ fieldset.collapsible .fieldset-legend
   padding: 24px
 
 .gsb-views-exposed-filter
+  +breakpoint($bp-mobile-max)
+    display: none
   legend
     margin-left: 4em
     padding: 0
@@ -226,6 +228,8 @@ fieldset.collapsible .fieldset-legend
 
 //Parent class to exposed, colapsable filter
 .exposed_filter_widget
+  +breakpoint($bp-mobile-max)
+    display: none
   //Reset style for case when filter and search are placed in one class
   &.exposed_filter_widget_one_column
     .ajax-progress
