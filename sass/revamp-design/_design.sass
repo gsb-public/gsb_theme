@@ -55,20 +55,6 @@
 .page-business-insights #content-wrapper
   background-image: none
 
-// Special landing pages with white titles
-.page-stanford-gsb-experience,
-.page-programs-mba-student-life,
-.page-programs-msx-student-life,
-.page-faculty-research
-  #content-wrapper
-    +breakpoint($bp-tablet-port-min)
-      +background(image_url("bg-landing-whitetitlebar.png") center top no-repeat, $white)
-      #page-title
-        background: rgba($white, 0.6)
-        border: 2px $white solid
-        margin-bottom: 30px
-        padding: 20px
-
 // Faculty grid
 .page-faculty-research-faculty
   #content-wrapper
@@ -86,6 +72,25 @@
   #content-wrapper
     +breakpoint($bp-tablet-port-min)
       +background(image_url("bg-msxfellows.png") -290px 0 no-repeat, $white)
+
+// Special landing pages with white titles
+.page-node-300216,
+.page-stanford-gsb-experience-why-business-school,
+.page-stanford-gsb-experience-academic-advantages,
+.page-stanford-gsb-experience-life-at-stanford,
+.page-node-301056,
+.page-programs-mba-student-life,
+.page-programs-msx-student-life,
+.page-programs-phd-student-life,
+.page-faculty-research
+  #content-wrapper
+    +breakpoint($bp-tablet-port-min)
+      +background(image_url("bg-landing-whitetitlebar.png") center top no-repeat, $white)
+      #page-title
+        background: rgba($white, 0.6)
+        border: 2px $white solid
+        margin-bottom: 30px
+        padding: 20px
 
 // FOOTER
 #footer-wrapper
@@ -306,7 +311,7 @@ a.no-border
         a
           padding-right: 10px
           color: $text-green
-          &[target=_blank]          
+          &[target=_blank]
             &:after
               content: 'i'
               color: #b1aeaf
@@ -314,7 +319,7 @@ a.no-border
               font-family: "gsb"
               font-size: 18px
               margin-left: 5px
-              
+
           &:hover
             color: $text-blue
             &:after
