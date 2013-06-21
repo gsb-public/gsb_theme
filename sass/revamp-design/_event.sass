@@ -333,27 +333,65 @@
 
 // Academic calendar
 .view-academic-calendar
-  table
-    +box-shadow(0px 1px 1px rgba($black, 0.1))
-    border: 1px solid #e4e4e4 !important
+  .view-content
+    @extend %border-and-box-shadow
+    background: $white
     margin-bottom: 30px
+  table
     width: 100%
+    caption
+      background: #d8e7e4
+      font-weight: bold
+      text-align: left
+      padding: 16px 23px 8px
     tr
       background-color: #fff
       border: 0 none
+      &:last-of-type
+        td
+          border: 0 none
     td
       padding: 0.9em 1em 0.5em
       background-color: $white
+      border-bottom: 1px solid #e4e4e4
       &:first-of-type
-        position: relative
-        left: 2px
         background-color: #f8f7f6
         width: 35%  
 
       &.views-field-field-academic-calendar-link
         font-weight: bold
-
-
+  .view-footer
+    overflow: hidden
+    padding-top: 1px
+    a
+      @extend %bg-border-and-box-shadow
+      +background(linear-gradient(#fbfaf8, $grey-e))
+      margin-bottom: 5px
+      color: $text-green
+      padding-top: 14px
+      padding-bottom: 11px
+      position: relative
+      &:after
+        @extend %chevron-big 
+        font-weight: bold
+        color: #e3e3e3
+      &:hover
+        color: $text-blue
+        &:after
+          color: $teal-light
+      &.prev
+        padding-left: 55px
+        padding-right: 22px
+        float: left
+        &:after
+          content: "q"
+          left: 12px
+          right: auto  
+      &.next        
+        float: right
+        padding-left: 22px
+        padding-right: 55px
+        
 #block-gsb-public-custom-blocks-gpcb-banner-title
   float: left        
 #block-gsb-public-custom-blocks-gsb-featured-event
