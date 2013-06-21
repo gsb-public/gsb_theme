@@ -40,6 +40,7 @@
       &.active,
       &.active-trail
         background: $black
+        
     a
       color: $white
       display: block
@@ -48,6 +49,8 @@
       +breakpoint($bp-mobile-max)
         display: inline-block
       margin: 0
+      &.qtip-hover
+        background: $black
     // IPAD
     +breakpoint($bp-tablet-port)
       +background(linear-gradient(bottom, $red-light, $red-dark))
