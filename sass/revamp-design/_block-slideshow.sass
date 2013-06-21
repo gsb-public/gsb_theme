@@ -40,9 +40,15 @@ ul.slideshow-items
     opacity: 1
   .full-view &
     +breakpoint($bp-mobile-max)
-      top: 20%
+      top: 30%
+    +breakpoint($bp-mobile-480)
+      top: 25%
+    +breakpoint($bp-mobile)
+      top: 15%
   .wide-view &
-    top: 20%
+    top: 25%
+    +breakpoint($bp-mobile)
+      top: 15%
 
 
 
@@ -94,24 +100,35 @@ ul.slideshow-items
     right: 0
     height: 367px
     width: 367px
+    z-index: 2
     .wide-view &
       bottom: 0
       height: 62%
-      +breakpoint($bp-mobile)
-        height: 70%
       padding: 26px
       position: absolute
       top: initial
       width: 100%
+      +breakpoint($bp-mobile-max)
+        height: auto
+        min-height: 47%
+      +breakpoint($bp-mobile-480)
+        height: 51%
+      +breakpoint($bp-mobile)
+        height: 70%
     .full-view &
       +breakpoint($bp-mobile-max)
         bottom: 0
-        height: 70%
+        height: auto
+        min-height: 41%
         padding: 26px
         position: absolute
         top: initial
         width: 100%
-    z-index: 2
+      +breakpoint($bp-mobile-480)
+        height: 51%
+      +breakpoint($bp-mobile)
+        height: 70%
+
     .inner
       position: absolute
       bottom: 30px
