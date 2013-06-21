@@ -123,6 +123,14 @@ function gsb_theme_preprocess_html(&$variables) {
   if (user_access('administer panelizer node page content')) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
+  if (drupal_get_http_header("status") == "404 Not Found") {
+    $variables['classes_array'][] = 'page-not-found';
+  }
+}
+function gsb_theme_preprocess_page(&$variables) {
+  if(drupal_get_http_header("status") == "404 Not Found") {
+    $variables['theme_hook_suggestions'][] = 'page__404';
+  }
 }
 
 /**
