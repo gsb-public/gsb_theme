@@ -5109,6 +5109,52 @@ p.acc-title + p {
   vertical-align: text-top;
 }
 
+.cta-red-gradient .field-item a[href*="mailto:"],
+.cta-red .field-item a[href*="mailto:"],
+.cta-green .field-item a[href*="mailto:"] {
+  padding-right: 22px;
+  padding-left: 55px;
+  position: relative;
+}
+.cta-red-gradient .field-item a[href*="mailto:"]:before,
+.cta-red .field-item a[href*="mailto:"]:before,
+.cta-green .field-item a[href*="mailto:"]:before {
+  padding-top: 11px;
+  position: absolute;
+  left: 22px;
+  top: 20%;
+  border-radius: 14px;
+  text-align: center;
+  display: inline-block;
+  height: 17px;
+  width: 28px;
+  content: "o";
+  font-family: "gsb";
+  font-size: 16px;
+  line-height: 0;
+  color: white;
+}
+.cta-red-gradient .field-item a[href*="mailto:"]:after,
+.cta-red .field-item a[href*="mailto:"]:after,
+.cta-green .field-item a[href*="mailto:"]:after {
+  content: "";
+}
+
+.cta-red-gradient .field-item a[href*="mailto:"]:before {
+  font-size: 19px;
+}
+
+.cta-red .field-item a[href*="mailto:"]:before {
+  background: #990000;
+}
+
+.cta-green .field-item a[href*="mailto:"]:before {
+  background: #7d8401;
+}
+.cta-green .field-item a[href*="mailto:"]:hover:before {
+  background: #2d6280;
+}
+
 .cta-green.designed-box {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBFAF8', endColorstr='#FFEDEDED');
