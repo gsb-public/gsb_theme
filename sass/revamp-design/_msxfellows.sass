@@ -11,6 +11,9 @@
       font-size: 34px
       font-weight: normal
       line-height: 40px
+  .field-name-title
+    +breakpoint($bp-mobile-max)
+      display: none
 
 .node-msx-fellows
   border-top: 3px solid $text-black
@@ -48,8 +51,6 @@
   .field-name-title
     margin-top: 25px
     margin-bottom: 25px
-    +breakpoint($bp-mobile-max)
-      display: none
 
   .field-name-field-year
     background: $grey-dark
