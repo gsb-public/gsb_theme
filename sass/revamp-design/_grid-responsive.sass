@@ -17,18 +17,31 @@
 
         &.views-column-last
           margin-right: 0
-  &.views-columns-5
+  &.views-columns-6
+    .views-column
+      margin-bottom: 38px
+      +breakpoint($bp-mobile)
+        margin-bottom: 14px
     > div
       display: block
       +clearfix
-      margin-bottom: 38px    
       > div
-        display: inline-block 
+        display: inline-block
         float: left
-        width: 18.6%
-        //min-width: 170px
-        margin-right: 1.75%   
-        
-        
+        width: 130px
+        margin-right: 18px
+        +breakpoint($bp-tablet-port-max)
+          margin-right: 108px
+          width: 170px
+        &.views-column-3
+          +breakpoint($bp-tablet-port-max)
+            margin-right: 0
+          +breakpoint($bp-mobile-480)
+            margin-right: 14px
+        +breakpoint($bp-mobile-max)
+          margin-right: 14px
+          width: 170px
+        +breakpoint($bp-mobile)
+          width: 130px
         &.views-column-last
-          margin-right: 0 
+          margin-right: 0
