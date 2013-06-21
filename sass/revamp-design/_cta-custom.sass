@@ -201,16 +201,18 @@
     width: 100%
     display: block
     padding: 25px
+    background: rgba($black, 0.55)
     &:hover
-      background: rgba($black, 0.55)
+      background: none
       .link-inner
-        border: 1px solid #5c8a81
+        border: 1px solid transparent
       .link-title
-        +background(linear-gradient(top, #5c8a81, #739d95))
+        +background(linear-gradient(top, #683651, #814d69))
+        +box-shadow(rgba($black, 0.25) 0 2px 2px)
     .link-inner
       background-position: -27px -27px
       height: 163px
-      border: 1px solid transparent
+      border: 1px solid #5c8a81
     .link-title
       position: relative
       font-size: 18px
@@ -218,8 +220,7 @@
       font-weight: bold
       color: $white
       padding: 0.9em 0.6em 0.6em 0.6em
-      +background(linear-gradient(top, #683651, #814d69))
-      +box-shadow(rgba($black, 0.25) 0 2px 2px)
+      +background(linear-gradient(top, #5c8a81, #739d95))
       &:after
         color: $white
         content: "\f100"
