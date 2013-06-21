@@ -105,9 +105,6 @@
           position: absolute
           top: 0
           left: 0
-      img
-        +breakpoint($bp-mobile)
-          min-height: 40%
     .diptych-txt-block
       position: absolute
       bottom: 28px
@@ -126,6 +123,9 @@
       +breakpoint($bp-tablet-port-max)
         font-size: 22px
         line-height: 1.2em
+      +breakpoint($bp-mobile)
+        font-size: 16px
+        line-height: 1.1em
 
     .field-type-link-field
       background-color: $teal-dark
