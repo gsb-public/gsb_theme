@@ -10033,45 +10033,73 @@ div.modal-content a.button.remove {
   background-position: center -14px;
 }
 
-.page-not-found .panel-display .inner-main-wrapper {
+.error-page .panel-display .inner-main-wrapper {
   margin-right: 0;
 }
-.page-not-found #content-wrapper {
+.error-page #content-wrapper {
+  background: none;
+}
+.error-page.page-not-found #content-wrapper:before,
+.error-page .pane-bundle-text {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  background: none;
 }
-.page-not-found #page-title,
-.page-not-found .pane-node-field-addthis,
-.page-not-found .tabs,
-.page-not-found #block-workbench-block,
-.page-not-found .action-links {
+.error-page .pane-bundle-text {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.error-page #page-title,
+.error-page .pane-node-field-addthis {
   display: none;
 }
-.page-not-found .page-title {
+.error-page .left {
   float: left;
   width: 30%;
+}
+.error-page .page-title {
   font-weight: normal;
   line-height: normal;
   font-size: 76px;
+  float: left;
 }
-.page-not-found .page-title span {
+.error-page .page-title span {
   position: relative;
   top: -20px;
   font-size: 20px;
   display: block;
   line-height: normal;
+  text-align: center;
 }
-.page-not-found .not-found-wrapper {
+.error-page .error-wrapper {
   overflow: hidden;
 }
-.page-not-found .not-found-wrapper .larger-text {
-  font-size: 40px;
+.error-page .error-wrapper .larger-text {
+  font-size: 32px;
 }
-.page-not-found .field-name-field-body a {
+.error-page .error-wrapper ol {
+  margin-bottom: 0;
+}
+.error-page .field-name-field-body ul li:before {
+  content: "";
+}
+.error-page .field-name-field-body a {
   color: #990000;
   border: none;
+}
+.error-page .menu-wrapper,
+.error-page .pane-block {
+  width: 33.333%;
+  float: left;
+}
+.error-page .menu-wrapper h2,
+.error-page .pane-block h2 {
+  color: #666666;
+  font-size: 24px;
+}
+.error-page.page-not-found .error-wrapper {
+  margin-bottom: 40px;
 }
 
 .intro-copy {

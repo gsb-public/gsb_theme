@@ -1,33 +1,53 @@
-.page-not-found
-  .panel-display .inner-main-wrapper    
-    margin-right: 0 
+.error-page
+  .panel-display .inner-main-wrapper
+    margin-right: 0
   #content-wrapper
+    background: none
+  &.page-not-found #content-wrapper:before,
+  .pane-bundle-text
     box-shadow: none
     -webkit-box-shadow: none
     -moz-box-shadow: none
+  .pane-bundle-text
     background: none 
+    border: none
+    padding: 0
   #page-title,
   .pane-node-field-addthis,
-  .tabs,
-  #block-workbench-block,
-  .action-links
     display: none
-  .page-title
+  .left
     float: left
     width: 30%
+  .page-title
     font-weight: normal
     line-height: normal
     font-size: 76px
+    float: left
     span
       position: relative
       top: -20px
       font-size: 20px    
       display: block
       line-height: normal
-  .not-found-wrapper
+      text-align: center
+  .error-wrapper
     overflow: hidden
     .larger-text
-      font-size: 40px
-  .field-name-field-body a
-    color: $red
-    border: none
+      font-size: 32px
+    ol
+      margin-bottom: 0
+  .field-name-field-body
+    ul li:before
+      content: ""
+    a
+      color: $red
+      border: none
+  .menu-wrapper,
+  .pane-block
+    width: 33.333%
+    float: left
+    h2
+      color: $grey-6
+      font-size: 24px
+  &.page-not-found .error-wrapper
+    margin-bottom: 40px
