@@ -40,7 +40,7 @@
     background: image_url('cta-visit.png') repeat-x top left
   .virtual-tour-btn
     background: $white
-    +background(image_url('arrow-cta-tan-small.png') no-repeat 93% 50%, $white)
+    //+background(image_url('arrow-cta-tan-small.png') no-repeat 93% 50%, $white)
     display: block
     padding: 0 15px
     height: 35px
@@ -48,11 +48,24 @@
     font-size: 18px
     font-weight: bold
     line-height: 38px
+    position: relative
+    &:after
+      font-family: "gsb"
+      font-size: 24px
+      line-height: 1.125
+      content: 'w'
+      font-weight: normal
+      text-transform: lowercase
+      position: absolute
+      right: 9px
+      color: #cdbb93    
   &:hover
     .virtual-tour-btn
       background: $red
-      +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(bottom, #870000, #c40000))
+      //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(bottom, #870000, #c40000))
       color: $white
+      &:after
+        color: $white
   .virtual-tour-cover
     display: block
     height: 120px
