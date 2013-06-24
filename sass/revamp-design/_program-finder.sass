@@ -11,7 +11,7 @@
     background: image_url("bg-program-finder.png") no-repeat
     height: 476px
     padding: 10px
-    +breakpoint($bp-tablet-nexus-max)
+    +breakpoint($bp-program-finder)
       height: auto
       +background(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
@@ -19,7 +19,7 @@
     +background(linear-gradient(#f4f4f4, $grey-d))
     height: 450px
     margin: 0 0 0 15em
-    +breakpoint($bp-tablet-nexus-max)
+    +breakpoint($bp-program-finder)
       height: auto
       margin: 0
       background: transparent
@@ -27,7 +27,7 @@
     fieldset.vertical-tabs-pane
       border: 0
       padding: 30px 40px 36px
-      +breakpoint($bp-tablet-nexus-max)
+      +breakpoint($bp-program-finder)
         padding: 14px
         +background(linear-gradient(#f4f4f4, $grey-d))
         width: 100%
@@ -51,7 +51,7 @@
     .vertical-tabs-panes
       height: 438px
       overflow: hidden
-      +breakpoint($bp-tablet-nexus-max)
+      +breakpoint($bp-program-finder)
         height: auto
     ul.vertical-tabs-list
       border-top: 0
@@ -112,24 +112,24 @@
     .column-b
       width: 230px
       float: left
-      +breakpoint($bp-tablet-nexus-max)
+      +breakpoint($bp-program-finder)
         width: auto
         float: none
     .column-a
       margin-right: 55px
-      +breakpoint($bp-tablet-nexus-max)
+      +breakpoint($bp-program-finder)
         margin-right: 0
     p
       font-size: 16px
       line-height: 19px
-      +breakpoint($bp-tablet-nexus-max)
+      +breakpoint($bp-program-finder)
         font-size: 18px
         line-height: 24px
 
 ////////////////////////
 // Reponsive behavior
 ///////////////////////
-+breakpoint($bp-tablet-nexus-max)
++breakpoint($bp-program-finder)
   ul.vertical-tabs-list
     margin: 0px
     padding: 0px
