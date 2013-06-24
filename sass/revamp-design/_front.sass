@@ -241,7 +241,24 @@
         font-weight: normal
         position: relative
         left: 12px
-
+  article
+    h3
+      font-size: 16px
+      line-height: 20px
+      margin-bottom: 2px
+    .author
+      font-size: 14px
+      color: $text-grey-light
+      line-height: 18px
+    p
+      .date
+        color: $text-grey-light
+        &:after
+          content: "|"
+          margin-right: 5px
+          margin-left: 5px
+          
+          
 // LATEST ARTICLES
 .front .view-business-insights-by-tag
   margin-top: 0

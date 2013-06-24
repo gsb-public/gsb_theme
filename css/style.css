@@ -1485,7 +1485,7 @@ del {
   *behavior: url("../behaviors/box-sizing/boxsizing.php");
   overflow: hidden;
   *zoom: 1;
-  width: 48.71795%;
+  width: 74.35897%;
   margin-right: -100%;
   float: left;
   clear: right;
@@ -1503,7 +1503,7 @@ del {
     width: 100%;
   }
 }
-#bottom .block-block:nth-of-type(1n) {
+#bottom .block-block {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1517,16 +1517,24 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 51.28205%;
-  clear: none;
 }
-@media (max-width: 35.5em) {
-  #bottom .block-block:nth-of-type(1n) {
-    float: none;
-    margin: 0;
-    width: 100%;
-  }
+#bottom .block-block:first-of-type {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 48.71795%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 0;
+  margin-left: 0%;
 }
-#bottom .block-block:nth-of-type(2n) {
+#bottom .block-block:last-of-type {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1540,6 +1548,22 @@ del {
   overflow: hidden;
   *zoom: 1;
   margin-left: 76.92308%;
+}
+#bottom .block-block article {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6%;
+}
+#bottom .block-block article:nth-child(2n+2) {
+  margin-right: 0;
+}
+@media (max-width: 35.5em) {
+  #bottom .block-block:nth-of-type(1n) {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
 }
 @media (max-width: 35.5em) {
   #bottom .block-block:nth-of-type(2n) {
@@ -3076,24 +3100,32 @@ a.event-calendar:hover {
   }
 }
 
-#block-gsb-public-custom-blocks-gpcb-follow-us,
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-2,
-#block-gsb-public-custom-blocks-gpcb-enews-signup {
-  display: inline-block;
-  margin-right: 15px;
-  vertical-align: top;
-  width: 256px;
+#footer .region-footer {
+  padding-top: 35px;
+  clear: both;
+  overflow: hidden;
 }
-@media (min-width: 64em) {
-  #block-gsb-public-custom-blocks-gpcb-follow-us,
-  #block-menu-menu-footer-1,
-  #block-menu-menu-footer-2,
-  #block-gsb-public-custom-blocks-gpcb-enews-signup {
-    margin-right: 30px;
-    width: 270px;
-  }
+#footer .region-footer > div {
+  margin-right: 30px !important;
+  margin-left: 0 !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+  overflow: hidden;
+  *zoom: 1;
+  width: 23.07692%;
+  margin-right: -100%;
+  float: left;
+  clear: right;
+  overflow: hidden;
+  *zoom: 1;
+  margin-left: 51.28205%;
 }
+#footer .region-footer > div:last-of-type {
+  margin-right: 0 !important;
+}
+
 @media (max-width: 48em) {
   #block-gsb-public-custom-blocks-gpcb-follow-us,
   #block-menu-menu-footer-1,
@@ -3184,18 +3216,10 @@ a.event-calendar:hover {
   background: linear-gradient(top, #f0efef, #ffffff);
 }
 
-.region-footer {
-  padding-top: 35px;
-  position: relative;
-  top: 0;
-}
-
-#block-gsb-public-custom-blocks-gpcb-follow-us {
-  margin-right: 15px;
-}
 #block-gsb-public-custom-blocks-gpcb-follow-us .cta-follow-us {
   background: none;
   border: none;
+  margin: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -6310,6 +6334,24 @@ p.acc-title + p {
   font-weight: normal;
   position: relative;
   left: 12px;
+}
+#bottom article h3 {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+#bottom article .author {
+  font-size: 14px;
+  color: #656162;
+  line-height: 18px;
+}
+#bottom article p .date {
+  color: #656162;
+}
+#bottom article p .date:after {
+  content: "|";
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .front .view-business-insights-by-tag {
