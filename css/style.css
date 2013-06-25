@@ -200,6 +200,18 @@ pre, code, kbd, tt {
   margin: 1px;
 }
 
+body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after {
+  margin-left: 3px;
+  font-family: "gsb";
+  line-height: 1;
+  position: relative;
+  top: 2px;
+  font-weight: normal;
+}
+body a[href$=".pdf"]:hover:after:after, body a[href$=".png"]:hover:after:after, body a[href$=".jpg"]:hover:after:after, body a[href$=".gif"]:hover:after:after, body a[href$=".pptx"]:hover:after:after, body a[href$=".ppt"]:hover:after:after, body a[href$=".pps"]:hover:after:after, body a[href$=".odp"]:hover:after:after, body a[href$=".zip"]:hover:after:after, body a[href$=".rar"]:hover:after:after, body a[href$=".tar"]:hover:after:after, body a[href$=".doc"]:hover:after:after, body a[href$=".docx"]:hover:after:after, body a[href$=".txt"]:hover:after:after, body a[href$=".odt"]:hover:after:after, body a[href$=".xls"]:hover:after:after, body a[href$=".xlsx"]:hover:after:after, body a[href$=".ods"]:hover:after:after {
+  color: #2d6280;
+}
+
 article,
 aside,
 details,
@@ -643,12 +655,23 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
   font-family: "search";
 }
 
-body a[href$=".pdf"]:before {
-  content: url('../images/pdficon-red.png');
-  margin-right: 3px;
+body a[href$=".pdf"]:after {
+  content: "m";
 }
-body a[href$=".pdf"]:hover:before {
-  content: url('../images/pdficon-blue.png');
+body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after {
+  content: "#";
+}
+body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after {
+  content: "%";
+}
+body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after {
+  content: "$";
+}
+body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after {
+  content: "&";
+}
+body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after {
+  content: "^";
 }
 
 * {
@@ -10201,12 +10224,6 @@ div.callout br {
 .field-name-field-body a:hover {
   color: #2d6280;
   border-bottom: solid 1px #2d6280;
-}
-.field-name-field-body a[href$=".pdf"] {
-  border: none;
-}
-.field-name-field-body a[href$=".pdf"]:before {
-  content: url('../images/pdficon-green.png');
 }
 .field-name-field-body a:hover {
   border: none;

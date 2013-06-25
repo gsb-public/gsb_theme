@@ -53,10 +53,51 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before
     content: "\f100"
     font-family: "search"
 
-body a[href$=".pdf"]
-  &:before
-    content: image_url("pdficon-red.png")
-    margin-right: 3px
-  &:hover
-    &:before
-      content: image_url("pdficon-blue.png")
+
+
+//txt, doc, docx, xls, xlsx, pdf, ppt, pptx, pps, odt, ods, odp, zip.
+
+body 
+  a
+    &[href$=".pdf"]
+      &:after
+        content: 'm'
+        @extend %doc-attached-icons
+        
+    &[href$=".png"],
+    &[href$=".jpg"],
+    &[href$=".gif"]
+      &:after
+        content: '#'
+        @extend %doc-attached-icons
+        
+    &[href$=".pptx"],
+    &[href$=".ppt"],
+    &[href$=".pps"],
+    &[href$=".odp"]
+      &:after
+        content: '%'
+        @extend %doc-attached-icons  
+        
+    &[href$=".zip"],
+    &[href$=".rar"],
+    &[href$=".tar"]
+      &:after
+        content: '$'
+        @extend %doc-attached-icons     
+        
+    &[href$=".doc"],
+    &[href$=".docx"],
+    &[href$=".txt"],
+    &[href$=".odt"]
+      &:after
+        content: '&'
+        @extend %doc-attached-icons 
+        
+    &[href$=".xls"],
+    &[href$=".xlsx"],
+    &[href$=".ods"]
+      &:after
+        content: '^'
+        @extend %doc-attached-icons      
+                                      

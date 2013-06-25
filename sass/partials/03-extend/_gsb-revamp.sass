@@ -145,3 +145,14 @@
   +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
   @extend %box-shadow
   margin: 1px
+
+%doc-attached-icons
+  margin-left: 3px
+  font-family: 'gsb'
+  line-height: 1
+  position: relative
+  top: 2px
+  font-weight: normal
+  &:hover
+    &:after
+      color: $text-blue
