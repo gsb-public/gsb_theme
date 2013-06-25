@@ -29,38 +29,40 @@
     </div>
     <div id="content-wrapper">
       <div id="content">
-        <div class="left"><h1 class="page-title">404 <span>Page Not Found</span></h1></div>
-        <div class="error-wrapper not-found">
-          <p class="larger-text">Oops...The page you are looking for could not be found</p>
-          <p>But we are here to help in your <a href="/search">Search</a></p>
-          <p>The <a href="/">Stanford Graduate School of Business</a> website is constantly evolving and the links you folllowed are possibily no longer available or have moved. Maybe you wanted to learn about <a href="/programs">Our Programs</a> or look into our <a href="http://gsbpublic.prod.acquia-sites.com/business-insights">Business Insights</a> or maybe for one of the links below.</p>
-          <div class="menu-wrapper">
-            <h2>Site Links</h2>
-            <ul class="menu">
-              <li><a href="/">Homepage</a></li>
-              <li><a href="/stanford-gsb-experience">Stanford GSB Experience</a></li>
-              <li><a href="/programs">Our Programs</a></li>
-              <li><a href="http://www.gsb.stanford.edu/research">Faculty &amp; Research</a></li>
-              <li><a href="/business-insights">Business Insights</a></li>
-              <li><a href="/search">Search</a></li>
-            </ul>
-          </div>
-          <div class="menu-wrapper">
-            <h2>About Us</h2>
-            <ul class="menu"><li class="first leaf"><a href="/" title="">Newsroom</a></li>
-              <li><a href="/" title="">Visit Us</a></li>
-              <li><a href="/" title="">Contact Us</a></li>
-              <li><a href="/" title="">Jobs</a></li>
-              <li><a href="/" title="">Log In</a></li>
-            </ul>
-          </div>
-          <div class="menu-wrapper">
-            <h2>Other Sites</h2>
-            <ul class="menu"><li class="first leaf"><a href="http://alumni.gsb.stanford.edu/">Alumni</a></li>
-              <li><a href="http://www.gsb.stanford.edu/giving/">Giving</a></li>
-              <li><a href="http://www.gsb.stanford.edu/corporate">Recruiters &amp; Corporate Partners</a></li>
-              <li><a href="/stanford-university-community">Stanford University Community</a></li>
-            </ul>
+        <div id="main">
+          <div class="left"><h1 class="page-title">404 <span>Page Not Found</span></h1></div>
+          <div class="error-wrapper not-found">
+            <p class="larger-text">Oops...The page you are looking for could not be found</p>
+            <p>But we are here to help in your <a href="/search">Search</a></p>
+            <p>The <a href="/">Stanford Graduate School of Business</a> website is constantly evolving and the links you folllowed are possibily no longer available or have moved. Maybe you wanted to learn about <a href="/programs">Our Programs</a> or look into our <a href="http://gsbpublic.prod.acquia-sites.com/business-insights">Business Insights</a> or maybe for one of the links below.</p>
+            <div class="menu-wrapper">
+              <h2>Site Links</h2>
+              <ul class="menu">
+                <li><a href="/">Homepage</a></li>
+                <li><a href="/stanford-gsb-experience">Stanford GSB Experience</a></li>
+                <li><a href="/programs">Our Programs</a></li>
+                <li><a href="http://www.gsb.stanford.edu/research">Faculty &amp; Research</a></li>
+                <li><a href="/business-insights">Business Insights</a></li>
+                <li><a href="/search">Search</a></li>
+              </ul>
+            </div>
+            <div class="menu-wrapper">
+              <h2>About Us</h2>
+              <ul class="menu"><li class="first leaf"><a href="/" title="">Newsroom</a></li>
+                <li><a href="/" title="">Visit Us</a></li>
+                <li><a href="/" title="">Contact Us</a></li>
+                <li><a href="/" title="">Jobs</a></li>
+                <li><a href="/" title="">Log In</a></li>
+              </ul>
+            </div>
+            <div class="menu-wrapper">
+              <h2>Other Sites</h2>
+              <ul class="menu"><li class="first leaf"><a href="http://alumni.gsb.stanford.edu/">Alumni</a></li>
+                <li><a href="http://www.gsb.stanford.edu/giving/">Giving</a></li>
+                <li><a href="http://www.gsb.stanford.edu/corporate">Recruiters &amp; Corporate Partners</a></li>
+                <li><a href="/stanford-university-community">Stanford University Community</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

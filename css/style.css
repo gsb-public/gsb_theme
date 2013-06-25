@@ -10086,7 +10086,7 @@ div.modal-content a.button.remove {
   border: none;
   padding: 0;
 }
-.error-page #page-title,
+.error-page #page-title, .error-page.page-not-found #search-touch-button,
 .error-page .pane-node-field-addthis {
   display: none;
 }
@@ -10147,8 +10147,22 @@ div.modal-content a.button.remove {
 .error-page .bryant-content .pane-fieldable-panels-pane a {
   font-size: 16px;
 }
+@media (max-width: 35.5em) {
+  .error-page.page-not-found #header-wrapper #header {
+    min-height: 80px;
+  }
+}
 .error-page.page-not-found .error-wrapper {
   margin-bottom: 40px;
+}
+@media (max-width: 35.5em) {
+  .error-page.page-not-found .left,
+  .error-page.page-not-found .error-wrapper {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .intro-copy {
