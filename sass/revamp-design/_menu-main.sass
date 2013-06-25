@@ -51,6 +51,8 @@
       margin: 0
       &.qtip-hover
         background: $black
+        +breakpoint($bp-mobile-max)
+          background: transparent
     // IPAD
     +breakpoint($bp-tablet-port)
       +background(linear-gradient(bottom, $red-light, $red-dark))
