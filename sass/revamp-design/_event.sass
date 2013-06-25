@@ -234,7 +234,7 @@
 // Admission events
 .view-admission-events
   table
-    +box-shadow(0px 1px 1px rgba($black, 0.1))
+    +box-shadow(0 1px 1px rgba($black, 0.1))
     border: 1px solid #e4e4e4 !important
     margin-bottom: 30px
     width: 100%
@@ -315,7 +315,7 @@
   .event-button
     background-color: #fbfaf8
     +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
-    margin: 2px 7px 0px 1px
+    margin: 2px 7px 0 1px
     border: 2px $white solid
     border-bottom: 0 none
     &:hover
@@ -462,7 +462,7 @@
   .event_calendar_featured
     //background: image_url("blue_box_event_f.png") no-repeat 0 0
     position: absolute
-    top: 0px
+    top: 0
     left: 0
     width: 143px
     height: 128px
@@ -479,23 +479,23 @@
       color: #63acd5
     > div
       line-height: 31px
-    
-    
+
+
     &.from-to
       b
         position: relative
         top: 10px
         &:last-of-type
           top: -8px
-          
-    
+
+
     ins,
     b,
     span
       display: block
-      
+
     span
-      top: -3px  
+      top: -3px
     ins
       text-decoration: none
       border: 0 none
