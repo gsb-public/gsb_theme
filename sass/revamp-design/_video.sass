@@ -49,6 +49,36 @@
     +breakpoint($bp-video)
       display: block
   .gsb-responsive-preview .file-video
+    a
+      position: relative
+      display: inline-block
+      &:before, &:after
+        font-family: "gsb"
+        line-height: 1
+        position: absolute
+        top: 50%
+        left: 50%
+      
+           
+      &:before
+        font-size: 64px
+        content: "~"
+        color: rgba(0, 0, 0, 0.8)
+        margin-top: -40px
+        margin-left: -32px
+
+      &:after
+        content: "9"
+        font-size: 24px
+        color: white
+        margin-top: -21px
+        margin-left: -10px
+
+      &:hover
+        &:before
+          color: rgba(0,0,0,1)
+        &:after
+          color: #63acd5    
     +breakpoint($bp-video)
       display: none
 

@@ -3507,6 +3507,37 @@ input.footer__signup__submit:hover {
     display: block;
   }
 }
+.field-type-file .gsb-responsive-preview .file-video a {
+  position: relative;
+  display: inline-block;
+}
+.field-type-file .gsb-responsive-preview .file-video a:before, .field-type-file .gsb-responsive-preview .file-video a:after {
+  font-family: "gsb";
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.field-type-file .gsb-responsive-preview .file-video a:before {
+  font-size: 64px;
+  content: "~";
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: -40px;
+  margin-left: -32px;
+}
+.field-type-file .gsb-responsive-preview .file-video a:after {
+  content: "9";
+  font-size: 24px;
+  color: white;
+  margin-top: -21px;
+  margin-left: -10px;
+}
+.field-type-file .gsb-responsive-preview .file-video a:hover:before {
+  color: black;
+}
+.field-type-file .gsb-responsive-preview .file-video a:hover:after {
+  color: #63acd5;
+}
 @media (min-width: 39.1875em) {
   .field-type-file .gsb-responsive-preview .file-video {
     display: none;
