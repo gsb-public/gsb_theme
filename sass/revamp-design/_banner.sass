@@ -5,8 +5,6 @@
 // GENERAL
 #banner
   overflow: hidden
-  .section
-    padding: 18px 0
 
 .banner-title,
 .banner-subtitle
@@ -19,7 +17,7 @@
   font-size: 28px
   letter-spacing: 0.07em
   line-height: 1.2em
-  //padding-bottom: 14px
+  padding-bottom: 18px /* WP-1773 */
   text-transform: uppercase
 
 .banner-subtitle
@@ -39,11 +37,9 @@
   font-size: 14px
   .breadcrumb
     line-height: 1em
-    padding-bottom: 18px
-    //padding-top: 18px
+    padding: 18px 0 /* WP-1773 */
     +breakpoint($bp-mobile-max)
       display: none
-      padding-left: 16px
     top: 0
     margin-bottom: 0
   a
