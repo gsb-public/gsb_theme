@@ -10022,38 +10022,45 @@ div.modal-content a.button.remove {
   background-position: center -14px;
 }
 
-.error-page .panel-display .inner-main-wrapper {
+body.error-page a {
+  color: #990000;
+  border: none;
+}
+body.error-page a:hover {
+  color: #2d6280;
+}
+body.error-page .panel-display .inner-main-wrapper {
   margin-right: 0;
 }
-.error-page #content-wrapper {
+body.error-page #content-wrapper {
   background: none;
 }
-.error-page.page-not-found #content-wrapper:before, .error-page.page-not-found #content-wrapper:after,
-.error-page .pane-bundle-text {
+body.error-page.page-not-found #content-wrapper:before, body.error-page.page-not-found #content-wrapper:after,
+body.error-page .pane-bundle-text {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-.error-page .pane-bundle-text {
+body.error-page .pane-bundle-text {
   background: none;
   border: none;
   padding: 0;
 }
-.error-page #page-title,
-.error-page .pane-node-field-addthis {
+body.error-page #page-title,
+body.error-page .pane-node-field-addthis {
   display: none;
 }
-.error-page .left {
+body.error-page .left {
   float: left;
   width: 30%;
 }
-.error-page .page-title {
+body.error-page .page-title {
   font-weight: normal;
   line-height: normal;
   font-size: 76px;
   float: left;
 }
-.error-page .page-title span {
+body.error-page .page-title span {
   position: relative;
   top: -20px;
   font-size: 20px;
@@ -10061,33 +10068,40 @@ div.modal-content a.button.remove {
   line-height: normal;
   text-align: center;
 }
-.error-page .error-wrapper {
+body.error-page .error-wrapper {
   overflow: hidden;
 }
-.error-page .error-wrapper .larger-text {
+body.error-page .error-wrapper .larger-text {
   font-size: 32px;
 }
-.error-page .error-wrapper ol {
+body.error-page .error-wrapper ol {
   margin-bottom: 0;
 }
-.error-page .field-name-field-body ul li:before {
+body.error-page .field-name-field-body ul li:before {
   content: "";
 }
-.error-page .field-name-field-body a {
-  color: #990000;
-  border: none;
-}
-.error-page .menu-wrapper,
-.error-page .pane-block {
-  width: 33.333%;
+body.error-page.page-not-found .menu-wrapper,
+body.error-page .pane-block,
+body.error-page .bryant-content .pane-fieldable-panels-pane {
+  width: 32%;
   float: left;
+  margin-right: 1%;
 }
-.error-page .menu-wrapper h2,
-.error-page .pane-block h2 {
+@media (max-width: 35.5em) {
+  body.error-page.page-not-found .menu-wrapper,
+  body.error-page .pane-block,
+  body.error-page .bryant-content .pane-fieldable-panels-pane {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+body.error-page.page-not-found .menu-wrapper h2,
+body.error-page .pane-block h2,
+body.error-page .bryant-content .pane-fieldable-panels-pane h2 {
   color: #666666;
   font-size: 24px;
 }
-.error-page.page-not-found .error-wrapper {
+body.error-page.page-not-found .error-wrapper {
   margin-bottom: 40px;
 }
 

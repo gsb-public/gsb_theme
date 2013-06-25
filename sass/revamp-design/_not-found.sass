@@ -1,4 +1,9 @@
-.error-page
+body.error-page
+  a
+    color: $red
+    border: none
+  a:hover
+    color: $text-blue
   .panel-display .inner-main-wrapper
     margin-right: 0
   #content-wrapper
@@ -40,13 +45,15 @@
   .field-name-field-body
     ul li:before
       content: ""
-    a
-      color: $red
-      border: none
-  .menu-wrapper,
-  .pane-block
-    width: 33.333%
+  &.page-not-found .menu-wrapper,
+  .pane-block,
+  .bryant-content .pane-fieldable-panels-pane
+    width: 32%
     float: left
+    margin-right: 1%
+    +breakpoint($bp-mobile-max)
+      width: 100%
+      margin-right: 0
     h2
       color: $grey-6
       font-size: 24px

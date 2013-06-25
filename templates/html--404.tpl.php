@@ -56,11 +56,10 @@
           </div>
           <div class="menu-wrapper">
             <h2>Other Sites</h2>
-            <ul class="menu"><li class="first leaf"><a href="/" title="">Newsroom</a></li>
-              <li><a href="/" title="">Visit Us</a></li>
-              <li><a href="/" title="">Contact Us</a></li>
-              <li><a href="/" title="">Jobs</a></li>
-              <li><a href="/" title="">Log In</a></li>
+            <ul class="menu"><li class="first leaf"><a href="http://alumni.gsb.stanford.edu/">Alumni</a></li>
+              <li><a href="http://www.gsb.stanford.edu/giving/">Giving</a></li>
+              <li><a href="http://www.gsb.stanford.edu/corporate">Recruiters &amp; Corporate Partners</a></li>
+              <li><a href="/stanford-university-community">Stanford University Community</a></li>
             </ul>
           </div>
         </div>
