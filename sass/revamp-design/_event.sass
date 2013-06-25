@@ -391,16 +391,15 @@
         float: right
         padding-left: 22px
         padding-right: 55px
-        
-#block-gsb-public-custom-blocks-gpcb-banner-title
-  float: left        
+
 #block-gsb-public-custom-blocks-gsb-featured-event
   margin-bottom: 40px
   float: right
   width: 795px
   position: relative
   top: 18px
-  
+  +breakpoint($bp-tablet-port-max)
+    display: none
   h2
     font-size: 24px
     color: #63acd5

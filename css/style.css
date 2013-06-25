@@ -6883,16 +6883,17 @@ p.acc-title + p {
   padding-right: 55px;
 }
 
-#block-gsb-public-custom-blocks-gpcb-banner-title {
-  float: left;
-}
-
 #block-gsb-public-custom-blocks-gsb-featured-event {
   margin-bottom: 40px;
   float: right;
   width: 795px;
   position: relative;
   top: 18px;
+}
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gsb-featured-event {
+    display: none;
+  }
 }
 #block-gsb-public-custom-blocks-gsb-featured-event h2 {
   font-size: 24px;
