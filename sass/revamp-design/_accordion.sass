@@ -26,37 +26,10 @@
     clear: both
   .accordion-body-wrap
     display: none
-  .accordion-toggle
-    display: block
-    float: left
-    position: relative
-    //background: image_url("accordion-icons.png") no-repeat 0 0
-    &:after
-      content: 'c'
-      font-family: 'gsb'
-      font-size: 26px
-      color: $red
-      font-weight: normal
-  .acc-title .accordion-toggle
-    position: absolute
-    top: 4px
-    left: 0
-    margin-top: 0
 
 .accordion-toggle.opened, .opened .accordion-toggle
   &:after
     content: 'd'
-
-.accordion-toggle
-  &:hover
-    //background-position: -15px 0
-    &:after
-      color: $text-blue
-  &.opened:hover
-    //background-position: -15px -16px
-
-.opened .accordion-toggle:hover
-  background-position: -15px -16px
 
 .page-node #content-body .field-name-field-accordion-item .field
   margin-bottom: 0
@@ -66,15 +39,13 @@
 .content
   .field-name-field-accordion-item .field-name-field-body
     display: none
-    margin-top: 0
-    padding-left: 36px
     color: $text-grey
     font-size: 18px
     padding-bottom: 12px
-
+  .field-name-field-accordion-item .field-name-field-body,
   .accordion-body-wrap .acc-body
     margin-top: 0
-    padding-left: 30px
+    padding-left: 36px
   .acc-body
     margin-bottom: 10px
   .field-name-field-accordion-item .field-name-field-title,
@@ -88,18 +59,26 @@
     font-weight: bold
     cursor: pointer
     line-height: 1.1
+    &:before
+      content: 'c'
+      font-family: 'gsb'
+      font-size: 26px
+      color: $red
+      font-weight: normal
+      width: 30px
+      display: inline-block
+    &:hover
+      &:before
+        color: $text-blue
 
   .field-name-field-accordion-item
     .entity-field-collection-item:first-of-type
       border-top: 0
     .field-name-field-title .field-items
-      margin-left: 30px
       padding: 8px 8px 18px 5px
   .acc-title
-    margin-left: 30px
-    padding: 8px 8px 8px 5px
+    padding: 8px 8px 18px 5px
     margin-left: 0
-    padding-left: 30px
 
 p.acc-title + p
   margin-top: 15px

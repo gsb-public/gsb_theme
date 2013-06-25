@@ -87,7 +87,6 @@
           if (!currentHead.hasClass('processed')) {
             // Add +/- icon on header.
             currentHead.addClass('processed')
-              .prepend('<span class="accordion-toggle"></span>')
               .click(function (e) {
                 var $this = $(this);
                 if ($this.parents('.entity').length > 0) {

@@ -4804,35 +4804,9 @@ a.twitter-icon:hover {
 .content .accordion-body-wrap {
   display: none;
 }
-.content .accordion-toggle {
-  display: block;
-  float: left;
-  position: relative;
-}
-.content .accordion-toggle:after {
-  content: "c";
-  font-family: "gsb";
-  font-size: 26px;
-  color: #990000;
-  font-weight: normal;
-}
-.content .acc-title .accordion-toggle {
-  position: absolute;
-  top: 4px;
-  left: 0;
-  margin-top: 0;
-}
 
 .accordion-toggle.opened:after, .opened .accordion-toggle:after {
   content: "d";
-}
-
-.accordion-toggle:hover:after {
-  color: #2d6280;
-}
-
-.opened .accordion-toggle:hover {
-  background-position: -15px -16px;
 }
 
 .page-node #content-body .field-name-field-accordion-item .field {
@@ -4843,15 +4817,14 @@ a.twitter-icon:hover {
 
 .content .field-name-field-accordion-item .field-name-field-body {
   display: none;
-  margin-top: 0;
-  padding-left: 36px;
   color: #231f20;
   font-size: 18px;
   padding-bottom: 12px;
 }
+.content .field-name-field-accordion-item .field-name-field-body,
 .content .accordion-body-wrap .acc-body {
   margin-top: 0;
-  padding-left: 30px;
+  padding-left: 36px;
 }
 .content .acc-body {
   margin-bottom: 10px;
@@ -4868,18 +4841,29 @@ a.twitter-icon:hover {
   cursor: pointer;
   line-height: 1.1;
 }
+.content .field-name-field-accordion-item .field-name-field-title .field-item:before,
+.content .acc-title:before {
+  content: "c";
+  font-family: "gsb";
+  font-size: 26px;
+  color: #990000;
+  font-weight: normal;
+  width: 30px;
+  display: inline-block;
+}
+.content .field-name-field-accordion-item .field-name-field-title .field-item:hover:before,
+.content .acc-title:hover:before {
+  color: #2d6280;
+}
 .content .field-name-field-accordion-item .entity-field-collection-item:first-of-type {
   border-top: 0;
 }
 .content .field-name-field-accordion-item .field-name-field-title .field-items {
-  margin-left: 30px;
   padding: 8px 8px 18px 5px;
 }
 .content .acc-title {
-  margin-left: 30px;
-  padding: 8px 8px 8px 5px;
+  padding: 8px 8px 18px 5px;
   margin-left: 0;
-  padding-left: 30px;
 }
 
 p.acc-title + p {
