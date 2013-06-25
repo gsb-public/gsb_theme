@@ -108,7 +108,8 @@ ul.slideshow-items
     z-index: 2
     .wide-view &
       bottom: 0
-      height: 62%
+      height: auto
+      min-height: 41%
       padding: 26px
       position: absolute
       top: initial
@@ -248,6 +249,8 @@ ul.slideshow-items
     height: 267px
     z-index: 2
     width: 100%
+    .wide-view &
+      height: 41%
     +breakpoint($bp-mobile-max)
       background: none
     .inner

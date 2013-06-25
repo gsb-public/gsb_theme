@@ -3845,7 +3845,8 @@ ul.slideshow-items {
 }
 .wide-view .slideshow-slide .slide-text {
   bottom: 0;
-  height: 62%;
+  height: auto;
+  min-height: 41%;
   padding: 26px;
   position: absolute;
   top: initial;
@@ -4068,6 +4069,9 @@ ul.slideshow-items {
   height: 267px;
   z-index: 2;
   width: 100%;
+}
+.wide-view .slideshow-simple .slide-text {
+  height: 41%;
 }
 @media (max-width: 35.5em) {
   .slideshow-simple .slide-text {
