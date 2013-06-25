@@ -19,7 +19,7 @@
         <div class="section clearfix">
           <a id="search-touch-button"></a>
           <a href="/" title="Home" rel="home" id="logo">
-            <img src="http://gsb.local/profiles/gsb_public/themes/gsb_theme/logo.png" alt="Home">
+            <img src="<?php print drupal_get_path('theme', 'gsb_theme'); ?>/logo.png" alt="Home">
           </a>
         </div>
       </div>
@@ -38,10 +38,10 @@
             <h2>Site Links</h2>
             <ul class="menu">
               <li><a href="/">Homepage</a></li>
-              <li><a href="http://gsbpublic.prod.acquia-sites.com/stanford-gsb-experience">Stanford GSB Experience</a></li>
+              <li><a href="/stanford-gsb-experience">Stanford GSB Experience</a></li>
               <li><a href="/programs">Our Programs</a></li>
               <li><a href="http://www.gsb.stanford.edu/research">Faculty &amp; Research</a></li>
-              <li><a href="http://gsbpublic.prod.acquia-sites.com/business-insights">Business Insights</a></li>
+              <li><a href="/business-insights">Business Insights</a></li>
               <li><a href="/search">Search</a></li>
             </ul>
           </div>
