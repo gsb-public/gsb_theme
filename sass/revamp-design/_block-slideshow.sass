@@ -59,11 +59,15 @@ ul.slideshow-items
 
   &.flex-prev     
     left: 28px
+    +breakpoint($bp-mobile)
+      left: 20px
     &:after
       content: '['   
     //background: image_url("prev-arrow-small.png") no-repeat
   &.flex-next
     right: 28px
+    +breakpoint($bp-mobile)
+      right: 20px
     &:after
       content: 'z'
       left: 2px      
@@ -243,6 +247,8 @@ ul.slideshow-items
   .slide-text
     +background(linear-gradient(left, rgba($white, 0) 25%, rgba($white, 1) 50%))
     padding: 0 25px
+    +breakpoint($bp-mobile)
+      padding: 0
     position: absolute
     top: 0
     right: 0
@@ -263,6 +269,7 @@ ul.slideshow-items
         top: 270px
         width: 100%
       +breakpoint($bp-mobile)
+        padding: 0 20px
         top: 191px
   .slide-title
     font-size: 16px
