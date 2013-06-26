@@ -72,7 +72,10 @@
       a
         @extend %green-button
     .event-ical-link
-      margin: 0 14px
+      display: none
+      .no-touch &
+        display: block
+        margin: 0 14px
 
   .group-right
     max-width: 270px
