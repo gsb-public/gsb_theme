@@ -19,7 +19,7 @@
         <div class="section clearfix">
           <a id="search-touch-button"></a>
           <a href="/" title="Home" rel="home" id="logo">
-            <img src="<?php print drupal_get_path('theme', 'gsb_theme'); ?>/logo.png" alt="Home">
+            <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/logo.png" alt="Home">
           </a>
         </div>
       </div>
