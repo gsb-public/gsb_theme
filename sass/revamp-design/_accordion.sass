@@ -51,6 +51,7 @@
   .field-name-field-accordion-item .field-name-field-title,
   .acc-title
     border-top: 2px #e1e5e4 solid
+    
   // Title styling
   .field-name-field-accordion-item .field-name-field-title .field-item,
   .acc-title
@@ -58,7 +59,7 @@
     font-family: $font-demi
     font-weight: bold
     cursor: pointer
-    line-height: 1.1
+    line-height: 1.1     
     &:before
       content: 'c'
       font-family: 'gsb'
@@ -70,6 +71,13 @@
     &:hover
       &:before
         color: $text-blue
+
+        
+  .field-name-field-accordion-item .field-name-field-title.opened .field-item,
+  .acc-title.opened
+    &:before
+      content: 'd'
+
 
   .field-name-field-accordion-item
     .entity-field-collection-item:first-of-type
