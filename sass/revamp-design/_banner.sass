@@ -5,6 +5,8 @@
 // GENERAL
 #banner
   overflow: hidden
+  +breakpoint($bp-mobile-min) /* WP-1773 */
+    padding: 18px 0 12px /* WPBQA-158 */
 
 .banner-title,
 .banner-subtitle
@@ -15,9 +17,7 @@
 .banner-title
   font-family: $font-demi
   font-size: 28px
-  letter-spacing: 0.07em
   line-height: 1.2em
-  padding-bottom: 18px /* WP-1773 */
 
 .banner-subtitle
   font-size: 42px
@@ -36,7 +36,8 @@
   font-size: 14px
   .breadcrumb
     line-height: 1em
-    padding: 18px 0 /* WP-1773 */
+    +breakpoint($bp-mobile-min) /* WP-1773 */
+      padding-bottom: 8px /* WPBQA-158 */
     +breakpoint($bp-mobile-max)
       display: none
     top: 0
