@@ -9,12 +9,18 @@ ul.slideshow-items
 .flex-control-nav
   display: none
 
+
+
+
 .flex-direction-nav a
-  opacity: 1
+  opacity: .8
   outline: none
   background-image: none
   width: 39px
   height: 39px
+  .no-touch &  
+    opacity: .4
+  
   &:before, &:after
     font-family: "gsb"
     line-height: 1
@@ -29,7 +35,8 @@ ul.slideshow-items
     content: "~"
     color: #887e6e
     opacity: .8
-    
+
+  
   &:after
     font-size: 37px
     color: $white
@@ -81,6 +88,11 @@ ul.slideshow-items
   @extend %border
   position: relative
   top: 0
+  .no-touch &
+    &:hover
+      .flex-direction-nav a
+        opacity: .8
+
 
 // Slide styling
 .slideshow-slide
@@ -214,6 +226,12 @@ ul.slideshow-items
         +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 5%, #cce0dc))
   .slide-cta
     background-color: $purple
+  &:hover
+    .slide-cta
+      background-color: $teal-dark   
+    
+    
+    
 
 .blue-button-on-orange
   .slide-text
@@ -226,6 +244,9 @@ ul.slideshow-items
         +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 5%))
   .slide-cta
     background-color: $teal-dark
+  &:hover
+    .slide-cta
+      background-color: $purple
 
 ////////////////////
 // SIMPLE SLIDESHOW
