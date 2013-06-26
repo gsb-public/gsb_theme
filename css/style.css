@@ -2606,21 +2606,20 @@ a.no-border:hover {
 .region-sidebar-first ul li ul li ul li a {
   font-weight: normal;
 }
-.region-sidebar-first ul li ul a.active {
+.region-sidebar-first ul li a.active {
   color: #2d6280;
 }
 @media (min-width: 48.0625em) {
-  .region-sidebar-first ul li ul a.active:before {
+  .region-sidebar-first ul li a.active:before {
     color: #2d6280;
     content: "\f100";
+    float: left;
     font-family: "arrow-double";
     font-size: 16px;
-    position: absolute;
-    left: 2px;
+    position: relative;
+    width: 0;
+    left: -12px;
   }
-}
-.region-sidebar-first ul li ul a.active a {
-  color: #2d6280;
 }
 
 .item-list .pager li {

@@ -21,7 +21,7 @@
   &:before
     content: "" !important
     position: absolute
-    left: 0 
+    left: 0
     width: 100%
     height: 5px !important
     visibility: visible
@@ -31,8 +31,8 @@
   &:before
     +box-shadow(0px 2px 2px rgba(0,0,0,.3) inset)
     top: 0px
-    
-    
+
+
   #content
     margin: 0 auto
     padding-top: 30px
@@ -541,61 +541,60 @@ a.no-border
     border-top: 0
     padding: 0
   // Menu styling
-  ul
-    li
+  ul li
+    color: $red
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 22px
+    &.collapsed
+      +breakpoint($bp-tablet-port-max)
+        &:before
+          color: $red
+          content: "➕"
+          font-family: "entypo"
+          font-size: 36px
+          position: absolute
+          left: 12px
+    &.active-trail
+      +breakpoint($bp-tablet-port-max)
+        &:before
+          color: $red
+          content: "➖"
+          font-family: "entypo"
+          font-size: 36px
+          position: absolute
+          left: 12px
+    a
       color: $red
-      font-size: 14px
-      font-weight: bold
-      margin-bottom: 22px
-      &.collapsed
-        +breakpoint($bp-tablet-port-max)
-          &:before
-            color: $red
-            content: "➕"
-            font-family: "entypo"
-            font-size: 36px
-            position: absolute
-            left: 12px
-      &.active-trail
-        +breakpoint($bp-tablet-port-max)
-          &:before
-            color: $red
-            content: "➖"
-            font-family: "entypo"
-            font-size: 36px
-            position: absolute
-            left: 12px
-      a
-        color: $red
-        line-height: 1.2
-      // Secondary children
-      ul
-        margin-top: 16px
-        padding-left: 16px
-        position: relative
-        left: 0
-        li
+      line-height: 1.2
+    // Secondary children
+    ul
+      margin-top: 16px
+      padding-left: 16px
+      position: relative
+      left: 0
+      li
+        color: $black
+        margin-bottom: 16px
+        text-transform: none
+        a
           color: $black
-          margin-bottom: 16px
-          text-transform: none
-          a
-            color: $black
-          // Terciary children
-          ul li,
-          ul li a
-            font-weight: normal
-        a.active
+        // Terciary children
+        ul li,
+        ul li a
+          font-weight: normal
+    a.active
+      color: $text-blue
+      +breakpoint($bp-wide-min)
+        &:before
           color: $text-blue
-          +breakpoint($bp-wide-min)
-            &:before
-              color: $text-blue
-              content: "\f100"
-              font-family: "arrow-double"
-              font-size: 16px
-              position: absolute
-              left: 2px
-          a
-            color: $text-blue
+          content: "\f100"
+          float: left
+          font-family: "arrow-double"
+          font-size: 16px
+          position: relative
+          width: 0
+          left: -12px
 
 ////////////////////
 // PAGER
