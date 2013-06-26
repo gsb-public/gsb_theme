@@ -127,68 +127,77 @@
   div.tabs
     position: absolute
     right: 0
-    text-align: right
+
+
     +breakpoint($bp-mobile-max)
       display: none
   ul.tabs
     border: 0
     display: block
-    height: 50px
     margin: 0
     padding: 0
-    position: relative
-    right: 0
     li
       border: 0
       display: inline-block
       margin: 0
       padding: 0
+      float: left
       a
-        background: none
         border: 0
-        font-weight: bold
-        line-height: 3em
-        padding: 0
+        font-weight: normal
+        font-size: 18px
+        text-align: left
+        height: 50px
+        display: inline-block
+        margin: 0
+        color: white
+        line-height: 50px
+        padding: 0 21px
+        +background(linear-gradient(bottom, #606060, #6f6f6f))  
+            
         &:before
-          width: 80px
-          height: 50px
-          display: block
-          text-align: center
-          position: absolute
-          font-family: 'gsb'
-          color: $white
-          font-size: 40px
+          display: inline-block
+          text-align: left
+          float: left
+          font-family: "gsb"
+          margin-right: 14px
+          line-height: 43px
+          color: white
           font-weight: normal
+                 
+        &:hover
+          //color: $grey-1
+            
+      &.active
+        a
           +background(linear-gradient(bottom, #c50000, $red))
-        &:hover,
-        &.active
-          color: $grey-1
+          cursor: default
+        
+      // List link
+      &:first-of-type
+        a
           &:before
-            background: $grey-1
-    // List link
-    li:first-of-type
-      a
-        position: relative
-        right: 100px
-        &:before
-          //content: image_url("icon-event-list.png")
-          right: 36px
-          content: "e"
-          line-height: .8
-    // Event link
-    li:last-of-type
-      a
-        &:before
-          //content: image_url("icon-event-cal.png")
-          content: '5'
-          right: 73px
-          line-height: 1
+            //content: image_url("icon-event-list.png")
+            content: "e"
+            font-size: 35px
+            line-height: 32px
+
+      // Event link
+      &:last-of-type
+        margin-left: 1px
+        a
+          &:before
+            //content: image_url("icon-event-cal.png")
+            content: "5"
+            font-size: 28px
+
+            
     a
-      border: 0
-      display: inline-block
-      margin: 0
-      height: 50px
-      width: 80px
+      //border: 0
+      //display: inline-block
+      //margin: 0
+      //height: 50px
+      //width: 80px
 
 ///////////////////
 // Event listing
