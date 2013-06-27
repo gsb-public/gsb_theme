@@ -9,8 +9,9 @@
       height: 152px
     margin: 0 auto
     max-width: $max-width
-    +breakpoint($bp-mobile-max)
-      min-height: 135px
+    .no-js &, .no-svg &
+      +breakpoint($bp-mobile-max)
+        min-height: 135px
 
 // CONTENT
 #content-wrapper
@@ -136,21 +137,36 @@
 // LOGO
 #logo
   display: inline-block
-  padding-top: 36px
+  margin-top: 36px
+  .svg &
+    height: 76px
+    width: 287px
+    background: image_url("logo.svg") no-repeat
+    background-size: 96%
+  .no-js &, .no-svg &
+    background: image_url("logo.png") no-repeat
   +breakpoint($logo-portrait)
-    img
+    .svg &
+      background-size: 100%
+      height: 65px
+      width: 230px
+    .no-js &, .no-svg &
       max-width: 230px
   +breakpoint($bp-tablet-port)
-    padding: 30px 0
-    padding-left: 20px
+    margin: 30px 0
+    margin-left: 20px
   +breakpoint($bp-mobile-max)
     display: block
-    padding: 21px 0 18px 15px
-    img
+    .svg &
+      height: 36px
+      margin: 15px
+      width: 122px
+    .no-js &, .no-svg &
+      margin: 21px 0 18px 15px
       max-width: 150px
   +breakpoint(769px 919px)
-    padding-top: 0
-    padding-bottom: 36px
+    margin-top: 0
+    margin-bottom: 36px
 
 // SITE SLOGAN
 #site-slogan
