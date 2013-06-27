@@ -14,9 +14,14 @@
         width: 30%
         //min-width: 270px /*Fix WP-1419
         margin-right: 5%
-
         &.views-column-last
           margin-right: 0
+        .person-grid-view &
+          +breakpoint($bp-mobile)
+            display: block
+            float: none
+            margin-right: 0
+            width: 100%
   &.views-columns-6
     .views-column
       margin-bottom: 38px
