@@ -85,7 +85,15 @@
                   touchNeighbour(ul_element, 'acc-body');
                   found_body = true;
                 } 
-              } 
+              } else if (next.prop('tagName') == 'TABLE') {
+                var table_element = next;
+                var acc_body_elements = next.find('.acc-body');  
+                if (acc_body_elements.length > 0) {
+                  table_element.wrapAll('<div class="accordion-body-wrap" />');    
+                  touchNeighbour(table_element, 'acc-body');
+                  found_body = true;
+                } 
+              }    
             }
             if (found_body == false) {
               // If the title has body after it - remove styling.
