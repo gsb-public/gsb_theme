@@ -7205,7 +7205,7 @@ p.acc-title + p {
   font-size: 16px;
 }
 .gsb-views-exposed-search .views-exposed-form .form-submit {
-  float: left;
+  float: right;
   width: 45px;
   height: 36px;
   -webkit-border-radius: 0;
@@ -7213,12 +7213,36 @@ p.acc-title + p {
   -ms-border-radius: 0;
   border-radius: 0;
   border: none;
-  background: transparent url(../images/search.png) no-repeat center 6px;
+  background: transparent;
   text-indent: 1000px;
   overflow: hidden;
 }
 .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
   background-position: center -27px;
+}
+.svg .gsb-views-exposed-search .views-exposed-form .form-submit {
+  height: 33px;
+  position: relative;
+  top: -35px;
+  width: 40px;
+}
+.no-svg .gsb-views-exposed-search .views-exposed-form .form-submit {
+  background: transparent url(../images/search.png) no-repeat center 6px;
+}
+.no-svg .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
+  background-position: center -27px;
+}
+.svg .gsb-views-exposed-search .views-exposed-form .views-submit-button:before {
+  color: #990000;
+  content: "a";
+  font-family: "gsb";
+  font-size: 30px;
+  position: relative;
+  right: -10px;
+  text-shadow: white -1px 1px;
+}
+.svg .gsb-views-exposed-search .views-exposed-form .views-submit-button:hover:before {
+  color: #2d6280;
 }
 
 @media (min-width: 35.5625em) and (max-width: 48em) {
@@ -7291,7 +7315,7 @@ p.acc-title + p {
 }
 .grey-search-box .form-submit {
   display: inline-block;
-  float: left;
+  float: right;
   width: 45px;
   height: 36px;
   background: transparent;
@@ -7306,8 +7330,7 @@ p.acc-title + p {
 .svg .grey-search-box .form-submit {
   height: 33px;
   position: relative;
-  right: -5px;
-  top: -26px;
+  top: -35px;
   width: 40px;
 }
 @media (max-width: 35.5em) {
@@ -7316,7 +7339,7 @@ p.acc-title + p {
   }
 }
 .no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
-  background: transparent url(../images/search.png) no-repeat center 12px;
+  background: transparent url(../images/search.png) no-repeat center 6px;
 }
 .no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
   background-position: center -27px;
@@ -7565,6 +7588,9 @@ fieldset.collapsible .fieldset-legend {
     position: relative;
     top: -44px;
   }
+}
+.svg .page-events .gsb-views-exposed-form .views-submit-button:before {
+  top: 9px;
 }
 .page-events .gsb-views-exposed-search {
   padding: 0;
@@ -8313,7 +8339,7 @@ div.modal-content a.button.remove {
 }
 .inner-main-wrapper #views-exposed-form-club-filters-club-list #edit-keyword-wrapper, .inner-main-wrapper
 #views-exposed-form-club-filters-club-list #edit-search-wrapper, .inner-main-wrapper
-#views-exposed-form-club-filters-club-list #edit-submit-club-filters {
+#views-exposed-form-club-filters-club-list .views-submit-button {
   display: none;
 }
 

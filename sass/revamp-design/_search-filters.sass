@@ -35,7 +35,7 @@
       color: $grey-6
       font-size: 16px
     .form-submit
-      float: left
+      float: right
       width: 45px
       height: 36px
       -webkit-border-radius: 0
@@ -43,11 +43,34 @@
       -ms-border-radius: 0
       border-radius: 0
       border: none
-      background: transparent url(../images/search.png) no-repeat center 6px
+      background: transparent
       text-indent: 1000px
       overflow: hidden
       &:hover
         background-position: center -27px
+      .svg &
+        height: 33px
+        position: relative
+        top: -35px
+        width: 40px
+      .no-svg &
+        background: transparent url(../images/search.png) no-repeat center 6px
+        &:hover
+          background-position: center -27px
+    .views-submit-button
+      .svg &
+        &:before
+          color: $red
+          content: 'a'
+          font-family: "gsb"
+          font-size: 30px
+          position: relative
+          right: -10px
+          +text-shadow($white -1px 1px)
+      &:hover
+        .svg &
+          &:before
+            color: $text-blue
 
 // Main search
 .grey-search-box
@@ -104,7 +127,7 @@
           color: $text-blue
   .form-submit
     display: inline-block
-    float: left
+    float: right
     width: 45px
     height: 36px
     background: transparent
@@ -118,13 +141,12 @@
     .svg &
       height: 33px
       position: relative
-      right: -5px
-      top: -26px
+      top: -35px
       width: 40px
       +breakpoint($bp-mobile-max)
         top: -20px
     .no-js &, .no-svg &
-      background: transparent url(../images/search.png) no-repeat center 12px
+      background: transparent url(../images/search.png) no-repeat center 6px
     &:hover
       .no-js &, .no-svg &
         background-position: center -27px
@@ -369,6 +391,8 @@ fieldset.collapsible .fieldset-legend
         margin-top: 0
         position: relative
         top: -44px
+    .svg & .views-submit-button:before
+      top: 9px
 
   .gsb-views-exposed-search //,#edit-search-wrapper Temporary disabled
     padding: 0
