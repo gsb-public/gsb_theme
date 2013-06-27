@@ -55,6 +55,7 @@
    */
   Drupal.behaviors.accordion = {
     attach: function (context, settings) {
+
       // Define accordion title.
       var acctitle = $('.acc-title');
       if ( acctitle.length > 0 ) {
@@ -67,13 +68,29 @@
             // If there are more than 1 body alement after title
             // wrap them all into accordion-body-wrap class
             // by calling touchNeighbour recursive function.
+            var found_body = false;
             if ( next.length > 0 ) {
               next.wrapAll('<div class="accordion-body-wrap" />');
               touchNeighbour(next, 'acc-body');
+              found_body = true;
             } else {
-              // If the title has body after it - remove styling.
-              $this.removeClass('acc-title');
+              // make one last attempt to find acc-body elements
+              // lists may have an acc-body elements as li items
+              next = $this.next();
+              if (next.prop('tagName') == 'UL') {
+                var ul_element = next;
+                var acc_body_elements = next.children('.acc-body');  
+                if (acc_body_elements.length > 0) {
+                  ul_element.wrapAll('<div class="accordion-body-wrap" />');    
+                  touchNeighbour(ul_element, 'acc-body');
+                  found_body = true;
+                } 
+              } 
             }
+            if (found_body == false) {
+              // If the title has body after it - remove styling.
+              $this.removeClass('acc-title');                
+            }  
           }
         });
       }
