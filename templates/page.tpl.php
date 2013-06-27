@@ -81,17 +81,22 @@
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
             <?php print render($page['navigation']); ?>
-            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a><?php
+            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a>
+              <?php
               $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
               print render($search_block['content']);
-             ?></div><div id="menu-main-footer">
-              <?php 
+              ?>
+            </div>
+            <div id="menu-main-footer">
+              <?php
                 $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
                 $footer_2 = module_invoke('menu', 'block_view', 'menu-footer-2');
                 print render($footer_1['content']);
                 print render($footer_2['content']);
               ?>
-          </div></div></div>
+            </div>
+          </div></div> <!-- /.section, /#navigation -->
+        </div> <!-- /#nav-touch-wrapper-->
       <?php endif;
         if ($site_slogan): ?>
         <div id="site-slogan"><?php print $site_slogan; ?></div>
@@ -102,7 +107,6 @@
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
-
     </div></div></div> <!-- /.section, /#header, /#header-wrapper -->
 
     <?php print $messages; ?>
