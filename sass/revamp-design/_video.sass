@@ -52,13 +52,14 @@
   .slideshow-slide &
     margin-right: 0px
     max-width: 627px
-  a
+  a.fancybox
     position: relative
     display: inline-block
     &:before, &:after
       font-family: "gsb"
       line-height: 1
       position: absolute
+      z-index: 50
       top: 50%
       left: 50%
     
@@ -82,7 +83,12 @@
         color: rgba(0,0,0,1)
       &:after
         color: #63acd5  
-
+  &.image
+    a
+      display: none
+      &:before,
+      &:after
+        display: none
 // CSS to handle the Preview and Video switching
 .field-type-file
   .gsb-responsive-main .file-video

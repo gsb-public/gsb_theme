@@ -3554,36 +3554,43 @@ input.footer__signup__submit:hover {
   margin-right: 0px;
   max-width: 627px;
 }
-.gsb-image-video-popup a {
+.gsb-image-video-popup a.fancybox {
   position: relative;
   display: inline-block;
 }
-.gsb-image-video-popup a:before, .gsb-image-video-popup a:after {
+.gsb-image-video-popup a.fancybox:before, .gsb-image-video-popup a.fancybox:after {
   font-family: "gsb";
   line-height: 1;
   position: absolute;
+  z-index: 50;
   top: 50%;
   left: 50%;
 }
-.gsb-image-video-popup a:before {
+.gsb-image-video-popup a.fancybox:before {
   font-size: 64px;
   content: "~";
   color: rgba(0, 0, 0, 0.8);
   margin-top: -40px;
   margin-left: -32px;
 }
-.gsb-image-video-popup a:after {
+.gsb-image-video-popup a.fancybox:after {
   content: "9";
   font-size: 24px;
   color: white;
   margin-top: -21px;
   margin-left: -10px;
 }
-.gsb-image-video-popup a:hover:before {
+.gsb-image-video-popup a.fancybox:hover:before {
   color: black;
 }
-.gsb-image-video-popup a:hover:after {
+.gsb-image-video-popup a.fancybox:hover:after {
   color: #63acd5;
+}
+.gsb-image-video-popup.image a {
+  display: none;
+}
+.gsb-image-video-popup.image a:before, .gsb-image-video-popup.image a:after {
+  display: none;
 }
 
 .field-type-file .gsb-responsive-main .file-video {
