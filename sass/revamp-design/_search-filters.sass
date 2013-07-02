@@ -34,7 +34,7 @@
       padding: 6px 50px 6px 10px
       color: $grey-6
       font-size: 16px
-    .form-submit
+    .form-submit //Input submit
       float: right
       width: 45px
       height: 36px
@@ -46,44 +46,9 @@
       background: transparent
       text-indent: 1000px
       overflow: hidden
+      background: transparent url(../images/search.png) no-repeat center 6px
       &:hover
         background-position: center -27px
-      .svg &
-        height: 33px
-        position: relative
-        top: -35px
-        width: 40px
-      .svg .page-events &
-        +breakpoint($bp-mobile-max)
-          height: 48px
-          top: -81px
-      .no-svg &
-        background: transparent url(../images/search.png) no-repeat center 6px
-        &:hover
-          background-position: center -27px
-    .views-submit-button
-      .svg &
-        &:before
-          color: $red
-          content: 'a'
-          font-family: "gsb"
-          font-size: 30px
-          position: relative
-          right: -10px
-          +text-shadow($white -1px 1px)
-      .svg .page-events &
-        &:before
-          top: 7px
-        +breakpoint($bp-mobile-max)
-          float: right
-          height: 0
-          &:before
-            right: -35px
-            top: -37px
-      &:hover
-        .svg &
-          &:before
-            color: $text-blue
 
   .views-widget-filter-field_search_field_value
     label
@@ -126,22 +91,7 @@
         padding: 15px 50px 15px 10px
       +breakpoint($bp-tablet-port)
         width: 218px
-  .form-actions
-    .svg &
-      &:before
-        color: $red
-        content: 'a'
-        font-family: "gsb"
-        font-size: 30px
-        position: relative
-        right: -10px
-        +text-shadow($white -1px 1px)
-        +breakpoint($bp-mobile-max)
-          top: 10px
-    &:hover
-      .svg &
-        &:before
-          color: $text-blue
+
   .form-submit
     display: inline-block
     float: right
@@ -155,26 +105,10 @@
     border: none
     text-indent: 1000px
     overflow: hidden
-    .svg &
-      height: 33px
-      position: relative
-      top: -35px
-      width: 40px
-      +breakpoint($bp-mobile-max)
-        top: -20px
-    .no-js &, .no-svg &
-      background: transparent url(../images/search.png) no-repeat center 6px
-    .page-events &
-      +breakpoint($bp-mobile-max)
-        float: right
-        margin-top: 0
-        position: relative
-        top: -44px
+    background: transparent url(../images/search.png) no-repeat center 6px
     &:hover
-      .no-js &, .no-svg &
-        background-position: center -27px
-        +breakpoint($bp-mobile-max)
-          background: transparent url(../images/search.png) no-repeat center -27px
+      background-position: center -27px
+
 
   .page-gsearch #content &
     width: 40%
