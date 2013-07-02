@@ -200,26 +200,23 @@ a.no-border
     border: 0
 
 //////////////////
-// PAGE TITLES
+// HIDE PAGE TITLE
 /////////////////
+// .node-type-publication,
+// .business-insight-detail,
+// .node-type-case-study,
+// .node-type-research-paper,
+// .page-business-insights,
 .front,
-.node-type-publication,
-.business-insight-detail,
-.node-type-case-study,
-.node-type-research-paper,
-.page-business-insights,
 .node-type-news,
 .node-type-event,
-.page-programs,
 .page-events,
 .node-type-week-in-the-life,
 .node-type-msx-fellows
   #page-title
     display: none
 
-// Show page titles again for mobile if they were in the banner
-.page-programs,
-.page-business-insights,
+// Show page titles again for mobile
 .page-events
   #page-title
     +breakpoint($bp-tablet-port-max)
