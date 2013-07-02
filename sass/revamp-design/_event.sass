@@ -104,14 +104,15 @@
   .view-gsb-event
     +clearfix
     .view-content
-      // display: inline-block
-      // float: right
       margin-top: 80px
-      // width: 74.4%
+      +breakpoint($bp-mobile-max)
+        margin-top: 0
     .view-empty
       display: inline-block
       margin-top: 80px
-  // langing page events listing
+      +breakpoint($bp-mobile-max)
+        margin-top: 0
+  // Landing page events listing
   .view-gsb-event
     .view-mode-teaser
       .field-name-title
