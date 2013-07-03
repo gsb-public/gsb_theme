@@ -33,11 +33,18 @@
   overflow: hidden
   @extend %box-shadow
   padding: 26px
+  +breakpoint(480px 568px)
+    background: image_url('cta-tour-mobile.jpg') no-repeat 0 0
+    max-width: 450px
+  +breakpoint($bp-mobile)
+    max-width: 269px
   &:hover
     display: block
     overflow: hidden
     @extend %border
     background: image_url('cta-visit.png') repeat-x top left
+    +breakpoint(480px 568px)
+      background: image_url('cta-tour-mobile.jpg') no-repeat 0 0
   .virtual-tour-btn
     background: $white
     //+background(image_url('arrow-cta-tan-small.png') no-repeat 93% 50%, $white)
@@ -71,6 +78,9 @@
     height: 120px
     border: 1px $white solid
     background: image_url('cta-visit.png') no-repeat -27px -62px
+    +breakpoint(480px 568px)
+      background: 0
+      border: 0
   &:hover
     .virtual-tour-cover
       border: 1px transparent solid
@@ -88,7 +98,7 @@
     background: image_url('cta-learn-mobile.jpg') no-repeat 0 0
     max-width: 450px
   +breakpoint($bp-mobile)
-    max-width: 270px
+    max-width: 269px
   &:hover
     display: block
     overflow: hidden
@@ -153,7 +163,9 @@
   position: relative
   height: 140px
   overflow: hidden
-  background: image_url('cta-follow-us-bg.png') no-repeat top left
+  background: image_url('cta-follow-us.jpg') no-repeat top left
+  +breakpoint($bp-mobile-max)
+    max-width: 450px
   a
     border: none
     color: $white
