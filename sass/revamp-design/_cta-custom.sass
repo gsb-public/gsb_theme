@@ -58,7 +58,7 @@
       text-transform: lowercase
       position: absolute
       right: 9px
-      color: #cdbb93    
+      color: #cdbb93
   &:hover
     .virtual-tour-btn
       background: $red
@@ -84,10 +84,17 @@
   height: 215px
   overflow: hidden
   padding: 24px
+  +breakpoint(480px 568px)
+    background: image_url('cta-learn-mobile.jpg') no-repeat 0 0
+    max-width: 450px
+  +breakpoint($bp-mobile)
+    max-width: 270px
   &:hover
     display: block
     overflow: hidden
     background: image_url('cta-about.png') repeat-x top left
+    +breakpoint(480px 568px)
+      background: image_url('cta-learn-mobile.jpg') no-repeat 0 0
   .about-campus-btn
     background: $text-green
     +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, $text-green)
@@ -99,6 +106,9 @@
     font-weight: bold
     line-height: 1.2em
     margin-top: 1px
+    min-width: 216px
+    +breakpoint($bp-mobile)
+      max-width: 216px
   &:hover
     .about-campus-btn
       background: $blue-dark
@@ -250,7 +260,7 @@
 .cta-around-globe,
 .link-inner
   background: image_url('gsbaroundtheglobe.jpg') no-repeat
-  
+
 .social-block-youtube
   &:after
     content: 'p'
