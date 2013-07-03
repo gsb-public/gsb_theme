@@ -10,6 +10,8 @@
   padding-bottom: 1px
   border: 2px $white solid
   background: image_url('cta-map.png') repeat-x top left
+  +breakpoint(480px 568px)
+    background: image_url('cta-map-mobile.jpg') repeat-x 80% 30%
   padding: 20px
   &:hover
     display: block
@@ -35,9 +37,6 @@
   padding: 26px
   +breakpoint(480px 568px)
     background: image_url('cta-tour-mobile.jpg') no-repeat 0 0
-    max-width: 450px
-  +breakpoint($bp-mobile)
-    max-width: 269px
   &:hover
     display: block
     overflow: hidden
@@ -96,9 +95,6 @@
   padding: 24px
   +breakpoint(480px 568px)
     background: image_url('cta-learn-mobile.jpg') no-repeat 0 0
-    max-width: 450px
-  +breakpoint($bp-mobile)
-    max-width: 269px
   &:hover
     display: block
     overflow: hidden
@@ -164,8 +160,6 @@
   height: 140px
   overflow: hidden
   background: image_url('cta-follow-us.jpg') no-repeat top left
-  +breakpoint($bp-mobile-max)
-    max-width: 450px
   a
     border: none
     color: $white
