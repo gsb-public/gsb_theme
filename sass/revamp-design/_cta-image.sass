@@ -44,9 +44,7 @@
     +breakpoint($bp-mobile)
       .front &
         font-size: 16px
-  .image-cta-color-purple .field-name-field-link-single a:hover
-    &:after
-      color: $white
+
   // Double arrow link
   .field-name-field-link-single
     display: inline-block
@@ -54,20 +52,24 @@
     top: 6px
     width: 100%
     word-wrap: break-word
-    a:after
-      color: $green-light
-      content: "w"
-      font-family: "gsb"
-      font-size: 26px !important
-      position: relative
-      line-height: 0
-      left: 5px
-      +breakpoint($bp-mobile-max)
-        .front &
-          font-size: 26px
-      +breakpoint($bp-mobile)
-        .front &
-          font-size: 16px
+    a
+      &:after
+        color: $green-light
+        content: "w"
+        font-family: "gsb"
+        font-size: 26px !important
+        position: relative
+        line-height: 0
+        left: 5px
+        +breakpoint($bp-mobile-max)
+          .front &
+            font-size: 26px
+        +breakpoint($bp-mobile)
+          .front &
+            font-size: 16px
+      &:hover
+        &:after
+          color: $white
   .fieldable-panels-pane
     position: relative
     top: 0
