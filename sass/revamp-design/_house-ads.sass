@@ -8,45 +8,24 @@
   padding: 26px
   > div
     +clearfix
-    
-  //COLOR STYLES
-  &.white
-    .field-name-field-link-single a
-      color: $text-green
-      &:hover
-        color: #2d6280
-        &:after
-          color: #2d6280 
-      
+
+  .field-name-field-link-single a
+    color: $text-green
+    &:hover
+      color: $text-blue
       &:after
-        color: $text-green 
-    .show-more
-      color: #7d8401
-      span
-        &:before
-          color: #bac405
-      &:hover
-        color: #2d6280
-        span 
-          &:before
-            color: #2d6280               
-  &.taupe
-    background: $grey-dark
+        color: $text-blue
+    &:after
+      color: $text-green
 
-  //&.white
+  .show-more
+    @extend %show-more-button
+
+  //COLOR STYLES
+  &.taupe
+    +background(linear-gradient(#edebe6, #f7f7f7))
   &.grey
-    background: $text-black
-
-  &.grey,
-  &.taupe
-    background-image: none
-    .field-name-field-body
-      p
-        color: $white   
-    .show-more
-      color: $white
-      &:hover
-        color: #63acd5
+    +background(linear-gradient(#e6ebed, #c4c8ca))
 
   .field-name-field-image-single-public
     float: left
@@ -55,18 +34,17 @@
     > img
       vertical-align: top
 
-
   .field-name-field-link-single a
     font-weight: bold
     font-size: 20px
-    color: $white
+    color: $text-green
     &:hover
-      color: #63acd5
+      color: $text-blue
       &:after
-        color: #63acd5
+        color: $text-blue
     &:after
       content: "w"
-      color: $white
+      color: $text-green
       font-family: "gsb"
       font-size: 24px
       font-weight: normal
@@ -82,13 +60,9 @@
     margin: 12px 0
     overflow: hidden
     p
-      color: $grey-5
       font-size: 14px
       line-height: 18px
       margin-bottom: 0
-  .show-more
-    @extend %show-more-button
-
 
 // Clearfixes in narrow
 .narrow-view
