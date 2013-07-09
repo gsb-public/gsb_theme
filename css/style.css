@@ -2531,21 +2531,31 @@ a.no-border:hover {
   font-size: 22px;
   margin-left: 10px;
 }
-.pane-bundle-text .field-name-field-body {
-  font-size: 14px;
-  line-height: 18px;
-}
 .wide-view .pane-bundle-text .field-name-field-body, .full-view .pane-bundle-text .field-name-field-body {
   font-size: 18px;
   line-height: 24px;
 }
-.pane-bundle-text .field-name-field-body p {
-  font-size: 14px;
-  line-height: 18px;
-}
 .wide-view .pane-bundle-text .field-name-field-body p, .full-view .pane-bundle-text .field-name-field-body p {
   font-size: 18px;
   line-height: 24px;
+}
+.narrow-view .pane-bundle-text .field-name-field-body, .narrow-view .pane-bundle-text p, .narrow-view .pane-bundle-text ul, .narrow-view .pane-bundle-text ol {
+  font-size: 16px;
+  line-height: 20px;
+}
+@media (min-width: 48.0625em) {
+  .narrow-view .pane-bundle-text .field-name-field-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .narrow-view .pane-bundle-text .field-name-field-body h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .narrow-view .pane-bundle-text .field-name-field-body h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .pane-bundle-text p.acc-title,
 .pane-bundle-text p.acc-body {
@@ -10596,25 +10606,6 @@ div.callout br {
 }
 .pane-bundle-text .field-name-field-body {
   overflow: hidden;
-}
-
-@media (min-width: 48.0625em) {
-  .narrow-view .pane-bundle-text .field-name-field-title {
-    font-size: 22px;
-    line-height: 26px;
-  }
-  .narrow-view .pane-bundle-text .field-name-field-body h2 {
-    font-size: 22px;
-    line-height: 26px;
-  }
-  .narrow-view .pane-bundle-text .field-name-field-body h3 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .narrow-view .pane-bundle-text .field-name-field-body p, .narrow-view .pane-bundle-text .field-name-field-body ul, .narrow-view .pane-bundle-text .field-name-field-body ol {
-    font-size: 16px;
-    line-height: 20px;
-  }
 }
 
 .field-name-field-body table {
