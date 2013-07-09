@@ -442,20 +442,31 @@ a.no-border
         font-size: 22px
         margin-left: 10px
   .field-name-field-body
-    font-size: 14px
-    line-height: 18px
     .wide-view &,
     .full-view &
       font-size: 18px
       line-height: 24px
     p
-      font-size: 14px
-      line-height: 18px
       // WPBQA-77
       .wide-view &,
       .full-view &
         font-size: 18px
         line-height: 24px
+  .narrow-view &
+    .field-name-field-body, p, ul, ol
+      font-size: 16px
+      line-height: 20px
+    +breakpoint($bp-wide-min)
+      .field-name-field-title
+        font-size: 22px
+        line-height: 26px
+      .field-name-field-body
+        h2
+          font-size: 22px
+          line-height: 26px
+        h3
+          font-size: 18px
+          line-height: 24px
   // Accordion in a text bundle
   p.acc-title,
   p.acc-body
