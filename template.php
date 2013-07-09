@@ -24,13 +24,13 @@ function gsb_theme_date_display_range($variables) {
  */
 function gsb_theme_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
-  
+
   // Remove the breadcrumb on the 'Search' page
   $root_path = menu_tab_root_path();
   if ($root_path == 'gsearch') {
     unset($variables['breadcrumb']);
     return;
-  }  
+  }
 
   // We can't implement hook_menu_breadcrumb_alter because breadcrumbs_by_path
   // are loaded on page_build.
@@ -150,7 +150,7 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
   // Alter search blocks titles.
   if ($variables['form']['#id'] == 'views-exposed-form-club-filters-club-list') {
     if (isset($variables['widgets']['filter-field_search_field_value']->label)) {
-      $variables['widgets']['filter-field_search_field_value']->label .= '<strong>GSB Clubs</strong>';
+      $variables['widgets']['filter-field_search_field_value']->label .= '<strong>Stanford GSB Clubs</strong>';
     }
   }
 }
