@@ -4,13 +4,15 @@
 
 .views-responsive-grid
   &.views-columns-3
+    +clearfix
     > div
       display: block
       +clearfix
       margin-bottom: 30px
       .person-grid-view &,
       .page-programs-mba-student-life-gsb-unofficial-week-in-the-life &
-        +breakpoint($bp-mobile)
+        +breakpoint($bp-mobile-max)
+          display: inline
           margin-bottom: 0
       > div
         display: inline-block
@@ -20,8 +22,10 @@
         margin-right: 5%
         &.views-column-last
           margin-right: 0
-        .person-grid-view &,
-        .page-programs-mba-student-life-gsb-unofficial-week-in-the-life &
+          .page-programs-mba-student-life-gsb-unofficial-week-in-the-life &
+            +breakpoint($bp-mobile-max)
+              margin-right: 5%
+        .person-grid-view &
           +breakpoint($bp-mobile)
             border-bottom: 1px solid $grey-e
             display: block
@@ -33,6 +37,18 @@
             .views-row-last
               border-bottom: 0
             max-width: 270px
+        .page-programs-mba-student-life-gsb-unofficial-week-in-the-life &
+          +breakpoint($bp-mobile-max)
+            margin-bottom: 6%
+            margin-right: 6%
+            width: 47%
+            &:nth-of-type(even)
+              margin-right: 0
+          +breakpoint($bp-mobile)
+            display: block
+            float: none
+            margin-right: 0
+            width: 270px
   &.views-columns-6
     .views-column
       margin-bottom: 38px

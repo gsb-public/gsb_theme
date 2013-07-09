@@ -9301,6 +9301,11 @@ div.modal-content a.button.remove {
   padding: 2px;
   background: white;
 }
+@media (max-width: 20em) {
+  .view-week-in-the-life .view-footer {
+    width: 270px;
+  }
+}
 .view-week-in-the-life .view-footer p {
   margin: 0;
 }
@@ -9486,14 +9491,19 @@ div.modal-content a.button.remove {
   margin-bottom: 7px;
 }
 
+.views-responsive-grid.views-columns-3 {
+  overflow: hidden;
+  *zoom: 1;
+}
 .views-responsive-grid.views-columns-3 > div {
   display: block;
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 30px;
 }
-@media (max-width: 20em) {
+@media (max-width: 35.5em) {
   .person-grid-view .views-responsive-grid.views-columns-3 > div, .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div {
+    display: inline;
     margin-bottom: 0;
   }
 }
@@ -9506,8 +9516,13 @@ div.modal-content a.button.remove {
 .views-responsive-grid.views-columns-3 > div > div.views-column-last {
   margin-right: 0;
 }
+@media (max-width: 35.5em) {
+  .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div.views-column-last {
+    margin-right: 5%;
+  }
+}
 @media (max-width: 20em) {
-  .person-grid-view .views-responsive-grid.views-columns-3 > div > div, .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div {
+  .person-grid-view .views-responsive-grid.views-columns-3 > div > div {
     border-bottom: 1px solid #ededed;
     display: block;
     float: none;
@@ -9517,8 +9532,26 @@ div.modal-content a.button.remove {
     width: 100%;
     max-width: 270px;
   }
-  .person-grid-view .views-responsive-grid.views-columns-3 > div > div .views-row-last, .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div .views-row-last {
+  .person-grid-view .views-responsive-grid.views-columns-3 > div > div .views-row-last {
     border-bottom: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div {
+    margin-bottom: 6%;
+    margin-right: 6%;
+    width: 47%;
+  }
+  .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 20em) {
+  .page-programs-mba-student-life-gsb-unofficial-week-in-the-life .views-responsive-grid.views-columns-3 > div > div {
+    display: block;
+    float: none;
+    margin-right: 0;
+    width: 270px;
   }
 }
 .views-responsive-grid.views-columns-6 .views-column {
