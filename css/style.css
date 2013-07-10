@@ -1245,7 +1245,12 @@ del {
 }
 
 .inner-sidebar-wrapper .panel-pane {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
+}
+@media (max-width: 35.5em) {
+  .inner-sidebar-wrapper .panel-pane {
+    margin-bottom: 15px !important;
+  }
 }
 
 .panel-display .full-header,
