@@ -47,16 +47,10 @@
     &:hover
       text-decoration: underline
 
-// BLACK BACKGROUND
-.page-events,
-.page-business-insights
-  #banner
-    +background(linear-gradient(bottom, #2f2f2f, #1b1b1b))
-
 // EVENT LANDING
 .page-events
-  #banner .section
-    background: image_url("bg-banner-eventcal.png") no-repeat -70% 100%
+  #banner
+    +background(image_url("bg-banner-eventcal.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, #1b1b1b))
     +clearfix
     +breakpoint($bp-tablet-port-max)
       height: 50px
