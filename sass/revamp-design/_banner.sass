@@ -98,8 +98,6 @@
     .menu
       display: none
     .sidebar
-      //.block-menu
-      // Mobile menu trigger
       h2
         border-left: 1px solid rgba($white, 0.3)
         color: $white
@@ -285,16 +283,14 @@
     min-height: 50px
     +background(linear-gradient(#756b5a, #887e6e))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-    .page-stanford-gsb-experience &,
-    .page-programs &
-      position: inherit
-      .sidebar h2
-        margin-top: 0
-      .block.open
-        h2
-          margin-top: -50px
-        .content
-          margin-top: 50px
+    position: inherit
+    .sidebar h2
+      margin-top: 0
+    .block.open
+      h2
+        margin-top: -50px
+      .content
+        margin-top: 50px
     .page-programs &
       +background(linear-gradient(#4c697a, #607c8c))
 
