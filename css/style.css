@@ -1736,6 +1736,11 @@ ul.menu li.collapsed {
 .breadcrumb a:hover {
   text-decoration: underline;
 }
+@media (max-width: 35.5em) {
+  .breadcrumb {
+    display: none;
+  }
+}
 
 .views-exposed-widgets {
   margin: 0;
@@ -8965,17 +8970,15 @@ div.modal-content a.button.remove {
     -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
     -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
     box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-  }
-  .page-stanford-gsb-experience #sidebar, .page-programs #sidebar {
     position: inherit;
   }
-  .page-stanford-gsb-experience #sidebar .sidebar h2, .page-programs #sidebar .sidebar h2 {
+  #sidebar .sidebar h2 {
     margin-top: 0;
   }
-  .page-stanford-gsb-experience #sidebar .block.open h2, .page-programs #sidebar .block.open h2 {
+  #sidebar .block.open h2 {
     margin-top: -50px;
   }
-  .page-stanford-gsb-experience #sidebar .block.open .content, .page-programs #sidebar .block.open .content {
+  #sidebar .block.open .content {
     margin-top: 50px;
   }
   .page-programs #sidebar {
