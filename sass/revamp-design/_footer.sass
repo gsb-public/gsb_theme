@@ -1,12 +1,12 @@
 // FOOTER
 
-
 #footer
   .region-footer
     padding-top: 35px
     position: relative
     top: 0
-
+    +breakpoint($bp-mobile-max)
+      padding-top: 15px
 
 // Footer columns
 #block-gsb-public-custom-blocks-gpcb-follow-us,
@@ -66,8 +66,6 @@
   border-top: 1px solid $white
   +background(linear-gradient(top, #f0efef, $white))
 
-
-
 // FOLLOW US
 #block-gsb-public-custom-blocks-gpcb-follow-us
   margin-right: 15px
@@ -79,21 +77,19 @@
     padding-left: 0
     +breakpoint($bp-mobile-max)
       border-bottom: 1px $grey-c solid
-      margin-bottom: 24px
+      margin-bottom: 15px
     a.cta-title
       width: 270px
       background: none
-      color: $red
       padding: 0
       font-size: 20px
       text-transform: none
       +breakpoint($bp-mobile-max)
-        float: left
+        margin-top: 5px
       &:after
         color: $grey-med
         font-size: 21px
-      &:hover
-        background: transparent
+        left: 0
     .icon-wrapper
       border-top: 1px $grey-c solid
       padding: 27px 0 0 0
@@ -103,29 +99,11 @@
         float: right
         margin: 0
         padding: 0
-        padding-bottom: 24px
-    .social-block-youtube,
-    .social-block-twitter,
-    .social-block-facebook,
-    .social-block-linkedin
-      &:hover
-        +breakpoint($bp-tablet-port)
-          //background-size: 33px 33px
- 
-    //.social-block-youtube:hover
-      //background: image_url("icon-youtube.png") no-repeat
-    //.social-block-twitter:hover
-     // background: image_url("icon-twitter.png") no-repeat
-    //.social-block-facebook:hover
-      //background: image_url("icon-fb.png") no-repeat
-    //.social-block-linkedin:hover
-      //background: image_url("icon-linkedin.png") no-repeat
-
+        padding-bottom: 15px
     .circle
       margin: 0 18px 0 0
-      font-weight: normal 
+      font-weight: normal
       +breakpoint($bp-tablet-port-max)
-        //background-size: 33px 33px
         height: 33px
         margin: 0 5px
         width: 33px
@@ -136,10 +114,6 @@
           margin-left: 0
         &.social-block-facebook
           margin-right: 0
-#footer #block-gsb-public-custom-blocks-gpcb-follow-us
-  margin-top: -5px
-  .cta-title
-    line-height: normal
 
 // NEWSLETTER SIGNUP
 .footer__signup__label
