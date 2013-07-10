@@ -173,7 +173,7 @@
         background: rgba($purple, 0.8)
 
 //////////////////
-// Wide view
+// Wide view Top CTA
 // Gradient overlay
 /////////////////
 .front-panel-feature-one,
@@ -195,3 +195,31 @@
       +background(linear-gradient(left top, rgba(#395d72, 0.9), rgba(#395d72, 0)))
     &.image-cta-color-dark-teal .group-right
       +background(linear-gradient(left top, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
+
+//////////////////
+// Wide view Bottom CTA
+// Gradient overlay
+/////////////////
+.front-panel-feature-one,
+.wide-view
+  .image-cta-position-bottom
+    .group-right
+      height: 393px
+      .group-wrapper
+        position: absolute
+        bottom: 0
+        padding-bottom: 30px
+      +breakpoint($bp-tablet-port-max)
+        height: 310px
+      +breakpoint($bp-mobile)
+        height: 198px
+        .front &
+          height: 213px
+    &.image-cta-color-purple .group-right
+      +background(linear-gradient(left bottom, rgba(#572440, 0.9), rgba(#572440, 0)))
+    &.image-cta-color-green .group-right
+      +background(linear-gradient(left bottom, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
+    &.image-cta-color-blue .group-right
+      +background(linear-gradient(left bottom, rgba(#395d72, 0.9), rgba(#395d72, 0)))
+    &.image-cta-color-dark-teal .group-right
+      +background(linear-gradient(left bottom, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
