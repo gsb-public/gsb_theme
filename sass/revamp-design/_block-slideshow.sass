@@ -18,14 +18,14 @@ ul.slideshow-items
   background-image: none
   width: 39px
   height: 39px
-  .no-touch &  
+  .no-touch &
     opacity: .4
-  
+
   &:before, &:after
     font-family: "gsb"
     line-height: 1
-    text-indent: 0 
-       
+    text-indent: 0
+
   &:before
     position: absolute
     font-size: 40px
@@ -36,7 +36,7 @@ ul.slideshow-items
     color: #887e6e
     opacity: .8
 
-  
+
   &:after
     font-size: 37px
     color: $white
@@ -64,12 +64,12 @@ ul.slideshow-items
 
 
 
-  &.flex-prev     
+  &.flex-prev
     left: 28px
     +breakpoint($bp-mobile)
       left: 20px
     &:after
-      content: '['   
+      content: '['
     //background: image_url("prev-arrow-small.png") no-repeat
   &.flex-next
     right: 28px
@@ -77,9 +77,9 @@ ul.slideshow-items
       right: 20px
     &:after
       content: 'z'
-      left: 2px      
+      left: 2px
     //background: image_url("next-arrow-small.png") no-repeat
-    
+
 
 
 // Slideshow wrapper
@@ -99,13 +99,13 @@ ul.slideshow-items
   background-color: $grey-e
   max-width: 870px
   height: 367px
+  position: relative
+  top: 0
   .wide-view &
     height: 500px
   .full-view &
     +breakpoint($bp-mobile-max)
       height: 500px
-  position: relative
-  top: 0
   a:hover
     .slide-title
       color: $text-blue
@@ -114,21 +114,19 @@ ul.slideshow-items
 
 
   .slide-text
+    bottom: 0
     padding: 0 26px
     position: absolute
-    top: 0
     right: 0
     height: 367px
     width: 367px
     z-index: 2
     .wide-view &
-      bottom: 0
       height: auto
       min-height: 41%
       max-height: 51%
       padding: 26px
       position: absolute
-      top: initial
       width: 100%
       +breakpoint($bp-mobile-max)
         height: auto
@@ -139,18 +137,15 @@ ul.slideshow-items
         height: 70%
     .full-view &
       +breakpoint($bp-mobile-max)
-        bottom: 0
         height: auto
         min-height: 41%
         padding: 26px
         position: absolute
-        top: initial
         width: 100%
       +breakpoint($bp-mobile-480)
         height: 51%
       +breakpoint($bp-mobile)
         height: 70%
-
     .inner
       position: absolute
       bottom: 30px
@@ -228,10 +223,10 @@ ul.slideshow-items
     background-color: $purple
   &:hover
     .slide-cta
-      background-color: $teal-dark   
-    
-    
-    
+      background-color: $teal-dark
+
+
+
 
 .blue-button-on-orange
   .slide-text
@@ -271,7 +266,6 @@ ul.slideshow-items
     +breakpoint($bp-mobile)
       padding: 0
     position: absolute
-    top: 0
     right: 0
     height: 267px
     z-index: 2
