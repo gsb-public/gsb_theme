@@ -103,7 +103,9 @@
       <?php endif;
         print render($page['header']);
         if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"></a>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
+        </a>
       <?php endif; ?>
     </div></div></div> <!-- /.section, /#header, /#header-wrapper -->
 

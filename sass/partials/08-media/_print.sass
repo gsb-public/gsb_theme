@@ -4,7 +4,7 @@
 // Paul Irish & Divya Manian: http://html5boilerplate.com/
 // And many others, less directly...
 
-/* Print Defaults --------------------------------------------------------------
+/* Print Defaults -------------------------------------------------------------- */
 @media print
   *
     background: transparent !important
@@ -12,6 +12,9 @@
     text-shadow: none !important
     filter: none !important
     -ms-filter: none !important
+    box-shadow: none !important
+    -moz-box-shadow: none !important
+    -webkit-box-shadow: none !important
   /* Black prints faster: h5bp.com/s */
 
   body
@@ -55,3 +58,32 @@
     widows: 3
   h2, h3
     page-break-after: avoid
+
+  #site-slogan,
+  #nav-touch-wrapper,
+  #footer-wrapper,
+  #sidebar,
+  #banner,
+  .breadcrumb,
+  .pager-region,
+  .pane-node-field-addthis,
+  .page-events #page-title,
+  .page-programs #page-title
+    display: none !important
+
+  #content-wrapper:before,
+  #content-wrapper:after
+    box-shadow: none !important
+    -moz-box-shadow: none !important
+    -webkit-box-shadow: none !important
+
+  #header-wrapper
+    border: none!important
+  #header
+    height: 60px !important
+    #logo
+      margin-top: 0
+      img
+        display: inline-block
+      &:after
+        display: none

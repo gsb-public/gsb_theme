@@ -1863,6 +1863,9 @@ div.label-inline {
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
 
   /* Black prints faster: h5bp.com/s */
@@ -1929,6 +1932,43 @@ div.label-inline {
 
   h2, h3 {
     page-break-after: avoid;
+  }
+
+  #site-slogan,
+  #nav-touch-wrapper,
+  #footer-wrapper,
+  #sidebar,
+  #banner,
+  .breadcrumb,
+  .pager-region,
+  .pane-node-field-addthis,
+  .page-events #page-title,
+  .page-programs #page-title {
+    display: none !important;
+  }
+
+  #content-wrapper:before,
+  #content-wrapper:after {
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+  }
+
+  #header-wrapper {
+    border: none !important;
+  }
+
+  #header {
+    height: 60px !important;
+  }
+  #header #logo {
+    margin-top: 0;
+  }
+  #header #logo img {
+    display: inline-block;
+  }
+  #header #logo:after {
+    display: none;
   }
 }
 @media (min-width: 48.0625em) {
@@ -2138,6 +2178,9 @@ div.label-inline {
 #logo {
   display: inline-block;
   margin-top: 36px;
+}
+#logo img {
+  display: none;
 }
 .svg #logo {
   height: 76px;
