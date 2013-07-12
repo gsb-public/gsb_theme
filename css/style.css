@@ -6764,6 +6764,7 @@ p.acc-title + p {
 }
 @media (max-width: 35.5em) {
   #bottom article {
+    padding-right: 0;
     width: 100%;
   }
 }
@@ -6773,6 +6774,11 @@ p.acc-title + p {
 #bottom article:nth-of-type(2n), #bottom article:last-of-type {
   padding-right: 0;
   padding-left: 15px;
+}
+@media (max-width: 35.5em) {
+  #bottom article:nth-of-type(2n), #bottom article:last-of-type {
+    padding-left: 0;
+  }
 }
 #bottom article h3 {
   font-size: 16px;

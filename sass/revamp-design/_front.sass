@@ -252,6 +252,7 @@
     padding-right: 15px
     width: 50%
     +breakpoint($bp-mobile-max)
+      padding-right: 0
       width: 100%
     &:nth-of-type(3n)
       clear: both
@@ -259,6 +260,8 @@
     &:last-of-type
       padding-right: 0
       padding-left: 15px
+      +breakpoint($bp-mobile-max)
+        padding-left: 0
     h3
       font-size: 16px
       font-weight: bold
