@@ -180,13 +180,7 @@
 .wide-view
   .image-cta-position-top
     .group-right
-      height: 393px
-      +breakpoint($bp-tablet-port-max)
-        height: 310px
-      +breakpoint($bp-mobile)
-        height: 198px
-        .front &
-          height: 213px
+      height: 100%
     &.image-cta-color-purple .group-right
       +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
     &.image-cta-color-green .group-right
@@ -209,12 +203,6 @@
         position: absolute
         bottom: 0
         padding-bottom: 30px
-      +breakpoint($bp-tablet-port-max)
-        height: 310px
-      +breakpoint($bp-mobile)
-        height: 198px
-        .front &
-          height: 213px
     &.image-cta-color-purple .group-right
       +background(linear-gradient(left bottom, rgba(#572440, 0.9), rgba(#572440, 0)))
     &.image-cta-color-green .group-right
