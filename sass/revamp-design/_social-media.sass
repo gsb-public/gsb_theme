@@ -11,7 +11,7 @@
   .pane-content
     &:before, &:after
       position: absolute
-      
+
     &:before
       display: block
       content: ''
@@ -19,11 +19,10 @@
       height: 41px
       +border-radius(20px)
       background-color: #c50000
-      +background(linear-gradient(bottom, #c50000 0%, #860000 100%))    
+      +background(linear-gradient(bottom, #c50000 0%, #860000 100%))
       top: 27px
-      right: 20px   
+      right: 20px
     &:after
-      //content: image_url("icon-twitter.png")
       color: white
       font-family: "gsb"
       font-size: 24px
@@ -80,18 +79,6 @@ a
       color: $white
       font-weight: bold
       line-height: 29px
-  &.social-icon
-    display: block
-    width: 40px
-    height: 41px
-    border: none
-    background-image: image_url('social-icons.png') no-repeat
-    text-indent: -10000px
-  &.twitter-icon
-    background-position: 0 0
-    &:hover
-      border: 0
-      background-position: 0 -41px
 
 // Hide the actual count on display not edit
 .field-name-field-social-display-num .field-item

@@ -79,14 +79,13 @@
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white
-      //background: image_url('arrow-cta-grey.png') no-repeat 93% 50%
     a
       color: $text-green
       position: relative
       &:after
-        @extend %chevron-big 
+        @extend %chevron-big
         font-weight: bold
-        color: #e3e3e3      
+        color: #e3e3e3
       //CTA green in mega menu
       .supermenu-pane &
         color: $text-green
@@ -94,22 +93,20 @@
       border-top: 0
     &:last-of-type
       border-bottom: 0
-    &:hover    
-      //background: image_url('arrow-cta-blue.png') no-repeat 93% 50%
+    &:hover
       a
         color: $text-blue
         &:after
-          color: $teal-light        
+          color: $teal-light
 
 // CTA Red
 .cta-red
   .field-item
     @extend %bg-border-and-box-shadow
-    //+background(image_url('arrow-cta-tan.png') no-repeat 93% 50%, linear-gradient(#fbfaf8, $grey-e))
     +background(linear-gradient(#fbfaf8, $grey-e))
     margin-bottom: 5px
     color: $grey-med
-   
+
     a
       color: $red
       position: relative
@@ -120,7 +117,6 @@
       background: #edeae5
       a:after
         color: $red
-      //+background(image_url('arrow-cta-red.png') no-repeat 93% 50%, linear-gradient(#f4f1ea, #ece9e4))
 
 
 // CTA Red Gradient
@@ -131,7 +127,7 @@
     +box-shadow($black, 0.45, 1px 1px 1px)
     position: relative
     color: $white
-  
+
   a
     color: $white
     position: relative
@@ -139,12 +135,8 @@
     position: relative
     &:after
       @extend %chevron-small
-      color: $white    
-
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, #c50000)
+      color: $white
     padding-bottom: 14px
-
-
     b
       font-weight: normal
     .front &
@@ -152,32 +144,26 @@
     &:hover
       a:after
         color: $white
-      //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#194560, #2c6180))
       +background(linear-gradient(#194560, #2c6180))
       .front &
         +background(linear-gradient(#194560, #2c6180))
   .item-0
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#860000, #8f0000))
     +background(linear-gradient(#860000, #8f0000))
     .front &
       +background(linear-gradient(#860000, #8f0000))
   .item-1
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#900000, #9d0000))
     +background(linear-gradient(#900000, #9d0000))
     .front &
       +background(linear-gradient(#900000, #9d0000))
   .item-2
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#9e0000, #ac0000))
     +background(linear-gradient(#9e0000, #ac0000))
     .front &
       +background(linear-gradient(#9e0000, #ac0000))
   .item-3
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#ae0000, #bb0000))
     +background(linear-gradient(#ae0000, #bb0000))
     .front &
       +background(linear-gradient(#ae0000, #bb0000))
   .item-4
-    //+background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(#bc0000, #c50000))
     +background(linear-gradient(#bc0000, #c50000))
     .front &
       +background(linear-gradient(#bc0000, #c50000))
