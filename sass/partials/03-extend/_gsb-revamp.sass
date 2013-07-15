@@ -4,18 +4,18 @@
 %clearfix2
   *zoom: 1
   &:before,
-  &:after 
+  &:after
     display: table
     content: ""
     line-height: 0
-  &:after 
+  &:after
     clear: both
 
 // BUTTONS
 %red-button-gradient
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
-  
+
 %chevron-big
   content: "w"
   font-family: "gsb"
@@ -37,7 +37,7 @@
 //SHOW More extend
 %show-more-button
   border: 0
-  color: $text-green 
+  color: $text-green
   cursor: pointer
   display: block
   font-weight: bold
@@ -47,7 +47,6 @@
   span
     font-size: 14px
     padding-left: 16px
-    //background: image_url('spotlight-arrow.png') no-repeat 0 2px
     &:before
       content: ''
       font-family: "entypo"
@@ -55,12 +54,12 @@
       font-weight: normal
       position: relative
       top: 10px
-      margin-right: 5px     
-  &:hover 
-    color: $text-blue 
+      margin-right: 5px
+  &:hover
+    color: $text-blue
     span
       background-position: 0 -13px
-  &.active 
+  &.active
     span
       &:before
         content: ''
