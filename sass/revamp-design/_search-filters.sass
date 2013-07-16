@@ -46,9 +46,14 @@
       background: transparent
       text-indent: 1000px
       overflow: hidden
-      background: transparent url(../images/search.png) no-repeat center 6px
-      &:hover
-        background-position: center -27px
+      .svg &
+        background: image_url("search.svg") no-repeat center
+        &:hover
+          background: image_url("search-hover.svg") no-repeat center
+      .no-js &, .no-svg &
+        background: image_url("search.png") no-repeat center 6px transparent
+        &:hover
+          background-position: center -27px
 
   .views-widget-filter-field_search_field_value
     label
@@ -105,9 +110,14 @@
     border: none
     text-indent: 1000px
     overflow: hidden
-    background: transparent url(../images/search.png) no-repeat center 6px
-    &:hover
-      background-position: center -27px
+    .svg &
+      background: image_url("search.svg") no-repeat center
+      &:hover
+        background: image_url("search-hover.svg") no-repeat center
+    .no-js &, .no-svg &
+      background: image_url("search.png") no-repeat center 6px transparent
+      &:hover
+        background-position: center -27px
 
 
   .page-gsearch #content &
@@ -193,6 +203,11 @@ fieldset.collapsible .fieldset-legend
     &:last-of-type,
     &:nth-of-type(3n)
       border-right: 0
+
+#edit-submit-gsb-event
+  +breakpoint($bp-mobile-max)
+    position: relative
+    top: -40px
 
 //EXCEPTIONS
 .pane-views-exp-club-filters-club-list
