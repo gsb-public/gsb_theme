@@ -2139,7 +2139,7 @@ div.label-inline {
 @media (min-width: 35.5625em) {
   .page-programs-msx #content-wrapper,
   .node-type-msx-fellows #content-wrapper {
-    background: url('../images/bg-msxfellows.png') -290px 0 no-repeat, white;
+    background: url('../images/bg-msxfellows.jpg') -290px 0 no-repeat, white;
   }
 }
 
@@ -6430,7 +6430,8 @@ p.acc-title + p {
 }
 
 .pane-gsb-event-frontpage {
-  background: url('../images/bg-homepage-events.png') top center no-repeat, #f6e9d6;
+  background: url('../images/bg-homepage-events.jpg') no-repeat;
+  height: 397px;
   padding: 26px;
 }
 @media (max-width: 20em) {
@@ -6438,8 +6439,18 @@ p.acc-title + p {
     padding: 20px;
   }
 }
+@media (max-width: 48em) {
+  .pane-gsb-event-frontpage {
+    background: url('../images/bg-homepage-events-wide.jpg') no-repeat;
+    height: 199px;
+    margin-right: 4px;
+  }
+}
 @media (max-width: 35.5em) {
   .pane-gsb-event-frontpage {
+    background: url('../images/bg-homepage-events-narrow.jpg') no-repeat;
+    max-height: 256px;
+    height: auto;
     max-width: 450px;
   }
 }
@@ -9601,7 +9612,7 @@ div.modal-content a.button.remove {
   background: -o-linear-gradient(right, #355567, #7390a1);
   background: -ms-linear-gradient(right, #355567, #7390a1);
   background: linear-gradient(right, #355567, #7390a1);
-  background: url('../images/bg-program-finder.png') no-repeat;
+  background: url('../images/bg-program-finder.jpg') no-repeat;
   height: 476px;
   padding: 10px;
 }
