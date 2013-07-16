@@ -7515,9 +7515,17 @@ p.acc-title + p {
   background: transparent;
   text-indent: 1000px;
   overflow: hidden;
-  background: transparent url(../images/search.png) no-repeat center 6px;
 }
-.gsb-views-exposed-search .views-exposed-form .form-submit:hover {
+.svg .gsb-views-exposed-search .views-exposed-form .form-submit {
+  background: url('../images/search.svg') no-repeat center;
+}
+.svg .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
+  background: url('../images/search-hover.svg') no-repeat center;
+}
+.no-js .gsb-views-exposed-search .views-exposed-form .form-submit, .no-svg .gsb-views-exposed-search .views-exposed-form .form-submit {
+  background: url('../images/search.png') no-repeat center 6px transparent;
+}
+.no-js .gsb-views-exposed-search .views-exposed-form .form-submit:hover, .no-svg .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
   background-position: center -27px;
 }
 .gsb-views-exposed-search .views-widget-filter-field_search_field_value label {
@@ -7588,9 +7596,17 @@ p.acc-title + p {
   border: none;
   text-indent: 1000px;
   overflow: hidden;
-  background: transparent url(../images/search.png) no-repeat center 6px;
 }
-.grey-search-box .form-submit:hover {
+.svg .grey-search-box .form-submit {
+  background: url('../images/search.svg') no-repeat center;
+}
+.svg .grey-search-box .form-submit:hover {
+  background: url('../images/search-hover.svg') no-repeat center;
+}
+.no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
+  background: url('../images/search.png') no-repeat center 6px transparent;
+}
+.no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
   background-position: center -27px;
 }
 .page-gsearch #content .grey-search-box {
@@ -7682,6 +7698,13 @@ fieldset.collapsible .fieldset-legend {
 }
 .gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:last-of-type, .gsb-views-exposed-filter .views-widget-filter-term_node_tid_depth_2:nth-of-type(3n) {
   border-right: 0;
+}
+
+@media (max-width: 35.5em) {
+  #edit-submit-gsb-event {
+    position: relative;
+    top: -40px;
+  }
 }
 
 .pane-views-exp-club-filters-club-list .gsb-views-exposed-search {
