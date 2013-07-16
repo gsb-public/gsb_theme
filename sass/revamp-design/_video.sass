@@ -83,8 +83,13 @@
       z-index: 50
       top: 50%
       left: 50%
-    
-         
+      .slideshow-cta &
+        +breakpoint($bp-mobile-max)
+          left: 63%
+        +breakpoint($bp-mobile)
+          left: 73%
+
+
     &:before
       font-size: 64px
       content: "~"
@@ -104,7 +109,7 @@
       &:before
         color: rgba(0,0,0,1)
       &:after
-        color: #63acd5  
+        color: #63acd5
   &.image
     a
       display: none
@@ -127,8 +132,8 @@
         position: absolute
         top: 50%
         left: 50%
-      
-           
+
+
       &:before
         font-size: 64px
         content: "~"
@@ -147,7 +152,7 @@
         &:before
           color: rgba(0,0,0,1)
         &:after
-          color: #63acd5    
+          color: #63acd5
     +breakpoint($bp-video)
       display: none
 
