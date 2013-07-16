@@ -243,7 +243,7 @@
         +background(linear-gradient(top, #683651, #814d69))
         +box-shadow(rgba($black, 0.25) 0 2px 2px)
     .link-inner
-      background-position: -27px -27px
+      background-position: -26px -26px
       height: 163px
       border: 1px solid #5c8a81
     .link-title
@@ -265,7 +265,9 @@
         right: 5%
 .cta-around-globe,
 .link-inner
-  background: image_url('gsbaroundtheglobe.jpg') no-repeat
+  background: image_url("gsbaroundtheglobe.jpg") no-repeat
+  +breakpoint($bp-mobile-max)
+    background: image_url("gsbaroundtheglobe-wide.jpg") no-repeat
 
 .social-block-youtube
   &:after
