@@ -371,8 +371,7 @@
       border-bottom: 1px solid #e4e4e4
       &:first-of-type
         background-color: #f8f7f6
-        width: 38%
-
+        width: 40%
       &.views-field-field-academic-calendar-link
         font-weight: bold
   .view-footer
@@ -386,6 +385,8 @@
       padding-top: 14px
       padding-bottom: 11px
       position: relative
+      +breakpoint($bp-mobile)
+        max-width: 127px
       &:after
         @extend %chevron-big
         font-weight: bold
@@ -398,14 +399,23 @@
         padding-left: 55px
         padding-right: 22px
         float: left
+        +breakpoint($bp-mobile)
+          padding-left: 40px
         &:after
           content: "q"
           left: 12px
           right: auto
+          +breakpoint($bp-mobile)
+            left: 0
       &.next
         float: right
         padding-left: 22px
         padding-right: 55px
+        +breakpoint($bp-mobile)
+          padding-right: 40px
+        &:after
+          +breakpoint($bp-mobile)
+            right: 0
 
 #block-gsb-public-custom-blocks-gsb-featured-event
   margin-bottom: 40px
