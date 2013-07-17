@@ -40,15 +40,17 @@
       &.active,
       &.active-trail
         background: $grey-29
-        
+
     a
       color: $white
       display: block
       font-family: $font-sans
+      margin: 0
       position: relative
       +breakpoint($bp-mobile-max)
         display: inline-block
-      margin: 0
+      +breakpoint($bp-mobile)
+        max-width: 250px
       &.qtip-hover
         background: $grey-29
         +breakpoint($bp-mobile-max)
@@ -266,7 +268,7 @@ a.event-calendar
     height: 50px
     left: 55px
     padding: 8px 11px 6px
-    position: absolute    
+    position: absolute
     &:after
       color: $white
       content: "a"
