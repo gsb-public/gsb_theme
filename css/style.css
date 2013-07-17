@@ -7232,6 +7232,11 @@ p.acc-title + p {
   padding-bottom: 11px;
   position: relative;
 }
+@media (max-width: 20em) {
+  .view-academic-calendar .view-footer a {
+    max-width: 127px;
+  }
+}
 .view-academic-calendar .view-footer a:after {
   font-weight: bold;
   color: #e3e3e3;
@@ -7247,15 +7252,35 @@ p.acc-title + p {
   padding-right: 22px;
   float: left;
 }
+@media (max-width: 20em) {
+  .view-academic-calendar .view-footer a.prev {
+    padding-left: 40px;
+  }
+}
 .view-academic-calendar .view-footer a.prev:after {
   content: "q";
   left: 12px;
   right: auto;
 }
+@media (max-width: 20em) {
+  .view-academic-calendar .view-footer a.prev:after {
+    left: 0;
+  }
+}
 .view-academic-calendar .view-footer a.next {
   float: right;
   padding-left: 22px;
   padding-right: 55px;
+}
+@media (max-width: 20em) {
+  .view-academic-calendar .view-footer a.next {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 20em) {
+  .view-academic-calendar .view-footer a.next:after {
+    right: 0;
+  }
 }
 
 #block-gsb-public-custom-blocks-gsb-featured-event {
