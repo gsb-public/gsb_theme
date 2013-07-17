@@ -79,26 +79,26 @@
               next = $this.next();
               if (next.prop('tagName') == 'UL') {
                 var ul_element = next;
-                var acc_body_elements = next.children('.acc-body');  
+                var acc_body_elements = next.children('.acc-body');
                 if (acc_body_elements.length > 0) {
-                  ul_element.wrapAll('<div class="accordion-body-wrap" />');    
+                  ul_element.wrapAll('<div class="accordion-body-wrap" />');
                   touchNeighbour(ul_element, 'acc-body');
                   found_body = true;
-                } 
+                }
               } else if (next.prop('tagName') == 'TABLE') {
                 var table_element = next;
-                var acc_body_elements = next.find('.acc-body');  
+                var acc_body_elements = next.find('.acc-body');
                 if (acc_body_elements.length > 0) {
-                  table_element.wrapAll('<div class="accordion-body-wrap" />');    
+                  table_element.wrapAll('<div class="accordion-body-wrap" />');
                   touchNeighbour(table_element, 'acc-body');
                   found_body = true;
-                } 
-              }    
+                }
+              }
             }
             if (found_body == false) {
               // If the title has body after it - remove styling.
-              $this.removeClass('acc-title');                
-            }  
+              $this.removeClass('acc-title');
+            }
           }
         });
       }
@@ -324,9 +324,9 @@
       var inptDIV = $('#views-exposed-form-gsb-event-event-listing-pane .views-widget-filter-field_search_field_value, #views-exposed-form-gsb-event-event-calendar-pane .views-widget-filter-field_search_field_value')
       var searchDIV = $('#views-exposed-form-gsb-event-event-listing-pane .views-submit-button, #views-exposed-form-gsb-event-event-calendar-pane .views-submit-button')
       var in_to_wrap = $('#views-exposed-form-gsb-event-event-listing-pane .views-exposed-widgets, #views-exposed-form-gsb-event-event-calendar-pane .views-exposed-widgets')
-
-      in_to_wrap.wrapInner('<div class="search-wrap-events">')
-
+      if (!$('.search-wrap-events').length) {
+        in_to_wrap.wrapInner('<div class="search-wrap-events">');
+      }
       var new_clone1 = inptDIV.clone()
       var new_clone2 = searchDIV.clone()
       inptDIV.remove()
