@@ -2904,12 +2904,17 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   color: white;
   display: block;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  position: relative;
   margin: 0;
+  position: relative;
 }
 @media (max-width: 35.5em) {
   #block-system-main-menu li a {
     display: inline-block;
+  }
+}
+@media (max-width: 20em) {
+  #block-system-main-menu li a {
+    max-width: 250px;
   }
 }
 #block-system-main-menu li a.qtip-hover {
