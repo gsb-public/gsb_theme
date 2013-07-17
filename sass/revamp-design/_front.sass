@@ -162,19 +162,11 @@
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage
   @extend %border-and-box-shadow
-  background: image_url("bg-homepage-events.png") no-repeat
-  height: 397px
+  +background((image_url("bg-homepage-events.png") top center no-repeat), #f6e9d6)
   padding: 26px
   +breakpoint($bp-mobile)
     padding: 20px
-  +breakpoint($bp-tablet-port-max)
-    background: image_url("bg-homepage-events-wide.png") no-repeat
-    height: 199px
-    margin-right: 4px
   +breakpoint($bp-mobile-max)
-    background: image_url("bg-homepage-events-narrow.png") no-repeat
-    max-height: 256px
-    height: auto
     max-width: 450px
   .view-gsb-event .view-content .views-row
     border-bottom: 0

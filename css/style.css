@@ -1508,7 +1508,7 @@ del {
 }
 @media (max-width: 48em) and (max-width: 20em) {
   .panel-display.gsb-front-page .front-panel-feature-three .panel-pane {
-    margin-bottom: 0;
+    margin-bottom: 1px;
   }
 }
 @media (max-width: 35.5em) {
@@ -6643,8 +6643,7 @@ p.acc-title + p {
 }
 
 .pane-gsb-event-frontpage {
-  background: url('../images/bg-homepage-events.png') no-repeat;
-  height: 397px;
+  background: url('../images/bg-homepage-events.png') top center no-repeat, #f6e9d6;
   padding: 26px;
 }
 @media (max-width: 20em) {
@@ -6652,18 +6651,8 @@ p.acc-title + p {
     padding: 20px;
   }
 }
-@media (max-width: 48em) {
-  .pane-gsb-event-frontpage {
-    background: url('../images/bg-homepage-events-wide.png') no-repeat;
-    height: 199px;
-    margin-right: 4px;
-  }
-}
 @media (max-width: 35.5em) {
   .pane-gsb-event-frontpage {
-    background: url('../images/bg-homepage-events-narrow.png') no-repeat;
-    max-height: 256px;
-    height: auto;
     max-width: 450px;
   }
 }
