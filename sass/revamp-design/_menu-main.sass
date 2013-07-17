@@ -40,7 +40,6 @@
       &.active,
       &.active-trail
         background: $grey-29
-
     a
       color: $white
       display: block
@@ -129,6 +128,8 @@
       &:first-of-type
         a
           padding: 12px 7px 18px
+      &:hover a
+        text-decoration: underline
       a
         &:after
           color: $white
@@ -152,6 +153,8 @@
     float: left
     height: 0
     width: 202px
+    &:hover a
+      text-decoration: underline
   +breakpoint($bp-tablet-port)
     float: right
     position: absolute
