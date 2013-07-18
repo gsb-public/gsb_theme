@@ -287,31 +287,32 @@
         font-size: 16px
 
       a
-        color: $text-black
-
+        position: relative
+        color: $text-green
+        padding-right: 30px
+        white-space: nowrap
+        &:after
+          width: 0
+          height: 0
+          display: inline-block
+          position: absolute
+          content: ''
+          right: -2px
+          border-style: solid
+          border-width: 7px
+          border-color: transparent
+          bottom: -2px
+          border-top-color: $text-green
+          border-top-width: 9px
         &.currentFilter
-          position: relative
-          color: $text-green
-          padding-right: 30px
-          &:after
-            width: 0
-            height: 0
-            display: inline-block
-            position: absolute
-            content: ''
-            right: -2px
-            border-style: solid
-            border-width: 7px
-            border-color: transparent
-          &[href*='desc']:after
-            bottom: -2px
-            border-top-color: $text-green
-            border-top-width: 9px
-          &[href*='asc']:after
-            bottom: 7px
-            border-bottom-color: $text-green
-            border-bottom-width: 9px
-
+          color: $text-black
+      .active
+        a[href*='asc']:after
+          bottom: 7px
+          border-bottom-color: $text-green
+          border-bottom-width: 9px
+          border-top-color: transparent
+          border-top-width: 7px
         img
           display: none
 

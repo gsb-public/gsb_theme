@@ -7096,14 +7096,12 @@ p.acc-title + p {
   font-size: 16px;
 }
 .view-admission-events table thead a {
-  color: #231f20;
-}
-.view-admission-events table thead a.currentFilter {
   position: relative;
   color: #7d8401;
   padding-right: 30px;
+  white-space: nowrap;
 }
-.view-admission-events table thead a.currentFilter:after {
+.view-admission-events table thead a:after {
   width: 0;
   height: 0;
   display: inline-block;
@@ -7113,18 +7111,21 @@ p.acc-title + p {
   border-style: solid;
   border-width: 7px;
   border-color: transparent;
-}
-.view-admission-events table thead a.currentFilter[href*='desc']:after {
   bottom: -2px;
   border-top-color: #7d8401;
   border-top-width: 9px;
 }
-.view-admission-events table thead a.currentFilter[href*='asc']:after {
+.view-admission-events table thead a.currentFilter {
+  color: #231f20;
+}
+.view-admission-events table thead .active a[href*='asc']:after {
   bottom: 7px;
   border-bottom-color: #7d8401;
   border-bottom-width: 9px;
+  border-top-color: transparent;
+  border-top-width: 7px;
 }
-.view-admission-events table thead a img {
+.view-admission-events table thead .active img {
   display: none;
 }
 .view-admission-events .view-filters {
