@@ -39,12 +39,12 @@
     padding-top: 30px
     padding-bottom: 12px
     max-width: $max-width
-    +breakpoint($bp-tablet-port)
-      padding: 30px 20px 12px
     +breakpoint($bp-mobile-max)
       padding-top: 0
 
 #main
+  +breakpoint($bp-tablet-port)
+    padding: 30px 20px 12px
   +breakpoint($bp-mobile-max)
     padding: 15px
 
