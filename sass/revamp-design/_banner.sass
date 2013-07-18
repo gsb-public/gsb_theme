@@ -88,12 +88,7 @@
   .sidebar
     h2
       display: none
-  +breakpoint($bp-tablet-port)
-    top: 235px
-    right: 0
   +breakpoint($bp-tablet-port-max)
-    float: right
-    position: absolute
     width: 100%
     .menu
       display: none
@@ -279,11 +274,10 @@
 // MOBILE NO BREADCRUMBS
 ///////////////////
 #sidebar
-  +breakpoint($bp-mobile-max)
-    min-height: 50px
+  +breakpoint($bp-tablet-port-max)
     +background(linear-gradient(#756b5a, #887e6e))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-    position: inherit
+    min-height: 50px
     .sidebar h2
       margin-top: 0
     .block.open
@@ -293,38 +287,3 @@
         margin-top: 50px
     .page-programs &
       +background(linear-gradient(#4c697a, #607c8c))
-
-///////////////////
-// LANDING PAGES
-// w/o breadcrumb banners
-///////////////////
-.page-node-300216,
-.page-node-301056
-  +breakpoint($bp-tablet-port-max)
-    #sidebar
-      min-height: 50px
-      top: 185px
-      +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-      .sidebar h2
-        margin-top: 0
-      .block.open
-        h2
-          margin-top: -50px
-        .content
-          margin-top: 50px
-
-// Stanford GSB landing
-.page-node-300216
-  +breakpoint($bp-tablet-port-max)
-    #sidebar
-      +background(linear-gradient(#756b5a, #887e6e))
-    #main
-      padding-top: 40px
-
-// Programs landing
-.page-node-301056
-  +breakpoint($bp-tablet-port-max)
-    #sidebar
-      +background(linear-gradient(#4c697a, #607c8c))
-    #main
-      padding-top: 40px
