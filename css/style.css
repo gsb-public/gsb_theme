@@ -2055,7 +2055,6 @@ div.label-inline {
 }
 #content-wrapper #content {
   margin: 0 auto;
-  padding-top: 30px;
   padding-bottom: 12px;
   max-width: 1170px;
 }
@@ -2065,6 +2064,9 @@ div.label-inline {
   }
 }
 
+#main {
+  padding-top: 30px;
+}
 @media (min-width: 35.5625em) and (max-width: 48em) {
   #main {
     padding: 30px 20px 12px;
@@ -8586,16 +8588,15 @@ div.modal-content a.button.remove {
     padding: 18px 0 12px;
   }
 }
+@media (max-width: 64em) {
+  #banner {
+    display: none;
+  }
+}
 
 .banner-title,
 .banner-subtitle {
   color: white;
-}
-@media (max-width: 48em) {
-  .banner-title,
-  .banner-subtitle {
-    display: none;
-  }
 }
 
 .banner-title {
@@ -8631,11 +8632,6 @@ div.modal-content a.button.remove {
 @media (min-width: 35.5625em) {
   #block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
     padding-bottom: 8px;
-  }
-}
-@media (max-width: 35.5em) {
-  #block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
-    display: none;
   }
 }
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs a {
