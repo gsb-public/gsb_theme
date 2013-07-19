@@ -7,12 +7,12 @@
   overflow: hidden
   +breakpoint($bp-mobile-min) /* WP-1773 */
     padding: 18px 0 12px /* WPBQA-158 */
+  +breakpoint($bp-tablet-land-max)
+    display: none
 
 .banner-title,
 .banner-subtitle
   color: $white
-  +breakpoint($bp-tablet-port-max)
-    display: none
 
 .banner-title
   font-family: $font-demi
@@ -38,8 +38,6 @@
     line-height: 1em
     +breakpoint($bp-mobile-min) /* WP-1773 */
       padding-bottom: 8px /* WPBQA-158 */
-    +breakpoint($bp-mobile-max)
-      display: none
     top: 0
     margin-bottom: 0
   a
