@@ -116,6 +116,8 @@
     overflow: hidden
     .svg &
       background: image_url("search.svg") no-repeat center
+      +breakpoint($bp-tablet-port-max)
+        background-size: 200%
       &:hover
         background: image_url("search-hover.svg") no-repeat center
     .no-js &, .no-svg &
