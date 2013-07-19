@@ -1723,8 +1723,12 @@ ul.menu li.collapsed {
 .breadcrumb {
   padding-bottom: 0;
   position: relative;
-  top: -4px;
   margin-bottom: 15px;
+}
+@media (min-width: 48.0625em) {
+  .breadcrumb {
+    top: -4px;
+  }
 }
 @media (max-width: 37.5625em) {
   .breadcrumb {

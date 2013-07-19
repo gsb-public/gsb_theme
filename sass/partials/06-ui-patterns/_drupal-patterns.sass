@@ -18,8 +18,9 @@ ul.menu li.collapsed
 .breadcrumb
   padding-bottom: 0
   position: relative
-  top: -4px
   margin-bottom: 15px
+  +breakpoint($bp-wide-min)
+    top: -4px
   +breakpoint(601px max-width)
     font-size: 12px
   a
