@@ -312,30 +312,6 @@
     }
   }
 
-
-
-  /*
-   *
-   * Event page wrap elements in filter without search input
-   * */
-
-  Drupal.behaviors.wrap_search ={
-    attach: function (context, settings) {
-      var inptDIV = $('#views-exposed-form-gsb-event-event-listing-pane .views-widget-filter-field_search_field_value, #views-exposed-form-gsb-event-event-calendar-pane .views-widget-filter-field_search_field_value')
-      var searchDIV = $('#views-exposed-form-gsb-event-event-listing-pane .views-submit-button, #views-exposed-form-gsb-event-event-calendar-pane .views-submit-button')
-      var in_to_wrap = $('#views-exposed-form-gsb-event-event-listing-pane .views-exposed-widgets, #views-exposed-form-gsb-event-event-calendar-pane .views-exposed-widgets')
-      if (!$('.search-wrap-events').length) {
-        in_to_wrap.wrapInner('<div class="search-wrap-events">');
-      }
-      var new_clone1 = inptDIV.clone()
-      var new_clone2 = searchDIV.clone()
-      inptDIV.remove()
-      searchDIV.remove()
-      in_to_wrap.prepend(new_clone1, new_clone2)
-    }
-  }
-
-
   /**
    * Input type number alternative for spinner
    */
