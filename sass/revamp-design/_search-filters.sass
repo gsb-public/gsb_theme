@@ -211,9 +211,8 @@ fieldset.collapsible .fieldset-legend
       border-right: 0
 
 #edit-submit-gsb-event
-  +breakpoint($bp-mobile-max)
-    position: relative
-    top: -48px
+  position: relative
+  top: -48px
 
 //EXCEPTIONS
 .pane-views-exp-club-filters-club-list
@@ -346,6 +345,8 @@ fieldset.collapsible .fieldset-legend
  *  Filter for Events page
  * */
 #views-exposed-form-gsb-event-event-listing-pane, #views-exposed-form-gsb-event-event-calendar-pane
+  .ajax-progress
+    display: none
   .views-widget-filter-field_search_field_value
     .form-text
       padding: 14px 50px 15px 10px
@@ -374,7 +375,6 @@ fieldset.collapsible .fieldset-legend
   overflow: hidden
   display: inline-block
   padding: 25px 25px 10px 25px
-  margin-top: 28px
   width: 100%
   +breakpoint($bp-mobile-max)
     display: none
