@@ -10,11 +10,13 @@
   a
     border-bottom: 0
   .group-left
-    margin-left: 26px
-    padding-top: 26px
+    padding: 26px 26px 0
     width: auto
+    max-width: 600px
     h2
       font-weight: bold
+      a
+        color: $text-black
 
     // Event Date
     .field-name-field-event-date
@@ -80,13 +82,14 @@
 
   .group-right
     max-width: 270px
+    .group-wrapper-buttons
+      margin-top: 35px
   .field-name-field-target-audience
     font-size: 14px
     max-width: 225px
     padding-top: 26px
 
   .group-footer
-    border-top: 1px solid $grey-c
     margin-left: 26px
     padding: 30px 0
     .field-name-field-editorial-summary,
