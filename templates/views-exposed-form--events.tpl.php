@@ -27,9 +27,6 @@
   ?>
 <?php endif; ?>
 <div class="views-exposed-form">
-  <div class="views-exposed-widget views-submit-button">
-    <?php print $button; ?>
-  </div>
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets_top as $id => $widget): ?>
       <div id="<?php print $widget->id; ?>-wrapper" class="views-exposed-widget views-widget-<?php print $id; ?>">
@@ -53,6 +50,9 @@
         <?php endif; ?>
       </div>
     <?php endforeach; ?>
+  </div>
+  <div class="views-exposed-widget views-submit-button">
+    <?php print $button; ?>
   </div>
   <div class="search-wrap-events clearfix">
     <?php foreach ($widgets_bottom as $id => $widget): ?>
