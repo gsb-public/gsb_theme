@@ -369,27 +369,15 @@ fieldset.collapsible .fieldset-legend
 
 .search-wrap-events
   position: relative
+  @extend %black-border-top
   @extend %bg-grey-gradient
   overflow: hidden
   display: inline-block
-  padding: 0 25px 10px 25px
+  padding: 25px 25px 10px 25px
   margin-top: 28px
   width: 100%
   +breakpoint($bp-mobile-max)
     display: none
-  &:before, &:after
-    content: ""
-  &:before
-    display: block
-    padding-top: 27px
-  &:after
-    width: 100%
-    height: 10px
-    display: inline-block
-    background-color: $text-black
-    position: absolute
-    left: 0
-    top: 0
   > div
     border-bottom: 1px solid #c4c4c4
     margin-bottom: 15px
