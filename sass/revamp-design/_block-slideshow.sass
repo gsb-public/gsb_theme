@@ -302,10 +302,6 @@ ul.slideshow-items li:first-of-type
     margin-bottom: 20px
     +breakpoint($bp-tablet-port-max)
       margin-bottom: 12px
-    +breakpoint($bp-nexus-landscape)
-      font-size: 12px
-    +breakpoint($bp-nexus-portrait)
-      font-size: 12px
     &:after
       content: ""
   .slide-description
@@ -318,13 +314,11 @@ ul.slideshow-items li:first-of-type
       overflow: hidden
       width: 225px
     +breakpoint($bp-nexus-landscape)
-      font-size: 16px
-      line-height: 20px
+      margin-bottom: 0
       width: 312px
     +breakpoint($bp-nexus-portrait)
-      font-size: 16px
-      line-height: 20px
-      width: 184px
+      margin-bottom: 10px
+      width: 175px
     +breakpoint($bp-mobile-max)
       width: 100%
     a
