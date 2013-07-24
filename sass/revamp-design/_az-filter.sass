@@ -14,7 +14,9 @@
     padding: 0 75px
     height: 65px
     overflow: hidden
-    +breakpoint(767px max-width)
+    +breakpoint($bp-nexus-portrait)
+      padding: 0 66px
+    +breakpoint($bp-nexus-landscape)
       padding: 0 66px
     ul
       margin: 0
@@ -25,7 +27,9 @@
       padding: 0
       width: 40px
       text-align: center
-      +breakpoint(767px max-width)
+      +breakpoint($bp-nexus-portrait)
+        width: 30px
+      +breakpoint($bp-nexus-landscape)
         width: 30px
       a
         font-size: 20px
@@ -52,7 +56,7 @@
     &:before
       font-family: "gsb"
       font-size: 31px
-      color: white
+      color: $white
       line-height: 0
       position: absolute
       top: 50%
