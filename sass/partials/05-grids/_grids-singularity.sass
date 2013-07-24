@@ -155,12 +155,14 @@
       width: $ipad-full
       float: none
       margin: 0
+      +breakpoint($bp-nexus-portrait)
+        width: 561px
       .panel-pane
         margin-bottom: 30px
         +breakpoint($bp-tablet-port-max)
           margin-bottom: 20px
-        +breakpoint($bp-mobile)
-          margin-bottom: 1px
+        +breakpoint($bp-mobile-max)
+          margin-bottom: 0
   +breakpoint($bp-mobile-max)
     .front-slider-pane,
     .front-panel-feature-one,
