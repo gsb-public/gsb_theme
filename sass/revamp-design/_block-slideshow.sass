@@ -15,9 +15,6 @@ ul.slideshow-items li:first-of-type
 .flex-control-nav
   display: none
 
-
-
-
 .flex-direction-nav a
   opacity: .8
   outline: none
@@ -101,7 +98,22 @@ ul.slideshow-items li:first-of-type
   .no-touch &
     &:hover
       .flex-direction-nav a
-        opacity: .8
+        opacity: 0.8
+  &:hover
+    .slideshow-cta &
+      .slide-title
+        color: $text-blue
+        &:after
+          color: $text-blue
+      .purple-button-on-blue .slide-cta
+        background-color: $teal-dark
+      .blue-button-on-orange .slide-cta
+        background-color: $purple
+    .slideshow-simple &
+      .slide-description
+        color: $text-blue
+        &:after
+          color: $text-blue
 
 
 // Slide styling
@@ -116,12 +128,6 @@ ul.slideshow-items li:first-of-type
   .full-view &
     +breakpoint($bp-mobile-max)
       height: 500px
-  a:hover
-    .slide-title
-      color: $text-blue
-      &:after
-        color: $text-blue
-
 
   .slide-text
     bottom: 0
@@ -231,12 +237,6 @@ ul.slideshow-items li:first-of-type
         +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 5%, #cce0dc))
   .slide-cta
     background-color: $purple
-  &:hover
-    .slide-cta
-      background-color: $teal-dark
-
-
-
 
 .blue-button-on-orange
   .slide-text
@@ -249,9 +249,6 @@ ul.slideshow-items li:first-of-type
         +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 5%))
   .slide-cta
     background-color: $teal-dark
-  &:hover
-    .slide-cta
-      background-color: $purple
 
 ////////////////////
 // SIMPLE SLIDESHOW
@@ -348,9 +345,5 @@ ul.slideshow-items li:first-of-type
         font-size: 22px
       +breakpoint($bp-mobile-max)
         font-size: 26px
-    &:hover
-      color: $text-blue
-      &:after
-        color: $text-blue
   .slide-cta
     display: none
