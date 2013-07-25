@@ -2911,7 +2911,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 #block-system-main-menu li .menu {
   display: none;
 }
-@media (min-width: 48.0625em) {
+@media (min-width: 35.5625em) {
   #block-system-main-menu li:hover {
     background: #292929;
   }
@@ -2934,14 +2934,6 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 @media (max-width: 20em) {
   #block-system-main-menu li a {
     max-width: 250px;
-  }
-}
-#block-system-main-menu li a.qtip-hover {
-  background: #292929;
-}
-@media (max-width: 35.5em) {
-  #block-system-main-menu li a.qtip-hover {
-    background: transparent;
   }
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
@@ -3092,8 +3084,10 @@ a.event-calendar {
   font-size: 18px;
   display: inline-block;
 }
-a.event-calendar:hover {
-  background: #292929;
+@media (min-width: 35.5625em) {
+  a.event-calendar:hover {
+    background: #292929;
+  }
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
   a.event-calendar {
@@ -5361,11 +5355,6 @@ p.acc-title + p {
   }
 }
 @media (min-width: 35.5625em) and (max-width: 48em) {
-  .qtip {
-    top: 48px !important;
-  }
-}
-@media (min-width: 35.625em) and (max-width: 37.625em) {
   .qtip {
     top: 58px !important;
   }
