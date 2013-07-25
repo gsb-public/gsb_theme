@@ -34,7 +34,7 @@
     padding: 0
     .menu
       display: none
-    +breakpoint($bp-wide-min)
+    +breakpoint($bp-tablet-port-min)
       &:hover
         background: $grey-29
       &.active,
@@ -50,10 +50,6 @@
         display: inline-block
       +breakpoint($bp-mobile)
         max-width: 250px
-      &.qtip-hover
-        background: $grey-29
-        +breakpoint($bp-mobile-max)
-          background: transparent
     // IPAD
     +breakpoint($bp-tablet-port)
       +background(linear-gradient(bottom, $red-light, $red-dark))
@@ -168,7 +164,8 @@ a.event-calendar
   font-size: 18px
   display: inline-block
   &:hover
-    background: $grey-29
+    +breakpoint($bp-tablet-port-min)
+      background: $grey-29
   +breakpoint($bp-tablet-port)
     border-left: 1px solid #FF0000
     font-size: 15px
