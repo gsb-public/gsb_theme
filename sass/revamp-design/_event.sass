@@ -63,22 +63,22 @@
         color: $green
         font-weight: bold
 
-    // Buttons
-    .group-wrapper-buttons
-      line-height: 36px
-      margin: 35px 0
-    .event-register-link,
-    .event-ical-link
-      display: inline
-    // Register Link
-    .event-register-link
-      a
-        @extend %green-button
-    .event-ical-link
-      display: none
-      .no-touch &
-        display: inline-block
-        margin: 0 14px
+  // Buttons
+  .group-wrapper-buttons
+    line-height: 36px
+    margin-top: 26px
+  .event-register-link,
+  .event-ical-link
+    display: inline
+  // Register Link
+  .event-register-link
+    margin-right: 9px
+    a
+      @extend %green-button
+  .event-ical-link
+    display: none
+    .no-touch &
+      display: inline-block
 
   .group-right
     max-width: 270px
@@ -86,8 +86,14 @@
       margin-top: 35px
   .field-name-field-target-audience
     font-size: 14px
-    max-width: 225px
     padding-top: 26px
+    .field-items
+      float: none
+    .field-item
+      a:after
+        content: ", "
+      &:last-child a:after
+        content: none
 
   .group-footer
     margin-left: 26px
