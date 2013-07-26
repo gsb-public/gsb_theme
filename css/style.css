@@ -7531,6 +7531,11 @@ p.acc-title + p {
 .svg .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center;
 }
+@media (max-width: 48em) {
+  .svg .gsb-views-exposed-search .views-exposed-form .form-submit:hover {
+    background-size: 200%;
+  }
+}
 .no-js .gsb-views-exposed-search .views-exposed-form .form-submit, .no-svg .gsb-views-exposed-search .views-exposed-form .form-submit {
   background: url('../images/search.png') no-repeat center 6px transparent;
 }
@@ -7608,7 +7613,11 @@ p.acc-title + p {
 }
 .svg .grey-search-box .form-submit {
   background: url('../images/search.svg') no-repeat center;
-  margin-top: 5px;
+}
+@media (max-width: 35.5em) {
+  .svg .grey-search-box .form-submit {
+    margin-top: 5px;
+  }
 }
 @media (max-width: 48em) {
   .svg .grey-search-box .form-submit {

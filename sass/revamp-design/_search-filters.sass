@@ -54,6 +54,9 @@
           background-size: 200%
         &:hover
           background: image_url("search-hover.svg") no-repeat center
+          +breakpoint($bp-tablet-port-max)
+            background-size: 200%
+
       .no-js &, .no-svg &
         background: image_url("search.png") no-repeat center 6px transparent
         &:hover
@@ -116,7 +119,8 @@
     overflow: hidden
     .svg &
       background: image_url("search.svg") no-repeat center
-      margin-top: 5px
+      +breakpoint($bp-mobile-max)
+        margin-top: 5px
       +breakpoint($bp-tablet-port-max)
         background-size: 200%
       &:hover
