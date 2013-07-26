@@ -1506,7 +1506,7 @@ del {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 48em) and (min-width: 35.625em) and (max-width: 37.625em) {
+@media (max-width: 48em) and (min-width: 37.5em) and (max-width: 37.625em) {
   .panel-display.gsb-front-page .front-panel-feature-three {
     width: 561px;
   }
@@ -1924,23 +1924,11 @@ div.label-inline {
   a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
 
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  .ir a:after {
-    content: "";
-  }
-
-  a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: "";
-  }
-
-  /* Don't show links for images, or Javascript/internal links */
   pre, blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid;
@@ -2017,6 +2005,36 @@ div.label-inline {
   .node-type-msx-fellows .node-msx-fellows.ds-2col > .group-right,
   .node-type-msx-fellows .node-msx-fellows .field-name-field-year {
     padding-left: 0;
+  }
+
+  .node-event.view-mode-full .group-header {
+    border: none !important;
+  }
+  .node-event.view-mode-full .group-left {
+    width: 60% !important;
+  }
+  .node-event.view-mode-full .group-right {
+    width: 35% !important;
+  }
+  .node-event.view-mode-full .event-register-link a,
+  .node-event.view-mode-full .event-ical-link a {
+    font-size: 12pt !important;
+    padding: 0 !important;
+  }
+  .node-event.view-mode-full .field-name-title h2 {
+    font-size: 24pt;
+    line-height: 1em;
+  }
+  .node-event.view-mode-full .field-name-field-address {
+    font-size: 16pt;
+  }
+  .node-event.view-mode-full .group-left,
+  .node-event.view-mode-full .field-name-field-target-audience {
+    padding: 0 !important;
+  }
+  .node-event.view-mode-full .group-footer,
+  .node-event.view-mode-full .group-wrapper-buttons {
+    margin: 0 !important;
   }
 }
 @media (min-width: 48.0625em) {

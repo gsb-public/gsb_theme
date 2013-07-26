@@ -29,16 +29,8 @@
     border-bottom: none !important
     &:visited
       text-decoration: underline
-    &[href]:after
-      content: " (" attr(href) ")"
   abbr[title]:after
     content: " (" attr(title) ")"
-  .ir a:after
-    content: ""
-  a
-    &[href^="javascript:"]:after, &[href^="#"]:after
-      content: ""
-  /* Don't show links for images, or Javascript/internal links */
   pre, blockquote
     border: 1px solid #999
     page-break-inside: avoid
@@ -94,3 +86,28 @@
   .node-type-msx-fellows .node-msx-fellows.ds-2col > .group-right,
   .node-type-msx-fellows .node-msx-fellows .field-name-field-year
     padding-left: 0
+
+  // event details
+  .node-event.view-mode-full
+    .group-header
+      border: none!important
+    .group-left
+      width: 60%!important
+    .group-right
+      width: 35%!important
+    .event-register-link,
+    .event-ical-link
+      a
+        font-size: 12pt!important
+        padding: 0!important
+    .field-name-title h2
+      font-size: 24pt
+      line-height: 1em
+    .field-name-field-address
+      font-size: 16pt
+    .group-left,
+    .field-name-field-target-audience
+      padding: 0!important
+    .group-footer,
+    .group-wrapper-buttons
+      margin: 0!important
