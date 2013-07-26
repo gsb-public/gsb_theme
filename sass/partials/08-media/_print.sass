@@ -47,7 +47,7 @@
   #banner,
   .breadcrumb,
   .pager-region,
-  .pane-node-field-addthis,
+  .pane-node-field-addthis
     display: none !important
 
   div#content-wrapper:before,
@@ -101,6 +101,8 @@
     border: 1px solid #ccc
     +box-shadow(none)
 
+  .page-programs #page-title
+    padding: 0!important
   //msx fellows
   .node-type-msx-fellows .node-msx-fellows.ds-2col > .group-left
     margin-right: 20px
@@ -109,13 +111,12 @@
     padding-left: 0
 
   // event details
+  .node-type-event
+    .inner-main-wrapper
+      margin-right: 0!important
+    .inner-sidebar-wrapper
+      display: none!important
   .node-event.view-mode-full
-    .group-header
-      border: none!important
-    .group-left
-      width: 60%!important
-    .group-right
-      width: 35%!important
     .event-register-link,
     .event-ical-link
       a
