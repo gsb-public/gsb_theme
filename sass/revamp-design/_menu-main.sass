@@ -182,7 +182,7 @@ a.event-calendar
     float: none
     line-height: 1
     padding: 18px
-    padding-left: 70px
+    padding-left: 75px
     &:hover
       +background(linear-gradient($grey-e, $white))
 
@@ -195,12 +195,16 @@ a.event-calendar
     +clearfix
     display: block
     +background(linear-gradient($grey-e, $white))
-    padding: 24px 0 24px 70px
+    padding: 12px 50px 0 75px
     .menu
       float: left
       width: 160px
+      +breakpoint($bp-mobile)
+        width: auto
       &:first-of-type
         margin-right: 20%
+        +breakpoint($bp-mobile)
+          margin-right: 0
     li
       line-height: 16px
       padding-bottom: 12px
