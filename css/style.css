@@ -1900,18 +1900,6 @@ div.label-inline {
 
 /* Print Defaults -------------------------------------------------------------- */
 @media print {
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-  }
-
-  /* Black prints faster: h5bp.com/s */
   body {
     font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 12pt !important;
@@ -1922,7 +1910,6 @@ div.label-inline {
   }
 
   a {
-    text-decoration: underline;
     border-bottom: none !important;
   }
   a:visited {
@@ -1967,22 +1954,21 @@ div.label-inline {
 
   #site-slogan,
   #nav-touch-wrapper,
+  #search-touch-button,
   #footer-wrapper,
   #sidebar,
   #banner,
   .breadcrumb,
   .pager-region,
-  .pane-node-field-addthis,
-  .page-events #page-title,
-  .page-programs #page-title {
+  .pane-node-field-addthis {
     display: none !important;
   }
 
-  #content-wrapper:before,
-  #content-wrapper:after {
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+  div#content-wrapper:before,
+  div#content-wrapper:after {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   #header-wrapper {
@@ -1994,12 +1980,55 @@ div.label-inline {
   }
   #header #logo {
     margin-top: 0;
+    background: none !important;
   }
   #header #logo img {
     display: inline-block;
   }
   #header #logo:after {
-    display: none;
+    display: block;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .slideshow-slide {
+    max-width: none !important;
+  }
+
+  .inner-sidebar-wrapper .panels-ipe-portlet-wrapper {
+    page-break-inside: avoid;
+  }
+
+  .shadowed-box,
+  .designed-box,
+  .person-list-view,
+  .pane-gsb-event-sidebar,
+  .pane-bundle-links .green-bar,
+  .pane-bundle-text,
+  div.region-content [class*="pane-menu-block"],
+  .pane-bundle-video,
+  .pane-gsb-event-upcoming-events,
+  .pane-bundle-spotlight,
+  .pane-bundle-house-ads,
+  .pane-bundle-accordion,
+  .cta-red .field-item,
+  .view-academic-calendar .view-footer a,
+  .gsb-views-exposed-form,
+  .exposed_filter_widget > div,
+  .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search,
+  .pane-bundle-existing-node .view-mode-teaser,
+  .pane-gsb-feature-faculty-display-az-list .pane-content,
+  .view-display-id-club_list .view-content,
+  .view-display-id-search_club .view-content,
+  .pane-club-filters-club-by-id-or-tag,
+  .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link,
+  .pane-lastname-az-links {
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   .node-type-msx-fellows .node-msx-fellows.ds-2col > .group-left {
@@ -2039,6 +2068,21 @@ div.label-inline {
   .node-event.view-mode-full .group-footer,
   .node-event.view-mode-full .group-wrapper-buttons {
     margin: 0 !important;
+  }
+}
+@media print and (-webkit-min-device-pixel-ratio: 0) {
+  body {
+    zoom: 70%;
+  }
+
+  .pane-bundle-spotlight .field-name-field-body,
+  .pane-bundle-house-ads .field-name-field-body {
+    height: 68px !important;
+  }
+
+  .content .field-name-field-accordion-item .field-name-field-title .field-item,
+  .content .acc-title {
+    font-weight: normal !important;
   }
 }
 @media (min-width: 48.0625em) {
