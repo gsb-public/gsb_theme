@@ -141,6 +141,26 @@ function gsb_theme_preprocess_page(&$variables) {
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
   }
+
+  $variables['event_and_search'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array(
+        'event-and-search',
+      ),
+    ),
+    'link' => array(
+      '#type' => 'link',
+      '#href' => 'events',
+      '#title' => t('Event Calendar'),
+      '#attributes' => array(
+        'class' => array(
+          'event-link',
+        ),
+      ),
+    ),
+    'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
+  );
 }
 
 /**

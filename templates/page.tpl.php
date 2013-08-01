@@ -81,12 +81,7 @@
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
             <?php print render($page['navigation']); ?>
-            <div class="event-link-wrapper"><a href="/events" class="event-link">Event Calendar</a>
-              <?php
-              $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
-              print render($search_block['content']);
-              ?>
-            </div>
+            <?php print render($event_and_search); ?>
             <div id="menu-main-footer">
               <?php
                 $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
