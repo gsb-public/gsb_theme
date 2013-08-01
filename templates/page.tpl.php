@@ -81,7 +81,7 @@
           <a id="nav-touch-button"></a>
           <div id="navigation"><div class="section">
             <?php print render($page['navigation']); ?>
-            <div class="se"><a href="/events" class="event-calendar">Event Calendar</a>
+            <div class="event-link-wrapper"><a href="/events" class="event-link">Event Calendar</a>
               <?php
               $search_block = module_invoke('google_appliance', 'block_view', 'ga_block_search_form');
               print render($search_block['content']);

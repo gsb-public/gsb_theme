@@ -140,7 +140,7 @@
 /////////////////////////
 //Event calendar link
 ////////////////////////
-.se
+.event-link-wrapper
   +breakpoint($bp-wide-min)
     float: left
     height: 0
@@ -153,7 +153,7 @@
     top: 0
     right: 0
     width: 15.65%
-a.event-calendar
+.event-link
   width: 100%
   +background(linear-gradient(top, #880000, #b40000))
   color: #fff
@@ -161,7 +161,7 @@ a.event-calendar
   display: inline-block
   &:hover
     background: $grey-29
-  &:active
+  &.active
     +background(linear-gradient(bottom, #9a0101, #6d0101))
   +breakpoint($bp-tablet-port)
     border-left: 1px solid #FF0000
