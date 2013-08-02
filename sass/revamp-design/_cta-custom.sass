@@ -100,7 +100,7 @@
       background: image_url('cta-learn-mobile.jpg') no-repeat 0 0
   .about-campus-btn
     background: $text-green
-    +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, $text-green)
+    +background($text-green)
     display: block
     padding: 12px 15px
     height: 60px
@@ -110,12 +110,22 @@
     line-height: 1.2em
     margin-top: 1px
     min-width: 216px
+    position: relative
+    &:after
+      color: $white
+      content: "\f100"
+      font-family: "arrow-double"
+      font-size: 26px
+      font-weight: normal
+      position: absolute
+      top: 34%
+      right: 5%
     +breakpoint($bp-mobile)
       max-width: 216px
   &:hover
     .about-campus-btn
       background: $blue-dark
-      +background(image_url('arrow-cta-white.png') no-repeat 93% 50%, linear-gradient(top, #194560, #2c6180))
+      +background(linear-gradient(top, #194560, #2c6180))
 
 // Rethink CTA
 .cta-rethink
