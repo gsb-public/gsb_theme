@@ -26,6 +26,7 @@
     print $q;
   ?>
 <?php endif; ?>
+<strong><?php print $filter_title; ?></strong>
 <div class="views-exposed-form">
   <div class="views-exposed-widgets clearfix">
     <?php foreach ($widgets as $id => $widget): ?>
