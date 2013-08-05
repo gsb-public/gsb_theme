@@ -10,41 +10,41 @@
         var $spotlight = $('.pane-bundle-spotlight, .pane-bundle-house-ads');
         if ($spotlight.length) {
           // If the line height of the body text changes, adjust this.
-          var visibleHeight = 18 * 4
-          $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>')
+          var visibleHeight = 18 * 4;
+          $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>');
           // Add behavior for every .show-more link.
           $spotlight.find('.show-more').once('showmore', function () {
             var $this = $(this),
               $spotlightContent = $this.siblings('.field-name-field-body'),
-              contentHeight = $spotlightContent.find('p').height()
+              contentHeight = $spotlightContent.find('p').height();
             // Remove .show-more if the body is less than the defined max height.
-            $spotlightContent.css('height',visibleHeight)
+            $spotlightContent.css('height',visibleHeight);
             if (contentHeight <= visibleHeight) {
-              $this.remove()
+              $this.remove();
             }
             else {
               $this.click(function() {
-                var $this = $(this), text, height
+                var $this = $(this), text, height;
                 // Expand description to its real height.
                 if (!$this.hasClass('active')) {
-                  text = Drupal.t('Show Less')
-                  height = contentHeight
+                  text = Drupal.t('Show Less');
+                  height = contentHeight;
                 }
                 // Collapse description to defined max height.
                 else {
-                  text = Drupal.t('Show More')
-                  height = visibleHeight
+                  text = Drupal.t('Show More');
+                  height = visibleHeight;
                 }
                 //$spotlightContent.removeAttr('style')
-                $spotlightContent.animate({'height' : height}, 300)
+                $spotlightContent.animate({'height' : height}, 300);
                 $this
                   .toggleClass('active')
-                  .html('<span>' + text + '</span>')
-              })
+                  .html('<span>' + text + '</span>');
+              });
             }
-          })
+          });
         }
-      })
+      });
     }
   };
 
@@ -141,7 +141,7 @@
         }
       }
     }
-  }
+  };
 
   /**
    * Placeholder for IE9-
@@ -169,10 +169,10 @@
           if (input.val() == input.attr('placeholder')) {
             input.val('');
           }
-          })
+          });
         });
       }
-    }}
+    }};
 
   /**
    * Check for social field fpp, if it exists, check the source.
@@ -202,7 +202,7 @@
         }
       }
     }
-  }
+  };
 
   /**
    * Add highlighted map functionality for BI sidebar menu
@@ -247,7 +247,7 @@
         biMapOverlay.removeClass();
       }
     }
-  }
+  };
 
   /**
    * Prevent form submit on chosing an autocomplete suggestion
@@ -258,7 +258,7 @@
         return event.keyCode != 13;
       });
     }
-  }
+  };
 
   /**
    * Modify collapsible functional for Filter regions and industry or anything else taxonomy
@@ -266,23 +266,23 @@
   Drupal.behaviors.colapsable_patch = {
     attach: function (context, settings) {
          $('.exposed_filter_widget .views-exposed-widget').children('label:not(.colapsable_processed)').click(function(){
-           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed')
-           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle()
-         }).addClass('colapsable_processed')
+           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed');
+           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle();
+         }).addClass('colapsable_processed');
 
          //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
-         var checkedInput = false
+         var checkedInput = false;
         $('.exposed_filter_widget .bef-checkboxes input').each(function(index, val){
           if($(this).attr('checked'))
-              checkedInput = true
-        })
+              checkedInput = true;
+        });
 
         if(checkedInput){
-          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').addClass('collapsed')
-          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').show()
+          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').addClass('collapsed');
+          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').show();
         }
     }
-  }
+  };
 
 
   /**
@@ -300,7 +300,7 @@
         $('.page-events .inner-sidebar-wrapper .pane-bundle-links').insertAfter($('.page-events .inner-sidebar-wrapper .pane-views-exp-gsb-event-panel-pane-2 .pane-content'));
       }
     }
-  }
+  };
 
   /**
    * Set class to active fitered column
@@ -308,9 +308,9 @@
 
   Drupal.behaviors.setClassToActiveFiltered ={
     attach: function (context, settings) {
-      $('.view-admission-events table thead a').has('img').addClass('currentFilter')
+      $('.view-admission-events table thead a').has('img').addClass('currentFilter');
     }
-  }
+  };
 
   /**
    * Input type number alternative for spinner
@@ -368,7 +368,7 @@
         });
       }
     }
-  }
+  };
 
     Drupal.behaviors.goTopLink ={
     attach: function (context, settings) {
@@ -376,6 +376,6 @@
         $('.go-to-top-link').find('a').attr('href','#banner');
       }
     }
-  }
+  };
 
 }(jQuery));
