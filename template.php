@@ -119,6 +119,7 @@ function gsb_theme_preprocess_html(&$variables) {
   $allowed_paths = array(
     'programs',
     'stanford-gsb-experience',
+    'events',
   );
   $normalized_arg = arg(0);
   $args = explode('/', trim(request_uri(), '/'));
@@ -176,7 +177,7 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
   // Add the 'Filter by' to the filter title on the admissions events pane
   if ($variables['form']['#id'] == 'views-exposed-form-admission-events-pane') {
     $variables['filter_title'] = t('Filter by');
-  }  
+  }
 }
 
 /**
