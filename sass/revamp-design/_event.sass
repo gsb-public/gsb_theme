@@ -143,8 +143,6 @@
   div.tabs
     position: absolute
     right: 0
-
-
     +breakpoint($bp-mobile-max)
       display: none
   ul.tabs
@@ -178,32 +176,26 @@
           font-family: "gsb"
           margin-right: 8px
           line-height: 43px
-          color: white
+          color: $white
           font-weight: normal
-
-        &:hover
-          //color: $grey-1
-
       &.active
         a
           +background(linear-gradient(bottom, #606060, #6f6f6f))
           cursor: default
 
-      // List link
-      &:first-of-type
-        a
-          &:before
-            content: "e"
-            font-size: 34px
-            line-height: 32px
-
-      // Event link
+      // Event List link
+      &:first-of-type a:before
+        content: "e"
+        font-size: 34px
+        line-height: 32px
+      // Event Calendar link
       &:last-of-type
         margin-left: 1px
-        a
-          &:before
-            content: "5"
-            font-size: 28px
+        +breakpoint(800px max-width)
+          display: none
+        a:before
+          content: "5"
+          font-size: 28px
 
 ///////////////////
 // Event listing
