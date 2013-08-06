@@ -145,7 +145,7 @@
   div.tabs
     position: absolute
     right: 0
-    +breakpoint($bp-mobile-max)
+    +breakpoint(800px max-width)
       display: none
   ul.tabs
     border: 0
@@ -193,8 +193,6 @@
       // Event Calendar link
       &:last-of-type
         margin-left: 1px
-        +breakpoint(800px max-width)
-          display: none
         a:before
           content: "5"
           font-size: 28px
