@@ -100,23 +100,23 @@ ul.slideshow-items li:first-of-type
       .flex-direction-nav a
         opacity: 0.8
 
-// Slideshow hover
-.slideshow-wrapper a
-  &:hover
-    .slideshow-cta &
-      .slide-title
-        color: $text-blue
-        &:after
-          color: $text-blue
-      .purple-button-on-blue .slide-cta
-        background-color: $teal-dark
-      .blue-button-on-orange .slide-cta
-        background-color: $purple
-    .slideshow-simple &
-      .slide-description
-        color: $text-blue
-        &:after
-          color: $text-blue
+// Slideshow hover for simple
+.slideshow-simple .slideshow-wrapper a:hover
+  .slide-description
+    color: $text-blue
+    &:after
+      color: $text-blue
+
+.slideshow-cta .slideshow-wrapper:hover
+  a .slide-title
+    color: $text-blue
+    &:after
+      color: $text-blue
+  .purple-button-on-blue a .slide-cta
+    background-color: $teal-dark
+  .blue-button-on-orange a .slide-cta
+    background-color: $purple
+
 
 
 // Slide styling
