@@ -10,9 +10,8 @@
  */
 ?>
 
-<div class="supermenu-row">
-  <div class="supermenu-pane supermenu-one-column">
+<div class="supermenu-one-column">
+  <div class="supermenu-pane">
       <?php print $content['columnone']; ?>
   </div>
 </div>
-<!-- /.gsb-front-page -->
