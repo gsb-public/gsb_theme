@@ -18,7 +18,7 @@
     &.diptych-blue
       .group-left .field-type-image .field-item
         &:after
-          +background(linear-gradient(top, rgba(45,98,128,0) 0%, rgba(45,98,128,0) 10%, rgba(45,98,128,1) 80%, rgba(45,98,128,1) 100%))
+          +background(linear-gradient(top, rgba($text-blue, 0) 0%, rgba($text-blue, 0) 35%, rgba($text-blue, 1) 85%))
           +breakpoint($bp-mobile-max)
             background: rgba(45,98,128,1)
 
@@ -53,10 +53,10 @@
           right: -22px
           margin-top: -5px
           top: 50%
-        
+
     .field-type-image, .field-type-file
-      margin: 0 -26px    
-    
+      margin: 0 -26px
+
   //Right group
   .group-right
     .group-diptych-txt-block
@@ -92,12 +92,12 @@
         a
           color: #fff
           &:after
-            color: #fff       
-       
-        
-  //Left group    
+            color: #fff
+
+
+  //Left group
   .group-left
-    position: relative  
+    position: relative
     .field-type-image
       .field-item
         position: relative
