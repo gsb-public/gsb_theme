@@ -152,9 +152,9 @@
     .front-panel-feature-two
       +grid-span(1, 2, $columns: $ipad-columns)
     .front-panel-feature-three
-      width: $ipad-full
       float: none
       margin: 0
+      width: 100%
       +breakpoint($bp-nexus-portrait)
         width: 561px
       .panel-pane
@@ -162,7 +162,15 @@
         +breakpoint($bp-tablet-port-max)
           margin-bottom: 20px
         +breakpoint($bp-mobile-max)
-          margin-bottom: 0
+          margin-bottom: 1px
+  +breakpoint($bp-android-landscape)
+    .front-panel-feature-one
+      margin: 0 0 20px 0
+      width: 100%
+    .front-panel-feature-two
+      margin: 0
+      width: 100%
+
   +breakpoint($bp-mobile-max)
     .front-slider-pane,
     .front-panel-feature-one,
