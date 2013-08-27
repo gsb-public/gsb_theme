@@ -284,6 +284,10 @@ ul.slideshow-items li:first-of-type
       height: 41%
     +breakpoint($bp-mobile-max)
       +background(linear-gradient(top, rgba($white, 0) 25%, rgba($white, 1) 50%))
+    +breakpoint($bp-mobile)
+      background: none
+    +breakpoint(321px 360px)
+      height: 325px
     .inner
       right: 30px
       width: 50%
