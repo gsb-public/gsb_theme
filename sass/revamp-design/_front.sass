@@ -127,10 +127,9 @@
       width: 41px
       height: 41px
       margin: 0 5px
-      +border-radius(20px)
+      +border-radius(50px)
       background-color: #c50000
       +background(linear-gradient(bottom, #c50000 0%, #860000 100%))
-
       &:after
         color: $white
         font-family: 'gsb'
@@ -142,6 +141,12 @@
         filter: none
         &:after
           color: #860000
+      &:first-of-type
+        margin-left: 0
+      &:last-of-type
+        margin-right: 0
+      +breakpoint(1023px 1025px)
+        margin: 0 2px
 
   // Tweet
   .tweet
