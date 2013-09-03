@@ -4,11 +4,10 @@
 
 // GENERAL
 #banner
-  overflow: hidden
+  +breakpoint($bp-tablet-land-min)
+    overflow: hidden
   +breakpoint($bp-mobile-min) /* WP-1773 */
     padding: 18px 0 12px /* WPBQA-158 */
-  +breakpoint($bp-tablet-land-max)
-    display: none
 
 .banner-title,
 .banner-subtitle
@@ -18,6 +17,10 @@
   font-family: $font-demi
   font-size: 28px
   line-height: 1.2em
+  +breakpoint($bp-tablet-land-max)
+    left: 15px
+    position: absolute
+    top: 10px
 
 .banner-subtitle
   font-size: 42px
@@ -69,14 +72,16 @@
 // PROGRAMS
 .page-programs
   #banner
-    +background(linear-gradient(#4c697a, #607c8c))
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+    +breakpoint($bp-tablet-land-min)
+      +background(linear-gradient(#4c697a, #607c8c))
+      +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 // TYPICAL
 .page-stanford-gsb-experience
   #banner
-    +background(linear-gradient(#756b5a, #887e6e))
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+    +breakpoint($bp-tablet-land-min)
+      +background(linear-gradient(#756b5a, #887e6e))
+      +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 
 ///////////////////
