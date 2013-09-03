@@ -370,10 +370,10 @@
     }
   };
 
-    Drupal.behaviors.goTopLink ={
+  Drupal.behaviors.goTopLink ={
     attach: function (context, settings) {
-      if($('#banner').length) {
-        $('.go-to-top-link').find('a').attr('href','#banner');
+      if($('#header-wrapper').length) {
+        $('.go-to-top-link').find('a').attr('href','#header-wrapper');
       }
     }
   };
