@@ -370,6 +370,9 @@
     }
   };
 
+  /**
+   * Changes the anchor element for the Views back to top link.
+   */
   Drupal.behaviors.goTopLink ={
     attach: function (context, settings) {
       if($('#header-wrapper').length) {
