@@ -57,52 +57,52 @@ li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before
 
 //txt, doc, docx, xls, xlsx, pdf, ppt, pptx, pps, odt, ods, odp, zip.
 
-body 
+body
   a
     &[href$=".pdf"]
       &:after
-        content: 'm'
+        content: 'm' !important
         @extend %doc-attached-icons
-        
+
     &[href$=".png"],
     &[href$=".jpg"],
     &[href$=".gif"]
       &:after
-        content: '#'
+        content: '#' !important
         @extend %doc-attached-icons
-        
+
     &[href$=".pptx"],
     &[href$=".ppt"],
     &[href$=".pps"],
     &[href$=".odp"]
       &:after
-        content: '%'
-        @extend %doc-attached-icons  
-        
+        content: '%' !important
+        @extend %doc-attached-icons
+
     &[href$=".zip"],
     &[href$=".rar"],
     &[href$=".tar"]
       &:after
-        content: '$'
-        @extend %doc-attached-icons     
-        
+        content: '$' !important
+        @extend %doc-attached-icons
+
     &[href$=".doc"],
     &[href$=".docx"],
     &[href$=".txt"],
     &[href$=".odt"]
       &:after
-        content: '&'
-        @extend %doc-attached-icons 
-        
+        content: '&' !important
+        @extend %doc-attached-icons
+
     &[href$=".xls"],
     &[href$=".xlsx"],
     &[href$=".ods"]
       &:after
-        content: '^'
-        @extend %doc-attached-icons      
+        content: '^' !important
+        @extend %doc-attached-icons
 
 
 //Hide old image assigned for file type
 .file-icon
   display: none !important
-                                      
+
