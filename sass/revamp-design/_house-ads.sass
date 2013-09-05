@@ -121,3 +121,15 @@
       .field-name-field-link-single,
       .field-name-field-body
         clear: both
+
+.narrow-view .pane-bundle-house-ads
+  +breakpoint($bp-mobile)
+    width: 270px
+  .field-name-field-image-single-public
+    +breakpoint($bp-mobile-max)
+      float: left
+      margin: 0
+      margin-right: 26px
+      width: 218px
+    +breakpoint($bp-mobile)
+      margin: -26px -26px 20px -26px
