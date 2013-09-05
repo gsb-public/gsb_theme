@@ -33,6 +33,8 @@
     width: 218px
     > img
       vertical-align: top
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
 
   .field-name-field-link-single a
     font-weight: bold
@@ -73,22 +75,23 @@
     > div
       overflow: visible
 
-  .field-name-field-link-single,
-  .field-name-field-image-single-public,
-  .field-name-field-body
-    clear: both
-    +breakpoint($bp-mobile-max)
-      clear: none
-  .field-name-field-image-single-public
-    margin: 0 -26px 20px -26px
-    width: auto
-    +breakpoint($bp-mobile-max)
-      float: left
-      margin: 0
-      margin-right: 26px
-      width: 218px
-    img
-      width: 100%
+    .field-name-field-link-single,
+    .field-name-field-image-single-public,
+    .field-name-field-body
+      clear: both
+      +breakpoint($bp-mobile-max)
+        clear: none
+    .field-name-field-image-single-public
+      margin: 0 -26px 20px -26px
+      width: auto
+      +breakpoint($bp-mobile-max)
+        float: left
+        margin: 0
+        margin-bottom: 20px
+        margin-right: 26px
+        width: 218px
+      img
+        width: 100%
 
 //////////////////////
 // Responsive changes
