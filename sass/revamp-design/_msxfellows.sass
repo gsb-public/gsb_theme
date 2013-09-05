@@ -1,5 +1,5 @@
 /////////////////
-// MSx Fellow Style
+// MSx Fellows
 /////////////////
 
 .node-type-msx-fellows
@@ -21,22 +21,20 @@
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
-
   .field-name-field-title-position-unlimited,
   .field-name-field-company-organization,
   .field-name-field-location,
   .field-name-field-academic-degrees
-    font-weight: bold 
-    font-size: 20px 
+    font-weight: bold
+    font-size: 20px
     margin-bottom: 27px
-  
   .field-name-field-academic-degrees
     .field-label
       margin-bottom: 8px
-    .item-list 
+    .item-list
       > ul
         margin: 0
-        li 
+        li
           margin: 0 0 7px 20px
           line-height: 1.3
           &:before
@@ -47,23 +45,19 @@
   .field-name-field-body
     font-size: 18px
     line-height: 1.4em
-
   .field-name-title
     margin-top: 25px
     margin-bottom: 25px
-
   .field-name-field-year
     background: $grey-dark
-    color: #fff
+    color: $white
     font-size: 14px
     padding: 9px 25px 5px
-    
     span
       &:before
         content: 'MSx Fellow'
         display: inline
         margin-right: 6px
-        
 
   &.ds-2col > .group-left
     width: 270px
@@ -80,16 +74,12 @@
       float: left
       padding-left: 0
 
-
-/*
- *Listing page 
- */
-
+// Listing page
 .view-msx-fellows
   .node-msx-fellows
-    border: 2px solid #fff
+    border: 2px solid $white
     padding: 0 10px
-    background: rgba(255,255,255,.5)
+    background: rgba($white, 0.5)
     min-height: 315px
     .field-name-field-image-single-public
       margin: -2px -12px 0 -12px
@@ -98,22 +88,24 @@
       margin: 14px 0 8px 0
       h2
         font-size: 16px
-        line-height: 1
+        line-height: 1.25
         margin: 0
         a
           color: $text-green
-          &:hover 
+          &:hover
             color: $text-blue
     .field-name-field-title-position-unlimited
       margin: 0 0 9px 0
     .field-name-field-location
       font-weight: normal
-      margin: 0 
-    .field-name-field-title-position-unlimited, 
+      margin: 0
+    .field-name-field-title-position-unlimited,
+    .field-name-field-company-organization,
     .field-name-field-location
-      font-size: 14px  
+      font-size: 14px
       line-height: 1.25
 
+// Text fpp override in MSx section
 .page-programs-msx
   .pane-bundle-text
     background: none
@@ -123,7 +115,7 @@
     box-shadow: 0 0 0 #000
     margin: 0
     padding: 0
-    
+
     .field-name-field-body p
       font-size: 18px
       line-height: 1.4em
@@ -132,5 +124,3 @@
       margin-bottom: 25px
   h1
     margin-bottom: 7px
-    
-    
