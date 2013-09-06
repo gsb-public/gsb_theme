@@ -4,9 +4,8 @@
 
 // GENERAL
 #banner
-  +breakpoint($bp-tablet-land-min)
+  +breakpoint($bp-tablet-land-min) /* WPBQA-393, WP-1773 */
     overflow: hidden
-  +breakpoint($bp-mobile-min) /* WP-1773 */
     padding: 18px 0 12px /* WPBQA-158 */
 
 .banner-title,
@@ -18,11 +17,12 @@
   font-size: 28px
   line-height: 1.2em
   +breakpoint($bp-tablet-land-max)
-    font-size: 24px
-    left: 15px
     line-height: 0
     position: relative
     top: 28px
+  +breakpoint($bp-mobile-max)
+    font-size: 24px
+    left: 15px
 
 .banner-subtitle
   font-size: 42px
@@ -39,6 +39,8 @@
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
   color: $white
   font-size: 14px
+  +breakpoint($bp-tablet-land-max)
+    display: none
   .breadcrumb
     line-height: 1em
     +breakpoint($bp-mobile-min) /* WP-1773 */
@@ -53,13 +55,14 @@
 // EVENT LANDING
 .page-events
   #banner
-    +background(image_url("bg-banner-eventcal.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, #1b1b1b))
-    +clearfix
-    +breakpoint($bp-tablet-port-max)
-      height: 50px
-  .banner-title
-    padding-top: 18px /* WP-1773 */
-    font-size: 48px
+    +breakpoint($bp-tablet-land-min)
+      +background(image_url("bg-banner-eventcal.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, #1b1b1b))
+      +clearfix
+      +breakpoint($bp-tablet-port-max)
+        height: 50px
+      .banner-title
+        padding-top: 18px /* WP-1773 */
+        font-size: 48px
 
 // BI LANDING
 .page-business-insights
