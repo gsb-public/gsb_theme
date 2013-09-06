@@ -303,12 +303,15 @@
   };
 
   /**
+   * Add classes to admission events table
    * Set class to active fitered column
+   * Add class to table
    */
 
   Drupal.behaviors.setClassToActiveFiltered ={
     attach: function (context, settings) {
       $('.view-admission-events table thead a').has('img').addClass('currentFilter');
+      $('.view-admission-events table').addClass('responsive');
     }
   };
 
@@ -380,5 +383,6 @@
       }
     }
   };
+
 
 }(jQuery));
