@@ -43,7 +43,7 @@
 
 #main
   padding-top: 30px
-  +breakpoint($bp-tablet-port)
+  +breakpoint($bp-content-max)
     padding: 30px 20px 12px
   +breakpoint($bp-mobile-max)
     padding: 15px
@@ -54,7 +54,7 @@
   .bottom-content
     margin: 0 auto
     max-width: $max-width
-    +breakpoint($bp-tablet-port)
+    +breakpoint($bp-content-max)
       padding: 0 20px
     +breakpoint($bp-mobile-max)
       padding: 0 15px
@@ -124,7 +124,7 @@
   #footer
     margin: 0 auto
     max-width: $max-width
-    +breakpoint($bp-tablet-port)
+    +breakpoint($bp-content-max)
       padding: 0 20px
     +breakpoint($bp-mobile-max)
       padding: 0 15px
@@ -135,7 +135,7 @@
     border-top: 1px $grey-c solid
     margin: 0 auto
     max-width: $max-width
-  +breakpoint($bp-tablet-port)
+  +breakpoint($bp-content-max)
     padding: 0 20px
   +breakpoint($bp-mobile-max)
     padding: 0 15px
@@ -153,16 +153,17 @@
     background-size: 96%
   .no-js &, .no-svg &
     background: image_url("logo.png") no-repeat
-  +breakpoint($logo-portrait)
+  +breakpoint(1210px max-width)
+    margin-left: 20px
+  +breakpoint($bp-tablet-port-max)
+    margin-top: 30px
+    margin-bottom: 30px
     .svg &
       background-size: 100%
       height: 65px
       width: 230px
     .no-js &, .no-svg &
       max-width: 230px
-  +breakpoint($bp-tablet-port)
-    margin: 30px 0
-    margin-left: 20px
   +breakpoint($bp-mobile-max)
     display: block
     .svg &
@@ -172,9 +173,6 @@
     .no-js &, .no-svg &
       margin: 21px 0 18px 15px
       max-width: 150px
-  +breakpoint(769px 919px)
-    margin-top: 0
-    margin-bottom: 36px
 
 // SITE SLOGAN
 #site-slogan
@@ -186,7 +184,6 @@
     font-size: 18px
     line-height: 1
     padding-right: 20px
-    padding-top: 80px
   +breakpoint(705px max-width)
     max-width: 300px
   +breakpoint($bp-mobile-max)
