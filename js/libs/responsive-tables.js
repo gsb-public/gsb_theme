@@ -35,8 +35,8 @@
 
     setCellHeights(original, copy);
 	}
-	
-        function unsplitTable(original) {
+
+	function unsplitTable(original) {
     original.closest(".table-wrapper").find(".pinned").remove();
     original.unwrap();
     original.unwrap();
