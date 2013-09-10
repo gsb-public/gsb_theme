@@ -13,8 +13,10 @@
     +grid-span(1, 1, $columns: $regions)
     margin-right: 65px
     width: 235px
-    +breakpoint($bp-tablet-land-min)
+    +breakpoint($bp-wide-min)
       padding-top: 30px
+    +breakpoint($bp-content)
+      padding-left: 20px
     h2
       display: none
     +breakpoint($bp-tablet-port-max)
