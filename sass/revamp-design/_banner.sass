@@ -23,6 +23,8 @@
   +breakpoint($bp-mobile-max)
     font-size: 24px
     left: 15px
+    .page-stanford-gsb-experience &
+      font-size: 16px
 
 .banner-subtitle
   font-size: 42px
@@ -84,6 +86,9 @@
 // TYPICAL
 .page-stanford-gsb-experience
   #banner
+    display: none
+    +breakpoint($bp-tablet-port-max)
+      display: block
     +breakpoint($bp-tablet-land-min)
       +background(linear-gradient(#756b5a, #887e6e))
       +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
