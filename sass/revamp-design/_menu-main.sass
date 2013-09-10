@@ -8,14 +8,17 @@
     top: -10px
     min-width: 690px
   .section
-    border-bottom: 10px solid $red
     +breakpoint($bp-mobile-max)
+      border-bottom: 10px solid $red
       +box-shadow($black 0 -1px 3px)
 
 ///////////////
 // MAIN MENU
 ///////////////
 #block-system-main-menu
+  +clearfix
+  background-color: $red-light
+  +background(linear-gradient(bottom, $red-light, $red-dark))
   float: left
   +breakpoint($bp-tablet-port)
     float: none
@@ -23,8 +26,6 @@
     float: none
   li
     border-right: 1px solid #FF0000
-    background-color: $red-light
-    +background(linear-gradient(bottom, $red-light, $red-dark))
     font-size: 18px
     float: left
     line-height: 20px
@@ -34,44 +35,44 @@
     padding: 0
     .menu
       display: none
-    +breakpoint($bp-tablet-port-min)
-      &.active,
-      &.active-trail
-        +background(linear-gradient(bottom, #9a0101, #6d0101))
-      &:hover
-        background: $grey-29
     a
       color: $white
       display: block
       font-family: $font-sans
       margin: 0
       position: relative
+      +breakpoint($bp-tablet-port-min)
+        &.active,
+        &.active-trail
+          +background(linear-gradient(bottom, #9a0101, #6d0101))
+        &:hover,
+        &.qtip-hover
+          background: $grey-27
       +breakpoint($bp-mobile-max)
         display: inline-block
       +breakpoint($bp-mobile)
         max-width: 250px
+
     // IPAD
     +breakpoint($bp-tablet-port)
-      +background(linear-gradient(bottom, $red-light, $red-dark))
+      width: 21.1%
+      &:last-of-type
+        border-right: 0
       &:after
         color: $white
         content: "."
         float: right
         font-family: "gsb"
         font-size: 30px
+        line-height: 0
         position: relative
-        top: -10px
-        right: 9px
-      width: 21.1%
-      &:last-of-type
-        border-right: 0
-      &:hover
-        background-color: $grey-29
+        top: -17px
+        right: 3px
       a
         font-size: 15px
         line-height: 14px
-        max-width: 123px
-        padding: 10px 30px 0 9px
+        height: 58px
+        padding: 10px
       &:first-of-type
         a
           padding-right: 18px
@@ -156,17 +157,18 @@
 .event-link
   width: 100%
   +background(linear-gradient(top, #880000, #b40000))
-  color: #fff
+  color: $white
   font-size: 18px
   display: inline-block
   &:hover
-    background: $grey-29
+    background: $grey-27
   .page-events &,
   .node-type-event &
     +background(linear-gradient(bottom, #9a0101, #6d0101))
   +breakpoint($bp-tablet-port)
     border-left: 1px solid #FF0000
     font-size: 15px
+    height: 58px
     line-height: 14px
     padding: 10px 12px 20px
   +breakpoint($bp-wide-min)
