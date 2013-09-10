@@ -15,6 +15,8 @@
 ///////////////
 // MAIN MENU
 ///////////////
+
+// Full width
 #block-system-main-menu
   +clearfix
   background-color: $red-light
@@ -53,7 +55,7 @@
       +breakpoint($bp-mobile)
         max-width: 250px
 
-    // IPAD
+    // Tablets
     +breakpoint($bp-tablet-port)
       width: 21.1%
       &:last-of-type
@@ -76,6 +78,7 @@
       &:first-of-type
         a
           padding-right: 18px
+
     // Mobile
     +breakpoint($bp-mobile-max)
       background: $white
@@ -139,7 +142,7 @@
         padding: 12px 8px 18px
 
 /////////////////////////
-//Event calendar link
+// EVENT AND SEARCH
 ////////////////////////
 .event-and-search
   +breakpoint($bp-wide-min)
@@ -154,6 +157,8 @@
     top: 0
     right: 0
     width: 15.65%
+
+// Event calendar link
 .event-link
   width: 100%
   +background(linear-gradient(top, #880000, #b40000))
@@ -188,9 +193,9 @@
       +background(linear-gradient($grey-e, $white))
 
 
-////////////////////////////////
+//////////////////////
 // Mobile footer menu
-////////////////////////////////
+//////////////////////
 #menu-main-footer
   display: none
   +breakpoint($bp-mobile-max)
@@ -215,9 +220,9 @@
       font-size: 13px
       text-transform: uppercase
 
-////////////////////////////
+////////////////
 // MENU BUTTON
-////////////////////////////
+////////////////
 #nav-touch-wrapper
   display: inline
   +breakpoint($bp-mobile-max)
@@ -257,7 +262,6 @@
         +background(linear-gradient($grey-e, $white))
         &:after
           color: $red
-
       #navigation
         display: block
         position: absolute

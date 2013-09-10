@@ -1,6 +1,7 @@
 //////////////////
 // IMAGE CTA FPP
 //////////////////
+
 .pane-bundle-image-cta
   img
     display: block
@@ -10,8 +11,6 @@
   .group-right
     float: none
     width: 100%
-  .group-left img
-    //@extend %border-and-box-shadow
   .group-right
     color: $white
     padding: 30px
@@ -91,7 +90,7 @@
     border-top: 0
 
 //////////////////
-// NARROW STYLING
+// Narrow view CTA
 //////////////////
 .narrow-view
   .image-cta-position-top,
@@ -113,7 +112,7 @@
       &:hover
         background: $purple
 
-  // Top text CTA
+  // Top Text CTA
   .image-cta-position-top
     .group-left
       display: none
@@ -127,26 +126,17 @@
           line-height: 1.1em
           &:after
             color: $white
-  // Bottom text CTA
+
+  // Bottom Text CTA
   .image-cta-position-bottom
     overflow: hidden
-    //+box-shadow(rgba(0, 0, 0, 0.1) 2px 2px 2px)
-    //border: 2px solid $white
-    .group-left img
-      //display: block
-      //border-bottom: 0
-      //vertical-align: bottom
     .field-name-field-title
       display: none
     .group-right
-      //border-top: 0
-      //border-bottom: 2px solid $white
       display: block
       position: absolute
       bottom: 0
-      //margin-left: 2px
       padding: 15px 26px 18px
-      //width: 262px
       z-index: 4
       .field-name-field-link-single
         width: 100%

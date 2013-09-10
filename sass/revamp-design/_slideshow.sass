@@ -1,20 +1,21 @@
-// Slideshow
+//////////////
+// Slideshows
+//////////////
 
 ul.slideshow-items
   list-style: none
   margin: 0
   padding: 0
+  li
+    display: none
+    &:first-of-type
+      display: block
 
-ul.slideshow-items li
-  display: none
-
-ul.slideshow-items li:first-of-type
-  display: block
-
-// Slideshow functionality
+// Hide pager
 .flex-control-nav
   display: none
 
+// SLIDESHOW ARROWS
 .flex-direction-nav a
   opacity: .8
   outline: none
@@ -23,12 +24,10 @@ ul.slideshow-items li:first-of-type
   height: 39px
   .no-touch &
     opacity: .4
-
   &:before, &:after
     font-family: "gsb"
     line-height: 1
     text-indent: 0
-
   &:before
     position: absolute
     font-size: 40px
@@ -36,10 +35,8 @@ ul.slideshow-items li:first-of-type
     top: 0
     left: 0
     content: "~"
-    color: #887e6e
-    opacity: .8
-
-
+    color: $grey-dark
+    opacity: 0.8
   &:after
     font-size: 37px
     color: $white
@@ -64,9 +61,7 @@ ul.slideshow-items li:first-of-type
     top: 25%
     +breakpoint($bp-mobile)
       top: 15%
-
-
-
+  // Previous arrow
   &.flex-prev
     left: 28px
     +breakpoint($bp-nexus-portrait)
@@ -75,7 +70,7 @@ ul.slideshow-items li:first-of-type
       left: 20px
     &:after
       content: '['
-    //background: image_url("prev-arrow-small.png") no-repeat
+  // Next arrow
   &.flex-next
     right: 28px
     +breakpoint($bp-nexus-portrait)
@@ -85,11 +80,8 @@ ul.slideshow-items li:first-of-type
     &:after
       content: 'z'
       left: 2px
-    //background: image_url("next-arrow-small.png") no-repeat
 
-
-
-// Slideshow wrapper
+// SLIDESHOW WRAPPER
 .slideshow-wrapper
   @extend %box-shadow
   @extend %border
@@ -100,13 +92,14 @@ ul.slideshow-items li:first-of-type
       .flex-direction-nav a
         opacity: 0.8
 
-// Slideshow hover for simple
+// SIMPLE SLIDESHOW - HOVER
 .slideshow-simple .slideshow-wrapper a:hover
   .slide-description
     color: $text-blue
     &:after
       color: $text-blue
 
+// CTA SLIDESHOW - HOVER
 .slideshow-cta .slideshow-wrapper:hover
   a .slide-title
     color: $text-blue
@@ -117,9 +110,7 @@ ul.slideshow-items li:first-of-type
   .blue-button-on-orange a .slide-cta
     background-color: $purple
 
-
-
-// Slide styling
+// SLIDES
 .slideshow-slide
   background-color: $grey-e
   max-width: 870px
@@ -132,6 +123,7 @@ ul.slideshow-items li:first-of-type
     +breakpoint($bp-mobile-max)
       height: 500px
 
+  // Side text
   .slide-text
     bottom: 0
     padding: 0 26px
@@ -229,6 +221,8 @@ ul.slideshow-items li:first-of-type
     left: 3px
 
 // Color picker styling
+
+// Purple
 .purple-button-on-blue
   .slide-text
     +background(linear-gradient(left, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
@@ -241,6 +235,7 @@ ul.slideshow-items li:first-of-type
   .slide-cta
     background-color: $purple
 
+// Blue
 .blue-button-on-orange
   .slide-text
     +background(linear-gradient(left, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))

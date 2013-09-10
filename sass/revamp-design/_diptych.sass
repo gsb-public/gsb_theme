@@ -2,10 +2,9 @@
 // Diptych
 /////////////////
 
-
 .pane-bundle-diptych
   margin-bottom: 30px
-  +background(linear-gradient(top,  $grey-1, #272727))
+  +background(linear-gradient(top, $grey-1, $grey-27))
   position: relative
   +clearfix
   .ds-2col
@@ -25,7 +24,7 @@
     &.diptych-purple
       .group-left .field-type-image .field-item
         &:after
-          +background(linear-gradient(top,  rgba(117,71,96,0) 0%, rgba(117,71,96,0) 10%, rgba(117,71,96,1) 80%, rgba(117,71,96,1) 100%))
+          +background(linear-gradient(top,  rgba($purple, 0) 0%, rgba($purple, 0) 10%, rgba($purple, 1) 80%, rgba($purple, 1) 100%))
           +breakpoint($bp-mobile-max)
             background: rgba(117,71,96,1)
 
@@ -40,11 +39,10 @@
       > div
         position: relative
       a
-        color: #fff
-        //font-weight: bold
+        color: $white
         &:after
           content: "w"
-          color: #fff
+          color: $white
           font-family: "gsb"
           font-size: 26px
           font-weight: normal
@@ -61,9 +59,6 @@
   .group-right
     .group-diptych-txt-block
       margin-top: 20px
-      //position: absolute
-      //bottom: 28px
-      //padding-right: 26px
 
     .gsb-responsive-main
       display: none
@@ -74,7 +69,7 @@
         display: block
 
     .field-type-text-long
-      color: #fff
+      color: $white
       font-size: 18px
       line-height: 1.3
       margin-bottom: 15px
@@ -84,16 +79,15 @@
     .field-type-link-field
       background-color: $grey-1
       a
-        color: #63Acd5
+        color: $blue-light
         &:after
           color: $text-blue
       &:hover
-        background-color: #63Acd5
+        background-color: $blue-light
         a
-          color: #fff
+          color: $white
           &:after
-            color: #fff
-
+            color: $white
 
   //Left group
   .group-left
@@ -115,11 +109,8 @@
 
     .field-type-text-long, .field-type-link-field
       color: $white
-      .field-items
-        //padding: 0 26px
-
+    // Text
     .field-type-text-long
-      //font-weight: bold
       font-size: 26px
       line-height: 1.3
       margin-bottom: 15px
@@ -129,13 +120,14 @@
       +breakpoint($bp-mobile)
         font-size: 16px
         line-height: 1.1em
-
+    // Link
     .field-type-link-field
       background-color: $teal-dark
       width: 218px
       &:hover
-        background-color: $blue //$purple
+        background-color: $blue
 
+// Wide view
 .wide-view
   .pane-bundle-diptych .ds-2col
     > .group-left
@@ -160,6 +152,7 @@
           width: 100%
           margin-left: 0
 
+// Full width
 .full-view
   +breakpoint($bp-tablet-port-max)
     .pane-bundle-diptych  .ds-2col

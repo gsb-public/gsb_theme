@@ -29,7 +29,7 @@
     a
       margin-bottom: 0
   a
-    background-color: #c60000
+    background-color: $red-light
     +box-shadow($black, 0.45, 1px 1px 1px)
     color: $white
     display: block
@@ -102,8 +102,6 @@
       li
         border-top: 2px solid #f10000
 
-
-
 // TWITTER FEED
 .pane-homepage-social-feed .twitter-feed
   padding: 26px
@@ -128,8 +126,8 @@
       height: 41px
       margin: 0 5px
       +border-radius(50px)
-      background-color: #c50000
-      +background(linear-gradient(bottom, #c50000 0%, #860000 100%))
+      background-color: $red-light
+      +background(linear-gradient(bottom, $red-light 0%, #860000 100%))
       &:after
         color: $white
         font-family: 'gsb'
@@ -140,7 +138,7 @@
         background: $white !important
         filter: none
         &:after
-          color: #860000
+          color: $red-dark
       &:first-of-type
         margin-left: 0
       &:last-of-type

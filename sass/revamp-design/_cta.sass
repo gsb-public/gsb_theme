@@ -2,17 +2,15 @@
 // GENERIC CTA
 /////////////////
 
-//
 .supermenu-row
   .cta-wrapper
     margin-bottom: 16px
 
-// General CTA style
+// General CTA styles
 .cta-wrapper
   margin: 1px 1px 8px 1px
   a
     display: block
-
 .cta-link
   padding: 14px 55px 11px 22px
   font-size: 16px
@@ -21,12 +19,11 @@
     line-height: 1
   span
     margin-right: 5px
-
 .cta-action
   line-height: 1
   vertical-align: text-top
 
-// mail CTA
+// CTA email
 .cta-red-gradient,
 .cta-red,
 .cta-green
@@ -71,7 +68,7 @@
         &:before
           background: $text-blue
 
-// CTA Green
+// CTA - Green
 .cta-green
   &.designed-box
     @include filter-gradient(#fbfaf8, #ededed, vertical)
@@ -99,14 +96,13 @@
         &:after
           color: $teal-light
 
-// CTA Red
+// CTA - Red
 .cta-red
   .field-item
     @extend %bg-border-and-box-shadow
     +background(linear-gradient(#fbfaf8, $grey-e))
     margin-bottom: 5px
     color: $grey-med
-
     a
       color: $red
       position: relative
@@ -118,8 +114,7 @@
       a:after
         color: $red
 
-
-// CTA Red Gradient
+// CTA - Red gradient
 .cta-red-gradient
   .field-item
     margin-bottom: 4px
@@ -127,7 +122,6 @@
     +box-shadow($black, 0.45, 1px 1px 1px)
     position: relative
     color: $white
-
   a
     color: $white
     position: relative
@@ -147,6 +141,7 @@
       +background(linear-gradient(#194560, #2c6180))
       .front &
         +background(linear-gradient(#194560, #2c6180))
+  // Item-specific gradients
   .item-0
     +background(linear-gradient(#860000, #8f0000))
     .front &
