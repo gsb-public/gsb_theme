@@ -2,12 +2,12 @@
 // BANNER REGION
 /////////////////
 
-// GENERAL
 #banner
   +breakpoint($bp-tablet-land-min) /* WPBQA-393, WP-1773 */
     overflow: hidden
     padding: 18px 0 12px /* WPBQA-158 */
 
+// Banner title and subtitles
 .banner-title,
 .banner-subtitle
   color: $white
@@ -35,8 +35,7 @@
   +breakpoint($bp-content-max)
     padding-left: 20px
 
-
-// BREADCRUMBS
+// Banner breadcrumbs
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
   color: $white
   font-size: 14px
@@ -52,6 +51,8 @@
     color: $white
     &:hover
       text-decoration: underline
+
+// Page specific styling of banner
 
 // EVENT LANDING
 .page-events
@@ -75,14 +76,14 @@
     margin-top: -24px
     padding-bottom: 27px
 
-// PROGRAMS
+// PROGRAMS SECTION
 .page-programs
   #banner
     +breakpoint($bp-tablet-land-min)
       +background(linear-gradient(#4c697a, #607c8c))
       +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
-// TYPICAL
+// STANFORD GSB EXPERIENCE SECTION
 .page-stanford-gsb-experience
   #banner
     display: none
@@ -150,7 +151,7 @@
           border-bottom: 0
 
 //////////////////
-// Mobile events filters
+// Events filters on mobile
 //////////////////
 .page-events .inner-sidebar-wrapper
   h2
@@ -173,7 +174,7 @@
     .pane-content
       display: none
       margin-top: -24px
-    // Mobile menu trigger
+    // Mobile menu link
     h2
       border-left: 1px solid rgba($white, 0.3)
       color: $white
@@ -245,8 +246,6 @@
           height: auto
           margin: 0
           padding: 0
-          // &:after
-          //   content: ""
         .views-widget
           display: none
         &.open
@@ -282,7 +281,7 @@
         font-weight: bold
 
 ///////////////////
-// MOBILE NO BREADCRUMBS
+// NO BREADCRUMBS
 ///////////////////
 #sidebar
   +breakpoint($bp-tablet-port-max)
