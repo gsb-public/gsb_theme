@@ -1,0 +1,78 @@
+///////////////////////////////////
+// Comma separator styling on tags
+///////////////////////////////////
+
+.gsb_field_formatter_field_collection_separator,
+.field-group-gsb_field_formatter_group_comma_separator
+  .entity,
+  .field,
+  .separator
+    display: inline-block
+    line-height: 1
+  .separator
+    margin-right: 5px
+
+.group-tags-wrapper
+  margin-top: 13px
+  font-size: 14px
+  color: $grey-a
+  margin-bottom: -6px
+  h3
+    color: $grey-8
+    display: inline-block
+    font-size: 14px
+    font-weight: normal
+    line-height: 1
+    margin: 0 5px 0 0
+    text-transform: none
+  a
+    color: $red
+    font-size: 14px
+    &:hover
+      border-bottom: 1px solid $text-blue
+      color: $text-blue
+
+.view-mode-teaser
+  .group-tags-wrapper
+    margin-top: 0
+
+////////////////////////////////
+// Comma separators on authors
+////////////////////////////////
+
+// Bizin detail authors
+// Publications authors
+// Case study authors
+.field-name-field-person-fac-staff-other,
+.field-name-field-person-other,
+.field-name-field-person-fac-student-other
+  .separator
+    position: relative
+    left: -4px
+
+// Kill random field.css float for this fc
+.field-name-field-person-fac-student-ref
+  .field-items
+    float: none
+
+// Authors of research paper
+.field-name-field-person-fac-student-other
+  .field-item
+    display: inline
+
+/////////////////
+// Author names
+/////////////////
+.field-name-field-person-other,
+.field-name-field-person-fac-student-other
+  +clearfix
+  color: $black
+  font-size: 18px
+  font-weight: bold
+  .label-inline
+    font-weight: bold
+    margin-right: 5px
+  a
+    color: $red
+  .field-name-field-first-name
+    margin-right: 5px

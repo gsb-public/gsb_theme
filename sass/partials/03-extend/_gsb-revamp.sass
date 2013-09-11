@@ -1,6 +1,6 @@
 // CUSTOM GSB REVAMP EXTENDS
 
-/*Clearfix 2*/
+// Clearfix 2
 %clearfix2
   *zoom: 1
   &:before,
@@ -10,11 +10,6 @@
     line-height: 0
   &:after
     clear: both
-
-// BUTTONS
-%red-button-gradient
-  +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
-  +box-shadow(#ababab 0 2px 4px)
 
 %chevron-big
   content: "w"
@@ -33,8 +28,15 @@
   font-size: 20px
   right: 22px
 
+////////////
+// BUTTONS
+////////////
 
-//SHOW More extend
+%red-button-gradient
+  +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
+  +box-shadow(#ababab 0 2px 4px)
+
+//Show More button
 %show-more-button
   border: 0
   color: $text-green
@@ -66,7 +68,7 @@
     &:hover span
       background-position: 0 2px
 
-
+// Rounded green buttons
 %green-button
   padding: 10px 16px
   border: none
@@ -83,6 +85,7 @@
     color: $white
 
 // BACKGROUNDS
+
 // Grey solid background like on right sidebar related links
 %bg-grey-solid
   background-color: $grey-e
@@ -136,7 +139,6 @@
     margin-left: 0 !important
     margin-right: 0 !important
 
-
 %bg-and-box-shadow
   background-color: $grey-c
   +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
@@ -154,3 +156,15 @@
   &:hover
     &:after
       color: $text-blue
+
+// Related links fpp
+%related-links
+  padding: 0 24px 24px 24px
+  // Links
+  .field-type-link-field .field-item
+    line-height: 1.3
+    padding-bottom: 20px
+    a
+      color: $red
+      font-size: 14px
+      font-weight: bold

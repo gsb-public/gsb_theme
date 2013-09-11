@@ -1,0 +1,67 @@
+//////////////////////
+// TEXT FPP
+//////////////////////
+
+.pane-bundle-text
+  @extend %bg-border-and-box-shadow
+  padding: 26px
+  // Pane title
+  .field-name-field-title
+    font-family: $font-demi
+    font-size: 20px
+    font-weight: bold
+    line-height: 26px
+    padding-bottom: 14px
+    .wide-view &,
+    .full-view &
+      font-size: 26px
+      line-height: 30px
+    a
+      color: $red
+      &:after
+        color: $grey-med
+        content: "\f100"
+        font-family: "arrow-double"
+        font-size: 22px
+        margin-left: 10px
+  .field-name-field-body
+    .wide-view &,
+    .full-view &
+      font-size: 18px
+      line-height: 24px
+    p
+      // WPBQA-77
+      .wide-view &,
+      .full-view &
+        font-size: 18px
+        line-height: 24px
+  .narrow-view &
+    .field-name-field-body, p, ul, ol
+      font-size: 16px
+      line-height: 20px
+    +breakpoint($bp-wide-min)
+      .field-name-field-title
+        font-size: 22px
+        line-height: 26px
+      .field-name-field-body
+        h2
+          font-size: 22px
+          line-height: 26px
+        h3
+          font-size: 18px
+          line-height: 24px
+  // Accordion in a text bundle
+  p.acc-title,
+  p.acc-body
+    clear: both
+  p.acc-title
+    font-size: 26px
+    line-height: 1.1
+  p.acc-body
+    color: $text-grey
+    font-size: 18px
+  // mba highlighted
+  .mba-highlighted-block
+    border-top: 9px solid $teal-light
+    padding-top: 20px
+    margin-top: -28px

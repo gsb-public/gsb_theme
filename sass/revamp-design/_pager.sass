@@ -1,0 +1,55 @@
+////////////////////
+// PAGER
+////////////////////
+
+.item-list .pager li
+  padding: 0
+
+.pager-region
+  border-top: 3px solid $text-black
+  padding-left: 25px
+  margin-bottom: 30px
+  .item-list
+    display: inline-block
+    margin-right: 2px
+    vertical-align: top
+    ul,
+    ul li
+      margin: 0
+      padding: 0
+    a
+      color: $white
+      font-size: 14px
+      font-weight: bold
+      line-height: 2.2
+      padding: 16px
+
+// Load more link
+.pager-load-more
+  .pager-next a
+    background: $text-green
+    text-transform: uppercase
+    position: relative
+    &:hover
+      background: $blue
+    &:before
+      content: "k"
+      font-family: "gsb"
+      text-transform: lowercase
+      font-size: 18px
+      line-height: 1
+      margin-left: -8px
+
+// Back to top link
+.additional-links
+  background: $text-black
+  &:hover
+    background: $blue
+  a
+    text-transform: uppercase
+
+// NO RESULTS TEXT
+.view-empty
+  font-weight: bold
+  margin: 24px
+  text-transform: uppercase

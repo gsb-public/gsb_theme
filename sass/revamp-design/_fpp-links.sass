@@ -1,0 +1,126 @@
+//////////////////////
+// Links FPP
+//////////////////////
+
+.pane-bundle-links
+  // Red links
+  .red-bar
+    &:before
+      content: ""
+      width: 120px
+      display: block
+      height: 10px
+      top: -13px
+      position: relative
+      background-color: $red
+    +background(linear-gradient(#e7e7e7, #f0f0f0))
+    padding: 13px 25px 20px 25px
+    .field-name-field-title
+      color: $text-grey
+      font-size: 18px
+      font-weight: bold
+      line-height: 1.3
+      margin-bottom: 8px
+    .field-name-field-link-unlimited
+      .field-item
+        line-height: 1.3
+        padding-bottom: 9px
+        &:last-of-type
+          padding-bottom: 0
+      a
+        color: $red
+        font-size: 14px
+        font-weight: bold
+        &[target=_blank]
+          &:after
+            content: 'i'
+            color: #b1aeaf
+            font-family: "gsb"
+            margin-left: 5px
+        &:hover
+          color: $text-blue
+          &:after
+            color: $teal-light
+
+  // Green links
+  .green-bar
+    @extend %bg-border-and-box-shadow
+    padding: 0 22px 12px 22px
+    .field-name-field-title
+      color: $text-black
+      font-size: 20px
+      font-weight: bold
+      padding: 18px 0 11px 0
+      line-height: 1.3
+    .field-name-field-link-unlimited
+      .field-item
+        border-top: 1px solid #e4e4e4
+        padding-top: 6px
+        padding-bottom: 5px
+        a
+          padding-right: 10px
+          color: $text-green
+          &[target=_blank]
+            &:after
+              content: 'i'
+              color: #b1aeaf
+              text-transform: lowercase
+              font-family: "gsb"
+              font-size: 14px
+              margin-left: 5px
+          &:hover
+            color: $text-blue
+            &:after
+              color: $teal-light
+
+  // Stanford logo
+  .stanford-links
+    position: relative
+    padding: 6px 25px 20px 25px
+    +background(linear-gradient(top, #e3dac7, #ebe5d9))
+    @include filter-gradient(#ebe5d9, #e3dac7, vertical)
+    $experimental-support-for-svg: true
+    min-height: 75px
+    &:before
+      content: ""
+      width: 100%
+      display: block
+      height: 3px
+      top: -6px
+      position: relative
+      background-color: $grey-med
+    &:after
+      content: ''
+      +background(image_url("stanford_logo.png") 0 0 no-repeat)
+      width: 41px
+      height: 41px
+      display: block
+      position: absolute
+      right: 25px
+      top: 20px
+    .field-name-field-link-unlimited
+      padding-right: 30%
+      padding-top: 13px
+      .field-item
+        line-height: 1.3
+        padding-bottom: 9px
+        &:last-of-type
+          padding-bottom: 0
+      a
+        color: $red
+        font-size: 14px
+        font-weight: bold
+        &[target=_blank]
+          &:after
+            content: 'i'
+            color: #b1aeaf
+            text-transform: lowercase
+            font-family: "gsb"
+            margin-left: 5px
+        &:hover
+          color: $text-blue
+          &[target=_blank]
+            &:after
+              color: $grey-dark
+    .field-name-field-title
+      display: none
