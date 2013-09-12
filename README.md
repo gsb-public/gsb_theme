@@ -21,4 +21,4 @@ This project is a public repository on Github. Please check in Sass and resultin
 Legacy browser support
 ======================
 
-Browser specific changes for IE are made inline using a class. For example ".ie8 &" under the element that you need to adjust, with the changes nested beneath the browser class.
+Browser specific changes for IE are made by using a class. For example, use ".ie8 &" under the element that you need to adjust, with the changes nested beneath the browser class.
