@@ -76,11 +76,39 @@
 
 // Listing page
 .view-msx-fellows
-  .node-msx-fellows
-    border: 2px solid $white
-    padding: 0 10px
+  .view-content
+    +clearfix
+  .views-row
     background: rgba($white, 0.5)
-    min-height: 315px
+    border: 2px solid $white
+    display: inline-block
+    float: left
+    margin-right: 18px
+    margin-bottom: 24px
+    min-height: 370px
+    width: 130px
+    &:nth-of-type(6n)
+      margin-right: 0
+    +breakpoint(1170px max-width)
+      margin-right: 10%
+      width: 170px
+      &:nth-of-type(6n)
+        margin-right: 18px
+      &:nth-of-type(3n)
+        margin-right: 0
+    +breakpoint(769px 937px)
+      &:nth-of-type(3n)
+        margin-right: 10%
+      &:nth-of-type(2n)
+        margin-right: 0
+    +breakpoint(677px max-width)
+      &:nth-of-type(3n)
+        margin-right: 10%
+      &:nth-of-type(2n)
+        margin-right: 0
+  .node-msx-fellows
+    border-top: 0
+    padding: 0 10px
     .field-name-field-image-single-public
       margin: -2px -12px 0 -12px
       float: none

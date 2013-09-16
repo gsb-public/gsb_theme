@@ -9670,11 +9670,54 @@ div.modal-content a.button.remove {
   }
 }
 
-.view-msx-fellows .node-msx-fellows {
-  border: 2px solid white;
-  padding: 0 10px;
+.view-msx-fellows .view-content {
+  overflow: hidden;
+  *zoom: 1;
+}
+.view-msx-fellows .views-row {
   background: rgba(255, 255, 255, 0.5);
-  min-height: 315px;
+  border: 2px solid white;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+  margin-bottom: 24px;
+  min-height: 370px;
+  width: 130px;
+}
+.view-msx-fellows .views-row:nth-of-type(6n) {
+  margin-right: 0;
+}
+@media (max-width: 73.125em) {
+  .view-msx-fellows .views-row {
+    margin-right: 10%;
+    width: 170px;
+  }
+  .view-msx-fellows .views-row:nth-of-type(6n) {
+    margin-right: 18px;
+  }
+  .view-msx-fellows .views-row:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 48.0625em) and (max-width: 58.5625em) {
+  .view-msx-fellows .views-row:nth-of-type(3n) {
+    margin-right: 10%;
+  }
+  .view-msx-fellows .views-row:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 42.3125em) {
+  .view-msx-fellows .views-row:nth-of-type(3n) {
+    margin-right: 10%;
+  }
+  .view-msx-fellows .views-row:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+.view-msx-fellows .node-msx-fellows {
+  border-top: 0;
+  padding: 0 10px;
 }
 .view-msx-fellows .node-msx-fellows .field-name-field-image-single-public {
   margin: -2px -12px 0 -12px;
