@@ -172,6 +172,9 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
     if (isset($variables['widgets']['filter-field_search_field_value']->label)) {
       $variables['widgets']['filter-field_search_field_value']->label .= '<strong>Stanford GSB Clubs</strong>';
     }
+    if (isset($variables['widgets']['filter-term_node_tid_depth_2'])) {
+      $variables['widgets']['filter-term_node_tid_depth_2']->label_prefix = '<strong>Filter by</strong>'; 
+    }        
   }
   // Add the 'Filter by' to the filter title on the admissions events pane
   if ($variables['form']['#id'] == 'views-exposed-form-admission-events-pane') {
