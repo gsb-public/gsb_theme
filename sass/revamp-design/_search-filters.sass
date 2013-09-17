@@ -219,14 +219,21 @@ fieldset.collapsible .fieldset-legend
   position: relative
   top: -48px
 
-// Prevent duplicate container on clubs filter by
+
+// ACTIVITIES AND ORGANIZATIONS
+// Prevent duplicate container on clubs filter
 .inner-main-wrapper .pane-views-exp-club-filters-club-list .gsb-views-exposed-search
   background: none
   border: none
-  box-shadow: 0 0 0 transparent
+  box-shadow: 0 0 0 #fff
   margin: -2px
 
-//Parent class to exposed, colapsable filter
+// Hide the filter by label in right sidebar
+.inner-sidebar-wrapper .pane-views-exp-club-filters-club-list
+  .filter-title
+    display: none
+
+//Parent class to exposed, collapsible filter
 .exposed_filter_widget
   +breakpoint($bp-mobile-max)
     display: none
@@ -264,7 +271,8 @@ fieldset.collapsible .fieldset-legend
     padding: 3px
     margin-top: 1px !important
     position: relative
-    > strong
+    > strong,
+    .filter-title
       border-bottom: 1px solid #e4e4e4
       display: block
       width: 100%%
