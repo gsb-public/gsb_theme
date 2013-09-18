@@ -2,7 +2,6 @@ require 'sass'
 require 'compass'
 
 # Require any additional compass plugins here.
-require 'survivalkit'
 require 'breakpoint'
 require 'singularitygs'
 
