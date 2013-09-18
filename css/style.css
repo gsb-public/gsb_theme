@@ -1,4 +1,9 @@
 @charset "UTF-8";
+pre, code, kbd, tt {
+  font-family: Consolas, Menlo, "Courier New", monospace, monospace;
+  _font-family: Consolas, Menlo, "Courier New", monospace, monospace;
+}
+
 img, textarea, input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=time], input[type=number], input[type=range], input[type=search], input[type=color], input:not([type="radio"]), table {
   max-width: 100%;
 }
@@ -9,11 +14,6 @@ cite, dfn {
 
 dfn {
   font-weight: bold;
-}
-
-pre, code, kbd, tt {
-  font-family: Consolas, Menlo, "Courier New", monospace, monospace;
-  _font-family: Consolas, Menlo, "Courier New", monospace, monospace;
 }
 
 /*Clearfix 2 */
@@ -319,8 +319,8 @@ dfn {
 }
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: yellow;
+  color: black;
 }
 
 p,
@@ -349,7 +349,7 @@ q {
 
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -858,7 +858,6 @@ h1.title {
   padding-bottom: 24px;
 }
 
-/* Images -------------------------------------------------------------- */
 img {
   vertical-align: text-bottom;
   height: auto;

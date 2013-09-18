@@ -43,7 +43,7 @@ ul.menu li.collapsed
 // MESSAGES
 div.messages
   border: 0 !important
-  padding: $kit-baseline-half 0.5em
+  padding: 12px 0.5em
   p:last-child
     margin-bottom: 0
   a
@@ -102,9 +102,22 @@ div.label-inline
 // COMMENTS
 #comments
   .comment
-    +vertical-separation
+    *zoom: 1
+    margin-bottom: 12px
+    padding-bottom: 12px
+    border-bottom: none
+    &:after
+      content: ""
+      display: table
+      clear: both
     &:last-child
-      +un-vertical-separation
+      padding-bottom: 0
+      border-bottom-width: 0
+      margin-bottom: 0
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0
+      padding-bottom: 0
   .indented
     padding-left: 1em
 
