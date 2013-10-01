@@ -2,4 +2,35 @@
 // PhD Candidates
 //////////////////
 
+// Page title handling
+.node-type-phd-candidate
+  #page-title
+    +breakpoint($bp-mobile-max)
+      display: block
+      // @extend %h2
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
+  .group-wrapper-name
+    +breakpoint($bp-mobile-max)
+      display: none
+
 // Detail page
+.node-phd-candidate.view-mode-full
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+  // Name
+  .group-wrapper-name
+    @extend %h2
+    margin: 25px 0
+    span
+      &:after
+        content: " "
+  // Information block under photo
+  .group-wrapper-information
+    @extend %bg-border-and-box-shadow
