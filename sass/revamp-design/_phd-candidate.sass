@@ -24,6 +24,46 @@
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
+
+  &.ds-2col > .group-left
+    width: 270px
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+
+  &.ds-2col > .group-right
+    float: none
+    width: auto
+    padding-left: 300px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0
+
+  // Photo label
+  .field-name-field-academic-area-single
+    background: $grey-dark
+    color: $white
+    font-size: 14px
+    margin-bottom: 20px
+    padding: 9px 25px 5px
+    span:before
+      content: 'PhD Candidate, '
+      display: inline
+  // Information block under photo
+  .group-wrapper-information
+    @extend %bg-border-and-box-shadow
+    padding: 20px 0
+    a
+      color: $link-green
+      font-weight: bold
+    .field
+      padding: 0 20px
+  // Links wrapper
+  .group-wrapper-links
+    border-top: 1px solid $white
+    border-bottom: 1px solid #e4e4e4
+
   // Name
   .group-wrapper-name
     @extend %h2
@@ -31,6 +71,26 @@
     span
       &:after
         content: " "
-  // Information block under photo
-  .group-wrapper-information
-    @extend %bg-border-and-box-shadow
+
+  // Summary
+  .field-name-field-description
+    margin-bottom: 35px
+
+  // Faculty advisors
+
+  // Research interests
+
+  // Research statement
+  .field-name-field-research-statement
+    margin-bottom: 35px
+    .label-above
+      font-weight: bold
+      margin-bottom: 18px
+
+  // Job market paper
+
+  // Publications
+
+  // Working papers
+
+  // Work in progress
