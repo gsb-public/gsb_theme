@@ -45,7 +45,7 @@
   .field-label
     font-size: 18px
     font-weight: bold
-    margin-bottom: 18px
+    margin-bottom: 10px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
@@ -70,15 +70,17 @@
     background: $grey-dark
     color: $white
     font-size: 14px
+    line-height: 18px
     margin-bottom: 20px
-    padding: 9px 25px 5px
+    padding: 14px 26px
     span:before
       content: 'PhD Candidate, '
       display: inline
+
   // Information block under photo
   .group-wrapper-information
     @extend %bg-border-and-box-shadow
-    padding: 20px 0
+    padding: 26px 0
     a
       color: $link-green
       font-size: 16px
@@ -90,22 +92,36 @@
           font-size: 12px
           margin-left: 0.2em
     .field
-      padding: 0 20px
+      padding: 0 26px
   // Email address
   .field-name-field-email
+    border-bottom: 1px solid #e4e4e4
+    a
+      display: inline-block
+      max-width: 211px
+      padding-bottom: 20px
+      word-wrap: break-word
     a:after
       content: " o"
       font-family: "gsb"
-      font-size: 16px
+      font-size: 13px
       line-height: 0
   // Links wrapper
   .group-wrapper-link
     border-top: 1px solid $white
     border-bottom: 1px solid #e4e4e4
+    padding: 20px 0
     .field-name-field-file-single-public
       a:after
         content: 'm' !important
         @extend %doc-attached-icons
+
+  // Address field
+  .field-name-phd-address
+    border-top: 1px solid $white
+    .field-items
+      padding-top: 20px
+
   // Name
   .group-wrapper-name
     @extend %h2
@@ -137,17 +153,14 @@
   // Faculty advisors
   .field-name-field-person-fac-ref
     margin-bottom: 35px
+    .label-above
+      margin-bottom: 0
     a:after
       color: $black
       content: ', '
     span:last-of-type
       a:after
         content: ''
-  // Research interests
-
-
-  // Research statement, Teaching statement
-
 
   // Job market paper
   .group-wrapper-jobpaper
