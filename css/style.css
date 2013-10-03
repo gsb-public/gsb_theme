@@ -121,7 +121,9 @@ dfn {
   background: linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
 }
 
-.view-mode-media_contact {
+.view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
+.node-phd-candidate.view-mode-full .field-name-field-working-papers,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress {
   border-top: 1px #cccccc solid;
 }
 
@@ -199,7 +201,10 @@ dfn {
   margin: 1px;
 }
 
-body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after {
+body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after {
   margin-left: 3px;
   font-family: "gsb";
   line-height: 1;
@@ -208,7 +213,10 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
   font-weight: normal;
   text-transform: lowercase;
 }
-body a[href$=".pdf"]:hover:after:after, body a[href$=".png"]:hover:after:after, body a[href$=".jpg"]:hover:after:after, body a[href$=".gif"]:hover:after:after, body a[href$=".pptx"]:hover:after:after, body a[href$=".ppt"]:hover:after:after, body a[href$=".pps"]:hover:after:after, body a[href$=".odp"]:hover:after:after, body a[href$=".zip"]:hover:after:after, body a[href$=".rar"]:hover:after:after, body a[href$=".tar"]:hover:after:after, body a[href$=".doc"]:hover:after:after, body a[href$=".docx"]:hover:after:after, body a[href$=".txt"]:hover:after:after, body a[href$=".odt"]:hover:after:after, body a[href$=".xls"]:hover:after:after, body a[href$=".xlsx"]:hover:after:after, body a[href$=".ods"]:hover:after:after {
+body a[href$=".pdf"]:hover:after:after, body a[href$=".png"]:hover:after:after, body a[href$=".jpg"]:hover:after:after, body a[href$=".gif"]:hover:after:after, body a[href$=".pptx"]:hover:after:after, body a[href$=".ppt"]:hover:after:after, body a[href$=".pps"]:hover:after:after, body a[href$=".odp"]:hover:after:after, body a[href$=".zip"]:hover:after:after, body a[href$=".rar"]:hover:after:after, body a[href$=".tar"]:hover:after:after, body a[href$=".doc"]:hover:after:after, body a[href$=".docx"]:hover:after:after, body a[href$=".txt"]:hover:after:after, body a[href$=".odt"]:hover:after:after, body a[href$=".xls"]:hover:after:after, body a[href$=".xlsx"]:hover:after:after, body a[href$=".ods"]:hover:after:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:hover:after:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:hover:after:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:hover:after:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after:after {
   color: #2d6280;
 }
 
@@ -10781,6 +10789,35 @@ div.modal-content a.button.remove {
   border-top: 3px solid #231f20;
   padding-top: 2px;
 }
+.node-phd-candidate.view-mode-full a {
+  color: #7d8401;
+}
+.node-phd-candidate.view-mode-full a:hover {
+  color: #2d6280;
+}
+.node-phd-candidate.view-mode-full .file-size {
+  display: none;
+}
+.node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a,
+.node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a,
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a {
+  font-size: 18px;
+}
+.node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:before,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:before,
+.node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:before,
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:before {
+  color: black;
+  content: "   |   ";
+  display: inline;
+}
+.node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:after,
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after {
+  content: "m" !important;
+}
 .node-phd-candidate.view-mode-full .label-above,
 .node-phd-candidate.view-mode-full .field-label {
   font-size: 18px;
@@ -10831,14 +10868,30 @@ div.modal-content a.button.remove {
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information a {
   color: #7d8401;
+  font-size: 16px;
   font-weight: bold;
+}
+.node-phd-candidate.view-mode-full .group-wrapper-information a[target=_blank]:after {
+  content: " i";
+  font-family: "gsb";
+  font-size: 12px;
+  margin-left: 0.2em;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information .field {
   padding: 0 20px;
 }
-.node-phd-candidate.view-mode-full .group-wrapper-links {
+.node-phd-candidate.view-mode-full .field-name-field-email a:after {
+  content: " o";
+  font-family: "gsb";
+  font-size: 16px;
+  line-height: 0;
+}
+.node-phd-candidate.view-mode-full .group-wrapper-link {
   border-top: 1px solid white;
   border-bottom: 1px solid #e4e4e4;
+}
+.node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after {
+  content: "m" !important;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-name {
   margin: 25px 0;
@@ -10846,11 +10899,52 @@ div.modal-content a.button.remove {
 .node-phd-candidate.view-mode-full .group-wrapper-name span:after {
   content: " ";
 }
-.node-phd-candidate.view-mode-full .field-name-field-description {
+.node-phd-candidate.view-mode-full .field-name-field-phd-research-interests,
+.node-phd-candidate.view-mode-full .field-name-field-research-statement,
+.node-phd-candidate.view-mode-full .field-name-field-teaching-statement,
+.node-phd-candidate.view-mode-full .field-name-field-link-single,
+.node-phd-candidate.view-mode-full .field-name-field-description,
+.node-phd-candidate.view-mode-full .field-name-field-body,
+.node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc {
+  font-size: 18px;
+  line-height: 24px;
   margin-bottom: 35px;
 }
-.node-phd-candidate.view-mode-full .field-name-field-research-statement {
-  margin-bottom: 35px;
+.node-phd-candidate.view-mode-full .field-name-field-link-single {
+  font-weight: bold;
+}
+.node-phd-candidate.view-mode-full .field-name-field-link-single a:after {
+  content: "w" !important;
+  font-family: "gsb";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+.node-phd-candidate.view-mode-full .group-wrapper-jobpaper {
+  padding-top: 35px;
+}
+.node-phd-candidate.view-mode-full .group-wrapper-jobpaper h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+.node-phd-candidate.view-mode-full .field-name-field-job-market-desc {
+  margin-top: 10px;
+}
+.node-phd-candidate.view-mode-full .field-name-field-publications,
+.node-phd-candidate.view-mode-full .field-name-field-working-papers,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress {
+  padding-top: 35px;
+}
+.node-phd-candidate.view-mode-full .field-name-field-publications .field-name-field-phd-citation,
+.node-phd-candidate.view-mode-full .field-name-field-publications .field-name-field-description,
+.node-phd-candidate.view-mode-full .field-name-field-working-papers .field-name-field-body,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress .field-name-field-body {
+  margin-top: 10px;
+}
+.node-phd-candidate.view-mode-full .field-name-field-publications .field-name-field-phd-citation {
+  color: #887e6e;
 }
 
 .intro-copy {

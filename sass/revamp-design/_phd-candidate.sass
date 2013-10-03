@@ -21,6 +21,26 @@
 .node-phd-candidate.view-mode-full
   border-top: 3px solid $text-black
   padding-top: 2px
+  a
+    color: $text-green
+    &:hover
+      color: $text-blue
+  // Replace file size with pdf icon
+  .file-size
+    display: none
+  .field-name-field-file-job-market-paper a,
+  .field-collection-item-field-publications .field-name-field-file-single-public a,
+  .field-collection-item-field-working-papers .field-name-field-file-single-public a,
+  .field-collection-item-field-work-in-progress .field-name-field-file-single-public a
+    font-size: 18px
+    &:before
+      color: $black
+      content: '   |   '
+      display: inline
+    &:after
+      content: 'm' !important
+      @extend %doc-attached-icons
+  // Labels
   .label-above,
   .field-label
     font-size: 18px
@@ -61,14 +81,31 @@
     padding: 20px 0
     a
       color: $link-green
+      font-size: 16px
       font-weight: bold
+      &[target=_blank]
+        &:after
+          content: ' i'
+          font-family: "gsb"
+          font-size: 12px
+          margin-left: 0.2em
     .field
       padding: 0 20px
+  // Email address
+  .field-name-field-email
+    a:after
+      content: " o"
+      font-family: "gsb"
+      font-size: 16px
+      line-height: 0
   // Links wrapper
-  .group-wrapper-links
+  .group-wrapper-link
     border-top: 1px solid $white
     border-bottom: 1px solid #e4e4e4
-
+    .field-name-field-file-single-public
+      a:after
+        content: 'm' !important
+        @extend %doc-attached-icons
   // Name
   .group-wrapper-name
     @extend %h2
@@ -77,22 +114,60 @@
       &:after
         content: " "
 
-  // Summary
-  .field-name-field-description
+  // Title and text sizing and spacing
+  .field-name-field-phd-research-interests,
+  .field-name-field-research-statement,
+  .field-name-field-teaching-statement,
+  .field-name-field-link-single,
+  .field-name-field-description,
+  .field-name-field-body,
+  .field-name-field-job-market-paper-desc
+    font-size: 18px
+    line-height: 24px
     margin-bottom: 35px
 
+  .field-name-field-link-single
+    font-weight: bold
+    a:after
+      content: "w" !important
+      font-family: "gsb"
+      font-weight: normal
+      font-size: 18px
+      line-height: 24px
   // Faculty advisors
 
-  // Research interests
+  // Research interests, Research statement, Teaching statement
 
-  // Research statement
-  .field-name-field-research-statement
-    margin-bottom: 35px
 
   // Job market paper
+  .group-wrapper-jobpaper
+    @extend %divider-top
+    padding-top: 35px
+    // Use label style from above
+    h3
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+      margin-bottom: 18px
+  .field-name-field-job-market-desc
+    margin-top: 10px
+
 
   // Publications
-
   // Working papers
-
   // Work in progress
+  .field-name-field-publications,
+  .field-name-field-working-papers,
+  .field-name-field-work-in-progress
+    @extend %divider-top
+    padding-top: 35px
+  .field-name-field-publications .field-name-field-phd-citation,
+  .field-name-field-publications .field-name-field-description,
+  .field-name-field-working-papers .field-name-field-body,
+  .field-name-field-work-in-progress .field-name-field-body
+    margin-top: 10px
+
+  // Publications
+  .field-name-field-publications
+    .field-name-field-phd-citation
+      color: $grey-dark
