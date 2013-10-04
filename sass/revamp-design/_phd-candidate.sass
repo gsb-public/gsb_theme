@@ -35,17 +35,17 @@
     font-size: 18px
     &:before
       color: $black
-      content: '   |   '
+      content: "   |   "
       display: inline
     &:after
-      content: 'm' !important
+      content: "m" !important
       @extend %doc-attached-icons
   // Labels
   .label-above,
   .field-label
     font-size: 18px
     font-weight: bold
-    margin-bottom: 10px
+    margin-bottom: 18px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
@@ -59,10 +59,12 @@
 
   &.ds-2col > .group-right
     float: none
-    width: auto
+    margin-bottom: 20px
     padding-left: 300px
+    width: auto
     +breakpoint($bp-mobile-max)
       float: left
+      margin-bottom: 0
       padding-left: 0
 
   // Photo label
@@ -74,7 +76,7 @@
     margin-bottom: 20px
     padding: 14px 26px
     span:before
-      content: 'PhD Candidate, '
+      content: "PhD Candidate,  "
       display: inline
 
   // Information block under photo
@@ -85,12 +87,13 @@
       color: $link-green
       font-size: 16px
       font-weight: bold
+      &:hover
+        color: $text-blue
       &[target=_blank]
         &:after
-          content: ' i'
+          content: " i"
           font-family: "gsb"
           font-size: 12px
-          margin-left: 0.2em
     .field
       padding: 0 26px
   // Email address
@@ -113,7 +116,7 @@
     padding: 20px 0
     .field-name-field-file-single-public
       a:after
-        content: 'm' !important
+        content: "m" !important
         @extend %doc-attached-icons
 
   // Address field
@@ -140,7 +143,13 @@
   .field-name-field-job-market-paper-desc
     font-size: 18px
     line-height: 24px
-    margin-bottom: 35px
+    margin-bottom: 20px
+
+  .field-name-field-phd-research-interests,
+  .field-name-field-research-statement,
+  .field-name-field-teaching-statement
+    .label-above
+      margin-bottom: 10px
 
   .field-name-field-link-single
     font-weight: bold
@@ -152,19 +161,20 @@
       line-height: 24px
   // Faculty advisors
   .field-name-field-person-fac-ref
-    margin-bottom: 35px
+    margin-bottom: 20px
     .label-above
       margin-bottom: 0
     a:after
       color: $black
-      content: ', '
+      content: ",  "
     span:last-of-type
       a:after
-        content: ''
+        content: ""
 
   // Job market paper
   .group-wrapper-jobpaper
     @extend %divider-top
+    margin-top: 35px
     padding-top: 35px
     // Use label style from above
     h3
@@ -172,8 +182,9 @@
       font-weight: bold
       line-height: 24px
       margin-bottom: 18px
-  .field-name-field-job-market-desc
+  .field-name-field-job-market-paper-desc
     margin-top: 10px
+    margin-bottom: 35px
 
 
   // Publications
@@ -183,8 +194,9 @@
   .field-name-field-working-papers,
   .field-name-field-work-in-progress
     @extend %divider-top
+    margin-top: 35px
     padding-top: 35px
-  .field-name-field-publications .field-name-field-phd-citation,
+
   .field-name-field-publications .field-name-field-description,
   .field-name-field-working-papers .field-name-field-body,
   .field-name-field-work-in-progress .field-name-field-body
