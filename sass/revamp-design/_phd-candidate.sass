@@ -206,3 +206,99 @@
   .field-name-field-publications
     .field-name-field-phd-citation
       color: $grey-dark
+
+// Job Candidate Listing
+
+// Academic area jump links pane
+.view-display-id-phd_job_market_jump_links
+  @extend %bg-border-and-box-shadow
+  margin-bottom: 26px
+  padding: 26px
+  .jump-links-title
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 20px
+  .view-content
+    -moz-column-count: 3 /* Firefox */
+    -webkit-column-count: 3 /* Safari and Chrome */
+    column-count: 3
+    background: none
+    border: 0
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    margin: 0
+  .views-row
+    margin-bottom: 12px
+    a
+      color: $link-green
+      display: inline-block
+      font-size: 16px
+      font-weight: bold
+      line-height: 20px
+      &:hover
+        color: $link-blue
+
+// List of job candidates
+.view-phd-job-market-candidates .view-content
+  @extend %bg-border-and-box-shadow
+  .views-row.main-view
+    border-top: 10px solid $teal-light
+    margin: 0 26px
+    .view-content
+      background: none
+      border: 0
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+      margin: 0
+    // Academic area name
+    .views-field-name
+      display: inline-block
+      font-size: 20px
+      font-weight: bold
+      line-height: 32px
+      margin-bottom: 26px
+      margin-top: 14px
+
+    .view-phd-job-market-candidate-detail
+      .node-phd-candidate
+        border-top: 1px solid #e4e4e4
+        padding-top: 18px
+        padding-bottom: 26px
+
+    // Individual candidate
+    .field-name-field-link-single
+      display: block
+      margin-bottom: 24px
+
+    .group-second,
+    .group-third,
+    .group-fourth
+      margin-top: 44px
+      .label-above
+        color: $grey-dark
+        font-size: 14px
+        font-weight: bold
+        margin-bottom: 18px
+
+    // Second column
+    .field-name-field-person-fac-ref
+      padding-left: 26px
+      a
+        color: $link-green
+        font-weight: bold
+        &:hover
+          color: $link-blue
+
+    // Third column
+    .field-name-field-dissertation
+      font-size: 18px
+      line-height: 24px
+      padding-right: 26px
+
+    // Fourth column
+    .field-name-field-phd-research-interests div
+      font-size: 14px
+      line-height: 18px
+      margin-bottom: 14px
