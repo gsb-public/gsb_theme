@@ -14,9 +14,7 @@
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-  <<?php print $name_wrapper ?> class="group-name">
-    <?php print $name; ?>
-  </<?php print $name_wrapper ?>>
+  <h5 class="phd-name"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h5>
 
   <<?php print $first_wrapper ?> class="group-first<?php print $first_classes; ?>">
     <?php print $first; ?>
