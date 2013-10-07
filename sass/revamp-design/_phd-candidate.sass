@@ -186,7 +186,6 @@
     margin-top: 10px
     margin-bottom: 35px
 
-
   // Publications
   // Working papers
   // Work in progress
@@ -269,46 +268,123 @@
       line-height: 32px
       margin-bottom: 26px
       margin-top: 14px
+      +breakpoint($bp-four-column-switch)
+        margin-bottom: 18px
 
     .view-phd-job-market-candidate-detail
       .node-phd-candidate
         border-top: 1px solid #e4e4e4
         padding-top: 18px
         padding-bottom: 26px
+        +breakpoint($bp-four-column-switch)
+          padding-bottom: 18px
 
     // Individual candidate
     .phd-name
       display: block
       margin-bottom: 24px
+      a:after
+        color: $grey-med
+        content: "w" !important
+        font-family: "gsb"
+        font-weight: normal
+        font-size: 18px
+        line-height: 24px
+      +breakpoint($bp-four-column-switch)
+        margin-bottom: 18px
+
+    // Reduce columns
+    .group-first
+      +breakpoint($bp-content-max)
+        width: 20%
 
     .group-second,
     .group-third,
     .group-fourth
+      +breakpoint($bp-content)
+        width: 26%
       .label-above
         color: $grey-dark
         font-size: 14px
         font-weight: bold
         margin-bottom: 18px
+        +breakpoint($bp-four-column-switch)
+          margin-bottom: 10px
+          margin-top: 18px
+    .group-second
+      width: 24%
 
-    // Second column
+    // Faculty Advisors
     .field-name-field-person-fac-ref
-      padding-left: 26px
-      +breakpoint($bp-tablet-land-max)
-        padding-left: 18px
+      padding-left: 12%
+      +breakpoint($bp-mobile-max)
+        padding-left: 0
       a
         color: $link-green
+        display: inline-block
         font-weight: bold
+        line-height: 20px
+        padding-bottom: 14px
         &:hover
           color: $link-blue
 
-    // Third column
+    // Dissertation
     .field-name-field-dissertation
       font-size: 18px
       line-height: 24px
       padding-right: 26px
+      +breakpoint($bp-four-column-switch)
+        font-size: 16px
+        line-height: 20px
 
     // Fourth column
     .field-name-field-phd-research-interests div
       font-size: 14px
       line-height: 18px
       margin-bottom: 14px
+
+    // Switch to 2 over 1 layout
+    .group-first
+      +breakpoint($bp-four-column-switch)
+        width: 20%
+    .group-second
+      +breakpoint($bp-four-column-switch)
+        width: 35%
+        .label-above
+          margin-top: 0
+    .group-third
+      +breakpoint($bp-four-column-switch)
+        width: 45%
+        .label-above
+          margin-top: 0
+    .group-fourth
+      +breakpoint($bp-four-column-switch)
+        clear: left
+        float: none
+        margin-left: 24%
+        padding-top: 1px
+        width: 100%
+      +breakpoint($bp-mobile-max)
+        margin-left: 0
+
+    // Switch to 2 column
+    .group-second,
+    .group-third,
+    .group-fourth
+      +breakpoint($bp-mobile-max)
+        float: none
+        margin-left: 25%
+        width: 80%
+    .group-second
+      +breakpoint($bp-mobile-max)
+        margin-top: 18px
+
+    // Switch to 1 column
+    .group-first,
+    .group-second,
+    .group-third,
+    .group-fourth
+      +breakpoint($bp-mobile)
+        float: none
+        margin-left: 0
+        width: 100%
