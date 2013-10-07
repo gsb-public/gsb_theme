@@ -3,6 +3,9 @@
 /**
  * @file
  * Display Suite 4 column template.
+ *
+ * CHANGES
+ * Add a full width region for the name to span 100%.
  */
 ?>
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-4col <?php print $classes;?> clearfix">
@@ -10,6 +13,10 @@
   <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
+
+  <<?php print $name_wrapper ?> class="group-name">
+    <?php print $name; ?>
+  </<?php print $name_wrapper ?>>
 
   <<?php print $first_wrapper ?> class="group-first<?php print $first_classes; ?>">
     <?php print $first; ?>
