@@ -11008,8 +11008,23 @@ div.modal-content a.button.remove {
   box-shadow: none;
   margin: 0;
 }
+@media (max-width: 35.5em) {
+  .view-display-id-phd_job_market_jump_links .view-content {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (max-width: 30em) {
+  .view-display-id-phd_job_market_jump_links .view-content {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
 .view-display-id-phd_job_market_jump_links .views-row {
   margin-bottom: 12px;
+  max-width: 97%;
 }
 .view-display-id-phd_job_market_jump_links .views-row a {
   color: #7d8401;
@@ -11061,6 +11076,11 @@ div.modal-content a.button.remove {
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref {
   padding-left: 26px;
+}
+@media (max-width: 64em) {
+  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref {
+    padding-left: 18px;
+  }
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a {
   color: #7d8401;

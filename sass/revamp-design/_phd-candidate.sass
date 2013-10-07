@@ -222,6 +222,14 @@
     -moz-column-count: 3 /* Firefox */
     -webkit-column-count: 3 /* Safari and Chrome */
     column-count: 3
+    +breakpoint($bp-mobile-max)
+      -moz-column-count: 2 /* Firefox */
+      -webkit-column-count: 2 /* Safari and Chrome */
+      column-count: 2
+    +breakpoint($bp-mobile-480)
+      -moz-column-count: 1 /* Firefox */
+      -webkit-column-count: 1 /* Safari and Chrome */
+      column-count: 1
     background: none
     border: 0
     -webkit-box-shadow: none
@@ -230,6 +238,7 @@
     margin: 0
   .views-row
     margin-bottom: 12px
+    max-width: 97%
     a
       color: $link-green
       display: inline-block
@@ -284,6 +293,8 @@
     // Second column
     .field-name-field-person-fac-ref
       padding-left: 26px
+      +breakpoint($bp-tablet-land-max)
+        padding-left: 18px
       a
         color: $link-green
         font-weight: bold
