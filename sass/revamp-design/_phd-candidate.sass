@@ -388,3 +388,50 @@
         float: none
         margin-left: 0
         width: 100%
+
+// Job Candidate Placement listing
+.view-phd-candidate-placement-listing
+  .phd-placement-wrapper
+    @extend %bg-border-and-box-shadow
+    padding: 0 26px
+    // Academic area name
+    .views-field-name
+      border-top: 10px solid $teal-light
+      border-bottom: 1px solid #e4e4e4
+      display: block
+      font-weight: bold
+      line-height: 32px
+      margin-bottom: 18px
+      padding-top: 12px
+      padding-bottom: 18px
+
+    // Placed candidate styling
+    .phd-row-wrapper
+      -moz-column-count: 3 /* Firefox */
+      -webkit-column-count: 3 /* Safari and Chrome */
+      column-count: 3
+    .views-row
+      display: inline-block
+      margin-bottom: 26px
+
+      .views-field-title
+        font-size: 16px
+        font-weight: bold
+        line-height: 20px
+        margin-bottom: 12px
+        .date-display-single
+          &:before
+            content: "‘"
+      .views-field-field-academic-institution
+        color: $grey-dark
+        font-size: 13px
+        font-weight: bold
+        line-height: 16px
+        text-transform: uppercase
+
+  // Back to top link styling
+  .pager-region
+    border-top: 3px solid $text-grey-light
+    margin-top: -1px
+  .additional-links
+    background: $text-grey-light
