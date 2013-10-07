@@ -407,27 +407,62 @@
 
     // Placed candidate styling
     .phd-row-wrapper
-      -moz-column-count: 3 /* Firefox */
-      -webkit-column-count: 3 /* Safari and Chrome */
-      column-count: 3
+      +clearfix
     .views-row
       display: inline-block
+      float: left
       margin-bottom: 26px
-
-      .views-field-title
-        font-size: 16px
-        font-weight: bold
-        line-height: 20px
-        margin-bottom: 12px
-        .date-display-single
-          &:before
-            content: "‘"
-      .views-field-field-academic-institution
-        color: $grey-dark
-        font-size: 13px
-        font-weight: bold
-        line-height: 16px
-        text-transform: uppercase
+      margin-right: 5%
+      max-width: 30%
+      min-height: 185px
+      &:nth-of-type(3n)
+        margin-right: 0
+      &:nth-of-type(4n)
+        clear: left
+      +breakpoint($bp-content)
+        max-width: 47%
+        margin-bottom: 18px
+        &:nth-of-type(4n)
+          clear: none
+        &:nth-of-type(odd)
+          clear: left
+        &:first-of-type,
+        &:nth-of-type(3n)
+          margin-right: 5%
+        &:nth-of-type(2n)
+          margin-right: 0
+      +breakpoint(775px max-width)
+        max-width: 44%
+        margin-bottom: 18px
+        &:nth-of-type(4n)
+          clear: none
+        &:nth-of-type(odd)
+          clear: left
+        &:first-of-type,
+        &:nth-of-type(3n)
+          margin-right: 12%
+        &:nth-of-type(2n)
+          margin-right: 0
+      +breakpoint($bp-mobile-max)
+        clear: both
+        margin-left: 0
+        margin-right: 0
+        max-width: 100%
+        min-height: inherit
+    .views-field-title
+      font-size: 16px
+      font-weight: bold
+      line-height: 20px
+      margin-bottom: 12px
+      .date-display-single
+        &:before
+          content: "‘"
+    .views-field-field-academic-institution
+      color: $grey-dark
+      font-size: 13px
+      font-weight: bold
+      line-height: 16px
+      text-transform: uppercase
 
   // Back to top link styling
   .pager-region
