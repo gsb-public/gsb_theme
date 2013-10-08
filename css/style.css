@@ -10414,27 +10414,22 @@ div.modal-content a.button.remove {
 .pane-bundle-diptych .group-left, .pane-bundle-diptych .group-right {
   padding: 0 26px;
 }
-.pane-bundle-diptych .group-left .field-type-link-field, .pane-bundle-diptych .group-right .field-type-link-field {
-  padding: 10px 35px 7px 15px;
-  line-height: 1.35;
-}
-.pane-bundle-diptych .group-left .field-type-link-field > div, .pane-bundle-diptych .group-right .field-type-link-field > div {
-  position: relative;
-}
 .pane-bundle-diptych .group-left .field-type-link-field a, .pane-bundle-diptych .group-right .field-type-link-field a {
   color: white;
+  display: block;
+  line-height: 1.5;
+  padding: 10px 35px 7px 15px;
 }
 .pane-bundle-diptych .group-left .field-type-link-field a:after, .pane-bundle-diptych .group-right .field-type-link-field a:after {
   content: "w";
   color: white;
+  display: inline;
+  float: right;
   font-family: "gsb";
   font-size: 26px;
   font-weight: normal;
-  line-height: 0;
-  position: absolute;
-  right: -22px;
-  margin-top: -5px;
-  top: 50%;
+  line-height: 0.45;
+  width: 0;
 }
 .pane-bundle-diptych .group-left .field-type-image, .pane-bundle-diptych .group-left .field-type-file, .pane-bundle-diptych .group-right .field-type-image, .pane-bundle-diptych .group-right .field-type-file {
   margin: 0 -26px;
@@ -10460,22 +10455,18 @@ div.modal-content a.button.remove {
     margin-top: 15px;
   }
 }
-.pane-bundle-diptych .group-right .field-type-link-field {
-  background-color: #1b1b1b;
-}
 .pane-bundle-diptych .group-right .field-type-link-field a {
+  background-color: #1b1b1b;
   color: #63acd5;
 }
 .pane-bundle-diptych .group-right .field-type-link-field a:after {
   color: #2d6280;
 }
-.pane-bundle-diptych .group-right .field-type-link-field:hover {
+.pane-bundle-diptych .group-right .field-type-link-field a:hover {
   background-color: #63acd5;
-}
-.pane-bundle-diptych .group-right .field-type-link-field:hover a {
   color: white;
 }
-.pane-bundle-diptych .group-right .field-type-link-field:hover a:after {
+.pane-bundle-diptych .group-right .field-type-link-field a:hover:after {
   color: white;
 }
 .pane-bundle-diptych .group-left {
@@ -10517,11 +10508,11 @@ div.modal-content a.button.remove {
     line-height: 1.1em;
   }
 }
-.pane-bundle-diptych .group-left .field-type-link-field {
+.pane-bundle-diptych .group-left .field-type-link-field a {
   background-color: #739d95;
   width: 218px;
 }
-.pane-bundle-diptych .group-left .field-type-link-field:hover {
+.pane-bundle-diptych .group-left .field-type-link-field a:hover {
   background-color: #607c8c;
 }
 
