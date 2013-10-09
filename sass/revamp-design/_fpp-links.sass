@@ -31,16 +31,13 @@
         color: $red
         font-size: 14px
         font-weight: bold
+        &:hover
+          color: $text-blue
         &[target=_blank]
           &:after
             content: 'i'
-            color: #b1aeaf
             font-family: "gsb"
-            margin-left: 5px
-        &:hover
-          color: $text-blue
-          &:after
-            color: $teal-light
+            margin-left: 0.3em
 
   // Green links
   .green-bar
@@ -60,18 +57,15 @@
         a
           padding-right: 10px
           color: $text-green
+          &:hover
+            color: $text-blue
           &[target=_blank]
             &:after
               content: 'i'
-              color: #b1aeaf
               text-transform: lowercase
               font-family: "gsb"
               font-size: 14px
-              margin-left: 5px
-          &:hover
-            color: $text-blue
-            &:after
-              color: $teal-light
+              margin-left: 0.3em
 
   // Stanford logo
   .stanford-links
@@ -110,17 +104,13 @@
         color: $red
         font-size: 14px
         font-weight: bold
+        &:hover
+          color: $text-blue
         &[target=_blank]
           &:after
             content: 'i'
-            color: #b1aeaf
             text-transform: lowercase
             font-family: "gsb"
-            margin-left: 5px
-        &:hover
-          color: $text-blue
-          &[target=_blank]
-            &:after
-              color: $grey-dark
+            margin-left: 0.3em
     .field-name-field-title
       display: none
