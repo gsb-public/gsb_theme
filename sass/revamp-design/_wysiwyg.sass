@@ -92,6 +92,12 @@ div.callout
       border-bottom: solid 1px $link-blue
     &:hover
       border: none
+    &[href*="mailto:"]
+      &:after
+        content: " o"
+        font-family: "gsb"
+        font-size: 13px
+        line-height: 0
   img
     vertical-align: top
   // Headers
