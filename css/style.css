@@ -2546,13 +2546,17 @@ a.no-border:hover {
   font-size: 14px;
   font-weight: bold;
 }
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
+  content: "i";
+  color: #b1aeaf;
+  font-family: "gsb";
+  margin-left: 5px;
+}
 .pane-bundle-links .red-bar .field-name-field-link-unlimited a:hover {
   color: #2d6280;
 }
-.pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
-  content: "i";
-  font-family: "gsb";
-  margin-left: 0.3em;
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a:hover:after {
+  color: #aac4bf;
 }
 .pane-bundle-links .green-bar {
   padding: 0 22px 12px 22px;
@@ -2573,15 +2577,19 @@ a.no-border:hover {
   padding-right: 10px;
   color: #7d8401;
 }
-.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover {
-  color: #2d6280;
-}
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
   content: "i";
+  color: #b1aeaf;
   text-transform: lowercase;
   font-family: "gsb";
   font-size: 14px;
-  margin-left: 0.3em;
+  margin-left: 5px;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover {
+  color: #2d6280;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover:after {
+  color: #aac4bf;
 }
 .pane-bundle-links .stanford-links {
   position: relative;
@@ -2632,14 +2640,18 @@ a.no-border:hover {
   font-size: 14px;
   font-weight: bold;
 }
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
+  content: "i";
+  color: #b1aeaf;
+  text-transform: lowercase;
+  font-family: "gsb";
+  margin-left: 5px;
+}
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover {
   color: #2d6280;
 }
-.pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
-  content: "i";
-  text-transform: lowercase;
-  font-family: "gsb";
-  margin-left: 0.3em;
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover[target=_blank]:after {
+  color: #887e6e;
 }
 .pane-bundle-links .stanford-links .field-name-field-title {
   display: none;
