@@ -297,16 +297,17 @@
       +breakpoint($bp-four-column-switch)
         margin-bottom: 18px
 
-    // Reduce columns
+    // Column styling
     .group-first
-      +breakpoint($bp-content-max)
-        width: 20%
+      width: 21%
+    .group-fourth
+      float: right
 
     .group-second,
     .group-third,
     .group-fourth
-      +breakpoint($bp-content)
-        width: 26%
+      padding: 0 2%
+      width: 25%
       .label-above
         color: $grey-dark
         font-size: 14px
@@ -315,8 +316,6 @@
         +breakpoint($bp-four-column-switch)
           margin-bottom: 10px
           margin-top: 18px
-    .group-second
-      width: 24%
 
     // Faculty Advisors
     .field-name-field-person-fac-ref
@@ -325,10 +324,11 @@
         padding-left: 0
       a
         color: $link-green
-        display: inline-block
+        display: block
+        font-size: 18px
         font-weight: bold
-        line-height: 20px
-        padding-bottom: 14px
+        line-height: 24px
+        margin-bottom: 14px
         &:hover
           color: $link-blue
 
@@ -336,16 +336,19 @@
     .field-name-field-dissertation
       font-size: 18px
       line-height: 24px
-      padding-right: 26px
       +breakpoint($bp-four-column-switch)
         font-size: 16px
         line-height: 20px
 
     // Fourth column
-    .field-name-field-phd-research-interests div
-      font-size: 14px
-      line-height: 18px
-      margin-bottom: 14px
+    .field-name-field-phd-research-interests
+      div:not(:first-of-type)
+        font-size: 14px
+        line-height: 18px
+        margin-bottom: 14px
+      div:nth-of-type(2n)
+        margin-top: -2px
+
 
     // Switch to 2 over 1 layout
     .group-first
