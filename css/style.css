@@ -11059,6 +11059,11 @@ div.modal-content a.button.remove {
     margin-bottom: 18px;
   }
 }
+@media (max-width: 35.5em) {
+  .view-phd-job-market-candidates .view-content .views-row.main-view .views-field-name {
+    margin-bottom: 10px;
+  }
+}
 .view-phd-job-market-candidates .view-content .views-row.main-view .view-phd-job-market-candidate-detail .node-phd-candidate {
   border-top: 1px solid #e4e4e4;
   padding-top: 18px;
@@ -11090,12 +11095,6 @@ div.modal-content a.button.remove {
     margin-bottom: 18px;
   }
 }
-.view-phd-job-market-candidates .view-content .views-row.main-view .group-first {
-  width: 21%;
-}
-.view-phd-job-market-candidates .view-content .views-row.main-view .group-fourth {
-  float: right;
-}
 .view-phd-job-market-candidates .view-content .views-row.main-view .group-second,
 .view-phd-job-market-candidates .view-content .views-row.main-view .group-third,
 .view-phd-job-market-candidates .view-content .views-row.main-view .group-fourth {
@@ -11118,18 +11117,33 @@ div.modal-content a.button.remove {
     margin-top: 18px;
   }
 }
+.view-phd-job-market-candidates .view-content .views-row.main-view .group-first {
+  width: 21%;
+}
+.view-phd-job-market-candidates .view-content .views-row.main-view .group-third {
+  padding: 0;
+}
+.view-phd-job-market-candidates .view-content .views-row.main-view .group-fourth {
+  float: right;
+}
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref {
   padding-left: 12%;
 }
 @media (max-width: 35.5em) {
   .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref {
+    max-width: 50%;
     padding-left: 0;
+  }
+}
+@media (max-width: 20em) {
+  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref {
+    max-width: 100%;
   }
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a {
   color: #7d8401;
-  display: block;
-  font-size: 18px;
+  display: inline-block;
+  font-size: 16px;
   font-weight: bold;
   line-height: 24px;
   margin-bottom: 14px;
@@ -11137,23 +11151,27 @@ div.modal-content a.button.remove {
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a:hover {
   color: #2d6280;
 }
-.view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-dissertation {
-  font-size: 18px;
-  line-height: 24px;
-}
-@media (max-width: 48em) {
-  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-dissertation {
-    font-size: 16px;
-    line-height: 20px;
+@media (max-width: 35.5em) {
+  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a {
+    margin-bottom: 2px;
   }
+  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a:last-of-type {
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 20em) {
+  .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a {
+    display: block;
+  }
+}
+.view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-dissertation {
+  font-size: 16px;
+  line-height: 24px;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-phd-research-interests div:not(:first-of-type) {
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 14px;
-}
-.view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-phd-research-interests div:nth-of-type(2n) {
-  margin-top: -2px;
+  margin-bottom: 12px;
 }
 @media (max-width: 48em) {
   .view-phd-job-market-candidates .view-content .views-row.main-view .group-first {
@@ -11196,6 +11214,7 @@ div.modal-content a.button.remove {
   .view-phd-job-market-candidates .view-content .views-row.main-view .group-fourth {
     float: none;
     margin-left: 25%;
+    padding: 0;
     width: 80%;
   }
 }
