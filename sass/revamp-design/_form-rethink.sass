@@ -1,3 +1,20 @@
 /////////////////
 // Re:Think form
 /////////////////
+
+// Form styling
+.pane-rethink-form
+  // Pad left side
+  .mergeTable
+    padding-left: 2px
+  // Spacing between fields
+  .mergeRow
+    margin-bottom: 14px
+
+  // Submit button
+  .button
+    @extend %green-button
+    font-weight: bold
+    padding: 8px 12px
+    &:hover
+      background: $text-blue
