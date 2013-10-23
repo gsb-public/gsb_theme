@@ -11256,21 +11256,20 @@ div.modal-content a.button.remove {
   float: left;
   margin-bottom: 30px;
   margin-right: 5%;
-  max-width: 30%;
-  min-height: 185px;
+  width: 30%;
 }
 .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(3n) {
   margin-right: 0;
 }
-.view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(4n) {
+.view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(3n+1) {
   clear: left;
 }
 @media (min-width: 62.5em) and (max-width: 75.625em) {
   .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row {
-    max-width: 47%;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+    width: 47%;
   }
-  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(4n) {
+  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(3n+1) {
     clear: none;
   }
   .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(odd) {
@@ -11285,16 +11284,16 @@ div.modal-content a.button.remove {
 }
 @media (max-width: 48.4375em) {
   .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row {
-    max-width: 44%;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+    width: 44%;
   }
-  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(4n) {
+  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(3n+1) {
     clear: none;
   }
   .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(odd) {
     clear: left;
   }
-  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:first-of-type, .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(3n) {
+  .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(odd) {
     margin-right: 12%;
   }
   .view-phd-candidate-placement-listing .phd-placement-wrapper .views-row:nth-of-type(2n) {
@@ -11306,8 +11305,7 @@ div.modal-content a.button.remove {
     clear: both;
     margin-left: 0;
     margin-right: 0;
-    max-width: 100%;
-    min-height: inherit;
+    width: 100%;
   }
 }
 .view-phd-candidate-placement-listing .phd-placement-wrapper .views-field-title {

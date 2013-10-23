@@ -428,16 +428,15 @@
       float: left
       margin-bottom: 30px
       margin-right: 5%
-      max-width: 30%
-      min-height: 185px
+      width: 30%
       &:nth-of-type(3n)
         margin-right: 0
-      &:nth-of-type(4n)
+      &:nth-of-type(3n+1)
         clear: left
       +breakpoint($bp-content)
-        max-width: 47%
-        margin-bottom: 18px
-        &:nth-of-type(4n)
+        margin-bottom: 30px
+        width: 47%
+        &:nth-of-type(3n+1)
           clear: none
         &:nth-of-type(odd)
           clear: left
@@ -447,14 +446,13 @@
         &:nth-of-type(2n)
           margin-right: 0
       +breakpoint(775px max-width)
-        max-width: 44%
-        margin-bottom: 18px
-        &:nth-of-type(4n)
+        margin-bottom: 30px
+        width: 44%
+        &:nth-of-type(3n+1)
           clear: none
         &:nth-of-type(odd)
           clear: left
-        &:first-of-type,
-        &:nth-of-type(3n)
+        &:nth-of-type(odd)
           margin-right: 12%
         &:nth-of-type(2n)
           margin-right: 0
@@ -462,8 +460,7 @@
         clear: both
         margin-left: 0
         margin-right: 0
-        max-width: 100%
-        min-height: inherit
+        width: 100%
     .views-field-title
       font-size: 16px
       font-weight: bold
