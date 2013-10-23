@@ -1,3 +1,25 @@
 /////////////////
-// Weather pane
+// Weather block
 /////////////////
+.pane-gsb-public-custom-blocks-gpcb-weather-widget
+  @extend %bg-border-and-box-shadow
+  padding: 26px
+  .weather-widget
+    +clearfix
+  .title
+    margin-bottom: 14px
+  img
+    float: left
+    margin-right: 8px
+  .temperature
+    font-weight: bold
+  .station
+    font-size: 14px
+    line-height: 1
+    text-transform: uppercase
+    &:hover
+      color: $link-blue
+    &:after
+      content: "w"
+      font-family: "gsb"
+      text-transform: lowercase
