@@ -11,6 +11,7 @@
     padding: 10px
     +breakpoint($bp-program-finder)
       height: auto
+      padding: 0
       +background(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
     @extend %border
@@ -144,32 +145,25 @@
     padding: 0
     clear: left
 
-  h2.resp-accordion
-    a
-      color: $white
-    cursor: pointer
+  .resp-accordion a
+    color: $white
+    display: block
     margin: 0
-    display: none
     font-size: 22px
     font-family: $font-sans
-    border-top: 1px solid #8aa5b4
-    border-bottom: 1px solid #647f8f
     padding: 10px 14px
+    border-top: 1px solid #8aa5b4
+    &:not(8n)
+      border-bottom: 1px solid #647f8f
     &:after
       color: $white
       content: ""
       float: right
       font-family: "entypo"
       font-size: 30px
-
-    &:first-of-type
-      border-top: 0
-    &:last-of-type
-      border-bottom: 0
     &:hover
       background-color: #f4f4f4
-      a
-        color: $grey-dark
+      color: $grey-dark
       &:after
         color: $grey-dark
 
@@ -177,12 +171,11 @@
     display: none
     padding: 15px
 
-  h2.resp-tab-active
+  .resp-tab-active a
     border-bottom: none
     margin-bottom: -1px !important
     background-color: #f4f4f4
-    a
-      color: $grey-dark
+    color: $grey-dark
     &:after
       color: $grey-dark
       content: ""
