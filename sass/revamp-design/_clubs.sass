@@ -42,7 +42,38 @@
     font-size: 18px
     line-height: 24px
     margin-bottom: 24px
-
+  .field-name-field-email
+    margin-bottom: 24px
+    .field-item
+      a
+        color: $text-green
+      a[href*="mailto:"]
+        padding-right: 22px
+        padding-left: 40px
+        position: relative
+        &:before
+          padding-top: 11px
+          position: absolute
+          left: 10px
+          border-radius: 14px
+          text-align: center
+          display: inline-block
+          height: 17px
+          width: 28px
+          content: "o"
+          font-family: "gsb"
+          font-size: 16px
+          line-height: 0
+          color: #fff
+        &:after
+          content: ""
+    .field-item
+      a[href*="mailto:"]
+        &:before
+          background: $text-green
+        &:hover
+          &:before
+            background: $text-blue
 // Club filters
 .pane-club-filters-club-by-id-or-tag
   @extend %bg-border-and-box-shadow
