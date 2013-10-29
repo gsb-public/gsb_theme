@@ -75,8 +75,8 @@ gsb_tweetfeed = {
                  } else {
                    title.text(data[0].user.name);
                  }
-                 title.wrap('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">');
-                 $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/' + data[0].user.screen_name +'">' +  $('.field-name-field-twitter-search').text() + '</a>');
+                 title.wrap('<a target="_blank" href="' + 'https://twitter.com/' + data[0].user.screen_name +'">');
+                 $('.field-name-field-twitter-search').replaceWith('<a target="_blank" href="' + 'https://twitter.com/' + data[0].user.screen_name +'">' +  $('.field-name-field-twitter-search').text() + '</a>');
                  // append tweets into page
                  for (var i = 0; i < data.length; i++) {
                     $(tempAppendTo).append(
@@ -97,7 +97,7 @@ gsb_tweetfeed = {
 			$.getJSON( hashtagurl, function( data ) {
 				 var html = '<div class="tweet"><span class="tweet-from-user">FROM-USER: </span>TWEET_TEXT<div class="time">tweetime</div>',
 				 data = data['statuses'];
-         $('.field-name-field-twitter-search').replaceWith('<a href="' + 'https://twitter.com/#' + gsb_tweetfeed.search +'">#' + gsb_tweetfeed.search + '</a>');
+         $('.field-name-field-twitter-search').replaceWith('<a target="_blank" href="' + 'https://twitter.com/#' + gsb_tweetfeed.search +'">#' + gsb_tweetfeed.search + '</a>');
         for (var i = 0; i < gsb_tweetfeed.numTweets; i++) {
         	$(tempAppendTo).append(
             html.replace('TWEET_TEXT', gsb_tweetfeed.ify.clean(data[i].text) )
