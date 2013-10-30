@@ -1951,11 +1951,16 @@ div.label-inline {
   width: auto;
 }
 
-/* Print Defaults -------------------------------------------------------------- */
+/* Print Defaults */
 @media print {
   body {
     font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 12pt !important;
+  }
+
+  .panel-display .full-header,
+  .panel-display .inner-content-wrapper {
+    overflow: visible !important;
   }
 
   h1, h2, h3, h4, h5, h6 {

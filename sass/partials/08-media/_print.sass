@@ -1,14 +1,19 @@
-//** PRINT STYLES **//
+// PRINT STYLES
 
 // Based heavily on the work of:
 // Paul Irish & Divya Manian: http://html5boilerplate.com/
 // And many others, less directly...
 
-/* Print Defaults -------------------------------------------------------------- */
+/* Print Defaults */
 @media print
   body
     font-family: $font-sans !important
     font-size: 12pt !important
+
+  .panel-display
+    .full-header,
+    .inner-content-wrapper
+      overflow: visible !important
 
   #{headers(all)}
     font-family: $font-sans !important
@@ -147,7 +152,7 @@
   .pane-bundle-spotlight,
   .pane-bundle-house-ads,
     .field-name-field-body
-      height: 68px!important
-  .content .field-name-field-accordion-item .field-name-field-title .field-item, 
+      height: 68px !important
+  .content .field-name-field-accordion-item .field-name-field-title .field-item,
   .content .acc-title
-    font-weight: normal!important
+    font-weight: normal !important
