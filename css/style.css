@@ -8775,17 +8775,27 @@ fieldset.collapsible .fieldset-legend {
 }
 @media (max-width: 64em) {
   .banner-title {
+    font-size: 100%;
     line-height: 0;
+    padding-left: 20px;
     position: relative;
     top: 28px;
   }
 }
 @media (max-width: 35.5em) {
   .banner-title {
-    font-size: 24px;
+    display: table-cell;
+    height: 50px;
+    line-height: 1.1;
+    padding-left: 15px;
+    top: inherit;
+    vertical-align: middle;
+    width: 98%;
   }
-  .page-stanford-gsb-experience .banner-title {
-    font-size: 16px;
+}
+@media (max-width: 20em) {
+  .banner-title {
+    width: 202px;
   }
 }
 
@@ -8918,8 +8928,7 @@ fieldset.collapsible .fieldset-legend {
     display: block;
     font-size: 14px;
     line-height: 1;
-    margin-top: -50px;
-    padding: 14px 0 8px 35px;
+    padding: 14px 0 8px 32px;
     position: absolute;
     right: 0;
     text-transform: uppercase;
@@ -9166,9 +9175,6 @@ fieldset.collapsible .fieldset-legend {
     box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
     min-height: 50px;
   }
-  #sidebar .sidebar h2 {
-    margin-top: 0;
-  }
   #sidebar .block.open h2 {
     margin-top: -50px;
   }
@@ -9183,6 +9189,14 @@ fieldset.collapsible .fieldset-legend {
     background: -o-linear-gradient(#4c697a, #607c8c);
     background: -ms-linear-gradient(#4c697a, #607c8c);
     background: linear-gradient(#4c697a, #607c8c);
+  }
+}
+@media (max-width: 35.5em) {
+  #sidebar .sidebar h2 {
+    margin-top: -50px;
+  }
+  #sidebar .block.open .content {
+    margin-top: -1px;
   }
 }
 

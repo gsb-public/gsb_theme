@@ -299,6 +299,9 @@
         $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
         $('.page-events .inner-sidebar-wrapper .pane-bundle-links').insertAfter($('.page-events .inner-sidebar-wrapper .pane-views-exp-gsb-event-panel-pane-2 .pane-content'));
       }
+      if (Modernizr.mq('(max-width: 999px)')) {
+        $('.banner-title').insertBefore($('#sidebar .sidebar'));
+      }
     }
   };
 
