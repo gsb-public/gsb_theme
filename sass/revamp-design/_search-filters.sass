@@ -233,7 +233,7 @@ fieldset.collapsible .fieldset-legend
   .filter-title
     display: none
 
-//Parent class to exposed, collapsible filter
+// Parent class to exposed, collapsible filter
 .exposed_filter_widget
   +breakpoint($bp-mobile-max)
     display: none
@@ -354,7 +354,10 @@ fieldset.collapsible .fieldset-legend
 #views-exposed-form-gsb-event-event-listing-pane,
 #views-exposed-form-gsb-event-event-calendar-pane
   .ajax-progress
-    display: none
+    float: right
+    position: relative
+    right: -90px
+    top: -30px
   .views-widget-filter-field_search_field_value
     .form-text
       padding: 14px 50px 15px 10px
@@ -364,16 +367,16 @@ fieldset.collapsible .fieldset-legend
     +breakpoint($bp-mobile-max)
       height: 48px
 
+// Remove pane container
 .page-events
   .gsb-views-exposed-form
     background: none !important
     margin: 0
     -webkit-box-shadow: 0px 0px 0px white
-    -moz-box-shadow:    0px 0px 0px white
-    box-shadow:    0px 0px 0px white
+    -moz-box-shadow: 0px 0px 0px white
+    box-shadow: 0px 0px 0px white
     border: 0 none
-
-  .gsb-views-exposed-search //,#edit-search-wrapper Temporary disabled
+  .gsb-views-exposed-search
     padding: 0
 
 .search-wrap-events
