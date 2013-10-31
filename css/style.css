@@ -8639,15 +8639,13 @@ fieldset.collapsible .fieldset-legend {
 .node-club.view-mode-teaser .field-name-field-email {
   margin-bottom: 24px;
 }
-.node-club.view-mode-teaser .field-name-field-email .field-item a {
+.node-club.view-mode-teaser .field-name-field-email .field-item a[href] {
   color: #7d8401;
-}
-.node-club.view-mode-teaser .field-name-field-email .field-item a[href*="mailto:"] {
   padding-right: 22px;
   padding-left: 40px;
   position: relative;
 }
-.node-club.view-mode-teaser .field-name-field-email .field-item a[href*="mailto:"]:before {
+.node-club.view-mode-teaser .field-name-field-email .field-item a[href]:before {
   padding-top: 11px;
   position: absolute;
   left: 10px;
@@ -8661,14 +8659,15 @@ fieldset.collapsible .fieldset-legend {
   font-size: 16px;
   line-height: 0;
   color: white;
-}
-.node-club.view-mode-teaser .field-name-field-email .field-item a[href*="mailto:"]:after {
-  content: "";
-}
-.node-club.view-mode-teaser .field-name-field-email .field-item a[href*="mailto:"]:before {
   background: #7d8401;
 }
-.node-club.view-mode-teaser .field-name-field-email .field-item a[href*="mailto:"]:hover:before {
+.node-club.view-mode-teaser .field-name-field-email .field-item a[href]:after {
+  content: "";
+}
+.node-club.view-mode-teaser .field-name-field-email .field-item a[href]:hover {
+  color: #2d6280;
+}
+.node-club.view-mode-teaser .field-name-field-email .field-item a[href]:hover:before {
   background: #2d6280;
 }
 

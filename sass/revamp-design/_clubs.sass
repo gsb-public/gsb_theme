@@ -45,9 +45,8 @@
   .field-name-field-email
     margin-bottom: 24px
     .field-item
-      a
+      a[href]
         color: $text-green
-      a[href*="mailto:"]
         padding-right: 22px
         padding-left: 40px
         position: relative
@@ -65,13 +64,11 @@
           font-size: 16px
           line-height: 0
           color: #fff
+          background: $text-green
         &:after
           content: ""
-    .field-item
-      a[href*="mailto:"]
-        &:before
-          background: $text-green
         &:hover
+          color: $text-blue
           &:before
             background: $text-blue
 // Club filters
