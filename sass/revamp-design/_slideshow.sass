@@ -311,10 +311,12 @@ ul.slideshow-items
     line-height: 36px
     margin-bottom: 0
     width: 375px
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint($bp-tablet-land-max)
       font-size: 20px
       line-height: 22px
       overflow: hidden
+      width: 320px
+    +breakpoint($bp-tablet-port-max)
       width: 225px
     +breakpoint($bp-nexus-landscape)
       margin-bottom: 0
@@ -336,10 +338,8 @@ ul.slideshow-items
       font-weight: bold
       top: 0
       left: 5px
-      +breakpoint($bp-nexus-landscape)
-        font-size: 22px
-      +breakpoint($bp-nexus-portrait)
-        font-size: 22px
+      +breakpoint($bp-tablet-land-max)
+        font-size: 20px
       +breakpoint($bp-mobile-max)
         font-size: 26px
   .slide-cta
