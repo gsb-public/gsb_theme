@@ -105,8 +105,8 @@
 // TWITTER FEED
 .pane-homepage-social-feed .twitter-feed
   padding: 26px
-  +breakpoint($bp-mobile)
-    padding: 20px
+  +breakpoint(1065px max-width)
+    padding: 26px 20px
   +breakpoint($bp-mobile-max)
     +background((image_url('bg-social-feed.png') no-repeat bottom right), #c1dbd9)
   // Title
@@ -116,15 +116,12 @@
     +breakpoint($bp-mobile-max)
       display: inline
   .follow-us-circles
-    +clearfix
     margin-bottom: 24px
     a
-      display: block
+      display: inline-block
       text-align: center
-      float: left
-      width: 41px
-      height: 41px
-      margin: 0 5px
+      width: 40px
+      height: 40px
       +border-radius(50px)
       background-color: $red-light
       +background(linear-gradient(bottom, $red-light 0%, #860000 100%))
@@ -139,12 +136,6 @@
         filter: none
         &:after
           color: $red-dark
-      &:first-of-type
-        margin-left: 0
-      &:last-of-type
-        margin-right: 0
-      +breakpoint(1023px 1025px)
-        margin: 0 2px
 
   // Tweet
   .tweet

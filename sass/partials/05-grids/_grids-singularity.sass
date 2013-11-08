@@ -150,7 +150,6 @@
   +breakpoint($bp-tablet-port-max)
     .front-panel-feature-one
       +grid-span(1, 1, $columns: $ipad-columns)
-      width: 440px
     .front-panel-feature-two
       +grid-span(1, 2, $columns: $ipad-columns)
     .front-panel-feature-three
@@ -173,7 +172,7 @@
       margin: 0
       width: 100%
 
-  +breakpoint($bp-mobile-max)
+  +breakpoint(605px max-width)
     .front-slider-pane,
     .front-panel-feature-one,
     .front-panel-feature-two,
