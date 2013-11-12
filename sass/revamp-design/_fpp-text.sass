@@ -3,8 +3,18 @@
 //////////////////////
 
 .pane-bundle-text
-  @extend %bg-border-and-box-shadow
-  padding: 26px
+  // Container
+  .default,
+  .mba-highlighted-block
+    @extend %bg-border-and-box-shadow
+    padding: 26px
+  // Blue Bar
+  .mba-highlighted-block
+    .field-name-field-title
+      border-top: 9px solid $teal-light
+      margin-top: -28px
+      padding-top: 20px
+
   // Pane title
   .field-name-field-title
     font-family: $font-demi
@@ -60,8 +70,3 @@
   p.acc-body
     color: $text-grey
     font-size: 18px
-  // mba highlighted
-  .mba-highlighted-block
-    border-top: 9px solid $teal-light
-    padding-top: 20px
-    margin-top: -28px
