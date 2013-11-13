@@ -10,14 +10,29 @@
 
 
 // Inset images with captions
-// Image float left
+.caption-right,
+.caption-left
+  // background: #f4eede
+  display: inline-block
+  margin-bottom: 15px
+  max-width: 100%
+  img
+    display: block
+    line-height: 0 !important
+  // .caption-text
+    color: $grey-dark
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 0
+    padding: 20px
+
+// Captions
 .caption-left
   float: left
-  margin: 4px 16px 4px 0
-// Image float right
+  margin-right: 30px
 .caption-right
   float: right
-  margin: 4px 0 4px 16px
+  margin-left: 30px
 
 // Callout
 div.callout
