@@ -189,3 +189,16 @@ function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
     $form['buttons']['#weight'] = 99;
   }
 }
+/**
+ * Implements hook_preprocess_HOOK() for theme_field().
+ */
+function gsb_theme_preprocess_field(&$variables, $hook) {
+  // Ensure custom DS labels are used for link label formatters.
+  if (isset($variables['ds-config']['lb']) && $variables['element']['#formatter'] == 'link_label') {
+    foreach ($variables['items'] as &$item) {
+      if (isset($item['#field'])) {
+        $item['#field']['label'] = $variables['ds-config']['lb'];
+      }
+    }
+  }
+}
