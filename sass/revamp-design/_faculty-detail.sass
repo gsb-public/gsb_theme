@@ -1,0 +1,50 @@
+//////////////////
+// Faculty detail
+//////////////////
+
+// Hide title on detail
+.node-type-faculty
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-demi
+      font-size: 28px
+      font-weight: normal
+      line-height: 1.2
+  .group-wrapper-name
+    +breakpoint($bp-mobile-max)
+      display: none
+
+// Detail page
+.node-faculty
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+
+  // Layout
+  &.ds-2col > .group-left
+    width: 270px
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+  &.ds-2col > .group-right
+    float: none
+    width: auto
+    padding-left: 300px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0
+
+  // Name
+  .group-wrapper-name
+    margin-top: 25px
+    font-size: 28px
+    font-weight: bold
+    line-height: 1.2
+    span
+      &:after
+        content: " "
