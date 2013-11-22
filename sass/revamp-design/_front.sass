@@ -168,8 +168,16 @@
     font-weight: bold
     line-height: 1
     margin-bottom: 28px
+    a:after
+      color: #c2b7a1
+      content: "w"
+      font-family: "gsb"
+      font-size: 18px
+      line-height: 0
     a:hover
       color: $text-blue
+      &:after
+        color: $text-blue
   ul
     margin: 0
     padding: 0
@@ -180,20 +188,30 @@
   .views-field-field-event-date,
   .views-field-title,
   .views-field-field-address
-    color: $text-black
-    font-size: 16px
     +breakpoint($bp-tablet-port-max)
       & > div
         display: inline
   .views-field-title a
     border: 0
+    color: $grey-1
     font-weight: bold
+    font-family: $font-demi
+    &:after
+      color: #bac405
+      content: "w"
+      font-family: "gsb"
+      font-size: 18px
+      line-height: 0
     &:hover
-      border-bottom: 1px solid $text-blue
       color: $text-blue
+      &:after
+        color: $text-blue
   .views-field-field-event-date
-    color: $grey-6
+    color: $grey-7
+    font-size: 14px
   .views-field-field-address
+    color: $text-black
+    font-size: 14px
     +breakpoint($bp-tablet-port-max)
       &:after
         content: " - "
