@@ -168,3 +168,23 @@
       color: $red
       font-size: 14px
       font-weight: bold
+
+// Profile detail information blocks
+// PhD, Faculty
+%group-wrapper-information
+  @extend %bg-border-and-box-shadow
+  padding: 26px 0
+  a
+    color: $link-green
+    font-size: 16px
+    font-family: $font-demi
+    &:hover
+      color: $link-blue
+    &[target=_blank]
+      &:after
+        content: " i"
+        font-family: "gsb"
+        font-size: 12px
+        font-weight: normal
+  .field
+    padding: 0 26px
