@@ -81,29 +81,14 @@
       margin-right: 0.3em
   // Information block under photo
   .group-wrapper-information
-    @extend %bg-border-and-box-shadow
-    padding: 26px 0
-    a
-      color: $link-green
-      font-size: 16px
-      font-weight: bold
-      &:hover
-        color: $text-blue
-      &[target=_blank]
-        &:after
-          content: " i"
-          font-family: "gsb"
-          font-size: 12px
-          font-weight: normal
-    .field
-      padding: 0 26px
+    @extend %group-wrapper-information
   // Email address
   .field-name-field-email
     border-bottom: 1px solid #e4e4e4
     a
       display: inline-block
       max-width: 211px
-      padding-bottom: 20px
+      padding-bottom: 15px
       word-wrap: break-word
     a:after
       content: " o"
@@ -114,7 +99,7 @@
   .group-wrapper-link
     border-top: 1px solid $white
     border-bottom: 1px solid #e4e4e4
-    padding: 20px 0
+    padding: 15px 0
     .field-name-field-file-single-public
       a:after
         content: "m" !important
@@ -124,7 +109,7 @@
   .field-name-phd-address
     border-top: 1px solid $white
     .field-items
-      padding-top: 20px
+      padding-top: 15px
 
   // Name
   .group-wrapper-name
