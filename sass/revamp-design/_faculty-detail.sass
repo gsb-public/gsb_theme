@@ -3,7 +3,7 @@
 //////////////////
 
 // Variables
-$faculty-margin-value: 22px
+$faculty-spacing: 22px
 
 // Extends
 %faculty-headers
@@ -144,7 +144,7 @@ $faculty-margin-value: 22px
         color: $link-blue
     // Spacing
     .field
-      margin-bottom: $faculty-margin-value
+      margin-bottom: $faculty-spacing
 
 
   // Name
@@ -153,7 +153,7 @@ $faculty-margin-value: 22px
     font-size: 28px
     font-weight: bold
     line-height: 1.2
-    margin-bottom: $faculty-margin-value
+    margin-bottom: $faculty-spacing
     span
       &:after
         content: " "
@@ -164,7 +164,7 @@ $faculty-margin-value: 22px
     color: $grey-dark
     font-style: italic
     line-height: 1.2
-    margin-bottom: $faculty-margin-value
+    margin-bottom: $faculty-spacing
     padding: 10px
     .label-inline
       font-weight: normal
@@ -179,8 +179,8 @@ $faculty-margin-value: 22px
     font-size: 14px
     font-weight: normal
     line-height: 1
-    margin-bottom: $faculty-margin-value
-    padding-bottom: $faculty-margin-value
+    margin-bottom: $faculty-spacing
+    padding-bottom: $faculty-spacing
     @extend %divider-bottom
     a
       color: $link-green
@@ -191,10 +191,11 @@ $faculty-margin-value: 22px
   // Sections
   .group-wrapper-research,
   .group-wrapper-academic
-    margin-bottom: $faculty-margin-value
+    margin-bottom: $faculty-spacing
     @extend %divider-bottom
 
   // Bullets
+  .field-name-field-body,
   .field-name-field-research-interests,
   .field-name-field-academic-degrees-unlimited,
   .field-name-field-academic-aptmts-unlimited,
@@ -203,16 +204,12 @@ $faculty-margin-value: 22px
   .field-name-field-teaching-materials,
   .field-name-field-link-conf-pres-unlimited,
   .field-name-field-link-video-unlimited,
-  .field-name-field-link-podcast-unlimited
+  .field-name-field-link-podcast-unlimited,
+  .field-name-field-stanford-gsb-affiliation,
+  .field-name-field-greater-univ-aff-unlimited
     @extend %faculty-bullets
 
-  // Academic section
-
-  // Bio
-  .field-name-field-body
-    @extend %faculty-bullets
-
-  // Video and podcast
+  // Videos and podcasts
   .field-name-field-link-video-unlimited,
   .field-name-field-link-podcast-unlimited
     font-family: $font-demi
@@ -227,3 +224,15 @@ $faculty-margin-value: 22px
   .field-name-field-link-podcast-unlimited
     a:after
       content: " 4" !important
+
+  // Affiliations
+  .group-wrapper-affiliation
+    @extend %divider-top
+    margin-bottom: $faculty-spacing
+    padding-top: $faculty-spacing
+    h2
+      @extend %header-large
+
+  .field-name-field-center-affiliations
+    &:after
+      content: ", "
