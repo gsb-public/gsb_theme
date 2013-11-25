@@ -2,6 +2,57 @@
 // Faculty detail
 //////////////////
 
+// Variables
+$faculty-margin-value: 22px
+
+// Extends
+%faculty-headers
+  color: $text-black
+  font-family: $font-demi
+  font-weight: normal
+  line-height: 1.2
+  margin: 0 0 12px 0
+  padding: 0
+
+%header-large
+  @extend %faculty-headers
+  font-size: 20px
+
+%header-small
+  @extend %faculty-headers
+  font-size: 16px
+
+%faculty-bullets
+  ul
+    margin: 0
+    padding: 0
+    text-indent: 0
+    li
+      font-size: 16px
+      line-height: 1.2
+      margin-bottom: 6px
+      padding-left: 14px
+      &:before
+        content: "• "
+        color: $text-blue
+        float: left
+        position: relative
+        left: -14px
+        width: 0
+  a[target=_blank]
+    &:after
+      content: " i"
+      font-family: "gsb"
+      font-size: 12px
+      font-weight: normal
+
+%faculty-paragraph
+  font-size: 16px
+  line-height: 1.4
+  margin-bottom: 12px
+  &:last-of-type
+    margin-bottom: 0
+
 // Hide title on detail
 .node-type-faculty
   #page-title
@@ -39,17 +90,8 @@
       float: left
       padding-left: 0
 
-  // Name
-  .group-wrapper-name
-    margin-top: 25px
-    font-size: 28px
-    font-weight: bold
-    line-height: 1.2
-    span
-      &:after
-        content: " "
-
   // LEFT SIDE
+
   // Photo label
   .field-name-faculty-rank-academic-area
     background: $text-black
@@ -59,11 +101,14 @@
     p
       font-family: $font-demi
       font-size: 14px
-      line-height: 1
+      line-height: 1.1
       margin-bottom: 0
   // Person details block
   .group-wrapper-information
     @extend %group-wrapper-information
+    .field-name-field-phone a
+      .no-touch &
+        color: $text-black
     .group-wrapper-contact
       border-bottom: 1px solid #e4e4e4
       padding-bottom: 15px
@@ -76,8 +121,109 @@
       padding-top: 15px
     // Email
     .field-name-field-email
+      line-height: 1.2
       a:after
         content: " o"
         font-family: "gsb-email"
         font-size: 13px
         line-height: 0
+
+  // RIGHT SIDE
+  .group-right
+    // Common patterns
+    h2.label-above
+      @extend %header-large
+    h3.label-above
+      @extend %header-small
+    p
+      @extend %faculty-paragraph
+
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+    // Spacing
+    .field
+      margin-bottom: $faculty-margin-value
+
+
+  // Name
+  .group-wrapper-name
+    margin-top: 25px
+    font-size: 28px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: $faculty-margin-value
+    span
+      &:after
+        content: " "
+
+  // On Leave statement
+  .field-name-field-leave-statement
+    background: #f3f0eb
+    color: $grey-dark
+    font-style: italic
+    line-height: 1.2
+    margin-bottom: $faculty-margin-value
+    padding: 10px
+    .label-inline
+      font-weight: normal
+
+  // Title and positions held
+  .field-name-field-title-position-unlimited
+    line-height: 1.2
+    .field-item
+      margin-bottom: 8px
+  // Academic area
+  .field-name-field-academic-area-single
+    font-size: 14px
+    font-weight: normal
+    line-height: 1
+    margin-bottom: $faculty-margin-value
+    padding-bottom: $faculty-margin-value
+    @extend %divider-bottom
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+        text-decoration: underline
+
+  // Sections
+  .group-wrapper-research,
+  .group-wrapper-academic
+    margin-bottom: $faculty-margin-value
+    @extend %divider-bottom
+
+  // Bullets
+  .field-name-field-research-interests,
+  .field-name-field-academic-degrees-unlimited,
+  .field-name-field-academic-aptmts-unlimited,
+  .field-name-field-professional-experience,
+  .field-name-field-awards-honors,
+  .field-name-field-teaching-materials,
+  .field-name-field-link-conf-pres-unlimited,
+  .field-name-field-link-video-unlimited,
+  .field-name-field-link-podcast-unlimited
+    @extend %faculty-bullets
+
+  // Academic section
+
+  // Bio
+  .field-name-field-body
+    @extend %faculty-bullets
+
+  // Video and podcast
+  .field-name-field-link-video-unlimited,
+  .field-name-field-link-podcast-unlimited
+    font-family: $font-demi
+    font-size: 14px
+    a:after
+      font-family: "gsb"
+      font-size: 18px !important
+      line-height: 0
+  .field-name-field-link-video-unlimited
+    a:after
+      content: " 3" !important
+  .field-name-field-link-podcast-unlimited
+    a:after
+      content: " 4" !important

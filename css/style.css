@@ -127,6 +127,11 @@ dfn {
   border-top: 1px #cccccc solid;
 }
 
+.node-faculty .field-name-field-academic-area-single, .node-faculty .group-wrapper-research,
+.node-faculty .group-wrapper-academic {
+  border-bottom: 1px #cccccc solid;
+}
+
 .node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty .group-wrapper-information, .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
@@ -234,6 +239,7 @@ body a[href$=".pdf"]:hover:after:after, body a[href$=".png"]:hover:after:after, 
   color: #7d8401;
   font-size: 16px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information a:hover, .node-faculty .group-wrapper-information a:hover {
   color: #2d6280;
@@ -781,7 +787,7 @@ pre {
 
 p {
   font-size: 18px;
-  line-height: 1.4em;
+  line-height: 1.4;
   margin-bottom: 20px;
 }
 
@@ -11201,6 +11207,90 @@ fieldset.collapsible .fieldset-legend {
   line-height: 0;
 }
 
+.node-faculty .group-right h2.label-above, .node-faculty .group-right h3.label-above {
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.node-faculty .group-right h2.label-above {
+  font-size: 20px;
+}
+
+.node-faculty .group-right h3.label-above {
+  font-size: 16px;
+}
+
+.node-faculty .field-name-field-research-interests ul,
+.node-faculty .field-name-field-academic-degrees-unlimited ul,
+.node-faculty .field-name-field-academic-aptmts-unlimited ul,
+.node-faculty .field-name-field-professional-experience ul,
+.node-faculty .field-name-field-awards-honors ul,
+.node-faculty .field-name-field-teaching-materials ul,
+.node-faculty .field-name-field-link-conf-pres-unlimited ul,
+.node-faculty .field-name-field-link-video-unlimited ul,
+.node-faculty .field-name-field-link-podcast-unlimited ul, .node-faculty .field-name-field-body ul {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+.node-faculty .field-name-field-research-interests ul li,
+.node-faculty .field-name-field-academic-degrees-unlimited ul li,
+.node-faculty .field-name-field-academic-aptmts-unlimited ul li,
+.node-faculty .field-name-field-professional-experience ul li,
+.node-faculty .field-name-field-awards-honors ul li,
+.node-faculty .field-name-field-teaching-materials ul li,
+.node-faculty .field-name-field-link-conf-pres-unlimited ul li,
+.node-faculty .field-name-field-link-video-unlimited ul li,
+.node-faculty .field-name-field-link-podcast-unlimited ul li, .node-faculty .field-name-field-body ul li {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  padding-left: 14px;
+}
+.node-faculty .field-name-field-research-interests ul li:before,
+.node-faculty .field-name-field-academic-degrees-unlimited ul li:before,
+.node-faculty .field-name-field-academic-aptmts-unlimited ul li:before,
+.node-faculty .field-name-field-professional-experience ul li:before,
+.node-faculty .field-name-field-awards-honors ul li:before,
+.node-faculty .field-name-field-teaching-materials ul li:before,
+.node-faculty .field-name-field-link-conf-pres-unlimited ul li:before,
+.node-faculty .field-name-field-link-video-unlimited ul li:before,
+.node-faculty .field-name-field-link-podcast-unlimited ul li:before, .node-faculty .field-name-field-body ul li:before {
+  content: "• ";
+  color: #2d6280;
+  float: left;
+  position: relative;
+  left: -14px;
+  width: 0;
+}
+.node-faculty .field-name-field-research-interests a[target=_blank]:after,
+.node-faculty .field-name-field-academic-degrees-unlimited a[target=_blank]:after,
+.node-faculty .field-name-field-academic-aptmts-unlimited a[target=_blank]:after,
+.node-faculty .field-name-field-professional-experience a[target=_blank]:after,
+.node-faculty .field-name-field-awards-honors a[target=_blank]:after,
+.node-faculty .field-name-field-teaching-materials a[target=_blank]:after,
+.node-faculty .field-name-field-link-conf-pres-unlimited a[target=_blank]:after,
+.node-faculty .field-name-field-link-video-unlimited a[target=_blank]:after,
+.node-faculty .field-name-field-link-podcast-unlimited a[target=_blank]:after, .node-faculty .field-name-field-body a[target=_blank]:after {
+  content: " i";
+  font-family: "gsb";
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.node-faculty .group-right p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.node-faculty .group-right p:last-of-type {
+  margin-bottom: 0;
+}
+
 .node-type-faculty #page-title {
   display: none;
 }
@@ -11251,15 +11341,6 @@ fieldset.collapsible .fieldset-legend {
     padding-left: 0;
   }
 }
-.node-faculty .group-wrapper-name {
-  margin-top: 25px;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-.node-faculty .group-wrapper-name span:after {
-  content: " ";
-}
 .node-faculty .field-name-faculty-rank-academic-area {
   background: #231f20;
   color: white;
@@ -11269,8 +11350,11 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty .field-name-faculty-rank-academic-area p {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 0;
+}
+.no-touch .node-faculty .group-wrapper-information .field-name-field-phone a {
+  color: #231f20;
 }
 .node-faculty .group-wrapper-information .group-wrapper-contact {
   border-bottom: 1px solid #e4e4e4;
@@ -11285,11 +11369,85 @@ fieldset.collapsible .fieldset-legend {
   border-top: 1px solid white;
   padding-top: 15px;
 }
+.node-faculty .group-wrapper-information .field-name-field-email {
+  line-height: 1.2;
+}
 .node-faculty .group-wrapper-information .field-name-field-email a:after {
   content: " o";
   font-family: "gsb-email";
   font-size: 13px;
   line-height: 0;
+}
+.node-faculty .group-right a {
+  color: #7d8401;
+}
+.node-faculty .group-right a:hover {
+  color: #2d6280;
+}
+.node-faculty .group-right .field {
+  margin-bottom: 22px;
+}
+.node-faculty .group-wrapper-name {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+.node-faculty .group-wrapper-name span:after {
+  content: " ";
+}
+.node-faculty .field-name-field-leave-statement {
+  background: #f3f0eb;
+  color: #887e6e;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 22px;
+  padding: 10px;
+}
+.node-faculty .field-name-field-leave-statement .label-inline {
+  font-weight: normal;
+}
+.node-faculty .field-name-field-title-position-unlimited {
+  line-height: 1.2;
+}
+.node-faculty .field-name-field-title-position-unlimited .field-item {
+  margin-bottom: 8px;
+}
+.node-faculty .field-name-field-academic-area-single {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+}
+.node-faculty .field-name-field-academic-area-single a {
+  color: #7d8401;
+}
+.node-faculty .field-name-field-academic-area-single a:hover {
+  color: #2d6280;
+  text-decoration: underline;
+}
+.node-faculty .group-wrapper-research,
+.node-faculty .group-wrapper-academic {
+  margin-bottom: 22px;
+}
+.node-faculty .field-name-field-link-video-unlimited,
+.node-faculty .field-name-field-link-podcast-unlimited {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.node-faculty .field-name-field-link-video-unlimited a:after,
+.node-faculty .field-name-field-link-podcast-unlimited a:after {
+  font-family: "gsb";
+  font-size: 18px !important;
+  line-height: 0;
+}
+.node-faculty .field-name-field-link-video-unlimited a:after {
+  content: " 3" !important;
+}
+.node-faculty .field-name-field-link-podcast-unlimited a:after {
+  content: " 4" !important;
 }
 
 .intro-copy {
