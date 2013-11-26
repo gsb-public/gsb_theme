@@ -17,11 +17,10 @@
 
   // Pane title
   .field-name-field-title
-    font-family: $font-demi
-    font-size: 20px
+    font-size: 24px
     font-weight: bold
-    line-height: 26px
-    padding-bottom: 14px
+    line-height: 1.2
+    margin-bottom: 14px
     .wide-view &,
     .full-view &
       font-size: 26px
@@ -34,32 +33,30 @@
         font-family: "arrow-double"
         font-size: 22px
         margin-left: 10px
-  .field-name-field-body
-    .wide-view &,
-    .full-view &
-      font-size: 18px
-      line-height: 24px
-    p
-      // WPBQA-77
-      .wide-view &,
-      .full-view &
-        font-size: 18px
-        line-height: 24px
+
+  // Narrow styles
   .narrow-view &
-    .field-name-field-body, p, ul, ol
-      font-size: 16px
-      line-height: 20px
-    +breakpoint($bp-wide-min)
+    +breakpoint($bp-tablet-port-min)
       .field-name-field-title
-        font-size: 22px
-        line-height: 26px
+        font-size: 20px
+        margin-bottom: 10px
       .field-name-field-body
+        p, ul, ol
+          font-size: 16px
+          line-height: 1.2
+          margin-bottom: 24px
+          &:last-child
+            margin-bottom: 0
         h2
-          font-size: 22px
-          line-height: 26px
+          font-family: $font-demi
+          font-size: 20px
+          line-height: 1.2
+          margin: 0 0 6px 0
         h3
-          font-size: 18px
-          line-height: 24px
+          font-size: 16px
+          font-weight: bold
+          line-height: 1.2
+
   // Accordion in a text bundle
   p.acc-title,
   p.acc-body
