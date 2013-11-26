@@ -844,7 +844,6 @@ h2, .node-phd-candidate.view-mode-full .group-wrapper-name {
   color: #2d6280;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 34px;
-  font-weight: normal;
   line-height: 40px;
 }
 
@@ -2693,10 +2692,6 @@ a.no-border:hover {
   line-height: 1.2;
   margin-bottom: 14px;
 }
-.wide-view .pane-bundle-text .field-name-field-title, .full-view .pane-bundle-text .field-name-field-title {
-  font-size: 26px;
-  line-height: 30px;
-}
 .pane-bundle-text .field-name-field-title a {
   color: #990000;
 }
@@ -2732,6 +2727,7 @@ a.no-border:hover {
     line-height: 1.2;
   }
 }
+
 .pane-bundle-text p.acc-title,
 .pane-bundle-text p.acc-body {
   clear: both;
@@ -11534,9 +11530,9 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .intro-copy {
-  font-size: 20px !important;
-  font-weight: bold;
-  line-height: 24px !important;
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 15px !important;
 }
 
 .caption-left {
@@ -11622,42 +11618,50 @@ div.callout br {
   vertical-align: top;
 }
 .field-name-field-body h2 {
-  font-size: 28px;
-  line-height: 32px;
   color: #231f20;
-  margin: 14px 0 8px 0;
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 6px 0 10px 0;
 }
 .field-name-field-body h3 {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 5px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 3px 0 4px 0;
 }
 .field-name-field-body h4 {
-  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
   margin-bottom: 3px;
 }
-.field-name-field-body h2 a, .field-name-field-body h3 a, .field-name-field-body h4 a {
+.field-name-field-body h5 {
+  color: #2d6280;
+  font-size: 17px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.field-name-field-body h2 a, .field-name-field-body h3 a, .field-name-field-body h4 a, .field-name-field-body h5 a {
   color: #231f20;
   border: none;
 }
-.field-name-field-body h2 a:after, .field-name-field-body h3 a:after, .field-name-field-body h4 a:after {
+.field-name-field-body h2 a:after, .field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
   color: #bac405;
   content: "w";
   font-family: "gsb";
-  margin-left: 3px;
   font-size: 17px;
+  margin-left: 3px;
 }
-.field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover, .field-name-field-body h4 a:hover {
+.field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover, .field-name-field-body h4 a:hover, .field-name-field-body h5 a:hover {
   border: none;
 }
-.field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after, .field-name-field-body h4 a:hover:after {
+.field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after, .field-name-field-body h4 a:hover:after, .field-name-field-body h5 a:hover:after {
   color: #2d6280;
 }
-.pane-bundle-text .field-name-field-body {
-  overflow: hidden;
+.field-name-field-body p:last-child, .field-name-field-body ul:last-child, .field-name-field-body ol:last-child {
+  margin-bottom: 0;
 }
 
 .field-name-field-body table {

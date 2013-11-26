@@ -4,9 +4,9 @@
 
 // Intro copy
 .intro-copy
-  font-size: 20px !important
-  font-weight: bold
-  line-height: 24px !important
+  font-size: 24px !important
+  line-height: 1.4 !important
+  margin-bottom: 15px !important
 
 // Captions
 .caption-left
@@ -82,42 +82,49 @@ div.callout
     vertical-align: top
   // Headers
   h2
-    font-size: 28px
-    line-height: 32px
     color: $text-black
-    margin: 14px 0 8px 0
+    font-size: 24px
+    line-height: 1.1
+    margin: 6px 0 10px 0
   h3
+    font-family: $font-demi
     font-size: 20px
-    line-height: 24px
-    margin-bottom: 5px
+    font-weight: normal
+    line-height: 1.2
+    margin: 3px 0 4px 0
   h4
-    color: $text-black
+    font-family: $font-demi
     font-size: 18px
-    font-weight: bold
+    font-weight: normal
     line-height: 1.2
     margin-bottom: 3px
-  h2 a, h3 a, h4 a
-    color: $text-black
-    border: none
-    &:after
-      color: $green-light
-      content: "w"
-      font-family: "gsb"
-      margin-left: 3px
-      font-size: 17px
-    &:hover
+  h5
+    color: $text-blue
+    font-size: 17px
+    line-height: 1.2
+    margin-bottom: 4px
+  h2, h3, h4, h5
+    a
+      color: $text-black
       border: none
       &:after
-        color: $text-blue
-  // Clearing the float
-  .pane-bundle-text &
-    overflow: hidden
+        color: $green-light
+        content: "w"
+        font-family: "gsb"
+        font-size: 17px
+        margin-left: 3px
+      &:hover
+        border: none
+        &:after
+          color: $text-blue
+  p, ul, ol
+    &:last-child
+      margin-bottom: 0
 
 // WYSIWYG Table
 .field-name-field-body
   table
     margin: 20px 0
-
   caption
     color: $text-blue
     font-family: $font-demi
@@ -129,7 +136,6 @@ div.callout
       background: #d5e7e4
       border-top: 1px solid $teal-light
       padding: 16px 12px
-
   tbody
     border-bottom: 1px solid $teal-light
     tr
@@ -150,7 +156,7 @@ div.callout
         font-size: 14px
         line-height: 18px
 
-// styles for the actual wysiwyg body
+// Styles for the actual wysiwyg body
 .cke_show_borders
   table
     td
