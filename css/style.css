@@ -5284,6 +5284,7 @@ a.social-block-link:hover {
   padding: 10px 26px;
 }
 .pane-bundle-accordion h2.pane-title {
+  border-bottom: 2px #e1e5e4 solid;
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
@@ -5297,28 +5298,18 @@ a.social-block-link:hover {
   display: none;
 }
 
-.acc-title,
-.acc-body {
-  clear: both;
-  margin-bottom: 0;
-  position: relative;
-}
-
 .accordion-toggle.opened:after,
 .opened .accordion-toggle:after {
   content: "d";
 }
 
-.accordion-body-wrap {
-  display: none;
-}
-.accordion-body-wrap .acc-body {
-  margin-top: 0;
-  padding-left: 36px;
-}
-
 .field-name-field-accordion-item #___page_0 iframe {
   height: 470px !important;
+}
+
+.acc-title,
+.acc-body {
+  clear: both;
 }
 
 .acc-title {
@@ -5327,6 +5318,7 @@ a.social-block-link:hover {
   font-size: 20px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.2;
+  margin-bottom: 0;
   margin-left: 0;
   padding: 4px 8px 12px 5px;
 }
@@ -5346,21 +5338,16 @@ a.social-block-link:hover {
   content: "d";
 }
 
-p.acc-title + p {
-  margin-top: 15px;
+.accordion-body-wrap {
+  display: none;
 }
-
-.accordion-body-wrap + p {
-  margin-top: 15px;
-}
-.accordion-body-wrap + p.acc-title {
-  margin-top: 0;
-}
-
-.acc-body {
-  font-size: 18px;
-  margin-bottom: 10px;
+.accordion-body-wrap .acc-body {
   padding-bottom: 12px;
+  padding-left: 36px;
+}
+
+.pane-bundle-accordion .field-collection-item-field-accordion-item:first-of-type .acc-title {
+  border-top: 0;
 }
 
 .qtip-wrapper ol,
@@ -11620,7 +11607,7 @@ div.callout br {
 .field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after, .field-name-field-body h4 a:hover:after, .field-name-field-body h5 a:hover:after {
   color: #2d6280;
 }
-.field-name-field-body p:last-child, .field-name-field-body ul:last-child, .field-name-field-body ol:last-child {
+.field-name-field-body p:last-child, .field-name-field-body ul:last-child, .field-name-field-body ol:last-child, .field-name-field-body table:last-child {
   margin-bottom: 0;
 }
 
