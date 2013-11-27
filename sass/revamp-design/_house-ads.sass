@@ -39,22 +39,20 @@
     font-weight: bold
     font-size: 20px
     color: $text-black
+    &:after
+      content: "w"
+      color: $text-green
+      display: inline-block
+      font-family: "gsb"
+      font-size: 20px
+      font-weight: normal
+      line-height: 1
+      margin-left: 2px
+      margin-top: -5px
     &:hover
       color: $text-blue
       &:after
         color: $text-blue
-    &:after
-      content: "w"
-      color: $text-green
-      font-family: "gsb"
-      font-size: 20px
-      font-weight: normal
-      margin-left: 2px
-      line-height: 1
-      position: relative
-      top: 0px
-      display: inline-block
-      margin-top: -5px
 
   .field-name-field-body
     font-size: 14px
