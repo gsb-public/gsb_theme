@@ -2728,19 +2728,6 @@ a.no-border:hover {
   }
 }
 
-.pane-bundle-text p.acc-title,
-.pane-bundle-text p.acc-body {
-  clear: both;
-}
-.pane-bundle-text p.acc-title {
-  font-size: 26px;
-  line-height: 1.1;
-}
-.pane-bundle-text p.acc-body {
-  color: #231f20;
-  font-size: 18px;
-}
-
 .gsb_field_formatter_field_collection_separator .entity,
 .gsb_field_formatter_field_collection_separator .field,
 .gsb_field_formatter_field_collection_separator .separator,
@@ -5296,18 +5283,15 @@ a.social-block-link:hover {
 .pane-bundle-accordion {
   padding: 10px 26px;
 }
-.pane-bundle-accordion .field-name-field-body p {
-  color: #231f20;
-}
-.pane-bundle-accordion .field-name-field-body p:last-child {
-  margin-bottom: 5px;
-}
-.pane-bundle-accordion .pane-title {
-  font-size: 26px;
-  line-height: 30px;
-  color: #231f20;
-  padding: 12px 0 16px 0;
+.pane-bundle-accordion h2.pane-title {
   border-bottom: 2px #e1e5e4 solid;
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 .pane-bundle-accordion .field-name-field-accordion-item > div > div:first-child .field-name-field-title {
   border: 0 none;
@@ -5338,7 +5322,6 @@ a.social-block-link:hover {
 
 .content .field-name-field-accordion-item .field-name-field-body {
   display: none;
-  color: #231f20;
   font-size: 18px;
   padding-bottom: 12px;
 }
@@ -5359,11 +5342,10 @@ a.social-block-link:hover {
 }
 .content .field-name-field-accordion-item .field-name-field-title .field-item,
 .content .acc-title {
-  font-size: 22px;
+  font-size: 20px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
   cursor: pointer;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 .content .field-name-field-accordion-item .field-name-field-title .field-item:before,
 .content .acc-title:before {
@@ -5387,10 +5369,10 @@ a.social-block-link:hover {
   border-top: 0;
 }
 .content .field-name-field-accordion-item .field-name-field-title .field-items {
-  padding: 8px 8px 18px 5px;
+  padding: 4px 8px 12px 5px;
 }
 .content .acc-title {
-  padding: 8px 8px 18px 5px;
+  padding: 4px 8px 12px 5px;
   margin-left: 0;
 }
 
@@ -5407,9 +5389,13 @@ p.acc-title + p {
 
 .accordion-body,
 .acc-body {
-  color: #231f20;
   font-size: 18px;
   padding-bottom: 12px;
+}
+
+.pane-bundle-text p.acc-title,
+.pane-bundle-text p.acc-body {
+  clear: both;
 }
 
 .qtip-wrapper ol,
