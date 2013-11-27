@@ -5248,7 +5248,6 @@ a.social-block-link:hover {
   padding: 10px 26px;
 }
 .pane-bundle-accordion h2.pane-title {
-  border-bottom: 2px #e1e5e4 solid;
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
@@ -5257,62 +5256,45 @@ a.social-block-link:hover {
   margin-top: 10px;
   padding-bottom: 10px;
 }
-.pane-bundle-accordion .field-name-field-accordion-item > div > div:first-child .field-name-field-title {
-  border: 0 none;
-}
 
 .accordion-toggle {
   display: none;
 }
 
-.content .acc-title, .content .acc-body {
-  position: relative;
-  margin-bottom: 0;
+.acc-title,
+.acc-body {
   clear: both;
-}
-.content .accordion-body-wrap {
-  display: none;
+  margin-bottom: 0;
+  position: relative;
 }
 
-.accordion-toggle.opened:after, .opened .accordion-toggle:after {
+.accordion-toggle.opened:after,
+.opened .accordion-toggle:after {
   content: "d";
 }
 
-.page-node #content-body .field-name-field-accordion-item .field {
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.content .field-name-field-accordion-item .field-name-field-body {
+.accordion-body-wrap {
   display: none;
-  font-size: 18px;
-  padding-bottom: 12px;
 }
-.content .field-name-field-accordion-item .field-name-field-body,
-.content .accordion-body-wrap .acc-body {
+.accordion-body-wrap .acc-body {
   margin-top: 0;
   padding-left: 36px;
 }
-.content .acc-body {
-  margin-bottom: 10px;
-}
-.content .field-name-field-accordion-item .field-name-field-title,
-.content .acc-title {
-  border-top: 2px #e1e5e4 solid;
-}
-.content .field-name-field-accordion-item #___page_0 iframe {
+
+.field-name-field-accordion-item #___page_0 iframe {
   height: 470px !important;
 }
-.content .field-name-field-accordion-item .field-name-field-title .field-item,
-.content .acc-title {
+
+.acc-title {
+  border-top: 2px #e1e5e4 solid;
+  cursor: pointer;
   font-size: 20px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  cursor: pointer;
   line-height: 1.2;
+  margin-left: 0;
+  padding: 4px 8px 12px 5px;
 }
-.content .field-name-field-accordion-item .field-name-field-title .field-item:before,
-.content .acc-title:before {
+.acc-title:before {
   content: "c";
   font-family: "gsb";
   font-size: 26px;
@@ -5321,23 +5303,11 @@ a.social-block-link:hover {
   width: 30px;
   display: inline-block;
 }
-.content .field-name-field-accordion-item .field-name-field-title .field-item:hover:before,
-.content .acc-title:hover:before {
+.acc-title:hover:before {
   color: #2d6280;
 }
-.content .field-name-field-accordion-item .field-name-field-title.opened .field-item:before,
-.content .acc-title.opened:before {
+.acc-title.opened:before {
   content: "d";
-}
-.content .field-name-field-accordion-item .entity-field-collection-item:first-of-type {
-  border-top: 0;
-}
-.content .field-name-field-accordion-item .field-name-field-title .field-items {
-  padding: 4px 8px 12px 5px;
-}
-.content .acc-title {
-  padding: 4px 8px 12px 5px;
-  margin-left: 0;
 }
 
 p.acc-title + p {
@@ -5351,15 +5321,10 @@ p.acc-title + p {
   margin-top: 0;
 }
 
-.accordion-body,
 .acc-body {
   font-size: 18px;
+  margin-bottom: 10px;
   padding-bottom: 12px;
-}
-
-.pane-bundle-text p.acc-title,
-.pane-bundle-text p.acc-body {
-  clear: both;
 }
 
 .qtip-wrapper ol,

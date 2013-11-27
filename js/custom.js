@@ -65,7 +65,7 @@
             $this.addClass('header-processed');
             // Find body container next to accordion title.
             var next = $this.next('.acc-body');
-            // If there are more than 1 body alement after title
+            // If there is more than 1 body an element after title
             // wrap them all into accordion-body-wrap class
             // by calling touchNeighbour recursive function.
             var found_body = false;
@@ -95,7 +95,7 @@
                 }
               }
             }
-            if (found_body == false) {
+            if (found_body === false) {
               // If the title has body after it - remove styling.
               $this.removeClass('acc-title');
             }
@@ -103,9 +103,9 @@
         });
       }
 
-      if ( $('.field-name-field-accordion-item, .acc-title').length > 0 ) {
+      if ( $('.acc-title').length > 0 ) {
         // Find accordion titles.
-        var accordionHead = $(".field-name-field-accordion-item .field-name-field-title, .acc-title");
+        var accordionHead = $('.acc-title');
         accordionHead.each( function() {
           // Add functionality on each accordion header.
           var currentHead = $(this);
@@ -116,7 +116,7 @@
                 var $this = $(this);
                 if ($this.parents('.entity').length > 0) {
                   // If it's a fpp toggle body field.
-                  $this.toggleClass('opened').parents('.entity').find('.field-name-field-body').slideToggle(250);
+                  $this.toggleClass('opened').parents('.entity').find('.accordion-body-wrap').slideToggle(250);
                 } else {
                   // If it's inside WYSIWYG toggle body wrapper.
                   $this.toggleClass('opened').next('.accordion-body-wrap').slideToggle(250);

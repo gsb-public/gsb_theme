@@ -1,11 +1,11 @@
 // ACCORDION FPP
 /////////////////
 
+// FPP container and title
 .pane-bundle-accordion
   @extend %bg-border-and-box-shadow
   padding: 10px 26px
   h2.pane-title
-    border-bottom: 2px #e1e5e4 solid
     color: $text-black
     font-family: $font-sans
     font-size: 22px
@@ -13,78 +13,54 @@
     line-height: 1.2
     margin-top: 10px
     padding-bottom: 10px
-  .field-name-field-accordion-item > div > div
-    &:first-child
-      .field-name-field-title
-        border: 0 none
 
+// Functionality
 .accordion-toggle
   display: none
 
-.content
-  .acc-title, .acc-body
-    position: relative
-    margin-bottom: 0
-    clear: both
-  .accordion-body-wrap
-    display: none
+.acc-title,
+.acc-body
+  clear: both
+  margin-bottom: 0
+  position: relative
 
-.accordion-toggle.opened, .opened .accordion-toggle
+.accordion-toggle.opened,
+.opened .accordion-toggle
   &:after
     content: "d"
 
-.page-node #content-body .field-name-field-accordion-item .field
-  margin-bottom: 0
-  font-size: 18px
-  line-height: 24px
-
-.content
-  .field-name-field-accordion-item .field-name-field-body
-    display: none
-    font-size: 18px
-    padding-bottom: 12px
-  .field-name-field-accordion-item .field-name-field-body,
-  .accordion-body-wrap .acc-body
+.accordion-body-wrap
+  display: none
+  .acc-body
     margin-top: 0
     padding-left: 36px
-  .acc-body
-    margin-bottom: 10px
-  .field-name-field-accordion-item .field-name-field-title,
-  .acc-title
-    border-top: 2px #e1e5e4 solid
-  .field-name-field-accordion-item #___page_0 iframe
-    height: 470px !important
 
-  // Title styling
-  .field-name-field-accordion-item .field-name-field-title .field-item,
-  .acc-title
-    font-size: 20px
-    font-family: $font-demi
-    cursor: pointer
-    line-height: 1.2
+.field-name-field-accordion-item #___page_0 iframe
+  height: 470px !important
+
+// Accordion item styling
+.acc-title
+  border-top: 2px #e1e5e4 solid
+  cursor: pointer
+  font-size: 20px
+  font-family: $font-demi
+  line-height: 1.2
+  margin-left: 0
+  padding: 4px 8px 12px 5px
+  &:before
+    content: "c"
+    font-family: "gsb"
+    font-size: 26px
+    color: $red
+    font-weight: normal
+    width: 30px
+    display: inline-block
+  &:hover
     &:before
-      content: "c"
-      font-family: "gsb"
-      font-size: 26px
-      color: $red
-      font-weight: normal
-      width: 30px
-      display: inline-block
-    &:hover
-      &:before
-        color: $text-blue
-  .field-name-field-accordion-item .field-name-field-title.opened .field-item,
-  .acc-title.opened
+      color: $text-blue
+  &.opened
     &:before
       content: "d"
-  .field-name-field-accordion-item
-    .entity-field-collection-item:first-of-type
-      border-top: 0
-    .field-name-field-title .field-items
-      padding: 4px 8px 12px 5px
-  .acc-title
-    padding: 4px 8px 12px 5px
-    margin-left: 0
 
 p.acc-title + p
   margin-top: 15px
@@ -94,13 +70,7 @@ p.acc-title + p
   &.acc-title
     margin-top: 0
 
-.accordion-body,
 .acc-body
   font-size: 18px
+  margin-bottom: 10px
   padding-bottom: 12px
-
-// Accordion in a text bundle
-.pane-bundle-text
-  p.acc-title,
-  p.acc-body
-    clear: both
