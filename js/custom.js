@@ -1,7 +1,7 @@
 (function ($) {
 
   /**
-   * Functionallity for Spotlight block show more/less link
+   * Functionality for Spotlight block show more/less link
    */
   Drupal.behaviors.spotlight_seemore = {
     attach: function (context, settings) {
@@ -10,7 +10,7 @@
         var $spotlight = $('.pane-bundle-spotlight, .pane-bundle-house-ads');
         if ($spotlight.length) {
           // If the line height of the body text changes, adjust this.
-          var visibleHeight = 18 * 4;
+          var visibleHeight = 19 * 4;
           $spotlight.find('.pane-content > div').once('showmore-link').append('<p class="show-more"><span>Show More</span></p>');
           // Add behavior for every .show-more link.
           $spotlight.find('.show-more').once('showmore', function () {
