@@ -4,16 +4,15 @@
 .pane-bundle-accordion
   @extend %bg-border-and-box-shadow
   padding: 10px 26px
-  .field-name-field-body p
-    color: $text-grey
-    &:last-child
-      margin-bottom: 5px
-  .pane-title
-    font-size: 26px
-    line-height: 30px
-    color: $text-black
-    padding: 12px 0 16px 0
+  h2.pane-title
     border-bottom: 2px #e1e5e4 solid
+    color: $text-black
+    font-family: $font-sans
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    margin-top: 10px
+    padding-bottom: 10px
   .field-name-field-accordion-item > div > div
     &:first-child
       .field-name-field-title
@@ -42,7 +41,6 @@
 .content
   .field-name-field-accordion-item .field-name-field-body
     display: none
-    color: $text-grey
     font-size: 18px
     padding-bottom: 12px
   .field-name-field-accordion-item .field-name-field-body,
@@ -54,17 +52,16 @@
   .field-name-field-accordion-item .field-name-field-title,
   .acc-title
     border-top: 2px #e1e5e4 solid
-  .field-name-field-accordion-item #___page_0 iframe 
+  .field-name-field-accordion-item #___page_0 iframe
     height: 470px !important
 
   // Title styling
   .field-name-field-accordion-item .field-name-field-title .field-item,
   .acc-title
-    font-size: 22px
+    font-size: 20px
     font-family: $font-demi
-    font-weight: bold
     cursor: pointer
-    line-height: 1.1
+    line-height: 1.2
     &:before
       content: "c"
       font-family: "gsb"
@@ -84,9 +81,9 @@
     .entity-field-collection-item:first-of-type
       border-top: 0
     .field-name-field-title .field-items
-      padding: 8px 8px 18px 5px
+      padding: 4px 8px 12px 5px
   .acc-title
-    padding: 8px 8px 18px 5px
+    padding: 4px 8px 12px 5px
     margin-left: 0
 
 p.acc-title + p
@@ -99,6 +96,11 @@ p.acc-title + p
 
 .accordion-body,
 .acc-body
-  color: $text-grey
   font-size: 18px
   padding-bottom: 12px
+
+// Accordion in a text bundle
+.pane-bundle-text
+  p.acc-title,
+  p.acc-body
+    clear: both
