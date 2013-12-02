@@ -203,7 +203,7 @@ dfn {
 body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after, .node-faculty .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after {
   margin-left: 3px;
   font-family: "gsb";
   line-height: 1;
@@ -215,7 +215,7 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
 body a[href$=".pdf"]:hover:after:after, body a[href$=".png"]:hover:after:after, body a[href$=".jpg"]:hover:after:after, body a[href$=".gif"]:hover:after:after, body a[href$=".pptx"]:hover:after:after, body a[href$=".ppt"]:hover:after:after, body a[href$=".pps"]:hover:after:after, body a[href$=".odp"]:hover:after:after, body a[href$=".zip"]:hover:after:after, body a[href$=".rar"]:hover:after:after, body a[href$=".tar"]:hover:after:after, body a[href$=".doc"]:hover:after:after, body a[href$=".docx"]:hover:after:after, body a[href$=".txt"]:hover:after:after, body a[href$=".odt"]:hover:after:after, body a[href$=".xls"]:hover:after:after, body a[href$=".xlsx"]:hover:after:after, body a[href$=".ods"]:hover:after:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:hover:after:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:hover:after:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:hover:after:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after:after, .node-faculty .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:hover:after:after {
   color: #2d6280;
 }
 
@@ -11261,11 +11261,12 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty .field-name-field-professional-experience ul,
 .node-faculty .field-name-field-awards-honors ul,
 .node-faculty .field-name-field-teaching-materials ul,
-.node-faculty .field-name-field-link-conf-pres-unlimited ul,
+.node-faculty .field-name-field-conf-presentations-section ul,
 .node-faculty .field-name-field-link-video-unlimited ul,
 .node-faculty .field-name-field-link-podcast-unlimited ul,
 .node-faculty .field-name-field-stanford-gsb-affiliation ul,
-.node-faculty .field-name-field-greater-univ-aff-unlimited ul {
+.node-faculty .field-name-field-greater-univ-aff-unlimited ul,
+.node-faculty .field-collection-item-field-service-profession-section ul {
   margin: 0;
   padding: 0;
   text-indent: 0;
@@ -11277,11 +11278,12 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty .field-name-field-professional-experience ul li,
 .node-faculty .field-name-field-awards-honors ul li,
 .node-faculty .field-name-field-teaching-materials ul li,
-.node-faculty .field-name-field-link-conf-pres-unlimited ul li,
+.node-faculty .field-name-field-conf-presentations-section ul li,
 .node-faculty .field-name-field-link-video-unlimited ul li,
 .node-faculty .field-name-field-link-podcast-unlimited ul li,
 .node-faculty .field-name-field-stanford-gsb-affiliation ul li,
-.node-faculty .field-name-field-greater-univ-aff-unlimited ul li {
+.node-faculty .field-name-field-greater-univ-aff-unlimited ul li,
+.node-faculty .field-collection-item-field-service-profession-section ul li {
   font-size: 16px;
   line-height: 1.2;
   margin-bottom: 6px;
@@ -11294,11 +11296,12 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty .field-name-field-professional-experience ul li:before,
 .node-faculty .field-name-field-awards-honors ul li:before,
 .node-faculty .field-name-field-teaching-materials ul li:before,
-.node-faculty .field-name-field-link-conf-pres-unlimited ul li:before,
+.node-faculty .field-name-field-conf-presentations-section ul li:before,
 .node-faculty .field-name-field-link-video-unlimited ul li:before,
 .node-faculty .field-name-field-link-podcast-unlimited ul li:before,
 .node-faculty .field-name-field-stanford-gsb-affiliation ul li:before,
-.node-faculty .field-name-field-greater-univ-aff-unlimited ul li:before {
+.node-faculty .field-name-field-greater-univ-aff-unlimited ul li:before,
+.node-faculty .field-collection-item-field-service-profession-section ul li:before {
   content: "• ";
   color: #2d6280;
   float: left;
@@ -11313,11 +11316,12 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty .field-name-field-professional-experience a[target=_blank]:after,
 .node-faculty .field-name-field-awards-honors a[target=_blank]:after,
 .node-faculty .field-name-field-teaching-materials a[target=_blank]:after,
-.node-faculty .field-name-field-link-conf-pres-unlimited a[target=_blank]:after,
+.node-faculty .field-name-field-conf-presentations-section a[target=_blank]:after,
 .node-faculty .field-name-field-link-video-unlimited a[target=_blank]:after,
 .node-faculty .field-name-field-link-podcast-unlimited a[target=_blank]:after,
 .node-faculty .field-name-field-stanford-gsb-affiliation a[target=_blank]:after,
-.node-faculty .field-name-field-greater-univ-aff-unlimited a[target=_blank]:after {
+.node-faculty .field-name-field-greater-univ-aff-unlimited a[target=_blank]:after,
+.node-faculty .field-collection-item-field-service-profession-section a[target=_blank]:after {
   content: " i";
   font-family: "gsb";
   font-size: 12px;
@@ -11438,14 +11442,14 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .node-faculty .group-right .field {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .node-faculty .group-wrapper-name {
   margin-top: 25px;
   font-size: 28px;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .node-faculty .group-wrapper-name span:after {
   content: " ";
@@ -11455,7 +11459,7 @@ fieldset.collapsible .fieldset-legend {
   color: #887e6e;
   font-style: italic;
   line-height: 1.2;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding: 10px;
 }
 .node-faculty .field-name-field-leave-statement .label-inline {
@@ -11471,8 +11475,8 @@ fieldset.collapsible .fieldset-legend {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  margin-bottom: 22px;
-  padding-bottom: 22px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 .node-faculty .field-name-field-academic-area-single a {
   color: #7d8401;
@@ -11483,12 +11487,29 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-faculty .group-wrapper-research,
 .node-faculty .group-wrapper-academic {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
+.node-faculty .field-name-field-teaching-materials,
+.node-faculty .field-name-field-conf-presentations-section,
 .node-faculty .field-name-field-link-video-unlimited,
 .node-faculty .field-name-field-link-podcast-unlimited {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  line-height: 1.1;
+}
+.node-faculty .field-name-field-conf-presentations-section .file-size {
+  display: none;
+}
+.node-faculty .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.node-faculty .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:before {
+  color: black;
+  content: "   |   ";
+  display: inline;
+}
+.node-faculty .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after {
+  content: "m" !important;
 }
 .node-faculty .field-name-field-link-video-unlimited a:after,
 .node-faculty .field-name-field-link-podcast-unlimited a:after {
@@ -11503,8 +11524,8 @@ fieldset.collapsible .fieldset-legend {
   content: " 4" !important;
 }
 .node-faculty .group-wrapper-affiliation {
-  margin-bottom: 22px;
-  padding-top: 22px;
+  margin-bottom: 24px;
+  padding-top: 24px;
 }
 .node-faculty .field-name-field-center-affiliations:after {
   content: ", ";

@@ -3,7 +3,7 @@
 //////////////////
 
 // Variables
-$faculty-spacing: 22px
+$faculty-spacing: 24px
 
 // Extends
 %faculty-headers
@@ -207,18 +207,41 @@ $faculty-spacing: 22px
   .field-name-field-professional-experience,
   .field-name-field-awards-honors,
   .field-name-field-teaching-materials,
-  .field-name-field-link-conf-pres-unlimited,
+  .field-name-field-conf-presentations-section,
   .field-name-field-link-video-unlimited,
   .field-name-field-link-podcast-unlimited,
   .field-name-field-stanford-gsb-affiliation,
-  .field-name-field-greater-univ-aff-unlimited
+  .field-name-field-greater-univ-aff-unlimited,
+  .field-collection-item-field-service-profession-section
     @extend %faculty-bullets
 
-  // Videos and podcasts
+  // List link style
+  .field-name-field-teaching-materials,
+  .field-name-field-conf-presentations-section,
   .field-name-field-link-video-unlimited,
   .field-name-field-link-podcast-unlimited
     font-family: $font-demi
     font-size: 14px
+    line-height: 1.1
+
+  // Presentations
+  .field-name-field-conf-presentations-section
+    // Replace file size with pdf icon
+    .file-size
+      display: none
+    .field-name-field-file-conf-presentation a
+      font-family: $font-sans
+      &:before
+        color: $black
+        content: "   |   "
+        display: inline
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+
+  // Videos and podcasts
+  .field-name-field-link-video-unlimited,
+  .field-name-field-link-podcast-unlimited
     a:after
       font-family: "gsb"
       font-size: 18px !important
