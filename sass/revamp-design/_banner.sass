@@ -156,11 +156,14 @@
           position: absolute
           left: 12px
           top: 8px
+
     .block-menu.open,
     .block-menu-block.open
       .content
-        position: relative
-        z-index: 10
+        margin-top: 50px
+        position: absolute
+        width: 100%
+        z-index: 12
       h2
         +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
         color: $red
@@ -173,12 +176,21 @@
         +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
         border-bottom: 10px solid $black
         display: block
-        margin-top: 1px
         padding-left: 36px
-        padding-top: 26px
         .menu
           background: transparent
           border-bottom: 0
+
+///////////////////
+// WITH SECTION TITLE
+///////////////////
+#sidebar
+  +breakpoint($bp-tablet-port-max)
+    +background(linear-gradient(#756b5a, #887e6e))
+    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+    min-height: 50px
+    .page-programs &
+      +background(linear-gradient(#4c697a, #607c8c))
 
 //////////////////
 // Events filters on mobile
@@ -309,25 +321,3 @@
       padding-left: 15px
       a
         font-weight: bold
-
-///////////////////
-// NO BREADCRUMBS
-///////////////////
-#sidebar
-  +breakpoint($bp-tablet-port-max)
-    +background(linear-gradient(#756b5a, #887e6e))
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-    min-height: 50px
-    .block.open
-      h2
-        margin-top: -50px
-      .content
-        margin-top: 50px
-    .page-programs &
-      +background(linear-gradient(#4c697a, #607c8c))
-  +breakpoint($bp-mobile-max)
-    .sidebar h2
-      margin-top: -50px
-    .block.open
-      .content
-        margin-top: -1px

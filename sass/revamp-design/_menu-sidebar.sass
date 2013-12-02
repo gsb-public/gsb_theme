@@ -16,6 +16,9 @@
     font-weight: bold
     margin-bottom: 22px
     line-height: 1.2
+    +breakpoint($bp-tablet-port-max)
+      &.first
+        padding-top: 22px
     &.collapsed
       +breakpoint($bp-tablet-port-max)
         &:before
@@ -39,9 +42,11 @@
     a
       color: $red
       line-height: 1.2
+      +breakpoint($bp-tablet-port-max)
+        display: inline-block
+        margin-bottom: 10px
     // Secondary children
     ul
-      margin-top: 16px
       padding-left: 16px
       position: relative
       left: 0
@@ -49,6 +54,9 @@
         color: $black
         margin-bottom: 16px
         text-transform: none
+        +breakpoint($bp-tablet-port-max)
+          &.first
+            padding-top: 0
         a
           color: $black
         // Terciary children
