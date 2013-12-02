@@ -3,9 +3,11 @@
 /////////////////
 
 #banner
-  +breakpoint($bp-tablet-land-min) /* WPBQA-393, WP-1773 */
+  // WPBQA-393, WP-1773
+  +breakpoint($bp-tablet-land-min)
     overflow: hidden
-    padding: 18px 0 12px /* WPBQA-158 */
+    // WP-2441
+    padding: 14px 0 9px
 
 // Banner title and subtitles
 .banner-title,
@@ -17,9 +19,9 @@
     color: $white
 
 .banner-title
-  font-family: $font-demi
-  font-size: 28px
-  line-height: 1.2em
+  font-size: 24px
+  font-weight: bold
+  line-height: 1.2
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
@@ -54,9 +56,11 @@
   +breakpoint($bp-tablet-port-max)
     display: none
   .breadcrumb
-    line-height: 1em
-    +breakpoint($bp-mobile-min) /* WP-1773 */
-      padding-bottom: 8px /* WPBQA-158 */
+    line-height: 1
+    // WP-1773
+    +breakpoint($bp-mobile-min)
+      // WPBQA-158
+      padding-bottom: 8px
     top: 0
     margin-bottom: 0
   a
@@ -75,7 +79,8 @@
       +breakpoint($bp-tablet-port-max)
         height: 50px
       .banner-title
-        padding-top: 18px /* WP-1773 */
+        // WP-1773
+        padding-top: 18px
         font-size: 48px
     +breakpoint($bp-mobile-max)
       display: none
