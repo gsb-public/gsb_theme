@@ -189,3 +189,27 @@
         font-weight: normal
   .field
     padding: 0 26px
+
+// Social icon circle
+%circle
+  background-color: $red-light
+  +background(linear-gradient(bottom, $red-light 0%, $red-dark 100%))
+  +border-radius(50px)
+  color: $white
+  display: block
+  margin: 0 auto
+  text-align: center
+  width: 40px
+  height: 40px
+  &:after
+    text-transform: lowercase
+    color: $white
+    font-family: "gsb"
+    font-size: 24px
+    position: relative
+    line-height: 1
+    top: 7px
+  &:hover
+    background: $white
+    &:after
+      color: $red

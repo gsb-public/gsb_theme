@@ -103,55 +103,27 @@
         border-top: 2px solid #f10000
 
 // TWITTER FEED
-.pane-homepage-social-feed .twitter-feed
+.pane-homepage-social-feed
+  @extend %border-and-box-shadow
   padding: 26px
+  +background((image_url('bg-social-feed.png') no-repeat bottom right), #d3eaeb)
   +breakpoint(1065px max-width)
     padding: 26px 20px
-  +breakpoint($bp-mobile-max)
-    +background((image_url('bg-social-feed.png') no-repeat bottom right), #c1dbd9)
+  // Social icons
+  .icon-wrapper,
+  .twitter-handle
+    margin-bottom: 24px
+
+  // Twitter feed
+  .twitter-handle a
+    &:hover
+      color: $link-blue
   // Title
   h5
     font-size: 16px
-    line-height: 1em
+    line-height: 1
     +breakpoint($bp-mobile-max)
       display: inline
-  .follow-us-circles
-    margin-bottom: 24px
-    a
-      display: inline-block
-      text-align: center
-      width: 40px
-      height: 40px
-      +border-radius(50px)
-      background-color: $red-light
-      +background(linear-gradient(bottom, $red-light 0%, #860000 100%))
-      &:after
-        color: $white
-        font-family: "gsb"
-        font-size: 24px
-        position: relative
-        top: 7px
-      &:hover
-        background: $white !important
-        filter: none
-        &:after
-          color: $red-dark
-
-  // Tweet
-  .tweet
-    font-size: 14px
-    line-height: 20px
-    margin-top: 0
-
-#fpp-tweets-front
-  margin-top: 24px
-  +breakpoint($bp-mobile-max)
-    margin-top: 18px
-    .tweet
-      margin-bottom: 18px
-      &:last-of-type
-        margin-bottom: 0
-
 
 // UPCOMING EVENTS
 .pane-gsb-event-frontpage
@@ -230,12 +202,12 @@
 
   // BOTTOM TITLES
   h2
-    border-bottom: 1px solid #e5e5e5
+    border-bottom: 1px $grey-c solid
     color: $text-black
-    line-height: 1em
+    line-height: 1
     margin-bottom: 12px
     padding-bottom: 12px
-    font-family: $font-headline
+    font-family: $font-sans
     font-size: 20px
     font-weight: bold
     a
@@ -246,8 +218,11 @@
         font-family: "arrow-double"
         font-size: 20px
         font-weight: normal
-        position: relative
-        left: 12px
+        margin-left: 0.3em
+      &:hover
+        color: $link-blue
+        &:after
+          color: $link-blue
   article
     +float-left
     padding-right: 15px

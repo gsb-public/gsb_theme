@@ -188,11 +188,7 @@
           // Get tweets number and search query.
           var _length = socialWrapper.find('.field-name-field-social-display-num').text(),
             _search = socialWrapper.find('.field-name-field-twitter-search').text();
-          // Add wrapper for tweets.
-          socialWrapper.addClass('twitter-feed designed-box processed')
-            .append('<div clas="twitter-feed"/></div>');
-          // Add background only if tweets qty less than 3.
-          if (_length < 3) { socialWrapper.addClass('bg'); }
+
           // Initialize twitterfeed.js function.
           gsb_tweetfeed.init({
             search: _search,
