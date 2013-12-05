@@ -140,12 +140,14 @@
     font-weight: bold
     line-height: 1
     margin-bottom: 28px
+    font-family: $font-sans
     a:after
       color: #c2b7a1
       content: "w"
       font-family: "gsb"
       font-size: 18px
       line-height: 0
+      font-weight: normal
     a:hover
       color: $text-blue
       &:after
@@ -160,13 +162,13 @@
   .views-field-field-event-date,
   .views-field-title,
   .views-field-field-address
+    line-height: 1.2
     +breakpoint($bp-tablet-port-max)
       & > div
         display: inline
   .views-field-title a
     border: 0
     color: $grey-1
-    font-weight: bold
     font-family: $font-demi
     &:after
       color: #bac405
