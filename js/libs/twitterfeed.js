@@ -33,7 +33,7 @@ gsb_tweetfeed = {
 			this.appendTo = config.appendTo;
       this.format = config.format == null ? 'l, M j | a' : config.format;
 
-      this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dev'],
+      this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       this.weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
       this.checkTweets();
 		},
