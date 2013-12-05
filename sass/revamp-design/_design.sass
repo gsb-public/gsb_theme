@@ -309,3 +309,49 @@ a.no-border
 // Mapbox map width
 .mapwrap
   width: 100%
+
+// Social icons
+.icon-wrapper
+  +clearfix
+  margin: 0
+  padding: 0
+  li
+    display: block
+    float: left
+    &:first-of-type
+      width: 22%
+      .circle
+        margin-left: 0
+    &:nth-of-type(2n)
+      width: 28%
+    &:nth-of-type(3n)
+      width: 28%
+    &:last-of-type
+      width: 22%
+      .circle
+        margin-right: 0
+
+// Icon style
+.circle
+  @extend %circle
+
+// Twitter feed
+.tweet
+  font-size: 14px
+  line-height: 1.4
+  margin-bottom: 20px
+  word-wrap: break-word
+
+  &:last-of-type
+    margin-bottom: 0
+  a
+    border: none
+    color: $red
+    &:hover
+      border: none
+      color: $text-blue
+      text-decoration: underline
+  .time
+    font-size: 13px
+    margin-top: 5px
+    margin-bottom: 0

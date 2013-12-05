@@ -1,4 +1,6 @@
+//////////
 // FOOTER
+//////////
 
 #footer
   .region-footer
@@ -42,7 +44,6 @@
     width: 171px
 
 // General footer menu styles
-#block-gsb-public-custom-blocks-gpcb-follow-us,
 #block-menu-menu-footer-1,
 #block-menu-menu-footer-2
   a
@@ -69,59 +70,48 @@
 // Follow us block
 #block-gsb-public-custom-blocks-gpcb-follow-us
   margin-right: 15px
-  .cta-follow-us
-    background: none
-    border: none
-    +box-shadow(none)
-    height: auto
-    padding-left: 0
-    +breakpoint($bp-mobile-max)
-      border-bottom: 1px $grey-c solid
-      margin-bottom: 15px
-    a.cta-title
-      width: 270px
-      background: none
-      padding: 0
-      font-size: 20px
-      text-transform: none
-      +breakpoint($bp-mobile-max)
-        margin-top: 5px
+  +breakpoint($bp-mobile-max)
+    border-bottom: 1px $grey-c solid
+    margin-bottom: 12px
+    padding-bottom: 12px
+    margin-right: 0
+  // Title
+  h2
+    border-bottom: 1px solid $grey-c
+    color: $red
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 12px
+    padding-bottom: 12px
+    a
       &:after
         color: $grey-med
-        font-size: 21px
-        left: 0
-    .icon-wrapper
-      border-top: 1px $grey-c solid
-      padding: 27px 0 0 0
-      margin-top: 38px
-      +breakpoint($bp-mobile-max)
-        border-top: 0
-        float: right
-        margin: 0
-        padding: 0
-        padding-bottom: 15px
-    .circle
-      margin: 0 18px 0 0
-      font-weight: normal
-      +breakpoint($bp-tablet-port-max)
-        height: 33px
-        margin: 0 5px
-        width: 33px
+        content: "\f100"
+        font-family: "arrow-double"
+        font-size: 20px
+        font-weight: normal
+        margin-left: 0.3em
+      &:hover
+        color: $link-blue
         &:after
-          font-size: 17px
-          top: 6px
-        &.social-block-twitter
-          margin-left: 0
-        &.social-block-facebook
-          margin-right: 0
+          color: $link-blue
+  // Icon wrapper
+  .icon-wrapper
+    display: block
+    max-width: 220px
 
 // NEWSLETTER SIGNUP
 .footer__signup__label
-  color: $red
   font-weight: bold
   font-size: 16px
   margin-bottom: 3px
   line-height: 1.3
+  a
+    color: $red
+    &:hover
+      color: $link-blue
 
 .footer__signup__description
   font-size: 15px
@@ -165,6 +155,8 @@ input.footer__signup__submit:hover
   font-weight: bold
   font-size: 13px
   text-shadow: none
+
+// Legal and Copyright region
 
 // Privacy menu
 #block-menu-menu-footer-3
