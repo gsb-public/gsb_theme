@@ -64,6 +64,10 @@
         ul li a
           font-weight: normal
           font-family: $font-demi
+          // Fourth level and below
+          ul li,
+          ul li a
+            font-family: $font-sans
     a.active
       color: $text-blue
       +breakpoint($bp-wide-min)
