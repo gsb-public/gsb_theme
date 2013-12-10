@@ -5421,6 +5421,8 @@ ul.slideshow-items li:first-of-type {
 }
 
 .acc-title {
+  overflow: hidden;
+  *zoom: 1;
   border-top: 2px #e1e5e4 solid;
   cursor: pointer;
   font-size: 20px;
@@ -5428,16 +5430,20 @@ ul.slideshow-items li:first-of-type {
   line-height: 1.2;
   margin-bottom: 0;
   margin-left: 0;
-  padding: 4px 8px 12px 5px;
+  padding: 8px 0 8px 36px;
 }
 .acc-title:before {
+  color: #990000;
   content: "c";
   font-family: "gsb";
   font-size: 26px;
-  color: #990000;
   font-weight: normal;
-  width: 30px;
-  display: inline-block;
+  line-height: 1;
+  float: left;
+  position: relative;
+  left: -36px;
+  top: -5px;
+  width: 0;
 }
 .acc-title:hover:before {
   color: #2d6280;
@@ -5451,7 +5457,7 @@ ul.slideshow-items li:first-of-type {
 }
 .accordion-body-wrap .acc-body {
   padding-bottom: 12px;
-  padding-left: 36px;
+  padding-left: 37px;
 }
 
 .pane-bundle-accordion .field-collection-item-field-accordion-item:first-of-type .acc-title {
