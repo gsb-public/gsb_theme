@@ -34,6 +34,7 @@
 
   // Accordion item styling
 .acc-title
+  +clearfix
   border-top: 2px #e1e5e4 solid
   cursor: pointer
   font-size: 20px
@@ -41,15 +42,19 @@
   line-height: 1.2
   margin-bottom: 0
   margin-left: 0
-  padding: 4px 8px 12px 5px
+  padding: 8px 0 8px 36px
   &:before
+    color: $red
     content: "c"
     font-family: "gsb"
     font-size: 26px
-    color: $red
     font-weight: normal
-    width: 30px
-    display: inline-block
+    line-height: 1
+    float: left
+    position: relative
+    left: -36px
+    top: -5px
+    width: 0
   &:hover
     &:before
       color: $text-blue
@@ -62,7 +67,7 @@
   display: none
   .acc-body
     padding-bottom: 12px
-    padding-left: 36px
+    padding-left: 37px
 
 // Border for FPP
 .pane-bundle-accordion
