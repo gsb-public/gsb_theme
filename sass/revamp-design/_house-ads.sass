@@ -32,7 +32,7 @@
     margin-right: 26px
     > img
       vertical-align: top
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-tablet-port)
       margin-bottom: 20px
 
   .field-name-field-link-single a
@@ -98,8 +98,7 @@
       .field-name-field-body,
       .field-name-field-link-single
         clear: both
-    .field-name-field-image-single-public
-      +breakpoint($bp-mobile)
+      .field-name-field-image-single-public
         margin-right: 0
         width: auto
 
@@ -117,6 +116,8 @@
       .field-name-field-link-single,
       .field-name-field-body
         clear: both
+      .field-name-field-image-single-public
+        margin-bottom: 20px
 
 .narrow-view .pane-bundle-house-ads
   +breakpoint($bp-mobile)
