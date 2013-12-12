@@ -5,22 +5,23 @@
 // Re:Think e-newsletters
 .pane-e-newsletters-list
   @extend %bg-border-and-box-shadow
-  padding: 20px 24px 24px 24px
+  padding: 26px
   h2
+    color: $text-black
     font-size: 20px
     font-weight: bold
     padding-bottom: 10px
     line-height: 1.2
-    color: $text-black
   .display_archive .campaign
+    color: $text-grey-light
     font-size: 16px
     font-weight: normal
     line-height: 1.2
-    color: $text-grey-light
     padding-bottom: 12px
     a
-      font-family: NewsGothicBT-Demi
       color: $text-black
+      font-family: $font-demi
+      font-weight: normal
       &:after
         color: $text-green
         content: "w"
@@ -31,4 +32,4 @@
         color: $text-blue
         &:after
           color: $teal-light
-    
+
