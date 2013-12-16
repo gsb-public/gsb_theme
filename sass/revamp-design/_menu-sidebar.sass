@@ -19,26 +19,27 @@
     +breakpoint($bp-tablet-port-max)
       &.first
         padding-top: 22px
-    &.collapsed
-      +breakpoint($bp-tablet-port-max)
-        &:before
-          color: $red
-          content: "➕"
-          font-family: "entypo"
-          font-size: 36px
-          font-weight: normal
-          position: absolute
-          left: 12px
+    &.collapsed,
     &.active-trail
       +breakpoint($bp-tablet-port-max)
         &:before
           color: $red
-          content: "➖"
           font-family: "entypo"
           font-size: 36px
           font-weight: normal
+          line-height: 0
+          margin-top: 9px
           position: absolute
           left: 12px
+    &.collapsed
+      +breakpoint($bp-tablet-port-max)
+        &:before
+          content: "➕"
+    &.active-trail
+      +breakpoint($bp-tablet-port-max)
+        &:before
+          content: "➖"
+
     a
       color: $red
       line-height: 1.2

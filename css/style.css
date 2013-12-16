@@ -3016,25 +3016,25 @@ a.no-border:hover {
   }
 }
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.collapsed:before {
+  .region-sidebar-first ul li.collapsed:before, .region-sidebar-first ul li.active-trail:before {
     color: #990000;
-    content: "➕";
     font-family: "entypo";
     font-size: 36px;
     font-weight: normal;
+    line-height: 0;
+    margin-top: 9px;
     position: absolute;
     left: 12px;
   }
 }
 @media (max-width: 62.4375em) {
+  .region-sidebar-first ul li.collapsed:before {
+    content: "➕";
+  }
+}
+@media (max-width: 62.4375em) {
   .region-sidebar-first ul li.active-trail:before {
-    color: #990000;
     content: "➖";
-    font-family: "entypo";
-    font-size: 36px;
-    font-weight: normal;
-    position: absolute;
-    left: 12px;
   }
 }
 .region-sidebar-first ul li a {
@@ -8655,6 +8655,7 @@ fieldset.collapsible .fieldset-legend {
     color: white;
     content: "➕";
     font-family: "entypo";
+    font-weight: normal;
     font-size: 36px;
     position: absolute;
     left: 12px;
