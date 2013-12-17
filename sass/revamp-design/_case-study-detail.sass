@@ -1,0 +1,120 @@
+////////////////////
+// Case Study detail
+////////////////////
+
+// Hide title on detail
+.node-type-case
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-demi
+      font-size: 28px
+      font-weight: normal
+      line-height: 1.2
+
+// Detail page
+.node-case
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+	
+  // Layout
+  &.ds-1col
+    +breakpoint($bp-mobile-max)
+      width: 100%
+	
+  .label-inline
+    &:after
+      content: "."
+      height: 0
+      clear: both
+      visibility: hidden
+	  
+  .field-name-title h2 
+    font-size: 28px
+    padding-bottom : 12px
+    margin-top: 25px
+    line-height: 1.2
+    font-family: $font-demi 
+    color: $text-black
+
+  .field-name-field-author
+    font-size: 18px
+    line-height: 1.2
+    font-family: $font-demi
+
+  .field-name-field-business-insight-topic,
+  .field-name-field-citation,
+  .field-name-field-year,
+  .field-name-field-item-id,
+  .field-name-field-page-count
+    line-height: 1.2
+    font-size: 16px
+	
+  .field-name-field-item-id,
+  .field-name-field-page-count
+    &:before
+      color: $text-black
+      content: " | "
+      display: inline
+  .field-name-field-page-count
+    &:after
+      content: " pgs."
+      color: $text-black
+      display: inline
+  .field-name-field-business-insight-topic
+    padding: 6px 0px 16px
+    font-family: $font-demi 
+    a
+      font-weight: normal
+      &:hover
+        color: $text-blue
+  .field-name-field-learning-objective
+    .label-above
+      font-family: $font-demi
+      padding: 6px 0px 4px
+  .field-name-field-tag
+    font-size: 14px
+    font-weight: bold
+    line-height: 1.2
+    padding: 12px 0px
+    span
+      font-weight: normal
+  .field-name-field-citation
+    color: $text-grey-light
+    padding-bottom: 26px
+
+  .field-name-field-link-single,
+  .field-name-field-permissions-statement,
+  .field-name-field-link-document,
+  .field-name-field-citation
+    border-bottom: 1px #c4c4c4 solid
+
+  .field-name-field-link-single,
+  .field-name-field-permissions-statement,
+  .field-name-field-link-document
+    font-size: 18px
+    line-height: 1.2
+    padding: 26px 0px
+    span
+      font-weight: bold
+  .field-name-field-link-single
+    a
+      font-weight: bold
+      color: $text-green
+      &:hover
+        color: $text-blue
+		
+  .field-name-field-link-document	
+    div
+      margin-top: 14px	
+    a
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))

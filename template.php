@@ -201,4 +201,11 @@ function gsb_theme_preprocess_field(&$variables, $hook) {
       }
     }
   }
+  
+  // Remove 'clearfix' class from case fields
+  $element = $variables['element'];
+  $key = array_search('clearfix', $variables['classes_array']);
+  if ($element['#bundle'] == 'case' && $key !== FALSE) {
+    unset($variables['classes_array'][$key]);
+  }
 }
