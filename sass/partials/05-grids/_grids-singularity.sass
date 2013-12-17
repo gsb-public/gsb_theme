@@ -10,7 +10,7 @@
 // First sidebar region
 #sidebar
   .sidebar
-    +grid-span(1, 1, $columns: $regions)
+    float: left
     margin-right: 65px
     width: 235px
     +breakpoint($bp-wide-min)
@@ -70,6 +70,7 @@
       width: 100%
     +breakpoint($bp-mobile)
       max-width: 270px
+
 // Standard 2 (.gsb-standard-page-two)
 .panel-display.gsb-standard-page-two
   // Specific pane spacing for this layout
@@ -133,25 +134,38 @@
   .front-panel-feature-row
     +clearfix
   .front-slider-pane
-    +grid-span(1, 1, $columns: $front-main)
+    float: left
+    width: 74.35897%
   .front-sidebar-pane
-    +grid-span(1, 2, $columns: $front-main)
+    margin-left: 76.92308%
   .front-panel-feature-one
-    +grid-span(1, 1, $columns: $front-main-inner)
+    float: left
+    margin-right: -100%
+    width: 48.71795%
     clear: left
   .front-panel-feature-two
-    +grid-span(1, 2, $columns: $front-main-inner)
-    clear: none
+    float: left
+    margin-left: 51.28205%
+    margin-right: -100%
+    width: 23.07692%
   .front-panel-feature-three
-    +grid-span(1, 3, $columns: $front-main-inner)
+    clear: right
+    float: right
+    margin-left: 76.92308%
+    width: 23.07692%
 
 // Front page responsive
 .panel-display.gsb-front-page
   +breakpoint($bp-tablet-port-max)
     .front-panel-feature-one
-      +grid-span(1, 1, $columns: $ipad-columns)
+      clear: right
+      width: 59.02307%
     .front-panel-feature-two
-      +grid-span(1, 2, $columns: $ipad-columns)
+      clear: right
+      float: right
+      margin-left: 63.09362%
+      margin-right: 0
+      width: 36.90638%
     .front-panel-feature-three
       float: none
       margin: 0
@@ -193,23 +207,32 @@
       width: 290px
 #bottom .block-block
   &:first-of-type
-    +grid-span(1, 1, $columns: $front-main-inner)
     clear: none
+    float: left
+    margin-right: -100%
+    width: 48.71795%
     +breakpoint($bp-mobile-max)
       float: none
       margin: 0
       margin-bottom: 30px
       width: 100%
   &:nth-of-type(2n)
-    +grid-span(1, 2, $columns: $front-main-inner)
     clear: none
+    float: left
+    margin-left: 51.28205%
+    margin-right: -100%
+    width: 23.07692%
     +breakpoint($bp-mobile-max)
       float: none
       margin: 0
       margin-bottom: 30px
       width: 100%
   &:nth-of-type(3n)
-    +grid-span(1, 3, $columns: $front-main-inner)
+    clear: right
+    float: right
+    margin-left: 76.92308%
+    margin-right: 0
+    width: 23.07692%
     +breakpoint($bp-mobile-max)
       float: none
       margin: 0
@@ -217,23 +240,23 @@
       width: 100%
 
 // Business Insights landing layout
-.panel-display.gsb-business-insights
-  .gsb-bizin-3col-top,
-  .gsb-bizin-3col-bottom
-    +pie-clearfix
-    .column
-      width: 35.3%
-      .panels-ipe-editing &
-        width: 31.03448%
-      &.first
-        +grid-span(1, 1, $columns: $business-insight)
-        clear: both
-      &.second
-        +grid-span(1, 2, $columns: $business-insight)
-        clear: right
-      &.third
-        +grid-span(1, 3, $columns: $business-insight)
-        float: none
+// .panel-display.gsb-business-insights
+//   .gsb-bizin-3col-top,
+//   .gsb-bizin-3col-bottom
+//     +pie-clearfix
+//     .column
+//       width: 35.3%
+//       .panels-ipe-editing &
+//         width: 31.03448%
+//       &.first
+//         +grid-span(1, 1, $columns: $business-insight)
+//         clear: both
+//       &.second
+//         +grid-span(1, 2, $columns: $business-insight)
+//         clear: right
+//       &.third
+//         +grid-span(1, 3, $columns: $business-insight)
+//         float: none
 
 // EDITING LAYOUTS
 .panels-ipe-editing
