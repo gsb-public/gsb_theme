@@ -27,6 +27,7 @@
       width: 100%
 	
   .label-inline
+    font-weight: normal
     &:after
       content: "."
       height: 0
@@ -40,6 +41,7 @@
     line-height: 1.2
     font-family: $font-demi 
     color: $text-black
+    font-weight: normal
 
   .field-name-field-author
     font-size: 18px
@@ -75,10 +77,12 @@
   .field-name-field-learning-objective
     .label-above
       font-family: $font-demi
+      font-weight: normal
       padding: 6px 0px 4px
   .field-name-field-tag
+    .label-inline
+      font-weight: bold
     font-size: 14px
-    font-weight: bold
     line-height: 1.2
     padding: 12px 0px
     span
@@ -107,6 +111,10 @@
       color: $text-green
       &:hover
         color: $text-blue
+		
+  .field-name-field-permissions-statement
+    .label-inline
+      font-weight: bold
 		
   .field-name-field-link-document	
     div
