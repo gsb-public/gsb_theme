@@ -195,8 +195,6 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
   margin-left: 3px;
   font-family: "gsb";
   line-height: 1;
-  position: relative;
-  top: 2px;
   font-weight: normal;
   text-transform: lowercase;
 }
@@ -10702,7 +10700,7 @@ fieldset.collapsible .fieldset-legend {
   color: #aac4bf;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-right h3.label-above {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title, .node-faculty.view-mode-full .group-right h3.label-above {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -10711,7 +10709,7 @@ fieldset.collapsible .fieldset-legend {
   padding: 0;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2 {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title {
   font-size: 20px;
 }
 
@@ -10800,6 +10798,15 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-faculty.view-mode-full .group-right p:last-of-type {
   margin-bottom: 0;
+}
+
+.node-faculty.view-mode-full .field-name-field-teaching-materials,
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
+.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
+.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 .node-type-faculty #page-title {
@@ -10954,14 +10961,6 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-wrapper-academic {
   margin-bottom: 24px;
 }
-.node-faculty.view-mode-full .field-name-field-teaching-materials,
-.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
-.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
-.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.1;
-}
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section .file-size {
   display: none;
 }
@@ -10997,6 +10996,26 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-faculty.view-mode-full .field-name-field-center-affiliations:after {
   content: ", ";
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view {
+  margin-bottom: 24px;
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-row {
+  margin-bottom: 6px;
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a {
+  font-size: 18px;
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a:after {
+  content: "w" !important;
+  font-family: "gsb";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.1;
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-field-author {
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 .node-type-case #page-title {

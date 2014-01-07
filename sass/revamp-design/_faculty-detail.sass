@@ -53,6 +53,11 @@ $faculty-spacing: 24px
   &:last-of-type
     margin-bottom: 0
 
+%faculty-link
+  font-family: $font-demi
+  font-size: 14px
+  line-height: 1.1
+
 // Hide title on detail
 .node-type-faculty
   #page-title
@@ -220,9 +225,7 @@ $faculty-spacing: 24px
   .field-name-field-conf-presentations-section,
   .field-name-field-link-video-unlimited,
   .field-name-field-link-podcast-unlimited
-    font-family: $font-demi
-    font-size: 14px
-    line-height: 1.1
+    @extend %faculty-link
 
   // Presentations
   .field-name-field-conf-presentations-section
@@ -267,3 +270,26 @@ $faculty-spacing: 24px
   .field-name-field-center-affiliations
     &:after
       content: ", "
+
+  // Case Study EVA
+  .view-display-id-case_listing_entity_view
+    margin-bottom: $faculty-spacing
+    // Section title
+    h2.title
+      @extend %header-large
+    .views-row
+      margin-bottom: 6px
+    // Case title
+    .views-field-title a
+      @extend %faculty-link
+      font-size: 18px
+      &:after
+        content: "w" !important
+        font-family: "gsb"
+        font-weight: normal
+        font-size: 18px
+        line-height: 1.1
+    // Case authors
+    .views-field-field-author
+      font-size: 14px
+      line-height: 1.1
