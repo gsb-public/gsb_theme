@@ -1,0 +1,151 @@
+////////////////////////
+// Working Paper detail
+////////////////////////
+
+// Hide title on detail
+.node-type-working-paper
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-demi
+      font-size: 28px
+      font-weight: normal
+      line-height: 1.2
+
+// Detail page
+.node-working-paper
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+	
+  // Layout
+  &.ds-2col > .group-left
+    width: 840px
+    +breakpoint($bp-mobile-max)
+      width: 100%
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+  &.ds-2col > .group-right
+    float: right
+    width: 270px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0
+	
+  .label-inline
+    font-weight: normal
+    &:after
+      content: "."
+      height: 0
+      clear: both
+      visibility: hidden
+	  
+  .field-name-title h2 
+    font-size: 28px
+    padding-bottom : 12px
+    margin-top: 25px
+    line-height: 1.2
+    font-family: $font-demi 
+    color: $text-black
+    font-weight: normal
+
+  .field-name-field-author
+    font-size: 18px
+    line-height: 1.2
+    font-family: $font-demi
+
+  .field-name-field-business-insight-topic,
+  .field-name-field-year,
+  .field-name-field-item-id,
+    line-height: 1.2
+    font-size: 16px
+	
+  .field-name-field-item-id
+    &:before
+      color: $text-black
+      content: " | "
+      display: inline
+
+  .field-name-field-business-insight-topic
+    padding: 6px 0px 16px
+    font-family: $font-demi 
+    a
+      font-weight: normal
+      &:hover
+        color: $text-blue		
+
+
+  .field-name-field-tag
+    border-bottom: 1px #c4c4c4 solid
+    .label-inline
+      font-weight: bold
+    font-size: 14px
+    line-height: 1.2
+    padding-bottom: 26px
+    span
+      font-weight: normal
+
+  .field-name-field-link-document
+    border-bottom: 1px #c4c4c4 solid
+    font-size: 18px
+    line-height: 1.2
+    padding: 26px 0px
+    span
+      font-weight: bold
+    a
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+
+  &.ds-2col > .group-right		
+    @extend %bg-border-and-box-shadow
+    padding: 26px
+  .field-name-field-author-sunet-id-reference
+    border-top: 9px solid $teal-light
+    margin-top: -26px
+    padding-top: 12px
+    .label-above
+      font-family: $font-demi
+      font-size: 14px
+      line-height: 1
+      margin-bottom: 16px
+    .ds-1col
+      img
+        float: none
+        height: 130px
+        width: 130px
+        margin-right: 20px
+        margin-bottom: 20px
+        margin-top: 26px
+		  
+      .group-wrapper-name
+        font-size: 20px
+        font-family: $font-demi
+        font-weight: normal
+        line-height: 1.2
+        margin-left: 0
+        a
+          color: $link-green
+          font-family: $font-demi
+          font-size: 20px
+          line-height: 1.2
+          &:hover
+            color: $link-blue
+          &:after
+            content: "w"
+            font-family: "gsb"
+            font-size: 17px
+            line-height: 0
+
+      .group_wrapper_position
+        font-family: $font-demi
+        font-size: 20px
+        line-height: 1.2
