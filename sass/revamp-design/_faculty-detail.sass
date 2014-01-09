@@ -271,7 +271,7 @@ $faculty-spacing: 24px
     &:after
       content: ", "
 
-  // Case Study EVA
+  // Case Study EVA and Working Paper EVA
   .view-display-id-case_listing_entity_view
     margin-bottom: $faculty-spacing
     // Section title
@@ -279,7 +279,7 @@ $faculty-spacing: 24px
       @extend %header-large
     .views-row
       margin-bottom: 6px
-    // Case title
+    // Title
     .views-field-title a
       @extend %faculty-link
       font-size: 18px
@@ -289,7 +289,8 @@ $faculty-spacing: 24px
         font-weight: normal
         font-size: 18px
         line-height: 1.1
-    // Case authors
-    .views-field-field-author
+    // Authors and Publication Year
+    .views-field-field-author,
+    .views-field-field-year
       font-size: 14px
       line-height: 1.1
