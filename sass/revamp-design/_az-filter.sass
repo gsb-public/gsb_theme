@@ -1,6 +1,8 @@
 ///////////////////
 // A-Z last name filter
+// Original styling
 ///////////////////
+
 
 .pane-lastname-az-links
   +breakpoint($bp-mobile-max)
@@ -79,3 +81,86 @@
     left: 0
     &:before
       content: 'q'
+
+////////////////////
+// New Style Implementation
+// Faculty Listing
+////////////////////
+
+.gsb-az-filter
+  background: $grey-f
+  border-bottom: 1px solid $grey-c
+  +breakpoint($bp-mobile-max)
+    display: none
+  +clearfix
+  position: relative
+  margin-bottom: 30px
+  .item-list
+    display: block
+    height: 50px
+    margin: 0 45px
+    max-width: 790px
+    overflow: hidden
+    +breakpoint($bp-nexus-portrait)
+      padding: 0 66px
+    +breakpoint($bp-nexus-landscape)
+      padding: 0 66px
+    ul
+      margin: 0
+    li
+      font-family: $font-demi
+      float: left
+      line-height: 3.5
+      margin: 0
+      padding: 0
+      width: 37px
+      text-align: center
+      +breakpoint($bp-nexus-portrait)
+        width: 30px
+      +breakpoint($bp-nexus-landscape)
+        width: 30px
+      a
+        font-size: 16px
+        &.active
+          color: $text-black
+          &:hover
+            color: $link-blue
+        &:hover
+          color: $link-blue
+
+  .next, .prev
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    cursor: pointer
+    position: absolute
+    top: 0
+    width: 50px
+    height: 50px
+    text-align: center
+    line-height: 3.8
+    &:before
+      color: $red
+      font-family: "gsb"
+      font-size: 40px
+      line-height: 0
+    &:hover
+      &:before
+        color: $link-blue
+    &.disabled
+      cursor: default
+      &:before
+        color: $grey-c
+      &:hover
+        &:before
+        color: $grey-c
+
+  // Arrow icons
+  .next
+    right: 0
+    &:before
+      content: 'z'
+  .prev
+    left: 0
+    &:before
+      content: '['
