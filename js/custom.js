@@ -259,12 +259,12 @@
   /**
    * Modify collapsible functional for Filter regions and industry or anything else taxonomy
    */
-  Drupal.behaviors.colapsable_patch = {
+  Drupal.behaviors.collapsible_patch = {
     attach: function (context, settings) {
-         $('.exposed_filter_widget .views-exposed-widget').children('label:not(.colapsable_processed)').click(function(){
+         $('.exposed_filter_widget .views-exposed-widget').children('label:not(.collapsible_processed)').click(function(){
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed');
            $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle();
-         }).addClass('colapsable_processed');
+         }).addClass('collapsible_processed');
 
          //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
          var checkedInput = false;
