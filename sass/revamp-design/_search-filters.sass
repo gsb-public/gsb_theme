@@ -447,61 +447,77 @@ fieldset.collapsible .fieldset-legend
 // New filter styling
 // Faculty listing
 //////////////////
-.page-node-303141
+.view-faculty-filters
+
+  // Filters
+  .view-filters
+    background: #f5f5f5
+    margin-bottom: 30px
+
   // Hide a-z field
   #edit-last-name-wrapper
     display: none
-  .views-exposed-widgets
-    padding: 16px 26px
-  // Filter and search container
   .gsb-views-exposed-form
-    background: $grey-f
+    background: none
     border: 0
     -moz-box-shadow: 0
     -webkit-box-shadow: 0
     box-shadow: 0
     margin: 0
 
-  // Pane spacing
-  .pane-views-6568be020eeffad27e0b157ac6fda9c2
-    margin-bottom: 0 !important
-
   // Search
   #edit-search-wrapper
+    border-bottom: 1px solid $grey-c
+    margin-bottom: 18px
+    padding: 18px 0
     #edit-search
       width: 100%
 
-  // Filters
+  .views-widget
+    padding: 0 26px
+
+  .views-exposed-widget
+    label
+      color: $text-black
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1
+      margin-bottom: 18px
+
   .gsb-views-exposed-filter
     border-top: 3px solid $text-black
     legend
       margin-left: 0
     .form-type-select
       border-bottom: 1px solid $grey-c
-      padding-bottom: 26px
+      margin-bottom: 18px
+      padding-bottom: 18px
 
-    // Category labels
-    .fieldset-title
-      color: $text-black
-      font-family: $font-demi
-      font-size: 16px
-      font-weight: normal
-      line-height: 1
-      text-transform: none
-    .fieldset-wrapper
-      margin-left: 0
-    .form-item
-      margin: 0
 
     // Checkboxes in columns
     .bef-checkboxes
-      -moz-column-count: 4
-      -webkit-column-count: 4
-      column-count: 4
+      // -moz-column-count: 4
+      // -webkit-column-count: 4
+      // column-count: 4
     // Checkbox labels
-    .form-item label
-      font-family: $font-demi
-      font-size: 14px
+    .form-item
       font-weight: normal
-      line-height: 1
-      text-transform: none
+      margin-top: 0
+      margin-bottom: 10px
+      position: relative
+      vertical-align: top
+      +clearfix
+      label
+        color: $text-black
+        float: left
+        font-family: $font-demi
+        font-size: 14px
+        font-weight: normal
+        line-height: 1.5
+        margin-bottom: 0
+        margin-left: 20px
+        margin-right: 0
+        text-transform: none
+      input
+        position: absolute
+        top: 2px
