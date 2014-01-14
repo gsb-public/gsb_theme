@@ -95,6 +95,13 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($is_search_form || $is_filter_form) {
     $form['#attributes']['class'][] = 'gsb-views-exposed-form';
   }
+
+  if ($form_state['view']->name == 'faculty_filters') {
+    // Trigger the alternate exposed form, see
+    // gsb_theme_preprocess_views_exposed_form().
+    $form['#gsb_feature_faculty_display'] = TRUE;
+    $form['#gsb_az_filter_names'] = $form_state['view']->display_handler->get_option('gsb_az_filter');
+  }
 }
 
 /**
@@ -176,6 +183,24 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
   // Add the 'Filter by' to the filter title on the admissions events pane
   if ($variables['form']['#id'] == 'views-exposed-form-admission-events-pane') {
     $variables['filter_title'] = t('Filter by');
+  }
+
+  if (isset($variables['form']['#gsb_feature_faculty_display'])) {
+    $search_form_name = 'filter-field_search_field_value';
+    $az_form_names = $variables['form']['#gsb_az_filter_names'];
+    // Split the search widget to go above the search button.
+    if (isset($variables['widgets'][$search_form_name])) {
+      $variables['search_widget'] = $variables['widgets'][$search_form_name];
+      unset($variables['widgets'][$search_form_name]);
+    }
+    $variables['az_widgets'] = array();
+    foreach ($az_form_names as $az_form_name) {
+      $az_form_name = "filter-gsb-az-filter gsb-az-filter-$az_form_name";
+      if (isset($variables['widgets'][$az_form_name])) {
+        $variables['az_widgets'][$az_form_name] = $variables['widgets'][$az_form_name];
+        unset($variables['widgets'][$az_form_name]);
+      }
+    }
   }
 }
 
