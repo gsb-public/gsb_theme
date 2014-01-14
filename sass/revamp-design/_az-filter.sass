@@ -87,7 +87,7 @@
 // Faculty Listing
 ////////////////////
 
-.gsb-az-filter
+.views-widget-filter-gsb-az-filter
   background: $grey-f
   border-bottom: 1px solid $grey-c
   +breakpoint($bp-mobile-max)
@@ -95,18 +95,16 @@
   +clearfix
   position: relative
   margin-bottom: 30px
-  .item-list
+  ul
     display: block
     height: 50px
     margin: 0 45px
-    max-width: 790px
     overflow: hidden
+    padding: 0
     +breakpoint($bp-nexus-portrait)
       padding: 0 66px
     +breakpoint($bp-nexus-landscape)
       padding: 0 66px
-    ul
-      margin: 0
     li
       font-family: $font-demi
       float: left
@@ -128,7 +126,7 @@
         &:hover
           color: $link-blue
 
-  .next, .prev
+  .prev-next
     -moz-user-select: none
     -webkit-user-select: none
     -ms-user-select: none
@@ -156,11 +154,12 @@
         color: $grey-c
 
   // Arrow icons
-  .next
-    right: 0
-    &:before
-      content: 'z'
   .prev
     left: 0
     &:before
       content: '['
+  .next
+    right: 0
+    &:before
+      content: 'z'
+
