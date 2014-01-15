@@ -105,7 +105,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
 
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by name');
+    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
   }
 
 }
