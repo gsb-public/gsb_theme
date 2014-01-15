@@ -102,6 +102,12 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['#gsb_feature_faculty_display'] = TRUE;
     $form['#gsb_az_filter_names'] = $form_state['view']->display_handler->get_option('gsb_az_filter');
   }
+
+  if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by name');
+  }
+
 }
 
 /**
@@ -226,7 +232,7 @@ function gsb_theme_preprocess_field(&$variables, $hook) {
       }
     }
   }
-  
+
   // Remove 'clearfix' class from case fields
   $element = $variables['element'];
   $key = array_search('clearfix', $variables['classes_array']);
