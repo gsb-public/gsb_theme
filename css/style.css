@@ -7545,6 +7545,7 @@ fieldset.collapsible .fieldset-legend {
 .view-faculty-filters .gsb-views-exposed-form {
   background: none;
   border: 0;
+  border-top: 3px solid #231f20;
   -moz-box-shadow: 0;
   -webkit-box-shadow: 0;
   box-shadow: 0;
@@ -7556,7 +7557,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-faculty-filters .search-wrap-faculty {
   border-bottom: 1px solid #cccccc;
-  margin-bottom: 18px;
   padding: 18px 26px;
   position: relative;
   overflow: hidden;
@@ -7603,26 +7603,37 @@ fieldset.collapsible .fieldset-legend {
 .no-js .view-faculty-filters #edit-submit-faculty-filters:hover, .no-svg .view-faculty-filters #edit-submit-faculty-filters:hover {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
 }
-.view-faculty-filters .views-exposed-widget label {
+.view-faculty-filters .views-widget-filter-secondary {
+  margin: 18px 0;
+}
+.view-faculty-filters .views-widget-filter-secondary legend {
+  line-height: 1;
+  margin-left: 0;
+}
+.view-faculty-filters .views-widget-filter-secondary .fieldset-title {
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+}
+.view-faculty-filters .views-widget-filter-secondary #edit-secondary {
+  height: auto;
+  padding: 0 26px;
+}
+.view-faculty-filters .views-widget-filter-secondary label {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
   margin-bottom: 18px;
 }
-.view-faculty-filters .gsb-views-exposed-filter {
-  border-top: 3px solid #231f20;
-}
-.view-faculty-filters .gsb-views-exposed-filter legend {
-  margin-left: 0;
-}
-.view-faculty-filters .gsb-views-exposed-filter .form-type-select {
+.view-faculty-filters .views-widget-filter-secondary .form-type-select {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 18px;
   padding-bottom: 18px;
 }
-.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item,
-.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item {
+.view-faculty-filters .views-widget-filter-secondary .form-type-select .form-item {
   font-weight: normal;
   margin-bottom: 0;
   margin-top: 0;
@@ -7631,8 +7642,7 @@ fieldset.collapsible .fieldset-legend {
   overflow: hidden;
   *zoom: 1;
 }
-.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item label,
-.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item label {
+.view-faculty-filters .views-widget-filter-secondary .form-type-select .form-item label {
   color: #231f20;
   float: left;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7644,8 +7654,7 @@ fieldset.collapsible .fieldset-legend {
   margin-right: 0;
   text-transform: none;
 }
-.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item input,
-.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item input {
+.view-faculty-filters .views-widget-filter-secondary .form-type-select .form-item input {
   position: absolute;
   top: 2px;
 }
@@ -9556,6 +9565,7 @@ fieldset.collapsible .fieldset-legend {
 
 .views-widget-filter-gsb-az-filter {
   background: #f2f2f2;
+  border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   overflow: hidden;
   *zoom: 1;
@@ -9568,7 +9578,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .views-widget-filter-gsb-az-filter .container {
   overflow: hidden;
-  margin: 0 45px;
+  margin: 0 52px;
 }
 .views-widget-filter-gsb-az-filter ul {
   display: block;
@@ -9577,23 +9587,13 @@ fieldset.collapsible .fieldset-legend {
   overflow: hidden;
   padding: 0;
 }
-@media (min-width: 37.5em) and (max-width: 37.625em) {
-  .views-widget-filter-gsb-az-filter ul {
-    padding: 0 66px;
-  }
-}
-@media (min-width: 60.0625em) and (max-width: 60.1875em) {
-  .views-widget-filter-gsb-az-filter ul {
-    padding: 0 66px;
-  }
-}
 .views-widget-filter-gsb-az-filter li {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   float: left;
   line-height: 3.5;
   margin: 0;
   padding: 0;
-  width: 37px;
+  width: 36px;
   text-align: center;
 }
 @media (min-width: 37.5em) and (max-width: 37.625em) {
@@ -9649,13 +9649,13 @@ fieldset.collapsible .fieldset-legend {
   color: #cccccc;
 }
 .views-widget-filter-gsb-az-filter .prev {
-  left: 0;
+  left: 8px;
 }
 .views-widget-filter-gsb-az-filter .prev:before {
   content: "[";
 }
 .views-widget-filter-gsb-az-filter .next {
-  right: 0;
+  right: 8px;
 }
 .views-widget-filter-gsb-az-filter .next:before {
   content: "z";

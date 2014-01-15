@@ -464,6 +464,7 @@ fieldset.collapsible .fieldset-legend
   .gsb-views-exposed-form
     background: none
     border: 0
+    border-top: 3px solid $text-black
     -moz-box-shadow: 0
     -webkit-box-shadow: 0
     box-shadow: 0
@@ -475,7 +476,6 @@ fieldset.collapsible .fieldset-legend
     margin-bottom: 0
   .search-wrap-faculty
     border-bottom: 1px solid $grey-c
-    margin-bottom: 18px
     padding: 18px 26px
     position: relative
     +clearfix
@@ -515,50 +515,57 @@ fieldset.collapsible .fieldset-legend
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
-  // Filters
-  .views-exposed-widget
+  // Filter section
+  .views-widget-filter-secondary
+    margin: 18px 0
+    // Fieldset title
+    legend
+      line-height: 1
+      margin-left: 0
+    .fieldset-title
+      color: $text-black
+      font-family: $font-demi
+      font-size: 18px
+      font-weight: normal
+      line-height: 1
+
+    #edit-secondary
+      height: auto
+      padding: 0 26px
     label
       color: $text-black
       font-family: $font-demi
       font-weight: normal
       line-height: 1
       margin-bottom: 18px
-
-  .gsb-views-exposed-filter
-    border-top: 3px solid $text-black
-    legend
-      margin-left: 0
     .form-type-select
       border-bottom: 1px solid $grey-c
       margin-bottom: 18px
       padding-bottom: 18px
-
-  #edit-term-node-tid-depth-wrapper,
-  #edit-term-node-tid-depth-1-wrapper
-    // Checkboxes in columns
-    .bef-checkboxes
-      // -moz-column-count: 4
-      // -webkit-column-count: 4
-      // column-count: 4
-    // Checkbox labels
-    .form-item
-      font-weight: normal
-      margin-bottom: 0
-      margin-top: 0
-      position: relative
-      vertical-align: top
-      +clearfix
-      label
-        color: $text-black
-        float: left
-        font-family: $font-demi
-        font-size: 14px
+      // Checkboxes in columns
+      .bef-checkboxes
+        // -moz-column-count: 4
+        // -webkit-column-count: 4
+        // column-count: 4
+      // Checkbox labels
+      .form-item
         font-weight: normal
-        line-height: 1.5
         margin-bottom: 0
-        margin-left: 20px
-        margin-right: 0
-        text-transform: none
-      input
-        position: absolute
-        top: 2px
+        margin-top: 0
+        position: relative
+        vertical-align: top
+        +clearfix
+        label
+          color: $text-black
+          float: left
+          font-family: $font-demi
+          font-size: 14px
+          font-weight: normal
+          line-height: 1.5
+          margin-bottom: 0
+          margin-left: 20px
+          margin-right: 0
+          text-transform: none
+        input
+          position: absolute
+          top: 2px

@@ -89,6 +89,7 @@
 
 .views-widget-filter-gsb-az-filter
   background: $grey-f
+  border-top: 1px solid $grey-c
   border-bottom: 1px solid $grey-c
   +breakpoint($bp-mobile-max)
     display: none
@@ -96,24 +97,20 @@
   position: relative
   .container
     overflow: hidden
-    margin: 0 45px
+    margin: 0 52px
   ul
     display: block
     height: 50px
     margin: 0
     overflow: hidden
     padding: 0
-    +breakpoint($bp-nexus-portrait)
-      padding: 0 66px
-    +breakpoint($bp-nexus-landscape)
-      padding: 0 66px
   li
     font-family: $font-demi
     float: left
     line-height: 3.5
     margin: 0
     padding: 0
-    width: 37px
+    width: 36px
     text-align: center
     +breakpoint($bp-nexus-portrait)
       width: 30px
@@ -157,10 +154,10 @@
 
   // Arrow icons
   .prev
-    left: 0
+    left: 8px
     &:before
       content: '['
   .next
-    right: 0
+    right: 8px
     &:before
       content: 'z'
