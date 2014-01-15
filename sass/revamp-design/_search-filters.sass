@@ -450,7 +450,8 @@ fieldset.collapsible .fieldset-legend
 
 // Faculty listing
 .view-faculty-filters
-
+  .ajax-progress-throbber
+    display: none
   // Filters container
   .view-filters
     background: $grey-f
@@ -465,9 +466,9 @@ fieldset.collapsible .fieldset-legend
     background: none
     border: 0
     border-top: 3px solid $text-black
-    -moz-box-shadow: 0
-    -webkit-box-shadow: 0
-    box-shadow: 0
+    -moz-box-shadow: none
+    -webkit-box-shadow: none
+    box-shadow: none
     margin: 0
 
   // Search field
@@ -522,6 +523,8 @@ fieldset.collapsible .fieldset-legend
     legend
       line-height: 1
       margin-left: 0
+    .fieldset-wrapper
+      margin-left: 26px
     .fieldset-title
       color: $text-black
       font-family: $font-demi
@@ -532,40 +535,47 @@ fieldset.collapsible .fieldset-legend
     #edit-secondary
       height: auto
       padding: 0 26px
-    label
-      color: $text-black
-      font-family: $font-demi
-      font-weight: normal
-      line-height: 1
-      margin-bottom: 18px
     .form-type-select
       border-bottom: 1px solid $grey-c
       margin-bottom: 18px
       padding-bottom: 18px
+      &:last-of-type
+        border-bottom: 0
+        margin-bottom: 0
+        padding-bottom: 0
+      label
+        color: $text-black
+        font-family: $font-demi
+        font-size: 16px
+        font-weight: normal
+        line-height: 1
+        margin-bottom: 18px
+        text-transform: none
       // Checkboxes in columns
-      .bef-checkboxes
-        // -moz-column-count: 4
-        // -webkit-column-count: 4
-        // column-count: 4
+      .form-checkboxes
+        -moz-column-count: 4
+        -webkit-column-count: 4
+        column-count: 4
       // Checkbox labels
       .form-item
         font-weight: normal
-        margin-bottom: 0
+        margin-bottom: 12px
         margin-top: 0
+        padding-left: 22px
         position: relative
         vertical-align: top
         +clearfix
         label
           color: $text-black
-          float: left
+          display: inline-block
           font-family: $font-demi
           font-size: 14px
           font-weight: normal
-          line-height: 1.5
+          line-height: 1.2
           margin-bottom: 0
-          margin-left: 20px
           margin-right: 0
           text-transform: none
+          vertical-align: top
         input
           position: absolute
-          top: 2px
+          left: 0
