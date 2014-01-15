@@ -282,15 +282,18 @@ $faculty-spacing: 24px
     // Title
     .views-field-title a
       @extend %faculty-link
-      font-size: 18px
       &:after
         content: "w" !important
         font-family: "gsb"
         font-weight: normal
-        font-size: 18px
+        font-size: 14px
         line-height: 1.1
     // Authors and Publication Year
+    .views-field-field-link-document,
     .views-field-field-author,
     .views-field-field-year
       font-size: 14px
       line-height: 1.1
+    .views-field-field-link-document
+      a[href$=".pdf"]:after
+        vertical-align: baseline
