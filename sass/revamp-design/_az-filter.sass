@@ -94,37 +94,39 @@
     display: none
   +clearfix
   position: relative
-  margin-bottom: 30px
+  .container
+    overflow: hidden
+    margin: 0 45px
   ul
     display: block
     height: 50px
-    margin: 0 45px
+    margin: 0
     overflow: hidden
     padding: 0
     +breakpoint($bp-nexus-portrait)
       padding: 0 66px
     +breakpoint($bp-nexus-landscape)
       padding: 0 66px
-    li
-      font-family: $font-demi
-      float: left
-      line-height: 3.5
-      margin: 0
-      padding: 0
-      width: 37px
-      text-align: center
-      +breakpoint($bp-nexus-portrait)
-        width: 30px
-      +breakpoint($bp-nexus-landscape)
-        width: 30px
-      a
-        font-size: 16px
-        &.active
-          color: $text-black
-          &:hover
-            color: $link-blue
-        &:hover
-          color: $link-blue
+  li
+    font-family: $font-demi
+    float: left
+    line-height: 3.5
+    margin: 0
+    padding: 0
+    width: 37px
+    text-align: center
+    +breakpoint($bp-nexus-portrait)
+      width: 30px
+    +breakpoint($bp-nexus-landscape)
+      width: 30px
+  a
+    font-size: 16px
+    &.active
+      color: $text-black
+      &:hover
+        color: $link-blue
+    &:hover
+      color: $link-blue
 
   .prev-next
     -moz-user-select: none
@@ -162,4 +164,3 @@
     right: 0
     &:before
       content: 'z'
-
