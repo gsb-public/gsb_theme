@@ -7536,7 +7536,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .view-faculty-filters .view-filters {
-  background: whitesmoke;
+  background: #f2f2f2;
   margin-bottom: 30px;
 }
 .view-faculty-filters #edit-last-name-wrapper {
@@ -7550,13 +7550,32 @@ fieldset.collapsible .fieldset-legend {
   box-shadow: 0;
   margin: 0;
 }
-.view-faculty-filters #edit-search-wrapper {
+.view-faculty-filters .form-item.form-item-search {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.view-faculty-filters .search-wrap-faculty {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 18px;
-  padding: 18px 0;
-}
-.view-faculty-filters #edit-search-wrapper #edit-search {
+  padding: 18px 26px;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
   width: 100%;
+}
+.view-faculty-filters .search-wrap-faculty #edit-search {
+  height: 36px;
+  width: 100%;
+}
+.view-faculty-filters #edit-search-wrapper {
+  float: left;
+  width: 100%;
+  margin-right: -36px;
+  padding-right: 36px;
+}
+.view-faculty-filters .views-submit-button {
+  float: left;
+  width: 36px;
 }
 .view-faculty-filters #edit-submit-faculty-filters {
   text-indent: 1000px;
@@ -7567,28 +7586,22 @@ fieldset.collapsible .fieldset-legend {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   border: none;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
 }
 .svg .view-faculty-filters #edit-submit-faculty-filters {
   background: url('../images/search-white.svg') no-repeat 60% 47%, #990000;
-}
-@media (max-width: 62.4375em) {
-  .svg .view-faculty-filters #edit-submit-faculty-filters {
-    background-size: 200%;
-  }
+  background-size: 60px;
 }
 .svg .view-faculty-filters #edit-submit-faculty-filters:hover {
   background: url('../images/search-white.svg') no-repeat 60% 47%, #2d6280;
+  background-size: 60px;
 }
 .no-js .view-faculty-filters #edit-submit-faculty-filters, .no-svg .view-faculty-filters #edit-submit-faculty-filters {
   background: url('../images/search-white.png') no-repeat 11px 11px, #990000;
 }
 .no-js .view-faculty-filters #edit-submit-faculty-filters:hover, .no-svg .view-faculty-filters #edit-submit-faculty-filters:hover {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
-}
-.view-faculty-filters .views-widget {
-  padding: 0 26px;
 }
 .view-faculty-filters .views-exposed-widget label {
   color: #231f20;
@@ -7608,16 +7621,18 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 18px;
   padding-bottom: 18px;
 }
-.view-faculty-filters .gsb-views-exposed-filter .form-item {
+.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item,
+.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item {
   font-weight: normal;
+  margin-bottom: 0;
   margin-top: 0;
-  margin-bottom: 10px;
   position: relative;
   vertical-align: top;
   overflow: hidden;
   *zoom: 1;
 }
-.view-faculty-filters .gsb-views-exposed-filter .form-item label {
+.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item label,
+.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item label {
   color: #231f20;
   float: left;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7629,7 +7644,8 @@ fieldset.collapsible .fieldset-legend {
   margin-right: 0;
   text-transform: none;
 }
-.view-faculty-filters .gsb-views-exposed-filter .form-item input {
+.view-faculty-filters #edit-term-node-tid-depth-wrapper .form-item input,
+.view-faculty-filters #edit-term-node-tid-depth-1-wrapper .form-item input {
   position: absolute;
   top: 2px;
 }

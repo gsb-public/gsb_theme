@@ -446,18 +446,21 @@ fieldset.collapsible .fieldset-legend
 
 ///////////////////
 // New filter styling
-// Faculty listing
 //////////////////
+
+// Faculty listing
 .view-faculty-filters
 
-  // Filters
+  // Filters container
   .view-filters
-    background: #f5f5f5
+    background: $grey-f
     margin-bottom: 30px
 
   // Hide a-z field
   #edit-last-name-wrapper
     display: none
+
+  // Remove old container styling
   .gsb-views-exposed-form
     background: none
     border: 0
@@ -466,14 +469,30 @@ fieldset.collapsible .fieldset-legend
     box-shadow: 0
     margin: 0
 
-  // Search
-  #edit-search-wrapper
+  // Search field
+  .form-item.form-item-search
+    margin-top: 0
+    margin-bottom: 0
+  .search-wrap-faculty
     border-bottom: 1px solid $grey-c
     margin-bottom: 18px
-    padding: 18px 0
+    padding: 18px 26px
+    position: relative
+    +clearfix
+    width: 100%
     #edit-search
+      height: 36px
       width: 100%
+  #edit-search-wrapper
+    float: left
+    width: 100%
+    margin-right: -36px
+    padding-right: 36px
 
+  // Search button
+  .views-submit-button
+    float: left
+    width: 36px
   #edit-submit-faculty-filters
     text-indent: 1000px
     -webkit-border-radius: 0
@@ -483,22 +502,20 @@ fieldset.collapsible .fieldset-legend
     border-top-right-radius: 50%
     border-bottom-right-radius: 50%
     border: none
-    width: 44px
-    height: 44px
+    width: 36px
+    height: 36px
     .svg &
       +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
-      +breakpoint($bp-tablet-port-max)
-        background-size: 200%
+      background-size: 60px
       &:hover
         +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        background-size: 60px
     .no-js &, .no-svg &
       +background(image_url("search-white.png") no-repeat 11px 11px, $red)
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
-  .views-widget
-    padding: 0 26px
-
+  // Filters
   .views-exposed-widget
     label
       color: $text-black
@@ -516,7 +533,8 @@ fieldset.collapsible .fieldset-legend
       margin-bottom: 18px
       padding-bottom: 18px
 
-
+  #edit-term-node-tid-depth-wrapper,
+  #edit-term-node-tid-depth-1-wrapper
     // Checkboxes in columns
     .bef-checkboxes
       // -moz-column-count: 4
@@ -525,8 +543,8 @@ fieldset.collapsible .fieldset-legend
     // Checkbox labels
     .form-item
       font-weight: normal
+      margin-bottom: 0
       margin-top: 0
-      margin-bottom: 10px
       position: relative
       vertical-align: top
       +clearfix
