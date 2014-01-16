@@ -96,10 +96,15 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['#attributes']['class'][] = 'gsb-views-exposed-form';
   }
 
-  if ($form_state['view']->name == 'faculty_filters') {
-    // Trigger the alternate exposed form, see
-    // gsb_theme_preprocess_views_exposed_form().
-    $form['#gsb_feature_faculty_display'] = TRUE;
+  $split_search_views = array(
+    'faculty_filters',
+    'gsb_event',
+  );
+  if (in_array($form_state['view']->name, $split_search_views)) {
+    // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
+    $form['#gsb_theme_search_button'] = TRUE;
+    // Exclude the search text field from auto-submit.
+    $form['search']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
   }
 
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
@@ -190,11 +195,15 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
     $variables['filter_title'] = t('Filter by');
   }
 
-  if (isset($variables['form']['#gsb_feature_faculty_display'])) {
+  if (isset($variables['form']['#gsb_theme_search_button'])) {
+    // Allow for an alternate template.
+    $variables['theme_hook_suggestions'][] = 'views_exposed_form__split_search';
+
+    $variables['search_widgets'] = array();
     $search_form_name = 'filter-field_search_field_value';
     // Split the search widget to go above the search button.
     if (isset($variables['widgets'][$search_form_name])) {
-      $variables['search_widget'] = $variables['widgets'][$search_form_name];
+      $variables['search_widgets'][$search_form_name] = $variables['widgets'][$search_form_name];
       unset($variables['widgets'][$search_form_name]);
     }
   }
