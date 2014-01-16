@@ -100,7 +100,6 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Trigger the alternate exposed form, see
     // gsb_theme_preprocess_views_exposed_form().
     $form['#gsb_feature_faculty_display'] = TRUE;
-    $form['#gsb_az_filter_names'] = $form_state['view']->display_handler->get_option('gsb_az_filter');
   }
 
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
@@ -193,19 +192,10 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
 
   if (isset($variables['form']['#gsb_feature_faculty_display'])) {
     $search_form_name = 'filter-field_search_field_value';
-    $az_form_names = $variables['form']['#gsb_az_filter_names'];
     // Split the search widget to go above the search button.
     if (isset($variables['widgets'][$search_form_name])) {
       $variables['search_widget'] = $variables['widgets'][$search_form_name];
       unset($variables['widgets'][$search_form_name]);
-    }
-    $variables['az_widgets'] = array();
-    foreach ($az_form_names as $az_form_name) {
-      $az_form_name = "filter-gsb-az-filter gsb-az-filter-$az_form_name";
-      if (isset($variables['widgets'][$az_form_name])) {
-        $variables['az_widgets'][$az_form_name] = $variables['widgets'][$az_form_name];
-        unset($variables['widgets'][$az_form_name]);
-      }
     }
   }
 }
