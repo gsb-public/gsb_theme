@@ -14,13 +14,13 @@
       line-height: 1.2
 
 // Detail page
-.node-working-paper
+.node-working-paper.view-mode-full
   border-top: 3px solid $text-black
   padding-top: 2px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
-	
+
   // Layout
   &.ds-2col > .group-left
     width: 840px
@@ -36,7 +36,7 @@
     +breakpoint($bp-mobile-max)
       float: left
       padding-left: 0
-	
+
   .label-inline
     font-weight: normal
     &:after
@@ -44,13 +44,13 @@
       height: 0
       clear: both
       visibility: hidden
-	  
-  .field-name-title h2 
+
+  .field-name-title h2
     font-size: 28px
     padding-bottom : 12px
     margin-top: 25px
     line-height: 1.2
-    font-family: $font-demi 
+    font-family: $font-demi
     color: $text-black
     font-weight: normal
 
@@ -64,7 +64,7 @@
   .field-name-field-item-id,
     line-height: 1.2
     font-size: 16px
-	
+
   .field-name-field-item-id
     &:before
       color: $text-black
@@ -72,15 +72,16 @@
       display: inline
 
   .field-name-field-business-insight-topic
-    padding: 6px 0px 16px
-    font-family: $font-demi 
+    margin-top: 6px
+    font-family: $font-demi
     a
       font-weight: normal
       &:hover
-        color: $text-blue		
+        color: $text-blue
 
   .field-name-field-description
-    padding-bottom: 26px
+    margin-bottom: 26px
+    margin-top: 16px
 
   .field-name-field-tag
     border-bottom: 1px #c4c4c4 solid
@@ -107,7 +108,7 @@
       &:hover
         +background(linear-gradient(top, #18455f, $text-blue))
 
-  &.ds-2col > .group-right		
+  &.ds-2col > .group-right
     @extend %bg-border-and-box-shadow
     padding: 26px
   .field-name-field-author-sunet-id-reference
@@ -127,7 +128,7 @@
         margin-right: 20px
         margin-bottom: 20px
         margin-top: 26px
-		  
+
       .group-wrapper-name
         font-size: 20px
         font-family: $font-demi
