@@ -15,17 +15,17 @@
 
 // Detail page
 .node-case.view-mode-full
-  border-top: 3px solid $text-black
-  padding-top: 2px
-  +breakpoint($bp-mobile-max)
-    border-top: 0
-    padding-top: 0
-
   // Layout
   &.ds-2col > .group-left
-    width: 840px
+    margin-right: -300px
+    width: 100%
     +breakpoint($bp-mobile-max)
-      width: 100%
+      border-top: 0
+      padding-top: 0
+    .group-left-inner
+      border-top: 3px solid $text-black
+      margin-right: 300px
+      padding-top: 2px
     img
       display: block
     +breakpoint($bp-mobile-max)
