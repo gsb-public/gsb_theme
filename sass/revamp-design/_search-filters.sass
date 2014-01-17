@@ -525,12 +525,15 @@ fieldset.collapsible .fieldset-legend
       margin-left: 0
     .fieldset-wrapper
       margin-left: 26px
+      padding-top: 18px
     .fieldset-title
       color: $text-black
       font-family: $font-demi
       font-size: 18px
       font-weight: normal
       line-height: 1
+    .form-item
+      margin: 0
 
     #edit-secondary
       height: auto
@@ -552,13 +555,14 @@ fieldset.collapsible .fieldset-legend
         margin-bottom: 18px
         text-transform: none
       // Checkboxes in columns
-      .form-checkboxes
+      .bef-checkboxes
         -moz-column-count: 4
         -webkit-column-count: 4
         column-count: 4
-      // Checkbox labels
+      // Checkboxes
       .form-item
         font-weight: normal
+        line-height: 1
         margin-bottom: 12px
         margin-top: 0
         padding-left: 22px
@@ -575,7 +579,8 @@ fieldset.collapsible .fieldset-legend
           margin-bottom: 0
           margin-right: 0
           text-transform: none
-          vertical-align: top
+          vertical-align: text-top
         input
           position: absolute
           left: 0
+          top: 2px
