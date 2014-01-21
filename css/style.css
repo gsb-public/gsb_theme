@@ -147,7 +147,8 @@ dfn {
   border-top: 10px #231f20 solid;
 }
 
-.view-faculty-filters .gsb-views-exposed-form, .node-case.view-mode-full.ds-2col > .group-left .group-left-inner, .node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner, .node-book.view-mode-full.ds-2col > .group-left .group-left-inner {
+.view-faculty-filters .gsb-views-exposed-form, .node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner,
+.node-case.view-mode-full.ds-2col > .group-left .group-left-inner, .node-book.view-mode-full.ds-2col > .group-left .group-left-inner {
   border-top: 3px #231f20 solid;
 }
 
@@ -11308,61 +11309,6 @@ fieldset.collapsible .fieldset-legend {
   display: none;
 }
 
-.node-case.view-mode-full.ds-2col > .group-left {
-  margin-right: -300px;
-  width: 100%;
-}
-@media (max-width: 35.5em) {
-  .node-case.view-mode-full.ds-2col > .group-left {
-    border-top: 0;
-    padding-top: 0;
-  }
-}
-.node-case.view-mode-full.ds-2col > .group-left .group-left-inner {
-  margin-right: 300px;
-  padding-top: 2px;
-}
-.node-case.view-mode-full.ds-2col > .group-left img {
-  display: block;
-}
-@media (max-width: 35.5em) {
-  .node-case.view-mode-full.ds-2col > .group-left {
-    margin-bottom: 20px;
-  }
-}
-.node-case.view-mode-full.ds-2col > .group-right {
-  float: right;
-  width: 270px;
-}
-@media (max-width: 35.5em) {
-  .node-case.view-mode-full.ds-2col > .group-right {
-    float: left;
-    padding-left: 0;
-  }
-}
-.node-case.view-mode-full .label-inline {
-  font-weight: normal;
-}
-.node-case.view-mode-full .label-inline:after {
-  content: ".";
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.node-case.view-mode-full .field-name-title h2 {
-  font-size: 28px;
-  padding-bottom: 12px;
-  margin-top: 25px;
-  line-height: 1.2;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #231f20;
-  font-weight: normal;
-}
-.node-case.view-mode-full .field-name-field-author {
-  font-size: 18px;
-  line-height: 1.2;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .node-case.view-mode-full .field-name-field-business-insight-topic,
 .node-case.view-mode-full .field-name-field-citation,
 .node-case.view-mode-full .field-name-field-year,
@@ -11511,48 +11457,64 @@ fieldset.collapsible .fieldset-legend {
   display: none;
 }
 
-.node-working-paper.view-mode-full.ds-2col > .group-left {
+.node-working-paper.view-mode-full.ds-2col > .group-left,
+.node-case.view-mode-full.ds-2col > .group-left {
   margin-right: -300px;
   width: 100%;
 }
+@media (max-width: 43.75em) {
+  .node-working-paper.view-mode-full.ds-2col > .group-left,
+  .node-case.view-mode-full.ds-2col > .group-left {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 35.5em) {
-  .node-working-paper.view-mode-full.ds-2col > .group-left {
+  .node-working-paper.view-mode-full.ds-2col > .group-left,
+  .node-case.view-mode-full.ds-2col > .group-left {
     border-top: 0;
     padding-top: 0;
   }
 }
-.node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner {
+.node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner,
+.node-case.view-mode-full.ds-2col > .group-left .group-left-inner {
   margin-right: 300px;
   padding-top: 2px;
 }
-.node-working-paper.view-mode-full.ds-2col > .group-left img {
-  display: block;
-}
-@media (max-width: 35.5em) {
-  .node-working-paper.view-mode-full.ds-2col > .group-left {
-    margin-bottom: 20px;
+@media (max-width: 43.75em) {
+  .node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner,
+  .node-case.view-mode-full.ds-2col > .group-left .group-left-inner {
+    margin-right: 0;
   }
 }
-.node-working-paper.view-mode-full.ds-2col > .group-right {
+.node-working-paper.view-mode-full.ds-2col > .group-left img,
+.node-case.view-mode-full.ds-2col > .group-left img {
+  display: block;
+}
+.node-working-paper.view-mode-full.ds-2col > .group-right,
+.node-case.view-mode-full.ds-2col > .group-right {
   float: right;
   width: 270px;
 }
-@media (max-width: 35.5em) {
-  .node-working-paper.view-mode-full.ds-2col > .group-right {
+@media (max-width: 43.75em) {
+  .node-working-paper.view-mode-full.ds-2col > .group-right,
+  .node-case.view-mode-full.ds-2col > .group-right {
     float: left;
-    padding-left: 0;
   }
 }
-.node-working-paper.view-mode-full .label-inline {
+.node-working-paper.view-mode-full .label-inline,
+.node-case.view-mode-full .label-inline {
   font-weight: normal;
 }
-.node-working-paper.view-mode-full .label-inline:after {
+.node-working-paper.view-mode-full .label-inline:after,
+.node-case.view-mode-full .label-inline:after {
   content: ".";
   height: 0;
   clear: both;
   visibility: hidden;
 }
-.node-working-paper.view-mode-full .field-name-title h2 {
+.node-working-paper.view-mode-full .field-name-title h2,
+.node-case.view-mode-full .field-name-title h2 {
   font-size: 28px;
   padding-bottom: 12px;
   margin-top: 25px;
@@ -11561,11 +11523,13 @@ fieldset.collapsible .fieldset-legend {
   color: #231f20;
   font-weight: normal;
 }
-.node-working-paper.view-mode-full .field-name-field-author {
+.node-working-paper.view-mode-full .field-name-field-author,
+.node-case.view-mode-full .field-name-field-author {
   font-size: 18px;
   line-height: 1.2;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .node-working-paper.view-mode-full .field-name-field-business-insight-topic,
 .node-working-paper.view-mode-full .field-name-field-year,
 .node-working-paper.view-mode-full .field-name-field-item-id {

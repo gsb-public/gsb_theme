@@ -6,52 +6,11 @@
 .node-type-case
   +page-title
 
+// .node-case.view-mode-full
+  // See _working-paper-detail.sass for shared layout and base styles
+
 // Detail page
 .node-case.view-mode-full
-  // Layout
-  &.ds-2col > .group-left
-    margin-right: -300px
-    width: 100%
-    +breakpoint($bp-mobile-max)
-      border-top: 0
-      padding-top: 0
-    .group-left-inner
-      @extend %black-border-top-small
-      margin-right: 300px
-      padding-top: 2px
-    img
-      display: block
-    +breakpoint($bp-mobile-max)
-      margin-bottom: 20px
-  &.ds-2col > .group-right
-    float: right
-    width: 270px
-    +breakpoint($bp-mobile-max)
-      float: left
-      padding-left: 0
-
-  .label-inline
-    font-weight: normal
-    &:after
-      content: "."
-      height: 0
-      clear: both
-      visibility: hidden
-
-  .field-name-title h2
-    font-size: 28px
-    padding-bottom : 12px
-    margin-top: 25px
-    line-height: 1.2
-    font-family: $font-demi
-    color: $text-black
-    font-weight: normal
-
-  .field-name-field-author
-    font-size: 18px
-    line-height: 1.2
-    font-family: $font-demi
-
   .field-name-field-business-insight-topic,
   .field-name-field-citation,
   .field-name-field-year,
