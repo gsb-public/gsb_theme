@@ -32,3 +32,57 @@
   line-height: 1
   margin-bottom: 16px
   padding-top: 16px
+
+// Author block styling for faculty
+// Used on detail pages for case study, working paper
+=author-block
+  @extend %bg-border-and-box-shadow
+  padding: 26px
+  // Block label
+  .field-name-field-author-sunet-id-reference
+    border-top: 9px solid $teal-light
+    margin-top: -26px
+    padding-top: 12px
+    .label-above
+      font-family: $font-demi
+      font-size: 14px
+      line-height: 1
+      margin-bottom: 16px
+
+    .view-mode-people_fpp
+      margin-bottom: 26px
+      &:last-of-type
+        margin-bottom: 0
+
+    // Profile Image
+    img
+      float: none
+      height: 130px
+      width: 130px
+      margin-bottom: 20px
+
+    // Name
+    .group-wrapper-name
+      font-size: 20px
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1.2
+      margin-left: 0
+      a
+        color: $link-green
+        font-family: $font-demi
+        font-size: 20px
+        line-height: 1.2
+        &:hover
+          color: $link-blue
+        &:after
+          content: "w"
+          font-family: "gsb"
+          font-size: 17px
+          line-height: 0
+
+    // Rank
+    .group_wrapper_position
+      font-family: $font-demi
+      font-size: 20px
+      line-height: 1.2
