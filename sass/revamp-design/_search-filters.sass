@@ -469,7 +469,7 @@ fieldset.collapsible .fieldset-legend
   .gsb-views-exposed-form
     background: none
     border: 0
-    border-top: 3px solid $text-black
+    @extend %black-border-top-small
     -moz-box-shadow: none
     -webkit-box-shadow: none
     box-shadow: none
@@ -480,7 +480,7 @@ fieldset.collapsible .fieldset-legend
     margin-top: 0
     margin-bottom: 0
   .views-exposed-search-wrap
-    border-bottom: 1px solid $grey-c
+    @extend %divider-bottom
     padding: 18px 26px
     position: relative
     +clearfix
@@ -543,7 +543,7 @@ fieldset.collapsible .fieldset-legend
       height: auto
       padding: 0 26px
     .form-type-select
-      border-bottom: 1px solid $grey-c
+      @extend %divider-bottom
       margin-bottom: 18px
       padding-bottom: 18px
       &:last-of-type

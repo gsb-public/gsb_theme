@@ -11,6 +11,10 @@
   &:after
     clear: both
 
+////////////
+// Chevrons
+////////////
+
 %chevron-big
   content: "w"
   font-family: "gsb"
@@ -36,7 +40,7 @@
   +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
 
-//Show More button
+// Show More button
 %show-more-button
   border: 0
   color: $text-green
@@ -84,7 +88,9 @@
     border: 0
     color: $white
 
+///////////////
 // BACKGROUNDS
+///////////////
 
 // Grey solid background like on right sidebar related links
 %bg-grey-solid
@@ -94,7 +100,10 @@
 %bg-grey-gradient
   +background(linear-gradient(top, rgba($grey-f, 1), rgba($grey-f, 0)))
 
+////////////////////////////
 // BORDERS AND BOX SHADOWS
+////////////////////////////
+
 %divider-top
   border-top: 1px $grey-c solid
 
@@ -107,14 +116,26 @@
 
 // Grey border
 %border-grey
-  border: 1px solid #e4e4e4
+  border: 1px #e4e4e4 solid
 
-// Black top border
-%black-border-top
-  border-top: 10px $black solid
-
+// Red top border
 %red-border-top
   border-top: 10px $red solid
+
+// Black top border - big
+%black-border-top
+  border-top: 10px $text-black solid
+
+// Black top border - small
+%black-border-top-small
+  border-top: 3px $text-black solid
+
+// Teal top border
+%teal-border-top
+  border-top: 10px $teal-light solid
+
+
+// Box Shadows
 
 %box-shadow
   +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
