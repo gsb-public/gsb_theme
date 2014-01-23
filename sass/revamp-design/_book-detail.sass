@@ -1,3 +1,39 @@
 //////////////////
 // Book detail
 //////////////////
+
+// Detail page
+// Hide title on detail
+.node-type-book
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-demi
+      font-size: 28px
+      font-weight: normal
+      line-height: 1.2
+
+// Layout
+.node-book.view-mode-full
+  // Layout
+  &.ds-2col > .group-left
+    margin-right: -300px
+    width: 100%
+    +breakpoint($bp-mobile-max)
+      border-top: 0
+      padding-top: 0
+    .group-left-inner
+      @extend %black-border-top-small
+      margin-right: 300px
+      padding-top: 2px
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+  &.ds-2col > .group-right
+    float: right
+    width: 270px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0
