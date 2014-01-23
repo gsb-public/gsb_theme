@@ -73,8 +73,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-media-mention-filters-media-mention-list',
     'views-exposed-form-publications-filters-publication-list',
     'views-exposed-form-research-paper-filters-research-paper-list',
-    'views-exposed-form-faculty-filters-faculty-list'
-
+    'views-exposed-form-faculty-filters-faculty-list',
+    'views-exposed-form-gsb-working-paper-listing-working-paper-list',
   );
 
 
@@ -99,6 +99,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   $split_search_views = array(
     'faculty_filters',
     'gsb_event',
+    'gsb_working_paper_listing',
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
