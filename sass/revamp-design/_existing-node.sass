@@ -10,7 +10,7 @@
 
 // Teaser Content styling
 .view-mode-teaser
-  padding: 30px 24px
+  padding: 26px
 
   // Image
   .field-name-field-file-single-public,
@@ -39,13 +39,12 @@
     a
       color: $red
       &:hover
-        border-bottom: 1px solid $text-blue
-        color: $text-blue
+        color: $link-blue
     color: $text-black
-    font-size: 26px
+    font-size: 20px
     font-weight: bold
-    line-height: 30px
-    margin-bottom: 20px
+    line-height: 1.2
+    margin-bottom: 6px
     text-transform: none
 
   // Hide tags labels on teasers
@@ -55,9 +54,10 @@
   // Editorial Summary
   .field-name-field-editorial-summary,
   .field-name-field-body
-    font-size: 14px
-    line-height: 18px
-    margin: 12px 0
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.2
+    margin-top: 12px
     max-width: 600px
 
 // Event icon on landing
@@ -111,3 +111,34 @@
       position: relative
       top: 1px
       left: 7px
+
+// Book, Case and Working Paper styles
+
+////////////////
+// Featured label
+////////////////
+.featured-label
+  @extend %taupe-border-top
+  display: inline-block
+  font-size: 12px
+  line-height: 1.2
+  padding-top: 6px
+  position: relative
+  top: -26px
+
+// Authors
+.field-collection-item-field-authors.view-mode-existing_node_teaser
+  font-family: $font-demi
+  font-size: 16px
+  font-weight: normal
+  line-height: 1.2
+  span:nth-of-type(2n)
+    &:before
+      content: " "
+
+// Book image
+.narrow-view .pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public
+  float: none
+  margin: 0
+  margin-bottom: 12px
+  max-width: 150px

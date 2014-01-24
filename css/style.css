@@ -156,6 +156,10 @@ dfn {
   border-top: 10px #aac4bf solid;
 }
 
+.featured-label {
+  border-top: 10px #c2b7a1 solid;
+}
+
 .node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
 .person-list-view,
 .pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
@@ -7854,7 +7858,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .view-mode-teaser {
-  padding: 30px 24px;
+  padding: 26px;
 }
 .view-mode-teaser .field-name-field-file-single-public,
 .view-mode-teaser .field-name-field-image-single-public {
@@ -7882,10 +7886,10 @@ fieldset.collapsible .fieldset-legend {
 .view-mode-teaser h2,
 .view-mode-teaser h3 {
   color: #231f20;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
-  line-height: 30px;
-  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-bottom: 6px;
   text-transform: none;
 }
 .view-mode-teaser h2 a,
@@ -7894,7 +7898,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-mode-teaser h2 a:hover,
 .view-mode-teaser h3 a:hover {
-  border-bottom: 1px solid #2d6280;
   color: #2d6280;
 }
 .view-mode-teaser .group-tags-wrapper h3 {
@@ -7902,9 +7905,10 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-mode-teaser .field-name-field-editorial-summary,
 .view-mode-teaser .field-name-field-body {
-  font-size: 14px;
-  line-height: 18px;
-  margin: 12px 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 12px;
   max-width: 600px;
 }
 
@@ -7939,6 +7943,32 @@ fieldset.collapsible .fieldset-legend {
   position: relative;
   top: 1px;
   left: 7px;
+}
+
+.featured-label {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.2;
+  padding-top: 6px;
+  position: relative;
+  top: -26px;
+}
+
+.field-collection-item-field-authors.view-mode-existing_node_teaser {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.field-collection-item-field-authors.view-mode-existing_node_teaser span:nth-of-type(2n):before {
+  content: " ";
+}
+
+.narrow-view .pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public {
+  float: none;
+  margin: 0;
+  margin-bottom: 12px;
+  max-width: 150px;
 }
 
 .pane-gsb-feature-faculty-display-az-list .pane-content {
