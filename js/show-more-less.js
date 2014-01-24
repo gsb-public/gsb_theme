@@ -82,7 +82,7 @@
    * @param counter
    */
   Drupal.showMoreLess.toggler = function($wrapper, type, counter) {
-    var $toggler, id, $element;
+    var $toggler, id, $element, $openAll, $closeAll;
 
     // Hide the overflow.
     $wrapper.css('overflow', 'hidden');
@@ -110,6 +110,34 @@
       }
 
       // We don't want the click event to allow the site to redirect.
+      e.preventDefault();
+    });
+
+    // Add click event to open all toggle.
+    $openAll = $wrapper.parent('.show-more-less').find('.show-more-less-open-all');
+    $openAll.click(function(e) {
+      Drupal.showMoreLess.openAll();
+      e.preventDefault();
+    });
+
+    // Add click event to close all toggle.
+    $closeAll = $wrapper.parent('.show-more-less').find('.show-more-less-close-all');
+    $closeAll.click(function(e) {
+      Drupal.showMoreLess.closeAll();
+      e.preventDefault();
+    });
+
+    // Add click event to open all/close all toggle.
+    $toggleAll = $wrapper.parent('.show-more-less').find('.show-more-less-toggle-all');
+    $toggleAll.click(function(e) {
+      if ($(this).hasClass('show-more-less-toggle-all-open')) {
+        Drupal.showMoreLess.closeAll();
+        $('.show-more-less-toggle-all').removeClass('show-more-less-toggle-all-open').addClass('show-more-less-toggle-all-closed').text(Drupal.t('Open All'));
+      }
+      else {
+        Drupal.showMoreLess.openAll();
+        $('.show-more-less-toggle-all').removeClass('show-more-less-toggle-all-closed').addClass('show-more-less-toggle-all-open').text(Drupal.t('Close All'));
+      }
       e.preventDefault();
     });
 
@@ -290,7 +318,7 @@
       // Check ot see if it's currently open
       if ($element.find('.show-more-less-open')) {
         // Find the type and close it
-        type = Drupal.showMoreless.findType($element);
+        type = Drupal.showMoreLess.findType($element);
         Drupal.showMoreLess.close($element, type);
       }
     });
