@@ -14,7 +14,7 @@
 (function ($) {
   Drupal.behaviors.showMoreLess = {
     attach: function (context) {
-      var counter, minimumToLaunch, $wrapper, $wrapperUL, $wrapperDiv, lineHeight;
+      var counter, minimumToLaunch, $wrapper, $itemsWrapper, lineHeight, type, divHeight, numRows;
 
       // Start a counter.
       counter = 0;
@@ -26,47 +26,47 @@
         // Add a class to the wrapper to make it unique.
         $wrapper.addClass('show-more-less-' + counter);
 
-        // Get the minimum number needed to use show more/less
+        // Get type of element.
+        type = Drupal.showMoreLess.findType($wrapper);
+
+        switch(type) {
+          case 'list':
+            // Find wrapper
+            $itemsWrapper = $wrapper.find('ul');
+            // Get the number of rows
+            numRows = $itemsWrapper.children('li').length;
+            break;
+
+          case 'view':
+            // Find wrapper
+            $itemsWrapper = $wrapper.find('.view-content');
+            // Get the number of rows
+            numRows = $itemsWrapper.find('.views-row').length;
+            break;
+
+          case 'text':
+            // Find wrapper
+            $itemsWrapper = $wrapper.find('div.show-more-less-wrapper');
+
+            // Get the lineHeight of the inside text so we can calculate number
+            // of lines.
+            lineHeight = $itemsWrapper.find(':first').css('line-height');
+            lineHeight = parseFloat(lineHeight);
+
+            // Get the entire div height.
+            divHeight = $itemsWrapper.height();
+            // Calculate the number of rows.
+            numRows = divHeight/lineHeight;
+            break;
+        }
+
+        // Get the minimum number of items.
         minimumToLaunch = parseInt(Drupal.showMoreLess.getSetting($wrapper, 'min'));
 
-
-        // Check to see if it's a text list.
-        if ($wrapper.hasClass('field-type-text')) {
-          $wrapperUL = $wrapper.find('ul');
-
-          // Make sure we have the minimum length.
-          if ($wrapperUL.children('li').length >= minimumToLaunch) {
-            // Build our toggler
-            Drupal.showMoreLess.toggler($wrapperUL, 'list', counter);
-          }
-        }
-        // Check to see if it's a view.
-        else if ($wrapper.hasClass('view')) {
-          $wrapperDiv = $wrapper.find('.view-content');
-
-          // Make sure we have the minimum length of lines.
-          if ($wrapperDiv.find('.views-row').length >= minimumToLaunch) {
-            // Build our toggler
-            Drupal.showMoreLess.toggler($wrapperDiv, 'view', counter);
-          }
-        }
-        // Otherwise let's assume it's text.
-        else {
-          $wrapperDiv = $wrapper.find('div.show-more-less-wrapper');
-
-          // Get the lineHeight of the inside text so we can calculate number
-          // of lines.
-          lineHeight = $wrapperDiv.find(':first').css('line-height');
-          lineHeight = parseFloat(lineHeight);
-
-          // Get the entire div height.
-          var divHeight = $wrapperDiv.height();
-
-          // Make sure we have the minimum length of lines.
-          if (divHeight >= lineHeight * minimumToLaunch) {
-            // Build our toggler
-            Drupal.showMoreLess.toggler($wrapperDiv, 'text', counter);
-          }
+        // Make sure we have the minimum length.
+        if (numRows >= minimumToLaunch) {
+          // Build our toggler
+          Drupal.showMoreLess.toggler($itemsWrapper, type, counter);
         }
       });
     }
@@ -81,7 +81,7 @@
    * @param $type
    * @param counter
    */
-  Drupal.showMoreLess.toggler = function($wrapper, $type, counter) {
+  Drupal.showMoreLess.toggler = function($wrapper, type, counter) {
     var $toggler, id, $element;
 
     // Hide the overflow.
@@ -103,10 +103,10 @@
       // If the link has an open class then it's currently open and we
       // need to close the div.  Otherwise open it.
       if ($(this).hasClass('show-more-less-toggler-open')) {
-        Drupal.showMoreLess.close($element, $type);
+        Drupal.showMoreLess.close($element, type);
       }
       else {
-        Drupal.showMoreLess.open($element, $type);
+        Drupal.showMoreLess.open($element, type);
       }
 
       // We don't want the click event to allow the site to redirect.
@@ -114,19 +114,19 @@
     });
 
     // Close by default.
-    Drupal.showMoreLess.close($wrapper.parent('.show-more-less'), $type);
+    Drupal.showMoreLess.close($wrapper.parent('.show-more-less'), type);
   }
 
   /**
-   * Open area
+   * Open area.
    *
    * @param $element
    * @param $type
    */
-  Drupal.showMoreLess.open = function($element, $type) {
+  Drupal.showMoreLess.open = function($element, type) {
     var newHeight, $wrapper, $lastItem;
     // Switch on what type of element it is.
-    switch($type) {
+    switch(type) {
       case 'view':
         // Get the wrapper.
         $wrapper = $element.children('.view-content');
@@ -173,16 +173,16 @@
   }
 
   /**
-   * Close area
+   * Close area.
    *
    * @param $element
    * @param $type
    */
-  Drupal.showMoreLess.close = function($element, $type) {
+  Drupal.showMoreLess.close = function($element, type) {
     var numberToShow, $bottomItem, newHeight;
     // Get the number of rows to show.
     numberToShow = parseInt(Drupal.showMoreLess.getSetting($element, 'num'));
-    switch ($type) {
+    switch (type) {
       case 'view':
         // Find the wrapper.
         $wrapper = $element.children('.view-content');
@@ -261,5 +261,57 @@
 
     return value;
   }
-})(jQuery);
 
+  /**
+   * Open all the items.
+   */
+  Drupal.showMoreLess.openAll = function() {
+    var type, $element;
+    // Find all the elements we use
+    $('.show-more-less').each(function() {
+      $element = $(this);
+      // Check ot see if it's currently closed
+      if ($element.find('.show-more-less-closed')) {
+        // Find the type and open it
+        type = Drupal.showMoreLess.findType($element);
+        Drupal.showMoreLess.open($element, type);
+      }
+    });
+  }
+
+  /**
+   * Close all the items.
+   */
+  Drupal.showMoreLess.closeAll = function() {
+    var type, $element;
+    // Find all the elements we use
+    $('.show-more-less').each(function() {
+      $element = $(this);
+      // Check ot see if it's currently open
+      if ($element.find('.show-more-less-open')) {
+        // Find the type and close it
+        type = Drupal.showMoreless.findType($element);
+        Drupal.showMoreLess.close($element, type);
+      }
+    });
+  }
+
+  /**
+   * Find the type of element.
+   *
+   * @param $element
+   * @returns string
+   */
+  Drupal.showMoreLess.findType = function($element) {
+    var $type = 'text';
+    // Check to see if it's a text list.
+    if ($element.hasClass('field-type-text')) {
+      $type = 'list';
+    }
+    // Check to see if it's a view.
+    else if ($element.hasClass('view')) {
+      $type = 'view';
+    }
+    return $type;
+  }
+})(jQuery);
