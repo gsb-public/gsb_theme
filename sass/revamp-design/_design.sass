@@ -356,3 +356,27 @@ a.no-border
     font-size: 13px
     margin-top: 5px
     margin-bottom: 0
+
+// Show more show less on faculty detail
+.show-more-less-toggler
+  border: 0 !important
+  color: $text-green
+  font-weight: bold
+  line-height: 1
+  font-size: 14px
+  &:before
+    color: $green-light !important
+    content: ""
+    font-family: "entypo"
+    font-size: 4em
+    font-weight: normal
+    line-height: 0
+    position: relative
+    top: 10px
+    margin-right: 5px
+  &:hover
+    &:before
+      color: $text-blue !important
+  &.show-more-less-toggler-open
+    &:before
+      content: ""

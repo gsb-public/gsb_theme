@@ -2484,6 +2484,31 @@ a.no-border:hover {
   margin-bottom: 0;
 }
 
+.show-more-less-toggler {
+  border: 0 !important;
+  color: #7d8401;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 14px;
+}
+.show-more-less-toggler:before {
+  color: #bac405 !important;
+  content: "";
+  font-family: "entypo";
+  font-size: 4em;
+  font-weight: normal;
+  line-height: 0;
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+}
+.show-more-less-toggler:hover:before {
+  color: #2d6280 !important;
+}
+.show-more-less-toggler.show-more-less-toggler-open:before {
+  content: "";
+}
+
 .pane-bundle-links .red-bar {
   background: -moz-linear-gradient(#e7e7e7, #f0f0f0);
   background: -o-linear-gradient(#e7e7e7, #f0f0f0);
