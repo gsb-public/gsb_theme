@@ -8,23 +8,26 @@
   .field-items
     display: none
 
-// Teaser Content styling
-.view-mode-teaser
-  padding: 26px
+/////////////////
+// EXISTING NODE
+/////////////////
+.pane-bundle-existing-node
+  @extend %bg-border-and-box-shadow
+  padding: 0 26px 26px 26px
 
   // Image
-  .field-name-field-file-single-public,
-  .field-name-field-image-single-public
-    float: right
-    vertical-align: top
-    .full-view &,
-    .wide-view &
-      max-width: 170px
-    .narrow-view .pane-bundle-existing-node &
-      margin-left: -26px
-      margin-right: -26px
-      margin-top: -26px
-      float: none
+  // .field-name-field-file-single-public,
+  // .field-name-field-image-single-public
+  //   float: right
+  //   vertical-align: top
+  //   .full-view &,
+  //   .wide-view &
+  //     max-width: 170px
+  //   .narrow-view .pane-bundle-existing-node &
+  //     margin-left: -26px
+  //     margin-right: -26px
+  //     margin-top: -26px
+  //     float: none
 
   // Date
   .field-name-field-date-published,
@@ -34,26 +37,69 @@
     margin-bottom: 1em
 
   // Title
-  h2,
-  h3
-    a
-      color: $red
-      &:hover
-        color: $link-blue
+  h2
     color: $text-black
     font-size: 20px
     font-weight: bold
     line-height: 1.2
     margin-bottom: 6px
     text-transform: none
+    a
+      color: $red
+      &:hover
+        color: $link-blue
+
+  // Document link
+  .field-name-field-link-document
+    a
+      &:hover
+        color: $link-blue
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+
 
   // Hide tags labels on teasers
   .group-tags-wrapper h3
     display: none
 
-  // Editorial Summary
+  // Book, Case and Working Paper styles
+
+  ////////////////
+  // Featured label
+  ////////////////
+  .featured-label
+    @extend %taupe-border-top
+    display: inline-block
+    font-size: 12px
+    line-height: 1.2
+    margin-bottom: 16px
+    padding-top: 6px
+
+  // Authors
+  .field-collection-item-field-authors,
+  .field-name-field-author
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.2
+
+  // Book image
+  .field-name-field-image-single-public
+    margin-bottom: 12px
+    max-width: 150px
+
+  // Working paper title
+  .group-wrapper-title
+    margin-bottom: 12px
+    h2
+      display: inline
+
+
+  // Editorial Summary or Description
   .field-name-field-editorial-summary,
-  .field-name-field-body
+  .field-name-field-body,
+  .field-name-field-description
     font-size: 16px
     font-weight: normal
     line-height: 1.2
@@ -76,66 +122,28 @@
         position: relative
         top: -6px
 
-/////////////////
-// EXISTING NODE
-/////////////////
-.pane-bundle-existing-node .view-mode-teaser
-  @extend %bg-border-and-box-shadow
-  .field-name-field-file-single-public,
-  .field-name-field-image-single-public
-    position: relative
-    top: -6px
-
 ////////////
 // TOP BAR
 ////////////
-.top-bar
-  background-color: $black
-  color: $white
-  font-size: 14px
-  line-height: 1em
-  margin-right: 2px
-  padding: 8px 24px
-  position: relative
-  top: 1px
-  .page-business-insights &,
-  .node-type-business-insight
-    background-color: $red
-  a
-    color: $white
-    &:after
-      color: $white
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 14px
-      position: relative
-      top: 1px
-      left: 7px
-
-// Book, Case and Working Paper styles
-
-////////////////
-// Featured label
-////////////////
-.featured-label
-  @extend %taupe-border-top
-  display: inline-block
-  font-size: 12px
-  line-height: 1.2
-  padding-top: 6px
-  position: relative
-  top: -26px
-
-// Authors
-.field-collection-item-field-authors.view-mode-existing_node_teaser
-  font-family: $font-demi
-  font-size: 16px
-  font-weight: normal
-  line-height: 1.2
-
-// Book image
-.narrow-view .pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public
-  float: none
-  margin: 0
-  margin-bottom: 12px
-  max-width: 150px
+// .top-bar
+//   background-color: $black
+//   color: $white
+//   font-size: 14px
+//   line-height: 1em
+//   margin-right: 2px
+//   padding: 8px 24px
+//   position: relative
+//   top: 1px
+//   .page-business-insights &,
+//   .node-type-business-insight
+//     background-color: $red
+//   a
+//     color: $white
+//     &:after
+//       color: $white
+//       content: "\f100"
+//       font-family: "arrow-double"
+//       font-size: 14px
+//       position: relative
+//       top: 1px
+//       left: 7px
