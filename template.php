@@ -112,9 +112,15 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['search']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
   }
 
+  // Faculty listing placeholder text
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
+  }
+  // Working paper listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-working-paper-listing-working-paper-list') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics or other keywords');
   }
 
 }

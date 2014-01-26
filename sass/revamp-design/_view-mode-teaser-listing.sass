@@ -7,26 +7,28 @@
   margin: 22px 0
   // Title
   .field-name-title
-    display: inline-block
+    display: inline
     h2
-      display: inline-block
+      display: inline
       font-family: $font-demi
       font-size: 20px
       font-weight: normal
       line-height: 1.2
-      margin-bottom: 6px
     &:hover
       a
         color: $link-blue
 
   // Document link
   .field-name-field-link-document
+    display: inline
+    a
+      &:hover
+        color: $link-blue
     &:after
       content: "m" !important
       @extend %doc-attached-icons
       color: $red
-      &:hover
-        color: $link-blue
+
 
   // Author
   .field-name-field-author
@@ -34,6 +36,7 @@
     font-size: 16px
     font-weight: normal
     line-height: 1.2
+    margin-top: 6px
 
   // Published year
   .field-name-field-year
