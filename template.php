@@ -122,6 +122,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics or other keywords');
   }
+  // Case study listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-case-listing-case-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics or other keywords');
+  }
 
 }
 

@@ -448,9 +448,11 @@ fieldset.collapsible .fieldset-legend
 // New filter styling
 //////////////////
 
-// Faculty listing and working papers listing
+// Faculty, working papers, case study listing filters
+// @todo generalize this
 .view-faculty-filters,
-.view-gsb-working-paper-listing
+.view-gsb-working-paper-listing,
+.view-gsb-case-listing
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -499,8 +501,10 @@ fieldset.collapsible .fieldset-legend
   .views-submit-button
     float: left
     width: 36px
+  // @todo generalize when all filters are redone
   #edit-submit-faculty-filters,
-  #edit-submit-gsb-working-paper-listing
+  #edit-submit-gsb-working-paper-listing,
+  #edit-submit-gsb-case-listing
     text-indent: 1000px
     -webkit-border-radius: 0
     -moz-border-radius: 0
