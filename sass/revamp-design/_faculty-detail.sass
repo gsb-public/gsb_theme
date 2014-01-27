@@ -273,8 +273,9 @@ $faculty-spacing: 24px
     &:after
       content: ", "
 
-  // Case Study EVA and Working Paper EVA
-  .view-display-id-case_listing_entity_view
+  // Case Study, Working Paper, Book EVA
+  .view-display-id-case_listing_entity_view,
+  .view-display-id-entity_view_1
     margin-bottom: $faculty-spacing
     // Section title
     h2.title
@@ -290,12 +291,16 @@ $faculty-spacing: 24px
         font-weight: normal
         font-size: 14px
         line-height: 1.1
-    // Authors and Publication Year
-    .views-field-field-link-document,
-    .views-field-field-author,
-    .views-field-field-year
-      font-size: 14px
-      line-height: 1.1
-    .views-field-field-link-document
-      a[href$=".pdf"]:after
-        vertical-align: baseline
+  // Authors and Publication Year
+  .views-field-field-link-document,
+  .views-field-field-author,
+  .views-field-field-authors,
+  .views-field-field-year,
+  .views-field-field-place-of-publication,
+  .views-field-field-publisher,
+  .views-field-field-year-of-publication
+    font-size: 14px
+    line-height: 1.1
+  .views-field-field-link-document
+    a[href$=".pdf"]:after
+      vertical-align: baseline
