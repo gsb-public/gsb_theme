@@ -7,9 +7,10 @@
   +page-title
 
 // Detail page shared styles
-// Case study and working paper detail
+// Case study, working paper and book detail
 .node-working-paper.view-mode-full,
-.node-case.view-mode-full
+.node-case.view-mode-full,
+.node-book.view-mode-full
   // Layout
   &.ds-2col > .group-left
     margin-right: -300px
@@ -35,7 +36,6 @@
     +breakpoint(700px max-width)
       float: left
 
-
   .label-inline
     font-weight: normal
     &:after
@@ -53,37 +53,42 @@
     color: $text-black
     font-weight: normal
 
-  .field-name-field-author
+  .field-name-field-author,
+  .field-name-field-authors
     font-size: 18px
     line-height: 1.2
-    font-family: $font-demi
-
-// Detail page
-.node-working-paper.view-mode-full
-  .field-name-field-business-insight-topic,
-  .field-name-field-year,
-  .field-name-field-item-id,
-    line-height: 1.2
-    font-size: 16px
-
-  .field-name-field-item-id
-    &:before
-      color: $text-black
-      content: " | "
-      display: inline
-
-  .field-name-field-business-insight-topic
-    margin-top: 6px
     font-family: $font-demi
     a
       font-weight: normal
       &:hover
         color: $text-blue
 
+  .group-wrapper-taxonomy
+    margin-top: 6px
+    a
+      font-weight: normal
+      &:hover
+        color: $text-blue
+
+  .field-name-field-business-insight-topic,
+  .field-name-field-year,
+  .field-name-field-item-id
+    font-size: 16px
+    line-height: 1.2
+
   .field-name-field-description
     @extend %p
     margin-bottom: 26px
     margin-top: 16px
+
+// Detail page
+.node-working-paper.view-mode-full
+
+  .field-name-field-item-id
+    &:before
+      color: $text-black
+      content: " | "
+      display: inline
 
   .field-name-field-tag
     @extend %divider-bottom

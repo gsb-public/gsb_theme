@@ -10,29 +10,49 @@
 
 // Layout
 .node-book.view-mode-full
-  // Layout
-  &.ds-2col > .group-left
-    margin-right: -300px
-    width: 100%
-    +breakpoint($bp-mobile-max)
-      border-top: 0
-      padding-top: 0
-    .group-left-inner
-      @extend %black-border-top-small
-      margin-right: 300px
-      padding-top: 2px
-    img
-      display: block
-    +breakpoint($bp-mobile-max)
-      margin-bottom: 20px
-  &.ds-2col > .group-right
-    float: right
-    width: 270px
-    +breakpoint($bp-mobile-max)
-      float: left
-      padding-left: 0
+  // See _working-paper-detail.sass for shared layout and base styles
 
-  // Author block
-  .book-faculty-author-wrapper
-    +author-block
-    margin-bottom: 30px
+  // Left side
+  .group-left
+    .group-wrapper-meta
+      +clearfix
+    // Image
+    .field-name-field-image-single-public
+      display: inline
+      float: right
+      img
+        max-width: 150px
+
+  // Publisher
+  .group-wrapper-publisher
+    font-size: 16px
+    line-height: 1.2
+
+  // Selected reviews
+  .field-name-field-selected-reviews
+    background: $grey-e
+    padding: 26px
+    .label-above
+      font-size: 18px
+      font-family: $font-demi
+      line-height: 1.2
+      margin-bottom: 12px
+
+  // Single review
+  .field-collection-item-field-selected-reviews
+    margin-top: 16px
+    margin-bottom: 16px
+    &:first-of-type
+      margin-top: 0
+    &:last-of-type
+      margin-bottom: 0
+  // Text
+  .field-name-field-review
+    font-size: 16px
+    line-height: 1.2
+  // Author
+  .field-name-field-reviewer
+    font-size: 14px
+    font-style: italic
+    line-height: 1.2
+    margin-top: 6px
