@@ -28,9 +28,29 @@
     font-size: 16px
     line-height: 1.2
 
+  // Links
+  .field-name-field-book-url-pdf-unlimited
+    @extend %divider-bottom
+    @extend %divider-top
+    padding: 26px 0
+    a
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+    .field-item
+      display: inline-block
+      vertical-align: bottom
+      &:first-of-type
+        margin-right: 6px
+
   // Selected reviews
   .field-name-field-selected-reviews
     background: $grey-e
+    margin-bottom: 26px
+    margin-top: 26px
     padding: 26px
     .label-above
       font-size: 18px
