@@ -110,12 +110,44 @@ dfn {
   color: white !important;
 }
 
+.pane-gsb-event-upcoming-events .more-link a, .pane-case-filters-panel-pane-1 .see-all a {
+  background: #739d95;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 17px;
+  text-align: left;
+  position: relative;
+}
+.pane-gsb-event-upcoming-events .more-link a:after, .pane-case-filters-panel-pane-1 .see-all a:after {
+  content: "w";
+  color: white;
+  font-family: "gsb";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 0;
+  position: absolute;
+  right: 14px;
+  top: 45%;
+}
+.pane-gsb-event-upcoming-events .more-link a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover {
+  background: #754760;
+}
+
 .region-sidebar-first, #views-exposed-form-gsb-event-event-listing-pane .views-exposed-widgets,
 #views-exposed-form-gsb-event-event-calendar-pane .views-exposed-widgets {
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -o-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -webkit-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: linear-gradient(to bottom, #f2f2f2, rgba(242, 242, 242, 0));
+}
+
+.pane-case-filters-panel-pane-1 {
+  background: -moz-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: -o-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: -webkit-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: linear-gradient(to bottom, #e7e7e7, #f0f0f0);
 }
 
 .view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
@@ -172,7 +204,7 @@ dfn {
   border-top: 10px #aac4bf solid;
 }
 
-.pane-bundle-existing-node .featured-label {
+.pane-bundle-existing-node .featured-label, .pane-case-filters-panel-pane-1 h2.pane-title {
   border-top: 10px #c2b7a1 solid;
 }
 
@@ -225,7 +257,7 @@ dfn {
 body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .pane-bundle-existing-node .field-name-field-link-document a:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document a:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .view-mode-teaser_listing .field-name-field-link-document:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document a:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .view-mode-teaser_listing .field-name-field-link-document:after, .view-mode-views_content_pane .field-name-field-link-document a:after {
   margin-left: 3px;
   font-family: "gsb";
   line-height: 1;
@@ -235,7 +267,7 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
 body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$=".jpg"]:hover:after, body a[href$=".gif"]:hover:after, body a[href$=".pptx"]:hover:after, body a[href$=".ppt"]:hover:after, body a[href$=".pps"]:hover:after, body a[href$=".odp"]:hover:after, body a[href$=".zip"]:hover:after, body a[href$=".rar"]:hover:after, body a[href$=".tar"]:hover:after, body a[href$=".doc"]:hover:after, body a[href$=".docx"]:hover:after, body a[href$=".txt"]:hover:after, body a[href$=".odt"]:hover:after, body a[href$=".xls"]:hover:after, body a[href$=".xlsx"]:hover:after, body a[href$=".ods"]:hover:after, .pane-bundle-existing-node .field-name-field-link-document a:hover:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:hover:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:hover:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:hover:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document a:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .view-mode-teaser_listing .field-name-field-link-document:hover:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document a:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .view-mode-teaser_listing .field-name-field-link-document:hover:after, .view-mode-views_content_pane .field-name-field-link-document a:hover:after {
   color: #2d6280;
 }
 
@@ -4029,26 +4061,6 @@ input.footer__signup__submit:hover {
   color: #231f20;
   font-size: 14px;
   line-height: 18px;
-}
-.pane-gsb-event-upcoming-events .more-link a {
-  background: #739d95;
-  color: white;
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 17px;
-  text-align: left;
-}
-.pane-gsb-event-upcoming-events .more-link a:after {
-  content: "w";
-  color: white;
-  font-family: "gsb";
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 0;
-}
-.pane-gsb-event-upcoming-events .more-link a:hover {
-  background: #754760;
 }
 
 ul.slideshow-items {
@@ -12146,13 +12158,15 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-case_listing .view-content .views-row:last-of-type {
   border-bottom: 0;
 }
-.view-display-id-case_listing .case-product-icon {
+
+.case-product-icon {
   display: none;
 }
-.view-display-id-case_listing .case-product-icon.Video {
+
+.case-product-icon.Video {
   display: inline;
 }
-.view-display-id-case_listing .case-product-icon.Video:before {
+.case-product-icon.Video:before {
   color: #2d6280;
   content: "3";
   font-family: "gsb";
@@ -12186,6 +12200,62 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-display-id-book_listing .field-name-field-authors {
   display: inline;
+}
+
+.pane-case-filters-panel-pane-1 {
+  padding: 0 26px 26px 26px;
+}
+.pane-case-filters-panel-pane-1 h2.pane-title {
+  color: #231f20;
+  display: block;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  padding-top: 6px;
+}
+
+.content-pane-listing .views-row {
+  margin-bottom: 12px;
+}
+
+.view-mode-views_content_pane h2 {
+  color: #231f20;
+  display: inline;
+  font-size: 16px;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.view-mode-views_content_pane h2 a {
+  color: #990000;
+}
+.view-mode-views_content_pane h2 a:hover {
+  color: #2d6280;
+}
+.view-mode-views_content_pane .field-name-field-link-document a {
+  font-size: 16px;
+}
+.view-mode-views_content_pane .field-name-field-link-document a:hover {
+  color: #2d6280;
+}
+.view-mode-views_content_pane .field-name-field-link-document a:after {
+  content: "m" !important;
+}
+.view-mode-views_content_pane .field-name-field-author {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.view-mode-views_content_pane .field-name-field-year {
+  font-size: 14px;
+  line-height: 1.2;
+}
+.view-mode-views_content_pane .case-product-icon.Video:before {
+  font-size: 20px;
 }
 
 .intro-copy {

@@ -92,6 +92,29 @@
     &:after
       color: $white !important
 
+// Rectangle teal CTA link style with >>
+%teal-cta
+  background: $teal-dark
+  color: $white
+  display: block
+  font-size: 14px
+  font-weight: bold
+  padding: 10px 17px
+  text-align: left
+  position: relative
+  &:after
+    content: "w"
+    color: $white
+    font-family: "gsb"
+    font-size: 16px
+    font-weight: normal
+    line-height: 0
+    position: absolute
+    right: 14px
+    top: 45%
+  &:hover
+    background: $purple
+
 ///////////////
 // BACKGROUNDS
 ///////////////
@@ -100,9 +123,13 @@
 %bg-grey-solid
   background-color: $grey-e
 
-// Grey gradient background like on left sidebar submenu
+// Grey gradient background used on left sidebar submenu
 %bg-grey-gradient
   +background(linear-gradient(top, rgba($grey-f, 1), rgba($grey-f, 0)))
+
+// Grey gradient background used on view content panes
+%bg-grey-gradient-e
+  +background(linear-gradient(top, rgba(#e7e7e7, 1), rgba(#f0f0f0, 1)))
 
 ////////////////////////////
 // BORDERS AND BOX SHADOWS

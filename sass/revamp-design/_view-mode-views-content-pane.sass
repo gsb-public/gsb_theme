@@ -1,1 +1,72 @@
-_view-mode-views-content-pane.sass
+///////////////////////
+// Views content panes
+///////////////////////
+
+// Case study views pane
+.pane-case-filters-panel-pane-1
+  @extend %bg-grey-gradient-e
+  padding: 0 26px 26px 26px
+  // CTA link
+  .see-all a
+    @extend %teal-cta
+
+
+  // Pane title
+  h2.pane-title
+    @extend %taupe-border-top
+    color: $text-black
+    display: block
+    font-family: $font-sans
+    font-size: 16px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: 24px
+    padding-top: 6px
+
+// Views
+.content-pane-listing
+  .views-row
+    margin-bottom: 12px
+
+// View mode
+.view-mode-views_content_pane
+  // Item title
+  h2
+    color: $text-black
+    display: inline
+    font-size: 16px
+    font-family: $font-demi
+    font-weight: normal
+    line-height: 1.2
+    a
+      color: $red
+      &:hover
+        color: $link-blue
+
+  // Document link
+  .field-name-field-link-document
+    a
+      font-size: 16px
+      &:hover
+        color: $link-blue
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+
+  // Authors
+  .field-name-field-author
+    font-family: $font-demi
+    font-size: 14px
+    font-weight: normal
+    line-height: 1.2
+    margin-top: 2px
+
+  // Year
+  .field-name-field-year
+    font-size: 14px
+    line-height: 1.2
+
+  // Cases product
+  .case-product-icon.Video
+    &:before
+      font-size: 20px
