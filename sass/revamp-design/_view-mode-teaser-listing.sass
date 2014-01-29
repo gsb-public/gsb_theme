@@ -9,7 +9,6 @@
   .field-name-title
     display: inline
     h2
-      display: inline
       font-family: $font-demi
       font-size: 20px
       font-weight: normal
@@ -30,7 +29,8 @@
       color: $red
 
   // Author
-  .field-name-field-author
+  .field-name-field-author,
+  .field-name-field-authors
     font-family: $font-demi
     font-size: 16px
     font-weight: normal
@@ -38,7 +38,8 @@
     margin-top: 6px
 
   // Published year
-  .field-name-field-year
+  .field-name-field-year,
+  .field-name-field-year-of-publication
     font-size: 16px
     line-height: 1.2
 
@@ -49,7 +50,9 @@
     margin: 12px 0 8px
 
   // Taxonomy wrapper
-  .group_wrapper_topics
+  .group-wrapper-topics
+    h3
+      display: none
     a
       font-size: 14px
       line-height: 1.2
