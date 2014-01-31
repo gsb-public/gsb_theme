@@ -123,23 +123,6 @@
       margin-top: 80px
       +breakpoint($bp-mobile-max)
         margin-top: 0
-  // Landing page events listing
-  .view-gsb-event
-    .view-mode-teaser
-      .field-name-title
-        h2
-          font-weight: normal
-      .field-name-field-address
-        .field-item
-          font-weight: bold
-      .field-name-field-event-date
-        margin-bottom: 0.5em /* WPBQA-245 */
-      .field-name-field-editorial-summary
-        line-height: 24px
-        margin: 5px 0 15px /* WPBQA-245 */
-      .field-name-field-address,
-      .field-name-field-editorial-summary
-        font-size: 18px
 
   // Filter styles
   div.tabs
@@ -200,24 +183,53 @@
 ///////////////////
 // Event listing
 ///////////////////
-.view-gsb-event
-  .view-content
-    .view-mode-teaser
-      padding: 1em 0 1.5em 0
-      margin: 0 24px
-      +clearfix
-    // Day separation
-    h5
-      display: block
-      border-top: 1px solid $black
-      padding-top: 1em
-    // Event separation
-    .page-events & .views-row .node
-      border-bottom: 1px solid $grey-b8
-    .page-events & .views-row-last .node
-      border-bottom: 0
+.view-display-id-event_listing_pane
+  .node-event.view-mode-teaser
+    margin: 0 26px
+    padding: 18px 0
+    +clearfix
+    // Image
+    .field-name-field-image-single-public
+      float: right
+      margin-left: 18px
+    // Date
+    .field-name-field-event-date
+      margin-bottom: 6px
+    // Title
+    .field-name-title
+      margin-bottom: 5px
+      h2
+        font-family: $font-demi
+        font-size: 20px
+        font-weight: normal
+        line-height: 1.2
+        &:hover
+          a
+            color: $link-blue
+    // Address
+    .field-name-field-address
+      font-size: 14px
+      line-height: 1.2
+      font-weight: bold
+      margin-bottom: 4px
+    // Description
+    .field-name-field-editorial-summary
+      font-size: 16px
+      line-height: 1.2
+      margin: 6px 0 15px
+
+  // Day separation
+  h5
+    display: block
+    border-top: 1px $text-black solid
+    padding-top: 18px
+  // Event separation
+  .views-row .node
+    @extend %divider-bottom
+  .views-row-last .node
+    border-bottom: 0
   .views-exposed-widget
-    border-bottom: 1px solid $grey-c
+    @extend %divider-bottom
     padding: 0
     margin-bottom: 20px
   .views-widget label.option
