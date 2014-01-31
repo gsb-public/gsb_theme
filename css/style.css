@@ -110,7 +110,7 @@ dfn {
   color: white !important;
 }
 
-.pane-gsb-event-upcoming-events .more-link a, .pane-case-filters-panel-pane-1 .see-all a, .pane-agenda-2 .agenda-block ol li .moreinfo li a {
+.pane-gsb-event-upcoming-events .more-link a, .pane-case-filters-panel-pane-1 .see-all a, .pane-agenda-2 .pane-content a {
   background: #739d95;
   color: white;
   display: block;
@@ -120,7 +120,7 @@ dfn {
   text-align: left;
   position: relative;
 }
-.pane-gsb-event-upcoming-events .more-link a:after, .pane-case-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .agenda-block ol li .moreinfo li a:after {
+.pane-gsb-event-upcoming-events .more-link a:after, .pane-case-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .pane-content a:after {
   content: "w";
   color: white;
   font-family: "gsb";
@@ -131,7 +131,7 @@ dfn {
   right: 14px;
   top: 45%;
 }
-.pane-gsb-event-upcoming-events .more-link a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .agenda-block ol li .moreinfo li a:hover {
+.pane-gsb-event-upcoming-events .more-link a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .pane-content a:hover {
   background: #754760;
 }
 
@@ -12288,20 +12288,23 @@ fieldset.collapsible .fieldset-legend {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-agenda-2 .agenda-block ol {
+.pane-agenda-2 .pane-content .agenda-block p {
+  display: none;
+}
+.pane-agenda-2 .pane-content .agenda-block ol {
   margin: 0;
 }
-.pane-agenda-2 .agenda-block ol li {
+.pane-agenda-2 .pane-content .agenda-block ol li {
   background: none;
   padding: 10px 0px 0px 0px;
 }
-.pane-agenda-2 .agenda-block ol li .calendar_title {
+.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title {
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
   color: #231f20;
 }
-.pane-agenda-2 .agenda-block ol li .calendar_title:before {
+.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title:before {
   content: "!";
   color: #887e6e;
   font-family: "gsb-clock";
@@ -12310,13 +12313,11 @@ fieldset.collapsible .fieldset-legend {
   margin-right: 4px;
   vertical-align: middle;
 }
-.pane-agenda-2 .agenda-block ol li .moreinfo {
-  display: block;
-  margin-top: 10px;
+.pane-agenda-2 .pane-content .agenda-block .moreinfo {
+  display: none;
 }
-.pane-agenda-2 .agenda-block ol li .moreinfo li {
-  margin: 0px;
-  padding: 5px;
+.pane-agenda-2 .pane-content a {
+  margin-top: 7px;
 }
 
 .intro-copy {

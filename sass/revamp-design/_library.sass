@@ -1,0 +1,44 @@
+/////////////
+// Library
+/////////////
+
+// Today's Hour Block
+
+.pane-agenda-2
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding: 20px 24px 24px 24px
+  .pane-title
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.2
+    color: $text-black 
+    font-family: $font-sans
+  .pane-content
+    .agenda-block
+      p
+        display: none
+      ol
+        margin: 0
+        li      
+          background: none
+          padding: 10px 0px 0px 0px 
+          .calendar_title
+            font-size: 18px
+            font-weight: normal
+            line-height: 1.2
+            color: $text-black
+            &:before
+              content: "!"
+              color: $grey-dark
+              font-family: "gsb-clock"
+              font-weight: normal
+              font-size: 28px
+              margin-right: 4px
+              vertical-align: middle
+      .moreinfo
+        display: none	  
+    a
+      @extend %teal-cta
+      margin-top: 7px
+        
