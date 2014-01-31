@@ -283,9 +283,10 @@ $faculty-spacing: 24px
     &:after
       content: ", "
 
-  // Case Study, Working Paper, Book EVA
+  // Case Study, Working Paper, Book, Publications EVA
   .view-display-id-case_listing_entity_view,
-  .view-display-id-entity_view_1
+  .view-display-id-entity_view_1,
+  .view-display-id-publications_listing_entity_view
     margin-bottom: $faculty-spacing
     // Section title
     h2.title
@@ -297,19 +298,18 @@ $faculty-spacing: 24px
     .views-field-title-1 a
       @extend %faculty-link
   // Authors and Publication Year
-  .views-field-field-link-document,
-  .views-field-field-author,
-  .views-field-field-authors,
-  .views-field-field-year,
-  .views-field-field-place-of-publication,
-  .views-field-field-publisher,
-  .views-field-field-year-of-publication,
+  .views-field,
   .views-field-field-body p
     font-size: 14px
     line-height: 1.1
   .views-field-field-link-document
     a[href$=".pdf"]:after
       vertical-align: baseline
+
+  // Authors commas
+  .views-field-field-authors
+    &:after
+      content: "."
 
   // Courses
   .group-courses-taught
