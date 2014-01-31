@@ -303,7 +303,9 @@ $faculty-spacing: 24px
     font-size: 14px
     line-height: 1.1
   .views-field-field-link-document
-    a[href$=".pdf"]:after
+    a:after
+      content: "m" !important
+      @extend %doc-attached-icons
       vertical-align: baseline
 
   // Authors commas
