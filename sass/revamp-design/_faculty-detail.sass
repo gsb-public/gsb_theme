@@ -282,6 +282,10 @@ $faculty-spacing: 24px
     &:after
       content: ", "
 
+  // Publications header
+  .group-publications h2
+    @extend %header-large
+
   // Case Study, Working Paper, Book, Publications EVA
   .view-display-id-case_listing_entity_view,
   .view-display-id-entity_view_1,
@@ -289,7 +293,7 @@ $faculty-spacing: 24px
     margin-bottom: $faculty-spacing
     // Section title
     h2.title
-      @extend %header-large
+      @extend %header-small
     .views-row
       margin-bottom: 6px
     // Title
@@ -311,6 +315,31 @@ $faculty-spacing: 24px
   .views-field-field-authors
     &:after
       content: "."
+
+  // Featured publication
+  // using content pane view mode
+  .field-name-field-featured-publication-ref
+    .label-above
+      @extend %header-small
+
+    .view-mode-views_content_pane
+      margin-bottom: 6px
+      .field-collection-item-field-authors
+        font-family: $font-sans
+    // Title
+    h2
+      display: block
+      margin-bottom: 0
+      a
+        @extend %faculty-link
+    // Concat Authors and publication info
+    .gsb_field_formatter_field_collection_separator,
+    .group-publication-details
+      display: inline
+    .gsb_field_formatter_field_collection_separator
+      &:after
+        content: ". "
+
 
   // Courses
   .group-courses-taught
