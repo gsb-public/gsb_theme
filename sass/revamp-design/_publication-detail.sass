@@ -1,0 +1,36 @@
+////////////////////
+// Publication detail
+////////////////////
+
+// Hide title on detail
+.node-type-publication
+  +page-title
+
+// .node-publication.view-mode-full
+  // See _working-paper-detail.sass for shared layout and base styles
+
+// Detail page
+.node-publication.view-mode-full
+
+  // Document links
+  .group-wrapper-links
+    @extend %divider-bottom
+    @extend %divider-top
+    margin-top: 16px
+    padding: 26px 0
+    a
+      &:after
+        content: "m" !important
+        @extend %doc-attached-icons
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+    .field
+      display: inline-block
+      vertical-align: bottom
+      &:first-of-type
+        margin-right: 6px
+
+  // Faculty author block
+  .faculty-author-wrapper
+    +author-block
