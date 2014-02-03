@@ -6,6 +6,7 @@
  *
  * CHANGES:
  *  - Removed clearfix
+ *  - Add inner left for fake columns
  */
 ?>
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-2col <?php print $classes;?>">
@@ -15,7 +16,9 @@
   <?php endif; ?>
 
   <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
-    <?php print $left; ?>
+    <div class="group-left-inner">
+      <?php print $left; ?>
+    </div>
   </<?php print $left_wrapper ?>>
 
   <<?php print $right_wrapper ?> class="group-right<?php print $right_classes; ?>">
