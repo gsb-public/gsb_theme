@@ -110,7 +110,8 @@ dfn {
   color: white !important;
 }
 
-.pane-gsb-event-upcoming-events .more-link a, .pane-case-filters-panel-pane-1 .see-all a, .pane-agenda-2 .pane-content a {
+.pane-gsb-event-upcoming-events .more-link a, .pane-case-filters-panel-pane-1 .see-all a,
+.pane-publication-filters-panel-pane-1 .see-all a, .pane-agenda-2 .pane-content a {
   background: #739d95;
   color: white;
   display: block;
@@ -120,7 +121,8 @@ dfn {
   text-align: left;
   position: relative;
 }
-.pane-gsb-event-upcoming-events .more-link a:after, .pane-case-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .pane-content a:after {
+.pane-gsb-event-upcoming-events .more-link a:after, .pane-case-filters-panel-pane-1 .see-all a:after,
+.pane-publication-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .pane-content a:after {
   content: "w";
   color: white;
   font-family: "gsb";
@@ -131,7 +133,8 @@ dfn {
   right: 14px;
   top: 45%;
 }
-.pane-gsb-event-upcoming-events .more-link a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .pane-content a:hover {
+.pane-gsb-event-upcoming-events .more-link a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover,
+.pane-publication-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .pane-content a:hover {
   background: #754760;
 }
 
@@ -143,7 +146,8 @@ dfn {
   background: linear-gradient(to bottom, #f2f2f2, rgba(242, 242, 242, 0));
 }
 
-.pane-case-filters-panel-pane-1 {
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1 {
   background: -moz-linear-gradient(top, #e7e7e7, #f0f0f0);
   background: -o-linear-gradient(top, #e7e7e7, #f0f0f0);
   background: -webkit-linear-gradient(top, #e7e7e7, #f0f0f0);
@@ -205,7 +209,8 @@ dfn {
   border-top: 10px #aac4bf solid;
 }
 
-.pane-bundle-existing-node .featured-label, .pane-case-filters-panel-pane-1 h2.pane-title {
+.pane-bundle-existing-node .featured-label, .pane-case-filters-panel-pane-1 h2.pane-title,
+.pane-publication-filters-panel-pane-1 h2.pane-title {
   border-top: 10px #c2b7a1 solid;
 }
 
@@ -12279,10 +12284,12 @@ fieldset.collapsible .fieldset-legend {
   display: inline;
 }
 
-.pane-case-filters-panel-pane-1 {
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1 {
   padding: 0 26px 26px 26px;
 }
-.pane-case-filters-panel-pane-1 h2.pane-title {
+.pane-case-filters-panel-pane-1 h2.pane-title,
+.pane-publication-filters-panel-pane-1 h2.pane-title {
   color: #231f20;
   display: block;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12304,9 +12311,14 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.2;
+  margin-bottom: 8px;
 }
 .view-mode-views_content_pane h2 a {
   color: #990000;
+  display: inline-block;
+}
+.pane-case-filters-panel-pane-1 .view-mode-views_content_pane h2 a {
+  display: inline;
 }
 .view-mode-views_content_pane h2 a:hover {
   color: #2d6280;
@@ -12320,18 +12332,26 @@ fieldset.collapsible .fieldset-legend {
 .view-mode-views_content_pane .field-name-field-link-document a:after {
   content: "m" !important;
 }
+.view-mode-views_content_pane .gsb_field_formatter_field_collection_separator,
 .view-mode-views_content_pane .field-name-field-author {
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+.view-mode-views_content_pane .field-name-field-author,
+.view-mode-views_content_pane .field-collection-item-field-authors {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2;
-  margin-top: 2px;
 }
-.view-mode-views_content_pane .field-name-field-year {
+.view-mode-views_content_pane .field-name-field-year,
+.view-mode-views_content_pane .group-publication-details {
   font-size: 14px;
   line-height: 1.2;
 }
-.view-mode-views_content_pane .case-product-icon.Video:before {
+
+.case-product-icon.Video:before {
   font-size: 20px;
 }
 

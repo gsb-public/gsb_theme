@@ -2,14 +2,14 @@
 // Views content panes
 ///////////////////////
 
-// Case study views pane
-.pane-case-filters-panel-pane-1
+// Case study and publications views pane
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1
   @extend %bg-grey-gradient-e
   padding: 0 26px 26px 26px
   // CTA link
   .see-all a
     @extend %teal-cta
-
 
   // Pane title
   h2.pane-title
@@ -38,8 +38,12 @@
     font-family: $font-demi
     font-weight: normal
     line-height: 1.2
+    margin-bottom: 8px
     a
       color: $red
+      display: inline-block
+      .pane-case-filters-panel-pane-1 &
+        display: inline
       &:hover
         color: $link-blue
 
@@ -54,19 +58,25 @@
         @extend %doc-attached-icons
 
   // Authors
+  .gsb_field_formatter_field_collection_separator,
   .field-name-field-author
+    line-height: 1
+    margin-bottom: 6px
+    margin-top: 2px
+  .field-name-field-author,
+  .field-collection-item-field-authors
     font-family: $font-demi
     font-size: 14px
     font-weight: normal
     line-height: 1.2
-    margin-top: 2px
 
-  // Year
-  .field-name-field-year
+  // Year and publication details
+  .field-name-field-year,
+  .group-publication-details
     font-size: 14px
     line-height: 1.2
 
-  // Cases product
-  .case-product-icon.Video
-    &:before
-      font-size: 20px
+// Cases product
+.case-product-icon.Video
+  &:before
+    font-size: 20px
