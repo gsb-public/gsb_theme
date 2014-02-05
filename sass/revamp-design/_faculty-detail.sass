@@ -311,6 +311,35 @@ $faculty-spacing: 24px
       @extend %doc-attached-icons
       vertical-align: baseline
 
+  // Authors commas
+  .views-field-field-authors
+    &:after
+      content: "."
+
+  // Featured publication
+  // using content pane view mode
+  .field-name-field-featured-publication-ref
+    .label-above
+      @extend %header-small
+
+    .view-mode-views_content_pane
+      margin-bottom: 6px
+      .field-collection-item-field-authors
+        font-family: $font-sans
+    // Title
+    h2
+      display: block
+      margin-bottom: 0
+      a
+        @extend %faculty-link
+    // Concat Authors and publication info
+    .gsb_field_formatter_field_collection_separator,
+    .group-publication-details
+      display: inline
+    .gsb_field_formatter_field_collection_separator
+      &:after
+        content: ". "
+
   // Courses
   .group-courses-taught
     // Courses header
