@@ -11134,7 +11134,7 @@ fieldset.collapsible .fieldset-legend {
 
 .node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -11149,7 +11149,7 @@ fieldset.collapsible .fieldset-legend {
 
 .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   font-size: 16px;
 }
 
@@ -11244,7 +11244,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -11258,7 +11258,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a:after,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a:after,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a:after,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
   content: "w" !important;
   font-family: "gsb";
   font-weight: normal;
@@ -11273,7 +11273,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a[target=_blank]:after,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
   content: " i" !important;
   font-size: 12px;
 }
@@ -11482,6 +11482,26 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .views-field-field-link-document a:after {
   content: "m" !important;
   vertical-align: baseline;
+}
+.node-faculty.view-mode-full .views-field-field-authors:after {
+  content: ".";
+}
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref .view-mode-views_content_pane {
+  margin-bottom: 6px;
+}
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref .view-mode-views_content_pane .field-collection-item-field-authors {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 {
+  display: block;
+  margin-bottom: 0;
+}
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref .gsb_field_formatter_field_collection_separator,
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref .group-publication-details {
+  display: inline;
+}
+.node-faculty.view-mode-full .field-name-field-featured-publication-ref .gsb_field_formatter_field_collection_separator:after {
+  content: ". ";
 }
 .node-faculty.view-mode-full .group-courses-taught h3 {
   font-size: 14px;
