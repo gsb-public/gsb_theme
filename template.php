@@ -77,6 +77,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-working-paper-listing-working-paper-list',
     'views-exposed-form-gsb-case-listing-case-listing',
     'views-exposed-form-gsb-book-listing-book-listing',
+    'views-exposed-form-gsb-publications-listing-publications-listing',
   );
 
 
@@ -104,6 +105,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_working_paper_listing',
     'gsb_case_listing',
     'gsb_book_listing',
+    'gsb_publications_listing'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -131,6 +133,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-book-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics, or other keywords');
+  }
+  // Publication listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-publications-listing-publications-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topics, or other keywords');
   }
 
 }
