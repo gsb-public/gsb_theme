@@ -170,7 +170,7 @@ dfn {
 .node-faculty.view-mode-full .group-wrapper-academic, .node-case.view-mode-full .field-name-field-link-single,
 .node-case.view-mode-full .field-name-field-permissions-statement,
 .node-case.view-mode-full .field-name-field-link-document,
-.node-case.view-mode-full .field-name-field-citation, .node-working-paper.view-mode-full .field-name-field-tag, .node-working-paper.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .view-display-id-working_paper_list .views-exposed-form, .view-display-id-case_listing .views-exposed-form, .view-display-id-book_listing .views-exposed-form, .node-publication.view-mode-full .group-wrapper-links {
+.node-case.view-mode-full .field-name-field-citation, .node-working-paper.view-mode-full .field-name-field-tag, .node-working-paper.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .view-display-id-working_paper_list .views-exposed-form, .view-display-id-case_listing .views-exposed-form, .view-display-id-book_listing .views-exposed-form, .node-publication.view-mode-full .group-wrapper-links, .view-display-id-publications_listing .views-exposed-form {
   border-bottom: 1px #cccccc solid;
 }
 
@@ -12199,7 +12199,8 @@ fieldset.collapsible .fieldset-legend {
   color: #990000;
 }
 .view-mode-teaser_listing .field-name-field-author,
-.view-mode-teaser_listing .field-name-field-authors {
+.view-mode-teaser_listing .field-name-field-authors,
+.view-mode-teaser_listing .field-collection-item-field-authors {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -12559,6 +12560,24 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.2;
+}
+
+.view-display-id-publications_listing .views-exposed-form .form-type-select .bef-checkboxes {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+.view-display-id-publications_listing .view-content .views-row {
+  border-bottom: 1px #231f20 solid;
+}
+.view-display-id-publications_listing .view-content .views-row:last-of-type {
+  border-bottom: 0;
+}
+.view-display-id-publications_listing .group-publication-details {
+  display: inline;
+}
+.view-display-id-publications_listing .group-publication-details:after {
+  content: ".";
 }
 
 .intro-copy {
