@@ -11484,7 +11484,7 @@ fieldset.collapsible .fieldset-legend {
   font-size: 28px;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 .node-faculty.view-mode-full .group-wrapper-name span:after {
   content: " ";
@@ -11500,11 +11500,15 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .field-name-field-leave-statement .label-inline {
   font-weight: normal;
 }
-.node-faculty.view-mode-full .field-name-field-title-position-unlimited {
+.node-faculty.view-mode-full .field.field-name-field-title-position-unlimited {
   line-height: 1.2;
-}
-.node-faculty.view-mode-full .field-name-field-title-position-unlimited .field-item {
   margin-bottom: 8px;
+}
+.node-faculty.view-mode-full .field.field-name-field-title-position-unlimited .field-item {
+  margin-bottom: 8px;
+}
+.node-faculty.view-mode-full .field.field-name-field-title-position-unlimited .field-item:last-of-type {
+  margin-bottom: 0;
 }
 .node-faculty.view-mode-full .field-name-field-academic-area-single {
   font-size: 14px;
@@ -11597,15 +11601,12 @@ fieldset.collapsible .fieldset-legend {
   font-size: 14px;
   line-height: 1.2;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  margin-left: 26px;
+  font-weight: normal;
   margin-bottom: 8px;
+  margin-top: 16px;
 }
-.node-faculty.view-mode-full .group-courses-taught .views-row {
-  margin-left: 26px;
-}
-.node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-collection-item-field-non-degree-course {
-  margin-left: 26px;
+.node-faculty.view-mode-full .group-courses-taught p {
+  line-height: 1.3;
 }
 .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-collection-item-field-non-degree-course .field {
   margin-bottom: 0;
