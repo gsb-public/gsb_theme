@@ -6,14 +6,13 @@
  *
  * CHANGES:
  *  - Removed clearfix
+ *  - Remove line break white space
  */
 ?>
 <<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?>">
-
   <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
-
   <?php print $ds_content; ?>
 <?php print '</' . $ds_content_wrapper . '>' ?>
 <?php if (!empty($drupal_render_children)): ?>
