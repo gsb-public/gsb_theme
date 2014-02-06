@@ -15,8 +15,7 @@
   <?php endif; ?>
 
   <?php print $ds_content; ?>
-</<?php print $ds_content_wrapper ?>>
-
+<?php print '</' . $ds_content_wrapper . '>' ?>
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
 <?php endif; ?>
