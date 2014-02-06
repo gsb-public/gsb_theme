@@ -307,7 +307,7 @@ $faculty-spacing: 24px
   .views-field-field-body p,
   .publication-meta
     font-size: 14px
-    line-height: 1.1
+    line-height: 1.2
   .views-field-field-link-document
     a:after
       content: "m" !important
@@ -330,11 +330,14 @@ $faculty-spacing: 24px
       margin-bottom: 0
       a
         @extend %faculty-link
+    .group-wrapper-featured
+      line-height: 1.2
     // Concat Authors and publication info
     .gsb_field_formatter_field_collection_separator,
     .group-publication-details
       display: inline
     .gsb_field_formatter_field_collection_separator
+      margin: 0
       &:after
         content: ". "
 
