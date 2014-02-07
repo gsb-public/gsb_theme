@@ -249,12 +249,20 @@
 .pane-gsb-public-custom-blocks-gpcb-conducting-research
   height: 200px
   padding: 26px
+  +background(linear-gradient(left, rgba(#30759c, 1), rgba(#015280, 0)), image_url("bg-library-conducting-research.jpg") 100% 50% no-repeat)
   .description
     color: $white
     font-size: 32px
     line-height: 1.2
     margin-bottom: 20px
-  +background(linear-gradient(left, rgba(#30759c, 1), rgba(#015280, 0)), image_url("bg-library-conducting-research.jpg") 100% 50% no-repeat)
+    +breakpoint(1000px 1050px)
+      font-size: 28px
+    +breakpoint(751px max-width)
+      font-size: 28px
+    +breakpoint(608px 568px)
+      font-size: 22px
+    +breakpoint($bp-mobile)
+      font-size: 24px
   a
     @extend %teal-cta
     max-width: 245px
