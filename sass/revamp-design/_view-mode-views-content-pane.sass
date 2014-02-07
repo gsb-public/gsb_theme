@@ -30,6 +30,8 @@
 
 // View mode
 .view-mode-views_content_pane
+  .group-wrapper-title
+    line-height: 1.2
   // Item title
   h2
     color: $text-black
@@ -56,6 +58,7 @@
       &:after
         content: "m" !important
         @extend %doc-attached-icons
+        font-size: 14px
 
   // Authors
   .gsb_field_formatter_field_collection_separator,
@@ -78,5 +81,6 @@
 
 // Cases product
 .case-product-icon.Video
+  display: inline
   &:before
     font-size: 20px
