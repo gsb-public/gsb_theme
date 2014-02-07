@@ -2,6 +2,32 @@
 // Library
 /////////////
 
+// Submit Buttom used in Library Forms
+.pane-library-faq-form,
+.pane-library-searchworks-form
+  .submit
+    float: left
+    text-indent: 1000px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    border: none
+    width: 36px
+    height: 36px
+    .svg &
+      +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
+      background-size: 60px
+      &:hover
+        +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        background-size: 60px
+    .no-js &, .no-svg &
+      +background(image_url("search-white.png") no-repeat 11px 11px, $red)
+      &:hover
+        +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
+
 // Today's Hour Block
 
 .pane-agenda-2
@@ -63,30 +89,6 @@
       margin-right: 0px
       padding-right: 36px
       height: 36px
-    // Search Button
-    .submit
-      float: left
-      text-indent: 1000px
-      -webkit-border-radius: 0
-      -moz-border-radius: 0
-      -ms-border-radius: 0
-      border-radius: 0
-      border-top-right-radius: 50%
-      border-bottom-right-radius: 50%
-      border: none
-      width: 36px
-      height: 36px
-      .svg &
-        +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
-        background-size: 60px
-        &:hover
-          +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
-          background-size: 60px
-      .no-js &, .no-svg &
-        +background(image_url("search-white.png") no-repeat 11px 11px, $red)
-        &:hover
-          +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
-
 		  
 .narrow-view
   .pane-library-faq-form
@@ -192,14 +194,11 @@
     font-size: 24px
     font-family: $font-demi
     color: $text-black 
+    margin-bottom: 10px
   .pane-content
     .tabbed_box
       margin: 0px auto 0px auto
-      width: 300px
       .tabbed_area 
-        border: 1px solid #494e52
-        background-color: #636d76
-        padding: 8px
         ul.tabs 
           margin: 0px
           padding: 0px
@@ -207,32 +206,39 @@
             list-style: none
             display: inline
             a
-              background-color: #464c54
-              color: #ffebb5
               padding: 8px 14px 8px 14px
-              text-decoration: none
-              font-size: 9px
-              font-family: Verdana, Arial, Helvetica, sans-serif
-              font-weight: bold
-              text-transform: uppercase
-              border: 1px solid #464c54
-              &:hover
-                background-color: #2f343a
-                border-color: #2f343a
-              &:active 
-                background-color: #ffffff
-                color: #282e32
-                border: 1px solid #464c54
-                border-bottom: 1px solid #ffffff
+              font-size: 14px
+              font-weight: normal
+              +background(linear-gradient(bottom, #ededed 20%, #f8f6f6 100%))
+              border: 1px solid #e4e4e4
+              border-bottom: 0
+            .active 
+              color: $text-black              
+              @extend %border-and-box-shadow
+              border-bottom: 0
         .content
-          background-color: #ffffff
-          padding: 10px
-          border: 1px solid #464c54      
-			
+          @extend %border-and-box-shadow
+          padding: 28px 
+          height: 102px
+          select
+            float: left		  
+          .search
+            width: 76%
+            float: left
+            margin-right: 0px
+            padding-right: 36px
+            height: 36px
+          .search-ejournal
+            width: 56%
+            float: left
+            margin-right: 0px
+            padding-right: 36px
+            height: 36px
+            
         #content_2
           display: none
         ul.tabs
           margin: 0px
           padding: 0px
           margin-top: 5px
-          margin-bottom: 6px
+          margin-bottom: 2px
