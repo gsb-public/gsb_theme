@@ -164,6 +164,7 @@ function gsb_theme_preprocess_html(&$variables) {
   $allowed_paths = array(
     'programs',
     'stanford-gsb-experience',
+    'library',
   );
   $normalized_arg = arg(0);
   $args = explode('/', trim(request_uri(), '/'));
