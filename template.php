@@ -271,20 +271,10 @@ function gsb_theme_preprocess_field(&$variables, $hook) {
 /**
  * Implements theme_menu_link().
  */
-function gsb_theme_menu_link(array $variables) {
-  $element = $variables['element'];
-
+function gsb_theme_preprocess_menu_link(&$variables) {
   // Need to remove any menu minipanels code on anything that isn't the main
   // menu.
-  if ($element['#original_link']['menu_name'] !== 'main-menu') {
-    unset($element['#localized_options']['menu_minipanels_hover']);
+  if ($variables['element']['#original_link']['menu_name'] !== 'main-menu') {
+    unset($variables['element']['#localized_options']['menu_minipanels_hover']);
   }
-
-  $sub_menu = '';
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
