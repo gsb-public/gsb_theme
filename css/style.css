@@ -12441,10 +12441,26 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-book.view-mode-teaser_listing .left.second-column {
   float: left;
-  max-width: 66%;
+  max-width: 70%;
+}
+@media (max-width: 52.5em) {
+  .node-book.view-mode-teaser_listing .left.second-column {
+    max-width: 100%;
+  }
 }
 .node-book.view-mode-teaser_listing .right {
-  float: left;
+  float: right;
+}
+@media (min-width: 62.4375em) and (max-width: 71.25em) {
+  .node-book.view-mode-teaser_listing .right {
+    float: left;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 52.5em) {
+  .node-book.view-mode-teaser_listing .right {
+    display: none;
+  }
 }
 .node-book.view-mode-teaser_listing .field-name-field-image-single-public {
   max-width: 150px;

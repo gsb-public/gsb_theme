@@ -25,10 +25,17 @@
   // Layout for image
   .left.second-column
     float: left
-    max-width: 66%
+    max-width: 70%
+    +breakpoint(840px max-width)
+      max-width: 100%
 
   .right
-    float: left
+    float: right
+    +breakpoint(999px 1140px)
+      float: left
+      margin-top: 20px
+    +breakpoint(840px max-width)
+      display: none
 
   // Image
   .field-name-field-image-single-public
