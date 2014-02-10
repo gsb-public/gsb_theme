@@ -137,4 +137,47 @@
       font-weight: normal
       margin-left: 8px
   
-  
+ 		
+// Library Blog
+ 
+.pane-rss-feed-rss-feed
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding:  2px 22px 22px 22px
+  .pager
+    display: none
+  .pane-title
+    font-size: 14px
+    font-weight: normal
+    color: $red
+    &:after
+      color: $grey-dark
+      content: "w"
+      font-family: "gsb"
+      font-size: 14px
+      line-height: 0  
+      margin-left: 2px
+  .view-rss-feed
+    .views-field-text
+      a
+        font-size: 20px
+        font-family: $font-demi
+        color: $text-black
+        &:after
+          color: $text-green
+          content: "w"
+          font-family: "gsb"
+          font-size: 20px
+          line-height: 0  
+          margin-left: 5px
+        &:hover
+          color: $text-blue
+          &:after
+            color: $text-blue
+		  
+    .views-field-text
+      span
+        font-size: 16px
+        font-weight: normal	
+      margin-top: 6px		
+	
