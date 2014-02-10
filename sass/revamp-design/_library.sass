@@ -194,7 +194,7 @@
     font-size: 24px
     font-family: $font-demi
     color: $text-black 
-    margin-bottom: 10px
+    margin-bottom: 20px
   .pane-content
     .tabbed_box
       margin: 0px auto 0px auto
@@ -206,7 +206,7 @@
             list-style: none
             display: inline
             a
-              padding: 8px 14px 8px 14px
+              padding: 10px 16px 10px 16px
               font-size: 14px
               font-weight: normal
               +background(linear-gradient(bottom, #ededed 20%, #f8f6f6 100%))
@@ -221,20 +221,24 @@
           @extend %border-and-box-shadow
           padding: 28px 
           height: 102px
+          +breakpoint($bp-tablet-port)
+            height: 114px
+          +breakpoint($bp-mobile-max)
+            height: 130px
           select
-            float: left		  
+            float: left		
+            margin-left: -12px			
           .search
-            width: 76%
             float: left
             margin-right: 0px
-            padding-right: 36px
+            margin-left: -12px
             height: 36px
           .search-ejournal
-            width: 56%
             float: left
             margin-right: 0px
             padding-right: 36px
             height: 36px
+            margin-left: 16px
             
         #content_2
           display: none
