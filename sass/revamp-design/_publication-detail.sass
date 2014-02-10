@@ -23,10 +23,9 @@
     margin-top: 16px
     padding: 26px 0
     a
-      &:after
-        content: "m" !important
-        @extend %doc-attached-icons
       @extend %green-button
+      &:after
+        @extend %doc-attached-icons
       &:hover
         +background(linear-gradient(top, #18455f, $text-blue))
     .field
@@ -34,6 +33,17 @@
       vertical-align: bottom
       &:first-of-type
         margin-right: 6px
+    // Link
+    .field-name-field-link-single a
+      &:after
+        content: "i" !important
+        font-size: 12px
+        line-height: 0
+    // PDF
+    .field-name-field-file-single-public a
+      &:after
+        content: "m" !important
+        font-size: 14px
 
   // Faculty author block
   .faculty-author-wrapper
