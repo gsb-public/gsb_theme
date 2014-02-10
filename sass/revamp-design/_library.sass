@@ -38,7 +38,7 @@
     font-size: 20px
     font-weight: bold
     line-height: 1.2
-    color: $text-black 
+    color: $text-black
     font-family: $font-sans
   .pane-content
     .agenda-block
@@ -46,9 +46,9 @@
         display: none
       ol
         margin: 0
-        li      
+        li
           background: none
-          padding: 10px 0px 0px 0px 
+          padding: 10px 0 0 0
           .calendar_title
             font-size: 18px
             font-weight: normal
@@ -63,12 +63,12 @@
               margin-right: 4px
               vertical-align: middle
       .moreinfo
-        display: none	  
+        display: none
     a
       @extend %teal-cta
       margin-top: 7px
 
-	  
+
 // Library FAQ's Block
 
 .pane-library-faq-form
@@ -79,17 +79,17 @@
     font-size: 24px
     font-weight: bold
     line-height: 1.2
-    color: $text-black 
+    color: $text-black
     font-family: $font-sans
   .pane-content
     //Search Field
     .hidden
       width: 82%
       float: left
-      margin-right: 0px
+      margin-right: 0
       padding-right: 36px
       height: 36px
-		  
+
 .narrow-view
   .pane-library-faq-form
     .pane-content
@@ -97,9 +97,9 @@
       .search_text
         font-size: 18px
         line-height: 1.2
-        font-weight: normal 
-        padding: 12px 0px
-      .hidden	
+        font-weight: normal
+        padding: 12px 0
+      .hidden
         font-size: 14px
 .wide-view
   .pane-library-faq-form
@@ -108,10 +108,10 @@
       .search_text
         font-size: 20px
         line-height: 1.2
-        font-weight: normal 
-        padding: 14px 0px
+        font-weight: normal
+        padding: 14px 0
 
-		
+
 // Chat with Librarian Block
 
 .pane-library-chat-form
@@ -122,7 +122,7 @@
   .pane-title
     font-size: 20px
     font-weight: bold
-    color: $text-black 
+    color: $text-black
     margin-left: 3px
     &:before
       content: ":"
@@ -185,66 +185,60 @@
 	
  
 // Library Search Works Block
- 
+
 .pane-library-searchworks-form
-  @extend %bg-border-and-box-shadow
-  position: relative
-  padding: 26px
   .pane-title
     font-size: 24px
     font-family: $font-demi
-    color: $text-black 
-    margin-bottom: 20px
-  .pane-content
-    .tabbed_box
-      margin: 0px auto 0px auto
-      .tabbed_area 
-        ul.tabs 
-          margin: 0px
-          padding: 0px
-          li
-            list-style: none
-            display: inline
-            a
-              padding: 10px 16px 10px 16px
-              font-size: 14px
-              font-weight: normal
-              +background(linear-gradient(bottom, #ededed 20%, #f8f6f6 100%))
-              border: 1px solid #e4e4e4
-              border-bottom: 0
-            .active 
-              color: $text-black              
-              @extend %border
-              +box-shadow(rgba($black, 0.1) 2px -2px 0px -2px, rgba($black, 0.1) 0 0 0 1px) 
-              border-bottom: 0
-        .content
-          @extend %border-and-box-shadow
-          padding: 28px 
-          height: 102px
-          +breakpoint($bp-tablet-port)
-            height: 114px
-          +breakpoint($bp-mobile-max)
-            height: 130px
-          select
-            float: left		
-            margin-left: -12px			
-          .search
-            float: left
-            margin-right: 0px
-            margin-left: -12px
-            height: 36px
-          .search-ejournal
-            float: left
-            margin-right: 0px
-            padding-right: 36px
-            height: 36px
-            margin-left: 16px
-            
-        #content_2
-          display: none
-        ul.tabs
-          margin: 0px
-          padding: 0px
-          margin-top: 5px
-          margin-bottom: 2px
-          margin-left: 1px
+    color: $text-black
+    margin-bottom: 30px
+  .tabbed_box
+    margin: 0 auto
+    .tabbed_area
+      ul.tabs
+        margin: 0
+        padding: 0
+        position: relative
+        top: -10px
+      li
+        list-style: none
+        display: inline
+        a
+          +background(linear-gradient(#f8f6f6, #ededed))
+          border: 1px solid #e4e4e4
+          border-bottom: 0
+          font-size: 14px
+          font-weight: normal
+          padding: 14px 26px
+          &.active
+            background: #fbfaf8
+            border: 1px solid rgba($black, 0.1)
+            border-bottom: 0
+            color: $text-black
+            padding-bottom: 15px
+
+  // Tab panes
+  .content
+    @extend %bg-border-and-box-shadow
+    border: 0
+    padding: 26px
+    height: 102px
+    +breakpoint($bp-tablet-port)
+      height: 114px
+    +breakpoint($bp-mobile-max)
+      height: 130px
+    select
+      float: left
+    .search
+      float: left
+      margin-right: 0
+      height: 36px
+    .search-ejournal
+      float: left
+      margin-right: 0
+      padding-right: 36px
+      height: 36px
+      margin-left: 16px
+
+  #content_2
+    display: none
