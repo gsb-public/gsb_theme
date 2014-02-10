@@ -278,3 +278,18 @@ function gsb_theme_preprocess_menu_link(&$variables) {
     unset($variables['element']['#localized_options']['menu_minipanels_hover']);
   }
 }
+
+/**
+ * Implements hook_process_HOOK() for node.tpl.php.
+ */
+function gsb_theme_process_node(&$variables, $hook) {
+  // For teaser listings, if the right column is not empty, add a specific class.
+  $types = array(
+    'book',
+  );
+  if (in_array($variables['type'], $types) && $variables['view_mode'] == 'teaser_listing') {
+    if (!empty($variables['right'])) {
+      $variables['left_classes'] .= ' second-column';
+    }
+  }
+}
