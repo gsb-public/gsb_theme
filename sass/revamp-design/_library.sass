@@ -117,8 +117,6 @@
 .pane-library-chat-form
   @extend %bg-border-and-box-shadow
   position: relative
-  padding: 26px
-  width: 50%
   .pane-title
     font-size: 20px
     font-weight: bold
@@ -139,6 +137,18 @@
       font-size: 14px
       font-weight: normal
       margin-left: 8px
+	  
+.wide-view
+  .pane-library-chat-form
+    width: 50%
+    padding: 26px
+.narrow-view
+  .pane-library-chat-form
+    padding: 22px
+    .pane-content
+      .libraryh3lp iframe
+        width: 220px !important
+
  		
 // Library Blog
  
