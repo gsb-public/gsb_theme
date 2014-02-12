@@ -160,7 +160,7 @@
         $wrapper = $element.children('.view-content');
 
         // Find the last item in the list.
-        $lastItem = $wrapper.children('.views-row-last');
+        $lastItem = $wrapper.children('.views-row').filter(':last');
 
         // Calculate the new height by
         // Distance from the top of last + height of last - distance from the top of the wrapper
