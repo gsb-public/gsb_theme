@@ -12378,21 +12378,25 @@ fieldset.collapsible .fieldset-legend {
   content: "m" !important;
   color: #990000;
 }
+.view-mode-teaser_listing .gsb_field_formatter_field_collection_separator {
+  line-height: 0;
+  margin-top: 6px;
+}
 .view-mode-teaser_listing .field-name-field-author,
-.view-mode-teaser_listing .field-name-field-authors,
 .view-mode-teaser_listing .field-collection-item-field-authors {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
-  margin-top: 6px;
 }
 .view-mode-teaser_listing .field-name-field-year,
 .view-mode-teaser_listing .field-name-field-year-of-publication {
   font-size: 16px;
   line-height: 1.2;
 }
-.view-mode-teaser_listing .field-name-field-description {
+.view-mode-teaser_listing .field-name-field-description,
+.view-mode-teaser_listing .field-name-field-body,
+.view-mode-teaser_listing .field-name-field-body p {
   font-size: 16px;
   line-height: 1.3;
   margin: 12px 0 8px;
@@ -12419,8 +12423,12 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-working_paper_list .view-content .views-row:last-of-type {
   border-bottom: 0;
 }
-.view-display-id-working_paper_list .field-name-title h2 {
+
+.node-working-paper.view-mode-teaser_listing .field-name-title h2 {
   display: inline;
+}
+.node-working-paper.view-mode-teaser_listing .field-name-field-author {
+  margin-top: 6px;
 }
 
 .view-display-id-case_listing .views-exposed-form .form-type-select .bef-checkboxes {
@@ -12436,6 +12444,10 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-display-id-case_listing .view-mode-teaser_listing .field-name-title h2 {
   display: inline;
+}
+
+.node-case.view-mode-teaser_listing .field-name-field-author {
+  margin-top: 6px;
 }
 
 .case-product-icon {
@@ -12494,10 +12506,7 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 .node-book.view-mode-teaser_listing .field-name-field-image-single-public {
-  max-width: 150px;
-}
-.node-book.view-mode-teaser_listing .gsb_field_formatter_field_collection_separator {
-  margin-top: 6px;
+  max-width: 100px;
 }
 .node-book.view-mode-teaser_listing .field-name-field-authors {
   display: inline;
@@ -12957,10 +12966,11 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-publications_listing .view-content .views-row:last-of-type {
   border-bottom: 0;
 }
-.view-display-id-publications_listing .group-wrapper-published {
+
+.node-publication.view-mode-teaser_listing .group-wrapper-published {
   display: inline;
 }
-.view-display-id-publications_listing .group-wrapper-published:after {
+.node-publication.view-mode-teaser_listing .group-wrapper-published:after {
   content: ".";
 }
 

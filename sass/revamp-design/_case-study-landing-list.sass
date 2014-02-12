@@ -2,6 +2,7 @@
 // Case study landing list
 //////////////////////////
 
+// View overrides
 .view-display-id-case_listing
   // General filter styles are in _search-filters
   // Checkboxes in 3 columns instead of 4
@@ -22,6 +23,13 @@
   // Display the title inline
   .view-mode-teaser_listing .field-name-title h2
     display: inline
+
+// Content overrides
+.node-case.view-mode-teaser_listing
+
+  // Author field
+  .field-name-field-author
+    margin-top: 6px
 
 // Product type
 .case-product-icon

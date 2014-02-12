@@ -2,6 +2,7 @@
 // Book landing list
 //////////////////////////
 
+// View overrides
 .view-display-id-book_listing
   // General filter styles are in _search-filters
   // Checkboxes in 3 columns instead of 4
@@ -19,6 +20,7 @@
       &:last-of-type
         border-bottom: 0
 
+// Content overrides
 .node-book.view-mode-teaser_listing
   +clearfix
 
@@ -39,10 +41,8 @@
 
   // Image
   .field-name-field-image-single-public
-    max-width: 150px
-  // Author wrapper
-  .gsb_field_formatter_field_collection_separator
-    margin-top: 6px
+    max-width: 100px
+
   // Authors
   .field-name-field-authors
     display: inline
