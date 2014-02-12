@@ -7373,19 +7373,22 @@ ul.slideshow-items li:first-of-type {
 }
 
 .collapsible .fieldset-title {
-  padding: 0 0 0 25px;
-  font-weight: bold;
-  background: url('../images/toggle-open.png') no-repeat left 2px;
   display: inline-block;
 }
-.collapsible .fieldset-title:hover {
-  background: url('../images/toggle-open-hover.png') no-repeat left 2px;
+.collapsible .fieldset-title:before {
+  color: #990000;
+  content: "d";
+  font-family: "gsb";
+  font-size: 24px;
+  line-height: 0;
+  position: relative;
+  left: -2px;
 }
-.collapsible.collapsed .fieldset-title {
-  background: url('../images/toggle-close.png') no-repeat left 1px;
+.collapsible .fieldset-title:hover:before {
+  color: #2d6280;
 }
-.collapsible.collapsed .fieldset-title:hover {
-  background: url('../images/toggle-close-hover.png') no-repeat left 1px;
+.collapsible.collapsed .fieldset-title:before {
+  content: "c";
 }
 
 fieldset.collapsible .fieldset-legend {

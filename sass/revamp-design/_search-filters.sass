@@ -146,17 +146,22 @@
 // Filter toggle
 .collapsible
   .fieldset-title
-    padding: 0 0 0 25px
-    font-weight: bold
-    background: image_url('toggle-open.png') no-repeat left 2px
     display: inline-block
+    &:before
+      color: $red
+      content: "d"
+      font-family: "gsb"
+      font-size: 24px
+      line-height: 0
+      position: relative
+      left: -2px
     &:hover
-      background: image_url('toggle-open-hover.png') no-repeat left 2px
+      &:before
+        color: $link-blue
   &.collapsed
     .fieldset-title
-      background: image_url('toggle-close.png') no-repeat left 1px
-      &:hover
-        background: image_url('toggle-close-hover.png') no-repeat left 1px
+      &:before
+        content: "c"
 
 fieldset.collapsible .fieldset-legend
   display: inline
