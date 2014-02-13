@@ -199,14 +199,23 @@
 .page-faculty-research,
 .page-giving,
 .page-alumni
-  #content-wrapper
-    +breakpoint($bp-tablet-port-min)
+  +breakpoint($bp-tablet-port-min)
+    #content-wrapper
       +background(image_url("bg-landing-whitetitlebar.jpg") center top no-repeat, $white)
-      #page-title
-        background: rgba($white, 0.6)
-        border: 2px $white solid
-        margin-bottom: 30px
-        padding: 12px 20px 10px
+    #page-title
+      background: rgba($white, 0.6)
+      border: 2px $white solid
+      margin-bottom: 30px
+      padding: 12px 20px 10px
+
+// White background title for faculty and research landing
+.page-node-303566
+  +breakpoint($bp-tablet-port-min)
+    #page-title
+      background: rgba($white, 0.6)
+      border: 2px $white solid
+      margin-bottom: 30px
+      padding: 12px 20px 10px
 
 // Links in main content
 .main-content
