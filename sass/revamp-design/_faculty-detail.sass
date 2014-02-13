@@ -300,6 +300,12 @@ $faculty-spacing: 24px
       @extend %doc-attached-icons
       vertical-align: baseline
 
+  // Working papers and case year
+  .view-display-id-case_listing_entity_view
+    .date-display-single
+      &:before
+        content: ", "
+
   // Featured publication
   // using content pane view mode
   .field-name-field-featured-publication-ref
