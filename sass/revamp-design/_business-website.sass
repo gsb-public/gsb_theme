@@ -1,0 +1,27 @@
+////////////////////
+// Business Website
+///////////////////
+
+// Selected Business Website Category Detail
+.view-business-websites-category-detail
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding: 12px 22px 12px 22px
+  .views-row
+    a
+      padding-right: 10px
+      color: #7d8401
+      &:after
+        content: "i"
+        text-transform: lowercase
+        font-family: "gsb"
+        font-size: 12px
+        margin-left: 0.3em
+      &:hover
+        color: $text-blue
+    .views-field-title
+      border-top: 1px solid #ebebeb
+      padding: 6px 0 12px 0
+  .views-row-first
+    .views-field-title
+      border-top: 0
