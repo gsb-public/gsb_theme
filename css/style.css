@@ -12196,6 +12196,12 @@ fieldset.collapsible .fieldset-legend {
   display: none;
 }
 
+@media (max-width: 25em) {
+  .node-book.view-mode-full .field-name-title h2 {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+}
 .node-book.view-mode-full .group-left .group-wrapper-meta {
   overflow: hidden;
   *zoom: 1;
@@ -12203,10 +12209,15 @@ fieldset.collapsible .fieldset-legend {
 .node-book.view-mode-full .group-left .field-name-field-image-single-public {
   display: inline;
   float: right;
-  margin-left: 16px;
+  margin-left: 12px;
 }
 .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
   max-width: 150px;
+}
+@media (max-width: 25em) {
+  .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
+    max-width: 75px;
+  }
 }
 .node-book.view-mode-full .field-name-field-authors {
   display: inline;

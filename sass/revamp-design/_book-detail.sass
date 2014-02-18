@@ -12,6 +12,11 @@
 .node-book.view-mode-full
   // See _working-paper-detail.sass for shared layout and base styles
 
+  .field-name-title h2
+    +breakpoint(400px max-width)
+      font-size: 24px
+      margin-top: 15px
+
   // Left side
   .group-left
     .group-wrapper-meta
@@ -20,10 +25,11 @@
     .field-name-field-image-single-public
       display: inline
       float: right
-      margin-left: 16px
+      margin-left: 12px
       img
         max-width: 150px
-
+        +breakpoint(400px max-width)
+          max-width: 75px
   // Authors
   .field-name-field-authors
     display: inline
