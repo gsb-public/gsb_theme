@@ -148,6 +148,9 @@ $faculty-spacing: 24px
         font-family: "gsb-email"
         font-size: 13px
         line-height: 0
+    // CV
+    .field-name-field-file-single-public a:after
+      font-size: 14px
 
   // RIGHT SIDE
   .group-right
@@ -246,6 +249,9 @@ $faculty-spacing: 24px
 
   // Presentations
   .field-name-field-conf-presentations-section
+    .field-name-field-file-conf-presentation
+      font-size: 14px
+      line-height: 1.2
     // Replace file size with pdf icon
     .field-name-field-file-conf-presentation a
       font-family: $font-sans
@@ -256,6 +262,8 @@ $faculty-spacing: 24px
       &:after
         content: "m" !important
         @extend %doc-attached-icons
+        font-size: 13px
+        vertical-align: baseline
 
   // Affiliations
   .group-wrapper-affiliation
@@ -298,7 +306,7 @@ $faculty-spacing: 24px
     a:after
       content: "m" !important
       @extend %doc-attached-icons
-      vertical-align: baseline
+      font-size: 13px
 
   // Working papers and case year
   .view-display-id-case_listing_entity_view
