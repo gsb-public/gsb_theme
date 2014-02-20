@@ -88,7 +88,6 @@
     h2
       display: inline
 
-
   // Editorial Summary or Description
   .field-name-field-editorial-summary,
   .field-name-field-body,
@@ -99,18 +98,35 @@
     margin-top: 12px
     max-width: 600px
 
-// Event icon on landing
-// .page-business-insights
-  .node-event.node-teaser
-    .field-name-title
-      &:before
-        color: $blue
-        content: '5'
-        font-family: gsb
-        line-height: 1
-        font-size: 27px
-        display: inline
-        float: left
-        margin-right: 5px
-        position: relative
-        top: -6px
+///////////////////////////
+// Responsive book teaser
+///////////////////////////
+.narrow-view .node-book.view-mode-teaser
+  +clearfix
+  // Featured label
+  .featured-label
+    +breakpoint($bp-mobile-max)
+      display: block
+      max-width: 90px
+
+  // Image
+  .field-name-field-image-single-public
+    +breakpoint($bp-mobile-max)
+      float: left
+      margin-right: 15px
+    +breakpoint($bp-mobile-480)
+      margin-right: 10px
+    img
+      +breakpoint($bp-mobile-max)
+        max-width: 85px
+      +breakpoint($bp-mobile-480)
+        max-width: 50px
+
+  // No text wrap on mobile
+  .field-name-title,
+  .field-name-field-authors
+    display: block
+    +breakpoint($bp-mobile-max)
+      margin-left: 100px
+    +breakpoint($bp-mobile-480)
+      margin-left: 60px

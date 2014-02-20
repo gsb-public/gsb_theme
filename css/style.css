@@ -8326,6 +8326,54 @@ fieldset.collapsible .fieldset-legend {
   max-width: 600px;
 }
 
+.narrow-view .node-book.view-mode-teaser {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .node-book.view-mode-teaser .featured-label {
+    display: block;
+    max-width: 90px;
+  }
+}
+@media (max-width: 35.5em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+    float: left;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 30em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 35.5em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
+    max-width: 85px;
+  }
+}
+@media (max-width: 30em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
+    max-width: 50px;
+  }
+}
+.narrow-view .node-book.view-mode-teaser .field-name-title,
+.narrow-view .node-book.view-mode-teaser .field-name-field-authors {
+  display: block;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-title,
+  .narrow-view .node-book.view-mode-teaser .field-name-field-authors {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 30em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-title,
+  .narrow-view .node-book.view-mode-teaser .field-name-field-authors {
+    margin-left: 60px;
+  }
+}
+
 .pane-gsb-feature-faculty-display-az-list .pane-content {
   margin-bottom: 30px;
 }
