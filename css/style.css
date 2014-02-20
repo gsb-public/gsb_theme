@@ -156,7 +156,9 @@ dfn {
 
 .view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers,
-.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .node-publication.view-mode-full .group-wrapper-links {
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-case.view-mode-full .field-name-field-link-single,
+.node-case.view-mode-full .field-name-field-permissions-statement,
+.node-case.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .node-publication.view-mode-full .group-wrapper-links {
   border-top: 1px #cccccc solid;
 }
 
@@ -169,10 +171,9 @@ dfn {
 .view-display-id-case_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-book_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-publications_listing .views-widget-filter-secondary .form-type-select, .node-faculty.view-mode-full .field-name-field-academic-area-single, .node-faculty.view-mode-full .group-wrapper-research,
-.node-faculty.view-mode-full .group-wrapper-academic, .node-case.view-mode-full .field-name-field-link-single,
-.node-case.view-mode-full .field-name-field-permissions-statement,
-.node-case.view-mode-full .field-name-field-link-document,
-.node-case.view-mode-full .field-name-field-citation, .node-working-paper.view-mode-full .field-name-field-tag, .node-working-paper.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .view-display-id-working_paper_list .views-exposed-form, .view-display-id-case_listing .views-exposed-form, .view-display-id-book_listing .views-exposed-form, .node-publication.view-mode-full .group-wrapper-links, .view-display-id-publications_listing .views-exposed-form {
+.node-faculty.view-mode-full .group-wrapper-academic, .node-case.view-mode-full .field-name-field-link-single:last-child,
+.node-case.view-mode-full .field-name-field-permissions-statement:last-child,
+.node-case.view-mode-full .field-name-field-link-document:last-child, .node-working-paper.view-mode-full .field-name-field-tag, .node-working-paper.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .view-display-id-working_paper_list .views-exposed-form, .view-display-id-case_listing .views-exposed-form, .view-display-id-book_listing .views-exposed-form, .node-publication.view-mode-full .group-wrapper-links, .view-display-id-publications_listing .views-exposed-form {
   border-bottom: 1px #cccccc solid;
 }
 
@@ -11698,12 +11699,11 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .node-case.view-mode-full .field-name-field-business-insight-topic,
-.node-case.view-mode-full .field-name-field-citation,
 .node-case.view-mode-full .field-name-field-year,
 .node-case.view-mode-full .field-name-field-item-id,
 .node-case.view-mode-full .field-name-field-page-count {
-  line-height: 1.2;
   font-size: 16px;
+  line-height: 1.2;
 }
 .node-case.view-mode-full .field-name-field-item-id:before,
 .node-case.view-mode-full .field-name-field-page-count:before {
@@ -11735,6 +11735,8 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-case.view-mode-full .field-name-field-citation {
   color: #656162;
+  font-size: 14px;
+  line-height: 1.2;
   padding-bottom: 26px;
 }
 .node-case.view-mode-full .field-name-field-link-single,
@@ -11742,7 +11744,7 @@ fieldset.collapsible .fieldset-legend {
 .node-case.view-mode-full .field-name-field-link-document {
   font-size: 18px;
   line-height: 1.2;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 .node-case.view-mode-full .field-name-field-link-single span,
 .node-case.view-mode-full .field-name-field-permissions-statement span,

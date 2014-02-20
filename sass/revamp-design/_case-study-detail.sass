@@ -11,13 +11,13 @@
 
 // Detail page
 .node-case.view-mode-full
+  // Case published informations
   .field-name-field-business-insight-topic,
-  .field-name-field-citation,
   .field-name-field-year,
   .field-name-field-item-id,
   .field-name-field-page-count
-    line-height: 1.2
     font-size: 16px
+    line-height: 1.2
 
   .field-name-field-item-id,
   .field-name-field-page-count
@@ -25,12 +25,14 @@
       color: $text-black
       content: " | "
       display: inline
+
   .field-name-field-page-count
     &:after
       content: " pgs."
       color: $text-black
       display: inline
 
+  // Learning objective
   .field-name-field-learning-objective
     @extend %p
     margin-bottom: 26px
@@ -40,6 +42,7 @@
       padding-bottom: 4px
       font-size: 18px
 
+  // Keywords
   .field-name-field-tag
     font-size: 14px
     line-height: 1.2
@@ -47,22 +50,26 @@
     .label-inline
       font-weight: bold
 
+  // Case citation
   .field-name-field-citation
     color: $text-grey-light
+    font-size: 14px
+    line-height: 1.2
     padding-bottom: 26px
 
+  // Top borders
   .field-name-field-link-single,
   .field-name-field-permissions-statement,
-  .field-name-field-link-document,
-  .field-name-field-citation
-    @extend %divider-bottom
-
+  .field-name-field-link-document
+    @extend %divider-top
+    &:last-child
+      @extend %divider-bottom
   .field-name-field-link-single,
   .field-name-field-permissions-statement,
   .field-name-field-link-document
     font-size: 18px
     line-height: 1.2
-    padding: 20px 0px
+    padding: 20px 0
     span
       font-weight: bold
 
