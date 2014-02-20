@@ -12229,14 +12229,36 @@ fieldset.collapsible .fieldset-legend {
 .node-book.view-mode-full .group-left .field-name-field-image-single-public {
   display: inline;
   float: right;
-  margin-left: 12px;
+  margin-left: 15px;
+}
+@media (max-width: 40.625em) {
+  .node-book.view-mode-full .group-left .field-name-field-image-single-public {
+    float: left;
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 36.25em) {
+  .node-book.view-mode-full .group-left .field-name-field-image-single-public {
+    margin-right: 10px;
+  }
 }
 .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
   max-width: 150px;
 }
-@media (max-width: 25em) {
+@media (max-width: 40.625em) {
   .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
-    max-width: 75px;
+    max-width: 100px;
+  }
+}
+@media (min-width: 26.1875em) and (max-width: 36.25em) {
+  .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
+    max-width: 85px;
+  }
+}
+@media (max-width: 26.1875em) {
+  .node-book.view-mode-full .group-left .field-name-field-image-single-public img {
+    max-width: 50px;
   }
 }
 .node-book.view-mode-full .field-name-field-authors {
@@ -12245,6 +12267,38 @@ fieldset.collapsible .fieldset-legend {
 .node-book.view-mode-full .group-wrapper-publisher {
   font-size: 16px;
   line-height: 1.2;
+}
+.node-book.view-mode-full .field-name-title,
+.node-book.view-mode-full .field-name-field-authors,
+.node-book.view-mode-full .group-wrapper-publisher,
+.node-book.view-mode-full .group-wrapper-topics {
+  display: block;
+  margin-right: 165px;
+}
+@media (max-width: 40.625em) {
+  .node-book.view-mode-full .field-name-title,
+  .node-book.view-mode-full .field-name-field-authors,
+  .node-book.view-mode-full .group-wrapper-publisher,
+  .node-book.view-mode-full .group-wrapper-topics {
+    margin-left: 115px;
+    margin-right: 0;
+  }
+}
+@media (min-width: 26.25em) and (max-width: 36.25em) {
+  .node-book.view-mode-full .field-name-title,
+  .node-book.view-mode-full .field-name-field-authors,
+  .node-book.view-mode-full .group-wrapper-publisher,
+  .node-book.view-mode-full .group-wrapper-topics {
+    margin-left: 95px;
+  }
+}
+@media (max-width: 26.1875em) {
+  .node-book.view-mode-full .field-name-title,
+  .node-book.view-mode-full .field-name-field-authors,
+  .node-book.view-mode-full .group-wrapper-publisher,
+  .node-book.view-mode-full .group-wrapper-topics {
+    margin-left: 60px;
+  }
 }
 .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited {
   margin-top: 26px;

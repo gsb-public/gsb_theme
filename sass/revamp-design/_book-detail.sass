@@ -25,11 +25,22 @@
     .field-name-field-image-single-public
       display: inline
       float: right
-      margin-left: 12px
+      margin-left: 15px
+      +breakpoint(650px max-width)
+        float: left
+        margin-left: 0
+        margin-right: 15px
+      +breakpoint(580px max-width)
+        margin-right: 10px
       img
         max-width: 150px
-        +breakpoint(400px max-width)
-          max-width: 75px
+        +breakpoint(650px max-width)
+          max-width: 100px
+        +breakpoint(580px 419px)
+          max-width: 85px
+        +breakpoint(419px max-width)
+          max-width: 50px
+
   // Authors
   .field-name-field-authors
     display: inline
@@ -37,6 +48,21 @@
   .group-wrapper-publisher
     font-size: 16px
     line-height: 1.2
+
+  // No wrap on mobile
+  .field-name-title,
+  .field-name-field-authors,
+  .group-wrapper-publisher,
+  .group-wrapper-topics
+    display: block
+    margin-right: 165px
+    +breakpoint(650px max-width)
+      margin-left: 115px
+      margin-right: 0
+    +breakpoint(580px 420px)
+      margin-left: 95px
+    +breakpoint(419px max-width)
+      margin-left: 60px
 
 
   // Links
