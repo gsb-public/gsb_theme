@@ -246,10 +246,12 @@
       margin-right: 0
       height: 36px
       +breakpoint($bp-mobile-max)
-        width: 184px
+        width: 82%
         margin-top: 12px
       +breakpoint($bp-tablet-port)
         width: 324px
+      +breakpoint($bp-tablet-land-min)
+        width: 284px
     .search-ejournal
       float: left
       margin-right: 0
@@ -261,6 +263,9 @@
         margin-left: 0
       +breakpoint($bp-tablet-port)
         width: 140px
+        margin-left: 4px
+      +breakpoint($bp-tablet-land-min)
+        width: 107px
         margin-left: 4px
 
   #content_1
