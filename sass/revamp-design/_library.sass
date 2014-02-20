@@ -237,8 +237,6 @@
     border: 0
     padding: 26px
     height: 102px
-    +breakpoint($bp-tablet-port)
-      height: 114px
     +breakpoint($bp-mobile-max)
       height: 130px
     select
@@ -247,12 +245,28 @@
       float: left
       margin-right: 0
       height: 36px
+      +breakpoint($bp-mobile-max)
+        width: 184px
+        margin-top: 12px
+      +breakpoint($bp-tablet-port)
+        width: 324px
     .search-ejournal
       float: left
       margin-right: 0
       padding-right: 36px
       height: 36px
       margin-left: 16px
+      +breakpoint($bp-mobile-max)
+        width: 184px
+        margin-left: 0
+      +breakpoint($bp-tablet-port)
+        width: 140px
+        margin-left: 4px
 
+  #content_1
+    +breakpoint($bp-mobile-max)
+      .submit
+        margin-top: 12px  
+	
   #content_2
     display: none
