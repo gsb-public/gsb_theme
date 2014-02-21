@@ -10,7 +10,7 @@
   .views-row
     a
       padding-right: 10px
-      color: #7d8401
+      color: $link-green
       &:after
         content: "i"
         text-transform: lowercase
@@ -26,12 +26,11 @@
     .views-field-title
       border-top: 0
 
-	  
-// Selected Business Website Category listing	  
-.view-business-website-category-listing 
+
+// Selected Business Website Category listing
+.view-business-website-category-listing
   @extend %bg-border-and-box-shadow
-  position: relative
-  padding: 12px 22px 12px 22px
+  padding: 12px 22px
   .letter-group
     display: none
   .view-content
@@ -41,13 +40,9 @@
   .views-row
     a
       padding-right: 10px
-      color: #7d8401
+      color: $link-green
       &:hover
-        color: $text-blue
+        color: $link-blue
     .views-field-name
       border-top: 1px solid #dcdcdc
-      padding: 10px 0 8px 0
-  .views-row-last
-    .views-field-name
-      border-bottom: 2px solid #cbcbcb
       padding: 10px 0 8px 0
