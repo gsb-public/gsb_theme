@@ -8342,11 +8342,6 @@ fieldset.collapsible .fieldset-legend {
     margin-right: 15px;
   }
 }
-@media (max-width: 30em) {
-  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public {
-    margin-right: 10px;
-  }
-}
 @media (max-width: 35.5em) {
   .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
     max-width: 85px;
@@ -8370,7 +8365,67 @@ fieldset.collapsible .fieldset-legend {
 @media (max-width: 30em) {
   .narrow-view .node-book.view-mode-teaser .field-name-title,
   .narrow-view .node-book.view-mode-teaser .field-name-field-authors {
-    margin-left: 60px;
+    margin-left: 65px;
+  }
+}
+
+.wide-view .node-book.view-mode-teaser {
+  overflow: hidden;
+  *zoom: 1;
+}
+.wide-view .node-book.view-mode-teaser .featured-label {
+  display: block;
+  max-width: 90px;
+}
+.wide-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+    float: none;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
+    float: none;
+    margin-right: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
+    max-width: 85px;
+  }
+}
+@media (max-width: 30em) {
+  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
+    max-width: 50px;
+  }
+}
+.wide-view .node-book.view-mode-teaser .field-name-title,
+.wide-view .node-book.view-mode-teaser .field-name-field-authors {
+  display: block;
+  margin-left: 115px;
+}
+@media (min-width: 35.5625em) and (max-width: 48em) {
+  .wide-view .node-book.view-mode-teaser .field-name-title,
+  .wide-view .node-book.view-mode-teaser .field-name-field-authors {
+    margin-left: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .wide-view .node-book.view-mode-teaser .field-name-title,
+  .wide-view .node-book.view-mode-teaser .field-name-field-authors {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 30em) {
+  .wide-view .node-book.view-mode-teaser .field-name-title,
+  .wide-view .node-book.view-mode-teaser .field-name-field-authors {
+    margin-left: 65px;
   }
 }
 
@@ -12309,42 +12364,42 @@ fieldset.collapsible .fieldset-legend {
     max-width: 50px;
   }
 }
-.node-book.view-mode-full .field-name-field-authors {
+.node-book.view-mode-full .group-left .field-name-field-authors {
   display: inline;
 }
-.node-book.view-mode-full .group-wrapper-publisher {
+.node-book.view-mode-full .group-left .group-wrapper-publisher {
   font-size: 16px;
   line-height: 1.2;
 }
-.node-book.view-mode-full .field-name-title,
-.node-book.view-mode-full .field-name-field-authors,
-.node-book.view-mode-full .group-wrapper-publisher,
-.node-book.view-mode-full .group-wrapper-topics {
+.node-book.view-mode-full .group-left .field-name-title,
+.node-book.view-mode-full .group-left .field-name-field-authors,
+.node-book.view-mode-full .group-left .group-wrapper-publisher,
+.node-book.view-mode-full .group-left .group-wrapper-topics {
   display: block;
   margin-right: 165px;
 }
 @media (max-width: 40.625em) {
-  .node-book.view-mode-full .field-name-title,
-  .node-book.view-mode-full .field-name-field-authors,
-  .node-book.view-mode-full .group-wrapper-publisher,
-  .node-book.view-mode-full .group-wrapper-topics {
+  .node-book.view-mode-full .group-left .field-name-title,
+  .node-book.view-mode-full .group-left .field-name-field-authors,
+  .node-book.view-mode-full .group-left .group-wrapper-publisher,
+  .node-book.view-mode-full .group-left .group-wrapper-topics {
     margin-left: 115px;
     margin-right: 0;
   }
 }
 @media (min-width: 26.25em) and (max-width: 36.25em) {
-  .node-book.view-mode-full .field-name-title,
-  .node-book.view-mode-full .field-name-field-authors,
-  .node-book.view-mode-full .group-wrapper-publisher,
-  .node-book.view-mode-full .group-wrapper-topics {
+  .node-book.view-mode-full .group-left .field-name-title,
+  .node-book.view-mode-full .group-left .field-name-field-authors,
+  .node-book.view-mode-full .group-left .group-wrapper-publisher,
+  .node-book.view-mode-full .group-left .group-wrapper-topics {
     margin-left: 95px;
   }
 }
 @media (max-width: 26.1875em) {
-  .node-book.view-mode-full .field-name-title,
-  .node-book.view-mode-full .field-name-field-authors,
-  .node-book.view-mode-full .group-wrapper-publisher,
-  .node-book.view-mode-full .group-wrapper-topics {
+  .node-book.view-mode-full .group-left .field-name-title,
+  .node-book.view-mode-full .group-left .field-name-field-authors,
+  .node-book.view-mode-full .group-left .group-wrapper-publisher,
+  .node-book.view-mode-full .group-left .group-wrapper-topics {
     margin-left: 60px;
   }
 }

@@ -101,6 +101,8 @@
 ///////////////////////////
 // Responsive book teaser
 ///////////////////////////
+
+// Narrow view
 .narrow-view .node-book.view-mode-teaser
   +clearfix
   // Featured label
@@ -114,8 +116,6 @@
     +breakpoint($bp-mobile-max)
       float: left
       margin-right: 15px
-    +breakpoint($bp-mobile-480)
-      margin-right: 10px
     img
       +breakpoint($bp-mobile-max)
         max-width: 85px
@@ -129,4 +129,43 @@
     +breakpoint($bp-mobile-max)
       margin-left: 100px
     +breakpoint($bp-mobile-480)
-      margin-left: 60px
+      margin-left: 65px
+
+// Wide view
+.wide-view .node-book.view-mode-teaser
+  +clearfix
+  // Featured label
+  .featured-label
+    display: block
+    max-width: 90px
+
+  // Image
+  .field-name-field-image-single-public
+    float: left
+    margin-bottom: 0
+    margin-right: 15px
+    +breakpoint(768px 569px)
+      float: none
+      margin-bottom: 12px
+      margin-right: 0
+    img
+      +breakpoint(768px 569px)
+        float: none
+        margin-right: 0
+      +breakpoint($bp-mobile-max)
+        max-width: 85px
+      +breakpoint($bp-mobile-480)
+        max-width: 50px
+
+  // No text wrap on mobile
+  .field-name-title,
+  .field-name-field-authors
+    display: block
+    margin-left: 115px
+    +breakpoint(768px 569px)
+      margin-left: 0
+
+    +breakpoint($bp-mobile-max)
+      margin-left: 100px
+    +breakpoint($bp-mobile-480)
+      margin-left: 65px
