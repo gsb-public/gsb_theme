@@ -248,7 +248,8 @@
         height: 36px
         width: 100%
 
-  // Adjustment for select
+  // ejournal wrapper
+  // Adjustment for select box
   .searchworks-ejournal
     margin-left: -180px
     padding-left: 180px
@@ -256,6 +257,19 @@
   .searchworks-select
     float: left
     margin-right: 15px
+    +breakpoint(1120px 999px)
+      margin-bottom: 12px
+    +breakpoint(820px max-width)
+      margin-bottom: 12px
+
+  .searchworks-ejournal
+    +breakpoint(1120px 999px)
+      margin: 0
+      padding: 0
+    +breakpoint(820px max-width)
+      margin: 0
+      padding: 0
+
 
   #content_2
     display: none
