@@ -13115,6 +13115,15 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
+.node-publication.view-mode-full .group-wrapper-published:after {
+  content: ".";
+}
+.node-publication.view-mode-full .group-wrapper-commas {
+  display: inline;
+}
+.node-publication.view-mode-full .group-wrapper-commas h3 {
+  display: none;
+}
 .node-publication.view-mode-full .group-wrapper-links {
   margin-top: 16px;
   padding: 26px 0;
@@ -13135,7 +13144,7 @@ fieldset.collapsible .fieldset-legend {
 .node-publication.view-mode-full .group-wrapper-links .field-name-field-link-single a:after {
   content: "i" !important;
   font-size: 12px;
-  line-height: 0;
+  line-height: 1;
 }
 .node-publication.view-mode-full .group-wrapper-links .field-name-field-file-single-public a:after {
   content: "m" !important;

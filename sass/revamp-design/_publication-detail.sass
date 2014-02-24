@@ -20,6 +20,15 @@
   .gsb_field_formatter_field_collection_separator .label-inline
     font-family: $font-demi
     font-size: 18px
+
+  // Citation
+  .group-wrapper-published
+    &:after
+      content: "."
+  .group-wrapper-commas
+    display: inline
+    h3
+      display: none
   // Document links
   .group-wrapper-links
     @extend %divider-bottom
@@ -42,7 +51,7 @@
       &:after
         content: "i" !important
         font-size: 12px
-        line-height: 0
+        line-height: 1
     // PDF
     .field-name-field-file-single-public a
       &:after
