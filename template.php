@@ -287,8 +287,13 @@ function gsb_theme_process_node(&$variables, $hook) {
   // For teaser listings, if the right column is not empty, add a specific class.
   $types = array(
     'book',
+    'event',
   );
-  if (in_array($variables['type'], $types) && $variables['view_mode'] == 'teaser_listing') {
+  $view_modes = array(
+    'teaser_listing',
+    'event_listing',
+  );
+  if (in_array($variables['type'], $types) && in_array($variables['view_mode'], $view_modes)) {
     if (!empty($variables['right'])) {
       $variables['left_classes'] .= ' second-column';
     }

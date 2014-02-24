@@ -180,64 +180,6 @@
           content: "5"
           font-size: 28px
 
-///////////////////
-// Event listing
-///////////////////
-.view-display-id-event_listing_pane
-  .node-event.view-mode-teaser
-    margin: 0 26px
-    padding: 18px 0
-    +clearfix
-    // Image
-    .field-name-field-image-single-public
-      float: right
-      margin-left: 18px
-      width: 170px
-    // Date
-    .field-name-field-event-date
-      margin-bottom: 6px
-    // Title
-    .field-name-title
-      margin-bottom: 5px
-      h2
-        font-family: $font-demi
-        font-size: 24px
-        font-weight: normal
-        line-height: 1.2
-        &:hover
-          a
-            color: $link-blue
-    // Address
-    .field-name-field-address
-      font-size: 14px
-      line-height: 1.2
-      font-weight: bold
-      margin-bottom: 4px
-    // Description
-    .field-name-field-editorial-summary
-      font-size: 16px
-      line-height: 1.2
-      margin: 6px 0 15px
-
-  // Day separation
-  h5
-    display: block
-    border-top: 1px $text-black solid
-    padding-top: 18px
-  // Event separation
-  .views-row .node
-    @extend %divider-bottom
-  .views-row-last .node
-    border-bottom: 0
-  .views-exposed-widget
-    @extend %divider-bottom
-    padding: 0
-    margin-bottom: 20px
-  .views-widget label.option
-    font-size: 13px
-    font-weight: bold
-    text-transform: uppercase
-
 //  Fullcalendar table border
 .fullcalendar table.fc-border-separate
   border-collapse: collapse

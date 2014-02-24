@@ -6804,61 +6804,6 @@ ul.slideshow-items li:first-of-type {
   font-size: 28px;
 }
 
-.view-display-id-event_listing_pane .node-event.view-mode-teaser {
-  margin: 0 26px;
-  padding: 18px 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-field-image-single-public {
-  float: right;
-  margin-left: 18px;
-  width: 170px;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-field-event-date {
-  margin-bottom: 6px;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-title {
-  margin-bottom: 5px;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-title h2 {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 1.2;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-title h2:hover a {
-  color: #2d6280;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-field-address {
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-.view-display-id-event_listing_pane .node-event.view-mode-teaser .field-name-field-editorial-summary {
-  font-size: 16px;
-  line-height: 1.2;
-  margin: 6px 0 15px;
-}
-.view-display-id-event_listing_pane h5 {
-  display: block;
-  border-top: 1px #231f20 solid;
-  padding-top: 18px;
-}
-.view-display-id-event_listing_pane .views-row-last .node {
-  border-bottom: 0;
-}
-.view-display-id-event_listing_pane .views-exposed-widget {
-  padding: 0;
-  margin-bottom: 20px;
-}
-.view-display-id-event_listing_pane .views-widget label.option {
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 .fullcalendar table.fc-border-separate {
   border-collapse: collapse;
 }
@@ -7223,6 +7168,83 @@ ul.slideshow-items li:first-of-type {
 }
 #block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured i {
   font-style: normal;
+}
+
+.view-display-id-event_listing_pane h5 {
+  display: block;
+  border-top: 1px #231f20 solid;
+  padding-top: 18px;
+}
+.view-display-id-event_listing_pane .views-row-last .node {
+  border-bottom: 0;
+}
+.view-display-id-event_listing_pane .views-exposed-widget {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.view-display-id-event_listing_pane .views-widget label.option {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.node-event.view-mode-event_listing {
+  margin: 0 26px;
+  padding: 18px 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-event.view-mode-event_listing .left.second-column {
+  float: left;
+  max-width: 70%;
+}
+@media (max-width: 52.5em) {
+  .node-event.view-mode-event_listing .left.second-column {
+    max-width: 100%;
+  }
+}
+.node-event.view-mode-event_listing .right {
+  float: right;
+}
+@media (min-width: 62.4375em) and (max-width: 71.25em) {
+  .node-event.view-mode-event_listing .right {
+    float: left;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 52.5em) {
+  .node-event.view-mode-event_listing .right {
+    display: none;
+  }
+}
+.node-event.view-mode-event_listing .field-name-field-image-single-public {
+  width: 170px;
+}
+.node-event.view-mode-event_listing .field-name-field-event-date {
+  margin-bottom: 6px;
+}
+.node-event.view-mode-event_listing .field-name-title {
+  margin-bottom: 5px;
+}
+.node-event.view-mode-event_listing .field-name-title h2 {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.node-event.view-mode-event_listing .field-name-title h2:hover a {
+  color: #2d6280;
+}
+.node-event.view-mode-event_listing .field-name-field-address {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.node-event.view-mode-event_listing .field-name-field-editorial-summary {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 6px 0 15px;
 }
 
 .gsb-views-exposed-search {
