@@ -127,36 +127,48 @@
       +background(linear-gradient(top, #194560, #2c6180))
 
 // Rethink CTA
-.cta-rethink
-  background: #c30000
-  +background(linear-gradient(#860000, #c50000))
-  @extend %border
-  color: $white
-  display: block
+.pane-gsb-public-custom-blocks-gpcb-rethink
+  @extend %bg-border-and-box-shadow
   padding: 26px
-  &:hover
-    background: #c30000
-    +background(linear-gradient(#18455f, #2d6280))
-  .cta-title
-    margin: 0
-    color: $white
-    font-size: 40px
-    line-height: 1em
+  +clearfix
+  // Logo
+  .rethink-logo
+    +text-replacement
+    margin-bottom: 12px
+    .svg &
+      +background(image_url("rethink-logo.svg") no-repeat 50% 50%)
+      background-size: 218px
+      +breakpoint(568px 371px)
+        background-position: 0 0
+        background-size: 150px
+        float: left
+        margin-right: -150px
+        width: 150px
+    .no-js &, .no-svg &
+      +background(image_url("rethink-logo.png") no-repeat 50% 50%)
+
+  .rethink-wrapper
+    font-size: 18px
+    line-height: 1.2
+    +breakpoint(568px 371px)
+      padding-left: 176px
+
+  // Description
+  .rethink-description
+    color: $text-black
+    font-family: $font-sans
+    margin-bottom: 12px
+
+  // Subscribe link
+  .rethink-link
+    font-family: $font-demi
     &:hover
-      color: $white
-  .cta-description
-    margin: 8px 0 0
-    color: $white
-    font-size: 20px
-    line-height: 1.5em
+      color: $link-blue
     &:after
-      color: $white
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 26px
-      font-weight: normal
-      position: relative
-      top: 2px
+      content: "o"
+      font-family: "gsb-email"
+      margin-left: 0.3em
+
 
 // Follow Us
 .pane-gsb-public-custom-blocks-gpcb-follow-us
