@@ -361,6 +361,7 @@ $faculty-spacing: 24px
   .publication-meta
     font-size: 14px
     line-height: 1.2
+    margin-top: 2px
   .views-field-field-link-document
     a:after
       content: "m" !important
@@ -401,6 +402,12 @@ $faculty-spacing: 24px
       margin: 0
       &:after
         content: ". "
+
+  // Spacing between authors and title on EVAs
+  .view-id-gsb_working_paper_listing,
+  .view-display-id-case_listing_entity_view
+    .views-field-field-year
+      margin-top: 2px
 
   // Courses
   .group-courses-taught
