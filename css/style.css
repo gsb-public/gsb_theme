@@ -156,7 +156,14 @@ dfn {
 
 .view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers,
-.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-case.view-mode-full .group-wrapper-paper-copy,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view,
+.node-faculty.view-mode-full .group-courses-taught,
+.node-faculty.view-mode-full .field-name-field-teaching-materials,
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
+.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
+.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
+.node-faculty.view-mode-full .group-wrapper-affiliation,
+.node-faculty.view-mode-full .field-name-field-service-profession-section, .node-case.view-mode-full .group-wrapper-paper-copy,
 .node-case.view-mode-full .field-name-field-permissions-statement,
 .node-case.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .node-publication.view-mode-full .group-wrapper-links {
   border-top: 1px #cccccc solid;
@@ -11525,9 +11532,9 @@ fieldset.collapsible .fieldset-legend {
   color: #aac4bf;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
-.node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -11536,13 +11543,13 @@ fieldset.collapsible .fieldset-legend {
   padding: 0;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .group-courses-taught h2 {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2 {
   font-size: 20px;
 }
 
-.node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
-.node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   font-size: 16px;
 }
 
@@ -11913,6 +11920,16 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-wrapper-academic {
   margin-bottom: 24px;
 }
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view,
+.node-faculty.view-mode-full .group-courses-taught,
+.node-faculty.view-mode-full .field-name-field-teaching-materials,
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
+.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
+.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
+.node-faculty.view-mode-full .group-wrapper-affiliation,
+.node-faculty.view-mode-full .field-name-field-service-profession-section {
+  padding-top: 24px;
+}
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation {
   font-size: 14px;
   line-height: 1.2;
@@ -11992,6 +12009,9 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-id-gsb_working_paper_listing .views-field-field-year,
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-field-year {
   margin-top: 2px;
+}
+.node-faculty.view-mode-full .group-courses-taught {
+  margin-bottom: 24px;
 }
 .node-faculty.view-mode-full .group-courses-taught h3 {
   font-size: 14px;
