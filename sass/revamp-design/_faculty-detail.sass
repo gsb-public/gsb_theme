@@ -277,10 +277,23 @@ $faculty-spacing: 24px
         text-decoration: underline
 
   // Sections
+  // Bottom border
   .group-wrapper-research,
   .group-wrapper-academic
     margin-bottom: $faculty-spacing
     @extend %divider-bottom
+
+  // Top border
+  .view-display-id-case_listing_entity_view,
+  .group-courses-taught,
+  .field-name-field-teaching-materials,
+  .field-name-field-conf-presentations-section,
+  .field-name-field-link-video-unlimited,
+  .field-name-field-link-podcast-unlimited,
+  .group-wrapper-affiliation,
+  .field-name-field-service-profession-section
+    @extend %divider-top
+    padding-top: $faculty-spacing
 
   // Bullets
   .field-name-field-body,
@@ -346,7 +359,7 @@ $faculty-spacing: 24px
   .view-display-id-publications_listing_entity_view
     margin-bottom: $faculty-spacing
     // Section title
-    h2.title
+    h2
       @extend %header-small
     .views-row
       line-height: 0
@@ -370,6 +383,9 @@ $faculty-spacing: 24px
 
   // Working papers and case year
   .view-display-id-case_listing_entity_view
+    // Section title
+    h2.title
+      @extend %header-large
     .date-display-single
       &:before
         content: ","
@@ -411,6 +427,7 @@ $faculty-spacing: 24px
 
   // Courses
   .group-courses-taught
+    margin-bottom: $faculty-spacing
     // Courses header
     h2
       @extend %header-large
