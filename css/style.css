@@ -59,7 +59,7 @@ dfn {
   padding-left: 16px;
 }
 .pane-bundle-spotlight .show-more span:before, .pane-bundle-house-ads .show-more span:before {
-  content: "ε¥á";
+  content: "";
   font-family: "entypo";
   font-size: 4em;
   font-weight: normal;
@@ -74,7 +74,7 @@ dfn {
   background-position: 0 -13px;
 }
 .pane-bundle-spotlight .active.show-more span:before, .pane-bundle-house-ads .active.show-more span:before {
-  content: "ε¥ú";
+  content: "";
 }
 .pane-bundle-spotlight .active.show-more:hover span, .pane-bundle-house-ads .active.show-more:hover span {
   background-position: 0 2px;
@@ -801,7 +801,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * ┬⌐ 2012 Bitstream Inc
+ * © 2012 Bitstream Inc
  */
 @font-face {
   font-family: "entypo";
@@ -2624,7 +2624,7 @@ a.no-border:hover {
 }
 .show-more-less-toggler:before {
   color: #bac405 !important;
-  content: "ε¥á";
+  content: "";
   font-family: "entypo";
   font-size: 4em;
   font-weight: normal;
@@ -2637,7 +2637,7 @@ a.no-border:hover {
   color: #2d6280 !important;
 }
 .show-more-less-toggler.show-more-less-toggler-open:before {
-  content: "ε¥ú";
+  content: "";
 }
 
 .file-size {
@@ -2964,12 +2964,12 @@ a.no-border:hover {
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.collapsed:before {
-    content: "Γ₧ò";
+    content: "➕";
   }
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.active-trail:before {
-    content: "Γ₧û";
+    content: "➖";
   }
 }
 .region-sidebar-first ul li a {
@@ -3509,7 +3509,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 
 @media (max-width: 35.5em) {
-  .grey-search-box.open {
+  #google-appliance-block-form.open {
     display: block;
   }
 }
@@ -4663,7 +4663,7 @@ ul.slideshow-items li:first-of-type {
 .pane-bundle-quote .field-name-field-body:before {
   color: black;
   font-weight: bold;
-  content: "ΓÇ£";
+  content: "“";
   font-size: 58px;
   position: absolute;
   left: -30px;
@@ -4672,7 +4672,7 @@ ul.slideshow-items li:first-of-type {
 .pane-bundle-quote .field-name-field-body:after {
   color: black;
   font-weight: bold;
-  content: "ΓÇ¥";
+  content: "”";
   font-size: 38px;
   position: relative;
   right: -4px;
@@ -7398,14 +7398,14 @@ ul.slideshow-items li:first-of-type {
 }
 
 @media (min-width: 35.5625em) and (max-width: 62.4375em) {
-  .grey-search-box {
+  #google-appliance-block-form {
     float: right;
     margin-top: 30px;
     padding-right: 20px;
   }
 }
 @media (max-width: 35.5em) {
-  .grey-search-box {
+  #google-appliance-block-form {
     display: none;
     left: 55px;
     position: absolute;
@@ -7413,14 +7413,14 @@ ul.slideshow-items li:first-of-type {
     z-index: 1;
   }
 }
-.grey-search-box .form-item {
+#google-appliance-block-form .form-item {
   float: left;
   width: 100%;
   margin-right: -46px;
   margin-top: 0;
   margin-bottom: 0;
 }
-.grey-search-box .form-item .form-text {
+#google-appliance-block-form .form-item .form-text {
   color: #666666;
   font-size: 16px;
   width: 100%;
@@ -7430,25 +7430,25 @@ ul.slideshow-items li:first-of-type {
   line-height: 1em;
   padding: 7px 50px 6px 10px;
 }
-.grey-search-box .form-item .form-text:focus {
+#google-appliance-block-form .form-item .form-text:focus {
   border-color: #d0d0d0 !important;
   box-shadow: none;
 }
-.svg .grey-search-box .form-item .form-text {
+.svg #google-appliance-block-form .form-item .form-text {
   padding-right: 40px;
 }
 @media (max-width: 35.5em) {
-  .grey-search-box .form-item .form-text {
+  #google-appliance-block-form .form-item .form-text {
     height: 50px;
     padding: 15px 50px 15px 10px;
   }
 }
 @media (min-width: 35.5625em) and (max-width: 62.4375em) {
-  .grey-search-box .form-item .form-text {
+  #google-appliance-block-form .form-item .form-text {
     width: 218px;
   }
 }
-.grey-search-box .form-submit {
+#google-appliance-block-form .form-submit {
   display: inline-block;
   float: right;
   width: 45px;
@@ -7462,47 +7462,51 @@ ul.slideshow-items li:first-of-type {
   text-indent: 1000px;
   overflow: hidden;
 }
-.svg .grey-search-box .form-submit {
+.svg #google-appliance-block-form .form-submit {
   background: url('../images/search.svg') no-repeat center;
 }
 @media (max-width: 35.5em) {
-  .svg .grey-search-box .form-submit {
+  .svg #google-appliance-block-form .form-submit {
     margin-top: 5px;
   }
 }
 @media (max-width: 64em) {
-  .svg .grey-search-box .form-submit {
+  .svg #google-appliance-block-form .form-submit {
     background-size: 170%;
   }
 }
-.svg .grey-search-box .form-submit:hover {
+.svg #google-appliance-block-form .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center;
 }
-.no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
+.no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit {
   background: url('../images/search.png') no-repeat center 6px transparent;
 }
-.no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
+.no-js #google-appliance-block-form .form-submit:hover, .no-svg #google-appliance-block-form .form-submit:hover {
   background-position: center -27px;
 }
-.page-gsearch #content .grey-search-box {
-  width: 40%;
-  height: 33px;
-}
-.page-gsearch #content .grey-search-box .form-text {
-  padding-left: 0.6em;
-  border-color: #d6d6d6;
-  margin-bottom: 20px;
-}
 
-.page-gsearch .search-form .form-item {
-  margin-right: -36px;
+#google-appliance-search-form,
+#google-appliance-search-form--2 {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 468px;
+}
+#google-appliance-search-form .form-item-search-keys,
+#google-appliance-search-form--2 .form-item-search-keys {
+  float: left;
+  margin: 0 -36px 12px 0;
   padding-right: 36px;
+  width: 100%;
 }
-.page-gsearch .search-form .form-item .form-text {
+#google-appliance-search-form .form-text,
+#google-appliance-search-form--2 .form-text {
   background-color: white;
+  border-color: lightgray;
   height: 36px;
+  padding-left: 0.6em;
 }
-.page-gsearch .search-form .form-submit {
+#google-appliance-search-form .form-submit,
+#google-appliance-search-form--2 .form-submit {
   text-indent: 1000px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -7514,18 +7518,24 @@ ul.slideshow-items li:first-of-type {
   width: 36px;
   height: 36px;
 }
-.svg .page-gsearch .search-form .form-submit {
+.svg #google-appliance-search-form .form-submit, .svg
+#google-appliance-search-form--2 .form-submit {
   background: url('../images/search-white.svg') no-repeat 60% 47%, #990000;
   background-size: 60px;
 }
-.svg .page-gsearch .search-form .form-submit:hover {
+.svg #google-appliance-search-form .form-submit:hover, .svg
+#google-appliance-search-form--2 .form-submit:hover {
   background: url('../images/search-white.svg') no-repeat 60% 47%, #2d6280;
   background-size: 60px;
 }
-.no-js .page-gsearch .search-form .form-submit, .no-svg .page-gsearch .search-form .form-submit {
+.no-js #google-appliance-search-form .form-submit, .no-svg #google-appliance-search-form .form-submit, .no-js
+#google-appliance-search-form--2 .form-submit, .no-svg
+#google-appliance-search-form--2 .form-submit {
   background: url('../images/search-white.png') no-repeat 11px 11px, #990000;
 }
-.no-js .page-gsearch .search-form .form-submit:hover, .no-svg .page-gsearch .search-form .form-submit:hover {
+.no-js #google-appliance-search-form .form-submit:hover, .no-svg #google-appliance-search-form .form-submit:hover, .no-js
+#google-appliance-search-form--2 .form-submit:hover, .no-svg
+#google-appliance-search-form--2 .form-submit:hover {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
 }
 
@@ -8953,7 +8963,7 @@ fieldset.collapsible .fieldset-legend {
   }
   #sidebar .sidebar h2:before {
     color: white;
-    content: "Γ₧ò";
+    content: "➕";
     font-family: "entypo";
     font-weight: normal;
     font-size: 36px;
@@ -8983,7 +8993,7 @@ fieldset.collapsible .fieldset-legend {
   #sidebar .block-menu.open h2:before,
   #sidebar .block-menu-block.open h2:before {
     color: #990000;
-    content: "Γ₧û";
+    content: "➖";
   }
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
@@ -9065,7 +9075,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .page-events .inner-sidebar-wrapper h2:before {
     color: white;
-    content: "Γ₧ò";
+    content: "➕";
     font-family: "entypo";
     font-size: 36px;
     position: absolute;
@@ -9098,7 +9108,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open h2:before {
     color: #990000;
-    content: "Γ₧û";
+    content: "➖";
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open .pane-content {
     display: block;
@@ -9257,7 +9267,7 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 0;
 }
 .field-name-field-witl-under-photo-facts .field-item:before {
-  content: "ΓÇó";
+  content: "•";
   color: #547f97;
   margin-right: 0;
   position: absolute;
@@ -9573,7 +9583,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-msx-fellows .field-name-field-academic-degrees .item-list ul li:before {
   color: #2d6280;
-  content: "ΓÇó";
+  content: "•";
   margin-left: -20px;
   padding-right: 8px;
 }
@@ -9919,7 +9929,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:after {
   color: white;
-  content: "ε¥ª";
+  content: "";
   float: right;
   font-family: "entypo";
   font-size: 30px;
@@ -10039,7 +10049,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .resp-accordion a:after {
     color: white;
-    content: "ε¥ñ";
+    content: "";
     float: right;
     font-family: "entypo";
     font-size: 30px;
@@ -10065,7 +10075,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .resp-tab-active a:after {
     color: #887e6e;
-    content: "ε¥º";
+    content: "";
   }
 
   .resp-content-active,
@@ -11296,7 +11306,7 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 14px;
 }
 .view-phd-candidate-placement-listing .phd-placement-wrapper .views-field-title .date-display-single:before {
-  content: "ΓÇÖ";
+  content: "’";
 }
 .view-phd-candidate-placement-listing .phd-placement-wrapper .views-field-field-academic-institution {
   color: #887e6e;
@@ -11641,7 +11651,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .field-name-field-stanford-gsb-affiliation ul li:before,
 .node-faculty.view-mode-full .field-name-field-greater-univ-aff-unlimited ul li:before,
 .node-faculty.view-mode-full .field-collection-item-field-service-profession-section ul li:before {
-  content: "ΓÇó ";
+  content: "• ";
   color: #2d6280;
   float: left;
   position: relative;
@@ -12735,10 +12745,10 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1.2;
 }
 .node-book.view-mode-full .field-name-field-review:before {
-  content: "ΓÇ£";
+  content: "“";
 }
 .node-book.view-mode-full .field-name-field-review:after {
-  content: "ΓÇ¥";
+  content: "”";
 }
 .node-book.view-mode-full .field-name-field-reviewer {
   font-size: 14px;
@@ -12747,7 +12757,7 @@ fieldset.collapsible .fieldset-legend {
   margin-top: 6px;
 }
 .node-book.view-mode-full .field-name-field-reviewer:before {
-  content: "ΓÇö ";
+  content: "— ";
 }
 .node-book.view-mode-full .cta-wrapper {
   margin-bottom: 30px;
@@ -13506,7 +13516,7 @@ div.callout br {
   padding-left: 1em;
 }
 .field-name-field-body ul li:before {
-  content: "ΓÇó ";
+  content: "• ";
   color: #2d6280;
 }
 .field-name-field-body ol {
