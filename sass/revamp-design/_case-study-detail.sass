@@ -57,28 +57,60 @@
     line-height: 1.2
     padding-bottom: 26px
 
-  // Top borders
-  .field-name-field-link-single,
+  // Dividing borders
+  .group-wrapper-paper-copy,
   .field-name-field-permissions-statement,
   .field-name-field-link-document
     @extend %divider-top
+    padding: 20px 0
     &:last-child
       @extend %divider-bottom
+
+  // Text sizing
+  // Harvard link, permission statement and document
   .field-name-field-link-single,
+  .field-name-field-link-center-single,
   .field-name-field-permissions-statement,
   .field-name-field-link-document
     font-size: 18px
     line-height: 1.2
-    padding: 20px 0
     span
       font-weight: bold
 
-  .field-name-field-link-single
+  // Paper copy
+  .group-wrapper-paper-copy
+    h3
+      font-size: 18px
+      line-height: 1.2
+      margin-bottom: 12px
+    .field
+      margin-bottom: 6px
+      padding-left: 14px
+      &:last-of-type
+        margin-bottom: 0
+      &:before
+        content: "• "
+        color: $text-blue
+        float: left
+        position: relative
+        left: -14px
+        width: 0
+    a[target=_blank]
+      &:after
+        content: " i"
+        font-family: "gsb"
+        font-size: 12px
+        font-weight: normal
+
+  // Link style
+  // Harvard business link and center link
+  .field-name-field-link-single,
+  .field-name-field-link-center-single
     a
       font-weight: bold
-      color: $text-green
+      color: $link-green
       &:hover
-        color: $text-blue
+        color: $link-blue
 
   .field-name-field-permissions-statement
     .label-inline

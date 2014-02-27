@@ -156,7 +156,7 @@ dfn {
 
 .view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers,
-.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-case.view-mode-full .field-name-field-link-single,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-case.view-mode-full .group-wrapper-paper-copy,
 .node-case.view-mode-full .field-name-field-permissions-statement,
 .node-case.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .node-publication.view-mode-full .group-wrapper-links {
   border-top: 1px #cccccc solid;
@@ -171,7 +171,7 @@ dfn {
 .view-display-id-case_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-book_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-publications_listing .views-widget-filter-secondary .form-type-select, .node-faculty.view-mode-full .field-name-field-academic-area-single, .node-faculty.view-mode-full .group-wrapper-research,
-.node-faculty.view-mode-full .group-wrapper-academic, .node-case.view-mode-full .field-name-field-link-single:last-child,
+.node-faculty.view-mode-full .group-wrapper-academic, .node-case.view-mode-full .group-wrapper-paper-copy:last-child,
 .node-case.view-mode-full .field-name-field-permissions-statement:last-child,
 .node-case.view-mode-full .field-name-field-link-document:last-child, .node-working-paper.view-mode-full .field-name-field-tag, .node-working-paper.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .view-display-id-working_paper_list .views-exposed-form, .view-display-id-case_listing .views-exposed-form, .view-display-id-book_listing .views-exposed-form, .node-publication.view-mode-full .group-wrapper-links, .view-display-id-publications_listing .views-exposed-form {
   border-bottom: 1px #cccccc solid;
@@ -11899,23 +11899,57 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1.2;
   padding-bottom: 26px;
 }
+.node-case.view-mode-full .group-wrapper-paper-copy,
+.node-case.view-mode-full .field-name-field-permissions-statement,
+.node-case.view-mode-full .field-name-field-link-document {
+  padding: 20px 0;
+}
 .node-case.view-mode-full .field-name-field-link-single,
+.node-case.view-mode-full .field-name-field-link-center-single,
 .node-case.view-mode-full .field-name-field-permissions-statement,
 .node-case.view-mode-full .field-name-field-link-document {
   font-size: 18px;
   line-height: 1.2;
-  padding: 20px 0;
 }
 .node-case.view-mode-full .field-name-field-link-single span,
+.node-case.view-mode-full .field-name-field-link-center-single span,
 .node-case.view-mode-full .field-name-field-permissions-statement span,
 .node-case.view-mode-full .field-name-field-link-document span {
   font-weight: bold;
 }
-.node-case.view-mode-full .field-name-field-link-single a {
+.node-case.view-mode-full .group-wrapper-paper-copy h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.node-case.view-mode-full .group-wrapper-paper-copy .field {
+  margin-bottom: 6px;
+  padding-left: 14px;
+}
+.node-case.view-mode-full .group-wrapper-paper-copy .field:last-of-type {
+  margin-bottom: 0;
+}
+.node-case.view-mode-full .group-wrapper-paper-copy .field:before {
+  content: "• ";
+  color: #2d6280;
+  float: left;
+  position: relative;
+  left: -14px;
+  width: 0;
+}
+.node-case.view-mode-full .group-wrapper-paper-copy a[target=_blank]:after {
+  content: " i";
+  font-family: "gsb";
+  font-size: 12px;
+  font-weight: normal;
+}
+.node-case.view-mode-full .field-name-field-link-single a,
+.node-case.view-mode-full .field-name-field-link-center-single a {
   font-weight: bold;
   color: #7d8401;
 }
-.node-case.view-mode-full .field-name-field-link-single a:hover {
+.node-case.view-mode-full .field-name-field-link-single a:hover,
+.node-case.view-mode-full .field-name-field-link-center-single a:hover {
   color: #2d6280;
 }
 .node-case.view-mode-full .field-name-field-permissions-statement .label-inline {
