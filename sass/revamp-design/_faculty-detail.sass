@@ -97,6 +97,7 @@ $faculty-spacing: 24px
     +breakpoint(684px max-width)
       width: 42%
     +breakpoint($bp-mobile-max)
+      +clearfix
       width: 100%
     img
       display: block
@@ -110,11 +111,15 @@ $faculty-spacing: 24px
       padding-left: 46%
       width: 100%
     +breakpoint($bp-mobile-max)
-      float: left
       padding-left: 0
 
   // LEFT SIDE
 
+  // Faculty photo
+  .field-name-field-image-single-public
+    +breakpoint($bp-mobile-max)
+      float: left
+      width: 65px
   // Photo label
   .group-wrapper-photolabel
     background: $text-black
@@ -125,12 +130,14 @@ $faculty-spacing: 24px
     margin-bottom: 20px
     padding: 14px 26px
     +breakpoint($bp-mobile-max)
-      width: 270px
+      display: none
 
   // Person information block
   // Fieldset logic
   .group-wrapper-information
     height: auto !important
+    +breakpoint($bp-mobile-max)
+      margin-left: 80px
     // Fieldset handle
     legend
       display: none

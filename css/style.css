@@ -11640,6 +11640,8 @@ fieldset.collapsible .fieldset-legend {
 }
 @media (max-width: 35.5em) {
   .node-faculty.view-mode-full.ds-2col > .group-left {
+    overflow: hidden;
+    *zoom: 1;
     width: 100%;
   }
 }
@@ -11664,8 +11666,13 @@ fieldset.collapsible .fieldset-legend {
 }
 @media (max-width: 35.5em) {
   .node-faculty.view-mode-full.ds-2col > .group-right {
-    float: left;
     padding-left: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .node-faculty.view-mode-full .field-name-field-image-single-public {
+    float: left;
+    width: 65px;
   }
 }
 .node-faculty.view-mode-full .group-wrapper-photolabel {
@@ -11679,11 +11686,16 @@ fieldset.collapsible .fieldset-legend {
 }
 @media (max-width: 35.5em) {
   .node-faculty.view-mode-full .group-wrapper-photolabel {
-    width: 270px;
+    display: none;
   }
 }
 .node-faculty.view-mode-full .group-wrapper-information {
   height: auto !important;
+}
+@media (max-width: 35.5em) {
+  .node-faculty.view-mode-full .group-wrapper-information {
+    margin-left: 80px;
+  }
 }
 .node-faculty.view-mode-full .group-wrapper-information legend {
   display: none;
