@@ -94,6 +94,8 @@ $faculty-spacing: 24px
   // Layout
   &.ds-2col > .group-left
     width: 270px
+    +breakpoint(684px max-width)
+      width: 42%
     +breakpoint($bp-mobile-max)
       width: 100%
     img
@@ -104,6 +106,9 @@ $faculty-spacing: 24px
     float: none
     width: auto
     padding-left: 300px
+    +breakpoint(684px max-width)
+      padding-left: 46%
+      width: 100%
     +breakpoint($bp-mobile-max)
       float: left
       padding-left: 0
