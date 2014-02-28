@@ -78,7 +78,8 @@ $faculty-spacing: 24px
       font-family: $font-sans
       font-size: 28px
       font-weight: bold
-      line-height: 1.2
+      line-height: 1
+      padding-bottom: 15px
   .group-wrapper-name
     +breakpoint($bp-mobile-max)
       display: none
@@ -102,7 +103,7 @@ $faculty-spacing: 24px
     img
       display: block
     +breakpoint($bp-mobile-max)
-      margin-bottom: 20px
+      margin-bottom: $faculty-spacing
   &.ds-2col > .group-right
     float: none
     width: auto
@@ -146,7 +147,7 @@ $faculty-spacing: 24px
         color: $text-black
         font-family: $font-sans
         font-size: 16px
-        line-height: 1.2
+        line-height: 1
         &:hover
           color: $text-black
       .fieldset-legend span.summary
