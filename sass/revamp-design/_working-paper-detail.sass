@@ -80,6 +80,10 @@
     margin-bottom: 26px
     margin-top: 16px
 
+  // Faculty author block
+  .faculty-author-wrapper
+    +author-block
+
 ////////////////////////
 // Working Paper detail
 ////////////////////////
@@ -117,7 +121,3 @@
       @extend %green-button
       &:hover
         +background(linear-gradient(top, #18455f, $text-blue))
-
-  // Author block
-  .field-name-field-author-sunet-id-reference
-    +author-block
