@@ -70,9 +70,7 @@
 
 // CTA - Green
 .cta-green
-  &.designed-box
-    @include filter-gradient(#fbfaf8, #ededed, vertical)
-    $experimental-support-for-svg: true
+  @extend %bg-border-and-box-shadow
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white
@@ -100,7 +98,6 @@
 .cta-red
   .field-item
     @extend %bg-border-and-box-shadow
-    +background(linear-gradient(#fbfaf8, $grey-e))
     margin-bottom: 5px
     color: $grey-med
     a

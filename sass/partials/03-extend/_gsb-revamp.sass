@@ -131,6 +131,11 @@
 %bg-grey-gradient-e
   +background(linear-gradient(top, rgba(#e7e7e7, 1), rgba(#f0f0f0, 1)))
 
+// Standard container gradient
+%bg-white-gradient
+  background-color: #f9f9f9
+  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
+
 ////////////
 // BORDERS
 ///////////
@@ -183,10 +188,10 @@
   @extend %box-shadow
   @extend %border
 
+// Design doc: https://docs.google.com/a/stanford.edu/document/d/10xlCbS9kfaUAVINQb3bR63SHBwBExYqIGygdiTJSBmI
 %bg-border-and-box-shadow
   @extend %border-and-box-shadow
-  background-color: #f9f9f9
-  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
+  @extend %bg-white-gradient
 
 .ie8
   %bg-border-and-box-shadow
@@ -196,8 +201,7 @@
 
 %bg-and-box-shadow
   @extend %box-shadow
-  background-color: $grey-c
-  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
+  @extend %bg-white-gradient
   margin: 1px
 
 // Attached document icons
