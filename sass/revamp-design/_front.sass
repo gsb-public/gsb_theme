@@ -16,7 +16,7 @@
   .cta-red-gradient a:after
     content: ""
   .cta-link
-    padding: 16px 26px
+    padding: 16px $standard-padding
     font-size: 18px
     +breakpoint($bp-tablet-port)
       padding: 13px 12px
@@ -105,10 +105,10 @@
 // TWITTER FEED
 .pane-homepage-social-feed
   @extend %border-and-box-shadow
-  padding: 26px
+  padding: $standard-padding
   +background((image_url('bg-social-feed.png') no-repeat bottom right), #d3eaeb)
   +breakpoint(1065px max-width)
-    padding: 26px 20px
+    padding: $standard-padding 20px
   // Social icons
   .icon-wrapper,
   .twitter-handle
@@ -129,7 +129,7 @@
 .pane-gsb-event-frontpage
   @extend %border-and-box-shadow
   +background((image_url("event-cal-wide_bg.png") top center no-repeat), #f6e9d6)
-  padding: 26px
+  padding: $standard-padding
   +breakpoint($bp-mobile)
     padding: 20px
   .view-gsb-event .view-content .views-row

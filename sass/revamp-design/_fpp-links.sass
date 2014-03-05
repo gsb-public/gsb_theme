@@ -14,7 +14,7 @@
       position: relative
       background-color: $red
     +background(linear-gradient(#e7e7e7, #f0f0f0))
-    padding: 13px 25px 20px 25px
+    padding: 13px $standard-padding 20px
     .field-name-field-title
       color: $text-grey
       font-size: 18px
@@ -44,12 +44,12 @@
   // Green links
   .green-bar
     @extend %bg-border-and-box-shadow
-    padding: 0 22px 12px 22px
+    padding: 0 $standard-padding 12px
     .field-name-field-title
       color: $text-black
       font-size: 20px
       font-weight: bold
-      padding: 18px 0 11px 0
+      padding: 18px 0 11px
       line-height: 1.3
     .field-name-field-link-unlimited
       .field-item
@@ -72,7 +72,7 @@
   // Stanford logo
   .stanford-links
     position: relative
-    padding: 6px 25px 20px 25px
+    padding: 6px $standard-padding 20px
     +background(linear-gradient(top, #e3dac7, #ebe5d9))
     @include filter-gradient(#ebe5d9, #e3dac7, vertical)
     $experimental-support-for-svg: true
