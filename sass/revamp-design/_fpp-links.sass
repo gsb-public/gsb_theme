@@ -5,6 +5,8 @@
 .pane-bundle-links
   // Red links
   .red-bar
+    @extend %bg-border-and-box-shadow
+    padding: 13px 25px 20px 25px
     &:before
       content: ""
       width: 120px
@@ -13,8 +15,6 @@
       top: -13px
       position: relative
       background-color: $red
-    +background(linear-gradient(#e7e7e7, #f0f0f0))
-    padding: 13px $standard-padding 20px
     .field-name-field-title
       color: $text-grey
       font-size: 18px
