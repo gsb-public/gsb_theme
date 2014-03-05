@@ -1,16 +1,20 @@
 ///////////////////
 // House Ads
+// Design doc: https://docs.google.com/a/stanford.edu/document/d/1lloxvAInDIPPMjVsYZ7_eh7jPRtR8UVCX_8a8aKAb74
 ///////////////////
 
 .pane-bundle-house-ads
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   padding: $standard-padding
 
   //COLOR STYLES
+  // White is standard container gradient
+  // Taupe
   &.taupe
-    +background(linear-gradient(#faf5ec, #dcd6ca))
+    +background(linear-gradient(#f6f5f4, #f0ede8))
+  // Dark Grey
   &.grey
-    +background(linear-gradient(#e9eff3, #cbd2d6))
+    +background(linear-gradient(#eff4f7, #e1e5e8))
 
   // Image
   .field-name-field-image-single-public
