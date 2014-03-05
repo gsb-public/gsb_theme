@@ -27,8 +27,8 @@
     .form-text
       width: 100%
       border: none
-      border: 1px #d0d0d0 solid
-      background: #e4e4e4
+      border: 1px $input-border solid
+      background: $white
       line-height: 1em
       height: auto
       padding: 6px 50px 6px 10px
@@ -88,14 +88,10 @@
       color: $grey-6
       font-size: 16px
       width: 100%
-      border: none
-      border: 1px #d0d0d0 solid
-      background: #e4e4e4
+      border: 1px $input-border solid
+      background: #f4f4f4
       line-height: 1em
       padding: 7px 50px 6px 10px
-      &:focus
-        border-color: #d0d0d0 !important
-        box-shadow: none
       .svg &
         padding-right: 40px
       +breakpoint($bp-mobile-max)
@@ -167,6 +163,14 @@
       +background(image_url("search-white.png") no-repeat 11px 11px, $red)
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
+
+  .page-gsearch #content &
+    width: 40%
+    height: 33px
+    .form-text
+      padding-left: 0.6em
+      border-color: $input-border
+      margin-bottom: 20px
 
 ///////////////////
 // Search filters

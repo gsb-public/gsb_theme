@@ -1365,7 +1365,7 @@ optgroup {
 }
 
 fieldset {
-  border-color: #c2b7a1;
+  border-color: lightgray;
   border-style: dotted;
 }
 
@@ -1385,7 +1385,7 @@ textarea, input[type=text], input[type=password], input[type=email], input[type=
   border-style: solid;
   padding: 0.3125em;
   border-width: 1px;
-  border-color: #c2b7a1;
+  border-color: lightgray;
   height: 33px;
   margin-top: 0;
   padding-left: 0.8em;
@@ -1456,7 +1456,7 @@ tbody tr:nth-of-type(even) {
 
 ins {
   text-decoration: none;
-  border-bottom: 1px solid #c2b7a1;
+  border-bottom: 1px solid #231f20;
 }
 
 del {
@@ -3691,7 +3691,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 
 input.footer__signup__email {
-  border: 1px #cccccc solid;
+  border: 1px lightgray solid;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -7347,8 +7347,8 @@ ul.slideshow-items li:first-of-type {
 .gsb-views-exposed-search .views-exposed-form .form-text {
   width: 100%;
   border: none;
-  border: 1px #d0d0d0 solid;
-  background: #e4e4e4;
+  border: 1px lightgray solid;
+  background: white;
   line-height: 1em;
   height: auto;
   padding: 6px 50px 6px 10px;
@@ -7424,15 +7424,10 @@ ul.slideshow-items li:first-of-type {
   color: #666666;
   font-size: 16px;
   width: 100%;
-  border: none;
-  border: 1px #d0d0d0 solid;
-  background: #e4e4e4;
+  border: 1px lightgray solid;
+  background: #f4f4f4;
   line-height: 1em;
   padding: 7px 50px 6px 10px;
-}
-#google-appliance-block-form .form-item .form-text:focus {
-  border-color: #d0d0d0 !important;
-  box-shadow: none;
 }
 .svg #google-appliance-block-form .form-item .form-text {
   padding-right: 40px;
@@ -7537,6 +7532,17 @@ ul.slideshow-items li:first-of-type {
 #google-appliance-search-form--2 .form-submit:hover, .no-svg
 #google-appliance-search-form--2 .form-submit:hover {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
+}
+.page-gsearch #content #google-appliance-search-form, .page-gsearch #content
+#google-appliance-search-form--2 {
+  width: 40%;
+  height: 33px;
+}
+.page-gsearch #content #google-appliance-search-form .form-text, .page-gsearch #content
+#google-appliance-search-form--2 .form-text {
+  padding-left: 0.6em;
+  border-color: lightgray;
+  margin-bottom: 20px;
 }
 
 .collapsible .fieldset-title {
