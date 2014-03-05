@@ -4,7 +4,7 @@
 
 .pane-bundle-house-ads
   @extend %bg-border-and-box-shadow
-  padding: 26px
+  padding: $standard-padding
 
   //COLOR STYLES
   &.taupe
@@ -62,10 +62,10 @@
 // Narrow view styling
 .narrow-view
   .pane-bundle-house-ads
-    padding: 0 0 26px 0
+    padding: 0 0 $standard-padding 0
     .field-name-field-link-single,
     .field-name-field-body
-      padding: 0 26px
+      padding: 0 $standard-padding
     .field-name-field-image-single-public,
     .field-name-field-link-single,
     .field-name-field-body
@@ -73,7 +73,7 @@
       +breakpoint($bp-mobile-max)
         clear: none
     .show-more
-      padding-right: 26px
+      padding-right: $standard-padding
 
 //////////////////////
 // Responsive
@@ -105,7 +105,8 @@
   .pane-bundle-house-ads
     +breakpoint($bp-mobile-max)
       .field-name-field-image-single-public
-        padding: 26px 26px 0 26px
+        padding: $standard-padding
+        padding-bottom: 0
       .field-name-field-link-single,
       .field-name-field-body
         clear: both

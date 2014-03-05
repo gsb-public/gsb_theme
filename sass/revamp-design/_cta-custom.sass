@@ -33,7 +33,7 @@
   display: block
   overflow: hidden
   @extend %box-shadow
-  padding: 26px
+  padding: $standard-padding
   +breakpoint(480px 568px)
     background: image_url('cta-tour-mobile.jpg') no-repeat 0 0
   &:hover
@@ -106,7 +106,7 @@
     color: $white
     font-size: 18px
     font-weight: bold
-    line-height: 1.2em
+    line-height: 1.2
     margin-top: 1px
     min-width: 216px
     position: relative
@@ -129,7 +129,7 @@
 // Rethink CTA
 .pane-gsb-public-custom-blocks-gpcb-rethink
   @extend %bg-border-and-box-shadow
-  padding: 26px
+  padding: $standard-padding
   +clearfix
   // Logo
   .rethink-logo
@@ -213,7 +213,7 @@
     display: block
     font-size: 18px
     line-height: 2.7
-    padding: 0 26px
+    padding: 0 $standard-padding
     width: 100%
     &:after
       color: $white
@@ -227,7 +227,7 @@
       background: $red
   .icon-wrapper
     margin-top: 24px
-    padding: 0 26px
+    padding: 0 $standard-padding
 
 // GSB Around the Globe
 .cta-around-globe
@@ -291,7 +291,7 @@
 // Conducting research
 .pane-gsb-public-custom-blocks-gpcb-conducting-research
   height: 200px
-  padding: 26px
+  padding: $standard-padding
   +background(linear-gradient(left, rgba(#30759c, 1), rgba(#015280, 0)), image_url("bg-library-conducting-research.jpg") 100% 50% no-repeat)
   .description
     color: $white
