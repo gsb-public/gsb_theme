@@ -131,9 +131,9 @@
 %bg-grey-gradient-e
   +background(linear-gradient(top, rgba(#e7e7e7, 1), rgba(#f0f0f0, 1)))
 
-////////////////////////////
-// BORDERS AND BOX SHADOWS
-////////////////////////////
+////////////
+// BORDERS
+///////////
 
 %divider-top
   border-top: 1px $grey-c solid
@@ -169,12 +169,13 @@
 %taupe-border-top
   border-top: 10px $grey-med solid
 
-
-// Box Shadows
+////////////////
+// CONTAINERS
+////////////////
 
 %box-shadow
-  +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
-  margin: 0 2px 2px 1px
+  +box-shadow(rgba($black, 0.1) 0 1px 0, rgba($black, 0.1) 0 0 0 1px)
+  margin: 0 1px 1px 1px
   +breakpoint($bp-mobile-max)
     margin-top: 1px
 
@@ -184,10 +185,8 @@
 
 %bg-border-and-box-shadow
   @extend %border-and-box-shadow
-  background-color: $grey-c
-  +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
-  @include filter-gradient(#fbfaf8, #ededed, vertical)
-  $experimental-support-for-svg: true
+  background-color: #f9f9f9
+  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
 
 .ie8
   %bg-border-and-box-shadow
@@ -196,11 +195,12 @@
     margin-right: 0 !important
 
 %bg-and-box-shadow
-  background-color: $grey-c
-  +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
   @extend %box-shadow
+  background-color: $grey-c
+  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
   margin: 1px
 
+// Attached document icons
 %doc-attached-icons
   margin-left: 3px
   font-family: "gsb"
