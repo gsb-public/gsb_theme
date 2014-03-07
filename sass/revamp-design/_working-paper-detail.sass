@@ -46,6 +46,10 @@
     color: $text-black
     font-weight: normal
 
+  // Authors
+  .gsb_field_formatter_field_collection_separator
+    line-height: 0
+
   .field-name-field-author,
   .field-name-field-authors,
   .field-collection-item-field-authors
@@ -99,6 +103,12 @@
       color: $text-black
       content: " | "
       display: inline
+
+  // Authors by inline label
+  .gsb_field_formatter_field_collection_separator .label-inline
+    font-family: $font-demi
+    font-size: 18px
+    line-height: 1.2
 
   .field-name-field-tag
     @extend %divider-bottom
