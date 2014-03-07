@@ -134,24 +134,55 @@
   // Logo
   .rethink-logo
     +text-replacement
+    background-size: 218px
     margin-bottom: 12px
     .svg &
-      +background(image_url("rethink-logo.svg") no-repeat 50% 50%)
-      background-size: 218px
-      +breakpoint(568px 371px)
+      +background(image_url("rethink-logo.svg") no-repeat 0 50%)
+      +breakpoint(568px 400px)
         background-position: 0 0
         background-size: 150px
         float: left
         margin-right: -150px
         width: 150px
     .no-js &, .no-svg &
-      +background(image_url("rethink-logo.png") no-repeat 50% 50%)
+      +background(image_url("rethink-logo.png") no-repeat 0 50%)
+      +breakpoint(568px 400px)
+        background-position: 0 0
+        background-size: 150px
+        float: left
+        margin-right: -150px
+        width: 150px
+    .wide-view &
+      background-position: 0 0
+      background-size: 150px
+      float: left
+      margin-right: -150px
+      width: 150px
+      +breakpoint(569px 720px)
+        background-position: 0 50%
+        background-size: 218px
+        float: none
+        margin-right: 0
+        width: auto
+      +breakpoint(399px max-width)
+        background-position: 0 50%
+        background-size: 218px
+        float: none
+        margin-right: 0
+        width: 100%
+
 
   .rethink-wrapper
     font-size: 18px
     line-height: 1.2
-    +breakpoint(568px 371px)
+    +breakpoint(568px 400px)
       padding-left: 176px
+    .wide-view &
+      padding-left: 176px
+      +breakpoint(569px 720px)
+        padding-left: 0
+      +breakpoint(399px max-width)
+        padding-left: 0
 
   // Description
   .rethink-description
