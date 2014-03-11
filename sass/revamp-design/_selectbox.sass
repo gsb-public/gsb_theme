@@ -1,4 +1,6 @@
-.jquery-selectbox 
+// Custom selectbox styling
+
+.jquery-selectbox
   position: relative
   height: 36px
   border: 1px solid #e4e4e4
@@ -13,20 +15,18 @@
   padding: 0
   background-color: #fff
 
-  .jquery-selectbox-currentItem 
+  .jquery-selectbox-currentItem
     padding: 3px 0px 0px 3px
     white-space: nowrap
-    padding-left: 12px
     display: block
     overflow: hidden
 
-  .jquery-selectbox-list 
+  .jquery-selectbox-list
     @extend %box-shadow
     display: none
     position: absolute
     top: 35px
     padding: 2px
-    padding-left: 12px
     left: -1px
     width: 286px !important
     height: 120px
@@ -34,9 +34,11 @@
     overflow-y: auto !important
     z-index: 1000
     border: 1px solid #e4e4e4
-    background-color: #fff	
 
-  .jquery-selectbox-moreButton 
+  .jquery-selectbox-moreButton
+    background-color: #fff
+
+  .jquery-selectbox-moreButton
     float: right
     height: 34px
     cursor: pointer
@@ -45,23 +47,19 @@
     &:after
       content: "k"
       font-family: "gsb"
-      font-weight: bold
-      font-size: 20px
-      vertical-align: middle
+      font-size: 14px
       height: 34px
-      padding: 6px
-      color: #990000
-  
-  .jquery-selectbox-item.listelementhover
-    background: #6a9d95
-    color: #fff
+      padding: 10px
+      color: $red
 
-  .jquery-selectbox-item 
+  .jquery-selectbox-item.listelementhover
+    background: $teal-dark
+    color: $white
+
+  .jquery-selectbox-item
     display: block
     cursor: default
-	
+
 .jquery-selectbox.selecthover
   //border-color: #e4e4e4
   z-index: 1700
-
-
