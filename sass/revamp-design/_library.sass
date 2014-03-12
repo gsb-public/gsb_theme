@@ -31,7 +31,6 @@
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
 // Today's Hour Block
-
 .pane-agenda-2
   @extend %bg-border-and-box-shadow
   position: relative
@@ -73,7 +72,6 @@
 
 
 // Library FAQ's Block
-
 .pane-library-faq-form
   @extend %bg-border-and-box-shadow
   position: relative
@@ -118,7 +116,6 @@
 
 
 // Chat with Librarian Block
-
 .pane-library-chat-form
   @extend %bg-border-and-box-shadow
   position: relative
@@ -156,7 +153,6 @@
 
 
 // Library Blog
-
 .pane-rss-feed-rss-feed
   @extend %bg-border-and-box-shadow
   position: relative
@@ -175,33 +171,37 @@
       font-size: 14px
       line-height: 0
       margin-left: 2px
-  .view-rss-feed
-    .views-field-text
-      a
-        font-size: 20px
-        font-family: $font-demi
-        color: $text-black
-        &:after
-          color: $text-green
-          content: "w"
-          font-family: "gsb"
-          font-size: 20px
-          line-height: 0
-          margin-left: 5px
-        &:hover
-          color: $text-blue
-          &:after
-            color: $text-blue
 
-    .views-field-text
-      span
-        font-size: 16px
-        font-weight: normal
-      margin-top: 6px
+  .views-row
+    margin-bottom: 20px
+    &:last-of-type
+      margin-bottom: 0
+  // Title
+  .views-field-text
+    a
+      font-size: 20px
+      font-family: $font-demi
+      color: $text-black
+      line-height: 1.2
+      &:after
+        color: $text-green
+        content: "w"
+        font-family: "gsb"
+        font-size: 20px
+        line-height: 0
+        margin-left: 5px
+      &:hover
+        color: $link-blue
+        &:after
+          color: $link-blue
+  // Description text
+  .views-field-text-2
+    font-size: 16px
+    line-height: 1.3
+
 
 
 // Library Search Works Block
-
 .pane-library-searchworks-form
   .pane-title
     font-size: 24px
