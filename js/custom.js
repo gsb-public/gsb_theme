@@ -383,5 +383,10 @@
     }
   };
 
+  Drupal.behaviors.gsb_theme = {
+    attach: function(context, settings) {
+      $("select").selectbox();
+	}
+  };
 
 }(jQuery));
