@@ -383,6 +383,9 @@
     }
   };
 
+  /**
+   * Custom Styling for selectbox
+   */
   Drupal.behaviors.gsb_theme = {
     attach: function(context, settings) {
       $("select").selectbox();
