@@ -248,7 +248,7 @@ dfn {
 }
 
 .pane-bundle-existing-node .featured-label, .pane-case-filters-panel-pane-1 h2.pane-title,
-.pane-publication-filters-panel-pane-1 h2.pane-title {
+.pane-publication-filters-panel-pane-1 h2.pane-title, .pane-rss-feed-rss-feed h2.pane-title {
   border-top: 10px #c2b7a1 solid;
 }
 
@@ -13211,18 +13211,16 @@ fieldset.collapsible .fieldset-legend {
 .pane-rss-feed-rss-feed .pager {
   display: none;
 }
-.pane-rss-feed-rss-feed .pane-title {
+.pane-rss-feed-rss-feed h2.pane-title {
+  color: #231f20;
+  display: inline-block;
   font-size: 14px;
   font-weight: normal;
-  color: #990000;
+  line-height: 1.2;
+  padding-top: 6px;
 }
-.pane-rss-feed-rss-feed .pane-title:after {
-  color: #887e6e;
-  content: "w";
-  font-family: "gsb";
-  font-size: 14px;
-  line-height: 0;
-  margin-left: 2px;
+.pane-rss-feed-rss-feed .pane-content {
+  padding: 20px 0;
 }
 .pane-rss-feed-rss-feed .views-row {
   margin-bottom: 20px;
@@ -13230,19 +13228,28 @@ fieldset.collapsible .fieldset-legend {
 .pane-rss-feed-rss-feed .views-row:last-of-type {
   margin-bottom: 0;
 }
-.pane-rss-feed-rss-feed .views-field-text a {
-  font-size: 20px;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #231f20;
-  line-height: 1.2;
+.pane-rss-feed-rss-feed .views-field-text {
+  margin-bottom: 6px;
 }
-.pane-rss-feed-rss-feed .views-field-text a:after {
+.pane-rss-feed-rss-feed .views-field-text a {
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  text-transform: none;
+}
+.wide-view .pane-rss-feed-rss-feed .views-field-text a:after {
   color: #636f00;
   content: "w";
   font-family: "gsb";
   font-size: 20px;
   line-height: 0;
   margin-left: 5px;
+}
+.narrow-view .pane-rss-feed-rss-feed .views-field-text a {
+  color: #990000;
 }
 .pane-rss-feed-rss-feed .views-field-text a:hover {
   color: #2d6280;
