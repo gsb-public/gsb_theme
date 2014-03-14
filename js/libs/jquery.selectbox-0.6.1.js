@@ -1,6 +1,6 @@
 /**
  * jQuery custom selectboxes
- * 
+ *
  * Copyright (c) 2008 Krzysztof Suszyński (suszynski.org)
  * Licensed under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
@@ -15,7 +15,7 @@ jQuery.fn.selectbox = function(options){
 	/* Default settings */
 	var settings = {
 		className: 'jquery-selectbox',
-		animationSpeed: "normal",
+		animationSpeed: 'fast',
 		listboxMaxSize: 10,
 		replaceInvisible: false
 	};
@@ -47,7 +47,7 @@ jQuery.fn.selectbox = function(options){
 		}
 		return false;
 	}
-	
+
 	/* Processing settings */
 	settings = jQuery.extend(settings, options || {});
 	/* Wrapping all passed elements */
@@ -64,7 +64,7 @@ jQuery.fn.selectbox = function(options){
 		);
 		jQuery('option', _this).each(function(k,v){
 			var v = jQuery(v);
-			var listElement =  jQuery('<span class="' + settings.className + '-item value-'+v.val()+' item-'+k+'">' + v.text() + '</span>');	
+			var listElement =  jQuery('<span class="' + settings.className + '-item value-'+v.val()+' item-'+k+'">' + v.text() + '</span>');
 			listElement.click(function(){
 				var thisListElement = jQuery(this);
 				var thisReplacment = thisListElement.parents('.'+settings.className);
@@ -127,7 +127,7 @@ jQuery.fn.selectbox = function(options){
 		if(thisListBoxSize > settings.listboxMaxSize)
 			thisListBoxSize = settings.listboxMaxSize;
 		if(thisListBoxSize == 0)
-			thisListBoxSize = 1;	
+			thisListBoxSize = 1;
 		var thisListBoxWidth = Math.round(_this.width() + 5);
 		if(jQuery.browser.safari)
 			thisListBoxWidth = thisListBoxWidth * 0.94;
@@ -142,6 +142,6 @@ jQuery.fn.unselectbox = function(){
 	var commonClass = 'jquery-custom-selectboxes-replaced';
 	return this.each(function() {
 		var selectToRemove = jQuery(this).filter('.' + commonClass);
-		selectToRemove.replaceWith(selectToRemove.find('select').show());		
+		selectToRemove.replaceWith(selectToRemove.find('select').show());
 	});
 }
