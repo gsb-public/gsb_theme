@@ -111,7 +111,7 @@ dfn {
 }
 
 .pane-gsb-event-upcoming-events .more-link a, .pane-gsb-public-custom-blocks-gpcb-conducting-research a, .pane-case-filters-panel-pane-1 .see-all a,
-.pane-publication-filters-panel-pane-1 .see-all a, .pane-agenda-2 .pane-content a {
+.pane-publication-filters-panel-pane-1 .see-all a, .pane-agenda-2 a {
   background: #538b80;
   color: white;
   display: block;
@@ -122,7 +122,7 @@ dfn {
   position: relative;
 }
 .pane-gsb-event-upcoming-events .more-link a:after, .pane-gsb-public-custom-blocks-gpcb-conducting-research a:after, .pane-case-filters-panel-pane-1 .see-all a:after,
-.pane-publication-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .pane-content a:after {
+.pane-publication-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 a:after {
   content: "w";
   color: white;
   font-family: "gsb";
@@ -134,7 +134,7 @@ dfn {
   top: 45%;
 }
 .pane-gsb-event-upcoming-events .more-link a:hover, .pane-gsb-public-custom-blocks-gpcb-conducting-research a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover,
-.pane-publication-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .pane-content a:hover {
+.pane-publication-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 a:hover {
   background: #754760;
 }
 
@@ -13107,9 +13107,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .pane-agenda-2 {
-  position: relative;
   padding: 26px;
-  padding-top: 20px;
 }
 .pane-agenda-2 .pane-title {
   font-size: 20px;
@@ -13118,35 +13116,38 @@ fieldset.collapsible .fieldset-legend {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-agenda-2 .pane-content .agenda-block p {
+.pane-agenda-2 .agenda-block p {
   display: none;
 }
-.pane-agenda-2 .pane-content .agenda-block ol {
+.pane-agenda-2 .agenda-block ol {
   margin: 0;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li {
+.pane-agenda-2 .agenda-block li {
   background: none;
   padding: 10px 0 0 0;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title {
+.pane-agenda-2 .agenda-block .calendar_title {
+  color: #231f20;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
-  color: #231f20;
+  position: relative;
+  left: -13px;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title:before {
+.pane-agenda-2 .agenda-block .calendar_title:before {
   content: "!";
   color: #887e6e;
   font-family: "gsb-clock";
   font-weight: normal;
   font-size: 28px;
-  margin-right: 4px;
-  vertical-align: middle;
+  margin-right: 2px;
+  position: relative;
+  top: 5px;
 }
-.pane-agenda-2 .pane-content .agenda-block .moreinfo {
+.pane-agenda-2 .agenda-block .moreinfo {
   display: none;
 }
-.pane-agenda-2 .pane-content a {
+.pane-agenda-2 a {
   margin-top: 7px;
 }
 
