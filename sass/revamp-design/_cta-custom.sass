@@ -201,30 +201,39 @@
 
 // Follow Us
 .pane-gsb-public-custom-blocks-gpcb-follow-us
-  @extend %border-and-box-shadow
-  background: #c1dbd9
-  background: image_url('cta-follow-us.jpg') no-repeat top left
-  height: 140px
+  +background(image_url('cta-follow-us.jpg') no-repeat top left, #89c0c5)
+  height: 144px
+  position: relative
+  // Header
+  h2
+    font-size: 0
+    line-height: 0
   .social-title
-    background: rgba($blue, 0.7)
+    background: rgba($teal-dark, 0.85)
     color: $white
     display: block
-    font-size: 18px
-    line-height: 2.7
-    padding: 0 $standard-padding
-    width: 100%
+    font-family: $font-demi
+    font-size: 19px
+    font-weight: normal
+    line-height: 1.2
+    padding: 14px $standard-padding
     &:after
       color: $white
       content: "w"
+      display: inline-block
       font-family: "gsb"
-      position: relative
-      line-height: 1
-      top: 0
-      left: 12px
+      font-size: 19px
+      font-weight: normal
+      line-height: 0
+      margin-left: 5px
     &:hover
-      background: $red
+      background: rgba($text-blue, 0.85)
+      text-decoration: underline
+
+  // Social icons
   .icon-wrapper
-    margin-top: 24px
+    margin-top: $standard-padding
+    max-width: 270px
     padding: 0 $standard-padding
 
 // GSB Around the Globe
