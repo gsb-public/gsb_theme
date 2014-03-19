@@ -291,7 +291,8 @@ $faculty-spacing: 24px
   .field-name-field-link-video-unlimited,
   .field-name-field-link-podcast-unlimited,
   .group-wrapper-affiliation,
-  .field-name-field-service-profession-section
+  .field-name-field-service-profession-section,
+  .view-display-id-media_mention_listing_entity_view
     @extend %divider-top
     padding-top: $faculty-spacing
 
@@ -353,10 +354,11 @@ $faculty-spacing: 24px
   .group-publications h2
     @extend %header-large
 
-  // Case Study, Working Paper, Book, Publications EVA
+  // Case Study, Working Paper, Book, Publications, Media item EVA
   .view-display-id-case_listing_entity_view,
   .view-display-id-entity_view_1,
-  .view-display-id-publications_listing_entity_view
+  .view-display-id-publications_listing_entity_view,
+  .view-display-id-media_mention_listing_entity_view
     margin-bottom: $faculty-spacing
     // Section title
     h2
@@ -368,6 +370,7 @@ $faculty-spacing: 24px
     .views-field-title a,
     .views-field-title-1 a
       @extend %faculty-link
+
   // Authors and Publication Year
   .views-field,
   .views-field-field-body p,
@@ -381,11 +384,15 @@ $faculty-spacing: 24px
       @extend %doc-attached-icons
       font-size: 13px
 
-  // Working papers and case year
-  .view-display-id-case_listing_entity_view
+  // Working papers, case, media item use large header
+  .view-display-id-case_listing_entity_view,
+  .view-display-id-media_mention_listing_entity_view
     // Section title
     h2.title
       @extend %header-large
+
+  // Working papers, case year styling
+  .view-display-id-case_listing_entity_view
     .date-display-single
       &:before
         content: ","
@@ -464,3 +471,20 @@ $faculty-spacing: 24px
       .field-name-field-description
         font-size: 14px
         line-height: 1.1
+
+  // Media item icons
+  .view-display-id-media_mention_listing_entity_view
+    .views-field-title
+      display: inline-block
+    .audio,
+    .video
+      color: $text-blue
+      display: inline-block
+      font-family: "gsb"
+      line-height: 0
+    .audio
+      &:before
+        content: "4"
+    .video
+      &:before
+        content: "3"
