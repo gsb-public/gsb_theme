@@ -43,34 +43,29 @@
 // Show More link
 %show-more-link
   border: 0
-  color: $text-green
+  color: $link-green
   cursor: pointer
   display: block
   font-weight: bold
-  line-height: 1em
+  line-height: 1
   margin: 5px 0 0
   text-align: right
   span
     font-size: 14px
     padding-left: 16px
     &:before
-      content: ""
-      font-family: "entypo"
-      font-size: 4em
+      content: "."
+      font-family: "gsb"
+      font-size: 24px
       font-weight: normal
       position: relative
-      top: 10px
-      margin-right: 5px
+      top: 2px
   &:hover
-    color: $text-blue
-    span
-      background-position: 0 -13px
+    color: $link-blue
   &.active
     span
       &:before
-        content: ""
-    &:hover span
-      background-position: 0 2px
+        content: ","
 
 // Rounded green buttons
 %green-button

@@ -370,22 +370,24 @@ a.no-border
   font-weight: bold
   line-height: 1
   font-size: 14px
+  margin-left: 22px
   &:before
     color: $green-light !important
-    content: ""
-    font-family: "entypo"
-    font-size: 4em
+    content: "."
+    float: left
+    font-family: "gsb"
+    font-size: 30px
     font-weight: normal
     line-height: 0
     position: relative
-    top: 10px
-    margin-right: 5px
+    left: -8px
+    top: 6px
   &:hover
     &:before
       color: $text-blue !important
   &.show-more-less-toggler-open
     &:before
-      content: ""
+      content: ","
 
 // Hide file size of uploaded pdfs
 .file-size

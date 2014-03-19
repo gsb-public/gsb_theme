@@ -50,7 +50,7 @@ dfn {
   cursor: pointer;
   display: block;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1;
   margin: 5px 0 0;
   text-align: right;
 }
@@ -59,25 +59,18 @@ dfn {
   padding-left: 16px;
 }
 .pane-bundle-spotlight .show-more span:before, .pane-bundle-house-ads .show-more span:before {
-  content: "";
-  font-family: "entypo";
-  font-size: 4em;
+  content: ".";
+  font-family: "gsb";
+  font-size: 24px;
   font-weight: normal;
   position: relative;
-  top: 10px;
-  margin-right: 5px;
+  top: 2px;
 }
 .pane-bundle-spotlight .show-more:hover, .pane-bundle-house-ads .show-more:hover {
   color: #2d6280;
 }
-.pane-bundle-spotlight .show-more:hover span, .pane-bundle-house-ads .show-more:hover span {
-  background-position: 0 -13px;
-}
 .pane-bundle-spotlight .active.show-more span:before, .pane-bundle-house-ads .active.show-more span:before {
-  content: "";
-}
-.pane-bundle-spotlight .active.show-more:hover span, .pane-bundle-house-ads .active.show-more:hover span {
-  background-position: 0 2px;
+  content: ",";
 }
 
 .green-rounded-button, .node-event.view-mode-full .field-name-field-register-url a, .pane-rethink-form .button, .node-case.view-mode-full .field-name-field-link-document a, .node-working-paper.view-mode-full .field-name-field-link-document a, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a, .node-publication.view-mode-full .group-wrapper-links a {
@@ -2634,23 +2627,25 @@ a.no-border:hover {
   font-weight: bold;
   line-height: 1;
   font-size: 14px;
+  margin-left: 22px;
 }
 .show-more-less-toggler:before {
   color: #bac405 !important;
-  content: "";
-  font-family: "entypo";
-  font-size: 4em;
+  content: ".";
+  float: left;
+  font-family: "gsb";
+  font-size: 30px;
   font-weight: normal;
   line-height: 0;
   position: relative;
-  top: 10px;
-  margin-right: 5px;
+  left: -8px;
+  top: 6px;
 }
 .show-more-less-toggler:hover:before {
   color: #2d6280 !important;
 }
 .show-more-less-toggler.show-more-less-toggler-open:before {
-  content: "";
+  content: ",";
 }
 
 .file-size {
@@ -2964,23 +2959,23 @@ a.no-border:hover {
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.collapsed:before, .region-sidebar-first ul li.active-trail:before {
     color: #990000;
-    font-family: "entypo";
-    font-size: 36px;
+    font-family: "gsb";
+    font-size: 20px;
     font-weight: normal;
     line-height: 0;
-    margin-top: 9px;
+    margin-top: 5px;
     position: absolute;
     left: 12px;
   }
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.collapsed:before {
-    content: "➕";
+    content: "c";
   }
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.active-trail:before {
-    content: "➖";
+    content: "d";
   }
 }
 .region-sidebar-first ul li a {
@@ -3075,13 +3070,14 @@ a.no-border:hover {
   background: #607c8c;
 }
 .pager-load-more .pager-next a:before {
-  content: "k";
+  content: ".";
   font-family: "gsb";
-  text-transform: lowercase;
-  font-size: 18px;
-  line-height: 1;
-  margin-left: -8px;
+  font-size: 24px;
   font-weight: normal;
+  line-height: 0;
+  margin-left: -8px;
+  position: relative;
+  top: 2px;
 }
 
 .additional-links {
@@ -9012,13 +9008,14 @@ fieldset.collapsible .fieldset-legend {
   }
   #sidebar .sidebar h2:before {
     color: white;
-    content: "➕";
-    font-family: "entypo";
+    content: "c";
+    font-family: "gsb";
     font-weight: normal;
-    font-size: 36px;
+    font-size: 22px;
     position: absolute;
-    left: 12px;
-    top: 8px;
+    left: 7px;
+    top: 11px;
+    text-transform: none;
   }
   #sidebar .block-menu.open .content,
   #sidebar .block-menu-block.open .content {
@@ -9042,7 +9039,7 @@ fieldset.collapsible .fieldset-legend {
   #sidebar .block-menu.open h2:before,
   #sidebar .block-menu-block.open h2:before {
     color: #990000;
-    content: "➖";
+    content: "d";
   }
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
@@ -9124,12 +9121,13 @@ fieldset.collapsible .fieldset-legend {
   }
   .page-events .inner-sidebar-wrapper h2:before {
     color: white;
-    content: "➕";
-    font-family: "entypo";
-    font-size: 36px;
+    content: "c";
+    font-family: "gsb";
+    font-size: 22px;
     position: absolute;
-    left: 12px;
+    left: 6px;
     top: 8px;
+    text-transform: none;
   }
   .page-events .inner-sidebar-wrapper .panel-pane {
     margin-bottom: 0;
@@ -9157,7 +9155,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open h2:before {
     color: #990000;
-    content: "➖";
+    content: "d";
   }
   .page-events .inner-sidebar-wrapper .panel-pane.open .pane-content {
     display: block;
@@ -9978,12 +9976,12 @@ fieldset.collapsible .fieldset-legend {
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:after {
   color: white;
-  content: "";
+  content: ".";
   float: right;
-  font-family: "entypo";
+  font-family: "gsb";
   font-size: 30px;
   position: relative;
-  top: -40px;
+  top: -46px;
   right: 6px;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:focus {
@@ -10098,10 +10096,12 @@ fieldset.collapsible .fieldset-legend {
   }
   .resp-accordion a:after {
     color: white;
-    content: "";
+    content: ".";
     float: right;
-    font-family: "entypo";
+    font-family: "gsb";
     font-size: 30px;
+    font-weight: normal;
+    line-height: 1;
   }
   .resp-accordion a:hover {
     background-color: #f4f4f4;
@@ -10124,7 +10124,7 @@ fieldset.collapsible .fieldset-legend {
   }
   .resp-tab-active a:after {
     color: #887e6e;
-    content: "";
+    content: ",";
   }
 
   .resp-content-active,
