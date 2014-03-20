@@ -72,7 +72,7 @@
     font-size: 14px
     line-height: 18px
     margin-bottom: 20px
-    padding: 14px 26px
+    padding: 14px $standard-padding
     span:before
       content: "PhD Candidate,"
       display: inline
@@ -197,7 +197,7 @@
 .view-display-id-phd_job_market_jump_links
   @extend %bg-border-and-box-shadow
   margin-bottom: 26px
-  padding: 26px
+  padding: $standard-padding
   .jump-links-title
     font-size: 20px
     font-weight: bold
@@ -262,7 +262,7 @@
       .node-phd-candidate
         border-top: 1px solid #e4e4e4
         padding-top: 18px
-        padding-bottom: 26px
+        padding-bottom: $standard-padding
         +breakpoint($bp-four-column-switch)
           padding-bottom: 18px
       .view-empty
@@ -392,7 +392,7 @@
 .view-phd-candidate-placement-listing
   .phd-placement-wrapper
     @extend %bg-border-and-box-shadow
-    padding: 0 26px
+    padding: 0 $standard-padding
     // Academic area name
     .views-field-name
       border-top: 10px solid $teal-light

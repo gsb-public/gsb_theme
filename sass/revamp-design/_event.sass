@@ -10,7 +10,8 @@
   a
     border-bottom: 0
   .group-left
-    padding: 26px 26px 0
+    padding: $standard-padding
+    padding-bottom: 0
     width: auto
     max-width: 600px
     h2
@@ -87,7 +88,7 @@
       margin-top: 35px
   .field-name-field-target-audience
     font-size: 14px
-    padding-top: 26px
+    padding-top: $standard-padding
     .field-items
       float: none
     .field-item
@@ -286,12 +287,10 @@
       background-color: $grey-c
       +background(linear-gradient(top, #ededed 20%, #fbfaf8 100%))
       @include filter-gradient(#fbfaf8, #ededed, vertical)
-      $experimental-support-for-svg: true
     &.active
       background-color: $grey-c
       +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
       @include filter-gradient(#fbfaf8, #ededed, vertical)
-      $experimental-support-for-svg: true
       color: $red-dark
 
 // Academic calendar
@@ -327,7 +326,6 @@
     padding-top: 1px
     a
       @extend %bg-border-and-box-shadow
-      +background(linear-gradient(#fbfaf8, $grey-e))
       margin-bottom: 5px
       color: $text-green
       padding-top: 14px

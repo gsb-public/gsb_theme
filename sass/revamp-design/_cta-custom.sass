@@ -33,7 +33,7 @@
   display: block
   overflow: hidden
   @extend %box-shadow
-  padding: 26px
+  padding: $standard-padding
   +breakpoint(480px 568px)
     background: image_url('cta-tour-mobile.jpg') no-repeat 0 0
   &:hover
@@ -106,7 +106,7 @@
     color: $white
     font-size: 18px
     font-weight: bold
-    line-height: 1.2em
+    line-height: 1.2
     margin-top: 1px
     min-width: 216px
     position: relative
@@ -129,7 +129,7 @@
 // Rethink CTA
 .pane-gsb-public-custom-blocks-gpcb-rethink
   @extend %bg-border-and-box-shadow
-  padding: 26px
+  padding: $standard-padding
   +clearfix
   // Logo
   .rethink-logo
@@ -171,7 +171,6 @@
         margin-right: 0
         width: 100%
 
-
   .rethink-wrapper
     font-size: 18px
     line-height: 1.2
@@ -200,34 +199,42 @@
       font-family: "gsb-email"
       margin-left: 0.3em
 
-
 // Follow Us
 .pane-gsb-public-custom-blocks-gpcb-follow-us
-  @extend %border-and-box-shadow
-  background: #c1dbd9
-  background: image_url('cta-follow-us.jpg') no-repeat top left
-  height: 140px
+  +background(image_url('cta-follow-us.jpg') no-repeat top left, #89c0c5)
+  height: 144px
+  position: relative
+  // Header
+  h2
+    font-size: 0
+    line-height: 0
   .social-title
-    background: rgba($blue, 0.7)
+    background: rgba($teal-dark, 0.85)
     color: $white
     display: block
-    font-size: 18px
-    line-height: 2.7
-    padding: 0 26px
-    width: 100%
+    font-family: $font-demi
+    font-size: 19px
+    font-weight: normal
+    line-height: 1.2
+    padding: 14px $standard-padding
     &:after
       color: $white
       content: "w"
+      display: inline-block
       font-family: "gsb"
-      position: relative
-      line-height: 1
-      top: 0
-      left: 12px
+      font-size: 19px
+      font-weight: normal
+      line-height: 0
+      margin-left: 5px
     &:hover
-      background: $red
+      background: rgba($text-blue, 0.85)
+      text-decoration: underline
+
+  // Social icons
   .icon-wrapper
-    margin-top: 24px
-    padding: 0 26px
+    margin-top: $standard-padding
+    max-width: 270px
+    padding: 0 $standard-padding
 
 // GSB Around the Globe
 .cta-around-globe
@@ -254,7 +261,7 @@
       font-weight: bold
       color: $white
       padding: 0.9em 0.6em 0.6em 0.6em
-      +background(linear-gradient(top, #5c8a81, #739d95))
+      +background(linear-gradient(top, #5c8a81, $teal-dark))
       &:after
         color: $white
         content: "\f100"
@@ -291,7 +298,7 @@
 // Conducting research
 .pane-gsb-public-custom-blocks-gpcb-conducting-research
   height: 200px
-  padding: 26px
+  padding: $standard-padding
   +background(linear-gradient(left, rgba(#30759c, 1), rgba(#015280, 0)), image_url("bg-library-conducting-research.jpg") 100% 50% no-repeat)
   .description
     color: $white

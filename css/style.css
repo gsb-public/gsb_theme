@@ -46,7 +46,7 @@ dfn {
 
 .pane-bundle-spotlight .show-more, .pane-bundle-house-ads .show-more {
   border: 0;
-  color: #7d8401;
+  color: #636f00;
   cursor: pointer;
   display: block;
   font-weight: bold;
@@ -86,11 +86,11 @@ dfn {
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
-  background: #7d8401;
-  background: -moz-linear-gradient(top, #6c7200, #7d8401);
-  background: -o-linear-gradient(top, #6c7200, #7d8401);
-  background: -webkit-linear-gradient(top, #6c7200, #7d8401);
-  background: linear-gradient(to bottom, #6c7200, #7d8401);
+  background: #636f00;
+  background: -moz-linear-gradient(top, #6c7200, #636f00);
+  background: -o-linear-gradient(top, #6c7200, #636f00);
+  background: -webkit-linear-gradient(top, #6c7200, #636f00);
+  background: linear-gradient(to bottom, #6c7200, #636f00);
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -111,8 +111,8 @@ dfn {
 }
 
 .pane-gsb-event-upcoming-events .more-link a, .pane-gsb-public-custom-blocks-gpcb-conducting-research a, .pane-case-filters-panel-pane-1 .see-all a,
-.pane-publication-filters-panel-pane-1 .see-all a, .pane-agenda-2 .pane-content a {
-  background: #739d95;
+.pane-publication-filters-panel-pane-1 .see-all a, .pane-agenda-2 a {
+  background: #538b80;
   color: white;
   display: block;
   font-size: 14px;
@@ -122,7 +122,7 @@ dfn {
   position: relative;
 }
 .pane-gsb-event-upcoming-events .more-link a:after, .pane-gsb-public-custom-blocks-gpcb-conducting-research a:after, .pane-case-filters-panel-pane-1 .see-all a:after,
-.pane-publication-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 .pane-content a:after {
+.pane-publication-filters-panel-pane-1 .see-all a:after, .pane-agenda-2 a:after {
   content: "w";
   color: white;
   font-family: "gsb";
@@ -134,7 +134,7 @@ dfn {
   top: 45%;
 }
 .pane-gsb-event-upcoming-events .more-link a:hover, .pane-gsb-public-custom-blocks-gpcb-conducting-research a:hover, .pane-case-filters-panel-pane-1 .see-all a:hover,
-.pane-publication-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 .pane-content a:hover {
+.pane-publication-filters-panel-pane-1 .see-all a:hover, .pane-agenda-2 a:hover {
   background: #754760;
 }
 
@@ -154,9 +154,32 @@ dfn {
   background: linear-gradient(to bottom, #e7e7e7, #f0f0f0);
 }
 
+.node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
+.person-list-view,
+.pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-lastname-az-links, .view-display-id-phd_job_market_jump_links, .view-phd-job-market-candidates .view-content, .view-phd-candidate-placement-listing .phd-placement-wrapper, .pane-faculty-filters-faculty-by-criteria, .pane-gsb-public-custom-blocks-gpcb-weather-widget, .pane-bundle-featured-person, .pane-e-newsletters-list, .node-working-paper.view-mode-full .faculty-author-wrapper,
+.node-case.view-mode-full .faculty-author-wrapper,
+.node-book.view-mode-full .faculty-author-wrapper,
+.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .pane-bundle-house-ads {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
 .view-mode-media_contact, .node-phd-candidate.view-mode-full .group-wrapper-jobpaper, .node-phd-candidate.view-mode-full .field-name-field-publications,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers,
-.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-case.view-mode-full .group-wrapper-paper-copy,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view,
+.node-faculty.view-mode-full .group-courses-taught,
+.node-faculty.view-mode-full .field-name-field-teaching-materials,
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
+.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
+.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
+.node-faculty.view-mode-full .group-wrapper-affiliation,
+.node-faculty.view-mode-full .field-name-field-service-profession-section,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view, .node-case.view-mode-full .group-wrapper-paper-copy,
 .node-case.view-mode-full .field-name-field-permissions-statement,
 .node-case.view-mode-full .field-name-field-link-document, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited, .node-publication.view-mode-full .group-wrapper-links {
   border-top: 1px #cccccc solid;
@@ -179,12 +202,12 @@ dfn {
 
 .node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-house-ads, .pane-bundle-accordion, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-lastname-az-links, .view-display-id-phd_job_market_jump_links, .view-phd-job-market-candidates .view-content, .view-phd-candidate-placement-listing .phd-placement-wrapper, .pane-faculty-filters-faculty-by-criteria, .pane-gsb-public-custom-blocks-gpcb-weather-widget, .pane-bundle-featured-person, .pane-e-newsletters-list, .node-working-paper.view-mode-full .faculty-author-wrapper,
 .node-case.view-mode-full .faculty-author-wrapper,
 .node-book.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .view-business-website-category-listing, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-gsb-public-custom-blocks-gpcb-follow-us, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
+.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour:hover, .pane-program-finder div.vertical-tabs, .pane-program-finder div.vertical-tabs ul.vertical-tabs-list .selected {
   border: 2px white solid;
 }
 
@@ -224,58 +247,41 @@ dfn {
 }
 
 .pane-bundle-existing-node .featured-label, .pane-case-filters-panel-pane-1 h2.pane-title,
-.pane-publication-filters-panel-pane-1 h2.pane-title {
+.pane-publication-filters-panel-pane-1 h2.pane-title, .pane-rss-feed-rss-feed h2.pane-title {
   border-top: 10px #c2b7a1 solid;
 }
 
 .node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
 .person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-house-ads, .pane-bundle-accordion, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+.pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
 .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-lastname-az-links, .view-display-id-phd_job_market_jump_links, .view-phd-job-market-candidates .view-content, .view-phd-candidate-placement-listing .phd-placement-wrapper, .pane-faculty-filters-faculty-by-criteria, .pane-gsb-public-custom-blocks-gpcb-weather-widget, .pane-bundle-featured-person, .pane-e-newsletters-list, .node-working-paper.view-mode-full .faculty-author-wrapper,
 .node-case.view-mode-full .faculty-author-wrapper,
 .node-book.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .view-business-website-category-listing, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-gsb-public-custom-blocks-gpcb-follow-us, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  margin: 0 2px 2px 1px;
+.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .pane-bundle-house-ads, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 0 1px 1px 1px;
 }
 @media (max-width: 35.5em) {
   .node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
   .person-list-view,
-  .pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-house-ads, .pane-bundle-accordion, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
+  .pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
+  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
   .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-lastname-az-links, .view-display-id-phd_job_market_jump_links, .view-phd-job-market-candidates .view-content, .view-phd-candidate-placement-listing .phd-placement-wrapper, .pane-faculty-filters-faculty-by-criteria, .pane-gsb-public-custom-blocks-gpcb-weather-widget, .pane-bundle-featured-person, .pane-e-newsletters-list, .node-working-paper.view-mode-full .faculty-author-wrapper,
   .node-case.view-mode-full .faculty-author-wrapper,
   .node-book.view-mode-full .faculty-author-wrapper,
-  .node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .view-business-website-category-listing, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-gsb-public-custom-blocks-gpcb-follow-us, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
+  .node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .pane-bundle-social-feed, .pane-bundle-image-cta, .learn-about-campus, .pane-homepage-social-feed, .pane-gsb-event-frontpage, .view-academic-calendar .view-content, .pane-program-finder .field-group-tab-wrapper, .pane-bundle-house-ads, .slideshow-wrapper, .cta-virtual-tour, .pane-media-toolkit {
     margin-top: 1px;
   }
 }
 
-.node-phd-candidate.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .group-wrapper-information, .shadowed-box, .designed-box,
-.person-list-view,
-.pane-gsb-event-sidebar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-gsb-event-upcoming-events, .pane-bundle-spotlight, .pane-bundle-house-ads, .pane-bundle-accordion, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .view-academic-calendar .view-footer a, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-lastname-az-links, .view-display-id-phd_job_market_jump_links, .view-phd-job-market-candidates .view-content, .view-phd-candidate-placement-listing .phd-placement-wrapper, .pane-faculty-filters-faculty-by-criteria, .pane-gsb-public-custom-blocks-gpcb-weather-widget, .pane-bundle-featured-person, .pane-e-newsletters-list, .node-working-paper.view-mode-full .faculty-author-wrapper,
-.node-case.view-mode-full .faculty-author-wrapper,
-.node-book.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .faculty-author-wrapper, .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .node-book.view-mode-full .field-buy-book, .pane-agenda-2, .pane-library-faq-form, .pane-library-chat-form, .pane-rss-feed-rss-feed, .pane-library-searchworks-form .searchworks-content, .view-business-websites-category-detail, .view-business-website-category-listing {
-  background-color: #cccccc;
-  background: -moz-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
-  background: -o-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
-  background: -webkit-linear-gradient(bottom, #ededed 20%, #fbfaf8 100%);
-  background: linear-gradient(to top, #ededed 20%, #fbfaf8 100%);
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBFAF8', endColorstr='#FFEDEDED');
-}
-
 .ie8 .node-phd-candidate.view-mode-full .group-wrapper-information, .node-phd-candidate.view-mode-full .ie8 .group-wrapper-information, .ie8 .node-faculty.view-mode-full .group-wrapper-information, .node-faculty.view-mode-full .ie8 .group-wrapper-information, .ie8 .shadowed-box, .ie8 .designed-box,
 .ie8 .person-list-view,
-.ie8 .pane-gsb-event-sidebar, .ie8 .pane-bundle-links .green-bar, .pane-bundle-links .ie8 .green-bar, .ie8 .pane-bundle-text .default, .pane-bundle-text .ie8 .default,
+.ie8 .pane-gsb-event-sidebar, .ie8 .pane-bundle-links .red-bar, .pane-bundle-links .ie8 .red-bar, .ie8 .pane-bundle-links .green-bar, .pane-bundle-links .ie8 .green-bar, .ie8 .pane-bundle-text .default, .pane-bundle-text .ie8 .default,
 .ie8 .pane-bundle-text .mba-highlighted-block,
-.pane-bundle-text .ie8 .mba-highlighted-block, .ie8 div.region-content [class*="pane-menu-block"], div.region-content .ie8 [class*="pane-menu-block"], .ie8 .pane-bundle-video, .ie8 .pane-gsb-event-upcoming-events, .ie8 .pane-bundle-spotlight, .ie8 .pane-bundle-house-ads, .ie8 .pane-bundle-accordion, .ie8 .cta-red .field-item, .cta-red .ie8 .field-item, .ie8 .pane-gsb-public-custom-blocks-gpcb-rethink, .ie8 .view-academic-calendar .view-footer a, .view-academic-calendar .view-footer .ie8 a, .ie8 .gsb-views-exposed-form, .ie8 .exposed_filter_widget > div, .ie8 .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .ie8 .gsb-views-exposed-search, .ie8 .pane-bundle-existing-node, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content, .ie8 .view-display-id-club_list .view-content, .view-display-id-club_list .ie8 .view-content,
+.pane-bundle-text .ie8 .mba-highlighted-block, .ie8 div.region-content [class*="pane-menu-block"], div.region-content .ie8 [class*="pane-menu-block"], .ie8 .pane-bundle-video, .ie8 .pane-gsb-event-upcoming-events, .ie8 .pane-bundle-spotlight, .ie8 .pane-bundle-accordion, .ie8 .cta-green, .ie8 .cta-red .field-item, .cta-red .ie8 .field-item, .ie8 .pane-gsb-public-custom-blocks-gpcb-rethink, .ie8 .view-academic-calendar .view-footer a, .view-academic-calendar .view-footer .ie8 a, .ie8 .gsb-views-exposed-form, .ie8 .exposed_filter_widget > div, .ie8 .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .ie8 .gsb-views-exposed-search, .ie8 .pane-bundle-existing-node, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content, .ie8 .view-display-id-club_list .view-content, .view-display-id-club_list .ie8 .view-content,
 .ie8 .view-display-id-search_club .view-content,
 .view-display-id-search_club .ie8 .view-content, .ie8 .pane-club-filters-club-by-id-or-tag, .ie8 .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-club-filters-club-by-id-or-tag .view-club-filters .ie8 .more-link, .ie8 .pane-lastname-az-links, .ie8 .view-display-id-phd_job_market_jump_links, .ie8 .view-phd-job-market-candidates .view-content, .view-phd-job-market-candidates .ie8 .view-content, .ie8 .view-phd-candidate-placement-listing .phd-placement-wrapper, .view-phd-candidate-placement-listing .ie8 .phd-placement-wrapper, .ie8 .pane-faculty-filters-faculty-by-criteria, .ie8 .pane-gsb-public-custom-blocks-gpcb-weather-widget, .ie8 .pane-bundle-featured-person, .ie8 .pane-e-newsletters-list, .ie8 .node-working-paper.view-mode-full .faculty-author-wrapper, .node-working-paper.view-mode-full .ie8 .faculty-author-wrapper,
 .ie8 .node-case.view-mode-full .faculty-author-wrapper,
@@ -283,10 +289,14 @@ dfn {
 .ie8 .node-book.view-mode-full .faculty-author-wrapper,
 .node-book.view-mode-full .ie8 .faculty-author-wrapper,
 .ie8 .node-publication.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .ie8 .faculty-author-wrapper, .ie8 .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .pane-faculty-filters-faculty-list .view-faculty-filters .ie8 .views-row, .ie8 .node-book.view-mode-full .field-buy-book, .node-book.view-mode-full .ie8 .field-buy-book, .ie8 .pane-agenda-2, .ie8 .pane-library-faq-form, .ie8 .pane-library-chat-form, .ie8 .pane-rss-feed-rss-feed, .ie8 .pane-library-searchworks-form .searchworks-content, .pane-library-searchworks-form .ie8 .searchworks-content, .ie8 .view-business-websites-category-detail, .ie8 .view-business-website-category-listing {
+.node-publication.view-mode-full .ie8 .faculty-author-wrapper, .ie8 .pane-faculty-filters-faculty-list .view-faculty-filters .views-row, .pane-faculty-filters-faculty-list .view-faculty-filters .ie8 .views-row, .ie8 .node-book.view-mode-full .field-buy-book, .node-book.view-mode-full .ie8 .field-buy-book, .ie8 .pane-agenda-2, .ie8 .pane-library-faq-form, .ie8 .pane-library-chat-form, .ie8 .pane-rss-feed-rss-feed, .ie8 .pane-library-searchworks-form .searchworks-content, .pane-library-searchworks-form .ie8 .searchworks-content, .ie8 .view-business-websites-category-detail {
   border: 1px #cccccc solid !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+.pane-bundle-house-ads {
+  margin: 1px;
 }
 
 body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .pane-bundle-existing-node .field-name-field-link-document a:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
@@ -323,7 +333,7 @@ body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$
   padding: 15px 0;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information a, .node-faculty.view-mode-full .group-wrapper-information a {
-  color: #7d8401;
+  color: #636f00;
   font-size: 16px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.2;
@@ -808,7 +818,7 @@ th[align="right"] {
 @font-face {
   font-family: "gsb";
   src: url("../fonts/gsb-webfont.eot");
-  src: url("../fonts/gsb-webfont.eot") format("embedded-opentype"), url("../fonts/gsb.svg-webfont.woff") format("woff"), url("../fonts/gsb-webfont.ttf") format("truetype"), url("../fonts/gsb.svg-webfont.svg") format("svg");
+  src: url("../fonts/gsb-webfont.eot") format("embedded-opentype"), url("../fonts/gsb-webfont.woff") format("woff"), url("../fonts/gsb-webfont.ttf") format("truetype"), url("../fonts/gsb-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1353,7 +1363,7 @@ optgroup {
 }
 
 fieldset {
-  border-color: #c2b7a1;
+  border-color: lightgray;
   border-style: dotted;
 }
 
@@ -1373,7 +1383,7 @@ textarea, input[type=text], input[type=password], input[type=email], input[type=
   border-style: solid;
   padding: 0.3125em;
   border-width: 1px;
-  border-color: #c2b7a1;
+  border-color: lightgray;
   height: 33px;
   margin-top: 0;
   padding-left: 0.8em;
@@ -1444,7 +1454,7 @@ tbody tr:nth-of-type(even) {
 
 ins {
   text-decoration: none;
-  border-bottom: 1px solid #c2b7a1;
+  border-bottom: 1px solid #231f20;
 }
 
 del {
@@ -2457,7 +2467,7 @@ div.label-inline {
     background: rgba(255, 255, 255, 0.6);
     border: 2px white solid;
     margin-bottom: 30px;
-    padding: 12px 20px 10px;
+    padding: 12px 26px 10px;
   }
 }
 
@@ -2466,7 +2476,7 @@ div.label-inline {
     background: rgba(255, 255, 255, 0.6);
     border: 2px white solid;
     margin-bottom: 30px;
-    padding: 12px 20px 10px;
+    padding: 12px 26px 10px;
   }
 }
 
@@ -2538,7 +2548,7 @@ a.no-border:hover {
   padding: 1px;
 }
 .shadowed-box .cp-content {
-  padding: 24px;
+  padding: 26px;
 }
 
 .separated-box,
@@ -2605,7 +2615,7 @@ a.no-border:hover {
 
 .show-more-less-toggler {
   border: 0 !important;
-  color: #7d8401;
+  color: #636f00;
   font-weight: bold;
   line-height: 1;
   font-size: 14px;
@@ -2633,10 +2643,6 @@ a.no-border:hover {
 }
 
 .pane-bundle-links .red-bar {
-  background: -moz-linear-gradient(#e7e7e7, #f0f0f0);
-  background: -o-linear-gradient(#e7e7e7, #f0f0f0);
-  background: -webkit-linear-gradient(#e7e7e7, #f0f0f0);
-  background: linear-gradient(#e7e7e7, #f0f0f0);
   padding: 13px 25px 20px 25px;
 }
 .pane-bundle-links .red-bar:before {
@@ -2678,13 +2684,13 @@ a.no-border:hover {
   color: #2d6280;
 }
 .pane-bundle-links .green-bar {
-  padding: 0 22px 12px 22px;
+  padding: 0 26px 12px;
 }
 .pane-bundle-links .green-bar .field-name-field-title {
   color: #231f20;
   font-size: 20px;
   font-weight: bold;
-  padding: 18px 0 11px 0;
+  padding: 18px 0 11px;
   line-height: 1.3;
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item {
@@ -2694,7 +2700,7 @@ a.no-border:hover {
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
   content: "i";
@@ -2708,7 +2714,7 @@ a.no-border:hover {
 }
 .pane-bundle-links .stanford-links {
   position: relative;
-  padding: 6px 25px 20px 25px;
+  padding: 6px 26px 20px;
   background: -moz-linear-gradient(top, #e3dac7, #ebe5d9);
   background: -o-linear-gradient(top, #e3dac7, #ebe5d9);
   background: -webkit-linear-gradient(top, #e3dac7, #ebe5d9);
@@ -2835,18 +2841,20 @@ a.no-border:hover {
   font-size: 18px;
 }
 
-.gsb_field_formatter_field_collection_separator .entity,
-.gsb_field_formatter_field_collection_separator .field,
-.gsb_field_formatter_field_collection_separator .separator,
 .field-group-gsb_field_formatter_group_comma_separator .entity,
 .field-group-gsb_field_formatter_group_comma_separator .field,
 .field-group-gsb_field_formatter_group_comma_separator .separator {
   display: inline-block;
   line-height: 1;
 }
-.gsb_field_formatter_field_collection_separator .separator,
 .field-group-gsb_field_formatter_group_comma_separator .separator {
   margin-right: 5px;
+}
+
+.gsb_field_formatter_field_collection_separator .entity,
+.gsb_field_formatter_field_collection_separator .field,
+.gsb_field_formatter_field_collection_separator .separator {
+  display: inline;
 }
 
 .group-tags-wrapper {
@@ -3022,7 +3030,7 @@ a.no-border:hover {
 
 .pager-region {
   border-top: 3px solid #231f20;
-  padding-left: 25px;
+  padding-left: 26px;
   margin-bottom: 30px;
 }
 .pager-region .item-list {
@@ -3044,7 +3052,7 @@ a.no-border:hover {
 }
 
 .pager-load-more .pager-next a {
-  background: #7d8401;
+  background: #636f00;
   text-transform: uppercase;
   position: relative;
 }
@@ -3078,12 +3086,12 @@ a.no-border:hover {
 }
 
 div.region-content [class*="pane-menu-block"] {
-  padding: 0 22px 12px 22px;
+  padding: 0 26px 12px;
 }
 div.region-content [class*="pane-menu-block"] h2 {
   color: #231f20;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   padding: 18px 0 11px 0;
   line-height: 1.3;
 }
@@ -3094,7 +3102,7 @@ div.region-content [class*="pane-menu-block"] .menu li {
 }
 div.region-content [class*="pane-menu-block"] .menu li a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 div.region-content [class*="pane-menu-block"] .menu li a[target=_blank]:after {
   content: "i";
@@ -3497,7 +3505,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 
 @media (max-width: 35.5em) {
-  .grey-search-box.open {
+  #google-appliance-block-form.open {
     display: block;
   }
 }
@@ -3679,7 +3687,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 
 input.footer__signup__email {
-  border: 1px #cccccc solid;
+  border: 1px lightgray solid;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -3814,7 +3822,7 @@ input.footer__signup__submit:hover {
 }
 
 .pane-bundle-video {
-  padding: 24px;
+  padding: 26px;
 }
 .wide-view .pane-bundle-video {
   overflow: hidden;
@@ -4081,7 +4089,8 @@ input.footer__signup__submit:hover {
 }
 
 .pane-gsb-event-upcoming-events {
-  padding: 20px 24px 24px 24px;
+  padding: 26px;
+  padding-top: 20px;
 }
 .pane-gsb-event-upcoming-events h2.pane-title {
   color: #990000;
@@ -4122,7 +4131,7 @@ input.footer__signup__submit:hover {
   margin-bottom: 8px;
 }
 .pane-gsb-event-upcoming-events .field-name-title h2 a {
-  color: #7d8401;
+  color: #636f00;
 }
 .pane-gsb-event-upcoming-events .field-name-title h2 a:hover {
   color: #2d6280;
@@ -4272,7 +4281,7 @@ ul.slideshow-items li:first-of-type {
   color: #2d6280;
 }
 .slideshow-cta .slideshow-wrapper:hover .purple-button-on-blue a .slide-cta {
-  background-color: #739d95;
+  background-color: #538b80;
 }
 .slideshow-cta .slideshow-wrapper:hover .blue-button-on-orange a .slide-cta {
   background-color: #754760;
@@ -4462,7 +4471,7 @@ ul.slideshow-items li:first-of-type {
   }
 }
 .blue-button-on-orange .slide-cta {
-  background-color: #739d95;
+  background-color: #538b80;
 }
 
 .slideshow-simple .slideshow-wrapper {
@@ -4494,7 +4503,7 @@ ul.slideshow-items li:first-of-type {
   background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, #ffffff 50%);
-  padding: 0 25px;
+  padding: 0 26px;
   position: absolute;
   right: 0;
   height: 267px;
@@ -4710,7 +4719,7 @@ ul.slideshow-items li:first-of-type {
 
 .pane-bundle-spotlight {
   position: relative;
-  padding: 0 26px 20px 26px;
+  padding: 0 26px 20px;
 }
 .pane-bundle-spotlight .spotlight-border {
   position: absolute;
@@ -4869,16 +4878,16 @@ ul.slideshow-items li:first-of-type {
   padding: 26px;
 }
 .pane-bundle-house-ads.taupe {
-  background: -moz-linear-gradient(#faf5ec, #dcd6ca);
-  background: -o-linear-gradient(#faf5ec, #dcd6ca);
-  background: -webkit-linear-gradient(#faf5ec, #dcd6ca);
-  background: linear-gradient(#faf5ec, #dcd6ca);
+  background: -moz-linear-gradient(#f6f5f4, #f0ede8);
+  background: -o-linear-gradient(#f6f5f4, #f0ede8);
+  background: -webkit-linear-gradient(#f6f5f4, #f0ede8);
+  background: linear-gradient(#f6f5f4, #f0ede8);
 }
 .pane-bundle-house-ads.grey {
-  background: -moz-linear-gradient(#e9eff3, #cbd2d6);
-  background: -o-linear-gradient(#e9eff3, #cbd2d6);
-  background: -webkit-linear-gradient(#e9eff3, #cbd2d6);
-  background: linear-gradient(#e9eff3, #cbd2d6);
+  background: -moz-linear-gradient(#eff4f7, #e1e5e8);
+  background: -o-linear-gradient(#eff4f7, #e1e5e8);
+  background: -webkit-linear-gradient(#eff4f7, #e1e5e8);
+  background: linear-gradient(#eff4f7, #e1e5e8);
 }
 .pane-bundle-house-ads .field-name-field-image-single-public {
   margin-bottom: 12px;
@@ -4893,7 +4902,7 @@ ul.slideshow-items li:first-of-type {
 }
 .pane-bundle-house-ads .field-name-field-link-single a:after {
   content: "w";
-  color: #7d8401;
+  color: #636f00;
   display: inline-block;
   font-family: "gsb";
   font-size: 20px;
@@ -4978,7 +4987,8 @@ ul.slideshow-items li:first-of-type {
 
 @media (max-width: 35.5em) {
   .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public {
-    padding: 26px 26px 0 26px;
+    padding: 26px;
+    padding-bottom: 0;
   }
   .narrow-view .pane-bundle-house-ads .field-name-field-link-single,
   .narrow-view .pane-bundle-house-ads .field-name-field-body {
@@ -5019,7 +5029,7 @@ ul.slideshow-items li:first-of-type {
 
 .person-list-view {
   margin-bottom: 50px;
-  padding: 0 24px;
+  padding: 0 26px;
 }
 .person-list-view .field-name-field-title {
   border-top: 10px #aac4bf solid;
@@ -5427,7 +5437,7 @@ ul.slideshow-items li:first-of-type {
 }
 
 .cta-link {
-  padding: 14px 55px 11px 22px;
+  padding: 14px 55px 11px 26px;
   font-size: 16px;
   position: relative;
 }
@@ -5483,22 +5493,18 @@ ul.slideshow-items li:first-of-type {
 }
 
 .cta-green .field-item a[href*="mailto:"]:before {
-  background: #7d8401;
+  background: #636f00;
 }
 .cta-green .field-item a[href*="mailto:"]:hover:before {
   background: #2d6280;
 }
 
-.cta-green.designed-box {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBFAF8', endColorstr='#FFEDEDED');
-}
 .cta-green .field-item {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
 }
 .cta-green .field-item a {
-  color: #7d8401;
+  color: #636f00;
   position: relative;
 }
 .cta-green .field-item a:after {
@@ -5506,7 +5512,7 @@ ul.slideshow-items li:first-of-type {
   color: #e3e3e3;
 }
 .supermenu-pane .cta-green .field-item a {
-  color: #7d8401;
+  color: #636f00;
 }
 .cta-green .field-item:first-of-type {
   border-top: 0;
@@ -5522,10 +5528,6 @@ ul.slideshow-items li:first-of-type {
 }
 
 .cta-red .field-item {
-  background: -moz-linear-gradient(#fbfaf8, #ededed);
-  background: -o-linear-gradient(#fbfaf8, #ededed);
-  background: -webkit-linear-gradient(#fbfaf8, #ededed);
-  background: linear-gradient(#fbfaf8, #ededed);
   margin-bottom: 5px;
   color: #c2b7a1;
 }
@@ -5657,13 +5659,8 @@ ul.slideshow-items li:first-of-type {
 }
 .pane-bundle-image-cta .group-right {
   color: white;
-  padding: 30px;
+  padding: 26px;
   position: absolute;
-}
-@media (max-width: 35.5em) {
-  .pane-bundle-image-cta .group-right {
-    padding: 26px;
-  }
 }
 @media (max-width: 20em) {
   .front .pane-bundle-image-cta .group-right {
@@ -5755,7 +5752,7 @@ ul.slideshow-items li:first-of-type {
 }
 .narrow-view .image-cta-position-top.image-cta-color-purple:hover,
 .narrow-view .image-cta-position-bottom.image-cta-color-purple:hover {
-  background: #739d95;
+  background: #538b80;
 }
 .narrow-view .image-cta-position-top.image-cta-color-green,
 .narrow-view .image-cta-position-bottom.image-cta-color-green {
@@ -5775,7 +5772,7 @@ ul.slideshow-items li:first-of-type {
 }
 .narrow-view .image-cta-position-top.image-cta-color-dark-teal,
 .narrow-view .image-cta-position-bottom.image-cta-color-dark-teal {
-  background: #739d95;
+  background: #538b80;
 }
 .narrow-view .image-cta-position-top.image-cta-color-dark-teal:hover,
 .narrow-view .image-cta-position-bottom.image-cta-color-dark-teal:hover {
@@ -5825,7 +5822,7 @@ ul.slideshow-items li:first-of-type {
   background: rgba(117, 71, 96, 0.8);
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-purple .group-right:hover {
-  background: rgba(115, 157, 149, 0.8);
+  background: rgba(83, 139, 128, 0.8);
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-green .group-right {
   background: rgba(7, 109, 84, 0.8);
@@ -5840,7 +5837,7 @@ ul.slideshow-items li:first-of-type {
   background: rgba(7, 109, 84, 0.8);
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-dark-teal .group-right {
-  background: rgba(115, 157, 149, 0.8);
+  background: rgba(83, 139, 128, 0.8);
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-dark-teal .group-right:hover {
   background: rgba(117, 71, 96, 0.8);
@@ -6039,14 +6036,14 @@ ul.slideshow-items li:first-of-type {
   }
 }
 .learn-about-campus .about-campus-btn {
-  background: #7d8401;
+  background: #636f00;
   display: block;
   padding: 12px 15px;
   height: 60px;
   color: white;
   font-size: 18px;
   font-weight: bold;
-  line-height: 1.2em;
+  line-height: 1.2;
   margin-top: 1px;
   min-width: 216px;
   position: relative;
@@ -6175,33 +6172,41 @@ ul.slideshow-items li:first-of-type {
 }
 
 .pane-gsb-public-custom-blocks-gpcb-follow-us {
-  background: #c1dbd9;
-  background: url('../images/cta-follow-us.jpg') no-repeat top left;
-  height: 140px;
+  background: url('../images/cta-follow-us.jpg') no-repeat top left, #89c0c5;
+  height: 144px;
+  position: relative;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us h2 {
+  font-size: 0;
+  line-height: 0;
 }
 .pane-gsb-public-custom-blocks-gpcb-follow-us .social-title {
-  background: rgba(96, 124, 140, 0.7);
+  background: rgba(83, 139, 128, 0.85);
   color: white;
   display: block;
-  font-size: 18px;
-  line-height: 2.7;
-  padding: 0 26px;
-  width: 100%;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 1.2;
+  padding: 14px 26px;
 }
 .pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
   color: white;
   content: "w";
+  display: inline-block;
   font-family: "gsb";
-  position: relative;
-  line-height: 1;
-  top: 0;
-  left: 12px;
+  font-size: 19px;
+  font-weight: normal;
+  line-height: 0;
+  margin-left: 5px;
 }
 .pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:hover {
-  background: #990000;
+  background: rgba(45, 98, 128, 0.85);
+  text-decoration: underline;
 }
 .pane-gsb-public-custom-blocks-gpcb-follow-us .icon-wrapper {
-  margin-top: 24px;
+  margin-top: 26px;
+  max-width: 270px;
   padding: 0 26px;
 }
 
@@ -6238,10 +6243,10 @@ ul.slideshow-items li:first-of-type {
   font-weight: bold;
   color: white;
   padding: 0.9em 0.6em 0.6em 0.6em;
-  background: -moz-linear-gradient(top, #5c8a81, #739d95);
-  background: -o-linear-gradient(top, #5c8a81, #739d95);
-  background: -webkit-linear-gradient(top, #5c8a81, #739d95);
-  background: linear-gradient(to bottom, #5c8a81, #739d95);
+  background: -moz-linear-gradient(top, #5c8a81, #538b80);
+  background: -o-linear-gradient(top, #5c8a81, #538b80);
+  background: -webkit-linear-gradient(top, #5c8a81, #538b80);
+  background: linear-gradient(to bottom, #5c8a81, #538b80);
 }
 .cta-around-globe .around-globe-link .link-title:after {
   color: white;
@@ -6559,7 +6564,7 @@ ul.slideshow-items li:first-of-type {
   color: #2d6280;
 }
 .pane-gsb-event-frontpage .views-field-field-event-date {
-  color: #777777;
+  color: #595959;
   font-size: 14px;
 }
 .pane-gsb-event-frontpage .views-field-field-address {
@@ -6672,7 +6677,8 @@ ul.slideshow-items li:first-of-type {
   border-bottom: 0;
 }
 .node-event.view-mode-full .group-left {
-  padding: 26px 26px 0;
+  padding: 26px;
+  padding-bottom: 0;
   width: auto;
   max-width: 600px;
 }
@@ -6918,7 +6924,7 @@ ul.slideshow-items li:first-of-type {
   background-color: white;
 }
 .view-admission-events table tbody a {
-  color: #7d8401;
+  color: #636f00;
   font-weight: bold;
 }
 .view-admission-events table tbody tr {
@@ -6932,7 +6938,7 @@ ul.slideshow-items li:first-of-type {
 }
 .view-admission-events table thead a {
   position: relative;
-  color: #7d8401;
+  color: #636f00;
   padding-right: 30px;
   white-space: nowrap;
 }
@@ -6947,7 +6953,7 @@ ul.slideshow-items li:first-of-type {
   border-width: 7px;
   border-color: transparent;
   bottom: -2px;
-  border-top-color: #7d8401;
+  border-top-color: #636f00;
   border-top-width: 9px;
 }
 .view-admission-events table thead a.currentFilter {
@@ -6955,7 +6961,7 @@ ul.slideshow-items li:first-of-type {
 }
 .view-admission-events table thead .active a[href*='asc']:after {
   bottom: 7px;
-  border-bottom-color: #7d8401;
+  border-bottom-color: #636f00;
   border-bottom-width: 9px;
   border-top-color: transparent;
   border-top-width: 7px;
@@ -7042,12 +7048,8 @@ ul.slideshow-items li:first-of-type {
   padding-top: 1px;
 }
 .view-academic-calendar .view-footer a {
-  background: -moz-linear-gradient(#fbfaf8, #ededed);
-  background: -o-linear-gradient(#fbfaf8, #ededed);
-  background: -webkit-linear-gradient(#fbfaf8, #ededed);
-  background: linear-gradient(#fbfaf8, #ededed);
   margin-bottom: 5px;
-  color: #7d8401;
+  color: #636f00;
   padding-top: 14px;
   padding-bottom: 11px;
   position: relative;
@@ -7337,8 +7339,8 @@ ul.slideshow-items li:first-of-type {
 .gsb-views-exposed-search .views-exposed-form .form-text {
   width: 100%;
   border: none;
-  border: 1px #d0d0d0 solid;
-  background: #e4e4e4;
+  border: 1px lightgray solid;
+  background: white;
   line-height: 1em;
   height: auto;
   padding: 6px 50px 6px 10px;
@@ -7388,14 +7390,14 @@ ul.slideshow-items li:first-of-type {
 }
 
 @media (min-width: 35.5625em) and (max-width: 62.4375em) {
-  .grey-search-box {
+  #google-appliance-block-form {
     float: right;
     margin-top: 30px;
     padding-right: 20px;
   }
 }
 @media (max-width: 35.5em) {
-  .grey-search-box {
+  #google-appliance-block-form {
     display: none;
     left: 55px;
     position: absolute;
@@ -7403,42 +7405,37 @@ ul.slideshow-items li:first-of-type {
     z-index: 1;
   }
 }
-.grey-search-box .form-item {
+#google-appliance-block-form .form-item {
   float: left;
   width: 100%;
   margin-right: -46px;
   margin-top: 0;
   margin-bottom: 0;
 }
-.grey-search-box .form-item .form-text {
+#google-appliance-block-form .form-item .form-text {
   color: #666666;
   font-size: 16px;
   width: 100%;
-  border: none;
-  border: 1px #d0d0d0 solid;
-  background: #e4e4e4;
+  border: 1px lightgray solid;
+  background: #f4f4f4;
   line-height: 1em;
   padding: 7px 50px 6px 10px;
 }
-.grey-search-box .form-item .form-text:focus {
-  border-color: #d0d0d0 !important;
-  box-shadow: none;
-}
-.svg .grey-search-box .form-item .form-text {
+.svg #google-appliance-block-form .form-item .form-text {
   padding-right: 40px;
 }
 @media (max-width: 35.5em) {
-  .grey-search-box .form-item .form-text {
+  #google-appliance-block-form .form-item .form-text {
     height: 50px;
     padding: 15px 50px 15px 10px;
   }
 }
 @media (min-width: 35.5625em) and (max-width: 62.4375em) {
-  .grey-search-box .form-item .form-text {
+  #google-appliance-block-form .form-item .form-text {
     width: 218px;
   }
 }
-.grey-search-box .form-submit {
+#google-appliance-block-form .form-submit {
   display: inline-block;
   float: right;
   width: 45px;
@@ -7452,36 +7449,127 @@ ul.slideshow-items li:first-of-type {
   text-indent: 1000px;
   overflow: hidden;
 }
-.svg .grey-search-box .form-submit {
+.svg #google-appliance-block-form .form-submit {
   background: url('../images/search.svg') no-repeat center;
 }
 @media (max-width: 35.5em) {
-  .svg .grey-search-box .form-submit {
+  .svg #google-appliance-block-form .form-submit {
     margin-top: 5px;
   }
 }
 @media (max-width: 64em) {
-  .svg .grey-search-box .form-submit {
+  .svg #google-appliance-block-form .form-submit {
     background-size: 170%;
   }
 }
-.svg .grey-search-box .form-submit:hover {
+.svg #google-appliance-block-form .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center;
 }
-.no-js .grey-search-box .form-submit, .no-svg .grey-search-box .form-submit {
+.no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit {
   background: url('../images/search.png') no-repeat center 6px transparent;
 }
-.no-js .grey-search-box .form-submit:hover, .no-svg .grey-search-box .form-submit:hover {
+.no-js #google-appliance-block-form .form-submit:hover, .no-svg #google-appliance-block-form .form-submit:hover {
   background-position: center -27px;
 }
-.page-gsearch #content .grey-search-box {
-  width: 40%;
-  height: 33px;
+
+#google-appliance-search-form,
+#google-appliance-search-form--2 {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 468px;
 }
-.page-gsearch #content .grey-search-box .form-text {
+#google-appliance-search-form .form-item-search-keys,
+#google-appliance-search-form--2 .form-item-search-keys {
+  float: left;
+  margin: 0 -36px 12px 0;
+  padding-right: 36px;
+  width: 100%;
+}
+#google-appliance-search-form .form-text,
+#google-appliance-search-form--2 .form-text {
+  background-color: white;
+  border-color: lightgray;
+  height: 36px;
   padding-left: 0.6em;
-  border-color: #d6d6d6;
+}
+#google-appliance-search-form .form-submit,
+#google-appliance-search-form--2 .form-submit {
+  text-indent: 1000px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+.svg #google-appliance-search-form .form-submit, .svg
+#google-appliance-search-form--2 .form-submit {
+  background: url('../images/search-white.svg') no-repeat 60% 47%, #990000;
+  background-size: 60px;
+}
+.svg #google-appliance-search-form .form-submit:hover, .svg
+#google-appliance-search-form--2 .form-submit:hover {
+  background: url('../images/search-white.svg') no-repeat 60% 47%, #2d6280;
+  background-size: 60px;
+}
+.no-js #google-appliance-search-form .form-submit, .no-svg #google-appliance-search-form .form-submit, .no-js
+#google-appliance-search-form--2 .form-submit, .no-svg
+#google-appliance-search-form--2 .form-submit {
+  background: url('../images/search-white.png') no-repeat 11px 11px, #990000;
+}
+.no-js #google-appliance-search-form .form-submit:hover, .no-svg #google-appliance-search-form .form-submit:hover, .no-js
+#google-appliance-search-form--2 .form-submit:hover, .no-svg
+#google-appliance-search-form--2 .form-submit:hover {
+  background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
+}
+.page-gsearch #content #google-appliance-search-form, .page-gsearch #content
+#google-appliance-search-form--2 {
+  width: 40%;
+  height: 36px;
+}
+.page-gsearch #content #google-appliance-search-form .form-text, .page-gsearch #content
+#google-appliance-search-form--2 .form-text {
+  padding-left: 0.6em;
+  border-color: lightgray;
   margin-bottom: 20px;
+}
+
+.page-gsearch .search-form .form-item {
+  margin-right: -36px;
+  padding-right: 36px;
+}
+.page-gsearch .search-form .form-item .form-text {
+  background-color: white;
+  height: 36px;
+}
+.page-gsearch .search-form .form-submit {
+  text-indent: 1000px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+.svg .page-gsearch .search-form .form-submit {
+  background: url('../images/search-white.svg') no-repeat 60% 47%, #990000;
+  background-size: 60px;
+}
+.svg .page-gsearch .search-form .form-submit:hover {
+  background: url('../images/search-white.svg') no-repeat 60% 47%, #2d6280;
+  background-size: 60px;
+}
+.no-js .page-gsearch .search-form .form-submit, .no-svg .page-gsearch .search-form .form-submit {
+  background: url('../images/search-white.png') no-repeat 11px 11px, #990000;
+}
+.no-js .page-gsearch .search-form .form-submit:hover, .no-svg .page-gsearch .search-form .form-submit:hover {
+  background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
 }
 
 .collapsible .fieldset-title {
@@ -8291,7 +8379,7 @@ fieldset.collapsible .fieldset-legend {
   padding-bottom: 20px;
 }
 .view-mode-media_contact a {
-  color: #7d8401;
+  color: #636f00;
 }
 .view-mode-media_contact .group-wrapper-name {
   color: black;
@@ -8323,7 +8411,8 @@ fieldset.collapsible .fieldset-legend {
 
 .pane-media-toolkit {
   background: #f2f2f2;
-  padding: 0 24px 24px 24px;
+  padding: 26px;
+  padding-top: 0;
 }
 .pane-media-toolkit h2.pane-title {
   color: #656162;
@@ -8352,7 +8441,8 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .pane-bundle-existing-node {
-  padding: 0 26px 26px 26px;
+  padding: 26px;
+  padding-top: 0;
 }
 .pane-bundle-existing-node .field-name-field-date-published,
 .pane-bundle-existing-node .field-name-field-event-date {
@@ -8593,7 +8683,7 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-club_list .views-row,
 .view-display-id-search_club .views-row {
   border-bottom: none;
-  padding: 0 24px;
+  padding: 0 26px;
   position: relative;
   top: 0;
 }
@@ -8615,7 +8705,7 @@ fieldset.collapsible .fieldset-legend {
   top: -8px;
 }
 .node-club.view-mode-teaser h5 a {
-  color: #7d8401;
+  color: #636f00;
   padding-right: 10px;
 }
 .node-club.view-mode-teaser h5 a:after {
@@ -8641,7 +8731,7 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 30px;
 }
 .node-club.view-mode-teaser .field-name-field-email a {
-  color: #7d8401;
+  color: #636f00;
 }
 .node-club.view-mode-teaser .field-name-field-email a:after {
   content: " o";
@@ -8673,7 +8763,7 @@ fieldset.collapsible .fieldset-legend {
   display: block;
   padding: 14px 50px 11px 22px;
   font-size: 16px;
-  color: #7d8401;
+  color: #636f00;
   position: relative;
 }
 .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
@@ -8870,7 +8960,8 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 
-.page-library #banner {
+.page-library #banner,
+.page-newsroom #banner {
   background: -moz-linear-gradient(#756b5a, #887e6e);
   background: -o-linear-gradient(#756b5a, #887e6e);
   background: -webkit-linear-gradient(#756b5a, #887e6e);
@@ -9411,7 +9502,7 @@ fieldset.collapsible .fieldset-legend {
   padding: 0 20px 26px;
 }
 .view-week-in-the-life .field-name-node-link a {
-  background: #739d95;
+  background: #538b80;
   display: block;
   padding: 11px 16px 10px;
   color: white;
@@ -9542,7 +9633,7 @@ fieldset.collapsible .fieldset-legend {
   background: #887e6e;
   color: white;
   font-size: 14px;
-  padding: 9px 25px 5px;
+  padding: 9px 26px 5px;
 }
 .node-msx-fellows.ds-2col > .group-left {
   width: 270px;
@@ -9629,7 +9720,7 @@ fieldset.collapsible .fieldset-legend {
   margin: 0;
 }
 .view-msx-fellows .node-msx-fellows .field-name-title h2 a {
-  color: #7d8401;
+  color: #636f00;
 }
 .view-msx-fellows .node-msx-fellows .field-name-title h2 a:hover {
   color: #2d6280;
@@ -9831,7 +9922,7 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 .pane-program-finder div.vertical-tabs .fieldset-wrapper a {
-  color: #7d8401;
+  color: #636f00;
   display: inline-block;
   font-size: 20px;
   line-height: 24px;
@@ -10430,7 +10521,7 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 .pane-bundle-diptych .group-left .field-type-link-field a {
-  background-color: #739d95;
+  background-color: #538b80;
   width: 218px;
 }
 .pane-bundle-diptych .group-left .field-type-link-field a:hover {
@@ -10538,7 +10629,7 @@ fieldset.collapsible .fieldset-legend {
 
 .page-gsearch .search-results .title a,
 .page-gsearch .google-appliance-pager a {
-  color: #7d8401;
+  color: #636f00;
 }
 .page-gsearch .search-results .title a:hover,
 .page-gsearch .google-appliance-pager a:hover {
@@ -10741,7 +10832,7 @@ fieldset.collapsible .fieldset-legend {
   padding-top: 2px;
 }
 .node-phd-candidate.view-mode-full a {
-  color: #7d8401;
+  color: #636f00;
 }
 .node-phd-candidate.view-mode-full a:hover {
   color: #2d6280;
@@ -10958,7 +11049,7 @@ fieldset.collapsible .fieldset-legend {
   max-width: 97%;
 }
 .view-display-id-phd_job_market_jump_links .views-row a {
-  color: #7d8401;
+  color: #636f00;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
@@ -11075,7 +11166,7 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a {
-  color: #7d8401;
+  color: #636f00;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
@@ -11272,7 +11363,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .pane-faculty-filters-faculty-by-criteria {
-  padding: 0 22px 12px 22px;
+  padding: 0 26px 12px;
 }
 .pane-faculty-filters-faculty-by-criteria .pane-title {
   color: #231f20;
@@ -11290,7 +11381,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .pane-faculty-filters-faculty-by-criteria .views-row a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 .pane-faculty-filters-faculty-by-criteria .views-row a[target=_blank]:after {
   content: "i";
@@ -11447,7 +11538,7 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 3px;
 }
 .pane-bundle-featured-person .group-name-wrapper a {
-  color: #7d8401;
+  color: #636f00;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.2;
@@ -11477,7 +11568,7 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 12px !important;
 }
 .pane-bundle-featured-person .email a {
-  color: #7d8401;
+  color: #636f00;
 }
 .pane-bundle-featured-person .email a:hover {
   color: #2d6280;
@@ -11512,7 +11603,7 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
 }
 .pane-e-newsletters-list .display_archive .campaign a:after {
-  color: #7d8401;
+  color: #636f00;
   content: "w";
   font-family: "gsb";
   font-size: 16px;
@@ -11525,9 +11616,11 @@ fieldset.collapsible .fieldset-legend {
   color: #aac4bf;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
-.node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -11536,13 +11629,15 @@ fieldset.collapsible .fieldset-legend {
   padding: 0;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .group-courses-taught h2 {
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2.title, .node-faculty.view-mode-full .group-courses-taught h2 {
   font-size: 20px;
 }
 
-.node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
-.node-faculty.view-mode-full .view-display-id-entity_view_1 h2.title,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2.title, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view h2,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2, .node-faculty.view-mode-full .field-name-field-featured-publication-ref .label-above, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   font-size: 16px;
 }
 
@@ -11637,7 +11732,9 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -11651,7 +11748,9 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a:after,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a:after,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a:after,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
   content: "w" !important;
   font-family: "gsb";
   font-weight: normal;
@@ -11666,7 +11765,9 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a[target=_blank]:after,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
   content: " i" !important;
   font-size: 12px;
 }
@@ -11856,7 +11957,7 @@ fieldset.collapsible .fieldset-legend {
   border-bottom: 0;
 }
 .node-faculty.view-mode-full .group-right a {
-  color: #7d8401;
+  color: #636f00;
 }
 .node-faculty.view-mode-full .group-right a:hover {
   color: #2d6280;
@@ -11903,7 +12004,7 @@ fieldset.collapsible .fieldset-legend {
   padding-bottom: 24px;
 }
 .node-faculty.view-mode-full .field-name-field-academic-area-single a {
-  color: #7d8401;
+  color: #636f00;
 }
 .node-faculty.view-mode-full .field-name-field-academic-area-single a:hover {
   color: #2d6280;
@@ -11912,6 +12013,17 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-wrapper-research,
 .node-faculty.view-mode-full .group-wrapper-academic {
   margin-bottom: 24px;
+}
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view,
+.node-faculty.view-mode-full .group-courses-taught,
+.node-faculty.view-mode-full .field-name-field-teaching-materials,
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section,
+.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
+.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
+.node-faculty.view-mode-full .group-wrapper-affiliation,
+.node-faculty.view-mode-full .field-name-field-service-profession-section,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view {
+  padding-top: 24px;
 }
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation {
   font-size: 14px;
@@ -11941,12 +12053,15 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view,
 .node-faculty.view-mode-full .view-display-id-entity_view_1,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view {
   margin-bottom: 24px;
 }
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-row,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-row,
-.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-row {
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-row,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-row {
+  line-height: 0;
   margin-bottom: 6px;
 }
 .node-faculty.view-mode-full .views-field,
@@ -11954,6 +12069,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .publication-meta {
   font-size: 14px;
   line-height: 1.2;
+  margin-top: 2px;
 }
 .node-faculty.view-mode-full .views-field-field-link-document a:after {
   content: "m" !important;
@@ -11971,6 +12087,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-faculty.view-mode-full .field-name-field-featured-publication-ref h2 {
   display: block;
+  line-height: 0;
   margin-bottom: 0;
 }
 .node-faculty.view-mode-full .field-name-field-featured-publication-ref .group-wrapper-featured {
@@ -11986,6 +12103,13 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .field-name-field-featured-publication-ref .gsb_field_formatter_field_collection_separator:after {
   content: ". ";
 }
+.node-faculty.view-mode-full .view-id-gsb_working_paper_listing .views-field-field-year,
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-field-year {
+  margin-top: 2px;
+}
+.node-faculty.view-mode-full .group-courses-taught {
+  margin-bottom: 24px;
+}
 .node-faculty.view-mode-full .group-courses-taught h3 {
   font-size: 14px;
   line-height: 1.2;
@@ -11993,6 +12117,9 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   margin-bottom: 8px;
   margin-top: 16px;
+}
+.node-faculty.view-mode-full .group-courses-taught h3:first-of-type {
+  margin-top: 0;
 }
 .node-faculty.view-mode-full .group-courses-taught p {
   line-height: 1.3;
@@ -12003,6 +12130,22 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-description {
   font-size: 14px;
   line-height: 1.1;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title {
+  display: inline-block;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video {
+  color: #2d6280;
+  display: inline-block;
+  font-family: "gsb";
+  line-height: 0;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio:before {
+  content: "4";
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video:before {
+  content: "3";
 }
 
 .node-type-case #page-title {
@@ -12097,7 +12240,7 @@ fieldset.collapsible .fieldset-legend {
 .node-case.view-mode-full .field-name-field-link-single a,
 .node-case.view-mode-full .field-name-field-link-center-single a {
   font-weight: bold;
-  color: #7d8401;
+  color: #636f00;
 }
 .node-case.view-mode-full .field-name-field-link-single a:hover,
 .node-case.view-mode-full .field-name-field-link-center-single a:hover {
@@ -12374,7 +12517,7 @@ fieldset.collapsible .fieldset-legend {
 .node-case.view-mode-full .faculty-author-wrapper .group-wrapper-name a,
 .node-book.view-mode-full .faculty-author-wrapper .group-wrapper-name a,
 .node-publication.view-mode-full .faculty-author-wrapper .group-wrapper-name a {
-  color: #7d8401;
+  color: #636f00;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.2;
@@ -12689,7 +12832,7 @@ fieldset.collapsible .fieldset-legend {
   right: -46px;
 }
 .node-book.view-mode-full .field-buy-book {
-  padding: 0 22px 12px 22px;
+  padding: 0 26px 12px;
 }
 .node-book.view-mode-full .field-buy-book .label-above {
   color: #231f20;
@@ -12705,7 +12848,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .node-book.view-mode-full .field-buy-book .field-item a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 .node-book.view-mode-full .field-buy-book .field-item a[target=_blank]:after {
   content: "i";
@@ -12882,7 +13025,8 @@ fieldset.collapsible .fieldset-legend {
 
 .pane-case-filters-panel-pane-1,
 .pane-publication-filters-panel-pane-1 {
-  padding: 0 26px 26px 26px;
+  padding: 26px;
+  padding-top: 0;
 }
 .pane-case-filters-panel-pane-1 h2.pane-title,
 .pane-publication-filters-panel-pane-1 h2.pane-title {
@@ -13001,8 +13145,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .pane-agenda-2 {
-  position: relative;
-  padding: 20px 24px 24px 24px;
+  padding: 26px;
 }
 .pane-agenda-2 .pane-title {
   font-size: 20px;
@@ -13011,35 +13154,38 @@ fieldset.collapsible .fieldset-legend {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-agenda-2 .pane-content .agenda-block p {
+.pane-agenda-2 .agenda-block p {
   display: none;
 }
-.pane-agenda-2 .pane-content .agenda-block ol {
+.pane-agenda-2 .agenda-block ol {
   margin: 0;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li {
+.pane-agenda-2 .agenda-block li {
   background: none;
   padding: 10px 0 0 0;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title {
+.pane-agenda-2 .agenda-block .calendar_title {
+  color: #231f20;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
-  color: #231f20;
+  position: relative;
+  left: -13px;
 }
-.pane-agenda-2 .pane-content .agenda-block ol li .calendar_title:before {
+.pane-agenda-2 .agenda-block .calendar_title:before {
   content: "!";
   color: #887e6e;
   font-family: "gsb-clock";
   font-weight: normal;
   font-size: 28px;
-  margin-right: 4px;
-  vertical-align: middle;
+  margin-right: 2px;
+  position: relative;
+  top: 5px;
 }
-.pane-agenda-2 .pane-content .agenda-block .moreinfo {
+.pane-agenda-2 .agenda-block .moreinfo {
   display: none;
 }
-.pane-agenda-2 .pane-content a {
+.pane-agenda-2 a {
   margin-top: 7px;
 }
 
@@ -13131,49 +13277,61 @@ fieldset.collapsible .fieldset-legend {
 
 .pane-rss-feed-rss-feed {
   position: relative;
-  padding: 2px 22px 22px 22px;
+  padding: 26px;
+  padding-top: 2px;
 }
 .pane-rss-feed-rss-feed .pager {
   display: none;
 }
-.pane-rss-feed-rss-feed .pane-title {
+.pane-rss-feed-rss-feed h2.pane-title {
+  color: #231f20;
+  display: inline-block;
   font-size: 14px;
   font-weight: normal;
-  color: #990000;
+  line-height: 1.2;
+  padding-top: 6px;
 }
-.pane-rss-feed-rss-feed .pane-title:after {
-  color: #887e6e;
-  content: "w";
-  font-family: "gsb";
-  font-size: 14px;
-  line-height: 0;
-  margin-left: 2px;
+.pane-rss-feed-rss-feed .pane-content {
+  padding: 20px 0;
 }
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text a {
-  font-size: 20px;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.pane-rss-feed-rss-feed .views-row {
+  margin-bottom: 20px;
+}
+.pane-rss-feed-rss-feed .views-row:last-of-type {
+  margin-bottom: 0;
+}
+.pane-rss-feed-rss-feed .views-field-text {
+  margin-bottom: 6px;
+}
+.pane-rss-feed-rss-feed .views-field-text a {
   color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  text-transform: none;
 }
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text a:after {
-  color: #7d8401;
+.wide-view .pane-rss-feed-rss-feed .views-field-text a:after {
+  color: #636f00;
   content: "w";
   font-family: "gsb";
   font-size: 20px;
   line-height: 0;
   margin-left: 5px;
 }
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text a:hover {
+.narrow-view .pane-rss-feed-rss-feed .views-field-text a {
+  color: #990000;
+}
+.pane-rss-feed-rss-feed .views-field-text a:hover {
   color: #2d6280;
 }
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text a:hover:after {
+.pane-rss-feed-rss-feed .views-field-text a:hover:after {
   color: #2d6280;
 }
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text {
-  margin-top: 6px;
-}
-.pane-rss-feed-rss-feed .view-rss-feed .views-field-text span {
+.pane-rss-feed-rss-feed .views-field-text-2 {
   font-size: 16px;
-  font-weight: normal;
+  line-height: 1.3;
 }
 
 .pane-library-searchworks-form .pane-title {
@@ -13207,7 +13365,7 @@ fieldset.collapsible .fieldset-legend {
   padding: 14px 26px;
 }
 .pane-library-searchworks-form .tabbed_box .tabbed_area li a.active {
-  background: #fbfaf8;
+  background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 0;
   color: #231f20;
@@ -13236,6 +13394,9 @@ fieldset.collapsible .fieldset-legend {
 .pane-library-searchworks-form .searchworks-select {
   float: left;
   margin-right: 15px;
+  max-width: 165px;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 62.4375em) and (max-width: 70em) {
   .pane-library-searchworks-form .searchworks-select {
@@ -13330,12 +13491,15 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .view-business-websites-category-detail {
+  padding: 12px 26px;
+}
+
+.view-business-websites-category-detail {
   position: relative;
-  padding: 12px 22px 12px 22px;
 }
 .view-business-websites-category-detail .views-row a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 .view-business-websites-category-detail .views-row a:after {
   content: "i";
@@ -13355,9 +13519,6 @@ fieldset.collapsible .fieldset-legend {
   border-top: 0;
 }
 
-.view-business-website-category-listing {
-  padding: 12px 22px;
-}
 .view-business-website-category-listing .letter-group {
   display: none;
 }
@@ -13368,14 +13529,13 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-business-website-category-listing .views-row a {
   padding-right: 10px;
-  color: #7d8401;
+  color: #636f00;
 }
 .view-business-website-category-listing .views-row a:hover {
   color: #2d6280;
 }
 .view-business-website-category-listing .views-row .views-field-name {
-  border-top: 1px solid gainsboro;
-  padding: 10px 0 8px 0;
+  padding: 8px 0;
 }
 
 .intro-copy {
@@ -13399,7 +13559,7 @@ div.callout {
   margin: 0 20px 20px 0;
   max-width: 430px;
   width: 60%;
-  color: #739d95;
+  color: #538b80;
   font-size: 22px;
   line-height: 28px;
 }
@@ -13446,8 +13606,8 @@ div.callout br {
   line-height: 18px;
 }
 .field-name-field-body a {
-  border-bottom: dashed 1px #7d8401;
-  color: #7d8401;
+  border-bottom: dashed 1px #636f00;
+  color: #636f00;
   text-decoration: none;
   word-wrap: break-word;
 }
@@ -13550,7 +13710,7 @@ div.callout br {
   padding: 16px 12px;
 }
 .field-name-field-body tbody td a {
-  color: #7d8401;
+  color: #636f00;
   font-weight: bold;
   border-bottom: none;
 }

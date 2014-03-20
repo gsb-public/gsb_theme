@@ -13,10 +13,8 @@
     width: 100%
   .group-right
     color: $white
-    padding: 30px
+    padding: $standard-padding
     position: absolute
-    +breakpoint($bp-mobile-max)
-      padding: 26px
     +breakpoint($bp-mobile)
       .front &
         padding: 20px
@@ -117,7 +115,7 @@
     .group-left
       display: none
     .group-right
-      padding: 18px 26px
+      padding: 18px $standard-padding
       position: relative
       .field-name-field-link-single
         width: 100%
@@ -136,7 +134,7 @@
       display: block
       position: absolute
       bottom: 0
-      padding: 15px 26px 18px
+      padding: 15px $standard-padding 18px
       z-index: 4
       .field-name-field-link-single
         width: 100%
