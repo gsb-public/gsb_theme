@@ -251,7 +251,7 @@
     @extend %bg-border-and-box-shadow
     border: 0
     padding: $standard-padding
-    +clearfix
+    +pie-clearfix
 
     // Search field no-wrap
     #edit-search-wrapper
@@ -266,8 +266,8 @@
   // ejournal wrapper
   // Adjustment for select box
   .searchworks-ejournal
-    margin-left: -180px
-    padding-left: 180px
+    margin-left: -199px
+    padding-left: 222px
 
   .searchworks-select
     float: left
@@ -290,3 +290,12 @@
 
   #content_2
     display: none
+
+  // Selectbox adjustments
+  .jquery-selectbox,
+  .jquery-selectbox-list
+    width: 195px !important
+  .jquery-selectbox
+    margin-top: 0
+  .jquery-selectbox-list
+    height: auto !important
