@@ -11708,7 +11708,7 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .field-name-field-greater-univ-aff-unlimited ul li:before,
 .node-faculty.view-mode-full .field-collection-item-field-service-profession-section ul li:before {
   content: "• ";
-  color: #2d6280;
+  color: #607c8c;
   float: left;
   position: relative;
   left: -14px;
@@ -12149,18 +12149,31 @@ fieldset.collapsible .fieldset-legend {
   font-size: 14px;
   line-height: 1.1;
 }
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view {
+  overflow: hidden;
+  *zoom: 1;
+}
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title {
-  display: inline-block;
+  display: block;
 }
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video {
-  color: #2d6280;
+  color: #607c8c;
   display: inline-block;
+  float: left;
   font-family: "gsb";
-  line-height: 0;
+  line-height: 1;
+  position: relative;
+  top: -4px;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio {
+  margin-right: 2px;
 }
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio:before {
   content: "4";
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video {
+  margin-right: 4px;
 }
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video:before {
   content: "3";

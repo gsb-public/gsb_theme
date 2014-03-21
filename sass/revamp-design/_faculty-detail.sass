@@ -38,7 +38,7 @@ $faculty-spacing: 24px
       padding-left: 14px
       &:before
         content: "• "
-        color: $text-blue
+        color: $blue
         float: left
         position: relative
         left: -14px
@@ -478,17 +478,23 @@ $faculty-spacing: 24px
 
   // Media item icons
   .view-display-id-media_mention_listing_entity_view
+    +clearfix
     .views-field-title
-      display: inline-block
+      display: block
     .audio,
     .video
-      color: $text-blue
+      color: $blue
       display: inline-block
+      float: left
       font-family: "gsb"
-      line-height: 0
+      line-height: 1
+      position: relative
+      top: -4px
     .audio
+      margin-right: 2px
       &:before
         content: "4"
     .video
+      margin-right: 4px
       &:before
         content: "3"
