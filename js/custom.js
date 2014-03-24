@@ -384,12 +384,15 @@
   };
 
   /**
-   * Custom Styling for selectbox
+   * Custom Styling for selectbox.
    */
   Drupal.behaviors.gsb_theme = {
-    attach: function(context, settings) {
-      $("#block-system-main select").selectbox({replaceInvisible: true});
-	}
+    attach: function() {
+      $('#block-system-main select').selectbox({
+        animationSpeed: 'fast',
+        replaceInvisible: true
+      });
+    }
   };
 
 }(jQuery));
