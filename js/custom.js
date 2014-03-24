@@ -388,7 +388,7 @@
    */
   Drupal.behaviors.gsb_theme = {
     attach: function(context, settings) {
-      $("select").selectbox({replaceInvisible: true});
+      $("#block-system-main select").selectbox({replaceInvisible: true});
 	}
   };
 
