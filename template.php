@@ -145,7 +145,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
 /**
  * Preprocess html.
  *
- * Load slectivizr library for support IE 8,7 pseudo classes.
+ * Load selectivizr library for support IE 8, 7 pseudo classes.
  */
 function gsb_theme_preprocess_html(&$variables) {
   global $base_url;
@@ -184,6 +184,10 @@ function gsb_theme_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'error-page';
   }
 }
+
+/**
+ * Preprocess page.
+ */
 function gsb_theme_preprocess_page(&$variables) {
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
