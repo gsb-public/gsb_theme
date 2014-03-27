@@ -12188,6 +12188,12 @@ fieldset.collapsible .fieldset-legend {
   display: none;
 }
 
+.node-case.view-mode-full .label-inline:after {
+  content: ".";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 .node-case.view-mode-full .field-name-field-business-insight-topic,
 .node-case.view-mode-full .field-name-field-year,
 .node-case.view-mode-full .field-name-field-item-id,
@@ -12361,20 +12367,14 @@ fieldset.collapsible .fieldset-legend {
     float: left;
   }
 }
-.node-working-paper.view-mode-full .label-inline,
-.node-case.view-mode-full .label-inline,
-.node-book.view-mode-full .label-inline,
-.node-publication.view-mode-full .label-inline {
+.node-working-paper.view-mode-full .gsb_field_formatter_field_collection_separator .label-inline,
+.node-case.view-mode-full .gsb_field_formatter_field_collection_separator .label-inline,
+.node-book.view-mode-full .gsb_field_formatter_field_collection_separator .label-inline,
+.node-publication.view-mode-full .gsb_field_formatter_field_collection_separator .label-inline {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   font-weight: normal;
-}
-.node-working-paper.view-mode-full .label-inline:after,
-.node-case.view-mode-full .label-inline:after,
-.node-book.view-mode-full .label-inline:after,
-.node-publication.view-mode-full .label-inline:after {
-  content: ".";
-  height: 0;
-  clear: both;
-  visibility: hidden;
+  line-height: 1.2;
 }
 .node-working-paper.view-mode-full .field-name-title h2,
 .node-case.view-mode-full .field-name-title h2,
@@ -13487,11 +13487,6 @@ fieldset.collapsible .fieldset-legend {
 
 .node-publication.view-mode-full .group-wrapper-published {
   line-height: 1.2;
-}
-.node-publication.view-mode-full .gsb_field_formatter_field_collection_separator .label-inline {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
 }
 .node-publication.view-mode-full .group-wrapper-commas {
   display: inline;
