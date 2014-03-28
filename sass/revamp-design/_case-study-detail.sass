@@ -17,26 +17,17 @@
       height: 0
       clear: both
       visibility: hidden
-  // Case published informations
+  // Author label
+  .field-name-field-author .label-inline
+    font-weight: normal
+  // Case published information
   .field-name-field-business-insight-topic,
   .field-name-field-year,
   .field-name-field-item-id,
   .field-name-field-page-count
+    color: $text-black
     font-size: 16px
     line-height: 1.2
-
-  .field-name-field-item-id,
-  .field-name-field-page-count
-    &:before
-      color: $text-black
-      content: " | "
-      display: inline
-
-  .field-name-field-page-count
-    &:after
-      content: " pgs."
-      color: $text-black
-      display: inline
 
   // Learning objective
   .field-name-field-learning-objective
@@ -119,18 +110,21 @@
       &:hover
         color: $link-blue
 
+  // Permission statement
   .field-name-field-permissions-statement
     .label-inline
       font-weight: bold
 
+  // PDF available
   .field-name-field-link-document
-    div
-      margin-top: 22px
+    .label-inline
+      margin-bottom: 16px
     a
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
       &:after
         content: "m" !important
         @extend %doc-attached-icons
         font-size: 14px
-      @extend %green-button
-      &:hover
-        +background(linear-gradient(top, #18455f, $text-blue))
+        margin-left: 6px
