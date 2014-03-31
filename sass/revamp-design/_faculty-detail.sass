@@ -307,39 +307,83 @@ $faculty-spacing: 24px
   .field-name-field-academic-aptmts-unlimited,
   .field-name-field-professional-experience,
   .field-name-field-awards-honors,
-  .field-name-field-teaching-materials,
-  .field-name-field-conf-presentations-section,
-  .field-name-field-link-video-unlimited,
-  .field-name-field-link-podcast-unlimited,
   .field-name-field-stanford-gsb-affiliation,
   .field-name-field-greater-university-affil,
   .field-collection-item-field-service-profession-section
     @extend %faculty-bullets
 
-  // List link style
-  .field-name-field-teaching-materials a,
-  .field-name-field-conf-presentations-section a,
-  .field-name-field-link-video-unlimited a,
-  .field-name-field-link-podcast-unlimited a
-    @extend %faculty-link
-
-  // Presentations
-  .field-name-field-conf-presentations-section
-    .field-name-field-file-conf-presentation
+  // Teaching materials
+  .field-name-field-teaching-materials
+    .field-collection-item-field-teaching-materials
+      margin-bottom: 10px
+    // Title
+    .field-name-field-link-single
+      display: inline-block
+      font-family: $font-demi
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 0
+      a
+        display: inline-block
+        @extend %faculty-link
+    // PDF file
+    .field-name-field-file-single-public
       font-size: 14px
       line-height: 1.2
-    // Replace file size with pdf icon
-    .field-name-field-file-conf-presentation a
-      font-family: $font-sans
-      &:before
-        color: $black
-        content: "   |   "
-        display: inline
-      &:after
-        content: "m" !important
-        @extend %doc-attached-icons
-        font-size: 13px
-        vertical-align: baseline
+      // Replace file size with pdf icon
+      a
+        font-family: $font-sans
+        &:before
+          color: $black
+          content: "   |   "
+          display: inline
+        &:after
+          content: "m" !important
+          @extend %doc-attached-icons
+          font-size: 13px
+          vertical-align: baseline
+    // Description
+    .field-name-field-description
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 0
+
+  // Conferences, Talks & Presentations
+  .field-name-field-conf-presentations-section
+    .field-collection-item-field-conf-presentations-section
+      margin-bottom: 10px
+    // Title
+    .field-name-field-link-conf-pres-unlimited
+      display: inline-block
+      font-family: $font-demi
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 0
+      a
+        display: inline-block
+        @extend %faculty-link
+    // PDF file
+    .field-name-field-file-conf-presentation
+      a
+        font-family: $font-sans
+        font-size: 14px
+        line-height: 1.2
+        &:before
+          color: $black
+          content: "   |   "
+          display: inline
+        &:after
+          content: "m" !important
+          @extend %doc-attached-icons
+          font-size: 13px
+          vertical-align: baseline
+    // Description
+    .field-name-field-description
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 0
 
   // Affiliations
   .group-wrapper-affiliation
@@ -475,26 +519,3 @@ $faculty-spacing: 24px
       .field-name-field-description
         font-size: 14px
         line-height: 1.1
-
-  // Media item icons
-  .view-display-id-media_mention_listing_entity_view
-    +clearfix
-    .views-field-title
-      display: block
-    .audio,
-    .video
-      color: $blue
-      display: inline-block
-      float: left
-      font-family: "gsb"
-      line-height: 1
-      position: relative
-      top: -4px
-    .audio
-      margin-right: 2px
-      &:before
-        content: "4"
-    .video
-      margin-right: 4px
-      &:before
-        content: "3"
