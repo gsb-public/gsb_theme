@@ -1,0 +1,14 @@
+# Font Custom config
+# http://fontcustom.com
+# https://github.com/FontCustom/fontcustom#configuration
+font_name: icons
+css_selector: .{{glyph}}
+no_hash: true
+input:
+  vectors: ../../images/icons
+  templates: .
+output:
+  fonts: .
+  preview: .
+  _icons.scss: ../../styles
+templates: [preview, _icons.sass]

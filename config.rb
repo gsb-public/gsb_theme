@@ -8,6 +8,7 @@ require 'compass'
 
 # Require additional gems
 require 'breakpoint'
+require 'fontcustom'
 
 # Set this to the root of your project when deployed:
 http_path = '/'
