@@ -72,14 +72,12 @@
             font-family: $font-sans
     a.active
       color: $text-blue
-      @include icon-before("arrow-double-right", true)
-      &:before
-        float: left
-        font-size: 12px
-        line-height: 1.5
-        position: relative
-        left: -12px
-        width: 0
-      +breakpoint($bp-tablet-port-max)
+      +breakpoint($bp-wide-min)
+        +icon-before("arrow-double-right", true)
         &:before
-          content: ""
+          float: left
+          font-size: 12px
+          line-height: 1.5
+          position: relative
+          left: -16px
+          width: 0

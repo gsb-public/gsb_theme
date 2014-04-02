@@ -14,20 +14,6 @@
   }
 }
 /* Font icon pseudo-element base styles */
-.region-sidebar-first ul li a.active:before {
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-
 pre, code, kbd, tt {
   font-family: Consolas, Menlo, "Courier New", monospace, monospace;
   _font-family: Consolas, Menlo, "Courier New", monospace, monospace;
@@ -2995,20 +2981,28 @@ a.no-border:hover {
 .region-sidebar-first ul li a.active {
   color: #2d6280;
 }
-.region-sidebar-first ul li a.active:before {
-  content: "\f101";
-}
-.region-sidebar-first ul li a.active:before {
-  float: left;
-  font-size: 12px;
-  line-height: 1.5;
-  position: relative;
-  left: -12px;
-  width: 0;
-}
-@media (max-width: 62.4375em) {
+@media (min-width: 62.5em) {
   .region-sidebar-first ul li a.active:before {
-    content: "";
+    content: "\f101";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .region-sidebar-first ul li a.active:before {
+    float: left;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
+    left: -16px;
+    width: 0;
   }
 }
 
