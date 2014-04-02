@@ -20,26 +20,22 @@
       margin-bottom: 22px
       &.first
         padding-top: 22px
+    &.collapsed
+      +breakpoint($bp-tablet-port-max)
+        +icon-before("plus", true)
+    &.active-trail
+      +breakpoint($bp-tablet-port-max)
+        +icon-before("minus", true)
     &.collapsed,
     &.active-trail
       +breakpoint($bp-tablet-port-max)
         &:before
           color: $red
-          font-family: "gsb"
-          font-size: 20px
+          font-size: 14px
           font-weight: normal
-          line-height: 0
-          margin-top: 5px
+          line-height: 1.4
           position: absolute
           left: 12px
-    &.collapsed
-      +breakpoint($bp-tablet-port-max)
-        &:before
-          content: "c"
-    &.active-trail
-      +breakpoint($bp-tablet-port-max)
-        &:before
-          content: "d"
 
     a
       color: $red

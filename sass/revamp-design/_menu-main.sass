@@ -58,18 +58,17 @@
     // Tablets
     +breakpoint($bp-tablet-port)
       width: 21.1%
+      +icon-after("arrow-med-down", true)
       &:last-of-type
         border-right: 0
       &:after
         color: $white
-        content: "."
         float: right
-        font-family: "gsb"
-        font-size: 30px
+        font-size: 14px
         line-height: 0
         position: relative
-        top: -17px
-        right: 3px
+        top: -13px
+        right: 7px
       a
         font-size: 15px
         line-height: 14px
@@ -92,20 +91,18 @@
         color: $red
         padding: 15px 0
         position: relative
-        left: 45px
+        left: 55px
+      +icon-before("plus", true)
       &:before
         color: $red
-        content: "c"
         float: left
-        font-family: "gsb"
-        font-size: 25px
+        font-size: 14px
         position: relative
         line-height: 1
-        top: 4px
-        left: 14px
+        top: 18px
+        left: 20px
       &.open
-        &:before
-          content: "d"
+        +icon-before("minus", false)
         .menu
           display: block
       li
@@ -127,17 +124,15 @@
       &:hover a
         text-decoration: underline
       a
+        +icon-after("arrow-med-down", true)
         &:after
           color: $white
-          content: "."
           float: right
-          font-family: "gsb"
-          font-size: 30px
+          font-size: 14px
           position: absolute
           line-height: 1
-          font-weight: normal
-          right: 0
-          bottom: 7px
+          right: 6px
+          bottom: 4px
         min-height: 80px
         padding: 12px 8px 18px
 
@@ -237,16 +232,17 @@
       padding: 3px 12px 9px
       vertical-align: top
       position: relative
+      width: 50px
       z-index: 12
   #nav-touch-button
+    +icon-after("menu", true)
     &:after
       color: $white
-      content: "f"
-      float: right
-      line-height: 1
-      font-family: "gsb"
-      font-size: 30px
+      font-size: 21px
+      line-height: 0
       position: relative
+      top: 12px
+      right: -2px
 
 // Menu toggle functionality
 #nav-touch-wrapper
@@ -276,16 +272,17 @@
     cursor: pointer
     display: inline-block
     height: 50px
-    left: 55px
-    padding: 8px 11px 6px
+    left: 50px
     position: absolute
+    width: 50px
+    +icon-after("search", true)
     &:after
       color: $white
-      content: "a"
-      font-family: "gsb"
-      font-size: 31px
+      font-size: 24px
+      line-height: 0
+      padding: 0 12px
       position: relative
-      line-height: 1
+      top: 20px
 
 #google-appliance-block-form.open
   +breakpoint($bp-mobile-max)

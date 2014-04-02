@@ -2918,25 +2918,45 @@ a.no-border:hover {
   }
 }
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.collapsed:before, .region-sidebar-first ul li.active-trail:before {
-    color: #990000;
-    font-family: "gsb";
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 0;
-    margin-top: 5px;
-    position: absolute;
-    left: 12px;
-  }
-}
-@media (max-width: 62.4375em) {
   .region-sidebar-first ul li.collapsed:before {
-    content: "c";
+    content: "\f11b";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
   }
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.active-trail:before {
-    content: "d";
+    content: "\f117";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+}
+@media (max-width: 62.4375em) {
+  .region-sidebar-first ul li.collapsed:before, .region-sidebar-first ul li.active-trail:before {
+    color: #990000;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    position: absolute;
+    left: 12px;
   }
 }
 .region-sidebar-first ul li a {
@@ -3183,19 +3203,31 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   #block-system-main-menu li {
     width: 21.1%;
   }
+  #block-system-main-menu li:after {
+    content: "\f105";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
   #block-system-main-menu li:last-of-type {
     border-right: 0;
   }
   #block-system-main-menu li:after {
     color: white;
-    content: ".";
     float: right;
-    font-family: "gsb";
-    font-size: 30px;
+    font-size: 14px;
     line-height: 0;
     position: relative;
-    top: -17px;
-    right: 3px;
+    top: -13px;
+    right: 7px;
   }
   #block-system-main-menu li a {
     font-size: 15px;
@@ -3221,21 +3253,33 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     color: #990000;
     padding: 15px 0;
     position: relative;
-    left: 45px;
+    left: 55px;
+  }
+  #block-system-main-menu li:before {
+    content: "\f11b";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
   }
   #block-system-main-menu li:before {
     color: #990000;
-    content: "c";
     float: left;
-    font-family: "gsb";
-    font-size: 25px;
+    font-size: 14px;
     position: relative;
     line-height: 1;
-    top: 4px;
-    left: 14px;
+    top: 18px;
+    left: 20px;
   }
   #block-system-main-menu li.open:before {
-    content: "d";
+    content: "\f117";
   }
   #block-system-main-menu li.open .menu {
     display: block;
@@ -3269,16 +3313,27 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     padding: 12px 8px 18px;
   }
   #block-system-main-menu li a:after {
+    content: "\f105";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  #block-system-main-menu li a:after {
     color: white;
-    content: ".";
     float: right;
-    font-family: "gsb";
-    font-size: 30px;
+    font-size: 14px;
     position: absolute;
     line-height: 1;
-    font-weight: normal;
-    right: 0;
-    bottom: 7px;
+    right: 6px;
+    bottom: 4px;
   }
 }
 
@@ -3420,17 +3475,31 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     padding: 3px 12px 9px;
     vertical-align: top;
     position: relative;
+    width: 50px;
     z-index: 12;
   }
 }
 #nav-touch-wrapper #nav-touch-button:after {
-  color: white;
-  content: "f";
-  float: right;
+  content: "\f115";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
   line-height: 1;
-  font-family: "gsb";
-  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+#nav-touch-wrapper #nav-touch-button:after {
+  color: white;
+  font-size: 21px;
+  line-height: 0;
   position: relative;
+  top: 12px;
+  right: -2px;
 }
 
 @media (max-width: 35.5em) {
@@ -3473,17 +3542,31 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     cursor: pointer;
     display: inline-block;
     height: 50px;
-    left: 55px;
-    padding: 8px 11px 6px;
+    left: 50px;
     position: absolute;
+    width: 50px;
+  }
+  #search-touch-button:after {
+    content: "\f11f";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
   }
   #search-touch-button:after {
     color: white;
-    content: "a";
-    font-family: "gsb";
-    font-size: 31px;
+    font-size: 24px;
+    line-height: 0;
+    padding: 0 12px;
     position: relative;
-    line-height: 1;
+    top: 20px;
   }
 }
 
@@ -7385,7 +7468,7 @@ ul.slideshow-items li:first-of-type {
 @media (max-width: 35.5em) {
   #google-appliance-block-form {
     display: none;
-    left: 55px;
+    left: 50px;
     position: absolute;
     width: 85%;
     z-index: 1;
@@ -8985,14 +9068,25 @@ fieldset.collapsible .fieldset-legend {
     width: 108px;
   }
   #sidebar .sidebar h2:before {
-    color: white;
-    content: "c";
-    font-family: "gsb";
+    content: "\f11b";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
     font-weight: normal;
-    font-size: 22px;
+    font-family: 'icons';
+  }
+  #sidebar .sidebar h2:before {
+    color: white;
+    font-size: 14px;
     position: absolute;
     left: 7px;
-    top: 11px;
+    top: 20px;
     text-transform: none;
   }
   #sidebar .block-menu.open .content,
@@ -9016,8 +9110,11 @@ fieldset.collapsible .fieldset-legend {
   }
   #sidebar .block-menu.open h2:before,
   #sidebar .block-menu-block.open h2:before {
+    content: "\f117";
+  }
+  #sidebar .block-menu.open h2:before,
+  #sidebar .block-menu-block.open h2:before {
     color: #990000;
-    content: "d";
   }
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
