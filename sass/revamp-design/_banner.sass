@@ -167,15 +167,13 @@
         right: 0
         text-transform: uppercase
         width: 108px
+        +icon-before("plus", true)
         &:before
           color: $white
-          content: "c"
-          font-family: "gsb"
-          font-weight: normal
-          font-size: 22px
+          font-size: 14px
           position: absolute
           left: 7px
-          top: 11px
+          top: 20px
           text-transform: none
     .block-menu.open,
     .block-menu-block.open
@@ -189,9 +187,9 @@
         color: $red
         +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
         padding-right: 73px
+        +icon-before("minus", false)
         &:before
           color: $red
-          content: "d"
       .menu
         +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
         border-bottom: 10px solid $black
