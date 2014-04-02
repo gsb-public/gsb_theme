@@ -12,23 +12,21 @@
     clear: both
 
 ////////////
-// Chevrons
+// Double arrow
 ////////////
 
-%chevron-big
-  content: "w"
-  font-family: "gsb"
+%arrow-double-big
   position: absolute
   font-size: 40px
   right: 12px
   font-weight: normal !important
   text-transform: lowercase
   top: 50%
-  margin-top: -6px
+  margin-top: -8px
   line-height: 0
 
-%chevron-small
-  @extend %chevron-big
+%arrow-double-small
+  @extend %arrow-double-big
   font-size: 20px
   right: 22px
 
@@ -202,10 +200,7 @@
 // Attached document icons
 %doc-attached-icons
   margin-left: 3px
-  font-family: "gsb"
-  line-height: 1
   font-weight: normal
-  text-transform: lowercase
   &:hover
     &:after
       color: $text-blue
@@ -256,13 +251,10 @@
   width: 40px
   height: 40px
   &:after
-    text-transform: lowercase
     color: $white
-    font-family: "gsb"
-    font-size: 24px
+    font-size: 21px
     position: relative
-    line-height: 1
-    top: 7px
+    top: 10px
   &:hover
     background: $white
     &:after

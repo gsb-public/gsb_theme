@@ -32,15 +32,13 @@ dfn {
 }
 
 .cta-red-gradient a:after, .cta-green .field-item a:after, .cta-red .field-item a:after, .view-academic-calendar .view-footer a:after, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
-  content: "w";
-  font-family: "gsb";
   position: absolute;
   font-size: 40px;
   right: 12px;
   font-weight: normal !important;
   text-transform: lowercase;
   top: 50%;
-  margin-top: -6px;
+  margin-top: -8px;
   line-height: 0;
 }
 
@@ -88,7 +86,7 @@ dfn {
   content: ",";
 }
 
-.green-rounded-button, .node-event.view-mode-full .field-name-field-register-url a, .pane-rethink-form .button, .node-case.view-mode-full .field-name-field-link-document a, .node-working-paper.view-mode-full .field-name-field-link-document a, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a, .pane-bookmarklet-link a, .node-publication.view-mode-full .group-wrapper-links a {
+.green-rounded-button, .node-event.view-mode-full .field-name-field-register-url a, .pane-rethink-form .button, .node-case.view-mode-full .field-name-field-link-document a, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a, .pane-bookmarklet-link a, .node-publication.view-mode-full .group-wrapper-links a {
   padding: 10px 16px;
   border: none;
   -moz-border-radius: 20px;
@@ -107,14 +105,14 @@ dfn {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-.green-rounded-button:after, .node-event.view-mode-full .field-name-field-register-url a:after, .pane-rethink-form .button:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document a:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .pane-bookmarklet-link a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
+.green-rounded-button:after, .node-event.view-mode-full .field-name-field-register-url a:after, .pane-rethink-form .button:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .pane-bookmarklet-link a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
   color: white !important;
 }
-.green-rounded-button:hover, .node-event.view-mode-full .field-name-field-register-url a:hover, .pane-rethink-form .button:hover, .node-case.view-mode-full .field-name-field-link-document a:hover, .node-working-paper.view-mode-full .field-name-field-link-document a:hover, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover, .pane-bookmarklet-link a:hover, .node-publication.view-mode-full .group-wrapper-links a:hover {
+.green-rounded-button:hover, .node-event.view-mode-full .field-name-field-register-url a:hover, .pane-rethink-form .button:hover, .node-case.view-mode-full .field-name-field-link-document a:hover, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover, .pane-bookmarklet-link a:hover, .node-publication.view-mode-full .group-wrapper-links a:hover {
   border: 0;
   color: white;
 }
-.green-rounded-button:hover:after, .node-event.view-mode-full .field-name-field-register-url a:hover:after, .pane-rethink-form .button:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document a:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .pane-bookmarklet-link a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
+.green-rounded-button:hover:after, .node-event.view-mode-full .field-name-field-register-url a:hover:after, .pane-rethink-form .button:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .pane-bookmarklet-link a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
   color: white !important;
 }
 
@@ -305,20 +303,17 @@ dfn {
   margin: 1px;
 }
 
-body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .pane-bundle-existing-node .field-name-field-link-document a:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
+body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, .pane-bundle-existing-node .field-name-field-link-document a:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after, .node-faculty.view-mode-full .views-field-field-link-document a:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document a:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .view-mode-teaser_listing .field-name-field-link-document:after, .view-mode-views_content_pane .field-name-field-link-document a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after, .node-faculty.view-mode-full .views-field-field-link-document a:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .view-mode-teaser_listing .field-name-field-link-document:after, .view-mode-views_content_pane .field-name-field-link-document a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
   margin-left: 3px;
-  font-family: "gsb";
-  line-height: 1;
   font-weight: normal;
-  text-transform: lowercase;
 }
-body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$=".jpg"]:hover:after, body a[href$=".gif"]:hover:after, body a[href$=".pptx"]:hover:after, body a[href$=".ppt"]:hover:after, body a[href$=".pps"]:hover:after, body a[href$=".odp"]:hover:after, body a[href$=".zip"]:hover:after, body a[href$=".rar"]:hover:after, body a[href$=".tar"]:hover:after, body a[href$=".doc"]:hover:after, body a[href$=".docx"]:hover:after, body a[href$=".txt"]:hover:after, body a[href$=".odt"]:hover:after, body a[href$=".xls"]:hover:after, body a[href$=".xlsx"]:hover:after, body a[href$=".ods"]:hover:after, .pane-bundle-existing-node .field-name-field-link-document a:hover:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:hover:after,
+body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$=".jpg"]:hover:after, body a[href$=".jpeg"]:hover:after, body a[href$=".gif"]:hover:after, body a[href$=".tiff"]:hover:after, body a[href$=".pptx"]:hover:after, body a[href$=".ppt"]:hover:after, body a[href$=".pps"]:hover:after, body a[href$=".odp"]:hover:after, body a[href$=".zip"]:hover:after, body a[href$=".rar"]:hover:after, body a[href$=".tar"]:hover:after, body a[href$=".doc"]:hover:after, body a[href$=".docx"]:hover:after, body a[href$=".txt"]:hover:after, body a[href$=".odt"]:hover:after, body a[href$=".xls"]:hover:after, body a[href$=".xlsx"]:hover:after, body a[href$=".ods"]:hover:after, .pane-bundle-existing-node .field-name-field-link-document a:hover:after, .node-phd-candidate.view-mode-full .field-name-field-file-job-market-paper a:hover:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-publications .field-name-field-file-single-public a:hover:after,
 .node-phd-candidate.view-mode-full .field-collection-item-field-working-papers .field-name-field-file-single-public a:hover:after,
-.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:hover:after, .node-faculty.view-mode-full .views-field-field-link-document a:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document a:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .view-mode-teaser_listing .field-name-field-link-document:hover:after, .view-mode-views_content_pane .field-name-field-link-document a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
+.node-phd-candidate.view-mode-full .field-collection-item-field-work-in-progress .field-name-field-file-single-public a:hover:after, .node-phd-candidate.view-mode-full .group-wrapper-link .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:hover:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:hover:after, .node-faculty.view-mode-full .views-field-field-link-document a:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .view-mode-teaser_listing .field-name-field-link-document:hover:after, .view-mode-views_content_pane .field-name-field-link-document a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
   color: #2d6280;
 }
 
@@ -375,13 +370,10 @@ body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$
   height: 40px;
 }
 .circle:after {
-  text-transform: lowercase;
   color: white;
-  font-family: "gsb";
-  font-size: 24px;
+  font-size: 21px;
   position: relative;
-  line-height: 1;
-  top: 7px;
+  top: 10px;
 }
 .circle:hover {
   background: white;
@@ -844,23 +836,106 @@ th[align="right"] {
   font-style: normal;
 }
 body a[href$=".pdf"]:after {
-  content: "m" !important;
-  vertical-align: text-top;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
-body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".gif"]:after {
-  content: "#" !important;
+body a[href$=".pdf"]:after {
+  content: "\f118" !important;
+}
+body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after {
+  content: "\f119";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after {
+  content: "\f119" !important;
 }
 body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after {
-  content: "%" !important;
+  content: "\f11d";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after {
+  content: "\f11d" !important;
 }
 body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after {
-  content: "$" !important;
+  content: "\f124";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after {
+  content: "\f124" !important;
 }
 body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after {
-  content: "&" !important;
+  content: "\f110";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after {
+  content: "\f110" !important;
 }
 body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after {
-  content: "^" !important;
+  content: "\f120";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after {
+  content: "\f120" !important;
 }
 
 .file-icon {
@@ -2644,8 +2719,20 @@ a.no-border:hover {
   font-weight: bold;
 }
 .pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
-  content: "i";
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
   font-weight: normal;
   font-size: 12px;
   margin-left: 0.3em;
@@ -2673,9 +2760,20 @@ a.no-border:hover {
   color: #636f00;
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
-  content: "i";
-  text-transform: lowercase;
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
   font-size: 12px;
   margin-left: 0.3em;
 }
@@ -2729,12 +2827,22 @@ a.no-border:hover {
   font-weight: bold;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
-  content: "i";
-  color: #b1aeaf;
-  text-transform: lowercase;
-  font-family: "gsb";
-  font-size: 12px;
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
+  color: #b1aeaf;
+  font-size: 12px;
   margin-left: 0.3em;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover {
@@ -3709,10 +3817,22 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   padding-bottom: 12px;
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us h2 a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+#block-gsb-public-custom-blocks-gpcb-follow-us h2 a:after {
   color: #c2b7a1;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 20px;
+  font-size: 12px;
   font-weight: normal;
   margin-left: 0.3em;
 }
@@ -4229,29 +4349,39 @@ ul.slideshow-items li:first-of-type {
   opacity: 0.8;
   outline: none;
   background-image: none;
-  width: 39px;
-  height: 39px;
+  width: 40px;
+  height: 40px;
 }
 .no-touch .flex-direction-nav a {
   opacity: 0.4;
 }
 .flex-direction-nav a:before, .flex-direction-nav a:after {
-  font-family: "gsb";
-  line-height: 1;
   text-indent: 0;
 }
 .flex-direction-nav a:before {
-  position: absolute;
-  font-size: 40px;
+  content: "\f10c";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
   line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.flex-direction-nav a:before {
+  position: absolute;
+  font-size: 44px;
   top: 0;
   left: 0;
-  content: "~";
   color: #887e6e;
   opacity: 0.8;
 }
 .flex-direction-nav a:after {
-  font-size: 37px;
+  font-size: 18px;
   color: white;
   position: absolute;
   top: 11px;
@@ -4295,6 +4425,20 @@ ul.slideshow-items li:first-of-type {
 .flex-direction-nav a.flex-prev {
   left: 28px;
 }
+.flex-direction-nav a.flex-prev:after {
+  content: "\f106";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
 @media (min-width: 37.5em) and (max-width: 37.625em) {
   .flex-direction-nav a.flex-prev {
     left: 12px;
@@ -4306,10 +4450,24 @@ ul.slideshow-items li:first-of-type {
   }
 }
 .flex-direction-nav a.flex-prev:after {
-  content: "[";
+  left: 12px;
 }
 .flex-direction-nav a.flex-next {
   right: 28px;
+}
+.flex-direction-nav a.flex-next:after {
+  content: "\f107";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 @media (min-width: 37.5em) and (max-width: 37.625em) {
   .flex-direction-nav a.flex-next {
@@ -4322,8 +4480,7 @@ ul.slideshow-items li:first-of-type {
   }
 }
 .flex-direction-nav a.flex-next:after {
-  content: "z";
-  left: 2px;
+  left: 14px;
 }
 
 .slideshow-wrapper {
@@ -4443,10 +4600,22 @@ ul.slideshow-items li:first-of-type {
   margin-bottom: 15px;
   text-transform: none;
 }
-.slideshow-simple .slide-title:after {
+.slide-title .slideshow-simple:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.slide-title .slideshow-simple:after {
   color: #990000;
-  content: "\f100";
-  font-family: "arrow-double";
   font-size: 36px;
   position: relative;
   top: 2px;
@@ -4486,9 +4655,20 @@ ul.slideshow-items li:first-of-type {
   padding: 10px 18px 12px 16px;
 }
 .slide-cta:after {
-  content: "w";
-  font-family: "gsb";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.slide-cta:after {
   position: relative;
   left: 3px;
 }
@@ -4681,24 +4861,31 @@ ul.slideshow-items li:first-of-type {
   color: #990000;
 }
 .slideshow-simple .slide-description:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.slideshow-simple .slide-description:after {
   color: #bac405;
-  content: "w";
-  font-family: "gsb";
-  font-size: 32px;
+  font-size: 18px;
   position: relative;
   line-height: 0;
   font-weight: bold;
   top: 0;
   left: 5px;
 }
-@media (max-width: 64em) {
-  .slideshow-simple .slide-description:after {
-    font-size: 20px;
-  }
-}
 @media (max-width: 35.5em) {
   .slideshow-simple .slide-description:after {
-    font-size: 26px;
+    font-size: 14px;
   }
 }
 .slideshow-simple .slide-cta {
@@ -5576,6 +5763,20 @@ ul.slideshow-items li:first-of-type {
   position: relative;
 }
 .cta-green .field-item a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.cta-green .field-item a:after {
   font-weight: bold;
   color: #e3e3e3;
 }
@@ -5604,6 +5805,20 @@ ul.slideshow-items li:first-of-type {
   position: relative;
 }
 .cta-red .field-item a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.cta-red .field-item a:after {
   color: #c2b7a1;
 }
 .cta-red .field-item:hover {
@@ -5628,6 +5843,20 @@ ul.slideshow-items li:first-of-type {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   padding-bottom: 14px;
+}
+.cta-red-gradient a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 .cta-red-gradient a:after {
   color: white;
@@ -6117,10 +6346,22 @@ ul.slideshow-items li:first-of-type {
   position: relative;
 }
 .learn-about-campus .about-campus-btn:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.learn-about-campus .about-campus-btn:after {
   color: white;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 26px;
+  font-size: 21px;
   font-weight: normal;
   position: absolute;
   top: 34%;
@@ -6259,10 +6500,22 @@ ul.slideshow-items li:first-of-type {
   padding: 14px 26px;
 }
 .pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
   color: white;
-  content: "w";
   display: inline-block;
-  font-family: "gsb";
   font-size: 19px;
   font-weight: normal;
   line-height: 0;
@@ -6339,19 +6592,63 @@ ul.slideshow-items li:first-of-type {
 }
 
 .social-block-youtube:after {
-  content: "p";
+  content: "\f123";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 
 .social-block-twitter:after {
-  content: "r";
+  content: "\f121";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 
 .social-block-facebook:after {
-  content: "s";
+  content: "\f113";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 
 .social-block-linkedin:after {
-  content: "n";
+  content: "\f114";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 
 .pane-gsb-public-custom-blocks-gpcb-conducting-research {
@@ -6479,22 +6776,34 @@ ul.slideshow-items li:first-of-type {
     color: white;
     cursor: pointer;
     display: block;
-    font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 1;
     padding: 16px 0;
     padding-left: 33px;
   }
   #program-links-title:before {
+    content: "\f11b";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  #program-links-title:before {
     color: white;
-    content: "c";
     float: left;
-    font-family: "gsb";
-    font-size: 28px;
+    font-size: 18px;
     line-height: 0;
     position: relative;
-    top: 6px;
-    left: -29px;
+    top: 10px;
+    left: -24px;
   }
 }
 
@@ -6503,7 +6812,7 @@ ul.slideshow-items li:first-of-type {
     display: none;
   }
   .pane-program-links .cta-red-gradient.open #program-links-title:before {
-    content: "d";
+    content: "\f117";
   }
   .pane-program-links .cta-red-gradient.open .links {
     display: block;
@@ -7127,6 +7436,20 @@ ul.slideshow-items li:first-of-type {
   .view-academic-calendar .view-footer a {
     max-width: 127px;
   }
+}
+.view-academic-calendar .view-footer a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 .view-academic-calendar .view-footer a:after {
   font-weight: bold;
@@ -8837,6 +9160,20 @@ fieldset.collapsible .fieldset-legend {
   font-size: 16px;
   color: #636f00;
   position: relative;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
   font-weight: bold;
@@ -12697,11 +13034,25 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1.2;
   padding: 26px 0;
 }
-.node-working-paper.view-mode-full .field-name-field-link-document a:after {
-  content: "m" !important;
+.node-working-paper.view-mode-full .field-name-field-link-document:after {
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-working-paper.view-mode-full .field-name-field-link-document:after:after {
+  content: "\f118" !important;
   font-size: 14px;
 }
-.node-working-paper.view-mode-full .field-name-field-link-document a:hover {
+.node-working-paper.view-mode-full .field-name-field-link-document:after:hover {
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
   background: -webkit-linear-gradient(top, #18455f, #2d6280);

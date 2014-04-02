@@ -333,8 +333,9 @@
       position: relative
       +breakpoint($bp-tablet-land-max)
         max-width: 127px
+      +icon-after("arrow-double-right", true)
       &:after
-        @extend %chevron-big
+        @extend %arrow-double-big
         font-weight: bold
         color: #e3e3e3
       &:hover

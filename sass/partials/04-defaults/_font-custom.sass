@@ -1,51 +1,79 @@
 // Fontcustom icons
 
-
-//txt, doc, docx, xls, xlsx, pdf, ppt, pptx, pps, odt, ods, odp, zip.
 body
   a
-    &[href$=".pdf"]
-      &:after
-        content: 'm' !important
-        vertical-align: text-top
-        @extend %doc-attached-icons
-
+    &[href$=".pdf"],
     &[href$=".png"],
     &[href$=".jpg"],
-    &[href$=".gif"]
-      &:after
-        content: '#' !important
-        @extend %doc-attached-icons
-
+    &[href$=".jpeg"],
+    &[href$=".gif"],
+    &[href$=".tiff"],
     &[href$=".pptx"],
     &[href$=".ppt"],
     &[href$=".pps"],
-    &[href$=".odp"]
-      &:after
-        content: '%' !important
-        @extend %doc-attached-icons
-
+    &[href$=".odp"],
     &[href$=".zip"],
     &[href$=".rar"],
-    &[href$=".tar"]
-      &:after
-        content: '$' !important
-        @extend %doc-attached-icons
-
+    &[href$=".tar"],
     &[href$=".doc"],
     &[href$=".docx"],
     &[href$=".txt"],
-    &[href$=".odt"]
-      &:after
-        content: '&' !important
-        @extend %doc-attached-icons
-
+    &[href$=".odt"],
     &[href$=".xls"],
     &[href$=".xlsx"],
     &[href$=".ods"]
       &:after
-        content: '^' !important
         @extend %doc-attached-icons
+
+    // PDF
+    &[href$=".pdf"]
+      +icon-after("pdf", true)
+      &:after
+        content: "\f118" !important
+
+    // Images
+    &[href$=".png"],
+    &[href$=".jpg"],
+    &[href$=".jpeg"],
+    &[href$=".gif"],
+    &[href$=".tiff"]
+      +icon-after("picture", true)
+      &:after
+        content: "\f119" !important
+
+    // Presentations
+    &[href$=".pptx"],
+    &[href$=".ppt"],
+    &[href$=".pps"],
+    &[href$=".odp"]
+      +icon-after("presentation", true)
+      &:after
+        content: "\f11d" !important
+
+    // Compressed files
+    &[href$=".zip"],
+    &[href$=".rar"],
+    &[href$=".tar"]
+      +icon-after("zip", true)
+      &:after
+        content: "\f124" !important
+
+    // Documents
+    &[href$=".doc"],
+    &[href$=".docx"],
+    &[href$=".txt"],
+    &[href$=".odt"]
+      +icon-after("document", true)
+      &:after
+        content: "\f110" !important
+
+    // Spreadsheet
+    &[href$=".xls"],
+    &[href$=".xlsx"],
+    &[href$=".ods"]
+      +icon-after("spreadsheet", true)
+      &:after
+        content: "\f120" !important
 
 //Hide old image assigned for file type
 .file-icon

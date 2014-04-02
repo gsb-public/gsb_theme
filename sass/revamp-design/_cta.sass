@@ -77,8 +77,9 @@
     a
       color: $text-green
       position: relative
+      +icon-after("arrow-double-right", true)
       &:after
-        @extend %chevron-big
+        @extend %arrow-double-big
         font-weight: bold
         color: #e3e3e3
       //CTA green in mega menu
@@ -103,8 +104,9 @@
     a
       color: $red
       position: relative
+      +icon-after("arrow-double-right", true)
       &:after
-        @extend %chevron-big
+        @extend %arrow-double-big
         color: $grey-med
     &:hover
       background: #edeae5
@@ -124,8 +126,9 @@
     position: relative
     font-family: $font-demi
     position: relative
+    +icon-after("arrow-double-right", true)
     &:after
-      @extend %chevron-small
+      @extend %arrow-double-small
       color: $white
     padding-bottom: 14px
     b

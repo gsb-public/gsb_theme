@@ -56,21 +56,20 @@
     color: $white
     cursor: pointer
     display: block
-    font-family: $font-light
+    font-family: $font-demi
     font-size: 22px
     line-height: 1
     padding: 16px 0
     padding-left: 33px
+    +icon-before("plus", true)
     &:before
       color: $white
-      content: "c"
       float: left
-      font-family: "gsb"
-      font-size: 28px
+      font-size: 18px
       line-height: 0
       position: relative
-      top: 6px
-      left: -29px
+      top: 10px
+      left: -24px
 
 // Mobile 480 show/hide
 .pane-program-links
@@ -79,8 +78,7 @@
       display: none
     .cta-red-gradient.open
       #program-links-title
-        &:before
-          content: "d"
+        +icon-before("minus", false)
       .links
         display: block
 
