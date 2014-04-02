@@ -128,9 +128,10 @@
     line-height: 1.2
     padding: $standard-padding 0
     a
+    +icon-after("pdf", true)
       &:after
-        content: "m" !important
         @extend %doc-attached-icons
+        content: "\f118" !important
         font-size: 14px
       @extend %green-button
       &:hover

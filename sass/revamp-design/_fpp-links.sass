@@ -32,9 +32,8 @@
         font-size: 14px
         font-weight: bold
         &[target=_blank]
+          +icon-after("arrow-external", true)
           &:after
-            content: "i"
-            font-family: "gsb"
             font-weight: normal
             font-size: 12px
             margin-left: 0.3em
@@ -60,10 +59,8 @@
           padding-right: 10px
           color: $text-green
           &[target=_blank]
+            +icon-after("arrow-external", true)
             &:after
-              content: "i"
-              text-transform: lowercase
-              font-family: "gsb"
               font-size: 12px
               margin-left: 0.3em
           &:hover
@@ -106,13 +103,10 @@
         font-size: 14px
         font-weight: bold
         &[target=_blank]
+          +icon-after("arrow-external", true)
           &:after
-            content: "i"
             color: #b1aeaf
-            text-transform: lowercase
-            font-family: "gsb"
             font-size: 12px
-            font-weight: normal
             margin-left: 0.3em
         &:hover
           color: $text-blue

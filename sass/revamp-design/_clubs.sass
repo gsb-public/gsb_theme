@@ -82,8 +82,9 @@
         font-size: 16px
         color: $text-green
         position: relative
+        +icon-after("arrow-double-right", true)
         &:after
-          @extend %chevron-big
+          @extend %arrow-double-big
           font-weight: bold
           color: #e3e3e3
         &:hover

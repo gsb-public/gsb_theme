@@ -17,28 +17,25 @@ ul.slideshow-items
 
 // SLIDESHOW ARROWS
 .flex-direction-nav a
-  opacity: .8
+  opacity: 0.8
   outline: none
   background-image: none
-  width: 39px
-  height: 39px
+  width: 40px
+  height: 40px
   .no-touch &
-    opacity: .4
+    opacity: 0.4
   &:before, &:after
-    font-family: "gsb"
-    line-height: 1
     text-indent: 0
+  +icon-before("circle", true)
   &:before
     position: absolute
-    font-size: 40px
-    line-height: 1
+    font-size: 44px
     top: 0
     left: 0
-    content: "~"
     color: $grey-dark
     opacity: 0.8
   &:after
-    font-size: 37px
+    font-size: 18px
     color: $white
     position: absolute
     top: 11px
@@ -63,23 +60,25 @@ ul.slideshow-items
       top: 15%
   // Previous arrow
   &.flex-prev
+    +icon-after("arrow-med-left", true)
     left: 28px
     +breakpoint($bp-nexus-portrait)
       left: 12px
     +breakpoint($bp-mobile)
       left: 20px
     &:after
-      content: '['
+      left: 12px
+
   // Next arrow
   &.flex-next
+    +icon-after("arrow-med-right", true)
     right: 28px
     +breakpoint($bp-nexus-portrait)
       right: 12px
     +breakpoint($bp-mobile)
       right: 20px
     &:after
-      content: 'z'
-      left: 2px
+      left: 14px
 
 // SLIDESHOW WRAPPER
 .slideshow-wrapper
@@ -175,14 +174,14 @@ ul.slideshow-items
   line-height: 32px
   margin-bottom: 15px
   text-transform: none
-  .slideshow-simple &:after
-    color: $red
-    content: "\f100"
-    font-family: "arrow-double"
-    font-size: 36px
-    position: relative
-    top: 2px
-    left: 5px
+  .slideshow-simple
+    +icon-after("arrow-double-right", true)
+    &:after
+      color: $red
+      font-size: 36px
+      position: relative
+      top: 2px
+      left: 5px
 
 // Slide description
 .slide-description
@@ -213,10 +212,8 @@ ul.slideshow-items
   font-size: 16px
   line-height: 18px
   padding: 10px 18px 12px 16px
+  +icon-after("arrow-double-right", true)
   &:after
-    content: "w"
-    font-family: "gsb"
-    font-weight: normal
     position: relative
     left: 3px
 
@@ -328,19 +325,16 @@ ul.slideshow-items
       width: 100%
     a
       color: $red
+    +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
-      content: "w"
-      font-family: "gsb"
-      font-size: 32px
+      font-size: 18px
       position: relative
       line-height: 0
       font-weight: bold
       top: 0
       left: 5px
-      +breakpoint($bp-tablet-land-max)
-        font-size: 20px
       +breakpoint($bp-mobile-max)
-        font-size: 26px
+        font-size: 14px
   .slide-cta
     display: none

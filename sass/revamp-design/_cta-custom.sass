@@ -110,11 +110,10 @@
     margin-top: 1px
     min-width: 216px
     position: relative
+    +icon-after("arrow-double-right", true)
     &:after
       color: $white
-      content: "\f100"
-      font-family: "arrow-double"
-      font-size: 26px
+      font-size: 21px
       font-weight: normal
       position: absolute
       top: 34%
@@ -217,11 +216,10 @@
     font-weight: normal
     line-height: 1.2
     padding: 14px $standard-padding
+    +icon-after("arrow-double-right", true)
     &:after
       color: $white
-      content: "w"
       display: inline-block
-      font-family: "gsb"
       font-size: 19px
       font-weight: normal
       line-height: 0
@@ -280,20 +278,16 @@
 
 // Social icons
 .social-block-youtube
-  &:after
-    content: "p"
+  +icon-after("youtube", true)
 
 .social-block-twitter
-  &:after
-    content: "r"
+  +icon-after("twitter", true)
 
 .social-block-facebook
-  &:after
-    content: "s"
+  +icon-after("facebook", true)
 
 .social-block-linkedin
-  &:after
-    content: "n"
+  +icon-after("linkedin", true)
 
 // Conducting research
 .pane-gsb-public-custom-blocks-gpcb-conducting-research
