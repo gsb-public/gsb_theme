@@ -4,8 +4,8 @@
    * Functionality for Spotlight block show more/less link
    */
   Drupal.behaviors.spotlight_seemore = {
-    attach: function (context, settings) {
-      $(window).bind('load ready resize', function(){
+    attach: function () {
+      $(window).bind('load ready resize', function () {
         // Check if spotlight exists.
         var $spotlight = $('.pane-bundle-spotlight, .pane-bundle-house-ads');
         if ($spotlight.length) {
@@ -23,7 +23,7 @@
               $this.remove();
             }
             else {
-              $this.click(function() {
+              $this.click(function () {
                 var $this = $(this), text, height;
                 // Expand description to its real height.
                 if (!$this.hasClass('active')) {
@@ -48,13 +48,12 @@
     }
   };
 
-
   /**
    * Add accordion functionality for both
    * fieldable panel pane and WYSIWYG.
    */
   Drupal.behaviors.accordion = {
-    attach: function (context, settings) {
+    attach: function () {
 
       // Define accordion title.
       var acctitle = $('.acc-title');
@@ -69,25 +68,28 @@
             // wrap them all into accordion-body-wrap class
             // by calling touchNeighbour recursive function.
             var found_body = false;
+            var acc_body_elements;
             if ( next.length > 0 ) {
               next.wrapAll('<div class="accordion-body-wrap" />');
               touchNeighbour(next, 'acc-body');
               found_body = true;
-            } else {
+            }
+            else {
               // make one last attempt to find acc-body elements
               // lists may have an acc-body elements as li items
               next = $this.next();
               if (next.prop('tagName') == 'UL') {
                 var ul_element = next;
-                var acc_body_elements = next.children('.acc-body');
+                acc_body_elements = next.children('.acc-body');
                 if (acc_body_elements.length > 0) {
                   ul_element.wrapAll('<div class="accordion-body-wrap" />');
                   touchNeighbour(ul_element, 'acc-body');
                   found_body = true;
                 }
-              } else if (next.prop('tagName') == 'TABLE') {
+              }
+              else if (next.prop('tagName') == 'TABLE') {
                 var table_element = next;
-                var acc_body_elements = next.find('.acc-body');
+                acc_body_elements = next.find('.acc-body');
                 if (acc_body_elements.length > 0) {
                   table_element.wrapAll('<div class="accordion-body-wrap" />');
                   touchNeighbour(table_element, 'acc-body');
@@ -106,18 +108,19 @@
       if ( $('.acc-title').length > 0 ) {
         // Find accordion titles.
         var accordionHead = $('.acc-title');
-        accordionHead.each( function() {
+        accordionHead.each(function () {
           // Add functionality on each accordion header.
           var currentHead = $(this);
           if (!currentHead.hasClass('processed')) {
             // Add +/- icon on header.
             currentHead.addClass('processed')
-              .click(function (e) {
+              .click(function () {
                 var $this = $(this);
                 if ($this.parents('.entity').length > 0) {
                   // If it's a fpp toggle body field.
                   $this.toggleClass('opened').parents('.entity').find('.accordion-body-wrap').slideToggle(250);
-                } else {
+                }
+                else {
                   // If it's inside WYSIWYG toggle body wrapper.
                   $this.toggleClass('opened').next('.accordion-body-wrap').slideToggle(250);
                 }
@@ -136,7 +139,8 @@
         if ( next.hasClass(className) || next.hasClass(className2) ) {
           next.insertAfter(e);
           touchNeighbour(next, className, className2);
-        } else {
+        }
+        else {
           return false;
         }
       }
@@ -144,46 +148,15 @@
   };
 
   /**
-   * Placeholder for IE9-
-   */
-
-  Drupal.behaviors.placeholder = {
-    attach: function (context, settings) {
-      if(!Modernizr.input.placeholder){
-        $('[placeholder]').focus(function() {
-          var input = $(this);
-          if (input.val() == input.attr('placeholder')) {
-          input.val('');
-          input.removeClass('placeholder');
-          }
-        }).blur(function() {
-          var input = $(this);
-          if (input.val() == '' || input.val() == input.attr('placeholder')) {
-          input.addClass('placeholder');
-          input.val(input.attr('placeholder'));
-          }
-        }).blur();
-        $('[placeholder]').parents('form').submit(function() {
-          $(this).find('[placeholder]').each(function() {
-          var input = $(this);
-          if (input.val() == input.attr('placeholder')) {
-            input.val('');
-          }
-          });
-        });
-      }
-    }};
-
-  /**
    * Check for social field fpp, if it exists, check the source.
    * If the source is twitter, grab the values from fields and
    * transmit them to gsb_tweetfeed function.
    */
   Drupal.behaviors.social_feed = {
-    attach: function (context, settings) {
-      if ($('.pane-bundle-social-feed').length > 0 && !$('.pane-bundle-social-feed').hasClass('processed')) {
-        var socialWrapper = $('.pane-bundle-social-feed'),
-            _source = socialWrapper.find('.field-name-field-feed-source').text();
+    attach: function () {
+      var socialWrapper = $('.pane-bundle-social-feed');
+      if (socialWrapper.length > 0 && !socialWrapper.hasClass('processed')) {
+        var _source = socialWrapper.find('.field-name-field-feed-source').text();
         if ( _source.toLowerCase() == 'twitter') {
           // Get tweets number and search query.
           var _length = socialWrapper.find('.field-name-field-social-display-num').text(),
@@ -201,93 +174,11 @@
   };
 
   /**
-   * Add highlighted map functionality for BI sidebar menu
-   */
-  Drupal.behaviors.map_hover = {
-    attach: function (context, settings) {
-      if ($('.bi-map').length) {
-        var sidebar = $('#quicklinks'),
-          biMenu = sidebar.find('.view-business-insights-sidebar'),
-          biMap = sidebar.find('.bi-map'),
-          biMaptext = biMap.find('.bi-map__text'),
-          biMapOverlay = sidebar.find('.bi-map__overlay');
-
-        /* if js is applied show map. */
-        biMap.show();
-        /* hide text block until user hovers or link is active. */
-        biMaptext.hide();
-
-        /* if location term page is opened, highlight the map. */
-        var locationTerms = biMenu.find('.menu_region').find('a.active');
-        if  (locationTerms.length) {
-          change_map(locationTerms.text());
-        }
-
-        /* change map image on region hover */
-        $('.bi-map-area').find('area').mouseover(function() {change_map($(this).attr('alt'));})
-          .mouseout(function() {revert_map();});
-        $('.bi-map')
-          .mouseleave(function() {
-            biMaptext.hide();
-          });
-      }
-
-      /* change map background on hover */
-      function change_map(t) {
-        biMapOverlay.removeClass().addClass('bi-map__overlay ' + t.replace(/ /g, '').toLowerCase());
-        biMaptext.show().text(t);
-      }
-
-      /* return default map background */
-      function revert_map(t) {
-        biMapOverlay.removeClass();
-      }
-    }
-  };
-
-  /**
-   * Prevent form submit on chosing an autocomplete suggestion
-   */
-  Drupal.behaviors.prevent_submit_on_autocomplete = {
-    attach: function (context, settings) {
-      $('input.form-text.form-autocomplete').keypress(function(event) {
-        return event.keyCode != 13;
-      });
-    }
-  };
-
-  /**
-   * Modify collapsible functional for Filter regions and industry or anything else taxonomy
-   */
-  Drupal.behaviors.collapsible_patch = {
-    attach: function (context, settings) {
-         $('.exposed_filter_widget .views-exposed-widget').children('label:not(.collapsible_processed)').click(function(){
-           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').toggleClass('collapsed');
-           $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').toggle();
-         }).addClass('collapsible_processed');
-
-         //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
-         var checkedInput = false;
-        $('.exposed_filter_widget .bef-checkboxes input').each(function(index, val){
-          if($(this).attr('checked'))
-              checkedInput = true;
-        });
-
-        if(checkedInput){
-          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget').addClass('collapsed');
-          $('.exposed_filter_widget .views-exposed-form .views-exposed-widget .views-widget').show();
-        }
-    }
-  };
-
-
-  /**
    * Move quicklinks to top of page in mobile landscape context.
    * Move search to top of page in mobile landscape context.
    */
-
-  Drupal.behaviors.mainmenu_mobile ={
-    attach: function (context, settings) {
+  Drupal.behaviors.mainmenu_mobile = {
+    attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
         $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
         $('#quicklinks').insertBefore($('#top-content'));
@@ -307,8 +198,8 @@
    * Add class to table
    */
 
-  Drupal.behaviors.setClassToActiveFiltered ={
-    attach: function (context, settings) {
+  Drupal.behaviors.setClassToActiveFiltered = {
+    attach: function () {
       $('.view-admission-events table thead a').has('img').addClass('currentFilter');
       $('.view-admission-events table').addClass('responsive');
     }
@@ -317,41 +208,45 @@
   /**
    * Input type number alternative for spinner
    */
-  Drupal.behaviors.spinner ={
-    attach: function (context, settings) {
+  Drupal.behaviors.spinner = {
+    attach: function () {
       // detect IE 10
-      if (Function('/*@cc_on return document.documentMode===10@*/')()){
+      if (Function('/*@cc_on return document.documentMode===10@*/')()) {
         var isIE10 = true;
       }
       // detect IE 9
-      if (Function('/*@cc_on return document.documentMode===9@*/')()){
+      if (Function('/*@cc_on return document.documentMode===9@*/')()) {
         var isIE9 = true;
       }
       if (!Modernizr.inputtypes.number || isIE10 || isIE9) {
-        $('.form-number').wrap('<span class="fake-input-wrapper" />')
+        var $form_number = $('.form-number');
+        $form_number.wrap('<span class="fake-input-wrapper" />')
         .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
 
-        $('.fake-input-wrapper').each(function() {
+        $('.fake-input-wrapper').each(function () {
           var numberInput = $(this).find('.form-number').attr('autocomplete','off'),
                 min = parseInt(numberInput.attr('min')),
                 max = parseInt(numberInput.attr('max')),
                 step = parseInt(numberInput.attr('step'));
 
-          $(this).find('button').click(function(e) {
+          $(this).find('button').click(function (e) {
             e.preventDefault();
             $(this).parent().prev().trigger('focus');
             var direction = $(this).data('dir'),
             val =  parseInt(numberInput.val());
             if (!val) {
               numberInput.val(min);
-            } else if (val > max) {
+            }
+            else if (val > max) {
               numberInput.val(max);
-            } else {
+            }
+            else {
               var mod = (val-min) % step;
               // increase or decrease depending on the button
-              if(mod === 0) {
+              if (mod === 0) {
                 ( direction === 'up' ) ?  val += step: val -= step;
-              } else {
+              }
+              else {
                 ( direction === 'up' ) ?  val += step-mod: val -= mod;
               }
               if (val >=min && val < max ) {
@@ -360,7 +255,7 @@
             }
           });
         });
-        $('.form-number').keydown(function(e) {
+        $form_number.keydown(function (e) {
           if (e.which === 38) {
             $(this).next().find('.up').trigger('click');
           }
@@ -375,9 +270,9 @@
   /**
    * Changes the anchor element for the Views back to top link.
    */
-  Drupal.behaviors.goTopLink ={
-    attach: function (context, settings) {
-      if($('#header-wrapper').length) {
+  Drupal.behaviors.goTopLink = {
+    attach: function () {
+      if ($('#header-wrapper').length) {
         $('.go-to-top-link').find('a').attr('href','#header-wrapper');
       }
     }
@@ -387,8 +282,8 @@
    * Custom Styling for selectbox.
    */
   Drupal.behaviors.gsb_theme = {
-    attach: function() {
-      $('#block-system-main select').selectbox({
+    attach: function () {
+      $('#block-system-main').find('select').selectbox({
         animationSpeed: 'fast',
         replaceInvisible: true
       });
