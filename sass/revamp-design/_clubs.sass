@@ -31,13 +31,11 @@
       position: absolute
       top: -8px
     a
-      color: $text-green
+      color: $link-green
       padding-right: 10px
+      +icon-after("arrow-external", true)
       &:after
         color: $green-light
-        content: "i"
-        font-family: "gsb"
-        font-weight: normal
         font-size: 12px
         margin-left: 0.3em
       &:hover
@@ -52,11 +50,11 @@
     margin-bottom: 30px
     a
       color: $link-green
+      +icon-after("email-stroke", true)
       &:after
-        content: " o"
-        font-family: "gsb-email"
-        font-size: 13px
+        font-size: 12px
         line-height: 0
+        margin-left: 0.3em
       &:hover
         color: $link-blue
         text-decoration: underline

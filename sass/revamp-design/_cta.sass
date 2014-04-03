@@ -32,21 +32,19 @@
       padding-right: 22px
       padding-left: 55px
       position: relative
+      +icon-before("email-fill", true)
       &:before
-        padding-top: 11px
+        +border-radius(50px)
+        color: $white
+        display: inline-block
+        font-size: 12px
+        height: 28px
+        line-height: 2.5
         position: absolute
         left: 22px
         top: 20%
-        border-radius: 14px
         text-align: center
-        display: inline-block
-        height: 17px
         width: 28px
-        content: "o"
-        font-family: "gsb"
-        font-size: 12px
-        line-height: 0
-        color: #fff
       &:after
         content: ""
 .cta-red-gradient
@@ -63,10 +61,10 @@
   .field-item
     a[href*="mailto:"]
       &:before
-        background: $text-green
+        background: $link-green
       &:hover
         &:before
-          background: $text-blue
+          background: $link-blue
 
 // CTA - Green
 .cta-green

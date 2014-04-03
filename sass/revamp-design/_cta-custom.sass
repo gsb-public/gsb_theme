@@ -53,11 +53,10 @@
     font-weight: bold
     line-height: 38px
     position: relative
+    +icon-after("arrow-double-right", true)
     &:after
-      font-family: "gsb"
-      font-size: 24px
-      line-height: 1.125
-      content: "w"
+      font-size: 21px
+      line-height: 1.7
       font-weight: normal
       text-transform: lowercase
       position: absolute
@@ -260,12 +259,10 @@
       color: $white
       padding: 0.9em 0.6em 0.6em 0.6em
       +background(linear-gradient(top, #5c8a81, $teal-dark))
+      +icon-after("arrow-double-right", true)
       &:after
         color: $white
-        content: "\f100"
-        font-family: "arrow-double"
-        font-size: 26px
-        font-weight: normal
+        font-size: 21px
         position: absolute
         top: 34%
         right: 5%

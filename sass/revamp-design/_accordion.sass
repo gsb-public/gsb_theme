@@ -21,8 +21,7 @@
 
 .accordion-toggle.opened,
 .opened .accordion-toggle
-  &:after
-    content: "d"
+  +icon-before("minus", true)
 
 // Icons fix
 .field-name-field-accordion-item #___page_0 iframe
@@ -43,24 +42,20 @@
   margin-bottom: 0
   margin-left: 0
   padding: 8px 0 8px 36px
+  +icon-before("plus", true)
   &:before
     color: $red
-    content: "c"
-    font-family: "gsb"
-    font-size: 26px
-    font-weight: normal
-    line-height: 1
+    font-size: 18px
     float: left
     position: relative
     left: -36px
-    top: -5px
+    top: 3px
     width: 0
   &:hover
     &:before
       color: $text-blue
   &.opened
-    &:before
-      content: "d"
+    +icon-before("minus", true)
 
 // Accordion body
 .accordion-body-wrap

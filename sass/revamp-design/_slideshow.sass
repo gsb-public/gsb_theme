@@ -94,16 +94,16 @@ ul.slideshow-items
 // SIMPLE SLIDESHOW - HOVER
 .slideshow-simple .slideshow-wrapper a:hover
   .slide-description
-    color: $text-blue
+    color: $link-blue
     &:after
-      color: $text-blue
+      color: $link-blue
 
 // CTA SLIDESHOW - HOVER
 .slideshow-cta .slideshow-wrapper:hover
   a .slide-title
-    color: $text-blue
+    color: $link-blue
     &:after
-      color: $text-blue
+      color: $link-blue
   .purple-button-on-blue a .slide-cta
     background-color: $teal-dark
   .blue-button-on-orange a .slide-cta
@@ -214,6 +214,7 @@ ul.slideshow-items
   padding: 10px 18px 12px 16px
   +icon-after("arrow-double-right", true)
   &:after
+    font-size: 12px
     position: relative
     left: 3px
 
