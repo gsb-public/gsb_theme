@@ -139,17 +139,16 @@
     line-height: 1
     margin-bottom: 28px
     font-family: $font-sans
-    a:after
-      color: #c2b7a1
-      content: "w"
-      font-family: "gsb"
-      font-size: 18px
-      line-height: 0
-      font-weight: normal
-    a:hover
-      color: $text-blue
+    a
+      +icon-after("arrow-double-right", true)
       &:after
-        color: $text-blue
+        color: #c2b7a1
+        font-size: 12px
+        line-height: 0
+      &:hover
+        color: $link-blue
+        &:after
+          color: $link-blue
   ul
     margin: 0
     padding: 0
@@ -169,16 +168,16 @@
     color: $grey-1
     font-family: $font-demi
     font-weight: normal
+    +icon-after("arrow-double-right", true)
     &:after
       color: #bac405
-      content: "w"
-      font-family: "gsb"
-      font-size: 18px
+      font-size: 12px
       line-height: 0
+      margin-left: 0.3em
     &:hover
-      color: $text-blue
+      color: $link-blue
       &:after
-        color: $text-blue
+        color: $link-blue
   .views-field-field-event-date
     color: #595959
     font-size: 14px
@@ -213,12 +212,10 @@
     font-weight: bold
     a
       color: $red
+      +icon-after("arrow-double-right", true)
       &:after
         color: $grey-med
-        content: "\f100"
-        font-family: "arrow-double"
-        font-size: 20px
-        font-weight: normal
+        font-size: 14px
         margin-left: 0.3em
       &:hover
         color: $link-blue
@@ -257,4 +254,4 @@
           margin-right: 5px
           margin-left: 5px
     h3 a:hover
-      color: $text-blue
+      color: $link-blue

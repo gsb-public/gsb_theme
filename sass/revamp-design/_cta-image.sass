@@ -33,7 +33,7 @@
   // Description
   .field-name-field-link-single a
     font-size: 28px
-    line-height: 1.15em
+    line-height: 1.15
     color: $white
     +breakpoint($bp-tablet-port)
       .front &
@@ -50,11 +50,10 @@
     width: 100%
     word-wrap: break-word
     a
+      +icon-after("arrow-double-right", true)
       &:after
         color: $green-light
-        content: "w"
-        font-family: "gsb"
-        font-size: 26px !important
+        font-size: 18px !important
         position: relative
         line-height: 0
         left: 5px
