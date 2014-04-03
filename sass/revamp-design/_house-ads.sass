@@ -27,20 +27,16 @@
     font-weight: bold
     font-size: 20px
     color: $text-black
+    +icon-after("arrow-double-right", true)
     &:after
-      content: "w"
       color: $text-green
       display: inline-block
-      font-family: "gsb"
-      font-size: 20px
-      font-weight: normal
-      line-height: 1
+      font-size: 13px
       margin-left: 2px
-      margin-top: -5px
     &:hover
-      color: $text-blue
+      color: $link-blue
       &:after
-        color: $text-blue
+        color: $link-blue
 
   // Description
   .field-name-field-body

@@ -112,16 +112,18 @@ div.callout
     a
       color: $text-black
       border: none
+      +icon-after("arrow-double-right", true)
       &:after
         color: $green-light
-        content: "w"
-        font-family: "gsb"
-        font-size: 17px
+        font-size: 16px
         margin-left: 3px
       &:hover
         border: none
         &:after
-          color: $text-blue
+          color: $link-blue
+  h4, h5
+    a:after
+      font-size: 14px
   p, ul, ol, table
     &:last-child
       margin-bottom: 0

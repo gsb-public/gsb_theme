@@ -78,8 +78,6 @@
     position: relative
     display: inline-block
     &:before, &:after
-      font-family: "gsb"
-      line-height: 1
       position: absolute
       z-index: 50
       top: 50%
@@ -89,19 +87,16 @@
           left: 63%
         +breakpoint($bp-mobile)
           left: 73%
-
-
+    +icon-before("circle", true)
     &:before
       font-size: 64px
-      content: "~"
       color: rgba(0, 0, 0, 0.5)
       margin-top: -40px
       margin-left: -32px
 
-
+    +icon-after("play", true)
     &:after
-      content: "9"
-      font-size: 24px
+      font-size: 21px
       color: $white
       margin-top: -21px
       margin-left: -10px
@@ -128,20 +123,18 @@
       position: relative
       display: inline-block
       &:before, &:after
-        font-family: "gsb"
-        line-height: 1
         position: absolute
         top: 50%
         left: 50%
+      +icon-before("circle", true)
       &:before
         font-size: 64px
-        content: "~"
         color: rgba(0, 0, 0, 0.8)
         margin-top: -40px
         margin-left: -32px
+      +icon-after("play", true)
       &:after
-        content: "9"
-        font-size: 24px
+        font-size: 21px
         color: $white
         margin-top: -21px
         margin-left: -10px

@@ -17,7 +17,7 @@
 
 %arrow-double-big
   position: absolute
-  font-size: 40px
+  font-size: 21px
   right: 12px
   font-weight: normal !important
   text-transform: lowercase
@@ -27,7 +27,7 @@
 
 %arrow-double-small
   @extend %arrow-double-big
-  font-size: 20px
+  font-size: 16px
   right: 22px
 
 ////////////
@@ -51,19 +51,17 @@
   span
     font-size: 14px
     padding-left: 16px
+    +icon-before("arrow-med-down", true)
     &:before
-      content: "."
-      font-family: "gsb"
-      font-size: 24px
+      font-size: 12px
       font-weight: normal
       position: relative
-      top: 2px
+      right: 5px
   &:hover
     color: $link-blue
   &.active
     span
-      &:before
-        content: ","
+      +icon-before("arrow-med-up", false)
 
 // Rounded green buttons
 %green-button
@@ -95,16 +93,15 @@
   padding: 10px 17px
   text-align: left
   position: relative
+  +icon-after("arrow-double-right", true)
   &:after
-    content: "w"
     color: $white
-    font-family: "gsb"
     font-size: 16px
     font-weight: normal
     line-height: 0
     position: absolute
     right: 14px
-    top: 45%
+    top: 50%
   &:hover
     background: $purple
 
