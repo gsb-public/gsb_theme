@@ -54,78 +54,64 @@
    */
   Drupal.behaviors.accordion = {
     attach: function () {
-
       // Define accordion title.
       var acctitle = $('.acc-title');
       if ( acctitle.length > 0 ) {
-        acctitle.each(function () {
+        acctitle.once(function () {
           var $this = $(this);
-          if (!$this.hasClass('header-processed')) {
-            $this.addClass('header-processed');
-            // Find body container next to accordion title.
-            var next = $this.next('.acc-body');
-            // If there is more than 1 body an element after title
-            // wrap them all into accordion-body-wrap class
-            // by calling touchNeighbour recursive function.
-            var found_body = false;
-            var acc_body_elements;
-            if ( next.length > 0 ) {
-              next.wrapAll('<div class="accordion-body-wrap" />');
-              touchNeighbour(next, 'acc-body');
-              found_body = true;
+          // Find body container next to accordion title.
+          var next = $this.next('.acc-body');
+          // If there is more than 1 body an element after title
+          // wrap them all into accordion-body-wrap class
+          // by calling touchNeighbour recursive function.
+          var found_body = false;
+          var acc_body_elements;
+          if ( next.length > 0 ) {
+            next.wrapAll('<div class="accordion-body-wrap" />');
+            touchNeighbour(next, 'acc-body');
+            found_body = true;
+          }
+          else {
+            // make one last attempt to find acc-body elements
+            // lists may have an acc-body elements as li items
+            next = $this.next();
+            if (next.prop('tagName') == 'UL') {
+              var ul_element = next;
+              acc_body_elements = next.children('.acc-body');
+              if (acc_body_elements.length > 0) {
+                ul_element.wrapAll('<div class="accordion-body-wrap" />');
+                touchNeighbour(ul_element, 'acc-body');
+                found_body = true;
+              }
+            }
+            else if (next.prop('tagName') == 'TABLE') {
+              var table_element = next;
+              acc_body_elements = next.find('.acc-body');
+              if (acc_body_elements.length > 0) {
+                table_element.wrapAll('<div class="accordion-body-wrap" />');
+                touchNeighbour(table_element, 'acc-body');
+                found_body = true;
+              }
+            }
+          }
+          if (found_body === false) {
+            // If the title has body after it - remove styling.
+            $this.removeClass('acc-title');
+          }
+
+          // Add functionality on each accordion header.
+          // Add +/- icon on header.
+          $this.click(function () {
+            var $this = $(this);
+            if ($this.parents('.entity').length > 0) {
+              // If it's a fpp toggle body field.
+              $this.toggleClass('opened').parents('.entity').find('.accordion-body-wrap').slideToggle(250);
             }
             else {
-              // make one last attempt to find acc-body elements
-              // lists may have an acc-body elements as li items
-              next = $this.next();
-              if (next.prop('tagName') == 'UL') {
-                var ul_element = next;
-                acc_body_elements = next.children('.acc-body');
-                if (acc_body_elements.length > 0) {
-                  ul_element.wrapAll('<div class="accordion-body-wrap" />');
-                  touchNeighbour(ul_element, 'acc-body');
-                  found_body = true;
-                }
-              }
-              else if (next.prop('tagName') == 'TABLE') {
-                var table_element = next;
-                acc_body_elements = next.find('.acc-body');
-                if (acc_body_elements.length > 0) {
-                  table_element.wrapAll('<div class="accordion-body-wrap" />');
-                  touchNeighbour(table_element, 'acc-body');
-                  found_body = true;
-                }
-              }
+              // If it's inside WYSIWYG toggle body wrapper.
+              $this.toggleClass('opened').next('.accordion-body-wrap').slideToggle(250);
             }
-            if (found_body === false) {
-              // If the title has body after it - remove styling.
-              $this.removeClass('acc-title');
-            }
-          }
-        });
-      }
-
-      if ( $('.acc-title').length > 0 ) {
-        // Find accordion titles.
-        var accordionHead = $('.acc-title');
-        accordionHead.each(function () {
-          // Add functionality on each accordion header.
-          var currentHead = $(this);
-          if (!currentHead.hasClass('processed')) {
-            // Add +/- icon on header.
-            currentHead.addClass('processed')
-              .click(function () {
-                var $this = $(this);
-                if ($this.parents('.entity').length > 0) {
-                  // If it's a fpp toggle body field.
-                  $this.toggleClass('opened').parents('.entity').find('.accordion-body-wrap').slideToggle(250);
-                }
-                else {
-                  // If it's inside WYSIWYG toggle body wrapper.
-                  $this.toggleClass('opened').next('.accordion-body-wrap').slideToggle(250);
-                }
-            });
-          }
+          });
         });
       }
 
