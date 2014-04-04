@@ -37,14 +37,12 @@
         font-size: 20px
         line-height: 24px
         margin-bottom: 14px
+        +icon-after("arrow-double-right", true)
         &:after
           color: $grey-med
-          content: "\f100"
-          font-family: "arrow-double"
-          font-size: 18px
-          font-weight: normal
+          font-size: 12px
           position: relative
-          left: 7px
+          left: 5px
         &:hover
           color: $text-blue
     .vertical-tabs-panes
@@ -58,15 +56,14 @@
       width: 238px
       li
         background-color: transparent
+        +icon-after("arrow-med-down", true)
         &:after
           color: $white
-          content: "."
           float: right
-          font-family: "gsb"
-          font-size: 30px
+          font-size: 14px
           position: relative
-          top: -46px
-          right: 6px
+          top: -35px
+          right: 10px
         border-left: 0
         border-top: 1px solid #8aa5b4
         border-bottom: 1px solid #647f8f
@@ -155,14 +152,12 @@
     border-top: 1px solid #8aa5b4
     &:not(8n)
       border-bottom: 1px solid #647f8f
+    +icon-after("arrow-med-down", true)
     &:after
       color: $white
-      content: "."
       float: right
-      font-family: "gsb"
-      font-size: 30px
-      font-weight: normal
-      line-height: 1
+      font-size: 14px
+      line-height: 3
     &:hover
       background-color: #f4f4f4
       color: $grey-dark
@@ -178,9 +173,9 @@
     margin-bottom: -1px !important
     background-color: #f4f4f4
     color: $grey-dark
+    +icon-after("arrow-med-up", true)
     &:after
       color: $grey-dark
-      content: ","
 
   .resp-content-active,
   .resp-accordion-active,

@@ -41,6 +41,17 @@
             color: $text-blue
         &:hover
           color: $text-blue
+  // Arrow icons
+  .prev
+    left: 0
+    +icon-before("arrow-double-left", true)
+    &:before
+      margin-left: -15px
+  .next
+    right: 0
+    +icon-before("arrow-double-right", true)
+    &:before
+      margin-left: -9px
 
   .next, .prev
     -moz-user-select: none
@@ -55,15 +66,12 @@
     text-align: center
     line-height: 1
     &:before
-      font-family: "gsb"
-      font-size: 31px
+      font-size: 24px
       color: $white
       line-height: 0
       position: absolute
       top: 50%
       left: 50%
-      margin-top: -5px
-      margin-left: -15px
     &.disabled
       +background(linear-gradient(top, #e4e4e4, #e9e9e9))
       cursor: default
@@ -71,16 +79,6 @@
         +background(linear-gradient(top, #e4e4e4, #e9e9e9))
     &:hover
       +background(linear-gradient(top, #18455f, #2d6280))
-
-  // Arrow icons
-  .next
-    right: 0
-    &:before
-      content: 'w'
-  .prev
-    left: 0
-    &:before
-      content: 'q'
 
 ////////////////////
 // New Style Implementation
@@ -138,8 +136,7 @@
     line-height: 3.8
     &:before
       color: $red
-      font-family: "gsb"
-      font-size: 40px
+      font-size: 21px
       line-height: 0
     &:hover
       &:before
@@ -155,9 +152,7 @@
   // Arrow icons
   .prev
     left: 8px
-    &:before
-      content: '['
+    +icon-before("arrow-med-left", true)
   .next
     right: 8px
-    &:before
-      content: 'z'
+    +icon-before("arrow-med-right", true)

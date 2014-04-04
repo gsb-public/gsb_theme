@@ -18,11 +18,9 @@
       padding-right: 10px
       color: $text-green
       &[target=_blank]
+        +icon-after("arrow-external", true)
         &:after
-          content: "i"
           color: #b1aeaf
-          text-transform: lowercase
-          font-family: "gsb"
           font-size: 14px
           margin-left: 5px
       &:hover

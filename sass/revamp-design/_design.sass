@@ -371,23 +371,19 @@ a.no-border
   line-height: 1
   font-size: 14px
   margin-left: 22px
+  +icon-before("arrow-med-down", true)
   &:before
     color: $green-light !important
-    content: "."
     float: left
-    font-family: "gsb"
-    font-size: 30px
-    font-weight: normal
+    font-size: 12px
     line-height: 0
     position: relative
-    left: -8px
-    top: 6px
+    top: 12px
   &:hover
     &:before
-      color: $text-blue !important
+      color: $link-blue !important
   &.show-more-less-toggler-open
-    &:before
-      content: ","
+    +icon-before("arrow-med-up", false)
 
 // Hide file size of uploaded pdfs
 .file-size
