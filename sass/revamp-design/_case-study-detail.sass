@@ -93,11 +93,10 @@
         left: -14px
         width: 0
     a[target=_blank]
+      +icon-after("arrow-external", true)
       &:after
-        content: " i"
-        font-family: "gsb"
         font-size: 12px
-        font-weight: normal
+        margin-left: 0.3em
 
   // Link style
   // Harvard business link and center link
@@ -120,11 +119,8 @@
     .label-inline
       margin-bottom: 16px
     a
-      @extend %green-button
-      &:hover
-        +background(linear-gradient(top, #18455f, $text-blue))
+      +icon-after("pdf", true)
       &:after
-        content: "m" !important
         @extend %doc-attached-icons
         font-size: 14px
         margin-left: 6px

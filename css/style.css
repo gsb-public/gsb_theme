@@ -98,7 +98,7 @@ dfn {
   content: "\f108";
 }
 
-.green-rounded-button, .node-event.view-mode-full .field-name-field-register-url a, .pane-rethink-form .button, .node-case.view-mode-full .field-name-field-link-document a, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a, .pane-bookmarklet-link a, .node-publication.view-mode-full .group-wrapper-links a {
+.green-rounded-button, .node-event.view-mode-full .field-name-field-register-url a, .pane-rethink-form .button, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a, .pane-bookmarklet-link a, .node-publication.view-mode-full .group-wrapper-links a {
   padding: 10px 16px;
   border: none;
   -moz-border-radius: 20px;
@@ -117,14 +117,14 @@ dfn {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-.green-rounded-button:after, .node-event.view-mode-full .field-name-field-register-url a:after, .pane-rethink-form .button:after, .node-case.view-mode-full .field-name-field-link-document a:after, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .pane-bookmarklet-link a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
+.green-rounded-button:after, .node-event.view-mode-full .field-name-field-register-url a:after, .pane-rethink-form .button:after, .node-working-paper.view-mode-full .field-name-field-link-document:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after, .pane-bookmarklet-link a:after, .node-publication.view-mode-full .group-wrapper-links a:after {
   color: white !important;
 }
-.green-rounded-button:hover, .node-event.view-mode-full .field-name-field-register-url a:hover, .pane-rethink-form .button:hover, .node-case.view-mode-full .field-name-field-link-document a:hover, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover, .pane-bookmarklet-link a:hover, .node-publication.view-mode-full .group-wrapper-links a:hover {
+.green-rounded-button:hover, .node-event.view-mode-full .field-name-field-register-url a:hover, .pane-rethink-form .button:hover, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover, .pane-bookmarklet-link a:hover, .node-publication.view-mode-full .group-wrapper-links a:hover {
   border: 0;
   color: white;
 }
-.green-rounded-button:hover:after, .node-event.view-mode-full .field-name-field-register-url a:hover:after, .pane-rethink-form .button:hover:after, .node-case.view-mode-full .field-name-field-link-document a:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .pane-bookmarklet-link a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
+.green-rounded-button:hover:after, .node-event.view-mode-full .field-name-field-register-url a:hover:after, .pane-rethink-form .button:hover:after, .node-working-paper.view-mode-full .field-name-field-link-document:hover:after, .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:hover:after, .pane-bookmarklet-link a:hover:after, .node-publication.view-mode-full .group-wrapper-links a:hover:after {
   color: white !important;
 }
 
@@ -369,10 +369,23 @@ body a[href$=".pdf"]:hover:after, body a[href$=".png"]:hover:after, body a[href$
   color: #2d6280;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information a[target=_blank]:after, .node-faculty.view-mode-full .group-wrapper-information a[target=_blank]:after {
-  content: " i";
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-phd-candidate.view-mode-full .group-wrapper-information a[target=_blank]:after, .node-faculty.view-mode-full .group-wrapper-information a[target=_blank]:after {
   font-size: 12px;
   font-weight: normal;
+  margin-left: 0.3em;
 }
 .node-phd-candidate.view-mode-full .group-wrapper-information .field, .node-faculty.view-mode-full .group-wrapper-information .field {
   padding: 0 26px;
@@ -825,41 +838,6 @@ th[align="right"] {
  *
  * © 2012 Bitstream Inc
  */
-@font-face {
-  font-family: "arrow-double";
-  src: url("../fonts/arrow-double.eot");
-  src: url("../fonts/arrow-double.eot") format("embedded-opentype"), url("../fonts/arrow-double.woff") format("woff"), url("../fonts/arrow-double.ttf") format("truetype"), url("../fonts/arrow-double.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "gsb";
-  src: url("../fonts/gsb-webfont.eot");
-  src: url("../fonts/gsb-webfont.eot") format("embedded-opentype"), url("../fonts/gsb-webfont.woff") format("woff"), url("../fonts/gsb-webfont.ttf") format("truetype"), url("../fonts/gsb-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "gsb-email";
-  src: url("../fonts/gsb-email-icon.eot");
-  src: url("../fonts/gsb-email-icon.eot") format("embedded-opentype"), url("../fonts/gsb-email-icon.svg") format("svg"), url("../fonts/gsb-email-icon.ttf") format("truetype"), url("../fonts/gsb-email-icon.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "gsb-clock";
-  src: url("../fonts/gsb-clock.eot");
-  src: url("../fonts/gsb-clock.eot") format("embedded-opentype"), url("../fonts/gsb-clock.svg") format("svg"), url("../fonts/gsb-clock.ttf") format("truetype"), url("../fonts/gsb-clock.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "gsb-chat";
-  src: url("../fonts/gsb-chat.eot");
-  src: url("../fonts/gsb-chat.eot") format("embedded-opentype"), url("../fonts/gsb-chat.svg") format("svg"), url("../fonts/gsb-chat.ttf") format("truetype"), url("../fonts/gsb-chat.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 body a[href$=".pdf"]:after {
   content: "\f118";
   speak: none;
@@ -2690,22 +2668,32 @@ a.no-border:hover {
   margin-left: 22px;
 }
 .show-more-less-toggler:before {
-  color: #bac405 !important;
-  content: ".";
-  float: left;
-  font-family: "gsb";
-  font-size: 30px;
+  content: "\f105";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.show-more-less-toggler:before {
+  color: #bac405 !important;
+  float: left;
+  font-size: 12px;
   line-height: 0;
   position: relative;
-  left: -8px;
-  top: 6px;
+  top: 12px;
 }
 .show-more-less-toggler:hover:before {
   color: #2d6280 !important;
 }
 .show-more-less-toggler.show-more-less-toggler-open:before {
-  content: ",";
+  content: "\f108";
 }
 
 .file-size {
@@ -2799,7 +2787,7 @@ a.no-border:hover {
   font-family: 'icons';
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 0.3em;
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover {
@@ -2899,10 +2887,22 @@ a.no-border:hover {
   color: #990000;
 }
 .pane-bundle-text .field-name-field-title a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-text .field-name-field-title a:after {
   color: #c2b7a1;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 22px;
+  font-size: 21px;
   margin-left: 10px;
 }
 @media (min-width: 35.5625em) {
@@ -3195,14 +3195,24 @@ a.no-border:hover {
   background: #607c8c;
 }
 .pager-load-more .pager-next a:before {
-  content: ".";
-  font-family: "gsb";
-  font-size: 24px;
+  content: "\f105";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.pager-load-more .pager-next a:before {
   line-height: 0;
-  margin-left: -8px;
   position: relative;
-  top: 2px;
+  left: -7px;
+  top: -1px;
 }
 
 .additional-links {
@@ -3241,9 +3251,20 @@ div.region-content [class*="pane-menu-block"] .menu li a {
   color: #636f00;
 }
 div.region-content [class*="pane-menu-block"] .menu li a[target=_blank]:after {
-  content: "i";
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+div.region-content [class*="pane-menu-block"] .menu li a[target=_blank]:after {
   font-size: 12px;
   margin-left: 0.3em;
 }
@@ -5010,12 +5031,24 @@ ul.slideshow-items li:first-of-type {
   display: inline-block;
 }
 .pane-bundle-quote .field-name-field-link-single a:after {
-  content: "w";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-quote .field-name-field-link-single a:after {
   color: #bac405;
-  font-family: "gsb";
   left: 0;
   line-height: 0;
-  font-size: 29px;
+  font-size: 21px;
   font-weight: bold;
   top: 0;
   position: absolute;
@@ -6241,10 +6274,11 @@ ul.slideshow-items li:first-of-type {
 }
 .narrow-view .image-cta-position-top .group-right .field-name-field-link-single a {
   font-size: 20px;
-  line-height: 1.1em;
+  line-height: 1.1;
 }
 .narrow-view .image-cta-position-top .group-right .field-name-field-link-single a:after {
   color: white;
+  font-size: 12px !important;
 }
 .narrow-view .image-cta-position-bottom {
   overflow: hidden;
@@ -6264,10 +6298,11 @@ ul.slideshow-items li:first-of-type {
 }
 .narrow-view .image-cta-position-bottom .group-right .field-name-field-link-single a {
   font-size: 20px;
-  line-height: 1.1em;
+  line-height: 1.1;
 }
 .narrow-view .image-cta-position-bottom .group-right .field-name-field-link-single a:after {
   color: white;
+  font-size: 12px !important;
 }
 .narrow-view .image-cta-position-bottom.image-cta-color-purple .group-right {
   background: rgba(117, 71, 96, 0.8);
@@ -6641,8 +6676,20 @@ ul.slideshow-items li:first-of-type {
   color: #2d6280;
 }
 .pane-gsb-public-custom-blocks-gpcb-rethink .rethink-link:after {
-  content: "o";
-  font-family: "gsb-email";
+  content: "\f112";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-public-custom-blocks-gpcb-rethink .rethink-link:after {
   margin-left: 0.3em;
 }
 
@@ -7442,7 +7489,6 @@ ul.slideshow-items li:first-of-type {
   display: inline-block;
   text-align: left;
   float: left;
-  font-family: "gsb";
   margin-right: 8px;
   line-height: 43px;
   color: white;
@@ -7456,16 +7502,41 @@ ul.slideshow-items li:first-of-type {
   cursor: default;
 }
 .page-events ul.tabs li:first-of-type a:before {
-  content: "e";
-  font-size: 34px;
-  line-height: 32px;
+  content: "\f116";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.page-events ul.tabs li:first-of-type a:before {
+  font-size: 21px;
 }
 .page-events ul.tabs li:last-of-type {
   margin-left: 1px;
 }
 .page-events ul.tabs li:last-of-type a:before {
-  content: "5";
-  font-size: 28px;
+  content: "\f10a";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.page-events ul.tabs li:last-of-type a:before {
+  font-size: 24px;
 }
 
 .fullcalendar table.fc-border-separate {
@@ -7684,7 +7755,9 @@ ul.slideshow-items li:first-of-type {
   }
 }
 .view-academic-calendar .view-footer a.prev:after {
-  content: "q";
+  content: "\f100";
+}
+.view-academic-calendar .view-footer a.prev:after {
   left: 12px;
   right: auto;
 }
@@ -7731,17 +7804,24 @@ ul.slideshow-items li:first-of-type {
   color: inherit;
 }
 #block-gsb-public-custom-blocks-gsb-featured-event h2 a:after {
-  content: "w";
-  color: #63acd5;
-  font-family: "gsb";
-  font-size: 29px;
-  font-weight: normal;
-  margin-left: 4px;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
   line-height: 1;
-  position: relative;
-  top: 1px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+#block-gsb-public-custom-blocks-gsb-featured-event h2 a:after {
+  color: #63acd5;
+  font-size: 16px;
+  margin-left: 4px;
   display: inline-block;
-  margin-top: -8px;
 }
 #block-gsb-public-custom-blocks-gsb-featured-event h2 a:hover {
   color: white;
@@ -7801,12 +7881,24 @@ ul.slideshow-items li:first-of-type {
   text-align: center;
 }
 #block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured:after {
-  content: "6";
-  font-family: gsb;
+  content: "\f109";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+#block-gsb-public-custom-blocks-gsb-featured-event .event_calendar_featured:after {
   font-size: 163px;
   position: absolute;
   line-height: 0;
-  top: 48px;
+  top: 75px;
   left: -8px;
   color: #63acd5;
 }
@@ -8180,10 +8272,22 @@ ul.slideshow-items li:first-of-type {
   display: inline-block;
 }
 .collapsible .fieldset-title:before {
+  content: "\f117";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.collapsible .fieldset-title:before {
   color: #990000;
-  content: "d";
-  font-family: "gsb";
-  font-size: 24px;
+  font-size: 18px;
   line-height: 0;
   position: relative;
   left: -2px;
@@ -8192,7 +8296,21 @@ ul.slideshow-items li:first-of-type {
   color: #2d6280;
 }
 .collapsible.collapsed .fieldset-title:before {
-  content: "c";
+  content: "\f11b";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.collapsible.collapsed .fieldset-title:before {
+  line-height: 0;
 }
 
 fieldset.collapsible .fieldset-legend {
@@ -8341,10 +8459,21 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .exposed_filter_widget .views-exposed-widget > label:before {
-  content: "c";
-  font-family: "gsb";
-  font-size: 26px;
+  content: "\f11b";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
   line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.exposed_filter_widget .views-exposed-widget > label:before {
+  font-size: 18px;
   margin-left: -20px;
   top: 0px;
   position: relative;
@@ -8354,7 +8483,7 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .exposed_filter_widget .views-exposed-widget.collapsed > label:before {
-  content: "d";
+  content: "\f117";
 }
 .exposed_filter_widget .views-exposed-widget.collapsed > label:hover:before {
   color: #2d6280;
@@ -9768,14 +9897,25 @@ fieldset.collapsible .fieldset-legend {
     width: 108px;
   }
   .page-events .inner-sidebar-wrapper h2:before {
+    content: "\f11b";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .page-events .inner-sidebar-wrapper h2:before {
     color: white;
-    content: "c";
-    font-family: "gsb";
     font-size: 22px;
     position: absolute;
     left: 6px;
     top: 8px;
-    text-transform: none;
   }
   .page-events .inner-sidebar-wrapper .panel-pane {
     margin-bottom: 0;
@@ -10172,13 +10312,24 @@ fieldset.collapsible .fieldset-legend {
 .view-week-in-the-life .field-name-node-link a:hover {
   background: #754760;
 }
+.view-week-in-the-life .field-name-node-link a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
 .view-week-in-the-life .field-name-node-link a:before {
-  content: "\f100";
   float: right;
   color: white;
-  font-family: "arrow-double";
-  font-size: 26px;
-  font-weight: normal;
+  font-size: 21px;
   line-height: 0.5;
   position: relative;
   top: 4px;
@@ -10211,13 +10362,24 @@ fieldset.collapsible .fieldset-legend {
 .view-week-in-the-life .view-footer p a:hover:before {
   color: #990000;
 }
+.view-week-in-the-life .view-footer p a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
 .view-week-in-the-life .view-footer p a:before {
-  content: "\f100";
   float: right;
   color: #c2b7a1;
-  font-family: "arrow-double";
-  font-size: 47px;
-  font-weight: normal;
+  font-size: 21px;
   line-height: 0.5;
   position: relative;
   top: -2px;
@@ -10590,13 +10752,24 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 14px;
 }
 .pane-program-finder div.vertical-tabs .fieldset-wrapper a:after {
-  color: #c2b7a1;
-  content: "\f100";
-  font-family: "arrow-double";
-  font-size: 18px;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-finder div.vertical-tabs .fieldset-wrapper a:after {
+  color: #c2b7a1;
+  font-size: 12px;
   position: relative;
-  left: 7px;
+  left: 5px;
 }
 .pane-program-finder div.vertical-tabs .fieldset-wrapper a:hover {
   color: #2d6280;
@@ -10623,14 +10796,26 @@ fieldset.collapsible .fieldset-legend {
   border-right: 1px solid #2d6280;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:after {
+  content: "\f105";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:after {
   color: white;
-  content: ".";
   float: right;
-  font-family: "gsb";
-  font-size: 30px;
+  font-size: 14px;
   position: relative;
-  top: -46px;
-  right: 6px;
+  top: -35px;
+  right: 10px;
 }
 .pane-program-finder div.vertical-tabs ul.vertical-tabs-list li:focus {
   outline: 0;
@@ -10743,13 +10928,24 @@ fieldset.collapsible .fieldset-legend {
     border-bottom: 1px solid #647f8f;
   }
   .resp-accordion a:after {
-    color: white;
-    content: ".";
-    float: right;
-    font-family: "gsb";
-    font-size: 30px;
-    font-weight: normal;
+    content: "\f105";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
     line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .resp-accordion a:after {
+    color: white;
+    float: right;
+    font-size: 14px;
+    line-height: 3;
   }
   .resp-accordion a:hover {
     background-color: #f4f4f4;
@@ -10771,8 +10967,21 @@ fieldset.collapsible .fieldset-legend {
     color: #887e6e;
   }
   .resp-tab-active a:after {
+    content: "\f108";
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .resp-tab-active a:after {
     color: #887e6e;
-    content: ",";
   }
 
   .resp-content-active,
@@ -10863,6 +11072,46 @@ fieldset.collapsible .fieldset-legend {
 .pane-lastname-az-links .item-list li a:hover {
   color: #2d6280;
 }
+.pane-lastname-az-links .prev {
+  left: 0;
+}
+.pane-lastname-az-links .prev:before {
+  content: "\f100";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-lastname-az-links .prev:before {
+  margin-left: -15px;
+}
+.pane-lastname-az-links .next {
+  right: 0;
+}
+.pane-lastname-az-links .next:before {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-lastname-az-links .next:before {
+  margin-left: -9px;
+}
 .pane-lastname-az-links .next, .pane-lastname-az-links .prev {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -10880,15 +11129,12 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1;
 }
 .pane-lastname-az-links .next:before, .pane-lastname-az-links .prev:before {
-  font-family: "gsb";
-  font-size: 31px;
+  font-size: 24px;
   color: white;
   line-height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -5px;
-  margin-left: -15px;
 }
 .pane-lastname-az-links .next.disabled, .pane-lastname-az-links .prev.disabled {
   background: -moz-linear-gradient(top, #e4e4e4, #e9e9e9);
@@ -10908,18 +11154,6 @@ fieldset.collapsible .fieldset-legend {
   background: -o-linear-gradient(top, #18455f, #2d6280);
   background: -webkit-linear-gradient(top, #18455f, #2d6280);
   background: linear-gradient(to bottom, #18455f, #2d6280);
-}
-.pane-lastname-az-links .next {
-  right: 0;
-}
-.pane-lastname-az-links .next:before {
-  content: "w";
-}
-.pane-lastname-az-links .prev {
-  left: 0;
-}
-.pane-lastname-az-links .prev:before {
-  content: "q";
 }
 
 .views-widget-filter-gsb-az-filter {
@@ -10991,8 +11225,7 @@ fieldset.collapsible .fieldset-legend {
 }
 .views-widget-filter-gsb-az-filter .prev-next:before {
   color: #990000;
-  font-family: "gsb";
-  font-size: 40px;
+  font-size: 21px;
   line-height: 0;
 }
 .views-widget-filter-gsb-az-filter .prev-next:hover:before {
@@ -11011,13 +11244,35 @@ fieldset.collapsible .fieldset-legend {
   left: 8px;
 }
 .views-widget-filter-gsb-az-filter .prev:before {
-  content: "[";
+  content: "\f106";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 .views-widget-filter-gsb-az-filter .next {
   right: 8px;
 }
 .views-widget-filter-gsb-az-filter .next:before {
-  content: "z";
+  content: "\f107";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 
 .pane-bundle-diptych {
@@ -11088,14 +11343,24 @@ fieldset.collapsible .fieldset-legend {
   padding: 10px 35px 7px 15px;
 }
 .pane-bundle-diptych .group-left .field-type-link-field a:after, .pane-bundle-diptych .group-right .field-type-link-field a:after {
-  content: "w";
-  color: white;
-  display: inline;
-  float: right;
-  font-family: "gsb";
-  font-size: 26px;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
-  line-height: 0.45;
+  font-family: 'icons';
+}
+.pane-bundle-diptych .group-left .field-type-link-field a:after, .pane-bundle-diptych .group-right .field-type-link-field a:after {
+  color: white;
+  float: right;
+  font-size: 21px;
+  line-height: 1.2;
   width: 0;
 }
 .pane-bundle-diptych .group-left .field-type-image, .pane-bundle-diptych .group-left .field-type-file, .pane-bundle-diptych .group-right .field-type-image, .pane-bundle-diptych .group-right .field-type-file {
@@ -11186,6 +11451,9 @@ fieldset.collapsible .fieldset-legend {
 .pane-bundle-diptych .group-left .field-type-link-field a {
   background-color: #538b80;
   width: 218px;
+}
+.pane-bundle-diptych .group-left .field-type-link-field a:after {
+  line-height: 0;
 }
 .pane-bundle-diptych .group-left .field-type-link-field a:hover {
   background-color: #607c8c;
@@ -11624,9 +11892,20 @@ fieldset.collapsible .fieldset-legend {
   font-weight: bold;
 }
 .node-phd-candidate.view-mode-full .field-name-field-link-single a:after {
-  content: "w" !important;
-  font-family: "gsb";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.node-phd-candidate.view-mode-full .field-name-field-link-single a:after {
   font-size: 18px;
   line-height: 24px;
 }
@@ -11771,10 +12050,21 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 24px;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .phd-name a:after {
-  color: #c2b7a1;
-  content: "w" !important;
-  font-family: "gsb";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.view-phd-job-market-candidates .view-content .views-row.main-view .phd-name a:after {
+  color: #c2b7a1;
   font-size: 18px;
   line-height: 24px;
 }
@@ -12047,10 +12337,21 @@ fieldset.collapsible .fieldset-legend {
   color: #636f00;
 }
 .pane-faculty-filters-faculty-by-criteria .views-row a[target=_blank]:after {
-  content: "i";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-faculty-filters-faculty-by-criteria .views-row a[target=_blank]:after {
   color: #b1aeaf;
-  text-transform: lowercase;
-  font-family: "gsb";
   font-size: 14px;
   margin-left: 5px;
 }
@@ -12101,9 +12402,21 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .pane-gsb-public-custom-blocks-gpcb-weather-widget .station:after {
-  content: "w";
-  font-family: "gsb";
-  text-transform: lowercase;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-public-custom-blocks-gpcb-weather-widget .station:after {
+  font-size: 12px;
 }
 
 .pane-bundle-featured-person {
@@ -12213,9 +12526,21 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .pane-bundle-featured-person .group-name-wrapper a:after {
-  content: "w";
-  font-family: "gsb";
-  font-size: 17px;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-featured-person .group-name-wrapper a:after {
+  font-size: 14px;
   line-height: 0;
 }
 .pane-bundle-featured-person .group-rank-area {
@@ -12241,10 +12566,23 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .pane-bundle-featured-person .email a:after {
-  content: " o";
-  font-family: "gsb-email";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-featured-person .email a:after {
   font-size: 12px;
   line-height: 0;
+  margin-left: 0.3em;
 }
 
 .pane-e-newsletters-list {
@@ -12270,10 +12608,22 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
 }
 .pane-e-newsletters-list .display_archive .campaign a:after {
+  content: "\f100";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-e-newsletters-list .display_archive .campaign a:after {
   color: #636f00;
-  content: "w";
-  font-family: "gsb";
-  font-size: 16px;
+  font-size: 12px;
   line-height: 0;
 }
 .pane-e-newsletters-list .display_archive .campaign a:hover {
@@ -12364,10 +12714,30 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .field-name-field-stanford-gsb-affiliation a[target=_blank]:after,
 .node-faculty.view-mode-full .field-name-field-greater-university-affil a[target=_blank]:after,
 .node-faculty.view-mode-full .field-collection-item-field-service-profession-section a[target=_blank]:after {
-  content: " i";
-  font-family: "gsb";
-  font-size: 12px;
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .field-name-field-body a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-research-interests a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-academic-degrees-unlimited a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-academic-aptmts-unlimited a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-professional-experience a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-awards-honors a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-stanford-gsb-affiliation a[target=_blank]:after,
+.node-faculty.view-mode-full .field-name-field-greater-university-affil a[target=_blank]:after,
+.node-faculty.view-mode-full .field-collection-item-field-service-profession-section a[target=_blank]:after {
+  font-size: 12px;
+  margin-left: 0.3em;
 }
 
 .node-faculty.view-mode-full .group-right p {
@@ -12400,11 +12770,29 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a:after,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
-  content: "w" !important;
-  font-family: "gsb";
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.1;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-link-single a:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-link-conf-pres-unlimited a:after, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a:after,
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title-1 a:after,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a:after,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a:after,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a:after,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
+  font-size: 10px;
+  margin-left: 0.3em;
 }
 .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-link-single a[target=_blank]:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-link-conf-pres-unlimited a[target=_blank]:after, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title-1 a[target=_blank]:after,
@@ -12414,8 +12802,29 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
-  content: " i" !important;
-  font-size: 12px;
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-link-single a[target=_blank]:after, .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-link-conf-pres-unlimited a[target=_blank]:after, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title-1 a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1 a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-publications_listing_entity_view .views-field-title-1 a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a[target=_blank]:after,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
+  font-size: 10px;
+  margin-left: 0.3em;
 }
 
 .node-type-faculty #page-title {
@@ -12591,10 +13000,23 @@ fieldset.collapsible .fieldset-legend {
   line-height: 1.2;
 }
 .node-faculty.view-mode-full .group-wrapper-information .field-name-field-email a:after {
-  content: " o";
-  font-family: "gsb-email";
-  font-size: 13px;
+  content: "\f112";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .group-wrapper-information .field-name-field-email a:after {
+  font-size: 12px;
   line-height: 0;
+  margin-left: 0.3em;
 }
 .node-faculty.view-mode-full .group-wrapper-information .field-name-field-file-single-public a:after {
   font-size: 14px;
@@ -12696,7 +13118,20 @@ fieldset.collapsible .fieldset-legend {
   display: inline;
 }
 .node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:after {
-  content: "m" !important;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .field-name-field-teaching-materials .field-name-field-file-single-public a:after {
   font-size: 13px;
   vertical-align: baseline;
 }
@@ -12730,9 +13165,21 @@ fieldset.collapsible .fieldset-legend {
   display: inline;
 }
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after {
-  content: "m" !important;
-  font-size: 13px;
-  vertical-align: baseline;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-file-conf-presentation a:after {
+  font-size: 12px;
 }
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section .field-name-field-description {
   font-size: 14px;
@@ -12769,7 +13216,20 @@ fieldset.collapsible .fieldset-legend {
   margin-top: 2px;
 }
 .node-faculty.view-mode-full .views-field-field-link-document a:after {
-  content: "m" !important;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-faculty.view-mode-full .views-field-field-link-document a:after {
   font-size: 13px;
 }
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .date-display-single:before {
@@ -12917,10 +13377,22 @@ fieldset.collapsible .fieldset-legend {
   width: 0;
 }
 .node-case.view-mode-full .group-wrapper-paper-copy a[target=_blank]:after {
-  content: " i";
-  font-family: "gsb";
-  font-size: 12px;
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.node-case.view-mode-full .group-wrapper-paper-copy a[target=_blank]:after {
+  font-size: 12px;
+  margin-left: 0.3em;
 }
 .node-case.view-mode-full .field-name-field-link-single a,
 .node-case.view-mode-full .field-name-field-link-center-single a {
@@ -12938,14 +13410,21 @@ fieldset.collapsible .fieldset-legend {
 .node-case.view-mode-full .field-name-field-link-document .label-inline {
   margin-bottom: 16px;
 }
-.node-case.view-mode-full .field-name-field-link-document a:hover {
-  background: -moz-linear-gradient(top, #18455f, #2d6280);
-  background: -o-linear-gradient(top, #18455f, #2d6280);
-  background: -webkit-linear-gradient(top, #18455f, #2d6280);
-  background: linear-gradient(to bottom, #18455f, #2d6280);
+.node-case.view-mode-full .field-name-field-link-document a:after {
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
 .node-case.view-mode-full .field-name-field-link-document a:after {
-  content: "m" !important;
   font-size: 14px;
   margin-left: 6px;
 }
@@ -13227,10 +13706,26 @@ fieldset.collapsible .fieldset-legend {
 .node-case.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after,
 .node-book.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after,
 .node-publication.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after {
-  content: "w";
-  font-family: "gsb";
-  font-size: 17px;
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-working-paper.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after,
+.node-case.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after,
+.node-book.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after,
+.node-publication.view-mode-full .faculty-author-wrapper .group-wrapper-name a:after {
+  font-size: 12px;
   line-height: 0;
+  margin-left: 0.3em;
 }
 .node-working-paper.view-mode-full .faculty-author-wrapper .group_wrapper_position,
 .node-case.view-mode-full .faculty-author-wrapper .group_wrapper_position,
@@ -13563,9 +14058,20 @@ fieldset.collapsible .fieldset-legend {
   color: #636f00;
 }
 .node-book.view-mode-full .field-buy-book .field-item a[target=_blank]:after {
-  content: "i";
-  text-transform: lowercase;
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-book.view-mode-full .field-buy-book .field-item a[target=_blank]:after {
   font-size: 12px;
   margin-left: 0.3em;
 }
@@ -13598,7 +14104,20 @@ fieldset.collapsible .fieldset-legend {
   color: #2d6280;
 }
 .view-mode-teaser_listing .field-name-field-link-document:after {
-  content: "m" !important;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-mode-teaser_listing .field-name-field-link-document:after {
   color: #990000;
   font-size: 17px;
 }
@@ -13684,11 +14203,22 @@ fieldset.collapsible .fieldset-legend {
   display: inline;
 }
 .case-product-icon.Video:before {
-  color: #2d6280;
-  content: "3";
-  font-family: "gsb";
-  font-size: 24px;
+  content: "\f122";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
   font-weight: normal;
+  font-family: 'icons';
+}
+.case-product-icon.Video:before {
+  color: #2d6280;
+  font-size: 24px;
   line-height: 0;
 }
 
@@ -13888,9 +14418,21 @@ fieldset.collapsible .fieldset-legend {
   left: -13px;
 }
 .pane-agenda-2 .agenda-block .calendar_title:before {
-  content: "!";
+  content: "\f10f";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-agenda-2 .agenda-block .calendar_title:before {
   color: #887e6e;
-  font-family: "gsb-clock";
   font-weight: normal;
   font-size: 28px;
   margin-right: 2px;
@@ -13961,10 +14503,21 @@ fieldset.collapsible .fieldset-legend {
   margin-left: 3px;
 }
 .pane-library-chat-form .pane-title:before {
-  content: ":";
+  content: "\f10b";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-library-chat-form .pane-title:before {
   color: #aac5c0;
-  font-family: "gsb-chat";
-  font-weight: bold;
   font-size: 52px;
   margin-right: 2px;
   vertical-align: top;
@@ -14028,10 +14581,22 @@ fieldset.collapsible .fieldset-legend {
   text-transform: none;
 }
 .wide-view .pane-rss-feed-rss-feed .views-field-text a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.wide-view .pane-rss-feed-rss-feed .views-field-text a:after {
   color: #636f00;
-  content: "w";
-  font-family: "gsb";
-  font-size: 20px;
+  font-size: 14px;
   line-height: 0;
   margin-left: 5px;
 }
@@ -14188,12 +14753,37 @@ fieldset.collapsible .fieldset-legend {
   margin-right: 6px;
 }
 .node-publication.view-mode-full .group-wrapper-links .field-name-field-link-single a:after {
-  content: "i" !important;
-  font-size: 12px;
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
   line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-link-single a:after {
+  font-size: 12px;
 }
 .node-publication.view-mode-full .group-wrapper-links .field-name-field-file-single-public a:after {
-  content: "m" !important;
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-file-single-public a:after {
   font-size: 14px;
 }
 
@@ -14228,9 +14818,20 @@ fieldset.collapsible .fieldset-legend {
   color: #636f00;
 }
 .view-business-websites-category-detail .views-row a:after {
-  content: "i";
-  text-transform: lowercase;
-  font-family: "gsb";
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-business-websites-category-detail .views-row a:after {
   font-size: 12px;
   margin-left: 0.3em;
 }
@@ -14310,10 +14911,22 @@ fieldset.collapsible .fieldset-legend {
   height: 34px;
 }
 .jquery-selectbox-moreButton:after {
+  content: "\f105";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.jquery-selectbox-moreButton:after {
   color: #990000;
-  content: ",";
-  font-family: "gsb";
-  font-size: 20px;
+  font-size: 14px;
   height: 36px;
   padding: 0 5px;
   position: relative;

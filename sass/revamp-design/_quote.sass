@@ -38,20 +38,19 @@
       text-indent: -1000px
       position: relative
       display: inline-block
+      +icon-after("arrow-double-right", true)
       &:after
-        content: "w"
         color: $green-light
-        font-family: "gsb"
         left: 0
         line-height: 0
-        font-size: 29px
+        font-size: 21px
         font-weight: bold
         top: 0
         position: absolute
         text-indent: 0
       &:hover
         &:after
-          color: $text-blue
+          color: $link-blue
   // AUTHOR
   .group_author
     font-size: 18px

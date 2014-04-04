@@ -44,15 +44,13 @@
       display: block
       line-height: 1.5
       padding: 10px 35px 7px 15px
+      +icon-after("arrow-double-right", true)
       &:after
-        content: "w"
         color: $white
-        display: inline
         float: right
-        font-family: "gsb"
-        font-size: 26px
-        font-weight: normal
-        line-height: 0.45
+        font-size: 21px
+        line-height: 1.2
+
         width: 0
 
     .field-type-image, .field-type-file
@@ -83,7 +81,7 @@
       background-color: $grey-1
       color: $blue-light
       &:after
-        color: $text-blue
+        color: $link-blue
       &:hover
         background-color: $blue-light
         color: $white
@@ -131,6 +129,8 @@
     .field-type-link-field a
       background-color: $teal-dark
       width: 218px
+      &:after
+        line-height: 0
       &:hover
         background-color: $blue
 

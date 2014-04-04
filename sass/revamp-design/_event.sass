@@ -159,7 +159,6 @@
           display: inline-block
           text-align: left
           float: left
-          font-family: "gsb"
           margin-right: 8px
           line-height: 43px
           color: $white
@@ -170,16 +169,18 @@
           cursor: default
 
       // Event List link
-      &:first-of-type a:before
-        content: "e"
-        font-size: 34px
-        line-height: 32px
+      &:first-of-type
+        a
+          +icon-before("menu-list", true)
+          &:before
+            font-size: 21px
       // Event Calendar link
       &:last-of-type
         margin-left: 1px
-        a:before
-          content: "5"
-          font-size: 28px
+        a
+          +icon-before("calendar-day", true)
+          &:before
+            font-size: 24px
 
 //  Fullcalendar table border
 .fullcalendar table.fc-border-separate
@@ -348,8 +349,8 @@
         float: left
         +breakpoint($bp-tablet-land-max)
           padding-left: 40px
+        +icon-after("arrow-double-left", false)
         &:after
-          content: "q"
           left: 12px
           right: auto
           +breakpoint($bp-tablet-land-max)
@@ -374,24 +375,17 @@
     display: none
   h2
     font-size: 24px
-    color: #63acd5
+    color: $blue-light
     line-height: 1.2
     margin-bottom: 10px
     a
       color: inherit
+      +icon-after("arrow-double-right", true)
       &:after
-        content: "w"
-        color: #63acd5
-        font-family: "gsb"
-        font-size: 29px
-        font-weight: normal
+        color: $blue-light
+        font-size: 16px
         margin-left: 4px
-        line-height: 1
-        position: relative
-        top: 1px
         display: inline-block
-        margin-top: -8px
-
       &:hover
         color: $white
         &:after
@@ -410,11 +404,11 @@
   .group_tag_wrap
     line-height: 1.2em
     font-size: 15px
-    color: #63acd5
+    color: $blue-light
     .separator
       display: inline
     a
-      color: #63acd5
+      color: $blue-light
       &:hover
         color: $white
 
@@ -433,7 +427,7 @@
     font-size: 16px
     line-height: 1.4
 
-  //THE BOX
+  // Featured event
   .event_calendar_featured
     position: absolute
     top: 0
@@ -442,15 +436,14 @@
     height: 128px
     padding: 29px 5px 5px
     text-align: center
+    +icon-after("calendar-blank", true)
     &:after
-      content: '6'
-      font-family: gsb
       font-size: 163px
       position: absolute
       line-height: 0
-      top: 48px
+      top: 75px
       left: -8px
-      color: #63acd5
+      color: $blue-light
     > div
       line-height: 31px
 

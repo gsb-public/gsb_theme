@@ -57,10 +57,9 @@
       line-height: 1.2
       position: relative
       left: -13px
+      +icon-before("clock", true)
       &:before
-        content: "!"
         color: $grey-dark
-        font-family: "gsb-clock"
         font-weight: normal
         font-size: 28px
         margin-right: 2px
@@ -126,11 +125,9 @@
     font-weight: bold
     color: $text-black
     margin-left: 3px
+    +icon-before("chat", true)
     &:before
-      content: ":"
       color: #aac5c0
-      font-family: "gsb-chat"
-      font-weight: bold
       font-size: 52px
       margin-right: 2px
       vertical-align: top
@@ -194,11 +191,10 @@
       text-transform: none
       // looks like listing
       .wide-view &
+        +icon-after("arrow-double-right", true)
         &:after
           color: $text-green
-          content: "w"
-          font-family: "gsb"
-          font-size: 20px
+          font-size: 14px
           line-height: 0
           margin-left: 5px
       // looks like teaser
@@ -207,7 +203,7 @@
       &:hover
         color: $link-blue
         &:after
-          color: $text-blue
+          color: $link-blue
 
   // Description text
   .views-field-text-2

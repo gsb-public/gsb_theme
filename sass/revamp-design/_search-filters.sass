@@ -211,11 +211,10 @@
 .collapsible
   .fieldset-title
     display: inline-block
+    +icon-before("minus", true)
     &:before
       color: $red
-      content: "d"
-      font-family: "gsb"
-      font-size: 24px
+      font-size: 18px
       line-height: 0
       position: relative
       left: -2px
@@ -224,8 +223,9 @@
         color: $link-blue
   &.collapsed
     .fieldset-title
+      +icon-before("plus", true)
       &:before
-        content: "c"
+        line-height: 0
 
 fieldset.collapsible .fieldset-legend
   display: inline
@@ -362,29 +362,23 @@ fieldset.collapsible .fieldset-legend
       -webkit-user-select: none
       -ms-user-select: none
       font-family: $font-sans
+      +icon-before("plus", true)
       &:before
-        content: "c"
-        font-family: "gsb"
-        font-size: 26px
-        line-height: 1
+        font-size: 18px
         margin-left: -20px
         top: 0px
         position: relative
         padding-right: 5px
-
       &:hover
-        color: $text-blue
+        color: $link-blue
 
 
     &.collapsed
       > label
-        &:before
-          content: 'd'
-
-
+        +icon-before("minus", false)
         &:hover
           &:before
-            color: $text-blue
+            color: $link-blue
 
     .views-widget
       display: none

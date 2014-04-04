@@ -44,11 +44,10 @@ $faculty-spacing: 24px
         left: -14px
         width: 0
   a[target=_blank]
+    +icon-after("arrow-external", true)
     &:after
-      content: " i"
-      font-family: "gsb"
       font-size: 12px
-      font-weight: normal
+      margin-left: 0.3em
 
 %faculty-paragraph
   font-size: 16px
@@ -62,16 +61,15 @@ $faculty-spacing: 24px
   font-size: 14px
   font-weight: normal
   line-height: 1.2
+  +icon-after("arrow-double-right", true)
   &:after
-    content: "w" !important
-    font-family: "gsb"
-    font-weight: normal
-    font-size: 14px
-    line-height: 1.1
+    font-size: 10px
+    margin-left: 0.3em
   &[target=_blank]
+    +icon-after("arrow-external", true)
     &:after
-      content: " i" !important
-      font-size: 12px
+      font-size: 10px
+      margin-left: 0.3em
 
 // Hide title on detail
 .node-type-faculty
@@ -205,11 +203,12 @@ $faculty-spacing: 24px
     // Email
     .field-name-field-email
       line-height: 1.2
-      a:after
-        content: " o"
-        font-family: "gsb-email"
-        font-size: 13px
-        line-height: 0
+      a
+        +icon-after("email-stroke", true)
+        &:after
+          font-size: 12px
+          line-height: 0
+          margin-left: 0.3em
     // CV
     .field-name-field-file-single-public a:after
       font-size: 14px
@@ -336,8 +335,8 @@ $faculty-spacing: 24px
           color: $black
           content: "   |   "
           display: inline
+        +icon-after("pdf", true)
         &:after
-          content: "m" !important
           @extend %doc-attached-icons
           font-size: 13px
           vertical-align: baseline
@@ -372,11 +371,10 @@ $faculty-spacing: 24px
           color: $black
           content: "   |   "
           display: inline
+        +icon-after("pdf", true)
         &:after
-          content: "m" !important
           @extend %doc-attached-icons
-          font-size: 13px
-          vertical-align: baseline
+          font-size: 12px
     // Description
     .field-name-field-description
       font-size: 14px
@@ -425,10 +423,11 @@ $faculty-spacing: 24px
     line-height: 1.2
     margin-top: 2px
   .views-field-field-link-document
-    a:after
-      content: "m" !important
-      @extend %doc-attached-icons
-      font-size: 13px
+    a
+      +icon-after("pdf", true)
+      &:after
+        @extend %doc-attached-icons
+        font-size: 13px
 
   // Working papers, case, media item use large header
   .view-display-id-case_listing_entity_view,

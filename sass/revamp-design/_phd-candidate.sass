@@ -136,12 +136,11 @@
 
   .field-name-field-link-single
     font-weight: bold
-    a:after
-      content: "w" !important
-      font-family: "gsb"
-      font-weight: normal
-      font-size: 18px
-      line-height: 24px
+    a
+      +icon-after("arrow-double-right", true)
+      &:after
+        font-size: 18px
+        line-height: 24px
   // Faculty advisors
   .field-name-field-person-fac-ref
     margin-bottom: 20px
@@ -272,13 +271,12 @@
     .phd-name
       display: block
       margin-bottom: 24px
-      a:after
-        color: $grey-med
-        content: "w" !important
-        font-family: "gsb"
-        font-weight: normal
-        font-size: 18px
-        line-height: 24px
+      a
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: $grey-med
+          font-size: 18px
+          line-height: 24px
       +breakpoint($bp-four-column-switch)
         margin-bottom: 18px
 
