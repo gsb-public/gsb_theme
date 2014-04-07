@@ -71,11 +71,11 @@
     margin-top: 26px
     padding: $standard-padding 0
     a
+      @extend %green-button
+      +icon-after("pdf", true)
       &:after
-        content: "m" !important
         @extend %doc-attached-icons
         font-size: 14px
-      @extend %green-button
       &:hover
         +background(linear-gradient(top, #18455f, $text-blue))
     .field-item
