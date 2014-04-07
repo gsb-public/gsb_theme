@@ -292,8 +292,6 @@ $faculty-spacing: 24px
   .group-courses-taught,
   .field-name-field-teaching-materials,
   .field-name-field-conf-presentations-section,
-  .field-name-field-link-video-unlimited,
-  .field-name-field-link-podcast-unlimited,
   .group-wrapper-affiliation,
   .field-name-field-service-profession-section,
   .view-display-id-media_mention_listing_entity_view
@@ -519,3 +517,26 @@ $faculty-spacing: 24px
       .field-name-field-description
         font-size: 14px
         line-height: 1.1
+
+  // Media item icons
+  .view-display-id-media_mention_listing_entity_view
+    +clearfix
+    .views-field-title
+      display: block
+    .audio,
+    .video
+      color: $blue
+      display: inline-block
+      float: left
+      font-family: "gsb"
+      line-height: 1
+      position: relative
+      top: -4px
+    .audio
+      margin-right: 2px
+      &:before
+        content: "4"
+    .video
+      margin-right: 4px
+      &:before
+        content: "3"

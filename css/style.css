@@ -168,8 +168,6 @@ dfn {
 .node-faculty.view-mode-full .group-courses-taught,
 .node-faculty.view-mode-full .field-name-field-teaching-materials,
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section,
-.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
-.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
 .node-faculty.view-mode-full .group-wrapper-affiliation,
 .node-faculty.view-mode-full .field-name-field-service-profession-section,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view, .node-case.view-mode-full .group-wrapper-paper-copy,
@@ -12021,8 +12019,6 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-courses-taught,
 .node-faculty.view-mode-full .field-name-field-teaching-materials,
 .node-faculty.view-mode-full .field-name-field-conf-presentations-section,
-.node-faculty.view-mode-full .field-name-field-link-video-unlimited,
-.node-faculty.view-mode-full .field-name-field-link-podcast-unlimited,
 .node-faculty.view-mode-full .group-wrapper-affiliation,
 .node-faculty.view-mode-full .field-name-field-service-profession-section,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view {
@@ -12186,6 +12182,35 @@ fieldset.collapsible .fieldset-legend {
 .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-description {
   font-size: 14px;
   line-height: 1.1;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view {
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title {
+  display: block;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio,
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video {
+  color: #607c8c;
+  display: inline-block;
+  float: left;
+  font-family: "gsb";
+  line-height: 1;
+  position: relative;
+  top: -4px;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio {
+  margin-right: 2px;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .audio:before {
+  content: "4";
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video {
+  margin-right: 4px;
+}
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .video:before {
+  content: "3";
 }
 
 .node-type-case #page-title {
