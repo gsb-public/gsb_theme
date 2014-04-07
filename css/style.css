@@ -2745,6 +2745,7 @@ a.no-border:hover {
   font-family: 'icons';
 }
 .pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
+  content: "\f102" !important;
   font-weight: normal;
   font-size: 10px;
   margin-left: 0.3em;
@@ -2786,6 +2787,7 @@ a.no-border:hover {
   font-family: 'icons';
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
+  content: "\f102" !important;
   font-size: 10px;
   margin-left: 0.3em;
 }
@@ -2854,6 +2856,7 @@ a.no-border:hover {
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
   color: #b1aeaf;
+  content: "\f102" !important;
   font-size: 10px;
   margin-left: 0.3em;
 }
@@ -2925,6 +2928,7 @@ a.no-border:hover {
     margin: 0 0 6px 0;
   }
   .narrow-view .pane-bundle-text .field-name-field-body h3 {
+    font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 1.2;
@@ -6753,7 +6757,7 @@ ul.slideshow-items li:first-of-type {
 .pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
   color: white;
   display: inline-block;
-  font-size: 19px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 0;
   margin-left: 5px;
@@ -14614,10 +14618,10 @@ fieldset.collapsible .fieldset-legend {
   position: relative;
 }
 .pane-library-chat-form .pane-title {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #231f20;
-  margin-left: 3px;
 }
 .pane-library-chat-form .pane-title:before {
   content: "\f10b";
@@ -14635,9 +14639,15 @@ fieldset.collapsible .fieldset-legend {
 }
 .pane-library-chat-form .pane-title:before {
   color: #aac5c0;
-  font-size: 52px;
-  margin-right: 2px;
-  vertical-align: top;
+  font-size: 48px;
+  line-height: 0;
+  margin-right: 14px;
+  position: relative;
+  top: 8px;
+}
+.pane-library-chat-form .pane-content {
+  position: relative;
+  left: -6px;
 }
 .pane-library-chat-form .pane-content .libraryh3lp iframe {
   width: 230px !important;
@@ -14654,7 +14664,7 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .narrow-view .pane-library-chat-form {
-  padding: 22px;
+  padding: 26px;
 }
 .narrow-view .pane-library-chat-form .pane-content .libraryh3lp iframe {
   width: 220px !important;
@@ -15205,7 +15215,7 @@ div.callout br {
 .field-name-field-body h2 a:after, .field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
   color: #bac405;
   font-size: 16px;
-  margin-left: 3px;
+  margin-left: 0.3em;
 }
 .field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover, .field-name-field-body h4 a:hover, .field-name-field-body h5 a:hover {
   border: none;
@@ -15213,7 +15223,7 @@ div.callout br {
 .field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after, .field-name-field-body h4 a:hover:after, .field-name-field-body h5 a:hover:after {
   color: #2d6280;
 }
-.field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
+.field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
   font-size: 14px;
 }
 .field-name-field-body p:last-child, .field-name-field-body ul:last-child, .field-name-field-body ol:last-child, .field-name-field-body table:last-child {

@@ -121,17 +121,21 @@
   @extend %bg-border-and-box-shadow
   position: relative
   .pane-title
+    color: $text-black
+    font-family: $font-sans
     font-size: 20px
     font-weight: bold
-    color: $text-black
-    margin-left: 3px
     +icon-before("chat", true)
     &:before
       color: #aac5c0
-      font-size: 52px
-      margin-right: 2px
-      vertical-align: top
+      font-size: 48px
+      line-height: 0
+      margin-right: 14px
+      position: relative
+      top: 8px
   .pane-content
+    position: relative
+    left: -6px
     .libraryh3lp iframe
       width: 230px !important
     .helptext
@@ -145,7 +149,7 @@
     padding: $standard-padding
 .narrow-view
   .pane-library-chat-form
-    padding: 22px
+    padding: 26px
     .pane-content
       .libraryh3lp iframe
         width: 220px !important
