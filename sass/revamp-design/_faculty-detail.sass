@@ -444,34 +444,6 @@ $faculty-spacing: 24px
         content: ","
         margin-right: 3px
 
-  // Featured publication
-  // using content pane view mode
-  .field-name-field-featured-publication-ref
-    .label-above
-      @extend %header-small
-
-    .view-mode-views_content_pane
-      margin-bottom: 6px
-      .field-collection-item-field-authors
-        font-family: $font-sans
-    // Title
-    h2
-      display: block
-      line-height: 0
-      margin-bottom: 0
-      a
-        @extend %faculty-link
-    .group-wrapper-featured
-      line-height: 1.2
-    // Concat Authors and publication info
-    .gsb_field_formatter_field_collection_separator,
-    .group-wrapper-published
-      display: inline
-    .gsb_field_formatter_field_collection_separator
-      margin: 0
-      &:after
-        content: ". "
-
   // Spacing between authors and title on EVAs
   .view-id-gsb_working_paper_listing,
   .view-display-id-case_listing_entity_view
