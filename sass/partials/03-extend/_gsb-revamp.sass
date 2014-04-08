@@ -1,15 +1,5 @@
 // CUSTOM GSB REVAMP EXTENDS
 
-// Clearfix 2
-%clearfix2
-  *zoom: 1
-  &:before,
-  &:after
-    display: table
-    content: ""
-    line-height: 0
-  &:after
-    clear: both
 
 ////////////
 // Double arrow
@@ -34,7 +24,7 @@
 ////////////
 
 %red-button-gradient
-  +background(linear-gradient(bottom, #c50000 40%, #860000 90%))
+  +background(linear-gradient(bottom, $red-light 40%, #860000 90%))
   +box-shadow(#ababab 0 2px 4px)
 
 // Show More link
