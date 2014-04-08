@@ -188,7 +188,7 @@
 .fullcalendar table.fc-border-separate
   border-collapse: collapse
   thead
-    border: 1px solid #666
+    border: 1px solid $grey-6
   tbody td
     border: 1px solid $grey-c
 .fc-content
@@ -288,12 +288,12 @@
     &:hover
       color: $blue-dark
       background-color: $grey-c
-      +background(linear-gradient(top, #ededed 20%, #fbfaf8 100%))
-      @include filter-gradient(#fbfaf8, #ededed, vertical)
+      +background(linear-gradient(top, $grey-e 20%, #fbfaf8 100%))
+      @include filter-gradient(#fbfaf8, $grey-e, vertical)
     &.active
       background-color: $grey-c
-      +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
-      @include filter-gradient(#fbfaf8, #ededed, vertical)
+      +background(linear-gradient(bottom, $grey-e 20%, #fbfaf8 100%))
+      @include filter-gradient(#fbfaf8, $grey-e, vertical)
       color: $red-dark
 
 // Academic calendar

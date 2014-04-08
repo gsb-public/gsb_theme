@@ -62,7 +62,7 @@ input[type="button"]
   border: 1px solid
   border-color: #c2c2c2
   cursor: pointer
-  color: #333
+  color: $grey-3
   font: 12px/1.2 Arial, sans-serif
   outline: 0
   overflow: visible
@@ -82,7 +82,7 @@ button[disabled],
 input[type="reset"][disabled],
 input[type="submit"][disabled],
 input[type="button"][disabled]
-  color: #888
+  color: $grey-8
 
 textarea,
 select,
@@ -101,9 +101,9 @@ input[type="url"],
 input[type="week"]
   -webkit-appearance: none
   +border-radius(0)
-  background-color: #fff
+  background-color: $white
   border: 1px solid
-  border-color: #c2b7a1
+  border-color: $grey-med
   color: #000
   outline: 0
   padding: 0.5em 0.8em
@@ -122,10 +122,10 @@ input[type="week"]
 
 input.placeholder-text,
 textarea.placeholder-text
-  color: #888
+  color: $grey-8
 
 ::-webkit-input-placeholder
-  color: #888
+  color: $grey-8
 
 textarea[disabled],
 select[disabled],
@@ -142,8 +142,8 @@ input[type="text"][disabled],
 input[type="time"][disabled],
 input[type="url"][disabled],
 input[type="week"][disabled]
-  background-color: #eee
-  color: #888
+  background-color: $grey-e
+  color: $grey-8
 
 button:focus,
 button:active,
@@ -193,19 +193,19 @@ textarea
   width: 100%
 
 optgroup
-  color: #000
+  color: $black
   font-style: normal
   font-weight: normal
 
-  // styling for select box
-select	
+// styling for select box
+select
   border-color: #e4e4e4
   color: $text-black
   font-size: 14px
   font-family: $font-demi
-  option:checked 
+  option:checked
     background-color: #6a9d95
-    color: white
+    color: $white
   optgroup
     border-color: #e4e4e4
-		
+
