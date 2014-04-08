@@ -2,81 +2,24 @@
 // Default Variables
 ////////////////////////////
 
-$base-font-size: 16px
-$base-line-height: $base-font-size * 1.5
-$breakpoint-legacy-syntax: true
-
-// Custom variables
-$standard-padding: 26px
-
-// --- Modular SCALE (used by _defaults.sass) -----------
-// values used to determine modular scale values
-// see: src/common/mixins/_modular-scale.sass
-// and http://modularscale.com/
-$base-size: $base-font-size
-
-
-$pixel-normalize: true
-
 $init-type: normalize
 
-// Grid Variables
+$base-font-size: 16px
+$base-line-height: $base-font-size * 1.5
 
-$show-grid: true
-$show-baseline: false
-
-// use the Compass baseline system
-$establish-baseline: true
+// Custom variables
+$max-width: 1170px
+$standard-padding: 26px
 
 ////////////////////////////
 // Layout classes
 ////////////////////////////
-// narrow-view: 270px
-// wide-view: 570px
-// full-view: 870px
-
-
-////////////////////////////
-// Singularity Grids
-////////////////////////////
-
-// Setup
-$columns: 12
-$gutter: 30
-$max-width: 1170px
-$regions: 235 870
-
-// HOMEPAGE
-$front-main: 870 270
-$front-main-inner: 570 270 270
-
-$ipad-full: 727px
-$ipad-columns: 435 272
-
-// STANDARD 2
-$standard-with-region: 570 270
-$standard: 870 270
-
-// LANDING 1
-$landing-one-content: $standard
-$landing-one-main-inner: 270 270
-
-// BUSINESS INSIGHT
-$business-insight: 270 270 270
-
-
-@function calc-max-width($columns, $unit: px)
-  $max-width: 0
-  @for $i from 1 through length($columns)
-    $max-width: $max-width + nth($columns, $i)
-  @return $max-width + $unit
-
-// .override-gutter
-//   +grid-span(1, 2, $gutter: .25)
-
+// .narrow-view: 270px
+// .wide-view: 570px
+// .full-view: 870px
 
 ////////////////////////////
-// Breakpoint Variables
+// Global Breakpoint Variables
 // +breakpoint($VARIABLE)
 ////////////////////////////
 $breakpoint-to-ems: true
@@ -92,18 +35,9 @@ $bp-tablet-port-max: 999px max-width
 $bp-tablet-land-max: 1024px max-width
 $bp-tablet-land-min: 1000px min-width
 
-$bp-tablet-nexus-max: 907px max-width
-$bp-video: 627px min-width
-
-$bp-program-finder: 1165px max-width
-
 $bp-nexus-portrait: 600px 602px
 $bp-nexus-landscape: 961px 963px
-
-$bp-android-landscape: 603px 750px
 
 $bp-wide-min: 1000px min-width
 $bp-content-max: 1210px max-width
 $bp-content: 1000px 1210px
-
-$bp-four-column-switch: 768px max-width
