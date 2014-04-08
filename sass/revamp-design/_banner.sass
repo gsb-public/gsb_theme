@@ -96,7 +96,7 @@
 .page-events
   #banner
     +breakpoint($bp-tablet-land-min)
-      +background(image_url("bg-banner-eventcal.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, #1b1b1b))
+      +background(image_url("bg-banner-eventcal.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, $grey-1))
       +clearfix
       +breakpoint($bp-tablet-port-max)
         height: 50px
@@ -111,7 +111,7 @@
 .page-programs
   #banner
     +breakpoint($bp-tablet-land-min)
-      +background(linear-gradient(#4c697a, #607c8c))
+      +background(linear-gradient(#4c697a, $blue))
       +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 // STANFORD GSB EXPERIENCE SECTION
@@ -121,14 +121,14 @@
     +breakpoint($bp-tablet-port-max)
       display: block
     +breakpoint($bp-tablet-land-min)
-      +background(linear-gradient(#756b5a, #887e6e))
+      +background(linear-gradient(#756b5a, $grey-dark))
       +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 // LIBRARY, NEWSROOM
 .page-library,
 .page-newsroom
   #banner
-    +background(linear-gradient(#756b5a, #887e6e))
+    +background(linear-gradient(#756b5a, $grey-dark))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 
@@ -194,11 +194,11 @@
 ///////////////////
 #sidebar
   +breakpoint($bp-tablet-port-max)
-    +background(linear-gradient(#756b5a, #887e6e))
+    +background(linear-gradient(#756b5a, $grey-dark))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
     min-height: 50px
     .page-programs &
-      +background(linear-gradient(#4c697a, #607c8c))
+      +background(linear-gradient(#4c697a, $blue))
 
 //////////////////
 // Events filters on mobile
@@ -272,7 +272,7 @@
       .views-exposed-widget
         label
           background-color: $grey-c
-          +background(linear-gradient(bottom, #ededed 20%, #fbfaf8 100%))
+          +background(linear-gradient(bottom, $grey-e 20%, #fbfaf8 100%))
           border: 2px $white solid
           +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
           color: $red
@@ -301,7 +301,7 @@
           .views-widget
             display: block
             padding-left: 10px
-            background: #ededed
+            background: $grey-e
             border: 2px $white solid
             +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
             border-top: 0
