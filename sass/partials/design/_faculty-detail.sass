@@ -271,8 +271,6 @@ $faculty-spacing: 24px
     font-weight: normal
     line-height: 1
     margin-bottom: $faculty-spacing
-    padding-bottom: $faculty-spacing
-    @extend %divider-bottom
     a
       color: $link-green
       &:hover
@@ -280,11 +278,6 @@ $faculty-spacing: 24px
         text-decoration: underline
 
   // Sections
-  // Bottom border
-  .group-wrapper-research,
-  .group-wrapper-academic
-    margin-bottom: $faculty-spacing
-    @extend %divider-bottom
 
   // Top border
   .view-display-id-case_listing_entity_view,
@@ -293,7 +286,10 @@ $faculty-spacing: 24px
   .field-name-field-conf-presentations-section,
   .group-wrapper-affiliation,
   .field-name-field-service-profession-section,
-  .view-display-id-media_mention_listing_entity_view
+  .view-display-id-media_mention_listing_entity_view,
+  .group-publications,
+  .group-wrapper-research,
+  .group-wrapper-academic
     @extend %divider-top
     padding-top: $faculty-spacing
 
