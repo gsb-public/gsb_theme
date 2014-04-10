@@ -238,16 +238,4 @@
     }
   };
 
-  /**
-   * Custom Styling for selectbox.
-   */
-  Drupal.behaviors.gsb_theme = {
-    attach: function () {
-      $('#block-system-main').find('select').selectbox({
-        animationSpeed: 'fast',
-        replaceInvisible: true
-      });
-    }
-  };
-
 }(jQuery));
