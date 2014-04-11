@@ -28,16 +28,18 @@
   .left.second-column
     float: left
     max-width: 70%
-    +breakpoint(840px max-width)
-      max-width: 100%
+
 
   .right
     float: right
-    +breakpoint(999px 1140px)
-      float: left
-      margin-top: 20px
-    +breakpoint(840px max-width)
-      display: none
+    +breakpoint(750px max-width)
+      max-width: 85px
+    +breakpoint(623px 569px)
+      max-width: 50px
+    +breakpoint(568px 480px)
+      max-width: 85px
+    +breakpoint($bp-mobile-480)
+      max-width: 50px
 
   // Image
   .field-name-field-image-single-public
