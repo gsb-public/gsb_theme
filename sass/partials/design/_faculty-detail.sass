@@ -493,17 +493,12 @@ $faculty-spacing: 24px
     .audio,
     .video
       color: $blue
-      display: inline-block
+      font-size: 14px
       float: left
-      font-family: "gsb"
-      line-height: 1
-      position: relative
-      top: -4px
     .audio
       margin-right: 2px
-      &:before
-        content: "4"
+      +icon-before("podcast", true)
     .video
       margin-right: 4px
-      &:before
-        content: "3"
+      margin-top: -1px
+      +icon-before("video", true)
