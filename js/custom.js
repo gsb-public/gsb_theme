@@ -160,7 +160,6 @@
 
   Drupal.behaviors.setClassToActiveFiltered = {
     attach: function () {
-      $('.view-admission-events table thead a').has('img').addClass('currentFilter');
       $('.view-admission-events table').addClass('responsive');
     }
   };
