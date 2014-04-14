@@ -15115,44 +15115,57 @@ div.callout br {
   line-height: 1.2;
 }
 
-.field-name-field-body ul, .field-name-field-body ol {
+.format-wysiwyg ul, .format-wysiwyg ol,
+.field-name-field-body ul,
+.field-name-field-body ol {
   margin: 0 0 24px 0;
   font-size: 18px;
   line-height: 24px;
 }
-.field-name-field-body ul li, .field-name-field-body ol li {
+.format-wysiwyg ul li, .format-wysiwyg ol li,
+.field-name-field-body ul li,
+.field-name-field-body ol li {
   margin-bottom: 5px;
 }
+.format-wysiwyg ul,
 .field-name-field-body ul {
   position: relative;
   left: 0;
   text-indent: -1em;
   padding-left: 1em;
 }
+.format-wysiwyg ul li:before,
 .field-name-field-body ul li:before {
   content: "• ";
   color: #2d6280;
 }
+.format-wysiwyg ol,
 .field-name-field-body ol {
   padding-left: 26px;
 }
-.field-name-field-body table ul, .field-name-field-body table ol {
+.format-wysiwyg table ul, .format-wysiwyg table ol,
+.field-name-field-body table ul,
+.field-name-field-body table ol {
   font-size: 14px;
   line-height: 18px;
 }
+.format-wysiwyg a,
 .field-name-field-body a {
   border-bottom: dashed 1px #636f00;
   color: #636f00;
   text-decoration: none;
   word-wrap: break-word;
 }
+.format-wysiwyg a:hover,
 .field-name-field-body a:hover {
   color: #2d6280;
   border-bottom: solid 1px #2d6280;
 }
+.format-wysiwyg a:hover,
 .field-name-field-body a:hover {
   border: none;
 }
+.format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after {
   content: "\f111";
   speak: none;
@@ -15167,14 +15180,17 @@ div.callout br {
   font-weight: normal;
   font-family: 'icons';
 }
+.format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after {
   font-size: 10px;
   line-height: 0;
   margin-left: 0.3em;
 }
+.format-wysiwyg img,
 .field-name-field-body img {
   vertical-align: top;
 }
+.format-wysiwyg h2,
 .field-name-field-body h2 {
   color: #231f20;
   font-size: 24px;
@@ -15182,6 +15198,7 @@ div.callout br {
   line-height: 1.1;
   margin: 6px 0 10px 0;
 }
+.format-wysiwyg h3,
 .field-name-field-body h3 {
   color: black;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15190,6 +15207,7 @@ div.callout br {
   line-height: 1.2;
   margin: 3px 0 4px 0;
 }
+.format-wysiwyg h4,
 .field-name-field-body h4 {
   color: black;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15198,17 +15216,26 @@ div.callout br {
   line-height: 1.2;
   margin-bottom: 3px;
 }
+.format-wysiwyg h5,
 .field-name-field-body h5 {
   color: #2d6280;
   font-size: 17px;
   line-height: 1.2;
   margin-bottom: 4px;
 }
-.field-name-field-body h2 a, .field-name-field-body h3 a, .field-name-field-body h4 a, .field-name-field-body h5 a {
+.format-wysiwyg h2 a, .format-wysiwyg h3 a, .format-wysiwyg h4 a, .format-wysiwyg h5 a,
+.field-name-field-body h2 a,
+.field-name-field-body h3 a,
+.field-name-field-body h4 a,
+.field-name-field-body h5 a {
   color: #231f20;
   border: none;
 }
-.field-name-field-body h2 a:after, .field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
+.format-wysiwyg h2 a:after, .format-wysiwyg h3 a:after, .format-wysiwyg h4 a:after, .format-wysiwyg h5 a:after,
+.field-name-field-body h2 a:after,
+.field-name-field-body h3 a:after,
+.field-name-field-body h4 a:after,
+.field-name-field-body h5 a:after {
   content: "\f101";
   speak: none;
   text-rendering: optimizeLegibility;
@@ -15222,27 +15249,47 @@ div.callout br {
   font-weight: normal;
   font-family: 'icons';
 }
-.field-name-field-body h2 a:after, .field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
+.format-wysiwyg h2 a:after, .format-wysiwyg h3 a:after, .format-wysiwyg h4 a:after, .format-wysiwyg h5 a:after,
+.field-name-field-body h2 a:after,
+.field-name-field-body h3 a:after,
+.field-name-field-body h4 a:after,
+.field-name-field-body h5 a:after {
   color: #bac405;
   font-size: 16px;
   margin-left: 0.3em;
 }
-.field-name-field-body h2 a:hover, .field-name-field-body h3 a:hover, .field-name-field-body h4 a:hover, .field-name-field-body h5 a:hover {
+.format-wysiwyg h2 a:hover, .format-wysiwyg h3 a:hover, .format-wysiwyg h4 a:hover, .format-wysiwyg h5 a:hover,
+.field-name-field-body h2 a:hover,
+.field-name-field-body h3 a:hover,
+.field-name-field-body h4 a:hover,
+.field-name-field-body h5 a:hover {
   border: none;
 }
-.field-name-field-body h2 a:hover:after, .field-name-field-body h3 a:hover:after, .field-name-field-body h4 a:hover:after, .field-name-field-body h5 a:hover:after {
+.format-wysiwyg h2 a:hover:after, .format-wysiwyg h3 a:hover:after, .format-wysiwyg h4 a:hover:after, .format-wysiwyg h5 a:hover:after,
+.field-name-field-body h2 a:hover:after,
+.field-name-field-body h3 a:hover:after,
+.field-name-field-body h4 a:hover:after,
+.field-name-field-body h5 a:hover:after {
   color: #2d6280;
 }
-.field-name-field-body h3 a:after, .field-name-field-body h4 a:after, .field-name-field-body h5 a:after {
+.format-wysiwyg h3 a:after, .format-wysiwyg h4 a:after, .format-wysiwyg h5 a:after,
+.field-name-field-body h3 a:after,
+.field-name-field-body h4 a:after,
+.field-name-field-body h5 a:after {
   font-size: 14px;
 }
-.field-name-field-body p:last-child, .field-name-field-body ul:last-child, .field-name-field-body ol:last-child, .field-name-field-body table:last-child {
+.format-wysiwyg p:last-child, .format-wysiwyg ul:last-child, .format-wysiwyg ol:last-child, .format-wysiwyg table:last-child,
+.field-name-field-body p:last-child,
+.field-name-field-body ul:last-child,
+.field-name-field-body ol:last-child,
+.field-name-field-body table:last-child {
   margin-bottom: 0;
 }
-
+.format-wysiwyg table,
 .field-name-field-body table {
   margin: 20px 0;
 }
+.format-wysiwyg caption,
 .field-name-field-body caption {
   color: #2d6280;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15251,33 +15298,41 @@ div.callout br {
   line-height: 1em;
   margin-bottom: 20px;
 }
+.format-wysiwyg thead tr th,
 .field-name-field-body thead tr th {
   background: #d5e7e4;
   border-top: 1px solid #aac4bf;
   padding: 16px 12px;
 }
+.format-wysiwyg tbody,
 .field-name-field-body tbody {
   border-bottom: 1px solid #aac4bf;
 }
+.format-wysiwyg tbody tr,
 .field-name-field-body tbody tr {
   background: whitesmoke;
   border-top: 1px solid #aac4bf;
 }
+.format-wysiwyg tbody tr:nth-of-type(odd),
 .field-name-field-body tbody tr:nth-of-type(odd) {
   background-color: white;
 }
+.format-wysiwyg tbody tr th,
 .field-name-field-body tbody tr th {
   background: #dddddd;
   padding: 16px 12px;
 }
+.format-wysiwyg tbody td,
 .field-name-field-body tbody td {
   padding: 16px 12px;
 }
+.format-wysiwyg tbody td a,
 .field-name-field-body tbody td a {
   color: #636f00;
   font-weight: bold;
   border-bottom: none;
 }
+.format-wysiwyg tbody td p,
 .field-name-field-body tbody td p {
   font-size: 14px;
   line-height: 18px;
