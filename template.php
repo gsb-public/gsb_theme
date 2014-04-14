@@ -307,3 +307,17 @@ function gsb_theme_process_node(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for views-view-table.tpl.php.
+ */
+function gsb_theme_preprocess_views_view_table(&$variables) {
+  // A list of table views that should be responsive.
+  $responsive_views = array(
+    'admission_events',
+  );
+
+  if (in_array($variables['view']->name, $responsive_views)) {
+    $variables['classes_array'][] = 'responsive';
+  }
+}

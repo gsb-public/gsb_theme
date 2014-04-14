@@ -153,18 +153,6 @@
   };
 
   /**
-   * Add classes to admission events table
-   * Set class to active fitered column
-   * Add class to table
-   */
-
-  Drupal.behaviors.setClassToActiveFiltered = {
-    attach: function () {
-      $('.view-admission-events table').addClass('responsive');
-    }
-  };
-
-  /**
    * Input type number alternative for spinner
    */
   Drupal.behaviors.spinner = {
