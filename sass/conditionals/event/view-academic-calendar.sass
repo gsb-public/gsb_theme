@@ -1,0 +1,81 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Event - Academic calendar
+
+.view-academic-calendar
+  .view-content
+    @extend %border-and-box-shadow
+    background: $white
+    margin-bottom: 30px
+  table
+    width: 100%
+    caption
+      background: #d8e7e4
+      font-weight: bold
+      text-align: left
+      padding: 16px 23px 8px
+    tr
+      background-color: #fff
+      border: 0 none
+      &:last-of-type
+        td
+          border: 0 none
+    td
+      padding: 0.9em 1em 0.5em
+      background-color: $white
+      border-bottom: 1px solid #e4e4e4
+      &:first-of-type
+        background-color: #f8f7f6
+        width: 40%
+      &.views-field-field-academic-calendar-link
+        font-weight: bold
+  .view-footer
+    overflow: hidden
+    padding-top: 1px
+    a
+      @extend %bg-border-and-box-shadow
+      margin-bottom: 5px
+      color: $text-green
+      padding-top: 14px
+      padding-bottom: 11px
+      position: relative
+      +breakpoint($bp-tablet-land-max)
+        max-width: 127px
+      +icon-after("arrow-double-right", true)
+      &:after
+        @extend %arrow-double-big
+        font-weight: bold
+        color: #e3e3e3
+      &:hover
+        color: $text-blue
+        &:after
+          color: $teal-light
+      &.prev
+        padding-left: 55px
+        padding-right: 22px
+        float: left
+        +breakpoint($bp-tablet-land-max)
+          padding-left: 40px
+        +icon-after("arrow-double-left", false)
+        &:after
+          left: 12px
+          right: auto
+          +breakpoint($bp-tablet-land-max)
+            left: 0
+      &.next
+        float: right
+        padding-left: 22px
+        padding-right: 55px
+        +breakpoint($bp-mobile)
+          padding-right: 40px
+        &:after
+          +breakpoint($bp-tablet-land-max)
+            right: 0

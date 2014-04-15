@@ -1,0 +1,37 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.view-display-id-publications_listing .views-exposed-form {
+  border-bottom: 1px #cccccc solid;
+}
+
+.view-display-id-publications_listing .views-exposed-form .form-type-select .bef-checkboxes {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+.view-display-id-publications_listing .view-content .views-row {
+  border-bottom: 1px #231f20 solid;
+}
+.view-display-id-publications_listing .view-content .views-row:last-of-type {
+  border-bottom: 0;
+}
+
+.node-publication.view-mode-teaser_listing .group-wrapper-published {
+  line-height: 1.2;
+}
+.node-publication.view-mode-teaser_listing .group-wrapper-published:after {
+  content: ".";
+}

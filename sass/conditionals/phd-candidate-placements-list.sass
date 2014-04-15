@@ -1,0 +1,133 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Job Candidate Listing
+
+// Academic area jump links pane
+.view-display-id-phd_job_market_jump_links
+  @extend %bg-border-and-box-shadow
+  margin-bottom: 26px
+  padding: $standard-padding
+  .jump-links-title
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 20px
+  .view-content
+    -moz-column-count: 3
+    -webkit-column-count: 3
+    column-count: 3
+    +breakpoint($bp-mobile-max)
+      -moz-column-count: 2
+      -webkit-column-count: 2
+      column-count: 2
+    +breakpoint($bp-mobile-480)
+      -moz-column-count: 1
+      -webkit-column-count: 1
+      column-count: 1
+    background: none
+    border: 0
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    margin: 0
+  .views-row
+    margin-bottom: 12px
+    max-width: 97%
+    a
+      color: $link-green
+      display: inline-block
+      font-size: 16px
+      font-weight: bold
+      line-height: 20px
+      &:hover
+        color: $link-blue
+
+// Job Candidate Placement listing
+.view-phd-candidate-placement-listing
+  .phd-placement-wrapper
+    @extend %bg-border-and-box-shadow
+    padding: 0 $standard-padding
+    // Academic area name
+    .views-field-name
+      border-top: 10px solid $teal-light
+      border-bottom: 1px solid #e4e4e4
+      display: block
+      font-weight: bold
+      line-height: 32px
+      margin-bottom: 18px
+      padding-top: 12px
+      padding-bottom: 18px
+
+    // Placed candidate styling
+    .phd-row-wrapper
+      +clearfix
+    .views-row
+      display: inline-block
+      float: left
+      margin-bottom: 30px
+      margin-right: 5%
+      width: 30%
+      &:nth-of-type(3n)
+        margin-right: 0
+      &:nth-of-type(3n+1)
+        clear: left
+      +breakpoint($bp-content)
+        margin-bottom: 30px
+        width: 47%
+        &:nth-of-type(3n+1)
+          clear: none
+        &:nth-of-type(odd)
+          clear: left
+        &:first-of-type,
+        &:nth-of-type(3n)
+          margin-right: 5%
+        &:nth-of-type(2n)
+          margin-right: 0
+      +breakpoint(775px max-width)
+        margin-bottom: 30px
+        width: 44%
+        &:nth-of-type(3n+1)
+          clear: none
+        &:nth-of-type(odd)
+          clear: left
+        &:nth-of-type(odd)
+          margin-right: 12%
+        &:nth-of-type(2n)
+          margin-right: 0
+      +breakpoint($bp-mobile-max)
+        clear: both
+        margin-left: 0
+        margin-right: 0
+        width: 100%
+    .views-field-title
+      font-size: 16px
+      font-weight: bold
+      line-height: 20px
+      margin-bottom: 14px
+      .date-display-single
+        &:before
+          content: "’"
+    .views-field-field-academic-institution
+      color: $grey-dark
+      font-size: 13px
+      font-weight: bold
+      line-height: 16px
+      text-transform: uppercase
+      margin-bottom: 4px
+    .views-field-field-dissertation
+      font-size: 16px
+      line-height: 20px
+
+  // Back to top link styling
+  .pager-region
+    border-top: 3px solid $text-grey-light
+    margin-top: -1px
+  .additional-links
+    background: $text-grey-light

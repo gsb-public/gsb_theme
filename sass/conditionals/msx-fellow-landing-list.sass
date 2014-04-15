@@ -1,0 +1,69 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// MSx fellows listing page
+
+.view-msx-fellows
+  .view-content
+    +clearfix
+  .views-row
+    background: rgba($white, 0.5)
+    border: 1px solid $grey-d
+    display: inline-block
+    float: left
+    margin-right: 18px
+    margin-bottom: 24px
+    min-height: 370px
+    width: 130px
+    &:nth-of-type(6n)
+      margin-right: 0
+    +breakpoint(1170px max-width)
+      margin-right: 10%
+      width: 170px
+      &:nth-of-type(6n)
+        margin-right: 18px
+      &:nth-of-type(3n)
+        margin-right: 0
+    +breakpoint(769px 937px)
+      &:nth-of-type(3n)
+        margin-right: 10%
+      &:nth-of-type(2n)
+        margin-right: 0
+    +breakpoint(677px max-width)
+      &:nth-of-type(3n)
+        margin-right: 10%
+      &:nth-of-type(2n)
+        margin-right: 0
+  .node-msx-fellows
+    border-top: 0
+    padding: 0 10px
+    .field-name-field-image-single-public
+      margin: -2px -11px 0 -11px
+      float: none
+    .field-name-title
+      margin: 14px 0 8px 0
+      h2
+        font-size: 16px
+        line-height: 1.25
+        margin: 0
+        a
+          color: $text-green
+          &:hover
+            color: $link-blue
+    .field-name-field-title-position-unlimited
+      margin: 0 0 9px 0
+    .field-name-field-location
+      font-weight: normal
+      margin: 0
+    .field-name-field-title-position-unlimited,
+    .field-name-field-company-organization,
+    .field-name-field-location
+      font-size: 14px
+      line-height: 1.25

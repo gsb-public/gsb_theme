@@ -1,0 +1,204 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+
+// PhD Candidates - Detail
+
+// Page title
+.node-type-phd-candidate
+  #page-title
+    +breakpoint($bp-mobile-max)
+      display: block
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
+  .group-wrapper-name
+    +breakpoint($bp-mobile-max)
+      display: none
+
+// Detail page
+.node-phd-candidate.view-mode-full
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  a
+    color: $text-green
+    &:hover
+      color: $text-blue
+  // Replace file size with pdf icon
+  .field-name-field-file-job-market-paper a,
+  .field-collection-item-field-publications .field-name-field-file-single-public a,
+  .field-collection-item-field-working-papers .field-name-field-file-single-public a,
+  .field-collection-item-field-work-in-progress .field-name-field-file-single-public a
+    font-size: 18px
+    &:before
+      color: $black
+      content: "   |   "
+      display: inline
+    +icon-after("pdf", true)
+    &:after
+      @extend %doc-attached-icons
+  // Labels
+  .label-above,
+  .field-label
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 18px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+
+  &.ds-2col > .group-left
+    width: 270px
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+
+  &.ds-2col > .group-right
+    float: none
+    margin-bottom: 20px
+    padding-left: 300px
+    width: auto
+    +breakpoint($bp-mobile-max)
+      float: left
+      margin-bottom: 0
+      padding-left: 0
+
+  // Photo label
+  .field-name-field-academic-area-single
+    background: $grey-dark
+    color: $white
+    font-size: 14px
+    line-height: 18px
+    margin-bottom: 20px
+    padding: 14px $standard-padding
+    span:before
+      content: "PhD Candidate,"
+      display: inline
+      margin-right: 0.3em
+  // Information block under photo
+  .group-wrapper-information
+    @extend %group-wrapper-information
+  // Email address
+  .field-name-field-email
+    border-bottom: 1px solid #e4e4e4
+    a
+      display: inline-block
+      max-width: 211px
+      padding-bottom: 15px
+      word-wrap: break-word
+    a
+      +icon-after("pdf", true)
+      &:after
+        font-size: 12px
+        line-height: 0
+  // Links wrapper
+  .group-wrapper-link
+    border-top: 1px solid $white
+    border-bottom: 1px solid #e4e4e4
+    padding: 15px 0
+    .field-name-field-file-single-public
+      a
+        +icon-after("pdf", true)
+        &:after
+          @extend %doc-attached-icons
+
+  // Address field
+  .field-name-phd-address
+    border-top: 1px solid $white
+    .field-items
+      padding-top: 15px
+
+  // Name
+  .group-wrapper-name
+    color: $text-blue
+    font-family: $font-demi
+    font-size: 34px
+    font-weight: normal
+    line-height: 40px
+    margin: 25px 0
+    span
+      &:after
+        content: " "
+
+  // Title and text sizing and spacing
+  .field-name-field-phd-research-interests,
+  .field-name-field-research-statement,
+  .field-name-field-teaching-statement,
+  .field-name-field-link-single,
+  .field-name-field-description,
+  .field-name-field-body,
+  .field-name-field-job-market-paper-desc
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 20px
+
+  .field-name-field-phd-research-interests,
+  .field-name-field-research-statement,
+  .field-name-field-teaching-statement
+    .label-above
+      margin-bottom: 10px
+
+  .field-name-field-link-single
+    font-weight: bold
+    a
+      +icon-after("arrow-double-right", true)
+      &:after
+        font-size: 18px
+        line-height: 24px
+  // Faculty advisors
+  .field-name-field-person-fac-ref
+    margin-bottom: 20px
+    .label-above
+      margin-bottom: 0
+    a:after
+      color: $black
+      content: ","
+      margin-right: 0.3em
+    span:last-of-type
+      a:after
+        content: ""
+
+  // Job market paper
+  .group-wrapper-jobpaper
+    @extend %divider-top
+    margin-top: 35px
+    padding-top: 35px
+    // Use label style from above
+    h3
+      font-size: 18px
+      font-weight: bold
+      line-height: 24px
+      margin-bottom: 18px
+  .field-name-field-job-market-paper-desc
+    margin-top: 10px
+    margin-bottom: 35px
+
+  // Publications
+  // Working papers
+  // Work in progress
+  .field-name-field-publications,
+  .field-name-field-working-papers,
+  .field-name-field-work-in-progress
+    @extend %divider-top
+    margin-top: 35px
+    padding-top: 35px
+
+  .field-name-field-publications .field-name-field-description,
+  .field-name-field-working-papers .field-name-field-body,
+  .field-name-field-work-in-progress .field-name-field-body
+    margin-top: 10px
+
+  // Publications
+  .field-name-field-publications
+    .field-name-field-phd-citation
+      color: $grey-dark

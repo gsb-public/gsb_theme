@@ -1,0 +1,77 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Library FAQ's Block
+.pane-library-faq-form
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding: $standard-padding
+  +breakpoint($bp-mobile-max)
+    height: 194px
+  .pane-title
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.2
+    color: $text-black
+    font-family: $font-sans
+  .pane-content
+    //Search Field
+    .hidden
+      width: 82%
+      float: left
+      margin-right: 0
+      padding-right: 36px
+      height: 36px
+  // Submit button
+  input[type=text]
+    border-color: #d3d3d3
+  .submit
+    float: left
+    text-indent: 1000px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    border: none
+    width: 36px
+    height: 36px
+    .svg &
+      +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
+      background-size: 60px
+      &:hover
+        +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        background-size: 60px
+    .no-js &, .no-svg &
+      +background(image_url("search-white.png") no-repeat 11px 11px, $red)
+      &:hover
+        +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
+
+.narrow-view
+  .pane-library-faq-form
+    .pane-content
+      margin-bottom: 32px
+      .search_text
+        font-size: 18px
+        line-height: 1.2
+        font-weight: normal
+        padding: 12px 0
+      .hidden
+        font-size: 14px
+.wide-view
+  .pane-library-faq-form
+    .pane-content
+      margin-bottom: 36px
+      .search_text
+        font-size: 20px
+        line-height: 1.2
+        font-weight: normal
+        padding: 14px 0

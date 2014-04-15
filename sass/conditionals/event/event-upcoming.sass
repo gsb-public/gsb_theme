@@ -1,0 +1,59 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Event - Upcoming events
+
+.pane-gsb-event-upcoming-events
+  @extend %bg-border-and-box-shadow
+  padding: $standard-padding
+  padding-top: 20px
+  h2.pane-title
+    color: $red
+    font-size: 14px
+    font-weight: normal
+    line-height: 18px
+    margin-bottom: 20px
+    a:hover
+      color: $link-blue
+  .view-gsb-event .view-content .views-row
+    border: 0
+    padding: 14px 0
+    position: relative
+    top: 0
+  .view-mode-event_upcoming
+    &:before
+      content: image_url("tab-club.jpg")
+      display: block
+      left: -24px
+      position: absolute
+      top: -8px
+  .field-name-field-address
+    color: $text-grey-light
+    font-size: 14px
+    margin-bottom: 12px
+  .field-name-field-event-date
+    margin-bottom: 8px
+    line-height: 1.1
+    color: $text-grey-light
+    font-size: 14px
+  .field-name-title h2
+    font-size: 20px
+    line-height: 1.1
+    margin-bottom: 8px
+    a
+      color: $text-green
+      &:hover
+        color: $text-blue
+  .field-name-field-editorial-summary
+    color: $text-black
+    font-size: 14px
+    line-height: 18px
+  .more-link a
+    @extend %teal-cta

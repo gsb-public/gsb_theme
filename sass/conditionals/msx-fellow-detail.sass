@@ -1,0 +1,84 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// MSx Fellows - Detail
+
+// MSx fellows page
+.node-type-msx-fellows
+  #page-title
+    +breakpoint($bp-mobile-max)
+      display: block
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
+  .field-name-title
+    +breakpoint($bp-mobile-max)
+      display: none
+
+// MSx Fellows detail page
+.node-msx-fellows
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+  .field-name-field-title-position-unlimited,
+  .field-name-field-company-organization,
+  .field-name-field-location,
+  .field-name-field-academic-degrees
+    font-weight: bold
+    font-size: 20px
+    margin-bottom: 5px
+  .field-name-field-location
+    font-weight: normal
+  .field-name-field-academic-degrees
+    margin-top: 15px
+    .label-above
+      margin-bottom: 5px
+    .item-list ul
+      margin: 0
+      li
+        font-size: 18px
+        font-weight: normal
+        margin: 0 0 0 20px
+        line-height: 24px
+        &:before
+          color: $text-blue
+          content: "•"
+          margin-left: -20px
+          padding-right: 8px
+  .field-name-field-body
+    font-size: 18px
+    line-height: 1.4em
+  .field-name-title
+    margin-top: 25px
+    margin-bottom: 25px
+  .field-name-field-year
+    background: $grey-dark
+    color: $white
+    font-size: 14px
+    padding: 9px $standard-padding 5px
+
+  &.ds-2col > .group-left
+    width: 270px
+    img
+      display: block
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 20px
+
+  &.ds-2col > .group-right
+    float: none
+    width: auto
+    padding-left: 300px
+    +breakpoint($bp-mobile-max)
+      float: left
+      padding-left: 0

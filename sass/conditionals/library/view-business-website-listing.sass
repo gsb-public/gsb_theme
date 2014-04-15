@@ -1,0 +1,28 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Business website - Listing
+
+// Selected Business Website Category listing
+.view-business-website-category-listing
+  .letter-group
+    display: none
+  .view-content
+    -moz-column-count: 3
+    -webkit-column-count: 3
+    column-count: 3
+  .views-row
+    a
+      padding-right: 10px
+      color: $link-green
+      &:hover
+        color: $link-blue
+    .views-field-name
+      padding: 8px 0

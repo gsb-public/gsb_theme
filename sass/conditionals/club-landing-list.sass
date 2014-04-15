@@ -1,0 +1,107 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Clubs - Listing
+
+.view-display-id-club_list,
+.view-display-id-search_club
+  border-top: 0
+  margin-bottom: 30px
+  .view-content
+    @extend %bg-border-and-box-shadow
+  .views-row
+    border-bottom: none
+    padding: 0 $standard-padding
+    position: relative
+    top: 0
+
+.node-club.view-mode-teaser
+  padding: 0
+  position: relative
+  top: 0
+  h5
+    line-height: 1.2
+    margin-bottom: 18px
+    padding-top: 20px
+    text-transform: none
+    &:before
+      content: image_url("tab-club.jpg")
+      position: absolute
+      top: -8px
+    a
+      color: $link-green
+      padding-right: 10px
+      +icon-after("arrow-external", true)
+      &:after
+        color: $green-light
+        font-size: 12px
+        margin-left: 0.3em
+      &:hover
+        color: $text-blue
+        &:after
+          color: $teal-light
+  .field-name-field-body
+    font-size: 18px
+    line-height: 1.4
+    margin: 4px 0
+  .field-name-field-email
+    margin-bottom: 30px
+    a
+      color: $link-green
+      +icon-after("email-stroke", true)
+      &:after
+        font-size: 12px
+        line-height: 0
+        margin-left: 0.3em
+      &:hover
+        color: $link-blue
+        text-decoration: underline
+
+// Club filters
+.pane-club-filters-club-by-id-or-tag
+  @extend %bg-border-and-box-shadow
+  padding: $standard-padding
+  overflow: hidden
+  h2
+    margin-bottom: 18px
+  .view-club-filters
+    .more-link
+      @extend %bg-border-and-box-shadow
+      @include filter-gradient(#fbfaf8, $grey-e, vertical)
+      width: 50%
+      min-width: 208px
+      float: right
+      text-align: left
+      a
+        display: block
+        padding: 14px 50px 11px 22px
+        font-size: 16px
+        color: $text-green
+        position: relative
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-big
+          font-weight: bold
+          color: #e3e3e3
+        &:hover
+          color: $text-blue
+          &:after
+            color: $teal-light
+
+// Hide duplicate search and filter
+#views-exposed-form-club-filters-club-list
+  #edit-term-node-tid-depth-2-wrapper
+    .inner-sidebar-wrapper &
+      display: none
+  #edit-keyword-wrapper,
+  #edit-search-wrapper,
+  .views-submit-button
+    .inner-main-wrapper &
+      display: none

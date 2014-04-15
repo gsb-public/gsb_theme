@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+@media (max-width: 35.5em) {
+  .node-type-msx-fellows #page-title {
+    display: block;
+    color: #2d6280;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 40px;
+  }
+}
+@media (max-width: 35.5em) {
+  .node-type-msx-fellows .field-name-title {
+    display: none;
+  }
+}
+
+.node-msx-fellows {
+  border-top: 3px solid #231f20;
+  padding-top: 2px;
+}
+@media (max-width: 35.5em) {
+  .node-msx-fellows {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+.node-msx-fellows .field-name-field-title-position-unlimited,
+.node-msx-fellows .field-name-field-company-organization,
+.node-msx-fellows .field-name-field-location,
+.node-msx-fellows .field-name-field-academic-degrees {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.node-msx-fellows .field-name-field-location {
+  font-weight: normal;
+}
+.node-msx-fellows .field-name-field-academic-degrees {
+  margin-top: 15px;
+}
+.node-msx-fellows .field-name-field-academic-degrees .label-above {
+  margin-bottom: 5px;
+}
+.node-msx-fellows .field-name-field-academic-degrees .item-list ul {
+  margin: 0;
+}
+.node-msx-fellows .field-name-field-academic-degrees .item-list ul li {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 0 20px;
+  line-height: 24px;
+}
+.node-msx-fellows .field-name-field-academic-degrees .item-list ul li:before {
+  color: #2d6280;
+  content: "•";
+  margin-left: -20px;
+  padding-right: 8px;
+}
+.node-msx-fellows .field-name-field-body {
+  font-size: 18px;
+  line-height: 1.4em;
+}
+.node-msx-fellows .field-name-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.node-msx-fellows .field-name-field-year {
+  background: #887e6e;
+  color: white;
+  font-size: 14px;
+  padding: 9px 26px 5px;
+}
+.node-msx-fellows.ds-2col > .group-left {
+  width: 270px;
+}
+.node-msx-fellows.ds-2col > .group-left img {
+  display: block;
+}
+@media (max-width: 35.5em) {
+  .node-msx-fellows.ds-2col > .group-left {
+    margin-bottom: 20px;
+  }
+}
+.node-msx-fellows.ds-2col > .group-right {
+  float: none;
+  width: auto;
+  padding-left: 300px;
+}
+@media (max-width: 35.5em) {
+  .node-msx-fellows.ds-2col > .group-right {
+    float: left;
+    padding-left: 0;
+  }
+}

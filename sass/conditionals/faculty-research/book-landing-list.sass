@@ -1,0 +1,56 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Book - Landing list
+
+// View overrides
+.view-display-id-book_listing
+  // General filter styles are in _search-filters
+  // Checkboxes in 3 columns instead of 4
+  .views-exposed-form
+    @extend %divider-bottom
+    .form-type-select .bef-checkboxes
+      -moz-column-count: 3
+      -webkit-column-count: 3
+      column-count: 3
+
+  // General view mode teaser listing styles are in _view-mode-teaser-listing
+  .view-content
+    .views-row
+      border-bottom: 1px $text-black solid
+      &:last-of-type
+        border-bottom: 0
+
+// Content overrides
+.node-book.view-mode-teaser_listing
+  +clearfix
+
+  // Layout for image
+  .left.second-column
+    float: left
+    max-width: 70%
+  .right
+    float: right
+    +breakpoint(750px max-width)
+      max-width: 85px
+    +breakpoint(623px 569px)
+      max-width: 50px
+    +breakpoint(568px 480px)
+      max-width: 85px
+    +breakpoint($bp-mobile-480)
+      max-width: 50px
+
+  // Image
+  .field-name-field-image-single-public
+    max-width: 100px
+
+  // Authors
+  .field-name-field-authors
+    display: inline

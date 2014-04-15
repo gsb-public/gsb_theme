@@ -1,0 +1,211 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Program Finder
+
+$bp-program-finder: 1165px max-width
+
+.pane-program-finder
+  .field-group-tab-wrapper
+    @extend %border-and-box-shadow
+    +background(linear-gradient(right, #355567, #7390a1))
+    background: image_url("bg-program-finder.jpg") no-repeat
+    height: 476px
+    padding: 10px
+    +breakpoint($bp-program-finder)
+      height: auto
+      padding: 0
+      +background(linear-gradient(right, #355567, #7390a1))
+  div.vertical-tabs
+    @extend %border
+    +background(linear-gradient(#f4f4f4, $grey-d))
+    height: 450px
+    margin: 0 0 0 15em
+    +breakpoint($bp-program-finder)
+      height: auto
+      margin: 0
+      background: transparent
+      border: 0
+    fieldset.vertical-tabs-pane
+      border: 0
+      padding: 30px 40px 36px
+      +breakpoint($bp-program-finder)
+        padding: 14px
+        +background(linear-gradient(#f4f4f4, $grey-d))
+        width: 100%
+    .fieldset-wrapper
+      a
+        color: $text-green
+        display: inline-block
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 14px
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: $grey-med
+          font-size: 12px
+          position: relative
+          left: 5px
+        &:hover
+          color: $text-blue
+    .vertical-tabs-panes
+      height: 438px
+      overflow: hidden
+      +breakpoint($bp-program-finder)
+        height: auto
+    ul.vertical-tabs-list
+      border-top: 0
+      margin: -2px 0 -2px -15em
+      width: 238px
+      li
+        background-color: transparent
+        +icon-after("arrow-med-down", true)
+        &:after
+          color: $white
+          float: right
+          font-size: 14px
+          position: relative
+          top: -35px
+          right: 10px
+        border-left: 0
+        border-top: 1px solid #8aa5b4
+        border-bottom: 1px solid #647f8f
+        border-right: 1px solid $text-blue
+        &:focus
+          outline: 0
+        &:first-of-type
+          border-top: 1px solid transparent
+        &:last-of-type
+          border-bottom: 1px solid transparent
+
+        &.selected
+          background-color: #f4f4f4
+          &:after
+            color: $grey-med
+          width: 240px
+          &:first-of-type
+            border-top: 2px solid $white
+          &:last-of-type
+            border-bottom: 2px solid $white
+        a
+          color: $white
+          font-size: 20px
+          line-height: 1
+          padding: 17px 24px 17px 12px
+          strong
+            font-weight: normal
+          &:hover
+            outline: 0
+            strong
+              text-decoration: none
+      .selected
+        @extend %border
+        border-right: 1px solid transparent
+        strong
+          color: $grey-dark
+
+  // Split columns
+  .program-columns
+    +clearfix
+    .column-a,
+    .column-b
+      width: 230px
+      float: left
+      +breakpoint($bp-program-finder)
+        width: auto
+        float: none
+    .column-a
+      margin-right: 55px
+      +breakpoint($bp-program-finder)
+        margin-right: 0
+    p
+      font-size: 16px
+      line-height: 19px
+      +breakpoint($bp-program-finder)
+        font-size: 18px
+        line-height: 24px
+
+
+// Reponsive behavior
+
++breakpoint($bp-program-finder)
+  ul.vertical-tabs-list
+    margin: 0
+    padding: 0
+
+  .vertical-tabs-list li
+    display: inline-block
+    padding: 14px
+    margin: 0
+    list-style: none
+    cursor: pointer
+    float: left
+
+  .vertical-tabs-panes
+    padding: 0
+    clear: left
+
+  .resp-accordion a
+    color: $white
+    display: block
+    margin: 0
+    font-size: 22px
+    font-family: $font-sans
+    padding: 10px 14px
+    border-top: 1px solid #8aa5b4
+    &:not(8n)
+      border-bottom: 1px solid #647f8f
+    +icon-after("arrow-med-down", true)
+    &:after
+      color: $white
+      float: right
+      font-size: 14px
+      line-height: 3
+    &:hover
+      background-color: #f4f4f4
+      color: $grey-dark
+      &:after
+        color: $grey-dark
+
+  .resp-tab-content
+    display: none
+    padding: 15px
+
+  .resp-tab-active a
+    border-bottom: none
+    margin-bottom: -1px !important
+    background-color: #f4f4f4
+    color: $grey-dark
+    +icon-after("arrow-med-up", true)
+    &:after
+      color: $grey-dark
+
+  .resp-content-active,
+  .resp-accordion-active,
+  .resp-easy-accordion  h2.resp-accordion,
+  .resp-tab-content-active
+    display: block
+
+  .resp-jfit
+    width: 100%
+    margin: 0
+
+  ul.vertical-tabs-list
+    display: none
+
+  .resp-vtabs .vertical-tabs-panes
+    border: none
+    float: none
+    width: 100%
+    min-height: initial
+    clear: none
+
+  .resp-accordion-closed
+    display: none !important

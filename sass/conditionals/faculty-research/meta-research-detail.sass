@@ -1,0 +1,102 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+// Detail page shared styles
+// Case study, working paper, book and publication detail
+.node-working-paper.view-mode-full,
+.node-case.view-mode-full,
+.node-book.view-mode-full,
+.node-publication.view-mode-full
+  // Layout
+  &.ds-2col > .group-left
+    margin-right: -300px
+    width: 100%
+    +breakpoint(700px max-width)
+      margin-right: 0
+      margin-bottom: 20px
+    +breakpoint($bp-mobile-max)
+      border-top: 0
+      padding-top: 0
+    .group-left-inner
+      @extend %black-border-top-small
+      margin-right: 300px
+      padding-top: 2px
+      +breakpoint(700px max-width)
+        margin-right: 0
+    img
+      display: block
+
+  &.ds-2col > .group-right
+    float: right
+    width: 270px
+    +breakpoint(700px max-width)
+      float: left
+
+  // Authors by inline label
+  .gsb_field_formatter_field_collection_separator .label-inline
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.2
+
+  .field-name-title h2
+    color: $text-black
+    font-family: $font-demi
+    font-size: 28px
+    font-weight: normal
+    line-height: 1.2
+    margin-top: 25px
+    padding-bottom: 12px
+
+  // Authors
+  .gsb_field_formatter_field_collection_separator
+    line-height: 0
+
+  .field-name-field-author,
+  .field-name-field-authors,
+  .field-collection-item-field-authors
+    font-family: $font-demi
+    font-size: 18px
+    line-height: 1.2
+    a
+      font-weight: normal
+      &:hover
+        color: $link-blue
+
+  .group-wrapper-taxonomy,
+  .group-wrapper-topics
+    h3
+      display: none
+    font-size: 16px
+    line-height: 1.2
+    margin-top: 6px
+    a
+      font-weight: normal
+      &:hover
+        color: $link-blue
+
+  .field-name-field-month,
+  .field-name-field-pub-date-day,
+  .field-name-field-year-of-publication,
+  .field-name-field-year,
+  .field-name-field-item-id
+    font-size: 16px
+    line-height: 1.2
+
+  .field-name-field-description,
+  .field-name-field-body
+    @extend %p
+    margin-bottom: 26px
+    margin-top: 16px
+
+  // Faculty author block
+  .faculty-author-wrapper
+    +author-block

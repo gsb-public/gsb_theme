@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.group_witl_photo_info,
+.group_witl_group_days {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (max-width: 35.5em) {
+  .group_witl_photo_info,
+  .group_witl_group_days {
+    max-width: 270px;
+  }
+}
+
+.group_witl_photo_info {
+  margin-bottom: 2em;
+  border: 1px solid #ededed;
+  -moz-box-shadow: 0 1px 2px #d4d4d4;
+  -webkit-box-shadow: 0 1px 2px #d4d4d4;
+  box-shadow: 0 1px 2px #d4d4d4;
+}
+@media (max-width: 35.5em) {
+  .group_witl_photo_info {
+    padding-bottom: 20px;
+  }
+}
+.group_witl_photo_info .field-type-datetime {
+  margin: 0 !important;
+}
+.group_witl_photo_info h2 {
+  padding: 30px 0 16px;
+  border: 0 none;
+}
+
+.group_witl_photo_wrap_mba {
+  position: relative;
+}
+.group_witl_photo_wrap_mba .date-display-single {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #887e6e;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 27px 3px;
+}
+.group_witl_photo_wrap_mba .date-display-single:before {
+  content: "MBA ";
+}
+
+.field-name-field-witl-under-photo-facts {
+  background: -moz-linear-gradient(top, #1b1b1b, #272727);
+  background: -o-linear-gradient(top, #1b1b1b, #272727);
+  background: -webkit-linear-gradient(top, #1b1b1b, #272727);
+  background: linear-gradient(to bottom, #1b1b1b, #272727);
+  color: white;
+  padding: 20px;
+}
+@media (max-width: 35.5em) {
+  .field-name-field-witl-under-photo-facts {
+    margin-bottom: 15px;
+  }
+}
+.field-name-field-witl-under-photo-facts .field-item {
+  font-size: 1em;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6em;
+  padding-left: 1em;
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.field-name-field-witl-under-photo-facts .field-item:last-of-type {
+  margin-bottom: 0;
+}
+.field-name-field-witl-under-photo-facts .field-item:before {
+  content: "•";
+  color: #547f97;
+  margin-right: 0;
+  position: absolute;
+  margin-left: -1em;
+}
+
+.group_witl_listing_wrap {
+  position: relative;
+}
+
+.field-name-field-witl-post-mba-goals,
+.field-name-field-witl-facts-title,
+.field-name-field-witl-facts {
+  font-size: 18px;
+  line-height: 1.3;
+}
+.field-name-field-witl-post-mba-goals .field-label,
+.field-name-field-witl-facts-title .field-label,
+.field-name-field-witl-facts .field-label {
+  padding-bottom: 5px;
+}
+
+.field-name-field-witl-facts-title {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.view-week-in-the-life {
+  margin-bottom: 20px;
+}
+.view-week-in-the-life .field-name-title {
+  color: #990000;
+  font-size: 22px;
+  background: -moz-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: -o-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: -webkit-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: linear-gradient(to bottom, #fbfaf8, #f3f2f2);
+  border-bottom: 1px solid #e6e5e5;
+  padding: 23px 20px 13px;
+  line-height: 1.25;
+}
+.view-week-in-the-life .field-name-title a:hover {
+  color: #2d6280;
+}
+.view-week-in-the-life .field-name-field-year {
+  font-weight: bold;
+  margin-top: 0;
+  padding: 0;
+  margin: 0;
+}
+.view-week-in-the-life .date-display-single {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  background-color: #887e6e;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 9px 27px 4px;
+}
+.view-week-in-the-life .date-display-single:before {
+  content: "MBA ";
+}
+.view-week-in-the-life .view-header p {
+  font-size: 25px;
+  line-height: 1.3;
+}
+.view-week-in-the-life .view-header p > strong {
+  color: #2c627c;
+}
+.view-week-in-the-life .view-mode-teaser {
+  padding: 0 0 30px 0;
+  position: relative;
+  height: 600px;
+  background: white;
+  -moz-box-shadow: 1px 1px 0 #f3f3f3;
+  -webkit-box-shadow: 1px 1px 0 #f3f3f3;
+  box-shadow: 1px 1px 0 #f3f3f3;
+  margin: 0 2px 2px 2px;
+  border: 1px solid #e3e3e3;
+}
+.view-week-in-the-life .field-name-field-image-single-public {
+  margin: -1px -1px 0 -1px;
+  float: none;
+}
+.view-week-in-the-life .field-name-field-image-single-public img {
+  vertical-align: top;
+}
+.view-week-in-the-life .field-name-node-link {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px 26px;
+}
+.view-week-in-the-life .field-name-node-link a {
+  background: #538b80;
+  display: block;
+  padding: 11px 16px 10px;
+  color: white;
+  font-weight: bold;
+}
+.view-week-in-the-life .field-name-node-link a:hover {
+  background: #754760;
+}
+.view-week-in-the-life .field-name-node-link a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-week-in-the-life .field-name-node-link a:before {
+  float: right;
+  color: white;
+  font-size: 21px;
+  line-height: 0.5;
+  position: relative;
+  top: 4px;
+  right: 2px;
+}
+.view-week-in-the-life .view-footer {
+  border: 1px solid #e5e5e5;
+  padding: 2px;
+  background: white;
+}
+@media (max-width: 20em) {
+  .view-week-in-the-life .view-footer {
+    width: 270px;
+  }
+}
+.view-week-in-the-life .view-footer p {
+  margin: 0;
+}
+.view-week-in-the-life .view-footer p a {
+  display: block;
+  font-weight: bold;
+  background: -moz-linear-gradient(top, #fbfaf8, #ededed);
+  background: -o-linear-gradient(top, #fbfaf8, #ededed);
+  background: -webkit-linear-gradient(top, #fbfaf8, #ededed);
+  background: linear-gradient(to bottom, #fbfaf8, #ededed);
+  border: 0 none;
+  color: #990000;
+  padding: 15px 20px 11px;
+}
+.view-week-in-the-life .view-footer p a:hover:before {
+  color: #990000;
+}
+.view-week-in-the-life .view-footer p a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-week-in-the-life .view-footer p a:before {
+  float: right;
+  color: #c2b7a1;
+  font-size: 21px;
+  line-height: 0.5;
+  position: relative;
+  top: -2px;
+  right: 2px;
+}

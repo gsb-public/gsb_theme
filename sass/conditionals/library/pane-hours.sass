@@ -1,0 +1,51 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Today's Hours Block
+.pane-agenda-2
+  @extend %bg-border-and-box-shadow
+  padding: $standard-padding
+  // Pane title
+  .pane-title
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.2
+    color: $text-black
+    font-family: $font-sans
+  // Pane content
+  .agenda-block
+    p
+      display: none
+    ol
+      margin: 0
+    li
+      background: none
+      padding: 10px 0 0 0
+    .calendar_title
+      color: $text-black
+      font-size: 18px
+      font-weight: normal
+      line-height: 1.2
+      position: relative
+      left: -13px
+      +icon-before("clock", true)
+      &:before
+        color: $grey-dark
+        font-weight: normal
+        font-size: 28px
+        margin-right: 2px
+        position: relative
+        top: 5px
+
+    .moreinfo
+      display: none
+  a
+    @extend %teal-cta
+    margin-top: 7px
