@@ -1,0 +1,128 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.node-publication.view-mode-full .group-wrapper-links a {
+  padding: 10px 16px;
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background: #636f00;
+  background: -moz-linear-gradient(top, #6c7200, #636f00);
+  background: -o-linear-gradient(top, #6c7200, #636f00);
+  background: -webkit-linear-gradient(top, #6c7200, #636f00);
+  background: linear-gradient(to bottom, #6c7200, #636f00);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.node-publication.view-mode-full .group-wrapper-links a:after {
+  color: white !important;
+}
+.node-publication.view-mode-full .group-wrapper-links a:hover {
+  border: 0;
+  color: white;
+}
+.node-publication.view-mode-full .group-wrapper-links a:hover:after {
+  color: white !important;
+}
+
+.node-publication.view-mode-full .group-wrapper-links {
+  border-top: 1px #cccccc solid;
+}
+
+.node-publication.view-mode-full .group-wrapper-links {
+  border-bottom: 1px #cccccc solid;
+}
+
+.node-publication.view-mode-full .group-wrapper-links a:after {
+  margin-left: 3px;
+  font-weight: normal;
+}
+.node-publication.view-mode-full .group-wrapper-links a:hover:after {
+  color: #2d6280;
+}
+
+.node-type-publication #page-title {
+  display: none;
+}
+
+.node-publication.view-mode-full .group-wrapper-published {
+  line-height: 1.2;
+}
+.node-publication.view-mode-full .group-wrapper-commas {
+  display: inline;
+}
+.node-publication.view-mode-full .group-wrapper-commas:after {
+  content: ".";
+}
+.node-publication.view-mode-full .group-wrapper-commas h3 {
+  display: none;
+}
+.node-publication.view-mode-full .group-wrapper-links {
+  margin-top: 16px;
+  padding: 26px 0;
+}
+.node-publication.view-mode-full .group-wrapper-links a:hover {
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+.node-publication.view-mode-full .group-wrapper-links .field {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.node-publication.view-mode-full .group-wrapper-links .field:first-of-type {
+  margin-right: 6px;
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-link-single a:after {
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-link-single a:after {
+  font-size: 12px;
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-file-single-public a:after {
+  content: "\f118";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-publication.view-mode-full .group-wrapper-links .field-name-field-file-single-public a:after {
+  font-size: 14px;
+}

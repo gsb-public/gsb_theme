@@ -1,0 +1,232 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.view-display-id-event_listing_pane .views-row .node, .view-display-id-event_listing_pane .views-exposed-widget {
+  border-bottom: 1px #cccccc solid;
+}
+
+.page-events #main {
+  position: relative;
+}
+.page-events .view-filters {
+  margin-right: 30px;
+}
+.page-events .view-gsb-event {
+  overflow: hidden;
+  *zoom: 1;
+}
+.page-events .view-gsb-event .view-content {
+  margin-top: 80px;
+}
+@media (max-width: 35.5em) {
+  .page-events .view-gsb-event .view-content {
+    margin-top: 0;
+  }
+}
+.page-events .view-gsb-event .view-empty {
+  display: inline-block;
+  margin-top: 80px;
+}
+@media (max-width: 35.5em) {
+  .page-events .view-gsb-event .view-empty {
+    margin-top: 0;
+  }
+}
+.page-events div.tabs {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 50em) {
+  .page-events div.tabs {
+    display: none;
+  }
+}
+.page-events ul.tabs {
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.page-events ul.tabs li {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.page-events ul.tabs li a {
+  border: 0;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  height: 50px;
+  display: inline-block;
+  margin: 0;
+  color: white;
+  line-height: 50px;
+  padding: 0 24px 0 20px;
+  background: -moz-linear-gradient(bottom, #c50000, #990000);
+  background: -o-linear-gradient(bottom, #c50000, #990000);
+  background: -webkit-linear-gradient(bottom, #c50000, #990000);
+  background: linear-gradient(to top, #c50000, #990000);
+}
+.page-events ul.tabs li a:before {
+  display: inline-block;
+  text-align: left;
+  float: left;
+  margin-right: 8px;
+  line-height: 43px;
+  color: white;
+  font-weight: normal;
+}
+.page-events ul.tabs li.active a {
+  background: -moz-linear-gradient(bottom, #606060, #6f6f6f);
+  background: -o-linear-gradient(bottom, #606060, #6f6f6f);
+  background: -webkit-linear-gradient(bottom, #606060, #6f6f6f);
+  background: linear-gradient(to top, #606060, #6f6f6f);
+  cursor: default;
+}
+.page-events ul.tabs li:first-of-type a:before {
+  content: "\f116";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.page-events ul.tabs li:first-of-type a:before {
+  font-size: 21px;
+  line-height: 2.3;
+}
+.page-events ul.tabs li:last-of-type {
+  margin-left: 1px;
+}
+.page-events ul.tabs li:last-of-type a:before {
+  content: "\f10a";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.page-events ul.tabs li:last-of-type a:before {
+  font-size: 24px;
+  line-height: 2;
+}
+
+.fullcalendar table.fc-border-separate {
+  border-collapse: collapse;
+}
+.fullcalendar table.fc-border-separate thead {
+  border: 1px solid #666666;
+}
+.fullcalendar table.fc-border-separate tbody td {
+  border: 1px solid #cccccc;
+}
+
+.fc-content .fc-event-default,
+.fc-content .fc-event-time {
+  border-color: #2d6280;
+  background: #2d6280;
+}
+
+.view-display-id-event_listing_pane h5 {
+  display: block;
+  border-top: 1px #231f20 solid;
+  padding-top: 18px;
+}
+.view-display-id-event_listing_pane .views-row-last .node {
+  border-bottom: 0;
+}
+.view-display-id-event_listing_pane .views-exposed-widget {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.view-display-id-event_listing_pane .views-widget label.option {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.node-event.view-mode-event_listing {
+  margin: 0 26px;
+  padding: 18px 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-event.view-mode-event_listing .left.second-column {
+  float: left;
+  max-width: 70%;
+}
+@media (max-width: 52.5em) {
+  .node-event.view-mode-event_listing .left.second-column {
+    max-width: 100%;
+  }
+}
+.node-event.view-mode-event_listing .right {
+  float: right;
+}
+@media (min-width: 62.4375em) and (max-width: 71.25em) {
+  .node-event.view-mode-event_listing .right {
+    float: left;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 52.5em) {
+  .node-event.view-mode-event_listing .right {
+    display: none;
+  }
+}
+.node-event.view-mode-event_listing .field-name-field-image-single-public {
+  width: 170px;
+}
+.node-event.view-mode-event_listing .field-name-field-event-date {
+  margin-bottom: 6px;
+}
+.node-event.view-mode-event_listing .field-name-title {
+  margin-bottom: 5px;
+}
+.node-event.view-mode-event_listing .field-name-title h2 {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.node-event.view-mode-event_listing .field-name-title h2:hover a {
+  color: #2d6280;
+}
+.node-event.view-mode-event_listing .field-name-field-address {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.node-event.view-mode-event_listing .field-name-field-editorial-summary {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 6px 0 15px;
+}

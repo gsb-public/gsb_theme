@@ -1,0 +1,136 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.pane-gsb-event-upcoming-events .more-link a {
+  background: #538b80;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 17px;
+  text-align: left;
+  position: relative;
+}
+.pane-gsb-event-upcoming-events .more-link a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-event-upcoming-events .more-link a:after {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 0;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+}
+.pane-gsb-event-upcoming-events .more-link a:hover {
+  background: #754760;
+}
+
+.pane-gsb-event-upcoming-events {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.pane-gsb-event-upcoming-events {
+  border: 2px white solid;
+}
+
+.pane-gsb-event-upcoming-events {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 0 1px 1px 1px;
+}
+@media (max-width: 35.5em) {
+  .pane-gsb-event-upcoming-events {
+    margin-top: 1px;
+  }
+}
+
+.ie8 .pane-gsb-event-upcoming-events {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.pane-gsb-event-upcoming-events {
+  padding: 26px;
+  padding-top: 20px;
+}
+.pane-gsb-event-upcoming-events h2.pane-title {
+  color: #990000;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.pane-gsb-event-upcoming-events h2.pane-title a:hover {
+  color: #2d6280;
+}
+.pane-gsb-event-upcoming-events .view-gsb-event .view-content .views-row {
+  border: 0;
+  padding: 14px 0;
+  position: relative;
+  top: 0;
+}
+.pane-gsb-event-upcoming-events .view-mode-event_upcoming:before {
+  content: url('../../../images/tab-club.jpg');
+  display: block;
+  left: -24px;
+  position: absolute;
+  top: -8px;
+}
+.pane-gsb-event-upcoming-events .field-name-field-address {
+  color: #656162;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.pane-gsb-event-upcoming-events .field-name-field-event-date {
+  margin-bottom: 8px;
+  line-height: 1.1;
+  color: #656162;
+  font-size: 14px;
+}
+.pane-gsb-event-upcoming-events .field-name-title h2 {
+  font-size: 20px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.pane-gsb-event-upcoming-events .field-name-title h2 a {
+  color: #636f00;
+}
+.pane-gsb-event-upcoming-events .field-name-title h2 a:hover {
+  color: #2d6280;
+}
+.pane-gsb-event-upcoming-events .field-name-field-editorial-summary {
+  color: #231f20;
+  font-size: 14px;
+  line-height: 18px;
+}

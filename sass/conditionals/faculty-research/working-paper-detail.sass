@@ -1,0 +1,55 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+// Working Paper - detail
+
+// See meta-research-detail.sass for shared layout and base styles
+
+// Hide title on detail
+.node-type-working-paper
+  +page-title
+
+.node-working-paper.view-mode-full
+
+  .field-name-field-item-id
+    &:before
+      color: $text-black
+      content: " | "
+      display: inline
+
+  // Authors by inline label
+  .gsb_field_formatter_field_collection_separator .label-inline
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.2
+
+  .field-name-field-tag
+    @extend %divider-bottom
+    font-size: 14px
+    line-height: 1.2
+    padding-bottom: $standard-padding
+    span
+      font-weight: normal
+
+  .field-name-field-link-document
+    @extend %divider-bottom
+    font-size: 18px
+    line-height: 1.2
+    padding: $standard-padding 0
+    a
+      @extend %green-button
+      +icon-after("pdf", true)
+      &:after
+        @extend %doc-attached-icons
+        font-size: 14px
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))

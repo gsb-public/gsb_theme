@@ -1,0 +1,172 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Event - Landing
+
+.page-events
+  #main
+    position: relative
+  .view-filters
+    margin-right: 30px
+  .view-gsb-event
+    +clearfix
+    .view-content
+      margin-top: 80px
+      +breakpoint($bp-mobile-max)
+        margin-top: 0
+    .view-empty
+      display: inline-block
+      margin-top: 80px
+      +breakpoint($bp-mobile-max)
+        margin-top: 0
+
+  // Filter styles
+  div.tabs
+    position: absolute
+    right: 0
+    +breakpoint(800px max-width)
+      display: none
+  ul.tabs
+    border: 0
+    display: block
+    margin: 0
+    padding: 0
+    li
+      border: 0
+      display: inline-block
+      margin: 0
+      padding: 0
+      float: left
+      a
+        border: 0
+        font-weight: normal
+        font-size: 18px
+        text-align: left
+        height: 50px
+        display: inline-block
+        margin: 0
+        color: white
+        line-height: 50px
+        padding: 0 24px 0 20px
+        +background(linear-gradient(bottom, $red-light, $red))
+
+        &:before
+          display: inline-block
+          text-align: left
+          float: left
+          margin-right: 8px
+          line-height: 43px
+          color: $white
+          font-weight: normal
+      &.active
+        a
+          +background(linear-gradient(bottom, #606060, #6f6f6f))
+          cursor: default
+
+      // Event List link
+      &:first-of-type
+        a
+          +icon-before("menu-list", true)
+          &:before
+            font-size: 21px
+            line-height: 2.3
+      // Event Calendar link
+      &:last-of-type
+        margin-left: 1px
+        a
+          +icon-before("calendar-day", true)
+          &:before
+            font-size: 24px
+            line-height: 2
+
+//  Fullcalendar table border
+.fullcalendar table.fc-border-separate
+  border-collapse: collapse
+  thead
+    border: 1px solid $grey-6
+  tbody td
+    border: 1px solid $grey-c
+.fc-content
+  .fc-event-default,
+  .fc-event-time
+    border-color: $text-blue
+    background: $text-blue
+
+// View overrides
+.view-display-id-event_listing_pane
+
+  // Day separation
+  h5
+    display: block
+    border-top: 1px $text-black solid
+    padding-top: 18px
+  // Event separation
+  .views-row .node
+    @extend %divider-bottom
+  .views-row-last .node
+    border-bottom: 0
+  .views-exposed-widget
+    @extend %divider-bottom
+    padding: 0
+    margin-bottom: 20px
+  .views-widget label.option
+    font-size: 13px
+    font-weight: bold
+    text-transform: uppercase
+
+// Content overrides
+.node-event.view-mode-event_listing
+  margin: 0 26px
+  padding: 18px 0
+  +clearfix
+
+  // Layout for image
+  .left.second-column
+    float: left
+    max-width: 70%
+    +breakpoint(840px max-width)
+      max-width: 100%
+
+  .right
+    float: right
+    +breakpoint(999px 1140px)
+      float: left
+      margin-top: 20px
+    +breakpoint(840px max-width)
+      display: none
+
+  // Image
+  .field-name-field-image-single-public
+    width: 170px
+  // Date
+  .field-name-field-event-date
+    margin-bottom: 6px
+  // Title
+  .field-name-title
+    margin-bottom: 5px
+    h2
+      font-family: $font-demi
+      font-size: 24px
+      font-weight: normal
+      line-height: 1.2
+      &:hover
+        a
+          color: $link-blue
+  // Address
+  .field-name-field-address
+    font-size: 14px
+    line-height: 1.2
+    font-weight: bold
+    margin-bottom: 4px
+  // Description
+  .field-name-field-editorial-summary
+    font-size: 16px
+    line-height: 1.2
+    margin: 6px 0 15px

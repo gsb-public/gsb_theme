@@ -1,0 +1,113 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Event - Detail
+
+.node-event.view-mode-full
+  border-top: 3px solid $black
+  padding-top: 0
+  padding-left: 0
+  a
+    border-bottom: 0
+  .group-left
+    padding: $standard-padding
+    padding-bottom: 0
+    width: auto
+    max-width: 600px
+    h2
+      font-weight: bold
+      a
+        color: $text-black
+
+    // Event Date
+    .field-name-field-event-date
+      font-weight: bold
+      font-size: 18px
+      margin-bottom: 20px
+
+    // Title
+    .field-name-title
+      margin-bottom: 25px
+
+    // Speaker name(s)
+    .field-name-field-person-or-other
+      display: none
+
+    .field-name-field-person-fac-other
+      margin-bottom: 25px
+      position: relative
+      top: 0
+      +clearfix
+    .field-collection-item-field-person-fac-other,
+    .separator
+      +float-left
+      line-height: 24px
+      a
+        color: $green-light
+    .separator,
+    .name-first
+      margin-right: 5px
+    .name-first,
+    .name-last,
+    .speaker-name a
+      font-size: 22px
+
+    // Address
+    .field-name-field-address
+      .thoroughfare
+        font-weight: bold
+
+    // Map Link
+    .field-name-field-link-map
+      margin-bottom: 30px
+      a
+        color: $green
+        font-weight: bold
+
+  // Buttons
+  .group-wrapper-buttons
+    line-height: 36px
+    margin-top: 26px
+  .field-name-field-register-url,
+  .event-ical-link
+    display: inline
+  // Register Link
+  .field-name-field-register-url
+    a
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+  .event-ical-link
+    display: none
+    .no-touch &
+      display: inline-block
+
+  .group-right
+    max-width: 270px
+    .group-wrapper-buttons
+      margin-top: 35px
+  .field-name-field-target-audience
+    font-size: 14px
+    padding-top: $standard-padding
+    .field-items
+      float: none
+    .field-item
+      a:after
+        content: ", "
+      &:last-child a:after
+        content: none
+
+  .group-footer
+    margin-left: 26px
+    padding: 30px 0
+    .field-name-field-editorial-summary,
+    .field-name-field-body p
+      font-size: 18px
+      line-height: 28px

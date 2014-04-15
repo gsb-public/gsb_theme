@@ -1,0 +1,47 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Chat with Librarian Block
+.pane-library-chat-form
+  @extend %bg-border-and-box-shadow
+  position: relative
+  .pane-title
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    +icon-before("chat", true)
+    &:before
+      color: #aac5c0
+      font-size: 48px
+      line-height: 0
+      margin-right: 14px
+      position: relative
+      top: 8px
+  .pane-content
+    position: relative
+    left: -6px
+    .libraryh3lp iframe
+      width: 230px !important
+    .helptext
+      font-size: 14px
+      font-weight: normal
+      margin-left: 8px
+
+.wide-view
+  .pane-library-chat-form
+    width: 50%
+    padding: $standard-padding
+.narrow-view
+  .pane-library-chat-form
+    padding: 26px
+    .pane-content
+      .libraryh3lp iframe
+        width: 220px !important

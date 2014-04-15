@@ -1,0 +1,166 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+$bp-four-column-switch: 768px max-width
+
+// List of job candidates
+.view-phd-job-market-candidates .view-content
+  @extend %bg-border-and-box-shadow
+  .views-row.main-view
+    border-top: 10px solid $teal-light
+    margin: 0 26px
+    .view-content
+      background: none
+      border: 0
+      -webkit-box-shadow: none
+      -moz-box-shadow: none
+      box-shadow: none
+      margin: 0
+    // Academic area name
+    .views-field-name
+      display: inline-block
+      font-size: 20px
+      font-weight: bold
+      line-height: 32px
+      margin-bottom: 26px
+      margin-top: 14px
+      +breakpoint($bp-four-column-switch)
+        margin-bottom: 18px
+      +breakpoint($bp-mobile-max)
+        margin-bottom: 10px
+
+    .view-phd-job-market-candidate-detail
+      .node-phd-candidate
+        border-top: 1px solid #e4e4e4
+        padding-top: 18px
+        padding-bottom: $standard-padding
+        +breakpoint($bp-four-column-switch)
+          padding-bottom: 18px
+      .view-empty
+        font-weight: normal
+        text-transform: none
+
+    // Individual candidate
+    .phd-name
+      display: block
+      margin-bottom: 24px
+      a
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: $grey-med
+          font-size: 18px
+          line-height: 24px
+      +breakpoint($bp-four-column-switch)
+        margin-bottom: 18px
+
+    // Column styling
+    .group-second,
+    .group-third,
+    .group-fourth
+      padding: 0 2%
+      width: 25%
+      .label-above
+        color: $grey-dark
+        font-size: 14px
+        font-weight: bold
+        margin-bottom: 18px
+        +breakpoint($bp-four-column-switch)
+          margin-bottom: 10px
+          margin-top: 18px
+
+    .group-first
+      width: 21%
+    .group-third
+      padding: 0
+    .group-fourth
+      float: right
+
+    // Faculty Advisors
+    .field-name-field-person-fac-ref
+      padding-left: 12%
+      +breakpoint($bp-mobile-max)
+        max-width: 50%
+        padding-left: 0
+      +breakpoint($bp-mobile)
+        max-width: 100%
+      a
+        color: $link-green
+        display: inline-block
+        font-size: 16px
+        font-weight: bold
+        line-height: 24px
+        margin-bottom: 14px
+        &:hover
+          color: $link-blue
+        +breakpoint($bp-mobile-max)
+          margin-bottom: 2px
+          &:last-of-type
+            margin-bottom: 14px
+        +breakpoint($bp-mobile)
+          display: block
+
+    // Dissertation
+    .field-name-field-dissertation
+      font-size: 16px
+      line-height: 24px
+
+    // Fourth column
+    .field-name-field-phd-research-interests
+      div:not(:first-of-type)
+        font-size: 14px
+        line-height: 18px
+        margin-bottom: 12px
+
+    // Switch to 2 over 1 layout
+    .group-first
+      +breakpoint($bp-four-column-switch)
+        width: 20%
+    .group-second
+      +breakpoint($bp-four-column-switch)
+        width: 35%
+        .label-above
+          margin-top: 0
+    .group-third
+      +breakpoint($bp-four-column-switch)
+        width: 45%
+        .label-above
+          margin-top: 0
+    .group-fourth
+      +breakpoint($bp-four-column-switch)
+        clear: left
+        float: none
+        margin-left: 24%
+        padding-top: 1px
+        width: 100%
+      +breakpoint($bp-mobile-max)
+        margin-left: 0
+
+    // Switch to 2 column
+    .group-second,
+    .group-third,
+    .group-fourth
+      +breakpoint($bp-mobile-max)
+        float: none
+        margin-left: 25%
+        padding: 0
+        width: 80%
+    .group-second
+      +breakpoint($bp-mobile-max)
+        margin-top: 18px
+
+    // Switch to 1 column
+    .group-first,
+    .group-second,
+    .group-third,
+    .group-fourth
+      +breakpoint($bp-mobile)
+        float: none
+        margin-left: 0
+        width: 100%

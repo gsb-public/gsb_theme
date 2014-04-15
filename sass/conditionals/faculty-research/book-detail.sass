@@ -1,0 +1,166 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Book - Detail
+
+// See meta-research-detail.sass for shared layout and base styles
+
+// Hide title on detail
+.node-type-book
+  #page-title
+    display: none
+
+// Layout
+.node-book.view-mode-full
+
+  .field-name-title h2
+    +breakpoint(400px max-width)
+      font-size: 24px
+      margin-top: 15px
+
+  // Left side
+  .group-left
+    .group-wrapper-meta
+      +clearfix
+    // Image
+    .field-name-field-image-single-public
+      display: inline
+      float: right
+      margin-left: 15px
+      +breakpoint(650px max-width)
+        float: left
+        margin-left: 0
+        margin-right: 15px
+      +breakpoint(580px max-width)
+        margin-right: 10px
+      img
+        max-width: 150px
+        +breakpoint(650px max-width)
+          max-width: 100px
+        +breakpoint(580px 419px)
+          max-width: 85px
+        +breakpoint(419px max-width)
+          max-width: 50px
+
+    // Authors
+    .field-name-field-authors
+      display: inline
+    // Publisher
+    .group-wrapper-publisher
+      font-size: 16px
+      line-height: 1.2
+
+    // No wrap on mobile
+    .field-name-title,
+    .field-name-field-authors,
+    .group-wrapper-publisher,
+    .group-wrapper-topics
+      display: block
+      margin-right: 165px
+      +breakpoint(650px max-width)
+        margin-left: 115px
+        margin-right: 0
+      +breakpoint(580px 420px)
+        margin-left: 95px
+      +breakpoint(419px max-width)
+        margin-left: 60px
+
+  // Links
+  .field-name-field-book-url-pdf-unlimited
+    @extend %divider-bottom
+    @extend %divider-top
+    margin-top: 26px
+    padding: $standard-padding 0
+    a
+      @extend %green-button
+      +icon-after("pdf", true)
+      &:after
+        @extend %doc-attached-icons
+        font-size: 14px
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+    .field-item
+      display: inline-block
+      vertical-align: bottom
+      &:first-of-type
+        margin-right: 6px
+
+  // Selected reviews
+  .field-name-field-selected-reviews
+    background: $grey-e
+    margin-bottom: 26px
+    margin-top: 26px
+    padding: $standard-padding
+    .label-above
+      font-size: 18px
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 12px
+
+  // Single review
+  .field-collection-item-field-selected-reviews
+    margin-top: 16px
+    margin-bottom: 16px
+    &:first-of-type
+      margin-top: 0
+    &:last-of-type
+      margin-bottom: 0
+  // Text
+  .field-name-field-review
+    font-size: 16px
+    line-height: 1.2
+    &:before
+      content: "“"
+    &:after
+      content: "”"
+  // Author
+  .field-name-field-reviewer
+    font-size: 14px
+    font-style: italic
+    line-height: 1.2
+    margin-top: 6px
+    &:before
+      content: "— "
+
+  // Right side
+
+  // CTA (red CTA)
+  .cta-wrapper
+    margin-bottom: 30px
+    .cta-red .field-item a:after
+      right: -46px
+
+  // Buy book (green links)
+  .field-buy-book
+    @extend %bg-border-and-box-shadow
+    padding: 0 $standard-padding 12px
+    // Title
+    .label-above
+      color: $text-black
+      font-size: 20px
+      font-weight: bold
+      padding: 18px 0 11px 0
+      line-height: 1.3
+    // Links
+    .field-item
+      border-top: 1px solid #e4e4e4
+      padding-top: 6px
+      padding-bottom: 5px
+      a
+        padding-right: 10px
+        color: $text-green
+        &[target=_blank]
+          +icon-after("arrow-external", true)
+          &:after
+            font-size: 12px
+            margin-left: 0.3em
+        &:hover
+          color: $text-blue

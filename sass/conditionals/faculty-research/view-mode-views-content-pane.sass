@@ -1,0 +1,97 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Views content panes
+
+// Case study and publications views pane
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1
+  @extend %bg-grey-gradient-e
+  padding: $standard-padding
+  padding-top: 0
+  // CTA link
+  .see-all a
+    @extend %teal-cta
+
+  // Pane title
+  h2.pane-title
+    @extend %taupe-border-top
+    color: $text-black
+    display: block
+    font-family: $font-sans
+    font-size: 16px
+    font-weight: bold
+    line-height: 1.2
+    padding-top: 6px
+
+  // Pane content
+  .pane-content
+    padding-top: 24px
+
+// Views
+.content-pane-listing
+  .views-row
+    margin-bottom: 12px
+
+// View mode
+.view-mode-views_content_pane
+  .group-wrapper-title
+    line-height: 1.2
+  // Item title
+  h2
+    color: $text-black
+    font-size: 16px
+    font-family: $font-demi
+    font-weight: normal
+    line-height: 1.2
+    .pane-case-filters-panel-pane-1 &
+      display: inline
+    a
+      color: $red
+      .pane-case-filters-panel-pane-1 &
+        display: inline
+      &:hover
+        color: $link-blue
+
+  // Document link
+  .field-name-field-link-document
+    a
+      font-size: 16px
+      &:hover
+        color: $link-blue
+      +icon-after("pdf", true)
+      &:after
+        @extend %doc-attached-icons
+        font-size: 10px
+
+  // Authors
+  .gsb_field_formatter_field_collection_separator,
+  .field-name-field-author
+    line-height: 0
+    margin-bottom: 6px
+    margin-top: 2px
+  .field-name-field-author,
+  .field-collection-item-field-authors
+    font-family: $font-demi
+    font-size: 14px
+    font-weight: normal
+    line-height: 1.2
+
+  // Year and publication details
+  .field-name-field-year,
+  .group-wrapper-published
+    font-size: 14px
+    line-height: 1.2
+
+// Cases product
+.case-product-icon.Video
+  display: inline
+  &:before
+    font-size: 20px

@@ -1,0 +1,92 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.pane-e-newsletters-list {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.pane-e-newsletters-list {
+  border: 2px white solid;
+}
+
+.pane-e-newsletters-list {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 0 1px 1px 1px;
+}
+@media (max-width: 35.5em) {
+  .pane-e-newsletters-list {
+    margin-top: 1px;
+  }
+}
+
+.ie8 .pane-e-newsletters-list {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.pane-e-newsletters-list {
+  padding: 26px;
+}
+.pane-e-newsletters-list h2 {
+  color: #231f20;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+.pane-e-newsletters-list .display_archive .campaign {
+  color: #656162;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+  padding-bottom: 12px;
+}
+.pane-e-newsletters-list .display_archive .campaign a {
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+.pane-e-newsletters-list .display_archive .campaign a:after {
+  content: "\f100";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-e-newsletters-list .display_archive .campaign a:after {
+  color: #636f00;
+  font-size: 12px;
+  line-height: 0;
+}
+.pane-e-newsletters-list .display_archive .campaign a:hover {
+  color: #2d6280;
+}
+.pane-e-newsletters-list .display_archive .campaign a:hover:after {
+  color: #aac4bf;
+}

@@ -1,0 +1,159 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.node-event.view-mode-full .field-name-field-register-url a {
+  padding: 10px 16px;
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background: #636f00;
+  background: -moz-linear-gradient(top, #6c7200, #636f00);
+  background: -o-linear-gradient(top, #6c7200, #636f00);
+  background: -webkit-linear-gradient(top, #6c7200, #636f00);
+  background: linear-gradient(to bottom, #6c7200, #636f00);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.node-event.view-mode-full .field-name-field-register-url a:after {
+  color: white !important;
+}
+.node-event.view-mode-full .field-name-field-register-url a:hover {
+  border: 0;
+  color: white;
+}
+.node-event.view-mode-full .field-name-field-register-url a:hover:after {
+  color: white !important;
+}
+
+.node-event.view-mode-full {
+  border-top: 3px solid black;
+  padding-top: 0;
+  padding-left: 0;
+}
+.node-event.view-mode-full a {
+  border-bottom: 0;
+}
+.node-event.view-mode-full .group-left {
+  padding: 26px;
+  padding-bottom: 0;
+  width: auto;
+  max-width: 600px;
+}
+.node-event.view-mode-full .group-left h2 {
+  font-weight: bold;
+}
+.node-event.view-mode-full .group-left h2 a {
+  color: #231f20;
+}
+.node-event.view-mode-full .group-left .field-name-field-event-date {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.node-event.view-mode-full .group-left .field-name-title {
+  margin-bottom: 25px;
+}
+.node-event.view-mode-full .group-left .field-name-field-person-or-other {
+  display: none;
+}
+.node-event.view-mode-full .group-left .field-name-field-person-fac-other {
+  margin-bottom: 25px;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-event.view-mode-full .group-left .field-collection-item-field-person-fac-other,
+.node-event.view-mode-full .group-left .separator {
+  float: left;
+  line-height: 24px;
+}
+.node-event.view-mode-full .group-left .field-collection-item-field-person-fac-other a,
+.node-event.view-mode-full .group-left .separator a {
+  color: #bac405;
+}
+.node-event.view-mode-full .group-left .separator,
+.node-event.view-mode-full .group-left .name-first {
+  margin-right: 5px;
+}
+.node-event.view-mode-full .group-left .name-first,
+.node-event.view-mode-full .group-left .name-last,
+.node-event.view-mode-full .group-left .speaker-name a {
+  font-size: 22px;
+}
+.node-event.view-mode-full .group-left .field-name-field-address .thoroughfare {
+  font-weight: bold;
+}
+.node-event.view-mode-full .group-left .field-name-field-link-map {
+  margin-bottom: 30px;
+}
+.node-event.view-mode-full .group-left .field-name-field-link-map a {
+  color: #7b8201;
+  font-weight: bold;
+}
+.node-event.view-mode-full .group-wrapper-buttons {
+  line-height: 36px;
+  margin-top: 26px;
+}
+.node-event.view-mode-full .field-name-field-register-url,
+.node-event.view-mode-full .event-ical-link {
+  display: inline;
+}
+.node-event.view-mode-full .field-name-field-register-url a:hover {
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+.node-event.view-mode-full .event-ical-link {
+  display: none;
+}
+.no-touch .node-event.view-mode-full .event-ical-link {
+  display: inline-block;
+}
+.node-event.view-mode-full .group-right {
+  max-width: 270px;
+}
+.node-event.view-mode-full .group-right .group-wrapper-buttons {
+  margin-top: 35px;
+}
+.node-event.view-mode-full .field-name-field-target-audience {
+  font-size: 14px;
+  padding-top: 26px;
+}
+.node-event.view-mode-full .field-name-field-target-audience .field-items {
+  float: none;
+}
+.node-event.view-mode-full .field-name-field-target-audience .field-item a:after {
+  content: ", ";
+}
+.node-event.view-mode-full .field-name-field-target-audience .field-item:last-child a:after {
+  content: none;
+}
+.node-event.view-mode-full .group-footer {
+  margin-left: 26px;
+  padding: 30px 0;
+}
+.node-event.view-mode-full .group-footer .field-name-field-editorial-summary,
+.node-event.view-mode-full .group-footer .field-name-field-body p {
+  font-size: 18px;
+  line-height: 28px;
+}

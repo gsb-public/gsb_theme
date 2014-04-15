@@ -1,0 +1,208 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
+  position: absolute;
+  font-size: 21px;
+  right: 12px;
+  top: 50%;
+  margin-top: -10px;
+  line-height: 0;
+}
+
+.view-display-id-club_list .view-content,
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.view-display-id-club_list .view-content,
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link {
+  border: 2px white solid;
+}
+
+.view-display-id-club_list .view-content,
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 0 1px 1px 1px;
+}
+@media (max-width: 35.5em) {
+  .view-display-id-club_list .view-content,
+  .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link {
+    margin-top: 1px;
+  }
+}
+
+.ie8 .view-display-id-club_list .view-content, .view-display-id-club_list .ie8 .view-content,
+.ie8 .view-display-id-search_club .view-content,
+.view-display-id-search_club .ie8 .view-content, .ie8 .pane-club-filters-club-by-id-or-tag, .ie8 .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link, .pane-club-filters-club-by-id-or-tag .view-club-filters .ie8 .more-link {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.view-display-id-club_list,
+.view-display-id-search_club {
+  border-top: 0;
+  margin-bottom: 30px;
+}
+.view-display-id-club_list .views-row,
+.view-display-id-search_club .views-row {
+  border-bottom: none;
+  padding: 0 26px;
+  position: relative;
+  top: 0;
+}
+
+.node-club.view-mode-teaser {
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+.node-club.view-mode-teaser h5 {
+  line-height: 1.2;
+  margin-bottom: 18px;
+  padding-top: 20px;
+  text-transform: none;
+}
+.node-club.view-mode-teaser h5:before {
+  content: url('../../images/tab-club.jpg');
+  position: absolute;
+  top: -8px;
+}
+.node-club.view-mode-teaser h5 a {
+  color: #636f00;
+  padding-right: 10px;
+}
+.node-club.view-mode-teaser h5 a:after {
+  content: "\f102";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-club.view-mode-teaser h5 a:after {
+  color: #bac405;
+  font-size: 12px;
+  margin-left: 0.3em;
+}
+.node-club.view-mode-teaser h5 a:hover {
+  color: #2d6280;
+}
+.node-club.view-mode-teaser h5 a:hover:after {
+  color: #aac4bf;
+}
+.node-club.view-mode-teaser .field-name-field-body {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+.node-club.view-mode-teaser .field-name-field-email {
+  margin-bottom: 30px;
+}
+.node-club.view-mode-teaser .field-name-field-email a {
+  color: #636f00;
+}
+.node-club.view-mode-teaser .field-name-field-email a:after {
+  content: "\f112";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-club.view-mode-teaser .field-name-field-email a:after {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 0.3em;
+}
+.node-club.view-mode-teaser .field-name-field-email a:hover {
+  color: #2d6280;
+  text-decoration: underline;
+}
+
+.pane-club-filters-club-by-id-or-tag {
+  padding: 26px;
+  overflow: hidden;
+}
+.pane-club-filters-club-by-id-or-tag h2 {
+  margin-bottom: 18px;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFBFAF8', endColorstr='#FFEDEDED');
+  width: 50%;
+  min-width: 208px;
+  float: right;
+  text-align: left;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a {
+  display: block;
+  padding: 14px 50px 11px 22px;
+  font-size: 16px;
+  color: #636f00;
+  position: relative;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
+  content: "\f101";
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:after {
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:hover {
+  color: #2d6280;
+}
+.pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:hover:after {
+  color: #aac4bf;
+}
+
+.inner-sidebar-wrapper #views-exposed-form-club-filters-club-list #edit-term-node-tid-depth-2-wrapper {
+  display: none;
+}
+.inner-main-wrapper #views-exposed-form-club-filters-club-list #edit-keyword-wrapper, .inner-main-wrapper
+#views-exposed-form-club-filters-club-list #edit-search-wrapper, .inner-main-wrapper
+#views-exposed-form-club-filters-club-list .views-submit-button {
+  display: none;
+}

@@ -1,0 +1,82 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Faculty Landing List
+
+.pane-faculty-filters-faculty-list
+  .views-row
+    background: none
+  .view-faculty-filters
+    .view-content
+      +clearfix
+      padding-top: 1px
+    .views-row
+      @extend %bg-border-and-box-shadow
+      margin: 0
+      border-bottom: 2px solid $white
+      display: inline-block
+      float: left
+      margin-left: 1px
+      margin-right: 16px
+      margin-bottom: 24px
+      min-height: 300px
+      width: 130px
+      &:nth-of-type(6n)
+        margin-right: 0
+      +breakpoint(1170px max-width)
+        margin-right: 10%
+        width: 170px
+        &:nth-of-type(6n)
+          margin-right: 16px
+        &:nth-of-type(3n)
+          margin-right: 0
+      +breakpoint(769px 937px)
+        &:nth-of-type(3n)
+          margin-right: 10%
+        &:nth-of-type(2n)
+          margin-right: 0
+      +breakpoint(677px max-width)
+        &:nth-of-type(3n)
+          margin-right: 10%
+        &:nth-of-type(2n)
+          margin-right: 0
+    .node-faculty
+      border-top: 0
+      padding: 0 10px
+      .field-name-field-image-single-public
+        margin: -3px -12px 0 -12px
+        float: none
+      // Name
+      .field-name-title
+        margin: 14px 0 8px 0
+        font-size: 18px
+        line-height: 1.2
+        font-family: $font-demi
+        font-weight: normal
+        a:hover
+          color: $link-blue
+      .person-position,
+      .person-area
+        display: inline-block
+        font-family: $font-demi
+        font-size: 14px
+        font-weight: normal
+        line-height: 1.3
+        margin: 0
+        float: left
+        color: $text-black
+        vertical-align: top
+        &:after
+          content: ","
+          margin-right: 0.3em
+        &:last-child
+          &:after
+            content: ""
+            margin-right: 0

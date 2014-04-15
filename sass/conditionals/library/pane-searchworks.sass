@@ -1,0 +1,122 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Library Search Works Block
+.pane-library-searchworks-form
+  .pane-title
+    font-size: 24px
+    font-family: $font-demi
+    font-weight: normal
+    color: $text-black
+    margin-bottom: 30px
+  .tabbed_box
+    margin: 0 auto
+    .tabbed_area
+      ul.searchworks-tabs
+        margin: 0
+        padding: 0
+        position: relative
+        top: -10px
+      li
+        list-style: none
+        display: inline
+        a
+          +background(linear-gradient(#f8f6f6, $grey-e))
+          border: 1px solid #e4e4e4
+          border-bottom: 0
+          font-size: 14px
+          font-weight: normal
+          padding: 14px $standard-padding
+          &.active
+            background: $white
+            border: 1px solid rgba($black, 0.1)
+            border-bottom: 0
+            color: $text-black
+            padding-bottom: 15px
+
+  // Tab panes
+  .searchworks-content
+    @extend %bg-border-and-box-shadow
+    border: 0
+    padding: $standard-padding
+    +pie-clearfix
+
+    // Search field no-wrap
+    #edit-search-wrapper
+      float: left
+      width: 100%
+      margin-right: -36px
+      padding-right: 36px
+      input
+        height: 36px
+        width: 100%
+
+  // ejournal wrapper
+  // Adjustment for select box
+  .searchworks-ejournal
+    margin-left: -199px
+    padding-left: 222px
+
+  .searchworks-select
+    float: left
+    margin-right: 15px
+    max-width: 165px
+    position: relative
+    z-index: 1
+    +breakpoint(1120px 999px)
+      margin-bottom: 12px
+    +breakpoint(820px max-width)
+      margin-bottom: 12px
+
+  .searchworks-ejournal
+    +breakpoint(1120px 999px)
+      margin: 0
+      padding: 0
+    +breakpoint(820px max-width)
+      margin: 0
+      padding: 0
+
+  #content_2
+    display: none
+
+  // Selectbox adjustments
+  .jquery-selectbox,
+  .jquery-selectbox-list
+    width: 195px !important
+  .jquery-selectbox
+    margin-top: 0
+  .jquery-selectbox-list
+    height: auto !important
+
+  // Submit button
+  input[type=text]
+    border-color: #d3d3d3
+  .submit
+    float: left
+    text-indent: 1000px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    border: none
+    width: 36px
+    height: 36px
+    .svg &
+      +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
+      background-size: 60px
+      &:hover
+        +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        background-size: 60px
+    .no-js &, .no-svg &
+      +background(image_url("search-white.png") no-repeat 11px 11px, $red)
+      &:hover
+        +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)

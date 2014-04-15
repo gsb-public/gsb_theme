@@ -1,0 +1,100 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Week in the Life - WITL
+
+.node-type-week-in-the-life
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      color: $text-blue
+      font-family: $font-demi
+      font-size: 34px
+      font-weight: normal
+      line-height: 40px
+  .field-name-title
+    +breakpoint($bp-mobile-max)
+      display: none
+
+// WITL detail page
+.node-week-in-the-life
+  .field-name-title
+    +background(linear-gradient(top, #fbfaf8, #f3f2f2))
+    border-bottom: 1px solid #e6e5e5
+    margin-bottom: 18px
+
+  .field-type-text-long,
+  .field-type-datetime
+    padding: 0 20px
+    color: $text-black
+
+  .field-type-text-long
+    margin-bottom: 20px
+
+  .field-type-datetime
+    font-weight: bold
+    font-size: 18px
+    margin-top: 20px
+
+  .group_witl_photo_wrap
+    float: left
+    margin-right: 3.5%
+    width: 31%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin-right: 0
+      width: 100%
+    img
+      display: block
+
+  .witl-days
+    float: left
+    width: 31%
+    margin-right: 3.5%
+    border: 1px solid #e5e5e5
+    background-color: $white
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin-bottom: 15px
+      margin-right: 0
+      width: 100%
+    &:last-of-type
+      margin-right: 0
+    .field-type-image
+      &:after
+        content: image_url("tab-witl.jpg")
+        float: left
+        margin-top: -10px
+        padding-left: 20px
+
+    .field-type-list-text
+      .field-item
+        padding: 0.8em 1em 0.6em
+
+    .field-collection-view
+      padding: 0
+      margin: 0
+      border: 0 none
+
+    .field-collection-container
+      border: 0 none
+      margin: 0
+
+  .field-type-list-text
+    background-color: $blue
+    color: $white
+    font-weight: bold
+    text-transform: uppercase
+
+.field-name-field-witl-facts-title,
+.field-name-field-witl-facts
+  +breakpoint($bp-mobile-max)
+    padding: 0 20px

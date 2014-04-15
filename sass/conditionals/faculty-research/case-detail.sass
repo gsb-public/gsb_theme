@@ -1,0 +1,132 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+// Case Study detail
+
+// Hide title on detail
+.node-type-case
+  +page-title
+
+// .node-case.view-mode-full
+// See meta-research-detail.sass for shared layout and base styles
+
+// Detail page
+.node-case.view-mode-full
+  .label-inline
+    &:after
+      content: "."
+      height: 0
+      clear: both
+      visibility: hidden
+  // Author label
+  .field-name-field-author .label-inline
+    font-weight: normal
+  // Case published information
+  .field-name-field-business-insight-topic,
+  .field-name-field-year,
+  .field-name-field-item-id,
+  .field-name-field-page-count
+    color: $text-black
+    font-size: 16px
+    line-height: 1.2
+
+  // Learning objective
+  .field-name-field-learning-objective
+    @extend %p
+    margin-bottom: 26px
+    .label-above
+      font-family: $font-demi
+      font-weight: normal
+      padding-bottom: 4px
+      font-size: 18px
+
+  // Keywords
+  .field-name-field-tag
+    font-size: 14px
+    line-height: 1.2
+    padding-bottom: 12px
+    .label-inline
+      font-weight: bold
+
+  // Case citation
+  .field-name-field-citation
+    color: $text-grey-light
+    font-size: 14px
+    line-height: 1.2
+    padding-bottom: 26px
+
+  // Dividing borders
+  .group-wrapper-paper-copy,
+  .field-name-field-link-document
+    @extend %divider-top
+    padding: 20px 0
+    &:last-child
+      @extend %divider-bottom
+
+  // Text sizing
+  // Harvard link, permission statement and document
+  .field-name-field-link-single,
+  .field-name-field-link-center-single,
+  .field-name-field-link-document
+    font-size: 18px
+    line-height: 1.2
+    span
+      font-weight: bold
+
+  // Paper copy
+  .group-wrapper-paper-copy
+    h3
+      font-size: 18px
+      line-height: 1.2
+      margin-bottom: 12px
+    .field
+      margin-bottom: 6px
+      padding-left: 14px
+      &:last-of-type
+        margin-bottom: 0
+      &:before
+        content: "• "
+        color: $text-blue
+        float: left
+        position: relative
+        left: -14px
+        width: 0
+    a[target=_blank]
+      +icon-after("arrow-external", true)
+      &:after
+        font-size: 12px
+        margin-left: 0.3em
+
+  // Link style
+  // Harvard business link and center link
+  .field-name-field-link-single,
+  .field-name-field-link-center-single
+    a
+      font-size: 16px
+      font-weight: bold
+      color: $link-green
+      &:hover
+        color: $link-blue
+
+  // PDF available
+  .field-name-field-link-document
+    .label-inline
+      margin-bottom: 16px
+    a
+      +icon-after("pdf", true)
+      @extend %green-button
+      &:hover
+        +background(linear-gradient(top, #18455f, $text-blue))
+      +icon-after("pdf", true)
+      &:after
+        @extend %doc-attached-icons
+        font-size: 14px
+        margin-left: 6px

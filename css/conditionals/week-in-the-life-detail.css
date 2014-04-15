@@ -1,0 +1,119 @@
+/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
+/* Font icon pseudo-element base styles */
+.node-type-week-in-the-life #page-title {
+  display: none;
+}
+@media (max-width: 35.5em) {
+  .node-type-week-in-the-life #page-title {
+    display: block;
+    color: #2d6280;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 40px;
+  }
+}
+@media (max-width: 35.5em) {
+  .node-type-week-in-the-life .field-name-title {
+    display: none;
+  }
+}
+
+.node-week-in-the-life .field-name-title {
+  background: -moz-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: -o-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: -webkit-linear-gradient(top, #fbfaf8, #f3f2f2);
+  background: linear-gradient(to bottom, #fbfaf8, #f3f2f2);
+  border-bottom: 1px solid #e6e5e5;
+  margin-bottom: 18px;
+}
+.node-week-in-the-life .field-type-text-long,
+.node-week-in-the-life .field-type-datetime {
+  padding: 0 20px;
+  color: #231f20;
+}
+.node-week-in-the-life .field-type-text-long {
+  margin-bottom: 20px;
+}
+.node-week-in-the-life .field-type-datetime {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.node-week-in-the-life .group_witl_photo_wrap {
+  float: left;
+  margin-right: 3.5%;
+  width: 31%;
+}
+@media (max-width: 35.5em) {
+  .node-week-in-the-life .group_witl_photo_wrap {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.node-week-in-the-life .group_witl_photo_wrap img {
+  display: block;
+}
+.node-week-in-the-life .witl-days {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+}
+@media (max-width: 35.5em) {
+  .node-week-in-the-life .witl-days {
+    float: none;
+    margin-bottom: 15px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.node-week-in-the-life .witl-days:last-of-type {
+  margin-right: 0;
+}
+.node-week-in-the-life .witl-days .field-type-image:after {
+  content: url('../../images/tab-witl.jpg');
+  float: left;
+  margin-top: -10px;
+  padding-left: 20px;
+}
+.node-week-in-the-life .witl-days .field-type-list-text .field-item {
+  padding: 0.8em 1em 0.6em;
+}
+.node-week-in-the-life .witl-days .field-collection-view {
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+.node-week-in-the-life .witl-days .field-collection-container {
+  border: 0 none;
+  margin: 0;
+}
+.node-week-in-the-life .field-type-list-text {
+  background-color: #607c8c;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (max-width: 35.5em) {
+  .field-name-field-witl-facts-title,
+  .field-name-field-witl-facts {
+    padding: 0 20px;
+  }
+}

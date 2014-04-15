@@ -1,0 +1,68 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../fonts/icons/icons
+
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Library Blog
+.pane-rss-feed-rss-feed
+  @extend %bg-border-and-box-shadow
+  position: relative
+  padding: $standard-padding
+  padding-top: 2px
+  .pager
+    display: none
+  // Pane title
+  h2.pane-title
+    @extend %taupe-border-top
+    color: $text-black
+    display: inline-block
+    font-size: 14px
+    font-weight: normal
+    line-height: 1.2
+    padding-top: 6px
+
+  // Pane content
+  .pane-content
+    padding: 20px 0
+  // Row spacing
+  .views-row
+    margin-bottom: 20px
+    &:last-of-type
+      margin-bottom: 0
+
+  // Title
+  .views-field-text
+    margin-bottom: 6px
+    a
+      color: $text-black
+      font-family: $font-demi
+      font-size: 20px
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 6px
+      text-transform: none
+      // looks like listing
+      .wide-view &
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: $text-green
+          font-size: 14px
+          line-height: 0
+          margin-left: 5px
+      // looks like teaser
+      .narrow-view &
+        color: $red
+      &:hover
+        color: $link-blue
+        &:after
+          color: $link-blue
+
+  // Description text
+  .views-field-text-2
+    font-size: 16px
+    line-height: 1.3
