@@ -145,14 +145,12 @@
       &:hover
         background: $purple
       +icon-after("arrow-double-right", true)
-      &:before
+      &:after
         float: right
-        color: #fff
-        font-size: 21px
-        line-height: 0.5
+        color: $white
+        font-size: 14px
         position: relative
-        top: 4px
-        right: 2px
+        top: 6px
 
   .view-footer
     border: 1px solid #e5e5e5
@@ -173,11 +171,7 @@
           &:before
             color: $red
         +icon-after("arrow-double-right", true)
-        &:before
+        &:after
           float: right
           color: $grey-med
           font-size: 21px
-          line-height: 0.5
-          position: relative
-          top: -2px
-          right: 2px
