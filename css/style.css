@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/* Icon font setup: http://jaydenseric.com/blog/font-icons-like-a-boss-with-sass-and-font-custom */
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icons/icons.eot");
-  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "icons";
-    src: url("../fonts/icons/icons.svg#icons") format("svg");
-  }
-}
-/* Font icon pseudo-element base styles */
 pre, code, kbd, tt {
   font-family: Consolas, Menlo, "Courier New", monospace, monospace;
   _font-family: Consolas, Menlo, "Courier New", monospace, monospace;
@@ -740,6 +725,19 @@ th[align="right"] {
  *
  * © 2012 Bitstream Inc
  */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"), url("../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons/icons.svg#icons") format("svg");
+  }
+}
 body a[href$=".pdf"]:after {
   content: "\f118";
   speak: none;
