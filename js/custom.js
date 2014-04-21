@@ -225,4 +225,13 @@
     }
   };
 
+  /**
+   * Custom Styling for selectbox.
+   */
+  Drupal.behaviors.customSelect = {
+    attach: function () {
+      $('#block-system-main').find('select').customSelect();
+    }
+  };
+
 }(jQuery));
