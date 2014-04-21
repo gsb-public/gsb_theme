@@ -1,63 +1,23 @@
-// Custom selectbox styling
-
-.jquery-selectbox
+// Custom select box styling
+.customSelect
   @extend %border-grey
   background: $white
   color: $text-black
-  display: inline
-  float: left
   font-family: $font-demi
   font-size: 14px
-  height: 36px
-  margin: 4px 4px 4px 0
-  padding: 0
-  position: relative
-  width: 286px !important
-  z-index: 0
-
-.jquery-selectbox-currentItem
-  display: block
-  overflow: hidden
-  padding: 5px 0 0 12px
-  white-space: nowrap
-
-.jquery-selectbox-list
-  background: $white
-  @extend %border-grey
-  display: none
-  overflow-x: hidden
-  overflow-y: auto !important
-  padding: 2px
-  position: absolute
-  top: 35px
-  left: -1px
-  width: 286px !important
-  z-index: 1000
-  span
-    padding-left: 12px
-
-.jquery-selectbox-moreButton
-  cursor: pointer
-  background-color: #f9f9f9
-  border-left: 1px solid #e4e4e4
-  float: right
-  height: 34px
   +icon-after("arrow-med-down", true)
   &:after
+    background-color: #f9f9f9
+    border-left: 1px solid $grey-c
     color: $red
+    display: inline-block
+    float: right
     font-size: 14px
+    line-height: 2.6
     height: 36px
-    padding: 0 5px
-    position: relative
-    top: 2px
+    padding: 0 8px
 
-.jquery-selectbox-item.listelementhover
-  background: $teal-dark
-  color: $white
 
-.jquery-selectbox-item
-  display: block
-  cursor: default
-
-.jquery-selectbox.selecthover
-  z-index: 1700
+// Input field
+.customSelectInner
+  padding: 6px

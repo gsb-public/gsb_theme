@@ -230,7 +230,7 @@
    */
   Drupal.behaviors.customSelect = {
     attach: function () {
-      $('#block-system-main').find('select').customSelect();
+      $('select').not('.searchworks-select, #edit-state').customSelect();
     }
   };
 
