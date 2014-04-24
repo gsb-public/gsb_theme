@@ -63,11 +63,14 @@ $faculty-spacing: 24px
   &:last-of-type
     margin-bottom: 0
 
-%faculty-link
+%faculty-title-text
   font-family: $font-demi
   font-size: 14px
   font-weight: normal
   line-height: 1.2
+
+%faculty-link
+  @extend %faculty-title-text
   +icon-after("arrow-double-right", true)
   &:after
     font-size: 10px
@@ -482,11 +485,13 @@ $faculty-spacing: 24px
       // Rows
       .field-collection-item-field-non-degree-course
         .field
-          margin-bottom: 0
+          margin-bottom: 5px
 
       // Title
-      .field-name-field-link-single a
-        @extend %faculty-link
+      .field-name-field-link-single
+        @extend %faculty-title-text
+        a
+          @extend %faculty-link
       // Description
       .field-name-field-description
         font-size: 14px
