@@ -230,7 +230,7 @@
    */
   Drupal.behaviors.customSelect = {
     attach: function () {
-      $('select').not('.searchworks-select, #edit-state').customSelect();
+      $('select').not('.searchworks-select, #edit-state, #modalContent select').customSelect();
     }
   };
 
