@@ -120,11 +120,12 @@
     +breakpoint($bp-mobile-max)
       float: left
       margin-right: 15px
+    +breakpoint($bp-mobile-480)
+      float: none
+      margin-right: 0
     img
       +breakpoint($bp-mobile-max)
         max-width: 85px
-      +breakpoint($bp-mobile-480)
-        max-width: 50px
 
   // No text wrap on mobile
   .field-name-title,
@@ -133,7 +134,7 @@
     +breakpoint($bp-mobile-max)
       margin-left: 100px
     +breakpoint($bp-mobile-480)
-      margin-left: 65px
+      margin-left: 0
 
 // Wide view
 .wide-view .node-book.view-mode-teaser
@@ -152,14 +153,16 @@
       float: none
       margin-bottom: 12px
       margin-right: 0
+    +breakpoint($bp-mobile-480)
+      float: none
+      margin-bottom: 12px
+      margin-right: 0
     img
       +breakpoint(768px 569px)
         float: none
         margin-right: 0
       +breakpoint($bp-mobile-max)
         max-width: 85px
-      +breakpoint($bp-mobile-480)
-        max-width: 50px
 
   // No text wrap on mobile
   .field-name-title,
@@ -168,8 +171,7 @@
     margin-left: 115px
     +breakpoint(768px 569px)
       margin-left: 0
-
     +breakpoint($bp-mobile-max)
       margin-left: 100px
     +breakpoint($bp-mobile-480)
-      margin-left: 65px
+      margin-left: 0

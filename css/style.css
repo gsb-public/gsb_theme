@@ -7991,14 +7991,15 @@ fieldset.collapsible .fieldset-legend {
     margin-right: 15px;
   }
 }
+@media (max-width: 30em) {
+  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+    float: none;
+    margin-right: 0;
+  }
+}
 @media (max-width: 35.5em) {
   .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
     max-width: 85px;
-  }
-}
-@media (max-width: 30em) {
-  .narrow-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
-    max-width: 50px;
   }
 }
 .narrow-view .node-book.view-mode-teaser .field-name-title,
@@ -8014,7 +8015,7 @@ fieldset.collapsible .fieldset-legend {
 @media (max-width: 30em) {
   .narrow-view .node-book.view-mode-teaser .field-name-title,
   .narrow-view .node-book.view-mode-teaser .field-name-field-authors {
-    margin-left: 65px;
+    margin-left: 0;
   }
 }
 
@@ -8038,6 +8039,13 @@ fieldset.collapsible .fieldset-legend {
     margin-right: 0;
   }
 }
+@media (max-width: 30em) {
+  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public {
+    float: none;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
 @media (min-width: 35.5625em) and (max-width: 48em) {
   .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
     float: none;
@@ -8047,11 +8055,6 @@ fieldset.collapsible .fieldset-legend {
 @media (max-width: 35.5em) {
   .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
     max-width: 85px;
-  }
-}
-@media (max-width: 30em) {
-  .wide-view .node-book.view-mode-teaser .field-name-field-image-single-public img {
-    max-width: 50px;
   }
 }
 .wide-view .node-book.view-mode-teaser .field-name-title,
@@ -8074,7 +8077,7 @@ fieldset.collapsible .fieldset-legend {
 @media (max-width: 30em) {
   .wide-view .node-book.view-mode-teaser .field-name-title,
   .wide-view .node-book.view-mode-teaser .field-name-field-authors {
-    margin-left: 65px;
+    margin-left: 0;
   }
 }
 
