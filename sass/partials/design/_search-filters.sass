@@ -624,6 +624,7 @@ fieldset.collapsible .fieldset-legend
         border-bottom: 0
         margin-bottom: 0
         padding-bottom: 0
+      // Category label
       label
         color: $text-black
         font-family: $font-demi
@@ -632,11 +633,6 @@ fieldset.collapsible .fieldset-legend
         line-height: 1
         margin-bottom: 18px
         text-transform: none
-      // Checkboxes in columns
-      .bef-checkboxes
-        -moz-column-count: 4
-        -webkit-column-count: 4
-        column-count: 4
       // Checkboxes
       .form-item
         font-weight: normal
@@ -661,3 +657,10 @@ fieldset.collapsible .fieldset-legend
           position: absolute
           left: 0
           top: 2px
+    // Checkboxes in columns
+    .form-item-academic-area,
+    .form-item-topics
+      .bef-checkboxes
+        -moz-column-count: 3
+        -webkit-column-count: 3
+        column-count: 3

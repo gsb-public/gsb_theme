@@ -12,13 +12,8 @@
 // View overrides
 .view-display-id-case_listing
   // General filter styles are in _search-filters
-  // Checkboxes in 3 columns instead of 4
   .views-exposed-form
     @extend %divider-bottom
-    .form-type-select .bef-checkboxes
-      -moz-column-count: 3
-      -webkit-column-count: 3
-      column-count: 3
 
   // General view mode teaser listing styles are in _view-mode-teaser-listing
   .view-content
@@ -30,6 +25,20 @@
   // Display the title inline
   .view-mode-teaser_listing .field-name-title h2
     display: inline
+
+  // Custom Availability Filters
+  .views-widget-filter-secondary .form-type-select.case-availability
+    .form-type-select
+      border-bottom: none
+      display: inline-block
+      margin-bottom: 0
+      max-width: 153px
+      padding-bottom: 0
+      padding-left: 0
+    .form-item-field-has-harvard-link-value
+      margin-left: 11px
+    .form-item-field-has-case-center-value
+      margin-left: 12px
 
 // Content overrides
 .node-case.view-mode-teaser_listing
