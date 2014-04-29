@@ -79,12 +79,16 @@
     padding: $standard-padding 0
     a
       @extend %green-button
-      +icon-after("pdf", true)
+      +icon-after("arrow-external", true)
       &:after
         @extend %doc-attached-icons
-        font-size: 14px
+        font-size: 12px
       &:hover
         +background(linear-gradient(top, #18455f, $text-blue))
+    .file a
+      +icon-after("pdf", true)
+      &:after
+        font-size: 14px
     .field-item
       display: inline-block
       vertical-align: bottom
