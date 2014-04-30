@@ -407,15 +407,14 @@ $faculty-spacing: 24px
   .field.field-name-field-stanford-gsb-affiliation
     margin-bottom: 16px
 
-
   // Publications header
   .group-publications h2
     @extend %header-large
 
-  // Case Study, Working Paper, Book, Publications, Media item EVA
+  // EVA: Case Study, Working Paper, Book, Publications, Media item EVA
   .view-display-id-case_listing_entity_view,
   .view-display-id-entity_view_1,
-  .view-display-id-publications_listing_entity_view,
+  .view-id-gsb_publications_listing,
   .view-display-id-media_mention_listing_entity_view
     margin-bottom: $faculty-spacing
     // Section title
@@ -443,27 +442,45 @@ $faculty-spacing: 24px
         @extend %doc-attached-icons
         font-size: 13px
 
-  // Working papers, case, media item use large header
+  // EVA: Working papers, case, media item use large header
   .view-display-id-case_listing_entity_view,
   .view-display-id-media_mention_listing_entity_view
     // Section title
     h2.title
       @extend %header-large
 
-  // Working papers, case year styling
+  // EVA: Media item icons
+  .view-display-id-media_mention_listing_entity_view
+    +clearfix
+    .views-field-title
+      display: block
+    .audio,
+    .video
+      color: $blue
+      font-size: 14px
+      float: left
+    .audio
+      margin-right: 2px
+      +icon-before("podcast", true)
+    .video
+      margin-right: 4px
+      margin-top: -1px
+      +icon-before("video", true)
+
+  // EVA: Working papers, case year styling
   .view-display-id-case_listing_entity_view
     .date-display-single
       &:before
         content: ","
         margin-right: 3px
 
-  // Spacing between authors and title on EVAs
+  // EVA: Spacing between authors and title
   .view-id-gsb_working_paper_listing,
   .view-display-id-case_listing_entity_view
     .views-field-field-year
       margin-top: 2px
 
-  // Books eva authors
+  // EVA: Books authors
   .view-id-gsb_book_listing .views-field-field-authors .field-content
     &:after
       content: "."
@@ -507,21 +524,3 @@ $faculty-spacing: 24px
       .field-name-field-description
         font-size: 14px
         line-height: 1.1
-
-  // Media item icons
-  .view-display-id-media_mention_listing_entity_view
-    +clearfix
-    .views-field-title
-      display: block
-    .audio,
-    .video
-      color: $blue
-      font-size: 14px
-      float: left
-    .audio
-      margin-right: 2px
-      +icon-before("podcast", true)
-    .video
-      margin-right: 4px
-      margin-top: -1px
-      +icon-before("video", true)
