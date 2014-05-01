@@ -31,24 +31,26 @@
     font-weight: normal
     line-height: 1.2
 
+  // Keywords
   .field-name-field-tag
-    @extend %divider-bottom
     font-size: 14px
     line-height: 1.2
     padding-bottom: $standard-padding
-    span
-      font-weight: normal
+    .label-inline
+      margin-right: 3px
 
-  .field-name-field-link-document
+  // Download button
+  .gsb-cmis-download-wrapper
+    @extend %divider-top
     @extend %divider-bottom
-    font-size: 18px
-    line-height: 1.2
-    padding: $standard-padding 0
-    a
-      @extend %green-button
-      +icon-after("pdf", true)
-      &:after
-        @extend %doc-attached-icons
-        font-size: 14px
-      &:hover
-        +background(linear-gradient(top, #18455f, $text-blue))
+    margin-bottom: $standard-padding
+    padding: 12px 0
+  .gsb-cmis-download-button
+    @extend %green-button
+    display: inline-block
+    +icon-after("pdf", true)
+    &:after
+      @extend %doc-attached-icons
+      font-size: 14px
+    &:hover
+      +background(linear-gradient(top, #18455f, $text-blue))
