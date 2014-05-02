@@ -439,12 +439,11 @@ $faculty-spacing: 24px
     font-size: 14px
     line-height: 1.2
     margin-top: 2px
-  .views-field-field-link-document
-    a
-      +icon-after("pdf", true)
-      &:after
-        @extend %doc-attached-icons
-        font-size: 13px
+  .gsb-cmis-download-pdf
+    +icon-after("pdf", true)
+    &:after
+      @extend %doc-attached-icons
+      font-size: 12px
 
   // EVA: Working papers, case, media item use large header
   .view-display-id-case_listing_entity_view,
