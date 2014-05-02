@@ -325,7 +325,9 @@ $faculty-spacing: 24px
   // Teaching materials
   .field-name-field-teaching-materials
     .field-collection-item-field-teaching-materials
-      margin-bottom: 10px
+      margin-bottom: 6px
+      &:last-of-type
+        margin-bottom: 0
     // Title
     .field-name-field-link-single
       display: inline-block
@@ -424,9 +426,11 @@ $faculty-spacing: 24px
       line-height: 0
       margin-bottom: 6px
     // Title
-    .views-field-title a,
-    .views-field-title-1 a
-      @extend %faculty-link
+    .views-field-title,
+    .views-field-title-1
+      @extend %faculty-title-text
+      a
+        @extend %faculty-link
 
   // Authors and Publication Year
   .views-field,
