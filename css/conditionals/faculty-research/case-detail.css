@@ -4,7 +4,7 @@
   line-height: 1.4;
 }
 
-.node-case.view-mode-full .field-name-field-link-document a {
+.node-case.view-mode-full .gsb-cmis-download-button {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -21,32 +21,34 @@
   line-height: 1;
   padding: 10px 16px;
 }
-.node-case.view-mode-full .field-name-field-link-document a:after {
+.node-case.view-mode-full .gsb-cmis-download-button:after {
   color: white !important;
 }
-.node-case.view-mode-full .field-name-field-link-document a:hover {
+.node-case.view-mode-full .gsb-cmis-download-button:hover {
   border: 0;
   color: white;
 }
-.node-case.view-mode-full .field-name-field-link-document a:hover:after {
+.node-case.view-mode-full .gsb-cmis-download-button:hover:after {
   color: white !important;
 }
 
 .node-case.view-mode-full .group-wrapper-paper-copy,
-.node-case.view-mode-full .field-name-field-link-document {
+.node-case.view-mode-full .field-name-field-link-document,
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement, .node-case.view-mode-full .gsb-cmis-download-wrapper {
   border-top: 1px #cccccc solid;
 }
 
 .node-case.view-mode-full .group-wrapper-paper-copy:last-child,
-.node-case.view-mode-full .field-name-field-link-document:last-child {
+.node-case.view-mode-full .field-name-field-link-document:last-child,
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement:last-child, .node-case.view-mode-full .gsb-cmis-download-wrapper {
   border-bottom: 1px #cccccc solid;
 }
 
-.node-case.view-mode-full .field-name-field-link-document a:after {
+.node-case.view-mode-full .gsb-cmis-download-button:after {
   margin-left: 3px;
   font-weight: normal;
 }
-.node-case.view-mode-full .field-name-field-link-document a:hover:after {
+.node-case.view-mode-full .gsb-cmis-download-button:hover:after {
   color: #2d6280;
 }
 
@@ -95,8 +97,9 @@
   padding-bottom: 26px;
 }
 .node-case.view-mode-full .group-wrapper-paper-copy,
-.node-case.view-mode-full .field-name-field-link-document {
-  padding: 20px 0;
+.node-case.view-mode-full .field-name-field-link-document,
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement {
+  padding: 12px 0;
 }
 .node-case.view-mode-full .field-name-field-link-single,
 .node-case.view-mode-full .field-name-field-link-center-single,
@@ -108,6 +111,9 @@
 .node-case.view-mode-full .field-name-field-link-center-single span,
 .node-case.view-mode-full .field-name-field-link-document span {
   font-weight: bold;
+}
+.node-case.view-mode-full .group-wrapper-paper-copy {
+  margin-top: 12px;
 }
 .node-case.view-mode-full .group-wrapper-paper-copy h3 {
   font-size: 18px;
@@ -157,10 +163,20 @@
 .node-case.view-mode-full .field-name-field-link-center-single a:hover {
   color: #2d6280;
 }
-.node-case.view-mode-full .field-name-field-link-document .label-inline {
-  margin-bottom: 16px;
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement {
+  display: block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
 }
-.node-case.view-mode-full .field-name-field-link-document a:after {
+.node-case.view-mode-full .gsb-cmis-download-wrapper {
+  margin-bottom: 26px;
+  padding: 12px 0;
+}
+.node-case.view-mode-full .gsb-cmis-download-button {
+  display: inline-block;
+}
+.node-case.view-mode-full .gsb-cmis-download-button:after {
   content: "\f118";
   speak: none;
   text-rendering: optimizeLegibility;
@@ -174,27 +190,12 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.node-case.view-mode-full .field-name-field-link-document a:hover {
+.node-case.view-mode-full .gsb-cmis-download-button:after {
+  font-size: 14px;
+}
+.node-case.view-mode-full .gsb-cmis-download-button:hover {
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
   background: -webkit-linear-gradient(top, #18455f, #2d6280);
   background: linear-gradient(to bottom, #18455f, #2d6280);
-}
-.node-case.view-mode-full .field-name-field-link-document a:after {
-  content: "\f118";
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-.node-case.view-mode-full .field-name-field-link-document a:after {
-  font-size: 14px;
-  margin-left: 6px;
 }
