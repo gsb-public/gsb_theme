@@ -1,130 +1,121 @@
-//////////////
 // People FPP
-//////////////
 
-// General person name
-.person-name
+%person-fpp-text
   color: $black
-  font-size: 18px
-  font-weight: bold
-  line-height: 1em
-  .name-first,
-  .name-middle
-    margin-right: 0.3em
+  font-size: 16px
+  font-weight: normal
+  line-height: 1.1
+  margin-top: 4px
 
-.person-area
-  line-height: 1em
+.pane-bundle-people
 
-.person-position
-  line-height: normal
-  font-family: $font-demi
-  .person-position
-    line-height: 1
+  .field
+    @extend %person-fpp-text
 
-/////////////////////
-// People FPP - List
-/////////////////////
-.person-list-view
-  margin-bottom: 50px
-  padding: 0 $standard-padding
-  @extend %bg-border-and-box-shadow
-
-  // Title
-  .field-name-field-title
-    border-top: 10px $teal-light solid
-    border-bottom: 1px solid $grey-e
-    font-size: 18px
-    font-weight: bold
-    line-height: 1
-    margin-top: -2px
-    padding-top: 16px
-    padding-bottom: 24px
-
-  .views-row
-    border-bottom: 1px solid #e4e4e4
-    padding: 24px 0
-    min-height: 218px
-    +breakpoint($bp-mobile)
-      padding-bottom: 0
-    &:last-of-type
-      border-bottom: 0
-    +clearfix
-    .field-name-field-image-single-public
-      +float-left
-      margin-right: 24px
   // Name
-  .person-name
-    margin-bottom: 8px
-    a:hover
-      color: $text-blue
-    +breakpoint($bp-mobile)
-      clear: both
-      padding-top: 8px
-  // Position
-  .person-position
-    font-size: 18px
-  // Area
-  .person-area
-    .label-inline
-      font-weight: normal
-      margin-right: 0.3em
-  // Quote
-  .person-quote
-    font-size: 16px
-    line-height: 22px
-    margin-top: 24px
+  .field-name-title
+    font-family: $font-demi
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
 
-////////////
-// TEASER
-///////////
-.node-staff.view-mode-teaser,
-.node-faculty.view-mode-teaser
-  padding: 16px
+  // Rank
+  .field-name-field-rank
+    font-family: $font-demi
+
+  // Academic area
+  .field-name-field-academic-area
+    font-family: $font-demi
+    &:before
+      content: ","
+      margin-right: 3px
+
+  // Title, Role, Program
+  .field-name-field-person-title
+    font-size: 16px
+    margin-top: 12px
+  // Phone
+  .field-name-field-phone
+    font-size: 14px
+
+  // Email
+  .field-name-field-email a
+    color: $link-green
+    font-size: 14px
+    +icon-after("email-stroke", true)
+    &:hover
+      color: $link-blue
+    &:after
+      font-size: 12px
+      margin-left: 3px
+
+  // Description
+  .field-name-field-body
+    font-size: 14px
+    line-height: 1.2
+    margin-top: 12px
+
+// Layouts
+
+// List
+.person-list-view
+  .narrow-view &
+    @extend %bg-border-and-box-shadow
+    padding: $standard-padding
+
+  // Pane Title
+  .field-name-field-title
+    line-height: 1
+    .wide-view &
+      font-family: $font-demi
+      font-size: 26px
+      font-weight: normal
+    .narrow-view &
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+
+  // Content row style
+  .views-row
+    border-top: 2px solid #e4e4e4
+    margin-top: 12px
+    .wide-view &
+      +clearfix
+      margin-top: 24px
+
   // Image
   .field-name-field-image-single-public
-    float: none
-    margin: -16px -16px auto -16px
+    margin-top: 2px
+    .wide-view &
+      float: left
+      margin-right: 24px
+      img
+        height: 120px
+        width: 120px
+    .narrow-view &
+      img
+        height: 90px
+        width: 90px
+
+  // Information wrapper
+  .person-fpp-wrapper
+    .wide-view &
+      float: left
+
   // Name
-  .person-name
-    font-size: 16px
-    line-height: 3em
+  .field-name-title
+    .wide-view &
+      padding-top: 24px
+    .narrow-view &
+      margin-top: 8px
 
-  // Rank/Title/Position and Academic Area
-  .person-position,
-  .person-area
-    font-size: 14px
-    color: $text-black
-    line-height: 1em
-    display: inline
-  .person-position
-    &:after
-      content: ", "
-
-// Faculty list
-.pane-faculty-filters-faculty-list
-  .views-row
-    background: $grey-f
-
-/////////////////////
-// People FPP - Grid
-/////////////////////
+// Grid
 .person-grid-view
-  .node-staff.view-mode-teaser,
-  .node-faculty.view-mode-teaser
-    padding: 0
-    // Image
-  .field-name-field-image-single-public
-    margin: 0
-    img
-      margin: 0 0 7.6% 0
-  // Name
-  .person-name
-    line-height: 22px
-    a:hover
-      color: $text-blue
-  // Grid title
+  // Pane title
   .field-name-field-title
     font-size: 26px
     font-family: $font-demi
     font-weight: normal
-    margin-bottom: 40px
+    line-height: 1.2
+    margin-bottom: 36px
