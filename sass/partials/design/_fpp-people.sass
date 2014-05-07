@@ -12,6 +12,14 @@
   .field
     @extend %person-fpp-text
 
+  // Content row style
+  .views-row
+    border-top: 2px solid #e4e4e4
+    margin-top: 12px
+    .wide-view &
+      +clearfix
+      margin-top: 24px
+
   // Name
   .field-name-title
     font-family: $font-demi
@@ -26,15 +34,14 @@
 
   // Academic area
   .field-name-field-academic-area
+    display: inline-block
     font-family: $font-demi
-    &:before
-      content: ","
-      margin-right: 3px
+    margin-top: 0
 
   // Title, Role, Program
   .field-name-field-person-title
     font-size: 16px
-    margin-top: 12px
+    margin-top: 8px
   // Phone
   .field-name-field-phone
     font-size: 14px
@@ -76,14 +83,6 @@
       font-size: 20px
       font-weight: bold
 
-  // Content row style
-  .views-row
-    border-top: 2px solid #e4e4e4
-    margin-top: 12px
-    .wide-view &
-      +clearfix
-      margin-top: 24px
-
   // Image
   .field-name-field-image-single-public
     margin-top: 2px
@@ -115,10 +114,39 @@
 
 // Grid
 .person-grid-view
+  +clearfix
+
+  // Grid
+  .views-row
+    float: left
+    width: 270px
+    &.views-row-odd
+      margin-right: 30px
+    &.views-row-even
+
   // Pane title
   .field-name-field-title
     font-size: 26px
     font-family: $font-demi
     font-weight: normal
     line-height: 1.2
-    margin-bottom: 36px
+
+  // Image
+  .field-name-field-image-single-public
+    margin-top: 2px
+    float: left
+    margin-right: 16px
+    img
+      height: 90px
+      width: 90px
+
+  // Information wrapper
+  .person-fpp-wrapper.with-photo
+    float: left
+    margin-left: -106px
+    padding-left: 106px
+    width: 100%
+
+  // Name
+  .field-name-title
+    padding-top: 16px

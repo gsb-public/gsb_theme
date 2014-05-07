@@ -5259,6 +5259,15 @@ ul.slideshow-items li:first-of-type {
   margin-top: 4px;
 }
 
+.pane-bundle-people .views-row {
+  border-top: 2px solid #e4e4e4;
+  margin-top: 12px;
+}
+.wide-view .pane-bundle-people .views-row {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 24px;
+}
 .pane-bundle-people .field-name-title {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -5272,15 +5281,13 @@ ul.slideshow-items li:first-of-type {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .pane-bundle-people .field-name-field-academic-area {
+  display: inline-block;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.pane-bundle-people .field-name-field-academic-area:before {
-  content: ",";
-  margin-right: 3px;
+  margin-top: 0;
 }
 .pane-bundle-people .field-name-field-person-title {
   font-size: 16px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 .pane-bundle-people .field-name-field-phone {
   font-size: 14px;
@@ -5332,15 +5339,6 @@ ul.slideshow-items li:first-of-type {
   font-size: 20px;
   font-weight: bold;
 }
-.person-list-view .views-row {
-  border-top: 2px solid #e4e4e4;
-  margin-top: 12px;
-}
-.wide-view .person-list-view .views-row {
-  overflow: hidden;
-  *zoom: 1;
-  margin-top: 24px;
-}
 .person-list-view .field-name-field-image-single-public {
   margin-top: 2px;
 }
@@ -5369,12 +5367,40 @@ ul.slideshow-items li:first-of-type {
   margin-top: 8px;
 }
 
+.person-grid-view {
+  overflow: hidden;
+  *zoom: 1;
+}
+.person-grid-view .views-row {
+  float: left;
+  width: 270px;
+}
+.person-grid-view .views-row.views-row-odd {
+  margin-right: 30px;
+}
 .person-grid-view .field-name-field-title {
   font-size: 26px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.2;
-  margin-bottom: 36px;
+}
+.person-grid-view .field-name-field-image-single-public {
+  margin-top: 2px;
+  float: left;
+  margin-right: 16px;
+}
+.person-grid-view .field-name-field-image-single-public img {
+  height: 90px;
+  width: 90px;
+}
+.person-grid-view .person-fpp-wrapper.with-photo {
+  float: left;
+  margin-left: -106px;
+  padding-left: 106px;
+  width: 100%;
+}
+.person-grid-view .field-name-title {
+  padding-top: 16px;
 }
 
 .pane-bundle-social-feed {

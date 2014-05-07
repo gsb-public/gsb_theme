@@ -17,7 +17,7 @@
 <?php endif; ?>
 
 <?php if ($use_photo) print render($photo); ?>
-<div class="person-fpp-wrapper">
+<div class="person-fpp-wrapper <?php if ($use_photo) print 'with-photo'; ?>">
 <?php print render($name); ?>
 <?php if ($use_rank) print '<span class="field field-name-field-rank">' . render($rank) . '</span>'; ?>
 <?php if ($use_academic_area) print '<span class="field field-name-field-academic-area">' . render($academic_area) . '</span>'; ?>
