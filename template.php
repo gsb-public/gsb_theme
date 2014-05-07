@@ -189,10 +189,12 @@ function gsb_theme_preprocess_html(&$variables) {
  * Preprocess page.
  */
 function gsb_theme_preprocess_page(&$variables) {
+  // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
   }
 
+  // Add search and event link to main navigation
   $variables['event_and_search'] = array(
     '#type' => 'container',
     '#attributes' => array(
@@ -206,7 +208,7 @@ function gsb_theme_preprocess_page(&$variables) {
       '#title' => t('Event Calendar'),
       '#attributes' => array(
         'class' => array(
-          'event-link',
+          'event-calendar',
         ),
       ),
     ),
