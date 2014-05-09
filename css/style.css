@@ -5251,52 +5251,48 @@ ul.slideshow-items li:first-of-type {
   }
 }
 
-.pane-bundle-people .field {
+.pane-bundle-people .person-field {
   color: black;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.1;
   margin-top: 4px;
 }
-
-.pane-bundle-people .views-row {
+.pane-bundle-people .person-row {
   border-top: 2px solid #e4e4e4;
   margin-top: 12px;
 }
-.wide-view .pane-bundle-people .views-row {
+.wide-view .pane-bundle-people .person-row {
   overflow: hidden;
   *zoom: 1;
   margin-top: 24px;
 }
-.pane-bundle-people .field-name-title {
+.pane-bundle-people .person-name {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-bundle-people .field-name-title a {
+.pane-bundle-people .person-name a {
   color: #636f00;
 }
-.pane-bundle-people .field-name-title a:hover {
+.pane-bundle-people .person-name a:hover {
   color: #2d6280;
 }
-.pane-bundle-people .field-name-field-rank {
+.pane-bundle-people .person-rank-and-area {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-bundle-people .field-name-field-academic-area {
-  display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 0;
-}
-.pane-bundle-people .field-name-field-person-title {
-  font-size: 16px;
+.pane-bundle-people .person-position {
   margin-top: 8px;
 }
-.pane-bundle-people .field-name-field-phone {
+.narrow-view .pane-bundle-people .person-position {
+  margin-top: 4px;
+}
+.pane-bundle-people .person-phone {
   font-size: 14px;
 }
-.pane-bundle-people .field-name-field-email a {
+.pane-bundle-people .person-email a {
   color: #636f00;
   font-size: 14px;
 }
-.pane-bundle-people .field-name-field-email a:after {
+.pane-bundle-people .person-email a:after {
   content: "\f112";
   speak: none;
   text-rendering: optimizeLegibility;
@@ -5310,14 +5306,14 @@ ul.slideshow-items li:first-of-type {
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-bundle-people .field-name-field-email a:hover {
+.pane-bundle-people .person-email a:hover {
   color: #2d6280;
 }
-.pane-bundle-people .field-name-field-email a:after {
+.pane-bundle-people .person-email a:after {
   font-size: 12px;
   margin-left: 3px;
 }
-.pane-bundle-people .field-name-field-body {
+.pane-bundle-people .person-quote {
   font-size: 14px;
   line-height: 1.2;
   margin-top: 12px;
@@ -5339,18 +5335,16 @@ ul.slideshow-items li:first-of-type {
   font-size: 20px;
   font-weight: bold;
 }
-.person-list-view .field-name-field-image-single-public {
+.person-list-view img {
   margin-top: 2px;
 }
-.wide-view .person-list-view .field-name-field-image-single-public {
+.wide-view .person-list-view img {
   float: left;
   margin-right: 24px;
-}
-.wide-view .person-list-view .field-name-field-image-single-public img {
   height: 120px;
   width: 120px;
 }
-.narrow-view .person-list-view .field-name-field-image-single-public img {
+.narrow-view .person-list-view img {
   height: 90px;
   width: 90px;
 }
@@ -5360,10 +5354,10 @@ ul.slideshow-items li:first-of-type {
   padding-left: 144px;
   width: 100%;
 }
-.wide-view .person-list-view .field-name-title {
-  padding-top: 24px;
+.wide-view .person-list-view .person-name {
+  padding-top: 12px;
 }
-.narrow-view .person-list-view .field-name-title {
+.narrow-view .person-list-view .person-name {
   margin-top: 8px;
 }
 
@@ -5371,11 +5365,11 @@ ul.slideshow-items li:first-of-type {
   overflow: hidden;
   *zoom: 1;
 }
-.person-grid-view .views-row {
+.person-grid-view .person-row {
   float: left;
   width: 270px;
 }
-.person-grid-view .views-row.views-row-odd {
+.person-grid-view .person-row:nth-of-type(even) {
   margin-right: 30px;
 }
 .person-grid-view .field-name-field-title {
@@ -5384,23 +5378,21 @@ ul.slideshow-items li:first-of-type {
   font-weight: normal;
   line-height: 1.2;
 }
-.person-grid-view .field-name-field-image-single-public {
-  margin-top: 2px;
+.person-grid-view img {
   float: left;
+  margin-top: 2px;
   margin-right: 16px;
-}
-.person-grid-view .field-name-field-image-single-public img {
   height: 90px;
   width: 90px;
 }
-.person-grid-view .person-fpp-wrapper.with-photo {
+.person-grid-view .person-fpp-wrapper.use-photo {
   float: left;
   margin-left: -106px;
   padding-left: 106px;
   width: 100%;
 }
-.person-grid-view .field-name-title {
-  padding-top: 16px;
+.person-grid-view .person-name {
+  padding-top: 12px;
 }
 
 .pane-bundle-social-feed {

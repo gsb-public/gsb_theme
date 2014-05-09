@@ -1,19 +1,16 @@
 // People FPP
 
-%person-fpp-text
-  color: $black
-  font-size: 16px
-  font-weight: normal
-  line-height: 1.1
-  margin-top: 4px
-
 .pane-bundle-people
 
-  .field
-    @extend %person-fpp-text
+  .person-field
+    color: $black
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.1
+    margin-top: 4px
 
   // Content row style
-  .views-row
+  .person-row
     border-top: 2px solid #e4e4e4
     margin-top: 12px
     .wide-view &
@@ -21,7 +18,7 @@
       margin-top: 24px
 
   // Name
-  .field-name-title
+  .person-name
     font-family: $font-demi
     a
       color: $link-green
@@ -29,25 +26,21 @@
         color: $link-blue
 
   // Rank
-  .field-name-field-rank
+  .person-rank-and-area
     font-family: $font-demi
-
-  // Academic area
-  .field-name-field-academic-area
-    display: inline-block
-    font-family: $font-demi
-    margin-top: 0
 
   // Title, Role, Program
-  .field-name-field-person-title
-    font-size: 16px
+  .person-position
     margin-top: 8px
+    .narrow-view &
+      margin-top: 4px
+
   // Phone
-  .field-name-field-phone
+  .person-phone
     font-size: 14px
 
   // Email
-  .field-name-field-email a
+  .person-email a
     color: $link-green
     font-size: 14px
     +icon-after("email-stroke", true)
@@ -58,7 +51,7 @@
       margin-left: 3px
 
   // Description
-  .field-name-field-body
+  .person-quote
     font-size: 14px
     line-height: 1.2
     margin-top: 12px
@@ -84,18 +77,16 @@
       font-weight: bold
 
   // Image
-  .field-name-field-image-single-public
+  img
     margin-top: 2px
     .wide-view &
       float: left
       margin-right: 24px
-      img
-        height: 120px
-        width: 120px
+      height: 120px
+      width: 120px
     .narrow-view &
-      img
-        height: 90px
-        width: 90px
+      height: 90px
+      width: 90px
 
   // Information wrapper
   .person-fpp-wrapper
@@ -106,9 +97,9 @@
       width: 100%
 
   // Name
-  .field-name-title
+  .person-name
     .wide-view &
-      padding-top: 24px
+      padding-top: 12px
     .narrow-view &
       margin-top: 8px
 
@@ -117,12 +108,11 @@
   +clearfix
 
   // Grid
-  .views-row
+  .person-row
     float: left
     width: 270px
-    &.views-row-odd
+    &:nth-of-type(even)
       margin-right: 30px
-    &.views-row-even
 
   // Pane title
   .field-name-field-title
@@ -132,21 +122,20 @@
     line-height: 1.2
 
   // Image
-  .field-name-field-image-single-public
-    margin-top: 2px
+  img
     float: left
+    margin-top: 2px
     margin-right: 16px
-    img
-      height: 90px
-      width: 90px
+    height: 90px
+    width: 90px
 
   // Information wrapper
-  .person-fpp-wrapper.with-photo
+  .person-fpp-wrapper.use-photo
     float: left
     margin-left: -106px
     padding-left: 106px
     width: 100%
 
   // Name
-  .field-name-title
-    padding-top: 16px
+  .person-name
+    padding-top: 12px
