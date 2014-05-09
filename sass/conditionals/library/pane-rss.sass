@@ -12,7 +12,8 @@
   @extend %bg-border-and-box-shadow
   position: relative
   padding: $standard-padding
-  padding-top: 2px
+  .narrow-view &
+    padding-top: 2px
   .pager
     display: none
   // Pane title
@@ -54,6 +55,11 @@
       // looks like teaser
       .narrow-view &
         color: $red
+        &[target=_blank]
+          +icon-after("arrow-external", true)
+        &:after
+          font-size: 12px
+          margin-left: 3px
       &:hover
         color: $link-blue
         &:after
