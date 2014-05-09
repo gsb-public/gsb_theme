@@ -7797,6 +7797,13 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   line-height: 1;
 }
+.view-faculty-filters .views-widget-filter-secondary .fieldset-title:hover,
+.view-display-id-working_paper_list .views-widget-filter-secondary .fieldset-title:hover,
+.view-display-id-case_listing .views-widget-filter-secondary .fieldset-title:hover,
+.view-display-id-book_listing .views-widget-filter-secondary .fieldset-title:hover,
+.view-display-id-publications_listing .views-widget-filter-secondary .fieldset-title:hover {
+  color: #2d6280;
+}
 .view-faculty-filters .views-widget-filter-secondary .form-item,
 .view-display-id-working_paper_list .views-widget-filter-secondary .form-item,
 .view-display-id-case_listing .views-widget-filter-secondary .form-item,
@@ -7895,6 +7902,22 @@ fieldset.collapsible .fieldset-legend {
   -moz-column-count: 3;
   -webkit-column-count: 3;
   column-count: 3;
+}
+@media (max-width: 69.8125em) {
+  .view-faculty-filters .views-widget-filter-secondary .form-item-academic-area .bef-checkboxes,
+  .view-faculty-filters .views-widget-filter-secondary .form-item-topics .bef-checkboxes,
+  .view-display-id-working_paper_list .views-widget-filter-secondary .form-item-academic-area .bef-checkboxes,
+  .view-display-id-working_paper_list .views-widget-filter-secondary .form-item-topics .bef-checkboxes,
+  .view-display-id-case_listing .views-widget-filter-secondary .form-item-academic-area .bef-checkboxes,
+  .view-display-id-case_listing .views-widget-filter-secondary .form-item-topics .bef-checkboxes,
+  .view-display-id-book_listing .views-widget-filter-secondary .form-item-academic-area .bef-checkboxes,
+  .view-display-id-book_listing .views-widget-filter-secondary .form-item-topics .bef-checkboxes,
+  .view-display-id-publications_listing .views-widget-filter-secondary .form-item-academic-area .bef-checkboxes,
+  .view-display-id-publications_listing .views-widget-filter-secondary .form-item-topics .bef-checkboxes {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
 }
 
 .field-name-field-sections .field-label,

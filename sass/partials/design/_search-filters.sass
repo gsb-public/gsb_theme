@@ -612,6 +612,8 @@ fieldset.collapsible .fieldset-legend
       font-size: 18px
       font-weight: normal
       line-height: 1
+      &:hover
+        color: $link-blue
     .form-item
       margin: 0
 
@@ -667,3 +669,7 @@ fieldset.collapsible .fieldset-legend
         -moz-column-count: 3
         -webkit-column-count: 3
         column-count: 3
+        +breakpoint(1117px max-width)
+          -moz-column-count: 1
+          -webkit-column-count: 1
+          column-count: 1
