@@ -135,57 +135,65 @@
   padding: $standard-padding
   +breakpoint($bp-mobile)
     padding: 20px
-  .view-gsb-event .view-content .views-row
-    border-bottom: 0
-  h2.pane-title
+  .view-gsb-event .views-row
+    margin-bottom: 14px
+    &:last-of-type
+      margin-bottom: 0
+
+  // Pane title
+  .pane-title
     color: $red
+    font-family: $font-sans
     font-size: 16px
     font-weight: bold
     line-height: 1
-    margin-bottom: 28px
-    font-family: $font-sans
+    margin-bottom: 26px
     a
       +icon-after("arrow-double-right", true)
       &:after
-        color: #c2b7a1
+        color: #978d7e
         font-size: 12px
         line-height: 0
+        margin-left: 3px
       &:hover
         color: $link-blue
         &:after
           color: $link-blue
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
-    li
-      margin-bottom: 10px
-      margin-left: 0
+
   .views-field-field-event-date,
   .views-field-title,
   .views-field-field-address
     line-height: 1.2
+    margin-bottom: 4px
     +breakpoint($bp-tablet-port-max)
       & > div
         display: inline
-  .views-field-title a
-    border: 0
-    color: $grey-1
-    font-family: $font-demi
-    font-weight: normal
-    +icon-after("arrow-double-right", true)
-    &:after
-      color: #bac405
-      font-size: 12px
-      line-height: 0
-      margin-left: 0.3em
-    &:hover
-      color: $link-blue
+
+  // Event title
+  .views-field-title
+    line-height: 0
+    a
+      border: 0
+      color: $grey-1
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1.1
+      +icon-after("arrow-double-right", true)
       &:after
+        color: #bac405
+        font-size: 12px
+        margin-left: 3px
+      &:hover
         color: $link-blue
+        &:after
+          color: $link-blue
+
+  // Date
   .views-field-field-event-date
     color: #595959
     font-size: 14px
+
+  // Address
   .views-field-field-address
     color: $text-black
     font-size: 14px
