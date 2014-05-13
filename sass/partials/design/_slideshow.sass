@@ -95,19 +95,19 @@ ul.slideshow-items
 .slideshow-simple .slideshow-wrapper a:hover
   .slide-description
     color: $link-blue
+    text-decoration: underline
     &:after
-      color: $link-blue
+      color: $teal-light
+
 
 // CTA SLIDESHOW - HOVER
 .slideshow-cta .slideshow-wrapper:hover
-  a .slide-title
-    color: $link-blue
-    &:after
+  a
+    .slide-title
       color: $link-blue
-  .purple-button-on-blue a .slide-cta
-    background-color: $teal-dark
-  .blue-button-on-orange a .slide-cta
-    background-color: $purple
+    .slide-cta
+      background-color: $link-blue
+      text-decoration: underline
 
 // SLIDES
 .slideshow-slide
@@ -207,16 +207,8 @@ ul.slideshow-items
 
 // Slide CTA text
 .slide-cta
-  color: $white
-  display: inline-block
-  font-size: 16px
-  line-height: 18px
-  padding: 10px 18px 12px 16px
-  +icon-after("arrow-double-right", true)
-  &:after
-    font-size: 12px
-    position: relative
-    left: 3px
+  @extend %teal-cta
+
 
 // Color picker styling
 
@@ -231,7 +223,7 @@ ul.slideshow-items
       +breakpoint($bp-mobile-max)
         +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 5%, #cce0dc))
   .slide-cta
-    background-color: $purple
+    background-color: $teal-dark
 
 // Blue
 .blue-button-on-orange
@@ -260,9 +252,7 @@ ul.slideshow-items
       +background(linear-gradient(bottom, $grey-e, #fbfaf8 20%))
       height: auto
       min-height: 425px
-    &:hover
-      .slide-title
-        color: $red
+
   .slide-text
     +background(linear-gradient(left, rgba($white, 0) 25%, rgba($white, 1) 50%))
     padding: 0 $standard-padding
@@ -324,8 +314,6 @@ ul.slideshow-items
       width: 175px
     +breakpoint($bp-mobile-max)
       width: 100%
-    a
-      color: $red
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light

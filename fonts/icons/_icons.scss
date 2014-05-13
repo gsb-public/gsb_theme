@@ -42,23 +42,6 @@ $icons: (
     zip: "\f124",
 );
 
-// Font icon pseudo-element base styles
-%icon {
-    speak: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-transform: none;
-    line-height: 1;
-    font: {
-        style: normal;
-        variant: normal;
-        weight: normal;
-        family: 'icons';
-    }
-}
-
 // For adding icons to elements using CSS pseudo-elements
 @mixin icon-before($icon: false, $styles: false) {
     &:before {
@@ -66,6 +49,7 @@ $icons: (
             content: "#{map-get($icons, $icon)}";
         }
         @if $styles {
+            display: inline-block;
             speak: none;
             text-rendering: optimizeLegibility;
             -moz-osx-font-smoothing: grayscale;
@@ -89,6 +73,7 @@ $icons: (
             content: "#{map-get($icons, $icon)}";
         }
         @if $styles {
+            display: inline-block;
             speak: none;
             text-rendering: optimizeLegibility;
             -moz-osx-font-smoothing: grayscale;
@@ -113,6 +98,7 @@ $icons: (
             content: "#{map-get($icons, $icon)}";
         }
         @if $styles {
+            display: inline-block;
             speak: none;
             text-rendering: optimizeLegibility;
             -moz-osx-font-smoothing: grayscale;

@@ -44,6 +44,7 @@
       padding: 0
       float: left
       a
+        @extend %gradient-red
         border: 0
         font-weight: normal
         font-size: 18px
@@ -54,8 +55,6 @@
         color: white
         line-height: 50px
         padding: 0 24px 0 20px
-        +background(linear-gradient(bottom, $red-light, $red))
-
         &:before
           display: inline-block
           text-align: left
@@ -64,10 +63,15 @@
           line-height: 43px
           color: $white
           font-weight: normal
+        &:hover
+          @extend %gradient-blue
+          text-decoration: underline
       &.active
         a
           +background(linear-gradient(bottom, #606060, #6f6f6f))
           cursor: default
+          &:hover
+            @extend %gradient-blue
 
       // Event List link
       &:first-of-type

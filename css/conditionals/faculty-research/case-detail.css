@@ -4,16 +4,39 @@
   line-height: 1.4;
 }
 
+.node-case.view-mode-full .group-wrapper-paper-copy,
+.node-case.view-mode-full .field-name-field-link-document,
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement, .node-case.view-mode-full .gsb-cmis-download-wrapper {
+  border-top: 1px #cccccc solid;
+}
+
+.node-case.view-mode-full .group-wrapper-paper-copy:last-child,
+.node-case.view-mode-full .field-name-field-link-document:last-child,
+.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement:last-child, .node-case.view-mode-full .gsb-cmis-download-wrapper {
+  border-bottom: 1px #cccccc solid;
+}
+
 .node-case.view-mode-full .gsb-cmis-download-button {
-  border: none;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
   background: #636f00;
   background: -moz-linear-gradient(top, #6c7200, #636f00);
   background: -o-linear-gradient(top, #6c7200, #636f00);
   background: -webkit-linear-gradient(top, #6c7200, #636f00);
   background: linear-gradient(to bottom, #6c7200, #636f00);
+}
+
+.node-case.view-mode-full .gsb-cmis-download-button:hover {
+  background: #2d6280;
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+
+.node-case.view-mode-full .gsb-cmis-download-button {
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
   color: white;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -30,18 +53,6 @@
 }
 .node-case.view-mode-full .gsb-cmis-download-button:hover:after {
   color: white !important;
-}
-
-.node-case.view-mode-full .group-wrapper-paper-copy,
-.node-case.view-mode-full .field-name-field-link-document,
-.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement, .node-case.view-mode-full .gsb-cmis-download-wrapper {
-  border-top: 1px #cccccc solid;
-}
-
-.node-case.view-mode-full .group-wrapper-paper-copy:last-child,
-.node-case.view-mode-full .field-name-field-link-document:last-child,
-.node-case.view-mode-full .gsb-feature-case-ct-pdf-statement:last-child, .node-case.view-mode-full .gsb-cmis-download-wrapper {
-  border-bottom: 1px #cccccc solid;
 }
 
 .node-case.view-mode-full .gsb-cmis-download-button:after {
@@ -137,6 +148,7 @@
 }
 .node-case.view-mode-full .group-wrapper-paper-copy a[target=_blank]:after {
   content: "\f102";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -182,6 +194,7 @@
 }
 .node-case.view-mode-full .gsb-cmis-download-button:after {
   content: "\f118";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -196,10 +209,4 @@
 }
 .node-case.view-mode-full .gsb-cmis-download-button:after {
   font-size: 14px;
-}
-.node-case.view-mode-full .gsb-cmis-download-button:hover {
-  background: -moz-linear-gradient(top, #18455f, #2d6280);
-  background: -o-linear-gradient(top, #18455f, #2d6280);
-  background: -webkit-linear-gradient(top, #18455f, #2d6280);
-  background: linear-gradient(to bottom, #18455f, #2d6280);
 }

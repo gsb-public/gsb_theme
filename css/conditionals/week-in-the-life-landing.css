@@ -1,4 +1,47 @@
 @charset "UTF-8";
+.view-week-in-the-life .field-name-node-link a {
+  background: #538b80;
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 10px 17px;
+  text-align: left;
+  position: relative;
+}
+.view-week-in-the-life .field-name-node-link a:after {
+  content: "\f101";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-week-in-the-life .field-name-node-link a:after {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 0;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+}
+.view-week-in-the-life .field-name-node-link a:hover {
+  background: #2d6280;
+  color: white;
+}
+.view-week-in-the-life .field-name-node-link a:hover:after {
+  color: white;
+}
+
 .group_witl_photo_info,
 .group_witl_group_days {
   overflow: hidden;
@@ -105,15 +148,14 @@
   margin-bottom: 20px;
 }
 .view-week-in-the-life .field-name-title {
-  color: #990000;
   font-size: 22px;
   background: -moz-linear-gradient(top, #fbfaf8, #f3f2f2);
   background: -o-linear-gradient(top, #fbfaf8, #f3f2f2);
   background: -webkit-linear-gradient(top, #fbfaf8, #f3f2f2);
   background: linear-gradient(to bottom, #fbfaf8, #f3f2f2);
   border-bottom: 1px solid #e6e5e5;
-  padding: 23px 20px 13px;
-  line-height: 1.25;
+  padding: 12px 20px 12px;
+  line-height: 1.2;
 }
 .view-week-in-the-life .field-name-title a:hover {
   color: #2d6280;
@@ -145,15 +187,13 @@
   color: #2c627c;
 }
 .view-week-in-the-life .view-mode-teaser {
-  padding: 0 0 30px 0;
+  padding: 0 0 26px 0;
   position: relative;
   height: 600px;
   background: white;
-  -moz-box-shadow: 1px 1px 0 #f3f3f3;
-  -webkit-box-shadow: 1px 1px 0 #f3f3f3;
-  box-shadow: 1px 1px 0 #f3f3f3;
-  margin: 0 2px 2px 2px;
-  border: 1px solid #e3e3e3;
+}
+.view-week-in-the-life .field-name-field-witl-post-mba-goals {
+  margin: 20px;
 }
 .view-week-in-the-life .field-name-field-image-single-public {
   margin: -1px -1px 0 -1px;
@@ -168,37 +208,6 @@
   width: 100%;
   padding: 0 20px 26px;
 }
-.view-week-in-the-life .field-name-node-link a {
-  background: #538b80;
-  display: block;
-  padding: 11px 16px 10px;
-  color: white;
-  font-weight: bold;
-}
-.view-week-in-the-life .field-name-node-link a:hover {
-  background: #754760;
-}
-.view-week-in-the-life .field-name-node-link a:after {
-  content: "\f101";
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-.view-week-in-the-life .field-name-node-link a:after {
-  float: right;
-  color: white;
-  font-size: 14px;
-  position: relative;
-  top: 6px;
-}
 .view-week-in-the-life .view-footer {
   border: 1px solid #e5e5e5;
   padding: 2px;
@@ -212,22 +221,18 @@
 .view-week-in-the-life .view-footer p {
   margin: 0;
 }
-.view-week-in-the-life .view-footer p a {
+.view-week-in-the-life .view-footer a {
   display: block;
   font-weight: bold;
   background: -moz-linear-gradient(top, #fbfaf8, #ededed);
   background: -o-linear-gradient(top, #fbfaf8, #ededed);
   background: -webkit-linear-gradient(top, #fbfaf8, #ededed);
   background: linear-gradient(to bottom, #fbfaf8, #ededed);
-  border: 0 none;
-  color: #990000;
   padding: 15px 20px 11px;
 }
-.view-week-in-the-life .view-footer p a:hover:before {
-  color: #990000;
-}
-.view-week-in-the-life .view-footer p a:after {
+.view-week-in-the-life .view-footer a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -240,7 +245,7 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.view-week-in-the-life .view-footer p a:after {
+.view-week-in-the-life .view-footer a:after {
   float: right;
   color: #c2b7a1;
   font-size: 21px;

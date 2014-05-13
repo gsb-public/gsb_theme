@@ -39,24 +39,10 @@
 
   .group-left, .group-right
     padding: 0 $standard-padding
-    .field-type-link-field a
-      color: $white
-      display: block
-      line-height: 1.5
-      padding: 10px 35px 7px 15px
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $white
-        float: right
-        font-size: 21px
-        line-height: 1.2
-
-        width: 0
-
     .field-type-image, .field-type-file
       margin: 0 -26px
 
-  //Right group
+  // Right group
   .group-right
     .group-diptych-txt-block
       margin-top: 20px
@@ -80,15 +66,25 @@
     .field-type-link-field a
       background-color: $grey-1
       color: $blue-light
+      display: block
+      line-height: 1.2
+      padding: 10px 17px
+      position: relative
+      +icon-after("arrow-double-right", true)
       &:after
         color: $link-blue
+        font-size: 16px
+        line-height: 0
+        position: absolute
+        right: 14px
+        top: 50%
       &:hover
-        background-color: $blue-light
+        background-color: $link-blue
         color: $white
         &:after
           color: $white
 
-  //Left group
+  // Left group
   .group-left
     position: relative
     .field-type-image
@@ -111,7 +107,8 @@
         margin: 15px 0 26px 0
         padding-right: 0
 
-    .field-type-text-long, .field-type-link-field
+    .field-type-text-long,
+    .field-type-link-field
       color: $white
     // Text
     .field-type-text-long
@@ -126,13 +123,11 @@
         line-height: 1.3
 
     // Link
-    .field-type-link-field a
-      background-color: $teal-dark
-      width: 218px
-      &:after
-        line-height: 0
-      &:hover
-        background-color: $blue
+    .field-type-link-field
+      line-height: 0
+      a
+        width: 240px
+        @extend %teal-cta
 
 // Wide view
 .wide-view

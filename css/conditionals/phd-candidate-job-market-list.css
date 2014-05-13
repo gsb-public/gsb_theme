@@ -44,8 +44,8 @@
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
-  line-height: 32px;
-  margin-bottom: 26px;
+  line-height: 1.2;
+  margin-bottom: 24px;
   margin-top: 14px;
 }
 @media (max-width: 48em) {
@@ -70,14 +70,15 @@
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .view-phd-job-market-candidate-detail .view-empty {
   font-weight: normal;
-  text-transform: none;
+  margin: 0;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .phd-name {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .phd-name a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -95,6 +96,9 @@
   font-size: 14px;
   margin-left: 3px;
 }
+.view-phd-job-market-candidates .view-content .views-row.main-view .phd-name a:hover:after {
+  color: #aac4bf;
+}
 @media (max-width: 48em) {
   .view-phd-job-market-candidates .view-content .views-row.main-view .phd-name {
     margin-bottom: 18px;
@@ -110,8 +114,9 @@
 .view-phd-job-market-candidates .view-content .views-row.main-view .group-third .label-above,
 .view-phd-job-market-candidates .view-content .views-row.main-view .group-fourth .label-above {
   color: #766d5f;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+  line-height: 1.2;
   margin-bottom: 18px;
 }
 @media (max-width: 48em) {
@@ -150,8 +155,8 @@
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
-  line-height: 24px;
-  margin-bottom: 14px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-person-fac-ref a:hover {
   color: #2d6280;
@@ -171,11 +176,11 @@
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-dissertation {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.2;
 }
 .view-phd-job-market-candidates .view-content .views-row.main-view .field-name-field-phd-research-interests div:not(:first-of-type) {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 1.2;
   margin-bottom: 12px;
 }
 @media (max-width: 48em) {

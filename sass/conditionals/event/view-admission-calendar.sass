@@ -37,6 +37,8 @@
       a
         color: $text-green
         font-weight: bold
+        &:hover
+          color: $link-blue
       tr
         border-top: transparent
         border-bottom: 1px solid #e4e4e4
@@ -48,7 +50,7 @@
 
       a
         position: relative
-        color: $text-green
+        color: $link-green
         padding-right: 30px
         white-space: nowrap
         &:after
@@ -62,14 +64,19 @@
           border-width: 7px
           border-color: transparent
           bottom: -2px
-          border-top-color: $text-green
+          border-top-color: $link-green
           border-top-width: 9px
+        &:hover
+          color: $link-blue
+          text-decoration: underline
       .active
         a
           color: $text-black
+          &:hover
+            color: $link-blue
         a[href*="asc"]:after
           bottom: 7px
-          border-bottom-color: $text-green
+          border-bottom-color: $link-green
           border-bottom-width: 9px
           border-top-color: transparent
           border-top-width: 7px
@@ -87,18 +94,20 @@
       padding: 0.5em 1em
 
   .event-button
-    background-color: #fbfaf8
     +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
+    background-color: $grey-e
+    +background(linear-gradient(top, $grey-e 20%, #fbfaf8 100%))
+    @include filter-gradient(#fbfaf8, $grey-e, vertical)
+    color: $red
     margin: 2px 7px 0 1px
     border: 2px $white solid
-    border-bottom: 0 none
+    border-bottom: none
     &:hover
-      color: $blue-dark
-      background-color: $grey-c
-      +background(linear-gradient(top, $grey-e 20%, #fbfaf8 100%))
-      @include filter-gradient(#fbfaf8, $grey-e, vertical)
+      background: #fbfaf8
+      color: $link-blue
+      text-decoration: underline
     &.active
-      background-color: $grey-c
-      +background(linear-gradient(bottom, $grey-e 20%, #fbfaf8 100%))
-      @include filter-gradient(#fbfaf8, $grey-e, vertical)
-      color: $red-dark
+      background: #fbfaf8
+      color: $text-black
+      &:hover
+        color: $link-blue

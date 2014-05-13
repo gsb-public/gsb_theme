@@ -55,9 +55,6 @@
       font-size: 22px
     .speaker-name a
       color: $link-green
-      &:hover
-        border-bottom: 1px solid $link-blue
-        color: $link-blue
 
     // Address
     .field-name-field-address
@@ -82,8 +79,7 @@
   .field-name-field-register-url
     a
       @extend %green-button
-      &:hover
-        +background(linear-gradient(top, #18455f, $text-blue))
+
   .event-ical-link
     display: none
     .no-touch &
@@ -96,10 +92,6 @@
   .field-name-field-target-audience
     font-size: 14px
     padding-top: $standard-padding
-    a
-      &:hover
-        color: $link-blue
-        border-bottom: 1px solid $link-blue
     .field-items
       float: none
     .field-item

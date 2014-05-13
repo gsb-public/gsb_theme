@@ -106,6 +106,7 @@
   }
   #program-links-title:before {
     content: "\f11b";
+    display: inline-block;
     speak: none;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
@@ -214,6 +215,7 @@
 }
 .pane-gsb-event-frontpage .pane-title a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -232,11 +234,8 @@
   line-height: 0;
   margin-left: 3px;
 }
-.pane-gsb-event-frontpage .pane-title a:hover {
-  color: #2d6280;
-}
 .pane-gsb-event-frontpage .pane-title a:hover:after {
-  color: #2d6280;
+  color: #aac4bf;
 }
 .pane-gsb-event-frontpage .views-field-field-event-date,
 .pane-gsb-event-frontpage .views-field-title,
@@ -256,13 +255,14 @@
 }
 .pane-gsb-event-frontpage .views-field-title a {
   border: 0;
-  color: #1b1b1b;
+  color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.1;
 }
 .pane-gsb-event-frontpage .views-field-title a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -284,7 +284,7 @@
   color: #2d6280;
 }
 .pane-gsb-event-frontpage .views-field-title a:hover:after {
-  color: #2d6280;
+  color: #aac4bf;
 }
 .pane-gsb-event-frontpage .views-field-field-event-date {
   color: #595959;
@@ -312,7 +312,8 @@
     line-height: 20px;
   }
 }
-#bottom h2 {
+
+.bottom-content h2 {
   border-bottom: 1px #cccccc solid;
   color: #231f20;
   line-height: 1;
@@ -322,11 +323,9 @@
   font-size: 20px;
   font-weight: bold;
 }
-#bottom h2 a {
-  color: #990000;
-}
-#bottom h2 a:after {
+.bottom-content h2 a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -339,60 +338,54 @@
   font-weight: normal;
   font-family: 'icons';
 }
-#bottom h2 a:after {
+.bottom-content h2 a:after {
   color: #c2b7a1;
   font-size: 14px;
-  margin-left: 0.3em;
+  margin-left: 3px;
 }
-#bottom h2 a:hover {
-  color: #2d6280;
+.bottom-content h2 a:hover:after {
+  color: #aac4bf;
 }
-#bottom h2 a:hover:after {
-  color: #2d6280;
-}
-#bottom article {
+.bottom-content article {
   float: left;
   padding-right: 15px;
   width: 50%;
 }
 @media (max-width: 35.5em) {
-  #bottom article {
+  .bottom-content article {
     padding-right: 0;
     width: 100%;
   }
 }
-#bottom article:nth-of-type(3n) {
+.bottom-content article:nth-of-type(3n) {
   clear: both;
 }
-#bottom article:nth-of-type(2n), #bottom article:last-of-type {
+.bottom-content article:nth-of-type(2n), .bottom-content article:last-of-type {
   padding-right: 0;
   padding-left: 15px;
 }
 @media (max-width: 35.5em) {
-  #bottom article:nth-of-type(2n), #bottom article:last-of-type {
+  .bottom-content article:nth-of-type(2n), .bottom-content article:last-of-type {
     padding-left: 0;
   }
 }
-#bottom article h3 {
+.bottom-content article h3 {
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
   margin-bottom: 2px;
 }
-#bottom article .author {
+.bottom-content article .author {
   font-size: 14px;
   color: #656162;
   line-height: 18px;
 }
-#bottom article p .date {
+.bottom-content article p .date {
   color: #666666;
   font-size: 16px;
 }
-#bottom article p .date:after {
+.bottom-content article p .date:after {
   content: "|";
   margin-right: 5px;
   margin-left: 5px;
-}
-#bottom article h3 a:hover {
-  color: #2d6280;
 }

@@ -121,10 +121,10 @@
       &:first-of-type
         a
           padding: 12px 7px 18px
-      &:hover a
-        text-decoration: underline
       a
         +icon-after("arrow-med-down", true)
+        min-height: 80px
+        padding: 12px 8px 18px
         &:after
           color: $white
           float: right
@@ -133,8 +133,7 @@
           line-height: 1
           right: 6px
           bottom: 4px
-        min-height: 80px
-        padding: 12px 8px 18px
+
 
 /////////////////////////
 // EVENT AND SEARCH
@@ -144,8 +143,6 @@
     float: left
     height: 0
     width: 202px
-    &:hover a
-      text-decoration: underline
   +breakpoint($bp-tablet-port)
     float: right
     position: absolute
@@ -162,6 +159,7 @@
   display: inline-block
   &:hover
     background: $grey-27
+    color: $white
   .page-events &,
   .node-type-event &
     +background(linear-gradient(bottom, #9a0101, #6d0101))

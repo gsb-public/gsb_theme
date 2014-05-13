@@ -72,17 +72,13 @@
     margin-bottom: 18px
   .view-club-filters
     .more-link
-      @extend %bg-border-and-box-shadow
-      @include filter-gradient(#fbfaf8, $grey-e, vertical)
-      width: 50%
-      min-width: 208px
+      min-width: 145px
       float: right
       text-align: left
       a
         display: block
-        padding: 14px 50px 11px 22px
-        font-size: 16px
-        color: $text-green
+        font-size: 18px
+        color: $link-green
         position: relative
         +icon-after("arrow-double-right", true)
         &:after
@@ -90,7 +86,7 @@
           font-weight: bold
           color: #e3e3e3
         &:hover
-          color: $text-blue
+          color: $link-blue
           &:after
             color: $teal-light
 

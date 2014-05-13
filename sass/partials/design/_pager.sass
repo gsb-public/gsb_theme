@@ -17,38 +17,35 @@
     ul li
       margin: 0
       padding: 0
-    a
-      color: $white
-      font-size: 14px
-      font-weight: bold
-      line-height: 2.2
-      padding: 16px
+  a
+    color: $white
+    font-size: 16px
+    font-weight: bold
+    line-height: 2.2
+    &:hover
+      background: $link-blue
+      text-decoration: underline
 
 // Load more link
 .pager-load-more
-  .pager-next a
-    background: $text-green
-    text-transform: uppercase
+  a
+    background: $teal-dark
+    padding: 12px 16px
     position: relative
-    &:hover
-      background: $blue
     +icon-before("arrow-med-down", true)
     &:before
+      font-size: 12px
       line-height: 0
       position: relative
       left: -7px
       top: -1px
 
 // Back to top link
-.additional-links
+.additional-links a
   background: $text-black
-  &:hover
-    background: $blue
-  a
-    text-transform: uppercase
+  padding: 9px 16px 10px
 
 // NO RESULTS TEXT
 .view-empty
   font-weight: bold
   margin: 24px
-  text-transform: uppercase

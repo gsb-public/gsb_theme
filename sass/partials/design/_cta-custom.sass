@@ -168,7 +168,7 @@
         float: none
         margin-right: 0
         width: 100%
-  // Rething wrapper
+  // Rethink wrapper
   .rethink-wrapper
     font-size: 18px
     line-height: 1.2
@@ -193,7 +193,7 @@
     +icon-after("email-stroke", true)
     &:after
       font-size: 14px
-      margin-left: 0.3em
+      margin-left: 3px
 
 // Follow Us
 .pane-gsb-public-custom-blocks-gpcb-follow-us
@@ -223,6 +223,7 @@
       margin-left: 5px
     &:hover
       background: rgba($text-blue, 0.85)
+      color: $white
       text-decoration: underline
 
   // Social icons
@@ -307,3 +308,6 @@
   a
     @extend %teal-cta
     max-width: 245px
+    &:hover
+      &:after
+        color: $white

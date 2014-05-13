@@ -27,8 +27,8 @@ $bp-four-column-switch: 768px max-width
       display: inline-block
       font-size: 20px
       font-weight: bold
-      line-height: 32px
-      margin-bottom: 26px
+      line-height: 1.2
+      margin-bottom: 24px
       margin-top: 14px
       +breakpoint($bp-four-column-switch)
         margin-bottom: 18px
@@ -44,18 +44,21 @@ $bp-four-column-switch: 768px max-width
           padding-bottom: 18px
       .view-empty
         font-weight: normal
-        text-transform: none
+        margin: 0
 
     // Individual candidate
     .phd-name
       display: block
-      margin-bottom: 24px
+      margin-bottom: 18px
       a
         +icon-after("arrow-double-right", true)
         &:after
           color: $grey-med
           font-size: 14px
           margin-left: 3px
+        &:hover
+          &:after
+            color: $teal-light
       +breakpoint($bp-four-column-switch)
         margin-bottom: 18px
 
@@ -67,8 +70,9 @@ $bp-four-column-switch: 768px max-width
       width: 25%
       .label-above
         color: $grey-dark
-        font-size: 14px
+        font-size: 16px
         font-weight: bold
+        line-height: 1.2
         margin-bottom: 18px
         +breakpoint($bp-four-column-switch)
           margin-bottom: 10px
@@ -94,8 +98,8 @@ $bp-four-column-switch: 768px max-width
         display: inline-block
         font-size: 16px
         font-weight: bold
-        line-height: 24px
-        margin-bottom: 14px
+        line-height: 1.2
+        margin-bottom: 10px
         &:hover
           color: $link-blue
         +breakpoint($bp-mobile-max)
@@ -108,13 +112,13 @@ $bp-four-column-switch: 768px max-width
     // Dissertation
     .field-name-field-dissertation
       font-size: 16px
-      line-height: 24px
+      line-height: 1.2
 
     // Fourth column
     .field-name-field-phd-research-interests
       div:not(:first-of-type)
-        font-size: 14px
-        line-height: 18px
+        font-size: 16px
+        line-height: 1.2
         margin-bottom: 12px
 
     // Switch to 2 over 1 layout

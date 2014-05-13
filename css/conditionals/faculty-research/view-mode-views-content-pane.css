@@ -1,3 +1,16 @@
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1 {
+  background: -moz-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: -o-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: -webkit-linear-gradient(top, #e7e7e7, #f0f0f0);
+  background: linear-gradient(to bottom, #e7e7e7, #f0f0f0);
+}
+
+.pane-case-filters-panel-pane-1 h2.pane-title,
+.pane-publication-filters-panel-pane-1 h2.pane-title {
+  border-top: 10px #c2b7a1 solid;
+}
+
 .pane-case-filters-panel-pane-1 .see-all a,
 .pane-publication-filters-panel-pane-1 .see-all a {
   background: #538b80;
@@ -5,6 +18,7 @@
   display: block;
   font-size: 14px;
   font-weight: bold;
+  line-height: 1.2;
   padding: 10px 17px;
   text-align: left;
   position: relative;
@@ -12,6 +26,7 @@
 .pane-case-filters-panel-pane-1 .see-all a:after,
 .pane-publication-filters-panel-pane-1 .see-all a:after {
   content: "\f101";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -36,20 +51,12 @@
 }
 .pane-case-filters-panel-pane-1 .see-all a:hover,
 .pane-publication-filters-panel-pane-1 .see-all a:hover {
-  background: #754760;
+  background: #2d6280;
+  color: white;
 }
-
-.pane-case-filters-panel-pane-1,
-.pane-publication-filters-panel-pane-1 {
-  background: -moz-linear-gradient(top, #e7e7e7, #f0f0f0);
-  background: -o-linear-gradient(top, #e7e7e7, #f0f0f0);
-  background: -webkit-linear-gradient(top, #e7e7e7, #f0f0f0);
-  background: linear-gradient(to bottom, #e7e7e7, #f0f0f0);
-}
-
-.pane-case-filters-panel-pane-1 h2.pane-title,
-.pane-publication-filters-panel-pane-1 h2.pane-title {
-  border-top: 10px #c2b7a1 solid;
+.pane-case-filters-panel-pane-1 .see-all a:hover:after,
+.pane-publication-filters-panel-pane-1 .see-all a:hover:after {
+  color: white;
 }
 
 .view-mode-views_content_pane .field-name-field-link-document a:after {
@@ -114,6 +121,7 @@
 }
 .view-mode-views_content_pane .field-name-field-link-document a:after {
   content: "\f118";
+  display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;

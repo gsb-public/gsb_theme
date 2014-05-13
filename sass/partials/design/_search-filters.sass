@@ -317,6 +317,8 @@ fieldset.collapsible .fieldset-legend
       width: 100% !important
       > label
         margin-bottom: 6px
+        &:hover
+          text-decoration: underline
     .bef-checkboxes
       > div
         width: 32%
@@ -560,7 +562,6 @@ fieldset.collapsible .fieldset-legend
       width: 100%
   #edit-search-wrapper
     float: left
-
     margin-right: -36px
     padding-right: 36px
     width: 100%
@@ -586,15 +587,15 @@ fieldset.collapsible .fieldset-legend
     width: 36px
     height: 36px
     .svg &
-      +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
+      +background(image_url("search-white.svg") no-repeat 60% 47%, linear-gradient(bottom, $red-light 0%, $red-dark 100%))
       background-size: 60px
       &:hover
-        +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        +background(image_url("search-white.svg") no-repeat 60% 47%, linear-gradient(top, #18455f, $text-blue))
         background-size: 60px
     .no-js &, .no-svg &
-      +background(image_url("search-white.png") no-repeat 11px 11px, $red)
+      +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(bottom, $red-light 0%, $red-dark 100%))
       &:hover
-        +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
+        +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, #18455f, $text-blue))
 
   // Filter section
   .views-widget-filter-secondary

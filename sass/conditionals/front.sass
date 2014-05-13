@@ -156,9 +156,8 @@
         line-height: 0
         margin-left: 3px
       &:hover
-        color: $link-blue
         &:after
-          color: $link-blue
+          color: $teal-light
 
   .views-field-field-event-date,
   .views-field-title,
@@ -174,7 +173,7 @@
     line-height: 0
     a
       border: 0
-      color: $grey-1
+      color: $text-black
       font-family: $font-demi
       font-weight: normal
       line-height: 1.1
@@ -186,7 +185,7 @@
       &:hover
         color: $link-blue
         &:after
-          color: $link-blue
+          color: $teal-light
 
   // Date
   .views-field-field-event-date
@@ -209,6 +208,8 @@
       font-size: 16px
       +breakpoint($bp-mobile-max)
         line-height: 20px
+
+.bottom-content
   // Titles
   h2
     border-bottom: 1px $grey-c solid
@@ -220,18 +221,17 @@
     font-size: 20px
     font-weight: bold
     a
-      color: $red
       +icon-after("arrow-double-right", true)
       &:after
         color: $grey-med
         font-size: 14px
-        margin-left: 0.3em
+        margin-left: 3px
       &:hover
-        color: $link-blue
         &:after
-          color: $link-blue
+          color: $teal-light
+
   article
-    +float-left
+    float: left
     padding-right: 15px
     width: 50%
     +breakpoint($bp-mobile-max)
@@ -262,5 +262,3 @@
           content: "|"
           margin-right: 5px
           margin-left: 5px
-    h3 a:hover
-      color: $link-blue

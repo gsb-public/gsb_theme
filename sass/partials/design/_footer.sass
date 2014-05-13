@@ -47,14 +47,11 @@
 #block-menu-menu-footer-1,
 #block-menu-menu-footer-2
   a
-    color: $red
     display: block
     font-weight: bold
     line-height: 1.3
     max-width: 200px
     text-transform: uppercase
-    &:hover
-      color: $text-blue
     +breakpoint(895px max-width)
       font-size: 13px
   li
@@ -78,7 +75,6 @@
   // Title
   h2
     border-bottom: 1px solid $grey-c
-    color: $red
     font-family: $font-sans
     font-size: 20px
     font-weight: bold
@@ -91,11 +87,11 @@
         color: $grey-med
         font-size: 12px
         font-weight: normal
-        margin-left: 0.3em
+        margin-left: 3px
       &:hover
-        color: $link-blue
         &:after
-          color: $link-blue
+          color: $teal-light
+
   // Icon wrapper
   .icon-wrapper
     display: block
@@ -107,10 +103,6 @@
   font-size: 16px
   margin-bottom: 3px
   line-height: 1.3
-  a
-    color: $red
-    &:hover
-      color: $link-blue
 
 .footer__signup__description
   font-size: 15px
@@ -126,7 +118,7 @@ input.footer__signup__email
   +border-radius(0)
   float: left
   height: 36px
-  line-height: 1em
+  line-height: 1
   width: 160px
   padding-left: 7px
   +breakpoint($bp-tablet-port)
@@ -138,22 +130,24 @@ input.footer__signup__email
     +box-shadow(none)
     border: 1px #900 solid
 
-input.footer__signup__submit,
-input.footer__signup__submit:hover
-  margin: 0
-  margin-left: -1px
-  float: left
-  width: 41px
-  text-align: center
-  line-height: 31px
-  height: 36px
-  background: #900
-  color: $white
+input.footer__signup__submit
+  +background(linear-gradient(bottom, $red-light 40%, $red-dark 90%))
   border: none
   +border-radius(0 20px 20px 0)
+  color: $white
+  float: left
+  font-size: 14px
+  font-family: $font-sans
   font-weight: bold
-  font-size: 13px
+  height: 36px
+  line-height: 2.5
+  margin: 0
+  margin-left: -1px
+  text-align: center
   text-shadow: none
+  width: 41px
+  &:hover
+    +background(linear-gradient(#194560, #2c6180))
 
 // Legal and Copyright region
 
@@ -179,7 +173,6 @@ input.footer__signup__submit:hover
     +breakpoint($bp-mobile-max)
       margin-right: 25px
     a
-      color: $red
       font-size: 14px
 
 // Copyright and address

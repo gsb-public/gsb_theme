@@ -22,81 +22,6 @@
   margin-top: -8px
   right: 22px
 
-////////////
-// BUTTONS
-////////////
-
-%red-button-gradient
-  +background(linear-gradient(bottom, $red-light 40%, #860000 90%))
-  +box-shadow(#ababab 0 2px 4px)
-
-// Show More link
-%show-more-link
-  border: 0
-  color: $link-green
-  cursor: pointer
-  display: block
-  font-weight: bold
-  line-height: 1
-  margin: 5px 0 0
-  text-align: right
-  span
-    font-size: 14px
-    padding-left: 16px
-    +icon-before("arrow-med-down", true)
-    &:before
-      font-size: 12px
-      font-weight: normal
-      position: relative
-      right: 5px
-  &:hover
-    color: $link-blue
-  &.active
-    span
-      +icon-before("arrow-med-up", false)
-
-// Rounded green buttons
-%green-button
-  border: none
-  +border-radius(20px)
-  background: $text-green
-  +background(linear-gradient(top, #6c7200, $text-green))
-  color: $white
-  font-family: $font-sans
-  font-size: 16px
-  font-weight: bold
-  line-height: 1
-  padding: 10px 16px
-  &:after
-    color: $white !important
-  &:hover
-    border: 0
-    color: $white
-    &:after
-      color: $white !important
-
-// Rectangle teal CTA link style with >>
-%teal-cta
-  background: $teal-dark
-  color: $white
-  display: block
-  font-size: 14px
-  font-weight: bold
-  padding: 10px 17px
-  text-align: left
-  position: relative
-  +icon-after("arrow-double-right", true)
-  &:after
-    color: $white
-    font-size: 16px
-    font-weight: normal
-    line-height: 0
-    position: absolute
-    right: 14px
-    top: 50%
-  &:hover
-    background: $purple
-
 ///////////////
 // BACKGROUNDS
 ///////////////
@@ -186,6 +111,93 @@
   @extend %bg-white-gradient
   margin: 1px
 
+// Gradients
+
+%gradient-green
+  background: $text-green
+  +background(linear-gradient(top, #6c7200, $text-green))
+
+%gradient-blue
+  background: $text-blue
+  +background(linear-gradient(top, #18455f, $text-blue))
+
+%gradient-red
+  background-color: $red-light
+  +background(linear-gradient(bottom, $red-light 0%, $red-dark 100%))
+
+// Global pieces
+
+// Show More link
+%show-more-link
+  border: 0
+  color: $link-green
+  cursor: pointer
+  display: block
+  font-weight: bold
+  line-height: 1
+  margin: 5px 0 0
+  text-align: right
+  span
+    font-size: 14px
+    padding-left: 16px
+    +icon-before("arrow-med-down", true)
+    &:before
+      font-size: 12px
+      font-weight: normal
+      position: relative
+      right: 5px
+  &:hover
+    color: $link-blue
+  &.active
+    span
+      +icon-before("arrow-med-up", false)
+
+// Rounded green buttons
+%green-button
+  border: none
+  +border-radius(20px)
+  @extend %gradient-green
+  color: $white
+  font-family: $font-sans
+  font-size: 16px
+  font-weight: bold
+  line-height: 1
+  padding: 10px 16px
+  &:after
+    color: $white !important
+  &:hover
+    @extend %gradient-blue
+    border: 0
+    color: $white
+    &:after
+      color: $white !important
+
+// Rectangle teal CTA link style with >>
+%teal-cta
+  background: $teal-dark
+  color: $white
+  display: block
+  font-size: 14px
+  font-weight: bold
+  line-height: 1.2
+  padding: 10px 17px
+  text-align: left
+  position: relative
+  +icon-after("arrow-double-right", true)
+  &:after
+    color: $white
+    font-size: 16px
+    font-weight: normal
+    line-height: 0
+    position: absolute
+    right: 14px
+    top: 50%
+  &:hover
+    background: $link-blue
+    color: $white
+    &:after
+      color: $white
+
 // Attached document icons
 %doc-attached-icons
   margin-left: 3px
@@ -232,8 +244,7 @@
 
 // Social icon circle
 %circle
-  background-color: $red-light
-  +background(linear-gradient(bottom, $red-light 0%, $red-dark 100%))
+  @extend %gradient-red
   +border-radius(50px)
   color: $white
   display: block
@@ -247,6 +258,6 @@
     position: relative
     top: 10px
   &:hover
-    background: $white
+    @extend %gradient-blue
     &:after
-      color: $red
+      color: $white

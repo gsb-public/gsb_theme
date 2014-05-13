@@ -15,8 +15,7 @@
   padding: 14px 55px 11px $standard-padding
   font-size: 16px
   position: relative
-  span, b
-    line-height: 1
+  line-height: 1.2
   span
     margin-right: 5px
 .cta-action
@@ -28,6 +27,7 @@
 .cta-red,
 .cta-green
   .field-item
+    line-height: 1
     a[href*="mailto:"]
       padding-right: 22px
       padding-left: 55px
@@ -100,16 +100,14 @@
     margin-bottom: 5px
     color: $grey-med
     a
-      color: $red
       position: relative
       +icon-after("arrow-double-right", true)
       &:after
         @extend %arrow-double-big
         color: $grey-med
-    &:hover
-      background: #edeae5
-      a:after
-        color: $red
+      &:hover
+        &:after
+          color: $teal-light
 
 // CTA - Red gradient
 .cta-red-gradient
@@ -141,9 +139,9 @@
         +background(linear-gradient(#194560, #2c6180))
   // Item-specific gradients
   .item-0
-    +background(linear-gradient(#860000, #8f0000))
+    +background(linear-gradient($red-dark, #8f0000))
     .front &
-      +background(linear-gradient(#860000, #8f0000))
+      +background(linear-gradient($red-dark, #8f0000))
   .item-1
     +background(linear-gradient(#900000, #9d0000))
     .front &

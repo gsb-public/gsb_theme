@@ -13,14 +13,22 @@
   @extend %bg-border-and-box-shadow
   padding: $standard-padding
   padding-top: 20px
-  h2.pane-title
+  .pane-title a
     color: $red
+    display: block
     font-size: 14px
     font-weight: normal
     line-height: 18px
     margin-bottom: 20px
-    a:hover
+    +icon-after("arrow-double-right", true)
+    &:after
+      color: $grey-med
+      font-size: 10px
+      margin-left: 3px
+    &:hover
       color: $link-blue
+      &:after
+        color: $teal-light
   .view-gsb-event .view-content .views-row
     border: 0
     padding: 14px 0
@@ -47,9 +55,10 @@
     line-height: 1.1
     margin-bottom: 8px
     a
-      color: $text-green
+      color: $link-green
       &:hover
-        color: $text-blue
+        color: $link-blue
+
   .field-name-field-editorial-summary
     color: $text-black
     font-size: 14px
