@@ -13,8 +13,6 @@
   border-top: 3px solid $black
   padding-top: 0
   padding-left: 0
-  a
-    border-bottom: 0
   .group-left
     padding: $standard-padding
     padding-bottom: 0
@@ -46,17 +44,20 @@
       +clearfix
     .field-collection-item-field-person-fac-other,
     .separator
-      +float-left
-      line-height: 24px
-      a
-        color: $green-light
+      float: left
+      line-height: 1.2
     .separator,
     .name-first
-      margin-right: 5px
+      margin-right: 3px
     .name-first,
     .name-last,
     .speaker-name a
       font-size: 22px
+    .speaker-name a
+      color: $link-green
+      &:hover
+        border-bottom: 1px solid $link-blue
+        color: $link-blue
 
     // Address
     .field-name-field-address
@@ -95,6 +96,10 @@
   .field-name-field-target-audience
     font-size: 14px
     padding-top: $standard-padding
+    a
+      &:hover
+        color: $link-blue
+        border-bottom: 1px solid $link-blue
     .field-items
       float: none
     .field-item

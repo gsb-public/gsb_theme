@@ -31,9 +31,6 @@
   padding-top: 0;
   padding-left: 0;
 }
-.node-event.view-mode-full a {
-  border-bottom: 0;
-}
 .node-event.view-mode-full .group-left {
   padding: 26px;
   padding-bottom: 0;
@@ -67,20 +64,23 @@
 .node-event.view-mode-full .group-left .field-collection-item-field-person-fac-other,
 .node-event.view-mode-full .group-left .separator {
   float: left;
-  line-height: 24px;
-}
-.node-event.view-mode-full .group-left .field-collection-item-field-person-fac-other a,
-.node-event.view-mode-full .group-left .separator a {
-  color: #bac405;
+  line-height: 1.2;
 }
 .node-event.view-mode-full .group-left .separator,
 .node-event.view-mode-full .group-left .name-first {
-  margin-right: 5px;
+  margin-right: 3px;
 }
 .node-event.view-mode-full .group-left .name-first,
 .node-event.view-mode-full .group-left .name-last,
 .node-event.view-mode-full .group-left .speaker-name a {
   font-size: 22px;
+}
+.node-event.view-mode-full .group-left .speaker-name a {
+  color: #636f00;
+}
+.node-event.view-mode-full .group-left .speaker-name a:hover {
+  border-bottom: 1px solid #2d6280;
+  color: #2d6280;
 }
 .node-event.view-mode-full .group-left .field-name-field-address .thoroughfare {
   font-weight: bold;
@@ -121,6 +121,10 @@
 .node-event.view-mode-full .field-name-field-target-audience {
   font-size: 14px;
   padding-top: 26px;
+}
+.node-event.view-mode-full .field-name-field-target-audience a:hover {
+  color: #2d6280;
+  border-bottom: 1px solid #2d6280;
 }
 .node-event.view-mode-full .field-name-field-target-audience .field-items {
   float: none;
