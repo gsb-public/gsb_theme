@@ -11,6 +11,8 @@ $bp-video: 627px min-width
     position: relative
     .content img
       display: block
+      +breakpoint(768px 568px)
+        width: 100%
       +breakpoint($bp-mobile-480)
         width: 100%
   .gsb-responsive-main
@@ -18,33 +20,36 @@ $bp-video: 627px min-width
     .content div
       margin: 0 auto
 
-// VIDEO FPP
+// Video fpp
 .pane-bundle-video
   @extend %bg-border-and-box-shadow
   padding: $standard-padding
-  .wide-view &
-    +clearfix
-  .field-name-field-file-single-public
-    .narrow-view &
-      margin: -26px -26px 20px
-      +breakpoint($bp-mobile-480)
-        margin: 0
-    .wide-view &
-      float: left
-      +breakpoint($bp-tablet-land-max)
-        float: none
+  +clearfix
+
+  // Title
   .field-name-field-title
     color: $text-black
     font-size: 24px
     font-weight: bold
     line-height: 1.1
     margin-bottom: 12px
+    +breakpoint(768px 568px)
+      margin-top: 12px
+    +breakpoint($bp-mobile-480)
+      margin-top: 12px
+    .narrow-view &
+      +breakpoint($bp-mobile-max)
+        margin-top: 12px
+
+  // Description
   .field-name-field-body
     font-size: 16px
     line-height: 1.2
     margin: 12px 0
     max-width: 600px
     overflow: hidden
+
+// Videos in slideshows
 .full-view .slideshow-cta
   .slideshow-slide
     .gsb-image-video-popup
@@ -65,10 +70,14 @@ $bp-video: 627px min-width
           margin-top: -61px
           margin-left: -108px
 
-//Main video responsive play button and width styl
+// Main video responsive play button and width
 .gsb-image-video-popup
   margin-right: 26px
   max-width: 270px
+  +breakpoint(768px 568px)
+    margin-right: 0
+  +breakpoint($bp-mobile-480)
+    margin-right: 0
   .narrow-view &
     margin-right: 0
   .slideshow-slide &
@@ -89,6 +98,7 @@ $bp-video: 627px min-width
           left: 63%
         +breakpoint($bp-mobile)
           left: 73%
+
     +icon-before("circle", true)
     &:before
       font-size: 64px
@@ -114,6 +124,7 @@ $bp-video: 627px min-width
       &:before,
       &:after
         display: none
+
 // CSS to handle the Preview and Video switching
 .field-type-file
   .gsb-responsive-main .file-video

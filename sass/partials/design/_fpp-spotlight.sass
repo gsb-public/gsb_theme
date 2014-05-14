@@ -6,6 +6,7 @@
   @extend %bg-border-and-box-shadow
   position: relative
   padding: 0 $standard-padding 20px
+
   .spotlight-border
     position: absolute
     top: 0
@@ -96,6 +97,8 @@
     .field-name-field-spotlight-person-fid .field-items
       margin-right: 26px
       max-width: 270px
+      +breakpoint($bp-mobile-480)
+        max-width: 100%
 
 // Clear the image/video on full and wide modes
 .full-view

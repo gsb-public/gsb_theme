@@ -128,8 +128,22 @@ div.label-inline
 
 
 // DISPLAY SUITE
-.ds-2col-stacked > .group-right
-  max-width: 220px
+// Video, spotlight, house ad fpp
+.ds-2col,
+.ds-2col-stacked
+  .group-left
+    width: 58%
+  .group-right
+    width: 42%
 
-.ds-2col-stacked > .group-left
-  width: auto
+  .group-left,
+  .group-right
+    +breakpoint(768px 568px)
+      float: none
+      width: 100%
+    +breakpoint($bp-mobile-480)
+      float: none
+      width: 100%
+    .narrow-view &
+      float: none
+      width: 100%
