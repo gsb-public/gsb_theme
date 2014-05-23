@@ -129,21 +129,41 @@ div.label-inline
 
 // DISPLAY SUITE
 // Video, spotlight, house ad fpp
-.ds-2col,
-.ds-2col-stacked
-  .group-left
-    width: 58%
-  .group-right
-    width: 42%
+.pane-bundle-video,
+.pane-bundle-house-ads
+  .ds-2col
+    .group-left
+      width: 58%
+    .group-right
+      width: 42%
 
-  .group-left,
-  .group-right
-    +breakpoint(768px 568px)
-      float: none
-      width: 100%
-    +breakpoint($bp-mobile-480)
-      float: none
-      width: 100%
-    .narrow-view &
-      float: none
-      width: 100%
+    .group-left,
+    .group-right
+      +breakpoint(768px 569px)
+        float: none
+        width: 100%
+      +breakpoint($bp-mobile-480)
+        float: none
+        width: 100%
+      .narrow-view &
+        float: none
+        width: 100%
+
+.pane-bundle-spotlight
+  .ds-2col-stacked
+    .group-left
+      width: 58%
+    .group-right
+      width: 42%
+
+    .group-left,
+    .group-right
+      +breakpoint(768px 569px)
+        float: none
+        width: 100%
+      +breakpoint($bp-mobile-480)
+        float: none
+        width: 100%
+      .narrow-view &
+        float: none
+        width: 100%
