@@ -67,8 +67,10 @@
       background-color: $grey-1
       color: $blue-light
       display: block
+      font-size: 14px
+      font-weight: bold
       line-height: 1.2
-      padding: 10px 17px
+      padding: 14px 17px
       position: relative
       +icon-after("arrow-double-right", true)
       &:after
@@ -110,6 +112,11 @@
     .field-type-text-long,
     .field-type-link-field
       color: $white
+
+    // Link
+    .field-type-link-field a
+      padding: 14px 17px
+
     // Text
     .field-type-text-long
       font-size: 26px
