@@ -11,20 +11,35 @@
 .view-business-websites-category-detail
   @extend %bg-border-and-box-shadow
   padding: 12px $standard-padding
-  position: relative
+
+  // Row styling
   .views-row
-    a
-      padding-right: 10px
-      color: $link-green
+    border-top: 1px solid #e4e4e4
+    padding: 12px 0 8px
+    &:first-of-type
+      border-top: 0
+      padding-top: 0
+    &:last-of-type
+      padding-bottom: 0
+
+  // Link
+  a
+    color: $link-green
+    font-size: 16px
+    line-height: 1.2
+    &[target="_blank"]
       +icon-after("arrow-external", true)
       &:after
-        font-size: 12px
-        margin-left: 0.3em
-      &:hover
-        color: $text-blue
-    .views-field-title
-      border-top: 1px solid #ebebeb
-      padding: 6px 0 12px 0
-  .views-row-first
-    .views-field-title
-      border-top: 0
+        font-size: 10px
+        margin-left: 3px
+    &:hover
+      color: $link-blue
+
+  // Title
+  .views-field-title
+    line-height: 0
+
+  // Description
+  .views-field-field-bus-website-description
+    line-height: 1.3
+    margin-top: 3px
