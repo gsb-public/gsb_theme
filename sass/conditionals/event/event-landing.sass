@@ -129,19 +129,17 @@
   margin: 0 26px
   padding: 18px 0
   +clearfix
-
   // Layout for image
   .left.second-column
     float: left
     max-width: 70%
+    +breakpoint(960px max-width)
+      max-width: 50%
     +breakpoint(840px max-width)
       max-width: 100%
 
   .right
     float: right
-    +breakpoint(999px 1140px)
-      float: left
-      margin-top: 20px
     +breakpoint(840px max-width)
       display: none
 
