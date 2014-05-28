@@ -22,6 +22,7 @@
     font-size: 16px
     font-weight: bold
     line-height: 2.2
+    padding: 10px 16px
     &:hover
       background: $link-blue
       text-decoration: underline
@@ -30,8 +31,6 @@
 .pager-load-more
   a
     background: $teal-dark
-    padding: 12px 16px
-    position: relative
     +icon-before("arrow-med-down", true)
     &:before
       font-size: 12px
@@ -41,9 +40,10 @@
       top: -1px
 
 // Back to top link
-.additional-links a
-  background: $text-black
-  padding: 9px 16px 10px
+.additional-links
+  overflow: hidden
+  a
+    background: $text-black
 
 // NO RESULTS TEXT
 .view-empty
