@@ -2,21 +2,23 @@
 // Comma separator styling on tags
 ///////////////////////////////////
 
+// Field formatter
 .field-group-gsb_field_formatter_group_comma_separator
   .entity,
   .field,
   .separator
-    display: inline-block
-    line-height: 1
+    display: inline
   .separator
-    margin-right: 5px
+    margin-right: 3px
 
+// Field collection
 .gsb_field_formatter_field_collection_separator
   .entity,
   .field,
   .separator
     display: inline
 
+// Tags wrapper
 .group-tags-wrapper
   font-size: 14px
   color: $text-black
@@ -52,7 +54,7 @@
     position: relative
     left: -4px
 
-// Kill random field.css float for this fc
+// Kill random field.css float for this field collection
 .field-name-field-person-fac-student-ref
   .field-items
     float: none
@@ -71,10 +73,9 @@
   color: $black
   font-size: 18px
   font-weight: bold
+  line-height: 1
   .label-inline
     font-weight: bold
     margin-right: 5px
-  a
-    color: $red
   .field-name-field-first-name
     margin-right: 5px
