@@ -122,6 +122,8 @@
         background-size: 170%
       &:hover
         background: image_url("search-hover.svg") no-repeat center
+        +breakpoint($bp-tablet-land-max)
+          background-size: 170%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 6px transparent
       &:hover
@@ -216,17 +218,16 @@
     &:before
       color: $red
       font-size: 18px
-      line-height: 0
       position: relative
       left: -2px
     &:hover
+      color: $link-blue
       &:before
         color: $link-blue
   &.collapsed
     .fieldset-title
       +icon-before("plus", true)
-      &:before
-        line-height: 0
+
 
 fieldset.collapsible .fieldset-legend
   display: inline

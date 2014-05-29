@@ -3439,7 +3439,6 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     float: left;
     font-size: 14px;
     position: relative;
-    line-height: 1;
     top: 18px;
     left: 20px;
   }
@@ -3494,7 +3493,6 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     float: right;
     font-size: 14px;
     position: absolute;
-    line-height: 1;
     right: 6px;
     bottom: 4px;
   }
@@ -3658,7 +3656,6 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 #nav-touch-wrapper #nav-touch-button:after {
   color: white;
   font-size: 21px;
-  line-height: 0;
   position: relative;
   top: 12px;
   right: -2px;
@@ -3726,10 +3723,9 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   #search-touch-button:after {
     color: white;
     font-size: 24px;
-    line-height: 0;
     padding: 0 12px;
     position: relative;
-    top: 20px;
+    top: 16px;
   }
 }
 
@@ -7078,6 +7074,12 @@ ul.slideshow-items li:first-of-type {
 #google-appliance-block-form--2 .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center;
 }
+@media (max-width: 64em) {
+  .svg #google-appliance-block-form .form-submit:hover, .svg
+  #google-appliance-block-form--2 .form-submit:hover {
+    background-size: 170%;
+  }
+}
 .no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit, .no-js
 #google-appliance-block-form--2 .form-submit, .no-svg
 #google-appliance-block-form--2 .form-submit {
@@ -7210,9 +7212,11 @@ ul.slideshow-items li:first-of-type {
 .collapsible .fieldset-title:before {
   color: #990000;
   font-size: 18px;
-  line-height: 0;
   position: relative;
   left: -2px;
+}
+.collapsible .fieldset-title:hover {
+  color: #2d6280;
 }
 .collapsible .fieldset-title:hover:before {
   color: #2d6280;
@@ -7231,9 +7235,6 @@ ul.slideshow-items li:first-of-type {
   font-variant: normal;
   font-weight: normal;
   font-family: 'icons';
-}
-.collapsible.collapsed .fieldset-title:before {
-  line-height: 0;
 }
 
 fieldset.collapsible .fieldset-legend {
