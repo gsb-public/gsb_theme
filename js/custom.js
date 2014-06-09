@@ -149,6 +149,9 @@
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
       }
+      if (Modernizr.mq('(max-width: 850px)')) {
+        $('.front #quicklinks').insertBefore($('.front-slider-pane'));
+      }
     }
   };
 

@@ -15,315 +15,183 @@ ul.slideshow-items
 .flex-control-nav
   display: none
 
-// SLIDESHOW ARROWS
-.flex-direction-nav a
-  opacity: 0.8
-  outline: none
-  background-image: none
-  width: 40px
-  height: 40px
-  .no-touch &
-    opacity: 0.4
-  &:before, &:after
-    text-indent: 0
-  +icon-before("circle", true)
-  &:before
-    position: absolute
-    font-size: 44px
-    top: 0
-    left: 0
-    color: $grey-dark
-    opacity: 0.8
-  &:after
-    font-size: 18px
-    color: $white
-    position: absolute
-    top: 11px
-    line-height: 0
-    left: 0
-    opacity: 1
-  .front &
-    +breakpoint($bp-mobile-max)
-      top: 30%
-    +breakpoint($bp-mobile)
-      top: 20%
-  .full-view &
-    +breakpoint($bp-mobile-max)
-      top: 30%
-    +breakpoint($bp-mobile-480)
-      top: 25%
-    +breakpoint($bp-mobile)
-      top: 15%
-  .wide-view &
-    top: 25%
-    +breakpoint($bp-mobile)
-      top: 15%
-  // Previous arrow
-  &.flex-prev
-    +icon-after("arrow-med-left", true)
-    left: 28px
-    +breakpoint($bp-nexus-portrait)
-      left: 12px
-    +breakpoint($bp-mobile)
-      left: 20px
-    &:after
-      left: 12px
+.flex-viewport
+  overflow: visible !important
 
-  // Next arrow
-  &.flex-next
-    +icon-after("arrow-med-right", true)
-    right: 28px
-    +breakpoint($bp-nexus-portrait)
-      right: 12px
-    +breakpoint($bp-mobile)
-      right: 20px
+// SLIDESHOW ARROWS
+.flex-direction-nav
+  display: block
+  height: 40px
+  position: absolute
+  right: 0
+  bottom: 130px
+  .front &,
+  .full-view &
+    +breakpoint(691px min-width)
+      top: 10px
+    +breakpoint(690px max-width)
+      bottom: 75px
+      top: initial
+    +breakpoint($bp-mobile-480)
+      bottom: 70px
+    +breakpoint(390px max-width)
+      bottom: 95px
+  .wide-view &
+    bottom: 75px
+    +breakpoint($bp-mobile-480)
+      bottom: 70px
+    +breakpoint(390px max-width)
+      bottom: 95px
+
+  // Circles
+  a
+    background-image: none
+    opacity: 1
+    width: 34px
+    height: 32px
+    &:before, &:after
+      position: absolute
+      text-indent: 0
+    &:hover
+      &:before
+        color: $link-blue
+    +icon-before("circle", true)
+    &:before
+      color: $green-light
+      font-size: 36px
+      top: 0
+      left: 0
     &:after
-      left: 14px
+      color: $white
+      font-size: 16px
+      top: 8px
+      left: 0
+
+    // Arrows
+    // Previous arrow
+    &.flex-prev
+      left: inherit
+      right: 80px
+      +icon-after("arrow-med-left", true)
+      &:after
+        left: 10px
+
+    // Next arrow
+    &.flex-next
+      right: 20px
+      +icon-after("arrow-med-right", true)
+      &:after
+        left: 12px
+
 
 // SLIDESHOW WRAPPER
 .slideshow-wrapper
-  @extend %box-shadow
-  @extend %border
+  @extend %border-and-box-shadow
+  +clearfix
+  background: $white
   position: relative
-  top: 0
-  .no-touch &
-    &:hover
-      .flex-direction-nav a
-        opacity: 0.8
-
-// SIMPLE SLIDESHOW - HOVER
-.slideshow-simple .slideshow-wrapper a:hover
-  .slide-description
-    color: $link-blue
-    text-decoration: underline
-    &:after
-      color: $teal-light
-
-
-// CTA SLIDESHOW - HOVER
-.slideshow-cta .slideshow-wrapper:hover
-  a
-    .slide-title
-      color: $link-blue
-    .slide-cta
-      background-color: $link-blue
-      text-decoration: underline
-
-// SLIDES
-.slideshow-slide
-  background-color: $grey-e
-  max-width: 870px
-  height: 367px
-  position: relative
-  top: 0
-  .wide-view &
-    height: 500px
+  bottom: 0
+  .front &,
   .full-view &
-    +breakpoint($bp-mobile-max)
-      height: 500px
+    height: 265px
+    +breakpoint(999px max-width)
+      height: 243px
+    +breakpoint(690px max-width)
+      height: initial
+  li
+    background: $white
 
-  // Side text
-  .slide-text
+  // Image
+  .field-type-image
+    .front &,
+    .full-view &
+      float: left
+      max-width: 570px
+      width: 66%
+      +breakpoint(690px max-width)
+        float: none
+        max-width: 100%
+        width: 100%
+    img
+      width: 100%
+
+// Slide text wrapper
+.slide-text-wrapper
+  padding: 22px
+  .front &,
+  .full-view &
+    position: relative
+    bottom: -50px
+    height: 260px
     bottom: 0
-    padding: 0 $standard-padding
-    position: absolute
+    float: left
+    max-width: 300px
     right: 0
-    height: 367px
-    width: 367px
-    z-index: 2
-    .wide-view &
-      height: auto
-      min-height: 41%
-      max-height: 51%
-      padding: $standard-padding
-      position: absolute
-      width: 100%
-      +breakpoint($bp-mobile-max)
-        height: auto
-        min-height: 47%
-      +breakpoint($bp-mobile-480)
-        height: 51%
-      +breakpoint($bp-mobile)
-        height: 70%
-    .full-view &
-      +breakpoint($bp-mobile-max)
-        height: auto
-        min-height: 41%
-        padding: $standard-padding
-        position: absolute
-        width: 100%
-      +breakpoint($bp-mobile-480)
-        height: 51%
-      +breakpoint($bp-mobile)
-        height: 70%
+    width: 34%
+    +breakpoint(999px max-width)
+      height: 243px
     .inner
+      bottom: 26px
       position: absolute
-      bottom: 30px
-      .wide-view &
+    +breakpoint(690px max-width)
+      float: none
+      height: initial
+      margin-top: 33px
+      max-width: 100%
+      padding: 4%
+      width: 100%
+      .inner
+        bottom: initial
         position: initial
-        max-width: 510px
-      .full-view &
-        +breakpoint($bp-mobile-max)
-          position: initial
-          max-width: 510px
-
-// Slide title
-.slide-title
-  color: $text-black
-  font-size: 26px
-  line-height: 32px
-  margin-bottom: 15px
-  text-transform: none
-  .slideshow-simple
-    +icon-after("arrow-double-right", true)
-    &:after
-      color: $red
-      font-size: 36px
-      position: relative
-      top: 2px
-      left: 5px
-
-// Slide description
-.slide-description
-  color: $text-black
-  font-size: 18px
-  line-height: 22px
-  margin-bottom: 30px
-
-/////////////////
-// CTA SLIDESHOW
-/////////////////
-.slideshow-cta
-  .slide-title,
-  .slide-description
-    width: 250px
-    .wide-view &
-      width: 100%
-    .full-view &
-      +breakpoint($bp-mobile-max)
-        width: 100%
-  .slide-title
-    font-family: $font-demi
-
-// Slide CTA text
-.slide-cta
-  @extend %teal-cta
+  .wide-view &
+    margin-top: 33px
+    +breakpoint(690px max-width)
+      padding: 4%
 
 
-// Color picker styling
-
-// Purple
-.purple-button-on-blue
-  .slide-text
-    +background(linear-gradient(left, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
-    .wide-view &
-      +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 18%, #cce0dc))
-    .full-view &,
-    .wide-view &
-      +breakpoint($bp-mobile-max)
-        +background(linear-gradient(top, rgba(#d9e5e3, 0.6), rgba(#d9e5e3, 1) 5%, #cce0dc))
-  .slide-cta
-    background-color: $teal-dark
-
-// Blue
-.blue-button-on-orange
-  .slide-text
-    +background(linear-gradient(left, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
-    .wide-view &
-      +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 18%))
-    .full-view &,
-    .wide-view &
-      +breakpoint($bp-mobile-max)
-        +background(linear-gradient(top, rgba(#fbe1a8, 0.6), rgba(#fbe1a8, 1) 5%))
-  .slide-cta
-    background-color: $teal-dark
-
-////////////////////
-// SIMPLE SLIDESHOW
-////////////////////
-.slideshow-simple
-  .slideshow-wrapper
-    margin-right: 5px
-  .slideshow-slide
-    height: 262px
-    +breakpoint($bp-tablet-port)
-      height: 205px
-    +breakpoint($bp-mobile-max)
-      +background(linear-gradient(bottom, $grey-e, #fbfaf8 20%))
-      height: auto
-      min-height: 425px
-
-  .slide-text
-    +background(linear-gradient(left, rgba($white, 0) 25%, rgba($white, 1) 50%))
-    padding: 0 $standard-padding
-    +breakpoint($bp-mobile)
-      padding: 0
-    position: absolute
-    right: 0
-    height: 267px
-    z-index: 2
-    width: 100%
-    .wide-view &
-      height: 41%
-    +breakpoint($bp-mobile-max)
-      +background(linear-gradient(top, rgba($white, 0) 25%, rgba($white, 1) 50%))
-    +breakpoint($bp-mobile)
-      background: none
-    +breakpoint(321px 360px)
-      height: 325px
-    .inner
-      right: 30px
-      width: 50%
-      +breakpoint($bp-nexus-portrait)
-        bottom: 0
-      +breakpoint($bp-mobile-max)
-        background: none
-        padding: 0 $standard-padding
-        right: 0
-        top: 155px
-        width: 100%
-      +breakpoint($bp-mobile)
-        padding: 0 20px
-        top: 50px
-  .slide-title
-    font-size: 16px
-    color: $red
-    line-height: 1em
-    margin-bottom: 20px
-    +breakpoint($bp-tablet-port-max)
-      margin-bottom: 12px
-    &:after
-      content: ""
-  .slide-description
-    font-size: 28px
-    line-height: 36px
-    margin-bottom: 0
-    width: 375px
-    +breakpoint($bp-tablet-land-max)
-      font-size: 20px
-      line-height: 22px
-      overflow: hidden
-      width: 320px
-    +breakpoint($bp-tablet-port-max)
-      width: 225px
-    +breakpoint($bp-nexus-landscape)
-      margin-bottom: 0
-      width: 312px
-    +breakpoint($bp-nexus-portrait)
+  // Superhead - Not linked
+  .field-name-field-superhead
+    p
+      color: $text-black
+      font-size: 14px
+      font-family: $font-demi
+      line-height: 1
       margin-bottom: 10px
-      width: 175px
-    +breakpoint($bp-mobile-max)
-      width: 100%
+
+  // Text - Not linked
+  .field-name-field-text-slide
+    color: $text-black
+    p
+      font-size: 20px
+      line-height: 1.2
+      margin-bottom: 0
+
+  // Superhead - Link
+  .slide-superhead .field-name-field-superhead
+    p
+      color: $red
+      font-size: 14px
+      font-family: $font-demi
+      line-height: 1
+      margin-bottom: 10px
+      &:hover
+        color: $link-blue
+
+  // Text - Link
+  .slide-text
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
-      font-size: 18px
-      position: relative
-      line-height: 0
-      font-weight: bold
-      top: 0
-      left: 5px
-      +breakpoint($bp-mobile-max)
-        font-size: 14px
-  .slide-cta
-    display: none
+      font-size: 16px
+    &:hover
+      &:after
+        color: $teal-light
+    .field-name-field-text-slide
+      display: inline
+      p
+        font-size: 20px
+        line-height: 1.2
+        display: inline
+        margin: 0
+      &:hover
+        color: $link-blue

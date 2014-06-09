@@ -150,6 +150,13 @@
 
 // Front page responsive
 .panel-display.gsb-front-page
+  .front-slider-pane
+    +breakpoint(850px max-width)
+      float: none
+      width: 100%
+  .front-sidebar-pane
+    +breakpoint(850px max-width)
+      margin-left: 0
   +breakpoint($bp-tablet-port-max)
     .front-panel-feature-one
       clear: right
@@ -179,7 +186,6 @@
     .front-panel-feature-two
       margin: 0
       width: 100%
-
   +breakpoint(605px max-width)
     .front-slider-pane,
     .front-panel-feature-one,
@@ -199,6 +205,7 @@
     .front-panel-feature-two,
     .front-panel-feature-three
       width: 290px
+
 #bottom .block-block
   &:first-of-type
     clear: none

@@ -57,7 +57,7 @@
 // Program links title
 #program-links-title
   display: none
-  +breakpoint($bp-mobile-max)
+  +breakpoint(850px max-width)
     color: $white
     cursor: pointer
     display: block
@@ -76,9 +76,9 @@
       top: 10px
       left: -24px
 
-// Mobile 480 show/hide
+// Mobile show/hide
 .pane-program-links
-  +breakpoint($bp-mobile-max)
+  +breakpoint(850px max-width)
     .links
       display: none
     .cta-red-gradient.open
@@ -91,19 +91,18 @@
 // QUICKLINKS
 // Special mobile positioning
 
-#quicklinks
-  +breakpoint($bp-mobile-max)
+.front #quicklinks
+  +breakpoint(850px max-width)
     float: none
     margin: 0
     width: 100%
-    .front &
-      +background(linear-gradient($red-dark, $red-light))
-      margin-bottom: 15px
-      .cta-link
-        background: transparent
-        padding: 16px 33px
-      li
-        border-top: 2px solid #f10000
+    +background(linear-gradient($red-dark, $red-light))
+    margin-bottom: 15px
+    .cta-link
+      background: transparent
+      padding: 16px 33px
+    li
+      border-top: 2px solid #f10000
 
 // Twitter feed
 .pane-homepage-social-feed
