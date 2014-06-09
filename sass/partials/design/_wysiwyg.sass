@@ -45,25 +45,22 @@ div.callout
 .format-wysiwyg,
 .field-name-field-body
   ul, ol
-    margin: 0 0 24px 0
     font-size: 18px
-    line-height: 24px
+    line-height: 1.2
+    margin: 0 0 24px 0
+    padding: 0
     li
       margin-bottom: 5px
+  ol
+    padding-left: $standard-padding
   ul
-    position: relative
-    left: 0
-    text-indent: -1em
-    padding-left: 1em
     li:before
       content: "• "
       color: $text-blue
-  ol
-    padding-left: $standard-padding
   table
     ul, ol
       font-size: 14px
-      line-height: 18px
+      line-height: 1.2
   a
     border-bottom: dashed 1px $link-green
     color: $link-green
@@ -125,6 +122,7 @@ div.callout
   p, ul, ol, table
     &:last-child
       margin-bottom: 0
+
   // Tables
   table
     margin: 20px 0
