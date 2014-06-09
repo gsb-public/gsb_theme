@@ -66,17 +66,17 @@ div.callout
       line-height: 18px
   a
     border-bottom: dashed 1px $link-green
-    color: $text-green
+    color: $link-green
     text-decoration: none
     word-wrap: break-word
     &:hover
       border-bottom: solid 1px $link-blue
+      color: $link-blue
     &[href*="mailto:"]
       +icon-after("email-fill", true)
       &:after
         font-size: 10px
-        line-height: 0
-        margin-left: 0.3em
+        margin-left: 3px
   img
     vertical-align: top
   // Headers
