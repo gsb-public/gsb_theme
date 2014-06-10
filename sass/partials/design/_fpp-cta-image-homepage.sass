@@ -1,3 +1,63 @@
 // Homepage image CTA
 
 .pane-bundle-homepage-cta
+  @extend %border-and-box-shadow
+
+  // Gradient overlays
+  .fieldable-panels-pane
+    position: relative
+  .image-cta-color-blue .group-wrapper-content
+    +background(linear-gradient(top, rgba(#03659e, 0.9), rgba(#03659e, 0)))
+  .image-cta-color-purple .group-wrapper-content
+    +background(linear-gradient(top, rgba(#97185d, 0.9), rgba(#572440, 0)))
+  .image-cta-color-lime .group-wrapper-content
+    +background(linear-gradient(top, rgba(#919900, 0.9), rgba(#919900, 0)))
+  .image-cta-color-teal .group-wrapper-content
+    +background(linear-gradient(top, rgba(#009c84, 0.9), rgba(#009c84, 0)))
+  .image-cta-color-pink .group-wrapper-content
+    +background(linear-gradient(top, rgba(#e64097, 0.9), rgba(#e64097, 0)))
+
+  // Image
+  img
+    display: block
+
+  // Content wrapper
+  .group-wrapper-content
+    height: 100%
+    padding: $standard-padding
+    position: absolute
+    top: 0
+    width: 100%
+    +breakpoint($bp-mobile)
+      padding: 20px
+
+  // Superhead
+  .field-name-field-title
+    color: $white
+    font-size: 16px
+    line-height: 1
+    margin-bottom: 8px
+
+  // Title
+  .field-name-field-homepage-cta-text
+    color: $white
+    font-size: 28px
+    line-height: 1.2
+    +breakpoint($bp-tablet-port)
+      font-size: 24px
+    +breakpoint($bp-mobile)
+      font-size: 16px
+    a
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 18px !important
+        position: relative
+        left: 5px
+        +breakpoint($bp-mobile-max)
+          font-size: 26px
+        +breakpoint($bp-mobile)
+          font-size: 16px
+      &:hover
+        &:after
+          color: $white
