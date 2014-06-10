@@ -7,15 +7,15 @@
   .fieldable-panels-pane
     position: relative
   .image-cta-color-blue .group-wrapper-content
-    +background(linear-gradient(top, rgba(#03659e, 0.9), rgba(#03659e, 0)))
+    +background(linear-gradient(top, rgba(#03659e, 1), rgba(#03659e, 0)))
   .image-cta-color-purple .group-wrapper-content
-    +background(linear-gradient(top, rgba(#97185d, 0.9), rgba(#572440, 0)))
+    +background(linear-gradient(top, rgba(#97185d, 1), rgba(#572440, 0)))
   .image-cta-color-lime .group-wrapper-content
-    +background(linear-gradient(top, rgba(#919900, 0.9), rgba(#919900, 0)))
+    +background(linear-gradient(top, rgba(#919900, 1), rgba(#919900, 0)))
   .image-cta-color-teal .group-wrapper-content
-    +background(linear-gradient(top, rgba(#009c84, 0.9), rgba(#009c84, 0)))
+    +background(linear-gradient(top, rgba(#009c84, 1), rgba(#009c84, 0)))
   .image-cta-color-pink .group-wrapper-content
-    +background(linear-gradient(top, rgba(#e64097, 0.9), rgba(#e64097, 0)))
+    +background(linear-gradient(top, rgba(#e64097, 1), rgba(#e64097, 0)))
 
   // Image
   img
@@ -30,34 +30,38 @@
     width: 100%
     +breakpoint($bp-mobile)
       padding: 20px
+    &.hover
+      +background(linear-gradient(top, rgba(#014872, 1), rgba(#014872, 0)))
 
   // Superhead
   .field-name-field-title
     color: $white
     font-size: 16px
-    line-height: 1
+    line-height: 1.2
     margin-bottom: 8px
 
-  // Title
-  .field-name-field-homepage-cta-text
+// Title (Uses field-name-field-homepage-cta-text as the link title)
+.field-name-field-link-single
+  line-height: 0
+  a
     color: $white
-    font-size: 28px
+    font-size: 40px
     line-height: 1.2
-    +breakpoint($bp-tablet-port)
+    +breakpoint($bp-mobile-480)
+      font-size: 32px
+    +breakpoint(400px max-width)
       font-size: 24px
-    +breakpoint($bp-mobile)
-      font-size: 16px
-    a
-      +icon-after("arrow-double-right", true)
+    +icon-after("arrow-double-right", true)
+    &:after
+      color: $green-light
+      font-size: 24px
+      position: relative
+      left: 5px
+      +breakpoint($bp-mobile-480)
+        font-size: 18px
+      +breakpoint(400px max-width)
+        font-size: 14px
+    &:hover
+      color: $white
       &:after
-        color: $green-light
-        font-size: 18px !important
-        position: relative
-        left: 5px
-        +breakpoint($bp-mobile-max)
-          font-size: 26px
-        +breakpoint($bp-mobile)
-          font-size: 16px
-      &:hover
-        &:after
-          color: $white
+        color: $white

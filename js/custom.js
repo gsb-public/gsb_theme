@@ -234,4 +234,15 @@
     }
   };
 
+  /**
+   * Custom hover for home page image cta.
+   */
+  Drupal.behaviors.homepageImageCta = {
+    attach: function () {
+      $('.pane-bundle-homepage-cta a').hover(function() {
+        $(this).closest('.group-wrapper-content').toggleClass('hover');
+      });
+    }
+  };
+
 }(jQuery));
