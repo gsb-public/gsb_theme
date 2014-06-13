@@ -1,202 +1,93 @@
-//////////////////
-// IMAGE CTA FPP
-//////////////////
+// Image CTA
 
 .pane-bundle-image-cta
+  @extend %box-shadow
+  max-width: 566px
+  position: relative
+  bottom: 0
+  // Image
   img
     display: block
-  @extend %border-and-box-shadow
-  max-width: 566px
+
+  // Linked text
+  .field-name-field-link-single
+    line-height: 0
+    a
+      color: $white
+      display: block
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.2
+      padding: 12px $standard-padding
+      width: 100%
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $white
+        font-size: 12px
+      &:hover
+        background: rgba($hover-bright, 0.85)
+
+// Narrow view
+.narrow-view
   .group-left,
   .group-right
     float: none
     width: 100%
+  // Layout
   .group-right
-    color: $white
-    padding: $standard-padding
     position: absolute
-    +breakpoint($bp-mobile)
-      .front &
-        padding: 20px
-  .image-cta-position-top .group-right
-    top: 0
-  .image-cta-position-bottom .group-right
     bottom: 0
+  // Colors
+  .image-cta-color-blue a
+    background: rgba($blue-bright, 0.85)
 
-  // Title
-  .field-name-field-title
-    color: $white
-    font-size: 15px
-    font-weight: normal
-    line-height: 1
-    text-transform: uppercase
-  // Description
-  .field-name-field-link-single a
-    font-size: 28px
-    line-height: 1.15
-    color: $white
-    +breakpoint($bp-tablet-port)
-      .front &
-        font-size: 24px
-    +breakpoint($bp-mobile)
-      .front &
-        font-size: 16px
+  .image-cta-color-lime a
+    background: rgba($lime-bright, 0.85)
 
-  // Double arrow link
+  .image-cta-color-pink a
+    background: rgba($pink-bright, 0.85)
+
+  .image-cta-color-purple a
+    background: rgba($purple-bright, 0.85)
+
+  .image-cta-color-teal a
+    background: rgba($teal-bright, 0.85)
+
+// Wide view
+.wide-view
+  .pane-bundle-image-cta
+    +clearfix
   .field-name-field-link-single
-    display: inline-block
-    position: relative
-    top: 6px
-    width: 100%
-    word-wrap: break-word
     a
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $green-light
-        font-size: 18px !important
-        position: relative
-        line-height: 0
-        left: 5px
-        +breakpoint($bp-mobile-max)
-          .front &
-            font-size: 26px
-        +breakpoint($bp-mobile)
-          .front &
-            font-size: 16px
-      &:hover
-        &:after
-          color: $white
-  .fieldable-panels-pane
-    position: relative
-    top: 0
-
-
-.field-name-field-image-cta-link a
-  position: relative
-  display: block
-  border: none
-  border-top: 1px $white solid
-  border-bottom: 1px $grey-e solid
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  box-shadow: none
-  color: $red
-  font-size: 18px
-  line-height: 24px
-  &:first-child
-    border-top: 0
-
-//////////////////
-// Narrow view CTA
-//////////////////
-.narrow-view
-  .image-cta-position-top,
-  .image-cta-position-bottom
-    &.image-cta-color-purple
-      background: $purple
-      &:hover
-        background: $teal-dark
-    &.image-cta-color-green
-      background: $green-dark
-      &:hover
-        background: $blue
-    &.image-cta-color-blue
-      background: $blue
-      &:hover
-        background: $green-dark
-    &.image-cta-color-dark-teal
-      background: $teal-dark
-      &:hover
-        background: $purple
-
-  // Top Text CTA
-  .image-cta-position-top
-    .group-left
-      display: none
-    .group-right
-      padding: 18px $standard-padding
-      position: relative
-      .field-name-field-link-single
-        width: 100%
-        a
-          font-size: 20px
-          line-height: 1.1
-          &:after
-            color: $white
-            font-size: 12px !important
-
-  // Bottom Text CTA
-  .image-cta-position-bottom
-    overflow: hidden
-    .field-name-field-title
-      display: none
-    .group-right
-      display: block
+      font-size: 20px
       position: absolute
       bottom: 0
-      padding: 15px $standard-padding 18px
-      z-index: 4
-      .field-name-field-link-single
-        width: 100%
-        a
-          font-size: 20px
-          line-height: 1.1
-          &:after
-            color: $white
-            font-size: 12px !important
-    &.image-cta-color-purple .group-right
-      background: rgba($purple, 0.8)
-      &:hover
-        background: rgba($teal-dark, 0.8)
-    &.image-cta-color-green .group-right
-      background: rgba($green-dark, 0.8)
-      &:hover
-        background: rgba($blue, 0.8)
-    &.image-cta-color-blue .group-right
-      background: rgba($blue, 0.8)
-      &:hover
-        background: rgba($green-dark, 0.8)
-    &.image-cta-color-dark-teal .group-right
-      background: rgba($teal-dark, 0.8)
-      &:hover
-        background: rgba($purple, 0.8)
+      padding-top: 25%
+      width: 66.66%
 
-//////////////////
-// Wide view Top CTA
-// Gradient overlay
-/////////////////
-.front-panel-feature-one,
-.wide-view
-  .image-cta-position-top
-    .group-right
-      height: 100%
-    &.image-cta-color-purple .group-right
-      +background(linear-gradient(left top, rgba(#572440, 0.9), rgba(#572440, 0)))
-    &.image-cta-color-green .group-right
-      +background(linear-gradient(left top, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
-    &.image-cta-color-blue .group-right
-      +background(linear-gradient(left top, rgba(#395d72, 0.9), rgba(#395d72, 0)))
-    &.image-cta-color-dark-teal .group-right
-      +background(linear-gradient(left top, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
+  // Layout
+  .group-left
+    float: left
+    width: 190px
+  .group-right
+    float: left
+    display: inline-block
+    margin-left: -190px
+    padding-left: 190px
+    width: 100%
 
-//////////////////
-// Wide view Bottom CTA
-// Gradient overlay
-/////////////////
-.front-panel-feature-one,
-.wide-view
-  .image-cta-position-bottom
-    .group-right
-      height: 100%
-      .group-wrapper
-        position: absolute
-        bottom: 0
-        padding-bottom: 30px
-    &.image-cta-color-purple .group-right
-      +background(linear-gradient(left bottom, rgba(#572440, 0.9), rgba(#572440, 0)))
-    &.image-cta-color-green .group-right
-      +background(linear-gradient(left bottom, rgba(#0c4a3b, 0.9), rgba(#0c4a3b, 0)))
-    &.image-cta-color-blue .group-right
-      +background(linear-gradient(left bottom, rgba(#395d72, 0.9), rgba(#395d72, 0)))
-    &.image-cta-color-dark-teal .group-right
-      +background(linear-gradient(left bottom, rgba(#378a7a, 0.9), rgba(#378a7a, 0)))
+  // Colors
+  .image-cta-color-blue a
+    background: $blue-bright
+
+  .image-cta-color-lime a
+    background: $lime-bright
+
+  .image-cta-color-pink a
+    background: $pink-bright
+
+  .image-cta-color-purple a
+    background: $purple-bright
+
+  .image-cta-color-teal a
+    background: $teal-bright
