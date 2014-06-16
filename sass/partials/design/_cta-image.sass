@@ -9,34 +9,6 @@
   img
     display: block
 
-  // Linked text
-  .field-name-field-link-single
-    line-height: 0
-    a
-      color: $white
-      display: block
-      font-family: $font-demi
-      font-size: 18px
-      line-height: 1.2
-      padding: 12px $standard-padding
-      width: 100%
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $white
-        font-size: 12px
-      &:hover
-        background: rgba($hover-bright, 0.85)
-
-// Narrow view
-.narrow-view .pane-bundle-image-cta
-  .group-left,
-  .group-right
-    float: none
-    width: 100%
-  // Layout
-  .group-right
-    position: absolute
-    bottom: 0
   // Colors
   .image-cta-color-blue a
     background: rgba($blue-bright, 0.85)
@@ -53,16 +25,82 @@
   .image-cta-color-teal a
     background: rgba($teal-bright, 0.85)
 
-// Wide view
-.wide-view .pane-bundle-image-cta
-  +clearfix
+  // Linked text
   .field-name-field-link-single
+    line-height: 0
+    a
+      color: $white
+      display: block
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.2
+      padding: 12px $standard-padding
+      width: 100%
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $white
+        font-size: 12px
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+// Narrow view
+.narrow-view .pane-bundle-image-cta
+  .group-left,
+  .group-right
+    float: none
+    width: 100%
+  // Layout
+  .group-right
+    position: absolute
+    bottom: 0
+  +breakpoint(568px 480px)
+    +clearfix
     a
       font-size: 20px
       position: absolute
       bottom: 0
       padding-top: 25%
       width: 66.66%
+      +breakpoint(532px 481px)
+        width: 62.66%
+    // Layout
+    .group-left
+      float: left
+      width: 190px
+    .group-right
+      float: left
+      display: inline-block
+      margin-left: -190px
+      padding-left: 190px
+      width: 100%
+
+// Wide view
+.wide-view .pane-bundle-image-cta
+  +clearfix
+  .field-name-field-link-single
+    line-height: 0
+    a
+      font-size: 20px
+      position: absolute
+      bottom: 0
+      padding-top: 25%
+      width: 66.66%
+      +breakpoint(1155px 1101px)
+        width: 62.66%
+      +breakpoint(1100px 999px)
+        font-size: 18px
+        padding: 12px $standard-padding
+        width: 100%
+      +breakpoint(845px 569px)
+        font-size: 18px
+        padding: 12px $standard-padding
+        width: 100%
+      +breakpoint(532px 481px)
+        width: 62.66%
+      +breakpoint(479px max-width)
+        font-size: 18px
+        padding: 12px $standard-padding
+        width: 100%
 
   // Layout
   .group-left
@@ -74,19 +112,39 @@
     margin-left: -190px
     padding-left: 190px
     width: 100%
-
-  // Colors
-  .image-cta-color-blue a
-    background: $blue-bright
-
-  .image-cta-color-lime a
-    background: $lime-bright
-
-  .image-cta-color-pink a
-    background: $pink-bright
-
-  .image-cta-color-purple a
-    background: $purple-bright
-
-  .image-cta-color-teal a
-    background: $teal-bright
+  +breakpoint(1100px 999px)
+    position: relative
+    bottom: 0
+    .group-left,
+    .group-right
+      float: none
+      width: 100%
+    .group-right
+      position: absolute
+      bottom: 0
+      margin: 0
+      padding: 0
+  +breakpoint(845px 569px)
+    position: relative
+    bottom: 0
+    .group-left,
+    .group-right
+      float: none
+      width: 100%
+    .group-right
+      position: absolute
+      bottom: 0
+      margin: 0
+      padding: 0
+  +breakpoint(479px max-width)
+    position: relative
+    bottom: 0
+    .group-left,
+    .group-right
+      float: none
+      width: 100%
+    .group-right
+      position: absolute
+      bottom: 0
+      margin: 0
+      padding: 0
