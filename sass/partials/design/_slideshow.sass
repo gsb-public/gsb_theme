@@ -6,10 +6,6 @@ ul.slideshow-items
   list-style: none
   margin: 0
   padding: 0
-  li
-    display: none
-    &:first-of-type
-      display: block
 
 // Hide pager
 .flex-control-nav
@@ -24,37 +20,25 @@ ul.slideshow-items
   height: 40px
   position: absolute
   right: 0
-  bottom: 130px
-  .front &,
-  .full-view &
-    +breakpoint(691px min-width)
-      top: 10px
+  .full-view &,
+  .front &
+    top: 16px
     +breakpoint(690px max-width)
-      bottom: 75px
-      top: initial
-    +breakpoint($bp-mobile-480)
-      bottom: 70px
-    +breakpoint(390px max-width)
-      bottom: 95px
+      top: -30px
   .wide-view &
-    bottom: 75px
-    +breakpoint($bp-mobile-480)
-      bottom: 70px
-    +breakpoint(390px max-width)
-      bottom: 95px
+    top: -30px
 
-  // Circles
-  a
+  // Arrows
+  .flex-next,
+  .flex-prev
     background-image: none
     opacity: 1
     width: 34px
     height: 32px
-    &:before, &:after
+    &:before,
+    &:after
       position: absolute
       text-indent: 0
-    &:hover
-      &:before
-        color: $link-blue
     +icon-before("circle", true)
     &:before
       color: $green-light
@@ -64,27 +48,28 @@ ul.slideshow-items
     &:after
       color: $white
       font-size: 16px
-      top: 8px
-      left: 0
+      top: 9px
+    &:hover
+      &:before
+        color: $link-blue
 
-    // Arrows
-    // Previous arrow
-    &.flex-prev
-      left: inherit
-      right: 80px
-      +icon-after("arrow-med-left", true)
-      &:after
-        left: 10px
+  // Previous arrow
+  .flex-prev
+    left: inherit
+    right: 80px
+    +icon-after("arrow-med-left", true)
+    &:after
+      left: 10px
 
-    // Next arrow
-    &.flex-next
-      right: 20px
-      +icon-after("arrow-med-right", true)
-      &:after
-        left: 12px
+  // Next arrow
+  .flex-next
+    left: inherit
+    right: 20px
+    +icon-after("arrow-med-right", true)
+    &:after
+      left: 12px
 
-
-// SLIDESHOW WRAPPER
+// Slideshow wrapper
 .slideshow-wrapper
   @extend %border-and-box-shadow
   +clearfix
@@ -118,6 +103,8 @@ ul.slideshow-items
 // Slide text wrapper
 .slide-text-wrapper
   padding: 22px
+  position: relative
+  top: 0
   .front &,
   .full-view &
     position: relative
@@ -136,7 +123,7 @@ ul.slideshow-items
     +breakpoint(690px max-width)
       float: none
       height: initial
-      margin-top: 33px
+      margin-top: 42px
       max-width: 100%
       padding: 4%
       width: 100%
@@ -144,7 +131,7 @@ ul.slideshow-items
         bottom: initial
         position: initial
   .wide-view &
-    margin-top: 33px
+    margin-top: 42px
     +breakpoint(690px max-width)
       padding: 4%
 
@@ -152,6 +139,7 @@ ul.slideshow-items
   // Superhead - Not linked
   .field-name-field-superhead
     font-size: 13px
+    margin-top: 10px
     p
       color: $text-black
       font-size: 13px
@@ -169,6 +157,7 @@ ul.slideshow-items
 
   // Superhead - Link
   .slide-superhead .field-name-field-superhead
+    margin-top: 10px
     a
       font-size: 13px
     p
