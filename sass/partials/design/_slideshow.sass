@@ -138,53 +138,36 @@ ul.slideshow-items
 
   // Superhead - Not linked
   .field-name-field-superhead
+    font-family: $font-demi
     font-size: 13px
-    margin-top: 10px
-    p
-      color: $text-black
-      font-size: 13px
-      font-family: $font-demi
-      line-height: 1
-      margin-bottom: 10px
+    line-height: 1
+    margin: 10px 0
 
   // Text - Not linked
   .field-name-field-text-slide
-    color: $text-black
-    p
-      font-size: 20px
-      line-height: 1.2
-      margin-bottom: 0
+    font-size: 20px
+    line-height: 1.2
 
   // Superhead - Link
-  .slide-superhead .field-name-field-superhead
-    margin-top: 10px
-    a
-      font-size: 13px
-    p
-      color: $red
-      font-size: 13px
-      font-family: $font-demi
-      line-height: 1
-      margin-bottom: 10px
-      &:hover
-        color: $link-blue
+  .slide-superhead
+    font-family: $font-demi
+    font-size: 13px
+    line-height: 1
+    margin-bottom: 10px
 
   // Text - Link
   .slide-text
+    color: $text-black
+    font-size: 20px
+    line-height: 1.2
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
       font-size: 16px
       margin-left: 3px
     &:hover
+      color: $link-blue
       &:after
         color: $teal-light
     .field-name-field-text-slide
       display: inline
-      p
-        font-size: 20px
-        line-height: 1.2
-        display: inline
-        margin: 0
-      &:hover
-        color: $link-blue
