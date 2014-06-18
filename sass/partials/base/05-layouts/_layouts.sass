@@ -252,10 +252,8 @@
   .panel-display .inner-sidebar-wrapper
     margin-left: 0
 
-// Insights layout one
 
-#sidebar
-  display: none
+// Insights layout one
 .gsb-insights-one
   .narrow-view
     max-width: $narrow-view
@@ -286,6 +284,44 @@
     .panels-ipe-editing &
       margin-bottom: 0
   .narrow-narrow-narrow-narrow
+    .third
+      margin-right: 30px
+      +breakpoint(609px max-width)
+        margin-right: 0
+  .column
+    float: left
+    +breakpoint(609px max-width)
+      float: none
+
+// Insights layout one
+.gsb-insights-two
+  .narrow-view
+    max-width: $narrow-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $narrow-view
+  .wide-view
+    max-width: $wide-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $wide-view
+  .first
+    margin-right: 30px
+    +breakpoint(609px max-width)
+      margin-right: 0
+  .full-header,
+  .wide-wide,
+  .narrow-narrow-narrow-narrow
+    +clearfix
+    .panel-pane
+      margin-bottom: 30px
+      margin-top: 1px
+    .panels-ipe-editing &
+      margin-bottom: 0
+  .narrow-narrow-narrow-narrow
+    .second,
     .third
       margin-right: 30px
       +breakpoint(609px max-width)
