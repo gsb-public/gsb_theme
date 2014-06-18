@@ -93,7 +93,6 @@
       float: none
       width: 100%
 
-
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
   .full-header,
@@ -252,3 +251,46 @@
       margin-right: 0
   .panel-display .inner-sidebar-wrapper
     margin-left: 0
+
+// Insights layout one
+
+#sidebar
+  display: none
+.gsb-insights-one
+  .narrow-view
+    max-width: $narrow-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $narrow-view
+  .wide-view
+    max-width: $wide-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $wide-view
+  .first,
+  .second
+    margin-right: 30px
+    +breakpoint(609px max-width)
+      margin-right: 0
+  .full-header,
+  .wide-narrow-narrow,
+  .narrow-narrow-wide,
+  .narrow-wide-narrow,
+  .narrow-narrow-narrow-narrow
+    +clearfix
+    .panel-pane
+      margin-bottom: 30px
+      margin-top: 1px
+    .panels-ipe-editing &
+      margin-bottom: 0
+  .narrow-narrow-narrow-narrow
+    .third
+      margin-right: 30px
+      +breakpoint(609px max-width)
+        margin-right: 0
+  .column
+    float: left
+    +breakpoint(609px max-width)
+      float: none
