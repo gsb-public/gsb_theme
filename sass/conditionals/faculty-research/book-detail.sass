@@ -76,9 +76,12 @@
     @extend %divider-bottom
     @extend %divider-top
     margin-top: 26px
-    padding: $standard-padding 0
+    padding-top: $standard-padding
+    +clearfix
+    // Link button
     a
       @extend %green-button
+      display: block
       +icon-after("arrow-external", true)
       &:after
         @extend %doc-attached-icons
@@ -87,11 +90,11 @@
       +icon-after("pdf", true)
       &:after
         font-size: 14px
-    .field-item
-      display: inline-block
-      vertical-align: bottom
+    .entity
+      float: left
+      padding-bottom: $standard-padding
       &:first-of-type
-        margin-right: 6px
+        margin-right: 12px
 
   // Selected reviews
   .field-name-field-selected-reviews

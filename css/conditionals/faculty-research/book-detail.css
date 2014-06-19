@@ -174,7 +174,12 @@
 }
 .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited {
   margin-top: 26px;
-  padding: 26px 0;
+  padding-top: 26px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a {
+  display: block;
 }
 .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited a:after {
   content: "\f102";
@@ -212,12 +217,12 @@
 .node-book.view-mode-full .field-name-field-book-url-pdf-unlimited .file a:after {
   font-size: 14px;
 }
-.node-book.view-mode-full .field-name-field-book-url-pdf-unlimited .field-item {
-  display: inline-block;
-  vertical-align: bottom;
+.node-book.view-mode-full .field-name-field-book-url-pdf-unlimited .entity {
+  float: left;
+  padding-bottom: 26px;
 }
-.node-book.view-mode-full .field-name-field-book-url-pdf-unlimited .field-item:first-of-type {
-  margin-right: 6px;
+.node-book.view-mode-full .field-name-field-book-url-pdf-unlimited .entity:first-of-type {
+  margin-right: 12px;
 }
 .node-book.view-mode-full .field-name-field-selected-reviews {
   background: #ededed;
