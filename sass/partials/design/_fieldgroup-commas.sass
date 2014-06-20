@@ -7,7 +7,9 @@
   .entity,
   .field,
   .separator
-    display: inline
+    display: inline-block
+    +breakpoint($bp-mobile-max)
+      display: inline
   .separator
     margin-right: 3px
 
