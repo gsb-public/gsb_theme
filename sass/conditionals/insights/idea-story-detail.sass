@@ -69,6 +69,12 @@
       font-family: $font-demi
       font-size: 18px
       line-height: 1.2
+      &:after
+        color: $text-black
+        content: ", "
+      &:last-of-type
+        &:after
+          content: ""
 
   // Media icons
 
