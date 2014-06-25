@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for GSB Insights Two.
+ * Template for GSB Insights C.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
@@ -10,10 +10,10 @@
  */
 ?>
 
-<div class="panel-display gsb-insights-two<?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display gsb-insights-c<?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <?php if ($content['contentone']): ?>
-    <div class="full-header">
+    <div class="full-header superwide-view">
       <?php print $content['contentone']; ?>
     </div>
   <?php endif; ?>

@@ -105,3 +105,15 @@
   -webkit-transform: translateY(-50%)
   -ms-transform: translateY(-50%)
   transform: translateY(-50%)
+
+=layout-alpha-beta-gamma
+  +clearfix
+  max-width: $wide-view
+  +breakpoint(609px max-width)
+    max-width: 100%
+  .narrow-view
+    float: left
+  .beta
+    margin-right: 30px
+    +breakpoint(609px max-width)
+      margin-right: 0

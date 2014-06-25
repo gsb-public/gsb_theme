@@ -251,12 +251,14 @@
       margin-right: 0
   .panel-display .inner-sidebar-wrapper
     margin-left: 0
+  .panels-ipe-placeholder h3
+    width: 50%
 
-
-// Insights layout one
-.gsb-insights-one
+// Insights layout A
+.gsb-insights-a
   .narrow-view
     max-width: $narrow-view
+    min-width: $narrow-view
     +breakpoint(609px max-width)
       max-width: 100%
     .panels-ipe-editing &
@@ -293,10 +295,91 @@
     +breakpoint(609px max-width)
       float: none
 
-// Insights layout one
-.gsb-insights-two
+  // alpha, beta, gamma styling
+  .wide-narrow-narrow .first,
+  .narrow-narrow-wide .third,
+  .narrow-wide-narrow .second
+    +layout-alpha-beta-gamma
+
+// Insights layout B
+.gsb-insights-b
+  +clearfix
+  .insights-main-wrapper
+    float: left
+    margin-right: -320px
+    padding-right: 270px
+    width: 100%
+    +breakpoint(1210px max-width)
+      margin-right: 0
+      padding-right: 270px
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
+  .insights-sidebar-wrapper
+    float: right
+    +breakpoint(1210px max-width)
+      float: left
+      margin-right: 30px
+    +breakpoint($bp-mobile-max)
+      float: none
+      width: 100%
+    .panel-pane
+      margin-bottom: 30px
+      margin-top: 1px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
   .narrow-view
     max-width: $narrow-view
+    min-width: $narrow-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $narrow-view
+  .wide-view
+    max-width: $wide-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+    .panels-ipe-editing &
+      width: $wide-view
+  .first,
+  .second
+    margin-right: 30px
+    +breakpoint(609px max-width)
+      margin-right: 0
+
+  .full-header,
+  .wide-narrow-narrow,
+  .narrow-wide,
+  .narrow-narrow-narrow-narrow
+    +clearfix
+    .panel-pane
+      margin-bottom: 30px
+      margin-top: 1px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  .narrow-wide
+    .second
+      +layout-alpha-beta-gamma
+
+  .narrow-narrow-narrow-narrow
+    clear: both
+    .third
+      margin-right: 30px
+      +breakpoint(609px max-width)
+        margin-right: 0
+
+  .column
+    float: left
+    +breakpoint(609px max-width)
+      float: none
+
+// Insights layout C
+.gsb-insights-c
+  .narrow-view
+    max-width: $narrow-view
+    min-width: $narrow-view
     +breakpoint(609px max-width)
       max-width: 100%
     .panels-ipe-editing &
