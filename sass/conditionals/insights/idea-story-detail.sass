@@ -155,14 +155,39 @@
 
   // Body field
   .field-name-field-body
-    font-size: 18px
-    line-height: 1.4
+    // Paragraph
     p
-      font-size: 18px
-      line-height: 1.4
       &:first-of-type
         font-size: 24px
         line-height: 1.4
+    // Blockquote
+    blockquote p
+      font-size: 18px !important
+
+    // Headers
+    h2, h3, h4
+      margin-bottom: 6px
+
+    // Heading 2
+    h2
+      font-size: 22px
+      margin-top: 6px
+    // Heading 3
+    h3
+      font-family: $font-sans
+      font-size: 18px
+      font-weight: bold
+    // Ordered and unordered lists
+    ol, ul
+      li
+        margin-bottom: 12px
+        &:last-of-type
+          margin-bottom: 0
+    ul
+      li:before
+        color: $text-black
+
+
 
   // Full taxonomy (bottom of page)
   .group-wrapper-taxonomy
