@@ -1,1 +1,158 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
 // Top Stories
+// Used for both top stories on idea story detail, as well as the content pane
+
+// Top stories base styling
+.top-stories-wrapper
+  // Layout
+  .ds-2col
+    +clearfix
+  .node-idea-story.view-mode-idea_story_top_stories
+    .group-left,
+    .group-right
+      float: none
+      width: 100%
+    .group-left
+      margin-bottom: 8px
+
+  // Superhead
+  .superhead
+    @extend %black-border-top
+    display: inline-block
+    font-size: 14px
+    line-height: 1
+    margin-bottom: 26px
+    padding-top: 8px
+
+  // Spacing
+  .view-mode-idea_story_top_stories
+    margin-bottom: 26px
+    &:last-of-type
+      margin-bottom: 0
+
+  // Key image
+  .field-name-field-image-key-image
+    max-width: 212px
+
+  // Title
+  .field-name-title
+    +breakpoint($bp-top-stories)
+      width: 100%
+    h2
+      font-family: $font-sans
+      font-weight: bold
+      line-height: 0
+      a
+        font-size: 18px
+        line-height: 1.2
+
+
+// Top stories on idea story detail
+.node-idea-story.view-mode-full
+
+  // Fieldset logic
+  .top-stories-fieldset
+    @extend %bg-and-box-shadow
+    padding: 0 $standard-padding $standard-padding
+    +breakpoint($bp-idea-story-detail)
+      padding-bottom: 18px
+    border: none
+    height: auto !important
+    margin: 0
+
+    // Toggle open and closed
+    legend
+      display: none
+      padding: 0
+      +breakpoint($bp-idea-story-detail)
+        display: block
+        float: left
+        font-family: $font-demi
+        font-size: 20px
+        line-height: 1.2
+        padding-top: 20px
+
+    // Fiedset wrapper
+    .fieldset-wrapper
+      +breakpoint(1145px min-width)
+        display: block !important
+      +breakpoint($bp-idea-story-detail)
+        clear: left
+        padding-top: 20px
+
+    .node-idea-story.view-mode-idea_story_top_stories
+      .group-left,
+      .group-right
+        float: none
+        width: 100%
+      .group-left
+        margin-bottom: 8px
+        +breakpoint($bp-top-stories)
+          margin-bottom: 0
+          margin-right: 16px
+          width: 170px
+        +breakpoint(420px 321px)
+          width: 50%
+          min-width: 100px
+      .group-right
+        margin-left: 0
+        +breakpoint($bp-top-stories)
+          float: left
+          margin-left: -176px
+          padding-left: 195px
+        +breakpoint(400px 321px)
+          margin-left: -160px
+          padding-left: 170px
+
+  // Superhead
+  .superhead
+    +breakpoint($bp-idea-story-detail)
+      display: none
+
+  // Key image
+  .field-name-field-image-key-image
+    +breakpoint($bp-top-stories)
+      float: left
+      max-width: 170px
+
+
+// Top stories used as a content pane
+.pane-top-idea-story
+  @extend %bg-and-box-shadow
+  padding: 0 $standard-padding $standard-padding
+  // Hide pane title
+  .pane-title
+    display: none
+  .node-idea-story.view-mode-idea_story_top_stories
+
+    .group-left
+      +breakpoint(568px 321px)
+        margin-bottom: 0
+        margin-right: 16px
+        width: 170px
+      +breakpoint(420px 321px)
+        width: 50%
+        min-width: 100px
+    .group-right
+      margin-left: 0
+      +breakpoint(568px 321px)
+        float: left
+        margin-left: -176px
+        padding-left: 195px
+      +breakpoint(400px 321px)
+        margin-left: -160px
+        padding-left: 170px
+
+  // Key image
+  .field-name-field-image-key-image
+    +breakpoint(568px 321px)
+      float: left
+      max-width: 170px
