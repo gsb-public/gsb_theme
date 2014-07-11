@@ -1,0 +1,146 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Related to idea story section on idea story detail
+.node-idea-story.view-mode-full
+  .group-wrapper-related
+    @extend %bg-and-box-shadow
+    padding: 0
+    border: none
+    height: auto !important
+
+    // Toggle open and closed
+    legend
+      display: none
+      padding: 0
+      +breakpoint($bp-idea-story-detail)
+        display: block
+        float: left
+        font-family: $font-demi
+        font-size: 20px
+        line-height: 1.2
+        padding-top: 20px
+        padding-left: $standard-padding
+        padding-bottom: 18px
+
+    // Fieldset wrapper
+    .fieldset-wrapper
+      +breakpoint(1145px min-width)
+        display: block !important
+      +breakpoint($bp-idea-story-detail)
+        clear: left
+        padding-top: 20px
+
+    // Superhead
+    .superhead
+      @extend %black-border-top
+      display: block
+      font-size: 18px
+      line-height: 1
+      margin: 0 26px 20px
+      padding-top: 12px
+      +breakpoint($bp-idea-story-detail)
+        display: none
+
+    // Related
+
+    // Related faculty
+    .field-name-field-person-fac-ref
+      padding: 0 $standard-padding $standard-padding
+      +breakpoint($bp-idea-story-detail)
+        padding: 0 $standard-padding 20px
+      .node-faculty
+        +clearfix
+        margin-bottom: 16px
+        &:last-of-type
+          margin-bottom: 0
+      // Image
+      .field-name-field-image-single-public
+        float: left
+        margin-right: 12px
+        max-width: 40px
+      // Name
+      .group-wrapper-name
+        font-family: $font-demi
+        line-height: 1.2
+      // Rank, academic area
+      .group-wrapper-position
+        font-size: 16px
+        line-height: 1.2
+
+    // Related Idea stories
+    .field-name-field-related-idea-story
+      padding: 0
+      .node-idea-story
+        @extend %divider-top
+        padding: $standard-padding
+        +breakpoint($bp-idea-story-detail)
+          padding: 20px $standard-padding
+      // Date
+      .field-name-field-date
+        font-size: 14px
+        margin-bottom: 14px
+
+      // Media icons
+
+      // Video
+      .media-icon.Video
+        top: 0
+        &:after
+          font-size: 22px
+
+      // Audio
+      .media-icon.Audio
+        top: 0
+        &:after
+          font-size: 20px
+
+      // Infographic
+      .media-icon.Infographic
+        &:after
+          font-size: 16px
+
+      // Title
+      h2
+        font-family: $font-sans
+        font-size: 20px
+        font-weight: bold
+        line-height: 0
+        margin-bottom: 12px
+        a
+          line-height: 1.2
+
+      // Dek
+      .field-name-field-editorial-summary
+        font-size: 16px
+        line-height: 1.2
+        margin-bottom: 0
+
+    // Related other content
+
+    // Related links
+    .field-name-field-link-unlimited
+      @extend %divider-top
+      padding: $standard-padding
+      +breakpoint($bp-idea-story-detail)
+        padding: 20px $standard-padding
+      div
+        line-height: 0
+        margin-bottom: 10px
+        &:last-of-type
+          margin-bottom: 0
+      a
+        font-family: $font-demi
+        font-size: 16px
+        line-height: 1.2
+        &[target=_blank]
+          +icon-after("arrow-external", true)
+          &:after
+            font-size: 10px
+            margin-left: 3px
