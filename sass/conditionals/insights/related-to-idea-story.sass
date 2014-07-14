@@ -10,7 +10,8 @@
 // Related to idea story section on idea story detail
 .node-idea-story.view-mode-full
   .group-wrapper-related
-    @extend %bg-and-box-shadow
+    @extend %box-shadow
+    background: $white
     padding: 0
     border: none
     height: auto !important
@@ -73,6 +74,7 @@
       .group-wrapper-position
         font-size: 16px
         line-height: 1.2
+        padding-left: 52px
 
     // Related Idea stories
     .field-name-field-related-idea-story
@@ -123,6 +125,33 @@
         margin-bottom: 0
 
     // Related other content
+    .field-collection-item-field-related-other-unlimited
+      @extend %divider-top
+      padding: $standard-padding
+      +breakpoint($bp-idea-story-detail)
+        padding: 20px $standard-padding
+      // Label
+      .field-name-field-related-other-label
+        font-family: $font-demi
+        font-size: 16px
+        margin-right: 5px
+      // Title
+      h2
+        font-size: 16px
+        line-height: 0
+        a
+          line-height: 1.2
+      // Authors
+      .field-name-field-authors
+        font-size: 14px
+        line-height: 1.2
+        margin-left: 0
+      .gsb_field_formatter_field_collection_separator .field
+        display: inline-block
+      .field-collection-item-field-authors
+        &:last-of-type
+          &:before
+            content: none
 
     // Related links
     .field-name-field-link-unlimited

@@ -60,7 +60,8 @@
 
   // Fieldset logic
   .top-stories-fieldset
-    @extend %bg-and-box-shadow
+    @extend %box-shadow
+    background: $white
     padding: 0 $standard-padding $standard-padding
     +breakpoint($bp-idea-story-detail)
       padding-bottom: 18px
@@ -127,7 +128,8 @@
 
 // Top stories used as a content pane
 .pane-top-idea-story
-  @extend %bg-and-box-shadow
+  @extend %box-shadow
+  background: $white
   padding: 0 $standard-padding $standard-padding
   // Hide pane title
   .pane-title
