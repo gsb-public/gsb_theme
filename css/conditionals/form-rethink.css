@@ -1,4 +1,4 @@
-.pane-rethink-form .button {
+.pane-rethink-form .button, .pane-rethink-form-email #mc-embedded-subscribe {
   background: #636f00;
   background: -moz-linear-gradient(top, #6c7200, #636f00);
   background: -o-linear-gradient(top, #6c7200, #636f00);
@@ -6,7 +6,7 @@
   background: linear-gradient(to bottom, #6c7200, #636f00);
 }
 
-.pane-rethink-form .button:hover {
+.pane-rethink-form .button:hover, .pane-rethink-form-email #mc-embedded-subscribe:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -14,7 +14,7 @@
   background: linear-gradient(to bottom, #18455f, #2d6280);
 }
 
-.pane-rethink-form .button {
+.pane-rethink-form .button, .pane-rethink-form-email #mc-embedded-subscribe {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -26,14 +26,14 @@
   line-height: 1;
   padding: 10px 16px;
 }
-.pane-rethink-form .button:after {
+.pane-rethink-form .button:after, .pane-rethink-form-email #mc-embedded-subscribe:after {
   color: white !important;
 }
-.pane-rethink-form .button:hover {
+.pane-rethink-form .button:hover, .pane-rethink-form-email #mc-embedded-subscribe:hover {
   border: 0;
   color: white;
 }
-.pane-rethink-form .button:hover:after {
+.pane-rethink-form .button:hover:after, .pane-rethink-form-email #mc-embedded-subscribe:hover:after {
   color: white !important;
 }
 
@@ -44,5 +44,13 @@
   margin-bottom: 14px;
 }
 .pane-rethink-form .button {
+  padding: 8px 12px;
+}
+
+.pane-rethink-form-email .indicates-required {
+  display: none;
+}
+.pane-rethink-form-email #mc-embedded-subscribe {
+  margin-top: 12px;
   padding: 8px 12px;
 }
