@@ -135,27 +135,71 @@
   .pane-title
     display: none
   .node-idea-story.view-mode-idea_story_top_stories
-
-    .group-left
-      +breakpoint(568px 321px)
+    .wide-view &
+      .group-left
         margin-bottom: 0
         margin-right: 16px
         width: 170px
-      +breakpoint(420px 321px)
-        width: 50%
-        min-width: 100px
-    .group-right
-      margin-left: 0
-      +breakpoint(568px 321px)
+        +breakpoint(668px 568px)
+          margin-bottom: 8px
+          margin-right: 0
+          width: 100%
+        +breakpoint(420px 321px)
+          width: 50%
+          min-width: 100px
+        +breakpoint($bp-mobile)
+          margin-bottom: 8px
+          margin-right: 0
+          width: 100%
+
+      .group-right
         float: left
         margin-left: -176px
         padding-left: 195px
-      +breakpoint(400px 321px)
-        margin-left: -160px
-        padding-left: 170px
+        +breakpoint(400px 321px)
+          margin-left: -160px
+          padding-left: 170px
+        +breakpoint(668px 568px)
+          float: none
+          margin-left: 0
+          padding-left: 0
+        +breakpoint($bp-mobile)
+          float: none
+          margin-left: 0
+          padding-left: 0
 
-  // Key image
-  .field-name-field-image-key-image
-    +breakpoint(568px 321px)
-      float: left
-      max-width: 170px
+      // Key image
+      .field-name-field-image-key-image
+        float: left
+        max-width: 170px
+        +breakpoint(668px 568px)
+          float: none
+          max-width: 212px
+        +breakpoint($bp-mobile)
+          float: none
+          max-width: 212px
+
+    .narrow-view &
+      .group-left
+        +breakpoint(568px 321px)
+          margin-bottom: 0
+          margin-right: 16px
+          width: 170px
+        +breakpoint(420px 321px)
+          width: 50%
+          min-width: 100px
+      .group-right
+        margin-left: 0
+        +breakpoint(568px 321px)
+          float: left
+          margin-left: -176px
+          padding-left: 195px
+        +breakpoint(400px 321px)
+          margin-left: -160px
+          padding-left: 170px
+
+      // Key image
+      .field-name-field-image-key-image
+        +breakpoint(568px 321px)
+          float: left
+          max-width: 170px
