@@ -186,23 +186,43 @@
       li:before
         color: $text-black
 
-    // Superscript
-    sup
-      background: $link-green
-      +border-radius(50%)
-      color: $white
-      display: inline-block
-      font-size: 12px
-      line-height: 1.5
-      margin-left: 5px
-      height: 18px
-      width: 18px
-      text-align: center
-      vertical-align: super
-      &:hover
-        background: $link-blue
-        cursor: pointer
+  // Footnotes
+  // Number
+  .see-footnote
+    background: $link-green
+    +border-radius(50%)
+    color: $white
+    display: inline-block
+    font-size: 12px
+    line-height: 1.4
+    height: 16px
+    width: 16px
+    text-align: center
+    vertical-align: super
+    &:hover
+      background: $link-blue
+      cursor: pointer
+  // List
+  ul.footnotes
+    @extend %divider-top
+    padding-top: 12px
+    li
+      margin-bottom: 8px
+      margin-left: 0
+      padding: 6px 0 6px 24px
+    li:before
+      content: none
 
+    // Number
+    .footnote-number
+      margin-left: -20px
+      padding-right: 6px
+    // Text
+    .footnote
+      font-size: 14px
+      line-height: 1.2
+      &:nth-of-type(even)
+        background-color: rgba($teal-light, 0.3)
 
   // Full taxonomy (bottom of page)
   .group-wrapper-taxonomy

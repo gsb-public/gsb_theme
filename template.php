@@ -346,8 +346,8 @@ function gsb_theme_footnote_list($footnotes) {
   foreach ($footnotes as $fn) {
     if(!is_array( $fn['ref_id'])) {
       // Output normal footnote
-      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><a class="footnote-label" href="#' . $fn['ref_id'] . '">' . $fn['value'] . '.</a> ';
-      $str .= $fn['text'] . "</li>\n";
+      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><span class="footnote-number">' . $fn['value'] . '.</span>';
+      $str .= $fn['text'] . '  |  <a class="footnote-link" href="#' . $fn['ref_id'] . '">' . t("Back to Text") . '</a>' . "</li>\n";
     }
     else {
       // Output footnote that has more than one reference to it in the body.
@@ -355,7 +355,7 @@ function gsb_theme_footnote_list($footnotes) {
       // Helper: we need to enumerate a, b, c...
       $abc = str_split("abcdefghijklmnopqrstuvwxyz"); $i = 0;
 
-      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><a href="#' . $fn['ref_id'][0] . '" class="footnote-label">' . $fn['value'] . '.</a> ';
+      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><span class="footnote-number">' . $fn['value'] . '.</span>';
       foreach ($fn['ref_id'] as $ref) {
         $str .= '<a class="footnote-multi" href="#' . $ref . '">' . $abc[$i] . '.</a> ';
         $i++;
