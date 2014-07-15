@@ -59,20 +59,28 @@
     <?php endif; ?>
 
     <?php if ($content['contentfourone'] || $content['contentfourtwo'] || $content['contentfourthree'] || $content['contentfourfour']): ?>
-        <div class="narrow-narrow-narrow-narrow">
-          <div class="column first narrow-view">
-            <?php print $content['contentfourone']; ?>
-          </div>
-          <div class="column second narrow-view">
-            <?php print $content['contentfourtwo']; ?>
-          </div>
-          <div class="column third narrow-view">
-            <?php print $content['contentfourthree']; ?>
-          </div>
-          <div class="column fourth narrow-view">
-            <?php print $content['contentfourfour']; ?>
-          </div>
+      <div class="narrow-narrow-narrow-narrow">
+        <div class="column first narrow-view">
+          <?php print $content['contentfourone']; ?>
+        </div>
+        <div class="column second narrow-view">
+          <?php print $content['contentfourtwo']; ?>
+        </div>
+        <div class="column third narrow-view">
+          <?php print $content['contentfourthree']; ?>
+        </div>
+        <div class="column fourth narrow-view">
+          <?php print $content['contentfourfour']; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <div class="insights-listing-wrapper">
+      <?php if ($content['contentfiveone']): ?>
+        <div class="insights-topic-listing">
+          <?php print $content['contentfiveone']; ?>
         </div>
       <?php endif; ?>
+    </div><!-- /.insights-listing-wrapper -->
 
 </div><!-- /.gsb-insights-one -->

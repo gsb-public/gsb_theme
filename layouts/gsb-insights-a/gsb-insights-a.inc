@@ -30,6 +30,8 @@ $plugin = array(
     'contentfiveone' => t('Row E column 1'),
     'contentfivetwo' => t('Row E column 2'),
     'contentfivethree' => t('Row E column 3'),
-    'contentfivefour' => t('Row E column 4')
+    'contentfivefour' => t('Row E column 4'),
+
+    'contentsixone' => t('Listing row')
   ),
 );

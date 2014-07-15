@@ -16,5 +16,7 @@ $plugin = array(
     'contentthreetwo' => t('Row C column 2'),
     'contentthreethree' => t('Row C column 3'),
     'contentthreefour' => t('Row C column 4'),
+
+    'contentfourone' => t('Listing row')
   ),
 );

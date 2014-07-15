@@ -105,4 +105,12 @@
 
     </div><!-- /.insights-main-wrapper -->
 
+    <div class="insights-listing-wrapper">
+      <?php if ($content['contentsixone']): ?>
+        <div class="insights-topic-listing">
+          <?php print $content['contentsixone']; ?>
+        </div>
+      <?php endif; ?>
+    </div><!-- /.insights-listing-wrapper -->
+
 </div><!-- /.gsb-insights-one -->
