@@ -323,3 +323,46 @@ function gsb_theme_preprocess_views_view_table(&$variables) {
     $variables['classes_array'][] = 'responsive';
   }
 }
+
+/**
+ * Themed output of the footnotes list appearing at at [footnotes]
+ *
+ * Accepts an array containing an ordered listing of associative arrays, each
+ * containing values on the following keys:
+ *   text   - the raw unprocessed text extracted from within the [fn] tag
+ *   text_clean   - a sanitized version of the previous, may be used as HTML attribute value
+ *   value  - the raw unprocessed footnote number or other identifying label
+ *   fn_id  - the globally unique identifier for the in-body footnote link
+ *            anchor, used to allow links from the list to the body
+ *   ref_id - the globally unique identifier for the footnote's anchor in the
+ *            footnote listing, used to allow links to the list from the body
+ */
+function gsb_theme_footnote_list($footnotes) {
+  $str = '<ul class="footnotes">';
+  // Drupal 7 requires we use "render element" which just introduces a wrapper
+  // around the old array.
+  $footnotes = $footnotes['footnotes'];
+  // loop through the footnotes
+  foreach ($footnotes as $fn) {
+    if(!is_array( $fn['ref_id'])) {
+      // Output normal footnote
+      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><a class="footnote-label" href="#' . $fn['ref_id'] . '">' . $fn['value'] . '.</a> ';
+      $str .= $fn['text'] . "</li>\n";
+    }
+    else {
+      // Output footnote that has more than one reference to it in the body.
+      // The only difference is to insert backlinks to all references.
+      // Helper: we need to enumerate a, b, c...
+      $abc = str_split("abcdefghijklmnopqrstuvwxyz"); $i = 0;
+
+      $str .= '<li class="footnote" id="' . $fn['fn_id'] .'"><a href="#' . $fn['ref_id'][0] . '" class="footnote-label">' . $fn['value'] . '.</a> ';
+      foreach ($fn['ref_id'] as $ref) {
+        $str .= '<a class="footnote-multi" href="#' . $ref . '">' . $abc[$i] . '.</a> ';
+        $i++;
+      }
+      $str .= $fn['text'] . "</li>\n";
+    }
+  }
+  $str .= "</ul>\n";
+  return $str;
+}
