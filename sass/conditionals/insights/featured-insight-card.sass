@@ -8,3 +8,72 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Featured insight cards
+.pane-bundle-featured-insight-card
+  @extend %box-shadow
+  background: $white
+  margin-left: 2px
+
+  // Superhead
+  .field-name-field-title
+    background: $text-black
+    color: $white
+    display: inline-block
+    font-size: 14px
+    line-height: 1
+    margin: 0 26px 10px 26px
+    padding: 6px 8px
+    position: relative
+    z-index: 2
+
+  // Spacing
+  .node-book .field-name-field-image-single-public,
+  .field-name-field-event-date,
+  .field-name-title,
+  .field-name-field-author,
+  .field-name-field-authors,
+  .field-name-field-editorial-summary
+    padding: 0 $standard-padding
+  .field-name-field-editorial-summary
+    padding-bottom: $standard-padding
+
+  // Date
+  .field-name-field-event-date
+    font-size: 14px
+    line-height: 1.2
+
+  // Title
+  .field-name-title
+    margin-bottom: 8px
+    h2
+      line-height: 0
+      a
+        font-family: $font-sans
+        font-size: 22px
+        font-weight: bold
+        line-height: 1.3
+
+  // Authors
+  .field-name-field-author,
+  .field-name-field-authors
+    display: block
+    font-family: $font-demi
+    font-size: 16px
+    line-height: 1.3
+    margin-bottom: 8px
+
+  // Dek
+  .field-name-field-editorial-summary
+    font-size: 16px
+    line-height: 1.3
+
+  // Content type specific changes
+  // Event
+  .node-event
+    margin-top: -36px
+    .field-name-field-image-single-public
+      margin-bottom: 8px
+
+  // Book
+  .node-book .field-name-field-image-single-public
+    margin-bottom: 8px
+    max-width: 150px
