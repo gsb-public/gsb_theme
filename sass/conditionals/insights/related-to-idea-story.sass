@@ -42,8 +42,9 @@
     .superhead
       @extend %black-border-top
       display: block
+      font-family: $font-demi
       font-size: 18px
-      line-height: 1
+      line-height: 1.3
       margin: 0 26px 20px
       padding-top: 12px
       +breakpoint($bp-idea-story-detail)
@@ -91,6 +92,7 @@
       // Date
       .field-name-field-date
         font-size: 14px
+        line-height: 1.2
         margin-bottom: 14px
 
       // Media icons
@@ -113,20 +115,24 @@
           font-size: 16px
 
       // Title
+      .field-name-title
+        display: inline
       h2
+        display: inline
         font-family: $font-sans
         font-size: 20px
         font-weight: bold
         line-height: 0
         margin-bottom: 12px
         a
-          line-height: 1.2
+          line-height: 1.3
 
       // Dek
       .field-name-field-editorial-summary
         font-size: 16px
-        line-height: 1.2
+        line-height: 1.3
         margin-bottom: 0
+        margin-top: 8px
 
     // Related other content
     .field-collection-item-field-related-other-unlimited
@@ -134,21 +140,38 @@
       padding: $standard-padding
       +breakpoint($bp-idea-story-detail)
         padding: 20px $standard-padding
+
+      // Title wrapper
+      .group-wrapper-title
+        line-height: 0
+        margin-bottom: 8px
+        h3
+          display: inline
+          font-family: $font-demi
+          font-size: 16px
+          font-weight: normal
+          line-height: 1.3
+
       // Label
       .field-name-field-related-other-label
         font-family: $font-demi
         font-size: 16px
+        line-height: 1.3
         margin-right: 5px
+
+      // Pipe
+      .pipe
+        margin-right: 5px
+
       // Title
-      h2
-        font-size: 16px
-        line-height: 0
-        a
-          line-height: 1.2
+      .field-name-field-title
+        line-height: 1.3
+
       // Authors
+      .field-name-field-author,
       .field-name-field-authors
         font-size: 14px
-        line-height: 1.2
+        line-height: 1.3
         margin-left: 0
       .gsb_field_formatter_field_collection_separator .field
         display: inline-block
@@ -156,6 +179,15 @@
         &:last-of-type
           &:before
             content: none
+
+      // Date and location
+      .field-name-field-event-date,
+      .field-name-field-address
+        font-size: 14px
+        line-height: 1.3
+
+      .field-name-field-event-date
+        font-family: $font-demi
 
     // Related links
     .field-name-field-link-unlimited
@@ -171,7 +203,7 @@
       a
         font-family: $font-demi
         font-size: 16px
-        line-height: 1.2
+        line-height: 1.3
         &[target=_blank]
           +icon-after("arrow-external", true)
           &:after
