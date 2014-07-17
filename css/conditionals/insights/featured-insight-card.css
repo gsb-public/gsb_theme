@@ -13,6 +13,13 @@
 .pane-bundle-featured-insight-card {
   background: white;
   margin-left: 2px;
+  padding: 26px;
+  padding-top: 0;
+}
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card {
+    padding-bottom: 20px;
+  }
 }
 .pane-bundle-featured-insight-card .field-name-field-title {
   background: #231f20;
@@ -20,21 +27,16 @@
   display: inline-block;
   font-size: 14px;
   line-height: 1;
-  margin: 0 26px 10px 26px;
+  margin-bottom: 26px;
   padding: 6px 8px;
   position: relative;
   z-index: 2;
 }
-.pane-bundle-featured-insight-card .node-book .field-name-field-image-single-public,
-.pane-bundle-featured-insight-card .field-name-field-event-date,
-.pane-bundle-featured-insight-card .field-name-title,
-.pane-bundle-featured-insight-card .field-name-field-author,
-.pane-bundle-featured-insight-card .field-name-field-authors,
-.pane-bundle-featured-insight-card .field-name-field-editorial-summary {
-  padding: 0 26px;
-}
-.pane-bundle-featured-insight-card .field-name-field-editorial-summary {
-  padding-bottom: 26px;
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .field-name-field-title {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
 }
 .pane-bundle-featured-insight-card .field-name-field-event-date {
   font-size: 14px;
@@ -52,6 +54,11 @@
   font-weight: bold;
   line-height: 1.3;
 }
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .field-name-title h2 a {
+    font-size: 18px;
+  }
+}
 .pane-bundle-featured-insight-card .field-name-field-author,
 .pane-bundle-featured-insight-card .field-name-field-authors {
   display: block;
@@ -60,17 +67,36 @@
   line-height: 1.3;
   margin-bottom: 8px;
 }
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .field-name-field-author,
+  .pane-bundle-featured-insight-card .field-name-field-authors {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
 .pane-bundle-featured-insight-card .field-name-field-editorial-summary {
   font-size: 16px;
   line-height: 1.3;
 }
-.pane-bundle-featured-insight-card .node-event {
-  margin-top: -36px;
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .field-name-field-editorial-summary {
+    display: none;
+  }
 }
 .pane-bundle-featured-insight-card .node-event .field-name-field-image-single-public {
-  margin-bottom: 8px;
+  margin: -52px -26px 8px -26px;
+}
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .node-event .field-name-field-image-single-public {
+    display: none;
+  }
 }
 .pane-bundle-featured-insight-card .node-book .field-name-field-image-single-public {
   margin-bottom: 8px;
   max-width: 150px;
+}
+@media (max-width: 38.125em) {
+  .pane-bundle-featured-insight-card .node-book .field-name-field-image-single-public {
+    display: none;
+  }
 }

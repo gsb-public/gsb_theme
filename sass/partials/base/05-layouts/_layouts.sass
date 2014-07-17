@@ -259,6 +259,8 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
+    +breakpoint(895px max-width)
+      max-width: 290px
     +breakpoint(609px max-width)
       max-width: 100%
     .panels-ipe-editing &
@@ -272,6 +274,8 @@
   .first,
   .second
     margin-right: 30px
+    +breakpoint(939px max-width)
+      margin-right: 15px
     +breakpoint(609px max-width)
       margin-right: 0
   .full-header,
@@ -288,6 +292,8 @@
   .narrow-narrow-narrow-narrow
     .third
       margin-right: 30px
+      +breakpoint(939px max-width)
+        margin-right: 15px
       +breakpoint(609px max-width)
         margin-right: 0
   .column
@@ -380,6 +386,8 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
+    +breakpoint(895px max-width)
+      max-width: 290px
     +breakpoint(609px max-width)
       max-width: 100%
     .panels-ipe-editing &
@@ -392,6 +400,8 @@
       width: $wide-view
   .first
     margin-right: 30px
+    +breakpoint(939px max-width)
+      margin-right: 15px
     +breakpoint(609px max-width)
       margin-right: 0
   .full-header,
@@ -407,7 +417,12 @@
     .second,
     .third
       margin-right: 30px
+      +breakpoint(939px max-width)
+        margin-right: 15px
       +breakpoint(609px max-width)
+        margin-right: 0
+    .second
+      +breakpoint(895px max-width)
         margin-right: 0
   .column
     float: left
