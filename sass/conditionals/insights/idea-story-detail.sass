@@ -242,3 +242,101 @@
         color: $link-blue
     .taxonomy-category .separator
       margin-right: 3px
+
+  // Explore More section
+  .explore-more-wrapper
+    @extend %black-border-top-small
+    +breakpoint($bp-idea-story-detail)
+      margin-bottom: 26px
+    +breakpoint(850px max-width)
+      border-bottom: 3px $text-black solid
+
+    // Superhead
+    .superhead
+      color: $text-black
+      font-family: $font-sans
+      font-size: 26px
+      font-weight: bold
+      margin-bottom: 26px
+      padding-top: 14px
+      +breakpoint(850px max-width)
+        font-size: 22px
+
+    // Content wrapper
+    .explore-more-content
+      padding-left: 35px
+      +breakpoint(850px max-width)
+        padding-left: 0
+
+    // Explore more idea stories
+    .node-idea-story.view-mode-teaser
+      display: inline-block
+      max-width: 245px
+      vertical-align: top
+      +breakpoint(850px max-width)
+        display: block
+        max-width: 100%
+      &:nth-of-type(2n)
+        margin: 0 40px
+        +breakpoint(1210px 850px)
+          margin: 0 20px
+        +breakpoint(850px max-width)
+          margin: 0
+
+      // Key Image
+      .field-name-field-image-key-image
+        margin-bottom: 20px
+        max-width: 245px
+        +breakpoint(850px max-width)
+          display: none
+
+      // Date
+      .field-name-field-date
+        font-size: 14px
+        line-height: 1.2
+        margin-bottom: 12px
+        +breakpoint(850px max-width)
+          display: none
+
+      // Media icons
+      .media-icon.Video,
+      .media-icon.Audio
+        &:after
+          font-size: 20px
+
+      .media-icon.Video
+        top: -1px
+      .media-icon.Audio
+        top: 0
+
+      // Title
+      .field-name-title
+        display: inline
+        h3
+          display: inline
+          font-size: 20px
+          line-height: 0
+          +breakpoint(850px max-width)
+            font-size: 18px
+          a
+            line-height: 1.3
+
+      // Dek
+      .field-name-field-editorial-summary
+        font-size: 16px
+        line-height: 1.3
+        margin-top: 12px
+        +breakpoint(850px max-width)
+          margin-top: 8px
+          margin-bottom: 20px
+
+      // Key taxonomy
+      .field-name-field-key-taxonomy
+        line-height: 0
+        margin-bottom: 0
+        +breakpoint(850px max-width)
+          display: none
+        a
+          display: inline-block
+          font-size: 16px
+          line-height: 1.3
