@@ -30,10 +30,12 @@
 
   > .group-left,
   > .group-right
-    width: auto
+    width: 100%
 
   .group-left
     max-width: 850px
+    +breakpoint($bp-idea-story-detail)
+      max-width: 100%
   .group-right
     margin-left: 50px
     width: 270px
@@ -340,3 +342,101 @@
           display: inline-block
           font-size: 16px
           line-height: 1.3
+
+  // Insights sign up
+  .insights-signup-form-wrapper
+    +clearfix
+    @extend %box-shadow
+    background: $white
+    padding: 20px $standard-padding
+    position: relative
+    top: 0
+    +breakpoint($bp-idea-story-detail)
+      margin-bottom: 26px
+
+    // Progress throbber
+    .ajax-progress
+      position: absolute
+      right: 8px
+      bottom: 30px
+
+    // Message with icon
+    .signup-text
+      float: left
+      font-size: 20px
+      line-height: 1.3
+      min-height: 36px
+      position: relative
+      top: 5px
+      +breakpoint(385px min-width)
+        padding-left: 35px
+      +breakpoint(585px max-width)
+        display: block
+        float: none
+        margin-bottom: 12px
+      +breakpoint(384px max-width)
+        font-size: 18px
+      a
+        color: $link-green
+        &:hover
+          color: $link-blue
+      +breakpoint(385px min-width)
+        +icon-before("email-stroke", true)
+        &:before
+          color: $teal-light
+          margin-right: 14px
+          display: block
+          float: left
+          line-height: 1.3
+          margin-left: -35px
+
+    // Email signup wrapper
+    .form-item-email
+      display: inline
+      margin: 0
+      float: left
+      margin-left: -325px
+      padding-left: 350px
+      margin-right: -40px
+      padding-right: 40px
+      width: 100%
+      +breakpoint(585px max-width)
+        display: block
+        margin-left: 0
+        padding-left: 0
+        max-width: 420px
+
+    // Input box
+    #edit-email
+      border: 1px $input-border solid
+      +box-shadow(none)
+      +border-radius(0)
+      float: left
+      height: 36px
+      line-height: 1
+      width: 100%
+      &:focus
+        outline: none
+        +box-shadow(none)
+        border: 1px #900 solid
+
+    // Submit button
+    #edit-submit
+      +background(linear-gradient(bottom, $red-light 40%, $red-dark 90%))
+      border: none
+      +border-radius(0 20px 20px 0)
+      color: $white
+      float: left
+      font-size: 14px
+      font-family: $font-sans
+      font-weight: bold
+      height: 36px
+      line-height: 2.5
+      margin: 0
+      margin-left: -1px
+      text-align: center
+      text-shadow: none
+      text-transform: uppercase
+      width: 40px
+      &:hover
+        +background(linear-gradient(#194560, #2c6180))
