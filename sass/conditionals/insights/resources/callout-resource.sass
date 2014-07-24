@@ -1,0 +1,38 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Callout resource
+.file-resource-pull-quote
+  +clearfix
+  color: #739d95
+  float: left
+  max-width: 408px
+
+  // Quote
+  .field-name-field-description
+    font-size: 26px
+    line-height: 1.4
+    +breakpoint($bp-mobile)
+      font-size: 22px
+    &:before
+      content: "“"
+    &:after
+      content: "”"
+
+  // Source
+  .field-name-field-quote-author
+    display: inline
+    float: right
+    font-size: 18px
+    line-height: 1.3
+    +breakpoint($bp-mobile)
+      font-size: 16px
+    &:before
+      content: "—"
+      margin-right: 3px

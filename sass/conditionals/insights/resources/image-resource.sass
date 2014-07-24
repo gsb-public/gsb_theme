@@ -1,0 +1,32 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Image resource
+
+// Full
+.file-resource_image--full_width
+  margin-bottom: 20px
+
+// Half and third
+.file-resource_image--1_2_width,
+.file-resource_image--1_3_width
+  float: right
+  margin-bottom: 20px
+  margin-left: 20px
+  +breakpoint($bp-idea-story-detail)
+    float: none
+    margin-left: 0
+
+// Half
+.file-resource_image--1_2_width
+  max-width: 408px
+
+// Third
+.file-resource_image--1_3_width
+  max-width: 268px
