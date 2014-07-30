@@ -8,205 +8,175 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Related to idea story section on idea story detail
-.node-idea-story.view-mode-full
-  .group-wrapper-related
-    @extend %box-shadow
-    background: $white
+.group-wrapper-related
+  @extend %box-shadow
+  background: $white
+  padding: 0
+  border: none
+  height: auto !important
+
+  // Toggle open and closed
+  legend
+    display: none
     padding: 0
-    border: none
-    height: auto !important
 
-    // Toggle open and closed
-    legend
-      display: none
-      padding: 0
-      +breakpoint($bp-idea-story-detail)
-        display: block
-        float: left
-        font-family: $font-demi
-        font-size: 20px
-        line-height: 1.2
-        padding-top: 20px
-        padding-left: $standard-padding
-        padding-bottom: 18px
+  // Superhead
+  .superhead
+    @extend %black-border-top
+    display: block
+    font-family: $font-demi
+    font-size: 18px
+    line-height: 1.3
+    margin: 0 26px 20px
+    padding-top: 12px
 
-    // Fieldset wrapper
-    .fieldset-wrapper
-      +breakpoint(1211px min-width)
-        display: block !important
-      +breakpoint($bp-idea-story-detail)
-        clear: left
-        padding-top: 20px
+  // Related
 
-    // Superhead
-    .superhead
-      @extend %black-border-top
-      display: block
-      font-family: $font-demi
-      font-size: 18px
-      line-height: 1.3
-      margin: 0 26px 20px
-      padding-top: 12px
-      +breakpoint($bp-idea-story-detail)
-        display: none
-
-    // Related
-
-    // Related faculty
-    .field-name-field-person-fac-ref
-      padding: 0 $standard-padding $standard-padding
-      +breakpoint($bp-idea-story-detail)
-        padding: 0 $standard-padding 20px
-      .node-faculty
-        +clearfix
-        margin-bottom: 16px
-        &:last-of-type
-          margin-bottom: 0
-      // Image
-      .field-name-field-image-single-public
-        float: left
-        margin-right: 12px
-        max-width: 40px
-      // Name
-      .group-wrapper-name
-        font-family: $font-demi
-        line-height: 0
-        a
-          display: inline-block
-          line-height: 1.2
-          max-width: 164px
-      // Rank, academic area
-      .group-wrapper-position
-        font-size: 16px
-        line-height: 1.2
-        padding-left: 52px
-
-    // Related Idea stories
-    .field-name-field-related-idea-story
-      padding: 0
-      .node-idea-story
-        @extend %divider-top
-        padding: $standard-padding
-        +breakpoint($bp-idea-story-detail)
-          padding: 20px $standard-padding
-      // Date
-      .field-name-field-date
-        font-size: 14px
-        line-height: 1.2
-        margin-bottom: 14px
-
-      // Media icons
-
-      // Video
-      .media-icon.Video
-        top: 0
-        &:after
-          font-size: 22px
-
-      // Audio
-      .media-icon.Audio
-        top: 0
-        &:after
-          font-size: 20px
-
-      // Infographic
-      .media-icon.Infographic
-        &:after
-          font-size: 20px
-
-      // Title
-      .field-name-title
-        display: inline
-      h2
-        display: inline
-        font-family: $font-sans
-        font-size: 20px
-        font-weight: bold
-        line-height: 0
-        margin-bottom: 12px
-        a
-          line-height: 1.2
-
-      // Dek
-      .field-name-field-editorial-summary
-        font-size: 16px
-        line-height: 1.3
+  // Related faculty
+  .field-name-field-person-fac-ref
+    padding: 0 $standard-padding $standard-padding
+    .node-faculty
+      +clearfix
+      margin-bottom: 16px
+      &:last-of-type
         margin-bottom: 0
-        margin-top: 8px
-
-    // Related other content
-    .field-collection-item-field-related-other-unlimited
-      @extend %divider-top
-      padding: $standard-padding
-      +breakpoint($bp-idea-story-detail)
-        padding: 20px $standard-padding
-
-      // Title wrapper
-      .group-wrapper-title
-        line-height: 0
-        margin-bottom: 8px
-        h3
-          display: inline
-          font-family: $font-demi
-          font-size: 16px
-          font-weight: normal
-          line-height: 0
-          // Title
-          .field-name-field-title
-            line-height: 1.2
-
-      // Label
-      .field-name-field-related-other-label
-        font-family: $font-demi
-        font-size: 16px
-        line-height: 1.3
-        margin-right: 5px
-
-      // Pipe
-      .pipe
-        margin-right: 5px
-
-
-
-      // Authors
-      .field-name-field-author,
-      .field-name-field-authors
-        font-size: 14px
-        line-height: 1.3
-        margin-left: 0
-      .gsb_field_formatter_field_collection_separator .field
-        display: inline-block
-      .field-collection-item-field-authors
-        &:last-of-type
-          &:before
-            content: none
-
-      // Date and location
-      .field-name-field-event-date,
-      .field-name-field-address
-        font-size: 14px
-        line-height: 1.3
-
-      .field-name-field-event-date
-        font-family: $font-demi
-
-    // Related links
-    .field-name-field-link-unlimited
-      @extend %divider-top
-      padding: $standard-padding
-      +breakpoint($bp-idea-story-detail)
-        padding: 20px $standard-padding
-      div
-        line-height: 0
-        margin-bottom: 10px
-        &:last-of-type
-          margin-bottom: 0
+    // Image
+    .field-name-field-image-single-public
+      float: left
+      margin-right: 12px
+      max-width: 40px
+    // Name
+    .group-wrapper-name
+      font-family: $font-demi
+      line-height: 0
       a
+        display: inline-block
+        line-height: 1.2
+        max-width: 164px
+    // Rank, academic area
+    .group-wrapper-position
+      font-size: 16px
+      line-height: 1.2
+      padding-left: 52px
+
+  // Related Idea stories
+  .field-name-field-related-idea-story
+    padding: 0
+    .node-idea-story
+      @extend %divider-top
+      padding: $standard-padding
+    // Date
+    .field-name-field-date
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 14px
+
+    // Media icons
+
+    // Video
+    .media-icon.Video
+      top: 0
+      &:after
+        font-size: 20px
+
+    // Audio
+    .media-icon.Audio
+      top: 0
+      &:after
+        font-size: 20px
+
+    // Infographic
+    .media-icon.Infographic
+      &:after
+        font-size: 20px
+
+    // Title
+    .field-name-title
+      display: inline
+    h2
+      display: inline
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 0
+      margin-bottom: 12px
+      a
+        line-height: 1.2
+
+    // Dek
+    .field-name-field-editorial-summary
+      font-size: 16px
+      line-height: 1.3
+      margin-bottom: 0
+      margin-top: 8px
+
+  // Related other content
+  .field-collection-item-field-related-other-unlimited
+    @extend %divider-top
+    padding: $standard-padding
+
+    // Title wrapper
+    .group-wrapper-title
+      line-height: 0
+      margin-bottom: 8px
+      h3
+        display: inline
         font-family: $font-demi
         font-size: 16px
-        line-height: 1.2
-        &[target=_blank]
-          +icon-after("arrow-external", true)
-          &:after
-            font-size: 10px
-            margin-left: 3px
+        font-weight: normal
+        line-height: 0
+        // Title
+        .field-name-field-title
+          line-height: 1.2
+
+    // Label
+    .field-name-field-related-other-label
+      font-family: $font-demi
+      font-size: 16px
+      line-height: 1.3
+      margin-right: 5px
+
+    // Pipe
+    .pipe
+      margin-right: 5px
+
+    // Authors
+    .field-name-field-author,
+    .field-name-field-authors
+      font-size: 14px
+      line-height: 1.3
+      margin-left: 0
+    .gsb_field_formatter_field_collection_separator .field
+      display: inline-block
+    .field-collection-item-field-authors
+      &:last-of-type
+        &:before
+          content: none
+
+    // Date and location
+    .field-name-field-event-date,
+    .field-name-field-address
+      font-size: 14px
+      line-height: 1.3
+
+    .field-name-field-event-date
+      font-family: $font-demi
+
+  // Related links
+  .field-name-field-link-unlimited
+    @extend %divider-top
+    padding: $standard-padding
+    div
+      line-height: 0
+      margin-bottom: 10px
+      &:last-of-type
+        margin-bottom: 0
+    a
+      font-family: $font-demi
+      font-size: 16px
+      line-height: 1.2
+      &[target=_blank]
+        +icon-after("arrow-external", true)
+        &:after
+          font-size: 10px
+          margin-left: 3px

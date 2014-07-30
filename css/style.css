@@ -54,8 +54,8 @@ p {
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.view-mode-media_contact {
-  border-top: 1px #cccccc solid;
+.view-mode-media_contact, ul.footnotes {
+  border-top: 1px lightgray solid;
 }
 
 .view-faculty-filters .views-exposed-search-wrap,
@@ -67,7 +67,7 @@ p {
 .view-display-id-case_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-book_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-publications_listing .views-widget-filter-secondary .form-type-select {
-  border-bottom: 1px #cccccc solid;
+  border-bottom: 1px lightgray solid;
 }
 
 .designed-box,
@@ -3065,6 +3065,49 @@ a.no-border:hover {
 .pane-media-toolkit .pane-content li {
   line-height: 30px;
   border-top: 1px solid #e4e4e4;
+}
+
+.see-footnote {
+  background: #636f00;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  font-size: 9px;
+  line-height: 1.7;
+  height: 14px;
+  position: relative;
+  text-align: center;
+  top: -3px;
+  width: 14px;
+}
+.see-footnote:hover {
+  background: #2d6280;
+  cursor: pointer;
+}
+
+ul.footnotes {
+  padding-top: 12px;
+}
+ul.footnotes li {
+  margin-bottom: 8px;
+  margin-left: 0;
+  padding: 6px 0 6px 24px;
+}
+ul.footnotes li:before {
+  content: none;
+}
+ul.footnotes .footnote-number {
+  margin-left: -20px;
+  padding-right: 6px;
+}
+ul.footnotes .footnote {
+  font-size: 14px;
+  line-height: 1.2;
+}
+ul.footnotes .footnote:target {
+  background-color: rgba(170, 196, 191, 0.3);
 }
 
 .pane-bundle-links .red-bar {

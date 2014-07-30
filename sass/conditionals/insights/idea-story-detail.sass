@@ -155,77 +155,7 @@
 
   // Body field
   .field-name-field-body
-    // Paragraph
-    p
-      &:first-of-type
-        font-size: 24px
-        line-height: 1.4
-    // Blockquote
-    blockquote p
-      font-size: 18px !important
-
-    // Headers
-    h2, h3, h4
-      margin-bottom: 6px
-
-    // Heading 2
-    h2
-      font-size: 22px
-      margin-top: 6px
-    // Heading 3
-    h3
-      font-family: $font-sans
-      font-size: 18px
-      font-weight: bold
-    // Ordered and unordered lists
-    ol, ul
-      li
-        margin-bottom: 12px
-        &:last-of-type
-          margin-bottom: 0
-    ul
-      li:before
-        color: $text-black
-
-  // Footnotes
-  // Number
-  .see-footnote
-    background: $link-green
-    +border-radius(50%)
-    color: $white
-    display: inline-block
-    font-size: 9px
-    line-height: 1.7
-    height: 14px
-    position: relative
-    text-align: center
-    top: -3px
-    width: 14px
-
-    &:hover
-      background: $link-blue
-      cursor: pointer
-  // List
-  ul.footnotes
-    @extend %divider-top
-    padding-top: 12px
-    li
-      margin-bottom: 8px
-      margin-left: 0
-      padding: 6px 0 6px 24px
-    li:before
-      content: none
-
-    // Number
-    .footnote-number
-      margin-left: -20px
-      padding-right: 6px
-    // Text
-    .footnote
-      font-size: 14px
-      line-height: 1.2
-      &:target
-        background-color: rgba($teal-light, 0.3)
+    @extend %resources-body
 
   // Full taxonomy (bottom of page)
   .group-wrapper-taxonomy
@@ -439,3 +369,54 @@
       width: 40px
       &:hover
         +background(linear-gradient(#194560, #2c6180))
+
+  // Related content
+  .group-wrapper-related
+
+    // Toggle open and closed
+    legend
+      +breakpoint($bp-idea-story-detail)
+        display: block
+        float: left
+        font-family: $font-demi
+        font-size: 20px
+        line-height: 1.2
+        padding-top: 20px
+        padding-left: $standard-padding
+        padding-bottom: 18px
+
+    // Fieldset wrapper
+    .fieldset-wrapper
+      +breakpoint(1211px min-width)
+        display: block !important
+      +breakpoint($bp-idea-story-detail)
+        clear: left
+        padding-top: 20px
+
+    // Superhead
+    .superhead
+      +breakpoint($bp-idea-story-detail)
+        display: none
+
+    // Related
+
+    // Related faculty
+    .field-name-field-person-fac-ref
+      +breakpoint($bp-idea-story-detail)
+        padding: 0 $standard-padding 20px
+
+    // Related Idea stories
+    .field-name-field-related-idea-story
+      .node-idea-story
+        +breakpoint($bp-idea-story-detail)
+          padding: 20px $standard-padding
+
+    // Related other content
+    .field-collection-item-field-related-other-unlimited
+      +breakpoint($bp-idea-story-detail)
+        padding: 20px $standard-padding
+
+    // Related links
+    .field-name-field-link-unlimited
+      +breakpoint($bp-idea-story-detail)
+        padding: 20px $standard-padding
