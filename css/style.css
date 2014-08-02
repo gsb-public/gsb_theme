@@ -54,7 +54,7 @@ p {
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.view-mode-media_contact, ul.footnotes {
+.view-mode-media_contact, .field-name-field-body ul.footnotes {
   border-top: 1px lightgray solid;
 }
 
@@ -3067,7 +3067,7 @@ a.no-border:hover {
   border-top: 1px solid #e4e4e4;
 }
 
-.see-footnote {
+.field-name-field-body .see-footnote {
   background: #636f00;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -3082,31 +3082,34 @@ a.no-border:hover {
   top: -3px;
   width: 14px;
 }
-.see-footnote:hover {
+.field-name-field-body .see-footnote:hover {
   background: #2d6280;
+  color: white;
   cursor: pointer;
 }
-
-ul.footnotes {
+.field-name-field-body ul.footnotes {
   padding-top: 12px;
 }
-ul.footnotes li {
+.field-name-field-body ul.footnotes li {
   margin-bottom: 8px;
   margin-left: 0;
   padding: 6px 0 6px 24px;
 }
-ul.footnotes li:before {
-  content: none;
+.field-name-field-body ul.footnotes li:before {
+  content: "" !important;
 }
-ul.footnotes .footnote-number {
+.field-name-field-body ul.footnotes .footnote-label {
+  border-bottom: none;
+}
+.field-name-field-body ul.footnotes .footnote-number {
   margin-left: -20px;
   padding-right: 6px;
 }
-ul.footnotes .footnote {
+.field-name-field-body ul.footnotes .footnote {
   font-size: 14px;
   line-height: 1.2;
 }
-ul.footnotes .footnote:target {
+.field-name-field-body ul.footnotes .footnote:target {
   background-color: rgba(170, 196, 191, 0.3);
 }
 

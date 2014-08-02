@@ -420,41 +420,43 @@ a.no-border
 
 // Footnotes
 // Number
-.see-footnote
-  background: $link-green
-  +border-radius(50%)
-  color: $white
-  display: inline-block
-  font-size: 9px
-  line-height: 1.7
-  height: 14px
-  position: relative
-  text-align: center
-  top: -3px
-  width: 14px
+.field-name-field-body
+  .see-footnote
+    background: $link-green
+    +border-radius(50%)
+    color: $white
+    display: inline-block
+    font-size: 9px
+    line-height: 1.7
+    height: 14px
+    position: relative
+    text-align: center
+    top: -3px
+    width: 14px
+    &:hover
+      background: $link-blue
+      color: $white
+      cursor: pointer
 
-  &:hover
-    background: $link-blue
-    cursor: pointer
-
-// List
-ul.footnotes
-  @extend %divider-top
-  padding-top: 12px
-  li
-    margin-bottom: 8px
-    margin-left: 0
-    padding: 6px 0 6px 24px
-  li:before
-    content: none
-
-  // Number
-  .footnote-number
-    margin-left: -20px
-    padding-right: 6px
-  // Text
-  .footnote
-    font-size: 14px
-    line-height: 1.2
-    &:target
-      background-color: rgba($teal-light, 0.3)
+  // List
+  ul.footnotes
+    @extend %divider-top
+    padding-top: 12px
+    li
+      margin-bottom: 8px
+      margin-left: 0
+      padding: 6px 0 6px 24px
+      &:before
+        content: "" !important
+    .footnote-label
+      border-bottom: none
+    // Number
+    .footnote-number
+      margin-left: -20px
+      padding-right: 6px
+    // Text
+    .footnote
+      font-size: 14px
+      line-height: 1.2
+      &:target
+        background-color: rgba($teal-light, 0.3)
