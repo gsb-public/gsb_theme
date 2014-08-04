@@ -9,3 +9,75 @@
 
 // PR Contact block on School Story and Announcement detail
 .field-name-field-pr-contact-unlimited
+  @extend %bg-border-and-box-shadow
+  margin-bottom: 30px
+  padding: $standard-padding
+
+  // For More Information title
+  h2.pane-title
+    border-bottom: 2px solid #e4e4e4
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 12px
+    padding-bottom: 12px
+
+  // Name
+  .field-name-title h3
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.1
+    margin-bottom: 3px
+
+  // Title
+  .field-name-field-pr-contact-title
+    font-family: $font-sans
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.1
+    margin-bottom: 8px
+
+  // Description, Phone, Email, Beats
+  .taxonomy-term-description,
+  .field-name-field-pr-contact-phone,
+  .field-name-field-pr-contact-email,
+  .field-name-field-pr-contact-beats
+    font-size: 14px
+    line-height: 0
+    margin: 0
+    margin-bottom: 3px
+    p
+      font-size: 14px
+      line-height: 1.1
+      margin-bottom: 0
+    a
+      color: $text-black
+      display: inline-block
+      font-size: 14px
+      line-height: 1.1
+      margin-bottom: 3px
+
+  // Description
+  .taxonomy-term-description
+    line-height: 1.2
+    margin-bottom: 5px
+
+  // Email
+  .field-name-field-pr-contact-email
+    a
+      +icon-after("email-stroke", true)
+      color: $link-green
+      &:hover
+        color: $link-blue
+      &:after
+        font-size: 12px
+        margin-left: 3px
+
+
+  // Beats
+  .field-name-field-pr-contact-beats
+    font-family: $font-demi
+    line-height: 1.2
