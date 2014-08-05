@@ -1,0 +1,96 @@
+// @charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// View mode news listing
+// Explore more
+.view-gsb-announcement-school-listing
+  @extend %black-border-top-small
+
+  // Title
+  h2.title
+    color: $text-black
+    font-family: $font-sans
+    font-size: 26px
+    font-weight: bold
+    padding-top: 14px
+    +breakpoint(850px max-width)
+      font-size: 22px
+
+  .views-row
+    @extend %divider-top
+    padding: 12px 0 12px $standard-padding
+    &:first-of-type
+      border-top: 0
+
+  .node-school-story.view-mode-news_listing,
+  .node-announcement.view-mode-news_listing
+    +clearfix
+
+    // Layout for image
+    .left.second-column
+      float: left
+      max-width: 70%
+      +breakpoint(1085px max-width)
+        max-width: 50%
+      +breakpoint(999px max-width)
+        max-width: 70%
+      +breakpoint(800px max-width)
+        max-width: 50%
+      +breakpoint(700px max-width)
+        max-width: 70%
+      +breakpoint($bp-mobile-max)
+        max-width: 100%
+    .right
+      float: right
+      +breakpoint($bp-mobile-max)
+        float: none
+
+    // Date
+    .field-name-field-date
+      color: $grey-6
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 12px
+      +breakpoint(850px max-width)
+        display: none
+
+    // Media icons
+    .media-icon
+      &:after
+        font-size: 20px !important
+
+    .media-icon.Video
+      top: -1px
+    .media-icon.Audio
+      top: 0
+
+    // Title
+    .field-name-title
+      display: inline
+      h3
+        display: inline
+        font-size: 20px
+        line-height: 0
+        +breakpoint(850px max-width)
+          font-size: 18px
+        a
+          line-height: 1.2
+
+    // Dek
+    .field-name-field-editorial-summary
+      font-size: 16px
+      line-height: 1.3
+      margin-top: 12px
+
+    // Image
+    .field-name-field-image-key-image
+      float: left
+      max-width: 125px
+      +breakpoint($bp-mobile-max)
+        display: none

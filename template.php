@@ -298,10 +298,13 @@ function gsb_theme_process_node(&$variables, $hook) {
   $types = array(
     'book',
     'event',
+    'announcement',
+    'school_story'
   );
   $view_modes = array(
     'teaser_listing',
     'event_listing',
+    'news_listing'
   );
   if (in_array($variables['type'], $types) && in_array($variables['view_mode'], $view_modes)) {
     if (!empty($variables['right'])) {
