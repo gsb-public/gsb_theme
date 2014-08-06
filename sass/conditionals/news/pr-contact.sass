@@ -9,9 +9,40 @@
 
 // PR Contact block on School Story and Announcement detail
 .field-name-field-pr-contact-unlimited
-  @extend %bg-border-and-box-shadow
+  @extend %box-shadow
+  background: $white
   margin-bottom: 30px
-  padding: $standard-padding
+
+  // Toggle open and closed
+  legend
+    display: none
+    padding: 0
+    +breakpoint(700px max-width)
+      display: block
+      float: left
+      font-family: $font-demi
+      font-size: 20px
+      line-height: 1.2
+      padding-top: 20px
+      padding-left: $standard-padding
+      padding-bottom: 18px
+
+  fieldset
+    border: none
+    height: auto !important
+    padding: $standard-padding
+    +breakpoint(700px max-width)
+      padding: 0
+
+
+  // Fieldset wrapper
+  .fieldset-wrapper
+    +breakpoint(701px min-width)
+      display: block !important
+    +breakpoint(700px max-width)
+      clear: left
+      padding: 0 20px 20px 50px
+
 
   // For More Information title
   h2.pane-title
@@ -23,6 +54,8 @@
     line-height: 1
     margin-bottom: 12px
     padding-bottom: 12px
+    +breakpoint(700px max-width)
+      display: none
 
   // Name
   .field-name-title h3
@@ -41,10 +74,8 @@
     margin-bottom: 8px
 
   // Description, Phone, Email, Beats
-  .taxonomy-term-description,
   .field-name-field-pr-contact-phone,
-  .field-name-field-pr-contact-email,
-  .field-name-field-pr-contact-beats
+  .field-name-field-pr-contact-email
     font-size: 14px
     line-height: 0
     margin: 0
@@ -60,11 +91,6 @@
       line-height: 1.1
       margin-bottom: 3px
 
-  // Description
-  .taxonomy-term-description
-    line-height: 1.2
-    margin-bottom: 5px
-
   // Email
   .field-name-field-pr-contact-email
     a
@@ -75,9 +101,3 @@
       &:after
         font-size: 12px
         margin-left: 3px
-
-
-  // Beats
-  .field-name-field-pr-contact-beats
-    font-family: $font-demi
-    line-height: 1.2
