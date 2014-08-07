@@ -1,0 +1,67 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+.page-insights
+  #block-gsb-public-custom-blocks-gpcb-banner-title
+    display: inline-block
+    margin-right: 30px
+    padding: 14px 0 9px
+
+// Insights taxonomy menu in banner
+#block-menu-section-27256
+  border-right: 1px solid #5e5e5e
+  border-left: 1px solid #5e5e5e
+  display: inline-block
+  position: relative
+  top: 0
+  vertical-align: top
+
+  // Topics title
+  h2
+    color: $white
+    font-size: 22px
+    height: 63px
+    line-height: 3.5
+    text-align: center
+    width: 155px
+    +icon-after("arrow-med-down", true)
+    &:after
+      font-size: 14px
+      margin-left: 20px
+      position: relative
+
+
+  // Hide and show
+  .content
+    display: none
+
+  &:hover
+    h2
+      +icon-after("arrow-med-up", true)
+    .content
+      display: block
+      position: absolute
+      z-index: 100
+
+      &:hover
+        display: block
+      .menu
+        +background(linear-gradient(bottom, $red-light, $red-dark))
+        -moz-column-count: 3
+        -webkit-column-count: 3
+        column-count: 3
+        padding: $standard-padding
+        width: 718px
+      li
+        line-height: 0
+        margin-bottom: 18px
+      a
+        color: $white
+        font-size: 18px
+        line-height: 1.2
