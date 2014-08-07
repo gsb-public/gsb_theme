@@ -35,15 +35,21 @@
       font-size: 14px
       margin-left: 20px
       position: relative
-
+      top: -3px
+    &:hover
+      text-decoration: underline
 
   // Hide and show
   .content
     display: none
 
   &:hover
+    // Topics title
     h2
+      +background(linear-gradient(bottom, #8e0000, $red-dark))
       +icon-after("arrow-med-up", true)
+
+    // Menu pane
     .content
       display: block
       position: absolute
@@ -52,7 +58,7 @@
       &:hover
         display: block
       .menu
-        +background(linear-gradient(bottom, $red-light, $red-dark))
+        +background(linear-gradient(bottom, $red-light, #8f0000))
         -moz-column-count: 3
         -webkit-column-count: 3
         column-count: 3
