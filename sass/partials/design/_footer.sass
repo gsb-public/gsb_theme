@@ -63,6 +63,10 @@
 #footer-wrapper
   border-top: 1px solid $white
   +background(linear-gradient(top, #f0efef, $white))
+  .page-insights &
+    background: $white
+    border-top: 0
+
 
 // Follow us block
 #block-gsb-public-custom-blocks-gpcb-follow-us
@@ -186,3 +190,17 @@ input.footer__signup__submit
     padding-top: 0
   .copyright
     font-family: $font-demi
+
+// Inights News, Alumni, Giving menu
+#block-menu-menu-insights-footer-bottom-menu
+  border-bottom: 1px $grey-c solid
+  padding: 20px 0
+  li
+    font-size: 16px
+    font-weight: bold
+    display: inline-block
+    line-height: 1.2
+    margin-right: 36px
+    text-transform: uppercase
+    &:last-of-type
+      margin-right: 0

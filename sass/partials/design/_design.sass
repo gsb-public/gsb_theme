@@ -117,35 +117,56 @@
       padding: 0 20px
     +breakpoint($bp-mobile-max)
       padding: 0 15px
-  .page-insights &
-    background: $text-black
-    padding-bottom: 30px
-    .block
-      a
-        color: $white
-        line-height: 1.2
-    // About Contact Follow menu
-    .block:first-of-type
-      border-bottom: 1px solid #5e5e5e
-      font-size: 22px
-      font-weight: bold
-      margin-bottom: 25px
-      padding-bottom: 20px
-      li
-        display: inline-block
-        margin-right: 55px
-    // Topics menu
-    .block:last-of-type
+
+// Insights section styling
+.page-insights #bottom
+  background: $text-black
+  padding-bottom: 30px
+  .block
+    a
+      color: $white
+      line-height: 1.2
+
+  // About Contact Follow menu
+  .block:first-of-type
+    border-bottom: 1px solid #5e5e5e
+    font-size: 22px
+    font-weight: bold
+    margin-bottom: 25px
+    padding-bottom: 20px
+    +breakpoint($bp-mobile)
       font-size: 18px
-      .menu
-        -moz-column-count: 6
-        -webkit-column-count: 6
-        column-count: 6
-      li
-        line-height: 0
-        margin-bottom: 18px
-        a
-          line-height: 1.2
+    li
+      display: inline-block
+      margin-right: 55px
+      +breakpoint($bp-mobile-480)
+        margin-right: 35px
+      &:last-of-type
+        margin-right: 0
+
+  // Topics menu
+  .block:last-of-type
+    font-size: 18px
+    +breakpoint($bp-mobile)
+      font-size: 14px
+    .menu
+      -moz-column-count: 6
+      -webkit-column-count: 6
+      column-count: 6
+      +breakpoint(900px max-width)
+        -moz-column-count: 3
+        -webkit-column-count: 3
+        column-count: 3
+      +breakpoint($bp-mobile-max)
+        -moz-column-count: 2
+        -webkit-column-count: 2
+        column-count: 2
+    li
+      border-top: 1px solid transparent
+      line-height: 0
+      margin-bottom: 18px
+      a
+        line-height: 1.2
 
 // FOOTER REGION
 #footer-wrapper
@@ -160,14 +181,16 @@
 
 // LEGAL REGION
 #legal
-  .region
-    border-top: 1px $grey-c solid
-    margin: 0 auto
-    max-width: $max-width
   +breakpoint($bp-content-max)
     padding: 0 20px
   +breakpoint($bp-mobile-max)
     padding: 0 15px
+  .region
+    border-top: 1px $grey-c solid
+    margin: 0 auto
+    max-width: $max-width
+    .page-insights &
+      border-top: 0
 
 ////////////////
 // BACKGROUNDS
