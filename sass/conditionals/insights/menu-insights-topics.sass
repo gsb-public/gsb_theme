@@ -12,6 +12,10 @@
     display: inline-block
     margin-right: 30px
     padding: 14px 0 9px
+    +breakpoint(999px max-width)
+      padding-top: 0
+    +breakpoint(768px max-width)
+      display: none
 
 // Insights taxonomy menu in banner
 #block-menu-section-27256
@@ -21,6 +25,10 @@
   position: relative
   top: 0
   vertical-align: top
+  +breakpoint(768px max-width)
+    border-left: 0
+    border-right: 0
+    display: block
 
   // Topics title
   h2
@@ -30,6 +38,10 @@
     line-height: 3.5
     text-align: center
     width: 155px
+    +breakpoint(768px max-width)
+      padding-left: 20px
+      text-align: left
+      width: 100%
     +icon-after("arrow-med-down", true)
     &:after
       font-size: 14px
@@ -64,6 +76,12 @@
         column-count: 3
         padding: $standard-padding
         width: 718px
+        +breakpoint(768px max-width)
+          -moz-column-count: 2
+          -webkit-column-count: 2
+          column-count: 2
+          padding: 20px
+          width: 100%
       li
         line-height: 0
         margin-bottom: 18px
