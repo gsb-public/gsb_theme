@@ -166,7 +166,7 @@ function gsb_theme_preprocess_html(&$variables) {
     'stanford-gsb-experience',
     'library',
     'newsroom',
-    'insights',
+    'insights'
   );
   $normalized_arg = arg(0);
   $args = explode('/', trim(request_uri(), '/'));

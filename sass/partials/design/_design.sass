@@ -237,6 +237,30 @@
     +breakpoint($bp-tablet-port-min)
       +background(image_url("bg-msxfellows.jpg") -290px 0 no-repeat, $white)
 
+// Insights section
+.page-insights
+  // Behind cards
+  #content-wrapper
+    background: #f4f4f4
+  // Behind listing (bottom content)
+  #bottom-content
+    background: $white
+  // Footer
+  #footer-wrapper
+    background: none
+    // Black footer
+    #footer
+      background: $text-black
+      max-width: 100%
+      .section
+        margin: 0 auto
+        max-width: 1170px
+    // Legal footer
+    #legal
+      background: $white
+
+// Page titles
+
 // Special color bg landing pages with white titles
 .page-node-300216,
 .page-node-300436,
@@ -266,6 +290,18 @@
       border: 2px $white solid
       margin-bottom: 30px
       padding: 12px 26px 10px
+
+// Insights title styling
+.page-insights
+  h1.title
+    @extend %box-shadow
+    background: $white
+    display: inline-block
+    font-size: 38px
+    font-weight: normal
+    line-height: 1
+    padding: $standard-padding
+  // .node-idea-story:not
 
 // No image background on insights detail
 .node-type-idea-story #content-wrapper

@@ -107,7 +107,7 @@ p {
 
 .designed-box,
 .pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour {
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .page-insights h1.title, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -116,7 +116,7 @@ p {
 @media (max-width: 35.5em) {
   .designed-box,
   .pane-gsb-event-sidebar, .pane-bundle-links .red-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour {
+  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .page-insights h1.title, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour {
     margin-top: 1px;
   }
 }
@@ -2873,6 +2873,27 @@ div.label-inline {
   }
 }
 
+.page-insights #content-wrapper {
+  background: #f4f4f4;
+}
+.page-insights #bottom-content {
+  background: white;
+}
+.page-insights #footer-wrapper {
+  background: none;
+}
+.page-insights #footer-wrapper #footer {
+  background: #231f20;
+  max-width: 100%;
+}
+.page-insights #footer-wrapper #footer .section {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.page-insights #footer-wrapper #legal {
+  background: white;
+}
+
 @media (min-width: 35.5625em) {
   .page-node-300216 #content-wrapper,
   .page-node-300436 #content-wrapper,
@@ -2912,6 +2933,15 @@ div.label-inline {
     margin-bottom: 30px;
     padding: 12px 26px 10px;
   }
+}
+
+.page-insights h1.title {
+  background: white;
+  display: inline-block;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 26px;
 }
 
 .node-type-idea-story #content-wrapper {
@@ -8568,7 +8598,8 @@ fieldset.collapsible .fieldset-legend {
 .page-node-304636 .breadcrumb,
 .page-node-304796 .breadcrumb,
 .page-node-306331 .breadcrumb,
-.page-node-368466 .breadcrumb {
+.page-node-368466 .breadcrumb,
+.page-insights .breadcrumb {
   display: none;
 }
 
