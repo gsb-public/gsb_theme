@@ -14,7 +14,7 @@
     padding: 14px 0 9px
     +breakpoint(999px max-width)
       padding-top: 0
-    +breakpoint(768px max-width)
+    +breakpoint($bp-mobile-max)
       display: none
 
 // Insights taxonomy menu in banner
@@ -25,7 +25,7 @@
   position: relative
   top: 0
   vertical-align: top
-  +breakpoint(768px max-width)
+  +breakpoint($bp-mobile-max)
     border-left: 0
     border-right: 0
     display: block
@@ -34,11 +34,11 @@
   h2
     color: $white
     font-size: 22px
-    height: 63px
+    height: 66px
     line-height: 3.5
     text-align: center
     width: 155px
-    +breakpoint(768px max-width)
+    +breakpoint($bp-mobile-max)
       padding-left: 20px
       text-align: left
       width: 100%
@@ -76,7 +76,7 @@
         column-count: 3
         padding: $standard-padding
         width: 718px
-        +breakpoint(768px max-width)
+        +breakpoint($bp-mobile-max)
           -moz-column-count: 2
           -webkit-column-count: 2
           column-count: 2

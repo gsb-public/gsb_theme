@@ -2605,6 +2605,26 @@ div.label-inline {
     max-width: 150px;
   }
 }
+@media (max-width: 35.5em) {
+  .page-insights #logo {
+    float: left;
+    height: 30px;
+    margin: 10px 20px;
+    width: 110px;
+  }
+  .page-insights #logo:after {
+    border-left: 1px solid #c6c6c6;
+    color: #231f20;
+    content: "Insights";
+    display: block;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    left: 125px;
+    line-height: 1.5;
+    padding-left: 15px;
+    position: relative;
+  }
+}
 
 .page-not-found #logo {
   height: 81px;
@@ -4144,6 +4164,9 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     width: 50px;
     z-index: 12;
   }
+  .page-insights #nav-touch-wrapper #nav-touch-button {
+    border-right: 0;
+  }
 }
 #nav-touch-wrapper #nav-touch-button:after {
   content: "\f115";
@@ -4175,6 +4198,17 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     background: -webkit-linear-gradient(bottom, #c50000, #860000);
     background: linear-gradient(to top, #c50000, #860000);
     max-height: 50px;
+  }
+  .page-insights #nav-touch-wrapper {
+    background: none;
+    display: inline-block;
+    float: left;
+  }
+  .page-insights #nav-touch-wrapper #nav-touch-button {
+    background: -moz-linear-gradient(bottom, #c50000, #860000);
+    background: -o-linear-gradient(bottom, #c50000, #860000);
+    background: -webkit-linear-gradient(bottom, #c50000, #860000);
+    background: linear-gradient(to top, #c50000, #860000);
   }
   #nav-touch-wrapper #navigation {
     display: none;
@@ -4234,6 +4268,9 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     position: relative;
     top: 16px;
   }
+}
+.page-insights #search-touch-button {
+  display: none;
 }
 
 @media (max-width: 35.5em) {
@@ -8667,6 +8704,11 @@ fieldset.collapsible .fieldset-legend {
 .page-insights #banner .banner-title {
   font-size: 34px;
   font-weight: normal;
+}
+@media (max-width: 40.625em) {
+  .page-insights #banner .banner-title {
+    font-size: 28px;
+  }
 }
 
 #sidebar .sidebar h2 {

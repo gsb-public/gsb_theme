@@ -222,6 +222,8 @@
     display: none
     +breakpoint($bp-mobile-max)
       border-right: 1px solid red
+      .page-insights &
+        border-right: 0
       cursor: pointer
       display: inline-block
       height: 50px
@@ -244,6 +246,12 @@
   +breakpoint($bp-mobile-max)
     +background(linear-gradient(bottom, $red-light, $red-dark))
     max-height: 50px
+    .page-insights &
+      background: none
+      display: inline-block
+      float: left
+      #nav-touch-button
+        +background(linear-gradient(bottom, $red-light, $red-dark))
     #navigation
       display: none
   &.open
@@ -277,6 +285,8 @@
       padding: 0 12px
       position: relative
       top: 16px
+  .page-insights &
+    display: none
 
 #google-appliance-block-form.open
   +breakpoint($bp-mobile-max)

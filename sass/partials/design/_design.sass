@@ -48,6 +48,23 @@
     .no-js &, .no-svg &
       margin: 21px 0 18px 15px
       max-width: 150px
+  .page-insights &
+    +breakpoint($bp-mobile-max)
+      float: left
+      height: 30px
+      margin: 10px 20px
+      width: 110px
+      &:after
+        border-left: 1px solid #c6c6c6
+        color: $text-black
+        content: "Insights"
+        display: block
+        font-family: $font-demi
+        font-size: 20px
+        left: 125px
+        line-height: 1.5
+        padding-left: 15px
+        position: relative
 
 // 404 logo
 .page-not-found
