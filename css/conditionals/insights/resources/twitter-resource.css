@@ -1,15 +1,20 @@
-.file-resource_twitter--default {
+.file-resource-twitter {
   float: right;
   margin-bottom: 20px !important;
   margin-left: 20px !important;
 }
-.file-resource_twitter--default iframe {
-  width: 408px !important;
-}
-@media (max-width: 75.625em) {
-  .file-resource_twitter--default {
+@media (max-width: 48.75em) {
+  .file-resource-twitter {
     float: none;
     margin-left: 0 !important;
-    width: 100% !important;
+    text-align: center;
+  }
+}
+.file-resource-twitter iframe {
+  min-width: 408px !important;
+}
+@media (max-width: 30em) {
+  .file-resource-twitter iframe {
+    min-width: 100% !important;
   }
 }

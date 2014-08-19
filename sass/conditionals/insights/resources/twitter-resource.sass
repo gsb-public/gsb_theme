@@ -12,14 +12,17 @@
 // Embedded timeline
 
 // Embedded tweet (iframe requires !important)
-.file-resource_twitter--default
+.file-resource-twitter
   float: right
   margin-bottom: 20px !important
   margin-left: 20px !important
-  // Width
-  iframe
-    width: 408px !important
-  +breakpoint($bp-idea-story-detail)
+  +breakpoint(780px max-width)
     float: none
     margin-left: 0 !important
-    width: 100% !important
+    text-align: center
+
+  // Width
+  iframe
+    min-width: 408px !important
+    +breakpoint($bp-mobile-480)
+      min-width: 100% !important
