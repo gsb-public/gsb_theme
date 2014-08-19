@@ -12,6 +12,7 @@
 // Full
 .file-resource_image--full_width
   margin-bottom: 20px
+  max-width: 815px
 
 // Half and third
 .file-resource_image--1_2_width,
@@ -21,7 +22,23 @@
 // Half
 .file-resource_image--1_2_width
   max-width: 408px
+  +breakpoint(780px max-width)
+    float: none
+    margin-left: 0
+    max-width: 100%
 
 // Third
 .file-resource_image--1_3_width
   max-width: 268px
+  +breakpoint(640px max-width)
+    float: none
+    margin-left: 0
+    max-width: 100%
+
+// Caption - figcaption
+.field-resource-image-caption
+  color: #595959
+  font-size: 14px
+  line-height: 1.2
+  margin-top: 8px
+  max-width: 650px
