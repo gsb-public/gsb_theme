@@ -142,12 +142,25 @@
 .page-insights
   #banner
     background: $text-black
-    .banner-title
-      font-size: 34px
-      font-weight: normal
-      +breakpoint(650px max-width)
-        font-size: 28px
 
+// Insights section title
+#block-gsb-public-custom-blocks-gpcb-insights
+  display: inline-block
+  margin-right: 20px
+  position: relative
+  top: 14px
+  a
+    color: $white
+    font-size: 34px
+    font-family: $font-sans
+    font-weight: normal
+    line-height: 1.2
+    &:hover
+      color: $white !important
+      text-decoration: none
+      border-bottom: 1px solid $white
+    +breakpoint(650px max-width)
+      font-size: 28px
 
 ///////////////////
 // First Sidebar
