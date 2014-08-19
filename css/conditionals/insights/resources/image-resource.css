@@ -1,3 +1,42 @@
+body a.image-enlarge-button {
+  background: #636f00;
+  background: -moz-linear-gradient(top, #6c7200, #636f00);
+  background: -o-linear-gradient(top, #6c7200, #636f00);
+  background: -webkit-linear-gradient(top, #6c7200, #636f00);
+  background: linear-gradient(to bottom, #6c7200, #636f00);
+}
+
+body a.image-enlarge-button:hover {
+  background: #2d6280;
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+
+body a.image-enlarge-button {
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  color: white;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 10px 16px;
+}
+body a.image-enlarge-button:after {
+  color: white !important;
+}
+body a.image-enlarge-button:hover {
+  border: 0;
+  color: white;
+}
+body a.image-enlarge-button:hover:after {
+  color: white !important;
+}
+
 .file-resource_image--1_2_width,
 .file-resource_image--1_3_width {
   float: right;
@@ -5,8 +44,11 @@
   margin-left: 20px;
 }
 
+.file-resource-image {
+  margin-bottom: 4em;
+}
+
 .file-resource_image--full_width {
-  margin-bottom: 20px;
   max-width: 815px;
 }
 
@@ -38,4 +80,43 @@
   line-height: 1.2;
   margin-top: 8px;
   max-width: 650px;
+  position: absolute;
+}
+
+.file-resource-image figure {
+  bottom: 0;
+  position: relative;
+}
+
+.image-enlarge-bar {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: -1px;
+  display: block;
+  height: 85px;
+  position: absolute;
+  width: 100%;
+}
+
+body a.image-enlarge-button {
+  float: right;
+  margin: 26px;
+}
+body a.image-enlarge-button:after {
+  content: "\f102";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+body a.image-enlarge-button:after {
+  content: "\f102" !important;
+  font-size: 12px;
 }

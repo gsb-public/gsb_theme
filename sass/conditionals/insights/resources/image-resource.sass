@@ -8,10 +8,11 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Image resource
+.file-resource-image
+  margin-bottom: 4em
 
 // Full
 .file-resource_image--full_width
-  margin-bottom: 20px
   max-width: 815px
 
 // Half and third
@@ -42,3 +43,26 @@
   line-height: 1.2
   margin-top: 8px
   max-width: 650px
+  position: absolute
+
+// Infographic expand
+.file-resource-image figure
+  bottom: 0
+  position: relative
+
+.image-enlarge-bar
+  background: rgba($black, 0.8)
+  bottom: -1px
+  display: block
+  height: 85px
+  position: absolute
+  width: 100%
+
+body a.image-enlarge-button
+  float: right
+  margin: 26px
+  @extend %green-button
+  +icon-after("arrow-external", true)
+  &:after
+    content: "\f102" !important
+    font-size: 12px
