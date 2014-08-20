@@ -9,6 +9,8 @@
 
 // Insights section styling
 .page-insights
+  #banner
+    +clearfix
   // Insights title styling
   h1.title
     @extend %box-shadow
@@ -92,3 +94,105 @@
 // No image background on Insights detail
 .node-type-idea-story #content-wrapper
   background: $white
+
+// Insights
+.page-insights
+  #banner
+    background: $text-black
+
+// Insights section title
+#block-gsb-public-custom-blocks-gpcb-insights
+  float: left
+  margin-right: 20px
+  position: relative
+  top: 14px
+  +breakpoint($bp-mobile-max)
+    display: none
+  a
+    color: $white
+    font-size: 34px
+    font-family: $font-sans
+    font-weight: normal
+    line-height: 1.2
+    &:hover
+      color: $white !important
+      text-decoration: none
+      border-bottom: 1px solid $white
+    +breakpoint(650px max-width)
+      font-size: 28px
+
+// Insights search
+#block-gsb-public-custom-blocks-gpcb-insights-search
+  height: 66px
+  position: relative
+  vertical-align: top
+  .form-container-insights-search
+    margin: 0
+
+  #insights-search-block-form
+    position: relative
+    top: 0
+
+  // Toggle button
+  #insights-search-touch-button
+    border-right: 1px solid #5e5e5e
+    cursor: pointer
+    display: inline-block
+    height: 66px
+    &.open
+      display: none
+    +icon-after("search", true)
+    &:after
+      color: $white
+      font-size: 24px
+      padding: 0 21px
+      position: relative
+      top: 25px
+
+  // Search form
+  #insights-search-block-form
+    display: none
+    &.open
+      display: inline-block
+
+  // Input
+  #edit-insights-search-keys
+    height: 66px
+    width: 564px
+    color: $grey-6
+    font-size: 16px
+    border: 1px $input-border solid
+    background: #f4f4f4
+    line-height: 1
+    padding: 7px 38px 6px 20px
+
+  // Search button
+  #edit-submit-insights-search
+    display: inline-block
+    width: 45px
+    height: 36px
+    background: transparent
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border: none
+    text-indent: 1000px
+    overflow: hidden
+    position: absolute
+    right: -2px
+    top: 18px
+    .svg &
+      background: image_url("search.svg") no-repeat center
+      +breakpoint($bp-mobile-max)
+        margin-top: 5px
+      +breakpoint($bp-tablet-land-max)
+        background-size: 170%
+      &:hover
+        background: image_url("search-hover.svg") no-repeat center
+        +breakpoint($bp-tablet-land-max)
+          background-size: 170%
+    .no-js &, .no-svg &
+      background: image_url("search.png") no-repeat center 6px transparent
+      &:hover
+        background-position: center -27px
