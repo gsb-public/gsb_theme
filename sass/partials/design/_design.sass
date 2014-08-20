@@ -52,19 +52,8 @@
     +breakpoint($bp-mobile-max)
       float: left
       height: 30px
-      margin: 10px 20px
-      width: 110px
-      &:after
-        border-left: 1px solid #c6c6c6
-        color: $text-black
-        content: "Insights"
-        display: block
-        font-family: $font-demi
-        font-size: 20px
-        left: 125px
-        line-height: 1.5
-        padding-left: 15px
-        position: relative
+      margin: 10px
+      width: 100px
 
 // 404 logo
 .page-not-found
@@ -135,55 +124,7 @@
     +breakpoint($bp-mobile-max)
       padding: 0 15px
 
-// Insights section styling
-.page-insights #bottom
-  background: $text-black
-  padding-bottom: 30px
-  .block
-    a
-      color: $white
-      line-height: 1.2
 
-  // About Contact Follow menu
-  .block:first-of-type
-    border-bottom: 1px solid #5e5e5e
-    font-size: 22px
-    font-weight: bold
-    margin-bottom: 25px
-    padding-bottom: 20px
-    +breakpoint($bp-mobile)
-      font-size: 18px
-    li
-      display: inline-block
-      margin-right: 55px
-      +breakpoint($bp-mobile-480)
-        margin-right: 35px
-      &:last-of-type
-        margin-right: 0
-
-  // Topics menu
-  .block:last-of-type
-    font-size: 18px
-    +breakpoint($bp-mobile)
-      font-size: 14px
-    .menu
-      -moz-column-count: 6
-      -webkit-column-count: 6
-      column-count: 6
-      +breakpoint(900px max-width)
-        -moz-column-count: 3
-        -webkit-column-count: 3
-        column-count: 3
-      +breakpoint($bp-mobile-max)
-        -moz-column-count: 2
-        -webkit-column-count: 2
-        column-count: 2
-    li
-      border-top: 1px solid transparent
-      line-height: 0
-      margin-bottom: 18px
-      a
-        line-height: 1.2
 
 // FOOTER REGION
 #footer-wrapper
@@ -254,28 +195,6 @@
     +breakpoint($bp-tablet-port-min)
       +background(image_url("bg-msxfellows.jpg") -290px 0 no-repeat, $white)
 
-// Insights section
-.page-insights
-  // Behind cards
-  #content-wrapper
-    background: #f4f4f4
-  // Behind listing (bottom content)
-  // #bottom-content
-  //   background: $white
-  // // Footer
-  // #footer-wrapper
-  //   background: none
-  //   // Black footer
-  //   #footer
-  //     background: $text-black
-  //     max-width: 100%
-  //     .section
-  //       margin: 0 auto
-  //       max-width: 1170px
-  //   // Legal footer
-  //   #legal
-  //     background: $white
-
 // Page titles
 
 // Special color bg landing pages with white titles
@@ -307,21 +226,6 @@
       border: 2px $white solid
       margin-bottom: 30px
       padding: 12px 26px 10px
-
-// Insights title styling
-.page-insights
-  h1.title
-    @extend %box-shadow
-    background: $white
-    display: inline-block
-    font-size: 38px
-    font-weight: normal
-    line-height: 1
-    padding: 18px 18px 16px
-
-// No image background on insights detail
-.node-type-idea-story #content-wrapper
-  background: $white
 
 // Links in main content
 .main-content
