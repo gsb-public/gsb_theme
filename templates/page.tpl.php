@@ -76,6 +76,7 @@
   <div id="page-wrapper"><div id="page">
     <div id="header-wrapper"><div id="header"><div class="section clearfix">
       <a id="search-touch-button"></a>
+
       <?php if ($page['navigation']): ?>
         <div id="nav-touch-wrapper">
           <a id="nav-touch-button"></a>
@@ -92,16 +93,22 @@
             </div>
           </div></div> <!-- /.section, /#navigation -->
         </div> <!-- /#nav-touch-wrapper-->
-      <?php endif;
-        if ($site_slogan): ?>
+      <?php endif; ?>
+
+      <?php if ($site_slogan): ?>
         <div id="site-slogan"><?php print $site_slogan; ?></div>
-      <?php endif;
-        print render($page['header']);
-        if ($logo): ?>
+      <?php endif; ?>
+
+      <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
           <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
         </a>
       <?php endif; ?>
+
+      <?php if ($page['header']): ?>
+        <?php print render($page['header']); ?>
+      <?php endif; ?>
+
     </div></div></div> <!-- /.section, /#header, /#header-wrapper -->
 
     <?php print $messages; ?>
