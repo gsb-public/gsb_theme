@@ -10042,10 +10042,21 @@ div.callout br {
 .field-name-field-body ol {
   padding-left: 26px;
 }
+.format-wysiwyg ul,
+.field-name-field-body ul {
+  position: relative;
+  left: 0;
+}
+.format-wysiwyg ul li,
+.field-name-field-body ul li {
+  padding-left: 15px;
+}
 .format-wysiwyg ul li:before,
 .field-name-field-body ul li:before {
   content: "• ";
   color: #2d6280;
+  position: absolute;
+  left: 0;
 }
 .format-wysiwyg table ul, .format-wysiwyg table ol,
 .field-name-field-body table ul,

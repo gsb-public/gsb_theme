@@ -54,9 +54,15 @@ div.callout
   ol
     padding-left: $standard-padding
   ul
-    li:before
-      content: "• "
-      color: $text-blue
+    position: relative
+    left: 0
+    li
+      padding-left: 15px
+      &:before
+        content: "• "
+        color: $text-blue
+        position: absolute
+        left: 0
   table
     ul, ol
       font-size: 14px
