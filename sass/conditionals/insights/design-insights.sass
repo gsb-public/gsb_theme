@@ -10,7 +10,7 @@
 // Insights section styling
 .page-insights
   #banner
-    +clearfix
+    +pie-clearfix
   // Insights title styling
   h1.title
     @extend %box-shadow
@@ -123,11 +123,32 @@
 
 // Insights search
 #block-gsb-public-custom-blocks-gpcb-insights-search
+  display: inline
+  float: left
   height: 66px
   position: relative
   vertical-align: top
+  +breakpoint(596px max-width)
+    display: inline
+    float: right
   .form-container-insights-search
     margin: 0
+
+  // Placeholder
+  input.placeholder-text,
+  textarea.placeholder-text
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.2
+    +breakpoint($bp-mobile)
+      font-size: 14px
+
+  ::-webkit-input-placeholder
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.2
+    +breakpoint($bp-mobile)
+      font-size: 14px
 
   #insights-search-block-form
     position: relative
@@ -139,6 +160,10 @@
     cursor: pointer
     display: inline-block
     height: 66px
+    +breakpoint(596px max-width)
+      border-right: 0
+      border-left: 1px solid #5e5e5e
+      float: right
     &.open
       display: none
     +icon-after("search", true)
@@ -158,13 +183,14 @@
   // Input
   #edit-insights-search-keys
     height: 66px
-    width: 564px
-    color: $grey-6
-    font-size: 16px
     border: 1px $input-border solid
     background: #f4f4f4
-    line-height: 1
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.5
     padding: 7px 38px 6px 20px
+    +breakpoint($bp-mobile)
+      font-size: 14px
 
   // Search button
   #edit-submit-insights-search
@@ -184,14 +210,8 @@
     top: 18px
     .svg &
       background: image_url("search.svg") no-repeat center
-      +breakpoint($bp-mobile-max)
-        margin-top: 5px
-      +breakpoint($bp-tablet-land-max)
-        background-size: 170%
       &:hover
         background: image_url("search-hover.svg") no-repeat center
-        +breakpoint($bp-tablet-land-max)
-          background-size: 170%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 6px transparent
       &:hover

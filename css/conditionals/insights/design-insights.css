@@ -11,8 +11,12 @@
 }
 
 .page-insights #banner {
-  overflow: hidden;
   *zoom: 1;
+}
+.page-insights #banner:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .page-insights h1.title {
   background: white;
@@ -153,12 +157,42 @@
 }
 
 #block-gsb-public-custom-blocks-gpcb-insights-search {
+  display: inline;
+  float: left;
   height: 66px;
   position: relative;
   vertical-align: top;
 }
+@media (max-width: 37.25em) {
+  #block-gsb-public-custom-blocks-gpcb-insights-search {
+    display: inline;
+    float: right;
+  }
+}
 #block-gsb-public-custom-blocks-gpcb-insights-search .form-container-insights-search {
   margin: 0;
+}
+#block-gsb-public-custom-blocks-gpcb-insights-search input.placeholder-text,
+#block-gsb-public-custom-blocks-gpcb-insights-search textarea.placeholder-text {
+  color: #666666;
+  font-size: 20px;
+  line-height: 1.2;
+}
+@media (max-width: 20em) {
+  #block-gsb-public-custom-blocks-gpcb-insights-search input.placeholder-text,
+  #block-gsb-public-custom-blocks-gpcb-insights-search textarea.placeholder-text {
+    font-size: 14px;
+  }
+}
+#block-gsb-public-custom-blocks-gpcb-insights-search ::-webkit-input-placeholder {
+  color: #666666;
+  font-size: 20px;
+  line-height: 1.2;
+}
+@media (max-width: 20em) {
+  #block-gsb-public-custom-blocks-gpcb-insights-search ::-webkit-input-placeholder {
+    font-size: 14px;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-insights-search #insights-search-block-form {
   position: relative;
@@ -169,6 +203,13 @@
   cursor: pointer;
   display: inline-block;
   height: 66px;
+}
+@media (max-width: 37.25em) {
+  #block-gsb-public-custom-blocks-gpcb-insights-search #insights-search-touch-button {
+    border-right: 0;
+    border-left: 1px solid #5e5e5e;
+    float: right;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-insights-search #insights-search-touch-button.open {
   display: none;
@@ -203,13 +244,17 @@
 }
 #block-gsb-public-custom-blocks-gpcb-insights-search #edit-insights-search-keys {
   height: 66px;
-  width: 564px;
-  color: #666666;
-  font-size: 16px;
   border: 1px lightgray solid;
   background: #f4f4f4;
-  line-height: 1;
+  color: #666666;
+  font-size: 20px;
+  line-height: 1.5;
   padding: 7px 38px 6px 20px;
+}
+@media (max-width: 20em) {
+  #block-gsb-public-custom-blocks-gpcb-insights-search #edit-insights-search-keys {
+    font-size: 14px;
+  }
 }
 #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search {
   display: inline-block;
@@ -230,23 +275,8 @@
 .svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search {
   background: url('../../../images/search.svg') no-repeat center;
 }
-@media (max-width: 35.5em) {
-  .svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search {
-    margin-top: 5px;
-  }
-}
-@media (max-width: 64em) {
-  .svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search {
-    background-size: 170%;
-  }
-}
 .svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search:hover {
   background: url('../../../images/search-hover.svg') no-repeat center;
-}
-@media (max-width: 64em) {
-  .svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search:hover {
-    background-size: 170%;
-  }
 }
 .no-js #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search, .no-svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search {
   background: url('../../../images/search.png') no-repeat center 6px transparent;
