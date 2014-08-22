@@ -106,6 +106,9 @@
   margin-right: 20px
   position: relative
   top: 14px
+  +breakpoint(864px max-width)
+    span
+      display: none
   +breakpoint($bp-mobile-max)
     display: none
   a
@@ -131,6 +134,8 @@
   +breakpoint(596px max-width)
     display: inline
     float: right
+    position: absolute
+    right: 0
   .form-container-insights-search
     margin: 0
 
@@ -140,14 +145,14 @@
     color: $grey-6
     font-size: 20px
     line-height: 1.2
-    +breakpoint($bp-mobile)
+    +breakpoint($bp-mobile-480)
       font-size: 14px
 
   ::-webkit-input-placeholder
     color: $grey-6
     font-size: 20px
     line-height: 1.2
-    +breakpoint($bp-mobile)
+    +breakpoint($bp-mobile-480)
       font-size: 14px
 
   #insights-search-block-form
@@ -189,7 +194,7 @@
     font-size: 20px
     line-height: 1.5
     padding: 7px 38px 6px 20px
-    +breakpoint($bp-mobile)
+    +breakpoint($bp-mobile-max)
       font-size: 14px
 
   // Search button
