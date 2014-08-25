@@ -144,6 +144,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by topic, program, name, or other keyword');
   }
+  // Ranking listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-ranking-listing-ranking-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by publication or date');
+  }
 
 }
 
