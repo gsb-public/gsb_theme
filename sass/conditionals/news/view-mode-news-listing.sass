@@ -12,6 +12,8 @@
 // Used on
 //  1. Explore More on school story and announcement detail
 //  2. Announcements & School stories (mixed list)
+//  3. Ranking listing
+//  4. Insights with related faculty (idea stories and offsite idea stories mixed)
 
 // Explore more
 .view-gsb-announcement-school-listing
@@ -104,16 +106,6 @@
 .view-gsb-announcements-school-stories-listing
   @extend %black-border-top-small
 
-  // Title
-  h2.title
-    color: $text-black
-    font-family: $font-sans
-    font-size: 26px
-    font-weight: bold
-    padding-top: 14px
-    +breakpoint(850px max-width)
-      font-size: 22px
-
   .views-row
     border-top: 1px solid $text-black
     padding: 12px 0
@@ -158,6 +150,8 @@
       &:after
         color: #bcbcbc
         font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
 
     // Audio
     .media-icon.Audio
@@ -168,6 +162,8 @@
       &:after
         color: #bcbcbc
         font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
 
     // Infographic
     .media-icon.Infographic
@@ -211,16 +207,6 @@
 .view-gsb-ranking-listing
   @extend %black-border-top-small
 
-  // Title
-  h2.title
-    color: $text-black
-    font-family: $font-sans
-    font-size: 26px
-    font-weight: bold
-    padding-top: 14px
-    +breakpoint(850px max-width)
-      font-size: 22px
-
   .views-row
     border-top: 1px solid $text-black
     padding: 12px 0
@@ -247,6 +233,8 @@
       &:after
         color: #bcbcbc
         font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
 
     // Audio
     .media-icon.Audio
@@ -257,6 +245,8 @@
       &:after
         color: #bcbcbc
         font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
 
     // Infographic
     .media-icon.Infographic
@@ -291,6 +281,114 @@
               font-size: 14px
               margin-left: 3px
 
+    // Publisher and Dek
+    .field-name-field-publisher,
+    .field-name-field-editorial-summary
+      font-size: 16px
+      line-height: 1.4
+      margin-top: 12px
+
+    .field-name-field-publisher
+      &:after
+        content: "|"
+        padding-right: 5px
+        padding-left: 5px
+
+// Faculty insights idea story and offsite idea story mixed
+.view-gsb-faculty-insights-listing
+  @extend %black-border-top-small
+
+  .views-row
+    border-top: 1px solid $text-black
+    padding: 12px 0
+    &:first-of-type
+      border-top: 0
+      padding-top: 0
+
+  .node-idea-story.view-mode-news_listing,
+  .node-offsite-idea-story.view-mode-news_listing
+    +clearfix
+
+    // Layout for image
+    .left.second-column
+      float: left
+      max-width: 65%
+      +breakpoint(1212px max-width)
+        max-width: 50%
+      +breakpoint(999px max-width)
+        max-width: 65%
+      +breakpoint(825px max-width)
+        max-width: 50%
+      +breakpoint(768px max-width)
+        max-width: 100%
+    .right
+      float: right
+      +breakpoint(768px max-width)
+        float: none
+
+    // Date
+    .field-name-field-date
+      color: $text-black
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 12px
+
+    // Media icons
+    .media-icon.Video
+      margin-right: 8px
+      position: relative
+      top: -1px
+      +icon-after("video", true)
+      &:after
+        color: #bcbcbc
+        font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
+
+    // Audio
+    .media-icon.Audio
+      margin-right: 8px
+      position: relative
+      top: 0
+      +icon-after("podcast", true)
+      &:after
+        color: #bcbcbc
+        font-size: 20px
+        +breakpoint(850px max-width)
+          font-size: 18px
+
+    // Infographic
+    .media-icon.Infographic
+      margin-right: 6px
+      &:after
+        content: "Infographic:"
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.2
+        +breakpoint(850px max-width)
+          font-size: 18px
+
+    // Title
+    .field-name-title
+      display: inline
+      h3
+        display: inline
+        font-size: 20px
+        line-height: 0
+        +breakpoint(850px max-width)
+          font-size: 18px
+      a
+        line-height: 1.2
+        &[target="_blank"]
+          +icon-after("arrow-external", true)
+          &:after
+            font-size: 12px
+            margin-left: 3px
+        &[href$=".pdf"]
+          &[target="_blank"]
+            &:after
+              font-size: 14px
+              margin-left: 3px
 
     // Publisher and Dek
     .field-name-field-publisher,
@@ -304,3 +402,12 @@
         content: "|"
         padding-right: 5px
         padding-left: 5px
+
+    // Image
+    .field-name-field-image-key-image
+      float: left
+      max-width: 170px
+      img
+        width: 100%
+      +breakpoint(768px max-width)
+        display: none

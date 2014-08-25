@@ -149,6 +149,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by publication or date');
   }
+  // Faculty insights listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by topic, faculty name, or other keyword');
+  }
 
 }
 
@@ -310,7 +315,10 @@ function gsb_theme_process_node(&$variables, $hook) {
     'book',
     'event',
     'announcement',
-    'school_story'
+    'school_story',
+    'offsite_school_story',
+    'idea_story',
+    'offsite_idea_story',
   );
   $view_modes = array(
     'teaser_listing',
