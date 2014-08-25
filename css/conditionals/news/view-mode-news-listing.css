@@ -2,7 +2,7 @@
   border-top: 1px lightgray solid;
 }
 
-.view-gsb-announcement-school-listing {
+.view-gsb-announcement-school-listing, .view-gsb-announcements-school-stories-listing {
   border-top: 3px #231f20 solid;
 }
 
@@ -133,6 +133,131 @@
 @media (max-width: 35.5em) {
   .view-gsb-announcement-school-listing .node-school-story.view-mode-news_listing .field-name-field-image-key-image,
   .view-gsb-announcement-school-listing .node-announcement.view-mode-news_listing .field-name-field-image-key-image {
+    display: none;
+  }
+}
+
+.view-gsb-announcements-school-stories-listing h2.title {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  padding-top: 14px;
+}
+@media (max-width: 53.125em) {
+  .view-gsb-announcements-school-stories-listing h2.title {
+    font-size: 22px;
+  }
+}
+.view-gsb-announcements-school-stories-listing .views-row {
+  border-top: 1px solid #231f20;
+  padding: 12px 0;
+}
+.view-gsb-announcements-school-stories-listing .views-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing {
+  overflow: hidden;
+  *zoom: 1;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .left.second-column,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .left.second-column {
+  float: left;
+  max-width: 65%;
+}
+@media (max-width: 75.75em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .left.second-column,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .left.second-column {
+    max-width: 50%;
+  }
+}
+@media (max-width: 62.4375em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .left.second-column,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .left.second-column {
+    max-width: 65%;
+  }
+}
+@media (max-width: 51.5625em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .left.second-column,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .left.second-column {
+    max-width: 50%;
+  }
+}
+@media (max-width: 48em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .left.second-column,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .left.second-column {
+    max-width: 100%;
+  }
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .right,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .right {
+  float: right;
+}
+@media (max-width: 48em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .right,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .right {
+    float: none;
+  }
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-field-date,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-field-date {
+  color: #231f20;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .media-icon:after,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .media-icon:after {
+  font-size: 20px !important;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .media-icon.Video,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .media-icon.Video {
+  top: -1px;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .media-icon.Audio,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .media-icon.Audio {
+  top: 0;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-title,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-title {
+  display: inline;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-title h3,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-title h3 {
+  display: inline;
+  font-size: 20px;
+  line-height: 0;
+}
+@media (max-width: 53.125em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-title h3,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-title h3 {
+    font-size: 18px;
+  }
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-title h3 a,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-title h3 a {
+  line-height: 1.2;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-field-editorial-summary,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-field-editorial-summary {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-field-image-key-image,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-field-image-key-image {
+  float: left;
+  max-width: 170px;
+}
+.view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-field-image-key-image img,
+.view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-field-image-key-image img {
+  width: 100%;
+}
+@media (max-width: 48em) {
+  .view-gsb-announcements-school-stories-listing .node-school-story.view-mode-news_listing .field-name-field-image-key-image,
+  .view-gsb-announcements-school-stories-listing .node-announcement.view-mode-news_listing .field-name-field-image-key-image {
     display: none;
   }
 }

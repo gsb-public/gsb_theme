@@ -506,7 +506,7 @@ fieldset.collapsible .fieldset-legend
   .gsb-views-exposed-search
     padding: 0
 
-//EXCEPTIONS on Clubs page
+// EXCEPTIONS on Clubs page
 .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search
   @extend %bg-border-and-box-shadow
   label
@@ -515,16 +515,18 @@ fieldset.collapsible .fieldset-legend
 
 
 ///////////////////
-// New filter styling
+// New search and filter styling
 //////////////////
 
-// Faculty, working papers, case study, book listing filters
+// Faculty, working papers, case study, book listing, school story and announcement mixed listing
+// Search section
 // @todo generalize this
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
 .view-display-id-book_listing,
-.view-display-id-publications_listing
+.view-display-id-publications_listing,
+.view-gsb-announcements-school-stories-listing
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -564,6 +566,17 @@ fieldset.collapsible .fieldset-legend
     #edit-search
       height: 36px
       width: 100%
+  // For school news and announcements
+  .page-newsroom &
+    .views-exposed-widgets
+      @extend %divider-bottom
+      padding: 18px $standard-padding
+      position: relative
+      +clearfix
+      width: 100%
+      #edit-search
+        height: 36px
+        width: 100%
   #edit-search-wrapper
     float: left
     margin-right: -36px
@@ -579,7 +592,8 @@ fieldset.collapsible .fieldset-legend
   #edit-submit-gsb-working-paper-listing,
   #edit-submit-gsb-case-listing,
   #edit-submit-gsb-book-listing,
-  #edit-submit-gsb-publications-listing
+  #edit-submit-gsb-publications-listing,
+  #edit-submit-gsb-announcements-school-stories-listing
     text-indent: 1000px
     -webkit-border-radius: 0
     -moz-border-radius: 0
@@ -601,7 +615,13 @@ fieldset.collapsible .fieldset-legend
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, #18455f, $text-blue))
 
-  // Filter section
+// Faculty, working papers, case study, book listing filters
+// Filter section
+.view-faculty-filters,
+.view-display-id-working_paper_list,
+.view-display-id-case_listing,
+.view-display-id-book_listing,
+.view-display-id-publications_listing,
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
