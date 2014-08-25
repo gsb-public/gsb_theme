@@ -154,6 +154,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by topic, faculty name, or other keyword');
   }
+  // In the media listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-in-the-media-listing-in-the-media-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search for name, topic, program, date or other keyword');
+  }
 
 }
 
