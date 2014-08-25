@@ -150,14 +150,35 @@
       margin-bottom: 12px
 
     // Media icons
-    .media-icon
-      &:after
-        font-size: 20px !important
-
     .media-icon.Video
+      margin-right: 8px
+      position: relative
       top: -1px
+      +icon-after("video", true)
+      &:after
+        color: #bcbcbc
+        font-size: 20px
+
+    // Audio
     .media-icon.Audio
+      margin-right: 8px
+      position: relative
       top: 0
+      +icon-after("podcast", true)
+      &:after
+        color: #bcbcbc
+        font-size: 20px
+
+    // Infographic
+    .media-icon.Infographic
+      margin-right: 6px
+      &:after
+        content: "Infographic:"
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.2
+        +breakpoint(850px max-width)
+          font-size: 18px
 
     // Title
     .field-name-title
