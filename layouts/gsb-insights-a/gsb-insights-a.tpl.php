@@ -12,11 +12,12 @@
 
 <div class="panel-display gsb-insights-a<?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <?php if ($content['contentone']): ?>
-    <div class="full-header superwide-view">
-      <?php print $content['contentone']; ?>
-    </div>
-  <?php endif; ?>
+  <div class="insights-card-wrapper">
+    <?php if ($content['contentone']): ?>
+      <div class="full-header superwide-view">
+        <?php print $content['contentone']; ?>
+      </div>
+    <?php endif; ?>
 
     <div class="insights-main-wrapper">
 
@@ -102,15 +103,15 @@
           </div>
         </div>
       <?php endif; ?>
-
     </div><!-- /.insights-main-wrapper -->
+  </div><!-- /.insights-card-wrapper -->
 
-    <div class="insights-listing-wrapper">
-      <?php if ($content['contentsixone']): ?>
-        <div class="insights-topic-listing">
-          <?php print $content['contentsixone']; ?>
-        </div>
-      <?php endif; ?>
-    </div><!-- /.insights-listing-wrapper -->
+  <div class="insights-listing-wrapper">
+    <?php if ($content['contentsixone']): ?>
+      <div class="insights-topic-listing">
+        <?php print $content['contentsixone']; ?>
+      </div>
+    <?php endif; ?>
+  </div><!-- /.insights-listing-wrapper -->
 
-</div><!-- /.gsb-insights-one -->
+</div><!-- /.gsb-insights-a -->

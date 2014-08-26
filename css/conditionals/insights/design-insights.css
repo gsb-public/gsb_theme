@@ -18,17 +18,6 @@
   display: table;
   clear: both;
 }
-.page-insights h1.title {
-  background: white;
-  display: inline-block;
-  font-size: 38px;
-  font-weight: normal;
-  line-height: 1;
-  padding: 18px 18px 16px;
-}
-.page-insights #content-wrapper {
-  background: #f4f4f4;
-}
 .page-insights #bottom {
   background: #231f20;
   padding-bottom: 30px;
@@ -119,12 +108,23 @@
   }
 }
 
-.node-type-idea-story #content-wrapper {
-  background: white;
-}
-
 .page-insights #banner {
   background: #231f20;
+}
+.page-insights #content-wrapper {
+  background: white;
+}
+.page-insights .insights-card-wrapper {
+  background: #f4f4f4;
+}
+.page-insights h1.title {
+  background: white;
+  display: inline-block;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 18px 18px 16px;
+  margin-top: 30px;
 }
 
 #block-gsb-public-custom-blocks-gpcb-insights {
@@ -295,4 +295,107 @@
 }
 .no-js #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search:hover, .no-svg #block-gsb-public-custom-blocks-gpcb-insights-search #edit-submit-insights-search:hover {
   background-position: center -27px;
+}
+
+.panels-layout-gsb-insights-a #content-wrapper #content,
+.panels-layout-gsb-insights-b #content-wrapper #content,
+.panels-layout-gsb-insights-c #content-wrapper #content {
+  background: white;
+  max-width: 100%;
+  padding-bottom: 0;
+}
+.panels-layout-gsb-insights-a #content-wrapper #content .section,
+.panels-layout-gsb-insights-b #content-wrapper #content .section,
+.panels-layout-gsb-insights-c #content-wrapper #content .section {
+  background: #f4f4f4;
+}
+.panels-layout-gsb-insights-a .insights-listing-wrapper,
+.panels-layout-gsb-insights-b .insights-listing-wrapper,
+.panels-layout-gsb-insights-c .insights-listing-wrapper {
+  background: white;
+}
+.panels-layout-gsb-insights-a #block-workbench-block,
+.panels-layout-gsb-insights-a .tabs,
+.panels-layout-gsb-insights-a .title-wrapper,
+.panels-layout-gsb-insights-a .full-header,
+.panels-layout-gsb-insights-a .insights-main-wrapper,
+.panels-layout-gsb-insights-a .insights-topic-listing,
+.panels-layout-gsb-insights-b #block-workbench-block,
+.panels-layout-gsb-insights-b .tabs,
+.panels-layout-gsb-insights-b .title-wrapper,
+.panels-layout-gsb-insights-b .full-header,
+.panels-layout-gsb-insights-b .insights-main-wrapper,
+.panels-layout-gsb-insights-b .insights-topic-listing,
+.panels-layout-gsb-insights-c #block-workbench-block,
+.panels-layout-gsb-insights-c .tabs,
+.panels-layout-gsb-insights-c .title-wrapper,
+.panels-layout-gsb-insights-c .full-header,
+.panels-layout-gsb-insights-c .insights-main-wrapper,
+.panels-layout-gsb-insights-c .insights-topic-listing {
+  display: block;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+@media (max-width: 75.625em) {
+  .panels-layout-gsb-insights-a #block-workbench-block,
+  .panels-layout-gsb-insights-a .tabs,
+  .panels-layout-gsb-insights-a .title-wrapper,
+  .panels-layout-gsb-insights-a .full-header,
+  .panels-layout-gsb-insights-a .insights-main-wrapper,
+  .panels-layout-gsb-insights-a .insights-topic-listing,
+  .panels-layout-gsb-insights-b #block-workbench-block,
+  .panels-layout-gsb-insights-b .tabs,
+  .panels-layout-gsb-insights-b .title-wrapper,
+  .panels-layout-gsb-insights-b .full-header,
+  .panels-layout-gsb-insights-b .insights-main-wrapper,
+  .panels-layout-gsb-insights-b .insights-topic-listing,
+  .panels-layout-gsb-insights-c #block-workbench-block,
+  .panels-layout-gsb-insights-c .tabs,
+  .panels-layout-gsb-insights-c .title-wrapper,
+  .panels-layout-gsb-insights-c .full-header,
+  .panels-layout-gsb-insights-c .insights-main-wrapper,
+  .panels-layout-gsb-insights-c .insights-topic-listing {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 35.5em) {
+  .panels-layout-gsb-insights-a #block-workbench-block,
+  .panels-layout-gsb-insights-a .tabs,
+  .panels-layout-gsb-insights-a .title-wrapper,
+  .panels-layout-gsb-insights-a .full-header,
+  .panels-layout-gsb-insights-a .insights-main-wrapper,
+  .panels-layout-gsb-insights-a .insights-topic-listing,
+  .panels-layout-gsb-insights-b #block-workbench-block,
+  .panels-layout-gsb-insights-b .tabs,
+  .panels-layout-gsb-insights-b .title-wrapper,
+  .panels-layout-gsb-insights-b .full-header,
+  .panels-layout-gsb-insights-b .insights-main-wrapper,
+  .panels-layout-gsb-insights-b .insights-topic-listing,
+  .panels-layout-gsb-insights-c #block-workbench-block,
+  .panels-layout-gsb-insights-c .tabs,
+  .panels-layout-gsb-insights-c .title-wrapper,
+  .panels-layout-gsb-insights-c .full-header,
+  .panels-layout-gsb-insights-c .insights-main-wrapper,
+  .panels-layout-gsb-insights-c .insights-topic-listing {
+    padding: 15px;
+  }
+}
+.panels-layout-gsb-insights-a #main,
+.panels-layout-gsb-insights-b #main,
+.panels-layout-gsb-insights-c #main {
+  padding-top: 0;
+}
+@media (max-width: 75.625em) {
+  .panels-layout-gsb-insights-a #main,
+  .panels-layout-gsb-insights-b #main,
+  .panels-layout-gsb-insights-c #main {
+    padding: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .panels-layout-gsb-insights-a #main,
+  .panels-layout-gsb-insights-b #main,
+  .panels-layout-gsb-insights-c #main {
+    padding: 0;
+  }
 }

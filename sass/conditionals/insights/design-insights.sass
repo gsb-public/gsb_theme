@@ -11,27 +11,13 @@
 .page-insights
   #banner
     +pie-clearfix
-  // Insights title styling
-  h1.title
-    @extend %box-shadow
-    background: $white
-    display: inline-block
-    font-size: 38px
-    font-weight: normal
-    line-height: 1
-    padding: 18px 18px 16px
-
-  // Behind cards
-  #content-wrapper
-    background: #f4f4f4
 
   #bottom
     background: $text-black
     padding-bottom: 30px
-    .block
-      a
-        color: $white
-        line-height: 1.2
+    .block a
+      color: $white
+      line-height: 1.2
 
     // About Contact Follow menu
     .block:first-of-type
@@ -91,14 +77,25 @@
         line-height: 1.5
         padding-left: 10px
 
-// No image background on Insights detail
-.node-type-idea-story #content-wrapper
-  background: $white
-
-// Insights
 .page-insights
+  // Insights general styling
   #banner
     background: $text-black
+  #content-wrapper
+    background: $white
+  .insights-card-wrapper
+    background: #f4f4f4
+
+  // Insights landing title styling
+  h1.title
+    @extend %box-shadow
+    background: $white
+    display: inline-block
+    font-size: 38px
+    font-weight: normal
+    line-height: 1
+    padding: 18px 18px 16px
+    margin-top: 30px
 
 // Insights section title
 #block-gsb-public-custom-blocks-gpcb-insights
@@ -223,3 +220,39 @@
       background: image_url("search.png") no-repeat center 6px transparent
       &:hover
         background-position: center -27px
+
+// Topic landing page changes
+.panels-layout-gsb-insights-a,
+.panels-layout-gsb-insights-b,
+.panels-layout-gsb-insights-c
+  #content-wrapper #content
+    background: $white
+    max-width: 100%
+    padding-bottom: 0
+    .section
+      background: #f4f4f4
+  .insights-listing-wrapper
+    background: $white
+
+  // Reapply margin and width
+  #block-workbench-block,
+  .tabs,
+  .title-wrapper,
+  .full-header,
+  .insights-main-wrapper,
+  .insights-topic-listing
+    display: block
+    max-width: $max-width
+    margin: 0 auto
+    +breakpoint($bp-content-max)
+      padding: 0 20px
+    +breakpoint($bp-mobile-max)
+      padding: 15px
+
+  // Main padding
+  #main
+    padding-top: 0
+    +breakpoint($bp-content-max)
+      padding: 0
+    +breakpoint($bp-mobile-max)
+      padding: 0

@@ -204,6 +204,9 @@ function gsb_theme_preprocess_html(&$variables) {
   if (drupal_get_http_header('status') == "404 Not Found" || drupal_get_http_header('status') == "403 Forbidden") {
     $variables['classes_array'][] = 'error-page';
   }
+  if ($display = panels_get_current_page_display()) {
+    $variables['classes_array'][] = 'panels-layout-' . $display->layout;
+  }
 }
 
 /**
