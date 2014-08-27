@@ -1,53 +1,55 @@
-/////////////
-// Quote FPP
-/////////////
+// Insights Quote FPP
 
-.pane-bundle-quote
-  margin-bottom: 30px
-  padding-left: 35px
-  +clearfix
-  .field-group-div
-    margin-top: 5px
-  // TEXT
-  .field-name-field-body
-    font-weight: bold
-    font-size: 35px
-    line-height: 1.2em
-    margin: 0
+.pane-bundle-insights-quote
+  margin-left: 26px
+  p
+    line-height: 0
+    margin-bottom: 0
+  a
+    color: $text-black
+    line-height: 1
     position: relative
     top: 0
-    display: inline
-    &:before
-      color: $black
-      font-weight: bold
-      content: "“"
-      font-size: 58px
-      position: absolute
-      left: -30px
-      top: 7px
-    &:after
-      color: $black
-      font-weight: bold
-      content: "”"
+    &:hover
+      color: $link-blue
+      text-decoration: none !important
+      .quote,
+      .attribution
+        text-decoration: underline
+      .last-double-apostrophe:after
+        color: $teal-light
+  // First quotation mark
+  .first-double-apostrophe
+    font-size: 64px
+    position: absolute
+    left: -30px
+    top: -18px
+    +breakpoint($bp-mobile-max)
       font-size: 38px
-      position: relative
-      right: -4px
-  .field-name-field-link-single
-    display: inline
-    a
-      text-indent: -1000px
-      position: relative
-      display: inline-block
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $green-light
-        left: 0
-        line-height: 0
-        font-size: 21px
-        font-weight: bold
-        top: 0
-        position: absolute
-        text-indent: 0
-      &:hover
-        &:after
-          color: $link-blue
+      left: -22px
+      top: -7px
+  // Quote text
+  .quote
+    font-size: 38px
+    line-height: 1.3
+    +breakpoint($bp-mobile-max)
+      font-size: 26px
+  // Second quotation mark
+  .last-double-apostrophe
+    font-size: 38px
+    +icon-after("arrow-double-right", true)
+    &:after
+      color: $green-light
+      font-size: 24px
+      margin-left: 8px
+
+  // Em dash
+  .dash
+    margin-right: 8px
+
+  // Attribution of quote
+  .attribution
+    font-size: 18px
+    line-height: 1.5
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
