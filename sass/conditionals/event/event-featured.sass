@@ -34,9 +34,8 @@
         &:after
           color: $white
 
-  .group_ft_evnt_wrp
+  .group-ft-evnt-wrp
     padding-left: 180px
-    padding-right: 30px
     min-height: 130px
     max-width: 570px
     overflow: hidden
@@ -44,8 +43,9 @@
   .field-name-field-image-single-public
     float: right
     width: 270px
-  .group_tag_wrap
-    line-height: 1.2em
+
+  .group-tag-wrap
+    line-height: 1.2
     font-size: 15px
     color: $blue-light
     .separator
@@ -59,60 +59,47 @@
       display: inline
       > div
         display: inline
+
   .field-name-field-address,
   .field-name-field-editorial-summary,
   .event_calendar_featured
     color: $white
 
   .field-name-field-editorial-summary
-    margin-top: -2px
-    margin-bottom: 24px
+    margin-bottom: 22px
     font-size: 16px
     line-height: 1.4
 
-  // Featured event
-  .event_calendar_featured
+  // Featured event date styling
+  .event-calendar-featured
+    color: $white
+    height: 135px
+    padding: 45px 5px 5px
     position: absolute
     top: 0
     left: 0
-    width: 143px
-    height: 128px
-    padding: 29px 5px 5px
     text-align: center
+    width: 143px
     +icon-after("calendar-blank", true)
     &:after
-      font-size: 163px
-      position: absolute
-      line-height: 0
-      top: 75px
-      left: -8px
       color: $blue-light
-    > div
-      line-height: 31px
+      font-size: 160px
+      line-height: 0
+      position: absolute
+      top: 80px
+      left: -8px
 
-
-    &.from-to
-      b
-        position: relative
-        top: 10px
-        &:last-of-type
-          top: -8px
-
-    ins,
-    b,
-    span
-      display: block
-
-    span
-      top: -3px
-    ins
-      text-decoration: none
-      border: 0 none
-      top: 5px
-    ins, span
+    .day,
+    .time
       font-size: 14px
-      position: relative
-    b
+      line-height: 1.2
+
+    .day
+      margin-bottom: 4px
+
+    .date
       font-size: 24px
-    i
-      font-style: normal
+      line-height: 1.2
+
+    .time
+      margin-top: 4px
