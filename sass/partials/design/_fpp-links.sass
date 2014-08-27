@@ -36,10 +36,13 @@
           +icon-after("arrow-external", true)
           &:after
             color: #949494
-            content: "\f102" !important
+            content: "\f102"
             font-weight: normal
             font-size: 10px
             margin-left: 3px
+          &[href$=".pdf"]
+            &:after
+              font-size: 12px
         &:hover
           &:after
             color: $teal-dark
@@ -67,9 +70,12 @@
           &[target=_blank]
             +icon-after("arrow-external", true)
             &:after
-              content: "\f102" !important
+              content: "\f102"
               font-size: 10px
               margin-left: 3px
+            &[href$=".pdf"]
+              &:after
+                font-size: 12px
           &:hover
             color: $text-blue
 
@@ -113,9 +119,12 @@
           +icon-after("arrow-external", true)
           &:after
             color: #949494
-            content: "\f102" !important
+            content: "\f102"
             font-size: 10px
             margin-left: 3px
+          &[href$=".pdf"]
+            &:after
+              font-size: 12px
         &:hover
           &[target=_blank]
             &:after

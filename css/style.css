@@ -3200,10 +3200,13 @@ a.no-border:hover {
 }
 .pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank]:after {
   color: #949494;
-  content: "\f102" !important;
+  content: "\f102";
   font-weight: normal;
   font-size: 10px;
   margin-left: 3px;
+}
+.pane-bundle-links .red-bar .field-name-field-link-unlimited a[target=_blank][href$=".pdf"]:after {
+  font-size: 12px;
 }
 .pane-bundle-links .red-bar .field-name-field-link-unlimited a:hover:after {
   color: #538b80;
@@ -3245,9 +3248,12 @@ a.no-border:hover {
   font-family: 'icons';
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank]:after {
-  content: "\f102" !important;
+  content: "\f102";
   font-size: 10px;
   margin-left: 3px;
+}
+.pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a[target=_blank][href$=".pdf"]:after {
+  font-size: 12px;
 }
 .pane-bundle-links .green-bar .field-name-field-link-unlimited .field-item a:hover {
   color: #2d6280;
@@ -3315,9 +3321,12 @@ a.no-border:hover {
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank]:after {
   color: #949494;
-  content: "\f102" !important;
+  content: "\f102";
   font-size: 10px;
   margin-left: 3px;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited a[target=_blank][href$=".pdf"]:after {
+  font-size: 12px;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited a:hover[target=_blank]:after {
   color: #538b80;
