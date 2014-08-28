@@ -3,35 +3,35 @@
 //////////////////////
 
 .pane-bundle-links
-  // Red links
-  .red-bar
+  // Black bar links
+  .black-bar
     @extend %bg-border-and-box-shadow
-    padding: 13px 25px 20px 25px
-    &:before
-      content: ""
-      width: 120px
-      display: block
-      height: 10px
-      top: -13px
-      position: relative
-      background-color: $red
+
+    // Title
     .field-name-field-title
+      @extend %black-border-top
       color: $text-black
+      font-family: $font-demi
       font-size: 18px
-      font-weight: bold
       line-height: 1.3
-      margin-bottom: 8px
+      margin: 0 $standard-padding
+      padding-top: 12px
+
+    // Links
     .field-name-field-link-unlimited
+      margin: 16px 0
+      padding: 0 $standard-padding
       .field-item
-        line-height: 1
+        line-height: 0
         padding-bottom: 12px
         &:last-of-type
           padding-bottom: 0
       a
         font-family: $font-demi
-        font-weight: normal
         font-size: 16px
-        line-height: 1.3
+        line-height: 1.4
+        +breakpoint($bp-mobile-max)
+          font-size: 14px
         &[target=_blank]
           +icon-after("arrow-external", true)
           &:after
