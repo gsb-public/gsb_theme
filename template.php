@@ -140,7 +140,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topics, or other keywords');
   }
   // Announcement and school story mixed listing placeholder text
-  if ($form['#id'] == 'views-exposed-form-gsb-announcements-school-stories-listing-annssh-stories-list') {
+  if ($form['#id'] == 'views-exposed-form-gsb-announcement-school-listing-annssh-stories-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by topic, program, name, or other keyword');
   }
