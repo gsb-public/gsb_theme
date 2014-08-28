@@ -131,7 +131,6 @@
   .group-wrapper-byline
     font-size: 16px
     line-height: 1.2
-    margin-bottom: 26px
 
   // Authors
   .field-name-field-authors
@@ -154,15 +153,18 @@
 
   // Body field
   .field-name-field-body
+    +clearfix
     @extend %resources-body
 
   // Full taxonomy (bottom of page)
   .group-wrapper-taxonomy
+    @extend %divider-top
     font-size: 14px
     line-height: 1.2
     margin-top: 26px
     margin-bottom: 26px
     margin-left: 35px
+    padding-top: 12px
     +breakpoint($bp-idea-story-detail)
       margin-left: 0
     h3
@@ -424,3 +426,34 @@
     .field-name-field-link-unlimited
       +breakpoint($bp-idea-story-detail)
         padding: 20px $standard-padding
+
+  // Social media buttons
+  .field-name-social-buttons-top,
+  .field-name-social-buttons-bottom
+    .item-list ul li
+      margin: 0
+    li
+      display: inline-block
+      vertical-align: top
+    // Facebook
+    .fb-share-button
+      top: -4px
+      left: -15px
+    // LinkedIn
+    .IN-widget
+      position: relative
+      left: -15px
+
+  // Top social buttons
+  .field-name-social-buttons-top
+    @extend %black-border-top-small
+    border-bottom: 1px $text-black solid
+    margin-bottom: 40px
+    margin-top: 20px
+    padding-top: 18px
+    padding-left: 35px
+
+  // Bottom social buttons
+  .field-name-social-buttons-bottom
+    margin-bottom: 20px
+    margin-left: 35px

@@ -1,4 +1,8 @@
-.node-idea-story.view-mode-full .explore-more-wrapper {
+.node-idea-story.view-mode-full .group-wrapper-taxonomy {
+  border-top: 1px lightgray solid;
+}
+
+.node-idea-story.view-mode-full .explore-more-wrapper, .node-idea-story.view-mode-full .field-name-social-buttons-top {
   border-top: 3px #231f20 solid;
 }
 
@@ -200,7 +204,6 @@
 .node-idea-story.view-mode-full .group-wrapper-byline {
   font-size: 16px;
   line-height: 1.2;
-  margin-bottom: 26px;
 }
 .node-idea-story.view-mode-full .field-name-field-authors {
   margin-left: 6px;
@@ -220,12 +223,17 @@
 .node-idea-story.view-mode-full .field-name-field-authors .odd:before {
   content: " and";
 }
+.node-idea-story.view-mode-full .field-name-field-body {
+  overflow: hidden;
+  *zoom: 1;
+}
 .node-idea-story.view-mode-full .group-wrapper-taxonomy {
   font-size: 14px;
   line-height: 1.2;
   margin-top: 26px;
   margin-bottom: 26px;
   margin-left: 35px;
+  padding-top: 12px;
 }
 @media (max-width: 75.625em) {
   .node-idea-story.view-mode-full .group-wrapper-taxonomy {
@@ -560,4 +568,34 @@
   .node-idea-story.view-mode-full .group-wrapper-related .field-name-field-link-unlimited {
     padding: 20px 26px;
   }
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-top .item-list ul li,
+.node-idea-story.view-mode-full .field-name-social-buttons-bottom .item-list ul li {
+  margin: 0;
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-top li,
+.node-idea-story.view-mode-full .field-name-social-buttons-bottom li {
+  display: inline-block;
+  vertical-align: top;
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-top .fb-share-button,
+.node-idea-story.view-mode-full .field-name-social-buttons-bottom .fb-share-button {
+  top: -4px;
+  left: -15px;
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-top .IN-widget,
+.node-idea-story.view-mode-full .field-name-social-buttons-bottom .IN-widget {
+  position: relative;
+  left: -15px;
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-top {
+  border-bottom: 1px #231f20 solid;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding-top: 18px;
+  padding-left: 35px;
+}
+.node-idea-story.view-mode-full .field-name-social-buttons-bottom {
+  margin-bottom: 20px;
+  margin-left: 35px;
 }
