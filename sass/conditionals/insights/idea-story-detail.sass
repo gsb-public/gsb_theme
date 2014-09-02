@@ -70,14 +70,13 @@
       font-family: $font-demi
       font-size: 18px
       line-height: 1.2
+    span
       &:after
         color: $text-black
         content: ","
-        margin-right: 6px
       &:last-of-type
         &:after
           content: ""
-          margin-right: 0
 
   // Media icons
 
@@ -244,9 +243,11 @@
       // Title
       .field-name-title
         display: inline
-        h3
+        h2
           display: inline
+          font-family: $font-sans
           font-size: 20px
+          font-weight: bold
           line-height: 0
           +breakpoint(850px max-width)
             font-size: 18px
