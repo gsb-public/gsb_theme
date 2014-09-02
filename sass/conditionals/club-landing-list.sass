@@ -25,15 +25,20 @@
   padding: 0
   position: relative
   top: 0
-  h5
-    line-height: 1.2
+  // Title
+  .field-name-title,
+  .field-name-field-link-single
     margin-bottom: 18px
     padding-top: 20px
-    text-transform: none
     &:before
       content: image_url("tab-club.jpg")
       position: absolute
       top: -8px
+  h2
+    font-family: $font-sans
+    font-size: 18px
+    font-weight: bold
+    line-height: 1.2
     a
       color: $link-green
       padding-right: 10px
@@ -46,10 +51,12 @@
         color: $text-blue
         &:after
           color: $teal-light
+  // Description
   .field-name-field-body
     font-size: 18px
     line-height: 1.4
     margin: 4px 0
+  // Email
   .field-name-field-email
     margin-bottom: 30px
     a
