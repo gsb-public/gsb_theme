@@ -13,6 +13,8 @@
 h2.insights-label {
   background: #231f20;
   color: white;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   font-size: 14px;
   line-height: 1.2;
   padding: 6px 8px;
@@ -321,11 +323,6 @@ h2.insights-label {
 .panels-layout-gsb-insights-c #content-wrapper #content .section {
   background: #f4f4f4;
 }
-.panels-layout-gsb-insights-a .insights-listing-wrapper,
-.panels-layout-gsb-insights-b .insights-listing-wrapper,
-.panels-layout-gsb-insights-c .insights-listing-wrapper {
-  background: white;
-}
 .panels-layout-gsb-insights-a #block-workbench-block,
 .panels-layout-gsb-insights-a .tabs,
 .panels-layout-gsb-insights-a .title-wrapper,
@@ -348,48 +345,51 @@ h2.insights-label {
   max-width: 1170px;
   margin: 0 auto;
 }
-@media (max-width: 75.625em) {
-  .panels-layout-gsb-insights-a #block-workbench-block,
-  .panels-layout-gsb-insights-a .tabs,
-  .panels-layout-gsb-insights-a .title-wrapper,
-  .panels-layout-gsb-insights-a .full-header,
-  .panels-layout-gsb-insights-a .insights-main-wrapper,
-  .panels-layout-gsb-insights-a .insights-topic-listing,
-  .panels-layout-gsb-insights-b #block-workbench-block,
-  .panels-layout-gsb-insights-b .tabs,
-  .panels-layout-gsb-insights-b .title-wrapper,
-  .panels-layout-gsb-insights-b .full-header,
-  .panels-layout-gsb-insights-b .insights-main-wrapper,
-  .panels-layout-gsb-insights-b .insights-topic-listing,
-  .panels-layout-gsb-insights-c #block-workbench-block,
-  .panels-layout-gsb-insights-c .tabs,
-  .panels-layout-gsb-insights-c .title-wrapper,
-  .panels-layout-gsb-insights-c .full-header,
-  .panels-layout-gsb-insights-c .insights-main-wrapper,
-  .panels-layout-gsb-insights-c .insights-topic-listing {
-    padding: 0 20px;
-  }
+.panels-layout-gsb-insights-a .insights-card-wrapper,
+.panels-layout-gsb-insights-b .insights-card-wrapper,
+.panels-layout-gsb-insights-c .insights-card-wrapper {
+  padding: 0 20px;
 }
 @media (max-width: 35.5em) {
-  .panels-layout-gsb-insights-a #block-workbench-block,
-  .panels-layout-gsb-insights-a .tabs,
-  .panels-layout-gsb-insights-a .title-wrapper,
-  .panels-layout-gsb-insights-a .full-header,
+  .panels-layout-gsb-insights-a .insights-card-wrapper,
+  .panels-layout-gsb-insights-b .insights-card-wrapper,
+  .panels-layout-gsb-insights-c .insights-card-wrapper {
+    padding: 20px;
+  }
+}
+@media (max-width: 56.1875em) {
   .panels-layout-gsb-insights-a .insights-main-wrapper,
-  .panels-layout-gsb-insights-a .insights-topic-listing,
-  .panels-layout-gsb-insights-b #block-workbench-block,
-  .panels-layout-gsb-insights-b .tabs,
-  .panels-layout-gsb-insights-b .title-wrapper,
-  .panels-layout-gsb-insights-b .full-header,
   .panels-layout-gsb-insights-b .insights-main-wrapper,
-  .panels-layout-gsb-insights-b .insights-topic-listing,
-  .panels-layout-gsb-insights-c #block-workbench-block,
-  .panels-layout-gsb-insights-c .tabs,
-  .panels-layout-gsb-insights-c .title-wrapper,
-  .panels-layout-gsb-insights-c .full-header,
-  .panels-layout-gsb-insights-c .insights-main-wrapper,
-  .panels-layout-gsb-insights-c .insights-topic-listing {
-    padding: 15px;
+  .panels-layout-gsb-insights-c .insights-main-wrapper {
+    max-width: 570px;
+  }
+}
+@media (max-width: 56.1875em) {
+  .panels-layout-gsb-insights-a .full-header,
+  .panels-layout-gsb-insights-b .full-header,
+  .panels-layout-gsb-insights-c .full-header {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 39.625em) {
+  .panels-layout-gsb-insights-a .full-header,
+  .panels-layout-gsb-insights-b .full-header,
+  .panels-layout-gsb-insights-c .full-header {
+    max-width: 290px;
+  }
+}
+.panels-layout-gsb-insights-a .insights-listing-wrapper,
+.panels-layout-gsb-insights-b .insights-listing-wrapper,
+.panels-layout-gsb-insights-c .insights-listing-wrapper {
+  background: white;
+  padding: 0 20px;
+}
+@media (max-width: 35.5em) {
+  .panels-layout-gsb-insights-a .insights-listing-wrapper,
+  .panels-layout-gsb-insights-b .insights-listing-wrapper,
+  .panels-layout-gsb-insights-c .insights-listing-wrapper {
+    padding-top: 16px;
   }
 }
 .panels-layout-gsb-insights-a #main,

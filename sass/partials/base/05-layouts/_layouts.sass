@@ -259,25 +259,24 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
-    +breakpoint(895px max-width)
+    +breakpoint(634px max-width)
       max-width: 290px
-    +breakpoint(609px max-width)
-      max-width: 100%
     .panels-ipe-editing &
       width: $narrow-view
   .wide-view
     max-width: $wide-view
-    +breakpoint(609px max-width)
-      max-width: 100%
+    +breakpoint(634px max-width)
+      max-width: 290px
+      margin: 0 auto
     .panels-ipe-editing &
       width: $wide-view
-  .first,
+  .first
+    margin-right: 30px
+    +breakpoint(899px max-width)
+      margin-right: 0
   .second
     margin-right: 30px
-    +breakpoint(939px max-width)
-      margin-right: 15px
-    +breakpoint(609px max-width)
-      margin-right: 0
+
   .full-header,
   .wide-narrow-narrow,
   .narrow-narrow-wide,
@@ -298,8 +297,9 @@
         margin-right: 0
   .column
     float: left
-    +breakpoint(609px max-width)
+    +breakpoint(634px max-width)
       float: none
+      margin: 0 auto
 
   // alpha, beta, gamma styling
   .wide-narrow-narrow .first,

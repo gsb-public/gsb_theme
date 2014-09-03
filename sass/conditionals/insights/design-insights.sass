@@ -11,6 +11,8 @@
 h2.insights-label
   background: $text-black
   color: $white
+  font-family: $font-demi
+  font-weight: normal
   font-size: 14px
   line-height: 1.2
   padding: 6px 8px
@@ -235,7 +237,7 @@ h2.insights-label
       &:hover
         background-position: center -27px
 
-// Topic landing page changes
+// Topic landing page
 .panels-layout-gsb-insights-a,
 .panels-layout-gsb-insights-b,
 .panels-layout-gsb-insights-c
@@ -245,8 +247,6 @@ h2.insights-label
     padding-bottom: 0
     .section
       background: #f4f4f4
-  .insights-listing-wrapper
-    background: $white
 
   // Reapply margin and width
   #block-workbench-block,
@@ -258,10 +258,28 @@ h2.insights-label
     display: block
     max-width: $max-width
     margin: 0 auto
-    +breakpoint($bp-content-max)
-      padding: 0 20px
+
+  .insights-card-wrapper
+    padding: 0 20px
     +breakpoint($bp-mobile-max)
-      padding: 15px
+      padding: 20px
+
+  .insights-main-wrapper
+    +breakpoint(899px max-width)
+      max-width: 570px
+
+  .full-header
+    +breakpoint(899px max-width)
+      max-width: 570px
+      margin: 0 auto
+    +breakpoint(634px max-width)
+      max-width: 290px
+
+  .insights-listing-wrapper
+    background: $white
+    padding: 0 20px
+    +breakpoint($bp-mobile-max)
+      padding-top: 16px
 
   // Main padding
   #main
