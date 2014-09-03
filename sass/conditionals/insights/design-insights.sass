@@ -253,20 +253,11 @@ h2.insights-label
   .tabs,
   .title-wrapper,
   .full-header,
-  .insights-main-wrapper,
+  .insights-card-wrapper,
   .insights-topic-listing
     display: block
     max-width: $max-width
     margin: 0 auto
-
-  .insights-card-wrapper
-    padding: 0 20px
-    +breakpoint($bp-mobile-max)
-      padding: 20px
-
-  .insights-main-wrapper
-    +breakpoint(899px max-width)
-      max-width: 570px
 
   .full-header
     +breakpoint(899px max-width)
@@ -288,3 +279,14 @@ h2.insights-label
       padding: 0
     +breakpoint($bp-mobile-max)
       padding: 0
+
+// Layout A
+.panels-layout-gsb-insights-a
+  .insights-card-wrapper
+    padding: 0 20px
+    +breakpoint($bp-mobile-max)
+      padding: 20px
+
+  .insights-main-wrapper
+    +breakpoint(899px max-width)
+      max-width: 570px
