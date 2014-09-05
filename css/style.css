@@ -127,7 +127,7 @@ p {
 
 .designed-box,
 .pane-gsb-event-sidebar, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour, .pane-bundle-existing-node {
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta, .cta-virtual-tour, .pane-bundle-existing-node {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -136,7 +136,7 @@ p {
 @media (max-width: 35.5em) {
   .designed-box,
   .pane-gsb-event-sidebar, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .pane-bundle-image-cta, .cta-virtual-tour, .pane-bundle-existing-node {
+  .pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-video, .pane-bundle-spotlight, .narrow-view .person-list-view, .pane-bundle-accordion, .cta-green, .cta-red .field-item, .pane-gsb-public-custom-blocks-gpcb-rethink, .gsb-views-exposed-form, .exposed_filter_widget > div, .page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .pane-faculty-filters-faculty-by-criteria, .slideshow-wrapper, .pane-bundle-social-feed, .learn-about-campus, .pane-bundle-homepage-cta, .pane-bundle-house-ads, .pane-media-toolkit, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta, .cta-virtual-tour, .pane-bundle-existing-node {
     margin-top: 1px;
   }
 }
@@ -2979,30 +2979,6 @@ a.no-border:hover {
   margin-right: 0;
 }
 
-.tweet {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 20px;
-  word-wrap: break-word;
-}
-.tweet:last-of-type {
-  margin-bottom: 0;
-}
-.tweet a {
-  border: none;
-  color: #990000;
-}
-.tweet a:hover {
-  border: none;
-  color: #2d6280;
-  text-decoration: underline;
-}
-.tweet .time {
-  font-size: 13px;
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-
 .show-more-less-toggler {
   border: 0 !important;
   color: #636f00;
@@ -5706,7 +5682,18 @@ ul.slideshow-items {
 .pane-bundle-social-feed .group-wrapper-twitter {
   margin-bottom: 24px;
 }
-.pane-bundle-social-feed .group-wrapper-twitter:before {
+.pane-bundle-social-feed .twitter-title-text,
+.pane-bundle-social-feed .twitter-search-text {
+  display: block;
+}
+.pane-bundle-social-feed .field-name-field-feed-source {
+  font-size: 18px;
+  height: 40px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0;
+}
+.pane-bundle-social-feed .field-name-field-feed-source a:before {
   content: "\f121";
   display: inline-block;
   speak: none;
@@ -5721,7 +5708,7 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-bundle-social-feed .group-wrapper-twitter:before {
+.pane-bundle-social-feed .field-name-field-feed-source a:before {
   background-color: #c50000;
   background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
   background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
@@ -5739,17 +5726,70 @@ ul.slideshow-items {
   height: 40px;
   text-align: center;
 }
-.pane-bundle-social-feed .field-name-field-feed-source {
-  font-size: 16px;
+.pane-bundle-social-feed .field-name-field-feed-source a:hover {
+  color: #2d6280;
+}
+.pane-bundle-social-feed .field-name-field-feed-source a:hover:before {
+  background: #2d6280;
+}
+
+.tweet {
+  font-size: 18px;
   line-height: 1.3;
-  font-weight: bold;
-  margin: 0;
-  padding-right: 35px;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+}
+@media (max-width: 35.5em) {
+  .not-front .tweet {
+    font-size: 16px;
+  }
+}
+.tweet:last-of-type {
+  margin-bottom: 0;
+}
+.tweet .time {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+
+.front .tweet {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
 .field-name-field-social-twitter-title .field-item,
 .field-name-field-social-display-num .field-item {
   display: none;
+}
+
+.page-insights .pane-bundle-social-feed {
+  background: white;
+  border: 0;
+}
+.page-insights .pane-bundle-social-feed .twitter-title-text {
+  display: none;
+}
+.page-insights .pane-bundle-social-feed .twitter-search-text {
+  position: relative;
+  top: 10px;
+}
+.page-insights .pane-bundle-social-feed .field-name-field-feed-source a:before {
+  background: black;
+  float: left;
+  font-size: 21px;
+  line-height: 2;
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.page-insights .pane-bundle-social-feed .field-name-field-feed-source a:hover {
+  color: #2d6280;
+}
+.page-insights .pane-bundle-social-feed .field-name-field-feed-source a:hover:before {
+  background: #2d6280;
 }
 
 .pane-bundle-accordion {
