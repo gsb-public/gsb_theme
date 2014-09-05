@@ -560,7 +560,8 @@ fieldset.collapsible .fieldset-legend
   .form-item.form-item-search
     margin-top: 0
     margin-bottom: 0
-  .views-exposed-search-wrap
+  .views-exposed-search-wrap,
+  #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets
     @extend %divider-bottom
     padding: 18px $standard-padding
     position: relative
@@ -569,17 +570,6 @@ fieldset.collapsible .fieldset-legend
     #edit-search
       height: 36px
       width: 100%
-  // For school news and announcements
-  .page-newsroom &
-    .views-exposed-widgets
-      @extend %divider-bottom
-      padding: 18px $standard-padding
-      position: relative
-      +clearfix
-      width: 100%
-      #edit-search
-        height: 36px
-        width: 100%
   #edit-search-wrapper
     float: left
     margin-right: -36px
