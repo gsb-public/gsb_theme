@@ -47,14 +47,14 @@
   .group-wrapper-header
     max-width: 670px
     padding-left: 35px
-    +breakpoint($bp-mobile-max)
+    +breakpoint(687px max-width)
       padding-left: 0
 
   // Body and Resources
   .field-name-field-body
     margin-bottom: 12px
     padding-left: 35px
-    +breakpoint($bp-mobile-max)
+    +breakpoint(687px max-width)
       padding-left: 0
     h1, h2, h3, h4, h5, h6,
     p
@@ -285,6 +285,8 @@
     top: 0
     +breakpoint($bp-idea-story-detail)
       margin-bottom: 26px
+    +breakpoint(687px max-width)
+      margin-left: 0
 
     // Progress throbber
     .ajax-progress
@@ -376,6 +378,8 @@
   // Media inquiries
   .media-inquiries
     margin-left: 35px
+    +breakpoint(687px max-width)
+      margin-left: 0
 
   // Related content
   .group-wrapper-related
@@ -459,6 +463,10 @@
     display: inline-block
     margin-bottom: 20px
     margin-left: 35px
+    +breakpoint(687px max-width)
+      height: 22px
+      margin-left: 0
+      margin-bottom: 0
 
   // Share this short url
   .short-url-wrapper,
@@ -472,6 +480,12 @@
     height: 45px
     margin-left: 10px
     padding-left: 20px
+    +breakpoint(687px max-width)
+      border-left: 0
+      display: block
+      margin-left: 0
+      margin-bottom: 36px
+      padding-left: 0
 
   .short-url
     border: 1px #d3d3d3 solid
