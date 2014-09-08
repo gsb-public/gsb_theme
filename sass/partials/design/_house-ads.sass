@@ -10,19 +10,26 @@
 
   .group-left
     position: relative
-    top 0
+    top: 0
 
-  // Superhead
-  .field-name-field-superhead
+  // Superhead - optional
+  .field-name-field-house-ads-superhead
     background: $text-black
     color: $white
     font-family: $font-demi
     font-weight: normal
     font-size: 14px
     line-height: 1.2
-    margin-left: 26px
+    margin: 0 26px
+    max-width: 216px
     padding: 6px 8px
     position: absolute
+    .page-insights &
+      +breakpoint(610px max-width)
+        font-size: 13px
+        margin-bottom: 12px
+        max-width: 100%
+        position: relative
     +breakpoint(568px 321px)
       .narrow-view &
         margin-left: 52px
@@ -31,14 +38,21 @@
   // Image
   .field-name-field-image-single-public
     margin-bottom: 12px
+    .page-insights &
+      +breakpoint(610px max-width)
+        display: none
     > img
       vertical-align: top
 
   // Title
   .field-name-field-link-single a
-    font-weight: bold
-    font-size: 20px
     color: $text-black
+    font-weight: bold
+    font-size: 22px
+    line-height: 1.2
+    .page-insights &
+      +breakpoint(610px max-width)
+        font-size: 18px
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
@@ -57,10 +71,16 @@
       font-size: 16px
       line-height: 1.2
       margin-bottom: 0
+    .page-insights &
+      +breakpoint(610px max-width)
+        display: none
 
   // Show more
   .show-more
     @extend %show-more-link
+    .page-insights &
+      +breakpoint(610px max-width)
+        display: none
 
 // Side view styling
 .wide-view
