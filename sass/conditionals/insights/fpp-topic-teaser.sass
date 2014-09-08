@@ -1,0 +1,51 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Topic teaser fpp
+.pane-bundle-topic-teaser
+  @extend %box-shadow
+  background: $white
+
+  // Topic action and name
+  .field-name-field-topic
+    border-bottom: 1px solid #e4e4e4
+    padding: $standard-padding
+    p
+      line-height: 0
+      margin-bottom: 0
+    a
+      color: $text-black
+      font-size: 24px
+      line-height: 1.2
+      +breakpoint($bp-mobile-max)
+        font-size: 20px
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 16px
+        font-weight: normal
+        margin-left: 5px
+        +breakpoint($bp-mobile-max)
+          font-size: 14px
+      &:hover
+        color: $link-blue
+        text-decoration: none
+        span
+          border-bottom: 1px solid $link-blue
+        &:after
+          color: #aac4bf
+
+
+  // Topic description
+  .field-name-field-description
+    font-size: 20px
+    line-height: 1.2
+    padding: $standard-padding
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
