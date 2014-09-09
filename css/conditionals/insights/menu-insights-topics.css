@@ -74,13 +74,13 @@
 #block-menu-section-27256 .content {
   display: none;
 }
-#block-menu-section-27256:hover h2 {
+.no-touch #block-menu-section-27256:hover h2 {
   background: -moz-linear-gradient(bottom, #8e0000, #860000);
   background: -o-linear-gradient(bottom, #8e0000, #860000);
   background: -webkit-linear-gradient(bottom, #8e0000, #860000);
   background: linear-gradient(to top, #8e0000, #860000);
 }
-#block-menu-section-27256:hover h2:after {
+.no-touch #block-menu-section-27256:hover h2:after {
   content: "\f108";
   display: inline-block;
   speak: none;
@@ -95,15 +95,13 @@
   font-weight: normal;
   font-family: 'icons';
 }
-#block-menu-section-27256:hover .content {
+.no-touch #block-menu-section-27256:hover .content {
   display: block;
   position: absolute;
   z-index: 100;
 }
-#block-menu-section-27256:hover .content:hover {
+.no-touch #block-menu-section-27256:hover .content .menu {
   display: block;
-}
-#block-menu-section-27256:hover .content .menu {
   background: -moz-linear-gradient(bottom, #c50000, #8f0000);
   background: -o-linear-gradient(bottom, #c50000, #8f0000);
   background: -webkit-linear-gradient(bottom, #c50000, #8f0000);
@@ -115,19 +113,19 @@
   width: 718px;
 }
 @media (max-width: 73.125em) {
-  #block-menu-section-27256:hover .content .menu {
+  .no-touch #block-menu-section-27256:hover .content .menu {
     min-width: 690px;
     width: 100%;
   }
 }
 @media (max-width: 51.875em) {
-  #block-menu-section-27256:hover .content .menu {
+  .no-touch #block-menu-section-27256:hover .content .menu {
     min-width: inherit;
     width: 100%;
   }
 }
 @media (max-width: 30em) {
-  #block-menu-section-27256:hover .content .menu {
+  .no-touch #block-menu-section-27256:hover .content .menu {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
@@ -135,11 +133,79 @@
     width: 100%;
   }
 }
-#block-menu-section-27256:hover .content li {
+.no-touch #block-menu-section-27256:hover .content li {
   line-height: 0;
   margin-bottom: 18px;
 }
-#block-menu-section-27256:hover .content a {
+.no-touch #block-menu-section-27256:hover .content a {
+  color: white;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.touch #block-menu-section-27256.open h2 {
+  background: -moz-linear-gradient(bottom, #8e0000, #860000);
+  background: -o-linear-gradient(bottom, #8e0000, #860000);
+  background: -webkit-linear-gradient(bottom, #8e0000, #860000);
+  background: linear-gradient(to top, #8e0000, #860000);
+}
+.touch #block-menu-section-27256.open h2:after {
+  content: "\f108";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.touch #block-menu-section-27256.open .content {
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+.touch #block-menu-section-27256.open .content .menu {
+  display: block;
+  background: -moz-linear-gradient(bottom, #c50000, #8f0000);
+  background: -o-linear-gradient(bottom, #c50000, #8f0000);
+  background: -webkit-linear-gradient(bottom, #c50000, #8f0000);
+  background: linear-gradient(to top, #c50000, #8f0000);
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  padding: 26px;
+  width: 718px;
+}
+@media (max-width: 73.125em) {
+  .touch #block-menu-section-27256.open .content .menu {
+    min-width: 690px;
+    width: 100%;
+  }
+}
+@media (max-width: 51.875em) {
+  .touch #block-menu-section-27256.open .content .menu {
+    min-width: inherit;
+    width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  .touch #block-menu-section-27256.open .content .menu {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    padding: 20px;
+    width: 100%;
+  }
+}
+.touch #block-menu-section-27256.open .content li {
+  line-height: 0;
+  margin-bottom: 18px;
+}
+.touch #block-menu-section-27256.open .content a {
   color: white;
   font-size: 18px;
   line-height: 1.2;

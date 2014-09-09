@@ -58,43 +58,85 @@
   .content
     display: none
 
-  &:hover
-    // Topics title
-    h2
-      +background(linear-gradient(bottom, #8e0000, $red-dark))
-      +icon-after("arrow-med-up", true)
+  .no-touch &
+    &:hover
+      // Topics title
+      h2
+        +background(linear-gradient(bottom, #8e0000, $red-dark))
+        +icon-after("arrow-med-up", true)
 
-    // Menu pane
-    .content
-      display: block
-      position: absolute
-      z-index: 100
-
-      &:hover
+      // Menu pane
+      .content
         display: block
-      .menu
-        +background(linear-gradient(bottom, $red-light, #8f0000))
-        -moz-column-count: 3
-        -webkit-column-count: 3
-        column-count: 3
-        padding: $standard-padding
-        width: 718px
-        +breakpoint(1170px max-width)
-          min-width: 690px
-          width: 100%
-        +breakpoint(830px max-width)
-          min-width: inherit
-          width: 100%
-        +breakpoint($bp-mobile-480)
-          -moz-column-count: 2
-          -webkit-column-count: 2
-          column-count: 2
-          padding: 20px
-          width: 100%
-      li
-        line-height: 0
-        margin-bottom: 18px
-      a
-        color: $white
-        font-size: 18px
-        line-height: 1.2
+        position: absolute
+        z-index: 100
+
+        .menu
+          display: block
+          +background(linear-gradient(bottom, $red-light, #8f0000))
+          -moz-column-count: 3
+          -webkit-column-count: 3
+          column-count: 3
+          padding: $standard-padding
+          width: 718px
+          +breakpoint(1170px max-width)
+            min-width: 690px
+            width: 100%
+          +breakpoint(830px max-width)
+            min-width: inherit
+            width: 100%
+          +breakpoint($bp-mobile-480)
+            -moz-column-count: 2
+            -webkit-column-count: 2
+            column-count: 2
+            padding: 20px
+            width: 100%
+        li
+          line-height: 0
+          margin-bottom: 18px
+        a
+          color: $white
+          font-size: 18px
+          line-height: 1.2
+
+
+  .touch &
+    &.open
+      // Topics title
+      h2
+        +background(linear-gradient(bottom, #8e0000, $red-dark))
+        +icon-after("arrow-med-up", true)
+
+      // Menu pane
+      .content
+        display: block
+        position: absolute
+        z-index: 100
+
+        .menu
+          display: block
+          +background(linear-gradient(bottom, $red-light, #8f0000))
+          -moz-column-count: 3
+          -webkit-column-count: 3
+          column-count: 3
+          padding: $standard-padding
+          width: 718px
+          +breakpoint(1170px max-width)
+            min-width: 690px
+            width: 100%
+          +breakpoint(830px max-width)
+            min-width: inherit
+            width: 100%
+          +breakpoint($bp-mobile-480)
+            -moz-column-count: 2
+            -webkit-column-count: 2
+            column-count: 2
+            padding: 20px
+            width: 100%
+        li
+          line-height: 0
+          margin-bottom: 18px
+        a
+          color: $white
+          font-size: 18px
+          line-height: 1.2
