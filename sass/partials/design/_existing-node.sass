@@ -177,13 +177,6 @@
     +breakpoint($bp-mobile-480)
       margin-left: 0
 
-// Insights teaser outside of Insights section
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser
-  // Hide taxonomy outside of section
-  .field-name-field-key-taxonomy
-    display: none
-
 .pane-bundle-existing-node .node-idea-story.view-mode-teaser,
 .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser,
 .node-school-story.view-mode-teaser,
@@ -290,6 +283,14 @@
     a
       font-size: 16px
       line-height: 1.3
+
+body:not(.page-insights)
+  // Insights teaser outside of Insights section
+  .pane-bundle-existing-node .node-idea-story.view-mode-teaser,
+  .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser
+    // Hide taxonomy outside of section
+    .field-name-field-key-taxonomy
+      display: none
 
 // Offsite school story responsive
 .node-offsite-school-story.view-mode-teaser

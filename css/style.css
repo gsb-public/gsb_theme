@@ -8930,11 +8930,6 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-key-taxonomy,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-key-taxonomy {
-  display: none;
-}
-
 .pane-bundle-existing-node .node-idea-story.view-mode-teaser,
 .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser,
 .node-school-story.view-mode-teaser,
@@ -9233,6 +9228,11 @@ fieldset.collapsible .fieldset-legend {
 .node-announcement.view-mode-teaser .field-name-field-key-taxonomy a {
   font-size: 16px;
   line-height: 1.3;
+}
+
+body:not(.page-insights) .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-key-taxonomy,
+body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-key-taxonomy {
+  display: none;
 }
 
 @media (max-width: 39.625em) {
