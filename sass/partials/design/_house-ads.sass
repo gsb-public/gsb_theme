@@ -24,16 +24,19 @@
     max-width: 216px
     padding: 6px 8px
     position: absolute
+    +breakpoint(568px 321px)
+      .narrow-view &
+        margin-left: 52px
+        top: 26px
+      .page-insights .narrow-view &
+        margin-left: 26px
+        top: 0
     .page-insights &
       +breakpoint(610px max-width)
         font-size: 13px
         margin-bottom: 12px
         max-width: 100%
         position: relative
-    +breakpoint(568px 321px)
-      .narrow-view &
-        margin-left: 52px
-        top: 26px
 
   // Image
   .field-name-field-image-single-public
