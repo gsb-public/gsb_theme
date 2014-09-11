@@ -20,17 +20,12 @@
     margin-right: 0
     max-width: 100%
 
-  // Quote
+  // Callout text
   .field-name-field-description
     font-size: 26px
     line-height: 1.4
     +breakpoint($bp-mobile)
       font-size: 22px
-    &:before
-      content: "“"
-    &:after
-      content: "”"
-
   // Source
   .field-name-field-quote-author
     display: inline
@@ -42,3 +37,12 @@
     &:before
       content: "—"
       margin-right: 3px
+
+// Quation marks for quotes
+.file-resource-pull-quote.callout-quote
+  // Quote
+  .field-name-field-description
+    &:before
+      content: "“"
+    &:after
+      content: "”"
