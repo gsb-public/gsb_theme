@@ -98,16 +98,10 @@ h2.insights-label
         line-height: 1.5
         padding-left: 10px
 
-.page-insights
-  // Insights general styling
-  #banner
-    background: $text-black
-  #content-wrapper
-    background: $white
-  .insights-card-wrapper
-    background: #f4f4f4
-
-  // Insights landing title styling
+// Insights topic landings title styling
+.panels-layout-gsb-insights-a,
+.panels-layout-gsb-insights-b,
+.panels-layout-gsb-insights-c
   h1.title
     @extend %box-shadow
     background: $white
@@ -121,6 +115,15 @@ h2.insights-label
       margin-left: 20px
     +breakpoint(635px max-width)
       margin: 20px
+
+.page-insights
+  // Insights general styling
+  #banner
+    background: $text-black
+  #content-wrapper
+    background: $white
+  .insights-card-wrapper
+    background: #f4f4f4
 
 // Insights section title
 #block-gsb-public-custom-blocks-gpcb-insights
