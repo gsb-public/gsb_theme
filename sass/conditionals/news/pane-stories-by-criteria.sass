@@ -1,0 +1,45 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+.pane-news-by-criteria-panel-pane-1
+  @extend %box-shadow
+  background: $white
+  padding: 0 26px 14px
+
+  // Pane title
+  h2.pane-title
+    @extend %black-border-top
+    background: $white
+    display: block
+    color: $text-black
+    font-family: $font-demi
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: -10px
+    padding-top: 12px
+    position: relative
+    a
+      color: $text-black
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 14px
+        margin-left: 3px
+      &:hover
+        color: $link-blue
+        &:after
+          color: $teal-light
+
+  .pane-content
+    @extend %black-border-top
+    padding: 0 26px
+
+  .view-news-by-criteria
+    margin: 0 -52px
+
