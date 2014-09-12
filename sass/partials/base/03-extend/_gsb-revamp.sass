@@ -258,23 +258,31 @@
 
 // Resource body styles
 %resources-body
-  // Paragraph
+  +clearfix
+
+  // Intro paragraph
   p
     &:first-of-type
-      font-size: 20px
-      line-height: 1.4
+      font-size: 22px
+      line-height: 1.6
+
   // Blockquote
+  blockquote,
   blockquote p
     font-size: 18px !important
+    line-height: 1.4 !important
+    max-width: 560px
 
   // Headers
   h2, h3, h4
+    line-height: 1.2
     margin-bottom: 6px
-
   // Heading 2
   h2
+    font-family: $font-sans
     font-size: 22px
-    margin-top: 6px
+    font-weight: bold
+    margin-top: 30px 0 10px 0
   // Heading 3
   h3
     font-family: $font-sans

@@ -56,9 +56,6 @@
     padding-left: 35px
     +breakpoint(687px max-width)
       padding-left: 0
-    h1, h2, h3, h4, h5, h6,
-    p
-      max-width: 670px
 
   // Field styling
 
@@ -152,8 +149,9 @@
 
   // Body field
   .field-name-field-body
-    +clearfix
     @extend %resources-body
+    h2, h3, h4, h5, h6, blockquote, ul, li, p
+      max-width: 670px
 
   // Full taxonomy (bottom of page)
   .group-wrapper-taxonomy
@@ -440,14 +438,7 @@
     li
       display: inline-block
       vertical-align: top
-    // Facebook
-    .fb-share-button
-      top: -4px
-      left: -15px
-    // LinkedIn
-    .IN-widget
-      position: relative
-      left: -15px
+
 
   // Top social buttons
   .field-name-social-buttons-top

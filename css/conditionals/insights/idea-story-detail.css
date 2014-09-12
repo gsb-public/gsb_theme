@@ -18,19 +18,29 @@
   }
 }
 
-.node-idea-story.view-mode-full .field-name-field-body p:first-of-type {
-  font-size: 20px;
-  line-height: 1.4;
+.node-idea-story.view-mode-full .field-name-field-body {
+  overflow: hidden;
+  *zoom: 1;
 }
+.node-idea-story.view-mode-full .field-name-field-body p:first-of-type {
+  font-size: 22px;
+  line-height: 1.6;
+}
+.node-idea-story.view-mode-full .field-name-field-body blockquote,
 .node-idea-story.view-mode-full .field-name-field-body blockquote p {
   font-size: 18px !important;
+  line-height: 1.4 !important;
+  max-width: 560px;
 }
 .node-idea-story.view-mode-full .field-name-field-body h2, .node-idea-story.view-mode-full .field-name-field-body h3, .node-idea-story.view-mode-full .field-name-field-body h4 {
+  line-height: 1.2;
   margin-bottom: 6px;
 }
 .node-idea-story.view-mode-full .field-name-field-body h2 {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
-  margin-top: 6px;
+  font-weight: bold;
+  margin-top: 30px 0 10px 0;
 }
 .node-idea-story.view-mode-full .field-name-field-body h3 {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -105,10 +115,6 @@
   .node-idea-story.view-mode-full .field-name-field-body {
     padding-left: 0;
   }
-}
-.node-idea-story.view-mode-full .field-name-field-body h1, .node-idea-story.view-mode-full .field-name-field-body h2, .node-idea-story.view-mode-full .field-name-field-body h3, .node-idea-story.view-mode-full .field-name-field-body h4, .node-idea-story.view-mode-full .field-name-field-body h5, .node-idea-story.view-mode-full .field-name-field-body h6,
-.node-idea-story.view-mode-full .field-name-field-body p {
-  max-width: 670px;
 }
 .node-idea-story.view-mode-full .field-name-field-key-taxonomy {
   line-height: 0;
@@ -221,9 +227,8 @@
 .node-idea-story.view-mode-full .field-name-field-authors .odd:before {
   content: " and";
 }
-.node-idea-story.view-mode-full .field-name-field-body {
-  overflow: hidden;
-  *zoom: 1;
+.node-idea-story.view-mode-full .field-name-field-body h2, .node-idea-story.view-mode-full .field-name-field-body h3, .node-idea-story.view-mode-full .field-name-field-body h4, .node-idea-story.view-mode-full .field-name-field-body h5, .node-idea-story.view-mode-full .field-name-field-body h6, .node-idea-story.view-mode-full .field-name-field-body blockquote, .node-idea-story.view-mode-full .field-name-field-body ul, .node-idea-story.view-mode-full .field-name-field-body li, .node-idea-story.view-mode-full .field-name-field-body p {
+  max-width: 670px;
 }
 .node-idea-story.view-mode-full .group-wrapper-taxonomy {
   font-size: 14px;
@@ -587,16 +592,6 @@
 .node-idea-story.view-mode-full .field-name-social-buttons-bottom li {
   display: inline-block;
   vertical-align: top;
-}
-.node-idea-story.view-mode-full .field-name-social-buttons-top .fb-share-button,
-.node-idea-story.view-mode-full .field-name-social-buttons-bottom .fb-share-button {
-  top: -4px;
-  left: -15px;
-}
-.node-idea-story.view-mode-full .field-name-social-buttons-top .IN-widget,
-.node-idea-story.view-mode-full .field-name-social-buttons-bottom .IN-widget {
-  position: relative;
-  left: -15px;
 }
 .node-idea-story.view-mode-full .field-name-social-buttons-top {
   border-bottom: 1px #231f20 solid;
