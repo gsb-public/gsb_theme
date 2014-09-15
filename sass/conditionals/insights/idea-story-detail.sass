@@ -170,8 +170,17 @@
       font-weight: normal
       &:hover
         color: $link-blue
-    .taxonomy-category .separator
-      margin-right: 3px
+    .taxonomy-category
+      .separator
+        margin-right: 3px
+      .taxonomy-term
+        &:after
+          content: ","
+          margin-right: 3px
+        &:last-of-type
+          &:after
+            content: ""
+            margin-right: 0
 
   // Explore More section
   .explore-more-wrapper
