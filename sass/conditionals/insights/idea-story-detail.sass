@@ -448,25 +448,14 @@
       display: inline-block
       vertical-align: top
 
-
   // Top social buttons
   .field-name-social-buttons-top
     @extend %black-border-top-small
-    border-bottom: 1px $text-black solid
-    margin-bottom: 40px
-    margin-top: 20px
-    padding-top: 18px
-    padding-left: 35px
+    @extend %social-buttons-top
 
   // Bottom social buttons
   .field-name-social-buttons-bottom
-    display: inline-block
-    margin-bottom: 20px
-    margin-left: 35px
-    +breakpoint(687px max-width)
-      height: 22px
-      margin-left: 0
-      margin-bottom: 0
+    @extend %social-buttons-bottom
 
   // Share this short url
   .short-url-wrapper,
@@ -475,21 +464,7 @@
 
   // Wrapper
   .short-url-wrapper
-    border-left: 1px solid #d3d3d3
-    line-height: 3.2
-    height: 45px
-    margin-left: 10px
-    padding-left: 20px
-    +breakpoint(687px max-width)
-      border-left: 0
-      display: block
-      margin-left: 0
-      margin-bottom: 36px
-      padding-left: 0
+    @extend %short-url-wrapper
 
   .short-url
-    border: 1px #d3d3d3 solid
-    color: $text-green
-    line-height: 1.2
-    margin-left: 8px
-    padding: 8px
+    @extend %short-url
