@@ -309,23 +309,26 @@
 
 // Insights layout B
 .gsb-insights-b
-  +clearfix
+  // Wrapper for main and sidebar
+  .insights-card-wrapper
+    +clearfix
+  // Main wrapper
   .insights-main-wrapper
     float: left
     margin-right: -320px
     padding-right: 270px
-    width: 100%
     +breakpoint(1210px max-width)
       margin-right: 0
       padding-right: 0
     +breakpoint($bp-mobile-max)
       float: none
       margin: 0
+
+  // Right sidebar
   .insights-sidebar-wrapper
     float: right
-    +breakpoint(1210px max-width)
+    +breakpoint(1169px max-width)
       float: left
-      margin-right: 30px
     +breakpoint($bp-mobile-max)
       float: none
       width: 100%
@@ -335,24 +338,34 @@
     .panels-ipe-editing &
       margin-bottom: 0
 
+  .wide-view
+    max-width: $wide-view
+    min-width: $wide-view
+    +breakpoint(609px max-width)
+      max-width: 100%
+      min-width: 100%
+    .panels-ipe-editing &
+      width: $wide-view
+
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
     +breakpoint(609px max-width)
       max-width: 100%
+      min-width: 100%
     .panels-ipe-editing &
       width: $narrow-view
-  .wide-view
-    max-width: $wide-view
-    +breakpoint(609px max-width)
-      max-width: 100%
-    .panels-ipe-editing &
-      width: $wide-view
+
   .first,
   .second
     margin-right: 30px
     +breakpoint(609px max-width)
       margin-right: 0
+
+  .column
+    float: left
+    +breakpoint(609px max-width)
+      float: none
 
   .full-header,
   .wide-narrow-narrow,
@@ -376,34 +389,32 @@
       +breakpoint(609px max-width)
         margin-right: 0
 
-  .column
-    float: left
-    +breakpoint(609px max-width)
-      float: none
-
 // Insights layout C
 .gsb-insights-c
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
-    +breakpoint(895px max-width)
-      max-width: 290px
     +breakpoint(609px max-width)
       max-width: 100%
     .panels-ipe-editing &
       width: $narrow-view
   .wide-view
     max-width: $wide-view
-    +breakpoint(609px max-width)
+    min-width: $wide-view
+    +breakpoint($max-width max-width)
+      margin-right: 0
+      max-width: 48%
+      min-width: inherit
+    +breakpoint(899px max-width)
       max-width: 100%
+      min-width: 100%
     .panels-ipe-editing &
       width: $wide-view
-  .first
-    margin-right: 30px
-    +breakpoint(939px max-width)
-      margin-right: 15px
-    +breakpoint(609px max-width)
-      margin-right: 0
+
+  .second.wide-view
+    +breakpoint($max-width max-width)
+      float: right
+
   .full-header,
   .wide-wide,
   .narrow-narrow-narrow-narrow
@@ -413,16 +424,21 @@
       margin-top: 1px
     .panels-ipe-editing &
       margin-bottom: 0
+  .wide-wide
+    .column.first
+      +breakpoint($max-width min-width)
+        margin-right: 30px
   .narrow-narrow-narrow-narrow
+    .first,
     .second,
     .third
       margin-right: 30px
-      +breakpoint(939px max-width)
-        margin-right: 15px
+    .first,
+    .third
       +breakpoint(609px max-width)
         margin-right: 0
     .second
-      +breakpoint(895px max-width)
+      +breakpoint(899px max-width)
         margin-right: 0
   .column
     float: left

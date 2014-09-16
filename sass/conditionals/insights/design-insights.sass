@@ -238,7 +238,7 @@ h2.insights-label
       &:hover
         background-position: center -27px
 
-// Topic landing page
+// Topic landing pages
 .panels-layout-gsb-insights-a,
 .panels-layout-gsb-insights-b,
 .panels-layout-gsb-insights-c
@@ -281,8 +281,10 @@ h2.insights-label
     +breakpoint($bp-mobile-max)
       padding: 0
 
-// Layout A
-.panels-layout-gsb-insights-a
+// Layout A and C
+.panels-layout-gsb-insights-a,
+.panels-layout-gsb-insights-b,
+.panels-layout-gsb-insights-c
   .insights-card-wrapper
     +breakpoint($max-width max-width)
       padding: 0 20px
@@ -291,5 +293,6 @@ h2.insights-label
 
   .insights-main-wrapper
     +breakpoint(899px max-width)
+      float: none
       max-width: 570px
       margin: 0 auto
