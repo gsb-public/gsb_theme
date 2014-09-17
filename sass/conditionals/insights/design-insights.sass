@@ -18,6 +18,11 @@ h2.insights-label
   padding: 6px 8px
   position: absolute
 
+// Landing page does not have title
+.page-node-368466
+  .panel-display
+    padding-top: 40px
+
 // Insights section styling
 .page-insights
 
@@ -110,8 +115,12 @@ h2.insights-label
     font-size: 38px
     font-weight: normal
     line-height: 1
+    margin: 40px 0
     padding: 18px 18px 16px
-    margin-top: 30px
+    +breakpoint($max-width max-width)
+      margin-left: 20px
+    +breakpoint(635px max-width)
+      margin: 20px
 
 // Insights section title
 #block-gsb-public-custom-blocks-gpcb-insights
@@ -290,6 +299,7 @@ h2.insights-label
       padding: 0 20px
     +breakpoint($bp-mobile-max)
       padding: 20px
+      padding-top: 0
 
   .insights-main-wrapper
     +breakpoint(899px max-width)
