@@ -2,7 +2,7 @@
 // Plugin definition
 $plugin = array(
   'title' => t('GSB Insights A'),
-  'icon' => 'gsb-insights-a.png',
+  'icon' => 'gsb-insights-a.jpg',
   'category' => t('GSB'),
   'theme' => 'gsb-insights-a',
   'css' => 'gsb-insights-a.css',
