@@ -7,4 +7,60 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Video resource
+// Video resource scaling
+.file-resource_youtube--full_width
+  .resource-youtube-video
+    height: 0
+    position: relative
+    padding-bottom: 56.25%
+    padding-top: 25px
+    top: 0
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+// Full
+.file-resource_youtube--full_width
+  max-width: 670px
+
+// Half and third
+.file-resource_youtube--1_2_width,
+.file-resource_youtube--1_3_width
+  @extend %insights-resource-right
+
+// Half
+.file-resource_youtube--1_2_width
+  max-width: 408px
+  +breakpoint(780px max-width)
+    float: none
+    margin-left: 0
+    max-width: 100%
+    text-align: center
+    .resource-youtube-video
+      height: 0
+      position: relative
+      padding-bottom: 56.25%
+      padding-top: 25px
+      top: 0
+      iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+// Third
+.file-resource_youtube--1_3_width
+  max-width: 270px
+  a
+    border-bottom: none
+    &:hover
+      border-bottom: none
+  +breakpoint(640px max-width)
+    float: none
+    margin-left: 0
+    max-width: 100%
+    text-align: center
