@@ -329,6 +329,9 @@
     float: right
     +breakpoint(1169px max-width)
       float: left
+      width: 100%
+    +breakpoint(899px max-width)
+      max-width: 570px
     +breakpoint($bp-mobile-max)
       float: none
       width: 100%
@@ -381,6 +384,11 @@
   .narrow-wide
     .second
       +layout-alpha-beta-gamma
+
+  .wide-narrow-narrow
+    .second
+      +breakpoint(999px max-width)
+        margin-right: 0
 
   .narrow-narrow-narrow-narrow
     clear: both

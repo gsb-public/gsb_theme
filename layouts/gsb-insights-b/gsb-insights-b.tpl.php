@@ -54,8 +54,10 @@
     </div><!-- /.insights-main-wrapper -->
 
     <?php if ($content['contenttwothree']): ?>
-      <div class="insights-sidebar-wrapper narrow-view">
-        <?php print $content['contenttwothree']; ?>
+      <div class="insights-sidebar-wrapper">
+        <div class="column narrow-view">
+          <?php print $content['contenttwothree']; ?>
+        </div>
       </div>
     <?php endif; ?>
 
