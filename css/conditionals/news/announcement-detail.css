@@ -1,5 +1,35 @@
+.node-announcement.view-mode-full .media-toolkit {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.node-announcement.view-mode-full .media-toolkit {
+  border: 2px white solid;
+}
+
 .node-announcement.view-mode-full .group-left .field-name-social-buttons-top {
   border-top: 3px #231f20 solid;
+}
+
+.node-announcement.view-mode-full .media-toolkit {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 0 1px 1px 1px;
+}
+@media (max-width: 35.5em) {
+  .node-announcement.view-mode-full .media-toolkit {
+    margin-top: 1px;
+  }
+}
+
+.ie8 .node-announcement.view-mode-full .media-toolkit, .node-announcement.view-mode-full .ie8 .media-toolkit {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .node-announcement.view-mode-full .group-left .field-name-field-body {
@@ -233,6 +263,54 @@
 .node-announcement.view-mode-full .group-left .short-url-wrapper,
 .node-announcement.view-mode-full .group-left .short-url {
   display: inline-block;
+}
+.node-announcement.view-mode-full .media-toolkit {
+  padding: 0 26px 12px;
+  margin-bottom: 30px;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-title {
+  color: #231f20;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 18px 0 11px;
+  line-height: 1.3;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item {
+  border-top: 1px solid #e4e4e4;
+  line-height: 1;
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item a {
+  padding-right: 10px;
+  color: #636f00;
+  line-height: 1.3;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item a[target=_blank]:after {
+  content: "\f102";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item a[target=_blank]:after {
+  content: "\f102";
+  font-size: 10px;
+  margin-left: 3px;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item a[target=_blank][href$=".pdf"]:after {
+  font-size: 12px;
+}
+.node-announcement.view-mode-full .media-toolkit .field-name-field-link-unlimited .field-item a:hover {
+  color: #2d6280;
 }
 @media (max-width: 43.75em) {
   .node-announcement.view-mode-full .group-wrapper-related legend {

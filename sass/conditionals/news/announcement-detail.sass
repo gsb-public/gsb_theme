@@ -5,7 +5,9 @@
 @import breakpoint
 @import ../../../fonts/icons/icons
 @import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
+
 
 // Announcement detail page
 
@@ -54,8 +56,8 @@
     margin-bottom: 12px
 
   .group-left
-    // Media icons
 
+    // Media icons
     // Video
     .media-icon.Video
       margin-right: 8px
@@ -140,6 +142,11 @@
 
     .short-url
       @extend %short-url
+
+  // Media toolkit
+  .media-toolkit
+    +container-green-links
+    margin-bottom: 30px
 
   // Related content
   .group-wrapper-related
