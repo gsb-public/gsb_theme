@@ -13,16 +13,6 @@
 .node-type-school-story
   #page-title
     display: none
-    +breakpoint($bp-mobile-max)
-      display: block
-      font-family: $font-sans
-      font-size: 28px
-      font-weight: bold
-      line-height: 1
-      padding-bottom: 17px
-  .field-name-title
-    +breakpoint($bp-mobile-max)
-      display: none
 
 .node-school-story.view-mode-full
 
@@ -54,8 +44,8 @@
     margin-bottom: 12px
 
   .group-left
-    // Media icons
 
+    // Media icons
     // Video
     .media-icon.Video
       margin-right: 8px
@@ -140,6 +130,10 @@
 
     .short-url
       @extend %short-url
+
+  // Red CTA links
+  .featured-links
+    margin-bottom: 30px
 
   // Related content
   .group-wrapper-related
