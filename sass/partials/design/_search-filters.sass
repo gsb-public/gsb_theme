@@ -178,7 +178,6 @@
       border-color: $input-border
       margin-bottom: 20px
 
-
 .page-gsearch
   .search-form
     .form-item
@@ -208,6 +207,48 @@
         +background(image_url("search-white.png") no-repeat 11px 11px, $red)
         &:hover
           +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
+
+// Insights search
+#views-exposed-form-insights-search-insights-search-results
+  +clearfix
+  margin-bottom: 22px
+  max-width: 468px
+  // Wrapper
+  .form-item-term
+    float: left
+    margin: 0 -40px 0 0
+    padding-right: 40px
+    width: 100%
+
+  // Text field
+  .form-text
+    background-color: $white
+    border-color: #d3d3d3
+    height: 40px
+    padding-left: 0.6em
+    width: 100%
+
+  .form-submit
+    text-indent: 1000px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    border: none
+    width: 40px
+    height: 40px
+    .svg &
+      +background(image_url("search-white.svg") no-repeat 60% 47%, $red)
+      background-size: 60px
+      &:hover
+        +background(image_url("search-white.svg") no-repeat 60% 47%, $link-blue)
+        background-size: 60px
+    .no-js &, .no-svg &
+      +background(image_url("search-white.png") no-repeat 11px 11px, $red)
+      &:hover
+        +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
 ///////////////////
 // Search filters
