@@ -147,7 +147,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // Ranking listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-ranking-listing-ranking-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by publication or date');
+    $form['search']['#attributes']['placeholder'] = t('search by publication, date, or other keyword');
   }
   // Faculty insights listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing') {
