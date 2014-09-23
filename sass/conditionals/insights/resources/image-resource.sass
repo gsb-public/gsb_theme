@@ -9,7 +9,6 @@
 
 // Image resource
 .file-resource-image
-  margin-bottom: 4em
 
 // Full
 .file-resource_image--full_width
@@ -41,9 +40,8 @@
   color: #595959
   font-size: 14px
   line-height: 1.2
-  margin-top: 8px
+  margin-top: 12px
   max-width: 650px
-  position: absolute
 
 // Infographic expand
 .file-resource-image figure
@@ -51,16 +49,14 @@
   position: relative
 
 .image-enlarge-bar
-  background: rgba($black, 0.8)
-  bottom: -1px
+  background: $black
   display: block
-  height: 85px
-  position: absolute
+  height: 60px
   width: 100%
 
 body a.image-enlarge-button
   float: right
-  margin: 26px
+  margin: 12px 26px
   @extend %green-button
   +icon-after("arrow-external", true)
   &:after
