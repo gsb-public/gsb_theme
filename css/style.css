@@ -3177,6 +3177,113 @@ a.no-border:hover {
   background-color: rgba(170, 196, 191, 0.3);
 }
 
+.sharrre {
+  float: none;
+  margin: 0;
+}
+.sharrre .count {
+  background: none;
+  border: 0;
+  color: #7d9395;
+  display: inline-block;
+  float: right;
+  font-weight: normal;
+  margin-left: 5px;
+  text-align: left;
+  width: inherit;
+}
+.sharrre .count:after, .sharrre .count:before {
+  border: none;
+  content: "";
+  margin-left: 0;
+}
+.sharrre .share {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: black;
+  border: 0;
+  box-shadow: none;
+  color: white;
+  display: inline-block;
+  font-weight: normal;
+  height: 44px;
+  margin-top: 0;
+  text-shadow: none;
+  width: 44px;
+}
+
+.sharrre-twitter .share:after,
+.sharrre-facebook .share:after,
+.sharrre-linkedin .share:after,
+.sharrre-googleplus .share:after {
+  color: white;
+}
+
+.sharrre-twitter .share:before {
+  content: "\f121";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+
+.sharrre-facebook .share:before {
+  content: "\f113";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+
+.sharrre-linkedin .share:before {
+  content: "\f114";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+
+.sharrre-googleplus .share:before {
+  content: "";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+
 .pane-bundle-links .black-bar .field-name-field-title {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;

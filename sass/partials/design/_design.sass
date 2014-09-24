@@ -451,3 +451,66 @@ a.no-border
       line-height: 1.2
       &:target
         background-color: rgba($teal-light, 0.3)
+
+// Sharrre social buttons
+.sharrre
+  float: none
+  margin: 0
+
+  // Wrapper
+  .box
+
+  // Counter
+  .count
+    background: none
+    border: 0
+    color: #7d9395
+    display: inline-block
+    float: right
+    font-weight: normal
+    margin-left: 5px
+    text-align: left
+    width: inherit
+    &:after,
+    &:before
+      border: none
+      content: ""
+      margin-left: 0
+
+  // Button
+  .share
+    +border-radius(50%)
+    background: $black
+    border: 0
+    box-shadow: none
+    color: $white
+    display: inline-block
+    font-weight: normal
+    height: 44px
+    margin-top: 0
+    text-shadow: none
+    width: 44px
+
+.sharrre-twitter,
+.sharrre-facebook,
+.sharrre-linkedin,
+.sharrre-googleplus
+  .share
+    &:after
+      color: $white
+
+// Twitter
+.sharrre-twitter .share
+  +icon-before("twitter", true)
+
+// Facebook
+.sharrre-facebook .share
+  +icon-before("facebook", true)
+
+// Linkedin
+.sharrre-linkedin .share
+  +icon-before("linkedin", true)
+
+// Google Plus
+.sharrre-googleplus .share
+  +icon-before("googleplus", true)
