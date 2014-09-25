@@ -75,43 +75,30 @@
   border-bottom: 1px #231f20 solid;
   margin-bottom: 40px;
   margin-top: 20px;
-  padding-top: 18px;
-  padding-left: 35px;
+  padding: 18px 0 12px;
+  padding-left: 12px;
 }
 
 .node-announcement.view-mode-full .group-left .field-name-social-buttons-bottom {
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-left: 35px;
+  margin-top: 50px;
 }
 @media (max-width: 42.9375em) {
   .node-announcement.view-mode-full .group-left .field-name-social-buttons-bottom {
-    height: 22px;
-    margin-left: 0;
+    display: block;
     margin-bottom: 0;
   }
 }
 
 .node-announcement.view-mode-full .group-left .short-url-wrapper {
-  border-left: 1px solid lightgray;
   line-height: 3.2;
-  height: 45px;
-  margin-left: 10px;
-  padding-left: 20px;
-}
-@media (max-width: 42.9375em) {
-  .node-announcement.view-mode-full .group-left .short-url-wrapper {
-    border-left: 0;
-    display: block;
-    margin-left: 0;
-    margin-bottom: 36px;
-    padding-left: 0;
-  }
+  margin-bottom: 36px;
 }
 
 .node-announcement.view-mode-full .group-left .short-url {
+  background: white;
   border: 1px lightgray solid;
   color: #636f00;
+  display: inline-block;
   line-height: 1.2;
   margin-left: 8px;
   padding: 8px;
@@ -236,6 +223,10 @@
   line-height: 1.2;
   margin-bottom: 26px;
 }
+.node-announcement.view-mode-full .group-left .field-name-social-buttons-top .item-list ul,
+.node-announcement.view-mode-full .group-left .field-name-social-buttons-bottom .item-list ul {
+  margin: 0;
+}
 .node-announcement.view-mode-full .group-left .field-name-social-buttons-top .item-list ul li,
 .node-announcement.view-mode-full .group-left .field-name-social-buttons-bottom .item-list ul li {
   margin: 0;
@@ -244,10 +235,6 @@
 .node-announcement.view-mode-full .group-left .field-name-social-buttons-bottom li {
   display: inline-block;
   vertical-align: top;
-}
-.node-announcement.view-mode-full .group-left .short-url-wrapper,
-.node-announcement.view-mode-full .group-left .short-url {
-  display: inline-block;
 }
 .node-announcement.view-mode-full .media-toolkit {
   padding: 0 26px 12px;

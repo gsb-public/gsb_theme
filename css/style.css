@@ -3177,49 +3177,6 @@ a.no-border:hover {
   background-color: rgba(170, 196, 191, 0.3);
 }
 
-.sharrre {
-  float: none;
-  margin: 0;
-}
-.sharrre .count {
-  background: none;
-  border: 0;
-  color: #7d9395;
-  display: inline-block;
-  float: right;
-  font-weight: normal;
-  margin-left: 5px;
-  text-align: left;
-  width: inherit;
-}
-.sharrre .count:after, .sharrre .count:before {
-  border: none;
-  content: "";
-  margin-left: 0;
-}
-.sharrre .share {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: black;
-  border: 0;
-  box-shadow: none;
-  color: white;
-  display: inline-block;
-  font-weight: normal;
-  height: 44px;
-  margin-top: 0;
-  text-shadow: none;
-  width: 44px;
-}
-
-.sharrre-twitter .share:after,
-.sharrre-facebook .share:after,
-.sharrre-linkedin .share:after,
-.sharrre-googleplus .share:after {
-  color: white;
-}
-
 .sharrre-twitter .share:before {
   content: "\f121";
   display: inline-block;
@@ -3269,7 +3226,7 @@ a.no-border:hover {
 }
 
 .sharrre-googleplus .share:before {
-  content: "";
+  content: "\f125";
   display: inline-block;
   speak: none;
   text-rendering: optimizeLegibility;
@@ -3282,6 +3239,66 @@ a.no-border:hover {
   font-variant: normal;
   font-weight: normal;
   font-family: 'icons';
+}
+
+.sharrre {
+  overflow: hidden;
+  *zoom: 1;
+  margin-right: 12px;
+}
+.sharrre .share {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+}
+.sharrre .share span {
+  visibility: hidden;
+}
+.sharrre .share:hover {
+  background: #8aa8a2;
+}
+.sharrre .count {
+  color: #7d9395;
+  display: inline-block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  float: right;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.sharrre .count:hover {
+  text-decoration: none;
+}
+
+.field-name-social-buttons-top .sharrre .share {
+  height: 44px;
+  width: 44px;
+}
+.field-name-social-buttons-top .sharrre .share:before {
+  font-size: 22px;
+  position: relative;
+  top: 14px;
+}
+.field-name-social-buttons-top .sharrre .count {
+  font-size: 18px;
+}
+
+.field-name-social-buttons-bottom .sharrre .share {
+  height: 30px;
+  width: 30px;
+}
+.field-name-social-buttons-bottom .sharrre .share:before {
+  font-size: 12px;
+  position: relative;
+  top: 3px;
+}
+.field-name-social-buttons-bottom .sharrre .count {
+  font-size: 16px;
 }
 
 .pane-bundle-links .black-bar .field-name-field-title {

@@ -453,51 +453,6 @@ a.no-border
         background-color: rgba($teal-light, 0.3)
 
 // Sharrre social buttons
-.sharrre
-  float: none
-  margin: 0
-
-  // Wrapper
-  .box
-
-  // Counter
-  .count
-    background: none
-    border: 0
-    color: #7d9395
-    display: inline-block
-    float: right
-    font-weight: normal
-    margin-left: 5px
-    text-align: left
-    width: inherit
-    &:after,
-    &:before
-      border: none
-      content: ""
-      margin-left: 0
-
-  // Button
-  .share
-    +border-radius(50%)
-    background: $black
-    border: 0
-    box-shadow: none
-    color: $white
-    display: inline-block
-    font-weight: normal
-    height: 44px
-    margin-top: 0
-    text-shadow: none
-    width: 44px
-
-.sharrre-twitter,
-.sharrre-facebook,
-.sharrre-linkedin,
-.sharrre-googleplus
-  .share
-    &:after
-      color: $white
 
 // Twitter
 .sharrre-twitter .share
@@ -513,4 +468,61 @@ a.no-border
 
 // Google Plus
 .sharrre-googleplus .share
-  +icon-before("googleplus", true)
+  +icon-before("google-plus", true)
+
+.sharrre
+  +clearfix
+  margin-right: 12px
+
+  // Button
+  .share
+    +border-radius(50%)
+    background: $black
+    color: $white
+    display: inline-block
+    font-weight: normal
+    text-align: center
+    span
+      visibility: hidden
+    &:hover
+      background: #8aa8a2
+
+  // Counter
+  .count
+    color: #7d9395
+    display: inline-block
+    font-family: $font-demi
+    font-weight: normal
+    float: right
+    font-weight: normal
+    margin-left: 5px
+    &:hover
+      text-decoration: none
+
+// Top social buttons
+.field-name-social-buttons-top .sharrre
+  .share
+    height: 44px
+    width: 44px
+    &:before
+      font-size: 22px
+      position: relative
+      top: 14px
+
+  // Counter
+  .count
+    font-size: 18px
+
+// Bottom social buttons
+.field-name-social-buttons-bottom .sharrre
+  .share
+    height: 30px
+    width: 30px
+    &:before
+      font-size: 12px
+      position: relative
+      top: 3px
+
+  // Counter
+  .count
+    font-size: 16px

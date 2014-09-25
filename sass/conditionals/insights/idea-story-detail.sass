@@ -432,8 +432,10 @@
   // Social media buttons
   .field-name-social-buttons-top,
   .field-name-social-buttons-bottom
-    .item-list ul li
+    .item-list ul
       margin: 0
+      li
+        margin: 0
     li
       display: inline-block
       vertical-align: top
@@ -442,19 +444,33 @@
   .field-name-social-buttons-top
     @extend %black-border-top-small
     @extend %social-buttons-top
+    padding-left: 35px
+    +breakpoint(687px max-width)
+      padding-left: 0
 
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
+    display: inline-block
+    margin-left: 35px
+    margin-top: 0
+    +breakpoint(687px max-width)
+      margin-left: 0
 
   // Share this short url
-  .short-url-wrapper,
-  .short-url
-    display: inline-block
-
   // Wrapper
   .short-url-wrapper
     @extend %short-url-wrapper
+    border-left: 1px solid #d3d3d3
+    display: inline-block
+    line-height: 3.2
+    margin-left: 10px
+    padding-left: 20px
+    +breakpoint(687px max-width)
+      border-left: 0
+      display: block
+      margin-left: 0
+      padding-left: 0
 
   .short-url
     @extend %short-url
