@@ -301,6 +301,8 @@ $faculty-spacing: 24px
   .group-wrapper-affiliation,
   .field-name-field-service-profession-section,
   .view-display-id-media_mention_listing_entity_view,
+  .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1,
+  .view-id-gsb_school_news.view-display-id-entity_view_1,
   .group-publications,
   .group-wrapper-research,
   .group-wrapper-academic
@@ -414,11 +416,10 @@ $faculty-spacing: 24px
   .view-display-id-case_listing_entity_view,
   .view-display-id-entity_view_1,
   .view-id-gsb_publications_listing,
-  .view-display-id-media_mention_listing_entity_view
+  .view-display-id-media_mention_listing_entity_view,
+  .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1,
+  .view-id-gsb_school_news.view-display-id-entity_view_1
     margin-bottom: $faculty-spacing
-    // Section title
-    h2
-      @extend %header-small
     .views-row
       line-height: 0
       margin-bottom: 6px
@@ -442,19 +443,31 @@ $faculty-spacing: 24px
       @extend %doc-attached-icons
       font-size: 12px
 
+  // EVA: Publications smaller headers
+  .view-display-id-entity_view_1,
+  .view-id-gsb_publications_listing
+    // Section title
+    h2
+      @extend %header-small
+
   // EVA: Working papers, case, media item use large header
   .view-display-id-case_listing_entity_view,
-  .view-display-id-media_mention_listing_entity_view
+  .view-display-id-media_mention_listing_entity_view,
+  .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1,
+  .view-id-gsb_school_news.view-display-id-entity_view_1
     // Section title
     h2.title
       @extend %header-large
 
   // EVA: Media item icons
-  .view-display-id-media_mention_listing_entity_view
+  .view-display-id-media_mention_listing_entity_view,
+  .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1,
+  .view-id-gsb_school_news.view-display-id-entity_view_1
     +clearfix
     .views-field-title
       display: block
     .audio,
+    .infographic,
     .video
       color: $blue
       font-size: 14px
@@ -466,6 +479,11 @@ $faculty-spacing: 24px
       margin-right: 4px
       margin-top: -1px
       +icon-before("video", true)
+    .infographic
+      margin-right: 4px
+      margin-top: -1px
+      &:before
+        content: "Infographic:"
 
   // EVA: Working papers, case year styling
   .view-display-id-case_listing_entity_view
