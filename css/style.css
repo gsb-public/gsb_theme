@@ -942,6 +942,18 @@ body {
   text-shadow: none;
 }
 
+.selectionShareable::-moz-selection {
+  color: #231f20;
+  background: #aac4bf;
+  text-shadow: none;
+}
+
+.selectionShareable::selection {
+  color: #231f20;
+  background: #aac4bf;
+  text-shadow: none;
+}
+
 a {
   color: #990000;
   text-decoration: none;
@@ -3299,6 +3311,16 @@ a.no-border:hover {
 }
 .field-name-social-buttons-bottom .sharrre .count {
   font-size: 16px;
+}
+
+.selectionShareable {
+  display: inline-block;
+}
+
+#selectionSharerPopover-inner {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
 }
 
 .pane-bundle-links .black-bar .field-name-field-title {

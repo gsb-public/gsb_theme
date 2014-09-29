@@ -37,7 +37,7 @@ body
   html
     font-size: 12.8px
 
-// Selected Text
+// Selected Text - regular
 // -moz- must be declared separately
 
 \::-moz-selection
@@ -48,6 +48,17 @@ body
 \::selection
   color: $white
   background: $text-blue
+  text-shadow: none
+
+// Selected Text - sharable
+.selectionShareable::-moz-selection
+  color: $text-black
+  background: $teal-light
+  text-shadow: none
+
+.selectionShareable::selection
+  color: $text-black
+  background: $teal-light
   text-shadow: none
 
 
