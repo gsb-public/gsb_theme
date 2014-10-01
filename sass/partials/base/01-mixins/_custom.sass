@@ -109,20 +109,14 @@
 =layout-alpha-beta-gamma
   +clearfix
   max-width: $wide-view
-  +breakpoint(609px max-width)
-    max-width: 100%
   .narrow-view
     float: left
-    +breakpoint(634px max-width)
+    +breakpoint(1170px max-width)
       float: none
       margin: 0 auto
-    +breakpoint(609px max-width)
-      float: none
   .beta
     margin-right: 30px
-    // +breakpoint(939px max-width)
-    //   margin-right: 15px
-    +breakpoint(634px max-width)
+    +breakpoint(1170px max-width)
       margin: 0 auto
 
 // Container style with green links
