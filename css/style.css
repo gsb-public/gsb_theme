@@ -2359,6 +2359,15 @@ div.label-inline {
   float: none;
   width: 100%;
 }
+@media (max-width: 73.125em) {
+  .page-insights .wide-view .pane-bundle-video .ds-2col .group-left, .page-insights .wide-view
+  .pane-bundle-video .ds-2col .group-right, .page-insights .wide-view
+  .pane-bundle-house-ads .ds-2col .group-left, .page-insights .wide-view
+  .pane-bundle-house-ads .ds-2col .group-right {
+    float: none;
+    width: 100%;
+  }
+}
 
 .pane-bundle-spotlight .ds-2col-stacked .group-left {
   width: 58%;
@@ -5516,12 +5525,12 @@ ul.slideshow-items {
 .pane-bundle-house-ads .field-name-field-house-ads-superhead {
   background: #231f20;
   color: white;
+  display: inline-block;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.2;
   margin: 0 26px;
-  max-width: 216px;
   padding: 6px 8px;
   position: absolute;
 }
@@ -5675,6 +5684,32 @@ ul.slideshow-items {
   .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public {
     margin: 0 -26px 12px -26px;
     padding-top: 0;
+  }
+}
+
+@media (max-width: 73.125em) {
+  .page-insights .wide-view .pane-bundle-house-ads {
+    padding: 0;
+    padding-bottom: 26px;
+  }
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-body {
+    padding: 0 26px;
+  }
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-body {
+    clear: both;
+  }
+  .page-insights .wide-view .pane-bundle-house-ads .show-more {
+    padding-right: 26px;
+  }
+}
+@media (max-width: 73.125em) and (max-width: 35.5em) {
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .page-insights .wide-view .pane-bundle-house-ads .field-name-field-body {
+    clear: none;
   }
 }
 
