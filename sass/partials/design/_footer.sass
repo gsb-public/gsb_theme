@@ -4,61 +4,12 @@
 
 #footer
   .region-footer
+    +clearfix
     padding-top: 35px
     position: relative
     top: 0
     +breakpoint($bp-mobile-max)
       padding-top: 15px
-
-// Footer columns
-#block-gsb-public-custom-blocks-gpcb-follow-us,
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-2,
-#block-gsb-public-custom-blocks-gpcb-enews-signup
-  display: inline-block
-  margin-right: 15px
-  vertical-align: top
-  width: 256px
-  +breakpoint(1024px min-width)
-    margin-right: 30px
-    width: 270px
-  +breakpoint($bp-tablet-port-max)
-    margin-right: 16px
-    width: 165px
-  +breakpoint($bp-mobile-max)
-    width: 100%
-
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-2
-  +breakpoint($bp-tablet-land-max)
-    width: 100%
-    max-width: 165px
-  +breakpoint(601px 767px)
-    max-width: 81px
-
-#block-gsb-public-custom-blocks-gpcb-enews-signup
-  margin-right: 0
-  +breakpoint($bp-tablet-port-max)
-    margin-bottom: 24px
-  +breakpoint($bp-tablet-port)
-    width: 171px
-
-// General footer menu styles
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-2
-  a
-    display: block
-    font-weight: bold
-    line-height: 1.3
-    max-width: 200px
-    text-transform: uppercase
-    +breakpoint(895px max-width)
-      font-size: 13px
-  li
-    margin-bottom: 20px
-    &:last-of-type
-      a
-        margin-bottom: 0
 
 #footer-wrapper
   border-top: 1px solid $white
@@ -67,15 +18,28 @@
     background: $white
     border-top: 0
 
+// Footer columns
+#block-gsb-public-custom-blocks-gpcb-follow-us,
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2,
+#block-gsb-public-custom-blocks-gpcb-enews-signup
 
 // Follow us block
 #block-gsb-public-custom-blocks-gpcb-follow-us
-  margin-right: 15px
+  clear: none
+  float: left
+  margin-right: -100%
+  width: 23.077%
   +breakpoint($bp-mobile-max)
+    float: none
+    margin: 0
+    margin-bottom: 30px
+    width: 100%
     border-bottom: 1px $grey-c solid
     margin-bottom: 12px
     padding-bottom: 12px
     margin-right: 0
+
   // Title
   h2
     border-bottom: 1px solid $grey-c
@@ -100,8 +64,56 @@
   .icon-wrapper
     display: block
     max-width: 220px
+  .circle
+    +breakpoint(768px max-width)
+      width: 30px
+      height: 30px
+  // Social icons
+  .social-block-twitter,
+  .social-block-youtube,
+  .social-block-linkedin,
+  .social-block-facebook
+    &:after
+      +breakpoint(768px max-width)
+        font-size: 16px
 
-// NEWSLETTER SIGNUP
+// General footer menu styles
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2
+  width: 23.077%
+  a
+    font-weight: bold
+    line-height: 1.3
+    text-transform: uppercase
+    +breakpoint(895px max-width)
+      font-size: 13px
+  li
+    margin-bottom: 20px
+    &:last-of-type
+      a
+        margin-bottom: 0
+
+#block-menu-menu-footer-1
+  clear: none
+  float: left
+  margin-left: 28.07692%
+  margin-right: -100%
+
+#block-menu-menu-footer-2
+  clear: none
+  float: left
+  margin-bottom: 30px
+  margin-left: 51.28205%
+  margin-right: 0
+
+// Email sign up
+#block-gsb-public-custom-blocks-gpcb-enews-signup
+  clear: right
+  float: none
+  margin-left: 76.92308%
+  margin-right: 0
+  width: 23.077%
+
 .footer__signup__label
   font-weight: bold
   font-size: 16px
@@ -113,8 +125,6 @@
   line-height: 1.2
   width: 185px
   margin-bottom: 20px
-  +breakpoint($bp-mobile-max)
-    width: 295px
 
 input.footer__signup__email
   border: 1px $input-border solid
@@ -125,10 +135,6 @@ input.footer__signup__email
   line-height: 1
   width: 160px
   padding-left: 7px
-  +breakpoint($bp-tablet-port)
-    width: 130px
-  +breakpoint($bp-mobile-max)
-    width: 247px
   &:focus
     outline: none
     +box-shadow(none)
@@ -191,7 +197,7 @@ input.footer__signup__submit
   .copyright
     font-family: $font-demi
 
-// Inights News, Alumni, Giving menu
+// Inights Only - News, Alumni, Giving menus
 #block-menu-menu-insights-footer-bottom-menu
   border-bottom: 1px $grey-c solid
   padding: 20px 0
