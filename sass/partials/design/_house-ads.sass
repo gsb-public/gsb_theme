@@ -32,17 +32,14 @@
         margin-left: 26px
         top: 0
     .page-insights &
-      +breakpoint(610px max-width)
-        font-size: 13px
-        margin-bottom: 12px
-        max-width: 100%
+      +breakpoint(1170px max-width)
         position: relative
 
   // Image
   .field-name-field-image-single-public
     margin-bottom: 12px
     .page-insights &
-      +breakpoint(610px max-width)
+      +breakpoint(1170px max-width)
         display: none
     > img
       vertical-align: top
@@ -54,8 +51,10 @@
     font-size: 22px
     line-height: 1.2
     .page-insights &
-      +breakpoint(610px max-width)
+      +breakpoint(1170px max-width)
+        display: inline-block
         font-size: 18px
+        padding-top: 20px
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
@@ -74,16 +73,10 @@
       font-size: 16px
       line-height: 1.2
       margin-bottom: 0
-    .page-insights &
-      +breakpoint(610px max-width)
-        display: none
 
   // Show more
   .show-more
     @extend %show-more-link
-    .page-insights &
-      +breakpoint(610px max-width)
-        display: none
 
 // Side view styling
 .wide-view
