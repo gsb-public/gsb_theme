@@ -47,20 +47,30 @@
       color: $white
       font-size: 40px
       line-height: 1.2
-      +breakpoint($bp-mobile-480)
+      +breakpoint(999px max-width)
         font-size: 32px
-      +breakpoint(400px max-width)
+      +breakpoint(800px max-width)
         font-size: 24px
+      +breakpoint(750px max-width)
+        font-size: 40px
+      +breakpoint(568px max-width)
+        font-size: 32px
+      +breakpoint(480px max-width)
+        font-size: 24px
+      +breakpoint($bp-mobile-max)
+        font-size: 18px
       +icon-after("arrow-double-right", true)
       &:after
         color: $green-light
         font-size: 24px
         position: relative
         left: 5px
-        +breakpoint($bp-mobile-480)
+        +breakpoint(999px max-width)
+          font-size: 20px
+        +breakpoint(750px max-width)
           font-size: 18px
-        +breakpoint(400px max-width)
-          font-size: 14px
+        +breakpoint($bp-mobile-max)
+          font-size: 12px
       &:hover
         color: $white
         &:after
