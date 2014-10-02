@@ -216,12 +216,16 @@
       margin: 0
       margin-bottom: 30px
       width: 100%
+
   #block-views-3d4066a27ed172aa07e6b07bf9a3bc3f
     clear: none
     float: left
     margin-left: 51.28205%
     margin-right: -100%
     width: 23.07692%
+    +breakpoint(999px max-width)
+      margin-left: 35%
+
   #block-block-11
     clear: right
     float: right
@@ -229,16 +233,20 @@
     margin-left: 76.92308%
     margin-right: 0
     width: 23.07692%
+
   #block-block-16
     clear: right
     float: right
     margin-left: 76.92308%
     margin-right: 0
     width: 23.07692%
+
   #block-views-gsb-idea-story-listing-block,
   #block-views-3d4066a27ed172aa07e6b07bf9a3bc3f,
   #block-block-11,
   #block-block-16
+    +breakpoint(999px max-width)
+      width: 32%
     +breakpoint(768px max-width)
       float: none
       margin: 0
