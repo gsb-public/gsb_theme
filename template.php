@@ -189,9 +189,10 @@ function gsb_theme_preprocess_html(&$variables) {
     'insights'
   );
   $normalized_arg = arg(0);
-  $args = explode('/', trim(request_uri(), '/'));
-  if (isset($args[0]) && in_array($args[0], $allowed_paths) && $normalized_arg == 'node') {
-    foreach (theme_get_suggestions($args, 'page', '-') as $arg) {
+  $parsed_url = drupal_parse_url(request_uri());
+  $path = explode('/', trim($parsed_url['path'], '/'));
+  if (isset($path[0]) && in_array($path[0], $allowed_paths) && $normalized_arg == 'node') {
+    foreach (theme_get_suggestions($path, 'page', '-') as $arg) {
       $variables['classes_array'][] = drupal_html_class($arg);
     }
   }
