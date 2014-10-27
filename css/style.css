@@ -4435,7 +4435,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   margin-right: -100%;
   width: 23.077%;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 48em) {
   #block-gsb-public-custom-blocks-gpcb-follow-us {
     float: none;
     margin: 0;
@@ -4473,6 +4473,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 #block-gsb-public-custom-blocks-gpcb-follow-us h2 a:after {
   color: #c2b7a1;
+  display: inline;
   font-size: 12px;
   font-weight: normal;
   margin-left: 3px;
@@ -4483,20 +4484,6 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 #block-gsb-public-custom-blocks-gpcb-follow-us .icon-wrapper {
   display: block;
   max-width: 220px;
-}
-@media (max-width: 48em) {
-  #block-gsb-public-custom-blocks-gpcb-follow-us .circle {
-    width: 30px;
-    height: 30px;
-  }
-}
-@media (max-width: 48em) {
-  #block-gsb-public-custom-blocks-gpcb-follow-us .social-block-twitter:after,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .social-block-youtube:after,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .social-block-linkedin:after,
-  #block-gsb-public-custom-blocks-gpcb-follow-us .social-block-facebook:after {
-    font-size: 16px;
-  }
 }
 
 #block-menu-menu-footer-1,
@@ -4509,14 +4496,9 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   line-height: 1.3;
   text-transform: uppercase;
 }
-@media (max-width: 55.9375em) {
-  #block-menu-menu-footer-1 a,
-  #block-menu-menu-footer-2 a {
-    font-size: 13px;
-  }
-}
 #block-menu-menu-footer-1 li,
 #block-menu-menu-footer-2 li {
+  line-height: 0;
   margin-bottom: 20px;
 }
 #block-menu-menu-footer-1 li:last-of-type a,
@@ -4527,8 +4509,13 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 #block-menu-menu-footer-1 {
   clear: none;
   float: left;
-  margin-left: 28.07692%;
+  margin-left: 25.642%;
   margin-right: -100%;
+}
+@media (max-width: 62.4375em) {
+  #block-menu-menu-footer-1 {
+    margin-left: 35%;
+  }
 }
 
 #block-menu-menu-footer-2 {
@@ -4538,6 +4525,13 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   margin-left: 51.28205%;
   margin-right: 0;
 }
+@media (max-width: 62.4375em) {
+  #block-menu-menu-footer-2 {
+    clear: left;
+    margin-left: 35%;
+    margin-right: -100%;
+  }
+}
 
 #block-gsb-public-custom-blocks-gpcb-enews-signup {
   clear: right;
@@ -4546,22 +4540,37 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   margin-right: 0;
   width: 23.077%;
 }
+@media (max-width: 62.4375em) {
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    margin-left: 68.12308%;
+  }
+}
 
-.footer__signup__label {
+.signup-label {
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 3px;
   line-height: 1.3;
 }
 
-.footer__signup__description {
-  font-size: 15px;
-  line-height: 1.2;
-  width: 185px;
+.signup-description {
+  font-size: 16px;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 
-input.footer__signup__email {
+.signup-wrapper {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.signup-email-wrapper {
+  margin-right: -40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+input.signup-email {
   border: 1px lightgray solid;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -4572,10 +4581,9 @@ input.footer__signup__email {
   float: left;
   height: 36px;
   line-height: 1;
-  width: 160px;
-  padding-left: 7px;
+  width: 100%;
 }
-input.footer__signup__email:focus {
+input.signup-email:focus {
   outline: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -4583,7 +4591,7 @@ input.footer__signup__email:focus {
   border: 1px #990000 solid;
 }
 
-input.footer__signup__submit {
+input.signup-submit {
   background: -moz-linear-gradient(bottom, #c50000 40%, #860000 90%);
   background: -o-linear-gradient(bottom, #c50000 40%, #860000 90%);
   background: -webkit-linear-gradient(bottom, #c50000 40%, #860000 90%);
@@ -4603,13 +4611,34 @@ input.footer__signup__submit {
   margin-left: -1px;
   text-align: center;
   text-shadow: none;
-  width: 41px;
+  text-transform: uppercase;
+  width: 40px;
 }
-input.footer__signup__submit:hover {
+input.signup-submit:hover {
   background: -moz-linear-gradient(#194560, #2c6180);
   background: -o-linear-gradient(#194560, #2c6180);
   background: -webkit-linear-gradient(#194560, #2c6180);
   background: linear-gradient(#194560, #2c6180);
+}
+
+@media (max-width: 62.4375em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us,
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-2,
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    width: 32%;
+  }
+}
+@media (max-width: 48em) {
+  #block-gsb-public-custom-blocks-gpcb-follow-us,
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-2,
+  #block-gsb-public-custom-blocks-gpcb-enews-signup {
+    float: none;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }
 
 #block-menu-menu-footer-3 {

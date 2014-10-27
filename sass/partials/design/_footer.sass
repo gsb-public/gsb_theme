@@ -1,6 +1,4 @@
-//////////
-// FOOTER
-//////////
+// Footer
 
 #footer
   .region-footer
@@ -18,19 +16,13 @@
     background: $white
     border-top: 0
 
-// Footer columns
-#block-gsb-public-custom-blocks-gpcb-follow-us,
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-2,
-#block-gsb-public-custom-blocks-gpcb-enews-signup
-
 // Follow us block
 #block-gsb-public-custom-blocks-gpcb-follow-us
   clear: none
   float: left
   margin-right: -100%
   width: 23.077%
-  +breakpoint($bp-mobile-max)
+  +breakpoint(768px max-width)
     float: none
     margin: 0
     margin-bottom: 30px
@@ -53,6 +45,7 @@
       +icon-after("arrow-double-right", true)
       &:after
         color: $grey-med
+        display: inline
         font-size: 12px
         font-weight: normal
         margin-left: 3px
@@ -64,18 +57,7 @@
   .icon-wrapper
     display: block
     max-width: 220px
-  .circle
-    +breakpoint(768px max-width)
-      width: 30px
-      height: 30px
-  // Social icons
-  .social-block-twitter,
-  .social-block-youtube,
-  .social-block-linkedin,
-  .social-block-facebook
-    &:after
-      +breakpoint(768px max-width)
-        font-size: 16px
+
 
 // General footer menu styles
 #block-menu-menu-footer-1,
@@ -85,9 +67,8 @@
     font-weight: bold
     line-height: 1.3
     text-transform: uppercase
-    +breakpoint(895px max-width)
-      font-size: 13px
   li
+    line-height: 0
     margin-bottom: 20px
     &:last-of-type
       a
@@ -96,8 +77,10 @@
 #block-menu-menu-footer-1
   clear: none
   float: left
-  margin-left: 28.07692%
+  margin-left: 25.642%
   margin-right: -100%
+  +breakpoint(999px max-width)
+    margin-left: 35%
 
 #block-menu-menu-footer-2
   clear: none
@@ -105,6 +88,10 @@
   margin-bottom: 30px
   margin-left: 51.28205%
   margin-right: 0
+  +breakpoint(999px max-width)
+    clear: left
+    margin-left: 35%
+    margin-right: -100%
 
 // Email sign up
 #block-gsb-public-custom-blocks-gpcb-enews-signup
@@ -113,34 +100,48 @@
   margin-left: 76.92308%
   margin-right: 0
   width: 23.077%
+  +breakpoint(999px max-width)
+    margin-left: 68.12308%
 
-.footer__signup__label
+// Title
+.signup-label
   font-weight: bold
   font-size: 16px
   margin-bottom: 3px
   line-height: 1.3
 
-.footer__signup__description
-  font-size: 15px
-  line-height: 1.2
-  width: 185px
+// Description
+.signup-description
+  font-size: 16px
+  line-height: 1.3
   margin-bottom: 20px
 
-input.footer__signup__email
+// Signup wrapper
+.signup-wrapper
+  +clearfix
+
+// Email wrapper
+.signup-email-wrapper
+  margin-right: -40px
+  padding-right: 40px
+  width: 100%
+
+// Email input
+input.signup-email
   border: 1px $input-border solid
   +box-shadow(none)
   +border-radius(0)
   float: left
   height: 36px
   line-height: 1
-  width: 160px
-  padding-left: 7px
+  width: 100%
   &:focus
     outline: none
     +box-shadow(none)
     border: 1px #900 solid
 
-input.footer__signup__submit
+// Submit button
+input.signup-submit
   +background(linear-gradient(bottom, $red-light 40%, $red-dark 90%))
   border: none
   +border-radius(0 20px 20px 0)
@@ -155,9 +156,23 @@ input.footer__signup__submit
   margin-left: -1px
   text-align: center
   text-shadow: none
-  width: 41px
+  text-transform: uppercase
+  width: 40px
   &:hover
     +background(linear-gradient(#194560, #2c6180))
+
+// Footer columns
+#block-gsb-public-custom-blocks-gpcb-follow-us,
+#block-menu-menu-footer-1,
+#block-menu-menu-footer-2,
+#block-gsb-public-custom-blocks-gpcb-enews-signup
+  +breakpoint(999px max-width)
+    width: 32%
+  +breakpoint(768px max-width)
+    float: none
+    margin: 0
+    margin-bottom: 30px
+    width: 100%
 
 // Legal and Copyright region
 
