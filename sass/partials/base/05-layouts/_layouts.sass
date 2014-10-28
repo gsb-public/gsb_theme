@@ -274,6 +274,10 @@
   .panels-ipe-placeholder h3
     width: 50%
 
+// Hide style button
+.panels-ipe-linkbar .style
+  display: none
+
 // Insights layout A
 .gsb-insights-a
   .narrow-view
@@ -290,9 +294,9 @@
       margin: 0 auto
     .panels-ipe-editing &
       width: $wide-view
-  .first
+  .column.first
     margin-right: 30px
-  .second
+  .column.second
     margin-right: 30px
 
 
@@ -320,9 +324,9 @@
       max-width: $wide-view
 
   // alpha, beta, gamma styling
-  .wide-narrow-narrow .first,
-  .narrow-narrow-wide .third,
-  .narrow-wide-narrow .second
+  .wide-narrow-narrow .column.first,
+  .narrow-narrow-wide .column.third,
+  .narrow-wide-narrow .column.second
     +layout-alpha-beta-gamma
 
 // Insights layout B
@@ -373,8 +377,8 @@
     .panels-ipe-editing &
       width: $narrow-view
 
-  .first,
-  .second
+  .column.first,
+  .column.second
     margin-right: 30px
     +breakpoint(1169px max-width)
       margin-right: 0
@@ -451,15 +455,15 @@
       +breakpoint($max-width min-width)
         margin-right: 30px
   .narrow-narrow-narrow-narrow
-    .first,
-    .second,
-    .third
+    .column.first,
+    .column.second,
+    .column.third
       margin-right: 30px
-    .first,
-    .third
+    .column.first,
+    .column.third
       +breakpoint(1169px max-width)
         margin-right: 0
-    .second
+    .column.second
       +breakpoint(1169px max-width)
         margin-right: 0
   .column

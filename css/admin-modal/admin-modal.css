@@ -19,36 +19,38 @@
 /**
  * Override of CTools Throbber
  */
-a.ctools-ajaxing,
-input.ctools-ajaxing,
-button.ctools-ajaxing,
-select.ctools-ajaxing {
+#modal-content a.ctools-ajaxing,
+#modal-content input.ctools-ajaxing,
+#modal-content button.ctools-ajaxing,
+#modal-content select.ctools-ajaxing {
   padding-right: 18px !important;
-  background: url(../images/status-active.gif) right center no-repeat !important;
+  background: url(../../images/status-active.gif) right center no-repeat !important;
+  position: relative;
 }
 
-div.ctools-ajaxing {
+#modal-content div.ctools-ajaxing {
   float: left;
   width: 18px;
-  background: url(../images/status-active.gif) center center no-repeat !important;
+  background: url(../../images/status-active.gif) center center no-repeat !important;
 }
 
-.ajax-progress .throbber {
+#modal-content .ajax-progress .throbber {
   display: none;
 }
 
-.ajax-progress-throbber {
-  background-image: url("../images/status-active.gif");
+#modal-content .ajax-progress-throbber {
+  background-image: url("../../images/status-active.gif");
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 16px;
   opacity: .9;
   padding: 3px;
+  position: absolute;
   width: 16px;
   vertical-align: middle;
 }
 
-.ajax-progress-throbber .message {
+#modal-content .ajax-progress-throbber .message {
   display: none;
 }
 
@@ -252,15 +254,17 @@ div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
   color: #fff;
   font: bold 16px/50px 'Open Sans', 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
   vertical-align: middle;
-  height: 50px;
+  height: 35px;
   padding: 0 14px 0 24px;
 }
 
 #modalContent div.ctools-modal-content .modal-title {
   color: #fff;
   font: bold 16px/50px 'Open Sans', 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
+  line-height: 2;
   text-shadow: none;
   padding: 0;
+  vertical-align: top;
 }
 
 #modalContent div.ctools-modal-content a.close {
@@ -270,7 +274,7 @@ div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
   outline: none;
   height: 15px;
   width: 16px;
-  margin-top: 15px;
+  margin-top: 10px;
   background: url(../../images/close-popup.png) no-repeat left top;
   padding: 0;
 }
@@ -419,11 +423,9 @@ div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
   border-bottom: none;
   color: #3b3b3b;
   display: block;
-  height: 2em;
   left: -1px; /* LTR */
   line-height: 2;
   padding: 1px 0 0;
-  position: absolute;
   text-indent: 10px;
   text-shadow: 0 1px 0 #fff;
   top: -12px;
@@ -799,7 +801,7 @@ div.modal-content a.button.remove {
   color: #444;
 }
 #modal-content .modal-add-content-form fieldset {
-  width: 50%;
+  width: 572px;
 }
 .modal-content .modal-add-content-form > div > .description {
   padding-bottom: 20px;
@@ -953,10 +955,34 @@ div.modal-content a.button.remove {
   width: 100.3%;
 }
 
+#modal-content .fieldset-legend span.summary {
+  display: none;
+}
+
+#modal-content .sf-vertical.sf-arrows > li > .sf-with-ul:after {
+  border-left-color: #5B5B5B;
+}
+
 .modal-content .form-wrapper {
   margin-bottom: 16px;
 }
 
 #field-slideshow-slides-values .field-name-field-link-single .form-text {
   margin: 9px 0;
+}
+
+/* Prevent window scroll when modal is open */
+body.panels-ipe-modal-open {
+  overflow: hidden;
+}
+
+/* Vertical tabs override in modal */
+#modal-content div.vertical-tabs {
+  border: 0;
+  margin-bottom: 26px;
+  margin-left: 0;
+}
+
+#modal-content .vertical-tabs-list {
+  display: none;
 }
