@@ -1,4 +1,215 @@
 /**
+ * Panopoly Modal Magic Styles
+ */
+
+/**
+ * Styles for Menu Block Pane
+ */
+.menu-block-processed {
+  border: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  /* Hide IPE from mobile, since it doesn't really work anyway */
+  #panels-ipe-control-container {
+    display: none !important;
+  }
+}
+
+/**
+ * Override of CTools Throbber
+ */
+a.ctools-ajaxing,
+input.ctools-ajaxing,
+button.ctools-ajaxing,
+select.ctools-ajaxing {
+  padding-right: 18px !important;
+  background: url(../images/status-active.gif) right center no-repeat !important;
+}
+
+div.ctools-ajaxing {
+  float: left;
+  width: 18px;
+  background: url(../images/status-active.gif) center center no-repeat !important;
+}
+
+.ajax-progress .throbber {
+  display: none;
+}
+
+.ajax-progress-throbber {
+  background-image: url("../images/status-active.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 16px;
+  opacity: .9;
+  padding: 3px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+.ajax-progress-throbber .message {
+  display: none;
+}
+
+/**
+ * Custom styling for Changing Layout Feature
+*/
+div.ctools-modal-content div.form-item-categories label {
+  float: left;
+  font-weight: normal;
+  margin-top: 2px;
+  margin-right: 5px;
+  width: auto;
+}
+
+#panels-layout-category-Panopoly {
+  margin: 3% 6%;
+}
+
+div.ctools-modal-content .panels-choose-layout .dependent-options {
+  padding-left: 0px;
+}
+
+div.modal-content-preview-button {
+  padding-top: 100px;
+  text-align: center;
+}
+
+#panels-layout-category-Panopoly-wrapper .panels-layouts-category,
+#panels-layout-category-Panopoly-wrapper .layout-link div {
+  display: none;
+}
+
+#panels-layout-category-Panopoly-wrapper .layout-link {
+  float: left;
+  height: 68px;
+  padding: 1.25em;
+  text-align: center;
+  width: 68px;
+}
+
+#panels-layout-category-Panopoly-wrapper .layout-link:hover {
+  background-color: #BBB;
+}
+
+#panels-layout-category-Panopoly-wrapper .current-layout {
+  background-color: #DDD;
+}
+
+/**
+ * Custom styling for exposed views filter options
+ */
+#modal-content .form-item-offset,
+#modal-content .form-item-items-per-page,
+#modal-content .form-item-exposed-sort-order,
+#modal-content .form-item-exposed-sort-by {
+  float: left;
+  width: 175px;
+}
+
+#modal-content .form-item-offset,
+#modal-content .form-item-exposed-sort-order {
+  clear: none;
+}
+
+#modal-content .form-item-exposed-sort-order label,
+#modal-content .form-item-exposed-sort-by label {
+  float: left;
+  font-weight: normal;
+  margin-right: 5px;
+  width: auto;
+  margin-top: 3px;
+  font-size: 100%;
+}
+
+#modal-content .form-item-exposed-pager-id label {
+  font-weight: normal;
+}
+
+#modal-content .general-settings-fieldset label {
+  float: left;
+  font-weight: normal;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#modal-content .general-settings-fieldset label.option {
+  float:none;
+}
+
+#modal-content #edit-context label {
+  float: left;
+  font-weight: normal;
+  width: auto;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+#modal-content #views-exposed-pane div.form-item {
+  display: inline;
+}
+
+#modal-content .form-item-view-settings {
+  display:inline;
+  margin-left: 5px;
+}
+
+/* Handle the Header Type Setting Element */
+#modal-content .form-item-header-type label {
+  display:inline;
+  clear: none;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+#modal-content .form-item-header-type select {
+  display: inline;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#modal-content .view-settings-wrapper .field-prefix {
+  padding-right: 5px;
+}
+
+#modal-content .view-settings-wrapper .form-radios {
+  display: inline;
+  padding-right: 5px;
+}
+
+/**
+ * Custom Stylizer CSS
+ */
+#ctools_stylizer_color_scheme_form {
+  float: none;
+}
+
+#ctools_stylizer_color_scheme_form #palette .form-item  {
+  width: auto;
+  padding: .5em .75em;
+}
+
+div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
+  width: auto;
+}
+
+#ctools_stylizer_color_scheme_form #palette .form-item label {
+  float: left;
+  margin-right: 10px;
+  margin-top: .25em;
+}
+
+/**
+ * Remove the Save as Default Option
+ */
+#panels-ipe-edit-control-form #panelizer-save-default {
+  display: none;
+}
+
+/**
  * Modal stylings from pnopoly magic module
  */
 
@@ -15,6 +226,9 @@
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   border: none;
 }
 
@@ -68,7 +282,6 @@
 
 #modalContent .panels-add-content-modal {
   background: #FFF;
-  padding-top: .9em;
 }
 
 #modalContent .panels-add-content-modal a.panels-modal-add-category {
@@ -146,36 +359,6 @@
 #modalContent .panels-section-column-categories .content-type-button span {
   display: inline-block;
   margin-top: -2px;
-}
-
-#modalContent .panels-section-column-categories .content-type-button img {
-  margin: 0px 2px 0px -9px;
-  padding: 3px 2px;
-  background-color: #FFFFFF;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #EEEEEE !important;
-  border-radius: 5px;
-}
-
-#modalContent .panels-section-column-categories .content-type-button a:active {
-  outline: none;
-  background-image: linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
-  background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
-  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
-  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
-  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #E9EAEC 100%);
-  background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0, #FFFFFF),
-  color-stop(1, #E9EAEC)
-  );
-}
-
-#modalContent div.ctools-modal-content .modal-content {
-  padding-bottom: 2px;
 }
 
 #modal-content .option-text-aligner {
@@ -318,88 +501,16 @@
   text-align: right;
 }
 
-#modal-content .widget-preview-title {
-  position: absolute;
-  right: -1px;
-  top: -24px;
-  font: bold 11px/23px 'Open Sans', 'Lucida Sans', 'Lucida Grande', Verdana, sans-serif;
-}
-
-#modalContent .widget-preview-title .content-type-button span {
-  width: auto;
-  padding: 0 0 0 10px;
-}
-
-#modal-content .widget-preview-title .content-type-button a {
-  display: inline-block;
-  font: bold 11px/23px 'Open Sans', 'Lucida Sans', 'Lucida Grande',  Verdana, sans-serif;
-  color: #fff;
-  text-decoration: none;
-  background: #5DE000;
-  background-image: linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
-  background-image: -o-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
-  background-image: -moz-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
-  background-image: -webkit-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
-  background-image: -ms-linear-gradient(bottom, #4BA700 0%, #5DE000 100%);
-  background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0, #4BA700),
-  color-stop(1, #5DE000)
-  );
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  float: none;
-  left: 0;
-  top: 0;
-  padding: 0;
-  width: 60px;
-}
-
-#modal-content .widget-preview-title .content-type-button a:hover,
-#modal-content .widget-preview-title .content-type-button a:focus {
-  background: #56CE00;
-  background-image: linear-gradient(bottom, #408E00 0%, #56CE00 100%);
-  background-image: -o-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
-  background-image: -moz-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
-  background-image: -webkit-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
-  background-image: -ms-linear-gradient(bottom, #408E00 0%, #56CE00 100%);
-  background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0, #408E00),
-  color-stop(1, #56CE00)
-  );
-}
-
-#modal-content .widget-preview-title .content-type-button a:active {
-  background: #5DE000;
-  background-image: linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
-  background-image: -o-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
-  background-image: -moz-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
-  background-image: -webkit-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
-  background-image: -ms-linear-gradient(bottom, #5DE000 0%, #4BA700 100%);
-  background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0, #5DE000),
-  color-stop(1, #4BA700)
-  );
-}
-
 #modal-content .panels-section-columns,
 #modal-content .panels-categories-description {
   overflow: visible;
   border: 1px solid #CECECA;
-  border-right: none;
+  border-right: 0;
+  border-bottom: 0;
   height: 100%;
   margin: 0;
-  margin-top: 1px;
   overflow-y: auto;
+  padding-top: 10px;
 }
 
 #modal-content .panels-categories-description {
@@ -433,10 +544,10 @@
 
 .panels-section-column .content-type-button {
   font-size: 1em;
+  margin-bottom: 6px;
 }
 
-#modal-content .widget-preview-title .content-type-button img,
-#modal-content .panels-add-content-modal > .panels-modal-add-category {
+#modal-content .content-type-button img {
   display: none;
 }
 
@@ -458,25 +569,6 @@
 .pane-menus .menu-links,
 .pane-users .user-links {
   float: right;
-}
-
-#modalContent .panels-add-content-modal a.panels-modal-add-category:hover,
-#modalContent .panels-section-column-categories .content-type-button a:hover,
-#modalContent .panels-add-content-modal a.panels-modal-add-category:focus,
-#modalContent .panels-section-column-categories .content-type-button a:focus {
-  background: #E6E6E6;
-  background-image: linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
-  background-image: -o-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
-  background-image: -moz-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
-  background-image: -webkit-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
-  background-image: -ms-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
-  background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0, #C5C5C5),
-  color-stop(1, #FAFAFA)
-  );
 }
 
 /**
@@ -649,8 +741,8 @@ div.modal-content a.button.remove {
 }
 .modal-add-content-form a,
 .panels-categories-first-page a,
-.panels-categories-stock-content-page a {
-  color:#0074bd;
+.panels-section-columns a {
+  color: #2d6280;
 }
 .panels-add-content-modal .sf-menu {
   position: relative;
@@ -692,9 +784,6 @@ div.modal-content a.button.remove {
 }
 .panels-add-content-modal .widget-preview-title li {
   list-style: none;
-}
-#modal-content .panels-add-content-modal  .widget-preview-title .content-type-button div > a {
-  width: 60px;
 }
 .modal-add-content-form {
   padding: 1em 0 0 1.2em;

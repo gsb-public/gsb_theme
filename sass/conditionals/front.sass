@@ -6,299 +6,294 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Front page
-
-// Layout
-.gsb-front-page,
-.front-panel-header-row
-  margin-bottom: 30px
-  +breakpoint($bp-tablet-port-max)
-    margin-bottom: 20px
-  +breakpoint($bp-mobile-max)
-    margin-bottom: 0
-
-// Program links
-.pane-program-links
-  .cta-red-gradient a:after
-    content: ""
-  .cta-link
-    padding: 16px $standard-padding
-    font-size: 18px
-    +breakpoint($bp-tablet-port)
-      padding: 13px 12px
-  ul
-    margin: 0
-    padding: 0
-  li
-    line-height: 1
-  li.last
-    a
-      margin-bottom: 0
-  a
-    background-color: $red-light
-    +box-shadow($black, 0.45, 1px 1px 1px)
-    color: $white
-    display: block
-    margin-bottom: 4px
-    max-height: 50px
-    +breakpoint($bp-tablet-port)
-      font-size: 16px
-      margin-bottom: 2px
-  .executive-education a
-    +breakpoint(918px max-width)
-      padding-top: 9px
-    +breakpoint($bp-mobile-max)
-      padding-top: 13px
-  .all-programs a
-    +breakpoint(801px max-width)
-      padding-top: 9px
-    +breakpoint($bp-mobile-max)
-      padding-top: 13px
-
-// Program links title
-#program-links-title
-  display: none
-  +breakpoint(850px max-width)
-    color: $white
-    cursor: pointer
-    display: block
-    font-family: $font-demi
-    font-size: 22px
-    line-height: 1
-    padding: 16px 0
-    padding-left: 33px
-    +icon-before("plus", true)
-    &:before
-      color: $white
-      float: left
-      font-size: 18px
-      line-height: 0
-      position: relative
-      top: 10px
-      left: -24px
-
-// Mobile show/hide
-.pane-program-links
-  +breakpoint(850px max-width)
-    .links
-      display: none
-    .cta-red-gradient.open
-      #program-links-title
-        +icon-before("minus", false)
-      .links
-        display: block
-
-
-// QUICKLINKS
-// Special mobile positioning
-
-.front #quicklinks
-  +breakpoint(850px max-width)
-    float: none
-    margin: 0
-    width: 100%
-    +background(linear-gradient($red-dark, $red-light))
-    margin-bottom: 15px
-    .cta-link
-      background: transparent
-      padding: 16px 33px
-    li
-      border-top: 2px solid #f10000
-
-// Twitter feed
-.pane-homepage-social-feed
-  @extend %border-and-box-shadow
-  padding: $standard-padding
-  +background((image_url('bg-social-feed.png') no-repeat bottom right), #d3eaeb)
-  +breakpoint(1065px max-width)
-    padding: $standard-padding 20px
-  // Social icons
-  .icon-wrapper,
-  .twitter-handle
-    margin-bottom: 24px
-
-  // Twitter handle
-  .twitter-handle
-    line-height: 0
-    a
-      font-size: 16px
-      line-height: 1.2
-
-// Upcoming events
-.pane-gsb-event-frontpage
-  @extend %border-and-box-shadow
-  +background((image_url("event-cal-wide_bg.png") top center no-repeat), #f6e9d6)
-  padding: $standard-padding
-  +breakpoint($bp-mobile)
-    padding: 20px
-  .view-gsb-event .views-row
-    margin-bottom: 14px
-    &:last-of-type
-      margin-bottom: 0
-
-  // Pane title
-  .pane-title
-    color: $red
-    font-family: $font-sans
-    font-size: 16px
-    font-weight: bold
-    line-height: 1
-    margin-bottom: 26px
-    a
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: #978d7e
-        font-size: 12px
-        line-height: 0
-        margin-left: 3px
-      &:hover
-        &:after
-          color: $teal-light
-
-  .views-field-field-event-date,
-  .views-field-title,
-  .views-field-field-address
-    line-height: 1.2
-    margin-bottom: 4px
+.front
+  // Layout
+  .gsb-front-page,
+  .front-panel-header-row
+    margin-bottom: 30px
     +breakpoint($bp-tablet-port-max)
-      & > div
-        display: inline
+      margin-bottom: 20px
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 0
 
-  // Event title
-  .views-field-title
-    line-height: 0
+  // Program links
+  .pane-program-links
+    .cta-red-gradient a:after
+      content: ""
+    .cta-link
+      padding: 16px $standard-padding
+      font-size: 18px
+      +breakpoint($bp-tablet-port)
+        padding: 13px 12px
+    ul
+      margin: 0
+      padding: 0
+    li
+      line-height: 1
+    li.last
+      a
+        margin-bottom: 0
     a
-      border: 0
-      color: $text-black
+      background-color: $red-light
+      +box-shadow($black, 0.45, 1px 1px 1px)
+      color: $white
+      display: block
+      margin-bottom: 4px
+      max-height: 50px
+      +breakpoint($bp-tablet-port)
+        font-size: 16px
+        margin-bottom: 2px
+    .executive-education a
+      +breakpoint(918px max-width)
+        padding-top: 9px
+      +breakpoint($bp-mobile-max)
+        padding-top: 13px
+    .all-programs a
+      +breakpoint(801px max-width)
+        padding-top: 9px
+      +breakpoint($bp-mobile-max)
+        padding-top: 13px
+
+  // Program links title
+  #program-links-title
+    display: none
+    +breakpoint(850px max-width)
+      color: $white
+      cursor: pointer
+      display: block
       font-family: $font-demi
-      font-weight: normal
-      line-height: 1.1
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: #bac405
-        font-size: 12px
-        margin-left: 3px
-      &:hover
-        color: $link-blue
+      font-size: 22px
+      line-height: 1
+      padding: 16px 0
+      padding-left: 33px
+      +icon-before("plus", true)
+      &:before
+        color: $white
+        float: left
+        font-size: 18px
+        line-height: 0
+        position: relative
+        top: 10px
+        left: -24px
+
+  // Mobile show/hide
+  .pane-program-links
+    +breakpoint(850px max-width)
+      .links
+        display: none
+      .cta-red-gradient.open
+        #program-links-title
+          +icon-before("minus", false)
+        .links
+          display: block
+
+
+  // QUICKLINKS
+  // Special mobile positioning
+
+  .front #quicklinks
+    +breakpoint(850px max-width)
+      float: none
+      margin: 0
+      width: 100%
+      +background(linear-gradient($red-dark, $red-light))
+      margin-bottom: 15px
+      .cta-link
+        background: transparent
+        padding: 16px 33px
+      li
+        border-top: 2px solid #f10000
+
+  // Twitter feed
+  .pane-homepage-social-feed
+    @extend %border-and-box-shadow
+    padding: $standard-padding
+    +background((image_url('bg-social-feed.png') no-repeat bottom right), #d3eaeb)
+    +breakpoint(1065px max-width)
+      padding: $standard-padding 20px
+    // Social icons
+    .icon-wrapper,
+    .twitter-handle
+      margin-bottom: 24px
+
+    // Twitter handle
+    .twitter-handle
+      line-height: 0
+      a
+        font-size: 16px
+        line-height: 1.2
+
+  // Upcoming events
+  .pane-gsb-event-frontpage
+    @extend %border-and-box-shadow
+    +background((image_url("event-cal-wide_bg.png") top center no-repeat), #f6e9d6)
+    padding: $standard-padding
+    +breakpoint($bp-mobile)
+      padding: 20px
+    .view-gsb-event .views-row
+      margin-bottom: 14px
+      &:last-of-type
+        margin-bottom: 0
+
+    // Pane title
+    .pane-title
+      color: $red
+      font-family: $font-sans
+      font-size: 16px
+      font-weight: bold
+      line-height: 1
+      margin-bottom: 26px
+      a
+        +icon-after("arrow-double-right", true)
         &:after
-          color: $teal-light
+          color: #978d7e
+          font-size: 12px
+          line-height: 0
+          margin-left: 3px
+        &:hover
+          &:after
+            color: $teal-light
 
-  // Date
-  .views-field-field-event-date
-    color: #595959
-    font-size: 14px
+    .views-field-field-event-date,
+    .views-field-title,
+    .views-field-field-address
+      line-height: 1.2
+      margin-bottom: 4px
+      +breakpoint($bp-tablet-port-max)
+        & > div
+          display: inline
 
-  // Address
-  .views-field-field-address
-    color: $text-black
-    font-size: 14px
+    // Event title
+    .views-field-title
+      line-height: 0
+      a
+        border: 0
+        color: $text-black
+        font-family: $font-demi
+        font-weight: normal
+        line-height: 1.1
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: #bac405
+          font-size: 12px
+          margin-left: 3px
+        &:hover
+          color: $link-blue
+          &:after
+            color: $teal-light
 
-// Bottom section
-#bottom
-  +clearfix
-  background-color: $white
-  padding-top: 30px
-  .block-block
-    vertical-align: top
+    // Date
+    .views-field-field-event-date
+      color: #595959
+      font-size: 14px
+
+    // Address
+    .views-field-field-address
+      color: $text-black
+      font-size: 14px
+
+  // Bottom section
+  #bottom .block-block
     p
       font-size: 16px
       +breakpoint($bp-mobile-max)
         line-height: 20px
 
-.bottom-content
-  // Media icons
-  .media-icon.Video
-    margin-right: 8px
-    position: relative
-    top: -1px
-    +icon-after("video", true)
-    &:after
-      color: #bcbcbc
-      font-size: 18px
-
-
-  // Audio
-  .media-icon.Audio
-    margin-right: 8px
-    position: relative
-    top: 0
-    +icon-after("podcast", true)
-    &:after
-      color: #bcbcbc
-      font-size: 18px
-
-
-  // Infographic
-  .media-icon.Infographic
-    margin-right: 6px
-    &:after
-      content: "Infographic:"
-      font-size: 18px
-      font-weight: bold
-      line-height: 1.2
-
-
-  // Titles
-  h2
-    border-bottom: 1px #e5e5e5 solid
-    color: $text-black
-    font-family: $font-sans
-    font-size: 20px
-    font-weight: bold
-    line-height: 1.2
-    margin-bottom: 22px
-    padding-bottom: 8px
-    a
-      +icon-after("arrow-double-right", true)
+  .bottom-content
+    // Media icons
+    .media-icon.Video
+      margin-right: 8px
+      position: relative
+      top: -1px
+      +icon-after("video", true)
       &:after
-        color: $grey-med
-        font-size: 14px
-        margin-left: 3px
-      &:hover
-        &:after
-          color: $teal-light
-
-  .block
-    float: left
+        color: #bcbcbc
+        font-size: 18px
 
 
-// Idea stories block
-#block-views-gsb-idea-story-listing-block
-  // Main title
-  h2
-    font-weight: normal
+    // Audio
+    .media-icon.Audio
+      margin-right: 8px
+      position: relative
+      top: 0
+      +icon-after("podcast", true)
+      &:after
+        color: #bcbcbc
+        font-size: 18px
 
-// Idea and school stories blocks
-#block-views-gsb-idea-story-listing-block,
-#block-views-3d4066a27ed172aa07e6b07bf9a3bc3f
 
-  // Content
-  .view-mode-idea_story_related
-    margin-bottom: 26px
+    // Infographic
+    .media-icon.Infographic
+      margin-right: 6px
+      &:after
+        content: "Infographic:"
+        font-size: 18px
+        font-weight: bold
+        line-height: 1.2
 
-    // Date
-    .field-name-field-date
-      font-size: 14px
-      line-height: 1.2
-      margin-bottom: 5px
 
-    // Title
-    .field-name-title
-      display: inline
+    // Titles
     h2
-      border-bottom: 0
-      color: $red
-      display: inline
+      border-bottom: 1px #e5e5e5 solid
+      color: $text-black
       font-family: $font-sans
-      font-size: 18px
+      font-size: 20px
       font-weight: bold
-      line-height: 1.3
+      line-height: 1.2
+      margin-bottom: 22px
+      padding-bottom: 8px
       a
-        display: inline
-        line-height: 1.3
+        +icon-after("arrow-double-right", true)
         &:after
-          content: ""
-    // Dek
-    .field-name-field-editorial-summary
-      font-size: 16px
-      line-height: 1.3
-      margin-top: 8px
+          color: $grey-med
+          font-size: 14px
+          margin-left: 3px
+        &:hover
+          &:after
+            color: $teal-light
+
+    .block
+      float: left
+
+
+  // Idea stories block
+  #block-views-gsb-idea-story-listing-block
+    // Main title
+    h2
+      font-weight: normal
+
+  // Idea and school stories blocks
+  #block-views-gsb-idea-story-listing-block,
+  #block-views-3d4066a27ed172aa07e6b07bf9a3bc3f
+
+    // Content
+    .view-mode-idea_story_related
+      margin-bottom: 26px
+
+      // Date
+      .field-name-field-date
+        font-size: 14px
+        line-height: 1.2
+        margin-bottom: 5px
+
+      // Title
+      .field-name-title
+        display: inline
+      h2
+        border-bottom: 0
+        color: $red
+        display: inline
+        font-family: $font-sans
+        font-size: 18px
+        font-weight: bold
+        line-height: 1.3
+        a
+          display: inline
+          line-height: 1.3
+          &:after
+            content: ""
+      // Dek
+      .field-name-field-editorial-summary
+        font-size: 16px
+        line-height: 1.3
+        margin-top: 8px
