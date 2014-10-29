@@ -111,10 +111,8 @@ h2.insights-label
     line-height: 1
     margin: 15px 0
     padding: 18px 18px 16px
-    +breakpoint($max-width max-width)
+    +breakpoint(600px max-width)
       margin-left: 20px
-    +breakpoint(635px max-width)
-      margin: 20px
 
 .page-insights
   // Insights general styling
@@ -271,6 +269,11 @@ h2.insights-label
     display: block
     max-width: $max-width
     margin: 0 auto
+
+  .title-wrapper
+    +breakpoint(1170px max-width)
+      max-width: 570px
+      margin: 0 auto
 
   .full-header
     +breakpoint(1170px max-width)
