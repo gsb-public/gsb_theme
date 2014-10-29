@@ -34,7 +34,7 @@
 
   // Image
   .field-name-field-image-single-public
-    margin-bottom: 12px
+    margin-bottom: 26px
     .page-insights &
       +breakpoint(1170px max-width)
         display: none
@@ -42,25 +42,25 @@
       vertical-align: top
 
   // Title
-  .field-name-field-link-single a
-    color: $text-black
-    font-weight: bold
-    font-size: 22px
-    line-height: 1.2
-    .page-insights &
-      +breakpoint(1170px max-width)
-        display: inline-block
-        font-size: 18px
-        padding-top: 20px
-    +icon-after("arrow-double-right", true)
-    &:after
-      color: $green-light
-      font-size: 12px
-      margin-left: 3px
-    &:hover
-      color: $link-blue
+  .field-name-field-link-single
+    a
+      color: $text-black
+      font-weight: bold
+      font-size: 22px
+      line-height: 1.2
+      .page-insights &
+        +breakpoint(1170px max-width)
+          display: inline-block
+          font-size: 18px
+      +icon-after("arrow-double-right", true)
       &:after
-        color: $teal-light
+        color: $green-light
+        font-size: 12px
+        margin-left: 3px
+      &:hover
+        color: $link-blue
+        &:after
+          color: $teal-light
 
   // Description
   .field-name-field-body
