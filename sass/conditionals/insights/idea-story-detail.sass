@@ -107,17 +107,23 @@
       font-weight: bold
       line-height: 1.2
       margin-bottom: 12px
+      +breakpoint(600px max-width)
+        font-size: 26px
 
   // Dek
   .field-name-field-editorial-summary
     font-size: 24px
     line-height: 1.4
     margin: 12px 0
+    +breakpoint(600px max-width)
+      font-size: 18px
 
   // Date and byline
   .group-wrapper-byline
     font-size: 16px
     line-height: 1.2
+    +breakpoint(600px max-width)
+      font-size: 14px
 
   // Authors
   .field-name-field-authors
@@ -126,6 +132,8 @@
       color: $link-green
       font-size: 16px
       line-height: 1.2
+      +breakpoint(600px max-width)
+        font-size: 14px
       &:hover
         color: $link-blue
     // By label
