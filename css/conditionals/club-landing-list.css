@@ -8,7 +8,7 @@
 }
 
 .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag {
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .view-display-id-club_alumni_list .view-content {
   background-color: #f9f9f9;
   background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
   background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
@@ -17,12 +17,12 @@
 }
 
 .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag {
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .view-display-id-club_alumni_list .view-content {
   border: 2px white solid;
 }
 
 .view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag {
+.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .view-display-id-club_alumni_list .view-content {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -30,14 +30,14 @@
 }
 @media (max-width: 35.5em) {
   .view-display-id-club_list .view-content,
-  .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag {
+  .view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .view-display-id-club_alumni_list .view-content {
     margin-top: 1px;
   }
 }
 
 .ie8 .view-display-id-club_list .view-content, .view-display-id-club_list .ie8 .view-content,
 .ie8 .view-display-id-search_club .view-content,
-.view-display-id-search_club .ie8 .view-content, .ie8 .pane-club-filters-club-by-id-or-tag {
+.view-display-id-search_club .ie8 .view-content, .ie8 .pane-club-filters-club-by-id-or-tag, .ie8 .view-display-id-club_alumni_list .view-content, .view-display-id-club_alumni_list .ie8 .view-content {
   border: 1px #cccccc solid !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -195,4 +195,59 @@
 #views-exposed-form-club-filters-club-list #edit-search-wrapper, .inner-main-wrapper
 #views-exposed-form-club-filters-club-list .views-submit-button {
   display: none;
+}
+
+.pane-club-filters-club-alumni-list .pane-title {
+  margin-bottom: 20px;
+}
+
+.view-display-id-club_alumni_list .view-content {
+  padding: 0 26px;
+}
+.view-display-id-club_alumni_list .views-row {
+  position: relative;
+  top: 0;
+}
+.view-display-id-club_alumni_list .views-field-title {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 26px;
+  padding-top: 20px;
+}
+.view-display-id-club_alumni_list .views-field-title:before {
+  content: url('../../images/tab-club.jpg');
+  position: absolute;
+  top: -8px;
+}
+.view-display-id-club_alumni_list .views-field-title a {
+  color: #636f00;
+  padding-right: 10px;
+}
+.view-display-id-club_alumni_list .views-field-title a:after {
+  content: "\f102";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-display-id-club_alumni_list .views-field-title a:after {
+  color: #bac405;
+  font-size: 12px;
+  margin-left: 0.3em;
+}
+.view-display-id-club_alumni_list .views-field-title a:hover {
+  color: #2d6280;
+}
+.view-display-id-club_alumni_list .views-field-title a:hover:after {
+  color: #aac4bf;
 }
