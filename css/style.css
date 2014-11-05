@@ -2373,12 +2373,6 @@ div.label-inline {
   }
 }
 
-.pane-bundle-spotlight .ds-2col-stacked .group-left {
-  width: 58%;
-}
-.pane-bundle-spotlight .ds-2col-stacked .group-right {
-  width: 42%;
-}
 @media (min-width: 35.5625em) and (max-width: 48em) {
   .pane-bundle-spotlight .ds-2col-stacked .group-left,
   .pane-bundle-spotlight .ds-2col-stacked .group-right {
@@ -2397,6 +2391,10 @@ div.label-inline {
 .pane-bundle-spotlight .ds-2col-stacked .group-right {
   float: none;
   width: 100%;
+}
+.pane-bundle-spotlight .ds-2col-stacked .group-right {
+  overflow: hidden;
+  *zoom: 1;
 }
 
 /* Print Defaults */
@@ -5488,24 +5486,30 @@ ul.slideshow-items {
 }
 .pane-bundle-spotlight .field-name-field-title-position-single,
 .pane-bundle-spotlight .field-name-field-program-single,
-.pane-bundle-spotlight .spotlight-year {
+.pane-bundle-spotlight .field-name-field-year {
   font-size: 16px;
   line-height: 1.2;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.pane-bundle-spotlight .field-name-field-program-single,
 .pane-bundle-spotlight .field-name-field-title-position-single {
+  display: block;
+  float: left;
+  margin-bottom: 12px;
+  margin-right: 3px;
   padding-top: 4px;
 }
-.pane-bundle-spotlight .field-name-field-program-single {
-  display: inline;
-  margin-right: 3px;
+.pane-bundle-spotlight .field-name-field-year {
+  float: left;
+  padding-top: 4px;
 }
 .pane-bundle-spotlight .field-name-field-program-single,
-.pane-bundle-spotlight .spotlight-year {
+.pane-bundle-spotlight .field-name-field-year {
   color: #766d5f;
 }
 .pane-bundle-spotlight .field-name-field-body {
-  margin: 12px 0;
+  clear: left;
+  margin-bottom: 12px;
   overflow: hidden;
 }
 .pane-bundle-spotlight .field-name-field-body p {

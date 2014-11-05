@@ -121,12 +121,6 @@ div.label-inline
   .indented
     padding-left: 1em
 
-// VIEWS
-// .views-row
-//   &:last-of-type
-//     border-bottom: 0
-
-
 // DISPLAY SUITE
 // Video, spotlight, house ad fpp
 .pane-bundle-video,
@@ -156,11 +150,6 @@ div.label-inline
 
 .pane-bundle-spotlight
   .ds-2col-stacked
-    .group-left
-      width: 58%
-    .group-right
-      width: 42%
-
     .group-left,
     .group-right
       +breakpoint(768px 569px)
@@ -172,3 +161,5 @@ div.label-inline
       .narrow-view &
         float: none
         width: 100%
+    .group-right
+      +clearfix
