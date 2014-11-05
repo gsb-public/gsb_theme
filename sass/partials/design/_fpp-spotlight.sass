@@ -56,29 +56,40 @@
   // Title, program and year
   .field-name-field-title-position-single,
   .field-name-field-program-single,
-  .spotlight-year
+  .field-name-field-year
     font-size: 16px
     line-height: 1.2
     font-family: $font-demi
 
+  // Program or position
+  .field-name-field-program-single,
   .field-name-field-title-position-single
+    display: block
+    float: left
+    margin-bottom: 12px
+    margin-right: 3px
     padding-top: 4px
 
-  .field-name-field-program-single
-    display: inline
-    margin-right: 3px
+  // Year
+  .field-name-field-year
+    float: left
+    padding-top: 4px
 
   .field-name-field-program-single,
-  .spotlight-year
+  .field-name-field-year
     color: $grey-dark
 
+  // Description
   .field-name-field-body
-    margin: 12px 0
+    clear: left
+    margin-bottom: 12px
     overflow: hidden
     p
       font-size: 16px
       line-height: 1.2
       margin-bottom: 0
+
+  // Show more
   .show-more
     @extend %show-more-link
 
