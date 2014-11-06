@@ -7,14 +7,9 @@
 
 // Front page
 .front
-  // Layout
-  .gsb-front-page,
   .front-panel-header-row
-    margin-bottom: 30px
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(850px max-width)
       margin-bottom: 20px
-    +breakpoint($bp-mobile-max)
-      margin-bottom: 0
 
   // Program links
   .pane-program-links
@@ -90,7 +85,6 @@
 
   // QUICKLINKS
   // Special mobile positioning
-
   #quicklinks
     +breakpoint(850px max-width)
       float: none
