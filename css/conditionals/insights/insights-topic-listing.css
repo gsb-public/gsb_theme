@@ -76,7 +76,7 @@
   float: left;
   margin-right: 8px;
   position: relative;
-  top: 4px;
+  top: 2px;
 }
 .insights-topic-listing .view-insights-topic-list .media-icon.Audio:after {
   content: "\f11c";
@@ -115,6 +115,46 @@
   font-weight: bold;
   line-height: 1.2;
 }
+.insights-topic-listing .view-insights-topic-list .group-wrapper-title {
+  line-height: 0;
+  margin-bottom: 8px;
+}
+.insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 {
+  line-height: 0;
+}
+@media (max-width: 20em) {
+  .insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 {
+    display: inline;
+    font-size: 20px;
+  }
+}
+.insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 a {
+  line-height: 1.2;
+}
+.insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 a[target=_blank]:after {
+  content: "\f102";
+  display: inline-block;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 a[target=_blank]:after {
+  font-size: 16px;
+  margin-left: 3px;
+}
+@media (max-width: 20em) {
+  .insights-topic-listing .view-insights-topic-list .group-wrapper-title h3 a[target=_blank]:after {
+    font-size: 12px;
+  }
+}
 .insights-topic-listing .view-insights-topic-list .field-name-title h3 {
   display: inline-block;
   line-height: 0;
@@ -129,11 +169,32 @@
 }
 .insights-topic-listing .view-insights-topic-list .field-name-title h3 a {
   color: #990000;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 .insights-topic-listing .view-insights-topic-list .field-name-title h3 a:hover {
   color: #2d6280;
   text-decoration: underline;
+}
+.insights-topic-listing .view-insights-topic-list .group-wrapper-dek {
+  overflow: hidden;
+  *zoom: 1;
+}
+.insights-topic-listing .view-insights-topic-list .field-name-field-publisher {
+  float: left;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.insights-topic-listing .view-insights-topic-list .field-name-field-publisher:after {
+  content: "|";
+  padding-right: 5px;
+  padding-left: 5px;
+}
+@media (max-width: 35.5em) {
+  .insights-topic-listing .view-insights-topic-list .field-name-field-publisher {
+    font-size: 16px;
+    position: relative;
+    top: 5px;
+  }
 }
 .insights-topic-listing .view-insights-topic-list .field-name-field-editorial-summary {
   font-size: 18px;
