@@ -157,7 +157,12 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // In the media listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-in-the-media-listing-in-the-media-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search for name, topic, program, date or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search for name, topic, program, date, or other keyword');
+  }
+  // Alumni stories listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-stories-alumni-stories-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search for program, name, or other keyword');
   }
 
 }

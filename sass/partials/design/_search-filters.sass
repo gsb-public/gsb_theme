@@ -559,7 +559,7 @@ fieldset.collapsible .fieldset-legend
 // New search and filter styling
 //////////////////
 
-// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing
+// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing
 // Search section
 // @todo generalize this
 .view-faculty-filters,
@@ -570,7 +570,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-annssh_stories_list,
 .view-gsb-ranking-listing,
 .view-gsb-faculty-insights-listing,
-.view-gsb-in-the-media-listing
+.view-gsb-in-the-media-listing,
+.view-display-id-alumni_stories_listing
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -605,7 +606,8 @@ fieldset.collapsible .fieldset-legend
   #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets,
   #views-exposed-form-gsb-in-the-media-listing-in-the-media-listing .views-exposed-widgets,
   #views-exposed-form-gsb-ranking-listing-ranking-listing .views-exposed-widgets,
-  #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets
+  #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets,
+  #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets
     @extend %divider-bottom
     padding: 18px $standard-padding
     position: relative
@@ -633,7 +635,8 @@ fieldset.collapsible .fieldset-legend
   #edit-submit-gsb-announcement-school-listing,
   #edit-submit-gsb-ranking-listing,
   #edit-submit-gsb-faculty-insights-listing,
-  #edit-submit-gsb-in-the-media-listing
+  #edit-submit-gsb-in-the-media-listing,
+  #edit-submit-stories
     text-indent: 1000px
     -webkit-border-radius: 0
     -moz-border-radius: 0
