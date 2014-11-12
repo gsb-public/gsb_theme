@@ -37,6 +37,15 @@
     +breakpoint(768px max-width)
       float: none
 
+  // Hide image in narrow view
+  .narrow-view &
+    .left.second-column
+      float: none
+      max-width: 100%
+    .right
+      display: none
+
+
   // Date
   .field-name-field-date
     color: $text-black
@@ -176,15 +185,6 @@
     &:first-of-type
       border-top: 0
 
-  .view-mode-news_listing
-    // Hide image in narrow view
-    .narrow-view &
-      .right
-        display: none
-    // Wide view images
-    .wide-view &
-      +clearfix
-
 // Stories by title listing
 .field-name-field-story-title-ref
 
@@ -195,14 +195,3 @@
     padding: 14px $standard-padding
     &:first-of-type
       border-top: 0
-
-  .view-mode-news_listing
-
-    // Hide image in narrow view
-    .narrow-view &
-      .right
-        display: none
-
-    // Wide view images
-    .wide-view &
-      +clearfix
