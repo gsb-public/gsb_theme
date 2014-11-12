@@ -25,7 +25,7 @@
     float: left
     max-width: 65%
     +breakpoint(1212px max-width)
-      max-width: 50%
+      max-width: 49%
     +breakpoint(999px max-width)
       max-width: 65%
     +breakpoint(825px max-width)
@@ -44,7 +44,6 @@
       max-width: 100%
     .right
       display: none
-
 
   // Date
   .field-name-field-date
@@ -90,7 +89,7 @@
 
   // Title wrapper
   .group-wrapper-title
-    margin-bottom: 8px
+    margin-bottom: 6px
 
   // Title
   .field-name-title
@@ -106,13 +105,11 @@
       &[target="_blank"]
         +icon-after("arrow-external", true)
         &:after
-          display: inline
           font-size: 12px
           margin-left: 3px
       &[href$=".pdf"]
         &[target="_blank"]
           &:after
-            display: inline
             font-size: 14px
             margin-left: 3px
 
@@ -121,7 +118,7 @@
   .field-name-field-editorial-summary
     font-size: 16px
     line-height: 1.4
-    margin-top: 12px
+    margin-top: 6px
 
   .field-name-field-publisher
     &:after
@@ -148,7 +145,7 @@
 
   .views-row
     border-top: 1px solid $text-black
-    padding: 12px 0
+    padding: 22px 0
     &:first-of-type
       border-top: 0
       padding-top: 0
@@ -171,7 +168,7 @@
 
   .views-row
     @extend %divider-top
-    padding: 12px 0 12px $standard-padding
+    padding: 22px 0 22px $standard-padding
     &:first-of-type
       border-top: 0
 
@@ -181,7 +178,7 @@
   // Views row
   .views-row
     border-top: 1px solid #d3d3d3
-    padding: 14px $standard-padding
+    padding: 22px $standard-padding
     &:first-of-type
       border-top: 0
 
@@ -192,6 +189,6 @@
   .field-item
     border-top: 1px solid #d3d3d3
     margin: 0 -26px
-    padding: 14px $standard-padding
+    padding: 22px $standard-padding
     &:first-of-type
       border-top: 0
