@@ -117,27 +117,27 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // Faculty listing placeholder text
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
+    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keyword');
   }
   // Working paper listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-working-paper-listing-working-paper-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics, or other keywords');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
   }
   // Case study listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-case-listing-case-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics, or other keywords');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
   }
   // Book listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-book-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topics, or other keywords');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
   }
   // Publication listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-publications-listing-publications-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topics, or other keywords');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topic, or other keyword');
   }
   // Announcement and school story mixed listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-announcement-school-listing-annssh-stories-list') {
@@ -163,6 +163,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-stories-alumni-stories-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search for program, name, or other keyword');
+  }
+  // Giving stories listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-stories-giving-stories-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by name, date, or other keyword');
   }
 
 }
