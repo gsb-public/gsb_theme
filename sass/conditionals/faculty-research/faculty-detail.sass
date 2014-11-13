@@ -325,8 +325,6 @@ $faculty-spacing: 24px
   .field-name-field-teaching-materials
     .field-collection-item-field-teaching-materials
       margin-bottom: 6px
-      &:last-of-type
-        margin-bottom: 0
     // Title
     .field-name-field-link-single
       display: inline-block
@@ -363,7 +361,7 @@ $faculty-spacing: 24px
   // Conferences, Talks & Presentations
   .field-name-field-conf-presentations-section
     .field-collection-item-field-conf-presentations-section
-      margin-bottom: 10px
+      margin-bottom: 6px
     // Title
     .field-name-field-link-conf-pres-unlimited
       display: inline-block
@@ -530,11 +528,11 @@ $faculty-spacing: 24px
         @extend %header-small
       // Rows
       .field-collection-item-field-non-degree-course
-        .field
-          margin-bottom: 5px
+        margin-bottom: 6px
 
       // Title
       .field-name-field-link-single
+        display: inline
         @extend %faculty-title-text
         a
           @extend %faculty-link

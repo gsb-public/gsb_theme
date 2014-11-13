@@ -28,7 +28,6 @@
 
         // Get type of element.
         type = Drupal.showMoreLess.findType($wrapper);
-
         switch(type) {
           case 'list':
             // Find wrapper
@@ -333,7 +332,7 @@
   Drupal.showMoreLess.findType = function($element) {
     var $type = 'text';
     // Check to see if it's a text list.
-    if ($element.hasClass('field-type-text')) {
+    if ($element.hasClass('field-type-text') || $element.hasClass('field-type-field-collection')) {
       $type = 'list';
     }
     // Check to see if it's a view.
