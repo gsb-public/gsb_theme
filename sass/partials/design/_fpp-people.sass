@@ -56,7 +56,7 @@
 
 // Layouts
 
-// List
+// 1 Column layout
 .person-list-view
   .narrow-view &
     @extend %bg-border-and-box-shadow
@@ -103,7 +103,7 @@
     .narrow-view &
       margin-top: 8px
 
-// Grid
+// 2 Column layout
 .person-grid-view
   +clearfix
 
@@ -113,6 +113,15 @@
     width: 270px
     &:nth-of-type(even)
       margin-right: 30px
+    .wide-view &
+      +breakpoint(1211px 1000px)
+        width: 100%
+        &:nth-of-type(even)
+          margin-right: 0
+      +breakpoint(910px max-width)
+        width: 100%
+        &:nth-of-type(even)
+          margin-right: 0
 
   // Pane title
   .field-name-field-title
