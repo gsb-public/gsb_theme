@@ -51,16 +51,16 @@
     </div></div><!-- /.inner-main-wrapper, /.main-wrapper -->
 
     <?php if ($content['quicklinks'] || $content['sidebar']): ?>
-      <div class="inner-sidebar-wrapper narrow-view">
+      <div class="inner-sidebar-wrapper">
 
       <?php if ($content['quicklinks']): ?>
-        <div id="quicklinks">
+        <div id="quicklinks" class="narrow-view">
           <?php print $content['quicklinks']; ?>
         </div>
       <?php endif; ?>
 
       <?php if ($content['sidebar']): ?>
-      <div class="sidebar-inner">
+      <div class="narrow-view sidebar-inner">
         <?php print $content['sidebar']; ?>
       </div>
       <?php endif; ?>
