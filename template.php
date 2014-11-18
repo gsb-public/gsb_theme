@@ -196,7 +196,9 @@ function gsb_theme_preprocess_html(&$variables) {
     'stanford-gsb-experience',
     'library',
     'newsroom',
-    'insights'
+    'insights',
+    'alumni',
+    'organizations'
   );
   $normalized_arg = arg(0);
   $parsed_url = drupal_parse_url(request_uri());
