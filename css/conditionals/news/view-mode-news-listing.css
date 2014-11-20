@@ -7,7 +7,8 @@
 .view-gsb-in-the-media-listing,
 .view-gsb-ranking-listing,
 .view-display-id-alumni_stories_listing,
-.view-display-id-giving_stories_listing, .view-gsb-announcement-school-listing.view-display-id-entity_view_1 {
+.view-display-id-giving_stories_listing,
+.view-display-id-alumni_book_listing, .view-gsb-announcement-school-listing.view-display-id-entity_view_1 {
   border-top: 3px #231f20 solid;
 }
 
@@ -65,11 +66,27 @@
   display: none;
 }
 .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-date,
-.view-mode-news_listing .field-name-field-date {
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-month,
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-pub-date-day,
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-year-of-publication,
+.view-mode-news_listing .field-name-field-date,
+.view-mode-news_listing .field-name-field-month,
+.view-mode-news_listing .field-name-field-pub-date-day,
+.view-mode-news_listing .field-name-field-year-of-publication {
   color: #231f20;
   font-size: 14px;
   line-height: 1.2;
   margin-bottom: 12px;
+}
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-month,
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-pub-date-day,
+.view-mode-news_listing .field-name-field-month,
+.view-mode-news_listing .field-name-field-pub-date-day {
+  margin-right: 5px;
+}
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-pub-date-day:after,
+.view-mode-news_listing .field-name-field-pub-date-day:after {
+  content: ",";
 }
 .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .media-icon.Video,
 .view-mode-news_listing .media-icon.Video {
@@ -209,8 +226,16 @@
 .view-mode-news_listing .field-name-field-publisher,
 .view-mode-news_listing .field-name-field-editorial-summary {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.3;
   margin-top: 6px;
+}
+@media (max-width: 35.5em) {
+  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-publisher,
+  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-editorial-summary,
+  .view-mode-news_listing .field-name-field-publisher,
+  .view-mode-news_listing .field-name-field-editorial-summary {
+    font-size: 14px;
+  }
 }
 .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-publisher:after,
 .view-mode-news_listing .field-name-field-publisher:after {
@@ -218,18 +243,40 @@
   padding-right: 5px;
   padding-left: 5px;
 }
-.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-image-key-image,
-.view-mode-news_listing .field-name-field-image-key-image {
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .gsb_field_formatter_field_collection_separator,
+.view-mode-news_listing .gsb_field_formatter_field_collection_separator {
+  line-height: 0;
+  margin-top: 6px;
+}
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-author,
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-collection-item-field-authors,
+.view-mode-news_listing .field-name-field-author,
+.view-mode-news_listing .field-collection-item-field-authors {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+@media (max-width: 35.5em) {
+  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-author,
+  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-collection-item-field-authors,
+  .view-mode-news_listing .field-name-field-author,
+  .view-mode-news_listing .field-collection-item-field-authors {
+    font-size: 14px;
+  }
+}
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-type-image,
+.view-mode-news_listing .field-type-image {
   float: left;
   max-width: 170px;
 }
-.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-image-key-image img,
-.view-mode-news_listing .field-name-field-image-key-image img {
+.view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-type-image img,
+.view-mode-news_listing .field-type-image img {
   width: 100%;
 }
 @media (max-width: 48em) {
-  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-name-field-image-key-image,
-  .view-mode-news_listing .field-name-field-image-key-image {
+  .view-gsb-announcement-school-listing.view-display-id-entity_view_1 .view-mode-news_listing .field-type-image,
+  .view-mode-news_listing .field-type-image {
     display: none;
   }
 }
@@ -239,7 +286,8 @@
 .view-gsb-in-the-media-listing .views-row,
 .view-gsb-ranking-listing .views-row,
 .view-display-id-alumni_stories_listing .views-row,
-.view-display-id-giving_stories_listing .views-row {
+.view-display-id-giving_stories_listing .views-row,
+.view-display-id-alumni_book_listing .views-row {
   border-top: 1px solid #231f20;
   padding: 22px 0;
 }
@@ -248,7 +296,8 @@
 .view-gsb-in-the-media-listing .views-row:first-of-type,
 .view-gsb-ranking-listing .views-row:first-of-type,
 .view-display-id-alumni_stories_listing .views-row:first-of-type,
-.view-display-id-giving_stories_listing .views-row:first-of-type {
+.view-display-id-giving_stories_listing .views-row:first-of-type,
+.view-display-id-alumni_book_listing .views-row:first-of-type {
   border-top: 0;
   padding-top: 0;
 }

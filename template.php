@@ -169,6 +169,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, date, or other keyword');
   }
+  // Alumni book listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-book-listing-alumni-book-listing') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
+  }
 
 }
 
