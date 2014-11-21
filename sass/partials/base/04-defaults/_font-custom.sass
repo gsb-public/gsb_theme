@@ -8,10 +8,14 @@ body
     &[href$=".jpeg"],
     &[href$=".gif"],
     &[href$=".tiff"],
+    &[href$=".svg"],
+    &[href$=".odg"],
+    &[href$=".fodg"],
     &[href$=".pptx"],
     &[href$=".ppt"],
     &[href$=".pps"],
     &[href$=".odp"],
+    &[href$=".fodp"],
     &[href$=".zip"],
     &[href$=".rar"],
     &[href$=".tar"],
@@ -19,9 +23,13 @@ body
     &[href$=".docx"],
     &[href$=".txt"],
     &[href$=".odt"],
+    &[href$=".fodt"],
+    &[href$=".odf"],
+    &[href$=".pages"],
     &[href$=".xls"],
     &[href$=".xlsx"],
-    &[href$=".ods"]
+    &[href$=".ods"],
+    &[href$=".fods"]
       &:after
         @extend %doc-attached-icons
 
@@ -37,7 +45,10 @@ body
     &[href$=".jpg"],
     &[href$=".jpeg"],
     &[href$=".gif"],
-    &[href$=".tiff"]
+    &[href$=".tiff"],
+    &[href$=".svg"],
+    &[href$=".odg"],
+    &[href$=".fodg"],
       +icon-after("picture", true)
       &:after
         content: "\f119" !important
@@ -46,7 +57,8 @@ body
     &[href$=".pptx"],
     &[href$=".ppt"],
     &[href$=".pps"],
-    &[href$=".odp"]
+    &[href$=".odp"],
+    &[href$=".fodp"]
       +icon-after("presentation", true)
       &:after
         content: "\f11d" !important
@@ -59,19 +71,23 @@ body
       &:after
         content: "\f124" !important
 
-    // Documents
+    // Word Documents
     &[href$=".doc"],
     &[href$=".docx"],
     &[href$=".txt"],
-    &[href$=".odt"]
-      +icon-after("document", true)
+    &[href$=".odt"],
+    &[href$=".fodt"],
+    &[href$=".odf"],
+    &[href$=".pages"]
+      +icon-after("document-blank", true)
       &:after
-        content: "\f110" !important
+        content: "\f126" !important
 
-    // Spreadsheet
+    // Spreadsheets
     &[href$=".xls"],
     &[href$=".xlsx"],
-    &[href$=".ods"]
+    &[href$=".ods"],
+    &[href$=".fods"]
       +icon-after("spreadsheet", true)
       &:after
         content: "\f120" !important
