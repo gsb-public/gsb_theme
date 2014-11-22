@@ -426,9 +426,9 @@ div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
   left: -1px; /* LTR */
   line-height: 2;
   padding: 1px 0 0;
+  position: relative;
   text-indent: 10px;
   text-shadow: 0 1px 0 #fff;
-  top: -12px;
   width: 100%;
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -467,6 +467,7 @@ div.ctools-modal-content #ctools_stylizer_color_scheme_form .form-item label {
 #modal-content .fieldset-wrapper {
   padding: 0 10px;
   margin-top: 2.25em;
+  min-width: 650px;
 }
 
 #modal-content .widget-preview .fieldset-wrapper {
@@ -864,6 +865,16 @@ div.modal-content a.button.remove {
 .modal-add-content-form a.tabledrag-handle-hover .handle {
   background-position-y: -13px;
 }
+.modal-add-content-form .form-managed-file .file {
+  display: inherit;
+  margin-bottom: 14px;
+  position: relative;
+  top: 6px;
+}
+.modal-add-content-form .form-managed-file .file a {
+  display: inline-block;
+  max-width: 300px;
+}
 .modal-add-content-form .draggable .delta-order .form-select {
   width: 70px;
 }
@@ -990,4 +1001,20 @@ body.panels-ipe-modal-open {
 
 #modal-content .vertical-tabs-list {
   display: none;
+}
+
+#modal-content .field-name-field-files-private-setting {
+  clear: none;
+  width: auto;
+  position: relative;
+  right: -2px;
+  top: -30px;
+  background: #FFFFFF;
+  border: 1px solid #ccc;
+  border-top-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0 10px 10px;
+  width: 652px;
 }
