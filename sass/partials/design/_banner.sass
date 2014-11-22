@@ -25,6 +25,8 @@
   font-size: 24px
   font-weight: bold
   line-height: 1.2
+  .page-alumni &
+    font-size: 34px
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
@@ -98,9 +100,9 @@
   .breadcrumb
     padding-bottom: 20px
 
-// Page specific styling of banner
+// Page-specific styling of banner
 
-// EVENT LANDING
+// Events
 .page-events
   #banner
     +breakpoint($bp-tablet-land-min)
@@ -115,7 +117,7 @@
     +breakpoint($bp-mobile-max)
       display: none
 
-// PROGRAMS SECTION
+// Programs
 .page-programs
   #banner
     +breakpoint($bp-tablet-land-min)
@@ -138,6 +140,12 @@
 .page-organizations
   #banner
     +background(linear-gradient(#756b5a, $grey-dark))
+    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+
+// Alumni
+.page-alumni
+  #banner
+    +background(linear-gradient(#930000, #c40000))
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
 ///////////////////
@@ -197,9 +205,8 @@
           background: transparent
           border-bottom: 0
 
-///////////////////
-// WITH SECTION TITLE
-///////////////////
+
+// Section menu for responsive
 #sidebar
   +breakpoint($bp-tablet-port-max)
     +background(linear-gradient(#756b5a, $grey-dark))
@@ -207,6 +214,8 @@
     min-height: 50px
     .page-programs &
       +background(linear-gradient(#4c697a, $blue))
+    .page-alumni &
+      +background(linear-gradient(#930000, #c40000))
 
 //////////////////
 // Events filters on mobile
