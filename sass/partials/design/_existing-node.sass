@@ -17,29 +17,51 @@
   padding: $standard-padding
   padding-top: 0
 
+  // Image
+  .field-name-field-image-single-public
+    margin: 0 -26px 10px
+
   // Date
+  .field-name-field-date,
   .field-name-field-month,
   .field-name-field-pub-date-day,
   .field-name-field-year-of-publication,
   .field-name-field-date-published,
   .field-name-field-event-date
-    color: $grey-6
+    color: $text-black
     font-size: 14px
-    margin-bottom: 1em
+    line-height: 1.2
+    margin-bottom: 8px
 
   // Title
-  h2
-    color: $text-black
-    font-family: $font-demi
-    font-size: 20px
-    font-weight: normal
-    line-height: 1.2
-    margin-bottom: 6px
-    text-transform: none
-    a
-      color: $red
-      &:hover
-        color: $link-blue
+  .field-name-title,
+  .field-name-field-link-single
+    margin-bottom: 8px
+    h2
+      color: $text-black
+      display: inline
+      line-height: 0
+      a
+        font-family: $font-sans
+        font-size: 26px
+        font-weight: bold
+        line-height: 1.2
+        +breakpoint(850px max-width)
+          font-size: 20px
+        +breakpoint(610px max-width)
+          font-size: 18px
+        &[target="_blank"]
+          +icon-after("arrow-external", true)
+          &:after
+            display: inline
+            font-size: 12px
+            margin-left: 3px
+        &[href$=".pdf"]
+          &[target="_blank"]
+            &:after
+              display: inline
+              font-size: 14px
+              margin-left: 3px
 
   // Document link
   .field-name-field-link-document
@@ -52,7 +74,6 @@
       &:after
         @extend %doc-attached-icons
         font-size: 14px
-
 
   // Hide tags labels on teasers
   .group-tags-wrapper h3
@@ -82,30 +103,35 @@
     font-weight: normal
     line-height: 1.2
 
-  // Book image
-  .field-name-field-image-single-public
-    margin-bottom: 12px
-    max-width: 150px
-
   // Working paper title
   .group-wrapper-title
     margin-bottom: 8px
     h2
       display: inline
 
-  // Editorial Summary or Description
-  .field-name-field-editorial-summary,
+  // Editorial summary, description, publisher and dek
   .field-name-field-body,
-  .field-name-field-description
+  .field-name-field-description,
+  .field-name-field-publisher,
+  .field-name-field-editorial-summary
     font-size: 16px
-    font-weight: normal
     line-height: 1.3
     margin-top: 12px
     max-width: 600px
 
-///////////////////////////
+  .field-name-field-publisher
+    display: inline-block
+    &:after
+      content: "|"
+      padding-right: 5px
+      padding-left: 5px
+
+// Book image
+.node-book.view-mode-teaser
+  .field-name-field-image-single-public
+    max-width: 150px
+
 // Responsive book teaser
-///////////////////////////
 
 // Narrow view
 .narrow-view .node-book.view-mode-teaser
@@ -190,13 +216,6 @@
   .field-name-field-image-key-image
     margin: 0 -26px 10px
 
-  // Date
-  .field-name-field-date
-    color: $text-black
-    font-size: 14px
-    line-height: 1.2
-    margin-bottom: 8px
-
   // Media icons
   .media-icon.Video
     margin-right: 8px
@@ -231,48 +250,6 @@
       line-height: 1.2
       +breakpoint(850px max-width)
         font-size: 18px
-
-  // Title
-  .field-name-title,
-  .field-name-field-link-single
-    margin-bottom: 8px
-    h2
-      display: inline
-      line-height: 0
-      a
-        font-family: $font-sans
-        font-size: 26px
-        font-weight: bold
-        line-height: 1.2
-        +breakpoint(850px max-width)
-          font-size: 20px
-        +breakpoint(610px max-width)
-          font-size: 18px
-        &[target="_blank"]
-          +icon-after("arrow-external", true)
-          &:after
-            display: inline
-            font-size: 12px
-            margin-left: 3px
-        &[href$=".pdf"]
-          &[target="_blank"]
-            &:after
-              display: inline
-              font-size: 14px
-              margin-left: 3px
-
-  // Publisher and Dek
-  .field-name-field-publisher,
-  .field-name-field-editorial-summary
-    font-size: 16px
-    line-height: 1.3
-
-  .field-name-field-publisher
-    display: inline-block
-    &:after
-      content: "|"
-      padding-right: 5px
-      padding-left: 5px
 
   // Taxonomy
   .field-name-field-key-taxonomy

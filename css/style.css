@@ -8196,29 +8196,76 @@ fieldset.collapsible .fieldset-legend {
   padding: 26px;
   padding-top: 0;
 }
+.pane-bundle-existing-node .field-name-field-image-single-public {
+  margin: 0 -26px 10px;
+}
+.pane-bundle-existing-node .field-name-field-date,
 .pane-bundle-existing-node .field-name-field-month,
 .pane-bundle-existing-node .field-name-field-pub-date-day,
 .pane-bundle-existing-node .field-name-field-year-of-publication,
 .pane-bundle-existing-node .field-name-field-date-published,
 .pane-bundle-existing-node .field-name-field-event-date {
-  color: #666666;
-  font-size: 14px;
-  margin-bottom: 1em;
-}
-.pane-bundle-existing-node h2 {
   color: #231f20;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 14px;
   line-height: 1.2;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+}
+.pane-bundle-existing-node .field-name-title,
+.pane-bundle-existing-node .field-name-field-link-single {
+  margin-bottom: 8px;
+}
+.pane-bundle-existing-node .field-name-title h2,
+.pane-bundle-existing-node .field-name-field-link-single h2 {
+  color: #231f20;
+  display: inline;
+  line-height: 0;
+}
+.pane-bundle-existing-node .field-name-title h2 a,
+.pane-bundle-existing-node .field-name-field-link-single h2 a {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+@media (max-width: 53.125em) {
+  .pane-bundle-existing-node .field-name-title h2 a,
+  .pane-bundle-existing-node .field-name-field-link-single h2 a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 38.125em) {
+  .pane-bundle-existing-node .field-name-title h2 a,
+  .pane-bundle-existing-node .field-name-field-link-single h2 a {
+    font-size: 18px;
+  }
+}
+.pane-bundle-existing-node .field-name-title h2 a[target="_blank"]:after,
+.pane-bundle-existing-node .field-name-field-link-single h2 a[target="_blank"]:after {
+  content: "\f102";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
 }
-.pane-bundle-existing-node h2 a {
-  color: #990000;
+.pane-bundle-existing-node .field-name-title h2 a[target="_blank"]:after,
+.pane-bundle-existing-node .field-name-field-link-single h2 a[target="_blank"]:after {
+  display: inline;
+  font-size: 12px;
+  margin-left: 3px;
 }
-.pane-bundle-existing-node h2 a:hover {
-  color: #2d6280;
+.pane-bundle-existing-node .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
+.pane-bundle-existing-node .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after {
+  display: inline;
+  font-size: 14px;
+  margin-left: 3px;
 }
 .pane-bundle-existing-node .field-name-field-link-document {
   font-size: 20px;
@@ -8267,24 +8314,32 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   line-height: 1.2;
 }
-.pane-bundle-existing-node .field-name-field-image-single-public {
-  margin-bottom: 12px;
-  max-width: 150px;
-}
 .pane-bundle-existing-node .group-wrapper-title {
   margin-bottom: 8px;
 }
 .pane-bundle-existing-node .group-wrapper-title h2 {
   display: inline;
 }
-.pane-bundle-existing-node .field-name-field-editorial-summary,
 .pane-bundle-existing-node .field-name-field-body,
-.pane-bundle-existing-node .field-name-field-description {
+.pane-bundle-existing-node .field-name-field-description,
+.pane-bundle-existing-node .field-name-field-publisher,
+.pane-bundle-existing-node .field-name-field-editorial-summary {
   font-size: 16px;
-  font-weight: normal;
   line-height: 1.3;
   margin-top: 12px;
   max-width: 600px;
+}
+.pane-bundle-existing-node .field-name-field-publisher {
+  display: inline-block;
+}
+.pane-bundle-existing-node .field-name-field-publisher:after {
+  content: "|";
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.node-book.view-mode-teaser .field-name-field-image-single-public {
+  max-width: 150px;
 }
 
 .narrow-view .node-book.view-mode-teaser {
@@ -8407,16 +8462,6 @@ fieldset.collapsible .fieldset-legend {
 .node-announcement.view-mode-teaser .field-name-field-image-key-image {
   margin: 0 -26px 10px;
 }
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-date,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-date,
-.node-school-story.view-mode-teaser .field-name-field-date,
-.node-offsite-school-story.view-mode-teaser .field-name-field-date,
-.node-announcement.view-mode-teaser .field-name-field-date {
-  color: #231f20;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
 .pane-bundle-existing-node .node-idea-story.view-mode-teaser .media-icon.Video,
 .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .media-icon.Video,
 .node-school-story.view-mode-teaser .media-icon.Video,
@@ -8532,155 +8577,6 @@ fieldset.collapsible .fieldset-legend {
   .node-announcement.view-mode-teaser .media-icon.Infographic:after {
     font-size: 18px;
   }
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single,
-.node-school-story.view-mode-teaser .field-name-title,
-.node-school-story.view-mode-teaser .field-name-field-link-single,
-.node-offsite-school-story.view-mode-teaser .field-name-title,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single,
-.node-announcement.view-mode-teaser .field-name-title,
-.node-announcement.view-mode-teaser .field-name-field-link-single {
-  margin-bottom: 8px;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2,
-.node-school-story.view-mode-teaser .field-name-title h2,
-.node-school-story.view-mode-teaser .field-name-field-link-single h2,
-.node-offsite-school-story.view-mode-teaser .field-name-title h2,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2,
-.node-announcement.view-mode-teaser .field-name-title h2,
-.node-announcement.view-mode-teaser .field-name-field-link-single h2 {
-  display: inline;
-  line-height: 0;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-.node-school-story.view-mode-teaser .field-name-title h2 a,
-.node-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-.node-offsite-school-story.view-mode-teaser .field-name-title h2 a,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-.node-announcement.view-mode-teaser .field-name-title h2 a,
-.node-announcement.view-mode-teaser .field-name-field-link-single h2 a {
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-@media (max-width: 53.125em) {
-  .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a,
-  .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a,
-  .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-school-story.view-mode-teaser .field-name-title h2 a,
-  .node-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-offsite-school-story.view-mode-teaser .field-name-title h2 a,
-  .node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-announcement.view-mode-teaser .field-name-title h2 a,
-  .node-announcement.view-mode-teaser .field-name-field-link-single h2 a {
-    font-size: 20px;
-  }
-}
-@media (max-width: 38.125em) {
-  .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a,
-  .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a,
-  .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-school-story.view-mode-teaser .field-name-title h2 a,
-  .node-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-offsite-school-story.view-mode-teaser .field-name-title h2 a,
-  .node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a,
-  .node-announcement.view-mode-teaser .field-name-title h2 a,
-  .node-announcement.view-mode-teaser .field-name-field-link-single h2 a {
-    font-size: 18px;
-  }
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after {
-  content: "\f102";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-title h2 a[target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-field-link-single h2 a[target="_blank"]:after {
-  display: inline;
-  font-size: 12px;
-  margin-left: 3px;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.node-school-story.view-mode-teaser .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.node-offsite-school-story.view-mode-teaser .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.node-announcement.view-mode-teaser .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after {
-  display: inline;
-  font-size: 14px;
-  margin-left: 3px;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-publisher,
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-editorial-summary,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-publisher,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-editorial-summary,
-.node-school-story.view-mode-teaser .field-name-field-publisher,
-.node-school-story.view-mode-teaser .field-name-field-editorial-summary,
-.node-offsite-school-story.view-mode-teaser .field-name-field-publisher,
-.node-offsite-school-story.view-mode-teaser .field-name-field-editorial-summary,
-.node-announcement.view-mode-teaser .field-name-field-publisher,
-.node-announcement.view-mode-teaser .field-name-field-editorial-summary {
-  font-size: 16px;
-  line-height: 1.3;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-publisher,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-publisher,
-.node-school-story.view-mode-teaser .field-name-field-publisher,
-.node-offsite-school-story.view-mode-teaser .field-name-field-publisher,
-.node-announcement.view-mode-teaser .field-name-field-publisher {
-  display: inline-block;
-}
-.pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-publisher:after,
-.pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-publisher:after,
-.node-school-story.view-mode-teaser .field-name-field-publisher:after,
-.node-offsite-school-story.view-mode-teaser .field-name-field-publisher:after,
-.node-announcement.view-mode-teaser .field-name-field-publisher:after {
-  content: "|";
-  padding-right: 5px;
-  padding-left: 5px;
 }
 .pane-bundle-existing-node .node-idea-story.view-mode-teaser .field-name-field-key-taxonomy,
 .pane-bundle-existing-node .node-offsite-idea-story.view-mode-teaser .field-name-field-key-taxonomy,
