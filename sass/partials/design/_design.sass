@@ -197,9 +197,21 @@
     +breakpoint($bp-tablet-port-min)
       +background(image_url("bg-msxfellows.jpg") -290px 0 no-repeat, $white)
 
+// Alumni
+.page-alumni
+  #content-wrapper
+    +breakpoint($bp-tablet-port-min)
+      +background(image_url("bg-alumni.jpg") center top no-repeat, $white)
+
+// Organizations, Companies and Recruiters
+.page-organizations
+  #content-wrapper
+    +breakpoint($bp-tablet-port-min)
+      +background(image_url("bg-organizations.jpg") center top no-repeat, $white)
+
 // Page titles
 
-// Special color bg landing pages with white titles
+// Special color bg for landing pages with white titles
 .page-node-300216,
 .page-node-300436,
 .page-node-300221,
@@ -209,8 +221,7 @@
 .page-node-301286,
 .page-node-301386,
 .page-faculty-research,
-.page-giving,
-.page-alumni
+.page-giving
   +breakpoint($bp-tablet-port-min)
     #content-wrapper
       +background(image_url("bg-landing-whitetitlebar.jpg") center top no-repeat, $white)
@@ -220,8 +231,11 @@
       margin-bottom: 30px
       padding: 12px 26px 10px
 
-// White background title for faculty and research landing
-.page-node-303566
+// White background title only
+// Faculty and research, alumni, organizations
+.page-node-303566,
+.page-alumni,
+.page-organizations
   +breakpoint($bp-tablet-port-min)
     #page-title
       background: rgba($white, 0.6)
