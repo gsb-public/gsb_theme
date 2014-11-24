@@ -12,7 +12,7 @@
   // Content row style
   .person-row
     border-top: 2px solid #e4e4e4
-    margin-top: 12px
+    margin-top: 20px
     .wide-view &
       +clearfix
       margin-top: 24px
@@ -50,7 +50,7 @@
 
   // Description
   .person-quote
-    font-size: 14px
+    font-size: 16px
     line-height: 1.2
     margin-top: 12px
 
@@ -59,7 +59,8 @@
 // 1 Column layout
 .person-list-view
   .narrow-view &
-    @extend %bg-border-and-box-shadow
+    @extend %box-shadow
+    background: $white
     padding: $standard-padding
 
   // Pane Title
@@ -97,11 +98,20 @@
   // Name
   .person-name
     .wide-view &
+      font-size: 20px
       padding-top: 12px
       a
-        font-size: 18px
+        font-size: 20px
     .narrow-view &
       margin-top: 8px
+
+  // Title, Role, Program
+  .person-position
+    .wide-view &
+      font-size: 20px
+      line-height: 1.2
+    .narrow-view &
+      margin-bottom: 10px
 
 // 2 Column layout
 .person-grid-view
@@ -148,3 +158,8 @@
   // Name
   .person-name
     padding-top: 12px
+
+  // Title, Role, Program
+  .person-position
+    .wide-view &
+      margin-bottom: 10px
