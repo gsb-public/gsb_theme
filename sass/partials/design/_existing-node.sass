@@ -17,9 +17,14 @@
   padding: $standard-padding
   padding-top: 0
 
-  // Image
-  .field-name-field-image-single-public
-    margin: 0 -26px 10px
+  // Featured label - tan style for working papers and cases
+  .featured-label
+    @extend %taupe-border-top
+    display: inline-block
+    font-size: 14px
+    line-height: 1.2
+    margin-bottom: 16px
+    padding-top: 6px
 
   // Date
   .field-name-field-date,
@@ -79,20 +84,11 @@
   .group-tags-wrapper h3
     display: none
 
-  // Book, Case and Working Paper styles
+  // Working paper title
+  .group-wrapper-title
+    margin-bottom: 8px
 
-  ////////////////
-  // Featured label
-  ////////////////
-  .featured-label
-    @extend %taupe-border-top
-    display: inline-block
-    font-size: 14px
-    line-height: 1.2
-    margin-bottom: 16px
-    padding-top: 6px
-
-  // Authors
+  // Working paper authors
   .gsb_field_formatter_field_collection_separator
     line-height: 0
 
@@ -103,11 +99,13 @@
     font-weight: normal
     line-height: 1.2
 
-  // Working paper title
-  .group-wrapper-title
-    margin-bottom: 8px
-    h2
-      display: inline
+  // Working paper publisher
+  .field-name-field-publisher
+    display: inline-block
+    &:after
+      content: "|"
+      padding-right: 5px
+      padding-left: 5px
 
   // Editorial summary, description, publisher and dek
   .field-name-field-body,
@@ -119,12 +117,29 @@
     margin-top: 12px
     max-width: 600px
 
-  .field-name-field-publisher
+// Event teaser
+.node-event.view-mode-teaser
+  // Event label - black like insights
+  h2.insights-label.event
+    background: $text-black
+    color: $white
     display: inline-block
-    &:after
-      content: "|"
-      padding-right: 5px
-      padding-left: 5px
+    font-family: $font-demi
+    font-size: 14px
+    line-height: 1.2
+    margin-bottom: 26px
+    padding: 6px 8px
+    position: relative
+    z-index: 2
+
+  // Image
+  .field-name-field-image-single-public
+    margin: -54px -26px 18px -26px
+
+  // Event address
+  .field-name-field-address
+    font-family: $font-demi
+    font-weight: normal
 
 // Book image
 .node-book.view-mode-teaser

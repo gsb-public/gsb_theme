@@ -8196,8 +8196,12 @@ fieldset.collapsible .fieldset-legend {
   padding: 26px;
   padding-top: 0;
 }
-.pane-bundle-existing-node .field-name-field-image-single-public {
-  margin: 0 -26px 10px;
+.pane-bundle-existing-node .featured-label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  padding-top: 6px;
 }
 .pane-bundle-existing-node .field-name-field-date,
 .pane-bundle-existing-node .field-name-field-month,
@@ -8297,12 +8301,8 @@ fieldset.collapsible .fieldset-legend {
 .pane-bundle-existing-node .group-tags-wrapper h3 {
   display: none;
 }
-.pane-bundle-existing-node .featured-label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  padding-top: 6px;
+.pane-bundle-existing-node .group-wrapper-title {
+  margin-bottom: 8px;
 }
 .pane-bundle-existing-node .gsb_field_formatter_field_collection_separator {
   line-height: 0;
@@ -8314,11 +8314,13 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   line-height: 1.2;
 }
-.pane-bundle-existing-node .group-wrapper-title {
-  margin-bottom: 8px;
+.pane-bundle-existing-node .field-name-field-publisher {
+  display: inline-block;
 }
-.pane-bundle-existing-node .group-wrapper-title h2 {
-  display: inline;
+.pane-bundle-existing-node .field-name-field-publisher:after {
+  content: "|";
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .pane-bundle-existing-node .field-name-field-body,
 .pane-bundle-existing-node .field-name-field-description,
@@ -8329,13 +8331,25 @@ fieldset.collapsible .fieldset-legend {
   margin-top: 12px;
   max-width: 600px;
 }
-.pane-bundle-existing-node .field-name-field-publisher {
+
+.node-event.view-mode-teaser h2.insights-label.event {
+  background: #231f20;
+  color: white;
   display: inline-block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 26px;
+  padding: 6px 8px;
+  position: relative;
+  z-index: 2;
 }
-.pane-bundle-existing-node .field-name-field-publisher:after {
-  content: "|";
-  padding-right: 5px;
-  padding-left: 5px;
+.node-event.view-mode-teaser .field-name-field-image-single-public {
+  margin: -54px -26px 18px -26px;
+}
+.node-event.view-mode-teaser .field-name-field-address {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 .node-book.view-mode-teaser .field-name-field-image-single-public {
