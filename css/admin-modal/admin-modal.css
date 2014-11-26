@@ -843,7 +843,10 @@ div.modal-content a.button.remove {
   border: 1px solid #ccc;
 }
 .modal-add-content-form .draggable td {
-  padding: 0.9em 0.7em;
+  padding: 1em;
+}
+.modal-add-content-form .draggable .warning.tabledrag-changed {
+  display: none;
 }
 .modal-add-content-form .draggable td.delta-order {
   border-left: 1px solid #ccc;
@@ -851,9 +854,6 @@ div.modal-content a.button.remove {
 .modal-add-content-form .draggable .field-multiple-drag {
   width: 0;
   padding: 0;
-}
-.modal-add-content-form .draggable a.tabledrag-handle {
-  margin-left: 0;
 }
 .modal-add-content-form a.tabledrag-handle .handle {
   background-position-y: 7px;
@@ -864,6 +864,9 @@ div.modal-content a.button.remove {
 }
 .modal-add-content-form a.tabledrag-handle-hover .handle {
   background-position-y: -13px;
+}
+.modal-add-content-form .form-managed-file {
+  margin-left: 10px;
 }
 .modal-add-content-form .form-managed-file .file {
   display: inherit;
