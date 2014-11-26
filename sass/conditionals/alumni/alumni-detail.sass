@@ -1,0 +1,150 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Hide title on detail
+.node-type-alumni
+  #page-title
+    display: none
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-sans
+      font-size: 28px
+      font-weight: bold
+      line-height: 1
+      padding-bottom: 17px
+  .group-wrapper-name
+    +breakpoint($bp-mobile-max)
+      display: none
+
+// Detail page
+.node-alumni.view-mode-full
+  border-top: 3px solid $text-black
+  padding-top: 2px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-top: 0
+
+  // Layout
+  &.ds-2col > .group-left
+    width: 270px
+    +breakpoint(684px max-width)
+      width: 42%
+    +breakpoint($bp-mobile-max)
+      +clearfix
+      width: 100%
+    img
+      display: block
+
+  &.ds-2col > .group-right
+    float: none
+    width: auto
+    padding-left: 300px
+    +breakpoint(684px max-width)
+      padding-left: 46%
+      width: 100%
+    +breakpoint($bp-mobile-max)
+      padding-left: 0
+
+  // LEFT SIDE
+
+  // Profile photo
+  .field-name-field-image-single-public
+    +breakpoint($bp-mobile-max)
+      float: left
+      width: 65px
+
+  // Person information block
+  // Fieldset logic
+  .group-wrapper-information
+    height: auto !important
+    +breakpoint($bp-mobile-max)
+      margin-left: 82px
+    // Fieldset handle
+    legend
+      display: none
+      padding: 0
+      a
+        color: $text-black
+        font-family: $font-demi
+        font-size: 18px
+        line-height: 1
+
+      .fieldset-legend span.summary
+        display: none
+      +breakpoint($bp-mobile-max)
+        display: block
+        float: left
+        line-height: 1.9
+        padding-left: 15px
+        width: 100%
+        border-bottom: 1px solid #e4e4e4
+        padding-bottom: 15px
+
+    // Fieldset container
+    .fieldset-wrapper
+      +breakpoint($bp-mobile-min)
+        display: block !important
+      +breakpoint($bp-mobile-max)
+        clear: left
+    // Collapsed
+    &.collapsed
+      legend
+        +breakpoint($bp-mobile-max)
+          border-bottom: 0
+          padding-bottom: 0
+
+  // Styling
+  .group-wrapper-information
+    @extend %group-wrapper-information
+
+    // Email
+    .field-name-field-email
+      line-height: 1.2
+      a
+        +icon-after("email-stroke", true)
+        &:after
+          font-size: 12px
+          margin-left: 3px
+
+    // Social links
+    .group-wrapper-scholar,
+    .group-wrapper-social
+      div
+        margin-bottom: 5px
+        &:last-of-type
+          margin-bottom: 0
+
+  // RIGHT SIDE
+  .group-right
+    > .field-group-format
+      &:last-of-type
+        border-bottom: 0
+    // Common patterns
+    h2.label-above
+      @extend %header-large
+    h3.label-above
+      @extend %header-small
+    p
+      @extend %faculty-paragraph
+
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+
+  // Name
+  .group-wrapper-name
+    margin-top: 25px
+    font-size: 28px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: 14px
+    span
+      &:after
+        content: " "
