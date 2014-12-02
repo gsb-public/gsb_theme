@@ -16,7 +16,7 @@
       font-family: $font-sans
       font-size: 28px
       font-weight: bold
-      line-height: 1
+      line-height: 1.3
       padding-bottom: 17px
   .group-wrapper-name
     +breakpoint($bp-mobile-max)
@@ -55,6 +55,7 @@
 
   // Profile photo
   .field-name-field-image-single-public
+    margin-bottom: 20px
     +breakpoint($bp-mobile-max)
       float: left
       width: 65px
@@ -83,7 +84,6 @@
         line-height: 1.9
         padding-left: 15px
         width: 100%
-        border-bottom: 1px solid #e4e4e4
         padding-bottom: 15px
 
     // Fieldset container
@@ -106,21 +106,22 @@
     // Email
     .field-name-field-email
       line-height: 1.2
+      margin-bottom: 5px
       a
         +icon-after("email-stroke", true)
         &:after
           font-size: 12px
           margin-left: 3px
 
-    // Social links
-    .group-wrapper-scholar,
-    .group-wrapper-social
-      div
-        margin-bottom: 5px
-        &:last-of-type
-          margin-bottom: 0
+    // Links
+    .field-name-field-link-single
+      margin-bottom: 5px
+    .field-name-field-link-unlimited div
+      margin-bottom: 5px
+      &:last-of-type
+        margin-bottom: 0
 
-  // RIGHT SIDE
+  // Right side
   .group-right
     > .field-group-format
       &:last-of-type
@@ -138,13 +139,47 @@
       &:hover
         color: $link-blue
 
-  // Name
-  .group-wrapper-name
-    margin-top: 25px
+  // Name and Degree wrapper
+  .group-name-and-degree
+    +pie-clearfix
+    margin-bottom: 14px
+    margin-top: 26px
+
+  // Name and Degree
+  .group-wrapper-name,
+  .field-name-field-stanford-degrees-single
     font-size: 28px
     font-weight: bold
-    line-height: 1.2
-    margin-bottom: 14px
+    line-height: 1.3
     span
-      &:after
-        content: " "
+      margin-right: 8px
+      &:last-of-type
+        margin-right: 0
+
+  // Name wrapper
+  .group-wrapper-name
+    float: left
+
+  // Degree comma
+  .field-name-field-stanford-degrees-single
+    &:before
+      content: ","
+      display: inline
+      margin-right: 8px
+
+  // Position Title
+  .field-name-field-title-position-single
+    font-family: $font-demi
+    font-size: 20px
+    line-height: 1.3
+    +breakpoint($bp-mobile-max)
+      margin-top: 20px
+
+  // Location
+  .field-name-field-location
+    font-size: 20px
+    line-height: 1.3
+
+  // Body
+  .field-name-field-body
+    margin-top: 26px
