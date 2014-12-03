@@ -7,20 +7,10 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Hide title on detail
+// Hide page title on detail
 .node-type-alumni
   #page-title
     display: none
-    +breakpoint($bp-mobile-max)
-      display: block
-      font-family: $font-sans
-      font-size: 28px
-      font-weight: bold
-      line-height: 1.3
-      padding-bottom: 17px
-  .group-wrapper-name
-    +breakpoint($bp-mobile-max)
-      display: none
 
 // Detail page
 .node-alumni.view-mode-full
@@ -52,6 +42,18 @@
       padding-left: 0
 
   // LEFT SIDE
+  // Extra field for name and degree in mobile
+  .field-name-alumni-name-degree
+    display: none
+    p
+      margin-bottom: 0
+    +breakpoint($bp-mobile-max)
+      display: block
+      font-family: $font-sans
+      font-size: 28px
+      font-weight: bold
+      line-height: 1.3
+      padding-bottom: 17px
 
   // Profile photo
   .field-name-field-image-single-public
@@ -102,6 +104,8 @@
   // Styling
   .group-wrapper-information
     @extend %group-wrapper-information
+    +breakpoint($bp-mobile-max)
+      margin-bottom: 26px
 
     // Email
     .field-name-field-email
@@ -141,9 +145,11 @@
 
   // Name and Degree wrapper
   .group-name-and-degree
-    +pie-clearfix
     margin-bottom: 14px
     margin-top: 26px
+    +breakpoint($bp-mobile-max)
+      display: none
+
 
   // Name and Degree
   .group-wrapper-name,
@@ -151,29 +157,35 @@
     font-size: 28px
     font-weight: bold
     line-height: 1.3
+
+  // Name wrapper
+  .group-wrapper-name
+    display: inline
     span
+      display: inline-block
       margin-right: 8px
       &:last-of-type
         margin-right: 0
 
-  // Name wrapper
-  .group-wrapper-name
-    float: left
+  // Degree field
+  .field-name-field-stanford-degrees-single
+    display: inline
 
-  // Degree comma
+  // Comma before degree field
+  .field-name-alumni-name-degree .field-degree,
   .field-name-field-stanford-degrees-single
     &:before
       content: ","
       display: inline
       margin-right: 8px
+      +breakpoint($bp-mobile-max)
+        margin-right: 5px
 
   // Position Title
   .field-name-field-title-position-single
     font-family: $font-demi
     font-size: 20px
     line-height: 1.3
-    +breakpoint($bp-mobile-max)
-      margin-top: 20px
 
   // Location
   .field-name-field-location

@@ -97,21 +97,6 @@
 .node-type-alumni #page-title {
   display: none;
 }
-@media (max-width: 35.5em) {
-  .node-type-alumni #page-title {
-    display: block;
-    font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 1.3;
-    padding-bottom: 17px;
-  }
-}
-@media (max-width: 35.5em) {
-  .node-type-alumni .group-wrapper-name {
-    display: none;
-  }
-}
 
 .node-alumni.view-mode-full {
   border-top: 3px solid #231f20;
@@ -155,6 +140,22 @@
 @media (max-width: 35.5em) {
   .node-alumni.view-mode-full.ds-2col > .group-right {
     padding-left: 0;
+  }
+}
+.node-alumni.view-mode-full .field-name-alumni-name-degree {
+  display: none;
+}
+.node-alumni.view-mode-full .field-name-alumni-name-degree p {
+  margin-bottom: 0;
+}
+@media (max-width: 35.5em) {
+  .node-alumni.view-mode-full .field-name-alumni-name-degree {
+    display: block;
+    font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+    padding-bottom: 17px;
   }
 }
 .node-alumni.view-mode-full .field-name-field-image-single-public {
@@ -213,6 +214,11 @@
     padding-bottom: 0;
   }
 }
+@media (max-width: 35.5em) {
+  .node-alumni.view-mode-full .group-wrapper-information {
+    margin-bottom: 26px;
+  }
+}
 .node-alumni.view-mode-full .group-wrapper-information .field-name-field-email {
   line-height: 1.2;
   margin-bottom: 5px;
@@ -255,14 +261,13 @@
   color: #2d6280;
 }
 .node-alumni.view-mode-full .group-name-and-degree {
-  *zoom: 1;
   margin-bottom: 14px;
   margin-top: 26px;
 }
-.node-alumni.view-mode-full .group-name-and-degree:after {
-  content: "";
-  display: table;
-  clear: both;
+@media (max-width: 35.5em) {
+  .node-alumni.view-mode-full .group-name-and-degree {
+    display: none;
+  }
 }
 .node-alumni.view-mode-full .group-wrapper-name,
 .node-alumni.view-mode-full .field-name-field-stanford-degrees-single {
@@ -270,31 +275,35 @@
   font-weight: bold;
   line-height: 1.3;
 }
-.node-alumni.view-mode-full .group-wrapper-name span,
-.node-alumni.view-mode-full .field-name-field-stanford-degrees-single span {
+.node-alumni.view-mode-full .group-wrapper-name {
+  display: inline;
+}
+.node-alumni.view-mode-full .group-wrapper-name span {
+  display: inline-block;
   margin-right: 8px;
 }
-.node-alumni.view-mode-full .group-wrapper-name span:last-of-type,
-.node-alumni.view-mode-full .field-name-field-stanford-degrees-single span:last-of-type {
+.node-alumni.view-mode-full .group-wrapper-name span:last-of-type {
   margin-right: 0;
 }
-.node-alumni.view-mode-full .group-wrapper-name {
-  float: left;
+.node-alumni.view-mode-full .field-name-field-stanford-degrees-single {
+  display: inline;
 }
+.node-alumni.view-mode-full .field-name-alumni-name-degree .field-degree:before,
 .node-alumni.view-mode-full .field-name-field-stanford-degrees-single:before {
   content: ",";
   display: inline;
   margin-right: 8px;
 }
+@media (max-width: 35.5em) {
+  .node-alumni.view-mode-full .field-name-alumni-name-degree .field-degree:before,
+  .node-alumni.view-mode-full .field-name-field-stanford-degrees-single:before {
+    margin-right: 5px;
+  }
+}
 .node-alumni.view-mode-full .field-name-field-title-position-single {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.3;
-}
-@media (max-width: 35.5em) {
-  .node-alumni.view-mode-full .field-name-field-title-position-single {
-    margin-top: 20px;
-  }
 }
 .node-alumni.view-mode-full .field-name-field-location {
   font-size: 20px;
