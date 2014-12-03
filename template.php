@@ -117,62 +117,62 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // Faculty listing placeholder text
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
   }
   // Working paper listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-working-paper-listing-working-paper-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keywords');
   }
   // Case study listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-case-listing-case-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keywords');
   }
   // Book listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-book-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, topic, or other keywords');
   }
   // Publication listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-publications-listing-publications-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topic, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topic, or other keywords');
   }
   // Announcement and school story mixed listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-announcement-school-listing-annssh-stories-list') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by topic, program, name, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, program, date, topic, or other keywords');
   }
   // Ranking listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-ranking-listing-ranking-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by publication, date, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by publication, date, or other keywords');
   }
   // Faculty insights listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by topic, faculty name, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, date, topic, or other keywords');
   }
   // In the media listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-in-the-media-listing-in-the-media-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search for name, topic, program, date, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, program, date, topic, or other keywords');
   }
   // Alumni stories listing placeholder text
   if ($form['#id'] == 'views-exposed-form-stories-alumni-stories-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search for program, name, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
   // Giving stories listing placeholder text
   if ($form['#id'] == 'views-exposed-form-stories-giving-stories-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by name, date, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
   // Alumni book listing placeholder text
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-alumni-book-listing') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keyword');
+    $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
 
 }
