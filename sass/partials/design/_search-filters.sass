@@ -1,10 +1,6 @@
-//////////////////////////
-// SEARCH BOX AND FILTERS
-//////////////////////////
+// Searches and filters
 
-////////////////
 // Search box
-////////////////
 .gsb-views-exposed-form
   @extend %bg-border-and-box-shadow
 
@@ -250,9 +246,8 @@
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
-///////////////////
-// Search filters
-///////////////////
+
+// Filters
 
 // Filter toggle
 .collapsible
@@ -272,7 +267,6 @@
     .fieldset-title
       +icon-before("plus", true)
 
-
 fieldset.collapsible .fieldset-legend
   display: inline
 
@@ -280,7 +274,6 @@ fieldset.collapsible .fieldset-legend
   background: none
   padding: 0
 
-// Filters
 #edit-field-club-category-tid-wrapper,
 #edit-field-business-insight-topic-tid-wrapper,
 #edit-field-region-tid-wrapper

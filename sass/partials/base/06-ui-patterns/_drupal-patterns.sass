@@ -1,6 +1,6 @@
-// see: elements-ui-patterns-drupal.html for markup
+// Drupal patterns
 
-// MENUS
+// Menus
 ul.menu
   margin: 0
   padding: 0
@@ -14,10 +14,10 @@ ul.menu li.collapsed
   list-style-image: none
   list-style-type: none
 
-// BREADCRUMBS
+// Breadcrumbs
 .breadcrumb
   font-size: 14px
-  padding-bottom: 0
+  padding-bottom: 30px
   position: relative
   +breakpoint($bp-wide-min)
     top: -4px
@@ -32,7 +32,7 @@ ul.menu li.collapsed
   +breakpoint($bp-mobile-max)
     display: none
 
-// SEARCH FIELD
+// Search field
 .views-exposed-widgets
   margin: 0
 .views-exposed-form .views-exposed-widget
@@ -40,7 +40,7 @@ ul.menu li.collapsed
   .form-submit
     margin: 0
 
-// MESSAGES
+// Messages
 div.messages
   border: 0 !important
   padding: 12px 0.5em
@@ -58,70 +58,38 @@ div.warning
 div.error
   color: $red
 
-// BLOCK
-
-// TABS
-// ul.tabs
-
-// NEW USER FORM
 .form-required
   color: $red
 
-// NEW PASSWORD FORM
-
-// PAGERS
+// Pagers
 ul.pager
   +horizontal-list(0.5em)
   a
     +remove-link-underlines
 
-// RSS LINK
+// RSS Link
 a.feed-icon
   +remove-link-underlines
 
-// INLINE LINKS
+// Inline links
 ul.inline
   +inline-list
 
-// INLINE LABELS
+// Inline labels
 div.label-inline
   display: inline-block
 
-// TAXONOMY LIST
+// Taxonomy list
 .field-type-taxonomy-term-reference
   .field-item
     display: inline
 
-// FIELDS
+// Field label above
 .field-label-above
   .field-label
     display: block
 
-// NODE PAGE
-
-// COMMENTS
-#comments
-  .comment
-    *zoom: 1
-    margin-bottom: 12px
-    padding-bottom: 12px
-    border-bottom: none
-    &:after
-      content: ""
-      display: table
-      clear: both
-    &:last-child
-      padding-bottom: 0
-      border-bottom-width: 0
-      margin-bottom: 0
-    &:last-child
-      border-bottom: none
-      margin-bottom: 0
-      padding-bottom: 0
-  .indented
-    padding-left: 1em
-
-// DISPLAY SUITE
+// Display Suite
 // Video, spotlight, house ad fpp
 .pane-bundle-video,
 .pane-bundle-house-ads
