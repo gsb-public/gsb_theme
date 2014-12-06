@@ -1,13 +1,13 @@
 // People FPP
 
-.pane-bundle-people
+// Person field style
+%person-field
+  color: $black
+  font-size: 16px
+  font-weight: normal
+  line-height: 1.2
 
-  .person-field
-    color: $black
-    font-size: 16px
-    font-weight: normal
-    line-height: 1.1
-    margin-top: 4px
+.pane-bundle-people
 
   // Content row style
   .person-row
@@ -17,6 +17,17 @@
       +clearfix
       margin-top: 24px
 
+  // Wrappers
+  .person-wrapper-name-title,
+  .person-wrapper-info
+    @extend %person-field
+    margin-bottom: 12px
+  .person-wrapper-info
+    div
+      margin-bottom: 2px
+      &:last-of-type
+        margin-bottom: 0
+
   // Name
   .person-name
     font-family: $font-demi
@@ -25,13 +36,9 @@
       &:hover
         color: $link-blue
 
-  // Rank
-  .person-rank-and-area
-    margin-top: 4px
-
-  // Title, Role, Program
-  .person-position
-    margin-top: 4px
+  // Alumni professional title
+  .person-alumni-title
+    font-family: $font-demi
 
   // Phone
   .person-phone
@@ -49,10 +56,8 @@
       margin-left: 3px
 
   // Description
-  .person-quote
-    font-size: 16px
-    line-height: 1.2
-    margin-top: 12px
+  .person-description
+    @extend %person-field
 
 // Layouts
 
@@ -63,7 +68,7 @@
     background: $white
     padding: $standard-padding
 
-  // Pane Title
+  // Pane title
   .field-name-field-title
     line-height: 1
     .wide-view &
@@ -87,7 +92,7 @@
       height: 90px
       width: 90px
 
-  // Information wrapper
+  // Person wrapper
   .person-fpp-wrapper
     .wide-view &
       float: left
@@ -105,13 +110,19 @@
     .narrow-view &
       margin-top: 8px
 
-  // Title, Role, Program
+  // Title, Role, Program field and rank field
+  .person-rank-and-area,
   .person-position
     .wide-view &
       font-size: 20px
       line-height: 1.2
     .narrow-view &
-      margin-bottom: 10px
+      margin-bottom: 5px
+
+  // Info wrapper
+  .person-wrapper-info
+    .narrow-view &
+      font-size: 14px
 
 // 2 Column layout
 .person-grid-view
@@ -123,15 +134,14 @@
     width: 270px
     &:nth-of-type(even)
       margin-right: 30px
-    .wide-view &
-      +breakpoint(1211px 1000px)
-        width: 100%
-        &:nth-of-type(even)
-          margin-right: 0
-      +breakpoint(910px max-width)
-        width: 100%
-        &:nth-of-type(even)
-          margin-right: 0
+    +breakpoint(1211px 1000px)
+      width: 100%
+      &:nth-of-type(even)
+        margin-right: 0
+    +breakpoint(910px max-width)
+      width: 100%
+      &:nth-of-type(even)
+        margin-right: 0
 
   // Pane title
   .field-name-field-title
@@ -148,7 +158,7 @@
     height: 90px
     width: 90px
 
-  // Information wrapper
+  // Person wrapper
   .person-fpp-wrapper.use-photo
     float: left
     margin-left: -106px
@@ -160,6 +170,10 @@
     padding-top: 12px
 
   // Title, Role, Program
+  .person-rank-and-area,
   .person-position
-    .wide-view &
-      margin-bottom: 10px
+    margin-bottom: 10px
+
+  // Info wrapper
+  .person-wrapper-info
+    font-size: 14px

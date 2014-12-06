@@ -5821,13 +5821,14 @@ ul.slideshow-items {
   }
 }
 
-.pane-bundle-people .person-field {
+.pane-bundle-people .person-wrapper-name-title,
+.pane-bundle-people .person-wrapper-info, .pane-bundle-people .person-description {
   color: black;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.1;
-  margin-top: 4px;
+  line-height: 1.2;
 }
+
 .pane-bundle-people .person-row {
   border-top: 2px solid #e4e4e4;
   margin-top: 20px;
@@ -5836,6 +5837,16 @@ ul.slideshow-items {
   overflow: hidden;
   *zoom: 1;
   margin-top: 24px;
+}
+.pane-bundle-people .person-wrapper-name-title,
+.pane-bundle-people .person-wrapper-info {
+  margin-bottom: 12px;
+}
+.pane-bundle-people .person-wrapper-info div {
+  margin-bottom: 2px;
+}
+.pane-bundle-people .person-wrapper-info div:last-of-type {
+  margin-bottom: 0;
 }
 .pane-bundle-people .person-name {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5846,11 +5857,8 @@ ul.slideshow-items {
 .pane-bundle-people .person-name a:hover {
   color: #2d6280;
 }
-.pane-bundle-people .person-rank-and-area {
-  margin-top: 4px;
-}
-.pane-bundle-people .person-position {
-  margin-top: 4px;
+.pane-bundle-people .person-alumni-title {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .pane-bundle-people .person-phone {
   font-size: 14px;
@@ -5880,11 +5888,6 @@ ul.slideshow-items {
 .pane-bundle-people .person-email a:after {
   font-size: 12px;
   margin-left: 3px;
-}
-.pane-bundle-people .person-quote {
-  font-size: 16px;
-  line-height: 1.2;
-  margin-top: 12px;
 }
 
 .narrow-view .person-list-view {
@@ -5933,12 +5936,17 @@ ul.slideshow-items {
 .narrow-view .person-list-view .person-name {
   margin-top: 8px;
 }
-.wide-view .person-list-view .person-position {
+.wide-view .person-list-view .person-rank-and-area, .wide-view
+.person-list-view .person-position {
   font-size: 20px;
   line-height: 1.2;
 }
-.narrow-view .person-list-view .person-position {
-  margin-bottom: 10px;
+.narrow-view .person-list-view .person-rank-and-area, .narrow-view
+.person-list-view .person-position {
+  margin-bottom: 5px;
+}
+.narrow-view .person-list-view .person-wrapper-info {
+  font-size: 14px;
 }
 
 .person-grid-view {
@@ -5953,18 +5961,18 @@ ul.slideshow-items {
   margin-right: 30px;
 }
 @media (min-width: 62.5em) and (max-width: 75.6875em) {
-  .wide-view .person-grid-view .person-row {
+  .person-grid-view .person-row {
     width: 100%;
   }
-  .wide-view .person-grid-view .person-row:nth-of-type(even) {
+  .person-grid-view .person-row:nth-of-type(even) {
     margin-right: 0;
   }
 }
 @media (max-width: 56.875em) {
-  .wide-view .person-grid-view .person-row {
+  .person-grid-view .person-row {
     width: 100%;
   }
-  .wide-view .person-grid-view .person-row:nth-of-type(even) {
+  .person-grid-view .person-row:nth-of-type(even) {
     margin-right: 0;
   }
 }
@@ -5990,8 +5998,12 @@ ul.slideshow-items {
 .person-grid-view .person-name {
   padding-top: 12px;
 }
-.wide-view .person-grid-view .person-position {
+.person-grid-view .person-rank-and-area,
+.person-grid-view .person-position {
   margin-bottom: 10px;
+}
+.person-grid-view .person-wrapper-info {
+  font-size: 14px;
 }
 
 .pane-bundle-social-feed {
