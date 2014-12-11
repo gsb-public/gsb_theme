@@ -1,9 +1,10 @@
 // Links FPP
 
 .pane-bundle-links
-  // Black bar links
+
+  // Black bar with red links
   .black-bar
-    @extend %bg-border-and-box-shadow
+    @extend %bg-and-box-shadow
 
     // Title
     .field-name-field-title
@@ -17,8 +18,7 @@
 
     // Links
     .field-name-field-link-unlimited
-      margin: 16px 0
-      padding: 0 $standard-padding
+      padding: 14px $standard-padding
       .field-item
         line-height: 0
         padding-bottom: 12px
@@ -27,29 +27,21 @@
       a
         font-family: $font-demi
         font-size: 16px
-        line-height: 1.4
-        +breakpoint($bp-mobile-max)
-          font-size: 14px
+        line-height: 1.3
         &[target=_blank]
           +icon-after("arrow-external", true)
           &:after
-            color: $red
-            content: "\f102"
-            font-weight: normal
             font-size: 10px
             margin-left: 3px
-          &[href$=".pdf"]
-            &:after
-              font-size: 12px
-        &:hover
+        &[href$=".pdf"]
           &:after
-            color: $teal-dark
+            font-size: 14px
 
   // Green links
   .green-bar
     +container-green-links
 
-  // Stanford logo
+  // Stanford logo links
   .stanford-links
     position: relative
     padding: 6px $standard-padding 20px
@@ -82,22 +74,17 @@
         &:last-of-type
           padding-bottom: 0
       a
-        font-size: 14px
+        font-size: 16px
         font-weight: bold
         line-height: 1.3
         &[target=_blank]
           +icon-after("arrow-external", true)
           &:after
             color: #949494
-            content: "\f102"
             font-size: 10px
             margin-left: 3px
           &[href$=".pdf"]
             &:after
               font-size: 12px
-        &:hover
-          &[target=_blank]
-            &:after
-              color: $teal-dark
     .field-name-field-title
       display: none

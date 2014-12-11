@@ -7,7 +7,6 @@
     font-size: 16px
 
 // Double arrow for CTA's
-
 %arrow-double-big
   position: absolute
   font-size: 21px
@@ -25,10 +24,6 @@
 
 // Backgrounds
 
-// Grey solid background like on right sidebar related links
-%bg-grey-solid
-  background-color: $grey-e
-
 // Grey gradient background used on left sidebar submenu
 %bg-grey-gradient
   +background(linear-gradient(top, rgba($grey-f, 1), rgba($grey-f, 0)))
@@ -36,6 +31,10 @@
 // Grey gradient background used on view content panes
 %bg-grey-gradient-e
   +background(linear-gradient(top, rgba(#e7e7e7, 1), rgba($grey-light, 1)))
+
+// White container
+%bg-white
+  background: $white
 
 // Standard container gradient
 %bg-white-gradient
@@ -80,20 +79,21 @@
 
 // Container styles
 
+// Box shadow only for containers
 %box-shadow
   +box-shadow(rgba($black, 0.1) 0 1px 0, rgba($black, 0.1) 0 0 0 1px)
-  margin: 0 1px 1px 1px
-  +breakpoint($bp-mobile-max)
-    margin-top: 1px
+  margin: 1px
 
+// White border and box shadow
 %border-and-box-shadow
-  @extend %box-shadow
   @extend %border
+  @extend %box-shadow
 
+// White gradient and box shadow
 // Design doc: https://docs.google.com/a/stanford.edu/document/d/10xlCbS9kfaUAVINQb3bR63SHBwBExYqIGygdiTJSBmI
 %bg-border-and-box-shadow
-  @extend %border-and-box-shadow
   @extend %bg-white-gradient
+  @extend %border-and-box-shadow
 
 .ie8
   %bg-border-and-box-shadow
@@ -101,10 +101,10 @@
     margin-left: 0 !important
     margin-right: 0 !important
 
+// White background with light grey border ala Insights
 %bg-and-box-shadow
+  @extend %bg-white
   @extend %box-shadow
-  @extend %bg-white-gradient
-  margin: 1px
 
 // Gradients
 
@@ -198,9 +198,6 @@
 %doc-attached-icons
   margin-left: 3px
   font-weight: normal
-  &:hover
-    &:after
-      color: $text-blue
 
 // Related links fpp
 %related-links
