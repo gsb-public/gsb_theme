@@ -30,7 +30,6 @@
       padding-top: 0
     .group-left-inner
       margin-right: 300px
-      padding-top: 2px
       +breakpoint(700px max-width)
         margin-right: 0
 
@@ -40,3 +39,47 @@
     +breakpoint(700px max-width)
       float: left
       width: 100%
+
+  // Left side
+  .group-left-inner
+    @extend %black-border-top-small
+
+    // Reunion group reference (black superhead label)
+    .field-name-field-reunion-group-page-ref
+      @extend %superhead-black
+
+    // Date
+    .field-name-alumni-reunion-agenda-item-date
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.3
+      margin-bottom: 26px
+
+    // Title and location wrapper
+    .group-wrapper-title-location
+      margin-bottom: 26px
+
+    // Title
+    .field-name-title h1
+      font-family: $font-demi
+      font-size: 32px
+      line-height: 1.3
+
+    // Location
+    .field-name-field-link-single
+      font-family: $font-demi
+      font-size: 24px
+      line-height: 0
+      a
+        color: $link-green
+        line-height: 1.3
+        &:hover
+          color: $link-blue
+
+    // Pricing
+
+    // Registration
+
+    // Description
+    .field-name-field-body
+      @extend %p
