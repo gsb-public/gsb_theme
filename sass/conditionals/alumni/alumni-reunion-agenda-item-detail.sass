@@ -1,0 +1,42 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+
+// Alumni reunion agenda item detail page
+
+// Manage title visibility
+.node-type-alumni-reunion-agenda-item
+  #page-title
+    display: none
+
+.node-alumni-reunion-agenda-item.view-mode-full
+
+  // Layout
+  &.ds-2col > .group-left
+    margin-right: -300px
+    width: 100%
+    +breakpoint(700px max-width)
+      margin-right: 0
+      margin-bottom: 20px
+    +breakpoint($bp-mobile-max)
+      border-top: 0
+      padding-top: 0
+    .group-left-inner
+      margin-right: 300px
+      padding-top: 2px
+      +breakpoint(700px max-width)
+        margin-right: 0
+
+  &.ds-2col > .group-right
+    float: right
+    width: 270px
+    +breakpoint(700px max-width)
+      float: left
+      width: 100%
