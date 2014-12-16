@@ -16,7 +16,9 @@ dfn {
   font-weight: bold;
 }
 
-p {
+p, .format-wysiwyg ul, .format-wysiwyg ol,
+.field-name-field-body ul,
+.field-name-field-body ol {
   font-size: 18px;
   line-height: 1.4;
 }
@@ -1535,12 +1537,7 @@ del {
 }
 
 .panel-display.gsb-standard-page-two .inner-main-wrapper .panel-pane {
-  margin-bottom: 30px;
-}
-@media (max-width: 35.5em) {
-  .panel-display.gsb-standard-page-two #quicklinks {
-    margin-bottom: 14px;
-  }
+  margin-bottom: 20px;
 }
 
 .panel-display.gsb-landing-events .main-wrapper {
@@ -1568,7 +1565,7 @@ del {
 .panel-display.gsb-landing-standard-page-one .main-header .panel-pane,
 .panel-display.gsb-landing-standard-page-one .main-middle .panel-pane,
 .panel-display.gsb-landing-standard-page-one .main-footer .panel-pane {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 1px;
 }
 .panels-ipe-editing .panel-display.gsb-landing-standard-page-one .full-header, .panels-ipe-editing
@@ -1604,11 +1601,6 @@ del {
 @media (max-width: 64em) {
   .panel-display.gsb-landing-standard-page-one .main-middle .column-second {
     float: left;
-  }
-}
-@media (max-width: 35.5em) {
-  .panel-display.gsb-landing-standard-page-one #quicklinks {
-    margin-bottom: 14px;
   }
 }
 
@@ -3636,7 +3628,7 @@ a.no-border:hover {
     margin-bottom: 10px;
   }
   .narrow-view .pane-bundle-text .field-name-field-body p:last-child, .narrow-view .pane-bundle-text .field-name-field-body ul:last-child, .narrow-view .pane-bundle-text .field-name-field-body ol:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   .narrow-view .pane-bundle-text .field-name-field-body h2 {
     font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8399,8 +8391,7 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
-
-.node-book.view-mode-teaser .field-name-field-image-single-public {
+.pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public {
   max-width: 150px;
 }
 
@@ -10533,7 +10524,6 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
 .intro-copy {
   font-size: 24px !important;
   line-height: 1.4 !important;
-  margin-bottom: 15px !important;
 }
 
 .caption-left {
@@ -10575,9 +10565,7 @@ div.callout br {
 .format-wysiwyg ul, .format-wysiwyg ol,
 .field-name-field-body ul,
 .field-name-field-body ol {
-  font-size: 18px;
-  line-height: 1.3;
-  margin: 0 0 24px 0;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 .format-wysiwyg ul li, .format-wysiwyg ol li,
@@ -10738,12 +10726,17 @@ div.callout br {
 .field-name-field-body h5 a:after {
   font-size: 14px;
 }
-.format-wysiwyg p:last-child, .format-wysiwyg ul:last-child, .format-wysiwyg ol:last-child, .format-wysiwyg table:last-child,
+.format-wysiwyg p:last-child,
+.format-wysiwyg ul:last-child,
+.format-wysiwyg ol:last-child,
+.format-wysiwyg li:last-child,
+.format-wysiwyg table:last-child,
 .field-name-field-body p:last-child,
 .field-name-field-body ul:last-child,
 .field-name-field-body ol:last-child,
+.field-name-field-body li:last-child,
 .field-name-field-body table:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .format-wysiwyg table,
 .field-name-field-body table {
