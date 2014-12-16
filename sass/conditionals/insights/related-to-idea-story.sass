@@ -37,6 +37,7 @@
     @extend %divider-bottom
     padding-bottom: $standard-padding
   .field-collection-item-field-related-faculty,
+  .field-name-field-person-fac-ref,
   .field-name-field-alumni-ref
     .node
       +clearfix
@@ -50,6 +51,7 @@
       float: left
       margin-right: 12px
       max-width: 40px
+
     // Name
     .group-wrapper-name,
     .field-name-title
@@ -70,7 +72,8 @@
     .group-wrapper-position
       padding-left: 52px
 
-  // Related Alumni
+  // Related Faculty and Alumni
+  .field-name-field-person-fac-ref,
   .field-name-field-alumni-ref
     @extend %divider-bottom
     padding-bottom: $standard-padding
