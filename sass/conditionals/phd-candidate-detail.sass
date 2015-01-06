@@ -73,17 +73,15 @@
       padding-left: 0
 
   // Photo label
-  .field-name-field-academic-area-single
+  .field-name-phd-academic-area-label
     background: $grey-dark
     color: $white
+    font-family: $font-demi
     font-size: 14px
-    line-height: 18px
+    line-height: 1.1
     margin-bottom: 20px
     padding: 14px $standard-padding
-    span:before
-      content: "PhD Candidate,"
-      display: inline
-      margin-right: 0.3em
+
   // Information block under photo
   .group-wrapper-information
     @extend %group-wrapper-information
@@ -94,9 +92,7 @@
     border-bottom: 1px solid #e4e4e4
     a
       display: inline-block
-      max-width: 211px
       padding-bottom: 15px
-      word-wrap: break-word
     a
       +icon-after("email-stroke", true)
       &:after
