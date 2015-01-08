@@ -1,0 +1,58 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+// Alumni Agenda Schedule list
+.pane-gsb-alumni-agenda-list-panel-pane-1
+  @extend %black-border-top-small
+
+  // List title
+  h2.pane-title
+    color: $text-black
+    font-family: $font-sans
+    font-size: 28px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 20px
+    margin-top: 8px
+
+  // Date
+  h3
+    font-size: 22px
+    margin-bottom: 18px
+
+  // Event separation
+  .views-row .node
+    @extend %divider-top
+    margin: 0 26px
+    padding-bottom: 18px
+
+  // Reunion group reference (black superhead label)
+  .field-name-field-reunion-group-page-ref
+    @extend %superhead-black
+    margin-bottom: 0
+
+  // Time of event
+  .field-name-field-event-date
+    font-family: $font-demi
+    font-size: 15px
+    line-height: 1.3
+    margin: 18px 0
+
+  // Title of event
+  .field-name-title
+    h2
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+
+  // Location
+  .field-name-field-link-single
+    font-size: 16px
+    line-height: 1.3
