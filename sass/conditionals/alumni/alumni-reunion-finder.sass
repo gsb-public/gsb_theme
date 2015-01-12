@@ -10,7 +10,20 @@
 
 // Alumni reunion finder
 .pane-reunion-finder
-  background: image_url("bg-reunion-finder.jpg") no-repeat
+  position: relative
+
+  // Image wrapper
+  .reunion-finder-image-wrapper
+
+  // Content wrapper
+  .reunion-finder-content-wrapper
+    position: absolute
+    top: 0
+    width: 100%
+
+  // Form wrapper
+  .reunion-finder-form-wrapper
+    padding: 18px
 
   // Title
   h3
@@ -21,4 +34,20 @@
     font-weight: normal
     line-height: 1.2
     margin-bottom: 12px
-    padding: 12px 8px
+    padding: 12px 18px
+
+  // Select dropdown
+  .customSelect
+    border: 1px solid #fff
+    width: 100% !important
+    &:after
+      height: 40px
+
+  .customSelectInner
+    font-size: 24px
+    line-height: 1.2
+    padding: 8px 0 0 14px
+
+  // Go to reunion link
+  #gotoReunion
+    @extend %red-button

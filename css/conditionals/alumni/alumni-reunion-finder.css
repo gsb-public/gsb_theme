@@ -1,5 +1,52 @@
+.pane-reunion-finder #gotoReunion:hover {
+  background: #2d6280;
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+
+.pane-reunion-finder #gotoReunion {
+  background-color: #c50000;
+  background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -webkit-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: linear-gradient(to top, #c50000 0%, #860000 100%);
+}
+
+.pane-reunion-finder #gotoReunion {
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  color: white;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 10px 16px;
+}
+.pane-reunion-finder #gotoReunion:after {
+  color: white !important;
+}
+.pane-reunion-finder #gotoReunion:hover {
+  border: 0;
+  color: white;
+}
+.pane-reunion-finder #gotoReunion:hover:after {
+  color: white !important;
+}
+
 .pane-reunion-finder {
-  background: url('../../../images/bg-reunion-finder.jpg') no-repeat;
+  position: relative;
+}
+.pane-reunion-finder .reunion-finder-content-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.pane-reunion-finder .reunion-finder-form-wrapper {
+  padding: 18px;
 }
 .pane-reunion-finder h3 {
   background: rgba(48, 117, 156, 0.85);
@@ -9,5 +56,17 @@
   font-weight: normal;
   line-height: 1.2;
   margin-bottom: 12px;
-  padding: 12px 8px;
+  padding: 12px 18px;
+}
+.pane-reunion-finder .customSelect {
+  border: 1px solid white;
+  width: 100% !important;
+}
+.pane-reunion-finder .customSelect:after {
+  height: 40px;
+}
+.pane-reunion-finder .customSelectInner {
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 8px 0 0 14px;
 }

@@ -30,8 +30,7 @@
     a
       +icon-before("twitter", true)
       &:before
-        background-color: $red-light
-        +background(linear-gradient(bottom, $red-light 0%, $red-dark 100%))
+        @extend %gradient-red
         +border-radius(50px)
         color: $white
         display: block
