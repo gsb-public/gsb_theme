@@ -24,6 +24,7 @@
   // Form wrapper
   .reunion-finder-form-wrapper
     padding: 18px
+    +clearfix
 
   // Title
   h3
@@ -38,7 +39,7 @@
 
   // Select dropdown
   .customSelect
-    border: 1px solid #fff
+    border: 1px solid $white
     width: 100% !important
     &:after
       height: 40px
@@ -51,3 +52,21 @@
   // Go to reunion link
   #gotoReunion
     @extend %red-button
+    float: right
+    font-size: 20px
+
+  // MBA year field label
+  #label_programYear
+    color: #134c6c
+    float: left
+    font-family: $font-demi
+    font-size: 24px
+    font-weight: normal
+    line-height: 1.8
+
+  // MBA year field input
+  #programYear
+    border: 1px solid $white
+    height: 42px
+    padding: 8px
+    width: 62px
