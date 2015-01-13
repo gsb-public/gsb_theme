@@ -10,10 +10,20 @@
 
 // Alumni reunion finder
 .pane-reunion-finder
+  background: #9ecbea
   position: relative
+  bottom: 0
+  .wide-view &
+    min-height: 515px
+  .narrow-view &
+    min-height: 400px
 
   // Image wrapper
   .reunion-finder-image-wrapper
+    position: absolute
+    bottom: 0
+    img
+      vertical-align: bottom
 
   // Content wrapper
   .reunion-finder-content-wrapper
@@ -23,10 +33,10 @@
 
   // Form wrapper
   .reunion-finder-form-wrapper
-    padding: 18px
+    padding: 0 $standard-padding
     +clearfix
 
-  // Title
+  // Pane Title
   h3
     background: rgba(#30759c, 0.85)
     color: $white
@@ -34,8 +44,11 @@
     font-size: 28px
     font-weight: normal
     line-height: 1.2
-    margin-bottom: 12px
-    padding: 12px 18px
+    margin-bottom: 18px
+    margin-top: -5px
+    padding: 12px $standard-padding
+    .narrow-view &
+      font-size: 24px
 
   // Select dropdown
   .customSelect
@@ -48,12 +61,25 @@
     font-size: 24px
     line-height: 1.2
     padding: 8px 0 0 14px
+    .narrow-view &
+      font-size: 20px
 
-  // Go to reunion link
+  // Go to reunion link button
   #gotoReunion
     @extend %red-button
     float: right
     font-size: 20px
+    .narrow-view &
+      font-size: 16px
+      text-align: center
+      width: 100%
+      +breakpoint($bp-mobile-max)
+        float: right
+        width: auto
+
+  // Program year wrapper
+  .program-year-wrapper
+    margin-top: 18px
 
   // MBA year field label
   #label_programYear
@@ -63,6 +89,9 @@
     font-size: 24px
     font-weight: normal
     line-height: 1.8
+    .narrow-view &
+      font-size: 18px
+      line-height: 2.3
 
   // MBA year field input
   #programYear
@@ -70,3 +99,18 @@
     height: 42px
     padding: 8px
     width: 62px
+
+  // Year error message
+  .program-year-error-wrapper
+    margin: 18px 0
+
+  // No reunion page message
+  #noReunionPage
+    border-top: 1px solid #cdeefd
+    font-family: $font-demi
+    font-size: 28px
+    line-height: 1.2
+    padding-top: 22px
+    text-align: right
+    .narrow-view &
+      font-size: 20px

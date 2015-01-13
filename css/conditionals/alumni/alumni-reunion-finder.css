@@ -38,7 +38,22 @@
 }
 
 .pane-reunion-finder {
+  background: #9ecbea;
   position: relative;
+  bottom: 0;
+}
+.wide-view .pane-reunion-finder {
+  min-height: 515px;
+}
+.narrow-view .pane-reunion-finder {
+  min-height: 400px;
+}
+.pane-reunion-finder .reunion-finder-image-wrapper {
+  position: absolute;
+  bottom: 0;
+}
+.pane-reunion-finder .reunion-finder-image-wrapper img {
+  vertical-align: bottom;
 }
 .pane-reunion-finder .reunion-finder-content-wrapper {
   position: absolute;
@@ -46,7 +61,7 @@
   width: 100%;
 }
 .pane-reunion-finder .reunion-finder-form-wrapper {
-  padding: 18px;
+  padding: 0 26px;
   overflow: hidden;
   *zoom: 1;
 }
@@ -57,8 +72,12 @@
   font-size: 28px;
   font-weight: normal;
   line-height: 1.2;
-  margin-bottom: 12px;
-  padding: 12px 18px;
+  margin-bottom: 18px;
+  margin-top: -5px;
+  padding: 12px 26px;
+}
+.narrow-view .pane-reunion-finder h3 {
+  font-size: 24px;
 }
 .pane-reunion-finder .customSelect {
   border: 1px solid white;
@@ -72,9 +91,26 @@
   line-height: 1.2;
   padding: 8px 0 0 14px;
 }
+.narrow-view .pane-reunion-finder .customSelectInner {
+  font-size: 20px;
+}
 .pane-reunion-finder #gotoReunion {
   float: right;
   font-size: 20px;
+}
+.narrow-view .pane-reunion-finder #gotoReunion {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .pane-reunion-finder #gotoReunion {
+    float: right;
+    width: auto;
+  }
+}
+.pane-reunion-finder .program-year-wrapper {
+  margin-top: 18px;
 }
 .pane-reunion-finder #label_programYear {
   color: #134c6c;
@@ -84,9 +120,27 @@
   font-weight: normal;
   line-height: 1.8;
 }
+.narrow-view .pane-reunion-finder #label_programYear {
+  font-size: 18px;
+  line-height: 2.3;
+}
 .pane-reunion-finder #programYear {
   border: 1px solid white;
   height: 42px;
   padding: 8px;
   width: 62px;
+}
+.pane-reunion-finder .program-year-error-wrapper {
+  margin: 18px 0;
+}
+.pane-reunion-finder #noReunionPage {
+  border-top: 1px solid #cdeefd;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+  padding-top: 22px;
+  text-align: right;
+}
+.narrow-view .pane-reunion-finder #noReunionPage {
+  font-size: 20px;
 }
