@@ -49,6 +49,9 @@
     .narrow-view &
       font-size: 24px
       margin-top: -5px
+    .wide-view &
+      +breakpoint($bp-mobile-max)
+        font-size: 24px
 
   // Select dropdown
   .customSelect
@@ -63,6 +66,9 @@
     padding: 8px 0 0 14px
     .narrow-view &
       font-size: 20px
+    .wide-view &
+      +breakpoint($bp-mobile-max)
+        font-size: 20px
 
   // Go to reunion link button
   #gotoReunion
@@ -76,6 +82,9 @@
       +breakpoint($bp-mobile-max)
         float: right
         width: auto
+    .wide-view &
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
 
   // Program year wrapper
   .program-year-wrapper
@@ -91,6 +100,10 @@
     line-height: 1.8
     .narrow-view &
       font-size: 18px
+      line-height: 2.3
+    .wide-view &
+      +breakpoint($bp-mobile-max)
+        font-size: 18px
       line-height: 2.3
 
   // MBA year field input
@@ -114,3 +127,6 @@
     text-align: right
     .narrow-view &
       font-size: 20px
+    .wide-view &
+      +breakpoint($bp-mobile-max)
+        font-size: 20px
