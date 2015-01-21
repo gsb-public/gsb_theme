@@ -619,3 +619,26 @@ a.no-border
     .field-name-field-link-unlimited
       +breakpoint(700px max-width)
         padding: 20px $standard-padding
+
+// Media icons
+
+// Video
+.media-icon.Video
+  margin-right: 8px
+  +icon-after("video", true)
+  &:after
+    color: #bcbcbc
+
+// Audio
+.media-icon.Audio
+  margin-right: 8px
+  +icon-after("podcast", true)
+  &:after
+    color: #bcbcbc
+
+// Infographic
+.media-icon.Infographic
+  margin-right: 6px
+  &:after
+    content: "Infographic:"
+    font-weight: bold

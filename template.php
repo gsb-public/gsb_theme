@@ -351,7 +351,38 @@ function gsb_theme_process_node(&$variables, $hook) {
     'event_listing',
     'news_listing'
   );
-  if (in_array($variables['type'], $types) && in_array($variables['view_mode'], $view_modes)) {
+  _gsb_theme_prepare_two_column_classes($variables['type'], $types, $view_modes, $variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for entities.
+ */
+function gsb_theme_process_entity(&$variables, $hook) {
+  if ($variables['entity_type'] == 'field_collection_item' && isset($variables['field_collection_item'])) {
+    $types = array(
+      'field_featured_item',
+    );
+    $view_modes = array(
+      'full',
+    );
+    _gsb_theme_prepare_two_column_classes($variables['field_collection_item']->bundle(), $types, $view_modes, $variables);
+  }
+}
+
+/**
+ * Prepares a template for two columns.
+ *
+ * @param string $bundle
+ *   The bundle of the entity.
+ * @param array $bundles
+ *   The bundles to prepare.
+ * @param array $view_modes
+ *   The view modes to prepare.
+ * @param array $variables
+ *   The array of variables for the template.
+ */
+function _gsb_theme_prepare_two_column_classes($bundle, $bundles, $view_modes, &$variables) {
+  if (in_array($bundle, $bundles) && in_array($variables['view_mode'], $view_modes)) {
     if (!empty($variables['right'])) {
       $variables['left_classes'] .= ' second-column';
     }

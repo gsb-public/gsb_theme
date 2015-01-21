@@ -18,11 +18,11 @@
     <?php print $header; ?>
   </<?php print $header_wrapper ?>>
 
-  <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
-    <?php print $left; ?>
+  <<?php print $left_wrapper ?> class="left<?php print $left_classes; ?>">
+      <?php print $left; ?>
   </<?php print $left_wrapper ?>>
 
-  <<?php print $right_wrapper ?> class="group-right<?php print $right_classes; ?>">
+  <<?php print $right_wrapper ?> class="right<?php print $right_classes; ?>">
     <?php print $right; ?>
   </<?php print $right_wrapper ?>>
 
