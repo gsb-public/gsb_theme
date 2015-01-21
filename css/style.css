@@ -91,7 +91,7 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
 .view-display-id-working_paper_list .views-widget-filter-secondary .form-type-select,
 .view-display-id-case_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-book_listing .views-widget-filter-secondary .form-type-select,
-.view-display-id-publications_listing .views-widget-filter-secondary .form-type-select {
+.view-display-id-publications_listing .views-widget-filter-secondary .form-type-select, .pane-bundle-featured-content ul {
   border-bottom: 1px lightgray solid;
 }
 
@@ -10578,6 +10578,9 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
 .narrow-view .pane-bundle-featured-content .right {
   display: none;
 }
+.pane-bundle-featured-content ul {
+  margin: 0;
+}
 .pane-bundle-featured-content li {
   margin-bottom: 18px;
 }
@@ -10651,6 +10654,25 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
 }
 .pane-bundle-featured-content .field-name-field-image-single-public img {
   max-width: 150px;
+}
+.pane-bundle-featured-content .show-more-less-toggler {
+  background: #538b80;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.2;
+  margin-left: 0;
+  padding: 10px 16px;
+}
+.pane-bundle-featured-content .show-more-less-toggler:before {
+  color: white !important;
+  float: none;
+  left: -6px;
+  top: -1px;
+}
+.pane-bundle-featured-content .show-more-less-toggler:hover {
+  background: #2d6280;
+  text-decoration: underline;
 }
 
 .intro-copy {

@@ -35,6 +35,9 @@
       display: none
 
   // Featured content item
+  ul
+    @extend %divider-bottom
+    margin: 0
   li
     margin-bottom: 18px
     &:last-of-type
@@ -112,3 +115,21 @@
       display: none
     img
       max-width: 150px
+
+  // Show more show less link
+  .show-more-less-toggler
+    background: $teal-dark
+    color: $white
+    font-size: 16px
+    font-weight: bold
+    line-height: 2.2
+    margin-left: 0
+    padding: 10px 16px
+    &:before
+      color: $white !important
+      float: none
+      left: -6px
+      top: -1px
+    &:hover
+      background: $link-blue
+      text-decoration: underline
