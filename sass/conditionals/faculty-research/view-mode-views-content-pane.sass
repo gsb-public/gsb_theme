@@ -7,11 +7,12 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Views content panes
+// Views content panes - Filters
 
-// Case study and publications views pane
+// Case study, publications, working papers views pane
 .pane-case-filters-panel-pane-1,
-.pane-publication-filters-panel-pane-1
+.pane-publication-filters-panel-pane-1,
+.pane-working-paper-filters-working-paper-filters-pane
   @extend %bg-grey-gradient-e
   padding: $standard-padding
   padding-top: 0
@@ -83,6 +84,22 @@
     font-weight: normal
     line-height: 1.2
 
+  // Working papers date
+  .field-name-field-month,
+  .field-name-field-pub-date-day,
+  .field-name-field-year-of-publication
+    display: inline-block
+    font-size: 14px
+    line-height: 1.2
+
+  // Day
+  .field-name-field-pub-date-day
+    margin-left: 3px
+
+  // Year
+  .field-name-field-year-of-publication
+    margin-left: 3px
+
   // Year and publication details
   .field-name-field-year,
   .group-wrapper-published
@@ -94,3 +111,7 @@
   display: inline
   &:before
     font-size: 20px
+
+// Working papers - specific authors spacing
+.node-working-paper .gsb_field_formatter_field_collection_separator
+  margin-bottom: 0

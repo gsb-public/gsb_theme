@@ -1,5 +1,6 @@
 .pane-case-filters-panel-pane-1,
-.pane-publication-filters-panel-pane-1 {
+.pane-publication-filters-panel-pane-1,
+.pane-working-paper-filters-working-paper-filters-pane {
   background: -moz-linear-gradient(top, #e7e7e7, #f0f0f0);
   background: -o-linear-gradient(top, #e7e7e7, #f0f0f0);
   background: -webkit-linear-gradient(top, #e7e7e7, #f0f0f0);
@@ -7,12 +8,14 @@
 }
 
 .pane-case-filters-panel-pane-1 h2.pane-title,
-.pane-publication-filters-panel-pane-1 h2.pane-title {
+.pane-publication-filters-panel-pane-1 h2.pane-title,
+.pane-working-paper-filters-working-paper-filters-pane h2.pane-title {
   border-top: 10px #c2b7a1 solid;
 }
 
 .pane-case-filters-panel-pane-1 .see-all a,
-.pane-publication-filters-panel-pane-1 .see-all a {
+.pane-publication-filters-panel-pane-1 .see-all a,
+.pane-working-paper-filters-working-paper-filters-pane .see-all a {
   background: #538b80;
   color: white;
   display: block;
@@ -24,7 +27,8 @@
   position: relative;
 }
 .pane-case-filters-panel-pane-1 .see-all a:after,
-.pane-publication-filters-panel-pane-1 .see-all a:after {
+.pane-publication-filters-panel-pane-1 .see-all a:after,
+.pane-working-paper-filters-working-paper-filters-pane .see-all a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -40,7 +44,8 @@
   font-family: 'icons';
 }
 .pane-case-filters-panel-pane-1 .see-all a:after,
-.pane-publication-filters-panel-pane-1 .see-all a:after {
+.pane-publication-filters-panel-pane-1 .see-all a:after,
+.pane-working-paper-filters-working-paper-filters-pane .see-all a:after {
   color: white;
   font-size: 16px;
   font-weight: normal;
@@ -50,12 +55,14 @@
   top: 50%;
 }
 .pane-case-filters-panel-pane-1 .see-all a:hover,
-.pane-publication-filters-panel-pane-1 .see-all a:hover {
+.pane-publication-filters-panel-pane-1 .see-all a:hover,
+.pane-working-paper-filters-working-paper-filters-pane .see-all a:hover {
   background: #2d6280;
   color: white;
 }
 .pane-case-filters-panel-pane-1 .see-all a:hover:after,
-.pane-publication-filters-panel-pane-1 .see-all a:hover:after {
+.pane-publication-filters-panel-pane-1 .see-all a:hover:after,
+.pane-working-paper-filters-working-paper-filters-pane .see-all a:hover:after {
   color: white;
 }
 
@@ -65,12 +72,14 @@
 }
 
 .pane-case-filters-panel-pane-1,
-.pane-publication-filters-panel-pane-1 {
+.pane-publication-filters-panel-pane-1,
+.pane-working-paper-filters-working-paper-filters-pane {
   padding: 26px;
   padding-top: 0;
 }
 .pane-case-filters-panel-pane-1 h2.pane-title,
-.pane-publication-filters-panel-pane-1 h2.pane-title {
+.pane-publication-filters-panel-pane-1 h2.pane-title,
+.pane-working-paper-filters-working-paper-filters-pane h2.pane-title {
   color: #231f20;
   display: block;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -80,7 +89,8 @@
   padding-top: 6px;
 }
 .pane-case-filters-panel-pane-1 .pane-content,
-.pane-publication-filters-panel-pane-1 .pane-content {
+.pane-publication-filters-panel-pane-1 .pane-content,
+.pane-working-paper-filters-working-paper-filters-pane .pane-content {
   padding-top: 24px;
 }
 
@@ -147,6 +157,19 @@
   font-weight: normal;
   line-height: 1.2;
 }
+.view-mode-views_content_pane .field-name-field-month,
+.view-mode-views_content_pane .field-name-field-pub-date-day,
+.view-mode-views_content_pane .field-name-field-year-of-publication {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.view-mode-views_content_pane .field-name-field-pub-date-day {
+  margin-left: 3px;
+}
+.view-mode-views_content_pane .field-name-field-year-of-publication {
+  margin-left: 3px;
+}
 .view-mode-views_content_pane .field-name-field-year,
 .view-mode-views_content_pane .group-wrapper-published {
   font-size: 14px;
@@ -158,4 +181,8 @@
 }
 .case-product-icon.Video:before {
   font-size: 20px;
+}
+
+.node-working-paper .gsb_field_formatter_field_collection_separator {
+  margin-bottom: 0;
 }
