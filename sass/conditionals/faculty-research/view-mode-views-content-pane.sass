@@ -9,10 +9,11 @@
 
 // Views content panes - Filters
 
-// Case study, publications, working papers views pane
+// Case study, publications, working papers, books views pane
 .pane-case-filters-panel-pane-1,
 .pane-publication-filters-panel-pane-1,
-.pane-working-paper-filters-working-paper-filters-pane
+.pane-working-paper-filters-working-paper-filters-pane,
+.pane-book-filters-book-filters-pane
   @extend %bg-grey-gradient-e
   padding: $standard-padding
   padding-top: 0
@@ -106,12 +107,14 @@
     font-size: 14px
     line-height: 1.2
 
+  // Working papers and books - specific authors spacing
+  &.node-working-paper,
+  &.node-book
+    .gsb_field_formatter_field_collection_separator
+      margin-bottom: 0
+
 // Cases product
 .case-product-icon.Video
   display: inline
   &:before
     font-size: 20px
-
-// Working papers - specific authors spacing
-.node-working-paper .gsb_field_formatter_field_collection_separator
-  margin-bottom: 0
