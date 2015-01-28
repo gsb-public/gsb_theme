@@ -1,0 +1,223 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+
+// ACT Project detail page
+
+// Manage title visibility
+.node-type-act
+  #page-title
+    display: none
+
+.node-act.view-mode-full
+
+  // Layout
+  &.ds-2col > .group-left
+    margin-right: -300px
+    width: 100%
+    +breakpoint(700px max-width)
+      margin-right: 0
+      margin-bottom: 20px
+    +breakpoint($bp-mobile-max)
+      border-top: 0
+      padding-top: 0
+    .group-left-inner
+      margin-right: 300px
+      +breakpoint(700px max-width)
+        margin-right: 0
+
+  &.ds-2col > .group-right
+    float: right
+    width: 270px
+    +breakpoint(700px max-width)
+      float: left
+      width: 100%
+
+  // Left side
+  .group-left-inner
+    @extend %black-border-top-small
+
+  // Title
+  .field-name-title
+    margin: 8px 0
+    h1
+      font-family: $font-sans
+      font-size: 32px
+      font-weight: bold
+      line-height: 1.3
+      +breakpoint(700px max-width)
+        font-size: 26px
+
+  // Project link
+  .field-name-field-link-single
+    font-family: $font-demi
+    font-size: 20px
+    line-height: 0
+    a
+      color: $link-green
+      line-height: 1.3
+      &:hover
+        color: $link-blue
+
+  // Location
+  .field-name-field-act-org-location
+    font-family: $font-demi
+    font-size: 20px
+    line-height: 1.3
+
+  // Logo
+  .field-name-field-image-logo-single-public
+    img
+      height: 75px
+      width: auto
+
+  // ACT info wrapper
+  .group-wrapper-act-info
+    font-size: 18px
+    line-height: 1.3
+    margin: 18px 0
+    // Inline labels
+    .label-inline
+      font-family: $font-demi
+      font-weight: normal
+      margin-right: 5px
+
+  // Image
+  .field-name-field-image-single-public
+    margin-bottom: 18px
+    img
+      height: 160px
+      width: auto
+
+  // Subheads with text
+  .field-name-field-act-organization,
+  .field-name-field-act-issue,
+  .field-name-field-act-situation,
+  .field-name-field-act-project-objectives,
+  .field-name-field-act-project-overview,
+  .field-name-field-act-key-recommendations,
+  .field-name-field-act-key-conclusions,
+  .field-name-field-act-final-report-outline,
+  .field-name-field-act-useful-item
+    margin-bottom: 18px
+    // Subhead
+    .label-above
+      font-family: $font-demi
+      font-size: 24px
+      line-height: 1.3
+      margin-bottom: 8px
+
+    // WYSIWYG
+    h3
+      color: $black
+      font-family: $font-demi
+      font-size: 20px
+      font-weight: normal
+      line-height: 1.2
+      margin: 3px 0 4px 0
+    a
+      border-bottom: dashed 1px $link-green
+      color: $link-green
+      text-decoration: none
+      word-wrap: break-word
+      &:hover
+        border-bottom: solid 1px $link-blue
+        color: $link-blue
+      &[href*="mailto:"]
+        +icon-after("email-stroke", true)
+        &:after
+          font-size: 10px
+          margin-left: 3px
+
+    ul, ol
+      @extend %p
+      margin: 0 0 20px 0
+      padding: 0
+      li
+        margin-bottom: 8px
+    ol
+      padding-left: 36px
+    ul
+      position: relative
+      left: 0
+      li
+        padding-left: 15px
+        &:before
+          content: "• "
+          color: $text-black
+          position: absolute
+          left: 0
+
+  // Right side
+  .group-right
+
+    // Red links
+    .field-name-field-link-unlimited
+      margin-bottom: 30px
+      a
+        +background(linear-gradient($red-dark, #8f0000))
+        font-size: 16px
+        line-height: 1.2
+        padding: 14px 55px 11px $standard-padding
+        position: relative
+        &:hover
+          +background(linear-gradient(#194560, #2c6180))
+
+    // People-like block
+    .field-name-field-act-project-team-role
+      @extend %bg-and-box-shadow
+      margin-bottom: 30px
+      padding: 0 $standard-padding 12px
+      // Pane title
+      h2
+        color: $text-black
+        font-size: 20px
+        font-weight: bold
+        padding: 18px 0 11px
+        line-height: 1.3
+    // Team member - alumni
+    .field-collection-item-field-act-project-team-role
+      border-top: 1px solid #e4e4e4
+      line-height: 1
+      padding-top: 6px
+      padding-bottom: 12px
+      a
+        color: $link-green
+        font-family: $font-demi
+        font-size: 16px
+        line-height: 1.3
+        padding-right: 10px
+        &[target=_blank]
+          +icon-after("arrow-external", true)
+          &:after
+            font-size: 10px
+            margin-left: 3px
+        &[href$=".pdf"]
+          &:after
+            font-size: 14px
+        &:hover
+          color: $link-blue
+    // Team member - other
+    .field-name-field-act-full-name
+      font-family: $font-demi
+      font-size: 16px
+      line-height: 1.3
+
+    // Team member role
+    .field-name-field-act-role
+      font-size: 16px
+      line-height: 1.3
+
+    // Comma before degree field
+    .field-degree
+      &:before
+        content: ","
+        display: inline
+        margin-right: 8px
