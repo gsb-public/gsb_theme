@@ -26,31 +26,23 @@
       max-width: 65%
     +breakpoint(825px max-width)
       max-width: 50%
-    +breakpoint(720px 568px)
+    +breakpoint(720px max-width)
       max-width: 100%
-    +breakpoint(470px max-width)
+    .touch &
+      float: none
       max-width: 100%
     .narrow-view &
       float: none
       max-width: 100%
-      +breakpoint(568px 471px)
-        float: left
-        max-width: 50%
 
   .right
     float: right
     margin-bottom: 18px
-    .wide-view &
-      +breakpoint(720px 568px)
-        display: none
-      +breakpoint(470px max-width)
-        display: none
+    .touch &
+      display: none
     .narrow-view &
       display: none
       float: none
-      +breakpoint(568px 471px)
-        display: block
-        float: right
 
   // Featured content item
   ul
