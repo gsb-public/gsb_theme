@@ -68,6 +68,8 @@
           Drupal.showMoreLess.toggler($itemsWrapper, type, counter);
         }
       });
+
+      Drupal.showMoreLess.loaded = true;
     }
   };
 
@@ -87,10 +89,10 @@
     $wrapper.css('overflow', 'hidden');
 
     // Add a link for people to click.
-    $wrapper.after('<a class="show-more-less-toggler show-more-less-toggler-open" data-id="' + counter + '" href="#">' + Drupal.t('Show More') + '</a>');
+    $wrapper.after('<div class="show-more-less-toggler-wrapper"><a class="show-more-less-toggler show-more-less-toggler-open" data-id="' + counter + '" href="#">' + Drupal.t('Show More') + '</a></div>');
 
     // Now create an object for that link.
-    $toggler = $wrapper.next('.show-more-less-toggler');
+    $toggler = $wrapper.next('.show-more-less-toggler-wrapper').find('a');
 
     // Add click event.
     $toggler.click(function(e) {
@@ -195,7 +197,7 @@
     Drupal.showMoreLess.animateItem($wrapper, newHeight);
 
     // Switch the value of the toggle.
-    $wrapper.siblings('.show-more-less-toggler').text(Drupal.t('Show Less'));
+    $wrapper.siblings('.show-more-less-toggler-wrapper').find('a').text(Drupal.t('Show Less'));
 
   }
 
@@ -213,6 +215,7 @@
       case 'view':
         // Find the wrapper.
         $wrapper = $element.children('.view-content');
+
         // Find the last item in the list.
         $bottomItem = $wrapper.find('.views-row:eq(' + numberToShow + ')');
         // Calculate the new height by
@@ -246,8 +249,15 @@
     // Animate the area
     Drupal.showMoreLess.animateItem($wrapper, newHeight);
 
+    // Scroll up to the top when closing.
+    if (Drupal.showMoreLess.loaded) {
+      $('html, body').animate({
+        scrollTop: $wrapper.offset().top - 50
+      }, 500);
+    }
+
     // Switch the value of the toggle.
-    $wrapper.siblings('.show-more-less-toggler').text(Drupal.t('Show More'));
+    $wrapper.siblings('.show-more-less-toggler-wrapper').find('a').text(Drupal.t('Show More'));
   }
 
   /**
@@ -260,7 +270,7 @@
     // Set the new height.
     $wrapper.animate({'height': newHeight + 'px'}, 500);
     // Toggle the open/close classes.
-    $wrapper.siblings('.show-more-less-toggler').toggleClass('show-more-less-toggler-open').toggleClass('show-more-less-toggler-closed');
+    $wrapper.siblings('.show-more-less-toggler-wrapper').find('a').toggleClass('show-more-less-toggler-open').toggleClass('show-more-less-toggler-closed');
   }
 
   /**
