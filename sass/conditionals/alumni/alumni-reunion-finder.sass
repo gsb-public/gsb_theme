@@ -11,10 +11,11 @@
 // Alumni reunion finder
 .pane-reunion-finder
   background: #9ecbea
+  margin-bottom: 30px
   position: relative
   bottom: 0
   .wide-view &
-    min-height: 515px
+    min-height: 480px
   .narrow-view &
     min-height: 400px
 
@@ -44,8 +45,8 @@
     font-size: 28px
     font-weight: normal
     line-height: 1.2
-    margin-bottom: 18px
-    padding: 12px $standard-padding
+    margin-bottom: 26px
+    padding: 14px $standard-padding
     .narrow-view &
       font-size: 24px
       margin-top: -5px
@@ -58,12 +59,15 @@
     border: 1px solid $white
     width: 100% !important
     &:after
-      height: 40px
+      height: 52px
+      line-height: 3.7
+      padding: 0 13px
 
   .customSelectInner
     font-size: 24px
     line-height: 1.2
-    padding: 8px 0 0 14px
+    padding: 0
+    margin: 12px 14px
     .narrow-view &
       font-size: 20px
     .wide-view &
@@ -100,14 +104,14 @@
     .wide-view &
       +breakpoint($bp-mobile-max)
         font-size: 18px
-      line-height: 2.3
 
   // MBA year field input
   #programYear
     border: 1px solid $white
+    font-size: 18px
     height: 42px
-    padding: 8px
-    width: 62px
+    padding: 10px
+    width: 70px
 
   // Year error message
   #programYearError
