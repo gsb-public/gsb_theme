@@ -20,15 +20,7 @@
   .left.second-column
     float: left
     max-width: 65%
-    +breakpoint(1212px max-width)
-      max-width: 49%
-    +breakpoint(999px max-width)
-      max-width: 65%
-    +breakpoint(825px max-width)
-      max-width: 50%
-    +breakpoint(720px max-width)
-      max-width: 100%
-    .touch &
+    +breakpoint(1200px max-width)
       float: none
       max-width: 100%
     .narrow-view &
@@ -38,8 +30,9 @@
   .right
     float: right
     margin-bottom: 18px
-    .touch &
+    +breakpoint(1200px max-width)
       display: none
+      float: none
     .narrow-view &
       display: none
       float: none
