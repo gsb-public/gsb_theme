@@ -39,7 +39,8 @@
 
   // Featured content item
   ul
-    margin: 0 0 24px 0
+    margin: 0
+    padding: 0
   li
     margin-bottom: 24px
 
@@ -147,6 +148,9 @@
       max-width: 150px
 
   // Show more show less link
+  .show-more-less-toggler-wrapper
+    @extend %divider-top
+    margin-top: 10px
   .show-more-less-toggler
     background: $teal-dark
     color: $white
