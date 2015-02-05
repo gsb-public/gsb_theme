@@ -78,6 +78,9 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-case-listing-case-listing',
     'views-exposed-form-gsb-book-listing-book-listing',
     'views-exposed-form-gsb-publications-listing-publications-listing',
+    'views-exposed-form-gsb-act-project-listing-panel-pane-1',
+    'views-exposed-form-gsb-act-project-listing-panel-pane-2',
+    'views-exposed-form-gsb-act-project-listing-panel-pane-3'
   );
 
 

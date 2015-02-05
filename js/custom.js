@@ -248,4 +248,13 @@
     }
   };
 
+  /**
+   * Move ACT Project selector after filters.
+   */
+  Drupal.behaviors.act_project_status_selector = {
+    attach: function () {
+      $('#edit-field-act-status-value-wrapper').insertAfter($('.view-display-id-panel_pane_1 .view-filters'));
+    }
+  };
+
 }(jQuery));

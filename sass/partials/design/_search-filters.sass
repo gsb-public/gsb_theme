@@ -547,7 +547,7 @@ fieldset.collapsible .fieldset-legend
     line-height: 1.3
 
 // Search and filter styling
-// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing
+// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
@@ -559,7 +559,8 @@ fieldset.collapsible .fieldset-legend
 .view-gsb-in-the-media-listing,
 .view-display-id-alumni_stories_listing,
 .view-display-id-giving_stories_listing,
-.view-display-id-alumni_book_listing
+.view-display-id-alumni_book_listing,
+.view-id-gsb_act_project_listing
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -659,13 +660,14 @@ fieldset.collapsible .fieldset-legend
     &:hover
       +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, #18455f, $text-blue))
 
-// Faculty, working papers, case study, book listing filters
+// Faculty, working papers, case study, book listing filters, ACT Project
 // Filter section
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
 .view-display-id-book_listing,
 .view-display-id-publications_listing,
+.view-id-gsb_act_project_listing
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
