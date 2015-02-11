@@ -11105,17 +11105,21 @@ div.callout br {
 .format-wysiwyg ul:last-child,
 .format-wysiwyg ol:last-child,
 .format-wysiwyg li:last-child,
-.format-wysiwyg table:last-child,
 .field-name-field-body p:last-child,
 .field-name-field-body ul:last-child,
 .field-name-field-body ol:last-child,
-.field-name-field-body li:last-child,
-.field-name-field-body table:last-child {
+.field-name-field-body li:last-child {
   margin-bottom: 0 !important;
 }
 .format-wysiwyg table,
 .field-name-field-body table {
   margin: 20px 0;
+}
+@media (max-width: 48em) {
+  .format-wysiwyg table,
+  .field-name-field-body table {
+    margin: 0;
+  }
 }
 .format-wysiwyg caption,
 .field-name-field-body caption {
