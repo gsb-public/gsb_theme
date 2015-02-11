@@ -75,5 +75,8 @@ h1.title
   font-family: $font-sans
   font-size: 34px
   font-weight: bold
-  line-height: 42px
-  padding-bottom: 24px
+  line-height: 1.3
+  padding-bottom: $standard-padding
+  .page-alumni &
+    +breakpoint($bp-tablet-port-max)
+      padding-top: $standard-padding

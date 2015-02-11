@@ -22,7 +22,7 @@
 .banner-title
   font-size: 24px
   font-weight: bold
-  line-height: 1.2
+  line-height: 1
   .page-alumni &
     font-size: 34px
   +breakpoint($bp-tablet-port-max)
@@ -34,7 +34,6 @@
   +breakpoint($bp-mobile-max)
     display: table-cell
     height: 50px
-    line-height: 1
     padding-left: 15px
     top: inherit
     vertical-align: middle
@@ -49,6 +48,7 @@
 .banner-content
   margin: 0 auto
   max-width: $max-width
+  position: relative
   +breakpoint($bp-content-max)
     padding-left: 20px
   .page-insights &
@@ -119,12 +119,43 @@
 // Alumni
 .page-alumni
   #banner
-    +background(linear-gradient(#930000, #c40000))
+    background: #b00000
     +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
 
-///////////////////
+// Alumni navigation in banner
+#block-menu-menu-alumni-utility-nav
+  position: absolute
+  right: 0
+  top: 10px
+  +breakpoint($bp-tablet-port-max)
+    display: none
+  li
+    display: inline-block
+    margin: 0 8px
+  a
+    color: $white
+    font-family: $font-demi
+    font-size: 16px
+    line-height: 1.2
+
+// Utility region for responsive
+#utility
+  display: none
+  +breakpoint($bp-tablet-port-max)
+    display: block
+    margin-top: 15px
+    position: absolute
+    right: 0
+    li
+      display: inline-block
+      margin: 0 8px
+    a
+      color: $text-black
+      font-family: $font-demi
+      font-size: 13px
+      line-height: 1.2
+
 // First Sidebar
-///////////////////
 #sidebar
   .sidebar
     h2
@@ -136,6 +167,8 @@
     .sidebar
       h2
         border-left: 1px solid rgba($white, 0.3)
+        .page-alumni &
+          border-left: 1px solid #eb0202
         color: $white
         cursor: pointer
         display: block
@@ -145,7 +178,7 @@
         padding: 14px 0 8px 32px
         position: absolute
         right: 0
-        text-transform: uppercase
+        text-transform: capitalize
         width: 108px
         +icon-before("plus", true)
         &:before

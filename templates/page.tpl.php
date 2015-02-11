@@ -134,6 +134,12 @@
           </div></div> <!-- /.section, /#sidebar -->
         <?php endif; ?>
 
+        <?php if ($page['utility']): ?>
+          <div id="utility" class="column"><div class="section">
+              <?php print render($page['utility']); ?>
+          </div></div> <!-- /.section, /#utility -->
+        <?php endif; ?>
+
         <div id="main" class="column"><div class="section">
           <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
           <a id="main-content"></a>
