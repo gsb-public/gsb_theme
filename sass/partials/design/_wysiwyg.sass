@@ -124,14 +124,15 @@ div.callout
   p,
   ul,
   ol,
-  li,
-  table
+  li
     &:last-child
       margin-bottom: 0 !important
 
   // Tables
   table
     margin: 20px 0
+    +breakpoint(768px max-width)
+      margin: 0
   caption
     color: $text-blue
     font-family: $font-demi
