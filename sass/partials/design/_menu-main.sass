@@ -236,14 +236,11 @@
 // Menu toggle functionality
 #nav-touch-wrapper
   +breakpoint($bp-mobile-max)
-    +background(linear-gradient(bottom, $red-light, $red-dark))
     max-height: 50px
-    .page-insights &
-      background: none
-      display: inline-block
-      float: left
-      #nav-touch-button
-        +background(linear-gradient(bottom, $red-light, $red-dark))
+    display: inline-block
+    float: left
+    #nav-touch-button
+      +background(linear-gradient(bottom, $red-light, $red-dark))
     #navigation
       display: none
   &.open
@@ -263,6 +260,7 @@
 #search-touch-button
   display: none
   +breakpoint($bp-mobile-max)
+    +background(linear-gradient(bottom, $red-light, $red-dark))
     border-right: 1px solid red
     cursor: pointer
     display: inline-block

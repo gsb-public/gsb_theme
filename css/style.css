@@ -2578,11 +2578,6 @@ div.label-inline {
     height: 152px;
   }
 }
-@media (max-width: 35.5em) {
-  .no-js #header-wrapper #header, .no-svg #header-wrapper #header {
-    min-height: 135px;
-  }
-}
 
 #logo {
   display: inline-block;
@@ -2599,6 +2594,9 @@ div.label-inline {
 }
 .no-js #logo, .no-svg #logo {
   background: url('../images/logo.png') no-repeat;
+  background-size: 100%;
+  height: 80px;
+  width: 286px;
 }
 @media (max-width: 75.625em) {
   #logo {
@@ -2607,38 +2605,29 @@ div.label-inline {
 }
 @media (max-width: 62.4375em) {
   #logo {
+    height: 65px;
+    width: 230px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .svg #logo {
     background-size: 100%;
+  }
+  .no-js #logo, .no-svg #logo {
     height: 65px;
     width: 230px;
   }
-  .no-js #logo, .no-svg #logo {
-    max-width: 230px;
-  }
 }
 @media (max-width: 35.5em) {
-  #logo {
-    display: block;
-  }
-  .svg #logo {
-    height: 36px;
-    margin: 15px;
-    width: 122px;
-  }
-  .no-js #logo, .no-svg #logo {
-    margin: 21px 0 18px 15px;
-    max-width: 150px;
-  }
-}
-@media (max-width: 37.25em) {
-  .page-insights #logo {
+  .svg #logo, .no-js #logo, .no-svg #logo {
     float: left;
     height: 30px;
     margin: 10px;
     width: 100px;
+    margin: 10px 10px 10px 65px;
+  }
+  .page-insights #logo {
+    margin-left: 10px !important;
   }
 }
 
@@ -2653,21 +2642,11 @@ div.label-inline {
     font-size: 18px;
     line-height: 1;
     padding-right: 20px;
-    padding-top: 80px;
-  }
-}
-@media (max-width: 44.0625em) {
-  #site-slogan {
-    max-width: 300px;
-  }
-}
-@media (max-width: 35.5em) {
-  #site-slogan {
-    display: none;
+    padding-top: 90px;
   }
 }
 @media (max-width: 48em) {
-  .page-insights #site-slogan {
+  #site-slogan {
     display: none;
   }
 }
@@ -4420,18 +4399,11 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 
 @media (max-width: 35.5em) {
   #nav-touch-wrapper {
-    background: -moz-linear-gradient(bottom, #c50000, #860000);
-    background: -o-linear-gradient(bottom, #c50000, #860000);
-    background: -webkit-linear-gradient(bottom, #c50000, #860000);
-    background: linear-gradient(to top, #c50000, #860000);
     max-height: 50px;
-  }
-  .page-insights #nav-touch-wrapper {
-    background: none;
     display: inline-block;
     float: left;
   }
-  .page-insights #nav-touch-wrapper #nav-touch-button {
+  #nav-touch-wrapper #nav-touch-button {
     background: -moz-linear-gradient(bottom, #c50000, #860000);
     background: -o-linear-gradient(bottom, #c50000, #860000);
     background: -webkit-linear-gradient(bottom, #c50000, #860000);
@@ -4465,6 +4437,10 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 @media (max-width: 35.5em) {
   #search-touch-button {
+    background: -moz-linear-gradient(bottom, #c50000, #860000);
+    background: -o-linear-gradient(bottom, #c50000, #860000);
+    background: -webkit-linear-gradient(bottom, #c50000, #860000);
+    background: linear-gradient(to top, #c50000, #860000);
     border-right: 1px solid red;
     cursor: pointer;
     display: inline-block;

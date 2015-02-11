@@ -9,9 +9,6 @@
       height: 152px
     margin: 0 auto
     max-width: $max-width
-    .no-js &, .no-svg &
-      +breakpoint($bp-mobile-max)
-        min-height: 135px
 
 // LOGO
 #logo
@@ -26,32 +23,30 @@
     background-size: 96.8%
   .no-js &, .no-svg &
     background: image_url("logo.png") no-repeat
+    background-size: 100%
+    height: 80px
+    width: 286px
   +breakpoint(1210px max-width)
     margin-left: 20px
   +breakpoint($bp-tablet-port-max)
+    height: 65px
+    width: 230px
     margin-top: 30px
     margin-bottom: 30px
     .svg &
       background-size: 100%
+    .no-js &, .no-svg &
       height: 65px
       width: 230px
-    .no-js &, .no-svg &
-      max-width: 230px
   +breakpoint($bp-mobile-max)
-    display: block
-    .svg &
-      height: 36px
-      margin: 15px
-      width: 122px
-    .no-js &, .no-svg &
-      margin: 21px 0 18px 15px
-      max-width: 150px
-  .page-insights &
-    +breakpoint(596px max-width)
+    .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
       margin: 10px
       width: 100px
+      margin: 10px 10px 10px 65px
+    .page-insights &
+      margin-left: 10px !important
 
 // SITE SLOGAN
 #site-slogan
@@ -63,14 +58,9 @@
     font-size: 18px
     line-height: 1
     padding-right: 20px
-    padding-top: 80px
-  +breakpoint(705px max-width)
-    max-width: 300px
-  +breakpoint($bp-mobile-max)
+    padding-top: 90px
+  +breakpoint(768px max-width)
     display: none
-  .page-insights &
-    +breakpoint(768px max-width)
-      display: none
 
 // CONTENT REGION
 #content-wrapper
