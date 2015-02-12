@@ -10,63 +10,66 @@
 // Event - Detail
 
 .node-event.view-mode-full
-  border-top: 3px solid $black
+  @extend %black-border-top-small
   padding-top: 0
   padding-left: 0
+
+  // Left side
   .group-left
     padding: $standard-padding
     padding-bottom: 0
     width: auto
     max-width: 600px
+    +breakpoint(1165px max-width)
+      max-width: 100%
 
-    // Event Date
-    .field-name-field-event-date
-      font-weight: bold
-      font-size: 18px
-      margin-bottom: 20px
-
-    // Title
-    .field-name-title
-      margin-bottom: 25px
-      h2
-        color: $text-black
-        font-family: $font-sans
-        font-weight: bold
-
-    // Speaker name(s)
-    .field-name-field-person-or-other
-      display: none
-
-    .field-name-field-person-fac-other
-      margin-bottom: 25px
-      position: relative
-      top: 0
-      +clearfix
-    .field-collection-item-field-person-fac-other,
-    .separator
+  // Right side
+  .group-right
+    max-width: 270px
+    +breakpoint(1165px max-width)
       float: left
-      line-height: 1.2
-    .separator,
-    .name-first
-      margin-right: 3px
-    .name-first,
-    .name-last,
-    .speaker-name a
-      font-size: 22px
-    .speaker-name a
+      max-width: 100%
+      padding-left: $standard-padding
+
+  // Event Date
+  .field-name-field-event-date
+    font-weight: bold
+    font-size: 18px
+    margin-bottom: 18px
+
+  // Title
+  .field-name-title
+    margin-bottom: 18px
+    h2
+      color: $text-black
+      font-family: $font-sans
+      font-weight: bold
+
+  // Speaker(s)
+  .gsb_field_formatter_field_collection_separator
+    margin-bottom: 18px
+  .field-name-field-person-fac-other
+    font-size: 22px
+    .field-name-field-first-name
+      margin-right: 5px
+    a
       color: $link-green
+      &:hover
+        color: $link-blue
 
-    // Address
-    .field-name-field-address
-      .thoroughfare
-        font-weight: bold
+  // Address
+  .field-name-field-address
+    .thoroughfare
+      font-weight: bold
 
-    // Map Link
-    .field-name-field-link-map
-      margin-bottom: 30px
-      a
-        color: $green
-        font-weight: bold
+  // Map link
+  .field-name-field-link-map
+    margin-bottom: 26px
+    a
+      color: $link-green
+      font-weight: bold
+      &:hover
+        color: $link-blue
 
   // Buttons
   .group-wrapper-buttons
@@ -75,6 +78,7 @@
   .field-name-field-register-url,
   .event-ical-link
     display: inline
+
   // Register Link
   .field-name-field-register-url
     a
@@ -85,13 +89,12 @@
     .no-touch &
       display: inline-block
 
-  .group-right
-    max-width: 270px
-    .group-wrapper-buttons
-      margin-top: 35px
+  .group-wrapper-buttons
+    margin-top: 26px
+
   .field-name-field-target-audience
     font-size: 14px
-    padding-top: $standard-padding
+    margin-top: 26px
     .field-items
       float: none
     .field-item

@@ -10,6 +10,10 @@
   }
 }
 
+.node-event.view-mode-full {
+  border-top: 3px #231f20 solid;
+}
+
 .node-event.view-mode-full .field-name-field-register-url a {
   background: #636f00;
   background: -moz-linear-gradient(top, #6c7200, #636f00);
@@ -50,7 +54,6 @@
 }
 
 .node-event.view-mode-full {
-  border-top: 3px solid black;
   padding-top: 0;
   padding-left: 0;
 }
@@ -60,55 +63,61 @@
   width: auto;
   max-width: 600px;
 }
-.node-event.view-mode-full .group-left .field-name-field-event-date {
+@media (max-width: 72.8125em) {
+  .node-event.view-mode-full .group-left {
+    max-width: 100%;
+  }
+}
+.node-event.view-mode-full .group-right {
+  max-width: 270px;
+}
+@media (max-width: 72.8125em) {
+  .node-event.view-mode-full .group-right {
+    float: left;
+    max-width: 100%;
+    padding-left: 26px;
+  }
+}
+.node-event.view-mode-full .field-name-field-event-date {
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
-.node-event.view-mode-full .group-left .field-name-title {
-  margin-bottom: 25px;
+.node-event.view-mode-full .field-name-title {
+  margin-bottom: 18px;
 }
-.node-event.view-mode-full .group-left .field-name-title h2 {
+.node-event.view-mode-full .field-name-title h2 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
-.node-event.view-mode-full .group-left .field-name-field-person-or-other {
-  display: none;
+.node-event.view-mode-full .gsb_field_formatter_field_collection_separator {
+  margin-bottom: 18px;
 }
-.node-event.view-mode-full .group-left .field-name-field-person-fac-other {
-  margin-bottom: 25px;
-  position: relative;
-  top: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-.node-event.view-mode-full .group-left .field-collection-item-field-person-fac-other,
-.node-event.view-mode-full .group-left .separator {
-  float: left;
-  line-height: 1.2;
-}
-.node-event.view-mode-full .group-left .separator,
-.node-event.view-mode-full .group-left .name-first {
-  margin-right: 3px;
-}
-.node-event.view-mode-full .group-left .name-first,
-.node-event.view-mode-full .group-left .name-last,
-.node-event.view-mode-full .group-left .speaker-name a {
+.node-event.view-mode-full .field-name-field-person-fac-other {
   font-size: 22px;
 }
-.node-event.view-mode-full .group-left .speaker-name a {
+.node-event.view-mode-full .field-name-field-person-fac-other .field-name-field-first-name {
+  margin-right: 5px;
+}
+.node-event.view-mode-full .field-name-field-person-fac-other a {
   color: #636f00;
 }
-.node-event.view-mode-full .group-left .field-name-field-address .thoroughfare {
+.node-event.view-mode-full .field-name-field-person-fac-other a:hover {
+  color: #2d6280;
+}
+.node-event.view-mode-full .field-name-field-address .thoroughfare {
   font-weight: bold;
 }
-.node-event.view-mode-full .group-left .field-name-field-link-map {
-  margin-bottom: 30px;
+.node-event.view-mode-full .field-name-field-link-map {
+  margin-bottom: 26px;
 }
-.node-event.view-mode-full .group-left .field-name-field-link-map a {
-  color: #7b8201;
+.node-event.view-mode-full .field-name-field-link-map a {
+  color: #636f00;
   font-weight: bold;
+}
+.node-event.view-mode-full .field-name-field-link-map a:hover {
+  color: #2d6280;
 }
 .node-event.view-mode-full .group-wrapper-buttons {
   line-height: 36px;
@@ -124,15 +133,12 @@
 .no-touch .node-event.view-mode-full .event-ical-link {
   display: inline-block;
 }
-.node-event.view-mode-full .group-right {
-  max-width: 270px;
-}
-.node-event.view-mode-full .group-right .group-wrapper-buttons {
-  margin-top: 35px;
+.node-event.view-mode-full .group-wrapper-buttons {
+  margin-top: 26px;
 }
 .node-event.view-mode-full .field-name-field-target-audience {
   font-size: 14px;
-  padding-top: 26px;
+  margin-top: 26px;
 }
 .node-event.view-mode-full .field-name-field-target-audience .field-items {
   float: none;

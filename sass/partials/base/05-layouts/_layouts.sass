@@ -452,3 +452,16 @@
     float: left
     +breakpoint(1169px max-width)
       float: none
+
+// Display Suite layouts - from ds module
+
+// 2 Column stacked
+.ds-2col-stacked
+  & > .group-left
+    float: left
+    width: 50%
+  & > .group-right
+    float: right
+    width: 50%
+  & > .group-footer
+    clear: both
