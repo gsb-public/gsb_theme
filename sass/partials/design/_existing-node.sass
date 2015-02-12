@@ -126,7 +126,7 @@
       font-family: $font-demi
       font-size: 14px
       line-height: 1.2
-      margin-bottom: 26px
+      margin-bottom: 18px
       padding: 6px 8px
       position: relative
       z-index: 2
@@ -134,11 +134,17 @@
     // Image
     .field-name-field-image-single-public
       margin: -54px -26px 18px -26px
+      .wide-view &
+        display: none
+      +breakpoint($bp-mobile-max)
+        display: none
 
     // Event address
     .field-name-field-address
       font-family: $font-demi
+      font-size: 16px
       font-weight: normal
+      line-height: 1.2
 
   // Book image
   .node-book.view-mode-teaser

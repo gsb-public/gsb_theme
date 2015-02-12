@@ -8453,7 +8453,7 @@ fieldset.collapsible .fieldset-legend {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   padding: 6px 8px;
   position: relative;
   z-index: 2;
@@ -8461,9 +8461,19 @@ fieldset.collapsible .fieldset-legend {
 .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
   margin: -54px -26px 18px -26px;
 }
+.wide-view .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
+  display: none;
+}
+@media (max-width: 35.5em) {
+  .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
+    display: none;
+  }
+}
 .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-address {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: normal;
+  line-height: 1.2;
 }
 .pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public {
   max-width: 150px;
