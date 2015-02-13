@@ -8,7 +8,7 @@
 @import partials/base/03-extend/gsb-revamp
 
 
-// PhD Candidates - Detail
+// PhD Candidate - Detail
 
 // Page title
 .node-type-phd-candidate
@@ -84,38 +84,55 @@
 
   // Information block under photo
   .group-wrapper-information
-    @extend %group-wrapper-information
-    .field-name-phd-address > div
+    @extend %bg-border-and-box-shadow
+    > div
+      line-height: 0
+    a
+      color: $link-green
+      font-size: 16px
+      font-family: $font-demi
+      font-weight: normal
       line-height: 1.2
-  // Email address
+      &:hover
+        color: $link-blue
+
+  // Email field
   .field-name-field-email
     border-bottom: 1px solid #e4e4e4
-    a
-      display: inline-block
-      padding-bottom: 15px
+    padding: 15px $standard-padding
     a
       +icon-after("email-stroke", true)
       &:after
         font-size: 12px
-        line-height: 0
-        margin-left: 3px
+        margin-left: 5px
+
   // Links wrapper
   .group-wrapper-link
     border-top: 1px solid $white
     border-bottom: 1px solid #e4e4e4
-    padding: 15px 0
-    .field-name-field-file-single-public
-      a
-        +icon-after("pdf", true)
-        &:after
-          @extend %doc-attached-icons
-          font-size: 14px
+    padding: 15px $standard-padding
+    line-height: 1.2
+    a:after
+      font-size: 10px
+      margin-left: 4px
+    // CV field
+    .field-name-field-file-single-public a
+      &:after
+        font-size: 14px
+    .field
+      margin-bottom: 3px
+      &:last-of-type
+        margin-bottom: 0
 
   // Address field
   .field-name-phd-address
     border-top: 1px solid $white
-    .field-items
-      padding-top: 15px
+    padding: 15px $standard-padding
+    div
+      line-height: 1.2
+      &:first-of-type
+        font-weight: bold
+        margin-bottom: 4px
 
   // Name
   .group-wrapper-name
