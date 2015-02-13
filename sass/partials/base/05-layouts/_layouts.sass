@@ -270,21 +270,25 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
-    +breakpoint(1170px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
     .panels-ipe-editing &
       width: $narrow-view
   .wide-view
     max-width: $wide-view
-    +breakpoint(1170px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
       margin: 0 auto
     .panels-ipe-editing &
       width: $wide-view
   .column.first
     margin-right: 30px
+    +breakpoint($max-width max-width)
+      margin-right: 0
   .column.second
     margin-right: 30px
+    +breakpoint($max-width max-width)
+      margin-right: 0
 
   .full-header,
   .wide-narrow-narrow,
@@ -299,11 +303,11 @@
   .narrow-narrow-narrow-narrow
     .third
       margin-right: 30px
-      +breakpoint(1170px max-width)
+      +breakpoint($max-width max-width)
         margin-right: 0
   .column
     float: left
-    +breakpoint(1170px max-width)
+    +breakpoint($max-width max-width)
       float: none
       margin: 0 auto
       max-width: $wide-view
@@ -334,7 +338,7 @@
   // Right sidebar
   .insights-sidebar-wrapper
     float: right
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       max-width: 570px
       float: none
       width: 100%
@@ -346,7 +350,7 @@
   .wide-view
     max-width: $wide-view
     min-width: $wide-view
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
       min-width: 100%
     .panels-ipe-editing &
@@ -355,7 +359,7 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
       min-width: 100%
     .panels-ipe-editing &
@@ -364,12 +368,12 @@
   .column.first,
   .column.second
     margin-right: 30px
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       margin-right: 0
 
   .column
     float: left
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       float: none
 
   .full-header,
@@ -388,14 +392,14 @@
 
   .wide-narrow-narrow
     .second
-      +breakpoint(1169px max-width)
+      +breakpoint($max-width max-width)
         margin-right: 0
 
   .narrow-narrow-narrow-narrow
     clear: both
     .third
       margin-right: 30px
-      +breakpoint(1169px max-width)
+      +breakpoint($max-width max-width)
         margin-right: 0
 
 // Insights layout C
@@ -403,7 +407,7 @@
   .narrow-view
     max-width: $narrow-view
     min-width: $narrow-view
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
     .panels-ipe-editing &
       width: $narrow-view
@@ -414,7 +418,7 @@
       margin-right: 0
       max-width: 48%
       min-width: inherit
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       max-width: 100%
       min-width: 100%
     .panels-ipe-editing &
@@ -441,16 +445,11 @@
     .column.second,
     .column.third
       margin-right: 30px
-    .column.first,
-    .column.third
-      +breakpoint(1169px max-width)
-        margin-right: 0
-    .column.second
-      +breakpoint(1169px max-width)
+      +breakpoint($max-width max-width)
         margin-right: 0
   .column
     float: left
-    +breakpoint(1169px max-width)
+    +breakpoint($max-width max-width)
       float: none
 
 // Display Suite layouts - from ds module
