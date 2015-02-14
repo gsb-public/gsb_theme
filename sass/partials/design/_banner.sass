@@ -20,11 +20,13 @@
     color: $white
 
 .banner-title
-  font-size: 24px
+  font-size: 26px
   font-weight: bold
   line-height: 1
   .page-alumni &
     font-size: 34px
+    +breakpoint($bp-tablet-port-max)
+      font-size: 26px
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
@@ -35,7 +37,7 @@
     display: table-cell
     height: 50px
     padding-left: 15px
-    top: inherit
+    top: 2px
     vertical-align: middle
     width: 98%
   +breakpoint($bp-mobile-max)
