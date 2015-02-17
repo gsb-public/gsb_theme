@@ -257,4 +257,13 @@
     }
   };
 
+  /**
+   * Move Infographic button out of figure for image resource
+   */
+  Drupal.behaviors.image_resource_infographic_button = {
+    attach: function () {
+      $('.image-enlarge-bar').insertAfter($('.file-resource-image figure'));
+    }
+  };
+
 }(jQuery));
