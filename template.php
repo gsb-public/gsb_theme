@@ -206,7 +206,8 @@ function gsb_theme_preprocess_html(&$variables) {
     'newsroom',
     'insights',
     'alumni',
-    'organizations'
+    'organizations',
+    'faculty-research',
   );
   $normalized_arg = arg(0);
   $parsed_url = drupal_parse_url(request_uri());
