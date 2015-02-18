@@ -17,7 +17,7 @@
   position: relative
   line-height: 1.2
   span
-    margin-right: 5px
+    margin: 0 5px
 .cta-action
   line-height: 1
   vertical-align: text-top
@@ -36,10 +36,9 @@
       &:before
         +border-radius(50px)
         color: $white
-        display: inline-block
-        font-size: 12px
+        font-size: 10px
         height: 28px
-        line-height: 2.5
+        line-height: 2.8
         position: absolute
         left: 22px
         top: 20%
@@ -57,6 +56,9 @@
     a[href*="mailto:"]
       &:before
         background: $red
+      &:hover
+        &:before
+          background: $link-blue
 .cta-green
   .field-item
     a[href*="mailto:"]
