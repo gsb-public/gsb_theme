@@ -335,7 +335,6 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
 }
 .circle:after {
   color: white;
-  font-size: 21px;
   position: relative;
   top: 10px;
 }
@@ -976,6 +975,10 @@ a[target=_blank]:after {
   font-variant: normal;
   font-weight: normal;
   font-family: 'icons';
+}
+a[target=_blank]:after {
+  font-size: 0.7em;
+  margin-left: 3px;
 }
 
 em,
@@ -2987,7 +2990,7 @@ a.no-border:hover {
   width: 100%;
 }
 
-.social-block-twitter:after {
+a.social-block-twitter:after {
   content: "\f121";
   display: inline;
   speak: none;
@@ -3002,8 +3005,12 @@ a.no-border:hover {
   font-weight: normal;
   font-family: 'icons';
 }
+a.social-block-twitter:after {
+  font-size: 19px;
+  margin-left: 0;
+}
 
-.social-block-youtube:after {
+a.social-block-youtube:after {
   content: "\f123";
   display: inline;
   speak: none;
@@ -3018,8 +3025,12 @@ a.no-border:hover {
   font-weight: normal;
   font-family: 'icons';
 }
+a.social-block-youtube:after {
+  font-size: 19px;
+  margin-left: 0;
+}
 
-.social-block-linkedin:after {
+a.social-block-linkedin:after {
   content: "\f114";
   display: inline;
   speak: none;
@@ -3034,8 +3045,12 @@ a.no-border:hover {
   font-weight: normal;
   font-family: 'icons';
 }
+a.social-block-linkedin:after {
+  font-size: 19px;
+  margin-left: 0;
+}
 
-.social-block-facebook:after {
+a.social-block-facebook:after {
   content: "\f113";
   display: inline;
   speak: none;
@@ -3049,6 +3064,10 @@ a.no-border:hover {
   font-variant: normal;
   font-weight: normal;
   font-family: 'icons';
+}
+a.social-block-facebook:after {
+  font-size: 19px;
+  margin-left: 0;
 }
 
 .icon-wrapper {
