@@ -6,6 +6,10 @@
     padding-top: 30px
     position: relative
     top: 0
+    .page-alumni &
+      padding-bottom: 30px
+      +breakpoint(768px max-width)
+        padding-bottom: 0
     +breakpoint($bp-mobile-max)
       padding-top: 15px
 
@@ -57,7 +61,6 @@
   .icon-wrapper
     display: block
     max-width: 220px
-
 
 // General footer menu styles
 #block-menu-menu-footer-1,
@@ -199,6 +202,8 @@ input.signup-submit
   li
     display: inline-block
     margin-right: 44px
+    &:last-of-type
+      margin-right: 0
     +breakpoint($bp-tablet-port)
       margin-right: 18px
     +breakpoint($bp-mobile-max)
@@ -218,7 +223,7 @@ input.signup-submit
   .copyright
     font-family: $font-demi
 
-// Inights Only - News, Alumni, Giving menus
+// Insights Only - News, Alumni, Giving menus
 #block-menu-menu-insights-footer-bottom-menu
   border-bottom: 1px $grey-c solid
   padding: 20px 0
@@ -231,3 +236,25 @@ input.signup-submit
     text-transform: uppercase
     &:last-of-type
       margin-right: 0
+
+// Second Alumni footer
+#block-menu-menu-section-menu-alumni-footer2
+  position: absolute
+  right: 0
+  bottom: 14px
+  +breakpoint(768px max-width)
+    bottom: 0
+    position: relative
+    margin: 40px 0 15px 0
+  li
+    display: inline-block
+    &:first-of-type
+      &:after
+        color: #656162
+        content: "|"
+        margin: 0 10px 0 14px
+  // Link style
+  a
+    font-family: $font-demi
+    font-size: 14px
+    font-weight: normal

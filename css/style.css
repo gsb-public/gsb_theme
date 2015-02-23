@@ -4543,6 +4543,14 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
   position: relative;
   top: 0;
 }
+.page-alumni #footer .region-footer {
+  padding-bottom: 30px;
+}
+@media (max-width: 48em) {
+  .page-alumni #footer .region-footer {
+    padding-bottom: 0;
+  }
+}
 @media (max-width: 35.5em) {
   #footer .region-footer {
     padding-top: 15px;
@@ -4815,6 +4823,9 @@ input.signup-submit:hover {
   display: inline-block;
   margin-right: 44px;
 }
+#block-menu-menu-footer-3 li:last-of-type {
+  margin-right: 0;
+}
 @media (min-width: 35.5625em) and (max-width: 62.4375em) {
   #block-menu-menu-footer-3 li {
     margin-right: 18px;
@@ -4859,6 +4870,32 @@ input.signup-submit:hover {
 }
 #block-menu-menu-insights-footer-bottom-menu li:last-of-type {
   margin-right: 0;
+}
+
+#block-menu-menu-section-menu-alumni-footer2 {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+}
+@media (max-width: 48em) {
+  #block-menu-menu-section-menu-alumni-footer2 {
+    bottom: 0;
+    position: relative;
+    margin: 40px 0 15px 0;
+  }
+}
+#block-menu-menu-section-menu-alumni-footer2 li {
+  display: inline-block;
+}
+#block-menu-menu-section-menu-alumni-footer2 li:first-of-type:after {
+  color: #656162;
+  content: "|";
+  margin: 0 10px 0 14px;
+}
+#block-menu-menu-section-menu-alumni-footer2 a {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .pane-bundle-video .gsb-responsive-preview,
