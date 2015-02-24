@@ -479,3 +479,23 @@ function gsb_theme_file_link($variables) {
 
   return '<span class="file">' . $icon . ' ' . l($link_text, $url, $options) . '</span>';
 }
+
+/**
+ * Implements hook_block_list_alter().
+ * 
+ * Removes the 'Section Menu: Alumni' menu block
+ * from the alumni/help or alumni/help/* pages
+ */
+function gsb_theme_block_list_alter(&$blocks) {
+  $alias = drupal_get_path_alias(current_path());
+  $pos = strpos($alias, 'alumni/help');
+  // Check if we on the alumni/help page or an alumni/help/* subpage
+  if ($pos !== false && $pos == 0) {
+    foreach($blocks as $key => $value) {
+      if ($value->delta == 'section-13071') {
+        // remove the menu block
+        unset($blocks[$value->bid]);
+      }
+    }
+  }
+}
