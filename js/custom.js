@@ -249,15 +249,6 @@
   };
 
   /**
-   * Move ACT Project selector after filters.
-   */
-  Drupal.behaviors.act_project_status_selector = {
-    attach: function () {
-      $('#edit-field-act-status-value-wrapper').insertAfter($('.view-display-id-panel_pane_1 .view-filters'));
-    }
-  };
-
-  /**
    * Move Infographic button out of figure for image resource
    */
   Drupal.behaviors.image_resource_infographic_button = {
