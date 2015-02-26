@@ -117,6 +117,13 @@
         font-size: 18px
         line-height: 1.2
 
+    // Content
+    // Override external icons
+    .twitter-feed
+      a[target="_blank"]
+        &:after
+          content: ""
+
   // Upcoming events
   .pane-gsb-event-frontpage
     @extend %border-and-box-shadow

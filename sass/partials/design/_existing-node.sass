@@ -1,6 +1,4 @@
-/////////////////////////////
 // TEASER AND EXISTING NODE
-/////////////////////////////
 
 // Hide sections field in display
 .field-name-field-sections
@@ -8,9 +6,7 @@
   .field-items
     display: none
 
-/////////////////
 // EXISTING NODE
-/////////////////
 .pane-bundle-existing-node
   @extend %bg-and-box-shadow
   padding: $standard-padding
@@ -55,11 +51,8 @@
         +breakpoint(610px max-width)
           font-size: 18px
         &[target="_blank"]
-          +icon-after("arrow-external", true)
           &:after
-            display: inline
             font-size: 12px
-            margin-left: 3px
         &[href$=".pdf"]
           &[target="_blank"]
             &:after
@@ -374,10 +367,8 @@ body:not(.page-insights)
               font-size: 34px
       .field-name-field-link-single a
         &[target="_blank"]
-          +icon-after("arrow-external", true)
           &:after
             font-size: 18px
-            margin-left: 3px
 
       // Publisher and Dek
       .field-name-field-publisher,

@@ -1,6 +1,4 @@
-/////////////////
 // GENERIC CTA
-/////////////////
 
 .supermenu-row
   .cta-wrapper
@@ -121,14 +119,16 @@
     color: $white
   a
     color: $white
-    position: relative
     font-family: $font-demi
+    padding-bottom: 14px
     position: relative
     +icon-after("arrow-double-right", true)
     &:after
       @extend %arrow-double-small
       color: $white
-    padding-bottom: 14px
+    &[target="_blank"]
+      &:after
+        font-size: 16px
     b
       font-weight: normal
     .front &
