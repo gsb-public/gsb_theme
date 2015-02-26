@@ -11,6 +11,10 @@
     color: $red
     &:hover
       color: $link-blue
+    // Override external icons
+    &[target="_blank"]
+      &:after
+        content: ""
 
   // The source, handle and title
   .group-wrapper-twitter
