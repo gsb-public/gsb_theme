@@ -26,45 +26,42 @@
 .cta-green
   .field-item
     line-height: 1
-    a[href*="mailto:"]
-      padding-right: 22px
-      padding-left: 55px
-      position: relative
-      +icon-before("email-fill", true)
-      &:before
-        +border-radius(50px)
-        color: $white
-        font-size: 10px
-        height: 28px
-        line-height: 2.8
-        position: absolute
-        left: 15px
-        top: 20%
-        text-align: center
-        width: 28px
-      &:after
-        content: ""
+  a[href*="mailto:"]
+    padding-right: 22px
+    padding-left: 55px
+    position: relative
+    +icon-before("email-fill", true)
+    &:before
+      +border-radius(50px)
+      color: $white
+      font-size: 10px
+      height: 28px
+      line-height: 2.8
+      position: absolute
+      left: 15px
+      top: 20%
+      text-align: center
+      width: 28px
+
 .cta-red-gradient
-  .field-item
-    a[href*="mailto:"]
-      &:before
-        font-size: 19px
+  a[href*="mailto:"]
+    &:before
+      font-size: 19px
+      line-height: 1.4
 .cta-red
-  .field-item
-    a[href*="mailto:"]
+  a[href*="mailto:"]
+    &:before
+      background: $red
+    &:hover
       &:before
-        background: $red
-      &:hover
-        &:before
-          background: $link-blue
+        background: $link-blue
 .cta-green
-  .field-item
-    a[href*="mailto:"]
+  a[href*="mailto:"]
+    &:before
+      background: $link-green
+    &:hover
       &:before
-        background: $link-green
-      &:hover
-        &:before
-          background: $link-blue
+        background: $link-blue
 
 // CTA - Green
 .cta-green
@@ -72,26 +69,23 @@
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white
-    a
-      color: $text-green
-      position: relative
-      +icon-after("arrow-double-right", true)
-      &:after
-        @extend %arrow-double-big
-        font-weight: bold
-        color: #e3e3e3
-      //CTA green in mega menu
-      .supermenu-pane &
-        color: $text-green
     &:first-of-type
       border-top: 0
     &:last-of-type
       border-bottom: 0
-    &:hover
-      a
-        color: $text-blue
-        &:after
-          color: $teal-light
+  a
+    color: $link-green
+    position: relative
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-big
+      font-weight: bold
+      color: #e3e3e3
+  .field-item:hover
+    a
+      color: $link-blue
+      &:after
+        color: $teal-light
 
 // CTA - Red
 .cta-red
@@ -99,15 +93,15 @@
     @extend %bg-border-and-box-shadow
     margin-bottom: 5px
     color: $grey-med
-    a
-      position: relative
-      +icon-after("arrow-double-right", true)
+  a
+    position: relative
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-big
+      color: $grey-med
+    &:hover
       &:after
-        @extend %arrow-double-big
-        color: $grey-med
-      &:hover
-        &:after
-          color: $teal-light
+        color: $teal-light
 
 // CTA - Red gradient
 .cta-red-gradient
@@ -139,6 +133,7 @@
       +background(linear-gradient(#194560, #2c6180))
       .front &
         +background(linear-gradient(#194560, #2c6180))
+
   // Item-specific gradients
   .item-0
     +background(linear-gradient($red-dark, #8f0000))
