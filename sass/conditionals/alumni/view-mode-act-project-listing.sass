@@ -49,12 +49,11 @@
 
 // Project list
 .pane-gsb-act-project-listing-panel-pane-1
-  .view-filters
-    margin-bottom: 0
+
   // Selector
   #edit-field-act-status-value-wrapper
-    float: right
-    margin-top: 20px
+    padding: 18px 0 18px 26px
+    @extend %divider-bottom
 
     label,
     .views-widget
@@ -63,9 +62,10 @@
       margin: 0
     label
       font-size: 16px
-      font-weight: normal
       line-height: 1.3
-      margin-bottom: 12px
+    .customSelect
+      font-weight: normal
+      text-transform: capitalize
     .customSelectInner
       padding-top: 10px
 
