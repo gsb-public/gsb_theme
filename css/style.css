@@ -30,7 +30,7 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   }
 }
 
-.cta-red-gradient a:after, .cta-green .field-item a:after, .cta-red .field-item a:after {
+.cta-red-gradient a:after, .cta-green a:after, .cta-red a:after {
   position: absolute;
   font-size: 21px;
   right: 12px;
@@ -6531,16 +6531,16 @@ ul.slideshow-items {
 .cta-green .field-item {
   line-height: 1;
 }
-.cta-red-gradient .field-item a[href*="mailto:"],
-.cta-red .field-item a[href*="mailto:"],
-.cta-green .field-item a[href*="mailto:"] {
+.cta-red-gradient a[href*="mailto:"],
+.cta-red a[href*="mailto:"],
+.cta-green a[href*="mailto:"] {
   padding-right: 22px;
   padding-left: 55px;
   position: relative;
 }
-.cta-red-gradient .field-item a[href*="mailto:"]:before,
-.cta-red .field-item a[href*="mailto:"]:before,
-.cta-green .field-item a[href*="mailto:"]:before {
+.cta-red-gradient a[href*="mailto:"]:before,
+.cta-red a[href*="mailto:"]:before,
+.cta-green a[href*="mailto:"]:before {
   content: "\f111";
   display: inline;
   speak: none;
@@ -6555,9 +6555,9 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.cta-red-gradient .field-item a[href*="mailto:"]:before,
-.cta-red .field-item a[href*="mailto:"]:before,
-.cta-green .field-item a[href*="mailto:"]:before {
+.cta-red-gradient a[href*="mailto:"]:before,
+.cta-red a[href*="mailto:"]:before,
+.cta-green a[href*="mailto:"]:before {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -6571,27 +6571,28 @@ ul.slideshow-items {
   text-align: center;
   width: 28px;
 }
-.cta-red-gradient .field-item a[href*="mailto:"]:after,
-.cta-red .field-item a[href*="mailto:"]:after,
-.cta-green .field-item a[href*="mailto:"]:after {
+.cta-red-gradient a[href*="mailto:"]:after,
+.cta-red a[href*="mailto:"]:after,
+.cta-green a[href*="mailto:"]:after {
   content: "";
 }
 
-.cta-red-gradient .field-item a[href*="mailto:"]:before {
+.cta-red-gradient a[href*="mailto:"]:before {
   font-size: 19px;
+  line-height: 1.4;
 }
 
-.cta-red .field-item a[href*="mailto:"]:before {
+.cta-red a[href*="mailto:"]:before {
   background: #990000;
 }
-.cta-red .field-item a[href*="mailto:"]:hover:before {
+.cta-red a[href*="mailto:"]:hover:before {
   background: #2d6280;
 }
 
-.cta-green .field-item a[href*="mailto:"]:before {
+.cta-green a[href*="mailto:"]:before {
   background: #636f00;
 }
-.cta-green .field-item a[href*="mailto:"]:hover:before {
+.cta-green a[href*="mailto:"]:hover:before {
   background: #2d6280;
 }
 
@@ -6599,11 +6600,17 @@ ul.slideshow-items {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
 }
-.cta-green .field-item a {
+.cta-green .field-item:first-of-type {
+  border-top: 0;
+}
+.cta-green .field-item:last-of-type {
+  border-bottom: 0;
+}
+.cta-green a {
   color: #636f00;
   position: relative;
 }
-.cta-green .field-item a:after {
+.cta-green a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -6618,18 +6625,9 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.cta-green .field-item a:after {
+.cta-green a:after {
   font-weight: bold;
   color: #e3e3e3;
-}
-.supermenu-pane .cta-green .field-item a {
-  color: #636f00;
-}
-.cta-green .field-item:first-of-type {
-  border-top: 0;
-}
-.cta-green .field-item:last-of-type {
-  border-bottom: 0;
 }
 .cta-green .field-item:hover a {
   color: #2d6280;
@@ -6642,10 +6640,10 @@ ul.slideshow-items {
   margin-bottom: 5px;
   color: #c2b7a1;
 }
-.cta-red .field-item a {
+.cta-red a {
   position: relative;
 }
-.cta-red .field-item a:after {
+.cta-red a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -6660,10 +6658,10 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.cta-red .field-item a:after {
+.cta-red a:after {
   color: #c2b7a1;
 }
-.cta-red .field-item a:hover:after {
+.cta-red a:hover:after {
   color: #aac4bf;
 }
 
@@ -10962,8 +10960,8 @@ div.callout br {
 }
 .format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after {
-  font-size: 10px;
-  margin-left: 3px;
+  font-size: 14px;
+  margin-left: 5px;
 }
 .format-wysiwyg img,
 .field-name-field-body img {
