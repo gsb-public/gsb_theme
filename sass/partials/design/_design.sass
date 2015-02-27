@@ -5,8 +5,6 @@
   +breakpoint($bp-wide-min)
     border-top: 10px $red-dark solid
   #header
-    +breakpoint($bp-wide-min)
-      height: 152px
     margin: 0 auto
     max-width: $max-width
 
@@ -17,10 +15,10 @@
   img
     display: none
   .svg &
-    height: 76px
-    width: 275px
     background: image_url("logo.svg") no-repeat
     background-size: 96.8%
+    height: 76px
+    width: 275px
   .no-js &, .no-svg &
     background: image_url("logo.png") no-repeat
     background-size: 100%
@@ -28,23 +26,17 @@
     width: 286px
   +breakpoint(1210px max-width)
     margin-left: 20px
-  +breakpoint($bp-tablet-port-max)
-    height: 65px
-    width: 230px
-    margin-top: 30px
-    margin-bottom: 30px
-    .svg &
+  +breakpoint(1065px max-width)
+    .svg &, .no-js &, .no-svg &
       background-size: 100%
-    .no-js &, .no-svg &
       height: 65px
-      width: 230px
+      width: 201px
   +breakpoint($bp-mobile-max)
     .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
-      margin: 10px
-      width: 100px
       margin: 10px 10px 10px 65px
+      width: 100px
     .page-insights &
       margin-left: 10px !important
 
@@ -52,13 +44,14 @@
 #site-slogan
   font-size: 22px
   float: right
-  line-height: 60px
+  line-height: 3
+  +breakpoint(1210px max-width)
+    padding-right: 20px
   +breakpoint($bp-tablet-port)
     clear: both
     font-size: 18px
     line-height: 1
-    padding-right: 20px
-    padding-top: 90px
+    padding: 80px 20px 16px 0
   +breakpoint(768px max-width)
     display: none
 
@@ -90,7 +83,7 @@
 // MAIN REGION
 #main
   padding: 30px 0
-  +breakpoint($bp-content-max)
+  +breakpoint(1210px max-width)
     padding: 20px
   +breakpoint($bp-mobile-max)
     padding: 15px
