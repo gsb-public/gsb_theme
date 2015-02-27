@@ -2946,8 +2946,17 @@ a.no-border:hover {
 .page-node-306331 #page-title,
 .page-node-303161 #page-title,
 .page-node-300276 #page-title,
-.page-node-368466 #page-title {
+.page-node-368466 #page-title,
+.page-node-364421 #page-title,
+.page-node-364111 #page-title {
   display: none;
+}
+
+@media (max-width: 62.4375em) {
+  .page-node-300216 #page-title,
+  .page-node-303566 #page-title {
+    display: none;
+  }
 }
 
 @media (max-width: 62.4375em) {
@@ -8989,15 +8998,16 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   .banner-title {
     display: table-cell;
     height: 50px;
+    line-height: 1;
     padding-left: 15px;
     top: 2px;
     vertical-align: middle;
     width: 98%;
   }
 }
-@media (max-width: 35.5em) {
+@media (max-width: 25em) {
   .banner-title {
-    width: 202px;
+    max-width: 210px;
   }
 }
 
@@ -9277,10 +9287,7 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
     background: linear-gradient(#4c697a, #607c8c);
   }
   .page-alumni #sidebar {
-    background: -moz-linear-gradient(#930000, #c40000);
-    background: -o-linear-gradient(#930000, #c40000);
-    background: -webkit-linear-gradient(#930000, #c40000);
-    background: linear-gradient(#930000, #c40000);
+    background: #b00000;
   }
 }
 

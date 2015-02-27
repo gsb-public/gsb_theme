@@ -36,12 +36,13 @@
   +breakpoint($bp-mobile-max)
     display: table-cell
     height: 50px
+    line-height: 1
     padding-left: 15px
     top: 2px
     vertical-align: middle
     width: 98%
-  +breakpoint($bp-mobile-max)
-    width: 202px
+  +breakpoint(400px max-width)
+    max-width: 210px
 
 .banner-subtitle
   font-size: 42px
@@ -231,7 +232,7 @@
     .page-programs &
       +background(linear-gradient(#4c697a, $blue))
     .page-alumni &
-      +background(linear-gradient(#930000, #c40000))
+      background: #b00000
 
 // Events filters on mobile
 .page-events .inner-sidebar-wrapper

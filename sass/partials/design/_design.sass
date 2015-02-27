@@ -257,9 +257,19 @@ a.no-border
 .page-node-306331,
 .page-node-303161,
 .page-node-300276,
-.page-node-368466
+.page-node-368466,
+.page-node-364421,
+.page-node-364111
   #page-title
     display: none
+
+// Hide page title when section is in banner on mobile
+// Stanford GSB Experience, Faculty & Research
+.page-node-300216,
+.page-node-303566
+  #page-title
+    +breakpoint($bp-tablet-port-max)
+      display: none
 
 // Show page titles again for mobile
 .page-events
