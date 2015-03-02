@@ -55,40 +55,36 @@
       font-size: 26px
       font-weight: bold
       line-height: 1.2
+      +breakpoint($bp-mobile-max)
+        font-size: 20px
 
   // Title wrapper for external links
   .group-wrapper-title
     line-height: 0
     margin-bottom: 8px
     h3
+      display: inline
       line-height: 0
-      +breakpoint($bp-mobile)
-        display: inline
+      +breakpoint($bp-mobile-max)
         font-size: 20px
-      // Title
-      a
-        line-height: 1.2
-        &[target=_blank]
-          &:after
-            font-size: 16px
-            +breakpoint($bp-mobile)
-              font-size: 12px
+    a
+      line-height: 1.2
+      &[target=_blank]
+        &:after
+          font-size: 16px
+          +breakpoint($bp-mobile-max)
+            font-size: 12px
 
   // Title
   .field-name-title h3
-    display: inline-block
+    display: inline
     line-height: 0
     margin-bottom: 8px
     max-width: 830px
-    +breakpoint($bp-mobile)
-      display: inline
+    +breakpoint($bp-mobile-max)
       font-size: 20px
     a
-      color: $red
       line-height: 1.2
-      &:hover
-        color: $link-blue
-        text-decoration: underline
 
   // Dek wrapper
   .group-wrapper-dek
