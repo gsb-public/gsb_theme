@@ -101,28 +101,27 @@
       display: none
 
   .form-submit
-    display: inline-block
-    float: right
-    width: 45px
-    height: 36px
     background: transparent
     -webkit-border-radius: 0
     -moz-border-radius: 0
     -ms-border-radius: 0
     border-radius: 0
     border: none
-    text-indent: 1000px
+    display: inline-block
+    float: right
+    height: 33px
     overflow: hidden
+    padding: 0
+    text-indent: 1000px
+    width: 45px
     .svg &
       background: image_url("search.svg") no-repeat center
+      background-size: 170%
       +breakpoint($bp-mobile-max)
         margin-top: 5px
-      +breakpoint($bp-tablet-land-max)
-        background-size: 170%
       &:hover
         background: image_url("search-hover.svg") no-repeat center
-        +breakpoint($bp-tablet-land-max)
-          background-size: 170%
+        background-size: 170%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 6px transparent
       &:hover
