@@ -92,15 +92,17 @@
     font-family: $font-demi
     font-size: 22px
     font-weight: normal
-    line-height: 1.8
+    line-height: 2
     margin-right: 0.6em
     .narrow-view &
       font-size: 20px
       line-height: 2.5
+      margin-right: 0.4em
+      +breakpoint($bp-mobile-max)
+        line-height: 2
     .wide-view &
       +breakpoint($bp-mobile-max)
         font-size: 20px
-        line-height: 2
 
   // MBA year field input
   #programYear
