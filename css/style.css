@@ -7242,22 +7242,24 @@ ul.slideshow-items {
 }
 #google-appliance-block-form .form-submit,
 #google-appliance-block-form--2 .form-submit {
-  display: inline-block;
-  float: right;
-  width: 45px;
-  height: 36px;
   background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
   border: none;
-  text-indent: 1000px;
+  display: inline-block;
+  float: right;
+  height: 33px;
   overflow: hidden;
+  padding: 0;
+  text-indent: 1000px;
+  width: 45px;
 }
 .svg #google-appliance-block-form .form-submit, .svg
 #google-appliance-block-form--2 .form-submit {
   background: url('../images/search.svg') no-repeat center;
+  background-size: 170%;
 }
 @media (max-width: 35.5em) {
   .svg #google-appliance-block-form .form-submit, .svg
@@ -7265,21 +7267,10 @@ ul.slideshow-items {
     margin-top: 5px;
   }
 }
-@media (max-width: 64em) {
-  .svg #google-appliance-block-form .form-submit, .svg
-  #google-appliance-block-form--2 .form-submit {
-    background-size: 170%;
-  }
-}
 .svg #google-appliance-block-form .form-submit:hover, .svg
 #google-appliance-block-form--2 .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center;
-}
-@media (max-width: 64em) {
-  .svg #google-appliance-block-form .form-submit:hover, .svg
-  #google-appliance-block-form--2 .form-submit:hover {
-    background-size: 170%;
-  }
+  background-size: 170%;
 }
 .no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit, .no-js
 #google-appliance-block-form--2 .form-submit, .no-svg
