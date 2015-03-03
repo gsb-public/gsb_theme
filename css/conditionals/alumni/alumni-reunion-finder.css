@@ -126,17 +126,22 @@
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 2;
   margin-right: 0.6em;
 }
 .narrow-view .pane-reunion-finder #label_programYear {
   font-size: 20px;
   line-height: 2.5;
+  margin-right: 0.4em;
+}
+@media (max-width: 35.5em) {
+  .narrow-view .pane-reunion-finder #label_programYear {
+    line-height: 2;
+  }
 }
 @media (max-width: 35.5em) {
   .wide-view .pane-reunion-finder #label_programYear {
     font-size: 20px;
-    line-height: 2;
   }
 }
 .pane-reunion-finder #programYear {
