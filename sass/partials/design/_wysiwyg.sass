@@ -83,44 +83,43 @@ div.callout
     color: $text-black
     font-size: 24px
     font-weight: normal
-    line-height: 1.1
-    margin: 6px 0 10px 0
+    line-height: 1.2
+    margin: 6px 0 10px
   h3
-    color: $black
+    color: $text-black
     font-family: $font-demi
     font-size: 20px
     font-weight: normal
     line-height: 1.2
-    margin: 3px 0 4px 0
+    margin: 3px 0 4px
   h4
-    color: $black
+    color: $text-black
     font-family: $font-demi
     font-size: 18px
     font-weight: normal
     line-height: 1.2
-    margin-bottom: 3px
+    margin-bottom: 4px
   h5
     color: $text-blue
-    font-size: 17px
+    font-size: 18px
     line-height: 1.2
-    margin-bottom: 4px
+    margin-bottom: 3px
   h2, h3, h4, h5
     a
+      border-bottom: 0
       color: $text-black
-      border: none
-      +icon-after("arrow-double-right", true)
       &:after
         color: $green-light
-        font-size: 16px
-        margin-left: 0.3em
+      &:not([target="_blank"])
+        +icon-after("arrow-double-right", true)
+        &:after
+          font-size: 0.7em
+          margin-left: 3px
       &:hover
         border: none
         text-decoration: underline
         &:after
           color: $teal-light
-  h3, h4, h5
-    a:after
-      font-size: 14px
   p,
   ul,
   ol,
