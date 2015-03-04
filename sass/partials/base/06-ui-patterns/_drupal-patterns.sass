@@ -107,9 +107,14 @@ div.label-inline
       +breakpoint($bp-mobile-480)
         float: none
         width: 100%
-      .narrow-view &
-        float: none
-        width: 100%
+      .main-middle .narrow-view &
+        +breakpoint(1211px min-width)
+          float: none
+          width: 100%
+      .inner-sidebar-wrapper .narrow-view &
+        +breakpoint(610px min-width)
+          float: none
+          width: 100%
       // Insights responsive
       .page-insights .wide-view &
         +breakpoint(1170px max-width)

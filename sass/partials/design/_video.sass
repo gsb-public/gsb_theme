@@ -4,6 +4,11 @@ $bp-video: 627px min-width
 
 .pane-bundle-video,
 .node-gsb-video
+  .gsb-image-video-popup
+    margin-bottom: 26px
+    .wide-view &
+      +breakpoint(768px min-width)
+        margin-bottom: 0
   .gsb-responsive-preview
     margin-bottom: 17px
     position: relative
@@ -20,7 +25,7 @@ $bp-video: 627px min-width
 
 // Video fpp
 .pane-bundle-video
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   padding: $standard-padding
   +clearfix
 
@@ -31,12 +36,6 @@ $bp-video: 627px min-width
     font-weight: bold
     line-height: 1.2
     margin-bottom: 12px
-    +breakpoint(768px 569px)
-      margin-top: 12px
-    +breakpoint($bp-mobile-480)
-      margin-top: 12px
-    .narrow-view &
-      margin-top: 12px
 
   // Description
   .field-name-field-body
@@ -74,8 +73,6 @@ $bp-video: 627px min-width
   +breakpoint(768px 569px)
     margin-right: 0
   +breakpoint($bp-mobile-480)
-    margin-right: 0
-  .narrow-view &
     margin-right: 0
   .slideshow-slide &
     margin-right: 0px

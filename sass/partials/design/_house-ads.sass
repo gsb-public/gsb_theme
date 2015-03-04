@@ -1,8 +1,7 @@
 // House Ads
 
 .pane-bundle-house-ads
-  @extend %box-shadow
-  background-color: $white
+  @extend %bg-and-box-shadow
   padding: $standard-padding
 
   .group-left
@@ -23,9 +22,6 @@
     padding: 6px 8px
     position: absolute
     +breakpoint(568px 321px)
-      .narrow-view &
-        margin-left: 52px
-        top: 26px
       .page-insights .narrow-view &
         margin-left: 26px
         top: 0
@@ -77,74 +73,61 @@
   .show-more
     @extend %show-more-link
 
-// Side view styling
-.wide-view
+// Responsive
+.wide-view,
+.narrow-view
   .pane-bundle-house-ads
     +clearfix
     .field-name-field-image-single-public
       float: left
       margin-right: 26px
-
-// Narrow view styling
-.narrow-view
-  .pane-bundle-house-ads
-    padding: 0 0 $standard-padding 0
-    .field-name-field-link-single,
-    .field-name-field-body
-      padding: 0 $standard-padding
-    .field-name-field-image-single-public,
-    .field-name-field-link-single,
-    .field-name-field-body
-      clear: both
-      +breakpoint($bp-mobile-max)
-        clear: none
-    .show-more
-      padding-right: $standard-padding
-
-//////////////////////
-// Responsive
-//////////////////////
-.wide-view,
-.narrow-view
-  .pane-bundle-house-ads
-    +breakpoint($bp-mobile-480)
+      +breakpoint(479px max-width)
+        margin-right: 0
+    +breakpoint($bp-tablet-port-max)
       .field-name-field-body,
       .field-name-field-link-single
         clear: both
+
+// Narrow view styling
+.inner-sidebar-wrapper .narrow-view
+  .pane-bundle-house-ads
+    +breakpoint(610px min-width)
+      padding: 0 0 $standard-padding 0
       .field-name-field-image-single-public
+        float: none
         margin-right: 0
+      .field-name-field-link-single,
+      .field-name-field-body
+        padding: 0 $standard-padding
+      .field-name-field-image-single-public,
+      .field-name-field-link-single,
+      .field-name-field-body
+        clear: both
+      .show-more
+        padding-right: $standard-padding
 
-// Image has padding
-.wide-view
+.main-middle .narrow-view
   .pane-bundle-house-ads
-    +breakpoint($bp-tablet-port-max)
-      .field-name-field-link-single,
-      .field-name-field-body
-        clear: both
-    +breakpoint($bp-mobile-max)
-      .field-name-field-link-single,
-      .field-name-field-body
-        clear: both
-
-// Image fills container width
-.narrow-view
-  .pane-bundle-house-ads
-    +breakpoint($bp-mobile-max)
+    +breakpoint(768px 610px)
+      margin-right: 0
+    +breakpoint(1211px min-width)
+      padding: 0 0 $standard-padding 0
       .field-name-field-image-single-public
-        padding: $standard-padding
-        padding-bottom: 0
+        float: none
+        margin-right: 0
+      .field-name-field-link-single,
+      .field-name-field-body
+        padding: 0 $standard-padding
+      .field-name-field-image-single-public,
       .field-name-field-link-single,
       .field-name-field-body
         clear: both
-    +breakpoint($bp-mobile)
-      width: 270px
-      .field-name-field-image-single-public
-        margin: 0 -26px 12px -26px
-        padding-top: 0
+      .show-more
+        padding-right: $standard-padding
 
 // Wide view Insights
 .page-insights .wide-view .pane-bundle-house-ads
-  +breakpoint(1170px max-width)
+  +breakpoint($max-width max-width)
     padding: 0
     padding-bottom: $standard-padding
     .field-name-field-link-single,
