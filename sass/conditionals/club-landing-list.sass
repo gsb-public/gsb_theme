@@ -13,7 +13,7 @@
   border-top: 0
   margin-bottom: 30px
   .view-content
-    @extend %bg-border-and-box-shadow
+    @extend %bg-and-box-shadow
   .views-row
     border-bottom: none
     padding: 0 $standard-padding
@@ -29,10 +29,7 @@
   .field-name-field-link-single
     margin-bottom: 18px
     padding-top: 20px
-    &:before
-      content: image_url("tab-club.jpg")
-      position: absolute
-      top: -8px
+
   h2
     font-family: $font-sans
     font-size: 18px
@@ -66,9 +63,9 @@
         color: $link-blue
         text-decoration: underline
 
-// Club filters
+// Customizable clubs list
 .pane-club-filters-club-by-id-or-tag
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   padding: $standard-padding
   overflow: hidden
   h2
@@ -104,36 +101,36 @@
     .inner-main-wrapper &
       display: none
 
-// Alumni list - titles only
+// Alumni clubs list - Titles only
 .pane-club-filters-club-alumni-list
+
   .pane-title
-    margin-bottom: 20px
+    @extend %black-border-top
+    @extend %bg-and-box-shadow
+    color: $text-black
+    font-size: 22px
+    font-weight: normal
+    margin: 0 26px
+    padding: 10px 26px 0 26px
+
 .view-display-id-club_alumni_list
-  // Container
   .view-content
-    @extend %bg-border-and-box-shadow
-    padding: 0 $standard-padding
+    @extend %bg-and-box-shadow
+  // Container
   .views-row
-    position: relative
-    top: 0
+    @extend %divider-bottom
+    padding: 10px $standard-padding
+
   // Title
   .views-field-title
     font-family: $font-sans
     font-size: 18px
     font-weight: bold
     line-height: 1.2
-    margin-bottom: 26px
-    padding-top: 20px
-    &:before
-      content: image_url("tab-club.jpg")
-      position: absolute
-      top: -8px
     a
-      color: $link-green
       &:after
-        color: $green-light
         font-size: 12px
-      &:hover
-        color: $link-blue
-        &:after
-          color: $teal-light
+
+  // Pager adjustment
+  .pager-region
+    margin-top: -1px
