@@ -220,9 +220,6 @@ function gsb_theme_preprocess_html(&$variables) {
   if (user_access('administer panelizer node page content')) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
-  if (drupal_get_http_header('status') == "404 Not Found") {
-    $variables['theme_hook_suggestions'][] = 'html__404';
-  }
   if (drupal_get_http_header('status') == "404 Not Found" || drupal_get_http_header('status') == "403 Forbidden") {
     $variables['classes_array'][] = 'error-page';
   }
@@ -238,6 +235,10 @@ function gsb_theme_preprocess_page(&$variables) {
   // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
+  }
+  // 404 page
+  if (drupal_get_http_header('status') == "404 Not Found") {
+    $variables['theme_hook_suggestions'][] = 'page__404';
   }
 
   // Add search and event link to main navigation
@@ -258,6 +259,11 @@ function gsb_theme_preprocess_page(&$variables) {
         ),
       ),
     ),
+    'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
+  );
+
+  // Global search
+  $variables['global_search'] = array(
     'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
   );
 }
@@ -482,7 +488,7 @@ function gsb_theme_file_link($variables) {
 
 /**
  * Implements hook_block_list_alter().
- * 
+ *
  * Removes the 'Section Menu: Alumni' menu block
  * from the alumni/help or alumni/help/* pages
  */

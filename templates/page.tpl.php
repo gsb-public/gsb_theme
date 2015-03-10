@@ -169,12 +169,13 @@
 
     <div id="footer-wrapper"><div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer, /#footer-wrapper -->
+      </div></div> <!-- /.section, /#footer-->
 
-    <?php if ($page['legal']): ?>
-      <div id="legal" class="clearfix"><div class="section">
-        <?php print render($page['legal']); ?>
-      </div></div> <!-- /.section, /#legal -->
-    <?php endif; ?>
+      <?php if ($page['legal']): ?>
+        <div id="legal"><div class="section">
+          <?php print render($page['legal']); ?>
+        </div></div> <!-- /.section, /#legal -->
+      <?php endif; ?>
+    </div> <!-- /#footer-wrapper -->
 
   </div></div></div></div> <!-- /#page, /#page-wrapper -->
