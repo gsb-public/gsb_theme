@@ -70,7 +70,26 @@
 
       <?php if ($page['legal']): ?>
         <div id="legal" class="clearfix"><div class="section">
-          <?php print render($page['legal']); ?>
+          <div class="region region-legal">
+            <div id="block-menu-menu-footer-3" class="block block-menu">
+              <div class="content">
+                <ul class="menu">
+                  <li class="first leaf"><a href="http://www.stanford.edu/site/accessibility" target="_blank">Accessibility</a></li>
+                  <li class="leaf"><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li class="leaf"><a href="http://www.stanford.edu/site/terms.html" target="_blank">Terms of Use</a></li>
+                  <li class="last leaf"><a href="http://www.stanford.edu/" target="_blank">Stanford University</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="block-block-1" class="block block-block">
+              <div class="content">
+                <div class="gsb-footer-meta">
+                  <div class="copyright">Copyright © Stanford Graduate School of Business</div>
+                  <div class="address">655 Knight Way, Stanford, CA 94305</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div></div> <!-- /.section, /#legal -->
       <?php endif; ?>
 
