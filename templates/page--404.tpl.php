@@ -29,10 +29,7 @@
         <div id="main">
           <div class="error-wrapper">
             <h1>Sorry! The page you are looking for could not be found</h1>
-            <h2>Please try our site search, or explore the links below.</h2>
-
-            <div class="search-wrapper"><?php print render($global_search); ?></div>
-
+            <h2>Please try our <a href="/search" title="Search">site search</a>, or explore the links below.</h2>
             <div class="menu-wrapper">
               <h3>Site Links</h3>
               <ul class="menu">
