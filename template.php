@@ -261,11 +261,6 @@ function gsb_theme_preprocess_page(&$variables) {
     ),
     'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
   );
-
-  // Global search
-  $variables['global_search'] = array(
-    'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
-  );
 }
 
 /**
