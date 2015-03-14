@@ -55,6 +55,11 @@
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper {
   padding: 18px 0 18px 26px;
 }
+@media (max-width: 48em) {
+  .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper {
+    padding-left: 18px;
+  }
+}
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper label,
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper .views-widget {
   display: inline-block;
@@ -65,13 +70,29 @@
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper label {
   font-size: 16px;
   line-height: 1.3;
+  margin-bottom: 10px;
 }
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper .customSelect {
+  display: block;
   font-weight: normal;
   text-transform: capitalize;
 }
 .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper .customSelectInner {
   padding-top: 10px;
+}
+@media (min-width: 62.5em) and (max-width: 68.75em) {
+  .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper .customSelectInner {
+    font-size: 12px;
+    padding-right: 0;
+    width: 170px !important;
+  }
+}
+@media (max-width: 48em) {
+  .pane-gsb-act-project-listing-panel-pane-1 #edit-field-act-status-value-wrapper .customSelectInner {
+    font-size: 12px;
+    padding-right: 0;
+    width: 170px !important;
+  }
 }
 .pane-gsb-act-project-listing-panel-pane-1 .view-content {
   clear: right;
