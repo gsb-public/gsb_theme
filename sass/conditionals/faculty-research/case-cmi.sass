@@ -7,3 +7,32 @@
 @import partials/base/00-variables/all
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
+
+// Case download authentication page
+.page-gsb-cmis-gsb-cmis-download-auth
+
+  // Hide generated title and breadcrumbs
+  .breadcrumb,
+  .title-wrapper
+    display: none
+
+#gsb-cmis-download-auth
+  max-width: 570px
+  // Links styled like red CTA
+  .case-login
+    @extend %bg-border-and-box-shadow
+    margin-bottom: 12px
+    color: $grey-med
+    a
+      display: block
+      font-size: 20px
+      line-height: 1.2
+      padding: 14px 55px 11px $standard-padding
+      position: relative
+      +icon-after("arrow-double-right", true)
+      &:after
+        @extend %arrow-double-big
+        color: $grey-med
+      &:hover
+        &:after
+          color: $teal-light
