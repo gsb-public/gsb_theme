@@ -29,6 +29,8 @@
       line-height: 1.2
       padding: 14px 55px 11px $standard-padding
       position: relative
+      +breakpoint(400px max-width)
+        font-size: 16px
       +icon-after("arrow-double-right", true)
       &:after
         @extend %arrow-double-big
