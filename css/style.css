@@ -2650,8 +2650,8 @@ div.label-inline {
     margin: 10px 10px 10px 65px;
     width: 100px;
   }
-  .page-insights #logo {
-    margin-left: 10px !important;
+  .page-insights #logo, .page-error #logo {
+    margin-left: 15px !important;
   }
 }
 
@@ -10217,10 +10217,13 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   background-position: center -14px;
 }
 
-.error-page #content-wrapper {
+.page-error #logo {
+  margin-bottom: 12px;
+}
+.page-error #content-wrapper {
   background: white;
 }
-.error-page h1 {
+.page-error h1 {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 34px;
   font-weight: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -10228,11 +10231,11 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   margin-bottom: 20px;
 }
 @media (max-width: 34.375em) {
-  .error-page h1 {
+  .page-error h1 {
     font-size: 28px;
   }
 }
-.error-page h2 {
+.page-error h2 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -10240,18 +10243,18 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   margin-bottom: 40px;
 }
 @media (max-width: 34.375em) {
-  .error-page h2 {
+  .page-error h2 {
     font-size: 20px;
     margin-bottom: 20px;
   }
 }
-.error-page .menu-wrapper {
+.page-error .menu-wrapper {
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 3em;
   vertical-align: top;
 }
-.error-page .menu-wrapper h3 {
+.page-error .menu-wrapper h3 {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: normal;
@@ -10259,24 +10262,25 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   margin-bottom: 20px;
 }
 @media (max-width: 34.375em) {
-  .error-page .menu-wrapper h3 {
+  .page-error .menu-wrapper h3 {
     font-size: 20px;
   }
 }
-.error-page .menu-wrapper a {
+.page-error .menu-wrapper a {
   display: block;
   font-size: 18px;
   line-height: 1.3;
   margin-bottom: 10px;
 }
-.error-page #legal {
-  padding: 10px 0;
+.page-error #legal {
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: -moz-linear-gradient(top, #f0efef, #ffffff);
   background: -o-linear-gradient(top, #f0efef, #ffffff);
   background: -webkit-linear-gradient(top, #f0efef, #ffffff);
   background: linear-gradient(to bottom, #f0efef, #ffffff);
 }
-.error-page #legal .region {
+.page-error #legal .region {
   border-top: 0;
 }
 

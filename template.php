@@ -221,7 +221,7 @@ function gsb_theme_preprocess_html(&$variables) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
   if (drupal_get_http_header('status') == "404 Not Found" || drupal_get_http_header('status') == "403 Forbidden") {
-    $variables['classes_array'][] = 'error-page';
+    $variables['classes_array'][] = 'page-error';
   }
   if ($display = panels_get_current_page_display()) {
     $variables['classes_array'][] = 'panels-layout-' . $display->layout;
