@@ -1022,6 +1022,13 @@ li ul {
   list-style-type: circle;
 }
 
+.item-list ul {
+  margin: 0;
+}
+.item-list ul li {
+  margin: 0;
+}
+
 li a.active {
   color: #990000;
 }
@@ -3313,12 +3320,23 @@ a.social-block-facebook:after {
   font-family: 'icons';
 }
 
-.sharrre {
-  overflow: hidden;
-  *zoom: 1;
+ul.gsb-social-buttons li {
   margin-right: 12px;
 }
-.sharrre .share {
+@media (max-width: 35.5em) {
+  ul.gsb-social-buttons li {
+    margin-right: 4px;
+  }
+}
+ul.gsb-social-buttons li:last-of-type {
+  margin-right: 0;
+}
+
+.sharrre .box {
+  overflow: hidden;
+  *zoom: 1;
+}
+.sharrre .box .share {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -3329,13 +3347,13 @@ a.social-block-facebook:after {
   text-align: center;
   overflow: hidden;
 }
-.sharrre .share span {
+.sharrre .box .share span {
   visibility: hidden;
 }
-.sharrre .share:hover {
+.sharrre .box .share:hover {
   background: #8aa8a2;
 }
-.sharrre .count {
+.sharrre .box .count {
   color: #7d9395;
   display: inline-block;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3344,7 +3362,7 @@ a.social-block-facebook:after {
   font-weight: normal;
   margin-left: 5px;
 }
-.sharrre .count:hover {
+.sharrre .box .count:hover {
   text-decoration: none;
 }
 
@@ -3374,6 +3392,11 @@ a.social-block-facebook:after {
 }
 .field-name-social-buttons-bottom .sharrre .count {
   font-size: 16px;
+}
+@media (max-width: 35.5em) {
+  .field-name-social-buttons-bottom .sharrre .count {
+    font-size: 11px;
+  }
 }
 
 #selectionSharerPopover-inner {

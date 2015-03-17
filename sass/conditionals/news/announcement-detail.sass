@@ -118,7 +118,10 @@
     .field-name-social-buttons-top
       @extend %black-border-top-small
       @extend %social-buttons-top
-
+      +breakpoint(1080px 999px)
+        +social-buttons-small
+      +breakpoint(745px max-width)
+        +social-buttons-small
     // Bottom social buttons
     .field-name-social-buttons-bottom
       @extend %social-buttons-bottom

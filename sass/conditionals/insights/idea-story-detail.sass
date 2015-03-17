@@ -5,6 +5,7 @@
 @import breakpoint
 @import ../../../fonts/icons/icons
 @import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
 // Insights idea story detail page
@@ -457,6 +458,8 @@
     padding-left: 35px
     +breakpoint(687px max-width)
       padding-left: 0
+    +breakpoint($bp-mobile-max)
+      +social-buttons-small
 
   // Bottom social buttons
   .field-name-social-buttons-bottom
