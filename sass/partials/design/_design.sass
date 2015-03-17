@@ -503,9 +503,15 @@ a.social-block-facebook
 .sharrre-googleplus .share
   +icon-before("google-plus", true)
 
-.sharrre
-  +clearfix
+ul.gsb-social-buttons li
   margin-right: 12px
+  +breakpoint($bp-mobile-max)
+    margin-right: 4px
+  &:last-of-type
+    margin-right: 0
+
+.sharrre .box
+  +clearfix
 
   // Button
   .share
@@ -549,19 +555,8 @@ a.social-block-facebook
     font-size: 18px
 
 // Bottom social buttons
-.field-name-social-buttons-bottom .sharrre
-  .share
-    height: 30px
-    width: 30px
-    &:before
-      display: inline-block
-      font-size: 12px
-      position: relative
-      top: 5px
-
-  // Counter
-  .count
-    font-size: 16px
+.field-name-social-buttons-bottom
+  +social-buttons-small
 
 // Highlight and sharrre
 #selectionSharerPopover-inner
