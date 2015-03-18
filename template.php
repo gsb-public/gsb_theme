@@ -220,8 +220,11 @@ function gsb_theme_preprocess_html(&$variables) {
   if (user_access('administer panelizer node page content')) {
     drupal_add_css(drupal_get_path('theme', 'gsb_theme') . '/css/admin-modal/admin-modal.css');
   }
-  if (drupal_get_http_header('status') == "404 Not Found" || drupal_get_http_header('status') == "403 Forbidden") {
-    $variables['classes_array'][] = 'page-error';
+  if (drupal_get_http_header('status') == "404 Not Found") {
+    $variables['classes_array'][] = 'page-error page-404';
+  }
+  if (drupal_get_http_header('status') == "403 Forbidden") {
+    $variables['classes_array'][] = 'page-error page-403';
   }
   if ($display = panels_get_current_page_display()) {
     $variables['classes_array'][] = 'panels-layout-' . $display->layout;
