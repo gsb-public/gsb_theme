@@ -72,25 +72,26 @@
           &:after
             color: $teal-light
 
-// Alumni clubs list - Titles only
+// Alumni clubs pane
 .pane-club-filters-club-alumni-list
-
+  @extend %bg-and-box-shadow
+  // For position absolute pager region to remove background
+  margin-bottom: 58px !important
   .pane-title
     @extend %black-border-top
-    @extend %bg-and-box-shadow
     color: $text-black
     font-size: 22px
     font-weight: normal
     margin: 0 26px
-    padding: 10px 26px 0 26px
+    padding-top: 10px
+    padding-top: 5px
 
+// Alumni clubs list - Titles only
 .view-display-id-club_alumni_list
-  .view-content
-    @extend %bg-and-box-shadow
   // Container
   .views-row
     @extend %divider-bottom
-    padding: 10px $standard-padding
+    padding: 13px $standard-padding 10px
 
   // Title
   .views-field-title
@@ -104,4 +105,7 @@
 
   // Pager adjustment
   .pager-region
+    margin-bottom: 0
     margin-top: -1px
+    position: absolute
+    width: 570px
