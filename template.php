@@ -52,7 +52,6 @@ function gsb_theme_breadcrumb($variables) {
  */
 function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   $search_form_ids = array(
-    'views-exposed-form-clubs-search-search-club',
     'views-exposed-form-search-news-news-list',
     'views-exposed-form-media-mention-media-mention-solr',
     'views-exposed-form-publications-publications-solr',
@@ -61,7 +60,6 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-faculty-search-solr-search',
     'views-exposed-form-search-case-study-panel-pane-1',
     'views-exposed-form-case-study-search-solr-search',
-    'views-exposed-form-club-filters-club-list',
     'views-exposed-form-gsb-event-panel-pane-2',
     'views-exposed-form-gsb-event-event-listing-pane',
     'views-exposed-form-gsb-event-event-calendar-pane',
@@ -92,17 +90,19 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     else if (!empty($form['search'])) {
       $form['search']['#attributes']['placeholder'] = t('search within');
     }
-
     $form['#attributes']['class'][] = 'gsb-views-exposed-search';
   }
+
   if ($is_filter_form = in_array($form['#id'], $filter_form_ids)) {
     $form['#attributes']['class'][] = 'gsb-views-exposed-filter';
   }
+
   if ($is_search_form || $is_filter_form) {
     $form['#attributes']['class'][] = 'gsb-views-exposed-form';
   }
 
   $split_search_views = array(
+    'club_filters',
     'faculty_filters',
     'gsb_event',
     'gsb_working_paper_listing',
@@ -176,6 +176,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-alumni-book-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
+  }
+  // clubs listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-club-filters-club-list') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('Search Stanford GSB clubs');
   }
 
 }
@@ -270,12 +275,6 @@ function gsb_theme_preprocess_page(&$variables) {
  * Preprocess exposed filters forms.
  */
 function gsb_theme_preprocess_views_exposed_form(&$variables) {
-  // Alter search blocks titles.
-  if ($variables['form']['#id'] == 'views-exposed-form-club-filters-club-list') {
-    if (isset($variables['widgets']['filter-field_search_field_value']->label)) {
-      $variables['widgets']['filter-field_search_field_value']->label .= '<strong>Stanford GSB Clubs</strong>';
-    }
-  }
   // Add the 'Filter by' to the filter title on the admissions events pane
   if ($variables['form']['#id'] == 'views-exposed-form-admission-events-pane') {
     $variables['filter_title'] = t('Filter by');
@@ -297,7 +296,7 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
 
 /**
  * Implements hook_form_alter()
- * adds class for add contet forms
+ * adds class for add content forms
  */
 function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
   $form['#attached']['js'][drupal_get_path('theme', 'gsb_theme') . '/js/gsb_forms.js'] = array();

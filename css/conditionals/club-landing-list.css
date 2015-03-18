@@ -17,8 +17,7 @@
   line-height: 0;
 }
 
-.view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-alumni-list .pane-title, .view-display-id-club_alumni_list .view-content {
+.pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-alumni-list .pane-title, .view-display-id-club_alumni_list .view-content {
   background: white;
 }
 
@@ -30,8 +29,7 @@
   border-top: 10px #231f20 solid;
 }
 
-.view-display-id-club_list .view-content,
-.view-display-id-search_club .view-content, .pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-alumni-list .pane-title, .view-display-id-club_alumni_list .view-content {
+.pane-club-filters-club-by-id-or-tag, .pane-club-filters-club-alumni-list .pane-title, .view-display-id-club_alumni_list .view-content {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -45,50 +43,28 @@
 }
 .view-display-id-club_list .views-row,
 .view-display-id-search_club .views-row {
-  border-bottom: none;
-  padding: 0 26px;
-  position: relative;
-  top: 0;
+  border-bottom: 1px solid #231f20;
+}
+.view-display-id-club_list .views-row:last-of-type,
+.view-display-id-search_club .views-row:last-of-type {
+  border-bottom: 0;
+}
+.view-display-id-club_list .views-row:first-of-type h5,
+.view-display-id-search_club .views-row:first-of-type h5 {
+  margin-top: 0;
 }
 
 .node-club.view-mode-teaser {
   padding: 0;
-  position: relative;
-  top: 0;
 }
-.node-club.view-mode-teaser .field-name-title,
-.node-club.view-mode-teaser .field-name-field-link-single {
-  margin-bottom: 18px;
-  padding-top: 20px;
-}
-.node-club.view-mode-teaser h2 {
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-.node-club.view-mode-teaser h2 a {
-  color: #636f00;
-  padding-right: 10px;
-}
-.node-club.view-mode-teaser h2 a:after {
-  color: #bac405;
-  font-size: 12px;
-}
-.node-club.view-mode-teaser h2 a:hover {
-  color: #2d6280;
-}
-.node-club.view-mode-teaser h2 a:hover:after {
-  color: #aac4bf;
+.node-club.view-mode-teaser h5 {
+  margin: 18px 0;
 }
 .node-club.view-mode-teaser .field-name-field-body {
-  margin: 4px 0;
+  margin: 4px 0 8px;
 }
 .node-club.view-mode-teaser .field-name-field-email {
-  margin-bottom: 30px;
-}
-.node-club.view-mode-teaser .field-name-field-email a {
-  color: #636f00;
+  margin-bottom: 18px;
 }
 .node-club.view-mode-teaser .field-name-field-email a:after {
   content: "\f112";
@@ -109,10 +85,6 @@
   font-size: 12px;
   line-height: 0;
   margin-left: 0.3em;
-}
-.node-club.view-mode-teaser .field-name-field-email a:hover {
-  color: #2d6280;
-  text-decoration: underline;
 }
 
 .pane-club-filters-club-by-id-or-tag {
@@ -157,15 +129,6 @@
 }
 .pane-club-filters-club-by-id-or-tag .view-club-filters .more-link a:hover:after {
   color: #aac4bf;
-}
-
-.inner-sidebar-wrapper #views-exposed-form-club-filters-club-list #edit-term-node-tid-depth-2-wrapper {
-  display: none;
-}
-.inner-main-wrapper #views-exposed-form-club-filters-club-list #edit-keyword-wrapper, .inner-main-wrapper
-#views-exposed-form-club-filters-club-list #edit-search-wrapper, .inner-main-wrapper
-#views-exposed-form-club-filters-club-list .views-submit-button {
-  display: none;
 }
 
 .pane-club-filters-club-alumni-list .pane-title {

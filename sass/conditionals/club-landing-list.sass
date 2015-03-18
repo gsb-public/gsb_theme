@@ -7,61 +7,43 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Clubs - Listing
+// Clubs - Non-customizable listings
 .view-display-id-club_list,
 .view-display-id-search_club
   border-top: 0
   margin-bottom: 30px
-  .view-content
-    @extend %bg-and-box-shadow
-  .views-row
-    border-bottom: none
-    padding: 0 $standard-padding
-    position: relative
-    top: 0
 
+  .views-row
+    border-bottom: 1px solid $text-black
+    &:last-of-type
+      border-bottom: 0
+    &:first-of-type
+      h5
+        margin-top: 0
+
+// Club node styling
 .node-club.view-mode-teaser
   padding: 0
-  position: relative
-  top: 0
-  // Title
-  .field-name-title,
-  .field-name-field-link-single
-    margin-bottom: 18px
-    padding-top: 20px
 
-  h2
-    font-family: $font-sans
-    font-size: 18px
-    font-weight: bold
-    line-height: 1.2
-    a
-      color: $link-green
-      padding-right: 10px
-      &:after
-        color: $green-light
-        font-size: 12px
-      &:hover
-        color: $link-blue
-        &:after
-          color: $teal-light
+  // Title field
+  h5
+    margin: 18px 0
+
   // Description
   .field-name-field-body
     @extend %p
-    margin: 4px 0
+    margin: 4px 0 8px
+
   // Email
   .field-name-field-email
-    margin-bottom: 30px
+    margin-bottom: 18px
     a
-      color: $link-green
       +icon-after("email-stroke", true)
       &:after
         font-size: 12px
         line-height: 0
         margin-left: 0.3em
-      &:hover
-        color: $link-blue
-        text-decoration: underline
+
 
 // Customizable clubs list
 .pane-club-filters-club-by-id-or-tag
@@ -89,17 +71,6 @@
           color: $link-blue
           &:after
             color: $teal-light
-
-// Hide duplicate search and filter
-#views-exposed-form-club-filters-club-list
-  #edit-term-node-tid-depth-2-wrapper
-    .inner-sidebar-wrapper &
-      display: none
-  #edit-keyword-wrapper,
-  #edit-search-wrapper,
-  .views-submit-button
-    .inner-main-wrapper &
-      display: none
 
 // Alumni clubs list - Titles only
 .pane-club-filters-club-alumni-list

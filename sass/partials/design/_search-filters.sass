@@ -2,7 +2,7 @@
 
 // Search box
 .gsb-views-exposed-form
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
 
 .gsb-views-exposed-search
   padding: 18px 24px 24px 24px
@@ -311,42 +311,16 @@ fieldset.collapsible .fieldset-legend
     line-height: 1em
     color: $red
 
-  .views-widget-filter-term_node_tid_depth_2
-    display: inline-block
-    float: left
-    width: 32.9%
-    vertical-align: top
-    border-right: 1px solid #e4e4e4
-    border-left: 1px solid $white
-    &:first-of-type
-      border-left: 0
-    &:last-of-type,
-    &:nth-of-type(3n)
-      border-right: 0
 
 #edit-submit-gsb-event
   position: relative
   top: -48px
 
-
-// ACTIVITIES AND ORGANIZATIONS
-// Prevent duplicate container on clubs filter
-.inner-main-wrapper .pane-views-exp-club-filters-club-list .gsb-views-exposed-search
-  background: none
-  border: none
-  box-shadow: 0 0 0 #fff
-  margin: -2px
-
-// Hide the filter by label in right sidebar
-.inner-sidebar-wrapper .pane-views-exp-club-filters-club-list
-  .filter-title
-    display: none
-
 // Parent class to exposed, collapsible filter
 .exposed_filter_widget
   +breakpoint($bp-mobile-max)
     display: none
-  //Reset style for case when filter and search are placed in one class
+  // Reset style for case when filter and search are placed in one class
   &.exposed_filter_widget_one_column
     .ajax-progress
       display: none
@@ -378,7 +352,7 @@ fieldset.collapsible .fieldset-legend
     padding: 0
     width: auto
   > div
-    @extend %bg-border-and-box-shadow
+    @extend %bg-and-box-shadow
     padding: 3px
     position: relative
     > strong,
@@ -540,15 +514,9 @@ fieldset.collapsible .fieldset-legend
   .gsb-views-exposed-search
     padding: 0
 
-// EXCEPTIONS on Clubs page
-.page-stanford-gsb-experience-life-stanford-activities-organizations .narrow-view .pane-views-exp-club-filters-club-list .gsb-views-exposed-search
-  @extend %bg-border-and-box-shadow
-  label
-    font-size: 20px
-    line-height: 1.3
 
 // Search and filter styling
-// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing
+// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing, Clubs list
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
@@ -561,7 +529,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-alumni_stories_listing,
 .view-display-id-giving_stories_listing,
 .view-display-id-alumni_book_listing,
-.view-id-gsb_act_project_listing
+.view-id-gsb_act_project_listing,
+.view-display-id-club_list
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -644,7 +613,8 @@ fieldset.collapsible .fieldset-legend
 #edit-submit-gsb-faculty-insights-listing,
 #edit-submit-gsb-in-the-media-listing,
 #edit-submit-stories,
-#edit-submit-gsb-book-listing
+#edit-submit-gsb-book-listing,
+#edit-submit-club-filters
   text-indent: 1000px
   -webkit-border-radius: 0
   -moz-border-radius: 0
@@ -666,14 +636,15 @@ fieldset.collapsible .fieldset-legend
     &:hover
       +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, #18455f, $text-blue))
 
-// Faculty, working papers, case study, book listing filters, ACT Project
+// Faculty, working papers, case study, book listing filters, ACT Project, Clubs list
 // Filter section
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
 .view-display-id-book_listing,
 .view-display-id-publications_listing,
-.view-id-gsb_act_project_listing
+.view-id-gsb_act_project_listing,
+.view-display-id-club_list
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
@@ -741,6 +712,7 @@ fieldset.collapsible .fieldset-legend
     // Checkboxes in columns
     .form-item-academic-area,
     .form-item-topics,
+    .form-item-organizations,
     .wide-view & .form-item-field-act-project-type-tid,
     .wide-view & .form-item-field-act-project-focus-tid,
     .wide-view & .form-item-field-act-organization-type-tid
