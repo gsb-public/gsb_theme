@@ -7,21 +7,7 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Clubs - Non-customizable listings
-.view-display-id-club_list,
-.view-display-id-search_club
-  border-top: 0
-  margin-bottom: 30px
-
-  .views-row
-    border-bottom: 1px solid $text-black
-    &:last-of-type
-      border-bottom: 0
-    &:first-of-type
-      h5
-        margin-top: 0
-
-// Club node styling
+// Club node teaserstyling
 .node-club.view-mode-teaser
   padding: 0
 
@@ -44,35 +30,60 @@
         line-height: 0
         margin-left: 0.3em
 
+// Clubs - Non-customizable listings
+.view-display-id-club_list,
+.view-display-id-search_club
+  border-top: 0
+  margin-bottom: 30px
 
-// Customizable clubs list
+  .views-row
+    border-bottom: 1px solid $text-black
+    &:last-of-type
+      border-bottom: 0
+    &:first-of-type
+      h5
+        margin-top: 0
+
+// Customizable clubs pane
 .pane-club-filters-club-by-id-or-tag
   @extend %bg-and-box-shadow
-  padding: $standard-padding
-  overflow: hidden
-  h2
-    margin-bottom: 18px
-  .view-club-filters
-    .more-link
-      min-width: 145px
-      float: right
-      text-align: left
-      a
-        display: block
-        font-size: 18px
-        color: $link-green
-        position: relative
-        +icon-after("arrow-double-right", true)
-        &:after
-          @extend %arrow-double-big
-          font-weight: bold
-          color: #e3e3e3
-        &:hover
-          color: $link-blue
-          &:after
-            color: $teal-light
+  padding-bottom: 4px
 
-// Alumni clubs pane
+  .pane-title
+    @extend %black-border-top
+    color: $text-black
+    font-size: 22px
+    font-weight: normal
+    margin: 0 26px
+    padding-top: 10px
+    padding-top: 5px
+
+// Customizable clubs list
+.view-display-id-club_by_id_or_tag
+  +clearfix
+  .views-row
+    @extend %divider-bottom
+    padding: 0 $standard-padding
+    &:last-of-type
+      border-bottom: 0
+
+  // See all clubs link
+  .more-link
+    float: right
+    height: 30px
+    min-width: 160px
+    text-align: left
+    a
+      display: block
+      font-size: 18px
+      font-weight: bold
+      position: relative
+      +icon-after("arrow-double-right", true)
+      &:after
+        @extend %arrow-double-big
+
+
+// Alumni Clubs pane - non-customizable
 .pane-club-filters-club-alumni-list
   @extend %bg-and-box-shadow
   // For position absolute pager region to remove background
