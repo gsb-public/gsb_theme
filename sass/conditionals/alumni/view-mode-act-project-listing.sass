@@ -50,10 +50,14 @@
 // Project list
 .pane-gsb-act-project-listing-panel-pane-1
 
-  // Selector
+  // Select
+  #edit-field-act-status-value
+    text-transform: capitalize
+
+  // Select wrapper
   #edit-field-act-status-value-wrapper
-    padding: 18px 0 18px 26px
     @extend %divider-bottom
+    padding: 18px 0 18px 26px
     +breakpoint(768px max-width)
       padding-left: 18px
     label,
