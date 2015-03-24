@@ -233,7 +233,7 @@
    */
   Drupal.behaviors.customSelect = {
     attach: function () {
-      $('select').not('.searchworks-select, #edit-state, #modalContent select, [multiple="multiple"], #emma_member_country').customSelect();
+      $('select').not('.hasCustomSelect, .searchworks-select, #edit-state, #modalContent select, [multiple="multiple"], #emma_member_country').customSelect();
     }
   };
 
