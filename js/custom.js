@@ -253,7 +253,16 @@
    */
   Drupal.behaviors.image_resource_infographic_button = {
     attach: function () {
-      $('.image-enlarge-bar').insertAfter($('.file-resource-image figure'));
+      $('.image-enlarge-bar').each(function() {
+        // Get the figure tag.
+        $figure = $(this).parent();
+        
+        // Remove the button.
+        $button = $(this).detach();
+        
+        // Put it back on after the figure tag.
+        $figure.after($button);
+      });    
     }
   };
 
