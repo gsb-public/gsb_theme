@@ -19,7 +19,7 @@
 .file-resource_image--1_3_width
   @extend %insights-resource-right
 
-// Half
+// Half width
 .file-resource_image--1_2_width
   max-width: 408px
   +breakpoint(780px max-width)
@@ -27,7 +27,7 @@
     margin-left: 0
     max-width: 100%
 
-// Third
+// Third of width
 .file-resource_image--1_3_width
   max-width: 268px
   +breakpoint(640px max-width)
@@ -42,6 +42,8 @@
   line-height: 1.2
   margin-top: 12px
   max-width: 650px
+  +breakpoint($bp-mobile-max)
+    font-size: 13px
 
 // Infographic expand
 .file-resource-image figure
