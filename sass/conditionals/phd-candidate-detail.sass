@@ -15,11 +15,7 @@
   #page-title
     +breakpoint($bp-mobile-max)
       display: block
-      color: $text-blue
-      font-family: $font-demi
-      font-size: 34px
-      font-weight: normal
-      line-height: 40px
+      font-size: 30px
   .group-wrapper-name
     +breakpoint($bp-mobile-max)
       display: none
@@ -29,9 +25,9 @@
   border-top: 3px solid $text-black
   padding-top: 2px
   a
-    color: $text-green
+    color: $link-green
     &:hover
-      color: $text-blue
+      color: $link-blue
   // Replace file size with pdf icon
   .field-name-field-file-job-market-paper a,
   .field-collection-item-field-publications .field-name-field-file-single-public a,
@@ -50,7 +46,7 @@
   .field-label
     font-size: 18px
     font-weight: bold
-    margin-bottom: 18px
+    margin-bottom: 4px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
@@ -74,7 +70,7 @@
 
   // Photo label
   .field-name-phd-academic-area-label
-    background: $grey-dark
+    background: $text-black
     color: $white
     font-family: $font-demi
     font-size: 14px
@@ -82,7 +78,7 @@
     margin-bottom: 20px
     padding: 14px $standard-padding
 
-  // Information block under photo
+  // Contact information block under photo
   .group-wrapper-information
     @extend %bg-border-and-box-shadow
     > div
@@ -134,14 +130,12 @@
         font-weight: bold
         margin-bottom: 4px
 
-  // Name
+  // PhD Candidate name
   .group-wrapper-name
-    color: $text-blue
-    font-family: $font-demi
-    font-size: 34px
-    font-weight: normal
-    line-height: 40px
-    margin: 25px 0
+    font-size: 30px
+    font-weight: bold
+    line-height: 1.3
+    margin: 25px 0 12px
     span
       &:after
         content: " "
@@ -157,12 +151,6 @@
     @extend %p
     margin-bottom: 20px
 
-  .field-name-field-phd-research-interests,
-  .field-name-field-research-statement,
-  .field-name-field-teaching-statement
-    .label-above
-      margin-bottom: 10px
-
   .field-name-field-link-single
     font-weight: bold
     a
@@ -173,8 +161,8 @@
   // Faculty advisors
   .field-name-field-faculty-advisors
     margin-bottom: 20px
-    .label-above
-      margin-bottom: 0
+    a
+      font-size: 18px
     a:after
       color: $black
       content: ","
@@ -189,9 +177,9 @@
     padding-top: 35px
     // Use label style from above
     h3
-      font-size: 18px
+      font-size: 22px
       font-weight: bold
-      line-height: 24px
+      line-height: 1.3
       margin-bottom: 18px
   .field-name-field-job-market-paper-desc
     margin-top: 10px
