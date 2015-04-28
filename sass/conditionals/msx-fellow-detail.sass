@@ -9,59 +9,71 @@
 
 // MSx Fellows - Detail
 
-// MSx fellows page
+// MSx fellows title switching with name
 .node-type-msx-fellows
   #page-title
     +breakpoint($bp-mobile-max)
       display: block
-      color: $text-blue
-      font-family: $font-demi
-      font-size: 34px
-      font-weight: normal
-      line-height: 40px
+      font-size: 30px
   .field-name-title
     +breakpoint($bp-mobile-max)
       display: none
 
-// MSx Fellows detail page
 .node-msx-fellows
   border-top: 3px solid $text-black
   padding-top: 2px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-top: 0
+
+  // Fellow name
+  .field-name-title
+    margin-top: 26px
+    margin-bottom: 22px
+    h1
+      font-size: 30px
+      padding-bottom: 0
+
+  // Fellow title/position, company or organization, location
   .field-name-field-title-position-unlimited,
   .field-name-field-company-organization,
-  .field-name-field-location,
-  .field-name-field-academic-degrees
-    font-weight: bold
-    font-size: 20px
-    margin-bottom: 5px
   .field-name-field-location
-    font-weight: normal
+    font-size: 22px
+    margin-bottom: 3px
+
+  // Title/position
+  .field-name-field-title-position-unlimited
+    font-weight: bold
+
+  // Education (academic degrees)
   .field-name-field-academic-degrees
-    margin-top: 15px
+    font-size: 18px
+    margin-bottom: 32px
+    margin-top: 20px
+    // Label
     .label-above
+      font-weight: bold
       margin-bottom: 5px
+    // List
     .item-list ul
       margin: 0
       li
         font-size: 18px
         font-weight: normal
         margin: 0 0 0 20px
-        line-height: 24px
+        line-height: 1.3
         &:before
-          color: $text-blue
           content: "•"
           margin-left: -20px
           padding-right: 8px
+
+  // Bio
   .field-name-field-body
     @extend %p
-  .field-name-title
-    margin-top: 25px
-    margin-bottom: 25px
+
+  // Class year
   .field-name-field-year
-    background: $grey-dark
+    background: $text-black
     color: $white
     font-size: 14px
     padding: 9px $standard-padding 5px
