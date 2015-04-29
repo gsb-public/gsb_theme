@@ -1,1 +1,39 @@
-_webforms.sass
+// Webforms
+
+.webform-client-form
+
+  fieldset
+    border: 0
+    margin: 20px 0 0 0
+    padding: 0
+
+  legend
+    font-size: 20px
+    font-weight: bold
+    padding: 0
+
+  label
+    margin: 35px 0 8px 0
+
+  .form-item .description
+    margin-top: 10px
+
+  // Radio buttons
+  input[type="radio"]
+    margin-left: 1px
+    position: relative
+    top: -1px
+
+  // Buttons
+  .form-submit
+    @extend %green-button
+    margin-right: 8px
+
+  // Inputs
+  .customSelectInner
+    line-height: 1
+    padding: 14px 0 6px 10px
+
+  .webform-calendar
+    position: relative
+    top: 10px
