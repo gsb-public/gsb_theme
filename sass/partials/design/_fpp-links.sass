@@ -1,6 +1,11 @@
 // Links FPP
 
 .pane-bundle-links
+  a[href*="mailto:"]
+    +icon-after("email-stroke", true)
+    &:after
+      font-size: 12px
+      margin-left: 5px
 
   // Black bar with red links
   .black-bar
