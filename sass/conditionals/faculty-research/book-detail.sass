@@ -101,12 +101,21 @@
     margin-bottom: 26px
     margin-top: 26px
     padding: $standard-padding
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
     .label-above
       font-size: 18px
       font-family: $font-demi
       font-weight: normal
       line-height: 1.2
       margin-bottom: 12px
+
+    // Excerpt
+    .field-name-field-file-single-public,
+    .field-name-field-link-single
+      margin: 4px 0
 
   // Single review
   .field-collection-item-field-selected-reviews
@@ -124,6 +133,7 @@
       content: "“"
     &:after
       content: "”"
+
   // Author
   .field-name-field-reviewer
     font-size: 14px
