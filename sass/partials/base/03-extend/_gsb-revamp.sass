@@ -120,6 +120,9 @@
   background-color: $red-light
   +background(linear-gradient(bottom, $red-light 0%, $red-dark 100%))
 
+%gradient-grey
+  background: #f5f5f5
+  +background(linear-gradient(top, #f5f5f5, $white))
 // Global pieces
 
 // Show More link
@@ -177,6 +180,14 @@
   @extend %rounded-button
   @extend %gradient-red
 
+// Rounded grey button
+%grey-button
+  @extend %rounded-button
+  @extend %gradient-grey
+  border: 1px #d3d3d3 solid
+  color: $link-green
+  &:hover
+    border: 1px transparent solid
 
 // Rectangle teal CTA link style with >>
 %teal-cta
