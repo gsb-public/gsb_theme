@@ -7,9 +7,18 @@
     margin: 20px 0 0 0
     padding: 0
 
+  // Label of fieldset
   legend
+    @extend %divider-top
+    display: block
     font-size: 20px
     font-weight: bold
+    padding: 20px 0 0 0
+    width: 100%
+
+  // No border or padding on the first fieldset
+  fieldset:first-of-type legend
+    border-top: 0
     padding: 0
 
   label
@@ -18,16 +27,24 @@
   .form-item .description
     margin-top: 10px
 
+  // Fields
+  input.form-text
+    width: 100%
+
   // Radio buttons
   input[type="radio"]
     margin-left: 1px
     position: relative
     top: -1px
 
-  // Buttons
-  .form-submit
-    @extend %green-button
+  // Edit button
+  #edit-draft
+    @extend %grey-button
     margin-right: 8px
+
+  // Submit button
+  #edit-submit
+    @extend %green-button
 
   // Inputs
   .customSelectInner
