@@ -6,3 +6,39 @@
 @import ../../../../fonts/icons/icons
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
+
+// Soundcloud resource
+.file-resource-soundcloud
+  iframe
+    width: 100% !important
+
+  // Set max-widths for full to match regular body width
+
+  // Large cover and Classic style - full width
+  &.file-resource_soundcloud--large_cover,
+  &.file-resource_soundcloud--full_width
+    margin-bottom: 20px
+    max-width: 670px
+
+  // Half and third
+  &.file-resource_soundcloud--1_2_width,
+  &.file-resource_soundcloud--1_3_width
+    @extend %insights-resource-right
+
+  // Classic style - half width
+  &.file-resource_soundcloud--1_2_width
+    max-width: 408px
+    +breakpoint(780px max-width)
+      float: none
+      margin-left: 0
+      max-width: 100%
+      text-align: center
+
+  // Classic style - third width
+  &.file-resource_soundcloud--1_3_width
+    max-width: 270px
+    +breakpoint(640px max-width)
+      float: none
+      margin-left: 0
+      max-width: 100%
+      text-align: center
