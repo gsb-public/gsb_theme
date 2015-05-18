@@ -41,61 +41,6 @@
   margin-bottom: 16px
   padding-top: 16px
 
-// Author block styling for faculty
-// Used on detail pages for case study, working paper
-=author-block
-  @extend %bg-border-and-box-shadow
-  margin-bottom: 30px
-  padding: 0 26px 26px 26px
-  // Block label
-  .label-above
-    @extend %teal-border-top
-    font-family: $font-demi
-    font-size: 14px
-    font-weight: normal
-    line-height: 1
-    margin-bottom: 16px
-    padding-top: 12px
-
-  .view-mode-people_fpp
-    margin-bottom: 26px
-    &:last-of-type
-      margin-bottom: 0
-
-  // Profile Image
-  img
-    float: none
-    height: 130px
-    width: 130px
-    margin-bottom: 10px
-
-  // Name
-  .group-wrapper-name
-    font-size: 16px
-    font-family: $font-demi
-    font-weight: normal
-    line-height: 1.2
-    margin-left: 0
-    a
-      color: $link-green
-      font-family: $font-demi
-      font-size: 16px
-      font-weight: normal
-      line-height: 1.2
-      &:hover
-        color: $link-blue
-      +icon-after("arrow-double-right", true)
-      &:after
-        font-size: 12px
-        margin-left: 3px
-
-  // Rank
-  .group-wrapper-position
-    font-family: $font-demi
-    font-size: 16px
-    font-weight: normal
-    line-height: 1.2
-
 // Vertical align
 =vertical-align
   position: relative
