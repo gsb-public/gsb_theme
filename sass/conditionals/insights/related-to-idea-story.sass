@@ -7,7 +7,7 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Related to idea story section on idea story, announcement, and school story detail
+// Related to idea story section on idea story, announcement, school story, book, JABCO, working paper detail
 .group-wrapper-related
   // custom box shadow because of divider issue
   @extend %bg-white
@@ -34,10 +34,11 @@
 
   // Related
 
-  // Related faculty
+  // Related faculty, alumni, MSx, PhD, staff
   .field-collection-item-field-related-faculty,
   .field-name-field-person-fac-ref,
-  .field-name-field-alumni-ref
+  .field-name-field-alumni-ref,
+  .field-name-field-person-ref-unlimited
     @extend %divider-bottom
     .node
       +clearfix
@@ -81,62 +82,62 @@
     .view-mode-idea_story_related
       @extend %divider-bottom
       padding: 18px $standard-padding
-    // Date
-    .field-name-field-date
-      font-size: 14px
-      line-height: 1.2
-      margin-bottom: 14px
+      // Date
+      .field-name-field-date
+        font-size: 14px
+        line-height: 1.2
+        margin-bottom: 14px
 
-    // Media icons
+      // Media icons
 
-    // Video
-    .media-icon.Video
-      margin-right: 5px
-      top: 0
-      +icon-after("video", true)
-      &:after
-        color: #bcbcbc
-        font-size: 20px
+      // Video
+      .media-icon.Video
+        margin-right: 5px
+        top: 0
+        +icon-after("video", true)
+        &:after
+          color: #bcbcbc
+          font-size: 20px
 
-    // Audio
-    .media-icon.Audio
-      margin-right: 5px
-      top: 0
-      +icon-after("podcast", true)
-      &:after
-        color: #bcbcbc
-        font-size: 20px
+      // Audio
+      .media-icon.Audio
+        margin-right: 5px
+        top: 0
+        +icon-after("podcast", true)
+        &:after
+          color: #bcbcbc
+          font-size: 20px
 
-    // Infographic
-    .media-icon.Infographic
-      margin-right: 5px
-      &:after
-        content: "Infographic:"
+      // Infographic
+      .media-icon.Infographic
+        margin-right: 5px
+        &:after
+          content: "Infographic:"
+          font-size: 20px
+          font-weight: bold
+
+      // Title
+      .field-name-title
+        display: inline
+      h2
+        display: inline
+        font-family: $font-sans
         font-size: 20px
         font-weight: bold
+        line-height: 0
+        margin-bottom: 12px
+        a
+          line-height: 1.3
+          &[target=_blank]
+            &:after
+              font-size: 10px
 
-    // Title
-    .field-name-title
-      display: inline
-    h2
-      display: inline
-      font-family: $font-sans
-      font-size: 20px
-      font-weight: bold
-      line-height: 0
-      margin-bottom: 12px
-      a
+      // Dek
+      .field-name-field-editorial-summary
+        font-size: 16px
         line-height: 1.3
-        &[target=_blank]
-          &:after
-            font-size: 10px
-
-    // Dek
-    .field-name-field-editorial-summary
-      font-size: 16px
-      line-height: 1.3
-      margin-bottom: 0
-      margin-top: 8px
+        margin-bottom: 0
+        margin-top: 8px
 
   // Related other content
   .field-collection-item-field-related-other-unlimited

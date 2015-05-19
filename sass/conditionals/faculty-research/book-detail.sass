@@ -145,15 +145,27 @@
 
   // Right side
 
-  // CTA (red CTA)
+  // Find at Stanford Library CTA (red CTA)
   .cta-wrapper
+    margin-top: 30px
     margin-bottom: 30px
-    .cta-red .field-item a:after
-      right: -46px
+    a
+      font-size: 16px
+      line-height: 1.2
+      padding: 14px 55px 11px $standard-padding
+      position: relative
+      +icon-after("arrow-double-right", true)
+      &:after
+        @extend %arrow-double-big
+        color: $grey-med
+      &:hover
+        &:after
+          color: $teal-light
 
   // Buy book (green links)
   .field-buy-book
     @extend %bg-border-and-box-shadow
+    margin-top: 30px
     padding: 0 $standard-padding 12px
     // Title
     .label-above
