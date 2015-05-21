@@ -42,7 +42,9 @@
     @extend %divider-bottom
     .node
       +clearfix
-      padding: 18px $standard-padding
+      padding: 0 $standard-padding 18px
+      &:first-of-type
+        padding-top: 18px
 
     // Image
     .field-name-field-image-single-public
