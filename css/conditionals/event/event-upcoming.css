@@ -1,14 +1,48 @@
-.pane-gsb-event-upcoming-events .field-name-field-event-date {
+.pane-gsb-event-upcoming-events .more-link a:after {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+
+.pane-gsb-event-upcoming-events .more-link a:after {
   font-size: 16px;
+  margin-right: 14px;
+  margin-top: -8px;
+  right: 0;
+}
+
+.pane-gsb-event-upcoming-events .more-link a {
+  background: #538b80;
+  color: white;
+  display: block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
   line-height: 1.2;
-  margin-bottom: 12px;
+  padding: 14px 36px 11px 26px;
+  position: relative;
+  text-align: left;
 }
 .pane-gsb-event-upcoming-events .field-name-title h2 {
   display: inline;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 0;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-event-upcoming-events .more-link a:after {
+  color: white;
 }
 @media (max-width: 53.125em) {
   .pane-gsb-event-upcoming-events .field-name-title h2 {
@@ -18,8 +52,35 @@
 .pane-gsb-event-upcoming-events .field-name-title a {
   line-height: 1.2;
 }
-.pane-gsb-event-upcoming-events .field-name-title a[target="_blank"]:after {
-  font-size: 12px;
+
+.pane-gsb-event-upcoming-events {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.pane-gsb-event-upcoming-events {
+  border: 2px white solid;
+}
+
+.pane-gsb-event-upcoming-events {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
+}
+
+.ie8 .pane-gsb-event-upcoming-events {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.pane-gsb-event-upcoming-events {
+  padding: 26px;
+  padding-top: 20px;
 }
 .pane-gsb-event-upcoming-events .field-name-title a[href$=".pdf"][target="_blank"]:after {
   font-size: 14px;

@@ -8,19 +8,42 @@
 
 // Double arrow for CTA's
 %arrow-double-big
-  position: absolute
   font-size: 21px
+  font-weight: normal
+  line-height: 0
+  margin-top: -10px
+  position: absolute
   right: 12px
   top: 50%
-  margin-top: -10px
-  line-height: 0
 
 %arrow-double-small
   @extend %arrow-double-big
   font-size: 16px
+  margin-right: 14px
   margin-top: -8px
-  right: 22px
+  right: 0
 
+// Rectangle teal CTA link with double arrow right
+%teal-cta
+  background: $teal-dark
+  color: $white
+  display: block
+  font-family: $font-demi
+  font-size: 14px
+  font-weight: normal
+  line-height: 1.2
+  padding: 14px 36px 11px $standard-padding
+  position: relative
+  text-align: left
+  +icon-after("arrow-double-right", true)
+  &:after
+    @extend %arrow-double-small
+    color: $white
+  &:hover
+    background: $link-blue
+    color: $white
+    &:after
+      color: $white
 
 // Backgrounds
 
@@ -188,32 +211,6 @@
   color: $link-green
   &:hover
     border: 1px transparent solid
-
-// Rectangle teal CTA link style with >>
-%teal-cta
-  background: $teal-dark
-  color: $white
-  display: block
-  font-size: 14px
-  font-weight: bold
-  line-height: 1.2
-  padding: 10px 17px
-  text-align: left
-  position: relative
-  +icon-after("arrow-double-right", true)
-  &:after
-    color: $white
-    font-size: 16px
-    font-weight: normal
-    line-height: 0
-    position: absolute
-    right: 14px
-    top: 50%
-  &:hover
-    background: $link-blue
-    color: $white
-    &:after
-      color: $white
 
 // Attached document icons
 %doc-attached-icons

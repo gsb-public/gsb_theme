@@ -1,4 +1,4 @@
-// CTA fpp
+// CTA FPP
 
 .supermenu-row
   .cta-wrapper
@@ -10,7 +10,7 @@
   a
     display: block
 .cta-link
-  padding: 14px 55px 11px $standard-padding
+  padding: 14px 36px 14px $standard-padding
   font-size: 16px
   position: relative
   line-height: 1.2
@@ -64,7 +64,7 @@
       &:before
         background: $link-blue
 
-// CTA - Green links
+// Green links, grey background
 .cta-green
   @extend %bg-border-and-box-shadow
   .field-item
@@ -74,7 +74,8 @@
       border-top: 0
     &:last-of-type
       border-bottom: 0
-  a
+  a,
+  a[target="_blank"]
     color: $link-green
     position: relative
     +icon-after("arrow-double-right", true)
@@ -88,13 +89,14 @@
       &:after
         color: $teal-light
 
-// CTA - Red links
+// Red links, grey background
 .cta-red
   .field-item
     @extend %bg-border-and-box-shadow
     margin-bottom: 5px
     color: $grey-med
-  a
+  a,
+  a[target="_blank"]
     position: relative
     +icon-after("arrow-double-right", true)
     &:after
@@ -104,7 +106,7 @@
       &:after
         color: $teal-light
 
-// CTA - White links, red gradient
+// White links, red gradient background
 .cta-red-gradient
   .field-item
     margin-bottom: 4px
