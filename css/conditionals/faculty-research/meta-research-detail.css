@@ -22,20 +22,6 @@
   }
 }
 
-.node-working-paper.view-mode-full .faculty-author-wrapper,
-.node-case.view-mode-full .faculty-author-wrapper,
-.node-book.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .faculty-author-wrapper {
-  background: white;
-}
-
-.node-working-paper.view-mode-full .faculty-author-wrapper .label-above,
-.node-case.view-mode-full .faculty-author-wrapper .label-above,
-.node-book.view-mode-full .faculty-author-wrapper .label-above,
-.node-publication.view-mode-full .faculty-author-wrapper .label-above {
-  border-top: 10px #231f20 solid;
-}
-
 .node-working-paper.view-mode-full.ds-2col > .group-left .group-left-inner,
 .node-case.view-mode-full.ds-2col > .group-left .group-left-inner,
 .node-book.view-mode-full.ds-2col > .group-left .group-left-inner,
@@ -239,35 +225,25 @@
   margin-bottom: 26px;
   margin-top: 26px;
 }
-.node-working-paper.view-mode-full .faculty-author-wrapper,
-.node-case.view-mode-full .faculty-author-wrapper,
-.node-book.view-mode-full .faculty-author-wrapper,
-.node-publication.view-mode-full .faculty-author-wrapper {
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  margin: 1px;
-  padding: 0;
-  border: none;
-}
-.node-working-paper.view-mode-full .faculty-author-wrapper .label-above,
-.node-case.view-mode-full .faculty-author-wrapper .label-above,
-.node-book.view-mode-full .faculty-author-wrapper .label-above,
-.node-publication.view-mode-full .faculty-author-wrapper .label-above {
-  display: block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.3;
-  margin: 0 26px;
-  padding-top: 12px;
-}
 .node-working-paper.view-mode-full .faculty-author-wrapper .node,
 .node-case.view-mode-full .faculty-author-wrapper .node,
 .node-book.view-mode-full .faculty-author-wrapper .node,
 .node-publication.view-mode-full .faculty-author-wrapper .node {
   overflow: hidden;
   *zoom: 1;
-  padding: 18px 26px;
+  padding: 0 26px 18px;
+}
+.node-working-paper.view-mode-full .faculty-author-wrapper .node:first-of-type,
+.node-case.view-mode-full .faculty-author-wrapper .node:first-of-type,
+.node-book.view-mode-full .faculty-author-wrapper .node:first-of-type,
+.node-publication.view-mode-full .faculty-author-wrapper .node:first-of-type {
+  padding-top: 18px;
+}
+.node-working-paper.view-mode-full .faculty-author-wrapper .node:last-of-type,
+.node-case.view-mode-full .faculty-author-wrapper .node:last-of-type,
+.node-book.view-mode-full .faculty-author-wrapper .node:last-of-type,
+.node-publication.view-mode-full .faculty-author-wrapper .node:last-of-type {
+  padding-bottom: 0;
 }
 .node-working-paper.view-mode-full .faculty-author-wrapper .field-name-field-image-single-public,
 .node-case.view-mode-full .faculty-author-wrapper .field-name-field-image-single-public,
