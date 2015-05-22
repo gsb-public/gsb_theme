@@ -40,7 +40,8 @@ div.callout
 
 // WYSIWYG body text
 .format-wysiwyg,
-.field-name-field-body
+.field-name-field-body,
+.field-name-field-text-equivalent
   ul, ol
     @extend %p
     margin: 0 0 20px 0
@@ -56,7 +57,7 @@ div.callout
       padding-left: 15px
       &:before
         content: "• "
-        color: $text-blue
+        color: $text-black
         position: absolute
         left: 0
   table
@@ -180,3 +181,7 @@ div.callout
   line-height: 1.2
   margin-top: 12px
   max-width: 650px
+
+// Include body field styling on new text equivalent page
+.field-name-field-text-equivalent
+  margin: 0 26px
