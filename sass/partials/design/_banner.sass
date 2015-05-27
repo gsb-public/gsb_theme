@@ -1,11 +1,9 @@
 // Banner region
 
 #banner
-  // WPBQA-393, WP-1773
   +breakpoint($bp-tablet-land-min)
     overflow: hidden
-    // WP-2441
-    padding: 14px 0 9px
+    padding: 14px 0 11px
     .page-insights &
       overflow: visible
       padding: 0
@@ -18,15 +16,14 @@
   a:hover,
   a:visited
     color: $white
+  a:hover
+    border-bottom: 2px solid $white
+    text-decoration: none
 
 .banner-title
-  font-size: 26px
+  font-size: 30px
   font-weight: bold
   line-height: 1
-  .page-alumni &
-    font-size: 34px
-    +breakpoint($bp-tablet-port-max)
-      font-size: 26px
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
@@ -47,7 +44,7 @@
 
 .banner-subtitle
   font-size: 42px
-  line-height: 2em
+  line-height: 1.2
 
 .banner-content
   margin: 0 auto
@@ -76,7 +73,8 @@
   a
     color: $white
     &:hover
-      text-decoration: underline
+      border-bottom: 2px solid $white
+      text-decoration: none
 
 // Page-specific styling of banner
 
@@ -89,7 +87,6 @@
       +breakpoint($bp-tablet-port-max)
         height: 50px
       .banner-title
-        // WP-1773
         padding-top: 18px
         font-size: 48px
     +breakpoint($bp-mobile-max)
@@ -130,7 +127,7 @@
 #block-menu-menu-alumni-utility-nav
   position: absolute
   right: 0
-  top: 10px
+  top: 8px
   +breakpoint($bp-tablet-port-max)
     display: none
   li
