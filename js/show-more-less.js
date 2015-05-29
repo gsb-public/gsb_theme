@@ -36,6 +36,13 @@
             numRows = $itemsWrapper.children('li').length;
             break;
 
+          case 'fielditems':
+            // Find wrapper
+            $itemsWrapper = $wrapper.find('.field-items');
+            // Get the number of rows
+            numRows = $itemsWrapper.children('.field-item').length;
+            break;
+
           case 'view':
             // Find wrapper
             $itemsWrapper = $wrapper.find('.view-content');
@@ -143,7 +150,7 @@
     });
 
     // Close by default.
-    Drupal.showMoreLess.close($wrapper.parent('.show-more-less'), type);
+    Drupal.showMoreLess.close($wrapper.parents('.show-more-less'), type);
   }
 
   /**
@@ -180,6 +187,18 @@
         newHeight = $lastItem.offset().top + $lastItem.height() - $wrapper.offset().top;
         break;
 
+      case 'fielditems':
+        // Find the wrapper.
+        $wrapper = $element.find('.field-items');
+
+        // Find the last item in the list.
+        $lastItem = $wrapper.children(':last');
+
+        // Calculate the new height by
+        // Distance from the top of last + height of last - distance from the top of the wrapper
+        newHeight = $lastItem.offset().top + $lastItem.height() - $wrapper.offset().top;
+        break;
+
       case 'text':
         // Get the wrapper.
         $wrapper = $element.children('div.show-more-less-wrapper');
@@ -198,7 +217,6 @@
 
     // Switch the value of the toggle.
     $wrapper.siblings('.show-more-less-toggler-wrapper').find('a').text(Drupal.t('Show Less'));
-
   }
 
   /**
@@ -228,6 +246,16 @@
         $wrapper = $element.children('ul');
         // Find the last item in the list.
         $bottomItem = $wrapper.children('li:eq(' + numberToShow + ')');
+        // Calculate the new height by
+        // Distance from the top of last - distance from the top of the wrapper.
+        newHeight = $bottomItem.offset().top - $wrapper.offset().top;
+        break;
+
+      case 'fielditems':
+        // Find the wrapper.
+        $wrapper = $element.find('.field-items');
+        // Find the last item in the list.
+        $bottomItem = $wrapper.children('.field-item:eq(' + numberToShow + ')');
         // Calculate the new height by
         // Distance from the top of last - distance from the top of the wrapper.
         newHeight = $bottomItem.offset().top - $wrapper.offset().top;
@@ -348,6 +376,10 @@
     // Check to see if it's a view.
     else if ($element.hasClass('view')) {
       $type = 'view';
+    }
+    // Check to see if it's a field-group.
+    else if ($element.hasClass('field-group-div')) {
+      $type = 'fielditems';
     }
     return $type;
   }
