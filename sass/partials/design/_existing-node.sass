@@ -6,20 +6,15 @@
   .field-items
     display: none
 
-// EXISTING NODE
+// Existing node, same as featured insight card styling
 .pane-bundle-existing-node
   @extend %bg-and-box-shadow
   padding: $standard-padding
   padding-top: 0
 
-  // Featured label - tan style for working papers and cases
+  // Featured label
   .featured-label
-    @extend %taupe-border-top
-    display: inline-block
-    font-size: 14px
-    line-height: 1.2
-    margin-bottom: 16px
-    padding-top: 6px
+    @extend %superhead-black
 
   // Date
   .field-name-field-date,
@@ -31,7 +26,7 @@
     color: $text-black
     font-size: 14px
     line-height: 1.2
-    margin-bottom: 14px
+    margin-bottom: 8px
 
   // Title
   .field-name-title,
@@ -43,7 +38,7 @@
       line-height: 0
       a
         font-family: $font-sans
-        font-size: 22px
+        font-size: 26px
         font-weight: bold
         line-height: 1.3
         +breakpoint(850px max-width)
@@ -60,17 +55,40 @@
               font-size: 14px
               margin-left: 3px
 
-  // Document link
-  .field-name-field-link-document
-    font-size: 20px
-    a
-      font-size: 20px
-      &:hover
-        color: $link-blue
-      +icon-after("pdf", true)
-      &:after
-        @extend %doc-attached-icons
-        font-size: 14px
+  // Document PDF link on working paper
+  .node-working-paper.view-mode-teaser
+    .field-name-title
+      display: inline-block
+      margin-right: 5px
+    .pipe
+      font-size: 24px
+      line-height: 1
+      margin-right: 5px
+      position: relative
+      top: -3px
+      +breakpoint(850px max-width)
+        font-size: 20px
+      +breakpoint(610px max-width)
+        font-size: 18px
+    .file
+      display: inline-block
+    .field-name-field-file-single-public
+      display: inline-block
+      a
+        font-size: 22px
+        line-height: 1.2
+        position: relative
+        top: -2px
+        +breakpoint(850px max-width)
+          font-size: 18px
+        +breakpoint(610px max-width)
+          font-size: 16px
+        &:hover
+          color: $link-blue
+        +icon-after("pdf", true)
+        &:after
+          @extend %doc-attached-icons
+          font-size: 0.85em
 
   // Hide tags labels on teasers
   .group-tags-wrapper h3
