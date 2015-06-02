@@ -196,7 +196,7 @@
 
         // Calculate the new height by
         // Distance from the top of last + height of last - distance from the top of the wrapper
-        newHeight = $lastItem.offset().top + $lastItem.height() - $wrapper.offset().top;
+        newHeight = $lastItem.offset().top + $lastItem.outerHeight() - $wrapper.offset().top;        
         break;
 
       case 'text':
