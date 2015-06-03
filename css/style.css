@@ -1567,7 +1567,8 @@ td {
 caption,
 th {
   color: #231f20;
-  font-weight: bold;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 th[scope="row"] {
@@ -1575,24 +1576,20 @@ th[scope="row"] {
 }
 
 caption {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
-  line-height: 26px;
+  line-height: 1;
 }
 
 th,
 td {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 1.2;
   vertical-align: top;
 }
 
-thead tr {
-  background: white;
-}
-
 tbody tr {
-  border-top: 1px solid #aac4bf;
+  border-top: 1px lightgray solid;
 }
 tbody tr:nth-of-type(even) {
   background-color: white;
@@ -7248,7 +7245,7 @@ ul.slideshow-items {
   border: none;
   border: 1px lightgray solid;
   background: white;
-  line-height: 1em;
+  line-height: 1.2;
   height: auto;
   padding: 6px 50px 6px 10px;
   color: #666666;
@@ -11237,7 +11234,7 @@ div.callout br {
 .format-wysiwyg table,
 .field-name-field-body table,
 .field-name-field-text-equivalent table {
-  margin: 20px 0;
+  margin: 20px 0 50px;
 }
 @media (max-width: 48em) {
   .format-wysiwyg table,
@@ -11250,45 +11247,44 @@ div.callout br {
 .field-name-field-body caption,
 .field-name-field-text-equivalent caption {
   color: #2d6280;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1em;
   margin-bottom: 20px;
 }
-.format-wysiwyg thead tr th,
-.field-name-field-body thead tr th,
-.field-name-field-text-equivalent thead tr th {
-  background: #d5e7e4;
-  border-top: 1px solid #aac4bf;
-  padding: 16px 12px;
+.format-wysiwyg thead,
+.field-name-field-body thead,
+.field-name-field-text-equivalent thead {
+  background: white;
+}
+.format-wysiwyg thead tr,
+.field-name-field-body thead tr,
+.field-name-field-text-equivalent thead tr {
+  border-top: 1px lightgray solid;
+}
+.format-wysiwyg thead th,
+.field-name-field-body thead th,
+.field-name-field-text-equivalent thead th {
+  padding: 16px;
 }
 .format-wysiwyg tbody,
 .field-name-field-body tbody,
 .field-name-field-text-equivalent tbody {
-  border-bottom: 1px solid #aac4bf;
+  border-bottom: 1px lightgray solid;
 }
 .format-wysiwyg tbody tr,
 .field-name-field-body tbody tr,
 .field-name-field-text-equivalent tbody tr {
-  background: whitesmoke;
-  border-top: 1px solid #aac4bf;
-}
-.format-wysiwyg tbody tr:nth-of-type(odd),
-.field-name-field-body tbody tr:nth-of-type(odd),
-.field-name-field-text-equivalent tbody tr:nth-of-type(odd) {
   background-color: white;
+  border-top: 1px lightgray solid;
 }
 .format-wysiwyg tbody tr th,
 .field-name-field-body tbody tr th,
 .field-name-field-text-equivalent tbody tr th {
-  background: #dddddd;
-  padding: 16px 12px;
+  background: whitesmoke;
+  padding: 16px;
 }
 .format-wysiwyg tbody td,
 .field-name-field-body tbody td,
 .field-name-field-text-equivalent tbody td {
-  padding: 16px 12px;
+  padding: 16px;
 }
 .format-wysiwyg tbody td a,
 .field-name-field-body tbody td a,
@@ -11305,7 +11301,7 @@ div.callout br {
 }
 
 .cke_show_borders table td {
-  border: 1px solid #cccccc;
+  border: 1px lightgray solid;
   padding: 3px;
 }
 

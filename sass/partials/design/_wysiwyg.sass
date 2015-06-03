@@ -132,33 +132,32 @@ div.callout
 
   // Tables
   table
-    margin: 20px 0
+    margin: 20px 0 50px
     +breakpoint(768px max-width)
       margin: 0
   caption
     color: $text-blue
-    font-family: $font-demi
-    font-size: 18px
-    font-weight: normal
-    line-height: 1em
     margin-bottom: 20px
+  // Table heading
   thead
-    tr th
-      background: #d5e7e4
-      border-top: 1px solid $teal-light
-      padding: 16px 12px
-  tbody
-    border-bottom: 1px solid $teal-light
+    background: $white
     tr
-      background: #f5f5f5
-      border-top: 1px solid $teal-light
-      &:nth-of-type(odd)
-        background-color: $white
+      border-top: 1px $border-grey solid
+    th
+      padding: 16px
+  tbody
+    border-bottom: 1px $border-grey solid
+    // Table row
+    tr
+      background-color: $white
+      border-top: 1px $border-grey solid
+    // Sub heading
     tr th
-      background: $grey-d
-      padding: 16px 12px
+      background: #f5f5f5
+      padding: 16px
+    // Table cell
     td
-      padding: 16px 12px
+      padding: 16px
       a
         color: $text-green
         font-weight: bold
@@ -171,7 +170,7 @@ div.callout
 .cke_show_borders
   table
     td
-      border: 1px solid $grey-c
+      border: 1px $border-grey solid
       padding: 3px
 
 // Caption for image fpp
