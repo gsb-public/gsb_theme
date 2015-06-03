@@ -211,7 +211,8 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   margin-right: 0 !important;
 }
 
-.webform-client-form #edit-submit, .green-rounded-button, #email-mail-page-form #edit-submit,
+.webform-client-form #edit-submit,
+.webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
 #email-contact-mail-page-form #edit-submit {
   background: #636f00;
   background: -moz-linear-gradient(top, #6c7200, #636f00);
@@ -220,8 +221,12 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   background: linear-gradient(to bottom, #6c7200, #636f00);
 }
 
-.webform-client-form #edit-submit:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
-#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover, .circle:hover {
+.webform-client-form #edit-submit:hover,
+.webform-client-form #edit-next:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
+#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
+.webform-client-form #edit-previous:hover,
+.webform-client-form .add-more:hover,
+.webform-client-form .del-btn:hover, .circle:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -237,7 +242,10 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   background: linear-gradient(to top, #c50000 0%, #860000 100%);
 }
 
-.webform-client-form #edit-draft {
+.webform-client-form #edit-draft,
+.webform-client-form #edit-previous,
+.webform-client-form .add-more,
+.webform-client-form .del-btn {
   background: whitesmoke;
   background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
   background: -o-linear-gradient(top, #f5f5f5, #ffffff);
@@ -288,8 +296,12 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   content: "\f108";
 }
 
-.webform-client-form #edit-submit, .green-rounded-button, #email-mail-page-form #edit-submit,
-#email-contact-mail-page-form #edit-submit, .webform-client-form #edit-draft {
+.webform-client-form #edit-submit,
+.webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
+#email-contact-mail-page-form #edit-submit, .webform-client-form #edit-draft,
+.webform-client-form #edit-previous,
+.webform-client-form .add-more,
+.webform-client-form .del-btn {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -301,25 +313,43 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   line-height: 1;
   padding: 10px 16px;
 }
-.webform-client-form #edit-submit:after, .green-rounded-button:after, #email-mail-page-form #edit-submit:after,
-#email-contact-mail-page-form #edit-submit:after, .webform-client-form #edit-draft:after {
+.webform-client-form #edit-submit:after,
+.webform-client-form #edit-next:after, .green-rounded-button:after, #email-mail-page-form #edit-submit:after,
+#email-contact-mail-page-form #edit-submit:after, .webform-client-form #edit-draft:after,
+.webform-client-form #edit-previous:after,
+.webform-client-form .add-more:after,
+.webform-client-form .del-btn:after {
   color: white !important;
 }
-.webform-client-form #edit-submit:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
-#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover {
+.webform-client-form #edit-submit:hover,
+.webform-client-form #edit-next:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
+#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
+.webform-client-form #edit-previous:hover,
+.webform-client-form .add-more:hover,
+.webform-client-form .del-btn:hover {
   border: 0;
   color: white;
 }
-.webform-client-form #edit-submit:hover:after, .green-rounded-button:hover:after, #email-mail-page-form #edit-submit:hover:after,
-#email-contact-mail-page-form #edit-submit:hover:after, .webform-client-form #edit-draft:hover:after {
+.webform-client-form #edit-submit:hover:after,
+.webform-client-form #edit-next:hover:after, .green-rounded-button:hover:after, #email-mail-page-form #edit-submit:hover:after,
+#email-contact-mail-page-form #edit-submit:hover:after, .webform-client-form #edit-draft:hover:after,
+.webform-client-form #edit-previous:hover:after,
+.webform-client-form .add-more:hover:after,
+.webform-client-form .del-btn:hover:after {
   color: white !important;
 }
 
-.webform-client-form #edit-draft {
+.webform-client-form #edit-draft,
+.webform-client-form #edit-previous,
+.webform-client-form .add-more,
+.webform-client-form .del-btn {
   border: 1px lightgray solid;
   color: #636f00;
 }
-.webform-client-form #edit-draft:hover {
+.webform-client-form #edit-draft:hover,
+.webform-client-form #edit-previous:hover,
+.webform-client-form .add-more:hover,
+.webform-client-form .del-btn:hover {
   border: 1px transparent solid;
 }
 
@@ -1534,8 +1564,16 @@ select[multiple="multiple"] {
   position: relative;
   top: -1px;
 }
-.webform-client-form #edit-draft {
+.webform-client-form #edit-draft,
+.webform-client-form #edit-previous,
+.webform-client-form .add-more,
+.webform-client-form .del-btn {
+  margin-bottom: 8px;
   margin-right: 8px;
+}
+.webform-client-form #edit-submit,
+.webform-client-form #edit-next {
+  margin-bottom: 8px;
 }
 .webform-client-form .customSelectInner {
   line-height: 1;
