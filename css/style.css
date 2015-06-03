@@ -3061,7 +3061,9 @@ a.no-border:hover {
 .page-node-300276 #page-title,
 .page-node-368466 #page-title,
 .page-node-364421 #page-title,
-.page-node-364111 #page-title {
+.page-node-364111 #page-title,
+.page-node-378751 #page-title,
+.page-node-383551 #page-title {
   display: none;
 }
 
@@ -9257,15 +9259,18 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   }
 }
 
-@media (min-width: 62.5em) {
-  .page-programs #banner {
-    background: -moz-linear-gradient(#4c697a, #607c8c);
-    background: -o-linear-gradient(#4c697a, #607c8c);
-    background: -webkit-linear-gradient(#4c697a, #607c8c);
-    background: linear-gradient(#4c697a, #607c8c);
-    -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-    box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+.page-programs #banner {
+  background: -moz-linear-gradient(#4c697a, #607c8c);
+  background: -o-linear-gradient(#4c697a, #607c8c);
+  background: -webkit-linear-gradient(#4c697a, #607c8c);
+  background: linear-gradient(#4c697a, #607c8c);
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+  box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+}
+@media (max-width: 62.4375em) {
+  .page-programs .banner-title {
+    min-height: 50px;
   }
 }
 

@@ -102,9 +102,11 @@
 // Programs
 .page-programs
   #banner
-    +breakpoint($bp-tablet-land-min)
-      +background(linear-gradient(#4c697a, $blue))
-      +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+    +background(linear-gradient(#4c697a, $blue))
+    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+  .banner-title
+    +breakpoint(999px max-width)
+      min-height: 50px
 
 // Stanford GSB Experience, Faculty & Research, Library, Newsroom, Organizations
 .page-stanford-gsb-experience,
