@@ -1,6 +1,4 @@
-/////////////////////////
 // MAIN MENU - MEGA MENU
-////////////////////////
 
 .qtip-wrapper
   ol,
@@ -108,35 +106,8 @@
     .field-name-field-academic-calendar-link
       color: $blue-light
 
-///////////////////////
-// RESPONSIVE MEGAMENU
-///////////////////////
+// Responsive Megamenu
 
 .qtip
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     display: none !important
-  +breakpoint($bp-tablet-port)
-    top: 58px !important
-
-// MEGAMENU AT TABLET SIZE
-.qtip-contentWrapper
-  +breakpoint($bp-tablet-port)
-    float: none
-    width: 100%
-
-.qtip-wrapper
-  +breakpoint($bp-tablet-port)
-    max-width: 99.9% !important
-
-/////////////////
-// Close link
-////////////////
-.qtip-close
-  color: $white
-  font-weight: bold
-  position: absolute
-  right: 6px
-  text-transform: uppercase
-  top: 6px
-  +breakpoint($bp-wide-min)
-    display: none

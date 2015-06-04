@@ -65,11 +65,7 @@
 // Main search
 #google-appliance-block-form,
 #google-appliance-block-form--2
-  +breakpoint($bp-tablet-port)
-    float: right
-    margin-top: 30px
-    padding-right: 20px
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     display: none
     left: 50px
     position: absolute
@@ -91,11 +87,9 @@
       padding: 7px 50px 6px 10px
       .svg &
         padding-right: 40px
-      +breakpoint($bp-mobile-max)
+      +breakpoint($bp-tablet-port-max)
         height: 50px
         padding: 15px 50px 15px 10px
-      +breakpoint($bp-tablet-port)
-        width: 218px
   .page-insights &
     +breakpoint(999px max-width)
       display: none
@@ -114,6 +108,8 @@
     padding: 0
     text-indent: 1000px
     width: 45px
+    +breakpoint($bp-tablet-port-max)
+      height: 50px
     .svg &
       background: image_url("search.svg") no-repeat center
       background-size: 170%

@@ -140,7 +140,6 @@
   Drupal.behaviors.mainmenu_mobile = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
-        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
         $('#quicklinks').insertBefore($('#top-content'));
         $('#block-gsb-public-custom-blocks-gpcb-enews-signup').insertBefore($('#block-menu-menu-footer-1'));
         $('.gsb-landing-events .inner-sidebar-wrapper').insertBefore($('#main'));
@@ -148,6 +147,7 @@
       }
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
+        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
       }
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
@@ -256,13 +256,13 @@
       $('.image-enlarge-bar').each(function() {
         // Get the figure tag.
         $figure = $(this).parent();
-        
+
         // Remove the button.
         $button = $(this).detach();
-        
+
         // Put it back on after the figure tag.
         $figure.after($button);
-      });    
+      });
     }
   };
 

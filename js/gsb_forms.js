@@ -58,7 +58,7 @@
             .toggle();
       });
 
-      //CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
+      // CHECK IF ANY INPUT IS CHECKED (TO MAINTAIN COLLAPSED)
       var checkedInput = false;
       $('.exposed_filter_widget .bef-checkboxes input').each(function () {
         if ($(this).attr('checked')) {

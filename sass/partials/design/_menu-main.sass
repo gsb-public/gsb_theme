@@ -7,7 +7,7 @@
     top: -10px
     min-width: 750px
   .section
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-tablet-port-max)
       border-bottom: 10px solid $red
       +box-shadow($black 0 -1px 3px)
 
@@ -19,9 +19,7 @@
   background-color: $red-light
   +background(linear-gradient(bottom, $red-light, $red-dark))
   float: left
-  +breakpoint($bp-tablet-port)
-    float: none
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     float: none
   li
     border-right: 1px solid #FF0000
@@ -40,43 +38,19 @@
       font-family: $font-demi
       margin: 0
       position: relative
-      +breakpoint($bp-tablet-port-min)
+      +breakpoint($bp-tablet-land-min)
+        display: inline-block
         &.active,
         &.active-trail
           +background(linear-gradient(bottom, #9a0101, #6d0101))
         &:hover,
         &.qtip-hover
           background: $grey-27
-      +breakpoint($bp-mobile-max)
-        display: inline-block
       +breakpoint($bp-mobile)
         max-width: 250px
 
-    // Tablets
-    +breakpoint($bp-tablet-port)
-      width: 16.8%
-      +icon-after("arrow-med-down", true)
-      &:last-of-type
-        border-right: 0
-      &:after
-        color: $white
-        float: right
-        font-size: 14px
-        line-height: 0
-        position: relative
-        top: -13px
-        right: 7px
-      a
-        font-size: 15px
-        line-height: 14px
-        height: 58px
-        padding: 10px
-      &:first-of-type
-        a
-          padding-right: 18px
-
     // Mobile
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-tablet-port-max)
       background: $white
       border: 0
       border-bottom: 1px solid #d5d5d5
@@ -137,12 +111,6 @@
     float: left
     height: 0
     width: 200px
-  +breakpoint($bp-tablet-port)
-    float: right
-    position: absolute
-    top: 0
-    right: 0
-    width: 15.65%
 
 // Event calendar link
 .event-calendar
@@ -158,16 +126,10 @@
   .page-events &,
   .node-type-event &
     +background(linear-gradient(bottom, #9a0101, #6d0101))
-  +breakpoint($bp-tablet-port)
-    border-left: 1px solid #FF0000
-    font-size: 15px
-    height: 58px
-    line-height: 14px
-    padding: 10px 12px 20px
   +breakpoint($bp-wide-min)
     line-height: 31px
     padding: 7px 0 9px 9px
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     +background(linear-gradient($grey-e, $white))
     border-bottom: 1px solid #d5d5d5
     color: $red
@@ -175,44 +137,40 @@
     float: none
     line-height: 1
     padding: 18px
-    padding-left: 70px
+    padding-left: 50px
     &:hover,
     &.active
       +background(linear-gradient($grey-e, $white))
+      color: $link-blue
 
 // Mobile footer menu
 #menu-main-footer
   display: none
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
+    +background(linear-gradient($grey-e, $white))
     +clearfix
     display: block
-    +background(linear-gradient($grey-e, $white))
-    padding: 12px 50px 0 70px
+    padding: 12px 50px 0 50px
+    width: 100%
     .menu
-      float: left
-      width: 160px
-      +breakpoint($bp-mobile)
-        width: auto
-      &:first-of-type
-        margin-right: 20%
-        +breakpoint($bp-mobile)
-          margin-right: 0
+      width: auto
     li
-      line-height: 16px
+      line-height: 1.2
       padding-bottom: 12px
     a
       font-weight: bold
       font-size: 13px
+      line-height: 1.2
       text-transform: uppercase
 
 // MENU BUTTON
 #nav-touch-wrapper
   display: inline
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     display: block
   #nav-touch-button
     display: none
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-tablet-port-max)
       border-right: 1px solid red
       .page-insights &
         border-right: 0
@@ -235,7 +193,7 @@
 
 // Menu toggle functionality
 #nav-touch-wrapper
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     max-height: 50px
     display: inline-block
     float: left
@@ -244,7 +202,7 @@
     #navigation
       display: none
   &.open
-    +breakpoint($bp-mobile-max)
+    +breakpoint($bp-tablet-port-max)
       #nav-touch-button
         background: $white
         +background(linear-gradient($grey-e, $white))
@@ -259,7 +217,7 @@
 // Search toggle functionality
 #search-touch-button
   display: none
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     +background(linear-gradient(bottom, $red-light, $red-dark))
     border-right: 1px solid red
     cursor: pointer
@@ -279,5 +237,5 @@
     display: none
 
 #google-appliance-block-form.open
-  +breakpoint($bp-mobile-max)
+  +breakpoint($bp-tablet-port-max)
     display: block
