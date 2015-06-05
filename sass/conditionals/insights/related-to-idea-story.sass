@@ -33,11 +33,22 @@
     padding-top: 12px
 
   // Related faculty, alumni, MSx, PhD, staff
+  .field-name-field-person-fac-ref,
+  .field-name-field-alumni-ref,
+  .field-name-field-person-ref-unlimited,
+  .field-name-field-related-faculty
+    @extend %divider-bottom
+
+  // Hide the border between people
+  .field-name-field-person-ref-unlimited
+    border-top: 1px $white solid
+    margin-top: -1px
+
+  // Related People
   .field-collection-item-field-related-faculty,
   .field-name-field-person-fac-ref,
   .field-name-field-alumni-ref,
   .field-name-field-person-ref-unlimited
-    @extend %divider-bottom
     .node
       +clearfix
       padding: 0 $standard-padding 18px
