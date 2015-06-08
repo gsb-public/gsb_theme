@@ -7,7 +7,13 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-.pane-news-by-criteria-panel-pane-1
+.pane-news-by-criteria-panel-pane-1,
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1,
+.pane-working-paper-filters-working-paper-filters-pane,
+.pane-book-filters-book-filters-pane,
+.pane-club-filters-club-by-id-or-tag,
+.pane-faculty-filters-faculty-by-criteria
   @extend %bg-and-box-shadow
   padding: 0 $standard-padding 14px
 
@@ -19,7 +25,7 @@
     color: $text-black
     font-family: $font-demi
     font-size: 18px
-    line-height: 1.3
+    line-height: 1.2
     margin-bottom: -10px
     padding-top: 12px
     position: relative
@@ -39,6 +45,13 @@
     @extend %black-border-top
     padding: 0 26px
 
-  .view-news-by-criteria
+  // Fake the spacing
+  .view
     margin: 0 -52px
 
+  // Views row
+  .views-row
+    border-top: 1px solid #d3d3d3
+    padding: 22px $standard-padding
+    &:first-of-type
+      border-top: 0
