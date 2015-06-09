@@ -31,7 +31,7 @@
         switch(type) {
           case 'list':
             // Find wrapper
-            $itemsWrapper = $wrapper.find('ul');
+            $itemsWrapper = $wrapper.find('ul').not('.contextual-links');
             // Get the number of rows
             numRows = $itemsWrapper.children('li').length;
             break;
