@@ -3824,19 +3824,18 @@ ul.gsb-social-buttons li:last-of-type {
   overflow: hidden;
   *zoom: 1;
   padding-top: 13px;
+  position: relative;
+  top: 0;
 }
-.pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-items {
-  float: left;
-  width: 80%;
-}
-.pane-bundle-links .stanford-links .field-name-field-link-unlimited:after {
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-items:after {
   content: url('../images/stanford_logo.png');
-  float: right;
-  max-width: 41px;
-  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 12px;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-item {
   line-height: 0;
+  margin-right: 41px;
   padding-bottom: 6px;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-item:last-of-type {

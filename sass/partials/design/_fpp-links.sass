@@ -103,21 +103,24 @@
       top: -6px
       width: 100%
 
-    // Link wrapper
+    // Links
     .field-name-field-link-unlimited
       +clearfix
       padding-top: 13px
+      position: relative
+      top: 0
       .field-items
-        float: left
-        width: 80%
-      // Stanford logo
-      &:after
-        content: image_url("stanford_logo.png")
-        float: right
-        max-width: 41px
-        width: 20%
+        min-height: 41px
+        // Stanford logo
+        &:after
+          content: image_url("stanford_logo.png")
+          position: absolute
+          right: 0
+          top: 12px
+
       .field-item
         line-height: 0
+        margin-right: 41px
         padding-bottom: 6px
         &:last-of-type
           padding-bottom: 0
