@@ -3812,26 +3812,28 @@ ul.gsb-social-buttons li:last-of-type {
   min-height: 75px;
 }
 .pane-bundle-links .stanford-links:before {
+  background-color: #c2b7a1;
   content: "";
-  width: 100%;
   display: block;
   height: 3px;
-  top: -6px;
   position: relative;
-  background-color: #c2b7a1;
-}
-.pane-bundle-links .stanford-links:after {
-  content: "";
-  background: url('../images/stanford_logo.png') 0 0 no-repeat;
-  width: 41px;
-  height: 41px;
-  display: block;
-  position: absolute;
-  right: 25px;
-  top: 20px;
+  top: -6px;
+  width: 100%;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited {
+  overflow: hidden;
+  *zoom: 1;
   padding-top: 13px;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-items {
+  float: left;
+  width: 80%;
+}
+.pane-bundle-links .stanford-links .field-name-field-link-unlimited:after {
+  content: url('../images/stanford_logo.png');
+  float: right;
+  max-width: 41px;
+  width: 20%;
 }
 .pane-bundle-links .stanford-links .field-name-field-link-unlimited .field-item {
   line-height: 0;

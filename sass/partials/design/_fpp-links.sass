@@ -95,26 +95,27 @@
     @include filter-gradient(#ebe5d9, #e3dac7, vertical)
     min-height: 75px
     &:before
+      background-color: $grey-med
       content: ""
-      width: 100%
       display: block
       height: 3px
-      top: -6px
       position: relative
-      background-color: $grey-med
-    &:after
-      content: ""
-      +background(image_url("stanford_logo.png") 0 0 no-repeat)
-      width: 41px
-      height: 41px
-      display: block
-      position: absolute
-      right: 25px
-      top: 20px
+      top: -6px
+      width: 100%
 
-    // Links styling
+    // Link wrapper
     .field-name-field-link-unlimited
+      +clearfix
       padding-top: 13px
+      .field-items
+        float: left
+        width: 80%
+      // Stanford logo
+      &:after
+        content: image_url("stanford_logo.png")
+        float: right
+        max-width: 41px
+        width: 20%
       .field-item
         line-height: 0
         padding-bottom: 6px
