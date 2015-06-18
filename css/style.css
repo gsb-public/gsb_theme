@@ -165,7 +165,7 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   border-top: 10px #231f20 solid;
 }
 
-.view-faculty-filters .view-filters,
+.pager-region, .view-faculty-filters .view-filters,
 .view-display-id-working_paper_list .view-filters,
 .view-display-id-case_listing .view-filters,
 .view-display-id-book_listing .view-filters,
@@ -1564,6 +1564,14 @@ th {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
+}
+
+tr {
+  border: 0 none;
+}
+tr.even, tr.odd {
+  background: none;
+  border-bottom: 0;
 }
 
 th[scope="row"] {
@@ -4169,7 +4177,6 @@ ul.gsb-social-buttons li:last-of-type {
 }
 
 .pager-region {
-  border-top: 3px solid #231f20;
   padding-left: 26px;
   margin-bottom: 60px;
 }

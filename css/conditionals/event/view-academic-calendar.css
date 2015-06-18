@@ -1,4 +1,4 @@
-.view-academic-calendar .view-footer a:after {
+.view-academic-calendar a.calendar-next:after {
   font-size: 21px;
   font-weight: normal;
   line-height: 0;
@@ -8,80 +8,117 @@
   top: 50%;
 }
 
-.view-academic-calendar .view-footer a {
-  background-color: #f9f9f9;
-  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+.view-academic-calendar a.calendar-next:after {
+  font-size: 16px;
+  margin-right: 14px;
+  margin-top: -8px;
+  right: 0;
 }
 
-.view-academic-calendar .view-footer a, .view-academic-calendar .view-content {
-  border: 2px white solid;
+.view-academic-calendar .view-grouping-content {
+  border-top: 3px #231f20 solid;
 }
 
-.view-academic-calendar .view-footer a, .view-academic-calendar .view-content {
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
-  margin: 1px;
-}
-
-.ie8 .view-academic-calendar .view-footer a, .view-academic-calendar .view-footer .ie8 a {
-  border: 1px #cccccc solid !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-.view-academic-calendar .view-content {
-  background: white;
-  margin-bottom: 30px;
+.view-academic-calendar {
+  overflow: hidden;
+  *zoom: 1;
 }
 .view-academic-calendar table {
   width: 100%;
 }
-.view-academic-calendar table caption {
-  background: #d8e7e4;
+.view-academic-calendar tr {
+  display: block;
+  padding: 18px 0;
+  width: 100%;
+}
+.view-academic-calendar td {
+  display: inline-block;
+}
+.view-academic-calendar td:first-of-type {
+  width: 30%;
+}
+.view-academic-calendar tbody tr:nth-of-type(even) {
+  background-color: transparent;
+}
+.view-academic-calendar .view-grouping {
+  border-bottom: 3px #231f20 solid;
+}
+.view-academic-calendar .view-grouping-header {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.view-academic-calendar caption {
+  font-size: 22px;
   font-weight: bold;
+  line-height: 1.2;
+  padding: 18px 0;
   text-align: left;
-  padding: 16px 23px 8px;
 }
-.view-academic-calendar table tr {
-  background-color: white;
-  border: 0 none;
+.view-academic-calendar tbody {
+  display: block;
+  padding-left: 26px;
 }
-.view-academic-calendar table tr:last-of-type td {
-  border: 0 none;
+.view-academic-calendar .views-field-field-event-date {
+  font-size: 16px;
+  line-height: 1.2;
 }
-.view-academic-calendar table td {
-  padding: 0.9em 1em 0.5em;
-  background-color: white;
-  border-bottom: 1px solid #e4e4e4;
+.view-academic-calendar .views-field-field-academic-calendar-link {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
 }
-.view-academic-calendar table td:first-of-type {
-  background-color: #f8f7f6;
-  width: 40%;
-}
-.view-academic-calendar table td.views-field-field-academic-calendar-link {
+.view-academic-calendar a.calendar-prev,
+.view-academic-calendar a.calendar-next {
+  background: #538b80;
+  color: white;
+  font-size: 16px;
   font-weight: bold;
-}
-.view-academic-calendar .view-footer {
-  overflow: hidden;
-  padding-top: 1px;
-}
-.view-academic-calendar .view-footer a {
-  margin-bottom: 5px;
-  color: #636f00;
-  padding-top: 14px;
-  padding-bottom: 11px;
+  line-height: 2.2;
+  padding: 10px 16px;
   position: relative;
 }
-@media (max-width: 64em) {
-  .view-academic-calendar .view-footer a {
-    max-width: 127px;
-  }
+.view-academic-calendar a.calendar-prev:hover,
+.view-academic-calendar a.calendar-next:hover {
+  background: #2d6280;
+  text-decoration: underline;
 }
-.view-academic-calendar .view-footer a:after {
+.view-academic-calendar a.calendar-prev {
+  float: left;
+  padding-left: 36px;
+}
+.view-academic-calendar a.calendar-prev:before {
+  content: "\f100";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-academic-calendar a.calendar-prev:before {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  left: 0;
+  line-height: 0;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+}
+.view-academic-calendar a.calendar-next {
+  float: right;
+  padding-right: 36px;
+}
+.view-academic-calendar a.calendar-next:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -96,50 +133,8 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.view-academic-calendar .view-footer a:after {
+.view-academic-calendar a.calendar-next:after {
+  color: white;
   font-weight: bold;
-  color: #e3e3e3;
-}
-.view-academic-calendar .view-footer a:hover {
-  color: #2d6280;
-}
-.view-academic-calendar .view-footer a:hover:after {
-  color: #aac4bf;
-}
-.view-academic-calendar .view-footer a.prev {
-  padding-left: 55px;
-  padding-right: 22px;
-  float: left;
-}
-@media (max-width: 64em) {
-  .view-academic-calendar .view-footer a.prev {
-    padding-left: 40px;
-  }
-}
-.view-academic-calendar .view-footer a.prev:after {
-  content: "\f100";
-}
-.view-academic-calendar .view-footer a.prev:after {
-  left: 12px;
-  right: auto;
-}
-@media (max-width: 64em) {
-  .view-academic-calendar .view-footer a.prev:after {
-    left: 0;
-  }
-}
-.view-academic-calendar .view-footer a.next {
-  float: right;
-  padding-left: 22px;
-  padding-right: 55px;
-}
-@media (max-width: 20em) {
-  .view-academic-calendar .view-footer a.next {
-    padding-right: 40px;
-  }
-}
-@media (max-width: 64em) {
-  .view-academic-calendar .view-footer a.next:after {
-    right: 0;
-  }
+  margin-right: 10px;
 }

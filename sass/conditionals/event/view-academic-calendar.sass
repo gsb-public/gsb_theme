@@ -7,74 +7,105 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Event - Academic calendar
+// Academic calendar
 
 .view-academic-calendar
-  .view-content
-    @extend %border-and-box-shadow
-    background: $white
-    margin-bottom: 30px
+  +clearfix
+
   table
     width: 100%
-    caption
-      background: #d8e7e4
+
+  // Row style
+  tr
+    display: block
+    padding: 18px 0
+    width: 100%
+
+  // Cell style
+  td
+    display: inline-block
+    &:first-of-type
+      width: 30%
+
+  tbody tr:nth-of-type(even)
+    background-color: transparent
+
+  .view-grouping
+    border-bottom: 3px $text-black solid
+
+  // Title of the list
+  .view-grouping-header
+    font-family: $font-demi
+    font-size: 24px
+    line-height: 1.2
+    margin-bottom: 12px
+
+  .view-grouping-content
+    @extend %black-border-top-small
+
+  // Season label
+  caption
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    padding: 18px 0
+    text-align: left
+
+  // Indent the date listing
+  tbody
+    display: block
+    padding-left: $standard-padding
+
+  // Date
+  .views-field-field-event-date
+    font-size: 16px
+    line-height: 1.2
+
+  // Title of event
+  .views-field-field-academic-calendar-link
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.2
+
+
+
+  // Show next and previous links
+  a.calendar-prev,
+  a.calendar-next
+    background: $teal-dark
+    color: $white
+    font-size: 16px
+    font-weight: bold
+    line-height: 2.2
+    padding: 10px 16px
+    position: relative
+    &:hover
+      background: $link-blue
+      text-decoration: underline
+
+  // Previous year
+  a.calendar-prev
+    float: left
+    padding-left: 36px
+    +icon-before("arrow-double-left", true)
+    &:before
+      color: $white
+      font-size: 16px
       font-weight: bold
-      text-align: left
-      padding: 16px 23px 8px
-    tr
-      background-color: #fff
-      border: 0 none
-      &:last-of-type
-        td
-          border: 0 none
-    td
-      padding: 0.9em 1em 0.5em
-      background-color: $white
-      border-bottom: 1px solid #e4e4e4
-      &:first-of-type
-        background-color: #f8f7f6
-        width: 40%
-      &.views-field-field-academic-calendar-link
-        font-weight: bold
-  .view-footer
-    overflow: hidden
-    padding-top: 1px
-    a
-      @extend %bg-border-and-box-shadow
-      margin-bottom: 5px
-      color: $text-green
-      padding-top: 14px
-      padding-bottom: 11px
-      position: relative
-      +breakpoint($bp-tablet-land-max)
-        max-width: 127px
-      +icon-after("arrow-double-right", true)
-      &:after
-        @extend %arrow-double-big
-        font-weight: bold
-        color: #e3e3e3
-      &:hover
-        color: $text-blue
-        &:after
-          color: $teal-light
-      &.prev
-        padding-left: 55px
-        padding-right: 22px
-        float: left
-        +breakpoint($bp-tablet-land-max)
-          padding-left: 40px
-        +icon-after("arrow-double-left", false)
-        &:after
-          left: 12px
-          right: auto
-          +breakpoint($bp-tablet-land-max)
-            left: 0
-      &.next
-        float: right
-        padding-left: 22px
-        padding-right: 55px
-        +breakpoint($bp-mobile)
-          padding-right: 40px
-        &:after
-          +breakpoint($bp-tablet-land-max)
-            right: 0
+      left: 0
+      line-height: 0
+      margin-left: 10px
+      position: absolute
+      top: 50%
+
+  // Upcoming year
+  a.calendar-next
+    float: right
+    padding-right: 36px
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-small
+      color: $white
+      font-weight: bold
+      margin-right: 10px
