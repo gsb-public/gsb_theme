@@ -1,15 +1,9 @@
-@charset "UTF-8"
+// Compact view mode
 
-// IMPORT COMPASS AND EXTENSIONS
-@import compass
-@import breakpoint
-@import ../../../fonts/icons/icons
-@import partials/base/00-variables/all
-@import partials/base/03-extend/gsb-revamp
+// Used on pane-bundle-existing-node-list
 
-// View mode content panes
+.view-mode-compact
 
-.view-mode-views_content_pane
   .group-wrapper-title
     line-height: 1.2
   // Item title
@@ -60,10 +54,11 @@
     font-size: 16px
     line-height: 1.2
 
-  // Month and Day
+  // Month and day
   .field-name-field-month
     margin-right: 3px
 
+  // Comma after day
   .comma
     margin-right: 3px
 
@@ -73,8 +68,16 @@
     font-size: 16px
     line-height: 1.2
 
+// Case title inline for case icon
+.node-case.view-mode-compact
   // Case video icon
   .case-product-icon.Video
-    display: inline
     &:before
       font-size: 20px
+  // Title
+  .field-name-title,
+  .field-name-title h2
+    display: inline
+  // Case number
+  .field-name-field-item-id
+    font-size: 20px
