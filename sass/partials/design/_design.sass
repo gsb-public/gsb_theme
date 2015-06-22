@@ -656,3 +656,29 @@ ul.gsb-social-buttons li
   a[target="_blank"]
     &:after
       content: ""
+
+// Pipe divider | for cases, working papers
+.pipe
+  line-height: 1
+  margin: 0 5px
+
+// Video icon - Cases-only product type
+.case-product-icon
+  display: none
+.case-product-icon.Video
+  display: inline-block
+  margin-right: 5px
+  +icon-before("video", true)
+
+// Publication citation wrapper
+.group-wrapper-published
+  line-height: 1.2
+
+// Publication citation comma wrapper
+.group-wrapper-commas
+  display: inline
+  &:after
+    content: "."
+  // Hide wrapper label
+  h3
+    display: none

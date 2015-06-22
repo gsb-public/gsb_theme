@@ -356,7 +356,9 @@ function gsb_theme_process_node(&$variables, $hook) {
   $view_modes = array(
     'teaser_listing',
     'event_listing',
-    'news_listing'
+    'news_listing',
+    'compact',
+    'expanded'
   );
   _gsb_theme_prepare_two_column_classes($variables['type'], $types, $view_modes, $variables);
 }
