@@ -56,3 +56,64 @@
     padding: 22px $standard-padding
     &:first-of-type
       border-top: 0
+
+// Academic style
+
+// Special styling for cases, publications, working papers
+.pane-case-filters-panel-pane-1,
+.pane-publication-filters-panel-pane-1,
+.pane-working-paper-filters-working-paper-filters-pane
+  background: #f4f4f4
+  // Pane title
+  h2.pane-title
+    background: #f4f4f4
+  .pane-content
+    padding: 0
+  // View
+  .view
+    margin: 0
+  // Row padding
+  .views-row
+    padding: 18px 0
+  // Title style
+  .view-mode-views_content_pane h2
+    font-size: 16px
+  // Authors
+  .gsb_field_formatter_field_collection_separator,
+  .field-name-field-author
+    margin-bottom: 2px
+
+// Special styling for clubs
+.pane-club-filters-club-by-id-or-tag
+  background: #f4f4f4
+  // Pane title
+  h2.pane-title
+    background: #f4f4f4
+  .pane-content
+    padding: 0
+  // View
+  .view
+    margin: 0
+  // Row padding
+  .views-row
+    padding: 18px 0
+  // Title style
+  .node-club.view-mode-teaser h5
+    font-size: 16px
+
+// Faculty style
+.pane-faculty-filters-faculty-by-criteria
+  // Row style
+  .views-row
+    border-top: 0
+    padding: 10px $standard-padding
+  // Link color
+  a
+    color: $link-green
+    &:hover
+      color: $link-blue
+  // Faculty name
+  .views-field-title
+    a
+      font-family: $font-sans
+      font-size: 16px
