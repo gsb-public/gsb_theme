@@ -79,26 +79,20 @@
   .field-name-title
     line-height: 1.2
     margin-bottom: 12px
-    // Item title
-    h2
-      color: $text-black
-      font-size: 20px
-      font-family: $font-sans
-      font-weight: bold
-      line-height: 1.2
-      +breakpoint($bp-mobile)
-        font-size: 18px
-
-  // Document link
-  .field-name-field-link-document
+  // Item title
+  h2
+    color: $text-black
+    display: inline
+    font-size: 20px
+    font-family: $font-sans
+    font-weight: bold
+    line-height: 1.2
+    +breakpoint($bp-mobile)
+      font-size: 18px
     a
-      font-size: 16px
+      color: $red
       &:hover
         color: $link-blue
-      +icon-after("pdf", true)
-      &:after
-        @extend %doc-attached-icons
-        font-size: 10px
 
   // Authors
   .gsb_field_formatter_field_collection_separator,
@@ -136,9 +130,16 @@
     font-size: 16px
     line-height: 1.2
 
+  // Stories date
+  .field-name-field-date
+    font-size: 16px
+    line-height: 1.2
+    margin-bottom: 12px
+
   // Description
   .field-name-field-body,
-  .field-name-field-description
+  .field-name-field-description,
+  .field-name-field-editorial-summary
     font-size: 16px
     line-height: 1.2
     margin-top: 12px
