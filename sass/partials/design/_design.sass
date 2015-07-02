@@ -75,6 +75,8 @@
 #content
   margin: 0 auto
   max-width: $max-width
+  .page-events &
+    max-width: 100%
 
 // MAIN REGION
 #main
@@ -86,6 +88,12 @@
   .page-alumni &
     +breakpoint($bp-tablet-port-max)
       margin-top: 30px
+  .page-events &
+    padding-top: 0
+    +breakpoint($bp-content-max)
+      padding: 0
+    +breakpoint($bp-mobile-max)
+      padding: 0
 
 
 // BOTTOM REGION

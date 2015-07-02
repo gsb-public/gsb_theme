@@ -5,101 +5,75 @@
 @import breakpoint
 @import ../../../fonts/icons/icons
 @import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
 
 // Event - Featured
 
-#block-gsb-public-custom-blocks-gsb-featured-event
-  margin-bottom: 40px
-  float: right
-  width: 795px
+.pane-featured-event
+  +clearfix
+  @extend %bg-and-box-shadow
+  margin: 0 auto
+  max-width: 870px
+  padding: $standard-padding
   position: relative
-  top: 18px
-  +breakpoint($bp-tablet-port-max)
-    display: none
-  h2
-    font-size: 24px
-    color: $blue-light
-    line-height: 1.2
-    margin-bottom: 10px
-    a
-      color: inherit
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $blue-light
-        font-size: 16px
-        margin-left: 4px
-        display: inline-block
-      &:hover
-        color: $white
-        &:after
-          color: $white
-
-  .group-ft-evnt-wrp
-    padding-left: 180px
-    min-height: 130px
-    max-width: 570px
-    overflow: hidden
-
-  .field-name-field-image-single-public
-    float: right
-    width: 270px
-
-  .group-tag-wrap
-    line-height: 1.2
-    font-size: 15px
-    color: $blue-light
-    .separator
-      display: inline
-    a
-      color: $blue-light
-      &:hover
-        color: $white
-
-    > div
-      display: inline
-      > div
-        display: inline
-
-  .field-name-field-address,
-  .field-name-field-editorial-summary,
-  .event_calendar_featured
-    color: $white
-
-  .field-name-field-editorial-summary
-    margin-bottom: 22px
-    font-size: 16px
-    line-height: 1.4
 
   // Featured event date styling
-  .event-calendar-featured
-    color: $white
+  .event-calendar-featured-date
+    color: $text-black
+    float: left
     height: 135px
-    padding: 45px 5px 5px
-    position: absolute
-    top: 0
-    left: 0
     text-align: center
-    width: 143px
-    +icon-after("calendar-blank", true)
-    &:after
-      color: $blue-light
-      font-size: 160px
+    +icon-before("calendar-blank", true)
+    &:before
+      color: #edecec
+      float: left
+      font-size: 140px
       line-height: 0
-      position: absolute
-      top: 80px
-      left: -8px
+      position: relative
+      top: 62px
 
     .day,
     .time
       font-size: 14px
-      line-height: 1.2
-
+      line-height: 1
+    // Day of week
     .day
       margin-bottom: 4px
-
+      margin-top: 40px
     .date
       font-size: 24px
-      line-height: 1.2
-
+      line-height: 1
+      text-transform: uppercase
     .time
       margin-top: 4px
+
+  // Information wrapper
+  .event-calendar-featured-wrapper
+    float: left
+    margin: 0 26px
+    max-width: 350px
+
+  // Title
+  .event-calendar-featured-title
+    font-size: 26px
+    font-weight: bold
+    line-height: 1.3
+
+  // Address
+  .event-calendar-featured-locality
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.2
+
+  // Decription
+  .event-calendar-featured-summary
+    font-size: 16px
+    line-height: 1.2
+    margin-top: 12px
+
+  // Image
+  .field-name-field-image-single-public
+    float: right
+    max-width: 270px
