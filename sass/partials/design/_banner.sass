@@ -85,20 +85,6 @@
 
 // Page-specific styling of banner
 
-// Events
-.page-events
-  #banner
-    +breakpoint($bp-tablet-land-min)
-      +background(image_url("bg-banner-eventcal-2015-05-26-1.png") no-repeat -70% 100%, linear-gradient(bottom, #2f2f2f, $grey-1))
-      +clearfix
-      +breakpoint($bp-tablet-port-max)
-        height: 50px
-      .banner-title
-        padding-top: 18px
-        font-size: 48px
-    +breakpoint($bp-mobile-max)
-      display: none
-
 // Programs
 .page-programs
   #banner
@@ -108,7 +94,8 @@
     +breakpoint(999px max-width)
       min-height: 50px
 
-// Stanford GSB Experience, Faculty & Research, Library, Newsroom, Organizations
+// Stanford GSB Experience, Faculty & Research, Library, Newsroom, Organizations, Events
+.page-events,
 .page-stanford-gsb-experience,
 .page-faculty-research,
 .page-library,

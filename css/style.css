@@ -1695,22 +1695,45 @@ del {
   margin-bottom: 20px;
 }
 
-.panel-display.gsb-landing-events .main-wrapper {
-  float: right;
-  margin-left: -300px;
+.panel-display.gsb-event-landing .featured-event {
+  background: #f4f4f4;
+  padding: 26px 0;
+}
+@media (max-width: 62.4375em) {
+  .panel-display.gsb-event-landing .featured-event {
+    display: none;
+  }
+}
+.panel-display.gsb-event-landing #top-content,
+.panel-display.gsb-event-landing .content-wrapper {
+  margin: 0 auto;
+  max-width: 870px;
+}
+.panel-display.gsb-event-landing .main-wrapper {
+  float: left;
+  margin-right: -300px;
   width: 100%;
 }
 @media (max-width: 35.5em) {
-  .panel-display.gsb-landing-events .main-wrapper {
+  .panel-display.gsb-event-landing .main-wrapper {
     float: none;
     margin: 0;
   }
 }
-.panel-display.gsb-landing-events .inner-sidebar-wrapper {
-  float: left;
+.panel-display.gsb-event-landing .inner-main-wrapper {
+  margin-right: 300px;
 }
 @media (max-width: 35.5em) {
-  .panel-display.gsb-landing-events .inner-sidebar-wrapper {
+  .panel-display.gsb-event-landing .inner-main-wrapper {
+    margin: 0;
+  }
+}
+.panel-display.gsb-event-landing .inner-sidebar-wrapper {
+  float: right;
+  width: 270px;
+}
+@media (max-width: 35.5em) {
+  .panel-display.gsb-event-landing .inner-sidebar-wrapper {
     float: none;
     width: 100%;
   }
@@ -2831,6 +2854,9 @@ div.label-inline {
   margin: 0 auto;
   max-width: 1170px;
 }
+.page-events #content {
+  max-width: 100%;
+}
 
 #main {
   padding: 30px 0;
@@ -2848,6 +2874,19 @@ div.label-inline {
 @media (max-width: 62.4375em) {
   .page-alumni #main {
     margin-top: 30px;
+  }
+}
+.page-events #main {
+  padding-top: 0;
+}
+@media (max-width: 75.625em) {
+  .page-events #main {
+    padding: 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .page-events #main {
+    padding: 0;
   }
 }
 
@@ -7928,18 +7967,6 @@ fieldset.collapsible .fieldset-legend {
   text-decoration: underline;
 }
 
-.page-events .gsb-views-exposed-form {
-  background: none !important;
-  margin: 0;
-  -webkit-box-shadow: 0px 0px 0px white;
-  -moz-box-shadow: 0px 0px 0px white;
-  box-shadow: 0px 0px 0px white;
-  border: 0 none;
-}
-.page-events .gsb-views-exposed-search {
-  padding: 0;
-}
-
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
@@ -9289,31 +9316,6 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   text-decoration: none;
 }
 
-@media (min-width: 62.5em) {
-  .page-events #banner {
-    background: url('../images/bg-banner-eventcal-2015-05-26-1.png') no-repeat -70% 100%, -moz-linear-gradient(bottom, #2f2f2f, #1b1b1b);
-    background: url('../images/bg-banner-eventcal-2015-05-26-1.png') no-repeat -70% 100%, -o-linear-gradient(bottom, #2f2f2f, #1b1b1b);
-    background: url('../images/bg-banner-eventcal-2015-05-26-1.png') no-repeat -70% 100%, -webkit-linear-gradient(bottom, #2f2f2f, #1b1b1b);
-    background: url('../images/bg-banner-eventcal-2015-05-26-1.png') no-repeat -70% 100%, linear-gradient(to top, #2f2f2f, #1b1b1b);
-    overflow: hidden;
-    *zoom: 1;
-  }
-  .page-events #banner .banner-title {
-    padding-top: 18px;
-    font-size: 48px;
-  }
-}
-@media (min-width: 62.5em) and (max-width: 62.4375em) {
-  .page-events #banner {
-    height: 50px;
-  }
-}
-@media (max-width: 35.5em) {
-  .page-events #banner {
-    display: none;
-  }
-}
-
 .page-programs #banner {
   background: -moz-linear-gradient(#4c697a, #607c8c);
   background: -o-linear-gradient(#4c697a, #607c8c);
@@ -9329,6 +9331,7 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   }
 }
 
+.page-events #banner,
 .page-stanford-gsb-experience #banner,
 .page-faculty-research #banner,
 .page-library #banner,
