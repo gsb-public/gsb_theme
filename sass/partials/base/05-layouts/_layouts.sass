@@ -74,23 +74,44 @@
     .panel-pane
       margin-bottom: 20px
 
-// Events landing (.gsb-landing-events inverse of standard landing)
-.panel-display.gsb-landing-events
+// Events landing (.gsb-event-landing)
+.panel-display.gsb-event-landing
+
+  // Featured event
+  .featured-event
+    background: #f4f4f4
+    padding: 26px 0
+    +breakpoint($bp-tablet-port-max)
+      display: none
+
+  // Content
+  #top-content,
+  .content-wrapper
+    margin: 0 auto
+    max-width: 870px
+
   // Main section
   .main-wrapper
-    float: right
-    margin-left: -300px
+    float: left
+    margin-right: -300px
     width: 100%
     +breakpoint($bp-mobile-max)
       float: none
       margin: 0
 
-  // Left sidebar
+  .inner-main-wrapper
+    margin-right: 300px
+    +breakpoint($bp-mobile-max)
+      margin: 0
+
+  // Right sidebar
   .inner-sidebar-wrapper
-    float: left
+    float: right
+    width: 270px
     +breakpoint($bp-mobile-max)
       float: none
       width: 100%
+
 
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
