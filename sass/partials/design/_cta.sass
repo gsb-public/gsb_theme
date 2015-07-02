@@ -109,11 +109,12 @@
 // White links, red gradient background
 .cta-red-gradient
   .field-item
-    margin-bottom: 4px
-    border: 0
     +box-shadow($black, 0.45, 1px 1px 1px)
-    position: relative
+    border: 0
     color: $white
+    margin-bottom: 4px
+    position: relative
+
   a
     color: $white
     font-family: $font-demi
@@ -123,9 +124,6 @@
     &:after
       @extend %arrow-double-small
       color: $white
-    &[target="_blank"]
-      &:after
-        font-size: 16px
     b
       font-weight: normal
     +background($red-light)
