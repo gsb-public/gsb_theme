@@ -45,6 +45,72 @@
     &:after
       color: $white
 
+// White link CTA
+%cta-white-link
+  background: $red-light
+  +background(linear-gradient(bottom, $red-light, $red-dark))
+  +box-shadow($black, 0.45, 1px 1px 1px)
+  margin-bottom: 12px
+  padding: 14px $standard-padding 11px $standard-padding
+  a
+    color: $white
+    display: block
+    font-size: 20px
+    line-height: 1.2
+    position: relative
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-big
+      right: 0
+      color: $white
+  &:hover
+    background: $blue-dark
+    +background(linear-gradient(#194560, #2c6180))
+    a
+      &:after
+        color: $white
+
+// Green link CTA
+%cta-green-link
+  @extend %bg-border-and-box-shadow
+  margin-bottom: 12px
+  padding: 14px $standard-padding 11px $standard-padding
+  a
+    color: $link-green
+    display: block
+    font-size: 20px
+    line-height: 1.2
+    position: relative
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-big
+      right: 0
+      color: $grey-med
+    &:hover
+      color: $link-blue
+      &:after
+        color: $teal-light
+
+// Red link CTA
+%cta-red-link
+  @extend %bg-border-and-box-shadow
+  margin-bottom: 12px
+  padding: 14px $standard-padding 11px $standard-padding
+  a
+    display: block
+    font-size: 20px
+    line-height: 1.2
+    position: relative
+    +icon-after("arrow-double-right", true)
+    &:after
+      @extend %arrow-double-big
+      right: 0
+      color: $grey-med
+    &:hover
+      &:after
+        color: $teal-light
+
+
 // Backgrounds
 
 // Grey gradient background used on left sidebar submenu
