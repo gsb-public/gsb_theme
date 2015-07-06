@@ -5,21 +5,24 @@
   // Content wrapper
   .pane-content
     padding-top: 12px
+
+  // Row styling
   .views-row
     +clearfix
-    margin-bottom: 9px
-    &:last-of-type
-      margin-bottom: 0
+    border-top: 0
+    padding: 10px $standard-padding
 
   // Faculty name
   .views-field-title
     line-height: 0
+    // Link color
     a
-      font-size: 20px
+      color: $link-green
+      font-size: 16px
       font-weight: bold
       line-height: 1.2
-      +breakpoint(850px max-width)
-        font-size: 18px
+      &:hover
+        color: $link-blue
 
   // Rank and academic area
   .views-field-field-rank,
@@ -34,7 +37,5 @@
   // Comma separator
   .separator
     display: block
-    font-size: 14px
     float: left
-    line-height: 1.2
-    margin-right: 3px
+    margin-right: 5px
