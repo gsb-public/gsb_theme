@@ -50,7 +50,6 @@
 
   // Local time zone link
 
-
   // Title - admission event title is smaller than event title
   .field-name-title
     margin-bottom: 18px
@@ -79,7 +78,6 @@
     line-height: 1.3
     +breakpoint($bp-mobile-max)
       font-size: 16px
-
 
   // Location link to full
   .location-anchor a
@@ -124,7 +122,11 @@
     padding-bottom: $standard-padding
     // Speaker description
     .field-name-field-description
+      font-size: 18px
+      line-height: 1.3
       margin-top: 8px
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
 
   // Each speaker
   .field-collection-item-field-event-speakers

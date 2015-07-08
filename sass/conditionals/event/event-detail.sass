@@ -8,104 +8,295 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Event - Detail
+.node-type-event
+  #page-title
+    display: none
 
 .node-event.view-mode-full
   @extend %black-border-top-small
-  padding-top: 0
-  padding-left: 0
+  padding-left: 35px
+  +breakpoint($bp-mobile-max)
+    border-top: 0
+    padding-left: 0
 
   // Left side
   .group-left
-    padding: $standard-padding
-    padding-bottom: 0
+    display: inline-block
+    float: none
+    max-width: 550px
+    padding-top: $standard-padding
     width: auto
-    max-width: 600px
-    +breakpoint(1165px max-width)
-      max-width: 100%
 
   // Right side
   .group-right
+    display: inline-block
+    float: none
     max-width: 270px
-    +breakpoint(1165px max-width)
-      float: left
-      max-width: 100%
-      padding-left: $standard-padding
+    vertical-align: top
+    +breakpoint($bp-mobile-max)
+      display: none
 
-  // Event Date
-  .field-name-field-event-date
-    font-weight: bold
-    font-size: 18px
-    margin-bottom: 18px
-
-  // Title
-  .field-name-title
-    margin-bottom: 18px
-    h2
-      color: $text-black
-      font-family: $font-sans
-      font-weight: bold
-
-  // Speaker(s)
-  .gsb_field_formatter_field_collection_separator
-    margin-bottom: 18px
-  .field-name-field-person-fac-other
-    font-size: 22px
-    .field-name-field-first-name
-      margin-right: 5px
-    a
-      color: $link-green
-      &:hover
-        color: $link-blue
-
-  // Address
-  .field-name-field-address
-    .thoroughfare
-      font-weight: bold
-
-  // Map link
-  .field-name-field-link-map
-    margin-bottom: 26px
-    a
-      color: $link-green
-      font-weight: bold
-      &:hover
-        color: $link-blue
-
-  // Buttons
-  .group-wrapper-buttons
-    line-height: 36px
+  // Bottom portion
+  .group-footer
     margin-top: 26px
-  .field-name-field-register-url,
-  .event-ical-link
+    max-width: 670px
+
+  // Date wrapper
+  .group-wrapper-date
+    margin-bottom: 26px
+
+  // Date and time field
+  .field-name-field-event-date
+    display: inline
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+
+  // Allow time zone next to time
+  .split-date-time
     display: inline
 
-  // Register Link
-  .field-name-field-register-url
+  .time
+    display: inline-block
+    margin-right: 5px
+
+  // Time zone
+  .field-name-field-time-zone
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+
+  // Local time zone link
+
+  // Title - admission event title is smaller than event title
+  .field-name-title
+    margin-bottom: 18px
+    h1
+      font-family: $font-sans
+      font-size: 36px
+      font-weight: bold
+      line-height: 1.3
+      +breakpoint($bp-mobile-max)
+        font-size: 26px
+
+  // Dek
+  .field-name-field-editorial-summary
+    font-size: 24px
+    font-weight: normal
+    line-height: 1.3
+    margin-bottom: 18px
+    +breakpoint($bp-mobile-max)
+      font-size: 18px
+
+  // Location teaser
+  .location-teaser
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+
+  // Location link to full
+  .location-anchor a
+    color: $link-green
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+    &:hover
+      color: $link-blue
+
+  // Body
+  .field-name-field-body
+    @extend %divider-top
+    margin-top: 26px
+    margin-bottom: 26px
+    padding-top: $standard-padding
+
+  // Headings
+  h2.label-above
+    color: $text-black
+    font-family: $font-sans
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 12px
+
+  h3.label-above
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 8px
+
+  // Who should attend
+  .field-name-field-event-who-attend
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 26px
+
+  // Speakers
+  .field-name-field-event-speakers
+    @extend %divider-bottom
+    margin-bottom: 26px
+    padding-bottom: $standard-padding
+    // Speaker description
+    .field-name-field-description
+      font-size: 18px
+      line-height: 1.3
+      margin-top: 8px
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
+
+  // Each speaker
+  .field-collection-item-field-event-speakers
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 26px
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+    .field-type-image
+      display: none
     a
-      @extend %green-button
+      color: $link-green
+      &:hover
+        color: $link-blue
 
-  .event-ical-link
-    display: none
-    .no-touch &
-      display: inline-block
+    // Names styling
+    .field-name-title,
+    h3,
+    .field-name-field-link-single
+      color: $text-black
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+      margin-bottom: 4px
+    &:last-of-type
+      margin-bottom: 0
 
-  .group-wrapper-buttons
-    margin-top: 26px
+  // First name other not linked spacing
+  .field-name-field-first-name
+    margin-right: 5px
 
+  // Open to
   .field-name-field-target-audience
-    font-size: 14px
-    margin-top: 26px
-    .field-items
-      float: none
-    .field-item
-      a:after
-        content: ", "
-      &:last-child a:after
-        content: none
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 12px
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
 
-  .group-footer
-    margin-left: 26px
-    padding: 30px 0
-    .field-name-field-editorial-summary,
-    .field-name-field-body p
-      @extend %p
+  // Attendance statement
+  .field-name-field-event-attendance-statement
+    font-size: 16px
+    line-height: 1.3
+    margin-bottom: 26px
+    +breakpoint($bp-mobile-max)
+      font-size: 14px
+
+  // Price
+  .field-name-field-price
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 26px
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+
+  // Registration deadline
+  .field-name-field-date-time
+    margin-bottom: 12px
+    .date-display-single
+      font-size: 18px
+      line-height: 1.3
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
+
+  // Register CTA
+  .field-name-field-register-url
+    @extend %cta-white-link
+    max-width: 350px
+    width: 100%
+
+  // Information CTA
+  .field-name-field-link-event-more-info
+    @extend %cta-green-link
+    max-width: 350px
+    width: 100%
+
+  // Full location information
+  .field-name-field-event-location
+    @extend %divider-top
+    margin-top: 26px
+    padding-top: $standard-padding
+
+  .field-collection-item-field-event-location
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 8px
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+    &:last-of-type
+      margin-bottom: 0
+
+  // Event type label
+  .field-name-field-event-location-type
+    font-weight: bold
+    margin-bottom: 4px
+
+  // View map link
+  .field-name-field-link-map
+    font-family: $font-demi
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+
+  // Schedule
+  .field-name-field-schedule
+    @extend %divider-top
+    margin-top: 26px
+    padding-top: $standard-padding
+
+  // Sponsors
+  .field-name-field-event-sponsors
+    margin-top: 26px
+
+  .field-collection-item-field-event-sponsors
+    @extend %divider-top
+    margin-top: 12px
+    padding-top: 12px
+
+  // Sponsor name
+  .field-name-field-sponsor
+    display: inline-block
+    font-size: 18px
+    line-height: 1.2
+    margin-right: 18px
+    a
+      font-size: 18px
+      line-height: 1.2
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+      a
+        font-size: 16px
+
+  // Sponsor logo
+  .field-name-field-image-logo-single-public
+    display: inline-block
+    max-width: 100px
+    vertical-align: middle
+    img
+      width: 100%
+    +breakpoint($bp-mobile-max)
+      margin-top: 12px
+
+  // Contact block

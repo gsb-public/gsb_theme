@@ -187,3 +187,23 @@ div.callout
 // Include body field styling on new text equivalent page
 .field-name-field-text-equivalent
   margin: 0 26px
+
+.field
+  ul, ol
+    @extend %p
+    margin: 0 0 20px 0
+    padding: 0
+    li
+      margin-bottom: 8px
+  ol
+    padding-left: 36px
+  ul
+    position: relative
+    left: 0
+    li
+      padding-left: 15px
+      &:before
+        content: "• "
+        color: $text-black
+        position: absolute
+        left: 0
