@@ -1,155 +1,444 @@
-.node-event.view-mode-full .group-footer .field-name-field-editorial-summary,
-.node-event.view-mode-full .group-footer .field-name-field-body p {
-  font-size: 18px;
-  line-height: 1.4;
+.node-event.view-mode-full .field-name-field-register-url a:after, .node-event.view-mode-full .field-name-field-link-event-more-info a:after {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
 }
-@media (max-width: 43.75em) {
-  .node-event.view-mode-full .group-footer .field-name-field-editorial-summary,
-  .node-event.view-mode-full .group-footer .field-name-field-body p {
-    font-size: 16px;
-  }
+
+.node-event.view-mode-full .field-name-field-register-url {
+  background: #c50000;
+  background: -moz-linear-gradient(bottom, #c50000, #860000);
+  background: -o-linear-gradient(bottom, #c50000, #860000);
+  background: -webkit-linear-gradient(bottom, #c50000, #860000);
+  background: linear-gradient(to top, #c50000, #860000);
+  -moz-box-shadow: black, 0.45, 1px 1px 1px;
+  -webkit-box-shadow: black, 0.45, 1px 1px 1px;
+  box-shadow: black, 0.45, 1px 1px 1px;
+  margin-bottom: 12px;
+  padding: 14px 26px 11px 26px;
+}
+.node-event.view-mode-full .field-name-field-register-url a {
+  color: white;
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+}
+.node-event.view-mode-full .field-name-field-register-url a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-event.view-mode-full .field-name-field-register-url a:after {
+  right: 0;
+  color: white;
+}
+.node-event.view-mode-full .field-name-field-register-url:hover {
+  background: #2c627c;
+  background: -moz-linear-gradient(#194560, #2c6180);
+  background: -o-linear-gradient(#194560, #2c6180);
+  background: -webkit-linear-gradient(#194560, #2c6180);
+  background: linear-gradient(#194560, #2c6180);
+}
+.node-event.view-mode-full .field-name-field-register-url:hover a:after {
+  color: white;
+}
+
+.node-event.view-mode-full .field-name-field-link-event-more-info {
+  margin-bottom: 12px;
+  padding: 14px 26px 11px 26px;
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info a {
+  color: #636f00;
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info a:after {
+  right: 0;
+  color: #c2b7a1;
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info a:hover {
+  color: #2d6280;
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info a:hover:after {
+  color: #aac4bf;
+}
+
+.node-event.view-mode-full .field-name-field-link-event-more-info {
+  background-color: #f9f9f9;
+  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
+  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
+}
+
+.node-event.view-mode-full .field-name-field-body, .node-event.view-mode-full .field-name-field-event-location, .node-event.view-mode-full .field-name-field-schedule, .node-event.view-mode-full .field-collection-item-field-event-sponsors {
+  border-top: 1px lightgray solid;
+}
+
+.node-event.view-mode-full .field-name-field-event-speakers {
+  border-bottom: 1px lightgray solid;
+}
+
+.node-event.view-mode-full .field-name-field-link-event-more-info {
+  border: 2px white solid;
 }
 
 .node-event.view-mode-full {
   border-top: 3px #231f20 solid;
 }
 
-.node-event.view-mode-full .field-name-field-register-url a {
-  background: #636f00;
-  background: -moz-linear-gradient(top, #6c7200, #636f00);
-  background: -o-linear-gradient(top, #6c7200, #636f00);
-  background: -webkit-linear-gradient(top, #6c7200, #636f00);
-  background: linear-gradient(to bottom, #6c7200, #636f00);
+.node-event.view-mode-full .field-name-field-link-event-more-info {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
 }
 
-.node-event.view-mode-full .field-name-field-register-url a:hover {
-  background: #2d6280;
-  background: -moz-linear-gradient(top, #18455f, #2d6280);
-  background: -o-linear-gradient(top, #18455f, #2d6280);
-  background: -webkit-linear-gradient(top, #18455f, #2d6280);
-  background: linear-gradient(to bottom, #18455f, #2d6280);
+.ie8 .node-event.view-mode-full .field-name-field-link-event-more-info, .node-event.view-mode-full .ie8 .field-name-field-link-event-more-info {
+  border: 1px #cccccc solid !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
-.node-event.view-mode-full .field-name-field-register-url a {
-  border: none;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  color: white;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1;
-  padding: 10px 16px;
-}
-.node-event.view-mode-full .field-name-field-register-url a:after {
-  color: white !important;
-}
-.node-event.view-mode-full .field-name-field-register-url a:hover {
-  border: 0;
-  color: white;
-}
-.node-event.view-mode-full .field-name-field-register-url a:hover:after {
-  color: white !important;
+.node-type-event #page-title {
+  display: none;
 }
 
 .node-event.view-mode-full {
-  padding-top: 0;
-  padding-left: 0;
+  padding-left: 35px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full {
+    border-top: 0;
+    padding-left: 0;
+  }
 }
 .node-event.view-mode-full .group-left {
-  padding: 26px;
-  padding-bottom: 0;
+  display: inline-block;
+  float: none;
+  max-width: 550px;
+  padding-top: 26px;
   width: auto;
-  max-width: 600px;
-}
-@media (max-width: 72.8125em) {
-  .node-event.view-mode-full .group-left {
-    max-width: 100%;
-  }
 }
 .node-event.view-mode-full .group-right {
+  display: inline-block;
+  float: none;
   max-width: 270px;
+  vertical-align: top;
 }
-@media (max-width: 72.8125em) {
+@media (max-width: 35.5em) {
   .node-event.view-mode-full .group-right {
-    float: left;
-    max-width: 100%;
-    padding-left: 26px;
+    display: none;
   }
 }
+.node-event.view-mode-full .group-footer {
+  margin-top: 26px;
+  max-width: 670px;
+}
+.node-event.view-mode-full .group-wrapper-date {
+  margin-bottom: 26px;
+}
 .node-event.view-mode-full .field-name-field-event-date {
-  font-weight: bold;
+  display: inline;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  margin-bottom: 18px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-event-date {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .split-date-time {
+  display: inline;
+}
+.node-event.view-mode-full .time {
+  display: inline-block;
+  margin-right: 5px;
+}
+.node-event.view-mode-full .field-name-field-time-zone {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
 }
 .node-event.view-mode-full .field-name-title {
   margin-bottom: 18px;
 }
-.node-event.view-mode-full .field-name-title h2 {
-  color: #231f20;
+.node-event.view-mode-full .field-name-title h1 {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
   font-weight: bold;
+  line-height: 1.3;
 }
-.node-event.view-mode-full .gsb_field_formatter_field_collection_separator {
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-title h1 {
+    font-size: 26px;
+  }
+}
+.node-event.view-mode-full .field-name-field-editorial-summary {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.3;
   margin-bottom: 18px;
 }
-.node-event.view-mode-full .field-name-field-person-fac-other {
-  font-size: 22px;
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-editorial-summary {
+    font-size: 18px;
+  }
 }
-.node-event.view-mode-full .field-name-field-person-fac-other .field-name-field-first-name {
-  margin-right: 5px;
+.node-event.view-mode-full .location-teaser {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
 }
-.node-event.view-mode-full .field-name-field-person-fac-other a {
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .location-teaser {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .location-anchor a {
   color: #636f00;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
 }
-.node-event.view-mode-full .field-name-field-person-fac-other a:hover {
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .location-anchor a {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .location-anchor a:hover {
   color: #2d6280;
 }
-.node-event.view-mode-full .field-name-field-address .thoroughfare {
+.node-event.view-mode-full .field-name-field-body {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  padding-top: 26px;
+}
+.node-event.view-mode-full h2.label-above {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
   font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.node-event.view-mode-full h3.label-above {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.node-event.view-mode-full .field-name-field-event-who-attend {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+.node-event.view-mode-full .field-name-field-event-speakers {
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+}
+.node-event.view-mode-full .field-name-field-event-speakers .field-name-field-description {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-event-speakers .field-name-field-description {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-collection-item-field-event-speakers {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-type-image {
+  display: none;
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers a {
+  color: #636f00;
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers a:hover {
+  color: #2d6280;
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-title,
+.node-event.view-mode-full .field-collection-item-field-event-speakers h3,
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-field-link-single {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.node-event.view-mode-full .field-collection-item-field-event-speakers:last-of-type {
+  margin-bottom: 0;
+}
+.node-event.view-mode-full .field-name-field-first-name {
+  margin-right: 5px;
+}
+.node-event.view-mode-full .field-name-field-target-audience {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-target-audience {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-name-field-event-attendance-statement {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-event-attendance-statement {
+    font-size: 14px;
+  }
+}
+.node-event.view-mode-full .field-name-field-price {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-price {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-name-field-date-time {
+  margin-bottom: 12px;
+}
+.node-event.view-mode-full .field-name-field-date-time .date-display-single {
+  font-size: 18px;
+  line-height: 1.3;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-date-time .date-display-single {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-name-field-register-url {
+  max-width: 350px;
+  width: 100%;
+}
+.node-event.view-mode-full .field-name-field-link-event-more-info {
+  max-width: 350px;
+  width: 100%;
+}
+.node-event.view-mode-full .field-name-field-event-location {
+  margin-top: 26px;
+  padding-top: 26px;
+}
+.node-event.view-mode-full .field-collection-item-field-event-location {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-collection-item-field-event-location {
+    font-size: 16px;
+  }
+}
+.node-event.view-mode-full .field-collection-item-field-event-location:last-of-type {
+  margin-bottom: 0;
+}
+.node-event.view-mode-full .field-name-field-event-location-type {
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 .node-event.view-mode-full .field-name-field-link-map {
-  margin-bottom: 26px;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .node-event.view-mode-full .field-name-field-link-map a {
   color: #636f00;
-  font-weight: bold;
 }
 .node-event.view-mode-full .field-name-field-link-map a:hover {
   color: #2d6280;
 }
-.node-event.view-mode-full .group-wrapper-buttons {
-  line-height: 36px;
+.node-event.view-mode-full .field-name-field-schedule {
+  margin-top: 26px;
+  padding-top: 26px;
+}
+.node-event.view-mode-full .field-name-field-event-sponsors {
   margin-top: 26px;
 }
-.node-event.view-mode-full .field-name-field-register-url,
-.node-event.view-mode-full .event-ical-link {
-  display: inline;
+.node-event.view-mode-full .field-collection-item-field-event-sponsors {
+  margin-top: 12px;
+  padding-top: 12px;
 }
-.node-event.view-mode-full .event-ical-link {
-  display: none;
-}
-.no-touch .node-event.view-mode-full .event-ical-link {
+.node-event.view-mode-full .field-name-field-sponsor {
   display: inline-block;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-right: 18px;
 }
-.node-event.view-mode-full .group-wrapper-buttons {
-  margin-top: 26px;
+.node-event.view-mode-full .field-name-field-sponsor a {
+  font-size: 18px;
+  line-height: 1.2;
 }
-.node-event.view-mode-full .field-name-field-target-audience {
-  font-size: 14px;
-  margin-top: 26px;
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-sponsor {
+    font-size: 16px;
+  }
+  .node-event.view-mode-full .field-name-field-sponsor a {
+    font-size: 16px;
+  }
 }
-.node-event.view-mode-full .field-name-field-target-audience .field-items {
-  float: none;
+.node-event.view-mode-full .field-name-field-image-logo-single-public {
+  display: inline-block;
+  max-width: 100px;
+  vertical-align: middle;
 }
-.node-event.view-mode-full .field-name-field-target-audience .field-item a:after {
-  content: ", ";
+.node-event.view-mode-full .field-name-field-image-logo-single-public img {
+  width: 100%;
 }
-.node-event.view-mode-full .field-name-field-target-audience .field-item:last-child a:after {
-  content: none;
-}
-.node-event.view-mode-full .group-footer {
-  margin-left: 26px;
-  padding: 30px 0;
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-image-logo-single-public {
+    margin-top: 12px;
+  }
 }
