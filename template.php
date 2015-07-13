@@ -53,16 +53,8 @@ function gsb_theme_breadcrumb($variables) {
 function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   $search_form_ids = array(
     'views-exposed-form-search-news-news-list',
-    'views-exposed-form-media-mention-media-mention-solr',
-    'views-exposed-form-publications-publications-solr',
     'views-exposed-form-research-papers-panel-pane-1',
     'views-exposed-form-search-faculty-panel-pane-1',
-    'views-exposed-form-faculty-search-solr-search',
-    'views-exposed-form-search-case-study-panel-pane-1',
-    'views-exposed-form-case-study-search-solr-search',
-    'views-exposed-form-gsb-event-panel-pane-2',
-    'views-exposed-form-gsb-event-event-listing-pane',
-    'views-exposed-form-gsb-event-event-calendar-pane',
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
@@ -78,7 +70,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-publications-listing-publications-listing',
     'views-exposed-form-gsb-act-project-listing-panel-pane-1',
     'views-exposed-form-gsb-act-project-listing-panel-pane-2',
-    'views-exposed-form-gsb-act-project-listing-panel-pane-3'
+    'views-exposed-form-gsb-act-project-listing-panel-pane-3',
+    'views-exposed-form-gsb-event-main-event-list-pane'
   );
 
 
@@ -177,10 +170,15 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
-  // clubs listing placeholder text
+  // Clubs listing placeholder text
   if ($form['#id'] == 'views-exposed-form-club-filters-club-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('Search Stanford GSB clubs');
+  }
+  // Main event listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-gsb-event-main-event-list-pane') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search for upcoming events');
   }
 
 }
@@ -213,6 +211,7 @@ function gsb_theme_preprocess_html(&$variables) {
     'alumni',
     'organizations',
     'faculty-research',
+    'events',
   );
   $normalized_arg = arg(0);
   $parsed_url = drupal_parse_url(request_uri());
@@ -358,7 +357,8 @@ function gsb_theme_process_node(&$variables, $hook) {
     'event_listing',
     'news_listing',
     'compact',
-    'expanded'
+    'expanded',
+    'main_list'
   );
   _gsb_theme_prepare_two_column_classes($variables['type'], $types, $view_modes, $variables);
 }

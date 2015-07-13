@@ -94,6 +94,12 @@
     +breakpoint(999px max-width)
       min-height: 50px
 
+// Events
+.page-events
+  .banner-title
+    +breakpoint(999px max-width)
+      min-height: 50px
+
 // Stanford GSB Experience, Faculty & Research, Library, Newsroom, Organizations, Events
 .page-events,
 .page-stanford-gsb-experience,
@@ -216,7 +222,6 @@
           background: transparent
           border-bottom: 0
 
-
 // Section menu for responsive
 #sidebar
   +breakpoint($bp-tablet-port-max)
@@ -227,130 +232,3 @@
       +background(linear-gradient(#4c697a, $blue))
     .page-alumni &
       background: #b00000
-
-// Events filters on mobile
-.page-events .inner-sidebar-wrapper
-  h2
-    display: none
-  +breakpoint($bp-mobile-max)
-    width: 100%
-    .gsb-views-exposed-search
-      width: 100%
-      label
-        margin-bottom: 0
-      .views-exposed-form .form-item
-        float: none
-    .pane-block
-      background: transparent
-      display: block
-      border: 0
-      margin: 0
-      max-width: 100%
-      padding: 0
-    .pane-content
-      display: none
-      margin-top: -24px
-    // Mobile menu link
-    h2
-      border-left: 1px solid rgba($white, 0.3)
-      color: $white
-      cursor: pointer
-      display: inline-block
-      font-size: 14px
-      line-height: 1
-      margin-top: -65px
-      padding: 14px 11px 7px 30px
-      position: absolute
-      right: 0
-      text-transform: uppercase
-      width: 108px
-      +icon-before("plus", true)
-      &:before
-        color: $white
-        font-size: 22px
-        position: absolute
-        left: 6px
-        top: 8px
-    .panel-pane
-      margin-bottom: 0
-    .panel-pane.open
-      +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
-      border-bottom: 10px solid $black
-      padding: 0 15px 15px 15px
-      h2
-        +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
-        color: $red
-        +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
-        margin-top: -51px
-        padding-right: 73px
-        padding-bottom: 9px
-        +icon-before("minus", true)
-        &:before
-          color: $red
-      .pane-content
-        display: block
-        margin-top: 1px
-        padding-bottom: 15px
-        position: relative
-        top: 15px
-        width: 100%
-        z-index: 1
-      .views-exposed-widget
-        label
-          background-color: $grey-c
-          +background(linear-gradient(bottom, $grey-e 20%, #fbfaf8 100%))
-          border: 2px $white solid
-          +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
-          color: $red
-          display: block
-          font-family: $font-demi
-          font-size: 18px
-          height: 44px
-          margin: 1px 2px 2px 1px
-          padding: 10px 0 10px 10px
-        label.option
-          background: none
-          border: 0
-          box-shadow: 0 0
-          -webkit-box-shadow: 0 0
-          -moz-box-shadow: 0 0
-          color: $black
-          display: inline
-          font-family: $font-sans
-          font-size: 14px
-          height: auto
-          margin: 0
-          padding: 0
-        .views-widget
-          display: none
-        &.open
-          .views-widget
-            display: block
-            padding-left: 10px
-            background: $grey-e
-            border: 2px $white solid
-            +box-shadow(rgba($black, 0.1) 2px 2px 2px, rgba($black, 0.1) 0 0 0 1px)
-            border-top: 0
-            margin-right: 2px
-            margin-left: 1px
-      #edit-search-wrapper .views-widget
-        display: block
-  // Additional calendars
-  .pane-bundle-links .green-bar
-    background: transparent
-    border: 0
-    padding: 0
-    margin: 0
-    box-shadow: 0 0
-    -webkit-box-shadow: 0 0
-    -moz-box-shadow: 0 0
-    .field-name-field-title
-      background: $grey-e
-      border-top: 1px solid $grey-c
-      margin: 20px -14px 0
-      padding: 14px 30px
-    .field-name-field-link-unlimited .field-item
-      border-top: 0
-      padding-left: 15px
-      a
-        font-weight: bold

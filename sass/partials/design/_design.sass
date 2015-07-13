@@ -90,11 +90,8 @@
       margin-top: 30px
   .page-events &
     padding-top: 0
-    +breakpoint($bp-content-max)
+    +breakpoint(900px min-width)
       padding: 0
-    +breakpoint($bp-mobile-max)
-      padding: 0
-
 
 // BOTTOM REGION
 #bottom
@@ -274,12 +271,6 @@ a.no-border
     +breakpoint($bp-tablet-port-max)
       display: none
 
-// Show page titles again for mobile
-.page-events
-  #page-title
-    +breakpoint($bp-tablet-port-max)
-      display: block
-
 // Hide Breadcrumbs on landing pages
 .page-node-301121,
 .page-node-301356,
@@ -309,8 +300,7 @@ a.no-border
 
 // GRADIENTS AND SHADOWS
 
-.designed-box,
-.pane-gsb-event-sidebar
+.designed-box
   @extend %bg-border-and-box-shadow
 
 // Green rounded button

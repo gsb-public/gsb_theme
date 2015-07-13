@@ -80,8 +80,8 @@
   // Featured event
   .featured-event
     background: #f4f4f4
-    padding: 26px 0
-    +breakpoint($bp-tablet-port-max)
+    padding: $standard-padding 0
+    +breakpoint(900px max-width)
       display: none
 
   // Content
@@ -89,6 +89,9 @@
   .content-wrapper
     margin: 0 auto
     max-width: 870px
+
+  .content-wrapper
+    padding: $standard-padding 0
 
   // Main section
   .main-wrapper
