@@ -16,7 +16,9 @@ dfn {
   font-weight: bold;
 }
 
-p, .format-wysiwyg ul, .format-wysiwyg ol,
+p, .format-body ul, .format-body ol,
+.format-wysiwyg ul,
+.format-wysiwyg ol,
 .field-name-field-body ul,
 .field-name-field-body ol,
 .field-name-field-text-equivalent ul,
@@ -25,7 +27,9 @@ p, .format-wysiwyg ul, .format-wysiwyg ol,
   line-height: 1.4;
 }
 @media (max-width: 43.75em) {
-  p, .format-wysiwyg ul, .format-wysiwyg ol,
+  p, .format-body ul, .format-body ol,
+  .format-wysiwyg ul,
+  .format-wysiwyg ol,
   .field-name-field-body ul,
   .field-name-field-body ol,
   .field-name-field-text-equivalent ul,
@@ -11287,7 +11291,9 @@ div.callout br {
   line-height: 1.2;
 }
 
-.format-wysiwyg ul, .format-wysiwyg ol,
+.format-body ul, .format-body ol,
+.format-wysiwyg ul,
+.format-wysiwyg ol,
 .field-name-field-body ul,
 .field-name-field-body ol,
 .field-name-field-text-equivalent ul,
@@ -11295,29 +11301,35 @@ div.callout br {
   margin: 0 0 20px 0;
   padding: 0;
 }
-.format-wysiwyg ul li, .format-wysiwyg ol li,
+.format-body ul li, .format-body ol li,
+.format-wysiwyg ul li,
+.format-wysiwyg ol li,
 .field-name-field-body ul li,
 .field-name-field-body ol li,
 .field-name-field-text-equivalent ul li,
 .field-name-field-text-equivalent ol li {
   margin-bottom: 8px;
 }
+.format-body ol,
 .format-wysiwyg ol,
 .field-name-field-body ol,
 .field-name-field-text-equivalent ol {
   padding-left: 36px;
 }
+.format-body ul,
 .format-wysiwyg ul,
 .field-name-field-body ul,
 .field-name-field-text-equivalent ul {
   position: relative;
   left: 0;
 }
+.format-body ul li,
 .format-wysiwyg ul li,
 .field-name-field-body ul li,
 .field-name-field-text-equivalent ul li {
   padding-left: 15px;
 }
+.format-body ul li:before,
 .format-wysiwyg ul li:before,
 .field-name-field-body ul li:before,
 .field-name-field-text-equivalent ul li:before {
@@ -11326,7 +11338,9 @@ div.callout br {
   position: absolute;
   left: 0;
 }
-.format-wysiwyg table ul, .format-wysiwyg table ol,
+.format-body table ul, .format-body table ol,
+.format-wysiwyg table ul,
+.format-wysiwyg table ol,
 .field-name-field-body table ul,
 .field-name-field-body table ol,
 .field-name-field-text-equivalent table ul,
@@ -11334,6 +11348,7 @@ div.callout br {
   font-size: 14px;
   line-height: 1.2;
 }
+.format-body a,
 .format-wysiwyg a,
 .field-name-field-body a,
 .field-name-field-text-equivalent a {
@@ -11342,12 +11357,14 @@ div.callout br {
   text-decoration: none;
   word-wrap: break-word;
 }
+.format-body a:hover,
 .format-wysiwyg a:hover,
 .field-name-field-body a:hover,
 .field-name-field-text-equivalent a:hover {
   border-bottom: solid 1px #2d6280;
   color: #2d6280;
 }
+.format-body a[href*="mailto:"]:after,
 .format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after,
 .field-name-field-text-equivalent a[href*="mailto:"]:after {
@@ -11365,17 +11382,20 @@ div.callout br {
   font-weight: normal;
   font-family: 'icons';
 }
+.format-body a[href*="mailto:"]:after,
 .format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after,
 .field-name-field-text-equivalent a[href*="mailto:"]:after {
   font-size: 14px;
   margin-left: 5px;
 }
+.format-body img,
 .format-wysiwyg img,
 .field-name-field-body img,
 .field-name-field-text-equivalent img {
   vertical-align: top;
 }
+.format-body h2,
 .format-wysiwyg h2,
 .field-name-field-body h2,
 .field-name-field-text-equivalent h2 {
@@ -11385,6 +11405,7 @@ div.callout br {
   line-height: 1.2;
   margin: 6px 0 10px;
 }
+.format-body h3,
 .format-wysiwyg h3,
 .field-name-field-body h3,
 .field-name-field-text-equivalent h3 {
@@ -11395,6 +11416,7 @@ div.callout br {
   line-height: 1.2;
   margin: 3px 0 4px;
 }
+.format-body h4,
 .format-wysiwyg h4,
 .field-name-field-body h4,
 .field-name-field-text-equivalent h4 {
@@ -11405,6 +11427,7 @@ div.callout br {
   line-height: 1.2;
   margin-bottom: 4px;
 }
+.format-body h5,
 .format-wysiwyg h5,
 .field-name-field-body h5,
 .field-name-field-text-equivalent h5 {
@@ -11415,7 +11438,11 @@ div.callout br {
   margin-bottom: 3px;
   margin-top: 15px;
 }
-.format-wysiwyg h2 a, .format-wysiwyg h3 a, .format-wysiwyg h4 a, .format-wysiwyg h5 a,
+.format-body h2 a, .format-body h3 a, .format-body h4 a, .format-body h5 a,
+.format-wysiwyg h2 a,
+.format-wysiwyg h3 a,
+.format-wysiwyg h4 a,
+.format-wysiwyg h5 a,
 .field-name-field-body h2 a,
 .field-name-field-body h3 a,
 .field-name-field-body h4 a,
@@ -11427,7 +11454,11 @@ div.callout br {
   border-bottom: 0;
   color: #231f20;
 }
-.format-wysiwyg h2 a:after, .format-wysiwyg h3 a:after, .format-wysiwyg h4 a:after, .format-wysiwyg h5 a:after,
+.format-body h2 a:after, .format-body h3 a:after, .format-body h4 a:after, .format-body h5 a:after,
+.format-wysiwyg h2 a:after,
+.format-wysiwyg h3 a:after,
+.format-wysiwyg h4 a:after,
+.format-wysiwyg h5 a:after,
 .field-name-field-body h2 a:after,
 .field-name-field-body h3 a:after,
 .field-name-field-body h4 a:after,
@@ -11438,7 +11469,11 @@ div.callout br {
 .field-name-field-text-equivalent h5 a:after {
   color: #bac405;
 }
-.format-wysiwyg h2 a:not([target="_blank"]):after, .format-wysiwyg h3 a:not([target="_blank"]):after, .format-wysiwyg h4 a:not([target="_blank"]):after, .format-wysiwyg h5 a:not([target="_blank"]):after,
+.format-body h2 a:not([target="_blank"]):after, .format-body h3 a:not([target="_blank"]):after, .format-body h4 a:not([target="_blank"]):after, .format-body h5 a:not([target="_blank"]):after,
+.format-wysiwyg h2 a:not([target="_blank"]):after,
+.format-wysiwyg h3 a:not([target="_blank"]):after,
+.format-wysiwyg h4 a:not([target="_blank"]):after,
+.format-wysiwyg h5 a:not([target="_blank"]):after,
 .field-name-field-body h2 a:not([target="_blank"]):after,
 .field-name-field-body h3 a:not([target="_blank"]):after,
 .field-name-field-body h4 a:not([target="_blank"]):after,
@@ -11461,7 +11496,11 @@ div.callout br {
   font-weight: normal;
   font-family: 'icons';
 }
-.format-wysiwyg h2 a:not([target="_blank"]):after, .format-wysiwyg h3 a:not([target="_blank"]):after, .format-wysiwyg h4 a:not([target="_blank"]):after, .format-wysiwyg h5 a:not([target="_blank"]):after,
+.format-body h2 a:not([target="_blank"]):after, .format-body h3 a:not([target="_blank"]):after, .format-body h4 a:not([target="_blank"]):after, .format-body h5 a:not([target="_blank"]):after,
+.format-wysiwyg h2 a:not([target="_blank"]):after,
+.format-wysiwyg h3 a:not([target="_blank"]):after,
+.format-wysiwyg h4 a:not([target="_blank"]):after,
+.format-wysiwyg h5 a:not([target="_blank"]):after,
 .field-name-field-body h2 a:not([target="_blank"]):after,
 .field-name-field-body h3 a:not([target="_blank"]):after,
 .field-name-field-body h4 a:not([target="_blank"]):after,
@@ -11473,7 +11512,11 @@ div.callout br {
   font-size: 0.7em;
   margin-left: 3px;
 }
-.format-wysiwyg h2 a:hover, .format-wysiwyg h3 a:hover, .format-wysiwyg h4 a:hover, .format-wysiwyg h5 a:hover,
+.format-body h2 a:hover, .format-body h3 a:hover, .format-body h4 a:hover, .format-body h5 a:hover,
+.format-wysiwyg h2 a:hover,
+.format-wysiwyg h3 a:hover,
+.format-wysiwyg h4 a:hover,
+.format-wysiwyg h5 a:hover,
 .field-name-field-body h2 a:hover,
 .field-name-field-body h3 a:hover,
 .field-name-field-body h4 a:hover,
@@ -11485,7 +11528,11 @@ div.callout br {
   border: none;
   text-decoration: underline;
 }
-.format-wysiwyg h2 a:hover:after, .format-wysiwyg h3 a:hover:after, .format-wysiwyg h4 a:hover:after, .format-wysiwyg h5 a:hover:after,
+.format-body h2 a:hover:after, .format-body h3 a:hover:after, .format-body h4 a:hover:after, .format-body h5 a:hover:after,
+.format-wysiwyg h2 a:hover:after,
+.format-wysiwyg h3 a:hover:after,
+.format-wysiwyg h4 a:hover:after,
+.format-wysiwyg h5 a:hover:after,
 .field-name-field-body h2 a:hover:after,
 .field-name-field-body h3 a:hover:after,
 .field-name-field-body h4 a:hover:after,
@@ -11496,6 +11543,10 @@ div.callout br {
 .field-name-field-text-equivalent h5 a:hover:after {
   color: #aac4bf;
 }
+.format-body p:last-child,
+.format-body ul:last-child,
+.format-body ol:last-child,
+.format-body li:last-child,
 .format-wysiwyg p:last-child,
 .format-wysiwyg ul:last-child,
 .format-wysiwyg ol:last-child,
@@ -11510,34 +11561,40 @@ div.callout br {
 .field-name-field-text-equivalent li:last-child {
   margin-bottom: 0 !important;
 }
+.format-body table,
 .format-wysiwyg table,
 .field-name-field-body table,
 .field-name-field-text-equivalent table {
   margin: 20px 0 50px;
 }
 @media (max-width: 48em) {
+  .format-body table,
   .format-wysiwyg table,
   .field-name-field-body table,
   .field-name-field-text-equivalent table {
     margin: 0;
   }
 }
+.format-body caption,
 .format-wysiwyg caption,
 .field-name-field-body caption,
 .field-name-field-text-equivalent caption {
   color: #2d6280;
   margin-bottom: 20px;
 }
+.format-body thead,
 .format-wysiwyg thead,
 .field-name-field-body thead,
 .field-name-field-text-equivalent thead {
   background: white;
 }
+.format-body thead tr,
 .format-wysiwyg thead tr,
 .field-name-field-body thead tr,
 .field-name-field-text-equivalent thead tr {
   border-top: 1px lightgray solid;
 }
+.format-body thead th,
 .format-wysiwyg thead th,
 .field-name-field-body thead th,
 .field-name-field-text-equivalent thead th {
@@ -11545,28 +11602,33 @@ div.callout br {
   font-weight: bold;
   padding: 16px;
 }
+.format-body tbody,
 .format-wysiwyg tbody,
 .field-name-field-body tbody,
 .field-name-field-text-equivalent tbody {
   border-bottom: 1px lightgray solid;
 }
+.format-body tbody tr,
 .format-wysiwyg tbody tr,
 .field-name-field-body tbody tr,
 .field-name-field-text-equivalent tbody tr {
   background-color: white;
   border-top: 1px lightgray solid;
 }
+.format-body tbody tr th,
 .format-wysiwyg tbody tr th,
 .field-name-field-body tbody tr th,
 .field-name-field-text-equivalent tbody tr th {
   background: whitesmoke;
   padding: 16px;
 }
+.format-body tbody td,
 .format-wysiwyg tbody td,
 .field-name-field-body tbody td,
 .field-name-field-text-equivalent tbody td {
   padding: 16px;
 }
+.format-body tbody td a,
 .format-wysiwyg tbody td a,
 .field-name-field-body tbody td a,
 .field-name-field-text-equivalent tbody td a {
@@ -11574,6 +11636,7 @@ div.callout br {
   font-weight: bold;
   border-bottom: none;
 }
+.format-body tbody td p,
 .format-wysiwyg tbody td p,
 .field-name-field-body tbody td p,
 .field-name-field-text-equivalent tbody td p {
