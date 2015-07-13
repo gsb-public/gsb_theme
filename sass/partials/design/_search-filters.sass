@@ -307,11 +307,6 @@ fieldset.collapsible .fieldset-legend
     line-height: 1em
     color: $red
 
-
-#edit-submit-gsb-event
-  position: relative
-  top: -48px
-
 // Parent class to exposed, collapsible filter
 .exposed_filter_widget
   +breakpoint($bp-mobile-max)
@@ -424,82 +419,8 @@ fieldset.collapsible .fieldset-legend
     border: 0 none !important
     margin-left: -10px !important
 
-// Filter for Events page
-#views-exposed-form-gsb-event-event-listing-pane,
-#views-exposed-form-gsb-event-event-calendar-pane
-  .ajax-progress
-    float: right
-    position: relative
-    right: -90px
-    top: -30px
-  .views-widget-filter-field_search_field_value
-    .form-text
-      padding: 14px 50px 15px 10px
-    label
-      display: none
-  .views-exposed-search-wrap
-    +breakpoint($bp-mobile-max)
-      height: 48px
-
-  .views-exposed-widgets
-    position: relative
-    @extend %black-border-top
-    @extend %bg-grey-gradient
-    overflow: hidden
-    display: inline-block
-    padding: 25px 25px 10px 25px
-    width: 100%
-    +breakpoint($bp-mobile-min)
-      margin-top: -17px
-    +breakpoint($bp-mobile-max)
-      display: none
-    > div
-      border-bottom: 1px $listing-divider solid
-      margin-bottom: 15px
-      padding-bottom: 15px !important
-      &#edit-field-region-tid-wrapper
-        padding: 0
-      &:last-of-type
-        border: 0 none
-        margin-bottom: 0
-        padding-bottom: 0 !important
-      > label
-        color: $text-black
-        font-weight: normal
-        margin: 0 0 5px 0
-        cursor: default
-    .form-item
-      float: none !important
-      margin: 0 !important
-      padding-bottom: 15px
-      line-height: 1.3
-      &:last-of-type
-        padding-bottom: 0
-      input[type="checkbox"]
-        float: left
-      > label
-        text-transform: uppercase
-        font-size: 13px
-        color: $text-black
-        margin: 0
-        font-weight: bold
-        display: block
-        padding-left: 22px
-      .bef-toggle
-        margin-bottom: 10px
-        display: block
-        &:hover
-          color: $text-blue
-          text-decoration: underline
-      .not-bef-toggle
-        margin-bottom: 10px
-        display: block
-        &:hover
-          color: $text-blue
-          text-decoration: underline
-
 // Search and filter styling
-// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing, Clubs list
+// Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing, Clubs list, events
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
@@ -513,7 +434,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-giving_stories_listing,
 .view-display-id-alumni_book_listing,
 .view-id-gsb_act_project_listing,
-.view-display-id-club_list
+.view-display-id-club_list,
+.view-display-id-main_event_list_pane
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -597,7 +519,8 @@ fieldset.collapsible .fieldset-legend
 #edit-submit-gsb-in-the-media-listing,
 #edit-submit-stories,
 #edit-submit-gsb-book-listing,
-#edit-submit-club-filters
+#edit-submit-club-filters,
+#edit-submit-gsb-event,
   text-indent: 1000px
   -webkit-border-radius: 0
   -moz-border-radius: 0
@@ -627,7 +550,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-book_listing,
 .view-display-id-publications_listing,
 .view-id-gsb_act_project_listing,
-.view-display-id-club_list
+.view-display-id-club_list,
+.view-display-id-main_event_list_pane
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
@@ -699,7 +623,9 @@ fieldset.collapsible .fieldset-legend
     .form-item-field-centers-research-programs-tid,
     .wide-view & .form-item-field-act-project-type-tid,
     .wide-view & .form-item-field-act-project-focus-tid,
-    .wide-view & .form-item-field-act-organization-type-tid
+    .wide-view & .form-item-field-act-organization-type-tid,
+    .form-item-field-event-location-type-value,
+    .form-item-field-target-audience-tid
       .bef-checkboxes
         -moz-column-count: 3
         -webkit-column-count: 3

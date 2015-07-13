@@ -7,73 +7,21 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Event - Landing
-
-// View overrides
-.view-display-id-event_listing_pane
+// Main Events List - used on events landing
+.view-display-id-main_event_list_pane
 
   // Day separation
-  h5
-    display: block
-    border-top: 1px $text-black solid
-    padding-top: 18px
-  // Event separation
-  .views-row .node
-    @extend %divider-bottom
-  .views-row-last .node
-    border-bottom: 0
-  .views-exposed-widget
-    @extend %divider-bottom
-    padding: 0
-    margin-bottom: 20px
-  .views-widget label.option
-    font-size: 13px
+  h2
+    color: $text-black
+    font-family: $font-sans
+    font-size: 22px
     font-weight: bold
-    text-transform: uppercase
+    line-height: 1.2
+    margin-bottom: 12px
+    padding-top: 18px
 
-  // Content overrides
-  .node-event.view-mode-event_listing
-    margin: 0 26px
-    padding: 18px 0
-    +clearfix
-    // Layout for image
-    .left.second-column
-      float: left
-      max-width: 70%
-      +breakpoint(960px max-width)
-        max-width: 50%
-      +breakpoint(840px max-width)
-        max-width: 100%
-
-    .right
-      float: right
-      +breakpoint(840px max-width)
-        display: none
-
-    // Image
-    .field-name-field-image-single-public
-      width: 170px
-    // Date
-    .field-name-field-event-date
-      margin-bottom: 6px
-    // Title
-    .field-name-title
-      margin-bottom: 5px
-      h2
-        font-family: $font-demi
-        font-size: 24px
-        font-weight: normal
-        line-height: 1.2
-
-    // Address
-    .field-name-field-address
-      font-family: $font-demi
-      font-size: 14px
-      line-height: 1.2
-      margin-bottom: 4px
-
-    // Description
-    .field-name-field-editorial-summary
-      font-size: 16px
-      line-height: 1.2
-      margin: 6px 0 15px
+  // Event per day
+  .view-mode-main_list
+    @extend %divider-top
+    margin-left: 26px
+    padding: 12px 0
