@@ -1,0 +1,67 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Event and admission event contact
+.pane-event-contacts
+  @extend %box-shadow
+  background: $white
+  padding: $standard-padding
+
+  .panel-pane
+    margin-bottom: 0 !important
+
+  // Pane title
+  h2.pane-title
+    border-bottom: 2px solid #e4e4e4
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    line-height: 1
+    padding-bottom: 20px
+
+  // Image
+  .field-name-field-image-single-public
+    height: 90px
+    width: 90px
+
+  // Name
+  .field-name-title
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.3
+    margin-top: 8px
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+
+  // Title
+  .person-position
+    display: none
+  .field-name-field-person-title
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.3
+    margin-top: 2px
+
+  // Email
+  .field-name-field-email a
+    color: $link-green
+    font-size: 14px
+    line-height: 1.3
+    margin-top: 2px
+    +icon-after("email-stroke", true)
+    &:hover
+      color: $link-blue
+    &:after
+      font-size: 12px
+      margin-left: 5px
