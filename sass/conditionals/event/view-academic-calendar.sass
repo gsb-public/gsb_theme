@@ -24,14 +24,18 @@
   // Cell style
   td
     display: inline-block
-    &:first-of-type
-      width: 22%
 
   tbody tr:nth-of-type(even)
     background-color: transparent
 
   .view-grouping
     border-bottom: 3px $text-black solid
+
+  // Column widths
+  .views-field-field-event-date
+    width: 22%
+  .views-field-field-academic-calendar-link
+    width: 77%
 
   // Title of the list
   .view-grouping-header
