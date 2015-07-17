@@ -54,7 +54,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   $search_form_ids = array(
     'views-exposed-form-search-news-news-list',
     'views-exposed-form-research-papers-panel-pane-1',
-    'views-exposed-form-search-faculty-panel-pane-1',
+    'views-exposed-form-search-faculty-panel-pane-1'
   );
   $filter_form_ids = array(
     'views-exposed-form-case-study-filters-case-study-list',
@@ -71,7 +71,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-act-project-listing-panel-pane-1',
     'views-exposed-form-gsb-act-project-listing-panel-pane-2',
     'views-exposed-form-gsb-act-project-listing-panel-pane-3',
-    'views-exposed-form-gsb-event-main-event-list-pane'
+    'views-exposed-form-gsb-event-main-event-list-pane',
+    'views-exposed-form-admission-events-mba-admission-panel-pane'
   );
 
 
@@ -101,7 +102,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_working_paper_listing',
     'gsb_case_listing',
     'gsb_book_listing',
-    'gsb_publications_listing'
+    'gsb_publications_listing',
+    'admission_events'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -180,7 +182,24 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search for upcoming events');
   }
+  // Admission event listing after build customizations
+  if ($form['#id'] == 'views-exposed-form-admission-events-mba-admission-panel-pane') {
+    $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
+  }
+}
 
+function gsb_theme_admission_events_mba_list_after_build($form, &$form_state) {
+  // Add placeholder text.
+  $form['search']['#attributes']['placeholder'] = t('search by location, title, or other keywords');
+
+  // Alter the date field labels
+  $form['date_search']['min']['#title'] = t('Date from');
+  $form['date_search']['max']['#title'] = t('to');
+
+  // Hide the date descriptions
+  unset($form['date_search']['max']['date']['#description'], $form['date_search']['min']['date']['#description']);
+
+  return $form;
 }
 
 /**

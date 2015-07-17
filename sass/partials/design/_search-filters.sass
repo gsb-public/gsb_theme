@@ -1,4 +1,4 @@
-// Searches and filters
+// Search and filters
 
 // Search box
 .gsb-views-exposed-form
@@ -34,8 +34,6 @@
       float: right
       width: 45px
       height: 36px
-      .svg .gsb-landing-events &
-        height: 48px
       -webkit-border-radius: 0
       -moz-border-radius: 0
       -ms-border-radius: 0
@@ -241,7 +239,6 @@
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, $link-blue)
 
-
 // Filters
 
 // Filter toggle
@@ -274,18 +271,22 @@ fieldset.collapsible .fieldset-legend
 #edit-field-region-tid-wrapper
   padding: 24px
 
+// Exposed filter class added in template.php
 .gsb-views-exposed-filter
   +breakpoint($bp-mobile-max)
     display: none
     .view-gsb-act-project-listing &
       display: block
+
   legend
     margin-left: 4em
     padding: 0
+
   fieldset
     border: 0
     margin: 0
     padding: 0
+
   .fieldset-wrapper
     margin-left: 22.5%
 
@@ -307,8 +308,8 @@ fieldset.collapsible .fieldset-legend
     line-height: 1em
     color: $red
 
-// Parent class to exposed, collapsible filter
-.exposed_filter_widget
+// Parent class to exposed, collapsible filter - used on MSx fellows
+.pane-views-exp-msx-fellows-list
   +breakpoint($bp-mobile-max)
     display: none
   // Reset style for case when filter and search are placed in one class
@@ -338,10 +339,13 @@ fieldset.collapsible .fieldset-legend
         input[type="checkbox"]
           margin-left: -18px
 
+  #edit-industry-tid-wrapper,
+  #edit-region-tid-wrapper
+    border-right: 1px solid #e4e4e4
+    float: left
+    padding: 16px 20px 6px
+    width: 50%
 
-  form.gsb-views-exposed-search
-    padding: 0
-    width: auto
   > div
     @extend %bg-and-box-shadow
     padding: 3px
@@ -356,6 +360,7 @@ fieldset.collapsible .fieldset-legend
 
   .views-exposed-widget
     > label
+      font-family: $font-sans
       font-size: 18px
       font-weight: bold
       padding-bottom: 8px
@@ -367,7 +372,6 @@ fieldset.collapsible .fieldset-legend
       -moz-user-select: none
       -webkit-user-select: none
       -ms-user-select: none
-      font-family: $font-sans
       +icon-before("plus", true)
       &:before
         font-size: 18px
@@ -377,7 +381,6 @@ fieldset.collapsible .fieldset-legend
         padding-right: 5px
       &:hover
         color: $link-blue
-
 
     &.collapsed
       > label
@@ -390,34 +393,36 @@ fieldset.collapsible .fieldset-legend
       display: none
       padding-left: 3px
 
-      .bef-checkboxes label
-        font-weight: bold
-        font-size: 13px
-        text-transform: uppercase
-
-    &:first-child,
-    &:nth-child(2n+2)
-      width: 50%
-      float: left
-      padding: 16px 20px 0
-    &:first-child
-      border-right: 1px solid #e4e4e4
-    &:nth-child(2n+2)
-      border-left: 1px solid #e4e4e4
-      margin-left: -1px
     fieldset
       border: 0 none
       padding: 14px
   .fieldset-wrapper
     padding-left: 8px
 
-  .views-submit-button
-    padding: 0 !important
-    position: absolute
-    bottom: -30px
-    left: 50%
-    border: 0 none !important
-    margin-left: -10px !important
+  // Checkboxes
+  .form-item
+    border-top: 1px solid transparent
+    font-weight: normal
+    margin-bottom: 12px
+    margin-top: 0
+    padding-left: 22px
+    position: relative
+    vertical-align: top
+    +clearfix
+    label
+      color: $text-black
+      display: inline-block
+      font-family: $font-demi
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 0
+      margin-right: 0
+      text-transform: none
+      vertical-align: top
+    input
+      position: absolute
+      left: 0
 
 // Search and filter styling
 // Faculty, working papers, case study, book listing, school story, announcement mixed listing, ranking listing, faculty insights, in the media listing, alumni listing, ACT Project listing, Clubs list, events
@@ -435,7 +440,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-alumni_book_listing,
 .view-id-gsb_act_project_listing,
 .view-display-id-club_list,
-.view-display-id-main_event_list_pane
+.view-display-id-main_event_list_pane,
+.view-display-id-mba_admission_panel_pane
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -504,7 +510,8 @@ fieldset.collapsible .fieldset-legend
 
 #views-exposed-form-gsb-act-project-listing-panel-pane-1 .views-exposed-widgets,
 #views-exposed-form-gsb-act-project-listing-panel-pane-2 .views-exposed-widgets,
-#views-exposed-form-gsb-act-project-listing-panel-pane-3 .views-exposed-widgets
+#views-exposed-form-gsb-act-project-listing-panel-pane-3 .views-exposed-widgets,
+#views-exposed-form-admission-events-mba-admission-panel-pane .views-exposed-widgets
   @extend %divider-bottom
 
 // Submit button styling
@@ -521,6 +528,7 @@ fieldset.collapsible .fieldset-legend
 #edit-submit-gsb-book-listing,
 #edit-submit-club-filters,
 #edit-submit-gsb-event,
+#edit-submit-admission-events
   text-indent: 1000px
   -webkit-border-radius: 0
   -moz-border-radius: 0
@@ -551,7 +559,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-publications_listing,
 .view-id-gsb_act_project_listing,
 .view-display-id-club_list,
-.view-display-id-main_event_list_pane
+.view-display-id-main_event_list_pane,
+.view-display-id-mba_admission_panel_pane
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
@@ -625,7 +634,9 @@ fieldset.collapsible .fieldset-legend
     .wide-view & .form-item-field-act-project-focus-tid,
     .wide-view & .form-item-field-act-organization-type-tid,
     .form-item-field-event-location-type-value,
-    .form-item-field-target-audience-tid
+    .form-item-field-target-audience-tid,
+    .form-item-field-region-tid,
+    .form-item-field-event-category-tid-1
       .bef-checkboxes
         -moz-column-count: 3
         -webkit-column-count: 3
@@ -634,3 +645,25 @@ fieldset.collapsible .fieldset-legend
           -moz-column-count: 1
           -webkit-column-count: 1
           column-count: 1
+
+// Admission event date range search
+#edit-date-search-wrapper
+  @extend %divider-bottom
+  +clearfix
+  padding: 18px $standard-padding
+  position: relative
+  width: 100%
+
+  .views-widget
+    div
+      display: inline-block
+
+  .form-item
+    +clearfix
+    margin-bottom: 0
+    label
+      float: left
+      font-size: 16px
+      position: relative
+      text-transform: none
+      top: 6px
