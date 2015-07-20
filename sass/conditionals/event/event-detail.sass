@@ -70,7 +70,20 @@
     font-weight: normal
     line-height: 1.3
 
-  // Local time zone link
+  // Find local time zone link
+  .field-name-find-local-time
+    .pipe
+      font-size: 18px
+  .find-time
+    color: $link-green
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    &:hover
+      color: $link-blue
+      &:after
+        color: $teal-light
 
   // Title - admission event title is smaller than event title
   .field-name-title
@@ -213,12 +226,16 @@
 
   // Registration deadline
   .field-name-field-date-time
+    display: inline-block
     margin-bottom: 12px
     .date-display-single
       font-size: 18px
       line-height: 1.3
       +breakpoint($bp-mobile-max)
         font-size: 16px
+      &:after
+        content: "|"
+        margin: 0 5px
 
   // Register CTA
   .field-name-field-register-url

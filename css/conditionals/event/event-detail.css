@@ -194,6 +194,22 @@
   font-weight: normal;
   line-height: 1.3;
 }
+.node-event.view-mode-full .field-name-find-local-time .pipe {
+  font-size: 18px;
+}
+.node-event.view-mode-full .find-time {
+  color: #636f00;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+.node-event.view-mode-full .find-time:hover {
+  color: #2d6280;
+}
+.node-event.view-mode-full .find-time:hover:after {
+  color: #aac4bf;
+}
 .node-event.view-mode-full .field-name-title {
   margin-bottom: 18px;
 }
@@ -351,6 +367,7 @@
   }
 }
 .node-event.view-mode-full .field-name-field-date-time {
+  display: inline-block;
   margin-bottom: 12px;
 }
 .node-event.view-mode-full .field-name-field-date-time .date-display-single {
@@ -361,6 +378,10 @@
   .node-event.view-mode-full .field-name-field-date-time .date-display-single {
     font-size: 16px;
   }
+}
+.node-event.view-mode-full .field-name-field-date-time .date-display-single:after {
+  content: "|";
+  margin: 0 5px;
 }
 .node-event.view-mode-full .field-name-field-register-url {
   max-width: 350px;
