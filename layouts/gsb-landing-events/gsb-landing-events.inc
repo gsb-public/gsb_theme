@@ -2,7 +2,7 @@
 // Plugin definition
 $plugin = array(
   'title' => t('GSB Event Landing'),
-  'icon' => 'gsb-landing-events.png',
+  'icon' => 'gsb-landing-events-2015-07-20-1.png',
   'category' => t('GSB'),
   'theme' => 'gsb-landing-events',
   'css' => 'gsb-landing-events.css',
