@@ -268,21 +268,11 @@ function gsb_theme_preprocess_page(&$variables) {
   }
 
   // Add search and event link to main navigation
-  $variables['event_and_search'] = array(
+  $variables['global_search'] = array(
     '#type' => 'container',
     '#attributes' => array(
       'class' => array(
-        'event-and-search',
-      ),
-    ),
-    'link' => array(
-      '#type' => 'link',
-      '#href' => 'events',
-      '#title' => t('Event Calendar'),
-      '#attributes' => array(
-        'class' => array(
-          'event-calendar',
-        ),
+        'global-search',
       ),
     ),
     'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
