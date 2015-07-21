@@ -26,22 +26,22 @@
     width: 286px
   +breakpoint(1210px max-width)
     margin-left: 20px
-  +breakpoint(1065px max-width)
+  +breakpoint(1160px max-width)
     .svg &, .no-js &, .no-svg &
       background-size: 100%
-      height: 65px
-      width: 201px
-  +breakpoint($bp-tablet-port-max)
+      height: 35px
+      margin: 10px
+      width: 120px
+  +breakpoint(999px max-width)
     .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
-      margin: 10px 10px 10px 65px
+      margin-left: 65px
       width: 100px
     .page-insights &, .page-404 &
       margin-left: 15px !important
 
-
-// SITE SLOGAN
+// Site slogan
 #site-slogan
   font-size: 22px
   float: right
@@ -51,7 +51,7 @@
   +breakpoint($bp-tablet-port-max)
     display: none
 
-// CONTENT REGION
+// Content wrapper
 #content-wrapper
   position: relative
   background: $white
@@ -78,7 +78,7 @@
   .page-events &
     max-width: 100%
 
-// MAIN REGION
+// Main region
 #main
   padding: 30px 0
   +breakpoint(1210px max-width)
@@ -93,7 +93,7 @@
     +breakpoint(900px min-width)
       padding: 0
 
-// BOTTOM REGION
+// Bottom region
 #bottom
   +clearfix
   background: $white
@@ -108,7 +108,7 @@
     +breakpoint($bp-mobile-max)
       padding: 0 15px
 
-// FOOTER REGION
+// Footer region
 #footer-wrapper
   background: $grey-f
   #footer
@@ -119,7 +119,7 @@
     +breakpoint($bp-mobile-max)
       padding: 0 15px
 
-// LEGAL REGION
+// Legal
 #legal
   +breakpoint($bp-content-max)
     padding: 0 20px

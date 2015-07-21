@@ -60,7 +60,7 @@
     label
       cursor: default
 
-// Main search
+// Global main search
 #google-appliance-block-form,
 #google-appliance-block-form--2
   +breakpoint($bp-tablet-port-max)
@@ -69,6 +69,8 @@
     position: absolute
     width: 85%
     z-index: 1
+  input
+    height: 55px
   .form-item
     float: left
     width: 100%
@@ -76,13 +78,13 @@
     margin-top: 0
     margin-bottom: 0
     .form-text
-      color: $grey-6
+      color: $text-black
       font-size: 16px
       width: 100%
       border: 1px $border-grey solid
       background: #f4f4f4
       line-height: 1
-      padding: 7px 50px 6px 10px
+      padding: 6px 50px 6px 10px
       .svg &
         padding-right: 40px
       +breakpoint($bp-tablet-port-max)
@@ -101,7 +103,7 @@
     border: none
     display: inline-block
     float: right
-    height: 33px
+    height: 55px
     overflow: hidden
     padding: 0
     text-indent: 1000px
