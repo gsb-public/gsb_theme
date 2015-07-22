@@ -133,6 +133,12 @@
     @extend %divider-bottom
     margin-bottom: 26px
     padding-bottom: $standard-padding
+    // Hide duplicate title
+    .group-wrapper-position,
+    .person-area,
+    .field-name-field-title-position-unlimited,
+    .field-name-field-company-organization
+      display: none
     // Speaker description
     .field-name-field-description
       font-size: 18px
@@ -155,6 +161,7 @@
       &:hover
         color: $link-blue
     // Names styling
+    .field-name-alumni-name-degree-linked,
     .field-name-title,
     h3,
     .field-name-field-link-single
