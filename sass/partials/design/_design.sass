@@ -1,17 +1,18 @@
-// GENERAL STYLES
+// Global styling
 
-// HEADER REGION
+// Header region
 #header-wrapper
   +breakpoint($bp-wide-min)
     border-top: 10px $red-dark solid
   #header
-    margin: 0 auto
-    max-width: $max-width
+    +breakpoint(1200px min-width)
+      margin: 0 auto
+      max-width: $max-width
 
-// LOGO
+// Logo
 #logo
   display: inline-block
-  margin-top: 36px
+  margin-top: 23px
   img
     display: none
   .svg &
@@ -24,19 +25,21 @@
     background-size: 100%
     height: 80px
     width: 286px
-  +breakpoint(1210px max-width)
-    margin-left: 20px
+  +breakpoint(1199px max-width)
+    margin-left: 15px
   +breakpoint(1160px max-width)
     .svg &, .no-js &, .no-svg &
       background-size: 100%
       height: 35px
-      margin: 10px
+      margin: 10px 10px 0 15px
+      position: absolute
       width: 120px
   +breakpoint(999px max-width)
     .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
-      margin-left: 65px
+      margin: 10px 10px 0 60px
+      position: relative
       width: 100px
     .page-insights &, .page-404 &
       margin-left: 15px !important
@@ -46,10 +49,25 @@
   font-size: 22px
   float: right
   line-height: 3
-  +breakpoint(1210px max-width)
-    padding-right: 20px
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(1199px max-width)
+    margin-right: 15px
+  +breakpoint(1160px max-width)
     display: none
+
+// Navigation
+#navigation
+  +breakpoint(1199px max-width)
+    margin-right: 15px
+  +breakpoint($bp-wide-min)
+    float: right
+    position: relative
+    top: -10px
+    margin-bottom: -10px
+    min-width: 842px
+  .section
+    +breakpoint($bp-tablet-port-max)
+      border-bottom: 10px solid $red
+      +box-shadow($black 0 -1px 3px)
 
 // Content wrapper
 #content-wrapper
@@ -73,18 +91,17 @@
       +box-shadow(0 0 0 rgba($black, 0) inset)
 
 #content
-  margin: 0 auto
-  max-width: $max-width
+  +breakpoint(1200px min-width)
+    margin: 0 auto
+    max-width: $max-width
   .page-events &
     max-width: 100%
 
 // Main region
 #main
   padding: 30px 0
-  +breakpoint(1210px max-width)
-    padding: 20px
-  +breakpoint($bp-mobile-max)
-    padding: 15px
+  +breakpoint(1199px max-width)
+    padding: 30px 15px
   .page-alumni &
     +breakpoint($bp-tablet-port-max)
       margin-top: 30px
