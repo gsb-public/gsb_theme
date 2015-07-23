@@ -436,18 +436,26 @@
   margin-top: 26px;
 }
 .node-event.view-mode-full .field-collection-item-field-event-sponsors {
+  overflow: hidden;
+  *zoom: 1;
   margin-top: 12px;
-  padding-top: 12px;
+  min-height: 95px;
+  padding-top: 18px;
 }
 .node-event.view-mode-full .field-name-field-sponsor {
   display: inline-block;
   font-size: 18px;
   line-height: 1.2;
   margin-right: 18px;
+  min-width: 270px;
 }
 .node-event.view-mode-full .field-name-field-sponsor a {
+  color: #636f00;
   font-size: 18px;
   line-height: 1.2;
+}
+.node-event.view-mode-full .field-name-field-sponsor a:hover {
+  color: #2d6280;
 }
 @media (max-width: 35.5em) {
   .node-event.view-mode-full .field-name-field-sponsor {
