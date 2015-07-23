@@ -296,8 +296,10 @@
 
   .field-collection-item-field-event-sponsors
     @extend %divider-top
+    +clearfix
     margin-top: 12px
-    padding-top: 12px
+    min-height: 95px
+    padding-top: 18px
 
   // Sponsor name
   .field-name-field-sponsor
@@ -305,9 +307,13 @@
     font-size: 18px
     line-height: 1.2
     margin-right: 18px
+    min-width: 270px
     a
+      color: $link-green
       font-size: 18px
       line-height: 1.2
+      &:hover
+        color: $link-blue
     +breakpoint($bp-mobile-max)
       font-size: 16px
       a
