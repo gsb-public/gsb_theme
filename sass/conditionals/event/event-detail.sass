@@ -113,6 +113,9 @@
     line-height: 1.3
     +breakpoint($bp-mobile-max)
       font-size: 16px
+    .field-name-field-event-location-type
+      font-weight: normal
+      margin-bottom: 4px
 
   // Location link to full
   .location-anchor a
@@ -261,6 +264,10 @@
     @extend %divider-top
     margin-top: 26px
     padding-top: $standard-padding
+    // Event type label
+    .field-name-field-event-location-type
+      font-weight: bold
+      margin-bottom: 4px
 
   .field-collection-item-field-event-location
     font-size: 18px
@@ -270,11 +277,6 @@
       font-size: 16px
     &:last-of-type
       margin-bottom: 0
-
-  // Event type label
-  .field-name-field-event-location-type
-    font-weight: bold
-    margin-bottom: 4px
 
   // View map link
   .field-name-field-link-map
