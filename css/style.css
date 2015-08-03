@@ -9214,14 +9214,19 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   min-height: 260px;
 }
 
+#banner {
+  background: -moz-linear-gradient(#756b5a, #766d5f);
+  background: -o-linear-gradient(#756b5a, #766d5f);
+  background: -webkit-linear-gradient(#756b5a, #766d5f);
+  background: linear-gradient(#756b5a, #766d5f);
+  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+  box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
+}
 @media (min-width: 62.5em) {
   #banner {
     overflow: hidden;
     padding: 14px 0 11px;
-  }
-  .page-insights #banner {
-    overflow: visible;
-    padding: 0;
   }
 }
 
@@ -9264,7 +9269,7 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   .banner-title {
     font-size: 100%;
     line-height: 0;
-    padding-left: 20px;
+    padding-left: 15px;
     position: relative;
     top: 28px;
   }
@@ -9274,7 +9279,6 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
     display: table-cell;
     height: 50px;
     line-height: 1;
-    padding-left: 15px;
     top: 2px;
     vertical-align: middle;
     width: 98%;
@@ -9299,12 +9303,7 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
 }
 @media (min-width: 62.5em) and (max-width: 75.625em) {
   .banner-content {
-    padding-left: 20px;
-  }
-}
-@media (max-width: 35.5em) {
-  .page-insights .banner-content {
-    padding-left: 0;
+    padding-left: 15px;
   }
 }
 
@@ -9356,21 +9355,6 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   }
 }
 
-.page-events #banner,
-.page-stanford-gsb-experience #banner,
-.page-faculty-research #banner,
-.page-library #banner,
-.page-newsroom #banner,
-.page-organizations #banner {
-  background: -moz-linear-gradient(#756b5a, #766d5f);
-  background: -o-linear-gradient(#756b5a, #766d5f);
-  background: -webkit-linear-gradient(#756b5a, #766d5f);
-  background: linear-gradient(#756b5a, #766d5f);
-  -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-  box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-}
-
 .page-stanford-gsb-experience #banner,
 .page-faculty-research #banner {
   display: none;
@@ -9380,6 +9364,12 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   .page-faculty-research #banner {
     display: block;
   }
+}
+
+.page-insights #banner {
+  background: #231f20;
+  overflow: visible;
+  padding: 0;
 }
 
 .page-alumni #banner {

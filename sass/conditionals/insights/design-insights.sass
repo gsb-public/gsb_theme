@@ -122,8 +122,6 @@ h2.insights-label
 
 .page-insights
   // Insights general styling
-  #banner
-    background: $text-black
   #content-wrapper
     background: $white
   .insights-card-wrapper
@@ -135,6 +133,8 @@ h2.insights-label
   margin-right: 20px
   position: relative
   top: 14px
+  +breakpoint($bp-tablet-port-max)
+    padding-left: 15px
   +breakpoint(999px max-width)
     span
       display: none
