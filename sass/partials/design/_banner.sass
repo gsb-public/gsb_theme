@@ -1,12 +1,11 @@
 // Banner region
 
 #banner
+  +background(linear-gradient(#756b5a, $grey-dark))
+  +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
   +breakpoint($bp-tablet-land-min)
     overflow: hidden
     padding: 14px 0 11px
-    .page-insights &
-      overflow: visible
-      padding: 0
 
 // Banner title and subtitles
 .banner-title,
@@ -34,14 +33,13 @@
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
-    padding-left: 20px
+    padding-left: 15px
     position: relative
     top: 28px
   +breakpoint($bp-mobile-max)
     display: table-cell
     height: 50px
     line-height: 1
-    padding-left: 15px
     top: 2px
     vertical-align: middle
     width: 98%
@@ -58,10 +56,7 @@
   max-width: $max-width
   position: relative
   +breakpoint(1210px 1000px)
-    padding-left: 20px
-  .page-insights &
-    +breakpoint($bp-mobile-max)
-      padding-left: 0
+    padding-left: 15px
 
 // Banner breadcrumbs
 #block-gsb-public-custom-blocks-gpcb-breadcrumbs
@@ -83,9 +78,9 @@
       border-bottom: 2px solid $white
       text-decoration: none
 
-// Page-specific styling of banner
+// Section-specific styling of banner
 
-// Programs
+// Programs (blue)
 .page-programs
   #banner
     +background(linear-gradient(#4c697a, $blue))
@@ -94,24 +89,13 @@
     +breakpoint(999px max-width)
       min-height: 50px
 
-// Events
+// Events (taupe)
 .page-events
   .banner-title
     +breakpoint(999px max-width)
       min-height: 50px
 
-// Stanford GSB Experience, Faculty & Research, Library, Newsroom, Organizations, Events
-.page-events,
-.page-stanford-gsb-experience,
-.page-faculty-research,
-.page-library,
-.page-newsroom,
-.page-organizations
-  #banner
-    +background(linear-gradient(#756b5a, $grey-dark))
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-
-// No banner on desktop for Stanford GSB Experience, Faculty & Research
+// No banner on desktop for Stanford GSB Experience, Faculty & Research (taupe)
 .page-stanford-gsb-experience,
 .page-faculty-research
   #banner
@@ -119,7 +103,14 @@
     +breakpoint($bp-tablet-port-max)
       display: block
 
-// Alumni
+// Insights (black)
+.page-insights
+  #banner
+    background: $text-black
+    overflow: visible
+    padding: 0
+
+// Alumni (red)
 .page-alumni
   #banner
     background: #b00000
