@@ -138,11 +138,10 @@
 
     // Pane title
     .pane-title
-      color: $red
       font-family: $font-sans
       font-size: 16px
       font-weight: bold
-      line-height: 1
+      line-height: 1.2
       margin-bottom: 26px
       a
         +icon-after("arrow-double-right", true)
@@ -168,27 +167,17 @@
     .views-field-title
       line-height: 0
       a
-        border: 0
-        color: $text-black
         font-family: $font-demi
         font-weight: normal
-        line-height: 1.1
-        +icon-after("arrow-double-right", true)
-        &:after
-          color: #bac405
-          font-size: 12px
-          margin-left: 3px
-        &:hover
-          color: $link-blue
-          &:after
-            color: $teal-light
+        line-height: 1.2
 
     // Date
     .views-field-field-event-date
       color: #595959
       font-size: 14px
 
-    // Address
+    // Location type and Address
+    .views-field-field-event-location-type,
     .views-field-field-address
       color: $text-black
       font-size: 14px
