@@ -49,3 +49,13 @@
     .field-name-field-title
       @extend %black-border-top
       padding-top: 12px
+
+  // Unstyled container
+  .unstyled
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+      &:after
+        &:hover
+          color: $teal-light
