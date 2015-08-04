@@ -154,33 +154,38 @@
           &:after
             color: $teal-light
 
-    .views-field-field-event-date,
-    .views-field-title,
-    .views-field-field-address
-      line-height: 1.2
-      margin-bottom: 4px
-      +breakpoint($bp-tablet-port-max)
-        & > div
-          display: inline
-
-    // Event title
-    .views-field-title
-      line-height: 0
-      a
-        font-family: $font-demi
-        font-weight: normal
+    .view-mode-compact
+      .field-name-field-event-date,
+      .field-name-title,
+      .field-name-field-event-location
+        font-size: 14px
         line-height: 1.2
+        margin-bottom: 4px
+        +breakpoint($bp-tablet-port-max)
+          & > div
+            display: inline
 
-    // Date
-    .views-field-field-event-date
-      color: #595959
-      font-size: 14px
+      // Event title
+      .field-name-title h2
+        line-height: 0
+        a
+          font-family: $font-demi
+          font-size: 16px
+          font-weight: normal
+          line-height: 1.2
 
-    // Location type and Address
-    .views-field-field-event-location-type,
-    .views-field-field-address
-      color: $text-black
-      font-size: 14px
+      // Date
+      .field-name-field-event-date
+        color: #595959
+
+      // Location type and Address
+      .field-name-field-event-location-type,
+      .field-name-field-address
+        color: $text-black
+        font-family: $font-sans
+        font-size: 14px
+        line-height: 1.2
+        margin-top: 0
 
   // Bottom section
   #bottom .block-block
