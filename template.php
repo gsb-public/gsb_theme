@@ -16,7 +16,8 @@ function gsb_theme_date_all_day_label($variables) {
  * Overrides theme_date_display_range().
  */
 function gsb_theme_date_display_range($variables) {
-  return $variables['date1'] . ' - ' . $variables['date2'];
+  return $variables['date1'] . ' – ' . $variables['date2'];
+  return $variables['time1'] . ' – ' . $variables['time2'];
 }
 
 /**
