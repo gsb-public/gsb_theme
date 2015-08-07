@@ -7,7 +7,9 @@ $plugin = array(
   'theme' => 'gsb-landing-events',
   'css' => 'gsb-landing-events.css',
   'regions' => array(
-    'main' => t('Content Main Column'),
-    'sidebar' => t('Content Sidebar'),
+    'featured_event' => t('Featured Event'),
+    'main' => t('Main Event Listing'),
+    'quicklinks' => t('Quick Links'),
+    'sidebar' => t('Sidebar'),
   ),
 );
