@@ -83,7 +83,7 @@
               <a id="nav-touch-button"></a>
               <div id="navigation"><div class="section">
                   <?php print render($page['navigation']); ?>
-                  <?php print render($event_and_search); ?>
+                  <?php print render($global_search); ?>
                   <div id="menu-main-footer">
                     <?php
                     $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
