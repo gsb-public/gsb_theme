@@ -2835,6 +2835,9 @@ div.label-inline {
   }
 }
 
+.js #navigation, #navigation.search-closed {
+  min-width: 687px;
+}
 @media (max-width: 74.9375em) {
   #navigation {
     margin-right: 15px;
@@ -2846,6 +2849,8 @@ div.label-inline {
     position: relative;
     top: -10px;
     margin-bottom: -10px;
+  }
+  #navigation.search-open {
     min-width: 842px;
   }
 }
@@ -4513,6 +4518,12 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     float: left;
     height: 0;
     margin-top: 10px;
+    width: 200px;
+  }
+  .js .global-search {
+    width: auto;
+  }
+  .js .search-open .global-search {
     width: 200px;
   }
 }
@@ -7332,12 +7343,15 @@ ul.slideshow-items {
   margin-top: 0;
   margin-bottom: 0;
 }
+.search-closed #google-appliance-block-form .form-item, .search-closed
+#google-appliance-block-form--2 .form-item {
+  display: none;
+}
 #google-appliance-block-form .form-item .form-text,
 #google-appliance-block-form--2 .form-item .form-text {
   color: #231f20;
   font-size: 16px;
   width: 100%;
-  border: 1px lightgray solid;
   background: #f4f4f4;
   line-height: 1;
   padding: 6px 50px 6px 10px;
@@ -7366,7 +7380,8 @@ ul.slideshow-items {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  border: none;
+  border: 1px lightgray solid;
+  border-left: 0;
   display: inline-block;
   float: right;
   height: 55px;
@@ -7383,18 +7398,12 @@ ul.slideshow-items {
 }
 .svg #google-appliance-block-form .form-submit, .svg
 #google-appliance-block-form--2 .form-submit {
-  background: url('../images/search.svg') no-repeat center;
+  background: url('../images/search.svg') no-repeat center, #f4f4f4;
   background-size: 170%;
-}
-@media (max-width: 35.5em) {
-  .svg #google-appliance-block-form .form-submit, .svg
-  #google-appliance-block-form--2 .form-submit {
-    margin-top: 5px;
-  }
 }
 .svg #google-appliance-block-form .form-submit:hover, .svg
 #google-appliance-block-form--2 .form-submit:hover {
-  background: url('../images/search-hover.svg') no-repeat center;
+  background: url('../images/search-hover.svg') no-repeat center, #f4f4f4;
   background-size: 170%;
 }
 .no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit, .no-js

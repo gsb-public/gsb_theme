@@ -56,6 +56,9 @@
 
 // Navigation
 #navigation
+  .js &,
+  &.search-closed
+    min-width: 687px
   +breakpoint(1199px max-width)
     margin-right: 15px
   +breakpoint($bp-wide-min)
@@ -63,7 +66,9 @@
     position: relative
     top: -10px
     margin-bottom: -10px
-    min-width: 842px
+    .no-js &
+    &.search-open,
+      min-width: 842px
   .section
     +breakpoint($bp-tablet-port-max)
       border-bottom: 10px solid $red

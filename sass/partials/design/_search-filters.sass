@@ -72,6 +72,11 @@
   input
     height: 55px
   .form-item
+    .search-closed &
+      display: none
+    .no-js &,
+    .js .search-open &
+      display block
     float: left
     width: 100%
     margin-right: -46px
@@ -81,7 +86,6 @@
       color: $text-black
       font-size: 16px
       width: 100%
-      border: 1px $border-grey solid
       background: #f4f4f4
       line-height: 1
       padding: 6px 50px 6px 10px
@@ -100,7 +104,8 @@
     -moz-border-radius: 0
     -ms-border-radius: 0
     border-radius: 0
-    border: none
+    border: 1px $border-grey solid
+    border-left: 0
     display: inline-block
     float: right
     height: 55px
@@ -111,12 +116,10 @@
     +breakpoint($bp-tablet-port-max)
       height: 50px
     .svg &
-      background: image_url("search.svg") no-repeat center
+      +background((image_url("search.svg") no-repeat center), #f4f4f4)
       background-size: 170%
-      +breakpoint($bp-mobile-max)
-        margin-top: 5px
       &:hover
-        background: image_url("search-hover.svg") no-repeat center
+        +background((image_url("search-hover.svg") no-repeat center), #f4f4f4)
         background-size: 170%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 6px transparent
