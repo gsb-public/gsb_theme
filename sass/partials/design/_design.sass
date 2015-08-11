@@ -1,9 +1,10 @@
 // Global styling
+$top-border-interval: 6px
 
 // Header region
 #header-wrapper
   +breakpoint($bp-wide-min)
-    border-top: 10px $red-dark solid
+    border-top: $top-border-interval $red-dark solid
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
@@ -14,7 +15,7 @@
 // Logo
 #logo
   display: inline-block
-  margin-top: 23px
+  margin-top: 29px
   img
     display: none
   .svg &
@@ -52,7 +53,8 @@
 #site-slogan
   font-size: 22px
   float: right
-  line-height: 3
+  line-height: 3.4
+  margin-top: 4px
   +breakpoint(1199px max-width)
     margin-right: 15px
   +breakpoint(1160px max-width)
@@ -70,8 +72,8 @@
   +breakpoint($bp-wide-min)
     float: right
     position: relative
-    top: -10px
-    margin-bottom: -10px
+    top: -$top-border-interval
+    margin-bottom: -$top-border-interval
     .no-js &,
     &.search-open,
       min-width: 842px
