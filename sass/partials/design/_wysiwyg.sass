@@ -5,13 +5,35 @@
   font-size: 24px !important
   line-height: 1.4 !important
 
-// Captions
-.caption-left
+// Image with Caption
+
+// Fit caption to the width of any image
+// From https://gist.github.com/hucklesby/7049507
+figure.caption-left,
+figure.caption-right
+  display: table
+  margin-bottom: 8px
+  table-layout: fixed
+  img
+    margin: 0 !important
+    width: 100%
+  figcaption
+    caption-side: bottom
+    color: #595959
+    display: table-caption
+    font-size: 14px
+    line-height: 1.2
+    margin-top: 8px
+
+// Aligned to left
+figure.caption-left
   float: left
-  margin: 4px 16px 4px 0
-.caption-right
+  margin-right: 20px
+
+// Aligned to right
+figure.caption-right
   float: right
-  margin: 4px 0 4px 16px
+  margin-left: 20px
 
 // Callout
 div.callout

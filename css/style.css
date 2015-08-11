@@ -2850,7 +2850,7 @@ div.label-inline {
     top: -10px;
     margin-bottom: -10px;
   }
-  #navigation.search-open {
+  .no-js #navigation, #navigation.search-open {
     min-width: 842px;
   }
 }
@@ -4520,7 +4520,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
     margin-top: 10px;
     width: 200px;
   }
-  .js .global-search {
+  .search-closed .global-search, .js .global-search {
     width: auto;
   }
   .js .search-open .global-search {
@@ -11352,14 +11352,35 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
   line-height: 1.4 !important;
 }
 
-.caption-left {
-  float: left;
-  margin: 4px 16px 4px 0;
+figure.caption-left,
+figure.caption-right {
+  display: table;
+  margin-bottom: 8px;
+  table-layout: fixed;
+}
+figure.caption-left img,
+figure.caption-right img {
+  margin: 0 !important;
+  width: 100%;
+}
+figure.caption-left figcaption,
+figure.caption-right figcaption {
+  caption-side: bottom;
+  color: #595959;
+  display: table-caption;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 8px;
 }
 
-.caption-right {
+figure.caption-left {
+  float: left;
+  margin-right: 20px;
+}
+
+figure.caption-right {
   float: right;
-  margin: 4px 0 4px 16px;
+  margin-left: 20px;
 }
 
 div.callout {
