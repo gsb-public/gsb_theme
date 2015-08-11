@@ -79,7 +79,7 @@
       display block
     float: left
     width: 100%
-    margin-right: -46px
+    margin-right: -60px
     margin-top: 0
     margin-bottom: 0
     .form-text
@@ -88,16 +88,15 @@
       width: 100%
       background: #f4f4f4
       line-height: 1
-      padding: 6px 50px 6px 10px
-      .svg &
-        padding-right: 40px
+      padding: 6px 60px 6px 10px
       +breakpoint($bp-tablet-port-max)
         height: 50px
-        padding: 15px 50px 15px 10px
+        padding: 15px 0px 15px 10px
   .page-insights &
     +breakpoint(999px max-width)
       display: none
 
+  // Submit button
   .form-submit
     background: transparent
     -webkit-border-radius: 0
@@ -112,19 +111,17 @@
     overflow: hidden
     padding: 0
     text-indent: 1000px
-    width: 45px
+    width: 60px
     +breakpoint($bp-tablet-port-max)
       height: 50px
     .svg &
       +background((image_url("search.svg") no-repeat center), #f4f4f4)
-      background-size: 170%
+      background-size: 150%
       &:hover
         +background((image_url("search-hover.svg") no-repeat center), #f4f4f4)
-        background-size: 170%
+        background-size: 150%
     .no-js &, .no-svg &
-      background: image_url("search.png") no-repeat center 6px transparent
-      &:hover
-        background-position: center -27px
+      background: image_url("search.png") no-repeat center 20px transparent
 
 // General search results page search input
 #google-appliance-search-form,

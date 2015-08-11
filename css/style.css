@@ -2772,6 +2772,9 @@ div.label-inline {
     max-width: 1170px;
   }
 }
+.no-js #header-wrapper #header {
+  position: relative;
+}
 
 #logo {
   display: inline-block;
@@ -2790,6 +2793,7 @@ div.label-inline {
   background: url('../images/logo-2015-05-26-1.png') no-repeat;
   background-size: 100%;
   height: 80px;
+  margin: 26px 0;
   width: 286px;
 }
 @media (max-width: 74.9375em) {
@@ -2834,9 +2838,12 @@ div.label-inline {
     display: none;
   }
 }
+.no-js #site-slogan {
+  display: none;
+}
 
 .js #navigation, #navigation.search-closed {
-  min-width: 687px;
+  min-width: 702px;
 }
 @media (max-width: 74.9375em) {
   #navigation {
@@ -7339,7 +7346,7 @@ ul.slideshow-items {
 #google-appliance-block-form--2 .form-item {
   float: left;
   width: 100%;
-  margin-right: -46px;
+  margin-right: -60px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -7354,17 +7361,13 @@ ul.slideshow-items {
   width: 100%;
   background: #f4f4f4;
   line-height: 1;
-  padding: 6px 50px 6px 10px;
-}
-.svg #google-appliance-block-form .form-item .form-text, .svg
-#google-appliance-block-form--2 .form-item .form-text {
-  padding-right: 40px;
+  padding: 6px 60px 6px 10px;
 }
 @media (max-width: 62.4375em) {
   #google-appliance-block-form .form-item .form-text,
   #google-appliance-block-form--2 .form-item .form-text {
     height: 50px;
-    padding: 15px 50px 15px 10px;
+    padding: 15px 0px 15px 10px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -7388,7 +7391,7 @@ ul.slideshow-items {
   overflow: hidden;
   padding: 0;
   text-indent: 1000px;
-  width: 45px;
+  width: 60px;
 }
 @media (max-width: 62.4375em) {
   #google-appliance-block-form .form-submit,
@@ -7399,22 +7402,17 @@ ul.slideshow-items {
 .svg #google-appliance-block-form .form-submit, .svg
 #google-appliance-block-form--2 .form-submit {
   background: url('../images/search.svg') no-repeat center, #f4f4f4;
-  background-size: 170%;
+  background-size: 150%;
 }
 .svg #google-appliance-block-form .form-submit:hover, .svg
 #google-appliance-block-form--2 .form-submit:hover {
   background: url('../images/search-hover.svg') no-repeat center, #f4f4f4;
-  background-size: 170%;
+  background-size: 150%;
 }
 .no-js #google-appliance-block-form .form-submit, .no-svg #google-appliance-block-form .form-submit, .no-js
 #google-appliance-block-form--2 .form-submit, .no-svg
 #google-appliance-block-form--2 .form-submit {
-  background: url('../images/search.png') no-repeat center 6px transparent;
-}
-.no-js #google-appliance-block-form .form-submit:hover, .no-svg #google-appliance-block-form .form-submit:hover, .no-js
-#google-appliance-block-form--2 .form-submit:hover, .no-svg
-#google-appliance-block-form--2 .form-submit:hover {
-  background-position: center -27px;
+  background: url('../images/search.png') no-repeat center 20px transparent;
 }
 
 #google-appliance-search-form,

@@ -8,6 +8,8 @@
     +breakpoint(1200px min-width)
       margin: 0 auto
       max-width: $max-width
+    .no-js &
+      position: relative
 
 // Logo
 #logo
@@ -20,10 +22,12 @@
     background-size: 96.8%
     height: 76px
     width: 275px
-  .no-js &, .no-svg &
+  .no-js &,
+  .no-svg &
     background: image_url("logo-2015-05-26-1.png") no-repeat
     background-size: 100%
     height: 80px
+    margin: 26px 0
     width: 286px
   +breakpoint(1199px max-width)
     margin-left: 15px
@@ -53,12 +57,14 @@
     margin-right: 15px
   +breakpoint(1160px max-width)
     display: none
+  .no-js &
+    display: none
 
 // Navigation
 #navigation
   .js &,
   &.search-closed
-    min-width: 687px
+    min-width: 702px
   +breakpoint(1199px max-width)
     margin-right: 15px
   +breakpoint($bp-wide-min)
