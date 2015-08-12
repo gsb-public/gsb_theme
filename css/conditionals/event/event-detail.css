@@ -208,16 +208,26 @@
 }
 .node-event.view-mode-full .time {
   display: inline-block;
-  margin-right: 5px;
 }
 .node-event.view-mode-full .field-name-field-time-zone {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.3;
+  margin-left: 5px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-field-time-zone {
+    font-size: 16px;
+  }
 }
 .node-event.view-mode-full .field-name-find-local-time .pipe {
   font-size: 18px;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .field-name-find-local-time .pipe {
+    font-size: 16px;
+  }
 }
 .node-event.view-mode-full .find-time {
   color: #636f00;
@@ -231,6 +241,11 @@
 }
 .node-event.view-mode-full .find-time:hover:after {
   color: #aac4bf;
+}
+@media (max-width: 35.5em) {
+  .node-event.view-mode-full .find-time {
+    font-size: 16px;
+  }
 }
 .node-event.view-mode-full .field-name-title {
   margin-bottom: 18px;
