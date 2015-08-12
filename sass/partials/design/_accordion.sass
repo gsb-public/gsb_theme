@@ -33,22 +33,21 @@
 // Accordion item styling
 .acc-title
   +clearfix
-  border-top: 2px #e1e5e4 solid
+  @extend %divider-top
   cursor: pointer
-  font-size: 20px
-  font-family: $font-demi
+  font-size: 18px
+  font-weight: bold
   line-height: 1.2
   margin-bottom: 0
   margin-left: 0
-  padding: 8px 0 8px 36px
+  padding: 16px 0 12px 36px
   +icon-before("plus", true)
   &:before
     color: $red
-    font-size: 18px
+    font-size: 16px
     float: left
     position: relative
     left: -36px
-    top: 1px
     width: 0
   &:hover
     color: $link-blue
