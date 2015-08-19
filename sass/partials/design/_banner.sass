@@ -103,6 +103,17 @@
     +breakpoint($bp-tablet-port-max)
       display: block
 
+// CIRCLE
+.page-faculty-research.page-faculty-research-centers-initiatives
+  #banner
+    display: block
+  // Hide on Centers & Research Initiatives landing desktop
+  &.page-node-309826
+    #banner
+      display: none
+      +breakpoint($bp-tablet-port-max)
+        display: block
+
 // Insights (black)
 .page-insights
   #banner
