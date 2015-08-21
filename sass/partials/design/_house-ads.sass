@@ -1,12 +1,7 @@
-// House Ads
+// House Ads and Video FPP
 
-.pane-bundle-house-ads
-  @extend %bg-and-box-shadow
-  padding: $standard-padding
-
-  .group-left
-    position: relative
-    top: 0
+.pane-bundle-house-ads,
+.pane-bundle-video
 
   // Superhead - optional
   .field-name-field-house-ads-superhead
@@ -29,21 +24,16 @@
       +breakpoint(1170px max-width)
         position: relative
 
-  // Image
-  .field-name-field-image-single-public
-    margin-bottom: 26px
-    .page-insights &
-      +breakpoint(1170px max-width)
-        display: none
-    > img
-      vertical-align: top
-
   // Title
-  .field-name-field-link-single
+  .field-name-field-link-single,
+  .field-name-field-title
+    color: $text-black
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
     a
       color: $text-black
       font-weight: bold
-      font-size: 22px
       line-height: 1.2
       .page-insights &
         +breakpoint(1170px max-width)
@@ -59,85 +49,3 @@
         color: $link-blue
         &:after
           color: $teal-light
-
-  // Description
-  .field-name-field-body
-    margin: 12px 0
-    overflow: hidden
-    p
-      font-size: 16px
-      line-height: 1.2
-      margin-bottom: 0
-
-  // Show more
-  .show-more
-    @extend %show-more-link
-
-// Responsive
-.wide-view,
-.narrow-view
-  .pane-bundle-house-ads
-    +clearfix
-    .field-name-field-image-single-public
-      float: left
-      margin-right: 26px
-      +breakpoint(479px max-width)
-        margin-right: 0
-    +breakpoint($bp-tablet-port-max)
-      .field-name-field-body,
-      .field-name-field-link-single
-        clear: both
-
-// Narrow view styling
-.inner-sidebar-wrapper .narrow-view
-  .pane-bundle-house-ads
-    +breakpoint(610px min-width)
-      padding: 0 0 $standard-padding 0
-      .field-name-field-image-single-public
-        float: none
-        margin-right: 0
-      .field-name-field-link-single,
-      .field-name-field-body
-        padding: 0 $standard-padding
-      .field-name-field-image-single-public,
-      .field-name-field-link-single,
-      .field-name-field-body
-        clear: both
-      .show-more
-        padding-right: $standard-padding
-
-.main-middle .narrow-view
-  .pane-bundle-house-ads
-    +breakpoint(768px 610px)
-      margin-right: 0
-    +breakpoint(1211px min-width)
-      padding: 0 0 $standard-padding 0
-      .field-name-field-image-single-public
-        float: none
-        margin-right: 0
-      .field-name-field-link-single,
-      .field-name-field-body
-        padding: 0 $standard-padding
-      .field-name-field-image-single-public,
-      .field-name-field-link-single,
-      .field-name-field-body
-        clear: both
-      .show-more
-        padding-right: $standard-padding
-
-// Wide view Insights
-.page-insights .wide-view .pane-bundle-house-ads
-  +breakpoint($max-width max-width)
-    padding: 0
-    padding-bottom: $standard-padding
-    .field-name-field-link-single,
-    .field-name-field-body
-      padding: 0 $standard-padding
-    .field-name-field-image-single-public,
-    .field-name-field-link-single,
-    .field-name-field-body
-      clear: both
-      +breakpoint($bp-mobile-max)
-        clear: none
-    .show-more
-      padding-right: $standard-padding

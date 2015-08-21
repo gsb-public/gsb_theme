@@ -2,15 +2,10 @@
 
 $bp-video: 627px min-width
 
+// Video FPP
 .pane-bundle-video,
 .node-gsb-video
-  .gsb-image-video-popup
-    margin-bottom: 26px
-    .wide-view &
-      +breakpoint(768px min-width)
-        margin-bottom: 0
   .gsb-responsive-preview
-    margin-bottom: 17px
     position: relative
     .content img
       display: block
@@ -22,28 +17,6 @@ $bp-video: 627px min-width
     clear: both
     .content div
       margin: 0 auto
-
-// Video fpp
-.pane-bundle-video
-  @extend %bg-and-box-shadow
-  padding: $standard-padding
-  +clearfix
-
-  // Title
-  .field-name-field-title
-    color: $text-black
-    font-size: 22px
-    font-weight: bold
-    line-height: 1.2
-    margin-bottom: 12px
-
-  // Description
-  .field-name-field-body
-    font-size: 16px
-    line-height: 1.2
-    margin: 12px 0
-    max-width: 600px
-    overflow: hidden
 
 // Videos in slideshows
 .full-view .slideshow-cta
@@ -68,14 +41,8 @@ $bp-video: 627px min-width
 
 // Main video responsive play button and width
 .gsb-image-video-popup
-  margin-right: 26px
   max-width: 270px
-  +breakpoint(768px 569px)
-    margin-right: 0
-  +breakpoint($bp-mobile-480)
-    margin-right: 0
   .slideshow-slide &
-    margin-right: 0px
     max-width: 627px
 
   a.fancybox

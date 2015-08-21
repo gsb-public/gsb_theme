@@ -90,11 +90,18 @@ div.label-inline
     display: block
 
 // Display Suite
-// Video, spotlight, house ad fpp
-.pane-bundle-video,
-.pane-bundle-house-ads
+// House Ad, Spotlight, and Video FPP
+.pane-bundle-house-ads,
+.pane-bundle-spotlight,
+.pane-bundle-video
+  @extend %bg-and-box-shadow
+  padding: $standard-padding
+
+  // Layout
   .ds-2col
     .group-left
+      position: relative
+      top: 0
       width: 58%
     .group-right
       width: 42%
@@ -121,18 +128,78 @@ div.label-inline
           float: none
           width: 100%
 
-.pane-bundle-spotlight
-  .ds-2col-stacked
-    .group-left,
-    .group-right
-      +breakpoint(768px 569px)
+  // Image
+  .field-name-field-image-single-public,
+  .gsb-image-video-popup,
+  .field-name-field-spotlight-person-fid,
+  .field-name-field-use-profile-img,
+  .field-name-field-file-single-public
+    margin-bottom: 26px
+    .page-insights &
+      +breakpoint(1170px max-width)
+        display: none
+    > img
+      vertical-align: top
+
+  // Description
+  .field-name-field-body
+    font-size: 16px
+    line-height: 1.2
+    margin: 12px 0
+    overflow: hidden
+    p
+      font-size: 16px
+      line-height: 1.2
+      margin-bottom: 0
+
+  // Show more
+  .show-more
+    @extend %show-more-link
+
+// Responsive implementation
+.wide-view,
+.narrow-view
+  .pane-bundle-house-ads,
+  .pane-bundle-spotlight,
+  .pane-bundle-video
+    +clearfix
+    .group-left
+      float: left
+
+// Narrow view styling
+.inner-sidebar-wrapper .narrow-view
+  .pane-bundle-house-ads,
+  .pane-bundle-spotlight,
+  .pane-bundle-video
+    .group-left
+      margin-bottom: 26px
+    +breakpoint(568px min-width)
+      padding: 0 0 $standard-padding 0
+      .group-left
         float: none
-        width: 100%
-      +breakpoint($bp-mobile-480)
-        float: none
-        width: 100%
-      .narrow-view &
-        float: none
-        width: 100%
-    .group-right
-      +clearfix
+        margin-right: 0
+      .group-right
+        padding: 0 $standard-padding
+      .group-left,
+      .group-right
+        clear: both
+      .show-more
+        padding-right: $standard-padding
+
+// Wide view Insights
+.page-insights .wide-view
+  .pane-bundle-house-ads,
+  .pane-bundle-spotlight,
+  .pane-bundle-video
+    +breakpoint($max-width max-width)
+      padding: 0
+      padding-bottom: $standard-padding
+      .group-right
+        padding: 0 $standard-padding
+      .group-left,
+      .group-right
+        clear: both
+        +breakpoint($bp-mobile-max)
+          clear: none
+      .show-more
+        padding-right: $standard-padding

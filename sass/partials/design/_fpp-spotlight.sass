@@ -1,33 +1,24 @@
-///////////////////
-// SPOTLIGHT FPP
-///////////////////
+// Spotlight FPP
 
 .pane-bundle-spotlight
-  @extend %bg-border-and-box-shadow
-  position: relative
-  padding: 0 $standard-padding 20px
+  .group-right
+    position: relative
 
-  .spotlight-border
-    position: absolute
-    top: 0
-    left: 25px
-    display: block
-    width: 95px
-    height: 10px
-    background: $red
+  // Spotlight superhead
   .feature-spotlight-label
-    border-top: 10px solid $red
-    color: $text-black
-    font-size: 14px
-    display: inline-block
-    line-height: 18px
-    margin-bottom: 18px
-    padding-top: 5px
+    @extend %superhead-black
+
+  // Image adjustment for superhead
+  .gsb-image-video-popup,
+  .field-name-field-spotlight-person-fid,
+  .field-name-field-use-profile-img,
+  .field-name-field-file-single-public
 
   // Name styling
   .group-name-wrapper
     color: $black
     a
+      color: $link-green
       display: block
     .field
       display: inline
@@ -36,20 +27,6 @@
       line-height: 26px
       margin-right: 5px
 
-  // Image styling
-  .field-name-field-spotlight-person-fid,
-  .field-name-field-use-profile-img,
-  .field-name-field-file-single-public
-    clear: both
-    img
-      padding-bottom: 12px
-      width: 100%
-      height: auto
-      max-width: 100%
-    .field-items
-      float: left
-      max-width: 100%
-
   .field-name-field-sections
     display: none
 
@@ -57,9 +34,9 @@
   .field-name-field-title-position-single,
   .field-name-field-program-single,
   .field-name-field-year
+    font-family: $font-demi
     font-size: 16px
     line-height: 1.2
-    font-family: $font-demi
 
   // Program
   .field-name-field-program-single
@@ -71,70 +48,10 @@
   .field-name-field-year
     padding-top: 5px
 
+  // Program and year
   .field-name-field-program-single,
   .field-name-field-year
     color: $grey-dark
 
-  // Description
-  .field-name-field-body
-    margin: 14px 0
-    overflow: hidden
-    p
-      font-size: 16px
-      line-height: 1.2
-      margin-bottom: 0
-
-  // Show more
-  .show-more
-    @extend %show-more-link
-
   .field-name-field-gsb-spotlight-image-video
     overflow: hidden
-
-
-// Clearfixes in wide and middle
-.full-view,
-.wide-view
-  .pane-bundle-spotlight
-    .group-name-wrapper
-      +clearfix
-    .gsb-responsive-main,
-    .gsb-responsive-preview .file-video,
-    .field-name-field-spotlight-person-fid .field-items
-      margin-right: 26px
-      max-width: 270px
-      +breakpoint($bp-mobile-480)
-        max-width: 100%
-
-// Clear the image/video on full and wide modes
-.full-view
-  .pane-bundle-spotlight
-    +clearfix
-    +breakpoint($bp-mobile-480)
-      .group-name-wrapper
-        +pie-clearfix
-      .group-name-wrapper,
-      .field-name-field-body,
-      .field-name-field-title-position-single
-        clear: both
-
-.wide-view
-  .pane-bundle-spotlight
-    +clearfix
-    +breakpoint($bp-tablet-port-max)
-      .group-name-wrapper
-        +pie-clearfix
-      .group-name-wrapper,
-      .field-name-field-body,
-      .field-name-field-title-position-single
-        clear: both
-
-// Clearfixes in narrow
-.narrow-view
-  .pane-bundle-spotlight
-    .group-name-wrapper
-      +pie-clearfix
-    .group-name-wrapper,
-    .field-name-field-body,
-    .field-name-field-title-position-single
-      clear: both
