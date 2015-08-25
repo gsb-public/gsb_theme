@@ -420,7 +420,8 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
   color: white;
 }
 
-.pane-bundle-spotlight .feature-spotlight-label, .pane-bundle-existing-node .featured-label, .pane-bundle-featured-content .field-name-field-related-other-label {
+.pane-bundle-spotlight .feature-spotlight-label, .pane-bundle-house-ads .field-name-field-house-ads-superhead,
+.pane-bundle-video .field-name-field-house-ads-superhead, .pane-bundle-existing-node .featured-label, .pane-bundle-featured-content .field-name-field-related-other-label {
   background: #231f20;
   color: white;
   display: inline-block;
@@ -434,7 +435,8 @@ body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:aft
   z-index: 2;
 }
 @media (max-width: 38.125em) {
-  .pane-bundle-spotlight .feature-spotlight-label, .pane-bundle-existing-node .featured-label, .pane-bundle-featured-content .field-name-field-related-other-label {
+  .pane-bundle-spotlight .feature-spotlight-label, .pane-bundle-house-ads .field-name-field-house-ads-superhead,
+  .pane-bundle-video .field-name-field-house-ads-superhead, .pane-bundle-existing-node .featured-label, .pane-bundle-featured-content .field-name-field-related-other-label {
     font-size: 13px;
     margin-bottom: 20px;
   }
@@ -2509,74 +2511,27 @@ div.label-inline {
 .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video {
-  padding: 26px;
+  padding: 0 26px 26px;
+}
+.pane-bundle-house-ads .ds-2col,
+.pane-bundle-spotlight .ds-2col,
+.pane-bundle-video .ds-2col {
+  overflow: hidden;
+  *zoom: 1;
 }
 .pane-bundle-house-ads .ds-2col .group-left,
 .pane-bundle-spotlight .ds-2col .group-left,
 .pane-bundle-video .ds-2col .group-left {
-  position: relative;
-  top: 0;
-  width: 58%;
+  float: left;
+  margin-right: 26px;
+  width: auto;
 }
 .pane-bundle-house-ads .ds-2col .group-right,
 .pane-bundle-spotlight .ds-2col .group-right,
 .pane-bundle-video .ds-2col .group-right {
-  width: 42%;
-}
-@media (min-width: 35.5625em) and (max-width: 48em) {
-  .pane-bundle-house-ads .ds-2col .group-left,
-  .pane-bundle-house-ads .ds-2col .group-right,
-  .pane-bundle-spotlight .ds-2col .group-left,
-  .pane-bundle-spotlight .ds-2col .group-right,
-  .pane-bundle-video .ds-2col .group-left,
-  .pane-bundle-video .ds-2col .group-right {
-    float: none;
-    width: 100%;
-  }
-}
-@media (max-width: 30em) {
-  .pane-bundle-house-ads .ds-2col .group-left,
-  .pane-bundle-house-ads .ds-2col .group-right,
-  .pane-bundle-spotlight .ds-2col .group-left,
-  .pane-bundle-spotlight .ds-2col .group-right,
-  .pane-bundle-video .ds-2col .group-left,
-  .pane-bundle-video .ds-2col .group-right {
-    float: none;
-    width: 100%;
-  }
-}
-@media (min-width: 75.6875em) {
-  .main-middle .narrow-view .pane-bundle-house-ads .ds-2col .group-left, .main-middle .narrow-view
-  .pane-bundle-house-ads .ds-2col .group-right, .main-middle .narrow-view
-  .pane-bundle-spotlight .ds-2col .group-left, .main-middle .narrow-view
-  .pane-bundle-spotlight .ds-2col .group-right, .main-middle .narrow-view
-  .pane-bundle-video .ds-2col .group-left, .main-middle .narrow-view
-  .pane-bundle-video .ds-2col .group-right {
-    float: none;
-    width: 100%;
-  }
-}
-@media (min-width: 38.125em) {
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .ds-2col .group-left, .inner-sidebar-wrapper .narrow-view
-  .pane-bundle-house-ads .ds-2col .group-right, .inner-sidebar-wrapper .narrow-view
-  .pane-bundle-spotlight .ds-2col .group-left, .inner-sidebar-wrapper .narrow-view
-  .pane-bundle-spotlight .ds-2col .group-right, .inner-sidebar-wrapper .narrow-view
-  .pane-bundle-video .ds-2col .group-left, .inner-sidebar-wrapper .narrow-view
-  .pane-bundle-video .ds-2col .group-right {
-    float: none;
-    width: 100%;
-  }
-}
-@media (max-width: 73.125em) {
-  .page-insights .wide-view .pane-bundle-house-ads .ds-2col .group-left, .page-insights .wide-view
-  .pane-bundle-house-ads .ds-2col .group-right, .page-insights .wide-view
-  .pane-bundle-spotlight .ds-2col .group-left, .page-insights .wide-view
-  .pane-bundle-spotlight .ds-2col .group-right, .page-insights .wide-view
-  .pane-bundle-video .ds-2col .group-left, .page-insights .wide-view
-  .pane-bundle-video .ds-2col .group-right {
-    float: none;
-    width: 100%;
-  }
+  float: none;
+  position: relative;
+  width: 100%;
 }
 .pane-bundle-house-ads .field-name-field-image-single-public,
 .pane-bundle-house-ads .gsb-image-video-popup,
@@ -2593,7 +2548,24 @@ div.label-inline {
 .pane-bundle-video .field-name-field-spotlight-person-fid,
 .pane-bundle-video .field-name-field-use-profile-img,
 .pane-bundle-video .field-name-field-file-single-public {
-  margin-bottom: 26px;
+  max-width: 270px;
+}
+.pane-bundle-house-ads .field-name-field-image-single-public img,
+.pane-bundle-house-ads .gsb-image-video-popup img,
+.pane-bundle-house-ads .field-name-field-spotlight-person-fid img,
+.pane-bundle-house-ads .field-name-field-use-profile-img img,
+.pane-bundle-house-ads .field-name-field-file-single-public img,
+.pane-bundle-spotlight .field-name-field-image-single-public img,
+.pane-bundle-spotlight .gsb-image-video-popup img,
+.pane-bundle-spotlight .field-name-field-spotlight-person-fid img,
+.pane-bundle-spotlight .field-name-field-use-profile-img img,
+.pane-bundle-spotlight .field-name-field-file-single-public img,
+.pane-bundle-video .field-name-field-image-single-public img,
+.pane-bundle-video .gsb-image-video-popup img,
+.pane-bundle-video .field-name-field-spotlight-person-fid img,
+.pane-bundle-video .field-name-field-use-profile-img img,
+.pane-bundle-video .field-name-field-file-single-public img {
+  vertical-align: top;
 }
 @media (max-width: 73.125em) {
   .page-insights .pane-bundle-house-ads .field-name-field-image-single-public, .page-insights
@@ -2614,29 +2586,12 @@ div.label-inline {
     display: none;
   }
 }
-.pane-bundle-house-ads .field-name-field-image-single-public > img,
-.pane-bundle-house-ads .gsb-image-video-popup > img,
-.pane-bundle-house-ads .field-name-field-spotlight-person-fid > img,
-.pane-bundle-house-ads .field-name-field-use-profile-img > img,
-.pane-bundle-house-ads .field-name-field-file-single-public > img,
-.pane-bundle-spotlight .field-name-field-image-single-public > img,
-.pane-bundle-spotlight .gsb-image-video-popup > img,
-.pane-bundle-spotlight .field-name-field-spotlight-person-fid > img,
-.pane-bundle-spotlight .field-name-field-use-profile-img > img,
-.pane-bundle-spotlight .field-name-field-file-single-public > img,
-.pane-bundle-video .field-name-field-image-single-public > img,
-.pane-bundle-video .gsb-image-video-popup > img,
-.pane-bundle-video .field-name-field-spotlight-person-fid > img,
-.pane-bundle-video .field-name-field-use-profile-img > img,
-.pane-bundle-video .field-name-field-file-single-public > img {
-  vertical-align: top;
-}
 .pane-bundle-house-ads .field-name-field-body,
 .pane-bundle-spotlight .field-name-field-body,
 .pane-bundle-video .field-name-field-body {
   font-size: 16px;
   line-height: 1.2;
-  margin: 12px 0;
+  margin: 12px 0 0;
   overflow: hidden;
 }
 .pane-bundle-house-ads .field-name-field-body p,
@@ -2649,56 +2604,362 @@ div.label-inline {
 
 .wide-view .pane-bundle-house-ads,
 .wide-view .pane-bundle-spotlight,
-.wide-view .pane-bundle-video,
-.narrow-view .pane-bundle-house-ads,
-.narrow-view .pane-bundle-spotlight,
-.narrow-view .pane-bundle-video {
-  overflow: hidden;
-  *zoom: 1;
+.wide-view .pane-bundle-video {
+  padding-top: 26px;
 }
-.wide-view .pane-bundle-house-ads .group-left,
-.wide-view .pane-bundle-spotlight .group-left,
-.wide-view .pane-bundle-video .group-left,
-.narrow-view .pane-bundle-house-ads .group-left,
-.narrow-view .pane-bundle-spotlight .group-left,
-.narrow-view .pane-bundle-video .group-left {
-  float: left;
-}
-
-.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-left,
-.inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .group-left,
-.inner-sidebar-wrapper .narrow-view .pane-bundle-video .group-left {
+.wide-view .pane-bundle-house-ads .feature-spotlight-label,
+.wide-view .pane-bundle-house-ads .field-name-field-house-ads-superhead,
+.wide-view .pane-bundle-spotlight .feature-spotlight-label,
+.wide-view .pane-bundle-spotlight .field-name-field-house-ads-superhead,
+.wide-view .pane-bundle-video .feature-spotlight-label,
+.wide-view .pane-bundle-video .field-name-field-house-ads-superhead {
   margin-bottom: 26px;
 }
-@media (min-width: 35.5em) {
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video {
-    padding: 0 0 26px 0;
+@media (min-width: 62.5em) and (max-width: 73.125em) {
+  .wide-view .pane-bundle-house-ads,
+  .wide-view .pane-bundle-spotlight,
+  .wide-view .pane-bundle-video {
+    padding: 0;
   }
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-left,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .group-left,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video .group-left {
+  .wide-view .pane-bundle-house-ads .group-left,
+  .wide-view .pane-bundle-house-ads .group-right,
+  .wide-view .pane-bundle-spotlight .group-left,
+  .wide-view .pane-bundle-spotlight .group-right,
+  .wide-view .pane-bundle-video .group-left,
+  .wide-view .pane-bundle-video .group-right {
+    clear: both;
     float: none;
-    margin-right: 0;
+    width: 100%;
   }
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-right,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .group-right,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video .group-right {
-    padding: 0 26px;
+  .wide-view .pane-bundle-house-ads .group-left,
+  .wide-view .pane-bundle-spotlight .group-left,
+  .wide-view .pane-bundle-video .group-left {
+    padding: 26px 26px 0 26px;
   }
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-left,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-right,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .group-left,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .group-right,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video .group-left,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video .group-right {
+  .wide-view .pane-bundle-house-ads .group-right,
+  .wide-view .pane-bundle-spotlight .group-right,
+  .wide-view .pane-bundle-video .group-right {
+    padding: 0 26px 26px;
+  }
+  .wide-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .wide-view .pane-bundle-house-ads .gsb-image-video-popup,
+  .wide-view .pane-bundle-house-ads .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-house-ads .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-house-ads .field-name-field-file-single-public,
+  .wide-view .pane-bundle-spotlight .field-name-field-image-single-public,
+  .wide-view .pane-bundle-spotlight .gsb-image-video-popup,
+  .wide-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-spotlight .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-spotlight .field-name-field-file-single-public,
+  .wide-view .pane-bundle-video .field-name-field-image-single-public,
+  .wide-view .pane-bundle-video .gsb-image-video-popup,
+  .wide-view .pane-bundle-video .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-video .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-video .field-name-field-file-single-public {
+    margin-bottom: 0;
+  }
+  .wide-view .pane-bundle-house-ads .feature-spotlight-label,
+  .wide-view .pane-bundle-house-ads .field-name-field-house-ads-superhead,
+  .wide-view .pane-bundle-spotlight .feature-spotlight-label,
+  .wide-view .pane-bundle-spotlight .field-name-field-house-ads-superhead,
+  .wide-view .pane-bundle-video .feature-spotlight-label,
+  .wide-view .pane-bundle-video .field-name-field-house-ads-superhead {
+    margin-bottom: 0;
+  }
+  .wide-view .pane-bundle-house-ads .group-name-wrapper,
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-title,
+  .wide-view .pane-bundle-spotlight .group-name-wrapper,
+  .wide-view .pane-bundle-spotlight .field-name-field-link-single,
+  .wide-view .pane-bundle-spotlight .field-name-field-title,
+  .wide-view .pane-bundle-video .group-name-wrapper,
+  .wide-view .pane-bundle-video .field-name-field-link-single,
+  .wide-view .pane-bundle-video .field-name-field-title {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 53.6875em) {
+  .wide-view .pane-bundle-house-ads,
+  .wide-view .pane-bundle-spotlight,
+  .wide-view .pane-bundle-video {
+    padding: 0;
+  }
+  .wide-view .pane-bundle-house-ads .group-left,
+  .wide-view .pane-bundle-house-ads .group-right,
+  .wide-view .pane-bundle-spotlight .group-left,
+  .wide-view .pane-bundle-spotlight .group-right,
+  .wide-view .pane-bundle-video .group-left,
+  .wide-view .pane-bundle-video .group-right {
+    clear: both;
+    float: none;
+    width: 100%;
+  }
+  .wide-view .pane-bundle-house-ads .group-left,
+  .wide-view .pane-bundle-spotlight .group-left,
+  .wide-view .pane-bundle-video .group-left {
+    padding: 26px 26px 0 26px;
+  }
+  .wide-view .pane-bundle-house-ads .group-right,
+  .wide-view .pane-bundle-spotlight .group-right,
+  .wide-view .pane-bundle-video .group-right {
+    padding: 0 26px 26px;
+  }
+  .wide-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .wide-view .pane-bundle-house-ads .gsb-image-video-popup,
+  .wide-view .pane-bundle-house-ads .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-house-ads .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-house-ads .field-name-field-file-single-public,
+  .wide-view .pane-bundle-spotlight .field-name-field-image-single-public,
+  .wide-view .pane-bundle-spotlight .gsb-image-video-popup,
+  .wide-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-spotlight .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-spotlight .field-name-field-file-single-public,
+  .wide-view .pane-bundle-video .field-name-field-image-single-public,
+  .wide-view .pane-bundle-video .gsb-image-video-popup,
+  .wide-view .pane-bundle-video .field-name-field-spotlight-person-fid,
+  .wide-view .pane-bundle-video .field-name-field-use-profile-img,
+  .wide-view .pane-bundle-video .field-name-field-file-single-public {
+    margin-bottom: 0;
+  }
+  .wide-view .pane-bundle-house-ads .feature-spotlight-label,
+  .wide-view .pane-bundle-house-ads .field-name-field-house-ads-superhead,
+  .wide-view .pane-bundle-spotlight .feature-spotlight-label,
+  .wide-view .pane-bundle-spotlight .field-name-field-house-ads-superhead,
+  .wide-view .pane-bundle-video .feature-spotlight-label,
+  .wide-view .pane-bundle-video .field-name-field-house-ads-superhead {
+    margin-bottom: 0;
+  }
+  .wide-view .pane-bundle-house-ads .group-name-wrapper,
+  .wide-view .pane-bundle-house-ads .field-name-field-link-single,
+  .wide-view .pane-bundle-house-ads .field-name-field-title,
+  .wide-view .pane-bundle-spotlight .group-name-wrapper,
+  .wide-view .pane-bundle-spotlight .field-name-field-link-single,
+  .wide-view .pane-bundle-spotlight .field-name-field-title,
+  .wide-view .pane-bundle-video .group-name-wrapper,
+  .wide-view .pane-bundle-video .field-name-field-link-single,
+  .wide-view .pane-bundle-video .field-name-field-title {
+    margin-top: 26px;
+  }
+}
+
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-video {
+  padding: 0;
+}
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-left,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-right, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .group-left,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .group-right, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .group-left,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .group-right {
+  clear: both;
+  float: none;
+  width: 100%;
+}
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-right, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .group-right, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .group-right {
+  padding: 0 26px 26px;
+}
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .gsb-image-video-popup,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-spotlight-person-fid,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-use-profile-img,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-file-single-public, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-image-single-public,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .gsb-image-video-popup,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-use-profile-img,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-file-single-public, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-image-single-public,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .gsb-image-video-popup,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-spotlight-person-fid,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-use-profile-img,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-file-single-public {
+  margin-bottom: 0;
+}
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-name-wrapper,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-link-single,
+.inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .field-name-field-title, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .group-name-wrapper,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-link-single,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-spotlight .field-name-field-title, .inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .group-name-wrapper,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-link-single,
+.inner-sidebar-wrapper
+.narrow-view .pane-bundle-video .field-name-field-title {
+  margin-top: 26px;
+}
+@media (max-width: 35.5em) {
+  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .group-left, .inner-sidebar-wrapper
+  .narrow-view .pane-bundle-spotlight .group-left, .inner-sidebar-wrapper
+  .narrow-view .pane-bundle-video .group-left {
+    padding: 26px 26px 0;
+  }
+}
+.main-middle .narrow-view .pane-bundle-house-ads, .main-middle
+.narrow-view .pane-bundle-spotlight, .main-middle
+.narrow-view .pane-bundle-video {
+  padding: 0;
+}
+@media (min-width: 75.625em) {
+  .main-middle .narrow-view .pane-bundle-house-ads .group-left,
+  .main-middle .narrow-view .pane-bundle-house-ads .group-right, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-left,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .group-right, .main-middle
+  .narrow-view .pane-bundle-video .group-left,
+  .main-middle
+  .narrow-view .pane-bundle-video .group-right {
     clear: both;
   }
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-house-ads .show-more,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-spotlight .show-more,
-  .inner-sidebar-wrapper .narrow-view .pane-bundle-video .show-more {
-    padding-right: 26px;
+  .main-middle .narrow-view .pane-bundle-house-ads .group-left, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-left, .main-middle
+  .narrow-view .pane-bundle-video .group-left {
+    float: none;
+    margin-right: 0;
+    max-width: none;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .group-right, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-right, .main-middle
+  .narrow-view .pane-bundle-video .group-right {
+    padding: 0 26px 26px 26px;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .main-middle .narrow-view .pane-bundle-house-ads .gsb-image-video-popup,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-spotlight-person-fid,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-use-profile-img,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-file-single-public, .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-image-single-public,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .gsb-image-video-popup,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-use-profile-img,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-file-single-public, .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-image-single-public,
+  .main-middle
+  .narrow-view .pane-bundle-video .gsb-image-video-popup,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-spotlight-person-fid,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-use-profile-img,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-file-single-public {
+    margin-bottom: 0;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .group-name-wrapper,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-link-single,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-title, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-name-wrapper,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-link-single,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-title, .main-middle
+  .narrow-view .pane-bundle-video .group-name-wrapper,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-link-single,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-title {
+    margin-top: 26px;
+  }
+}
+@media (max-width: 53.6875em) {
+  .main-middle .narrow-view .pane-bundle-house-ads .group-left,
+  .main-middle .narrow-view .pane-bundle-house-ads .group-right, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-left,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .group-right, .main-middle
+  .narrow-view .pane-bundle-video .group-left,
+  .main-middle
+  .narrow-view .pane-bundle-video .group-right {
+    clear: both;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .group-left, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-left, .main-middle
+  .narrow-view .pane-bundle-video .group-left {
+    float: none;
+    margin-right: 0;
+    max-width: none;
+    padding: 26px 26px 0 26px;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .group-right, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-right, .main-middle
+  .narrow-view .pane-bundle-video .group-right {
+    padding: 0 26px 26px 26px;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-image-single-public,
+  .main-middle .narrow-view .pane-bundle-house-ads .gsb-image-video-popup,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-spotlight-person-fid,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-use-profile-img,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-file-single-public, .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-image-single-public,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .gsb-image-video-popup,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-spotlight-person-fid,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-use-profile-img,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-file-single-public, .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-image-single-public,
+  .main-middle
+  .narrow-view .pane-bundle-video .gsb-image-video-popup,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-spotlight-person-fid,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-use-profile-img,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-file-single-public {
+    margin-bottom: 0;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .group-name-wrapper,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-link-single,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-title, .main-middle
+  .narrow-view .pane-bundle-spotlight .group-name-wrapper,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-link-single,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-title, .main-middle
+  .narrow-view .pane-bundle-video .group-name-wrapper,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-link-single,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-title {
+    margin-top: 26px;
+  }
+}
+@media (min-width: 53.75em) and (max-width: 75.5625em) {
+  .main-middle .narrow-view .pane-bundle-house-ads, .main-middle
+  .narrow-view .pane-bundle-spotlight, .main-middle
+  .narrow-view .pane-bundle-video {
+    padding: 26px;
+  }
+  .main-middle .narrow-view .pane-bundle-house-ads .feature-spotlight-label,
+  .main-middle .narrow-view .pane-bundle-house-ads .field-name-field-house-ads-superhead, .main-middle
+  .narrow-view .pane-bundle-spotlight .feature-spotlight-label,
+  .main-middle
+  .narrow-view .pane-bundle-spotlight .field-name-field-house-ads-superhead, .main-middle
+  .narrow-view .pane-bundle-video .feature-spotlight-label,
+  .main-middle
+  .narrow-view .pane-bundle-video .field-name-field-house-ads-superhead {
+    margin-bottom: 26px;
   }
 }
 
@@ -2709,11 +2970,6 @@ div.label-inline {
     padding: 0;
     padding-bottom: 26px;
   }
-  .page-insights .wide-view .pane-bundle-house-ads .group-right,
-  .page-insights .wide-view .pane-bundle-spotlight .group-right,
-  .page-insights .wide-view .pane-bundle-video .group-right {
-    padding: 0 26px;
-  }
   .page-insights .wide-view .pane-bundle-house-ads .group-left,
   .page-insights .wide-view .pane-bundle-house-ads .group-right,
   .page-insights .wide-view .pane-bundle-spotlight .group-left,
@@ -2721,6 +2977,13 @@ div.label-inline {
   .page-insights .wide-view .pane-bundle-video .group-left,
   .page-insights .wide-view .pane-bundle-video .group-right {
     clear: both;
+    float: none;
+    width: 100%;
+  }
+  .page-insights .wide-view .pane-bundle-house-ads .group-right,
+  .page-insights .wide-view .pane-bundle-spotlight .group-right,
+  .page-insights .wide-view .pane-bundle-video .group-right {
+    padding: 0 26px;
   }
   .page-insights .wide-view .pane-bundle-house-ads .show-more,
   .page-insights .wide-view .pane-bundle-spotlight .show-more,
@@ -2728,7 +2991,7 @@ div.label-inline {
     padding-right: 26px;
   }
 }
-@media (max-width: 73.125em) and (max-width: 35.5em) {
+@media (max-width: 35.5em) {
   .page-insights .wide-view .pane-bundle-house-ads .group-left,
   .page-insights .wide-view .pane-bundle-house-ads .group-right,
   .page-insights .wide-view .pane-bundle-spotlight .group-left,
@@ -5881,8 +6144,8 @@ ul.slideshow-items {
   }
 }
 
-.pane-bundle-spotlight .group-right {
-  position: relative;
+.pane-bundle-spotlight .feature-spotlight-label {
+  margin-bottom: 0;
 }
 .pane-bundle-spotlight .group-name-wrapper {
   color: black;
@@ -5895,7 +6158,7 @@ ul.slideshow-items {
   display: inline;
   font-size: 20px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 1.2;
   margin-right: 5px;
 }
 .pane-bundle-spotlight .field-name-field-sections {
@@ -5926,17 +6189,7 @@ ul.slideshow-items {
 
 .pane-bundle-house-ads .field-name-field-house-ads-superhead,
 .pane-bundle-video .field-name-field-house-ads-superhead {
-  background: #231f20;
-  color: white;
-  display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.2;
-  left: 0;
-  margin: 0 26px;
-  padding: 6px 8px;
-  position: absolute;
+  margin-bottom: 0;
 }
 @media (min-width: 20.0625em) and (max-width: 35.5em) {
   .page-insights .narrow-view .pane-bundle-house-ads .field-name-field-house-ads-superhead, .page-insights .narrow-view
@@ -5956,7 +6209,7 @@ ul.slideshow-items {
 .pane-bundle-video .field-name-field-link-single,
 .pane-bundle-video .field-name-field-title {
   color: #231f20;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
 }
