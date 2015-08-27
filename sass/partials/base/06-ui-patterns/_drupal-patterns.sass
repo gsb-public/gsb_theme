@@ -119,9 +119,6 @@ div.label-inline
     max-width: 270px
     img
       vertical-align: top
-    .page-insights &
-      +breakpoint(1170px max-width)
-        display: none
 
   // Description
   .field-name-field-body
@@ -139,6 +136,7 @@ div.label-inline
     @extend %show-more-link
 
 // Responsive implementation
+// Wide view
 .wide-view
   .pane-bundle-house-ads,
   .pane-bundle-spotlight,
@@ -286,24 +284,70 @@ div.label-inline
         .field-name-field-house-ads-superhead
           margin-bottom: 26px
 
-// Insights - Wide view
-.page-insights .wide-view
-  .pane-bundle-house-ads,
-  .pane-bundle-spotlight,
-  .pane-bundle-video
-    +breakpoint($max-width max-width)
+// Insights
+.page-insights
+  // Narrow view
+  .narrow-view
+    .pane-bundle-house-ads,
+    .pane-bundle-spotlight,
+    .pane-bundle-video
       padding: 0
-      padding-bottom: $standard-padding
+      // Stacked
       .group-left,
       .group-right
         clear: both
+      .group-left
         float: none
-        width: 100%
+        margin-right: 0
+        max-width: none
       .group-right
-        padding: 0 $standard-padding
-      .show-more
-        padding-right: $standard-padding
-    +breakpoint($bp-mobile-max)
-      .group-left,
+        padding: 0 $standard-padding $standard-padding $standard-padding
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        margin-bottom: 0
+      .group-name-wrapper,
+      .field-name-field-link-single,
+      .field-name-field-title
+        margin-top: 26px
+
+      +breakpoint($max-width max-width)
+        .group-left,
+        .group-right
+          clear: both
+        .group-left
+          display: none
+        .group-right
+          padding: 0 $standard-padding $standard-padding $standard-padding
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+
+
+  // Wide view
+  .wide-view
+    .pane-bundle-house-ads,
+    .pane-bundle-spotlight,
+    .pane-bundle-video
+      .group-left
+        float: left
+        margin-right: 26px
+        width: auto
+
       .group-right
         clear: none
+        float: none
+        position: relative
+        width: 100%
+
+      +breakpoint(1169px max-width)
+        padding-top: $standard-padding
+        .group-left
+          padding-top: 0
+      +breakpoint(568px max-width)
+        padding-top: 0
+        .group-left
+          display: none
