@@ -142,12 +142,14 @@ p, .format-body,
 .view-id-gsb_act_project_listing .views-exposed-search-wrap,
 .view-display-id-club_list .views-exposed-search-wrap,
 .view-display-id-main_event_list_pane .views-exposed-search-wrap,
-.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap, #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets,
+.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap,
+.view-display-id-all_research_panel_pane .views-exposed-search-wrap, #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets,
 #views-exposed-form-gsb-in-the-media-listing-in-the-media-listing .views-exposed-widgets,
 #views-exposed-form-gsb-ranking-listing-ranking-listing .views-exposed-widgets,
 #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets,
 #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets,
-#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets, #views-exposed-form-gsb-act-project-listing-panel-pane-1 .views-exposed-widgets,
+#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets,
+#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .views-exposed-widgets, #views-exposed-form-gsb-act-project-listing-panel-pane-1 .views-exposed-widgets,
 #views-exposed-form-gsb-act-project-listing-panel-pane-2 .views-exposed-widgets,
 #views-exposed-form-gsb-act-project-listing-panel-pane-3 .views-exposed-widgets,
 #views-exposed-form-admission-events-mba-admission-panel-pane .views-exposed-widgets, .view-faculty-filters .views-widget-filter-secondary .form-type-select,
@@ -193,7 +195,8 @@ p, .format-body,
 .view-id-gsb_act_project_listing .view-filters,
 .view-display-id-club_list .view-filters,
 .view-display-id-main_event_list_pane .view-filters,
-.view-display-id-mba_admission_panel_pane .view-filters, .view-faculty-filters .gsb-views-exposed-form,
+.view-display-id-mba_admission_panel_pane .view-filters,
+.view-display-id-all_research_panel_pane .view-filters, .view-faculty-filters .gsb-views-exposed-form,
 .view-display-id-working_paper_list .gsb-views-exposed-form,
 .view-display-id-case_listing .gsb-views-exposed-form,
 .view-display-id-book_listing .gsb-views-exposed-form,
@@ -208,7 +211,8 @@ p, .format-body,
 .view-id-gsb_act_project_listing .gsb-views-exposed-form,
 .view-display-id-club_list .gsb-views-exposed-form,
 .view-display-id-main_event_list_pane .gsb-views-exposed-form,
-.view-display-id-mba_admission_panel_pane .gsb-views-exposed-form {
+.view-display-id-mba_admission_panel_pane .gsb-views-exposed-form,
+.view-display-id-all_research_panel_pane .gsb-views-exposed-form {
   border-top: 3px #231f20 solid;
 }
 
@@ -7892,22 +7896,23 @@ fieldset.collapsible .fieldset-legend {
   margin-left: 22.5%;
 }
 .gsb-views-exposed-filter .views-exposed-widgets .form-item {
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 12px;
 }
 .gsb-views-exposed-filter .views-exposed-widgets .form-item label {
-  color: black;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
 }
 .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title {
   border: none;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1em;
-  color: #990000;
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
 }
 
 @media (max-width: 35.5em) {
@@ -8064,7 +8069,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing,
 .view-display-id-club_list,
 .view-display-id-main_event_list_pane,
-.view-display-id-mba_admission_panel_pane {
+.view-display-id-mba_admission_panel_pane,
+.view-display-id-all_research_panel_pane {
   position: relative;
 }
 .view-faculty-filters .ajax-progress-throbber,
@@ -8082,7 +8088,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .ajax-progress-throbber,
 .view-display-id-club_list .ajax-progress-throbber,
 .view-display-id-main_event_list_pane .ajax-progress-throbber,
-.view-display-id-mba_admission_panel_pane .ajax-progress-throbber {
+.view-display-id-mba_admission_panel_pane .ajax-progress-throbber,
+.view-display-id-all_research_panel_pane .ajax-progress-throbber {
   position: absolute;
   right: 9px;
   top: 20px;
@@ -8102,7 +8109,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .view-filters,
 .view-display-id-club_list .view-filters,
 .view-display-id-main_event_list_pane .view-filters,
-.view-display-id-mba_admission_panel_pane .view-filters {
+.view-display-id-mba_admission_panel_pane .view-filters,
+.view-display-id-all_research_panel_pane .view-filters {
   background: #f2f2f2;
 }
 .view-faculty-filters #edit-last-name-wrapper,
@@ -8120,7 +8128,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing #edit-last-name-wrapper,
 .view-display-id-club_list #edit-last-name-wrapper,
 .view-display-id-main_event_list_pane #edit-last-name-wrapper,
-.view-display-id-mba_admission_panel_pane #edit-last-name-wrapper {
+.view-display-id-mba_admission_panel_pane #edit-last-name-wrapper,
+.view-display-id-all_research_panel_pane #edit-last-name-wrapper {
   display: none;
 }
 .view-faculty-filters .gsb-views-exposed-form,
@@ -8138,7 +8147,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .gsb-views-exposed-form,
 .view-display-id-club_list .gsb-views-exposed-form,
 .view-display-id-main_event_list_pane .gsb-views-exposed-form,
-.view-display-id-mba_admission_panel_pane .gsb-views-exposed-form {
+.view-display-id-mba_admission_panel_pane .gsb-views-exposed-form,
+.view-display-id-all_research_panel_pane .gsb-views-exposed-form {
   background: none;
   border: 0;
   -moz-box-shadow: none;
@@ -8161,7 +8171,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .form-item.form-item-search,
 .view-display-id-club_list .form-item.form-item-search,
 .view-display-id-main_event_list_pane .form-item.form-item-search,
-.view-display-id-mba_admission_panel_pane .form-item.form-item-search {
+.view-display-id-mba_admission_panel_pane .form-item.form-item-search,
+.view-display-id-all_research_panel_pane .form-item.form-item-search {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -8180,7 +8191,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .views-exposed-search-wrap,
 .view-display-id-club_list .views-exposed-search-wrap,
 .view-display-id-main_event_list_pane .views-exposed-search-wrap,
-.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap {
+.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap,
+.view-display-id-all_research_panel_pane .views-exposed-search-wrap {
   padding: 18px 26px;
   position: relative;
   overflow: hidden;
@@ -8202,7 +8214,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .views-exposed-search-wrap #edit-search,
 .view-display-id-club_list .views-exposed-search-wrap #edit-search,
 .view-display-id-main_event_list_pane .views-exposed-search-wrap #edit-search,
-.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap #edit-search {
+.view-display-id-mba_admission_panel_pane .views-exposed-search-wrap #edit-search,
+.view-display-id-all_research_panel_pane .views-exposed-search-wrap #edit-search {
   height: 36px;
   width: 100%;
 }
@@ -8221,7 +8234,8 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing #edit-search-wrapper,
 .view-display-id-club_list #edit-search-wrapper,
 .view-display-id-main_event_list_pane #edit-search-wrapper,
-.view-display-id-mba_admission_panel_pane #edit-search-wrapper {
+.view-display-id-mba_admission_panel_pane #edit-search-wrapper,
+.view-display-id-all_research_panel_pane #edit-search-wrapper {
   float: left;
   margin-right: -36px;
   padding-right: 36px;
@@ -8242,9 +8256,15 @@ fieldset.collapsible .fieldset-legend {
 .view-id-gsb_act_project_listing .views-submit-button,
 .view-display-id-club_list .views-submit-button,
 .view-display-id-main_event_list_pane .views-submit-button,
-.view-display-id-mba_admission_panel_pane .views-submit-button {
+.view-display-id-mba_admission_panel_pane .views-submit-button,
+.view-display-id-all_research_panel_pane .views-submit-button {
   float: left;
   width: 36px;
+}
+
+.view-display-id-all_research_panel_pane .views-submit-button {
+  float: none;
+  width: 100%;
 }
 
 #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets,
@@ -8252,7 +8272,8 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-gsb-ranking-listing-ranking-listing .views-exposed-widgets,
 #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets,
 #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets,
-#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets {
+#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets,
+#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .views-exposed-widgets {
   padding: 18px 26px;
   position: relative;
   overflow: hidden;
@@ -8264,7 +8285,8 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-gsb-ranking-listing-ranking-listing .views-exposed-widgets #edit-search,
 #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets #edit-search,
 #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets #edit-search,
-#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets #edit-search {
+#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets #edit-search,
+#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .views-exposed-widgets #edit-search {
   height: 36px;
   width: 100%;
 }

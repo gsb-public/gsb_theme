@@ -21,3 +21,22 @@
       border-bottom: 1px $listing-divider solid
       &:last-of-type
         border-bottom: 0
+
+// All publications list
+
+// View overrides
+.view-display-id-all_research_panel_pane
+  // General filter styles are in _search-filters
+  .views-exposed-form
+    @extend %divider-bottom
+
+  // General view mode teaser listing styles are in _view-mode-teaser-listing
+  .view-content
+    .views-row
+      border-bottom: 1px $listing-divider solid
+      &:last-of-type
+        border-bottom: 0
+
+  .view-mode-compact,
+  .view-mode-expanded
+    margin: 26px 0

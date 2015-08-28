@@ -73,7 +73,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-act-project-listing-panel-pane-2',
     'views-exposed-form-gsb-act-project-listing-panel-pane-3',
     'views-exposed-form-gsb-event-main-event-list-pane',
-    'views-exposed-form-admission-events-mba-admission-panel-pane'
+    'views-exposed-form-admission-events-mba-admission-panel-pane',
+    'views-exposed-form-gsb-all-research-listing-all-research-panel-pane'
   );
 
 
@@ -104,7 +105,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_case_listing',
     'gsb_book_listing',
     'gsb_publications_listing',
-    'admission_events'
+    'admission_events',
+    'publication_filters'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -187,6 +189,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-admission-events-mba-admission-panel-pane') {
     $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
   }
+  // All publications listing
+  // if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
+  //   // Add placeholder text.
+  //   $form['search']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
+  // }
 }
 
 function gsb_theme_admission_events_mba_list_after_build($form, &$form_state) {
