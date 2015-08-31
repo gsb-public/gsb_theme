@@ -190,10 +190,10 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
   }
   // All publications listing
-  // if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
-  //   // Add placeholder text.
-  //   $form['search']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
-  // }
+  if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
+  }
 }
 
 function gsb_theme_admission_events_mba_list_after_build($form, &$form_state) {

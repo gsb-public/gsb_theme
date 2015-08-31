@@ -1,65 +1,5 @@
 // Search and filters
 
-// Search box
-.gsb-views-exposed-form
-  @extend %bg-and-box-shadow
-
-.gsb-views-exposed-search
-  padding: 18px 24px 24px 24px
-  width: 268px
-  label
-    color: $text-blue
-    margin-bottom: 18px
-    font-weight: normal
-    strong
-      display: block
-  .views-exposed-form
-    .form-item
-      margin: 5px 0 0
-      float: left
-      width: 100%
-      margin-right: -45px
-      margin-top: 0
-    .form-text
-      width: 100%
-      border: none
-      border: 1px $border-grey solid
-      background: $white
-      line-height: 1.2
-      height: auto
-      padding: 6px 50px 6px 10px
-      color: $grey-6
-      font-size: 16px
-    .form-submit
-      float: right
-      width: 45px
-      height: 36px
-      -webkit-border-radius: 0
-      -moz-border-radius: 0
-      -ms-border-radius: 0
-      border-radius: 0
-      border: none
-      background: transparent
-      text-indent: 1000px
-      overflow: hidden
-      .svg &
-        background: image_url("search.svg") no-repeat center
-        +breakpoint($bp-tablet-port-max)
-          background-size: 200%
-        &:hover
-          background: image_url("search-hover.svg") no-repeat center
-          +breakpoint($bp-tablet-port-max)
-            background-size: 200%
-
-      .no-js &, .no-svg &
-        background: image_url("search.png") no-repeat center 6px transparent
-        &:hover
-          background-position: center -27px
-
-  .views-widget-filter-field_search_field_value
-    label
-      cursor: default
-
 // Global main search
 #google-appliance-block-form,
 #google-appliance-block-form--2
@@ -279,11 +219,11 @@ fieldset.collapsible .fieldset-legend
 .gsb-views-exposed-filter .views-exposed-widgets
   +breakpoint($bp-mobile-max)
     display: none
-    .view-gsb-act-project-listing &
+    .view-gsb-act-project-listing &,
+    .view-gsb-all-research-listing &
       display: block
 
   legend
-    margin-left: 4em
     padding: 0
 
   fieldset
@@ -291,13 +231,9 @@ fieldset.collapsible .fieldset-legend
     margin: 0
     padding: 0
 
-  .fieldset-wrapper
-    margin-left: 22.5%
-
   .form-item
     font-weight: normal
     margin-bottom: 12px
-
 
   .form-item label
     color: $text-black
@@ -448,8 +384,7 @@ fieldset.collapsible .fieldset-legend
 .view-id-gsb_act_project_listing,
 .view-display-id-club_list,
 .view-display-id-main_event_list_pane,
-.view-display-id-mba_admission_panel_pane,
-.view-display-id-all_research_panel_pane
+.view-display-id-mba_admission_panel_pane
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -460,20 +395,6 @@ fieldset.collapsible .fieldset-legend
   .view-filters
     @extend %black-border-top-small
     background: $grey-f
-
-  // Hide a-z field
-  #edit-last-name-wrapper
-    display: none
-
-  // Remove old container styling
-  .gsb-views-exposed-form
-    background: none
-    border: 0
-    @extend %black-border-top-small
-    -moz-box-shadow: none
-    -webkit-box-shadow: none
-    box-shadow: none
-    margin: 0
 
   // Search field
   .form-item.form-item-search
@@ -499,20 +420,13 @@ fieldset.collapsible .fieldset-legend
     float: left
     width: 36px
 
-// All publications
-.view-display-id-all_research_panel_pane
-  .views-submit-button
-    float: none
-    width: 100%
-
 // Search input spacing
 #views-exposed-form-gsb-announcement-school-listing-annssh-stories-list .views-exposed-widgets,
 #views-exposed-form-gsb-in-the-media-listing-in-the-media-listing .views-exposed-widgets,
 #views-exposed-form-gsb-ranking-listing-ranking-listing .views-exposed-widgets,
 #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets,
 #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets,
-#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets,
-#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .views-exposed-widgets
+#views-exposed-form-stories-giving-stories-listing .views-exposed-widgets
   @extend %divider-bottom
   padding: 18px $standard-padding
   position: relative
@@ -542,7 +456,8 @@ fieldset.collapsible .fieldset-legend
 #edit-submit-gsb-book-listing,
 #edit-submit-club-filters,
 #edit-submit-gsb-event,
-#edit-submit-admission-events
+#edit-submit-admission-events,
+#edit-submit-gsb-all-research-listing
   text-indent: 1000px
   -webkit-border-radius: 0
   -moz-border-radius: 0
@@ -660,76 +575,6 @@ fieldset.collapsible .fieldset-legend
           -webkit-column-count: 1
           column-count: 1
 
-// Customizable content lists with filters
-// .view-display-id-all_research_panel_pane
-//   .views-widget-filter-secondary
-//     margin: 18px 0
-//     // Fieldset title
-//     legend
-//       line-height: 1
-//       margin-left: 0
-//     .fieldset-wrapper
-//       margin-left: 26px
-//       padding-top: 18px
-//     .fieldset-title
-//       color: $text-black
-//       font-family: $font-demi
-//       font-size: 18px
-//       font-weight: normal
-//       line-height: 1
-//       &:hover
-//         color: $link-blue
-//     .form-item
-//       margin: 0
-
-//     #edit-secondary
-//       height: auto
-//       padding: 0 $standard-padding
-//     .form-type-select
-//       @extend %divider-bottom
-//       margin-bottom: 18px
-//       padding-bottom: 18px
-//       &:last-of-type
-//         border-bottom: 0
-//         margin-bottom: 0
-//         padding-bottom: 0
-//       // Category label
-//       label
-//         color: $text-black
-//         font-family: $font-demi
-//         font-size: 16px
-//         font-weight: normal
-//         line-height: 1
-//         margin-bottom: 18px
-//         text-transform: none
-//       // Checkboxes
-//       .form-item
-//         border-top: 1px solid transparent
-//         margin-top: 0
-//         padding-left: 22px
-//         position: relative
-//         vertical-align: top
-//         +clearfix
-//         label
-//           display: inline-block
-//           margin-bottom: 0
-//           margin-right: 0
-//           text-transform: none
-//           vertical-align: top
-//         input
-//           position: absolute
-//           left: 0
-//     // Checkboxes in columns
-//     .form-item-field-event-category-tid-1
-//       .bef-checkboxes
-//         -moz-column-count: 3
-//         -webkit-column-count: 3
-//         column-count: 3
-//         +breakpoint(1210px max-width)
-//           -moz-column-count: 1
-//           -webkit-column-count: 1
-//           column-count: 1
-
 // Admission event date range search
 #edit-date-search-wrapper
   @extend %divider-bottom
@@ -760,3 +605,110 @@ fieldset.collapsible .fieldset-legend
       position: relative
       text-transform: none
       top: 10px
+
+// All publications - done differently from main lists
+.view-display-id-all_research_panel_pane
+  position: relative
+  .ajax-progress-throbber
+    position: absolute
+    right: 9px
+    top: 20px
+
+  // Filters container
+  .view-filters
+    @extend %black-border-top-small
+    @extend %divider-bottom
+    background: $grey-f
+    padding: 18px $standard-padding
+
+  // Search field
+  .form-item.form-item-search
+    margin-top: 0
+    margin-bottom: 0
+
+  #edit-search
+    height: 36px
+    width: 100%
+
+  #edit-search-wrapper
+    // @extend %divider-bottom
+    float: left
+    margin-bottom: 18px
+    margin-right: -36px
+    padding: 0 36px 0 0
+    width: 100%
+
+  .gsb-views-exposed-filter .views-exposed-widgets
+    // Fieldset title
+    legend
+      line-height: 1
+      margin-left: 0
+    .fieldset-wrapper
+      margin-left: 26px
+      padding-top: 18px
+    .fieldset-title
+      color: $text-black
+      font-family: $font-demi
+      font-size: 18px
+      font-weight: normal
+      line-height: 1
+      &:hover
+        color: $link-blue
+    .form-item
+      margin: 0
+
+    #edit-narrow-search
+      height: auto
+      padding: 0
+
+    .form-type-select
+      @extend %divider-bottom
+      margin-bottom: 18px
+      padding-bottom: 18px
+      &:last-of-type
+        border-bottom: 0
+        margin-bottom: 0
+        padding-bottom: 0
+      // Category label
+      label
+        color: $text-black
+        font-family: $font-demi
+        font-size: 16px
+        font-weight: normal
+        line-height: 1
+        margin-bottom: 18px
+        text-transform: none
+      // Checkboxes
+      .form-item
+        border-top: 1px solid transparent
+        font-weight: normal
+        margin-bottom: 12px
+        margin-top: 0
+        padding-left: 22px
+        position: relative
+        vertical-align: top
+        +clearfix
+        label
+          color: $text-black
+          display: inline-block
+          font-family: $font-demi
+          font-size: 14px
+          font-weight: normal
+          line-height: 1.2
+          margin-bottom: 0
+          margin-right: 0
+          text-transform: none
+          vertical-align: top
+        input
+          position: absolute
+          left: 0
+    // Checkboxes in columns
+    .form-checkboxes
+      .bef-checkboxes
+        -moz-column-count: 3
+        -webkit-column-count: 3
+        column-count: 3
+        +breakpoint(1210px max-width)
+          -moz-column-count: 1
+          -webkit-column-count: 1
+          column-count: 1
