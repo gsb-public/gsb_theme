@@ -234,7 +234,7 @@ div.label-inline
     .main-middle &
       padding: 0
       // Stacked
-      +breakpoint(1210px min-width)
+      +breakpoint(1211px min-width)
         .group-left,
         .group-right
           clear: both
@@ -242,6 +242,28 @@ div.label-inline
           float: none
           margin-right: 0
           max-width: none
+        .group-right
+          padding: 0 $standard-padding $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+
+      +breakpoint(1000px 1079px)
+        .group-left,
+        .group-right
+          clear: both
+        .group-left
+          float: none
+          margin-right: 0
+          max-width: none
+          padding: $standard-padding $standard-padding 0 $standard-padding
         .group-right
           padding: 0 $standard-padding $standard-padding $standard-padding
         .field-name-field-image-single-public,
@@ -278,11 +300,23 @@ div.label-inline
           margin-top: 26px
 
       // Side-by-side
-      +breakpoint(860px 1209px)
+      +breakpoint(1080px 1210px)
         padding: $standard-padding
+        .group-left,
+        .group-right
+          clear: none
         .feature-spotlight-label,
         .field-name-field-house-ads-superhead
           margin-bottom: 26px
+      +breakpoint(860px 999px)
+        padding: $standard-padding
+        .group-left,
+        .group-right
+          clear: none
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 26px
+
 
 // Insights
 .page-insights
