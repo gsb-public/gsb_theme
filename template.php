@@ -192,7 +192,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // All publications listing
   if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
     // Add placeholder text.
-    $form['search']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
+    $form['field_search_field_value']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
   }
 }
 
