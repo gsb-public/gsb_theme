@@ -114,6 +114,10 @@
   .views-row
     +clearfix
     border-top: 0
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.3
     padding: 10px $standard-padding
 
   // Faculty name
@@ -122,24 +126,13 @@
     // Link color
     a
       color: $link-green
+      font-family: $font-sans
       font-size: 16px
       font-weight: bold
       line-height: 1.2
       &:hover
         color: $link-blue
 
-  // Rank and academic area
-  .views-field-field-rank,
-  .views-field-field-academic-area-single
-    display: block
-    float: left
-    font-family: $font-demi
-    font-size: 16px
-    font-weight: normal
-    line-height: 1.3
-
-  // Comma separator
-  .separator
-    display: block
-    float: left
-    margin-right: 5px
+  // Comma seperator between rank and area
+  .comma
+    margin-left: -5px
