@@ -54,6 +54,26 @@
       font-size: 16px
       margin-bottom: 16px
 
+  // Publication type
+  .field-name-field-publication-type
+    display: none
+    font-size: 20px
+    line-height: 1.2
+    +breakpoint($bp-mobile-max)
+      font-size: 18px
+    // Show on all publications list
+    .view-gsb-all-research-listing &
+      display: inline
+
+  .pipe.pub-type
+    display: none
+    font-size: 20px
+    +breakpoint($bp-mobile-max)
+      font-size: 18px
+    // Show on all publications list
+    .view-gsb-all-research-listing &
+      display: inline
+
   // Title
   .group-wrapper-title,
   .field-name-title
@@ -78,6 +98,12 @@
           &:after
             font-size: 14px
             margin-left: 3px
+
+  .field-name-field-title,
+  .field-name-title
+    display: inline-block
+    .view-gsb-all-research-listing &
+      display: inline
 
   // Document link
   .field-name-field-link-document
