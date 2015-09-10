@@ -619,24 +619,31 @@ fieldset.collapsible .fieldset-legend
     @extend %black-border-top-small
     @extend %divider-bottom
     background: $grey-f
+
+  .views-widget-filter-field_search_field_value
+    padding: 18px $standard-padding
+
+  .narrow-search-wrapper
+    @extend %divider-top
     padding: 18px $standard-padding
 
   // Search field
-  .form-item.form-item-search
+  .views-widget
+    +clearfix
+  .form-item.form-item-field-search-field-value
     margin-top: 0
     margin-bottom: 0
-
+  .form-item-field-search-field-value
+    float: left
+    margin-right: -36px
+    padding-right: 36px
+    width: 100%
   #edit-field-search-field-value
     height: 36px
     width: 100%
-
-  #edit-field-search-field-value-wrapper
-    // @extend %divider-bottom
+  .views-submit-button
     float: left
-    margin-bottom: 18px
-    margin-right: -36px
-    padding: 0 36px 0 0
-    width: 100%
+    width: 36px
 
   .gsb-views-exposed-filter .views-exposed-widgets
     // Fieldset title
@@ -654,8 +661,6 @@ fieldset.collapsible .fieldset-legend
       line-height: 1
       &:hover
         color: $link-blue
-    .form-item
-      margin: 0
 
     #edit-narrow-search
       height: auto

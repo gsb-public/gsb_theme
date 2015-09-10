@@ -123,7 +123,7 @@ p, .format-body,
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
+.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
 
@@ -8801,22 +8801,34 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-display-id-all_research_panel_pane .view-filters {
   background: #f2f2f2;
+}
+.view-display-id-all_research_panel_pane .views-widget-filter-field_search_field_value {
   padding: 18px 26px;
 }
-.view-display-id-all_research_panel_pane .form-item.form-item-search {
+.view-display-id-all_research_panel_pane .narrow-search-wrapper {
+  padding: 18px 26px;
+}
+.view-display-id-all_research_panel_pane .views-widget {
+  overflow: hidden;
+  *zoom: 1;
+}
+.view-display-id-all_research_panel_pane .form-item.form-item-field-search-field-value {
   margin-top: 0;
   margin-bottom: 0;
+}
+.view-display-id-all_research_panel_pane .form-item-field-search-field-value {
+  float: left;
+  margin-right: -36px;
+  padding-right: 36px;
+  width: 100%;
 }
 .view-display-id-all_research_panel_pane #edit-field-search-field-value {
   height: 36px;
   width: 100%;
 }
-.view-display-id-all_research_panel_pane #edit-field-search-field-value-wrapper {
+.view-display-id-all_research_panel_pane .views-submit-button {
   float: left;
-  margin-bottom: 18px;
-  margin-right: -36px;
-  padding: 0 36px 0 0;
-  width: 100%;
+  width: 36px;
 }
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets legend {
   line-height: 1;
@@ -8835,9 +8847,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:hover {
   color: #2d6280;
-}
-.view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-item {
-  margin: 0;
 }
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets #edit-narrow-search {
   height: auto;
