@@ -521,3 +521,18 @@ function gsb_theme_block_list_alter(&$blocks) {
     }
   }
 }
+
+/**
+ * Implements hook_field_group_pre_render_alter().
+ *
+ * Adding group wrapper css classes for all field groups
+ */
+function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
+  $group_class = str_replace('_', '-', $group->group_name);
+  if (!empty($element['#attributes']['class']) && !in_array($group_class, $element['#attributes']['class'])) {
+    $element['#attributes']['class'][] = $group_class;
+  }
+  else {
+    $element['#attributes'] = array('class' => array($group_class));
+  }
+}
