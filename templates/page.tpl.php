@@ -126,7 +126,7 @@
       <?php endif; ?>
 
       <div id="content" class="clearfix">
-
+        <!--googleoff: index--><!--googleoff: snippet-->
         <?php if ($page['sidebar_first']): ?>
           <div id="sidebar" class="column"><div class="section">
               <div class="sidebar">
@@ -134,6 +134,7 @@
               </div> <!-- /.sidebar -->
             </div></div> <!-- /.section, /#sidebar -->
         <?php endif; ?>
+        <!--googleon: index--><!--googleon: snippet-->
 
         <?php if ($page['utility']): ?>
           <div id="utility" class="column"><div class="section">
