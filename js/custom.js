@@ -266,4 +266,29 @@
     }
   };
 
+  /**
+   * Add mmenu library for offcanvas filters
+   */
+  Drupal.behaviors.mmenu = {
+    attach: function () {
+      $("#edit-secondary").mmenu({
+        // Options
+
+        // configuration
+        offCanvas: {
+          pageNodetype: "fieldset"
+        }
+      });
+
+      var API = $("#edit-secondary").data( "mmenu" );
+
+      $("#my-button").click(function() {
+         API.open();
+      });
+
+
+
+    }
+  };
+
 }(jQuery));
