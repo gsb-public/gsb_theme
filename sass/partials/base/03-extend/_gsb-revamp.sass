@@ -278,6 +278,17 @@
   &:hover
     border: 1px transparent solid
 
+// Rounded white button
+%white-button
+  @extend %rounded-button
+  background: $white
+  border: 1px $border-grey solid
+  color: $link-green !important
+  &:hover
+    @extend %gradient-blue
+    border: 1px transparent solid
+    color: $white
+
 // Attached document icons
 %doc-attached-icons
   margin-left: 3px

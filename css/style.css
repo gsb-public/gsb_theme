@@ -123,7 +123,7 @@ p, .format-body,
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
+.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .filter-results-wrapper #edit-actions, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
 
@@ -228,7 +228,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover, .circle:hover {
+.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover, .circle:hover, .filter-results-wrapper .filter-button:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -315,7 +315,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
-.webform-client-form .del-btn {
+.webform-client-form .del-btn, .filter-results-wrapper .term-searched .filter-exit:before, .filter-results-wrapper #edit-actions input {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -332,7 +332,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit:after, .webform-client-form #edit-draft:after,
 .webform-client-form #edit-previous:after,
 .webform-client-form .add-more:after,
-.webform-client-form .del-btn:after {
+.webform-client-form .del-btn:after, .filter-results-wrapper #edit-actions input:after {
   color: white !important;
 }
 .webform-client-form #edit-submit:hover,
@@ -340,7 +340,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover {
+.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover {
   border: 0;
   color: white;
 }
@@ -349,7 +349,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit:hover:after, .webform-client-form #edit-draft:hover:after,
 .webform-client-form #edit-previous:hover:after,
 .webform-client-form .add-more:hover:after,
-.webform-client-form .del-btn:hover:after {
+.webform-client-form .del-btn:hover:after, .filter-results-wrapper #edit-actions input:hover:after {
   color: white !important;
 }
 
@@ -365,6 +365,16 @@ p, .format-body,
 .webform-client-form .add-more:hover,
 .webform-client-form .del-btn:hover {
   border: 1px transparent solid;
+}
+
+.filter-results-wrapper .term-searched .filter-exit:before, .filter-results-wrapper #edit-actions input {
+  background: white;
+  border: 1px lightgray solid;
+  color: #636f00 !important;
+}
+.filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover {
+  border: 1px transparent solid;
+  color: white;
 }
 
 body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after, body a[href$=".svg"]:after, body a[href$=".odg"]:after, body a[href$=".fodg"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".fodp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".fodt"]:after, body a[href$=".odf"]:after, body a[href$=".pages"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, body a[href$=".fods"]:after, .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after, .view-mode-compact .field-name-field-link-document a:after {
@@ -7892,6 +7902,10 @@ fieldset.collapsible .fieldset-legend {
   padding: 24px;
 }
 
+.gsb-views-exposed-filter .views-exposed-widgets {
+  background: #f2f2f2;
+  padding-top: 1px;
+}
 @media (max-width: 35.5em) {
   .gsb-views-exposed-filter .views-exposed-widgets {
     display: none;
@@ -8067,6 +8081,12 @@ fieldset.collapsible .fieldset-legend {
   left: 0;
 }
 
+.gsb-direct-link {
+  background: #f2f2f2;
+  padding-left: 26px;
+  padding-top: 6px;
+}
+
 .view-faculty-filters,
 .view-display-id-working_paper_list,
 .view-display-id-case_listing,
@@ -8158,6 +8178,7 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-club_list .views-exposed-search-wrap,
 .view-display-id-main_event_list_pane .views-exposed-search-wrap,
 .view-display-id-mba_admission_panel_pane .views-exposed-search-wrap {
+  background: #f2f2f2;
   padding: 18px 26px;
   position: relative;
   overflow: hidden;
@@ -8230,6 +8251,7 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing .views-exposed-widgets,
 #views-exposed-form-stories-alumni-stories-listing .views-exposed-widgets,
 #views-exposed-form-stories-giving-stories-listing .views-exposed-widgets {
+  background: #f2f2f2;
   padding: 18px 26px;
   position: relative;
   overflow: hidden;
@@ -8244,6 +8266,13 @@ fieldset.collapsible .fieldset-legend {
 #views-exposed-form-stories-giving-stories-listing .views-exposed-widgets #edit-search {
   height: 36px;
   width: 100%;
+}
+
+#views-exposed-form-gsb-act-project-listing-panel-pane-1 .views-exposed-widgets,
+#views-exposed-form-gsb-act-project-listing-panel-pane-2 .views-exposed-widgets,
+#views-exposed-form-gsb-act-project-listing-panel-pane-3 .views-exposed-widgets,
+#views-exposed-form-admission-events-mba-admission-panel-pane .views-exposed-widgets {
+  background: #f2f2f2;
 }
 
 #edit-submit-faculty-filters,
@@ -8831,6 +8860,9 @@ fieldset.collapsible .fieldset-legend {
   float: left;
   width: 36px;
 }
+.view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets {
+  background: #f2f2f2;
+}
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets legend {
   line-height: 1;
   margin-left: 0;
@@ -8907,6 +8939,140 @@ fieldset.collapsible .fieldset-legend {
     -webkit-column-count: 1;
     column-count: 1;
   }
+}
+
+.filter-results-wrapper {
+  background: white;
+  border-bottom: 3px #231f20 solid;
+}
+.filter-results-wrapper .results-wrapper {
+  padding: 16px 26px;
+}
+.filter-results-wrapper .results-text {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-right: 5px;
+}
+.filter-results-wrapper .term-searched {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-right: 5px;
+}
+.filter-results-wrapper .term-searched .term {
+  margin-right: 5px;
+}
+.filter-results-wrapper .term-searched .term:before {
+  content: "“";
+}
+.filter-results-wrapper .term-searched .term:after {
+  content: "”";
+}
+.filter-results-wrapper .term-searched .filter-exit {
+  display: inline-block;
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  top: 10px;
+  width: 30px;
+}
+.filter-results-wrapper .term-searched .filter-exit:before {
+  content: "\f11b";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.filter-results-wrapper .term-searched .filter-exit:before {
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+}
+.filter-results-wrapper .term-searched .filter-exit:hover:before {
+  color: white !important;
+}
+.filter-results-wrapper .filters-wrapper {
+  padding: 16px 0;
+}
+.filter-results-wrapper .filter-button {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background: white;
+  border: 1px lightgray solid;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.filter-results-wrapper .filter-button:hover {
+  border: 1px transparent solid;
+}
+.filter-results-wrapper .filter-button:hover .term {
+  color: white !important;
+}
+.filter-results-wrapper .filter-button:hover .filter-exit:before {
+  color: white;
+}
+.filter-results-wrapper .filter-button .term {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  border-right: 1px lightgray solid;
+  padding: 11px;
+  position: relative;
+  top: -9px;
+}
+.filter-results-wrapper .filter-button .filter-exit {
+  color: #636f00;
+  display: inline-block;
+  height: 31px;
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+  width: 30px;
+}
+.filter-results-wrapper .filter-button .filter-exit:before {
+  content: "\f11b";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.filter-results-wrapper .filter-button .filter-exit:before {
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+}
+.filter-results-wrapper #edit-actions {
+  margin: 0;
+  padding: 16px 26px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.filter-results-wrapper #edit-actions input {
+  float: right;
+  font-weight: normal;
+}
+.filter-results-wrapper #edit-actions input:hover {
+  color: white !important;
 }
 
 .field-name-field-sections .field-label,
