@@ -585,36 +585,38 @@ fieldset.collapsible .fieldset-legend
           -webkit-column-count: 1
           column-count: 1
 
-// Admission event date range search
-#edit-date-search-wrapper
-  @extend %divider-bottom
-  +clearfix
-  padding: 18px $standard-padding
-  position: relative
-  width: 100%
-
-  .views-widget
-    div
-      float: left
-      display: inline
-      padding: 1px 0
-
+// Admission event list date range search
+#edit-date-search-wrapper,
+#edit-field-event-date-value-wrapper
+  display: inline-block
+  padding: 18px 0
+  label,
+  div
+    display: inline-block
   label
-    margin-bottom: 5px
-
-  .container-inline-date > .form-item
+    position: relative
+    top: 6px
+  .description
+    display: none
+  .form-item
+    margin-bottom: 0
     margin-right: 0
 
-  .form-item
-    +clearfix
-    margin-bottom: 0
+#edit-date-search-wrapper
+  padding-left: $standard-padding
 
-    label
-      float: left
-      font-size: 16px
-      position: relative
-      text-transform: none
-      top: 10px
+#edit-field-event-date-value-wrapper
+  +breakpoint(837px max-width)
+    padding-left: $standard-padding
+  +breakpoint(1000px 1138px)
+    padding-left: $standard-padding
+
+// Admission event list special adjustment
+#views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper
+  @extend %divider-top
+  margin-top: 0
+  padding-top: 18px
+
 
 // All publications - done differently from main lists
 .view-display-id-all_research_panel_pane

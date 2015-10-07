@@ -123,7 +123,7 @@ p, .format-body,
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .filter-results-wrapper #edit-actions, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
+.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
 
@@ -158,7 +158,7 @@ p, .format-body,
 .view-id-gsb_act_project_listing .views-widget-filter-secondary .form-type-select,
 .view-display-id-club_list .views-widget-filter-secondary .form-type-select,
 .view-display-id-main_event_list_pane .views-widget-filter-secondary .form-type-select,
-.view-display-id-mba_admission_panel_pane .views-widget-filter-secondary .form-type-select, #edit-date-search-wrapper, .view-display-id-all_research_panel_pane .view-filters, .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-type-select {
+.view-display-id-mba_admission_panel_pane .views-widget-filter-secondary .form-type-select, .view-display-id-all_research_panel_pane .view-filters, .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-type-select {
   border-bottom: 1px lightgray solid;
 }
 
@@ -8790,35 +8790,50 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 
-#edit-date-search-wrapper {
-  overflow: hidden;
-  *zoom: 1;
-  padding: 18px 26px;
+#edit-date-search-wrapper,
+#edit-field-event-date-value-wrapper {
+  display: inline-block;
+  padding: 18px 0;
+}
+#edit-date-search-wrapper label,
+#edit-date-search-wrapper div,
+#edit-field-event-date-value-wrapper label,
+#edit-field-event-date-value-wrapper div {
+  display: inline-block;
+}
+#edit-date-search-wrapper label,
+#edit-field-event-date-value-wrapper label {
   position: relative;
-  width: 100%;
+  top: 6px;
 }
-#edit-date-search-wrapper .views-widget div {
-  float: left;
-  display: inline;
-  padding: 1px 0;
+#edit-date-search-wrapper .description,
+#edit-field-event-date-value-wrapper .description {
+  display: none;
 }
-#edit-date-search-wrapper label {
-  margin-bottom: 5px;
-}
-#edit-date-search-wrapper .container-inline-date > .form-item {
+#edit-date-search-wrapper .form-item,
+#edit-field-event-date-value-wrapper .form-item {
+  margin-bottom: 0;
   margin-right: 0;
 }
-#edit-date-search-wrapper .form-item {
-  overflow: hidden;
-  *zoom: 1;
-  margin-bottom: 0;
+
+#edit-date-search-wrapper {
+  padding-left: 26px;
 }
-#edit-date-search-wrapper .form-item label {
-  float: left;
-  font-size: 16px;
-  position: relative;
-  text-transform: none;
-  top: 10px;
+
+@media (max-width: 52.3125em) {
+  #edit-field-event-date-value-wrapper {
+    padding-left: 26px;
+  }
+}
+@media (min-width: 62.5em) and (max-width: 71.125em) {
+  #edit-field-event-date-value-wrapper {
+    padding-left: 26px;
+  }
+}
+
+#views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper {
+  margin-top: 0;
+  padding-top: 18px;
 }
 
 .view-display-id-all_research_panel_pane {
