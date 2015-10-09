@@ -32,21 +32,16 @@ $bp-video: 627px min-width
     font-size: 18px
     font-weight: normal
     line-height: 1.3
-    margin-bottom: 18px
     padding-top: 12px
     a
       color: $text-black
 
   // Video in list
-  .field-name-field-video
-
   .field-collection-item-field-video
     +clearfix
     @extend %divider-bottom
     padding: 22px $standard-padding
     margin: 0 -26px
-    &:first-of-type
-      padding-top: 0
     &:last-of-type
       border-bottom: 0
 
@@ -57,11 +52,21 @@ $bp-video: 627px min-width
       line-height: 1.3
       margin-bottom: 8px
 
+    .video-channeltitle,
+    .video-viewcount
+      font-size: 14px
+      line-height: 1.2
+
     // Video attribution
-    .video-attribution
+    .video-channeltitle
+      span
+        margin-right: 5px
 
     // Video view count
     .video-viewcount
+      margin-bottom: 8px
+      span
+        margin-left: 5px
 
     // Video description
     .field-name-field-body
@@ -77,84 +82,9 @@ $bp-video: 627px min-width
         +breakpoint(568px 321px)
           max-width: 65%
 
-    // Video thumbnail
-    .field-name-field-video-url
-      // Special icon width
-      .gsb-image-video-popup
-        max-width: 270px
-        .slideshow-slide &
-          max-width: 627px
-
-        a.fancybox
-          max-width: 100%
-          position: relative
-          display: inline-block
-          &:before, &:after
-            position: absolute
-            z-index: 50
-            top: 50%
-            left: 50%
-            .slideshow-cta &
-              +breakpoint($bp-mobile-max)
-                left: 63%
-              +breakpoint($bp-mobile)
-                left: 73%
-
-          +icon-before("circle", true)
-          &:before
-            font-size: 51px
-            color: rgba(0, 0, 0, 0.5)
-            margin-top: -30px
-            margin-left: -22px
-
-          +icon-after("play", true)
-          &:after
-            font-size: 16px
-            color: $white
-            margin-top: -12px
-            margin-left: -4px
-
-          &:hover
-            &:before
-              color: rgba(0,0,0,1)
-            &:after
-              color: $blue-light
-        &.image
-          a
-            display: none
-            &:before,
-            &:after
-              display: none
-
-      // CSS to handle the Preview and Video switching
-      .field-type-file
-        .gsb-responsive-main .file-video
-          display: none
-          +breakpoint($bp-video)
-            display: block
-        .gsb-responsive-preview .file-video
-          a
-            position: relative
-            display: inline-block
-            &:before, &:after
-              position: absolute
-              top: 50%
-              left: 50%
-            +icon-before("circle", true)
-            &:before
-              font-size: 51px
-              margin-top: -30px
-              margin-left: -22px
-            +icon-after("play", true)
-            &:after
-              font-size: 16px
-              color: $white
-              margin-top: -12px
-              margin-left: -4px
-
-
-
-
+    // Video wrapper
+    .group-wrapper-video
+      position: relative
       .wide-view &
         float: right
         margin-left: 10px
@@ -177,7 +107,37 @@ $bp-video: 627px min-width
           margin-left: 10px
           max-width: 125px
 
-    // Video length
+    // Video thumbnail
+    .field-name-field-video-url
+      // Special icon width
+      .gsb-image-video-popup
+        a.fancybox
+          +icon-before("circle", true)
+          &:before
+            font-size: 51px
+            margin-top: -30px
+            margin-left: -22px
+          +icon-after("play", true)
+          &:after
+            font-size: 16px
+            margin-top: -12px
+            margin-left: -4px
+
+      .field-type-file
+        .gsb-responsive-preview .file-video
+          a
+            +icon-before("circle", true)
+            &:before
+              font-size: 51px
+              margin-top: -30px
+              margin-left: -22px
+            +icon-after("play", true)
+            &:after
+              font-size: 16px
+              margin-top: -12px
+              margin-left: -4px
+
+    // Video time duration
     .video-duration
       background: $text-black
       color: $white
@@ -187,9 +147,9 @@ $bp-video: 627px min-width
       font-weight: bold
       line-height: 1.2
       padding: 4px
-      position: relative
-      top: -24px
-
+      position: absolute
+      right: 0
+      bottom: 2px
 
 // Videos in slideshows
 .full-view .slideshow-cta
