@@ -239,7 +239,6 @@ fieldset.collapsible .fieldset-legend
 
   .form-item label
     color: $text-black
-    font-family: $font-demi
     font-size: 14px
     font-weight: normal
     line-height: 1.2
@@ -357,8 +356,8 @@ fieldset.collapsible .fieldset-legend
     label
       color: $text-black
       display: inline-block
-      font-family: $font-demi
       font-size: 14px
+      font-family: $font-sans
       font-weight: normal
       line-height: 1.2
       margin-bottom: 0
@@ -396,13 +395,12 @@ fieldset.collapsible .fieldset-legend
   position: relative
   .ajax-progress-throbber
     position: absolute
-    right: 9px
-    top: 20px
+    right: 4px
+    top: 25px
 
   // Filters container
   .view-filters
     @extend %black-border-top-small
-    background: $grey-f
 
   // Search field
   .form-item.form-item-search
@@ -553,7 +551,7 @@ fieldset.collapsible .fieldset-legend
         label
           color: $text-black
           display: inline-block
-          font-family: $font-demi
+          font-family: $font-sans
           font-size: 14px
           font-weight: normal
           line-height: 1.2
@@ -708,7 +706,7 @@ fieldset.collapsible .fieldset-legend
         label
           color: $text-black
           display: inline-block
-          font-family: $font-demi
+          font-family: $font-sans
           font-size: 14px
           font-weight: normal
           line-height: 1.2
@@ -733,12 +731,11 @@ fieldset.collapsible .fieldset-legend
 // Search States
 .filter-results-wrapper
   @extend %divider-top
-  background: $white
   border-bottom: 3px $text-black solid
 
   // Results wrapper
   .results-wrapper
-    padding: 16px 1px
+    padding: 24px 0 16px
 
   // "Results for" text
   .results-text
@@ -781,16 +778,16 @@ fieldset.collapsible .fieldset-legend
 
   // Selected filters
   .filters-wrapper
-    padding: 16px 0
+    padding: 10px 0
   .filter-button
     +border-radius(20px)
     background: $white
     border: 1px $border-grey solid
     display: inline-block
-    margin-bottom: 5px
+    margin-bottom: 13px
     margin-right: 10px
     &:hover
-      @extend %gradient-blue
+      background: $link-blue
       border: 1px transparent solid
       .term
         color: $white !important
@@ -799,11 +796,12 @@ fieldset.collapsible .fieldset-legend
           color: $white
     // Term
     .term
+      border-right: 1px $border-grey solid
       color: $text-black
       font-family: $font-sans
       font-size: 14px
       line-height: 1.2
-      border-right: 1px $border-grey solid
+      margin-right: 5px
       padding: 11px
       position: relative
       top: -9px
@@ -814,13 +812,15 @@ fieldset.collapsible .fieldset-legend
       height: 31px
       overflow: hidden
       position: relative
-      top: 5px
-      width: 30px
+      top: 4px
+      width: 36px
       +icon-before("plus", true)
       &:before
         display: inline-block
         padding: 6px
         transform: rotate(45deg)
+        &:hover
+          background: $link-blue
       &:hover
         cursor: pointer
 
@@ -835,4 +835,5 @@ fieldset.collapsible .fieldset-legend
       float: right
       font-weight: normal
       &:hover
+        background: $link-blue
         color: $white !important

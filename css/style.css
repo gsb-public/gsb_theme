@@ -228,7 +228,7 @@ p, .format-body,
 #email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover, .circle:hover, .filter-results-wrapper .filter-button:hover {
+.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover, .circle:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -8163,7 +8163,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .gsb-views-exposed-filter .views-exposed-widgets .form-item label {
   color: #231f20;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2;
@@ -8302,8 +8301,8 @@ fieldset.collapsible .fieldset-legend {
 .pane-views-exp-msx-fellows-list .form-item label {
   color: #231f20;
   display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   margin-bottom: 0;
@@ -8357,26 +8356,8 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-main_event_list_pane .ajax-progress-throbber,
 .view-display-id-mba_admission_panel_pane .ajax-progress-throbber {
   position: absolute;
-  right: 9px;
-  top: 20px;
-}
-.view-faculty-filters .view-filters,
-.view-display-id-working_paper_list .view-filters,
-.view-display-id-case_listing .view-filters,
-.view-display-id-book_listing .view-filters,
-.view-display-id-publications_listing .view-filters,
-.view-display-id-annssh_stories_list .view-filters,
-.view-gsb-ranking-listing .view-filters,
-.view-gsb-faculty-insights-listing .view-filters,
-.view-gsb-in-the-media-listing .view-filters,
-.view-display-id-alumni_stories_listing .view-filters,
-.view-display-id-giving_stories_listing .view-filters,
-.view-display-id-alumni_book_listing .view-filters,
-.view-id-gsb_act_project_listing .view-filters,
-.view-display-id-club_list .view-filters,
-.view-display-id-main_event_list_pane .view-filters,
-.view-display-id-mba_admission_panel_pane .view-filters {
-  background: #f2f2f2;
+  right: 4px;
+  top: 25px;
 }
 .view-faculty-filters .form-item.form-item-search,
 .view-display-id-working_paper_list .form-item.form-item-search,
@@ -8801,7 +8782,7 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-mba_admission_panel_pane .views-widget-filter-secondary .form-type-select .form-item label {
   color: #231f20;
   display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2;
@@ -9165,7 +9146,7 @@ fieldset.collapsible .fieldset-legend {
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-type-select .form-item label {
   color: #231f20;
   display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2;
@@ -9192,11 +9173,10 @@ fieldset.collapsible .fieldset-legend {
 }
 
 .filter-results-wrapper {
-  background: white;
   border-bottom: 3px #231f20 solid;
 }
 .filter-results-wrapper .results-wrapper {
-  padding: 16px 1px;
+  padding: 24px 0 16px;
 }
 .filter-results-wrapper .results-text {
   display: inline-block;
@@ -9254,7 +9234,7 @@ fieldset.collapsible .fieldset-legend {
   color: white !important;
 }
 .filter-results-wrapper .filters-wrapper {
-  padding: 16px 0;
+  padding: 10px 0;
 }
 .filter-results-wrapper .filter-button {
   -moz-border-radius: 20px;
@@ -9263,10 +9243,11 @@ fieldset.collapsible .fieldset-legend {
   background: white;
   border: 1px lightgray solid;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 13px;
   margin-right: 10px;
 }
 .filter-results-wrapper .filter-button:hover {
+  background: #2d6280;
   border: 1px transparent solid;
 }
 .filter-results-wrapper .filter-button:hover .term {
@@ -9276,11 +9257,12 @@ fieldset.collapsible .fieldset-legend {
   color: white;
 }
 .filter-results-wrapper .filter-button .term {
+  border-right: 1px lightgray solid;
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  border-right: 1px lightgray solid;
+  margin-right: 5px;
   padding: 11px;
   position: relative;
   top: -9px;
@@ -9291,8 +9273,8 @@ fieldset.collapsible .fieldset-legend {
   height: 31px;
   overflow: hidden;
   position: relative;
-  top: 5px;
-  width: 30px;
+  top: 4px;
+  width: 36px;
 }
 .filter-results-wrapper .filter-button .filter-exit:before {
   content: "\f11b";
@@ -9314,6 +9296,9 @@ fieldset.collapsible .fieldset-legend {
   padding: 6px;
   transform: rotate(45deg);
 }
+.filter-results-wrapper .filter-button .filter-exit:before:hover {
+  background: #2d6280;
+}
 .filter-results-wrapper .filter-button .filter-exit:hover {
   cursor: pointer;
 }
@@ -9328,6 +9313,7 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
 }
 .filter-results-wrapper #edit-actions input:hover {
+  background: #2d6280;
   color: white !important;
 }
 
