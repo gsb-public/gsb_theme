@@ -19,6 +19,7 @@
 .node-event.view-mode-full
   @extend %black-border-top-small
   padding-left: 35px
+  margin-bottom: 100px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-left: 0
@@ -34,7 +35,7 @@
   // Right side
   .group-right
     display: inline-block
-    float: none
+    float: right
     max-width: 270px
     vertical-align: top
     +breakpoint($bp-mobile-max)
@@ -108,7 +109,8 @@
       font-family: $font-sans
       font-size: 36px
       font-weight: bold
-      line-height: 1.3
+      line-height: 1.2
+      margin: 30px 0 18px
       +breakpoint($bp-mobile-max)
         font-size: 26px
 
@@ -132,6 +134,8 @@
     .field-name-field-event-location-type
       font-weight: normal
       margin-bottom: 4px
+    .address-line-3
+      display: inline-block
 
   // Location link to full
   .location-anchor a
@@ -201,6 +205,10 @@
     .field-name-field-title-position-unlimited,
     .field-name-field-company-organization
       display: none
+    // Speaker title and area
+    .field-name-field-title
+      font-family: $font-demi
+      font-weight: $font-sans
     // Speaker description
     .field-name-field-description
       font-size: 18px
@@ -227,7 +235,9 @@
     .field-name-alumni-name-degree-linked,
     .field-name-title,
     h3,
-    .field-name-field-link-single
+    .field-name-field-link-single,
+    .field-name-field-first-name,
+    .field-name-field-last-name
       color: $text-black
       font-family: $font-sans
       font-size: 20px
@@ -245,7 +255,7 @@
   .field-name-field-target-audience
     font-size: 18px
     line-height: 1.3
-    margin-bottom: 12px
+    margin-bottom: 4px
     +breakpoint($bp-mobile-max)
       font-size: 16px
 
@@ -264,6 +274,8 @@
     margin-bottom: 26px
     +breakpoint($bp-mobile-max)
       font-size: 16px
+    div
+      margin-bottom: 6px
 
   // Registration deadline
   .field-name-field-date-time
@@ -308,6 +320,7 @@
     padding-top: $standard-padding
     // Event type label
     .field-name-field-event-location-type
+      font-size: 20px
       font-weight: bold
       margin-bottom: 4px
 

@@ -35,8 +35,9 @@
   color: white;
   display: block;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.3;
   position: relative;
+  top: -2px;
 }
 .node-event.view-mode-full .field-name-field-register-url a:after {
   content: "\f101";
@@ -156,6 +157,7 @@
 
 .node-event.view-mode-full {
   padding-left: 35px;
+  margin-bottom: 100px;
 }
 @media (max-width: 35.5em) {
   .node-event.view-mode-full {
@@ -172,7 +174,7 @@
 }
 .node-event.view-mode-full .group-right {
   display: inline-block;
-  float: none;
+  float: right;
   max-width: 270px;
   vertical-align: top;
 }
@@ -254,7 +256,8 @@
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
   font-weight: bold;
-  line-height: 1.3;
+  line-height: 1.2;
+  margin: 30px 0 18px;
 }
 @media (max-width: 35.5em) {
   .node-event.view-mode-full .field-name-title h1 {
@@ -286,6 +289,9 @@
 .node-event.view-mode-full .location-teaser .field-name-field-event-location-type {
   font-weight: normal;
   margin-bottom: 4px;
+}
+.node-event.view-mode-full .location-teaser .address-line-3 {
+  display: inline-block;
 }
 .node-event.view-mode-full .location-anchor a {
   color: #636f00;
@@ -355,6 +361,10 @@
 .node-event.view-mode-full .field-name-field-event-speakers .field-name-field-company-organization {
   display: none;
 }
+.node-event.view-mode-full .field-name-field-event-speakers .field-name-field-title {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .node-event.view-mode-full .field-name-field-event-speakers .field-name-field-description {
   font-size: 18px;
   line-height: 1.3;
@@ -387,7 +397,9 @@
 .node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-alumni-name-degree-linked,
 .node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-title,
 .node-event.view-mode-full .field-collection-item-field-event-speakers h3,
-.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-field-link-single {
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-field-link-single,
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-field-first-name,
+.node-event.view-mode-full .field-collection-item-field-event-speakers .field-name-field-last-name {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -404,7 +416,7 @@
 .node-event.view-mode-full .field-name-field-target-audience {
   font-size: 18px;
   line-height: 1.3;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 @media (max-width: 35.5em) {
   .node-event.view-mode-full .field-name-field-target-audience {
@@ -430,6 +442,9 @@
   .node-event.view-mode-full .field-name-field-price {
     font-size: 16px;
   }
+}
+.node-event.view-mode-full .field-name-field-price div {
+  margin-bottom: 6px;
 }
 .node-event.view-mode-full .field-name-field-date-time {
   display: inline-block;
@@ -474,6 +489,7 @@
   padding-top: 26px;
 }
 .node-event.view-mode-full .field-name-field-event-location .field-name-field-event-location-type {
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 4px;
 }
