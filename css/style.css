@@ -8035,50 +8035,54 @@ ul.slideshow-items {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
 }
 
-.collapsible .fieldset-title {
-  display: inline-block;
+@media (min-width: 35.5625em) {
+  .collapsible .fieldset-title {
+    display: inline-block;
+  }
+  .collapsible .fieldset-title:before {
+    content: "\f117";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .collapsible .fieldset-title:before {
+    color: #990000;
+    font-size: 18px;
+    position: relative;
+    left: -2px;
+  }
+  .collapsible .fieldset-title:hover {
+    color: #2d6280;
+  }
+  .collapsible .fieldset-title:hover:before {
+    color: #2d6280;
+  }
 }
-.collapsible .fieldset-title:before {
-  content: "\f117";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-.collapsible .fieldset-title:before {
-  color: #990000;
-  font-size: 18px;
-  position: relative;
-  left: -2px;
-}
-.collapsible .fieldset-title:hover {
-  color: #2d6280;
-}
-.collapsible .fieldset-title:hover:before {
-  color: #2d6280;
-}
-.collapsible.collapsed .fieldset-title:before {
-  content: "\f11b";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
+@media (min-width: 35.5625em) {
+  .collapsible.collapsed .fieldset-title:before {
+    content: "\f11b";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
 }
 
 fieldset.collapsible .fieldset-legend {
@@ -8099,14 +8103,6 @@ fieldset.collapsible .fieldset-legend {
 .gsb-views-exposed-filter .views-exposed-widgets {
   background: #f2f2f2;
   padding-top: 1px;
-}
-@media (max-width: 35.5em) {
-  .gsb-views-exposed-filter .views-exposed-widgets {
-    display: none;
-  }
-  .view-gsb-act-project-listing .gsb-views-exposed-filter .views-exposed-widgets, .view-gsb-all-research-listing .gsb-views-exposed-filter .views-exposed-widgets {
-    display: block;
-  }
 }
 .gsb-views-exposed-filter .views-exposed-widgets legend {
   padding: 0;
@@ -8133,6 +8129,28 @@ fieldset.collapsible .fieldset-legend {
   font-size: 18px;
   font-weight: normal;
   line-height: 1;
+}
+@media (max-width: 35.5em) {
+  .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:after {
+    content: "\f107";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:after {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
 }
 
 @media (max-width: 35.5em) {
@@ -9274,6 +9292,33 @@ fieldset.collapsible .fieldset-legend {
 .filter-results-wrapper #edit-actions input:hover {
   background: #2d6280;
   color: white !important;
+}
+
+.mm-menu .mm-navbar a.mm-title {
+  color: #231f20;
+  cursor: pointer;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+}
+.mm-menu .mm-navbar a.mm-title:before {
+  content: "\f106";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.mm-menu .mm-navbar a.mm-title:before {
+  margin-right: 5px;
 }
 
 .field-name-field-sections .field-label,

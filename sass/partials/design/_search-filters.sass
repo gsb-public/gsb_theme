@@ -187,21 +187,23 @@
 
 // Filter toggle
 .collapsible
-  .fieldset-title
-    display: inline-block
-    +icon-before("minus", true)
-    &:before
-      color: $red
-      font-size: 18px
-      position: relative
-      left: -2px
-    &:hover
-      color: $link-blue
-      &:before
-        color: $link-blue
-  &.collapsed
+  +breakpoint(569px min-width)
     .fieldset-title
-      +icon-before("plus", true)
+      display: inline-block
+      +icon-before("minus", true)
+      &:before
+        color: $red
+        font-size: 18px
+        position: relative
+        left: -2px
+      &:hover
+        color: $link-blue
+        &:before
+          color: $link-blue
+  &.collapsed
+    +breakpoint(569px min-width)
+      .fieldset-title
+        +icon-before("plus", true)
 
 fieldset.collapsible .fieldset-legend
   display: inline
@@ -219,11 +221,6 @@ fieldset.collapsible .fieldset-legend
 .gsb-views-exposed-filter .views-exposed-widgets
   background: $grey-f
   padding-top: 1px
-  +breakpoint($bp-mobile-max)
-    display: none
-    .view-gsb-act-project-listing &,
-    .view-gsb-all-research-listing &
-      display: block
 
   legend
     padding: 0
@@ -250,6 +247,12 @@ fieldset.collapsible .fieldset-legend
     font-size: 18px
     font-weight: normal
     line-height: 1
+    +breakpoint(568px max-width)
+      +icon-after("arrow-med-right", true)
+      &:after
+        margin-left: 5px
+        position: relative
+        top: 2px
 
 // Parent class to exposed, collapsible filter - used on MSx fellows
 .pane-views-exp-msx-fellows-list
@@ -837,3 +840,15 @@ fieldset.collapsible .fieldset-legend
       &:hover
         background: $link-blue
         color: $white !important
+
+// Filter tray
+.mm-menu .mm-navbar a.mm-title
+  color: $text-black
+  cursor: pointer
+  font-family: $font-demi
+  font-size: 18px
+  font-weight: normal
+  line-height: 1
+  +icon-before("arrow-med-left", true)
+  &:before
+    margin-right: 5px

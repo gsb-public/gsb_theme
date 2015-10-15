@@ -271,23 +271,29 @@
    */
   Drupal.behaviors.mmenu = {
     attach: function () {
-      $("#edit-secondary").mmenu({
-        // Options
+      if (Modernizr.mq('(max-width: 568px)')) {
+        var $wrapper = $('#edit-secondary .fieldset-wrapper');
+        $wrapper.mmenu({
+          // Options
+          navbar: {
+            add: true,
+            title: 'Narrow your results',
+            titleLink: parent
+          },
 
-        // configuration
-        offCanvas: {
-          pageNodetype: "fieldset"
-        }
-      });
+          offCanvas: {
+            position: 'right',
+          }
+        });
 
-      var API = $("#edit-secondary").data( "mmenu" );
+        $('.fieldset-title').click(function() {
+           $wrapper.data('mmenu').open();
+        });
+        $('.mm-navbar .mm-title').click(function() {
+           $wrapper.data('mmenu').close();
+        });
 
-      $("#my-button").click(function() {
-         API.open();
-      });
-
-
-
+      }
     }
   };
 
