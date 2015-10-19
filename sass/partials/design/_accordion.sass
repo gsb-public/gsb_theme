@@ -73,3 +73,24 @@
   .field-collection-item-field-accordion-item:first-of-type
     .acc-title
       border-top: 0
+
+// Admission Event Locations accordion
+.pane-admission-events-location-panel-pane
+  @extend %bg-border-and-box-shadow
+  padding: 10px $standard-padding
+  // Pane title
+  h2.pane-title
+    color: $text-black
+    font-family: $font-sans
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    margin-top: 10px
+    padding-bottom: 10px
+
+  // Fix for commas
+  .acc-body
+    +clearfix
+    span
+      display: block
+      float: left
