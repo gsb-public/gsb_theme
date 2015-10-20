@@ -73,7 +73,8 @@
 // Layouts
 
 // 1 Column layout
-.person-list-view
+.person-list-view,
+.person-list-view-container
   .narrow-view &
     @extend %box-shadow
     background: $white
@@ -142,6 +143,12 @@
   .person-email a
     .wide-view &
       font-size: 16px
+
+// Container styling
+.person-list-view-container
+  @extend %box-shadow
+  background: $white
+  padding: $standard-padding
 
 // 2 Column layout
 .person-grid-view

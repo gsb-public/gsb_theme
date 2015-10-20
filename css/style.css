@@ -200,7 +200,8 @@ p, .format-body,
 .designed-box, div.region-content [class*="pane-menu-block"], .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .narrow-view .person-list-view, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta {
+.pane-bundle-text .mba-highlighted-block, .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .narrow-view .person-list-view, .narrow-view
+.person-list-view-container, .person-list-view-container, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -6714,67 +6715,88 @@ ul.slideshow-items {
   margin-bottom: 24px;
 }
 
-.narrow-view .person-list-view {
+.narrow-view .person-list-view, .narrow-view
+.person-list-view-container {
   background: white;
   padding: 26px;
 }
-.person-list-view .field-name-field-title {
+.person-list-view .field-name-field-title,
+.person-list-view-container .field-name-field-title {
   line-height: 1;
   margin-bottom: 20px;
 }
-.wide-view .person-list-view .field-name-field-title {
+.wide-view .person-list-view .field-name-field-title, .wide-view
+.person-list-view-container .field-name-field-title {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: normal;
 }
-.narrow-view .person-list-view .field-name-field-title {
+.narrow-view .person-list-view .field-name-field-title, .narrow-view
+.person-list-view-container .field-name-field-title {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
-.person-list-view img {
+.person-list-view img,
+.person-list-view-container img {
   margin-top: 2px;
 }
-.wide-view .person-list-view img {
+.wide-view .person-list-view img, .wide-view
+.person-list-view-container img {
   float: left;
   margin-bottom: 24px;
   margin-right: 24px;
   height: 120px;
   width: 120px;
 }
-.narrow-view .person-list-view img {
+.narrow-view .person-list-view img, .narrow-view
+.person-list-view-container img {
   height: 90px;
   width: 90px;
 }
-.wide-view .person-list-view .person-fpp-wrapper {
+.wide-view .person-list-view .person-fpp-wrapper, .wide-view
+.person-list-view-container .person-fpp-wrapper {
   float: left;
   margin-left: -144px;
   padding-left: 144px;
   width: 100%;
 }
-.wide-view .person-list-view .person-name {
+.wide-view .person-list-view .person-name, .wide-view
+.person-list-view-container .person-name {
   font-size: 18px;
   padding-top: 12px;
 }
-.wide-view .person-list-view .person-name a {
+.wide-view .person-list-view .person-name a, .wide-view
+.person-list-view-container .person-name a {
   font-size: 20px;
 }
-.narrow-view .person-list-view .person-name {
+.narrow-view .person-list-view .person-name, .narrow-view
+.person-list-view-container .person-name {
   margin-top: 8px;
 }
 .wide-view .person-list-view .person-rank-and-area, .wide-view
-.person-list-view .person-position {
+.person-list-view .person-position, .wide-view
+.person-list-view-container .person-rank-and-area, .wide-view
+.person-list-view-container .person-position {
   font-size: 16px;
   line-height: 1.3;
 }
-.narrow-view .person-list-view .person-wrapper-info {
+.narrow-view .person-list-view .person-wrapper-info, .narrow-view
+.person-list-view-container .person-wrapper-info {
   font-size: 14px;
 }
-.wide-view .person-list-view .person-phone {
+.wide-view .person-list-view .person-phone, .wide-view
+.person-list-view-container .person-phone {
   font-size: 15px;
 }
-.wide-view .person-list-view .person-email a {
+.wide-view .person-list-view .person-email a, .wide-view
+.person-list-view-container .person-email a {
   font-size: 16px;
+}
+
+.person-list-view-container {
+  background: white;
+  padding: 26px;
 }
 
 .person-grid-view {
