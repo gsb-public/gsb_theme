@@ -250,9 +250,11 @@ fieldset.collapsible .fieldset-legend
     +breakpoint(568px max-width)
       +icon-after("arrow-med-right", true)
       &:after
+        color: $red
+        font-size: 0.8em
         margin-left: 5px
         position: relative
-        top: 2px
+        top: 1px
 
 // Parent class to exposed, collapsible filter - used on MSx fellows
 .pane-views-exp-msx-fellows-list
@@ -840,13 +842,32 @@ fieldset.collapsible .fieldset-legend
         color: $white !important
 
 // Filter tray
-.mm-menu .mm-navbar a.mm-title
-  color: $text-black
-  cursor: pointer
-  font-family: $font-demi
-  font-size: 18px
-  font-weight: normal
-  line-height: 1
-  +icon-before("arrow-med-left", true)
-  &:before
-    margin-right: 5px
+.mm-panels > .mm-panel.mm-hasnavbar
+  padding-top: 30px !important
+.mm-navbar > *
+  padding: 12px 0 !important
+
+.mm-menu
+  // Navigation title
+  .mm-navbar
+    padding: 0 20px 0 14px
+    text-align: center
+    a.mm-title
+      color: $text-black
+      cursor: pointer
+      font-family: $font-demi
+      font-size: 18px
+      font-weight: normal
+      line-height: 1
+      text-align: left
+      +icon-before("arrow-med-left", true)
+      &:before
+        color: $red
+        font-size: 0.8em
+        margin-right: 5px
+
+  input
+    margin: 0 4px 10px 0
+    vertical-align: none
+  label
+    margin: 0 0.5em 1em 0
