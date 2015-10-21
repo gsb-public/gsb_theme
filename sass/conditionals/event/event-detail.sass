@@ -19,7 +19,6 @@
 .node-event.view-mode-full
   @extend %black-border-top-small
   padding-left: 35px
-  margin-bottom: 100px
   +breakpoint($bp-mobile-max)
     border-top: 0
     padding-left: 0
@@ -28,9 +27,11 @@
   .group-left
     display: inline-block
     float: none
-    max-width: 550px
     padding-top: $standard-padding
-    width: auto
+    width: 100%
+    +breakpoint(900px min-width)
+      margin-right: -285px
+      padding-right: 285px
 
   // Right side
   .group-right
@@ -38,7 +39,7 @@
     float: right
     max-width: 270px
     vertical-align: top
-    +breakpoint($bp-mobile-max)
+    +breakpoint(900px max-width)
       display: none
 
   // Bottom portion

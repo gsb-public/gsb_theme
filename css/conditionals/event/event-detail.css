@@ -157,7 +157,6 @@
 
 .node-event.view-mode-full {
   padding-left: 35px;
-  margin-bottom: 100px;
 }
 @media (max-width: 35.5em) {
   .node-event.view-mode-full {
@@ -168,9 +167,14 @@
 .node-event.view-mode-full .group-left {
   display: inline-block;
   float: none;
-  max-width: 550px;
   padding-top: 26px;
-  width: auto;
+  width: 100%;
+}
+@media (min-width: 56.25em) {
+  .node-event.view-mode-full .group-left {
+    margin-right: -285px;
+    padding-right: 285px;
+  }
 }
 .node-event.view-mode-full .group-right {
   display: inline-block;
@@ -178,7 +182,7 @@
   max-width: 270px;
   vertical-align: top;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 56.25em) {
   .node-event.view-mode-full .group-right {
     display: none;
   }
