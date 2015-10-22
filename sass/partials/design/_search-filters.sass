@@ -221,6 +221,12 @@ fieldset.collapsible .fieldset-legend
 .gsb-views-exposed-filter .views-exposed-widgets
   background: $grey-f
   padding-top: 1px
+  // @todo remove this for tray
+  +breakpoint($bp-mobile-max)
+    display: none
+    .view-gsb-act-project-listing &,
+    .view-gsb-all-research-listing &
+      display: block
 
   legend
     padding: 0
@@ -247,17 +253,21 @@ fieldset.collapsible .fieldset-legend
     font-size: 18px
     font-weight: normal
     line-height: 1
-    +breakpoint(568px max-width)
-      +icon-after("arrow-med-right", true)
-      &:after
-        color: $red
-        font-size: 0.8em
-        margin-left: 5px
-        position: relative
-        top: 1px
+    // @todo add this for tray
+    // +breakpoint(568px max-width)
+    //   +icon-after("arrow-med-right", true)
+    //   &:after
+    //     color: $red
+    //     font-size: 0.8em
+    //     margin-left: 5px
+    //     position: relative
+    //     top: 1px
 
 // Parent class to exposed, collapsible filter - used on MSx fellows
 .pane-views-exp-msx-fellows-list
+  // @todo remove this for tray
+  +breakpoint($bp-mobile-max)
+    display: none
   // Reset style for case when filter and search are placed in one class
   &.exposed_filter_widget_one_column
     .ajax-progress
@@ -841,33 +851,34 @@ fieldset.collapsible .fieldset-legend
         background: $link-blue
         color: $white !important
 
-// Filter tray
-.mm-panels > .mm-panel.mm-hasnavbar
-  padding-top: 30px !important
-.mm-navbar > *
-  padding: 12px 0 !important
+// @todo add this for tray
+// Mobile filter tray
+// .mm-panels > .mm-panel.mm-hasnavbar
+//   padding-top: 30px !important
+// .mm-navbar > *
+//   padding: 12px 0 !important
 
-.mm-menu
-  // Navigation title
-  .mm-navbar
-    padding: 0 20px 0 14px
-    text-align: center
-    a.mm-title
-      color: $text-black
-      cursor: pointer
-      font-family: $font-demi
-      font-size: 18px
-      font-weight: normal
-      line-height: 1
-      text-align: left
-      +icon-before("arrow-med-left", true)
-      &:before
-        color: $red
-        font-size: 0.8em
-        margin-right: 5px
-  .form-item
-    +clearfix
-  input
-    float: left
-    margin: 2px 8px 12px 0
-    vertical-align: initial
+// .mm-menu
+//   // Navigation title
+//   .mm-navbar
+//     padding: 0 20px 0 14px
+//     text-align: center
+//     a.mm-title
+//       color: $text-black
+//       cursor: pointer
+//       font-family: $font-demi
+//       font-size: 18px
+//       font-weight: normal
+//       line-height: 1
+//       text-align: left
+//       +icon-before("arrow-med-left", true)
+//       &:before
+//         color: $red
+//         font-size: 0.8em
+//         margin-right: 5px
+//   .form-item
+//     +clearfix
+//   input
+//     float: left
+//     margin: 2px 8px 12px 0
+//     vertical-align: initial
