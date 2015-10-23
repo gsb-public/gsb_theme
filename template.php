@@ -526,8 +526,10 @@ function gsb_theme_block_list_alter(&$blocks) {
  * Implements hook_field_group_pre_render_alter().
  *
  * Adding group wrapper css classes for all field groups
+ * Also, adds 'hide_this' class if element is a 'related' group wrapper and has no children
  */
 function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
+  // Adding group wrapper css classes for all field groups
   $group_class = str_replace('_', '-', $group->group_name);
   if (!empty($element['#attributes']['class']) && !in_array($group_class, $element['#attributes']['class'])) {
     $element['#attributes']['class'][] = $group_class;
@@ -535,4 +537,33 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
   else {
     $element['#attributes'] = array('class' => array($group_class));
   }
+  // Add 'hide_this' class if 'related' group wrapper and has no children
+  if ($group->group_name == 'group_wrapper_related') {
+    foreach ($group->children as $child) {
+      if (!empty($element[$child]['#field_type']) && $element[$child]['#field_type'] == 'ds') {
+        continue;
+      }
+      if ($child == 'field_related_faculty') {
+        $first_item = $element['field_related_faculty']['#items'][0]['value'];
+        $first_entity = $element['field_related_faculty'][0]['entity']['field_collection_item'][$first_item]['#entity'];
+        if (!empty($first_entity->field_person_fac_single_ref)) {
+          $found_child = TRUE;
+          break;
+        }
+      }
+      else if ($element[$child] != NULL) {
+        $found_child = TRUE;
+        break;
+      }
+    }
+    if (!$found_child) {
+      if (!empty($element['#attributes']['class'])) {
+        $element['#attributes']['class'][] = 'hide_this';
+      }
+      else {
+        $element['#attributes'] = array('class' => array('hide_this'));
+      }
+    }
+  }
 }
+
