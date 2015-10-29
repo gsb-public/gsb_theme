@@ -55,14 +55,6 @@
       padding-bottom: 4px
       font-size: 18px
 
-  // Keywords
-  .field-name-field-tag
-    font-size: 14px
-    line-height: 1.2
-    padding-bottom: 12px
-    .label-inline
-      font-weight: bold
-
   // Case citation
   .field-name-field-citation
     color: $text-grey-light
@@ -71,7 +63,6 @@
     padding-bottom: 26px
 
   // Dividing borders
-  .group-wrapper-paper-copy,
   .field-name-field-link-document,
   .gsb-feature-case-ct-pdf-statement
     @extend %divider-top
@@ -91,27 +82,30 @@
 
   // Paper copy
   .group-wrapper-paper-copy
-    margin-top: 12px
+    @extend %bg-border-and-box-shadow
+    margin-top: 30px
+    padding: 0 $standard-padding 12px
+    // Title
     h3
-      font-size: 18px
-      line-height: 1.2
-      margin-bottom: 12px
-    .field
-      margin-bottom: 6px
-      padding-left: 14px
-      &:last-of-type
-        margin-bottom: 0
-      &:before
-        content: "• "
-        color: $text-black
-        float: left
-        position: relative
-        left: -14px
-        width: 0
-    a[target=_blank]
-      &:after
-        font-size: 12px
-        margin-left: 0.3em
+      color: $text-black
+      font-size: 20px
+      font-weight: bold
+      padding: 18px 0 11px 0
+      line-height: 1.3
+    // Links
+    .field-type-link-field
+      border-top: 1px solid #e4e4e4
+      padding-top: 6px
+      padding-bottom: 5px
+      a
+        color: $link-green
+        font-weight: normal
+        padding-right: 10px
+        &[target=_blank]
+          &:after
+            font-size: 12px
+        &:hover
+          color: $link-blue
 
   // Harvard business link and center link
   .field-name-field-link-single,
@@ -136,7 +130,6 @@
 
   // Download button
   .gsb-cmis-download-wrapper
-    @extend %divider-top
     @extend %divider-bottom
     margin-bottom: $standard-padding
     padding: 12px 0
