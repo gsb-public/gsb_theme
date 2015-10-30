@@ -12,56 +12,43 @@
   .view-content
     +clearfix
   .views-row
-    background: rgba($white, 0.5)
+    background: rgba($white, 0.65)
     border: 1px solid $grey-d
     display: inline-block
     float: left
-    margin-right: 18px
+    height: 315px
+    margin-left: 6px
+    margin-right: 6px
     margin-bottom: 24px
-    min-height: 370px
-    width: 130px
-    &:nth-of-type(6n)
-      margin-right: 0
-    +breakpoint(1170px max-width)
-      margin-right: 10%
-      width: 170px
-      &:nth-of-type(6n)
-        margin-right: 18px
-      &:nth-of-type(3n)
-        margin-right: 0
-    +breakpoint(769px 937px)
-      &:nth-of-type(3n)
-        margin-right: 10%
-      &:nth-of-type(2n)
-        margin-right: 0
-    +breakpoint(677px max-width)
-      &:nth-of-type(3n)
-        margin-right: 10%
-      &:nth-of-type(2n)
-        margin-right: 0
+    overflow: hidden
+    width: 133px
+
+  // Each fellow
   .node-msx-fellows
-    border-top: 0
-    padding: 0 10px
-    .field-name-field-image-single-public
-      margin: -2px -11px 0 -11px
-      float: none
+
+    // Name
     .field-name-title
-      margin: 14px 0 8px 0
+      margin: 8px 8px 6px 8px
       h2
-        font-size: 16px
-        line-height: 1.25
+        font-size: 15px
+        line-height: 1.1
         margin: 0
         a
-          color: $text-green
+          color: $link-green
           &:hover
             color: $link-blue
+    // Position or title
     .field-name-field-title-position-unlimited
-      margin: 0 0 9px 0
-    .field-name-field-location
-      font-weight: normal
-      margin: 0
-    .field-name-field-title-position-unlimited,
-    .field-name-field-company-organization,
-    .field-name-field-location
       font-size: 14px
-      line-height: 1.25
+      line-height: 1.2
+      margin: 0 8px
+    // Company or organization
+    .field-name-field-company-organization
+      font-size: 14px
+      line-height: 1.2
+      margin: 5px 8px 0
+    // Location
+    .field-name-field-location
+      font-size: 13px
+      line-height: 1.2
+      margin: 3px 8px 0
