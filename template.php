@@ -74,7 +74,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-act-project-listing-panel-pane-3',
     'views-exposed-form-gsb-event-main-event-list-pane',
     'views-exposed-form-admission-events-mba-admission-panel-pane',
-    'views-exposed-form-gsb-all-research-listing-all-research-panel-pane'
+    'views-exposed-form-gsb-all-research-listing-all-research-panel-pane',
+    'views-exposed-form-admission-events-msx-admission-panel-pane'
   );
 
 
@@ -185,7 +186,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search for upcoming events');
   }
-  // Admission event listing after build customizations
+  // MBA admission event listing after build customizations
   if ($form['#id'] == 'views-exposed-form-admission-events-mba-admission-panel-pane') {
     $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
   }
@@ -193,6 +194,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
     // Add placeholder text.
     $form['field_search_field_value']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
+  }
+  // MSx admission events
+  if ($form['#id'] == 'views-exposed-form-admission-events-msx-admission-panel-pane') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by location, title, or other keywords');
   }
 }
 
