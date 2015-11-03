@@ -156,7 +156,7 @@ div.callout
 
   // Tables
   table
-    margin: 20px 0
+    margin: 20px 0 50px
     .narrow-view &
       margin-bottom: 0
     +breakpoint(768px max-width)
@@ -194,6 +194,17 @@ div.callout
       p
         font-size: 14px
         line-height: 18px
+  // Table footer styled like caption
+  tfoot
+    margin-top: 12px
+    td
+      color: #595959
+      font-size: 14px
+      line-height: 1.2
+      margin-bottom: 8px
+      margin-left: 0
+      padding: 6px 0 6px 16px
+
 
 // Styles for the actual wysiwyg body
 .cke_show_borders
