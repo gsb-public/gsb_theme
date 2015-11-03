@@ -21,7 +21,6 @@ $bp-video: 627px min-width
 // Video list FPP
 .pane-bundle-videos
   @extend %bg-and-box-shadow
-  background: #f4f4f4
   padding: 0 $standard-padding
 
   // Pane title
@@ -47,21 +46,39 @@ $bp-video: 627px min-width
 
     // Video title
     .field-name-field-title
-      display: inline-block
+      display: inline
       font-size: 22px
       font-weight: bold
       line-height: 1.3
-      margin-bottom: 8px
       &:hover
         text-decoration: underline
+      .wide-view &
+        max-width: 65%
+        +breakpoint(710px 569px)
+          max-width: 100%
+        +breakpoint(365px max-width)
+          max-width: 100%
+      .narrow-view &
+        +breakpoint(568px 321px)
+          max-width: 65%
 
     .video-channeltitle,
     .video-viewcount
       font-size: 14px
       line-height: 1.2
+      .wide-view &
+        max-width: 65%
+        +breakpoint(710px 569px)
+          max-width: 100%
+        +breakpoint(365px max-width)
+          max-width: 100%
+      .narrow-view &
+        +breakpoint(568px 321px)
+          max-width: 65%
 
     // Video attribution
     .video-channeltitle
+      margin-top: 8px
       span
         margin-right: 5px
 
