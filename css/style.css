@@ -111,11 +111,11 @@ p, .format-body,
 .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list {
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list {
   background: white;
 }
 
-.designed-box, div.region-content [class*="pane-menu-block"], .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links {
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links {
   background-color: #f9f9f9;
   background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
   background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
@@ -166,7 +166,7 @@ p, .format-body,
   border-bottom: 1px lightgray solid;
 }
 
-.designed-box, div.region-content [class*="pane-menu-block"], .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta {
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta {
   border: 2px white solid;
 }
 
@@ -202,10 +202,10 @@ p, .format-body,
   border-top: 3px #231f20 solid;
 }
 
-.designed-box, div.region-content [class*="pane-menu-block"], .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-lastname-az-links, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .narrow-view .person-list-view, .narrow-view
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .narrow-view .person-list-view, .narrow-view
 .person-list-view-container, .person-list-view-container, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -213,7 +213,7 @@ p, .format-body,
   margin: 1px;
 }
 
-.ie8 .designed-box, .ie8 div.region-content [class*="pane-menu-block"], div.region-content .ie8 [class*="pane-menu-block"], .ie8 .pane-bundle-accordion, .ie8 .pane-admission-events-location-panel-pane, .ie8 .cta-green, .ie8 .cta-red .field-item, .cta-red .ie8 .field-item, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content, .ie8 .pane-lastname-az-links {
+.ie8 .designed-box, .ie8 .pane-bundle-accordion, .ie8 .pane-admission-events-location-panel-pane, .ie8 .cta-green, .ie8 .cta-red .field-item, .cta-red .ie8 .field-item, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content, .ie8 .pane-lastname-az-links {
   border: 1px #cccccc solid !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -4472,8 +4472,9 @@ ul.gsb-social-buttons li:last-of-type {
 }
 .pane-bundle-links .black-bar .field-name-field-title {
   color: #231f20;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.3;
   margin: 0 26px;
   padding-top: 12px;
@@ -4666,9 +4667,12 @@ ul.gsb-social-buttons li:last-of-type {
 }
 @media (min-width: 35.5625em) {
   .narrow-view .pane-bundle-text .field-name-field-title {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    color: #231f20;
+    font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 11px;
   }
   .narrow-view .pane-bundle-text .field-name-field-body p, .narrow-view .pane-bundle-text .field-name-field-body ul, .narrow-view .pane-bundle-text .field-name-field-body ol {
     font-size: 16px;
@@ -4992,10 +4996,11 @@ div.region-content [class*="pane-menu-block"] {
 }
 div.region-content [class*="pane-menu-block"] h2 {
   color: #231f20;
-  font-size: 20px;
-  font-weight: normal;
-  padding: 18px 0 11px 0;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
   line-height: 1.3;
+  padding: 18px 0 11px;
 }
 div.region-content [class*="pane-menu-block"] .menu li {
   border-top: 1px solid #e4e4e4;
@@ -11406,8 +11411,10 @@ body:not(.page-insights) .pane-bundle-existing-node .node-offsite-idea-story.vie
 }
 
 .pane-bundle-files .field-name-field-title {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.3;
   margin-bottom: 14px;
 }
