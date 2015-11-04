@@ -545,6 +545,7 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
   }
   // Add 'hide_this' class if 'related' group wrapper and has no children
   if ($group->group_name == 'group_wrapper_related') {
+    $found_child = false;
     foreach ($group->children as $child) {
       if (!empty($element[$child]['#field_type']) && $element[$child]['#field_type'] == 'ds') {
         continue;
@@ -557,7 +558,7 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
           break;
         }
       }
-      else if ($element[$child] != NULL) {
+      else if (!empty($element[$child]) && $element[$child] != NULL) {
         $found_child = TRUE;
         break;
       }
