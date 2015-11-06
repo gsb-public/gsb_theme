@@ -15,4 +15,3 @@
   <div><?php print $text_button; ?></div>
 </div>
 <?php endif; ?>
-
