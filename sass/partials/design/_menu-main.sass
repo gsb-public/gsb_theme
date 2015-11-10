@@ -151,6 +151,8 @@
     float: left
     #nav-touch-button
       +background(linear-gradient(bottom, $red-light, $red-dark))
+      &:hover
+        text-decoration: none
     #navigation
       display: none
   &.open
@@ -169,6 +171,8 @@
 // Search toggle functionality
 #search-touch-button
   display: none
+  &:hover
+    text-decoration: none
   +breakpoint($bp-tablet-port-max)
     +background(linear-gradient(bottom, $red-light, $red-dark))
     border-right: 1px solid red
