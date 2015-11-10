@@ -29,10 +29,11 @@
       background: $link-blue
       text-decoration: underline
 
-// Load more link
+// Show more link
 .pager-load-more
   a
     background: $teal-dark
+    text-transform: capitalize
     +icon-before("arrow-med-down", true)
     &:before
       font-size: 12px
@@ -40,7 +41,7 @@
       left: -7px
       top: -1px
 
-// Back to top link
+// Back to the top link
 .additional-links
   overflow: hidden
   a
