@@ -268,7 +268,7 @@
 
   /**
    * Add mmenu library for offcanvas filters
-
+   */
   Drupal.behaviors.mmenu = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
@@ -296,6 +296,5 @@
       }
     }
   };
-  */
 
 }(jQuery));

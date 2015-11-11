@@ -8198,14 +8198,6 @@ fieldset.collapsible .fieldset-legend {
   background: #f2f2f2;
   padding-top: 1px;
 }
-@media (max-width: 35.5em) {
-  .gsb-views-exposed-filter .views-exposed-widgets {
-    display: none;
-  }
-  .view-gsb-act-project-listing .gsb-views-exposed-filter .views-exposed-widgets, .view-gsb-all-research-listing .gsb-views-exposed-filter .views-exposed-widgets {
-    display: block;
-  }
-}
 .gsb-views-exposed-filter .views-exposed-widgets legend {
   padding: 0;
 }
@@ -8232,12 +8224,31 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   line-height: 1;
 }
-
 @media (max-width: 35.5em) {
-  .pane-views-exp-msx-fellows-list {
-    display: none;
+  .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:after {
+    content: "\f107";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:after {
+    color: #990000;
+    font-size: 0.8em;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
   }
 }
+
 .pane-views-exp-msx-fellows-list.exposed_filter_widget_one_column .ajax-progress {
   display: none;
 }
@@ -9414,6 +9425,57 @@ fieldset.collapsible .fieldset-legend {
 .filter-results-wrapper #edit-actions input:hover {
   background: #2d6280;
   color: white !important;
+}
+
+.mm-panels > .mm-panel.mm-hasnavbar {
+  padding-top: 30px !important;
+}
+
+.mm-navbar > * {
+  padding: 12px 0 !important;
+}
+
+.mm-menu .mm-navbar {
+  padding: 0 20px 0 14px;
+  text-align: center;
+}
+.mm-menu .mm-navbar a.mm-title {
+  color: #231f20;
+  cursor: pointer;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: left;
+}
+.mm-menu .mm-navbar a.mm-title:before {
+  content: "\f106";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.mm-menu .mm-navbar a.mm-title:before {
+  color: #990000;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+.mm-menu .form-item {
+  overflow: hidden;
+  *zoom: 1;
+}
+.mm-menu input {
+  float: left;
+  margin: 2px 8px 12px 0;
+  vertical-align: initial;
 }
 
 .field-name-field-sections .field-label,
