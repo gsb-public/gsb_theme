@@ -124,7 +124,7 @@ p, .format-body,
 }
 
 .webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper,
-#views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .filter-results-wrapper #edit-actions, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
+#views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
 
@@ -208,7 +208,12 @@ p, .format-body,
 .designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .narrow-view .person-list-view, .narrow-view
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-views-exp-msx-fellows-list > div, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .webform-client-form #edit-submit,
+.webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
+#email-contact-mail-page-form #edit-submit, #edit-done, .webform-client-form #edit-draft,
+.webform-client-form #edit-previous,
+.webform-client-form .add-more,
+.webform-client-form .del-btn, #edit-clear-all, .filter-results-wrapper #edit-actions input, .narrow-view .person-list-view, .narrow-view
 .person-list-view-container, .person-list-view-container, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -224,7 +229,7 @@ p, .format-body,
 
 .webform-client-form #edit-submit,
 .webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
-#email-contact-mail-page-form #edit-submit {
+#email-contact-mail-page-form #edit-submit, #edit-done {
   background: #636f00;
   background: -moz-linear-gradient(top, #6c7200, #636f00);
   background: -o-linear-gradient(top, #6c7200, #636f00);
@@ -234,10 +239,10 @@ p, .format-body,
 
 .webform-client-form #edit-submit:hover,
 .webform-client-form #edit-next:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
-#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
+#email-contact-mail-page-form #edit-submit:hover, #edit-done:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover, .circle:hover {
+.webform-client-form .del-btn:hover, #edit-clear-all:hover, .filter-results-wrapper #edit-actions input:hover, .circle:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -321,44 +326,43 @@ p, .format-body,
 
 .webform-client-form #edit-submit,
 .webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
-#email-contact-mail-page-form #edit-submit, .webform-client-form #edit-draft,
+#email-contact-mail-page-form #edit-submit, #edit-done, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
-.webform-client-form .del-btn, .filter-results-wrapper .term-searched .filter-exit:before, .filter-results-wrapper #edit-actions input {
+.webform-client-form .del-btn, #edit-clear-all, .filter-results-wrapper #edit-actions input, #edit-done[disabled="disabled"] {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
   color: white;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   line-height: 1;
   padding: 10px 16px;
 }
 .webform-client-form #edit-submit:after,
 .webform-client-form #edit-next:after, .green-rounded-button:after, #email-mail-page-form #edit-submit:after,
-#email-contact-mail-page-form #edit-submit:after, .webform-client-form #edit-draft:after,
+#email-contact-mail-page-form #edit-submit:after, #edit-done:after, .webform-client-form #edit-draft:after,
 .webform-client-form #edit-previous:after,
 .webform-client-form .add-more:after,
-.webform-client-form .del-btn:after, .filter-results-wrapper #edit-actions input:after {
+.webform-client-form .del-btn:after, #edit-clear-all:after, .filter-results-wrapper #edit-actions input:after, #edit-done[disabled="disabled"]:after {
   color: white !important;
 }
 .webform-client-form #edit-submit:hover,
 .webform-client-form #edit-next:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
-#email-contact-mail-page-form #edit-submit:hover, .webform-client-form #edit-draft:hover,
+#email-contact-mail-page-form #edit-submit:hover, #edit-done:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover, .filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover {
+.webform-client-form .del-btn:hover, #edit-clear-all:hover, .filter-results-wrapper #edit-actions input:hover {
   border: 0;
   color: white;
 }
 .webform-client-form #edit-submit:hover:after,
 .webform-client-form #edit-next:hover:after, .green-rounded-button:hover:after, #email-mail-page-form #edit-submit:hover:after,
-#email-contact-mail-page-form #edit-submit:hover:after, .webform-client-form #edit-draft:hover:after,
+#email-contact-mail-page-form #edit-submit:hover:after, #edit-done:hover:after, .webform-client-form #edit-draft:hover:after,
 .webform-client-form #edit-previous:hover:after,
 .webform-client-form .add-more:hover:after,
-.webform-client-form .del-btn:hover:after, .filter-results-wrapper #edit-actions input:hover:after {
+.webform-client-form .del-btn:hover:after, #edit-clear-all:hover:after, .filter-results-wrapper #edit-actions input:hover:after {
   color: white !important;
 }
 
@@ -366,23 +370,14 @@ p, .format-body,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
 .webform-client-form .del-btn {
-  border: 1px lightgray solid;
   color: #636f00;
 }
-.webform-client-form #edit-draft:hover,
-.webform-client-form #edit-previous:hover,
-.webform-client-form .add-more:hover,
-.webform-client-form .del-btn:hover {
-  border: 1px transparent solid;
-}
 
-.filter-results-wrapper .term-searched .filter-exit:before, .filter-results-wrapper #edit-actions input {
+#edit-clear-all, .filter-results-wrapper #edit-actions input {
   background: white;
-  border: 1px lightgray solid;
   color: #636f00 !important;
 }
-.filter-results-wrapper .term-searched .filter-exit:hover:before, .filter-results-wrapper #edit-actions input:hover {
-  border: 1px transparent solid;
+#edit-clear-all:hover, .filter-results-wrapper #edit-actions input:hover {
   color: white;
 }
 
@@ -9078,6 +9073,21 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 
+#edit-done[disabled="disabled"] {
+  background: #e3e3e3;
+  border: 1px #e3e3e3 solid;
+  color: white;
+}
+
+#edit-clear-all {
+  background: #f4f4f4;
+  margin-left: 10px;
+}
+#edit-clear-all:hover {
+  background: #2d6280;
+  color: white !important;
+}
+
 #edit-date-search-wrapper,
 #edit-field-event-date-value-wrapper {
   display: inline-block;
@@ -9247,30 +9257,21 @@ fieldset.collapsible .fieldset-legend {
 
 .filter-results-wrapper {
   border-bottom: 3px #231f20 solid;
+  padding-bottom: 24px;
 }
 .filter-results-wrapper .results-wrapper {
-  padding: 24px 0 16px;
+  padding: 24px 0 0;
 }
 .filter-results-wrapper .results-text {
-  display: inline-block;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.3;
-  margin-right: 5px;
-}
-.filter-results-wrapper .term-searched {
-  margin-right: 10px;
+  margin-bottom: 5px;
 }
 .filter-results-wrapper .term-searched .term {
   font-size: 16px;
   line-height: 1.3;
   margin-right: 5px;
-}
-.filter-results-wrapper .term-searched .term:before {
-  content: "“";
-}
-.filter-results-wrapper .term-searched .term:after {
-  content: "”";
 }
 .filter-results-wrapper .term-searched .filter-exit {
   display: inline-block;
@@ -9305,9 +9306,6 @@ fieldset.collapsible .fieldset-legend {
 }
 .filter-results-wrapper .term-searched .filter-exit:hover:before {
   color: white !important;
-}
-.filter-results-wrapper .filters-wrapper {
-  padding: 10px 0;
 }
 .filter-results-wrapper .filter-button {
   -moz-border-radius: 20px;
@@ -9375,13 +9373,11 @@ fieldset.collapsible .fieldset-legend {
 }
 .filter-results-wrapper #edit-actions {
   margin: 0;
-  padding: 16px 1px;
   overflow: hidden;
   *zoom: 1;
 }
 .filter-results-wrapper #edit-actions input {
-  float: right;
-  font-weight: normal;
+  background: #f4f4f4;
 }
 .filter-results-wrapper #edit-actions input:hover {
   background: #2d6280;

@@ -247,8 +247,7 @@
   +border-radius(20px)
   color: $white
   font-family: $font-sans
-  font-size: 16px
-  font-weight: bold
+  font-size: 14px
   line-height: 1
   padding: 10px 16px
   &:after
@@ -264,30 +263,29 @@
 %green-button
   @extend %rounded-button
   @extend %gradient-green
+  @extend %box-shadow
 
 // Rounded red button
 %red-button
   @extend %rounded-button
   @extend %gradient-red
+  @extend %box-shadow
 
 // Rounded grey button
 %grey-button
   @extend %rounded-button
   @extend %gradient-grey
-  border: 1px $border-grey solid
+  @extend %box-shadow
   color: $link-green
-  &:hover
-    border: 1px transparent solid
 
 // Rounded white button
 %white-button
   @extend %rounded-button
+  @extend %box-shadow
   background: $white
-  border: 1px $border-grey solid
   color: $link-green !important
   &:hover
     @extend %gradient-blue
-    border: 1px transparent solid
     color: $white
 
 // Attached document icons
