@@ -75,7 +75,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-event-main-event-list-pane',
     'views-exposed-form-admission-events-mba-admission-panel-pane',
     'views-exposed-form-gsb-all-research-listing-all-research-panel-pane',
-    'views-exposed-form-admission-events-msx-admission-panel-pane'
+    'views-exposed-form-admission-events-msx-admission-panel-pane',
+    'views-exposed-form-msx-fellows-list'
   );
 
 
@@ -107,7 +108,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_book_listing',
     'gsb_publications_listing',
     'admission_events',
-    'publication_filters'
+    'publication_filters',
+    'msx_fellows'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -199,6 +201,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-admission-events-msx-admission-panel-pane') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by location, title, or other keywords');
+  }
+  // Faculty listing placeholder text
+  if ($form['#id'] == 'views-exposed-form-msx-fellows-list') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
   }
 }
 
