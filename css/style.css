@@ -9080,12 +9080,18 @@ fieldset.collapsible .fieldset-legend {
 }
 
 #edit-clear-all {
-  background: #f4f4f4;
-  margin-left: 10px;
+  display: none !important;
 }
-#edit-clear-all:hover {
-  background: #2d6280;
-  color: white !important;
+@media (max-width: 35.5em) {
+  #edit-clear-all {
+    background: #f4f4f4;
+    display: block !important;
+    margin-left: 10px;
+  }
+  #edit-clear-all:hover {
+    background: #2d6280;
+    color: white !important;
+  }
 }
 
 #edit-date-search-wrapper,
