@@ -23,17 +23,21 @@
 
   // Large cover and Classic style - full width
   &.file-resource_soundcloud--large_cover,
-  &.file-resource_soundcloud--full_width
+  &.file-resource_soundcloud--full_width,
+  &.file-resource_soundcloud--full_width_mini
     margin-bottom: 20px
     max-width: 670px
 
-  // Half and third
+  // Half and third widths
   &.file-resource_soundcloud--1_2_width,
-  &.file-resource_soundcloud--1_3_width
+  &.file-resource_soundcloud--1_3_width,
+  &.file-resource_soundcloud--1_2_width_mini,
+  &.file-resource_soundcloud--1_3_width_mini
     @extend %insights-resource-right
 
-  // Classic style - half width
-  &.file-resource_soundcloud--1_2_width
+  // Classic and mini player style - half width
+  &.file-resource_soundcloud--1_2_width,
+  &.file-resource_soundcloud--1_2_width_mini
     max-width: 408px
     width: 100%
     +breakpoint(780px max-width)
@@ -42,8 +46,9 @@
       max-width: 100%
       text-align: center
 
-  // Classic style - third width
-  &.file-resource_soundcloud--1_3_width
+  // Classic and mini player style - third width
+  &.file-resource_soundcloud--1_3_width,
+  &.file-resource_soundcloud--1_3_width_mini
     max-width: 270px
     +breakpoint(640px max-width)
       float: none
