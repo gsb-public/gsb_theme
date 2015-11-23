@@ -123,8 +123,8 @@ p, .format-body,
   background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
 }
 
-.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper,
-#views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
+.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
+#views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
 
@@ -8692,21 +8692,6 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 18px;
   padding-bottom: 18px;
 }
-.view-faculty-filters .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-working_paper_list .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-case_listing .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-book_listing .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-publications_listing .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-id-gsb_act_project_listing .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-club_list .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-main_event_list_pane .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-mba_admission_panel_pane .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-display-id-msx_admission_panel_pane .views-widget-filter-secondary .form-type-select:last-of-type,
-.view-id-msx_fellows.view-display-id-list .views-widget-filter-secondary .form-type-select:last-of-type {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
 .view-faculty-filters .views-widget-filter-secondary .form-type-select label,
 .view-display-id-working_paper_list .views-widget-filter-secondary .form-type-select label,
 .view-display-id-case_listing .views-widget-filter-secondary .form-type-select label,
@@ -9093,50 +9078,43 @@ fieldset.collapsible .fieldset-legend {
   }
 }
 
-#edit-date-search-wrapper,
-#edit-field-event-date-value-wrapper {
+#edit-field-event-date-value2-value-wrapper,
+#edit-field-event-date-value-value-wrapper {
   display: inline-block;
-  padding: 18px 0;
+  padding-bottom: 18px;
 }
-#edit-date-search-wrapper label,
-#edit-date-search-wrapper div,
-#edit-field-event-date-value-wrapper label,
-#edit-field-event-date-value-wrapper div {
+#edit-field-event-date-value2-value-wrapper label,
+#edit-field-event-date-value2-value-wrapper div,
+#edit-field-event-date-value-value-wrapper label,
+#edit-field-event-date-value-value-wrapper div {
   display: inline-block;
 }
-#edit-date-search-wrapper label,
-#edit-field-event-date-value-wrapper label {
+#edit-field-event-date-value2-value-wrapper label,
+#edit-field-event-date-value-value-wrapper label {
+  float: left;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
   position: relative;
-  top: 6px;
+  top: 10px;
 }
-#edit-date-search-wrapper .description,
-#edit-field-event-date-value-wrapper .description {
+#edit-field-event-date-value2-value-wrapper .description,
+#edit-field-event-date-value-value-wrapper .description {
   display: none;
 }
-#edit-date-search-wrapper .form-item,
-#edit-field-event-date-value-wrapper .form-item {
+#edit-field-event-date-value2-value-wrapper .form-item,
+#edit-field-event-date-value-value-wrapper .form-item {
   margin-bottom: 0;
   margin-right: 0;
-}
-
-#edit-date-search-wrapper {
-  padding-left: 26px;
-}
-
-@media (max-width: 52.3125em) {
-  #edit-field-event-date-value-wrapper {
-    padding-left: 26px;
-  }
-}
-@media (min-width: 62.5em) and (max-width: 71.125em) {
-  #edit-field-event-date-value-wrapper {
-    padding-left: 26px;
-  }
 }
 
 #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper,
 #views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper {
   margin-top: 0;
+  padding-top: 18px;
+}
+#views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
+#views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value {
   padding-top: 18px;
 }
 

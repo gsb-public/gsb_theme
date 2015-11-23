@@ -423,10 +423,10 @@ fieldset.collapsible .fieldset-legend
       @extend %divider-bottom
       margin-bottom: 18px
       padding-bottom: 18px
-      &:last-of-type
-        border-bottom: 0
-        margin-bottom: 0
-        padding-bottom: 0
+      // &:last-of-type
+      //   border-bottom: 0
+      //   margin-bottom: 0
+      //   padding-bottom: 0
       // Category label
       label
         color: $text-black
@@ -504,37 +504,35 @@ fieldset.collapsible .fieldset-legend
       color: $white !important
 
 // Admission event list date range search
-#edit-date-search-wrapper,
-#edit-field-event-date-value-wrapper
+#edit-field-event-date-value2-value-wrapper,
+#edit-field-event-date-value-value-wrapper
   display: inline-block
-  padding: 18px 0
+  padding-bottom: 18px
   label,
   div
     display: inline-block
   label
+    float: left
+    font-family: $font-demi
+    font-size: 16px
+    font-weight: normal
     position: relative
-    top: 6px
+    top: 10px
   .description
     display: none
   .form-item
     margin-bottom: 0
     margin-right: 0
 
-#edit-date-search-wrapper
-  padding-left: $standard-padding
-
-#edit-field-event-date-value-wrapper
-  +breakpoint(837px max-width)
-    padding-left: $standard-padding
-  +breakpoint(1000px 1138px)
-    padding-left: $standard-padding
-
-// Admission event list special adjustment
+// Admission event lists special adjustment
 #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper,
 #views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper
-  @extend %divider-top
   margin-top: 0
   padding-top: 18px
+  .form-item-field-event-location-type-value
+    @extend %divider-top
+    padding-top: 18px
+
 
 // All publications - done differently from main lists
 .view-display-id-all_research_panel_pane
