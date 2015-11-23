@@ -18,7 +18,7 @@
               $spotlightContent = $this.siblings('.field-name-field-body'),
               contentHeight = $spotlightContent.find('p').height();
             // Remove .show-more if the body is less than the defined max height.
-            $spotlightContent.css('height',visibleHeight);
+            $spotlightContent.css('height', visibleHeight);
             if (contentHeight <= visibleHeight) {
               $this.remove();
             }
@@ -36,7 +36,7 @@
                   height = visibleHeight;
                 }
                 //$spotlightContent.removeAttr('style')
-                $spotlightContent.animate({'height' : height}, 300);
+                $spotlightContent.animate({'height': height}, 300);
                 $this
                   .toggleClass('active')
                   .html('<span>' + text + '</span>');
@@ -56,7 +56,7 @@
     attach: function () {
       // Define accordion title.
       var acctitle = $('.acc-title');
-      if ( acctitle.length > 0 ) {
+      if (acctitle.length > 0) {
         acctitle.once(function () {
           var $this = $(this);
           // Find body container next to accordion title.
@@ -66,7 +66,7 @@
           // by calling touchNeighbour recursive function.
           var found_body = false;
           var acc_body_elements;
-          if ( next.length > 0 ) {
+          if (next.length > 0) {
             next.wrapAll('<div class="accordion-body-wrap" />');
             touchNeighbour(next, 'acc-body');
             found_body = true;
@@ -122,7 +122,7 @@
        */
       function touchNeighbour(e, className, className2) {
         var next = e.parent().next();
-        if ( next.hasClass(className) || next.hasClass(className2) ) {
+        if (next.hasClass(className) || next.hasClass(className2)) {
           next.insertAfter(e);
           touchNeighbour(next, className, className2);
         }
@@ -171,19 +171,19 @@
       if (!Modernizr.inputtypes.number || isIE10 || isIE9) {
         var $form_number = $('.form-number');
         $form_number.wrap('<span class="fake-input-wrapper" />')
-        .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
+          .after('<div class="arrows-wrapper"><button class="up" data-dir ="up" /><button class="down" data-dir ="down" /></div>');
 
         $('.fake-input-wrapper').each(function () {
-          var numberInput = $(this).find('.form-number').attr('autocomplete','off'),
-                min = parseInt(numberInput.attr('min')),
-                max = parseInt(numberInput.attr('max')),
-                step = parseInt(numberInput.attr('step'));
+          var numberInput = $(this).find('.form-number').attr('autocomplete', 'off'),
+            min = parseInt(numberInput.attr('min')),
+            max = parseInt(numberInput.attr('max')),
+            step = parseInt(numberInput.attr('step'));
 
           $(this).find('button').click(function (e) {
             e.preventDefault();
             $(this).parent().prev().trigger('focus');
             var direction = $(this).data('dir'),
-            val =  parseInt(numberInput.val());
+              val = parseInt(numberInput.val());
             if (!val) {
               numberInput.val(min);
             }
@@ -191,15 +191,15 @@
               numberInput.val(max);
             }
             else {
-              var mod = (val-min) % step;
+              var mod = (val - min) % step;
               // increase or decrease depending on the button
               if (mod === 0) {
-                ( direction === 'up' ) ?  val += step: val -= step;
+                ( direction === 'up' ) ? val += step : val -= step;
               }
               else {
-                ( direction === 'up' ) ?  val += step-mod: val -= mod;
+                ( direction === 'up' ) ? val += step - mod : val -= mod;
               }
-              if (val >=min && val < max ) {
+              if (val >= min && val < max) {
                 numberInput.val(val);
               }
             }
@@ -223,7 +223,7 @@
   Drupal.behaviors.goTopLink = {
     attach: function () {
       if ($('#header-wrapper').length) {
-        $('.go-to-top-link').find('a').attr('href','#header-wrapper');
+        $('.go-to-top-link').find('a').attr('href', '#header-wrapper');
       }
     }
   };
@@ -242,7 +242,7 @@
    */
   Drupal.behaviors.homepageImageCta = {
     attach: function () {
-      $('.pane-bundle-homepage-cta a').hover(function() {
+      $('.pane-bundle-homepage-cta a').hover(function () {
         $(this).closest('.group-wrapper-content').toggleClass('hover');
       });
     }
@@ -253,7 +253,7 @@
    */
   Drupal.behaviors.image_resource_infographic_button = {
     attach: function () {
-      $('.image-enlarge-bar').each(function() {
+      $('.image-enlarge-bar').each(function () {
         // Get the figure tag.
         $figure = $(this).parent();
 
@@ -272,7 +272,8 @@
   Drupal.behaviors.mmenu = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
-        var $wrapper = $('#edit-secondary .fieldset-wrapper');
+        //var $wrapper = $('#edit-secondary .fieldset-wrapper');
+        var $wrapper = $('.fieldset-wrapper');
         $wrapper.mmenu({
           // Options
           navbar: {
@@ -286,12 +287,57 @@
           }
         });
 
-        $('.fieldset-title').click(function() {
-           $wrapper.data('mmenu').open();
+        $('.fieldset-title').click(function () {
+          $wrapper.data('mmenu').open();
         });
-        $('.mm-navbar .mm-title').click(function() {
-           $wrapper.data('mmenu').close();
+        $('.mm-navbar .mm-title').click(function () {
+          $wrapper.data('mmenu').close();
         });
+
+        var pTop = '';
+        var pLeft = '';
+        $("#edit-date-search-value-datepicker-popup-0").click(function(){
+          var pTop = '639px';
+          var pLeft = '286px';
+          $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
+        });
+        $("#edit-field-event-date-value-value-datepicker-popup-0").click(function(){
+          var pTop = '739px';
+          var pLeft = '286px';
+          $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
+        });
+        $('.mm-panels #edit-done').click(function () {
+          $('.results-wrapper').remove();
+          var $checked = "";
+          url_path = "";
+          $checked = $('input:checkbox').filter(':checked');
+          var final_url = "";
+          var search_term = "";
+          url_all = $(location).attr('href');
+          var base_url = "";
+          if (url_all.indexOf('?') != -1) {
+            url_parts = url_all.split('?');
+            base_url = url_parts[0];
+          } else {
+            base_url = url_all;
+          }
+          $checked.each(function () {
+            final_url += $(this).attr("name") + '=' + $(this).attr("value") + '&';
+          });
+
+          $(' input[type="text"]:not(".link-box")').each(function() {
+            if ($(this).val()) {
+              final_url += $(this).attr('name') + "=" + $(this).val() + '&';
+            }
+          });
+          final_url = base_url + "?" + final_url;
+          $(location).attr('href', (final_url));
+        });
+
+        $('.views-submit-button input').click( function() {
+          $('#edit-done').click();
+        });
+
 
       }
     }
