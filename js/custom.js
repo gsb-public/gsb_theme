@@ -296,14 +296,15 @@
 
         var pTop = '';
         var pLeft = '';
+
         $("#edit-date-search-value-datepicker-popup-0").click(function(){
-          var pTop = '639px';
-          var pLeft = '286px';
+          pTop = ($(this).offset().top +20)  + 'px';
+          pLeft = ($(this).offset().left + 250) + 'px';
           $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
         });
         $("#edit-field-event-date-value-value-datepicker-popup-0").click(function(){
-          var pTop = '739px';
-          var pLeft = '286px';
+          pTop = ($(this).offset().top +20)  + 'px';
+          pLeft = ($(this).offset().left + 250) + 'px';
           $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
         });
         $('.mm-panels #edit-done').click(function () {
