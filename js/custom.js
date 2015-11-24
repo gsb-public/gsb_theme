@@ -273,6 +273,8 @@
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
         //var $wrapper = $('#edit-secondary .fieldset-wrapper');
+        $('#edit-field-event-date-value2-value-wrapper').hide();
+        $('#edit-field-event-date-value-value-wrapper').hide();
         var $wrapper = $('.fieldset-wrapper');
         $wrapper.mmenu({
           // Options
@@ -294,19 +296,19 @@
           $wrapper.data('mmenu').close();
         });
 
-        var pTop = '';
-        var pLeft = '';
+        //var pTop = '';
+        //var pLeft = '';
 
-        $("#edit-date-search-value-datepicker-popup-0").click(function(){
-          pTop = ($(this).offset().top +20)  + 'px';
-          pLeft = ($(this).offset().left + 250) + 'px';
-          $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
-        });
-        $("#edit-field-event-date-value-value-datepicker-popup-0").click(function(){
-          pTop = ($(this).offset().top +20)  + 'px';
-          pLeft = ($(this).offset().left + 250) + 'px';
-          $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
-        });
+        //$("#edit-date-search-value-datepicker-popup-0").click(function(){
+        //  pTop = ($(this).offset().top +20)  + 'px';
+        //  pLeft = ($(this).offset().left + 250) + 'px';
+        //  $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
+        //});
+        //$("#edit-field-event-date-value-value-datepicker-popup-0").click(function(){
+        //  pTop = ($(this).offset().top +20)  + 'px';
+        //  pLeft = ($(this).offset().left + 250) + 'px';
+        //  $('#ui-datepicker-div').css({'left':pLeft, 'top':pTop});
+        //});
         $('.mm-panels #edit-done').click(function () {
           $('.results-wrapper').remove();
           var $checked = "";
