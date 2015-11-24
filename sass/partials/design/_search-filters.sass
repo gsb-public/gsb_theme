@@ -720,12 +720,16 @@ fieldset.collapsible .fieldset-legend
       height: 31px
       overflow: hidden
       position: relative
-      top: 4px
+      top: 5px
       width: 36px
       +icon-before("plus", true)
       &:before
         display: inline-block
         padding: 6px
+        -moz-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        -webkit-transform: rotate(45deg)
         transform: rotate(45deg)
         &:hover
           background: $link-blue
