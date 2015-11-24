@@ -272,8 +272,8 @@
   Drupal.behaviors.mmenu = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
-        //var $wrapper = $('#edit-secondary .fieldset-wrapper');
-        var $wrapper = $('.fieldset-wrapper');
+
+        var $wrapper = $('.fieldset-wrapper').not('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper');
         $wrapper.mmenu({
           // Options
           navbar: {

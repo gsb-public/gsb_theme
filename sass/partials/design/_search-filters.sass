@@ -255,6 +255,9 @@ fieldset.collapsible .fieldset-legend
         margin-left: 5px
         position: relative
         top: 1px
+    .pane-gsb-all-research-listing-all-research-panel-pane &
+      &:after
+        display: none
 
 // Direct link
 .gsb-direct-link
@@ -534,13 +537,30 @@ fieldset.collapsible .fieldset-legend
     padding-top: 18px
 
 
-// All publications - done differently from main lists
+// All publications list - done differently from main lists, does not use mobile tray
 .view-display-id-all_research_panel_pane
   position: relative
   .ajax-progress-throbber
     position: absolute
     right: 9px
     top: 20px
+
+  .collapsible
+    .fieldset-title
+      display: inline-block
+      +icon-before("minus", true)
+      &:before
+        color: $red
+        font-size: 18px
+        position: relative
+        left: -2px
+      &:hover
+        color: $link-blue
+        &:before
+          color: $link-blue
+    &.collapsed
+      .fieldset-title
+        +icon-before("plus", true)
 
   // Filters container
   .view-filters
@@ -599,10 +619,10 @@ fieldset.collapsible .fieldset-legend
       @extend %divider-bottom
       margin-bottom: 18px
       padding-bottom: 18px
-      &:last-of-type
-        border-bottom: 0
-        margin-bottom: 0
-        padding-bottom: 0
+      // &:last-of-type
+      //   border-bottom: 0
+      //   margin-bottom: 0
+      //   padding-bottom: 0
       // Category label
       label
         color: $text-black
@@ -646,7 +666,13 @@ fieldset.collapsible .fieldset-legend
           -webkit-column-count: 1
           column-count: 1
 
-// Search States
+  // Results
+  #edit-clear-all
+    display: none !important
+  .filter-results-wrapper
+    background: $white
+
+// Global Search States
 .filter-results-wrapper
   @extend %divider-top
   border-bottom: 3px $text-black solid

@@ -8244,6 +8244,9 @@ fieldset.collapsible .fieldset-legend {
     top: 1px;
   }
 }
+.pane-gsb-all-research-listing-all-research-panel-pane .gsb-views-exposed-filter .views-exposed-widgets .fieldset-title:after {
+  display: none;
+}
 
 .gsb-direct-link {
   background: #f2f2f2;
@@ -9126,6 +9129,51 @@ fieldset.collapsible .fieldset-legend {
   right: 9px;
   top: 20px;
 }
+.view-display-id-all_research_panel_pane .collapsible .fieldset-title {
+  display: inline-block;
+}
+.view-display-id-all_research_panel_pane .collapsible .fieldset-title:before {
+  content: "\f117";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.view-display-id-all_research_panel_pane .collapsible .fieldset-title:before {
+  color: #990000;
+  font-size: 18px;
+  position: relative;
+  left: -2px;
+}
+.view-display-id-all_research_panel_pane .collapsible .fieldset-title:hover {
+  color: #2d6280;
+}
+.view-display-id-all_research_panel_pane .collapsible .fieldset-title:hover:before {
+  color: #2d6280;
+}
+.view-display-id-all_research_panel_pane .collapsible.collapsed .fieldset-title:before {
+  content: "\f11b";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
 .view-display-id-all_research_panel_pane .view-filters {
   background: #f2f2f2;
 }
@@ -9186,11 +9234,6 @@ fieldset.collapsible .fieldset-legend {
   margin-bottom: 18px;
   padding-bottom: 18px;
 }
-.view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-type-select:last-of-type {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
 .view-display-id-all_research_panel_pane .gsb-views-exposed-filter .views-exposed-widgets .form-type-select label {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9236,6 +9279,12 @@ fieldset.collapsible .fieldset-legend {
     -webkit-column-count: 1;
     column-count: 1;
   }
+}
+.view-display-id-all_research_panel_pane #edit-clear-all {
+  display: none !important;
+}
+.view-display-id-all_research_panel_pane .filter-results-wrapper {
+  background: white;
 }
 
 .filter-results-wrapper {
