@@ -272,7 +272,9 @@
   Drupal.behaviors.mmenu = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
-        var $wrapper = $('.fieldset-wrapper').not('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper');
+        $('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper').wrapInner('<div class="bef-secondary-options"></div>');
+        //var $wrapper = $('.fieldset-wrapper').not('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper');
+        var $wrapper = $('.fieldset-wrapper');
         $('#edit-field-event-date-value2-value-wrapper').hide();
         $('#edit-field-event-date-value-value-wrapper').hide();
         $wrapper.mmenu({
