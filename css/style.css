@@ -8156,53 +8156,59 @@ ul.slideshow-items {
   background: url('../images/search-white.png') no-repeat 11px 11px, #2d6280;
 }
 
-@media (min-width: 35.5625em) {
-  .collapsible .fieldset-title {
-    display: inline-block;
-  }
-  .collapsible .fieldset-title:before {
-    content: "\f117";
-    display: inline;
-    speak: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-transform: none;
-    line-height: 1;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-family: 'icons';
-  }
-  .collapsible .fieldset-title:before {
-    color: #990000;
-    font-size: 18px;
-    position: relative;
-    left: -2px;
-  }
-  .collapsible .fieldset-title:hover {
-    color: #2d6280;
-  }
-  .collapsible .fieldset-title:hover:before {
-    color: #2d6280;
+.collapsible .fieldset-title {
+  display: inline-block;
+}
+.collapsible .fieldset-title:before {
+  content: "\f117";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.collapsible .fieldset-title:before {
+  color: #990000;
+  font-size: 18px;
+  position: relative;
+  left: -2px;
+}
+.collapsible .fieldset-title:hover {
+  color: #2d6280;
+}
+.collapsible .fieldset-title:hover:before {
+  color: #2d6280;
+}
+@media (max-width: 35.5em) {
+  #edit-secondary-wrapper .collapsible .fieldset-title:before {
+    content: "";
   }
 }
-@media (min-width: 35.5625em) {
-  .collapsible.collapsed .fieldset-title:before {
-    content: "\f11b";
-    display: inline;
-    speak: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-transform: none;
-    line-height: 1;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-family: 'icons';
+.collapsible.collapsed .fieldset-title:before {
+  content: "\f11b";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+@media (max-width: 35.5em) {
+  #edit-secondary-wrapper .collapsible.collapsed .fieldset-title:before {
+    content: "";
   }
 }
 

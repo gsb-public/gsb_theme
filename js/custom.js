@@ -274,7 +274,7 @@
       if (Modernizr.mq('(max-width: 568px)')) {
         $('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper').wrapInner('<div class="bef-secondary-options"></div>');
         //var $wrapper = $('.fieldset-wrapper').not('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper');
-        var $wrapper = $('.fieldset-wrapper');
+        var $wrapper = $('#edit-secondary .fieldset-wrapper');
         $('#edit-field-event-date-value2-value-wrapper').hide();
         $('#edit-field-event-date-value-value-wrapper').hide();
         $wrapper.mmenu({

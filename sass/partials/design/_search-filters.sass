@@ -187,23 +187,30 @@
 
 // Filter toggle
 .collapsible
-  +breakpoint(569px min-width)
-    .fieldset-title
-      display: inline-block
-      +icon-before("minus", true)
+  .fieldset-title
+    display: inline-block
+    +icon-before("minus", true)
+    &:before
+      color: $red
+      font-size: 18px
+      position: relative
+      left: -2px
+    &:hover
+      color: $link-blue
       &:before
-        color: $red
-        font-size: 18px
-        position: relative
-        left: -2px
-      &:hover
         color: $link-blue
+    #edit-secondary-wrapper &
+      +breakpoint(568px max-width)
         &:before
-          color: $link-blue
+          content: ''
+
   &.collapsed
-    +breakpoint(569px min-width)
-      .fieldset-title
-        +icon-before("plus", true)
+    .fieldset-title
+      +icon-before("plus", true)
+      #edit-secondary-wrapper &
+        +breakpoint(568px max-width)
+          &:before
+            content: ''
 
 fieldset.collapsible .fieldset-legend
   display: inline
@@ -426,10 +433,6 @@ fieldset.collapsible .fieldset-legend
       @extend %divider-bottom
       margin-bottom: 18px
       padding-bottom: 18px
-      // &:last-of-type
-      //   border-bottom: 0
-      //   margin-bottom: 0
-      //   padding-bottom: 0
       // Category label
       label
         color: $text-black
