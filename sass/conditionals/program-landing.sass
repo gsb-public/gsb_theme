@@ -23,8 +23,8 @@ $bp-program-finder: 1165px max-width
       padding: 0
       +background(linear-gradient(right, #355567, #7390a1))
   div.vertical-tabs
-    @extend %border
-    +background(linear-gradient(#f4f4f4, $grey-d))
+    @extend %border-white
+    background: #f4f4f4
     height: 450px
     margin: 0 0 0 15em
     +breakpoint($bp-program-finder)
@@ -105,7 +105,7 @@ $bp-program-finder: 1165px max-width
             strong
               text-decoration: none
       .selected
-        @extend %border
+        @extend %border-white
         border-right: 1px solid transparent
         strong
           color: $grey-dark
