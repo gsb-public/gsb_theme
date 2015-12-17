@@ -73,7 +73,7 @@
 
 // Green link CTA
 %cta-green-link
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   margin-bottom: 12px
   padding: 14px $standard-padding 11px $standard-padding
   a
@@ -94,7 +94,7 @@
 
 // Red link CTA
 %cta-red-link
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   margin-bottom: 12px
   padding: 14px $standard-padding 11px $standard-padding
   a
@@ -126,13 +126,7 @@
 %bg-white
   background: $white
 
-// Standard container gradient
-%bg-white-gradient
-  background-color: #f9f9f9
-  +background(linear-gradient(bottom, #f9f9f9 20%, $white 100%))
-
 // Borders
-
 %divider-top
   border-top: 1px $border-grey solid
 
@@ -140,7 +134,7 @@
   border-bottom: 1px $border-grey solid
 
 // White border
-%border
+%border-white
   border: 2px $white solid
 
 // Grey border
@@ -176,20 +170,8 @@
 
 // White border and box shadow
 %border-and-box-shadow
-  @extend %border
+  @extend %border-white
   @extend %box-shadow
-
-// White gradient and box shadow
-// Design doc: https://docs.google.com/a/stanford.edu/document/d/10xlCbS9kfaUAVINQb3bR63SHBwBExYqIGygdiTJSBmI
-%bg-border-and-box-shadow
-  @extend %bg-white-gradient
-  @extend %border-and-box-shadow
-
-.ie8
-  %bg-border-and-box-shadow
-    border: 1px $grey-c solid !important
-    margin-left: 0 !important
-    margin-right: 0 !important
 
 // White background with light grey border ala Insights
 %bg-and-box-shadow
@@ -308,7 +290,7 @@
 // Profile detail information blocks
 // PhD, Faculty
 %group-wrapper-information
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   padding: 15px 0
   > div
     line-height: 0
