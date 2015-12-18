@@ -5385,7 +5385,7 @@ ul.gsb-social-buttons li:last-of-type {
   font-size: 12px;
 }
 .pane-bundle-links .stanford-links .show-more-less-toggler-wrapper {
-  border-top: 1px solid #c2b7a1;
+  border-top: 1px #c2b7a1 solid;
 }
 .pane-bundle-links .stanford-links .show-more-less-toggler-wrapper a {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8628,6 +8628,9 @@ ul.slideshow-items {
 .cta-green a[target="_blank"]:after {
   color: #e3e3e3;
 }
+.cta-green a[href$=".pdf"]:after {
+  color: #7b8201;
+}
 .cta-green .field-item:hover a {
   color: #2d6280;
 }
@@ -8665,6 +8668,12 @@ ul.slideshow-items {
 }
 .cta-red a:hover:after,
 .cta-red a[target="_blank"]:hover:after {
+  color: #aac4bf;
+}
+.cta-red a[href$=".pdf"]:after {
+  color: #990000;
+}
+.cta-red a[href$=".pdf"]:hover:after {
   color: #aac4bf;
 }
 
