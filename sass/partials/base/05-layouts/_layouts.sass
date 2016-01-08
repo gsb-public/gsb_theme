@@ -115,6 +115,70 @@
       float: none
       width: 100%
 
+// Widescreen layout
+.panel-display.gsb-widescreen
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  // Featured content
+  .featured-content
+    background: rgba($black, 0.9)
+    padding: $standard-padding 0
+    +breakpoint(900px max-width)
+      display: none
+
+  // Content
+  #top-content,
+  .content-wrapper
+    margin: 0 auto
+    max-width: 1170px
+
+  .content-wrapper
+    padding: $standard-padding 0
+
+  // Main section
+  .main-wrapper
+    float: left
+    margin-right: -400px
+    width: 100%
+    +breakpoint($bp-mobile-max)
+      float: none
+      margin: 0
+
+  .main-wrapper
+    margin-left: 50px
+
+  .inner-sidebar-wrapper
+    margin-right: 50px
+
+  .inner-main-wrapper
+    margin-right: 500px
+    +breakpoint($bp-mobile-max)
+      margin: 0
+
+  .main-middle
+    +pie-clearfix
+    .column-first,
+    .column-second
+      width: 270px
+      +breakpoint(1210px max-width)
+        width: 100%
+    .column-first
+      float: left
+    .column-second
+      float: right
+      +breakpoint(1210px max-width)
+        float: left
+
+  // Right sidebar
+  .inner-sidebar-wrapper
+    float: right
+    width: 270px
+    +breakpoint($bp-mobile-max)
+      float: none
+      width: 100%
 
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
