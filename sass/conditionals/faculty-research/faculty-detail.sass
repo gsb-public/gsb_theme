@@ -190,7 +190,7 @@ $faculty-spacing: 24px
     font-size: 30px
     font-weight: bold
     line-height: 1.3
-    margin-bottom: 4px
+    margin-bottom: 6px
     margin-top: 26px
     span
       margin-right: 8px
@@ -206,14 +206,19 @@ $faculty-spacing: 24px
     .label-inline
       font-weight: normal
 
-  // Title and positions held
-  .field.field-name-field-title-position-unlimited
+  // Endowed Title or Appointment, simple titles, joint appointments
+  .field-name-field-title-appointment,
+  .field-name-field-title-position-unlimited,
+  .field-name-field-joint-appointment
+    font-size: 22px
+    line-height: 1.3
+
+  // Other Stanford school titles, fellowships
+  .field-name-field-other-titles
     font-size: 18px
-    line-height: 1.2
-    .field-item
-      margin-bottom: 8px
-      &:last-of-type
-        margin-bottom: 0
+    line-height: 1.3
+    margin-top: 24px
+
   // Academic area
   .field-name-field-academic-area-single
     font-size: 16px
@@ -240,7 +245,8 @@ $faculty-spacing: 24px
   .view-id-gsb_school_news.view-display-id-entity_view_1,
   .group-publications,
   .group-wrapper-research,
-  .group-wrapper-academic
+  .group-wrapper-academic,
+  .field-name-field-faculty-director-positions
     @extend %divider-top
     padding-top: $faculty-spacing
 
@@ -255,6 +261,15 @@ $faculty-spacing: 24px
   .field-name-field-greater-university-affil,
   .field-collection-item-field-service-profession-section
     @extend %faculty-bullets
+
+  // Other administrative titles
+  .field-name-field-faculty-director-positions
+    .label-above
+      @extend %header-large
+    .field-item
+      font-size: 16px
+      line-height: 1.3
+      margin-bottom: 6px
 
   // Teaching materials
   .field-name-field-teaching-materials
