@@ -279,7 +279,7 @@
       width: 292px
     .front-panel-feature-one,
     .front-panel-feature-two,
-    .front-panel-feature-three
+    .front-slider-pane-panel-feature-three
       width: 290px
 
 // Bottom region
@@ -356,54 +356,40 @@
 .gsb-insights-a
   .narrow-view
     max-width: $narrow-view
-    min-width: $narrow-view
-    +breakpoint($max-width max-width)
-      max-width: 100%
+    +breakpoint(1170px max-width)
+      max-width: $narrow-view
+    +breakpoint(605px max-width)
+      max-width: $wide-view
     .panels-ipe-editing &
       width: $narrow-view
+
   .wide-view
     max-width: $wide-view
-    +breakpoint($max-width max-width)
-      max-width: 100%
-      margin: 0 auto
+    min-width: $narrow-view
+    +breakpoint(1170px max-width)
+      max-width: $narrow-view
+    +breakpoint(605px max-width)
+      max-width: $wide-view
     .panels-ipe-editing &
       width: $wide-view
-  .column.first
-    margin-right: 30px
-    +breakpoint($max-width max-width)
-      margin-right: 0
-  .column.second
-    margin-right: 30px
-    +breakpoint($max-width max-width)
-      margin-right: 0
 
   .full-header,
   .wide-narrow-narrow,
   .narrow-narrow-wide,
   .narrow-wide-narrow,
   .narrow-narrow-narrow-narrow
-    +clearfix
     .panel-pane
-      margin-bottom: 30px
     .panels-ipe-editing &
       margin-bottom: 0
-  .narrow-narrow-narrow-narrow
-    .third
-      margin-right: 30px
-      +breakpoint($max-width max-width)
-        margin-right: 0
-  .column
-    float: left
-    +breakpoint($max-width max-width)
-      float: none
-      margin: 0 auto
-      max-width: $wide-view
 
-  // alpha, beta, gamma styling
-  .wide-narrow-narrow .column.first,
-  .narrow-narrow-wide .column.third,
-  .narrow-wide-narrow .column.second
-    +layout-alpha-beta-gamma
+
+  // NEW STUFF
+  .insights-main-wrapper
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    div
+      margin-bottom: 20px
 
 // Insights layout B
 .gsb-insights-b

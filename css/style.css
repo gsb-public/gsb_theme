@@ -1782,11 +1782,6 @@ del {
 .panel-display.gsb-widescreen .featured-content {
   padding: 26px 0;
 }
-@media (max-width: 56.25em) {
-  .panel-display.gsb-widescreen .featured-content {
-    display: none;
-  }
-}
 .panel-display.gsb-widescreen #top-content,
 .panel-display.gsb-widescreen .content-wrapper {
   margin: 0 auto;
@@ -2006,7 +2001,7 @@ del {
   }
   .panel-display.gsb-front-page .front-panel-feature-one,
   .panel-display.gsb-front-page .front-panel-feature-two,
-  .panel-display.gsb-front-page .front-panel-feature-three {
+  .panel-display.gsb-front-page .front-slider-pane-panel-feature-three {
     width: 290px;
   }
 }
@@ -2096,11 +2091,15 @@ del {
 
 .gsb-insights-a .narrow-view {
   max-width: 270px;
-  min-width: 270px;
 }
 @media (max-width: 73.125em) {
   .gsb-insights-a .narrow-view {
-    max-width: 100%;
+    max-width: 270px;
+  }
+}
+@media (max-width: 37.8125em) {
+  .gsb-insights-a .narrow-view {
+    max-width: 570px;
   }
 }
 .panels-ipe-editing .gsb-insights-a .narrow-view {
@@ -2108,46 +2107,20 @@ del {
 }
 .gsb-insights-a .wide-view {
   max-width: 570px;
+  min-width: 270px;
 }
 @media (max-width: 73.125em) {
   .gsb-insights-a .wide-view {
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 270px;
+  }
+}
+@media (max-width: 37.8125em) {
+  .gsb-insights-a .wide-view {
+    max-width: 570px;
   }
 }
 .panels-ipe-editing .gsb-insights-a .wide-view {
   width: 570px;
-}
-.gsb-insights-a .column.first {
-  margin-right: 30px;
-}
-@media (max-width: 73.125em) {
-  .gsb-insights-a .column.first {
-    margin-right: 0;
-  }
-}
-.gsb-insights-a .column.second {
-  margin-right: 30px;
-}
-@media (max-width: 73.125em) {
-  .gsb-insights-a .column.second {
-    margin-right: 0;
-  }
-}
-.gsb-insights-a .full-header,
-.gsb-insights-a .wide-narrow-narrow,
-.gsb-insights-a .narrow-narrow-wide,
-.gsb-insights-a .narrow-wide-narrow,
-.gsb-insights-a .narrow-narrow-narrow-narrow {
-  overflow: hidden;
-  *zoom: 1;
-}
-.gsb-insights-a .full-header .panel-pane,
-.gsb-insights-a .wide-narrow-narrow .panel-pane,
-.gsb-insights-a .narrow-narrow-wide .panel-pane,
-.gsb-insights-a .narrow-wide-narrow .panel-pane,
-.gsb-insights-a .narrow-narrow-narrow-narrow .panel-pane {
-  margin-bottom: 30px;
 }
 .panels-ipe-editing .gsb-insights-a .full-header, .panels-ipe-editing
 .gsb-insights-a .wide-narrow-narrow, .panels-ipe-editing
@@ -2156,55 +2129,13 @@ del {
 .gsb-insights-a .narrow-narrow-narrow-narrow {
   margin-bottom: 0;
 }
-.gsb-insights-a .narrow-narrow-narrow-narrow .third {
-  margin-right: 30px;
+.gsb-insights-a .insights-main-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-@media (max-width: 73.125em) {
-  .gsb-insights-a .narrow-narrow-narrow-narrow .third {
-    margin-right: 0;
-  }
-}
-.gsb-insights-a .column {
-  float: left;
-}
-@media (max-width: 73.125em) {
-  .gsb-insights-a .column {
-    float: none;
-    margin: 0 auto;
-    max-width: 570px;
-  }
-}
-.gsb-insights-a .wide-narrow-narrow .column.first,
-.gsb-insights-a .narrow-narrow-wide .column.third,
-.gsb-insights-a .narrow-wide-narrow .column.second {
-  overflow: hidden;
-  *zoom: 1;
-  max-width: 570px;
-}
-.gsb-insights-a .wide-narrow-narrow .column.first .narrow-view,
-.gsb-insights-a .narrow-narrow-wide .column.third .narrow-view,
-.gsb-insights-a .narrow-wide-narrow .column.second .narrow-view {
-  float: left;
-}
-@media (max-width: 73.125em) {
-  .gsb-insights-a .wide-narrow-narrow .column.first .narrow-view,
-  .gsb-insights-a .narrow-narrow-wide .column.third .narrow-view,
-  .gsb-insights-a .narrow-wide-narrow .column.second .narrow-view {
-    float: none;
-    margin: 0 auto;
-  }
-}
-.gsb-insights-a .wide-narrow-narrow .column.first .beta,
-.gsb-insights-a .narrow-narrow-wide .column.third .beta,
-.gsb-insights-a .narrow-wide-narrow .column.second .beta {
-  margin-right: 30px;
-}
-@media (max-width: 73.125em) {
-  .gsb-insights-a .wide-narrow-narrow .column.first .beta,
-  .gsb-insights-a .narrow-narrow-wide .column.third .beta,
-  .gsb-insights-a .narrow-wide-narrow .column.second .beta {
-    margin: 0 auto;
-  }
+.gsb-insights-a .insights-main-wrapper div {
+  margin-bottom: 20px;
 }
 
 .gsb-insights-b .insights-card-wrapper {
