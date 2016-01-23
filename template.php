@@ -252,6 +252,7 @@ function gsb_theme_preprocess_html(&$variables) {
     'organizations',
     'faculty-research',
     'events',
+    'exec-ed',
   );
   $normalized_arg = arg(0);
   $parsed_url = drupal_parse_url(request_uri());
@@ -366,6 +367,7 @@ function gsb_theme_preprocess_menu_link(&$variables) {
   if ($variables['element']['#original_link']['menu_name'] !== 'main-menu' &&
     $variables['element']['#original_link']['menu_name']!== 'menu-executive-education-mega-me') {
     unset($variables['element']['#localized_options']['menu_minipanels_hover']);
+
   }
 }
 
