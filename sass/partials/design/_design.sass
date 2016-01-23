@@ -1,5 +1,5 @@
 // Global styling
-$top-border-interval: 6px
+$top-border-interval: 3px
 
 // Header region
 #header-wrapper
@@ -48,6 +48,19 @@ $top-border-interval: 6px
       width: 100px
     .page-insights &, .page-404 &
       margin-left: 15px !important
+  // Exec ed section
+  .page-taxonomy-term-34446 &,
+  .page-exec-ed &
+    .svg &, .no-js &, .no-svg &
+      background-size: 100%
+      float: left
+      height: 35px
+      margin: 15px 10px 0 0
+      width: 120px
+    +breakpoint(1199px max-width)
+      margin-left: 15px
+    +breakpoint(999px max-width)
+      margin-left: 100px
 
 // Site slogan
 #site-slogan
@@ -58,6 +71,8 @@ $top-border-interval: 6px
     margin-right: 15px
   +breakpoint(1160px max-width)
     display: none
+  .page-taxonomy-term-34446 &,
+  .page-exec-ed &,
   .no-js &
     display: none
 
@@ -71,6 +86,7 @@ $top-border-interval: 6px
     position: relative
     top: -$top-border-interval
     margin-bottom: -$top-border-interval
+
     .no-js &,
     &.search-open,
       min-width: 842px

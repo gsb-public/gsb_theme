@@ -78,9 +78,9 @@
     li
       max-width: 107px
       a
-        min-height: 65px
-        padding: 12px 9px
-        width: 109px
+        min-height: 62px
+        padding: 11px 9px
+        width: 106px
 
 // Global search
 .global-search
@@ -195,3 +195,10 @@
 #google-appliance-block-form.open
   +breakpoint($bp-tablet-port-max)
     display: block
+
+// Display menu items in 3 columns
+.menu-name-main-menu,
+.menu-name-section-12261
+  -moz-column-count: 3
+  -webkit-column-count: 3
+  column-count: 3

@@ -3,15 +3,16 @@
 // Full width
 #block-menu-menu-executive-education-mega-me
   +clearfix
-  background-color: $grey-med
+  background: #7d7466
   float: left
   +breakpoint($bp-tablet-port-max)
     float: none
   li
-    border-right: 1px $white solid
-    font-size: 18px
+    border-top: $top-border-interval $red-dark solid
+    font-size: 16px
+    font-weight: normal
     float: left
-    line-height: 20px
+    line-height: 2.5
     list-style-type: none
     list-style-image: none
     margin: 0
@@ -21,6 +22,7 @@
     .menu
       display: none
     a
+      border-right: 1px #9b9285 solid
       color: $white
       display: block
       font-family: $font-demi
@@ -30,10 +32,10 @@
         display: inline-block
         &.active,
         &.active-trail
-          background: $grey-dark
+          background: #645c51
         &:hover,
         &.qtip-hover
-          background: $grey-dark
+          background: #645c51
       +breakpoint($bp-mobile)
         max-width: 250px
 
@@ -74,123 +76,19 @@
           &:before
             content: ""
   +breakpoint($bp-wide-min)
-    li
-      max-width: 107px
-      a
-        min-height: 65px
-        padding: 12px 9px
-        width: 109px
+    li a
+      min-height: 59px
+      padding: 9px 24px
 
-// Global search
-.global-search
-  +breakpoint($bp-wide-min)
-    float: left
-    height: 0
-    margin-top: $top-border-interval
-    width: 200px
-    .search-closed &,
-    .js &
-      width: auto
-    .js .search-open &
-      width: 200px
-
-// Mobile footer menu
-#menu-main-footer
+#admin-menu,
+.messages.error
   display: none
-  +breakpoint($bp-tablet-port-max)
-    +background(linear-gradient($grey-e, $white))
-    +clearfix
-    display: block
-    padding: 12px 50px 0 50px
-    width: 100%
-    .menu
-      width: auto
-    li
-      line-height: 1.2
-      padding-bottom: 12px
-    a
-      font-weight: bold
-      font-size: 13px
-      line-height: 1.2
-      text-transform: uppercase
 
-// Mobile menu button
-#nav-touch-wrapper
-  display: inline
-  +breakpoint($bp-tablet-port-max)
-    display: block
-  #nav-touch-button
-    display: none
-    +breakpoint($bp-tablet-port-max)
-      border-right: 1px $white solid
-      .page-insights &
-        border-right: 0
-      cursor: pointer
-      display: inline-block
-      height: 50px
-      padding: 3px 12px 9px
-      vertical-align: top
-      position: relative
-      width: 50px
-      z-index: 12
-  #nav-touch-button
-    +icon-after("menu", true)
-    &:after
-      color: $white
-      font-size: 21px
-      position: relative
-      top: 12px
-      right: -2px
+// Display items in 2 columns
+.menu-name-menu-executive-education-mega-me
+  -moz-column-count: 2
+  -webkit-column-count: 2
+  column-count: 2
 
-// Menu toggle functionality
-#nav-touch-wrapper
-  +breakpoint($bp-tablet-port-max)
-    max-height: 50px
-    display: inline-block
-    float: left
-    #nav-touch-button
-      background: $grey-dark
-      &:hover
-        text-decoration: none
-    #navigation
-      display: none
-  &.open
-    +breakpoint($bp-tablet-port-max)
-      #nav-touch-button
-        background: $white
-        +background(linear-gradient($grey-e, $white))
-        &:after
-          color: $red
-      #navigation
-        display: block
-        position: absolute
-        width: 100%
-        z-index: 11
-
-// Search toggle functionality
-#search-touch-button
-  display: none
-  &:hover
-    text-decoration: none
-  +breakpoint($bp-tablet-port-max)
-    background: $grey-dark
-    border-right: 1px $white solid
-    cursor: pointer
-    display: inline-block
-    height: 50px
-    left: 50px
-    position: absolute
-    width: 50px
-    +icon-after("search", true)
-    &:after
-      color: $white
-      font-size: 24px
-      padding: 0 12px
-      position: relative
-      top: 16px
-  .page-insights &
-    display: none
-
-#google-appliance-block-form.open
-  +breakpoint($bp-tablet-port-max)
-    display: block
+.qtip-content
+  background: #645c51 !important

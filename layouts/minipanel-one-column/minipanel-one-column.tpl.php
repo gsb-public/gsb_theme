@@ -1,7 +1,6 @@
 <?php
 /**
  * @file
- * Template for Panopoly Selby Flipped.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
