@@ -347,4 +347,13 @@
     }
   };
 
+  /**
+   * Move Exec Ed program finder filters out of container for full width.
+   */
+  Drupal.behaviors.ee_filters = {
+    attach: function () {
+      $('.isotopify.program-list .isotopify-filters').insertBefore($('.pane-program-list .programs'));
+    }
+  };
+
 }(jQuery));
