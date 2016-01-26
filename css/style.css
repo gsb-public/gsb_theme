@@ -3525,13 +3525,14 @@ div.label-inline {
   width: 120px;
 }
 @media (max-width: 74.9375em) {
-  .page-taxonomy-term-34446 #logo, .page-exec-ed #logo {
+  .svg .page-taxonomy-term-34446 #logo, .no-js .page-taxonomy-term-34446 #logo, .no-svg .page-taxonomy-term-34446 #logo, .svg .page-exec-ed #logo, .no-js .page-exec-ed #logo, .no-svg .page-exec-ed #logo {
     margin-left: 15px;
   }
 }
-@media (max-width: 62.4375em) {
-  .page-taxonomy-term-34446 #logo, .page-exec-ed #logo {
-    margin-left: 100px;
+@media (max-width: 73.0625em) {
+  .svg .page-taxonomy-term-34446 #logo, .no-js .page-taxonomy-term-34446 #logo, .no-svg .page-taxonomy-term-34446 #logo, .svg .page-exec-ed #logo, .no-js .page-exec-ed #logo, .no-svg .page-exec-ed #logo {
+    left: 40px;
+    margin-top: 10px;
   }
 }
 
@@ -3557,6 +3558,9 @@ div.label-inline {
 .js #navigation, #navigation.search-closed {
   min-width: 702px;
 }
+.page-taxonomy-term-34446 .js #navigation, .page-exec-ed .js #navigation, .page-taxonomy-term-34446 #navigation.search-closed, .page-exec-ed #navigation.search-closed {
+  min-width: 670px;
+}
 @media (min-width: 62.5em) {
   #navigation {
     float: right;
@@ -3568,9 +3572,20 @@ div.label-inline {
     min-width: 842px;
   }
 }
+@media (min-width: 73.125em) {
+  .page-taxonomy-term-34446 #navigation, .page-exec-ed #navigation {
+    float: right;
+    position: relative;
+    top: -3px;
+    margin-bottom: -3px;
+  }
+  .no-js .page-taxonomy-term-34446 #navigation, .page-taxonomy-term-34446 #navigation.search-open, .no-js .page-exec-ed #navigation, .page-exec-ed #navigation.search-open {
+    min-width: 810px;
+  }
+}
 @media (max-width: 62.4375em) {
   #navigation .section {
-    border-bottom: 10px solid #990000;
+    border-bottom: 10px black solid;
     -moz-box-shadow: black 0 -1px 3px;
     -webkit-box-shadow: black 0 -1px 3px;
     box-shadow: black 0 -1px 3px;
@@ -7438,7 +7453,7 @@ ul.slideshow-items {
   background: #7d7466;
   float: left;
 }
-@media (max-width: 62.4375em) {
+@media (max-width: 73.0625em) {
   #block-menu-menu-executive-education-mega-me {
     float: none;
   }
@@ -7468,7 +7483,7 @@ ul.slideshow-items {
   margin: 0;
   position: relative;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 73.125em) {
   #block-menu-menu-executive-education-mega-me li a {
     display: inline-block;
   }
@@ -7484,7 +7499,7 @@ ul.slideshow-items {
     max-width: 250px;
   }
 }
-@media (max-width: 62.4375em) {
+@media (max-width: 73.0625em) {
   #block-menu-menu-executive-education-mega-me li {
     background: white;
     border: 0;
@@ -7543,27 +7558,11 @@ ul.slideshow-items {
     content: "";
   }
 }
-@media (min-width: 62.5em) {
+@media (min-width: 73.125em) {
   #block-menu-menu-executive-education-mega-me li a {
     min-height: 59px;
-    padding: 9px 24px;
+    padding: 9px 22px;
   }
-}
-
-#admin-menu,
-.messages.error,
-div.error {
-  display: none;
-}
-
-.menu-name-menu-executive-education-mega-me {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-}
-
-.qtip-content {
-  background: #645c51 !important;
 }
 
 .supermenu-row .cta-wrapper {
@@ -8171,6 +8170,17 @@ div.error {
     z-index: 1;
   }
 }
+@media (max-width: 73.0625em) {
+  .page-taxonomy-term-34446 #google-appliance-block-form, .page-exec-ed #google-appliance-block-form, .page-taxonomy-term-34446
+  #google-appliance-block-form--2, .page-exec-ed
+  #google-appliance-block-form--2 {
+    display: none;
+    left: 50px;
+    position: absolute;
+    width: 85%;
+    z-index: 1;
+  }
+}
 #google-appliance-block-form input,
 #google-appliance-block-form--2 input {
   height: 59px;
@@ -8233,6 +8243,13 @@ div.error {
 }
 @media (max-width: 62.4375em) {
   #google-appliance-block-form .form-submit,
+  #google-appliance-block-form--2 .form-submit {
+    height: 50px;
+  }
+}
+@media (max-width: 73.0625em) {
+  .page-taxonomy-term-34446 #google-appliance-block-form .form-submit, .page-exec-ed #google-appliance-block-form .form-submit, .page-taxonomy-term-34446
+  #google-appliance-block-form--2 .form-submit, .page-exec-ed
   #google-appliance-block-form--2 .form-submit {
     height: 50px;
   }

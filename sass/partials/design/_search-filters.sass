@@ -9,6 +9,14 @@
     position: absolute
     width: 85%
     z-index: 1
+  .page-taxonomy-term-34446 &,
+  .page-exec-ed &
+    +breakpoint(1169px max-width)
+      display: none
+      left: 50px
+      position: absolute
+      width: 85%
+      z-index: 1
   // Search input
   input
     height: 59px
@@ -55,6 +63,10 @@
     width: 60px
     +breakpoint($bp-tablet-port-max)
       height: 50px
+    .page-taxonomy-term-34446 &,
+    .page-exec-ed &
+      +breakpoint(1169px max-width)
+        height: 50px
     .svg &
       +background((image_url("search.svg") no-repeat center), #f4f4f4)
       background-size: 150%

@@ -1,5 +1,4 @@
 // Global styling
-$top-border-interval: 3px
 
 // Header region
 #header-wrapper
@@ -57,10 +56,11 @@ $top-border-interval: 3px
       height: 35px
       margin: 15px 10px 0 0
       width: 120px
-    +breakpoint(1199px max-width)
-      margin-left: 15px
-    +breakpoint(999px max-width)
-      margin-left: 100px
+      +breakpoint(1199px max-width)
+        margin-left: 15px
+      +breakpoint(1169px max-width)
+        left: 40px
+        margin-top: 10px
 
 // Site slogan
 #site-slogan
@@ -81,18 +81,32 @@ $top-border-interval: 3px
   .js &,
   &.search-closed
     min-width: 702px
+    // Exec ed menu
+    .page-taxonomy-term-34446 &,
+    .page-exec-ed &
+      min-width: 670px
   +breakpoint($bp-wide-min)
     float: right
     position: relative
     top: -$top-border-interval
     margin-bottom: -$top-border-interval
-
     .no-js &,
-    &.search-open,
+    &.search-open
       min-width: 842px
+  // Exec ed menu
+  .page-taxonomy-term-34446 &,
+  .page-exec-ed &
+    +breakpoint(1170px min-width)
+      float: right
+      position: relative
+      top: -$top-border-interval
+      margin-bottom: -$top-border-interval
+      .no-js &,
+      &.search-open
+        min-width: 810px
   .section
     +breakpoint($bp-tablet-port-max)
-      border-bottom: 10px solid $red
+      border-bottom: 10px $black solid
       +box-shadow($black 0 -1px 3px)
 
 // Content wrapper
