@@ -6,7 +6,7 @@
   background-color: $red-light
   +background(linear-gradient(bottom, $red-light, $red-dark))
   float: left
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     float: none
   li
     border-right: 1px solid #FF0000
@@ -27,7 +27,7 @@
       font-family: $font-demi
       margin: 0
       position: relative
-      +breakpoint($bp-tablet-land-min)
+      +breakpoint(1000px min-width)
         display: inline-block
         &.active,
         &.active-trail
@@ -35,11 +35,11 @@
         &:hover,
         &.qtip-hover
           background: $grey-27
-      +breakpoint($bp-mobile)
+      +breakpoint(320px max-width)
         max-width: 250px
 
     // Mobile
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(999px max-width)
       background: $white
       border: 0
       border-bottom: 1px solid #d5d5d5
@@ -84,7 +84,7 @@
 
 // Global search
 .global-search
-  +breakpoint($bp-wide-min)
+  +breakpoint(1000px min-width)
     float: left
     height: 0
     margin-top: $top-border-interval
@@ -98,7 +98,7 @@
 // Mobile footer menu
 #menu-main-footer
   display: none
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     +background(linear-gradient($grey-e, $white))
     +clearfix
     display: block
@@ -118,11 +118,11 @@
 // Mobile menu button
 #nav-touch-wrapper
   display: inline
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     display: block
   #nav-touch-button
     display: none
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(999px max-width)
       border-right: 1px solid red
       .page-insights &
         border-right: 0
@@ -145,7 +145,7 @@
 
 // Menu toggle functionality
 #nav-touch-wrapper
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     max-height: 50px
     display: inline-block
     float: left
@@ -156,7 +156,7 @@
     #navigation
       display: none
   &.open
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(999px max-width)
       #nav-touch-button
         background: $white
         +background(linear-gradient($grey-e, $white))
@@ -173,7 +173,7 @@
   display: none
   &:hover
     text-decoration: none
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     +background(linear-gradient(bottom, $red-light, $red-dark))
     border-right: 1px solid red
     cursor: pointer
@@ -193,7 +193,7 @@
     display: none
 
 #google-appliance-block-form.open
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(999px max-width)
     display: block
 
 // Display menu items in 3 columns

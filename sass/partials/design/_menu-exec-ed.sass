@@ -1,12 +1,13 @@
-// Executive Educations menu
+// Executive Educations main menu
 
 // Full width
 #block-menu-menu-executive-education-mega-me
   +clearfix
   background: #7d7466
   float: left
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(1169px max-width)
     float: none
+
   li
     border-top: $top-border-interval $red-dark solid
     font-size: 16px
@@ -28,7 +29,7 @@
       font-family: $font-demi
       margin: 0
       position: relative
-      +breakpoint($bp-tablet-land-min)
+      +breakpoint(1170px min-width)
         display: inline-block
         &.active,
         &.active-trail
@@ -40,7 +41,7 @@
         max-width: 250px
 
     // Mobile
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(1169px max-width)
       background: $white
       border: 0
       border-bottom: 1px solid #d5d5d5
@@ -75,20 +76,7 @@
         &.open
           &:before
             content: ""
-  +breakpoint($bp-wide-min)
+  +breakpoint(1170px min-width)
     li a
       min-height: 59px
-      padding: 9px 24px
-
-#admin-menu,
-.messages.error
-  display: none
-
-// Display items in 2 columns
-.menu-name-menu-executive-education-mega-me
-  -moz-column-count: 2
-  -webkit-column-count: 2
-  column-count: 2
-
-.qtip-content
-  background: #645c51 !important
+      padding: 9px 22px
