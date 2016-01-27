@@ -7,14 +7,36 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+$page-top-variable: 220px
+
+// Program finder page hackiness
+.page-node-409306
+  #content
+    max-width: none
+
+  .title-wrapper,
+  .breadcrumb
+    display: none
+  #top-content
+    background: #f4f4f4
+    height: $page-top-variable
+  .full-header
+    margin: 0 auto
+    max-width: 1170px
+    padding-top: $standard-padding
+    position: relative
+    top: -$page-top-variable
+    margin-bottom: -$page-top-variable
+
+
 // Page layout
 .pane-program-list
   +clearfix
 
-  // Filters
+  // Filters wrapper
   .isotopify-filters
-    +clearfix
-    margin-bottom: 30px
+    margin-bottom: 100px
+
 
   // List
   .programs
@@ -33,21 +55,33 @@
 
 // Exec Ed program finder filters
 #isotopify-filters
-  +clearfix
-  background: #f4f4f4
+  position: relative
 
-  .form-type-select,
-  .form-type-textfield
-    float: left
-    width: 300px
+  // Filters across top
+  .form-item-filter-program-topic,
+  .form-item-filter-leadership-level,
+  .form-item-filter-program-location,
+  .isotopify-filter-daterange,
+  .form-item-search
+    display: inline-block
+    max-width: 230px
 
-  // Sort filter
+  // Sort filter outside of other filters
   .form-item-sort
     float: right
-    margin: 20px 0
+    margin: 0
+    position: absolute
+    right: 0
+    top: 115px
     width: auto
     label
       display: none
+    .customSelectInner
+      padding: 12px 6px 6px
+
+
+
+
 
 // Exec Ed program finder list
 .isotopify.program-list
