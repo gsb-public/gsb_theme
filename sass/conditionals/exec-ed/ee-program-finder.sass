@@ -54,16 +54,20 @@
 
   // Program result
   .isotopify-item
-    border-top: 1px #c4c4c4 solid
+    border-top: 1px $listing-divider solid
     padding: $standard-padding 35px
+    +breakpoint($bp-mobile-max)
+      padding: 20px 0
 
   // Program title
   .program-title
-    color: $red
+    color: $text-black
     font-size: 24px
     font-weight: bold
     line-height: 1.3
     margin-bottom: 18px
+    +breakpoint($bp-mobile-max)
+      font-size: 20px
 
   // Program date
   .program-date
@@ -88,7 +92,6 @@
 
   // Program tags
   .program-topic
-    color: $red
     font-size: 16px
     line-height: 1.3
     margin-top: 5px
