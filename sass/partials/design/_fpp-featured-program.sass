@@ -1,0 +1,55 @@
+// Featured Program FPP
+
+.pane-bundle-featured-program
+  @extend %box-shadow
+  +background(linear-gradient(top, rgba(#655d51, 0.85), rgba(#655d51, 0.85)), image_url("bg-feature-program-2016-01-29-2016-1.jpg") no-repeat top left)
+  color: $white
+  padding: 0 $standard-padding $standard-padding
+
+  // Superhead
+  .field-name-field-featured-superhead
+    @extend %superhead-black
+    margin-bottom: 0
+
+  // Marketing headline
+  .field-name-field-marketing-headline
+    font-size: 26px
+    line-height: 1.3
+    padding-top: $standard-padding
+    margin-bottom: 32px
+
+  // Referenced program instance info
+  // Program title
+  .field-name-field-program
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 18px
+    .wide-view &
+      font-size: 22px
+      +breakpoint($bp-mobile-max)
+        font-size: 20px
+    a
+      color: $white
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 16px
+        margin-left: 3px
+      &:hover
+        color: $white
+        &:after
+          color: $white
+
+  // Program date range and location
+  .field-name-field-program-location,
+  .field-name-field-instance-date
+    font-size: 16px
+    line-height: 1.3
+    .wide-view &
+      font-size: 18px
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
+
+  // Program location
+  // .field-name-field-program-location
