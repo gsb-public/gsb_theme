@@ -1,3 +1,7 @@
+.pane-program-list .isotopify-filters .ms-choice, .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button, .pane-program-list .isotopify-filters .ms-drop.bottom {
+  border: 1px #e4e4e4 solid;
+}
+
 .page-node-409306 #content {
   max-width: none;
 }
@@ -7,15 +11,15 @@
 }
 .page-node-409306 #top-content {
   background: #f4f4f4;
-  height: 220px;
+  height: 120px;
 }
 .page-node-409306 .full-header {
   margin: 0 auto;
   max-width: 1170px;
   padding-top: 26px;
   position: relative;
-  top: -220px;
-  margin-bottom: -220px;
+  top: -120px;
+  margin-bottom: -120px;
 }
 
 .pane-program-list {
@@ -23,7 +27,7 @@
   *zoom: 1;
 }
 .pane-program-list .isotopify-filters {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 .pane-program-list .programs {
   float: left;
@@ -40,18 +44,17 @@
   margin-bottom: 20px;
 }
 
-#isotopify-filters {
+.pane-program-list .isotopify-filters {
   position: relative;
 }
-#isotopify-filters .form-item-filter-program-topic,
-#isotopify-filters .form-item-filter-leadership-level,
-#isotopify-filters .form-item-filter-program-location,
-#isotopify-filters .isotopify-filter-daterange,
-#isotopify-filters .form-item-search {
-  display: inline-block;
-  max-width: 230px;
+.pane-program-list .isotopify-filters #isotopify-filters > div {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-#isotopify-filters .form-item-sort {
+.pane-program-list .isotopify-filters .form-item-sort {
   float: right;
   margin: 0;
   position: absolute;
@@ -59,11 +62,193 @@
   top: 115px;
   width: auto;
 }
-#isotopify-filters .form-item-sort label {
+.pane-program-list .isotopify-filters .form-item-sort label {
   display: none;
 }
-#isotopify-filters .form-item-sort .customSelectInner {
+.pane-program-list .isotopify-filters .form-item-sort .customSelectInner {
   padding: 12px 6px 6px;
+}
+.pane-program-list .isotopify-filters .form-item {
+  margin: 0;
+}
+.pane-program-list .isotopify-filters .form-item-filter-program-topic,
+.pane-program-list .isotopify-filters .form-item-filter-leadership-level,
+.pane-program-list .isotopify-filters .form-item-filter-program-location,
+.pane-program-list .isotopify-filters .isotopify-filter-daterange,
+.pane-program-list .isotopify-filters .form-item-search {
+  display: inline-block;
+  max-width: 230px;
+  position: relative;
+}
+.pane-program-list .isotopify-filters .form-item-filter-program-topic > label,
+.pane-program-list .isotopify-filters .form-item-filter-leadership-level > label,
+.pane-program-list .isotopify-filters .form-item-filter-program-location > label,
+.pane-program-list .isotopify-filters .isotopify-filter-daterange > label,
+.pane-program-list .isotopify-filters .form-item-search > label {
+  font-weight: normal;
+  left: 10px;
+  line-height: 2.2;
+  margin-right: 0;
+  position: absolute;
+  top: 2px;
+  z-index: 1;
+}
+.pane-program-list .isotopify-filters .ms-parent {
+  width: 210px !important;
+}
+.pane-program-list .isotopify-filters .ms-choice {
+  background: white;
+  border-radius: 0;
+  color: #231f20;
+  height: 38px;
+}
+.pane-program-list .isotopify-filters .ms-choice > div:after {
+  content: "\f105";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-list .isotopify-filters .ms-choice > div:after {
+  background-color: #f9f9f9;
+  border-left: 1px solid #cccccc;
+  color: #990000;
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  line-height: 2.6;
+  height: 36px;
+  padding: 0 10px;
+  position: relative;
+  top: 1px;
+  left: -1px;
+}
+.pane-program-list .isotopify-filters .ms-choice > div.open:after {
+  content: "\f108";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-list .isotopify-filters .ms-choice > div.open:after {
+  line-height: 2.6;
+}
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button {
+  background: white;
+  border-radius: 0;
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: 38px;
+  line-height: 2.2;
+  padding: 0;
+  padding-left: 10px;
+  text-align: left;
+  width: 210px;
+}
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button:after {
+  content: "\f105";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button:after {
+  background-color: #f9f9f9;
+  border-left: 1px solid #cccccc;
+  color: #990000;
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  line-height: 2.6;
+  height: 36px;
+  padding: 0 10px;
+  position: relative;
+}
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button.open:after {
+  content: "\f108";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button.open:after {
+  line-height: 2.6;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom {
+  border-radius: 0;
+  min-width: 700px;
+}
+.pane-program-list .isotopify-filters ul {
+  overflow: hidden;
+  *zoom: 1;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  max-height: none !important;
+  max-width: none;
+  min-height: 150px;
+  padding: 12px 26px;
+}
+.pane-program-list .isotopify-filters li {
+  display: block;
+  float: left;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.date-picker-wrapper {
+  background: white;
+}
+.date-picker-wrapper .drp_top-bar {
+  display: none;
+}
+.date-picker-wrapper .month-wrapper {
+  border: 0;
+  border-radius: 0;
+  width: 430px !important;
+}
+.date-picker-wrapper .month-name {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.date-picker-wrapper .month-name:first-word {
+  font-weight: bold;
 }
 
 .isotopify.program-list .isotopify-item {

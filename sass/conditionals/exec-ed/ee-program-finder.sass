@@ -5,9 +5,10 @@
 @import breakpoint
 @import ../../../fonts/icons/icons
 @import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
-$page-top-variable: 220px
+$page-top-variable: 120px
 
 // Program finder page hackiness
 .page-node-409306
@@ -28,15 +29,13 @@ $page-top-variable: 220px
     top: -$page-top-variable
     margin-bottom: -$page-top-variable
 
-
 // Page layout
 .pane-program-list
   +clearfix
 
   // Filters wrapper
   .isotopify-filters
-    margin-bottom: 100px
-
+    margin-bottom: $page-top-variable + 30px
 
   // List
   .programs
@@ -54,17 +53,13 @@ $page-top-variable: 220px
       margin-bottom: 20px
 
 // Exec Ed program finder filters
-#isotopify-filters
+.pane-program-list .isotopify-filters
   position: relative
 
-  // Filters across top
-  .form-item-filter-program-topic,
-  .form-item-filter-leadership-level,
-  .form-item-filter-program-location,
-  .isotopify-filter-daterange,
-  .form-item-search
-    display: inline-block
-    max-width: 230px
+  #isotopify-filters > div
+    +flex-box
+    flex-flow: row wrap
+    justify-content: space-between
 
   // Sort filter outside of other filters
   .form-item-sort
@@ -78,6 +73,140 @@ $page-top-variable: 220px
       display: none
     .customSelectInner
       padding: 12px 6px 6px
+
+  // Filters across top
+  .form-item
+    margin: 0
+
+  .form-item-filter-program-topic,
+  .form-item-filter-leadership-level,
+  .form-item-filter-program-location,
+  .isotopify-filter-daterange,
+  .form-item-search
+    display: inline-block
+    max-width: 230px
+    position: relative
+    > label
+      font-weight: normal
+      left: 10px
+      line-height: 2.2
+      margin-right: 0
+      position: absolute
+      top: 2px
+      z-index: 1
+  // Filter styling
+  .ms-parent
+    width: 210px !important
+  .ms-choice
+    @extend %border-grey
+    background: $white
+    border-radius: 0
+    color: $text-black
+    height: 38px
+    // Select arrow
+    > div
+      +icon-after("arrow-med-down", true)
+      &:after
+        background-color: #f9f9f9
+        border-left: 1px solid $grey-c
+        color: $red
+        display: inline-block
+        float: right
+        font-size: 14px
+        line-height: 2.6
+        height: 36px
+        padding: 0 10px
+        position: relative
+        top: 1px
+        left: -1px
+      &.open
+        +icon-after("arrow-med-up", true)
+        &:after
+          line-height: 2.6
+
+  // Date range button
+  button.isotopify-filter-daterange-button
+    @extend %border-grey
+    background: $white
+    border-radius: 0
+    color: $text-black
+    font-family: $font-sans
+    font-size: 16px
+    height: 38px
+    line-height: 2.2
+    padding: 0
+    padding-left: 10px
+    text-align: left
+    width: 210px
+    +icon-after("arrow-med-down", true)
+    &:after
+      background-color: #f9f9f9
+      border-left: 1px solid $grey-c
+      color: $red
+      display: inline-block
+      float: right
+      font-size: 14px
+      line-height: 2.6
+      height: 36px
+      padding: 0 10px
+      position: relative
+    &.open
+      +icon-after("arrow-med-up", true)
+      &:after
+        line-height: 2.6
+
+
+
+  // Select window
+  .ms-drop.bottom
+    @extend %border-grey
+    border-radius: 0
+    min-width: 700px
+  ul
+    +clearfix
+    -moz-column-count: 3
+    -webkit-column-count: 3
+    column-count: 3
+    max-height: none !important
+    max-width: none
+    min-height: 150px
+    padding: 12px 26px
+  // select items
+  li
+    display: block
+    float: left
+    font-size: 16px
+    line-height: 1.2
+    margin: 10px 0
+
+// Date drop down
+.date-picker-wrapper
+  background: $white
+
+  // Hide help text
+  .drp_top-bar
+    display: none
+
+  .month-wrapper
+    border: 0
+    border-radius: 0
+    width: 430px !important
+
+  .month-name
+    font-family: $font-sans
+    font-size: 16px
+    line-height: 1.2
+    text-transform: capitalize
+    &:first-word
+      font-weight: bold
+
+
+
+  .next
+
+
+
+
 
 
 
