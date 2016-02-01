@@ -2,9 +2,23 @@
 
 .pane-bundle-featured-program
   @extend %box-shadow
-  +background(linear-gradient(top, rgba(#655d51, 0.85), rgba(#655d51, 0.85)), image_url("bg-feature-program-2016-01-29-2016-1.jpg") no-repeat top left)
   color: $white
-  padding: 0 $standard-padding $standard-padding
+
+  // Color options
+  // None
+  .featured-program-color-
+    +background(linear-gradient(top, rgba($white, 0), rgba($white, 0)), image_url("bg-feature-program-2016-01-29-2016-1.jpg") no-repeat top left)
+    padding: 0 $standard-padding $standard-padding
+
+  // Taupe
+  .featured-program-color-taupe
+    +background(linear-gradient(top, rgba(#655d51, 0.85), rgba(#655d51, 0.85)), image_url("bg-feature-program-2016-01-29-2016-1.jpg") no-repeat top left)
+    padding: 0 $standard-padding $standard-padding
+
+  // Teal
+  .featured-program-color-teal
+    +background(linear-gradient(top, rgba(#149783, 0.85), rgba(#149783, 0.85)), image_url("bg-feature-program-2016-01-29-2016-1.jpg") no-repeat top left)
+    padding: 0 $standard-padding $standard-padding
 
   // Superhead
   .field-name-field-featured-superhead
