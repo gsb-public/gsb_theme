@@ -250,7 +250,7 @@
 .date-picker-wrapper .month-wrapper {
   border: 0;
   border-radius: 0;
-  width: 430px !important;
+  width: 550px !important;
 }
 .date-picker-wrapper .month-name {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -258,8 +258,82 @@
   line-height: 1.2;
   text-transform: capitalize;
 }
-.date-picker-wrapper .month-name:first-word {
-  font-weight: bold;
+.date-picker-wrapper .next:before,
+.date-picker-wrapper .prev:before {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: #bac405;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+.date-picker-wrapper .prev {
+  left: 8px;
+}
+.date-picker-wrapper .prev:before {
+  content: "\f106";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.date-picker-wrapper .next {
+  right: 8px;
+}
+.date-picker-wrapper .next:before {
+  content: "\f107";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.date-picker-wrapper .month-wrapper table tbody tr {
+  border-top: 0;
+}
+.date-picker-wrapper .month-wrapper table td {
+  background: white;
+  padding: 2px;
+}
+.date-picker-wrapper .month-wrapper table td div {
+  background: #fcfcfc;
+  border: 1px #e5e5e5 solid;
+  color: #c5c5c5;
+}
+.date-picker-wrapper .month-wrapper table .day {
+  padding: 5px;
+}
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  background: #bac405;
+}
+.date-picker-wrapper .month-wrapper table .day.checked {
+  background: #fcfcfc;
+  border: 1px #bac405 solid;
+  color: #231f20;
+}
+.date-picker-wrapper .month-wrapper table .day.first-date-selected, .date-picker-wrapper .month-wrapper table .day.last-date-selected {
+  background: #fcfcfc !important;
+  border: 2px #bac405 solid;
+  color: #231f20 !important;
 }
 
 .isotopify.program-list .isotopify-item {

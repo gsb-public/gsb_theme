@@ -182,6 +182,7 @@ $page-top-variable: 120px
     font-size: 16px
     line-height: 1.2
     margin-bottom: 12px
+
 // Date drop down
 .date-picker-wrapper
   background: $white
@@ -193,21 +194,61 @@ $page-top-variable: 120px
   .month-wrapper
     border: 0
     border-radius: 0
-    width: 430px !important
+    width: 550px !important
 
   .month-name
     font-family: $font-sans
     font-size: 16px
     line-height: 1.2
     text-transform: capitalize
-    &:first-word
-      font-weight: bold
+  // Arrows
+  .next,
+  .prev
+    &:before
+      +border-radius(50px)
+      background: $green-light
+      display: inline-block
+      color: $white
+      font-size: 12px
+      height: 20px
+      position: relative
+      width: 20px
 
-
+  .prev
+    left: 8px
+    +icon-before("arrow-med-left", true)
 
   .next
+    right: 8px
+    +icon-before("arrow-med-right", true)
 
-
+  // Actual calendar
+  .month-wrapper table
+    tbody tr
+      border-top: 0
+    td
+      background: $white
+      padding: 2px
+      div
+        background: #fcfcfc
+        border: 1px #e5e5e5 solid
+        color: #c5c5c5
+    .day
+      padding: 5px
+      // Today
+      &.real-today
+        background: $green-light
+      // Days selected range
+      &.checked
+        background: #fcfcfc
+        border: 1px $green-light solid
+        color: $text-black
+      // First and last of range
+      &.first-date-selected,
+      &.last-date-selected
+        background: #fcfcfc !important
+        border: 2px $green-light solid
+        color: $text-black !important
 
 
 
@@ -269,3 +310,4 @@ $page-top-variable: 120px
     font-size: 16px
     line-height: 1.3
     margin-top: 5px
+
