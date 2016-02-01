@@ -332,10 +332,10 @@ function gsb_theme_preprocess_views_exposed_form(&$variables) {
 function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
   $form['#attached']['js'][drupal_get_path('theme', 'gsb_theme') . '/js/gsb_forms.js'] = array();
   if ($form_id == 'google_appliance_block_form') {
-    if (strpos($form['#action'], '/exec-ed') == 0) {
+    if (strpos($form['#action'], '/exec-ed') === 0) {
       $form['#action'] = '/exec-ed/search';
     }
-    if (strpos($form['#action'], '/seed') == 0) {
+    if (strpos($form['#action'], '/seed') === 0) {
       $form['#action'] = '/seed/search';
     }
   }
