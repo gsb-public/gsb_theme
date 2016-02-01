@@ -48,7 +48,9 @@
   position: relative;
 }
 .pane-program-list .isotopify-filters #isotopify-filters > div {
-  display: -ms-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
@@ -212,22 +214,31 @@
   min-width: 700px;
 }
 .pane-program-list .isotopify-filters ul {
-  overflow: hidden;
-  *zoom: 1;
-  -moz-column-count: 3;
-  -webkit-column-count: 3;
-  column-count: 3;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: row wrap;
+  -moz-box-flex-flow: row wrap;
+  -ms-flexbox-flex-flow: row wrap;
+  -webkit-flex-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-justify-content: space-between;
+  -moz-box-justify-content: space-between;
+  -ms-flexbox-justify-content: space-between;
+  -webkit-flex-justify-content: space-between;
+  justify-content: space-between;
   max-height: none !important;
   max-width: none;
   min-height: 150px;
-  padding: 12px 26px;
+  padding: 26px;
 }
 .pane-program-list .isotopify-filters li {
-  display: block;
-  float: left;
+  flex-basis: 30%;
   font-size: 16px;
   line-height: 1.2;
-  margin: 10px 0;
+  margin-bottom: 12px;
 }
 
 .date-picker-wrapper {
