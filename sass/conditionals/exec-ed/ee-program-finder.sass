@@ -187,10 +187,6 @@ $page-top-variable: 120px
 .date-picker-wrapper
   background: $white
 
-  // Hide help text
-  .drp_top-bar
-    display: none
-
   .month-wrapper
     border: 0
     border-radius: 0
@@ -201,28 +197,71 @@ $page-top-variable: 120px
     font-size: 16px
     line-height: 1.2
     text-transform: capitalize
+
+  // Days of week
+  table
+    .week-name
+      font-weight: normal
+      th
+        color: $white
+        font-family: $font-sans
+        font-size: 13px
+        font-weight: normal
+        line-height: 1.2
+        position: relative
+        right: -4px
+        &::first-letter
+          color: #686868
+
   // Arrows
-  .next,
-  .prev
-    &:before
-      +border-radius(50px)
-      background: $green-light
-      display: inline-block
+  table .caption
+    position: relative
+    .next,
+    .prev
       color: $white
-      font-size: 12px
-      height: 20px
-      position: relative
-      width: 20px
+      padding: 0
+      position: absolute
+      top: 18px
+      &:before
+        +border-radius(50px)
+        background: $green-light
+        color: $white
+        font-size: 10px
+        padding: 8px
+        position: relative
+      &:hover
+        background: none
+        &:before
+          background: $link-blue
 
-  .prev
-    left: 8px
-    +icon-before("arrow-med-left", true)
+    .prev
+      +icon-before("arrow-med-left", true)
 
-  .next
-    right: 8px
-    +icon-before("arrow-med-right", true)
+    .next
+      +icon-before("arrow-med-right", true)
 
-  // Actual calendar
+  // First month
+  .month1
+    .month-name
+      padding-left: 10px
+      text-align: left
+    .prev
+      left: 8px
+    .next
+      right: 312px
+
+
+  // Second month
+  .month2
+    .month-name
+      padding-right: 10px
+      text-align: right
+    .prev
+      left: 266px
+    .next
+      right: 52px
+
+  // Days of month
   .month-wrapper table
     tbody tr
       border-top: 0
@@ -232,24 +271,32 @@ $page-top-variable: 120px
       div
         background: #fcfcfc
         border: 1px #e5e5e5 solid
-        color: #c5c5c5
+        color: #c5c5c5 !important
     .day
+      height: 26px
+      margin: 1px
       padding: 5px
+      width: 26px
       // Today
       &.real-today
         background: $green-light
+        color: $white !important
       // Days selected range
       &.checked
         background: #fcfcfc
         border: 1px $green-light solid
-        color: $text-black
+        color: $text-black !important
       // First and last of range
       &.first-date-selected,
       &.last-date-selected
         background: #fcfcfc !important
         border: 2px $green-light solid
         color: $text-black !important
-
+        margin: 0
+      // Hovering
+      &.toMonth.hovering
+        background: rgba($green-light, 0.3)
+        color: $text-black !important
 
 
 
