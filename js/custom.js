@@ -359,12 +359,12 @@
   /**
    * Custom click for ee program finder date range.
    */
-  Drupal.behaviors.programfinderDateRange = {
-    attach: function () {
-      $('.isotopify-filter-daterange-button').click(function () {
-        $(this).toggleClass('open');
-      });
-    }
-  };
+  // Drupal.behaviors.programfinderDateRange = {
+  //   attach: function () {
+  //     $('.isotopify-filter-daterange-button').click(function () {
+  //       $(this).toggleClass('open');
+  //     });
+  //   }
+  // };
 
 }(jQuery));
