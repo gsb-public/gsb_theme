@@ -7,7 +7,7 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Exec Ed section title
+// Exec Ed section title next to logo
 #block-gsb-public-custom-blocks-gpcb-exec-ed
   border-left: 1px solid #d6d6d6
   display: inline-block
@@ -34,7 +34,6 @@
   -moz-column-count: 2
   -webkit-column-count: 2
   column-count: 2
-
 
 // Responsive masthead
 .page-taxonomy-term-34446,
@@ -159,3 +158,18 @@
         width: auto
       .js .search-open &
         width: 200px
+
+  // Left hand rail menu
+  .region-sidebar-first
+    background: none
+    border-top: 1px $border-grey solid
+    ul li
+      color: #7d7466
+      font-family: $font-sans
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.2
+      a
+        color: #7d7466
+        &:hover
+          color: $text-black
