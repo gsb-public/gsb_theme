@@ -11,9 +11,12 @@
 $page-top-variable: 120px
 
 // Program finder page hackiness
-.page-node-409306
+.page-exec-ed-programs
   #content
     max-width: none
+
+  #sidebar
+    display: none
 
   .title-wrapper,
   .breadcrumb
@@ -21,7 +24,8 @@ $page-top-variable: 120px
   #top-content
     background: #f4f4f4
     height: $page-top-variable
-  .full-header
+  .full-header,
+  .featured-content
     margin: 0 auto
     max-width: 1170px
     padding-top: $standard-padding
@@ -195,6 +199,7 @@ $page-top-variable: 120px
   .month-name
     font-family: $font-sans
     font-size: 16px
+    font-weight: bold
     line-height: 1.2
     text-transform: capitalize
 
@@ -250,7 +255,6 @@ $page-top-variable: 120px
     .next
       right: 312px
 
-
   // Second month
   .month2
     .month-name
@@ -297,10 +301,6 @@ $page-top-variable: 120px
       &.toMonth.hovering
         background: rgba($green-light, 0.3)
         color: $text-black !important
-
-
-
-
 
 
 // Exec Ed program finder list
@@ -357,4 +357,3 @@ $page-top-variable: 120px
     font-size: 16px
     line-height: 1.3
     margin-top: 5px
-
