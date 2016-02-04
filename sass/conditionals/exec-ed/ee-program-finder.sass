@@ -171,7 +171,20 @@ $page-top-variable: 120px
   .ms-drop.bottom
     @extend %border-grey
     border-radius: 0
-    min-width: 700px
+    margin-top: 12px
+    min-width: 600px
+    overflow: visible
+    // Window carrot
+    &:before
+      border-left: 15px solid rgba(0, 0, 0, 0)
+      border-right: 15px solid rgba(0, 0, 0, 0)
+      border-bottom: 15px solid $white
+      content: ""
+      height: 0px
+      position: absolute
+      top: -13px
+      left: 18px
+      width: 0px
   // Last select box
   .form-item-filter-leadership-level .ms-drop.bottom
     min-width: 448px
@@ -202,11 +215,30 @@ $page-top-variable: 120px
 // Date drop down
 .date-picker-wrapper
   background: $white
+  margin-top: 12px
+  overflow: visible !important
+  &:before
+    border-left: 15px solid rgba(0, 0, 0, 0)
+    border-right: 15px solid rgba(0, 0, 0, 0)
+    border-bottom: 15px solid $white
+    content: ""
+    height: 0px
+    position: absolute
+    top: -13px
+    left: 32px
+    width: 0px
+
+  .gap
+    top: 0
+
+  .drp_top-bar
+    display: none
 
   .month-wrapper
     border: 0
     border-radius: 0
-    width: 550px !important
+    padding: 0
+    width: 483px !important
 
   .month-name
     font-family: $font-sans
@@ -238,7 +270,7 @@ $page-top-variable: 120px
       color: $white
       padding: 0
       position: absolute
-      top: 18px
+      top: 12px
       &:before
         +border-radius(50px)
         background: $green-light
@@ -263,9 +295,10 @@ $page-top-variable: 120px
       padding-left: 10px
       text-align: left
     .prev
-      left: 8px
+      left: 2px
+      top: 13px
     .next
-      right: 312px
+      right: 249px
 
   // Second month
   .month2
@@ -273,9 +306,10 @@ $page-top-variable: 120px
       padding-right: 10px
       text-align: right
     .prev
-      left: 266px
+      left: 261px
     .next
-      right: 52px
+      right: -10px
+      top: 11px
 
   // Days of month
   .month-wrapper table

@@ -223,7 +223,20 @@
 }
 .pane-program-list .isotopify-filters .ms-drop.bottom {
   border-radius: 0;
-  min-width: 700px;
+  margin-top: 12px;
+  min-width: 600px;
+  overflow: visible;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom:before {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  content: "";
+  height: 0px;
+  position: absolute;
+  top: -13px;
+  left: 18px;
+  width: 0px;
 }
 .pane-program-list .isotopify-filters .form-item-filter-leadership-level .ms-drop.bottom {
   min-width: 448px;
@@ -258,11 +271,31 @@
 
 .date-picker-wrapper {
   background: white;
+  margin-top: 12px;
+  overflow: visible !important;
+}
+.date-picker-wrapper:before {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  content: "";
+  height: 0px;
+  position: absolute;
+  top: -13px;
+  left: 32px;
+  width: 0px;
+}
+.date-picker-wrapper .gap {
+  top: 0;
+}
+.date-picker-wrapper .drp_top-bar {
+  display: none;
 }
 .date-picker-wrapper .month-wrapper {
   border: 0;
   border-radius: 0;
-  width: 550px !important;
+  padding: 0;
+  width: 483px !important;
 }
 .date-picker-wrapper .month-name {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -294,7 +327,7 @@
   color: white;
   padding: 0;
   position: absolute;
-  top: 18px;
+  top: 12px;
 }
 .date-picker-wrapper table .caption .next:before,
 .date-picker-wrapper table .caption .prev:before {
@@ -350,20 +383,22 @@
   text-align: left;
 }
 .date-picker-wrapper .month1 .prev {
-  left: 8px;
+  left: 2px;
+  top: 13px;
 }
 .date-picker-wrapper .month1 .next {
-  right: 312px;
+  right: 249px;
 }
 .date-picker-wrapper .month2 .month-name {
   padding-right: 10px;
   text-align: right;
 }
 .date-picker-wrapper .month2 .prev {
-  left: 266px;
+  left: 261px;
 }
 .date-picker-wrapper .month2 .next {
-  right: 52px;
+  right: -10px;
+  top: 11px;
 }
 .date-picker-wrapper .month-wrapper table tbody tr {
   border-top: 0;
