@@ -173,3 +173,47 @@
         color: #7d7466
         &:hover
           color: $text-black
+
+// Panelized program page blocks
+
+// CTAs block
+.node-program.view-mode-field_program_ctas
+
+  .field
+    font-size: 16px
+    line-height: 1.2
+    margin: 1px
+    padding: 14px $standard-padding
+    position: relative
+    a
+      display: block
+
+  // Red link CTA
+  .field-name-field-application-requirements
+    @extend %bg-border-and-box-shadow
+    color: $grey-med
+    margin-bottom: 20px
+    a,
+    a[target="_blank"]
+      position: relative
+      &:after
+        color: $grey-med
+      &:hover
+        &:after
+          color: $teal-light
+
+  // Green link CTAs
+  .field-name-field-cta1,
+  .field-name-field-cta2
+    @extend %bg-border-and-box-shadow
+    a,
+    a[target="_blank"]
+      color: $link-green
+      position: relative
+      &:after
+        color: #e3e3e3
+    &:hover
+      a
+        color: $link-blue
+        &:after
+          color: $teal-light
