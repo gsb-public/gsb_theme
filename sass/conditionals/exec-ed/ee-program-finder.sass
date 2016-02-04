@@ -123,6 +123,10 @@ $page-top-variable: 120px
         position: relative
         top: 1px
         left: -1px
+      &:hover
+        &:after
+          background-color: $link-blue
+          color: $white
       &.open
         +icon-after("arrow-med-up", true)
         &:after
@@ -154,6 +158,10 @@ $page-top-variable: 120px
       height: 36px
       padding: 0 10px
       position: relative
+    &:hover
+      &:after
+        background-color: $link-blue
+        color: $white
     &.open
       +icon-after("arrow-med-up", true)
       &:after
@@ -164,6 +172,10 @@ $page-top-variable: 120px
     @extend %border-grey
     border-radius: 0
     min-width: 700px
+  // Last select box
+  .form-item-filter-leadership-level .ms-drop.bottom
+    min-width: 448px
+
   ul
     +flex-box
     -webkit-box-flex-flow: row wrap
@@ -302,6 +314,52 @@ $page-top-variable: 120px
         background: rgba($green-light, 0.3)
         color: $text-black !important
 
+
+// Program finder search
+.pane-program-list
+
+  // Search field
+  .form-item.form-item-search
+    +clearfix
+    margin-top: 0
+    margin-bottom: 0
+    width: 210px
+
+  #edit-search--2
+    @extend %border-grey
+    float: left
+    height: 37px
+    margin-right: -36px
+    width: 174px
+
+  // Search submit button
+  .form-submit
+    float: left
+    position: relative
+    right: -36px
+    width: 36px
+
+  #edit-submit
+    @extend %border-grey
+    border-left: 0
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    height: 37px
+    text-indent: 1000px
+    .svg &
+      +background(image_url("search.svg") no-repeat 60% 47%, linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%))
+      background-size: 60px
+      &:hover
+        +background(image_url("search-white.svg") no-repeat 60% 47%, linear-gradient(top, $link-blue, $link-blue))
+        background-size: 60px
+    .no-js &, .no-svg &
+      +background(image_url("search.png") no-repeat 11px 11px, linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%))
+      &:hover
+        +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, $link-blue, $link-blue))
 
 // Exec Ed program finder list
 .isotopify.program-list

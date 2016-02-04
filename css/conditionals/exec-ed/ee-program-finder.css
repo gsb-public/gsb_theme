@@ -1,4 +1,4 @@
-.pane-program-list .isotopify-filters .ms-choice, .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button, .pane-program-list .isotopify-filters .ms-drop.bottom {
+.pane-program-list .isotopify-filters .ms-choice, .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button, .pane-program-list .isotopify-filters .ms-drop.bottom, .pane-program-list #edit-search--2, .pane-program-list #edit-submit {
   border: 1px #e4e4e4 solid;
 }
 
@@ -137,6 +137,10 @@
   top: 1px;
   left: -1px;
 }
+.pane-program-list .isotopify-filters .ms-choice > div:hover:after {
+  background-color: #2d6280;
+  color: white;
+}
 .pane-program-list .isotopify-filters .ms-choice > div.open:after {
   content: "\f108";
   display: inline;
@@ -195,6 +199,10 @@
   padding: 0 10px;
   position: relative;
 }
+.pane-program-list .isotopify-filters button.isotopify-filter-daterange-button:hover:after {
+  background-color: #2d6280;
+  color: white;
+}
 .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button.open:after {
   content: "\f108";
   display: inline;
@@ -216,6 +224,9 @@
 .pane-program-list .isotopify-filters .ms-drop.bottom {
   border-radius: 0;
   min-width: 700px;
+}
+.pane-program-list .isotopify-filters .form-item-filter-leadership-level .ms-drop.bottom {
+  min-width: 448px;
 }
 .pane-program-list .isotopify-filters ul {
   display: -webkit-box;
@@ -390,6 +401,63 @@
 .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
   background: rgba(186, 196, 5, 0.3);
   color: #231f20 !important;
+}
+
+.pane-program-list .form-item.form-item-search {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 210px;
+}
+.pane-program-list #edit-search--2 {
+  float: left;
+  height: 37px;
+  margin-right: -36px;
+  width: 174px;
+}
+.pane-program-list .form-submit {
+  float: left;
+  position: relative;
+  right: -36px;
+  width: 36px;
+}
+.pane-program-list #edit-submit {
+  border-left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 37px;
+  text-indent: 1000px;
+}
+.svg .pane-program-list #edit-submit {
+  background: url('../../../images/search.svg') no-repeat 60% 47%, -moz-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.svg') no-repeat 60% 47%, -o-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.svg') no-repeat 60% 47%, -webkit-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.svg') no-repeat 60% 47%, linear-gradient(to top, #f9f9f9 100%, #f9f9f9 100%);
+  background-size: 60px;
+}
+.svg .pane-program-list #edit-submit:hover {
+  background: url('../../../images/search-white.svg') no-repeat 60% 47%, -moz-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.svg') no-repeat 60% 47%, -o-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.svg') no-repeat 60% 47%, -webkit-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.svg') no-repeat 60% 47%, linear-gradient(to bottom, #2d6280, #2d6280);
+  background-size: 60px;
+}
+.no-js .pane-program-list #edit-submit, .no-svg .pane-program-list #edit-submit {
+  background: url('../../../images/search.png') no-repeat 11px 11px, -moz-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.png') no-repeat 11px 11px, -o-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.png') no-repeat 11px 11px, -webkit-linear-gradient(bottom, #f9f9f9 100%, #f9f9f9 100%);
+  background: url('../../../images/search.png') no-repeat 11px 11px, linear-gradient(to top, #f9f9f9 100%, #f9f9f9 100%);
+}
+.no-js .pane-program-list #edit-submit:hover, .no-svg .pane-program-list #edit-submit:hover {
+  background: url('../../../images/search-white.png') no-repeat 11px 11px, -moz-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.png') no-repeat 11px 11px, -o-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.png') no-repeat 11px 11px, -webkit-linear-gradient(top, #2d6280, #2d6280);
+  background: url('../../../images/search-white.png') no-repeat 11px 11px, linear-gradient(to bottom, #2d6280, #2d6280);
 }
 
 .isotopify.program-list .isotopify-item {

@@ -357,6 +357,15 @@
   };
 
   /**
+   * Move Exec Ed program finder search subit button.
+   */
+  Drupal.behaviors.ee_finder_search = {
+    attach: function () {
+      $('.pane-program-list #edit-submit').insertAfter($('.pane-program-list #edit-search--2'));
+    }
+  };
+
+  /**
    * Custom click for ee program finder date range.
    */
   // Drupal.behaviors.programfinderDateRange = {
