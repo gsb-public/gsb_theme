@@ -349,7 +349,18 @@ function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_preprocess_HOOK() for theme_field().
  */
 function gsb_theme_preprocess_field(&$variables, $hook) {
+  
+  // Check if the element is: field_related_faculty
+  // And if it is empty, then hide the element by adding the 'hide_this' css class to 
+  if ($variables['element']['#field_name'] == 'field_related_faculty') {
+    $item_id = $variables['element']['#items'][0]['value'];
+    if (empty($variables['element'][0]['entity']['field_collection_item'][$item_id]['field_person_fac_single_ref'])) {
+      $variables['classes_array'][] = 'hide_this';
+    }
+  }  
+  
   // Ensure custom DS labels are used for link label formatters.
+
   if (isset($variables['ds-config']['lb']) && $variables['element']['#formatter'] == 'link_label') {
     foreach ($variables['items'] as &$item) {
       if (isset($item['#field'])) {
