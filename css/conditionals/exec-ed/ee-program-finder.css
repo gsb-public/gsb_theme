@@ -2,14 +2,14 @@
   border: 1px #e4e4e4 solid;
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+.date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   margin: 1px;
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover {
+.date-picker-wrapper .drp_top-bar .apply-btn:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -17,7 +17,7 @@
   background: linear-gradient(to bottom, #18455f, #2d6280);
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   background: whitesmoke;
   background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
   background: -o-linear-gradient(top, #f5f5f5, #ffffff);
@@ -25,7 +25,7 @@
   background: linear-gradient(to bottom, #f5f5f5, #ffffff);
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+.date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -36,22 +36,22 @@
   line-height: 1;
   padding: 10px 16px;
 }
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:after, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:after {
+.date-picker-wrapper .drp_top-bar .apply-btn:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after {
   color: white !important;
 }
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover {
+.date-picker-wrapper .drp_top-bar .apply-btn:hover {
   border: 0;
   color: white;
 }
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover:after, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
+.date-picker-wrapper .drp_top-bar .apply-btn:hover:after {
   color: white !important;
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply {
+.date-picker-wrapper .drp_top-bar .apply-btn {
   background: #919900;
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   color: #636f00;
 }
 
@@ -139,20 +139,18 @@
   max-width: 230px;
   position: relative;
 }
-.pane-program-list .isotopify-filters .form-item-filter-program-topic .placeholder,
-.pane-program-list .isotopify-filters .form-item-filter-leadership-level .placeholder,
-.pane-program-list .isotopify-filters .form-item-filter-program-location .placeholder,
-.pane-program-list .isotopify-filters .isotopify-filter-daterange .placeholder,
-.pane-program-list .isotopify-filters .form-item-search .placeholder {
-  color: #231f20;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  height: 38px;
+.pane-program-list .isotopify-filters .form-item-filter-program-topic > label,
+.pane-program-list .isotopify-filters .form-item-filter-leadership-level > label,
+.pane-program-list .isotopify-filters .form-item-filter-program-location > label,
+.pane-program-list .isotopify-filters .isotopify-filter-daterange > label,
+.pane-program-list .isotopify-filters .form-item-search > label {
+  font-weight: normal;
+  left: 10px;
   line-height: 2.2;
-  padding: 0;
-  padding-left: 10px;
-  text-align: left;
-  width: 210px;
+  margin-right: 0;
+  position: absolute;
+  top: 2px;
+  z-index: 1;
 }
 .pane-program-list .isotopify-filters .ms-parent {
   width: 210px !important;
@@ -212,7 +210,7 @@
   font-family: 'icons';
 }
 .pane-program-list .isotopify-filters .ms-choice > div.open:after {
-  line-height: 2.3;
+  line-height: 2.6;
 }
 .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button {
   background: white;
@@ -274,21 +272,13 @@
   font-family: 'icons';
 }
 .pane-program-list .isotopify-filters button.isotopify-filter-daterange-button.open:after {
-  line-height: 2.3;
+  line-height: 2.6;
 }
 .pane-program-list .isotopify-filters .ms-drop.bottom {
   border-radius: 0;
   margin-top: 12px;
   min-width: 600px;
   overflow: visible;
-}
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply {
-  margin-bottom: 18px;
-  margin-left: 18px;
-  margin-right: 12px;
-}
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
-  margin-bottom: 18px;
 }
 .pane-program-list .isotopify-filters .ms-drop.bottom:before {
   border-left: 15px solid transparent;
@@ -323,7 +313,7 @@
   max-height: none !important;
   max-width: none;
   min-height: 150px;
-  padding: 18px;
+  padding: 26px;
 }
 .pane-program-list .isotopify-filters li {
   flex-basis: 30%;
@@ -351,8 +341,11 @@
 .date-picker-wrapper .gap {
   top: 0;
 }
-.date-picker-wrapper .drp_top-bar {
-  display: none;
+.date-picker-wrapper .drp_top-bar .normal-top {
+  display: none !important;
+}
+.date-picker-wrapper .drp_top-bar .apply-btn {
+  position: relative;
 }
 .date-picker-wrapper .month-wrapper {
   border: 0;

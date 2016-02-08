@@ -248,8 +248,16 @@ $page-top-variable: 120px
   .gap
     top: 0
 
+  // Date picker apply button
   .drp_top-bar
-    display: none
+    // hide range
+    .normal-top
+      display: none !important
+    .apply-btn
+      @extend %green-button
+      position: relative
+      &.disabled
+        @extend %grey-button
 
   .month-wrapper
     border: 0
