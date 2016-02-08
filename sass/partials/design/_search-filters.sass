@@ -730,54 +730,6 @@ fieldset.collapsible .fieldset-legend
         &:before
           color: $white !important
 
-  // Selected filters
-  .filter-button
-    +border-radius(20px)
-    background: $white
-    border: 1px $border-grey solid
-    display: inline-block
-    margin-bottom: 13px
-    margin-right: 10px
-    &:hover
-      background: $link-blue
-      border: 1px transparent solid
-      .term
-        color: $white !important
-      .filter-exit
-        &:before
-          color: $white
-    // Term
-    .term
-      color: $text-black
-      font-family: $font-sans
-      font-size: 14px
-      line-height: 1.2
-      padding: 11px 0 0 16px
-      position: relative
-      top: -9px
-    // Clear "X"
-    .filter-exit
-      color: $link-green
-      display: inline-block
-      height: 30px
-      overflow: hidden
-      position: relative
-      top: 5px
-      width: 36px
-      +icon-before("plus", true)
-      &:before
-        display: inline-block
-        padding: 6px
-        -moz-transform: rotate(45deg)
-        -ms-transform: rotate(45deg)
-        -o-transform: rotate(45deg)
-        -webkit-transform: rotate(45deg)
-        transform: rotate(45deg)
-        &:hover
-          background: $link-blue
-      &:hover
-        cursor: pointer
-
   // Clear all button
   #edit-actions
     margin: 0
@@ -788,6 +740,64 @@ fieldset.collapsible .fieldset-legend
       &:hover
         background: $link-blue
         color: $white !important
+
+// Clear all on program finder
+.clear-filters
+  @extend %white-button
+  background: #f4f4f4
+  margin-bottom: 18px
+  &:hover
+    background: $link-blue
+    color: $white !important
+
+// Selected filters
+.filter-button
+  +border-radius(20px)
+  background: $white
+  border: 1px $border-grey solid
+  display: inline-block
+  margin-bottom: 13px
+  margin-right: 10px
+  &:hover
+    background: $link-blue
+    border: 1px transparent solid
+    .term
+      color: $white !important
+    .filter-exit
+      &:before
+        color: $white
+  // Term
+  .term
+    color: $text-black
+    font-family: $font-sans
+    font-size: 14px
+    line-height: 1.2
+    padding: 11px 0 0 16px
+    position: relative
+    top: -7px
+  // Clear "X"
+  .filter-exit
+    color: $link-green
+    display: inline-block
+    height: 30px
+    overflow: hidden
+    position: relative
+    top: 5px
+    width: 36px
+    +icon-before("plus", true)
+    &:before
+      display: inline-block
+      padding: 6px
+      -moz-transform: rotate(45deg)
+      -ms-transform: rotate(45deg)
+      -o-transform: rotate(45deg)
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+      &:hover
+        background: $link-blue
+    &:hover
+      cursor: pointer
+
 
 // Mobile filter tray
 .mm-panels > .mm-panel
