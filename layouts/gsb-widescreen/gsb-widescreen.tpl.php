@@ -22,7 +22,7 @@
 
   <div class="content-wrapper">
 
-    <div class="main-wrapper"><div class="inner-main-wrapper wide-view">
+    <div class="main-wrapper"><div class="inner-main-wrapper">
 
         <?php if ($content['maintop']): ?>
         <div class="main-header wide-view">
