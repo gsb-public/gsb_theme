@@ -2,6 +2,59 @@
   border: 1px #e4e4e4 solid;
 }
 
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
+}
+
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover {
+  background: #2d6280;
+  background: -moz-linear-gradient(top, #18455f, #2d6280);
+  background: -o-linear-gradient(top, #18455f, #2d6280);
+  background: -webkit-linear-gradient(top, #18455f, #2d6280);
+  background: linear-gradient(to bottom, #18455f, #2d6280);
+}
+
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+  background: whitesmoke;
+  background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+  background: -o-linear-gradient(top, #f5f5f5, #ffffff);
+  background: -webkit-linear-gradient(top, #f5f5f5, #ffffff);
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+}
+
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  color: white;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 16px;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:after, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:after {
+  color: white !important;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover {
+  border: 0;
+  color: white;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply:hover:after, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
+  color: white !important;
+}
+
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply {
+  background: #919900;
+}
+
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+  color: #636f00;
+}
+
 .page-exec-ed-programs #content {
   max-width: none;
 }
@@ -229,6 +282,14 @@
   min-width: 600px;
   overflow: visible;
 }
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply {
+  margin-bottom: 18px;
+  margin-left: 18px;
+  margin-right: 12px;
+}
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all {
+  margin-bottom: 18px;
+}
 .pane-program-list .isotopify-filters .ms-drop.bottom:before {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
@@ -262,7 +323,7 @@
   max-height: none !important;
   max-width: none;
   min-height: 150px;
-  padding: 26px;
+  padding: 18px;
 }
 .pane-program-list .isotopify-filters li {
   flex-basis: 30%;
