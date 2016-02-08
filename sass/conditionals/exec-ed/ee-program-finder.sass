@@ -101,6 +101,7 @@ $page-top-variable: 120px
   // Filter styling
   .ms-parent
     width: 210px !important
+
   .ms-choice
     @extend %border-grey
     background: $white
@@ -174,6 +175,19 @@ $page-top-variable: 120px
     margin-top: 12px
     min-width: 600px
     overflow: visible
+
+    // Apply button
+    .checkbox-apply
+      @extend %green-button
+      margin-bottom: 18px
+      margin-left: 18px
+      margin-right: 12px
+
+    // Clear button
+    .checkbox-clear-all
+      @extend %grey-button
+      margin-bottom: 18px
+
     // Window carrot
     &:before
       border-left: 15px solid rgba(0, 0, 0, 0)
@@ -204,7 +218,7 @@ $page-top-variable: 120px
     max-height: none !important
     max-width: none
     min-height: 150px
-    padding: $standard-padding
+    padding: 18px
   // Select items
   li
     flex-basis: 30%
