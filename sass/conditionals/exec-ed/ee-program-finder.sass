@@ -233,6 +233,14 @@ $page-top-variable: 120px
     line-height: 1.2
     margin-bottom: 12px
 
+  // Three columns doesn't work for the last filter
+  .form-item-filter-leadership-level li
+    -webkit-box-flex-basis: 51%
+    -moz-box-flex-basis: 51%
+    -ms-flexbox-flex-basis: 51%
+    -webkit-flex-flex-basis: 51%
+    flex-basis: 51%
+
 // Date drop down
 .date-picker-wrapper
   background: $white
