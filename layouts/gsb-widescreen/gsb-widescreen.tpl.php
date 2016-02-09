@@ -12,13 +12,13 @@
 
 <div class="panel-display gsb-widescreen clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
+  <div id="top-content"></div>
+
   <?php if ($content['featured_content']): ?>
     <div class="featured-content full-view">
       <?php print $content['featured_content']; ?>
     </div>
   <?php endif; ?>
-
-  <div id="top-content"></div>
 
   <div class="content-wrapper">
 
