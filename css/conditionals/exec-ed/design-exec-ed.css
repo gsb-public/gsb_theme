@@ -1,3 +1,7 @@
+.pane-ee-programs-upcoming-deadlines {
+  background: white;
+}
+
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
 .node-program.view-mode-field_program_ctas .field-name-field-cta2 {
   background-color: #f9f9f9;
@@ -11,7 +15,7 @@
   border-top: 1px lightgray solid;
 }
 
-.node-program.view-mode-idea_story_related {
+.node-program.view-mode-idea_story_related, .pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines {
   border-bottom: 1px lightgray solid;
 }
 
@@ -20,8 +24,12 @@
   border: 2px white solid;
 }
 
+.pane-ee-programs-upcoming-deadlines h2.pane-title, .pane-ee-programs-upcoming-deadlines .pane-content {
+  border-top: 10px #231f20 solid;
+}
+
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
-.node-program.view-mode-field_program_ctas .field-name-field-cta2, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director {
+.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -470,4 +478,107 @@
 
 .node-program.view-mode-idea_story_related {
   padding: 18px 26px;
+}
+
+.pane-ee-programs-upcoming-deadlines {
+  padding: 0 26px 26px;
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title {
+  background: white;
+  display: block;
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: -10px;
+  padding-top: 12px;
+  position: relative;
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title a {
+  color: #231f20;
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title a:after {
+  color: #bac405;
+  font-size: 14px;
+  margin-left: 3px;
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title a:hover {
+  color: #2d6280;
+}
+.pane-ee-programs-upcoming-deadlines h2.pane-title a:hover:after {
+  color: #aac4bf;
+}
+.pane-ee-programs-upcoming-deadlines .pane-content {
+  padding: 0 26px;
+}
+.pane-ee-programs-upcoming-deadlines .view {
+  margin: 0 -52px;
+}
+.pane-ee-programs-upcoming-deadlines .views-row {
+  border-top: 1px lightgray solid;
+  padding: 22px 26px;
+}
+.pane-ee-programs-upcoming-deadlines .views-row:first-of-type {
+  border-top: 0;
+}
+.pane-ee-programs-upcoming-deadlines .views-field-title {
+  color: #231f20;
+  font-size: 20px;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0;
+  margin-bottom: 6px;
+}
+@media (max-width: 35.5em) {
+  .pane-ee-programs-upcoming-deadlines .views-field-title {
+    font-size: 18px;
+  }
+}
+.pane-ee-programs-upcoming-deadlines .views-field-title a {
+  line-height: 1.2;
+}
+.pane-ee-programs-upcoming-deadlines .views-field-title a[target="_blank"]:after {
+  font-size: 12px;
+}
+.pane-ee-programs-upcoming-deadlines .views-field-title a[href$=".pdf"][target="_blank"]:after {
+  font-size: 14px;
+  margin-left: 3px;
+}
+.pane-ee-programs-upcoming-deadlines .views-field-field-date {
+  font-size: 16px;
+  line-height: 1.3;
+}
+.pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines {
+  margin-bottom: 26px;
+}
+.pane-ee-programs-upcoming-deadlines .list-cta {
+  background: #538b80;
+  display: inline-block;
+  margin-left: -26px;
+}
+.pane-ee-programs-upcoming-deadlines .list-cta a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.2;
+  padding: 10px 16px;
+}
+.pane-ee-programs-upcoming-deadlines .list-cta a:hover {
+  background: #2d6280;
+  text-decoration: underline;
 }
