@@ -2,6 +2,10 @@
   border: 1px #e4e4e4 solid;
 }
 
+.full-time-header {
+  border-top: 3px #231f20 solid;
+}
+
 .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -582,17 +586,24 @@
   background: url('../../../images/search-white.png') no-repeat 11px 11px, linear-gradient(to bottom, #2d6280, #2d6280);
 }
 
-.isotopify.program-list .isotopify-item {
+.isotopify.program-list .isotopify-item,
+.isotopify.program-list .full-time-program,
+.full-time-programs-wrapper .isotopify-item,
+.full-time-programs-wrapper .full-time-program {
   border-top: 1px #c4c4c4 solid;
   padding: 26px 35px;
   width: 100%;
 }
 @media (max-width: 35.5em) {
-  .isotopify.program-list .isotopify-item {
+  .isotopify.program-list .isotopify-item,
+  .isotopify.program-list .full-time-program,
+  .full-time-programs-wrapper .isotopify-item,
+  .full-time-programs-wrapper .full-time-program {
     padding: 20px 0;
   }
 }
-.isotopify.program-list .program-title {
+.isotopify.program-list .program-title,
+.full-time-programs-wrapper .program-title {
   color: #231f20;
   font-size: 24px;
   font-weight: bold;
@@ -600,36 +611,51 @@
   margin-bottom: 18px;
 }
 @media (max-width: 35.5em) {
-  .isotopify.program-list .program-title {
+  .isotopify.program-list .program-title,
+  .full-time-programs-wrapper .program-title {
     font-size: 20px;
   }
 }
-.isotopify.program-list .program-date {
+.isotopify.program-list .program-date,
+.full-time-programs-wrapper .program-date {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.3;
   margin-bottom: 3px;
 }
-.isotopify.program-list .leadership-level {
+.isotopify.program-list .leadership-level,
+.full-time-programs-wrapper .leadership-level {
   font-size: 18px;
   font-weight: normal;
   line-height: 1.3;
   margin-bottom: 3px;
 }
-.isotopify.program-list .program-format {
+.isotopify.program-list .program-format,
+.full-time-programs-wrapper .program-format {
   font-size: 18px;
   font-weight: normal;
   line-height: 1.3;
   margin-bottom: 3px;
 }
-.isotopify.program-list .program-teaser {
+.isotopify.program-list .program-teaser,
+.full-time-programs-wrapper .program-teaser {
   font-size: 16px;
   line-height: 1.4;
   margin-top: 18px;
 }
-.isotopify.program-list .program-topic {
+.isotopify.program-list .program-topic,
+.full-time-programs-wrapper .program-topic {
   font-size: 16px;
   line-height: 1.3;
   margin-top: 5px;
+}
+
+.full-time-header {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  padding-top: 18px;
 }

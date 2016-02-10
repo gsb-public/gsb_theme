@@ -444,10 +444,12 @@ $page-top-variable: 120px
         +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, $link-blue, $link-blue))
 
 // Exec Ed program finder list
-.isotopify.program-list
+.isotopify.program-list,
+.full-time-programs-wrapper
 
-  // Program result
-  .isotopify-item
+  // Program
+  .isotopify-item,
+  .full-time-program
     border-top: 1px $listing-divider solid
     padding: $standard-padding 35px
     width: 100%
@@ -492,8 +494,19 @@ $page-top-variable: 120px
     line-height: 1.4
     margin-top: 18px
 
-  // Program tags
+  // Program topics
   .program-topic
     font-size: 16px
     line-height: 1.3
     margin-top: 5px
+
+// Full time degree programs
+// List title
+.full-time-header
+  @extend %black-border-top-small
+  font-family: $font-sans
+  font-size: 28px
+  font-weight: bold
+  line-height: 1.2
+  margin-bottom: 18px
+  padding-top: 18px
