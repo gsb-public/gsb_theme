@@ -18,6 +18,22 @@ $bp-video: 627px min-width
     .content div
       margin: 0 auto
 
+.gsb-widescreen
+  .pane-bundle-video,
+  .node-gsb-video
+    .gsb-responsive-preview
+      position: relative
+      .content img
+        display: block
+        +breakpoint(768px 569px)
+          width: 100%
+        +breakpoint($bp-mobile-480)
+          width: 100%
+    .gsb-responsive-main
+      clear: both
+      .content div
+        margin: 0 auto
+
 // Video list FPP
 .pane-bundle-videos
   @extend %bg-and-box-shadow

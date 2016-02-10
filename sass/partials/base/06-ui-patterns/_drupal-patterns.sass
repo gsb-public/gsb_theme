@@ -90,235 +90,234 @@ div.label-inline
     display: block
 
 // House Ad, Spotlight, and Video FPP for all layouts not widescreen
-div:not(.gsb-widescreen)
+
+.pane-bundle-house-ads,
+.pane-bundle-spotlight,
+.pane-bundle-video
+  @extend %bg-and-box-shadow
+  padding: 0 $standard-padding $standard-padding
+
+  // Layout
+  .ds-2col
+    +clearfix
+
+    .group-left
+      float: left
+      margin-right: 26px
+      width: auto
+
+    .group-right
+      float: none
+      position: relative
+      width: 100%
+
+  // Image
+  .field-name-field-image-single-public,
+  .gsb-image-video-popup,
+  .field-name-field-spotlight-person-fid,
+  .field-name-field-use-profile-img,
+  .field-name-field-file-single-public
+    max-width: 270px
+    img
+      vertical-align: top
+
+  // Description
+  .field-name-field-body
+    font-size: 16px
+    line-height: 1.2
+    margin: 12px 0 0
+    overflow: hidden
+    p
+      font-size: 16px
+      line-height: 1.2
+      margin-bottom: 0
+
+  // Show more
+  .show-more
+    @extend %show-more-link
+
+// Responsive implementation
+// Wide view
+.wide-view
   .pane-bundle-house-ads,
   .pane-bundle-spotlight,
   .pane-bundle-video
-    @extend %bg-and-box-shadow
-    padding: 0 $standard-padding $standard-padding
+    padding-top: 26px
 
-    // Layout
-    .ds-2col
-      +clearfix
+    .feature-spotlight-label,
+    .field-name-field-house-ads-superhead
+      margin-bottom: 26px
 
-      .group-left
-        float: left
-        margin-right: 26px
-        width: auto
-
+    // Stacked
+    +breakpoint(1000px 1170px)
+      padding: 0
+      .group-left,
       .group-right
+        clear: both
         float: none
-        position: relative
         width: 100%
-
-    // Image
-    .field-name-field-image-single-public,
-    .gsb-image-video-popup,
-    .field-name-field-spotlight-person-fid,
-    .field-name-field-use-profile-img,
-    .field-name-field-file-single-public
-      max-width: 270px
-      img
-        vertical-align: top
-
-    // Description
-    .field-name-field-body
-      font-size: 16px
-      line-height: 1.2
-      margin: 12px 0 0
-      overflow: hidden
-      p
-        font-size: 16px
-        line-height: 1.2
+      .group-left
+        padding: $standard-padding $standard-padding 0 $standard-padding
+      .group-right
+        padding: 0 $standard-padding $standard-padding
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
         margin-bottom: 0
-
-    // Show more
-    .show-more
-      @extend %show-more-link
-
-  // Responsive implementation
-  // Wide view
-  .wide-view
-    .pane-bundle-house-ads,
-    .pane-bundle-spotlight,
-    .pane-bundle-video
-      padding-top: 26px
-
       .feature-spotlight-label,
       .field-name-field-house-ads-superhead
-        margin-bottom: 26px
+        margin-bottom: 0
+      .group-name-wrapper,
+      .field-name-field-link-single,
+      .field-name-field-title
+        margin-top: 26px
+    +breakpoint(859px max-width)
+      padding: 0
+      .group-left,
+      .group-right
+        clear: both
+        float: none
+        width: 100%
+      .group-left
+        padding: $standard-padding $standard-padding 0 $standard-padding
+      .group-right
+        padding: 0 $standard-padding $standard-padding
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        margin-bottom: 0
+      .feature-spotlight-label,
+      .field-name-field-house-ads-superhead
+        margin-bottom: 0
+      .group-name-wrapper,
+      .field-name-field-link-single,
+      .field-name-field-title
+        margin-top: 26px
+
+// Narrow view styling
+.narrow-view
+  .pane-bundle-house-ads,
+  .pane-bundle-spotlight,
+  .pane-bundle-video
+
+    // Sidebar region with narrow panes
+    .inner-sidebar-wrapper &
+      // Stacked
+      padding: 0
+      .group-left,
+      .group-right
+        clear: both
+        float: none
+        width: 100%
+      .group-right
+        padding: 0 $standard-padding $standard-padding
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        margin-bottom: 0
+      .group-name-wrapper,
+      .field-name-field-link-single,
+      .field-name-field-title
+        margin-top: 26px
 
       // Stacked
-      +breakpoint(1000px 1170px)
-        padding: 0
+      +breakpoint(568px max-width)
+        .group-left
+          padding: $standard-padding $standard-padding 0
+
+    // Middle region with narrow panes
+    .main-middle &
+      padding: 0
+      // Stacked
+      +breakpoint(1211px min-width)
         .group-left,
         .group-right
           clear: both
-          float: none
-          width: 100%
         .group-left
-          padding: $standard-padding $standard-padding 0 $standard-padding
+          float: none
+          margin-right: 0
+          max-width: none
         .group-right
-          padding: 0 $standard-padding $standard-padding
+          padding: 0 $standard-padding $standard-padding $standard-padding
         .field-name-field-image-single-public,
         .gsb-image-video-popup,
         .field-name-field-spotlight-person-fid,
         .field-name-field-use-profile-img,
         .field-name-field-file-single-public
           margin-bottom: 0
-        .feature-spotlight-label,
-        .field-name-field-house-ads-superhead
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+
+      +breakpoint(1000px 1089px)
+        .group-left,
+        .group-right
+          clear: both
+        .group-left
+          float: none
+          margin-right: 0
+          max-width: none
+          padding: $standard-padding $standard-padding 0 $standard-padding
+        .group-right
+          padding: 0 $standard-padding $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
           margin-bottom: 0
         .group-name-wrapper,
         .field-name-field-link-single,
         .field-name-field-title
           margin-top: 26px
+
       +breakpoint(859px max-width)
-        padding: 0
         .group-left,
         .group-right
           clear: both
-          float: none
-          width: 100%
         .group-left
+          float: none
+          margin-right: 0
+          max-width: none
           padding: $standard-padding $standard-padding 0 $standard-padding
         .group-right
-          padding: 0 $standard-padding $standard-padding
+          padding: 0 $standard-padding $standard-padding $standard-padding
         .field-name-field-image-single-public,
         .gsb-image-video-popup,
         .field-name-field-spotlight-person-fid,
         .field-name-field-use-profile-img,
         .field-name-field-file-single-public
           margin-bottom: 0
-        .feature-spotlight-label,
-        .field-name-field-house-ads-superhead
-          margin-bottom: 0
         .group-name-wrapper,
         .field-name-field-link-single,
         .field-name-field-title
           margin-top: 26px
 
-  // Narrow view styling
-  .narrow-view
-    .pane-bundle-house-ads,
-    .pane-bundle-spotlight,
-    .pane-bundle-video
-
-      // Sidebar region with narrow panes
-      .inner-sidebar-wrapper &
-        // Stacked
-        padding: 0
+      // Side-by-side
+      +breakpoint(1090px 1210px)
+        padding: $standard-padding
         .group-left,
         .group-right
-          clear: both
-          float: none
-          width: 100%
+          clear: none
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 26px
+
+      +breakpoint(860px 999px)
+        padding: $standard-padding
+        .group-left,
         .group-right
-          padding: 0 $standard-padding $standard-padding
-        .field-name-field-image-single-public,
-        .gsb-image-video-popup,
-        .field-name-field-spotlight-person-fid,
-        .field-name-field-use-profile-img,
-        .field-name-field-file-single-public
-          margin-bottom: 0
-        .group-name-wrapper,
-        .field-name-field-link-single,
-        .field-name-field-title
-          margin-top: 26px
-
-        // Stacked
-        +breakpoint(568px max-width)
-          .group-left
-            padding: $standard-padding $standard-padding 0
-
-      // Middle region with narrow panes
-      .main-middle &
-        padding: 0
-        // Stacked
-        +breakpoint(1211px min-width)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
-
-        +breakpoint(1000px 1089px)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-            padding: $standard-padding $standard-padding 0 $standard-padding
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
-
-        +breakpoint(859px max-width)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-            padding: $standard-padding $standard-padding 0 $standard-padding
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
-
-        // Side-by-side
-        +breakpoint(1090px 1210px)
-          padding: $standard-padding
-          .group-left,
-          .group-right
-            clear: none
-          .feature-spotlight-label,
-          .field-name-field-house-ads-superhead
-            margin-bottom: 26px
-
-        +breakpoint(860px 999px)
-          padding: $standard-padding
-          .group-left,
-          .group-right
-            clear: none
-          .feature-spotlight-label,
-          .field-name-field-house-ads-superhead
-            margin-bottom: 26px
-
+          clear: none
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 26px
 
 // House ads, spotlights and video fpps in Insights section
 .page-insights
@@ -361,7 +360,6 @@ div:not(.gsb-widescreen)
         .field-name-field-link-single,
         .field-name-field-title
           margin-top: 26px
-
 
   // Wide view
   .wide-view
@@ -424,7 +422,10 @@ div.gsb-widescreen
     .field-name-field-file-single-public
       max-width: 310px
       img
+        min-width: 310px
         vertical-align: top
+        +breakpoint(392px max-width)
+          min-width: initial
 
     // Description
     .field-name-field-body
@@ -454,72 +455,127 @@ div.gsb-widescreen
         margin-bottom: 26px
 
       // Stacked
-      // +breakpoint(1px min-width)
-      //   padding: 0
-      //   .group-left,
-      //   .group-right
-      //     clear: both
-      //     float: none
-      //     width: 100%
-      //   .group-left
-      //     padding: $standard-padding $standard-padding 0 $standard-padding
-      //   .group-right
-      //     padding: 0 $standard-padding $standard-padding
-      //   .field-name-field-image-single-public,
-      //   .gsb-image-video-popup,
-      //   .field-name-field-spotlight-person-fid,
-      //   .field-name-field-use-profile-img,
-      //   .field-name-field-file-single-public
-      //     margin-bottom: 0
-      //   .feature-spotlight-label,
-      //   .field-name-field-house-ads-superhead
-      //     margin-bottom: 0
-      //   .group-name-wrapper,
-      //   .field-name-field-link-single,
-      //   .field-name-field-title
-      //     margin-top: 26px
-      // +breakpoint(859px max-width)
-      //   padding: 0
-      //   .group-left,
-      //   .group-right
-      //     clear: both
-      //     float: none
-      //     width: 100%
-      //   .group-left
-      //     padding: $standard-padding $standard-padding 0 $standard-padding
-      //   .group-right
-      //     padding: 0 $standard-padding $standard-padding
-      //   .field-name-field-image-single-public,
-      //   .gsb-image-video-popup,
-      //   .field-name-field-spotlight-person-fid,
-      //   .field-name-field-use-profile-img,
-      //   .field-name-field-file-single-public
-      //     margin-bottom: 0
-      //   .feature-spotlight-label,
-      //   .field-name-field-house-ads-superhead
-      //     margin-bottom: 0
-      //   .group-name-wrapper,
-      //   .field-name-field-link-single,
-      //   .field-name-field-title
-      //     margin-top: 26px
-
-  // Narrow view styling
-  .narrow-view
-    .pane-bundle-house-ads,
-    .pane-bundle-spotlight,
-    .pane-bundle-video
-
-      // Sidebar region with narrow panes
-      .inner-sidebar-wrapper &
-        // Stacked
+      +breakpoint(1170px 1000px)
         padding: 0
         .group-left,
         .group-right
           clear: both
           float: none
           width: 100%
+        .group-left
+          padding: $standard-padding $standard-padding 0 $standard-padding
         .group-right
           padding: 0 $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+      +breakpoint(859px max-width)
+        padding: 0
+        .group-left,
+        .group-right
+          clear: both
+          float: none
+          width: 100%
+        .group-left
+          padding: $standard-padding $standard-padding 0 $standard-padding
+        .group-right
+          padding: 0 $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+
+  // Narrow view styling
+  // Right sidebar
+  .inner-sidebar-wrapper .narrow-view
+    .pane-bundle-house-ads,
+    .pane-bundle-spotlight,
+    .pane-bundle-video
+      padding: 0
+
+      // Image
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        max-width: 270px
+        img
+          min-width: 270px
+          +breakpoint(392px max-width)
+            min-width: initial
+
+      // Stacked
+      .group-left,
+      .group-right
+        clear: both
+        float: none
+        width: 100%
+      .group-right
+        padding: 0 $standard-padding $standard-padding
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        margin-bottom: 0
+      .group-name-wrapper,
+      .field-name-field-link-single,
+      .field-name-field-title
+        margin-top: 26px
+
+      // Not full bleed
+      +breakpoint(670px max-width)
+        .group-left
+          padding: $standard-padding $standard-padding 0
+
+  // Middle region with narrow panes
+  .main-middle .narrow-view
+    .pane-bundle-house-ads,
+    .pane-bundle-spotlight,
+    .pane-bundle-video
+      padding: 0
+
+      // Image
+      .field-name-field-image-single-public,
+      .gsb-image-video-popup,
+      .field-name-field-spotlight-person-fid,
+      .field-name-field-use-profile-img,
+      .field-name-field-file-single-public
+        img
+          +breakpoint(671px 718px)
+            min-width: initial
+
+      // Stacked
+      +breakpoint(1211px min-width)
+        .group-left,
+        .group-right
+          clear: both
+        .group-left
+          float: none
+          margin-right: 0
+          max-width: none
+        .group-right
+          padding: 0 $standard-padding $standard-padding $standard-padding
         .field-name-field-image-single-public,
         .gsb-image-video-popup,
         .field-name-field-spotlight-person-fid,
@@ -531,95 +587,46 @@ div.gsb-widescreen
         .field-name-field-title
           margin-top: 26px
 
-        // Stacked
-        +breakpoint(568px max-width)
-          .group-left
-            padding: $standard-padding $standard-padding 0
+      +breakpoint(1104px max-width)
+        .group-left,
+        .group-right
+          clear: both
+        .group-left
+          float: none
+          margin-right: 0
+          max-width: none
+          padding: $standard-padding $standard-padding 0 $standard-padding
+        .group-right
+          padding: 0 $standard-padding $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
 
-      // Middle region with narrow panes
-      .main-middle &
-        padding: 0
-        // Stacked
-        +breakpoint(1211px min-width)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
+      // Side-by-side
+      +breakpoint(1105px 1210px)
+        padding: $standard-padding
+        .group-left,
+        .group-right
+          clear: none
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 26px
 
-        +breakpoint(1000px 1089px)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-            padding: $standard-padding $standard-padding 0 $standard-padding
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
-
-        +breakpoint(859px max-width)
-          .group-left,
-          .group-right
-            clear: both
-          .group-left
-            float: none
-            margin-right: 0
-            max-width: none
-            padding: $standard-padding $standard-padding 0 $standard-padding
-          .group-right
-            padding: 0 $standard-padding $standard-padding $standard-padding
-          .field-name-field-image-single-public,
-          .gsb-image-video-popup,
-          .field-name-field-spotlight-person-fid,
-          .field-name-field-use-profile-img,
-          .field-name-field-file-single-public
-            margin-bottom: 0
-          .group-name-wrapper,
-          .field-name-field-link-single,
-          .field-name-field-title
-            margin-top: 26px
-
-        // Side-by-side
-        +breakpoint(1090px 1210px)
-          padding: $standard-padding
-          .group-left,
-          .group-right
-            clear: none
-          .feature-spotlight-label,
-          .field-name-field-house-ads-superhead
-            margin-bottom: 26px
-
-        +breakpoint(860px 999px)
-          padding: $standard-padding
-          .group-left,
-          .group-right
-            clear: none
-          .feature-spotlight-label,
-          .field-name-field-house-ads-superhead
-            margin-bottom: 26px
+      +breakpoint(905px 999px)
+        padding: $standard-padding
+        .group-left,
+        .group-right
+          clear: none
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 26px
