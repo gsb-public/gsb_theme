@@ -1804,10 +1804,15 @@ del {
 }
 .panel-display.gsb-widescreen .main-wrapper {
   float: left;
-  margin-right: -400px;
+  margin-right: -450px;
   width: 100%;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 62.5em) {
+  .panel-display.gsb-widescreen .main-wrapper {
+    margin-right: -370px;
+  }
+}
+@media (max-width: 41.875em) {
   .panel-display.gsb-widescreen .main-wrapper {
     float: none;
     margin: 0;
@@ -1816,13 +1821,28 @@ del {
 .panel-display.gsb-widescreen .main-wrapper {
   margin-left: 50px;
 }
+@media (max-width: 62.5em) {
+  .panel-display.gsb-widescreen .main-wrapper {
+    margin-left: 0;
+  }
+}
 .panel-display.gsb-widescreen .inner-sidebar-wrapper {
   margin-right: 50px;
+}
+@media (max-width: 62.5em) {
+  .panel-display.gsb-widescreen .inner-sidebar-wrapper {
+    margin-right: 0;
+  }
 }
 .panel-display.gsb-widescreen .inner-main-wrapper {
   margin-right: 500px;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 62.5em) {
+  .panel-display.gsb-widescreen .inner-main-wrapper {
+    margin-right: 300px;
+  }
+}
+@media (max-width: 41.875em) {
   .panel-display.gsb-widescreen .inner-main-wrapper {
     margin: 0;
   }
@@ -1865,7 +1885,7 @@ del {
   float: right;
   width: 270px;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 41.875em) {
   .panel-display.gsb-widescreen .inner-sidebar-wrapper {
     float: none;
     width: 100%;
