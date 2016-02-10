@@ -357,11 +357,20 @@
   };
 
   /**
-   * Move Exec Ed program finder search subit button.
+   * Move Exec Ed program finder search submit button.
    */
   Drupal.behaviors.ee_finder_search = {
     attach: function () {
       $('.pane-program-list #edit-submit').insertAfter($('.pane-program-list #edit-search--2'));
+    }
+  };
+
+  /**
+   * Move Exec Ed program finder ctas.
+   */
+  Drupal.behaviors.ee_finder_ctas = {
+    attach: function () {
+      $('.pane-program-list .image-ctas').insertAfter($('.pane-program-list .programs'));
     }
   };
 
