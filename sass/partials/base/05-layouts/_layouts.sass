@@ -124,7 +124,6 @@
 
   // Featured content
   .featured-content
-    // background: rgba($black, 0.9)
     padding: $standard-padding 0
 
   // Content
@@ -139,21 +138,29 @@
   // Main section
   .main-wrapper
     float: left
-    margin-right: -400px
+    margin-right: -450px
     width: 100%
-    +breakpoint($bp-mobile-max)
+    +breakpoint(1000px max-width)
+      margin-right: -370px
+    +breakpoint(670px max-width)
       float: none
       margin: 0
 
   .main-wrapper
     margin-left: 50px
+    +breakpoint(1000px max-width)
+      margin-left: 0
 
   .inner-sidebar-wrapper
     margin-right: 50px
+    +breakpoint(1000px max-width)
+      margin-right: 0
 
   .inner-main-wrapper
     margin-right: 500px
-    +breakpoint($bp-mobile-max)
+    +breakpoint(1000px max-width)
+      margin-right: 300px
+    +breakpoint(670px max-width)
       margin: 0
 
   .main-middle
@@ -177,7 +184,7 @@
   .inner-sidebar-wrapper
     float: right
     width: 270px
-    +breakpoint($bp-mobile-max)
+    +breakpoint(670px max-width)
       float: none
       width: 100%
 
