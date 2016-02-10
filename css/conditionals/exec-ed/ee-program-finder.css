@@ -6,7 +6,7 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+.pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-program-list .isotopify-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .image-ctas .fieldable-panels-pane {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -100,9 +100,6 @@
   float: left;
   max-width: 270px;
   width: 100%;
-}
-.pane-program-list .image-ctas .cta {
-  margin-bottom: 20px;
 }
 
 .pane-program-list .isotopify-filters {
@@ -658,4 +655,74 @@
   line-height: 1.2;
   margin-bottom: 18px;
   padding-top: 18px;
+}
+
+.image-ctas .fieldable-panels-pane {
+  margin-bottom: 20px;
+  max-width: 566px;
+  position: relative;
+  bottom: 0;
+}
+.image-ctas img {
+  display: block;
+}
+.image-ctas .image-cta-color-blue a {
+  background: rgba(0, 72, 140, 0.85);
+}
+.image-ctas .image-cta-color-lime a {
+  background: rgba(145, 153, 0, 0.85);
+}
+.image-ctas .image-cta-color-pink a {
+  background: rgba(221, 24, 128, 0.85);
+}
+.image-ctas .image-cta-color-purple a {
+  background: rgba(151, 24, 93, 0.85);
+}
+.image-ctas .image-cta-color-teal a {
+  background: rgba(0, 156, 132, 0.85);
+}
+.image-ctas .field-name-field-link-single {
+  line-height: 0;
+}
+.image-ctas .field-name-field-link-single a {
+  color: white;
+  display: block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 12px 26px;
+  width: 100%;
+}
+.image-ctas .field-name-field-link-single a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.image-ctas .field-name-field-link-single a:after {
+  color: white;
+  font-size: 12px;
+  margin-left: 3px;
+}
+.image-ctas .field-name-field-link-single a:hover {
+  background: rgba(1, 72, 114, 0.85) !important;
+}
+.image-ctas .group-left,
+.image-ctas .group-right {
+  float: none;
+  width: 100%;
+}
+.image-ctas .group-right {
+  padding: 0 !important;
+  position: absolute;
+  bottom: 0;
 }

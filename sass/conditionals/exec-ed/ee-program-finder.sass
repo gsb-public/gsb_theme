@@ -55,8 +55,6 @@ $page-top-variable: 120px
     float: left
     max-width: 270px
     width: 100%
-    .cta
-      margin-bottom: 20px
 
 // Exec Ed program finder filters
 .pane-program-list .isotopify-filters
@@ -510,3 +508,63 @@ $page-top-variable: 120px
   line-height: 1.2
   margin-bottom: 18px
   padding-top: 18px
+
+// Image CTAs on program finder
+.image-ctas
+  // Each CTA
+  .fieldable-panels-pane
+    @extend %box-shadow
+    margin-bottom: 20px
+    max-width: 566px
+    position: relative
+    bottom: 0
+
+  // Image
+  img
+    display: block
+
+  // Colors
+  .image-cta-color-blue a
+    background: rgba($blue-bright, 0.85)
+
+  .image-cta-color-lime a
+    background: rgba($lime-bright, 0.85)
+
+  .image-cta-color-pink a
+    background: rgba($pink-bright, 0.85)
+
+  .image-cta-color-purple a
+    background: rgba($purple-bright, 0.85)
+
+  .image-cta-color-teal a
+    background: rgba($teal-bright, 0.85)
+
+  // Linked text
+  .field-name-field-link-single
+    line-height: 0
+    a
+      color: $white
+      display: block
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.2
+      padding: 12px $standard-padding
+      width: 100%
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $white
+        font-size: 12px
+        margin-left: 3px
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+  // Narrow view
+  .group-left,
+  .group-right
+    float: none
+    width: 100%
+  // Layout
+  .group-right
+    padding: 0 !important
+    position: absolute
+    bottom: 0
