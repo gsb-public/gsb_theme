@@ -211,9 +211,11 @@ $page-top-variable: 120px
       top: -13px
       left: 18px
       width: 0px
-  // Last select box
+
+  // Location select and leadership level are smaller
+  .form-item-filter-program-location .ms-drop.bottom,
   .form-item-filter-leadership-level .ms-drop.bottom
-    min-width: 448px
+    min-width: 330px
 
   ul
     +flex-box
@@ -242,7 +244,9 @@ $page-top-variable: 120px
     line-height: 1.2
     margin-bottom: 12px
 
+  // Location ittems only need one column
   // Three columns doesn't work for the last filter
+  .form-item-filter-program-location li,
   .form-item-filter-leadership-level li
     -webkit-box-flex-basis: 51%
     -moz-box-flex-basis: 51%
