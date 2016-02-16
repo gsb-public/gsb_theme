@@ -8,8 +8,6 @@
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
-$page-top-variable: 120px
-
 // Program finder page hackiness
 .page-node-409166
   #content
@@ -22,45 +20,38 @@ $page-top-variable: 120px
   .breadcrumb
     display: none
 
-  #top-content
-    background: #f4f4f4
-    height: $page-top-variable
-
   .full-header,
   .featured-content
+    background: #f4f4f4
+    max-width: none
+    overflow: visible
+    padding: $standard-padding 0
+    .panel-pane
+      margin: 0 auto
+      margin-bottom: 0 !important
+      max-width: 1170px
+      position: relative
+
+  .inner-content-wrapper
     margin: 0 auto
-    max-width: 1170px
-    padding-top: $standard-padding
-    position: relative
-    top: -$page-top-variable
-    margin-bottom: -$page-top-variable
+    padding-top: 70px
+
 
 // Page layout
 .pane-program-list
-  +clearfix
+  position: relative
+  top: -50px
 
   // Filters wrapper
   .isotopify-filters
-    margin-bottom: $page-top-variable + 30px
 
   // List
-  .programs
-    float: left
-    margin-right: 50px
-    max-width: 850px
-    width: 100%
-
-  // Image CTAs
-  .image-ctas
-    float: left
-    max-width: 270px
-    width: 100%
 
 // Exec Ed program finder filters
-.pane-program-list .isotopify-filters
+.pane-filters
   position: relative
 
-  #isotopify-filters > div
+  #edit-filters
     +flex-box
     flex-flow: row wrap
     justify-content: space-between
@@ -71,7 +62,7 @@ $page-top-variable: 120px
     margin: 0
     position: absolute
     right: 0
-    top: 115px
+    top: 125px
     width: auto
     label
       display: none
@@ -244,7 +235,7 @@ $page-top-variable: 120px
     line-height: 1.2
     margin-bottom: 12px
 
-  // Location ittems only need one column
+  // Location items only need one column
   // Three columns doesn't work for the last filter
   .form-item-filter-program-location li,
   .form-item-filter-leadership-level li
@@ -400,7 +391,7 @@ $page-top-variable: 120px
 
 
 // Program finder search
-.pane-program-list
+.isotopify-filters
 
   // Search field
   .form-item.form-item-search
@@ -580,3 +571,4 @@ h2.isotopify-title
   font-size: 28px
   font-weight: bold
   line-height: 1.2
+  margin-bottom: 18px

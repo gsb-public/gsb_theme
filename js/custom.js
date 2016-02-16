@@ -348,30 +348,13 @@
   };
 
   /**
-   * Move Exec Ed program finder filters out of container for full width.
-   */
-  Drupal.behaviors.ee_filters = {
-    attach: function () {
-      $('.isotopify.program-list .isotopify-filters').insertBefore($('.pane-program-list .programs'));
-    }
-  };
-
-  /**
    * Move Exec Ed program finder search submit button.
    */
   Drupal.behaviors.ee_finder_search = {
     attach: function () {
-      $('.pane-program-list #edit-submit').insertAfter($('.pane-program-list #edit-search--2'));
+      $('#isotopify-filters #edit-submit').insertAfter($('#isotopify-filters #edit-search--2'));
     }
   };
 
-  /**
-   * Move Exec Ed program finder ctas.
-   */
-  Drupal.behaviors.ee_finder_ctas = {
-    attach: function () {
-      $('.pane-program-list .image-ctas').insertAfter($('.pane-program-list .programs'));
-    }
-  };
 
 }(jQuery));
