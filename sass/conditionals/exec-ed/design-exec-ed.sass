@@ -532,6 +532,7 @@
   width: 100%
 
 .overlay-inner-wrapper
+  +clearfix
   margin: 0 auto
   max-width: 1170px
   padding: 20px 0
@@ -577,3 +578,18 @@ h1.ee-section-header-title
 
   .icon-wrapper
     overflow: visible
+
+// Apply and brochure buttons
+#block-gsb-feature-program-ct-ee-section-apply-brochure
+  +clearfix
+.ee-section-apply-brochure
+  @extend %gradient-red
+  float: right
+  max-width: 270px
+  a
+    color: $white
+    font-size: 16px
+
+  // Apply button
+  .apply-button
+    padding: 14px
