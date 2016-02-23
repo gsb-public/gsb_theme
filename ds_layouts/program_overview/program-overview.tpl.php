@@ -41,7 +41,7 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
-    <div class="header-wrapper">
+    <div class="ds-main-wrapper">
       <<?php print $left_wrapper; ?> class="ds-left<?php print $left_classes; ?>">
         <?php print $left; ?>
       </<?php print $left_wrapper; ?>>
@@ -52,7 +52,9 @@
     </div>
 
     <<?php print $learn_wrapper; ?> class="ds-learn<?php print $learn_classes; ?>">
-      <?php print $learn; ?>
+      <div class="learn-wrapper-inner">
+        <?php print $learn; ?>
+      </div>
     </<?php print $learn_wrapper; ?>>
 
     <<?php print $faculty_wrapper; ?> class="ds-faculty<?php print $faculty_classes; ?>">
@@ -60,7 +62,9 @@
     </<?php print $faculty_wrapper; ?>>
 
     <<?php print $cta_wrapper; ?> class="ds-cta<?php print $cta_classes; ?>">
-      <?php print $cta; ?>
+      <div class="cta-wrapper-inner">
+        <?php print $cta; ?>
+      </div>
     </<?php print $cta_wrapper; ?>>
 
     <<?php print $explore_wrapper; ?> class="ds-explore<?php print $explore_classes; ?>">

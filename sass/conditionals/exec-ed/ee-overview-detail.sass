@@ -7,3 +7,253 @@
 @import partials/base/00-variables/all
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
+
+.node-type-program #content
+  max-width: initial
+
+// Program overview page
+.node-program.view-mode-full
+
+
+  // Layout
+  .ds-main-wrapper,
+  .learn-wrapper-inner,
+  .ds-faculty,
+  .cta-wrapper-inner,
+  .ds-explore,
+  .ds-footer
+    margin: 0 auto
+    max-width: 1170px
+
+  // Main content
+  .ds-main-wrapper
+    +clearfix
+    .ds-left,
+    .ds-right
+      display: inline-block
+      max-width: 540px
+      vertical-align: top
+      width: 100%
+
+    .ds-left
+      float: left
+      margin-right: 90px
+
+    .ds-right
+      float: right
+
+  // Learn More About the Program
+  .ds-learn
+    background: #f4f4f4
+    padding: $standard-padding 0
+    .learn-wrapper-inner
+      max-width: 1170px
+
+  // Faculty
+  .ds-faculty
+    // padding: $standard-padding 0
+
+
+  // Styling
+  // Main typography styling
+  .ds-main-wrapper
+
+  // Overview Intro
+  .field-name-field-overview-intro
+    font-size: 26px
+    line-height: 1.4
+    margin-bottom: 26px
+
+  // Overview description
+  .field-name-field-overview-description
+    margin-bottom: 26px
+
+  // Key Benefits Intro
+  .field-name-field-key-benefits-intro
+    margin-bottom: 26px
+    h3.label-above
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+      margin-bottom: 12px
+
+  // Key Benefits description
+  .field-name-field-key-benefits-description
+    font-size: 18px
+    line-height: 1.4
+    margin-bottom: 26px
+
+  // Who Should Attend
+  .field-name-field-event-who-attend
+    font-size: 18px
+    line-height: 1.4
+    margin-bottom: 26px
+    h3.label-above
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+      margin-bottom: 12px
+    ul
+      margin: 0 0 20px 0
+      padding: 0
+      position: relative
+      left: 0
+      li
+        margin-bottom: 8px
+        padding-left: 15px
+        &:before
+          content: "• "
+          color: $text-black
+          position: absolute
+          left: 0
+
+  // Featured Item
+  .group-wrapper-featured-item
+    @extend %bg-and-box-shadow
+    margin-bottom: 26px
+    padding: $standard-padding
+    padding-top: 0
+
+    // Superhead
+    .field-name-field-featured-superhead
+      @extend %superhead-black
+
+    // Item reference
+    .field-name-field-featured-event
+
+    .insights-label,
+    .featured-label
+      display: none
+
+
+  // Program Contact
+  .field-name-field-program-director-name
+    +clearfix
+    color: $black
+    font-size: 16px
+    line-height: 1.3
+    a
+      color: $link-green
+      &:hover
+        color: $link-blue
+
+    // Contact Label
+    .label-above
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+      margin-bottom: 12px
+
+    .node-staff
+      @extend %divider-top
+
+    // Image
+    .field-name-field-image-single-public
+      float: left
+      margin-bottom: 24px
+      margin-right: 24px
+      margin-top: 2px
+      height: 120px
+      width: 120px
+      position: relative
+      z-index: 1
+
+    // Info wrapper
+    .group-wrapper-info
+      float: left
+      margin-left: -144px
+      padding-left: 144px
+      width: 100%
+
+    // Name
+    .field-name-title
+      margin-bottom: 3px
+      padding-top: 12px
+      h2
+        line-height: 0
+      a
+        font-family: $font-sans
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.3
+
+    // Title, role, dept
+    .field-name-field-staff-item
+      font-size: 16px
+      line-height: 1.3
+      margin-bottom: 12px
+
+    // Phone
+    .field-name-field-phone a
+      color: $text-black
+      font-size: 15px
+
+    // Email
+    .field-name-field-email a
+      font-size: 16px
+      color: $link-green
+      +icon-after("email-stroke", true)
+      &:hover
+        color: $link-blue
+      &:after
+        font-size: 12px
+        margin-left: 5px
+
+  // Learn More About the Program
+
+
+
+  // Faculty Directors styling
+
+
+  // CTA section styling
+  .ds-cta
+    background: #72bbaa
+
+    .cta-wrapper-inner
+      +background(image_url("bg-ee-program-overview-cta-2016-02-22-1.jpg") no-repeat center center, #72bbaa)
+      +clearfix
+      padding: 60px 100px
+    // CTA links
+    .field
+      @extend %bg-border-and-box-shadow
+      width: 456px
+      padding: 14px $standard-padding
+      a,
+      a[target="_blank"]
+        color: $link-green
+        font-size: 20px
+        line-height: 1.2
+        position: relative
+        text-decoration: none
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-big
+          right: -33px
+          font-weight: bold
+          color: #e3e3e3
+        &:hover
+          color: $link-blue
+          border-bottom: 1px $link-blue solid
+          &:after
+            color: $teal-light
+    .field-name-field-cta1
+      float: left
+    .field-name-field-cta2
+      float: right
+
+  // Explore Related Programs
+
+  // Footer
+  .ds-footer
+    @extend %divider-top
+    padding-top: $standard-padding
+
+  // Taxonomy
+  .field-name-field-program-topics
+    a
+      font-size: 20px
+      line-height: 1.3

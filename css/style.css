@@ -391,7 +391,8 @@ div.gsb-widescreen .pane-bundle-video .show-more:hover {
   color: white;
 }
 
-body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after, body a[href$=".svg"]:after, body a[href$=".odg"]:after, body a[href$=".fodg"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".fodp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".fodt"]:after, body a[href$=".odf"]:after, body a[href$=".pages"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, body a[href$=".fods"]:after, .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after, .view-mode-compact .field-name-field-link-document a:after {
+body a[href$=".pdf"]:after, body a[href$=".png"]:after, body a[href$=".jpg"]:after, body a[href$=".jpeg"]:after, body a[href$=".gif"]:after, body a[href$=".tiff"]:after, body a[href$=".svg"]:after, body a[href$=".odg"]:after, body a[href$=".fodg"]:after, body a[href$=".pptx"]:after, body a[href$=".ppt"]:after, body a[href$=".pps"]:after, body a[href$=".odp"]:after, body a[href$=".fodp"]:after, body a[href$=".zip"]:after, body a[href$=".rar"]:after, body a[href$=".tar"]:after, body a[href$=".doc"]:after, body a[href$=".docx"]:after, body a[href$=".txt"]:after, body a[href$=".odt"]:after, body a[href$=".fodt"]:after, body a[href$=".odf"]:after, body a[href$=".pages"]:after, body a[href$=".xls"]:after, body a[href$=".xlsx"]:after, body a[href$=".ods"]:after, body a[href$=".fods"]:after, .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after, .view-mode-compact .field-name-field-link-document a:after {
   margin-left: 3px;
   font-weight: normal;
 }
@@ -4583,9 +4584,9 @@ a.social-block-facebook:after {
 .show-more-less-toggler {
   border: 0 !important;
   color: #636f00;
-  font-weight: bold;
-  line-height: 1;
-  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  font-size: 18px;
   margin-left: 6px;
 }
 .show-more-less-toggler:before {
@@ -10382,29 +10383,42 @@ fieldset.collapsible .fieldset-legend {
   padding: 26px;
   padding-top: 0;
 }
+
 .pane-bundle-existing-node .field-name-field-date,
 .pane-bundle-existing-node .field-name-field-month,
 .pane-bundle-existing-node .field-name-field-pub-date-day,
 .pane-bundle-existing-node .field-name-field-year-of-publication,
 .pane-bundle-existing-node .field-name-field-date-published,
-.pane-bundle-existing-node .field-name-field-event-date {
+.pane-bundle-existing-node .field-name-field-event-date,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-date,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-month,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-pub-date-day,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-year-of-publication,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-date-published,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-event-date {
   color: #231f20;
   font-size: 14px;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .pane-bundle-existing-node .field-name-title,
-.pane-bundle-existing-node .field-name-field-link-single {
+.pane-bundle-existing-node .field-name-field-link-single,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-title,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single {
   margin-bottom: 8px;
 }
 .pane-bundle-existing-node .field-name-title h2,
-.pane-bundle-existing-node .field-name-field-link-single h2 {
+.pane-bundle-existing-node .field-name-field-link-single h2,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-title h2,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 {
   color: #231f20;
   display: inline;
   line-height: 0;
 }
 .pane-bundle-existing-node .field-name-title h2 a,
-.pane-bundle-existing-node .field-name-field-link-single h2 a {
+.pane-bundle-existing-node .field-name-field-link-single h2 a,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-title h2 a,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 a {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -10412,75 +10426,95 @@ fieldset.collapsible .fieldset-legend {
 }
 @media (max-width: 53.125em) {
   .pane-bundle-existing-node .field-name-title h2 a,
-  .pane-bundle-existing-node .field-name-field-link-single h2 a {
+  .pane-bundle-existing-node .field-name-field-link-single h2 a,
+  .node-program.view-mode-full .field-name-field-featured-event .field-name-title h2 a,
+  .node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 a {
     font-size: 20px;
   }
 }
 @media (max-width: 38.125em) {
   .pane-bundle-existing-node .field-name-title h2 a,
-  .pane-bundle-existing-node .field-name-field-link-single h2 a {
+  .pane-bundle-existing-node .field-name-field-link-single h2 a,
+  .node-program.view-mode-full .field-name-field-featured-event .field-name-title h2 a,
+  .node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 a {
     font-size: 18px;
   }
 }
 .pane-bundle-existing-node .field-name-title h2 a[target="_blank"]:after,
-.pane-bundle-existing-node .field-name-field-link-single h2 a[target="_blank"]:after {
+.pane-bundle-existing-node .field-name-field-link-single h2 a[target="_blank"]:after,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-title h2 a[target="_blank"]:after,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 a[target="_blank"]:after {
   font-size: 12px;
 }
 .pane-bundle-existing-node .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
-.pane-bundle-existing-node .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after {
+.pane-bundle-existing-node .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-title h2 a[href$=".pdf"][target="_blank"]:after,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-link-single h2 a[href$=".pdf"][target="_blank"]:after {
   display: inline;
   font-size: 14px;
   margin-left: 3px;
 }
-.pane-bundle-existing-node .group-wrapper-published {
+.pane-bundle-existing-node .group-wrapper-published,
+.node-program.view-mode-full .field-name-field-featured-event .group-wrapper-published {
   font-size: 16px;
   line-height: 1.3;
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-title {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-title,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-title {
   display: inline-block;
   margin-right: 5px;
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .pipe {
   font-size: 24px;
   position: relative;
   top: -3px;
 }
 @media (max-width: 53.125em) {
-  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe {
+  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe,
+  .node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .pipe {
     font-size: 20px;
   }
 }
 @media (max-width: 38.125em) {
-  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe {
+  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .pipe,
+  .node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .pipe {
     font-size: 18px;
   }
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .file {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .file,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .file {
   display: inline-block;
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public {
   display: inline-block;
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
   font-size: 22px;
   line-height: 1.2;
   position: relative;
   top: -2px;
 }
 @media (max-width: 53.125em) {
-  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
+  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a,
+  .node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
     font-size: 18px;
   }
 }
 @media (max-width: 38.125em) {
-  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
+  .pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a,
+  .node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a {
     font-size: 16px;
   }
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:hover {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:hover,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:hover {
   color: #2d6280;
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after {
   content: "\f118";
   display: inline;
   speak: none;
@@ -10495,30 +10529,38 @@ fieldset.collapsible .fieldset-legend {
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after {
+.pane-bundle-existing-node .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after,
+.node-program.view-mode-full .field-name-field-featured-event .node-working-paper.view-mode-teaser .field-name-field-file-single-public a:after {
   font-size: 0.85em;
 }
-.pane-bundle-existing-node .group-tags-wrapper h3 {
+.pane-bundle-existing-node .group-tags-wrapper h3,
+.node-program.view-mode-full .field-name-field-featured-event .group-tags-wrapper h3 {
   display: none;
 }
-.pane-bundle-existing-node .group-wrapper-title {
+.pane-bundle-existing-node .group-wrapper-title,
+.node-program.view-mode-full .field-name-field-featured-event .group-wrapper-title {
   margin-bottom: 8px;
 }
-.pane-bundle-existing-node .gsb_field_formatter_field_collection_separator {
+.pane-bundle-existing-node .gsb_field_formatter_field_collection_separator,
+.node-program.view-mode-full .field-name-field-featured-event .gsb_field_formatter_field_collection_separator {
   line-height: 0;
   margin: 6px 0 3px;
 }
 .pane-bundle-existing-node .field-collection-item-field-authors,
-.pane-bundle-existing-node .field-name-field-author {
+.pane-bundle-existing-node .field-name-field-author,
+.node-program.view-mode-full .field-name-field-featured-event .field-collection-item-field-authors,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-author {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
 }
-.pane-bundle-existing-node .field-name-field-publisher {
+.pane-bundle-existing-node .field-name-field-publisher,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-publisher {
   display: inline-block;
 }
-.pane-bundle-existing-node .field-name-field-publisher:after {
+.pane-bundle-existing-node .field-name-field-publisher:after,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-publisher:after {
   content: "|";
   padding-right: 5px;
   padding-left: 5px;
@@ -10526,13 +10568,18 @@ fieldset.collapsible .fieldset-legend {
 .pane-bundle-existing-node .field-name-field-body,
 .pane-bundle-existing-node .field-name-field-description,
 .pane-bundle-existing-node .field-name-field-publisher,
-.pane-bundle-existing-node .field-name-field-editorial-summary {
+.pane-bundle-existing-node .field-name-field-editorial-summary,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-body,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-description,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-publisher,
+.node-program.view-mode-full .field-name-field-featured-event .field-name-field-editorial-summary {
   font-size: 16px;
   line-height: 1.3;
   margin-top: 12px;
   max-width: 600px;
 }
-.pane-bundle-existing-node .node-event.view-mode-teaser h2.insights-label.event {
+.pane-bundle-existing-node .node-event.view-mode-teaser h2.insights-label.event,
+.node-program.view-mode-full .field-name-field-featured-event .node-event.view-mode-teaser h2.insights-label.event {
   background: #231f20;
   color: white;
   display: inline-block;
@@ -10544,24 +10591,29 @@ fieldset.collapsible .fieldset-legend {
   position: relative;
   z-index: 2;
 }
-.pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
+.pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public,
+.node-program.view-mode-full .field-name-field-featured-event .node-event.view-mode-teaser .field-name-field-image-single-public {
   margin: -46px -26px 18px -26px;
 }
-.wide-view .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
+.wide-view .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public, .wide-view
+.node-program.view-mode-full .field-name-field-featured-event .node-event.view-mode-teaser .field-name-field-image-single-public {
   display: none;
 }
 @media (max-width: 35.5em) {
-  .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public {
+  .pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-image-single-public,
+  .node-program.view-mode-full .field-name-field-featured-event .node-event.view-mode-teaser .field-name-field-image-single-public {
     display: none;
   }
 }
-.pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-address {
+.pane-bundle-existing-node .node-event.view-mode-teaser .field-name-field-address,
+.node-program.view-mode-full .field-name-field-featured-event .node-event.view-mode-teaser .field-name-field-address {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
 }
-.pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public {
+.pane-bundle-existing-node .node-book.view-mode-teaser .field-name-field-image-single-public,
+.node-program.view-mode-full .field-name-field-featured-event .node-book.view-mode-teaser .field-name-field-image-single-public {
   max-width: 150px;
 }
 
