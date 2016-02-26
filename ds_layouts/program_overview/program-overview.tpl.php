@@ -58,6 +58,7 @@
     </<?php print $learn_wrapper; ?>>
 
     <<?php print $faculty_wrapper; ?> class="ds-faculty<?php print $faculty_classes; ?>">
+      <h2 class="section-title">Faculty Leadership</h2>
       <?php print $faculty; ?>
     </<?php print $faculty_wrapper; ?>>
 
@@ -68,6 +69,7 @@
     </<?php print $cta_wrapper; ?>>
 
     <<?php print $explore_wrapper; ?> class="ds-explore<?php print $explore_classes; ?>">
+      <h2 class="section-title">Explore Related Programs</h2>
       <?php print $explore; ?>
     </<?php print $explore_wrapper; ?>>
 
