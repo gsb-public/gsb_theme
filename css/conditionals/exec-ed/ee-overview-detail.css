@@ -260,22 +260,38 @@
   overflow: hidden;
   *zoom: 1;
 }
-.node-program.view-mode-full .ds-faculty .program-faculty-leadership-wrapper {
-  overflow: hidden;
-  *zoom: 1;
-}
 .node-program.view-mode-full .ds-faculty .field-name-field-description {
   display: none;
 }
+.node-program.view-mode-full .ds-faculty .program-faculty-cta-wrapper {
+  text-align: center;
+}
+.node-program.view-mode-full .ds-faculty .faculty-leadership-wrapper {
+  display: inline-block;
+  float: left;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
 .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership {
-  overflow: hidden;
-  *zoom: 1;
   display: inline-block;
   vertical-align: top;
   width: 360px;
 }
+.node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(1n) {
+  margin-right: 22px;
+}
 .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(2n) {
-  margin: 0 45px;
+  margin: 0 22px;
+}
+.node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(3n) {
+  margin-left: 22px;
+  margin-right: 0;
+}
+.node-program.view-mode-full .ds-faculty .program-faculty-cta {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: initial;
+  width: 250px;
 }
 .node-program.view-mode-full .ds-faculty .field-name-field-image-single-public {
   float: left;
@@ -326,9 +342,7 @@
   margin-bottom: 6px;
 }
 .node-program.view-mode-full .ds-faculty .program-faculty-cta {
-  margin: 0 auto;
   padding: 14px 26px;
-  width: 215px;
 }
 .node-program.view-mode-full .ds-faculty .program-faculty-cta a,
 .node-program.view-mode-full .ds-faculty .program-faculty-cta a[target="_blank"] {
@@ -356,7 +370,7 @@
 }
 .node-program.view-mode-full .ds-faculty .program-faculty-cta a:after,
 .node-program.view-mode-full .ds-faculty .program-faculty-cta a[target="_blank"]:after {
-  right: -33px;
+  right: -70px;
   font-weight: bold;
   color: #e3e3e3;
 }
