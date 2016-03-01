@@ -127,12 +127,133 @@
       @extend %superhead-black
 
     // Item reference
-    .field-name-field-featured-event
-
     .insights-label,
     .featured-label
       display: none
 
+  // Instance block container
+  .gsb-program-program-instance-fields
+    margin-bottom: 52px
+
+  // Individual instance
+  .instance-wrapper
+    @extend %divider-top
+    padding: $standard-padding 0
+    &:first-of-type
+      border-top: 0
+
+  // Instance header
+  h2.instance-header
+    color: $text-black
+    font-family: $font-sans
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 18px
+
+  // Instance information
+  .instance-information
+    +clearfix
+    h3
+      font-family: $font-demi
+      font-size: 20px
+      font-weight: normal
+      line-height: 1.3
+      margin-bottom: 12px
+
+    h4
+      font-family: $font-demi
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+      margin-bottom: 8px
+
+
+    .group-left,
+    .group-right
+      float: left
+      width: 260px
+
+    .group-left
+      margin-right: 20px
+    .group-right
+
+    .instance-item-wrapper
+      margin-bottom: 36px
+
+    .program-format
+      font-size: 16px
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1.3
+
+    .time-commitment
+      color: #686868
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+
+    .schedule-item-wrapper
+      margin-bottom: 12px
+
+    .program-schedule-date
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+      margin-bottom: 3px
+
+    .program-schedule-description
+      color: #686868
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+
+    h3.app-requirements-link
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 14px
+        margin-left: 4px
+        margin-top: -8px
+      a
+        color: $text-black
+
+    .tuition-amount
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+      margin-bottom: 12px
+
+    .included-in-tuition
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+
+    .optional-programing
+      p
+        font-size: 16px
+        font-weight: normal
+        line-height: 1.3
+
+    .payment-cancellation a
+      color: $link-green
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+
+    .awarded-upon-completion
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+
+  // Instance taxonomy
+  .instance-taxonomy
+    @extend %divider-top
+    padding-top: 12px
+    a
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
 
   // Program Contact
   .field-name-field-program-director-name
