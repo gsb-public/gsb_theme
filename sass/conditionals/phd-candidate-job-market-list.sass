@@ -51,11 +51,13 @@ $bp-four-column-switch: 768px max-width
       margin-bottom: 18px
       a
         +icon-after("arrow-double-right", true)
+        color: $link-green
         &:after
           color: $grey-med
-          font-size: 14px
+          font-size: 12px
           margin-left: 3px
         &:hover
+          color: $link-blue
           &:after
             color: $teal-light
       +breakpoint($bp-four-column-switch)
