@@ -5,31 +5,22 @@
 @import breakpoint
 @import ../../fonts/icons/icons
 @import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
 // Job Candidate Listing
 
 // Academic area jump links pane
 .view-display-id-phd_job_market_jump_links
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   margin-bottom: 26px
   padding: $standard-padding
   .jump-links-title
     font-size: 20px
     font-weight: bold
-    margin-bottom: 20px
+    margin-bottom: 10px
   .view-content
-    -moz-column-count: 3
-    -webkit-column-count: 3
-    column-count: 3
-    +breakpoint($bp-mobile-max)
-      -moz-column-count: 2
-      -webkit-column-count: 2
-      column-count: 2
-    +breakpoint($bp-mobile-480)
-      -moz-column-count: 1
-      -webkit-column-count: 1
-      column-count: 1
+    +clearfix
     background: none
     border: 0
     -webkit-box-shadow: none
@@ -37,21 +28,32 @@
     box-shadow: none
     margin: 0
   .views-row
-    margin-bottom: 12px
-    max-width: 97%
+    float: left
+    margin-top: 17px
+    padding-right: 12px
+    width: 33.3%
+    +breakpoint(633px max-width)
+      width: 100%
     a
       color: $link-green
       display: inline-block
       font-size: 16px
       font-weight: bold
-      line-height: 20px
+      line-height: 1.2
       &:hover
         color: $link-blue
+    &:last-of-type
+      clear: left
+      margin-top: 0
+      +breakpoint(999px 927px)
+        margin-top: 17px
+      +breakpoint(633px max-width)
+        margin-top: 17px
 
 // Job Candidate Placement listing
 .view-phd-candidate-placement-listing
   .phd-placement-wrapper
-    @extend %bg-border-and-box-shadow
+    @extend %bg-and-box-shadow
     padding: 0 $standard-padding
     // Academic area name
     .views-field-name
@@ -126,7 +128,7 @@
 
   // Back to top link styling
   .pager-region
-    border-top: 3px solid $text-grey-light
+    border-top: 3px $text-black solid
     margin-top: -1px
   .additional-links
     background: $text-grey-light

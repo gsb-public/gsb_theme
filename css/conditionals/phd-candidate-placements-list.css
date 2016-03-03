@@ -1,14 +1,6 @@
 @charset "UTF-8";
 .view-display-id-phd_job_market_jump_links, .view-phd-candidate-placement-listing .phd-placement-wrapper {
-  background-color: #f9f9f9;
-  background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: -webkit-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
-  background: linear-gradient(to top, #f9f9f9 20%, #ffffff 100%);
-}
-
-.view-display-id-phd_job_market_jump_links, .view-phd-candidate-placement-listing .phd-placement-wrapper {
-  border: 2px white solid;
+  background: white;
 }
 
 .view-display-id-phd_job_market_jump_links, .view-phd-candidate-placement-listing .phd-placement-wrapper {
@@ -18,12 +10,6 @@
   margin: 1px;
 }
 
-.ie8 .view-display-id-phd_job_market_jump_links, .ie8 .view-phd-candidate-placement-listing .phd-placement-wrapper, .view-phd-candidate-placement-listing .ie8 .phd-placement-wrapper {
-  border: 1px #cccccc solid !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
 .view-display-id-phd_job_market_jump_links {
   margin-bottom: 26px;
   padding: 26px;
@@ -31,12 +17,11 @@
 .view-display-id-phd_job_market_jump_links .jump-links-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .view-display-id-phd_job_market_jump_links .view-content {
-  -moz-column-count: 3;
-  -webkit-column-count: 3;
-  column-count: 3;
+  overflow: hidden;
+  *zoom: 1;
   background: none;
   border: 0;
   -webkit-box-shadow: none;
@@ -44,33 +29,40 @@
   box-shadow: none;
   margin: 0;
 }
-@media (max-width: 35.5em) {
-  .view-display-id-phd_job_market_jump_links .view-content {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-@media (max-width: 30em) {
-  .view-display-id-phd_job_market_jump_links .view-content {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
 .view-display-id-phd_job_market_jump_links .views-row {
-  margin-bottom: 12px;
-  max-width: 97%;
+  float: left;
+  margin-top: 17px;
+  padding-right: 12px;
+  width: 33.3%;
+}
+@media (max-width: 39.5625em) {
+  .view-display-id-phd_job_market_jump_links .views-row {
+    width: 100%;
+  }
 }
 .view-display-id-phd_job_market_jump_links .views-row a {
   color: #636f00;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 1.2;
 }
 .view-display-id-phd_job_market_jump_links .views-row a:hover {
   color: #2d6280;
+}
+.view-display-id-phd_job_market_jump_links .views-row:last-of-type {
+  clear: left;
+  margin-top: 0;
+}
+@media (min-width: 57.9375em) and (max-width: 62.4375em) {
+  .view-display-id-phd_job_market_jump_links .views-row:last-of-type {
+    margin-top: 17px;
+  }
+}
+@media (max-width: 39.5625em) {
+  .view-display-id-phd_job_market_jump_links .views-row:last-of-type {
+    margin-top: 17px;
+  }
 }
 
 .view-phd-candidate-placement-listing .phd-placement-wrapper {
@@ -169,7 +161,7 @@
   line-height: 20px;
 }
 .view-phd-candidate-placement-listing .pager-region {
-  border-top: 3px solid #656162;
+  border-top: 3px #231f20 solid;
   margin-top: -1px;
 }
 .view-phd-candidate-placement-listing .additional-links {
