@@ -482,6 +482,90 @@
       float: right
 
   // Explore Related Programs
+  .ds-explore
+    +clearfix
+    padding: $standard-padding 0
+
+    // See All Faculty CTA styling
+    .program-programs-cta-wrapper
+      text-align: center
+
+    .program-programs-cta
+      @extend %bg-border-and-box-shadow
+      padding: 14px $standard-padding
+      a,
+      a[target="_blank"]
+        color: $link-green
+        font-size: 20px
+        line-height: 1.2
+        position: relative
+        text-decoration: none
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-big
+          right: -70px
+          font-weight: bold
+          color: #e3e3e3
+        &:hover
+          color: $link-blue
+          border-bottom: 1px $link-blue solid
+          &:after
+            color: $teal-light
+
+    // Layout
+    .gsb-program-explore-more-wrapper
+      display: inline-block
+      float: left
+      margin-bottom: 20px
+      vertical-align: top
+
+
+    .node-program-instance.view-mode-program_explore_other
+      display: inline-block
+      vertical-align: top
+      width: 360px
+      &:nth-of-type(1n)
+        margin-right: 22px
+      &:nth-of-type(2n)
+        margin: 0 22px
+      &:nth-of-type(3n)
+        margin-left: 22px
+        margin-right: 0
+
+    // See All Programs CTA positioning
+    .program-programs-cta
+      display: inline-block
+      margin: 0 auto
+      text-align: initial
+      width: 250px
+
+  // Individual programs
+  .node-program-instance.view-mode-program_explore_other
+
+    // Image
+    .gsb-key-image
+      margin-bottom: 12px
+      max-width: 360px
+
+    // Title
+    .field-name-field-program a
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+
+    // Date
+    .field-name-field-instance-date
+      font-family: $font-demi
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.3
+      margin-top: 3px
+
+    // Format and Location
+    .field-name-field-program-location
+      font-size: 16px
+      line-height: 1.3
+      margin-top: 3px
 
   // Footer
   .ds-footer
