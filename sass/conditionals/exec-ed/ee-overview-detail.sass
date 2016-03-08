@@ -52,10 +52,61 @@
   // Learn More About the Program
   .ds-learn
     background: #f4f4f4
+    max-width: 3
     padding: $standard-padding 0
     .learn-wrapper-inner
+      +clearfix
       max-width: 1170px
 
+    // Video or Image
+    .field-name-field-video
+      float: left
+      margin-right: 30px
+
+    .field-collection-item-field-video
+      a[target="_blank"]:after
+        display: none
+
+    // Blocks
+    .group-wrapper-curriculum,
+    .group-wrapper-participant,
+    .group-wrapper-application-req,
+    .field-name-field-additional-pages
+      float: left
+      margin-bottom: 18px
+      margin-right: 10px
+      width: 400px
+
+    // Learn more details
+    .group-wrapper-learn
+      +clearfix
+      float: left
+      max-width: 870px
+      // Learn more header
+      h2
+        color: $text-black
+        font-size: 32px
+        font-weight: normal
+        line-height: 1.3
+        margin-bottom: 26px
+      // Block titles
+      h3 a
+        color: $text-black
+        font-size: 24px
+        line-height: 1.3
+        +icon-after("arrow-double-right", true)
+        &:after
+          color: $green-light
+          font-size: 14px
+          margin-left: 4px
+
+    // Teasers
+    .curriculum-blurb,
+    .participant-profile-blurb,
+    .application-requirements-blurb,
+    .field-name-field-overview
+      font-size: 16px
+      line-height: 1.3
   // Faculty
   .ds-faculty
     padding: $standard-padding 0
