@@ -1,7 +1,8 @@
-// Executive Education main menu
+// Executive Education & SEED main menus
 
 // Full width
-#block-menu-menu-executive-education-mega-me
+#block-menu-menu-executive-education-mega-me,
+#block-menu-menu-mega-menu-seed
   +clearfix
   background: #7d7466
   float: left
@@ -9,7 +10,6 @@
     float: none
 
   li
-    border-top: $top-border-interval $red-dark solid
     font-size: 16px
     font-weight: normal
     float: left
@@ -80,3 +80,14 @@
     li a
       min-height: 59px
       padding: 20px 22px
+
+// SEED Menu only
+#block-menu-menu-mega-menu-seed
+  +breakpoint(1170px min-width)
+    li a
+      max-width: 133px
+      padding: 20px 16px
+    li:first-of-type,
+    li:last-of-type
+      a
+        max-width: 87px
