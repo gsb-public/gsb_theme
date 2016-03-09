@@ -4,6 +4,10 @@
 #header-wrapper
   +breakpoint($bp-wide-min)
     border-top: $top-border-interval $red-dark solid
+    // Exec Ed & SEED menu
+    .page-exec-ed &,
+    .page-seed &,
+      border-top: 0
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
@@ -47,9 +51,9 @@
       width: 100px
     .page-insights &, .page-404 &
       margin-left: 15px !important
-  // Exec ed section
-  .page-taxonomy-term-34446 &,
-  .page-exec-ed &
+  // Exec Ed & SEED menu
+  .page-exec-ed &,
+  .page-seed &,
     .svg &, .no-js &, .no-svg &
       background-size: 100%
       float: left
@@ -71,8 +75,9 @@
     margin-right: 15px
   +breakpoint(1160px max-width)
     display: none
-  .page-taxonomy-term-34446 &,
+  // Exec Ed & SEED menu
   .page-exec-ed &,
+  .page-seed &,
   .no-js &
     display: none
 
@@ -81,10 +86,12 @@
   .js &,
   &.search-closed
     min-width: 702px
-    // Exec ed menu
-    .page-taxonomy-term-34446 &,
+    // Exec Ed
     .page-exec-ed &
       min-width: 670px
+    // SEED menu
+    .page-seed &
+      min-width: 766px
   +breakpoint($bp-wide-min)
     float: right
     position: relative
@@ -93,9 +100,9 @@
     .no-js &,
     &.search-open
       min-width: 842px
-  // Exec ed menu
-  .page-taxonomy-term-34446 &,
-  .page-exec-ed &
+  // Exec Ed & SEED menu
+  .page-exec-ed &,
+  .page-seed &,
     +breakpoint(1170px min-width)
       float: right
       position: relative
