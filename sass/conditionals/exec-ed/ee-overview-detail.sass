@@ -60,12 +60,67 @@
 
     // Video or Image
     .field-name-field-video
+      @extend %bg-and-box-shadow
       float: left
       margin-right: 30px
+      max-width: 360px
 
     .field-collection-item-field-video
       a[target="_blank"]:after
         display: none
+
+    .group-wrapper-video
+      position: relative
+
+    .gsb-image-video-popup
+      max-width: 360px
+      img
+        width: 360px
+
+    // Video time duration
+    .video-duration
+      background: $text-black
+      color: $white
+      display: inline-block
+      float: right
+      font-size: 11px
+      font-weight: bold
+      line-height: 1.2
+      padding: 4px
+      position: absolute
+      right: 0
+      bottom: 2px
+
+    // Video title
+    .field-name-field-title
+      font-size: 22px
+      font-weight: bold
+      line-height: 1.3
+      padding: 0 $standard-padding
+
+    .video-channeltitle,
+    .video-viewcount
+      font-size: 14px
+      line-height: 1.2
+      padding: 0 $standard-padding
+
+    // Video attribution
+    .video-channeltitle
+      margin-top: 8px
+      span
+        margin-right: 5px
+
+    // Video view count
+    .video-viewcount
+      margin-bottom: 8px
+      span
+        margin-left: 5px
+
+    // Video description
+    .field-name-field-body
+      font-size: 16px
+      line-height: 1.3
+      padding: 0 $standard-padding
 
     // Blocks
     .group-wrapper-curriculum,
@@ -75,13 +130,13 @@
       float: left
       margin-bottom: 18px
       margin-right: 10px
-      width: 400px
+      width: 380px
 
     // Learn more details
     .group-wrapper-learn
       +clearfix
       float: left
-      max-width: 870px
+      max-width: 780px
       // Learn more header
       h2
         color: $text-black
