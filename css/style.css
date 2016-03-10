@@ -113,11 +113,11 @@ p, .format-body,
 .pane-bundle-video, div.gsb-widescreen .pane-bundle-house-ads,
 div.gsb-widescreen .pane-bundle-spotlight,
 div.gsb-widescreen .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list {
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .cta-green, .cta-red .field-item, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list {
   background: white;
 }
 
-.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content {
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .pane-gsb-feature-faculty-display-az-list .pane-content {
   background-color: #f9f9f9;
   background: -moz-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
   background: -o-linear-gradient(bottom, #f9f9f9 20%, #ffffff 100%);
@@ -170,7 +170,7 @@ div.gsb-widescreen .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bund
   border-bottom: 1px lightgray solid;
 }
 
-.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta {
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .pane-gsb-feature-faculty-display-az-list .pane-content, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta {
   border: 2px white solid;
 }
 
@@ -207,12 +207,12 @@ div.gsb-widescreen .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bund
   border-top: 3px #231f20 solid;
 }
 
-.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-gsb-feature-faculty-display-az-list .pane-content, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
+.designed-box, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .pane-gsb-feature-faculty-display-az-list .pane-content, .slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-widescreen .pane-bundle-house-ads,
 div.gsb-widescreen .pane-bundle-spotlight,
 div.gsb-widescreen .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bundle-links .green-bar, .pane-bundle-text .default,
-.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .webform-client-form #edit-submit,
+.pane-bundle-text .mba-highlighted-block, div.region-content [class*="pane-menu-block"], .pane-bundle-videos, .cta-green, .cta-red .field-item, .pane-bundle-existing-node, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .webform-client-form #edit-submit,
 .webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
 #email-contact-mail-page-form #edit-submit, #edit-done, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
@@ -225,7 +225,7 @@ div.gsb-widescreen .pane-bundle-video, .pane-bundle-links .black-bar, .pane-bund
   margin: 1px;
 }
 
-.ie8 .designed-box, .ie8 .pane-bundle-accordion, .ie8 .pane-admission-events-location-panel-pane, .ie8 .cta-green, .ie8 .cta-red .field-item, .cta-red .ie8 .field-item, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content {
+.ie8 .designed-box, .ie8 .pane-bundle-accordion, .ie8 .pane-admission-events-location-panel-pane, .ie8 .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-gsb-feature-faculty-display-az-list .ie8 .pane-content {
   border: 1px #cccccc solid !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -6185,6 +6185,7 @@ div.region-content [class*="pane-menu-block"] .menu li a:hover:after {
 }
 
 .signup-description {
+  cursor: default;
   font-size: 16px;
   line-height: 1.3;
   margin-bottom: 20px;
@@ -8207,10 +8208,10 @@ ul.slideshow-items {
 }
 
 .cta-link {
-  padding: 14px 36px 14px 26px;
   font-size: 16px;
-  position: relative;
   line-height: 1.2;
+  padding: 14px 36px 14px 26px;
+  position: relative;
 }
 .cta-link span {
   margin-right: 5px;
@@ -8331,8 +8332,8 @@ ul.slideshow-items {
 }
 
 .cta-red .field-item {
-  margin-bottom: 5px;
   color: #c2b7a1;
+  margin-bottom: 5px;
 }
 .cta-red a,
 .cta-red a[target="_blank"] {

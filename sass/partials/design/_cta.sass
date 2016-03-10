@@ -10,12 +10,13 @@
   a
     display: block
 .cta-link
-  padding: 14px 36px 14px $standard-padding
   font-size: 16px
-  position: relative
   line-height: 1.2
+  padding: 14px 36px 14px $standard-padding
+  position: relative
   span
     margin-right: 5px
+
 .cta-action
   line-height: 1
   vertical-align: text-top
@@ -66,7 +67,7 @@
 
 // Green links, grey background
 .cta-green
-  @extend %bg-border-and-box-shadow
+  @extend %bg-and-box-shadow
   .field-item
     border-bottom: 1px solid $grey-c
     border-top: 1px solid $white
@@ -92,9 +93,9 @@
 // Red links, grey background
 .cta-red
   .field-item
-    @extend %bg-border-and-box-shadow
-    margin-bottom: 5px
+    @extend %bg-and-box-shadow
     color: $grey-med
+    margin-bottom: 5px
   a,
   a[target="_blank"]
     position: relative
