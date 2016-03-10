@@ -612,32 +612,31 @@ h1.ee-section-header-title
     margin-bottom: 26px
 
   // Divider
-  .node-faculty
-    +clearfix
+  .entity-field-collection-item
     @extend %divider-top
 
   // Image
   .field-name-field-image-single-public
     float: left
-    margin-bottom: 24px
-    margin-right: 24px
+    margin-bottom: 16px
+    margin-right: 16px
     margin-top: 2px
-    height: 120px
-    width: 120px
+    height: 90px
+    width: 90px
     position: relative
     z-index: 1
 
   // Info wrapper
   .group-wrapper-info
     float: left
-    margin-left: -144px
-    padding-left: 144px
+    margin-left: -106px
+    padding-left: 106px
     width: 100%
 
   // Other fields
   .field-name-field-other-name,
   .field-name-field-academic-title
-    padding-left: 144px
+    padding-left: 106px
     width: 100%
 
   // Name
@@ -645,7 +644,7 @@ h1.ee-section-header-title
   .field-name-field-other-name
     color: $black
     font-family: $font-sans
-    font-size: 20px
+    font-size: 16px
     font-weight: bold
     line-height: 1.3
     margin-bottom: 3px
@@ -663,32 +662,40 @@ h1.ee-section-header-title
   .field-name-field-academic-title
     font-size: 16px
     line-height: 1.3
-    margin-bottom: 6px
+    margin-bottom: 16px
 
   // All field collections spacing
   .field-name-field-faculty-directors,
   .field-name-field-faculty-1,
   .field-name-field-faculty-2,
   .field-name-field-guest-speakers-advisors-fc
+    +clearfix
     margin-bottom: 26px
 
   // Faculty Directors field collection
   .field-collection-item-field-faculty-directors.view-mode-full
-    margin-bottom: 18px
+    +clearfix
+    margin-bottom: 30px
     // Description field
     .field-name-field-description
-      font-size: 18px
+      font-size: 16px
       font-weight: normal
       line-height: 1.3
       margin-top: 6px
       margin-left: 189px
 
-  // Individual faculty
-  .node-faculty.view-mode-faculty_leadership
+  // Individual faculty directors
+  .field-name-field-faculty-directors
     // Image
     .field-name-field-image-single-public
+      float: left
+      margin-bottom: 24px
+      margin-right: 24px
+      margin-top: 2px
       height: 165px
       width: 165px
+      position: relative
+      z-index: 1
 
     // Info wrapper
     .group-wrapper-info
@@ -714,7 +721,6 @@ h1.ee-section-header-title
       font-size: 20px
       font-weight: normal
       line-height: 1.3
-      margin-bottom: 6px
 
     // Faculty director positions
     .field-name-field-faculty-director-positions,
@@ -722,16 +728,12 @@ h1.ee-section-header-title
       font-size: 18px
       font-weight: normal
       line-height: 1.3
-      margin-top: 6px
-
+      margin-top: 16px
+      margin-bottom: 6px
 
   // Faculty 1 field collection field
   // Faculty 2 field collection field
   // Guest Speakers and Advisors field collection field
-  .field-name-field-faculty-1,
-  .field-name-field-faculty-2,
-  .field-name-field-guest-speakers-advisors-fc
-    +clearfix
 
   // Side-by-side display
   .field-collection-item-field-faculty-1.view-mode-full,
@@ -739,10 +741,11 @@ h1.ee-section-header-title
   .field-collection-item-field-guest-speakers-advisors-fc.view-mode-full
     float: left
     margin-top: 12px
-    width: 47.7%
+    width: 45.7%
+
     &:nth-of-type(odd)
       clear: left
-      margin-right: 30px
+      margin-right: 50px
     +breakpoint(1197px max-width)
       margin-right: 0
       width: 100%
