@@ -589,15 +589,18 @@ h1.ee-section-header-title
 #block-gsb-feature-program-ct-ee-section-apply-brochure
   +clearfix
 .ee-section-apply-brochure
-  @extend %gradient-red
   float: right
   max-width: 270px
+  .apply-button,
+  .download-brochure
+    display: inline-block
+  .download-brochure
+    border-left: 1px #d50707 solid
   a
+    @extend %gradient-red
     color: $white
+    display: inline-block
     font-size: 16px
-
-  // Apply button
-  .apply-button
     padding: 14px
 
 // Faculty panelized block
