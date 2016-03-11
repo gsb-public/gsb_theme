@@ -385,7 +385,8 @@ function gsb_theme_preprocess_menu_link(&$variables) {
   // Need to remove any menu minipanels code on anything that isn't the main
   // menu.
   if ($variables['element']['#original_link']['menu_name'] !== 'main-menu' &&
-    $variables['element']['#original_link']['menu_name']!== 'menu-executive-education-mega-me') {
+    $variables['element']['#original_link']['menu_name'] !== 'menu-executive-education-mega-me' &&
+    $variables['element']['#original_link']['menu_name'] !== 'menu-mega-menu-seed') {
     unset($variables['element']['#localized_options']['menu_minipanels_hover']);
 
   }
