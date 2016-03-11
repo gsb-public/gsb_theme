@@ -19,13 +19,13 @@ dfn {
 p, .format-body,
 .format-wysiwyg,
 .field-name-field-body,
-.field-name-field-text-equivalent, .format-body ul, .format-body ol,
+.field-name-field-text-equivalent .field-item, .format-body ul, .format-body ol,
 .format-wysiwyg ul,
 .format-wysiwyg ol,
 .field-name-field-body ul,
 .field-name-field-body ol,
-.field-name-field-text-equivalent ul,
-.field-name-field-text-equivalent ol {
+.field-name-field-text-equivalent .field-item ul,
+.field-name-field-text-equivalent .field-item ol {
   font-size: 18px;
   line-height: 1.4;
 }
@@ -33,13 +33,13 @@ p, .format-body,
   p, .format-body,
   .format-wysiwyg,
   .field-name-field-body,
-  .field-name-field-text-equivalent, .format-body ul, .format-body ol,
+  .field-name-field-text-equivalent .field-item, .format-body ul, .format-body ol,
   .format-wysiwyg ul,
   .format-wysiwyg ol,
   .field-name-field-body ul,
   .field-name-field-body ol,
-  .field-name-field-text-equivalent ul,
-  .field-name-field-text-equivalent ol {
+  .field-name-field-text-equivalent .field-item ul,
+  .field-name-field-text-equivalent .field-item ol {
     font-size: 16px;
   }
 }
@@ -13350,7 +13350,7 @@ div.callout br {
 .format-body,
 .format-wysiwyg,
 .field-name-field-body,
-.field-name-field-text-equivalent {
+.field-name-field-text-equivalent .field-item {
   overflow: hidden;
   *zoom: 1;
 }
@@ -13359,8 +13359,8 @@ div.callout br {
 .format-wysiwyg ol,
 .field-name-field-body ul,
 .field-name-field-body ol,
-.field-name-field-text-equivalent ul,
-.field-name-field-text-equivalent ol {
+.field-name-field-text-equivalent .field-item ul,
+.field-name-field-text-equivalent .field-item ol {
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -13369,33 +13369,33 @@ div.callout br {
 .format-wysiwyg ol li,
 .field-name-field-body ul li,
 .field-name-field-body ol li,
-.field-name-field-text-equivalent ul li,
-.field-name-field-text-equivalent ol li {
+.field-name-field-text-equivalent .field-item ul li,
+.field-name-field-text-equivalent .field-item ol li {
   margin-bottom: 8px;
 }
 .format-body ol,
 .format-wysiwyg ol,
 .field-name-field-body ol,
-.field-name-field-text-equivalent ol {
+.field-name-field-text-equivalent .field-item ol {
   padding-left: 36px;
 }
 .format-body ul,
 .format-wysiwyg ul,
 .field-name-field-body ul,
-.field-name-field-text-equivalent ul {
+.field-name-field-text-equivalent .field-item ul {
   position: relative;
   left: 0;
 }
 .format-body ul li,
 .format-wysiwyg ul li,
 .field-name-field-body ul li,
-.field-name-field-text-equivalent ul li {
+.field-name-field-text-equivalent .field-item ul li {
   padding-left: 15px;
 }
 .format-body ul li:before,
 .format-wysiwyg ul li:before,
 .field-name-field-body ul li:before,
-.field-name-field-text-equivalent ul li:before {
+.field-name-field-text-equivalent .field-item ul li:before {
   content: "• ";
   color: #231f20;
   position: absolute;
@@ -13406,15 +13406,15 @@ div.callout br {
 .format-wysiwyg table ol,
 .field-name-field-body table ul,
 .field-name-field-body table ol,
-.field-name-field-text-equivalent table ul,
-.field-name-field-text-equivalent table ol {
+.field-name-field-text-equivalent .field-item table ul,
+.field-name-field-text-equivalent .field-item table ol {
   font-size: 14px;
   line-height: 1.2;
 }
 .format-body a,
 .format-wysiwyg a,
 .field-name-field-body a,
-.field-name-field-text-equivalent a {
+.field-name-field-text-equivalent .field-item a {
   border-bottom: dashed 1px #636f00;
   color: #636f00;
   text-decoration: none;
@@ -13423,14 +13423,14 @@ div.callout br {
 .format-body a:hover,
 .format-wysiwyg a:hover,
 .field-name-field-body a:hover,
-.field-name-field-text-equivalent a:hover {
+.field-name-field-text-equivalent .field-item a:hover {
   border-bottom: solid 1px #2d6280;
   color: #2d6280;
 }
 .format-body a[href*="mailto:"]:after,
 .format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after,
-.field-name-field-text-equivalent a[href*="mailto:"]:after {
+.field-name-field-text-equivalent .field-item a[href*="mailto:"]:after {
   content: "\f112";
   display: inline;
   speak: none;
@@ -13448,20 +13448,20 @@ div.callout br {
 .format-body a[href*="mailto:"]:after,
 .format-wysiwyg a[href*="mailto:"]:after,
 .field-name-field-body a[href*="mailto:"]:after,
-.field-name-field-text-equivalent a[href*="mailto:"]:after {
+.field-name-field-text-equivalent .field-item a[href*="mailto:"]:after {
   font-size: 14px;
   margin-left: 5px;
 }
 .format-body img,
 .format-wysiwyg img,
 .field-name-field-body img,
-.field-name-field-text-equivalent img {
+.field-name-field-text-equivalent .field-item img {
   vertical-align: top;
 }
 .format-body h2,
 .format-wysiwyg h2,
 .field-name-field-body h2,
-.field-name-field-text-equivalent h2 {
+.field-name-field-text-equivalent .field-item h2 {
   color: #231f20;
   font-size: 24px;
   font-weight: normal;
@@ -13471,7 +13471,7 @@ div.callout br {
 .format-body h3,
 .format-wysiwyg h3,
 .field-name-field-body h3,
-.field-name-field-text-equivalent h3 {
+.field-name-field-text-equivalent .field-item h3 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -13482,7 +13482,7 @@ div.callout br {
 .format-body h4,
 .format-wysiwyg h4,
 .field-name-field-body h4,
-.field-name-field-text-equivalent h4 {
+.field-name-field-text-equivalent .field-item h4 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -13493,7 +13493,7 @@ div.callout br {
 .format-body h5,
 .format-wysiwyg h5,
 .field-name-field-body h5,
-.field-name-field-text-equivalent h5 {
+.field-name-field-text-equivalent .field-item h5 {
   color: #231f20;
   font-size: 16px;
   font-weight: bold;
@@ -13510,10 +13510,10 @@ div.callout br {
 .field-name-field-body h3 a,
 .field-name-field-body h4 a,
 .field-name-field-body h5 a,
-.field-name-field-text-equivalent h2 a,
-.field-name-field-text-equivalent h3 a,
-.field-name-field-text-equivalent h4 a,
-.field-name-field-text-equivalent h5 a {
+.field-name-field-text-equivalent .field-item h2 a,
+.field-name-field-text-equivalent .field-item h3 a,
+.field-name-field-text-equivalent .field-item h4 a,
+.field-name-field-text-equivalent .field-item h5 a {
   border-bottom: 0;
   color: #231f20;
 }
@@ -13526,10 +13526,10 @@ div.callout br {
 .field-name-field-body h3 a:after,
 .field-name-field-body h4 a:after,
 .field-name-field-body h5 a:after,
-.field-name-field-text-equivalent h2 a:after,
-.field-name-field-text-equivalent h3 a:after,
-.field-name-field-text-equivalent h4 a:after,
-.field-name-field-text-equivalent h5 a:after {
+.field-name-field-text-equivalent .field-item h2 a:after,
+.field-name-field-text-equivalent .field-item h3 a:after,
+.field-name-field-text-equivalent .field-item h4 a:after,
+.field-name-field-text-equivalent .field-item h5 a:after {
   color: #bac405;
 }
 .format-body h2 a:not([target="_blank"]):after, .format-body h3 a:not([target="_blank"]):after, .format-body h4 a:not([target="_blank"]):after, .format-body h5 a:not([target="_blank"]):after,
@@ -13541,10 +13541,10 @@ div.callout br {
 .field-name-field-body h3 a:not([target="_blank"]):after,
 .field-name-field-body h4 a:not([target="_blank"]):after,
 .field-name-field-body h5 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h2 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h3 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h4 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h5 a:not([target="_blank"]):after {
+.field-name-field-text-equivalent .field-item h2 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h3 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h4 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h5 a:not([target="_blank"]):after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -13568,10 +13568,10 @@ div.callout br {
 .field-name-field-body h3 a:not([target="_blank"]):after,
 .field-name-field-body h4 a:not([target="_blank"]):after,
 .field-name-field-body h5 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h2 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h3 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h4 a:not([target="_blank"]):after,
-.field-name-field-text-equivalent h5 a:not([target="_blank"]):after {
+.field-name-field-text-equivalent .field-item h2 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h3 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h4 a:not([target="_blank"]):after,
+.field-name-field-text-equivalent .field-item h5 a:not([target="_blank"]):after {
   font-size: 0.7em;
   margin-left: 3px;
 }
@@ -13584,10 +13584,10 @@ div.callout br {
 .field-name-field-body h3 a:hover,
 .field-name-field-body h4 a:hover,
 .field-name-field-body h5 a:hover,
-.field-name-field-text-equivalent h2 a:hover,
-.field-name-field-text-equivalent h3 a:hover,
-.field-name-field-text-equivalent h4 a:hover,
-.field-name-field-text-equivalent h5 a:hover {
+.field-name-field-text-equivalent .field-item h2 a:hover,
+.field-name-field-text-equivalent .field-item h3 a:hover,
+.field-name-field-text-equivalent .field-item h4 a:hover,
+.field-name-field-text-equivalent .field-item h5 a:hover {
   border: none;
   text-decoration: underline;
 }
@@ -13600,10 +13600,10 @@ div.callout br {
 .field-name-field-body h3 a:hover:after,
 .field-name-field-body h4 a:hover:after,
 .field-name-field-body h5 a:hover:after,
-.field-name-field-text-equivalent h2 a:hover:after,
-.field-name-field-text-equivalent h3 a:hover:after,
-.field-name-field-text-equivalent h4 a:hover:after,
-.field-name-field-text-equivalent h5 a:hover:after {
+.field-name-field-text-equivalent .field-item h2 a:hover:after,
+.field-name-field-text-equivalent .field-item h3 a:hover:after,
+.field-name-field-text-equivalent .field-item h4 a:hover:after,
+.field-name-field-text-equivalent .field-item h5 a:hover:after {
   color: #aac4bf;
 }
 .format-body p:last-child,
@@ -13618,55 +13618,55 @@ div.callout br {
 .field-name-field-body ul:last-child,
 .field-name-field-body ol:last-child,
 .field-name-field-body li:last-child,
-.field-name-field-text-equivalent p:last-child,
-.field-name-field-text-equivalent ul:last-child,
-.field-name-field-text-equivalent ol:last-child,
-.field-name-field-text-equivalent li:last-child {
+.field-name-field-text-equivalent .field-item p:last-child,
+.field-name-field-text-equivalent .field-item ul:last-child,
+.field-name-field-text-equivalent .field-item ol:last-child,
+.field-name-field-text-equivalent .field-item li:last-child {
   margin-bottom: 0 !important;
 }
 .format-body table,
 .format-wysiwyg table,
 .field-name-field-body table,
-.field-name-field-text-equivalent table {
+.field-name-field-text-equivalent .field-item table {
   margin: 20px 0 50px;
 }
 .narrow-view .format-body table, .narrow-view
 .format-wysiwyg table, .narrow-view
 .field-name-field-body table, .narrow-view
-.field-name-field-text-equivalent table {
+.field-name-field-text-equivalent .field-item table {
   margin-bottom: 0;
 }
 @media (max-width: 48em) {
   .format-body table,
   .format-wysiwyg table,
   .field-name-field-body table,
-  .field-name-field-text-equivalent table {
+  .field-name-field-text-equivalent .field-item table {
     margin: 0;
   }
 }
 .format-body caption,
 .format-wysiwyg caption,
 .field-name-field-body caption,
-.field-name-field-text-equivalent caption {
+.field-name-field-text-equivalent .field-item caption {
   color: #2d6280;
   margin-bottom: 20px;
 }
 .format-body thead,
 .format-wysiwyg thead,
 .field-name-field-body thead,
-.field-name-field-text-equivalent thead {
+.field-name-field-text-equivalent .field-item thead {
   background: white;
 }
 .format-body thead tr,
 .format-wysiwyg thead tr,
 .field-name-field-body thead tr,
-.field-name-field-text-equivalent thead tr {
+.field-name-field-text-equivalent .field-item thead tr {
   border-top: 1px lightgray solid;
 }
 .format-body thead th,
 .format-wysiwyg thead th,
 .field-name-field-body thead th,
-.field-name-field-text-equivalent thead th {
+.field-name-field-text-equivalent .field-item thead th {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding: 16px;
@@ -13674,33 +13674,33 @@ div.callout br {
 .format-body tbody,
 .format-wysiwyg tbody,
 .field-name-field-body tbody,
-.field-name-field-text-equivalent tbody {
+.field-name-field-text-equivalent .field-item tbody {
   border-bottom: 1px lightgray solid;
 }
 .format-body tbody tr,
 .format-wysiwyg tbody tr,
 .field-name-field-body tbody tr,
-.field-name-field-text-equivalent tbody tr {
+.field-name-field-text-equivalent .field-item tbody tr {
   background-color: white;
   border-top: 1px lightgray solid;
 }
 .format-body tbody tr th,
 .format-wysiwyg tbody tr th,
 .field-name-field-body tbody tr th,
-.field-name-field-text-equivalent tbody tr th {
+.field-name-field-text-equivalent .field-item tbody tr th {
   background: whitesmoke;
   padding: 16px;
 }
 .format-body tbody td,
 .format-wysiwyg tbody td,
 .field-name-field-body tbody td,
-.field-name-field-text-equivalent tbody td {
+.field-name-field-text-equivalent .field-item tbody td {
   padding: 16px;
 }
 .format-body tbody td a,
 .format-wysiwyg tbody td a,
 .field-name-field-body tbody td a,
-.field-name-field-text-equivalent tbody td a {
+.field-name-field-text-equivalent .field-item tbody td a {
   color: #636f00;
   font-weight: bold;
   border-bottom: none;
@@ -13708,20 +13708,20 @@ div.callout br {
 .format-body tbody td p,
 .format-wysiwyg tbody td p,
 .field-name-field-body tbody td p,
-.field-name-field-text-equivalent tbody td p {
+.field-name-field-text-equivalent .field-item tbody td p {
   font-size: 14px;
   line-height: 18px;
 }
 .format-body tfoot,
 .format-wysiwyg tfoot,
 .field-name-field-body tfoot,
-.field-name-field-text-equivalent tfoot {
+.field-name-field-text-equivalent .field-item tfoot {
   margin-top: 12px;
 }
 .format-body tfoot td,
 .format-wysiwyg tfoot td,
 .field-name-field-body tfoot td,
-.field-name-field-text-equivalent tfoot td {
+.field-name-field-text-equivalent .field-item tfoot td {
   color: #595959;
   font-size: 14px;
   line-height: 1.2;
