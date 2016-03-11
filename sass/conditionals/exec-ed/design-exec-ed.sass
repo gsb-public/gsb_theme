@@ -181,9 +181,12 @@
       font-family: $font-sans
       font-weight: normal
 
-// Hide breadcrumbs on program pages
-.node-type-program .breadcrumb
-  display: none
+// Hide titles and breadcrumbs on program overview and panelized pages
+.node-type-program,
+.node-type-program-panelized-page
+  .title-wrapper,
+  .breadcrumb
+    display: none
 
 // Panelized program page blocks
 
