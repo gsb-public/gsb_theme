@@ -52,26 +52,6 @@
     +breakpoint(1169px max-width)
       display: none !important
 
-  // Mobile footer menu
-  #menu-main-footer
-    display: none
-    +breakpoint(1169px max-width)
-      +background(linear-gradient($grey-e, $white))
-      +clearfix
-      display: block
-      padding: 12px 50px 0 50px
-      width: 100%
-      .menu
-        width: auto
-      li
-        line-height: 1.2
-        padding-bottom: 12px
-      a
-        font-weight: bold
-        font-size: 13px
-        line-height: 1.2
-        text-transform: uppercase
-
   // Mobile menu button
   #nav-touch-wrapper
     display: inline
@@ -764,7 +744,6 @@ h1.ee-section-header-title
   .block
     max-width: 335px
   .region-footer
-    padding-bottom: $standard-padding
     +flex-box
     -webkit-box-flex-flow: row wrap
     -moz-box-flex-flow: row wrap
@@ -849,7 +828,8 @@ h1.ee-section-header-title
 #block-menu-menu-executive-education-footer
   a
     display: inline-block
+    font-family: $font-demi
     font-size: 18px
-    font-weight: bold
+    font-weight: normal
     line-height: 1.3
     margin-bottom: 6px
