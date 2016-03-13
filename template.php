@@ -388,7 +388,6 @@ function gsb_theme_preprocess_menu_link(&$variables) {
     $variables['element']['#original_link']['menu_name'] !== 'menu-executive-education-mega-me' &&
     $variables['element']['#original_link']['menu_name'] !== 'menu-mega-menu-seed') {
     unset($variables['element']['#localized_options']['menu_minipanels_hover']);
-
   }
 }
 
@@ -567,6 +566,17 @@ function gsb_theme_block_list_alter(&$blocks) {
  */
 function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
   // Adding group wrapper css classes for all field groups
+  $group_children = array(
+    'group_wrapper_related' => array(
+      'field_related_faculty'
+    ),
+    'group_wrapper_faculty' => array(
+      'field_faculty_1',
+      'field_faculty_2',
+      'field_faculty_directors',
+      'field_guest_speakers_advisors_fc'
+    )
+  );
   $group_class = str_replace('_', '-', $group->group_name);
   if (!empty($element['#attributes']['class']) && !in_array($group_class, $element['#attributes']['class'])) {
     $element['#attributes']['class'][] = $group_class;
@@ -574,16 +584,16 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
   else {
     $element['#attributes'] = array('class' => array($group_class));
   }
-  // Add 'hide_this' class if 'related' group wrapper and has no children
-  if ($group->group_name == 'group_wrapper_related') {
+  // Add 'hide_this' class if group wrapper is in $group_children and has no children
+  if (in_array($group->group_name, array_keys($group_children))) {
     $found_child = false;
     foreach ($group->children as $child) {
       if (!empty($element[$child]['#field_type']) && $element[$child]['#field_type'] == 'ds') {
         continue;
       }
-      if ($child == 'field_related_faculty') {
-        $first_item = $element['field_related_faculty']['#items'][0]['value'];
-        $first_entity = $element['field_related_faculty'][0]['entity']['field_collection_item'][$first_item]['#entity'];
+      if (in_array($child, $group_children[$group->group_name])) {
+        $first_item = $element[$child]['#items'][0]['value'];
+        $first_entity = $element[$child][0]['entity']['field_collection_item'][$first_item]['#entity'];
         if (!empty($first_entity->field_person_fac_single_ref)) {
           $found_child = TRUE;
           break;
@@ -604,4 +614,3 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
     }
   }
 }
-
