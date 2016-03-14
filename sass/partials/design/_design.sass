@@ -58,7 +58,7 @@
       background-size: 100%
       float: left
       height: 35px
-      margin: 15px 10px 0 0
+      margin: 20px 10px 0 0
       width: 120px
       +breakpoint(1199px max-width)
         margin-left: 15px
@@ -101,8 +101,7 @@
     &.search-open
       min-width: 842px
   // Exec Ed & SEED menu
-  .page-exec-ed &,
-  .page-seed &,
+  .page-exec-ed &
     +breakpoint(1170px min-width)
       float: right
       position: relative
@@ -111,10 +110,25 @@
       .no-js &,
       &.search-open
         min-width: 810px
+  .page-seed &,
+    +breakpoint(1170px min-width)
+      float: right
+      position: relative
+      top: -$top-border-interval
+      margin-bottom: -$top-border-interval
+      .no-js &,
+      &.search-open
+        min-width: 904px
   .section
     +breakpoint($bp-tablet-port-max)
       border-bottom: 10px $black solid
       +box-shadow($black 0 -1px 3px)
+
+#admin-menu
+  display: none !important
+
+html body.admin-menu
+  margin-top: 0 !important
 
 // Content wrapper
 #content-wrapper

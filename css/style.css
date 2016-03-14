@@ -4085,7 +4085,7 @@ div.gsb-widescreen .main-middle .narrow-view .pane-bundle-video {
   background-size: 100%;
   float: left;
   height: 35px;
-  margin: 15px 10px 0 0;
+  margin: 20px 10px 0 0;
   width: 120px;
 }
 @media (max-width: 74.9375em) {
@@ -4140,14 +4140,25 @@ div.gsb-widescreen .main-middle .narrow-view .pane-bundle-video {
   }
 }
 @media (min-width: 73.125em) {
-  .page-exec-ed #navigation, .page-seed #navigation {
+  .page-exec-ed #navigation {
     float: right;
     position: relative;
     top: -3px;
     margin-bottom: -3px;
   }
-  .no-js .page-exec-ed #navigation, .page-exec-ed #navigation.search-open, .no-js .page-seed #navigation, .page-seed #navigation.search-open {
+  .no-js .page-exec-ed #navigation, .page-exec-ed #navigation.search-open {
     min-width: 810px;
+  }
+}
+@media (min-width: 73.125em) {
+  .page-seed #navigation {
+    float: right;
+    position: relative;
+    top: -3px;
+    margin-bottom: -3px;
+  }
+  .no-js .page-seed #navigation, .page-seed #navigation.search-open {
+    min-width: 904px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -4157,6 +4168,14 @@ div.gsb-widescreen .main-middle .narrow-view .pane-bundle-video {
     -webkit-box-shadow: black 0 -1px 3px;
     box-shadow: black 0 -1px 3px;
   }
+}
+
+#admin-menu {
+  display: none !important;
+}
+
+html body.admin-menu {
+  margin-top: 0 !important;
 }
 
 #content-wrapper {
@@ -8781,8 +8800,8 @@ ul.slideshow-items {
   }
 }
 @media (max-width: 73.0625em) {
-  .page-taxonomy-term-34446 #google-appliance-block-form, .page-exec-ed #google-appliance-block-form, .page-taxonomy-term-34446
-  #google-appliance-block-form--2, .page-exec-ed
+  .page-exec-ed #google-appliance-block-form, .page-seed #google-appliance-block-form, .page-exec-ed
+  #google-appliance-block-form--2, .page-seed
   #google-appliance-block-form--2 {
     display: none;
     left: 50px;
@@ -8794,6 +8813,11 @@ ul.slideshow-items {
 #google-appliance-block-form input,
 #google-appliance-block-form--2 input {
   height: 59px;
+}
+.page-exec-ed #google-appliance-block-form input, .page-seed #google-appliance-block-form input, .page-exec-ed
+#google-appliance-block-form--2 input, .page-seed
+#google-appliance-block-form--2 input {
+  height: 75px;
 }
 #google-appliance-block-form .form-item,
 #google-appliance-block-form--2 .form-item {
@@ -8837,12 +8861,11 @@ ul.slideshow-items {
 #google-appliance-block-form .form-submit,
 #google-appliance-block-form--2 .form-submit {
   background: transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
   border-radius: 0;
-  border: 1px lightgray solid;
-  border-left: 0;
+  border: 0;
+  border-bottom: 1px lightgray solid;
+  border-right: 1px lightgray solid;
+  border-top: 1px lightgray solid;
   display: inline-block;
   float: right;
   height: 59px;
@@ -8857,9 +8880,14 @@ ul.slideshow-items {
     height: 50px;
   }
 }
+.page-exec-ed #google-appliance-block-form .form-submit, .page-seed #google-appliance-block-form .form-submit, .page-exec-ed
+#google-appliance-block-form--2 .form-submit, .page-seed
+#google-appliance-block-form--2 .form-submit {
+  height: 75px;
+}
 @media (max-width: 73.0625em) {
-  .page-taxonomy-term-34446 #google-appliance-block-form .form-submit, .page-exec-ed #google-appliance-block-form .form-submit, .page-taxonomy-term-34446
-  #google-appliance-block-form--2 .form-submit, .page-exec-ed
+  .page-exec-ed #google-appliance-block-form .form-submit, .page-seed #google-appliance-block-form .form-submit, .page-exec-ed
+  #google-appliance-block-form--2 .form-submit, .page-seed
   #google-appliance-block-form--2 .form-submit {
     height: 50px;
   }

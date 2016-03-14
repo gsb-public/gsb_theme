@@ -9,8 +9,8 @@
     position: absolute
     width: 85%
     z-index: 1
-  .page-taxonomy-term-34446 &,
-  .page-exec-ed &
+  .page-exec-ed &,
+  .page-seed &
     +breakpoint(1169px max-width)
       display: none
       left: 50px
@@ -20,6 +20,9 @@
   // Search input
   input
     height: 59px
+    .page-exec-ed &,
+    .page-seed &
+      height: 75px
   .form-item
     .search-closed &
       display: none
@@ -48,12 +51,11 @@
   // Submit button
   .form-submit
     background: transparent
-    -webkit-border-radius: 0
-    -moz-border-radius: 0
-    -ms-border-radius: 0
     border-radius: 0
-    border: 1px $border-grey solid
-    border-left: 0
+    border: 0
+    border-bottom: 1px $border-grey solid
+    border-right: 1px $border-grey solid
+    border-top: 1px $border-grey solid
     display: inline-block
     float: right
     height: 59px
@@ -63,8 +65,9 @@
     width: 60px
     +breakpoint($bp-tablet-port-max)
       height: 50px
-    .page-taxonomy-term-34446 &,
-    .page-exec-ed &
+    .page-exec-ed &,
+    .page-seed &
+      height: 75px
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
