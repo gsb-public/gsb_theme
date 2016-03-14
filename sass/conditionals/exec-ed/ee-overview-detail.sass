@@ -507,6 +507,11 @@
       position: relative
       top: 30px
 
+    // Hide external icon from image
+    .group-wrapper-photo
+      a:after
+        display: none
+
     // Image
     .field-name-field-image-single-public
       float: left
@@ -525,16 +530,23 @@
       padding-left: 144px
       width: 100%
 
-    // Other
+    // Other - Faculty
     .field-name-field-other-name,
     .field-name-field-academic-title
       padding-left: 144px
       width: 100%
 
+    .group-wrapper-name
+      a
+        color: $link-green
+        &:hover
+          color: $link-blue
+        &:after
+          display: none
+
     // Name
     .field-name-title,
     .field-name-field-other-name
-      color: $black
       font-family: $font-sans
       font-size: 20px
       font-weight: bold
