@@ -626,7 +626,6 @@ h1.ee-section-header-title
   // Name
   .field-name-title,
   .field-name-field-other-name
-    color: $black
     font-family: $font-sans
     font-size: 16px
     font-weight: bold
@@ -648,13 +647,21 @@ h1.ee-section-header-title
     line-height: 1.3
     margin-bottom: 16px
 
-  // All field collections spacing
+  // All field collections
   .field-name-field-faculty-directors,
   .field-name-field-faculty-1,
   .field-name-field-faculty-2,
   .field-name-field-guest-speakers-advisors-fc
     +clearfix
     margin-bottom: 26px
+    // Other name
+    .group-wrapper-name
+      a
+        color: $link-green
+        &:hover
+          color: $link-blue
+        &:after
+          display: none
 
   // Faculty Directors field collection
   .field-collection-item-field-faculty-directors.view-mode-full
