@@ -562,3 +562,82 @@
     width: 50%
   & > .group-footer
     clear: both
+
+// GSB Full Bleed Landing Page
+.panels-layout-gsb-full-bleed-landing-page
+  #content
+    max-width: initial
+
+.gsb-full-bleed-landing-page
+
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  .panels-ipe-portlet-content
+    padding: $standard-padding 0
+
+  // Full Bleed Header
+  .full-bleed-header
+
+  // Content wrapper
+  .top-wrapper,
+  .middle-gray-inner-wrapper,
+  .middle-green-inner-wrapper,
+  .bottom-wrapper,
+  .last-full
+    margin: 0 auto
+    max-width: 1170px
+
+  .middle-gray-wrapper
+    background: #f4f4f4
+
+  .middle-green-wrapper
+    +background(image_url("bg-ee-program-overview-cta-2016-02-22-1.jpg") no-repeat center center, #72bbaa)
+
+  .top-halves-wrapper,
+  .middle-gray-inner-wrapper,
+  .middle-green-inner-wrapper,
+  .bottom-wrapper
+    +clearfix
+
+  // 3 across
+  .top-left-third,
+  .top-center-third,
+  .top-right-third
+    display: inline-block
+    vertical-align: top
+    width: 360px
+    &:nth-of-type(1n)
+      margin-right: 22px
+    &:nth-of-type(2n)
+      margin: 0 18px
+    &:nth-of-type(3n)
+      margin-left: 22px
+      margin-right: 0
+    +breakpoint(1210px max-width)
+      width: 100%
+
+  // 2 across
+  .top-left,
+  .top-right,
+  .middle-gray-left,
+  .middle-gray-right,
+  .middle-green-left,
+  .middle-green-right,
+  .bottom-left,
+  .bottom-right
+    width: 570px
+
+  .top-left,
+  .middle-gray-left,
+  .middle-green-left,
+  .bottom-left
+    float: left
+
+  .top-right,
+  .middle-gray-right,
+  .middle-green-right,
+  .bottom-right
+    float: right
