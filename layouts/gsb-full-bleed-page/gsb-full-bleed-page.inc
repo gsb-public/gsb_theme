@@ -1,10 +1,10 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('GSB Widescreen'),
-  'icon' => 'gsb-widescreen.png',
+  'title' => t('GSB Full Bleed Page'),
+  'icon' => 'gsb-full-bleed-page.png',
   'category' => t('GSB'),
-  'theme' => 'gsb-widescreen',
+  'theme' => 'gsb-full-bleed-page',
   'regions' => array(
     'featured_content' => t('Featured content'),
     'maintop' => t('Main Top'),
