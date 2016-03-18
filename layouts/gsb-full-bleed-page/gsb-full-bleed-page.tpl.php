@@ -1,8 +1,8 @@
 <?php
 /**
  * @file
- * Template for GSB Widescreen.
- *
+ * Template for GSB Full Bleed Page.
+ * gsb-full-bleed-page
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
  * - $content: An array of content, each item in the array is keyed to one
@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-widescreen clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display gsb-full-bleed-page clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <div id="top-content"></div>
 
