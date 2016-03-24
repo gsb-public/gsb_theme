@@ -678,7 +678,8 @@
   padding: 20px 0;
 }
 
-h1.ee-section-header-title {
+h1.ee-section-header-title,
+h1.ee-section-footer-title {
   color: white;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 34px;
@@ -687,12 +688,14 @@ h1.ee-section-header-title {
   margin-bottom: 26px;
 }
 
-.ee-section-header-menu {
+.ee-section-header-menu,
+.ee-section-footer-menu {
   display: inline-block;
   float: left;
   width: 60%;
 }
-.ee-section-header-menu ul {
+.ee-section-header-menu ul,
+.ee-section-footer-menu ul {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -709,12 +712,18 @@ h1.ee-section-header-title {
   -webkit-flex-justify-content: space-between;
   justify-content: space-between;
 }
-.ee-section-header-menu a {
+.ee-section-header-menu a,
+.ee-section-footer-menu a {
   color: #c2b7a1;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
   text-align: center;
+}
+.ee-section-header-menu a.active, .ee-section-header-menu a:hover,
+.ee-section-footer-menu a.active,
+.ee-section-footer-menu a:hover {
+  color: white;
 }
 
 .ee-section-header-follow-us {
@@ -910,4 +919,23 @@ h1.ee-section-header-title {
     margin-right: 0;
     width: 100%;
   }
+}
+
+.page-exec-ed #bottom .bottom-content {
+  max-width: initial;
+}
+
+.ee-section-footer-subject-to-change {
+  margin: 0 auto;
+  max-width: 1170px;
+  text-align: right;
+}
+
+.ee-section-footer-overlay {
+  background: #231f20;
+}
+.ee-section-footer-overlay .overlay-inner-wrapper {
+  margin-top: 20px;
+  max-width: 1170px;
+  padding: 20px 0;
 }

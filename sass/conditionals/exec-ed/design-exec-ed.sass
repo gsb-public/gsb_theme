@@ -483,8 +483,9 @@
   max-width: 1170px
   padding: 20px 0
 
-// Header Section title
-h1.ee-section-header-title
+// Header and Bottom title
+h1.ee-section-header-title,
+h1.ee-section-footer-title
   color: $white
   font-family: $font-sans
   font-size: 34px
@@ -492,8 +493,9 @@ h1.ee-section-header-title
   line-height: 1.3
   margin-bottom: 26px
 
-// Header Menu
-.ee-section-header-menu
+// Header and Bottom Menu
+.ee-section-header-menu,
+.ee-section-footer-menu
   display: inline-block
   float: left
   width: 60%
@@ -515,6 +517,9 @@ h1.ee-section-header-title
     font-size: 18px
     line-height: 1.2
     text-align: center
+    &.active,
+    &:hover
+      color: $white
 
 // Header Icons
 .ee-section-header-follow-us
@@ -707,3 +712,22 @@ h1.ee-section-header-title
     +breakpoint(1197px max-width)
       margin-right: 0
       width: 100%
+
+// Exec Ed footer
+.page-exec-ed
+  #bottom .bottom-content
+    max-width: initial
+
+// Program notice
+.ee-section-footer-subject-to-change
+  margin: 0 auto
+  max-width: 1170px
+  text-align: right
+
+// Footer title and menu
+.ee-section-footer-overlay
+  background: $text-black
+  .overlay-inner-wrapper
+    margin-top: 20px
+    max-width: 1170px
+    padding: 20px 0
