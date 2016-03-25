@@ -563,12 +563,12 @@
   & > .group-footer
     clear: both
 
-// GSB Full Bleed Landing Page
-.panels-layout-gsb-full-bleed-landing-page
+// GSB Full Bleed Home Page
+.panels-layout-gsb-full-bleed-home-page
   #content
     max-width: initial
 
-.gsb-full-bleed-landing-page
+.gsb-full-bleed-home-page
 
   .panel-pane
     margin-bottom: 20px
@@ -637,4 +637,54 @@
   .middle-gray-right,
   .middle-green-right,
   .bottom-right
+    float: right
+
+
+// GSB Full Bleed Landing Page
+.panels-layout-gsb-full-bleed-landing-page
+  #content
+    max-width: initial
+
+.gsb-full-bleed-landing-page
+
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  .panels-ipe-portlet-content
+    padding: $standard-padding 0
+
+  // Content wrapper
+  .content-wrapper
+    margin: 0 auto
+    max-width: 1170px
+
+  // Left rail wrapper
+  .left-rail-wrapper
+    float: left
+    margin-right: 65px
+    width: 235px
+
+  // Main wrapper
+  .main-wrapper
+    width: 100%
+
+  .top-inner-wrapper,
+  .middle-inner-wrapper
+    +clearfix
+
+  // 2 across
+  .top-left,
+  .top-right,
+  .middle-left,
+  .middle-right
+    width: 570px
+
+  .top-left,
+  .middle-left
+    float: left
+
+  .top-right,
+  .middle-right
     float: right

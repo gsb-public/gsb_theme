@@ -18,107 +18,82 @@
     </div>
   <?php endif; ?>
 
+  <?php if (!empty($title)): ?>
+    <h1 class="title"><?php print $title; ?></h1>
+  <?php endif; ?>
+
   <div class="content-wrapper">
 
-    <?php if ($content['top_full'] || $content['top_left_third'] || $content['top_center_third'] || $content['top_right_third'] || $content['top_left'] || $content['top_right']): ?>
-      <div class="top-wrapper">
-        <?php if ($content['top_full']): ?>
-          <div class="top-full full-view">
-            <?php print $content['top_full']; ?>
+    <?php if ($content['left_rail']): ?>
+
+      <div class="left-rail-wrapper">
+        <?php if ($content['left_rail']): ?>
+          <div id="sidebar" class="column">
+            <?php print $content['left_rail']; ?>
           </div>
         <?php endif; ?>
-        <?php if ($content['top_left_third'] || $content['top_center_third'] || $content['top_right_third']): ?>
-          <div class="top-thirds-wrapper">
-            <div class="top-left-third narrow-view">
-              <?php print $content['top_left_third']; ?>
-            </div>
-            <div class="top-center-third narrow-view">
-              <?php print $content['top_center_third']; ?>
-            </div>
-            <div class="top-right-third narrow-view">
-              <?php print $content['top_right_third']; ?>
-            </div>
-          </div>
-        <?php endif; ?>
-        <?php if ($content['top_left'] || $content['top_right']): ?>
-          <div class="top-halves-wrapper">
-            <div class="top-left wide-view">
-              <?php print $content['top_left']; ?>
-            </div>
-            <div class="top-right wide-view">
-              <?php print $content['top_right']; ?>
-            </div>
-          </div>
-        <?php endif; ?>
-      </div>
+      </div><!-- /.left-rail-wrapper -->
+
     <?php endif; ?>
 
-    <?php if ($content['middle_gray_full'] || $content['middle_gray_left'] || $content['middle_gray_right']): ?>
-      <div class="middle-gray-wrapper">
-        <div class="middle-gray-inner-wrapper">
-          <?php if ($content['middle_gray_full']): ?>
-            <div class="middle-gray-full full-view">
-              <?php print $content['middle_gray_full']; ?>
-            </div>
-          <?php endif; ?>
-          <?php if ($content['middle_gray_left'] || $content['middle_gray_right']): ?>
-            <div class="middle-gray-left wide-view">
-              <?php print $content['middle_gray_left']; ?>
-            </div>
-            <div class="middle-gray-right wide-view">
-              <?php print $content['middle_gray_right']; ?>
+    <?php if ($content['left_rail']): ?>
+      <div class="main-wrapper with-left-rail">
+    <?php endif; ?>
+
+    <?php if (empty($content['left_rail'])): ?>
+      <div class="main-wrapper">
+    <?php endif; ?>
+
+      <?php if ($content['top_full'] || $content['top_left'] || $content['top_right']): ?>
+        <div class="top-wrapper">
+          <div class="top-inner-wrapper">
+            <?php if ($content['top_full']): ?>
+              <div class="top-full full-view">
+                <?php print $content['top_full']; ?>
+              </div>
+            <?php endif; ?>
+            <?php if ($content['top_left'] || $content['top_right']): ?>
+                <div class="top-left wide-view">
+                  <?php print $content['top_left']; ?>
+                </div>
+                <div class="top-right wide-view">
+                  <?php print $content['top_right']; ?>
+                </div>
+            <?php endif; ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <?php if ($content['middle_full'] || $content['middle_left'] || $content['middle_right']): ?>
+        <div class="middle-wrapper">
+          <div class="middle-inner-wrapper">
+            <?php if ($content['middle_full']): ?>
+              <div class="middle-full full-view">
+                <?php print $content['middle_full']; ?>
+              </div>
+            <?php endif; ?>
+            <?php if ($content['middle_left'] || $content['middle_right']): ?>
+              <div class="middle-left wide-view">
+                <?php print $content['middle_left']; ?>
+              </div>
+              <div class="middle-right wide-view">
+                <?php print $content['middle_right']; ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <?php if ($content['bottom_full']): ?>
+        <div class="bottom-wrapper">
+          <?php if ($content['bottom_full']): ?>
+            <div class="bottom-full full-view">
+              <?php print $content['bottom_full']; ?>
             </div>
           <?php endif; ?>
         </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($content['middle_green_full'] || $content['middle_green_left'] || $content['middle_green_right']): ?>
-      <div class="middle-green-wrapper">
-        <div class="middle-green-inner-wrapper">
-          <?php if ($content['middle_green_full']): ?>
-            <div class="middle-green-full full-view">
-              <?php print $content['middle_green_full']; ?>
-            </div>
-          <?php endif; ?>
-          <?php if ($content['middle_green_left'] || $content['middle_green_right']): ?>
-            <div class="middle-green-left wide-view">
-              <?php print $content['middle_green_left']; ?>
-            </div>
-            <div class="middle-green-right wide-view">
-              <?php print $content['middle_green_right']; ?>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($content['bottom_full'] || $content['bottom_left'] || $content['bottom_right']): ?>
-      <div class="bottom-wrapper">
-        <?php if ($content['bottom_full']): ?>
-          <div class="bottom-full full-view">
-            <?php print $content['bottom_full']; ?>
-          </div>
-        <?php endif; ?>
-
-        <?php if ($content['bottom_left'] || $content['bottom_right']): ?>
-          <div class="bottom-left wide-view">
-            <?php print $content['bottom_left']; ?>
-          </div>
-          <div class="bottom-right wide-view">
-            <?php print $content['bottom_right']; ?>
-          </div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
-
-
-    <?php if ($content['last_full']): ?>
-      <div class="last-full full-view">
-        <?php print $content['last_full']; ?>
-      </div>
-    <?php endif; ?>
-
+      <?php endif; ?>
+    </div><!-- /.main-wrapper -->
   </div><!-- /.content-wrapper -->
 
-</div><!-- /.full-bleed-header -->
+</div><!-- /.gsb-full-bleed-landing-page -->
