@@ -29,7 +29,7 @@
 }
 
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
-.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs {
+.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -44,7 +44,8 @@
   margin-right: 0 !important;
 }
 
-.ee-section-apply-brochure a {
+.ee-section-apply-brochure .apply-button a,
+.ee-section-apply-brochure .download-brochure a {
   background-color: #c50000;
   background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
   background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
@@ -743,23 +744,30 @@ h1.ee-section-footer-title {
   overflow: hidden;
   *zoom: 1;
   float: right;
-  max-width: 270px;
+}
+.ee-section-apply-brochure a {
+  display: inline-block;
+  font-size: 16px;
+  padding: 14px;
 }
 .ee-section-apply-brochure .apply-button,
 .ee-section-apply-brochure .download-brochure {
   display: inline-block;
+}
+.ee-section-apply-brochure .apply-button a,
+.ee-section-apply-brochure .download-brochure a {
+  color: white;
+}
+.ee-section-apply-brochure .pre-qualication-link {
+  background: white;
+  display: inline-block;
+  float: left;
 }
 .ee-section-apply-brochure .apply-button {
   float: left;
 }
 .ee-section-apply-brochure .download-brochure {
   border-left: 1px #d50707 solid;
-}
-.ee-section-apply-brochure a {
-  color: white;
-  display: inline-block;
-  font-size: 16px;
-  padding: 14px;
 }
 
 .node-program-instance.view-mode-field_program_faculty h2 {

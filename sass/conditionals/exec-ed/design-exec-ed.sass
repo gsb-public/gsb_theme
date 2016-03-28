@@ -535,20 +535,26 @@ h1.ee-section-footer-title
 .ee-section-apply-brochure
   +clearfix
   float: right
-  max-width: 270px
+  a
+    display: inline-block
+    font-size: 16px
+    padding: 14px
+
   .apply-button,
   .download-brochure
     display: inline-block
+    a
+      @extend %gradient-red
+      color: $white
+  .pre-qualication-link
+    @extend %box-shadow
+    background: $white
+    display: inline-block
+    float: left
   .apply-button
     float: left
   .download-brochure
     border-left: 1px #d50707 solid
-  a
-    @extend %gradient-red
-    color: $white
-    display: inline-block
-    font-size: 16px
-    padding: 14px
 
 // Faculty panelized block
 .node-program-instance.view-mode-field_program_faculty
