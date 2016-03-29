@@ -2,7 +2,7 @@
 // Plugin definition
 $plugin = array(
   'title' => t('GSB Full Bleed Landing Page'),
-  'icon' => 'gsb-full-bleed-landing-page.png',
+  'icon' => 'gsb-full-bleed-landing-page-1.png',
   'category' => t('GSB'),
   'theme' => 'gsb-full-bleed-landing-page',
   'regions' => array(
