@@ -6,7 +6,8 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .image-ctas .fieldable-panels-pane {
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .isotopify.program-list .compare,
+.full-time-programs-wrapper .compare, .image-ctas .fieldable-panels-pane, .compare-items {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -21,7 +22,8 @@
   background: linear-gradient(to bottom, #18455f, #2d6280);
 }
 
-.pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+.pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .isotopify.program-list .compare,
+.full-time-programs-wrapper .compare {
   background: whitesmoke;
   background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
   background: -o-linear-gradient(top, #f5f5f5, #ffffff);
@@ -664,6 +666,48 @@
   line-height: 1.3;
   margin-top: 5px;
 }
+.isotopify.program-list .compare,
+.full-time-programs-wrapper .compare {
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  *zoom: 1;
+  color: white;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 16px;
+  float: right;
+}
+.isotopify.program-list .compare label,
+.full-time-programs-wrapper .compare label {
+  float: left;
+  color: #231f20;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.isotopify.program-list .compare input,
+.full-time-programs-wrapper .compare input {
+  -moz-box-shadow: #bac405 1px 1px 0px inset, #bac405 0 0 0 2px;
+  -webkit-box-shadow: #bac405 1px 1px 0px inset, #bac405 0 0 0 2px;
+  box-shadow: #bac405 1px 1px 0px inset, #bac405 0 0 0 2px;
+  border-radius: 50px;
+}
+.isotopify.program-list .compare input:before,
+.full-time-programs-wrapper .compare input:before {
+  border: 3px #bac405 solid;
+  content: " ";
+  height: 12px;
+  width: 12px;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+  right: 2px;
+  top: -2px;
+}
 
 .full-time-header {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -751,4 +795,42 @@ h2.isotopify-title {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 18px;
+}
+
+.compare-items {
+  background: #f4f4f4;
+  max-width: 870px;
+  padding: 26px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.compare-items h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+.compare-items .compare-item {
+  background: white;
+  font-size: 16px;
+  height: 100px;
+  line-height: 1.2;
+  max-width: 33%;
+  padding: 18px !important;
+}
+.compare-items .remove-item {
+  background: #bac405;
+  border: 1px #bac405 solid;
+  border-radius: 50px;
+  color: white;
+  display: inline-block;
+  height: 25px;
+  line-height: 1.5;
+  text-align: center;
+  width: 25px;
+}
+.compare-items .remove-item:hover {
+  background: #2d6280;
+  border: 1px #2d6280 solid;
+  cursor: pointer;
 }
