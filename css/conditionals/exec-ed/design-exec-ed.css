@@ -1,4 +1,15 @@
-.pane-ee-programs-upcoming-deadlines {
+.pane-bundle-programs-list .field-name-field-cta1 a:after,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:after {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+
+.pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1 {
   background: white;
 }
 
@@ -29,7 +40,7 @@
 }
 
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
-.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
+.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -960,4 +971,107 @@ h1.ee-section-footer-title {
   margin-top: 20px;
   max-width: 1170px;
   padding: 20px 0;
+}
+
+.pane-bundle-programs-list {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 26px 0;
+}
+.pane-bundle-programs-list .field-name-field-title {
+  color: #231f20;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+.pane-bundle-programs-list .gsb-program-explore-more-wrapper {
+  float: left;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other {
+  display: inline-block;
+  vertical-align: top;
+  width: 360px;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other:nth-of-type(1n) {
+  margin-right: 22px;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other:nth-of-type(2n) {
+  margin: 0 22px;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other:nth-of-type(3n) {
+  margin-left: 22px;
+  margin-right: 0;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other .gsb-key-image {
+  margin-bottom: 12px;
+  max-width: 360px;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other .gsb-key-image a:after {
+  display: none;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other .field-name-field-program a {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other .field-name-field-instance-date {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-top: 3px;
+}
+.pane-bundle-programs-list .node-program-instance.view-mode-program_explore_other .field-name-field-program-location {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-top: 3px;
+}
+.pane-bundle-programs-list .gsb-program-fpp-cta-wrapper {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+.pane-bundle-programs-list .field-name-field-cta1 {
+  min-width: 250px;
+  padding: 14px 26px;
+}
+.pane-bundle-programs-list .field-name-field-cta1 a,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"] {
+  color: #636f00;
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+  text-decoration: none;
+}
+.pane-bundle-programs-list .field-name-field-cta1 a:after,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-programs-list .field-name-field-cta1 a:after,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:after {
+  right: -40px;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.pane-bundle-programs-list .field-name-field-cta1 a:hover,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:hover {
+  color: #2d6280;
+  border-bottom: 1px #2d6280 solid;
+}
+.pane-bundle-programs-list .field-name-field-cta1 a:hover:after,
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:hover:after {
+  color: #aac4bf;
 }
