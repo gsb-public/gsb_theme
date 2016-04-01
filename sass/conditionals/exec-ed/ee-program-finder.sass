@@ -105,16 +105,19 @@
     display: inline-block
     max-width: 230px
     position: relative
-    .placeholder
-      color: $text-black
-      font-family: $font-sans
-      font-size: 16px
-      height: 47px
-      line-height: 2.9
-      padding: 0
-      padding-left: 18px
-      text-align: left
-      width: 210px
+
+  button.ms-choice > span,
+  .isotopify-filter-daterange .placeholder,
+  .form-item-search .placeholder
+    color: $text-black
+    font-family: $font-sans
+    font-size: 16px
+    height: 47px
+    line-height: 2.9
+    padding: 0
+    padding-left: 18px
+    text-align: left
+    width: 210px
 
   // Filter styling
   .ms-parent
@@ -150,15 +153,6 @@
         +icon-after("arrow-med-up", true)
         &:after
           line-height: 3
-    > span
-      color: $text-black
-      font-family: $font-sans
-      font-size: 16px
-      height: 47px
-      line-height: 2.2
-      padding: 0
-      padding-left: 10px
-      text-align: left
 
   // Date range button
   button.isotopify-filter-daterange-button
