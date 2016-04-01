@@ -6,7 +6,7 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .isotopify.program-list .compare,
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .isotopify.program-list .compare,
 .full-time-programs-wrapper .compare, .image-ctas .fieldable-panels-pane, .compare-items {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -14,7 +14,7 @@
   margin: 1px;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
+.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .compare-items .header .compare-button input:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
   background: #2d6280;
   background: -moz-linear-gradient(top, #18455f, #2d6280);
   background: -o-linear-gradient(top, #18455f, #2d6280);
@@ -22,8 +22,7 @@
   background: linear-gradient(to bottom, #18455f, #2d6280);
 }
 
-.pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .isotopify.program-list .compare,
-.full-time-programs-wrapper .compare {
+.pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   background: whitesmoke;
   background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
   background: -o-linear-gradient(top, #f5f5f5, #ffffff);
@@ -31,7 +30,7 @@
   background: linear-gradient(to bottom, #f5f5f5, #ffffff);
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-filters .ms-drop.bottom .checkbox-clear-all, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -42,18 +41,18 @@
   line-height: 1;
   padding: 10px 16px;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after {
+.pane-filters .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .compare-items .header .compare-button input:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after {
   color: white !important;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
+.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .compare-items .header .compare-button input:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
   border: 0;
   color: white;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
+.pane-filters .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .compare-items .header .compare-button input:hover:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
   color: white !important;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn {
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input {
   background: #919900;
 }
 
@@ -605,6 +604,8 @@
 .isotopify.program-list .full-time-program,
 .full-time-programs-wrapper .isotopify-item,
 .full-time-programs-wrapper .full-time-program {
+  overflow: hidden;
+  *zoom: 1;
   border-top: 1px #c4c4c4 solid;
   padding: 26px 35px;
   width: 100%;
@@ -616,6 +617,11 @@
   .full-time-programs-wrapper .full-time-program {
     padding: 20px 0;
   }
+}
+.isotopify.program-list .program-instance,
+.full-time-programs-wrapper .program-instance {
+  float: left;
+  max-width: 80%;
 }
 .isotopify.program-list .program-title,
 .full-time-programs-wrapper .program-title {
@@ -668,6 +674,7 @@
 }
 .isotopify.program-list .compare,
 .full-time-programs-wrapper .compare {
+  background: white;
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -675,11 +682,35 @@
   overflow: hidden;
   *zoom: 1;
   color: white;
+  float: right;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1;
   padding: 10px 16px;
-  float: right;
+}
+.isotopify.program-list .compare.inactive,
+.full-time-programs-wrapper .compare.inactive {
+  position: relative;
+}
+.isotopify.program-list .compare.inactive:before,
+.full-time-programs-wrapper .compare.inactive:before {
+  content: " ";
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  height: 44px;
+  position: absolute;
+  width: 108px;
+  top: -1px;
+  left: -1px;
+}
+.isotopify.program-list .compare.inactive input,
+.full-time-programs-wrapper .compare.inactive input {
+  -moz-box-shadow: rgba(186, 196, 5, 0.1) 1px 1px 0px inset, rgba(186, 196, 5, 0.1) 0 0 0 2px;
+  -webkit-box-shadow: rgba(186, 196, 5, 0.1) 1px 1px 0px inset, rgba(186, 196, 5, 0.1) 0 0 0 2px;
+  box-shadow: rgba(186, 196, 5, 0.1) 1px 1px 0px inset, rgba(186, 196, 5, 0.1) 0 0 0 2px;
+}
+.isotopify.program-list .compare.inactive input:before,
+.full-time-programs-wrapper .compare.inactive input:before {
+  border: 3px rgba(186, 196, 5, 0.1) solid;
 }
 .isotopify.program-list .compare label,
 .full-time-programs-wrapper .compare label {
@@ -687,7 +718,7 @@
   color: #231f20;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.2;
+  line-height: 1.6;
 }
 .isotopify.program-list .compare input,
 .full-time-programs-wrapper .compare input {
@@ -805,28 +836,58 @@ h2.isotopify-title {
   position: relative;
   z-index: 1;
 }
-.compare-items h3 {
+.compare-items .header {
+  overflow: hidden;
+  *zoom: 1;
+}
+.compare-items .header h3 {
+  display: inline-block;
   font-size: 22px;
   line-height: 1.3;
   margin-bottom: 26px;
 }
+.compare-items .header .compare-button {
+  float: right;
+}
 .compare-items .compare-item {
   background: white;
+  display: inline-block;
+  float: left;
+  padding: 18px;
+  position: relative;
+  vertical-align: top;
+  width: 260px;
+}
+.compare-items .compare-item:nth-of-type(odd) {
+  margin: 0 19px;
+}
+.compare-items .compare-program-title {
   font-size: 16px;
-  height: 100px;
   line-height: 1.2;
-  max-width: 33%;
-  padding: 18px !important;
+  margin-left: 38px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align-items: center;
+  -moz-box-align-items: center;
+  -ms-flexbox-align-items: center;
+  -webkit-flex-align-items: center;
+  align-items: center;
+  min-height: 95px;
+  width: 186px;
 }
 .compare-items .remove-item {
   background: #bac405;
-  border: 1px #bac405 solid;
   border-radius: 50px;
   color: white;
   display: inline-block;
   height: 25px;
   line-height: 1.5;
+  position: absolute;
   text-align: center;
+  top: 53px;
   width: 25px;
 }
 .compare-items .remove-item:hover {
