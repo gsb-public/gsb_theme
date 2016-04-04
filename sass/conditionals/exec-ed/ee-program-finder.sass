@@ -193,7 +193,6 @@
   .ms-drop.bottom
     @extend %border-grey
     border-radius: 0
-    margin-top: 12px
     min-width: 700px
     overflow: visible
 
@@ -206,20 +205,13 @@
 
     // Clear button
     .checkbox-clear-all
-      @extend %grey-button
+      @extend %white-button
       margin-bottom: 28px
 
-    // Window carrot
-    &:before
-      border-left: 15px solid rgba(0, 0, 0, 0)
-      border-right: 15px solid rgba(0, 0, 0, 0)
-      border-bottom: 15px solid $white
-      content: ""
-      height: 0px
-      position: absolute
-      top: -13px
-      left: 18px
-      width: 0px
+    // Inputs
+    input[type="checkbox"]
+      margin-right: 2px
+      vertical-align: text-top
 
   // Location select and leadership level are smaller
   .form-item-filter-program-location .ms-drop.bottom,
@@ -267,19 +259,9 @@
 // Date drop down
 .date-picker-wrapper
   background: $white
-  margin-top: 12px
   overflow: visible !important
-  &:before
-    border-left: 15px solid rgba(0, 0, 0, 0)
-    border-right: 15px solid rgba(0, 0, 0, 0)
-    border-bottom: 15px solid $white
-    content: ""
-    height: 0px
-    position: absolute
-    top: -13px
-    left: 32px
-    width: 0px
-
+  &.no-shortcuts
+    padding: $standard-padding
   .gap
     top: 0
 
@@ -293,6 +275,7 @@
       position: relative
       &.disabled
         @extend %grey-button
+        color: #686868
 
   .month-wrapper
     border: 0
