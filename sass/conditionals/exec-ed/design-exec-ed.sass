@@ -754,6 +754,7 @@ h1.ee-section-footer-title
 
   .gsb-program-explore-more-wrapper
     float: left
+    margin-bottom: 20px
 
   .node-program-instance.view-mode-program_explore_other
     display: inline-block
@@ -799,13 +800,14 @@ h1.ee-section-footer-title
 
   // CTA styling
   .gsb-program-fpp-cta-wrapper
-    display: inline-block
-    margin: 0 auto
     text-align: center
 
   .field-name-field-cta1
     @extend %bg-and-box-shadow
-    min-width: 250px
+    display: inline-block
+    margin: 0 auto
+    text-align: initial
+    width: 250px
     padding: 14px $standard-padding
     a,
     a[target="_blank"]
@@ -817,7 +819,7 @@ h1.ee-section-footer-title
       +icon-after("arrow-double-right", true)
       &:after
         @extend %arrow-double-big
-        right: -40px
+        right: -60px
         font-weight: bold
         color: #e3e3e3
       &:hover
