@@ -574,11 +574,6 @@
 
 .gsb-full-bleed-home-page
 
-  .full-view
-    margin-bottom: 20px
-    .panels-ipe-editing &
-      margin-bottom: 0
-
   // Content wrappers
   .top-wrapper,
   .middle-gray-inner-wrapper,
@@ -588,6 +583,15 @@
     margin: 0 auto
     max-width: 1170px
     padding: 36px 0
+
+  .top-wrapper,
+  .middle-gray-inner-wrapper,
+  .middle-green-inner-wrapper,
+  .bottom-wrapper
+    .full-view
+      margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
 
   .middle-gray-wrapper
     background: #f4f4f4
