@@ -77,7 +77,7 @@
       <div class="middle-green-wrapper">
         <div class="middle-green-inner-wrapper">
           <?php if ($content['middle_green_full']): ?>
-            <div class="middle-green-full full-view">
+            <div class="middle-green-full wide-view">
               <?php print $content['middle_green_full']; ?>
             </div>
           <?php endif; ?>
