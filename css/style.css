@@ -2546,9 +2546,6 @@ del {
 .panels-ipe-editing .gsb-full-bleed-landing-page .panel-pane {
   margin-bottom: 0;
 }
-.gsb-full-bleed-landing-page .panels-ipe-portlet-content {
-  padding: 26px 0;
-}
 .gsb-full-bleed-landing-page .content-wrapper {
   margin: 0 auto;
   max-width: 1170px;
@@ -5689,6 +5686,141 @@ ul.gsb-social-buttons li:last-of-type {
     font-family: 'icons';
   }
   .region-sidebar-first ul li a.active:before {
+    float: left;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
+    left: -16px;
+    width: 0;
+  }
+}
+
+.gsb-full-bleed-landing-page #sidebar ul {
+  border-top: 1px lightgray solid;
+  padding: 20px 20px 0 24px;
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul {
+    border-top: 0;
+    padding: 0;
+  }
+}
+.gsb-full-bleed-landing-page #sidebar ul li {
+  color: #7d7466;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li {
+    margin-bottom: 22px;
+  }
+  .gsb-full-bleed-landing-page #sidebar ul li.first {
+    padding-top: 22px;
+  }
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li.collapsed:before {
+    content: "\f11b";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li.active-trail:before {
+    content: "\f117";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li.collapsed:before, .gsb-full-bleed-landing-page #sidebar ul li.active-trail:before {
+    color: #231f20;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    position: absolute;
+    left: 12px;
+  }
+}
+.gsb-full-bleed-landing-page #sidebar ul li a {
+  color: #7d7466;
+  line-height: 1.2;
+}
+.gsb-full-bleed-landing-page #sidebar ul li a:hover {
+  color: #231f20;
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+.gsb-full-bleed-landing-page #sidebar ul li ul {
+  padding-left: 16px;
+  position: relative;
+  left: 0;
+}
+.gsb-full-bleed-landing-page #sidebar ul li ul li {
+  color: black;
+  margin: 12px 0;
+  text-transform: none;
+}
+@media (max-width: 62.4375em) {
+  .gsb-full-bleed-landing-page #sidebar ul li ul li.first {
+    padding-top: 0;
+  }
+}
+.gsb-full-bleed-landing-page #sidebar ul li ul li a {
+  color: black;
+}
+.gsb-full-bleed-landing-page #sidebar ul li ul li ul li,
+.gsb-full-bleed-landing-page #sidebar ul li ul li ul li a {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+.gsb-full-bleed-landing-page #sidebar ul li a.active {
+  color: #231f20;
+}
+@media (min-width: 62.5em) {
+  .gsb-full-bleed-landing-page #sidebar ul li a.active:before {
+    content: "\f101";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .gsb-full-bleed-landing-page #sidebar ul li a.active:before {
     float: left;
     font-size: 12px;
     line-height: 1.5;

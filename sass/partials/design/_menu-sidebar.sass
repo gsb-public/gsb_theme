@@ -77,3 +77,79 @@
           position: relative
           left: -16px
           width: 0
+
+// Menus added to panelized sidebars
+.gsb-full-bleed-landing-page #sidebar
+  ul
+    border-top: 1px $border-grey solid
+    padding: 20px 20px 0 24px
+    +breakpoint($bp-tablet-port-max)
+      border-top: 0
+      padding: 0
+
+  // Menu styling
+  ul li
+    color: #7d7466
+    font-family: $font-sans
+    font-size: 16px
+    font-weight: normal
+    margin-bottom: 16px
+    line-height: 1.2
+    +breakpoint($bp-tablet-port-max)
+      margin-bottom: 22px
+      &.first
+        padding-top: 22px
+    &.collapsed
+      +breakpoint($bp-tablet-port-max)
+        +icon-before("plus", true)
+    &.active-trail
+      +breakpoint($bp-tablet-port-max)
+        +icon-before("minus", true)
+    &.collapsed,
+    &.active-trail
+      +breakpoint($bp-tablet-port-max)
+        &:before
+          color: $text-black
+          font-size: 14px
+          font-weight: normal
+          line-height: 1.4
+          position: absolute
+          left: 12px
+    a
+      color: #7d7466
+      line-height: 1.2
+      &:hover
+        color: $text-black
+      +breakpoint($bp-tablet-port-max)
+        display: inline-block
+        margin-bottom: 10px
+    // Secondary children
+    ul
+      padding-left: 16px
+      position: relative
+      left: 0
+      li
+        color: $black
+        margin: 12px 0
+        text-transform: none
+        +breakpoint($bp-tablet-port-max)
+          &.first
+            padding-top: 0
+        a
+          color: $black
+        // Terciary children
+        ul li,
+        ul li a
+          font-family: $font-sans
+          font-weight: normal
+    a.active
+      color: $text-black
+      +breakpoint($bp-wide-min)
+        +icon-before("arrow-double-right", true)
+        &:before
+          float: left
+          font-size: 12px
+          line-height: 1.5
+          position: relative
+          left: -16px
+          width: 0
