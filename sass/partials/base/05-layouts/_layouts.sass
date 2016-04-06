@@ -565,20 +565,21 @@
 
 // GSB Full Bleed Home Page
 .panels-layout-gsb-full-bleed-home-page
+  #content-wrapper
+    padding-bottom: 0 !important
   #content
     max-width: initial
+  #main
+    padding-top: 0
 
 .gsb-full-bleed-home-page
 
-  .panel-pane
+  .full-view
     margin-bottom: 20px
     .panels-ipe-editing &
       margin-bottom: 0
 
-  .panels-ipe-portlet-content
-    padding: $standard-padding 0
-
-  // Content wrapper
+  // Content wrappers
   .top-wrapper,
   .middle-gray-inner-wrapper,
   .middle-green-inner-wrapper,
@@ -586,6 +587,7 @@
   .last-full
     margin: 0 auto
     max-width: 1170px
+    padding: 36px 0
 
   .middle-gray-wrapper
     background: #f4f4f4
@@ -640,8 +642,12 @@
     float: right
 
 
-// GSB Full Bleed Landing Page
+// GSB Full Bleed Landing Page (has left sidebar)
 .panels-layout-gsb-full-bleed-landing-page
+  #main
+    padding-top: 0
+  #content-wrapper
+    padding-bottom: 0 !important
   #content
     max-width: initial
 
@@ -651,9 +657,6 @@
     margin-bottom: 20px
     .panels-ipe-editing &
       margin-bottom: 0
-
-  .panels-ipe-portlet-content
-    padding: $standard-padding 0
 
   // Content wrapper
   .content-wrapper
@@ -668,6 +671,52 @@
 
   // Main wrapper
   .main-wrapper
+    max-width: 870px
+    width: 100%
+
+  .top-inner-wrapper,
+  .middle-inner-wrapper
+    +clearfix
+
+  // 2 across
+  .top-left,
+  .top-right,
+  .middle-left,
+  .middle-right
+    width: 410px
+
+  .top-left,
+  .middle-left
+    float: left
+
+  .top-right,
+  .middle-right
+    float: right
+
+// GSB Full Bleed Landing Page (No left sidebar)
+.panels-layout-gsb-full-bleed-landing-page-no-left
+  #main
+    padding-top: 0
+  #content-wrapper
+    padding-bottom: 0 !important
+  #content
+    max-width: initial
+
+.gsb-full-bleed-landing-page-no-left
+
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  // Content wrapper
+  .content-wrapper
+    margin: 0 auto
+    max-width: 1170px
+
+  // Main wrapper
+  .main-wrapper
+    max-width: 1170px
     width: 100%
 
   .top-inner-wrapper,

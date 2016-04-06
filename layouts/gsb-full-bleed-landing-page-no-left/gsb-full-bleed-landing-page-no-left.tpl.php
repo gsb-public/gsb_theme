@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for GSB Full Bleed Landing Page.
+ * Template for GSB Full Bleed Landing Page with No left.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.
@@ -10,7 +10,7 @@
  */
 ?>
 
-<div class="panel-display gsb-full-bleed-landing-page clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display gsb-full-bleed-landing-page-no-left clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <?php if ($content['full_bleed_header']): ?>
     <div class="full-bleed-header full-view">
@@ -26,25 +26,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ($content['left_rail']): ?>
-
-      <div class="left-rail-wrapper">
-        <?php if ($content['left_rail']): ?>
-          <div id="sidebar" class="column">
-            <?php print $content['left_rail']; ?>
-          </div>
-        <?php endif; ?>
-      </div><!-- /.left-rail-wrapper -->
-
-    <?php endif; ?>
-
-    <?php if ($content['left_rail']): ?>
-      <div class="main-wrapper with-left-rail">
-    <?php endif; ?>
-
-    <?php if (empty($content['left_rail'])): ?>
-      <div class="main-wrapper">
-    <?php endif; ?>
+    <div class="main-wrapper">
 
       <?php if ($content['top_full'] || $content['top_left'] || $content['top_right']): ?>
         <div class="top-wrapper">
