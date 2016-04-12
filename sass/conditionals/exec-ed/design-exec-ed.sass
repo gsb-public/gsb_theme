@@ -476,6 +476,8 @@
   position: absolute
   bottom: 50px
   width: 100%
+  opacity: 0.9
+  filter: alpha(opacity=90)
 
 .overlay-inner-wrapper
   +clearfix
@@ -512,7 +514,7 @@ h1.ee-section-footer-title
     -webkit-flex-justify-content: space-between
     justify-content: space-between
   a
-    color: $grey-med
+    color: #c2b7a5
     font-family: $font-demi
     font-size: 18px
     line-height: 1.2
@@ -522,12 +524,17 @@ h1.ee-section-footer-title
       color: $white
 
 // Header Icons
+.ee-section-header-social-buttons,
 .ee-section-header-follow-us
   float: right
   margin: 0 10px
 
   .icon-wrapper
     overflow: visible
+
+  .gsb-social-buttons
+    position: relative
+    top: -7px    
 
 // Apply and brochure buttons
 #block-gsb-feature-program-ct-ee-section-apply-brochure

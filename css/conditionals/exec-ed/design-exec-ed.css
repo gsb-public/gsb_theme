@@ -659,6 +659,8 @@
   position: absolute;
   bottom: 50px;
   width: 100%;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 
 .overlay-inner-wrapper {
@@ -705,7 +707,7 @@ h1.ee-section-footer-title {
 }
 .ee-section-header-menu a,
 .ee-section-footer-menu a {
-  color: #c2b7a1;
+  color: #c2b7a5;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
@@ -717,12 +719,19 @@ h1.ee-section-footer-title {
   color: white;
 }
 
+.ee-section-header-social-buttons,
 .ee-section-header-follow-us {
   float: right;
   margin: 0 10px;
 }
+.ee-section-header-social-buttons .icon-wrapper,
 .ee-section-header-follow-us .icon-wrapper {
   overflow: visible;
+}
+.ee-section-header-social-buttons .gsb-social-buttons,
+.ee-section-header-follow-us .gsb-social-buttons {
+  position: relative;
+  top: -7px;
 }
 
 #block-gsb-feature-program-ct-ee-section-apply-brochure {

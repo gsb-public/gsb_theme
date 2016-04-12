@@ -588,6 +588,7 @@ a.social-block-facebook
 
 ul.gsb-social-buttons li
   margin-right: 12px
+  display: inline-block
   +breakpoint($bp-mobile-max)
     margin-right: 4px
   &:last-of-type
@@ -599,12 +600,14 @@ ul.gsb-social-buttons li
   // Button
   .share
     +border-radius(50%)
-    background: $black
+    background: #7d7465
     color: $white
     display: inline-block
     font-weight: normal
     text-align: center
     overflow: hidden
+    height: 40px
+    width: 40px
     span
       visibility: hidden
     &:hover
@@ -623,6 +626,7 @@ ul.gsb-social-buttons li
       text-decoration: none
 
 // Top social buttons
+.gsb-social-buttons .sharrre,
 .field-name-social-buttons-top .sharrre
   .share
     height: 40px
