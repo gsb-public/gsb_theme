@@ -838,3 +838,46 @@ h1.ee-section-footer-title
         border-bottom: 1px $link-blue solid
         &:after
           color: $teal-light
+
+// Need more information block in full-bleed page
+
+.full-bleed-header
+  .pane-need-more-information
+    height: 215px
+    background: #f4f4f4
+    padding: $standard-padding
+    div.pane-content
+      width: 1170px
+      margin: 0 auto
+    h4
+      font-size: 32px
+      line-height: 1.2
+      font-weight: normal
+      text-align: center
+
+    .cta-list
+      @extend %bg-and-box-shadow
+      display: inline-block
+      margin-right: 14px
+      text-align: initial
+      position: relative
+      top: 30px
+      padding: 14px 26px
+      width: 270px
+      a,
+      a[target="_blank"]
+        color: $link-green
+        font-size: 18px
+        line-height: 1.2
+        position: relative
+        text-decoration: none
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-big
+          color: #e3e3e3
+          left: 200px
+        &:hover
+          color: $link-blue
+          border-bottom: 1px $link-blue solid
+          &:after
+            color: $teal-light
