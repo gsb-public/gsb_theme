@@ -535,8 +535,20 @@ h1.ee-section-footer-title
   .gsb-social-buttons
     position: relative
     top: -7px
+    .share
+      background: #7d7465
+      height: 32px
+      width: 32px
+      &:before
+        font-size: 18px
+        top: 7px
+      &:hover
+        background: #2d6280  
     .count
       display: none
+    .sharrre.sharrre-email
+      .share:before
+        transform: scale(0.8)
 
 // Apply and brochure buttons
 #block-gsb-feature-program-ct-ee-section-apply-brochure
