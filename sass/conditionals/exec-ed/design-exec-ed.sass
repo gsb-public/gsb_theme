@@ -17,19 +17,23 @@
   padding-top: 24px
   +breakpoint(1169px max-width)
     height: 50px
-    left: 235px
+    left: 60px
     padding-top: 10px
+    position: relative
   h2
     line-height: 0
     a
       color: $text-black
+      display: inline-block
       font-family: $font-sans
       font-size: 28px
       font-weight: bold
-      line-height: 1.2
+      line-height: 1.1
       padding-left: 15px
       +breakpoint(568px max-width)
         font-size: 18px
+        max-width: 80px
+        padding-left: 6px
 
 // Display mega menu items in 2 columns
 .menu-name-menu-executive-education-mega-me
@@ -51,95 +55,6 @@
   .qtip
     +breakpoint(1169px max-width)
       display: none !important
-
-  // Mobile menu button
-  #nav-touch-wrapper
-    display: inline
-    +breakpoint(1169px max-width)
-      display: block
-
-    #nav-touch-button
-      display: none
-      +breakpoint(1169px max-width)
-        border-right: 1px #9b9285 solid
-        cursor: pointer
-        display: inline-block
-        height: 50px
-        padding: 3px 12px 9px
-        vertical-align: top
-        position: relative
-        width: 50px
-        z-index: 12
-    #nav-touch-button
-      +icon-after("menu", true)
-      &:after
-        color: $white
-        font-size: 21px
-        position: relative
-        top: 12px
-        right: -2px
-
-  // Menu toggle functionality
-  #nav-touch-wrapper
-    +breakpoint(1169px max-width)
-      max-height: 50px
-      display: inline-block
-      float: left
-
-      #nav-touch-button
-        background: #7d7466
-        &:hover
-          text-decoration: none
-      #navigation
-        display: none
-    &.open
-      +breakpoint(1169px max-width)
-        #nav-touch-button
-          background: $white
-          +background(linear-gradient($grey-e, $white))
-          &:after
-            color: $red
-        #navigation
-          display: block !important
-          position: absolute !important
-          width: 100% !important
-          z-index: 11 !important
-
-  // Search toggle functionality
-  #search-touch-button
-    display: none
-    &:hover
-      text-decoration: none
-    +breakpoint(1169px max-width)
-      background: #7d7466
-      border-right: 1px #9b9285 solid
-      cursor: pointer
-      display: inline-block
-      height: 50px
-      left: 50px
-      position: absolute
-      width: 50px
-      +icon-after("search", true)
-      &:after
-        color: $white
-        font-size: 24px
-        padding: 0 12px
-        position: relative
-        top: 16px
-
-
-  // Global search
-  .global-search
-    +breakpoint(1170px min-width)
-      float: left
-      height: 0
-      margin-top: $top-border-interval
-      width: 200px
-      .search-closed &,
-      .js &
-        width: auto
-      .js .search-open &
-        width: 200px
 
   // Left hand rail menu
   .region-sidebar-first
@@ -549,7 +464,7 @@ h1.ee-section-footer-title
         font-size: 18px
         top: 7px
       &:hover
-        background: #2d6280  
+        background: #2d6280
     .count
       display: none
     .sharrre.sharrre-email

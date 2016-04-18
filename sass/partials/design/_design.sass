@@ -2,7 +2,7 @@
 
 // Header region
 #header-wrapper
-  +breakpoint($bp-wide-min)
+  +breakpoint(1170px min-width)
     border-top: $top-border-interval $red-dark solid
   #header
     +breakpoint(1200px min-width)
@@ -29,38 +29,39 @@
     height: 80px
     margin: 26px 0
     width: 286px
-  +breakpoint(1199px max-width)
-    margin-left: 15px
-  +breakpoint(1160px max-width)
-    .svg &, .no-js &, .no-svg &
-      background-size: 100%
-      height: 35px
-      margin: 15px 10px 0 15px
-      position: absolute
-      width: 120px
-  +breakpoint(999px max-width)
-    .svg &, .no-js &, .no-svg &
-      float: left
-      height: 30px
-      margin: 10px 10px 0 60px
-      position: relative
-      width: 100px
-    .page-insights &, .page-404 &
-      margin-left: 15px !important
-  // Exec Ed & SEED menu
-  .page-exec-ed &,
   .page-seed &,
+  .page-exec-ed &
     .svg &, .no-js &, .no-svg &
       background-size: 100%
       float: left
       height: 35px
       margin: 22px 18px 0 0
+      position: relative
       width: 130px
       +breakpoint(1199px max-width)
-        margin-left: 15px
-      +breakpoint(1169px max-width)
-        left: 40px
-        margin-top: 10px
+        margin-left: 10px
+  +breakpoint(1169px max-width)
+    .svg &, .no-js &, .no-svg &
+      float: left
+      height: 30px
+      left: 60px
+      margin: 10px 10px 0 0
+      position: relative
+      width: 100px
+    .page-insights &,
+    .page-404 &
+      left: 0
+      margin-left: 15px !important
+    .page-seed &,
+    .page-exec-ed &
+      .svg &, .no-js &, .no-svg &
+        float: left
+        height: 30px
+        left: 60px
+        margin: 10px 10px 0 0
+        position: relative
+        width: 100px
+
 
 // Site slogan
 #site-slogan
@@ -69,7 +70,7 @@
   line-height: 3.4
   +breakpoint(1199px max-width)
     margin-right: 15px
-  +breakpoint(1160px max-width)
+  +breakpoint(1169px max-width)
     display: none
   // Exec Ed & SEED menu
   .page-exec-ed &,
@@ -88,7 +89,7 @@
     // SEED menu
     .page-seed &
       min-width: 667px
-  +breakpoint($bp-wide-min)
+  +breakpoint(1170px min-width)
     float: right
     position: relative
     top: -$top-border-interval
@@ -114,10 +115,10 @@
       margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
-        min-width: 805px
+        min-width: 807px
   .section
-    +breakpoint($bp-tablet-port-max)
-      border-bottom: 10px $black solid
+    +breakpoint(1169px max-width)
+      border-bottom: 3px $black solid
       +box-shadow($black 0 -1px 3px)
 
 // Content wrapper

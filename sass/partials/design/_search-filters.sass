@@ -3,26 +3,21 @@
 // Global main search
 #google-appliance-block-form,
 #google-appliance-block-form--2
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint(1169px max-width)
     display: none
     left: 50px
     position: absolute
     width: 85%
     z-index: 1
-  .page-exec-ed &,
-  .page-seed &
-    +breakpoint(1169px max-width)
-      display: none
-      left: 50px
-      position: absolute
-      width: 85%
-      z-index: 1
+
   // Search input
   input
     height: 59px
     .page-exec-ed &,
     .page-seed &
       height: 78px
+      +breakpoint(1169px max-width)
+        height: 50px
   .form-item
     .search-closed &
       display: none
@@ -41,7 +36,7 @@
       background: #f4f4f4
       line-height: 1
       padding: 6px 60px 6px 10px
-      +breakpoint($bp-tablet-port-max)
+      +breakpoint(1169px max-width)
         height: 50px
         padding: 15px 0px 15px 10px
   .page-insights &
@@ -63,7 +58,7 @@
     padding: 0
     text-indent: 1000px
     width: 60px
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint(1169px max-width)
       height: 50px
     .page-exec-ed &,
     .page-seed &

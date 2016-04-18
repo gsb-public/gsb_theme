@@ -147,6 +147,8 @@
       }
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
+      }
+      if (Modernizr.mq('(max-width: 1169px)')) {
         $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
       }
       if (Modernizr.mq('(max-width: 850px)')) {
