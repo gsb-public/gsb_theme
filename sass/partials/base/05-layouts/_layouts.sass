@@ -575,7 +575,6 @@
       padding: 0
 
 .gsb-full-bleed-home-page
-
   .panel-pane
     margin-bottom: 20px
     .panels-ipe-editing &
@@ -612,22 +611,35 @@
   .bottom-wrapper
     +clearfix
 
+  .top-wrapper,
+  .bottom-wrapper
+    +breakpoint(1200px max-width)
+      padding-left: 10px
+      padding-right: 10px
+
   // 3 across
   .top-left-third,
   .top-center-third,
   .top-right-third
     display: inline-block
     vertical-align: top
-    width: 360px
+    max-width: 360px
+    width: 100%
+    +breakpoint(795px max-width)
+      max-width: inherit
     &:nth-of-type(1n)
       margin-right: 22px
+      +breakpoint(1200px max-width)
+        margin-right: 0
     &:nth-of-type(2n)
       margin: 0 18px
+      +breakpoint(795px max-width)
+        margin: 0
     &:nth-of-type(3n)
       margin-left: 22px
       margin-right: 0
-    +breakpoint(1210px max-width)
-      width: 100%
+      +breakpoint(1200px max-width)
+        margin-left: 0
 
   // 2 across
   .top-left,
@@ -638,7 +650,8 @@
   .middle-green-right,
   .bottom-left,
   .bottom-right
-    width: 570px
+    max-width: 570px
+    width: 100%
 
   .top-left,
   .middle-gray-left,
@@ -651,11 +664,14 @@
   .middle-green-right,
   .bottom-right
     float: right
+    +breakpoint(1200px max-width)
+      float: left
 
   // Set width on full green region
   .middle-green-full
     margin: 0 auto
     max-width: 570px
+    width: 100%
 
 // GSB Full Bleed Landing Page (has left sidebar)
 .panels-layout-gsb-full-bleed-landing-page
@@ -683,12 +699,14 @@
   .content-wrapper
     margin: 0 auto
     max-width: 1170px
+    width: 100%
 
   // Left rail wrapper
   .left-rail-wrapper
     float: left
     margin-right: 65px
-    width: 235px
+    max-width: 235px
+    width: 100%
 
   // Main wrapper
   .main-wrapper
@@ -704,7 +722,8 @@
   .top-right,
   .middle-left,
   .middle-right
-    width: 410px
+    max-width: 410px
+    width: 100%
 
   .top-left,
   .middle-left
@@ -713,6 +732,8 @@
   .top-right,
   .middle-right
     float: right
+    +breakpoint(1200px max-width)
+      float: left
 
 // GSB Full Bleed Landing Page (No left sidebar)
 .panels-layout-gsb-full-bleed-landing-page-no-left
@@ -755,7 +776,8 @@
   .top-right,
   .middle-left,
   .middle-right
-    width: 570px
+    max-width: 570px
+    width: 100%
 
   .top-left,
   .middle-left

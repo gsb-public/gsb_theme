@@ -13,6 +13,7 @@
   // Image
   img
     display: block
+    width: 100%
 
   // Colors
   .image-cta-color-blue a
@@ -59,26 +60,36 @@
   .group-right
     position: absolute
     bottom: 0
-  +breakpoint(568px 480px)
-    +clearfix
-    a
-      font-size: 20px
-      position: absolute
-      bottom: 0
-      padding-top: 25%
-      width: 66.66%
-      +breakpoint(532px 481px)
-        width: 62.66%
-    // Layout
-    .group-left
-      float: left
-      width: 190px
-    .group-right
-      float: left
-      display: inline-block
-      margin-left: -190px
-      padding-left: 190px
-      width: 100%
+
+// Narrow view in non-bleed layouts
+.panel-display.gsb-standard-page-two,
+.panel-display.gsb-event-landing,
+.panel-display.gsb-landing-standard-page-one,
+.panel-display.gsb-front-page,
+.gsb-insights-a,
+.gsb-insights-b,
+.gsb-insights-c
+  .narrow-view .pane-bundle-image-cta
+    +breakpoint(568px 480px)
+      +clearfix
+      a
+        font-size: 20px
+        position: absolute
+        bottom: 0
+        padding-top: 25%
+        width: 66.66%
+        +breakpoint(532px 481px)
+          width: 62.66%
+      // Layout
+      .group-left
+        float: left
+        width: 190px
+      .group-right
+        float: left
+        display: inline-block
+        margin-left: -190px
+        padding-left: 190px
+        width: 100%
 
 // Wide view
 .wide-view .pane-bundle-image-cta
