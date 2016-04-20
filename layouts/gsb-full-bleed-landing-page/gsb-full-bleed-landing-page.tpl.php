@@ -38,27 +38,21 @@
 
     <?php endif; ?>
 
-    <?php if ($content['left_rail']): ?>
-      <div class="main-wrapper with-left-rail">
-    <?php endif; ?>
-
-    <?php if (empty($content['left_rail'])): ?>
-      <div class="main-wrapper">
-    <?php endif; ?>
+    <div class="main-wrapper">
 
       <?php if ($content['top_full'] || $content['top_left'] || $content['top_right']): ?>
         <div class="top-wrapper">
           <div class="top-inner-wrapper">
             <?php if ($content['top_full']): ?>
-              <div class="top-full full-view">
+              <div class="top-full wide-view">
                 <?php print $content['top_full']; ?>
               </div>
             <?php endif; ?>
             <?php if ($content['top_left'] || $content['top_right']): ?>
-                <div class="top-left wide-view">
+                <div class="top-left narrow-view">
                   <?php print $content['top_left']; ?>
                 </div>
-                <div class="top-right wide-view">
+                <div class="top-right narrow-view">
                   <?php print $content['top_right']; ?>
                 </div>
             <?php endif; ?>
@@ -70,15 +64,15 @@
         <div class="middle-wrapper">
           <div class="middle-inner-wrapper">
             <?php if ($content['middle_full']): ?>
-              <div class="middle-full full-view">
+              <div class="middle-full wide-view">
                 <?php print $content['middle_full']; ?>
               </div>
             <?php endif; ?>
             <?php if ($content['middle_left'] || $content['middle_right']): ?>
-              <div class="middle-left wide-view">
+              <div class="middle-left narrow-view">
                 <?php print $content['middle_left']; ?>
               </div>
-              <div class="middle-right wide-view">
+              <div class="middle-right narrow-view">
                 <?php print $content['middle_right']; ?>
               </div>
             <?php endif; ?>
@@ -89,7 +83,7 @@
       <?php if ($content['bottom_full']): ?>
         <div class="bottom-wrapper">
           <?php if ($content['bottom_full']): ?>
-            <div class="bottom-full full-view">
+            <div class="bottom-full wide-view">
               <?php print $content['bottom_full']; ?>
             </div>
           <?php endif; ?>
