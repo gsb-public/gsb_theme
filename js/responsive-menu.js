@@ -11,6 +11,8 @@ Drupal.behaviors.responsiveMenu = {
     $(context).find('#search-touch-button').click(function() { $('#google-appliance-block-form').toggleClass('open');});
     $(context).find('#insights-search-touch-button').click(function() { $('#insights-search-block-form').toggleClass('open'); $(this).toggleClass('open');});
     $(context).find('#block-system-main-menu li').click(function() { $(this).toggleClass('open');});
+    $(context).find('#block-menu-menu-executive-education-mega-me li').click(function() { $(this).toggleClass('open');});
+    $(context).find('#block-menu-menu-mega-menu-seed li').click(function() { $(this).toggleClass('open');});
     $(context).find('#block-menu-section-27256').click(function() { $(this).toggleClass('open');});
   }
 };
