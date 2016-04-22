@@ -54,6 +54,7 @@
     margin-bottom: 16px
 
 // Exec Ed program finder filters
+.mini-finder-filters,
 .pane-filters
   position: relative
 
@@ -154,6 +155,7 @@
           line-height: 3
 
   // Date range button
+  button.mini-filter-daterange-button,
   button.isotopify-filter-daterange-button
     @extend %border-grey
     background: $white
@@ -696,3 +698,61 @@ h2.isotopify-title
       background: $link-blue
       border: 1px $link-blue solid
       cursor: pointer
+
+// Mini program finder block for full bleed homepage
+
+.pane-mini-program-finder
+  height: 400px
+  .finder-image
+    img
+      width: 100%
+    .apply-mini-finder
+      width: 1170px
+      margin: 0 auto
+      position: relative
+      a
+        @extend %gradient-red
+        color: white
+        font-size: 16px
+        line-height: 1.2
+        padding: 16px 26px
+        position: absolute
+        top: -356px
+        right: 0
+  .content
+    float: left  
+    background: white
+    position: relative
+    top: -120px
+    width: 100%
+    padding: 26px 89px 26px    
+    h4
+      font-size: 34px
+      font-weight: bold
+      line-height: 1.2  
+
+  .mini-finder-filters
+    float: right
+    background: white
+    position: relative
+    top: -187px
+    padding-right: 89px
+
+    .form-item-program-topic,
+    .isotopify-filter-daterange
+      width: 230px
+      position: relative
+      display: inline-block
+
+    .ms-choice
+      width: 100% !important
+
+    input#edit-submit
+      @extend %green-button
+      font-size: 18px
+      display: inline-block
+
+    #edit-filters
+      display: inline-block
+      .ms-drop ul > li label
+        font-weight: normal

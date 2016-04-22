@@ -1,4 +1,9 @@
-.pane-filters .ms-choice, .pane-filters button.isotopify-filter-daterange-button, .pane-filters .ms-drop.bottom, .isotopify-filters #edit-search--2, .isotopify-filters #edit-submit {
+.mini-finder-filters .ms-choice,
+.pane-filters .ms-choice, .mini-finder-filters button.mini-filter-daterange-button,
+.mini-finder-filters button.isotopify-filter-daterange-button,
+.pane-filters button.mini-filter-daterange-button,
+.pane-filters button.isotopify-filter-daterange-button, .mini-finder-filters .ms-drop.bottom,
+.pane-filters .ms-drop.bottom, .isotopify-filters #edit-search--2, .isotopify-filters #edit-submit {
   border: 1px #e4e4e4 solid;
 }
 
@@ -6,12 +11,22 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all, .isotopify.program-list .compare,
+.mini-finder-filters .ms-drop.bottom .checkbox-apply,
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder .mini-finder-filters input#edit-submit, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .mini-finder-filters .ms-drop.bottom .checkbox-clear-all,
+.pane-filters .ms-drop.bottom .checkbox-clear-all, .isotopify.program-list .compare,
 .full-time-programs-wrapper .compare, .image-ctas .fieldable-panels-pane, .compare-items {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   margin: 1px;
+}
+
+.pane-mini-program-finder .finder-image .apply-mini-finder a {
+  background-color: #c50000;
+  background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -webkit-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: linear-gradient(to top, #c50000 0%, #860000 100%);
 }
 
 .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
@@ -22,7 +37,9 @@
   background: linear-gradient(to bottom, #f5f5f5, #ffffff);
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all {
+.mini-finder-filters .ms-drop.bottom .checkbox-apply,
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder .mini-finder-filters input#edit-submit, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .mini-finder-filters .ms-drop.bottom .checkbox-clear-all,
+.pane-filters .ms-drop.bottom .checkbox-clear-all {
   border: none;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -33,19 +50,26 @@
   line-height: 1;
   padding: 10px 16px;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .compare-items .header .compare-button input:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:after {
+.mini-finder-filters .ms-drop.bottom .checkbox-apply:after,
+.pane-filters .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .compare-items .header .compare-button input:after, .pane-mini-program-finder .mini-finder-filters input#edit-submit:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after, .mini-finder-filters .ms-drop.bottom .checkbox-clear-all:after,
+.pane-filters .ms-drop.bottom .checkbox-clear-all:after {
   color: white !important;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .compare-items .header .compare-button input:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
+.mini-finder-filters .ms-drop.bottom .checkbox-apply:hover,
+.pane-filters .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .compare-items .header .compare-button input:hover, .pane-mini-program-finder .mini-finder-filters input#edit-submit:hover, .mini-finder-filters .ms-drop.bottom .checkbox-clear-all:hover,
+.pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
   background-color: #2d6280;
   border: 0;
   color: white;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .compare-items .header .compare-button input:hover:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
+.mini-finder-filters .ms-drop.bottom .checkbox-apply:hover:after,
+.pane-filters .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .compare-items .header .compare-button input:hover:after, .pane-mini-program-finder .mini-finder-filters input#edit-submit:hover:after, .mini-finder-filters .ms-drop.bottom .checkbox-clear-all:hover:after,
+.pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after {
   color: white !important;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input {
+.mini-finder-filters .ms-drop.bottom .checkbox-apply,
+.pane-filters .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder .mini-finder-filters input#edit-submit {
   background: #919900;
 }
 
@@ -53,10 +77,12 @@
   color: #636f00;
 }
 
+.mini-finder-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-filters .ms-drop.bottom .checkbox-clear-all {
   background: white;
   color: #636f00 !important;
 }
+.mini-finder-filters .ms-drop.bottom .checkbox-clear-all:hover,
 .pane-filters .ms-drop.bottom .checkbox-clear-all:hover {
   background: #2d6280;
   color: white !important;
@@ -104,9 +130,11 @@
   margin-bottom: 16px;
 }
 
+.mini-finder-filters,
 .pane-filters {
   position: relative;
 }
+.mini-finder-filters #edit-filters,
 .pane-filters #edit-filters {
   display: -webkit-box;
   display: -moz-box;
@@ -116,6 +144,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.mini-finder-filters .form-item-sort,
 .pane-filters .form-item-sort {
   float: right;
   height: 46px;
@@ -124,18 +153,22 @@
   right: 0;
   top: 138px;
 }
+.mini-finder-filters .form-item-sort label,
 .pane-filters .form-item-sort label {
   display: none;
 }
+.mini-finder-filters .form-item-sort .customSelectInner,
 .pane-filters .form-item-sort .customSelectInner {
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   padding: 12px 6px 6px 18px;
   width: 145px !important;
 }
+.mini-finder-filters .customSelect,
 .pane-filters .customSelect {
   width: 210px;
 }
+.mini-finder-filters .customSelect:after,
 .pane-filters .customSelect:after {
   background-color: #f9f9f9;
   border-left: 1px solid #cccccc;
@@ -147,9 +180,15 @@
   height: 45px;
   padding: 0 16px;
 }
+.mini-finder-filters .form-item,
 .pane-filters .form-item {
   margin: 0;
 }
+.mini-finder-filters .form-item-filter-program-topic,
+.mini-finder-filters .form-item-filter-leadership-level,
+.mini-finder-filters .form-item-filter-program-location,
+.mini-finder-filters .isotopify-filter-daterange,
+.mini-finder-filters .form-item-search,
 .pane-filters .form-item-filter-program-topic,
 .pane-filters .form-item-filter-leadership-level,
 .pane-filters .form-item-filter-program-location,
@@ -159,6 +198,9 @@
   max-width: 230px;
   position: relative;
 }
+.mini-finder-filters button.ms-choice > span,
+.mini-finder-filters .isotopify-filter-daterange .placeholder,
+.mini-finder-filters .form-item-search .placeholder,
 .pane-filters button.ms-choice > span,
 .pane-filters .isotopify-filter-daterange .placeholder,
 .pane-filters .form-item-search .placeholder {
@@ -172,15 +214,18 @@
   text-align: left;
   width: 210px;
 }
+.mini-finder-filters .ms-parent,
 .pane-filters .ms-parent {
   width: 210px !important;
 }
+.mini-finder-filters .ms-choice,
 .pane-filters .ms-choice {
   background: white;
   border-radius: 0;
   color: #231f20;
   height: 47px;
 }
+.mini-finder-filters .ms-choice > div:after,
 .pane-filters .ms-choice > div:after {
   content: "\f105";
   display: inline;
@@ -196,6 +241,7 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.mini-finder-filters .ms-choice > div:after,
 .pane-filters .ms-choice > div:after {
   background-color: #f9f9f9;
   border-left: 1px solid #cccccc;
@@ -210,10 +256,12 @@
   top: 1px;
   left: -1px;
 }
+.mini-finder-filters .ms-choice > div:hover:after,
 .pane-filters .ms-choice > div:hover:after {
   background-color: #2d6280;
   color: white;
 }
+.mini-finder-filters .ms-choice > div.open:after,
 .pane-filters .ms-choice > div.open:after {
   content: "\f108";
   display: inline;
@@ -229,9 +277,13 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.mini-finder-filters .ms-choice > div.open:after,
 .pane-filters .ms-choice > div.open:after {
   line-height: 3;
 }
+.mini-finder-filters button.mini-filter-daterange-button,
+.mini-finder-filters button.isotopify-filter-daterange-button,
+.pane-filters button.mini-filter-daterange-button,
 .pane-filters button.isotopify-filter-daterange-button {
   background: white;
   border-radius: 0;
@@ -245,6 +297,9 @@
   text-align: left;
   width: 210px;
 }
+.mini-finder-filters button.mini-filter-daterange-button:after,
+.mini-finder-filters button.isotopify-filter-daterange-button:after,
+.pane-filters button.mini-filter-daterange-button:after,
 .pane-filters button.isotopify-filter-daterange-button:after {
   content: "\f105";
   display: inline;
@@ -260,6 +315,9 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.mini-finder-filters button.mini-filter-daterange-button:after,
+.mini-finder-filters button.isotopify-filter-daterange-button:after,
+.pane-filters button.mini-filter-daterange-button:after,
 .pane-filters button.isotopify-filter-daterange-button:after {
   background-color: #f9f9f9;
   border-left: 1px solid #cccccc;
@@ -272,10 +330,16 @@
   padding: 0 16px;
   position: relative;
 }
+.mini-finder-filters button.mini-filter-daterange-button:hover:after,
+.mini-finder-filters button.isotopify-filter-daterange-button:hover:after,
+.pane-filters button.mini-filter-daterange-button:hover:after,
 .pane-filters button.isotopify-filter-daterange-button:hover:after {
   background-color: #2d6280;
   color: white;
 }
+.mini-finder-filters button.mini-filter-daterange-button.open:after,
+.mini-finder-filters button.isotopify-filter-daterange-button.open:after,
+.pane-filters button.mini-filter-daterange-button.open:after,
 .pane-filters button.isotopify-filter-daterange-button.open:after {
   content: "\f108";
   display: inline;
@@ -291,30 +355,40 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.mini-finder-filters button.mini-filter-daterange-button.open:after,
+.mini-finder-filters button.isotopify-filter-daterange-button.open:after,
+.pane-filters button.mini-filter-daterange-button.open:after,
 .pane-filters button.isotopify-filter-daterange-button.open:after {
   line-height: 3;
 }
+.mini-finder-filters .ms-drop.bottom,
 .pane-filters .ms-drop.bottom {
   border-radius: 0;
   min-width: 700px;
   overflow: visible;
 }
+.mini-finder-filters .ms-drop.bottom .checkbox-apply,
 .pane-filters .ms-drop.bottom .checkbox-apply {
   margin-bottom: 28px;
   margin-left: 24px;
   margin-right: 12px;
 }
+.mini-finder-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-filters .ms-drop.bottom .checkbox-clear-all {
   margin-bottom: 28px;
 }
+.mini-finder-filters .ms-drop.bottom input[type="checkbox"],
 .pane-filters .ms-drop.bottom input[type="checkbox"] {
   margin-right: 2px;
   vertical-align: text-top;
 }
+.mini-finder-filters .form-item-filter-program-location .ms-drop.bottom,
+.mini-finder-filters .form-item-filter-leadership-level .ms-drop.bottom,
 .pane-filters .form-item-filter-program-location .ms-drop.bottom,
 .pane-filters .form-item-filter-leadership-level .ms-drop.bottom {
   min-width: 330px;
 }
+.mini-finder-filters ul,
 .pane-filters ul {
   display: -webkit-box;
   display: -moz-box;
@@ -336,6 +410,7 @@
   min-height: 150px;
   padding: 26px 26px 10px 26px;
 }
+.mini-finder-filters li,
 .pane-filters li {
   -webkit-box-flex-basis: 33%;
   -moz-box-flex-basis: 33%;
@@ -347,6 +422,8 @@
   margin-bottom: 16px;
   max-width: 180px;
 }
+.mini-finder-filters .form-item-filter-program-location li,
+.mini-finder-filters .form-item-filter-leadership-level li,
 .pane-filters .form-item-filter-program-location li,
 .pane-filters .form-item-filter-leadership-level li {
   -webkit-box-flex-basis: 51%;
@@ -874,4 +951,64 @@ h2.isotopify-title {
   background: #2d6280;
   border: 1px #2d6280 solid;
   cursor: pointer;
+}
+
+.pane-mini-program-finder {
+  height: 400px;
+}
+.pane-mini-program-finder .finder-image img {
+  width: 100%;
+}
+.pane-mini-program-finder .finder-image .apply-mini-finder {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+.pane-mini-program-finder .finder-image .apply-mini-finder a {
+  color: white;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 16px 26px;
+  position: absolute;
+  top: -356px;
+  right: 0;
+}
+.pane-mini-program-finder .content {
+  float: left;
+  background: white;
+  position: relative;
+  top: -120px;
+  width: 100%;
+  padding: 26px 89px 26px;
+}
+.pane-mini-program-finder .content h4 {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.pane-mini-program-finder .mini-finder-filters {
+  float: right;
+  background: white;
+  position: relative;
+  top: -187px;
+  padding-right: 89px;
+}
+.pane-mini-program-finder .mini-finder-filters .form-item-program-topic,
+.pane-mini-program-finder .mini-finder-filters .isotopify-filter-daterange {
+  width: 230px;
+  position: relative;
+  display: inline-block;
+}
+.pane-mini-program-finder .mini-finder-filters .ms-choice {
+  width: 100% !important;
+}
+.pane-mini-program-finder .mini-finder-filters input#edit-submit {
+  font-size: 18px;
+  display: inline-block;
+}
+.pane-mini-program-finder .mini-finder-filters #edit-filters {
+  display: inline-block;
+}
+.pane-mini-program-finder .mini-finder-filters #edit-filters .ms-drop ul > li label {
+  font-weight: normal;
 }
