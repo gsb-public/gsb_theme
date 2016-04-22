@@ -590,6 +590,9 @@
     max-width: 1170px
     padding: 36px 0
 
+  .top-wrapper
+    padding-top: 0
+
   .top-wrapper,
   .middle-gray-inner-wrapper,
   .middle-green-inner-wrapper,
@@ -612,6 +615,8 @@
     +clearfix
 
   .top-wrapper,
+  .middle-gray-inner-wrapper,
+  .middle-green-inner-wrapper,
   .bottom-wrapper
     +breakpoint(1200px max-width)
       padding-left: 10px
@@ -643,17 +648,6 @@
 
   // 2 across
   .top-left,
-  .top-right,
-  .middle-gray-left,
-  .middle-gray-right,
-  .middle-green-left,
-  .middle-green-right,
-  .bottom-left,
-  .bottom-right
-    max-width: 570px
-    width: 100%
-
-  .top-left,
   .middle-gray-left,
   .middle-green-left,
   .bottom-left
@@ -664,14 +658,34 @@
   .middle-green-right,
   .bottom-right
     float: right
-    +breakpoint(1200px max-width)
-      float: left
+
+  .top-left,
+  .top-right,
+  .middle-gray-left,
+  .middle-gray-right,
+  .middle-green-left,
+  .middle-green-right,
+  .bottom-left,
+  .bottom-right
+    max-width: 570px
+    width: 100%
+    +breakpoint(1180px max-width)
+      max-width: 480px
+    +breakpoint(1110px max-width)
+      float: none
+      margin: 0 auto 20px
+      max-width: 570px
 
   // Set width on full green region
   .middle-green-full
     margin: 0 auto
     max-width: 570px
     width: 100%
+
+  .top-thirds-wrapper
+    +breakpoint(1160px max-width)
+      .panel-pane
+        margin: 0 auto 20px
 
 // GSB Full Bleed Landing Page (has left sidebar)
 .panels-layout-gsb-full-bleed-landing-page
