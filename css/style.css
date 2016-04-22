@@ -850,7 +850,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * ┬⌐ 2012 Bitstream Inc
+ * © 2012 Bitstream Inc
  */
 @font-face {
   font-family: "icons";
@@ -2481,6 +2481,9 @@ del {
   max-width: 1170px;
   padding: 36px 0;
 }
+.gsb-full-bleed-home-page .top-wrapper {
+  padding-top: 0;
+}
 .gsb-full-bleed-home-page .top-wrapper .full-view,
 .gsb-full-bleed-home-page .middle-gray-inner-wrapper .full-view,
 .gsb-full-bleed-home-page .middle-green-inner-wrapper .full-view,
@@ -2508,6 +2511,8 @@ del {
 }
 @media (max-width: 75em) {
   .gsb-full-bleed-home-page .top-wrapper,
+  .gsb-full-bleed-home-page .middle-gray-inner-wrapper,
+  .gsb-full-bleed-home-page .middle-green-inner-wrapper,
   .gsb-full-bleed-home-page .bottom-wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -2566,17 +2571,6 @@ del {
   }
 }
 .gsb-full-bleed-home-page .top-left,
-.gsb-full-bleed-home-page .top-right,
-.gsb-full-bleed-home-page .middle-gray-left,
-.gsb-full-bleed-home-page .middle-gray-right,
-.gsb-full-bleed-home-page .middle-green-left,
-.gsb-full-bleed-home-page .middle-green-right,
-.gsb-full-bleed-home-page .bottom-left,
-.gsb-full-bleed-home-page .bottom-right {
-  max-width: 570px;
-  width: 100%;
-}
-.gsb-full-bleed-home-page .top-left,
 .gsb-full-bleed-home-page .middle-gray-left,
 .gsb-full-bleed-home-page .middle-green-left,
 .gsb-full-bleed-home-page .bottom-left {
@@ -2588,18 +2582,52 @@ del {
 .gsb-full-bleed-home-page .bottom-right {
   float: right;
 }
-@media (max-width: 75em) {
+.gsb-full-bleed-home-page .top-left,
+.gsb-full-bleed-home-page .top-right,
+.gsb-full-bleed-home-page .middle-gray-left,
+.gsb-full-bleed-home-page .middle-gray-right,
+.gsb-full-bleed-home-page .middle-green-left,
+.gsb-full-bleed-home-page .middle-green-right,
+.gsb-full-bleed-home-page .bottom-left,
+.gsb-full-bleed-home-page .bottom-right {
+  max-width: 570px;
+  width: 100%;
+}
+@media (max-width: 73.75em) {
+  .gsb-full-bleed-home-page .top-left,
   .gsb-full-bleed-home-page .top-right,
+  .gsb-full-bleed-home-page .middle-gray-left,
   .gsb-full-bleed-home-page .middle-gray-right,
+  .gsb-full-bleed-home-page .middle-green-left,
   .gsb-full-bleed-home-page .middle-green-right,
+  .gsb-full-bleed-home-page .bottom-left,
   .gsb-full-bleed-home-page .bottom-right {
-    float: left;
+    max-width: 480px;
+  }
+}
+@media (max-width: 69.375em) {
+  .gsb-full-bleed-home-page .top-left,
+  .gsb-full-bleed-home-page .top-right,
+  .gsb-full-bleed-home-page .middle-gray-left,
+  .gsb-full-bleed-home-page .middle-gray-right,
+  .gsb-full-bleed-home-page .middle-green-left,
+  .gsb-full-bleed-home-page .middle-green-right,
+  .gsb-full-bleed-home-page .bottom-left,
+  .gsb-full-bleed-home-page .bottom-right {
+    float: none;
+    margin: 0 auto 20px;
+    max-width: 570px;
   }
 }
 .gsb-full-bleed-home-page .middle-green-full {
   margin: 0 auto;
   max-width: 570px;
   width: 100%;
+}
+@media (max-width: 72.5em) {
+  .gsb-full-bleed-home-page .top-thirds-wrapper .panel-pane {
+    margin: 0 auto 20px;
+  }
 }
 
 .panels-layout-gsb-full-bleed-landing-page #main {
