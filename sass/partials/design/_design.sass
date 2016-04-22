@@ -632,16 +632,22 @@ ul.gsb-social-buttons li
       text-decoration: none
 
 // Top social buttons
-.gsb-social-buttons .sharrre,
-.field-name-social-buttons-top .sharrre
-  .share
-    height: 40px
-    width: 40px
+.gsb-social-buttons,
+.field-name-social-buttons-top
+  .sharrre
+    .share
+      height: 40px
+      width: 40px
+      &:before
+        display: inline-block
+        font-size: 20px
+        position: relative
+        top: 9px
+
+  .sharrre-email .share
     &:before
-      display: inline-block
-      font-size: 20px
-      position: relative
-      top: 9px
+      font-size: 16px
+
 
   // Counter
   .count
