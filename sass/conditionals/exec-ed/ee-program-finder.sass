@@ -79,23 +79,6 @@
       font-size: 16px
       padding: 12px 6px 6px 18px
       width: 145px !important
-  .customSelect
-    width: 210px
-    &:after
-      background-color: #f9f9f9
-      border-left: 1px solid $grey-c
-      color: $red
-      display: inline-block
-      float: right
-      font-size: 14px
-      line-height: 3
-      height: 45px
-      padding: 0 16px
-
-
-  // Filters across top
-  .form-item
-    margin: 0
 
   .form-item-filter-program-topic,
   .form-item-filter-leadership-level,
@@ -106,53 +89,14 @@
     max-width: 230px
     position: relative
 
-  button.ms-choice > span,
-  .isotopify-filter-daterange .placeholder,
-  .form-item-search .placeholder
-    color: $text-black
-    font-family: $font-sans
-    font-size: 16px
-    height: 47px
-    line-height: 2.9
-    padding: 0
-    padding-left: 18px
-    text-align: left
-    width: 210px
-
   // Filter styling
   .ms-parent
     width: 210px !important
 
-  .ms-choice
-    @extend %border-grey
-    background: $white
-    border-radius: 0
-    color: $text-black
-    height: 47px
-    // Select arrow
-    > div
-      +icon-after("arrow-med-down", true)
-      &:after
-        background-color: #f9f9f9
-        border-left: 1px solid $grey-c
-        color: $red
-        display: inline-block
-        float: right
-        font-size: 14px
-        line-height: 3
-        height: 45px
-        padding: 0 16px
-        position: relative
-        top: 1px
-        left: -1px
-      &:hover
-        &:after
-          background-color: $link-blue
-          color: $white
-      &.open
-        +icon-after("arrow-med-up", true)
-        &:after
-          line-height: 3
+  button.ms-choice > span,
+  .isotopify-filter-daterange .placeholder,
+  .form-item-search .placeholder
+    width: 210px
 
   // Date range button
   button.mini-filter-daterange-button,
@@ -189,30 +133,6 @@
       +icon-after("arrow-med-up", true)
       &:after
         line-height: 3
-
-  // Select window
-  .ms-drop.bottom
-    @extend %border-grey
-    border-radius: 0
-    min-width: 700px
-    overflow: visible
-
-    // Apply button
-    .checkbox-apply
-      @extend %green-button
-      margin-bottom: 28px
-      margin-left: 24px
-      margin-right: 12px
-
-    // Clear button
-    .checkbox-clear-all
-      @extend %white-button
-      margin-bottom: 28px
-
-    // Inputs
-    input[type="checkbox"]
-      margin-right: 2px
-      vertical-align: text-top
 
   // Location select and leadership level are smaller
   .form-item-filter-program-location .ms-drop.bottom,
@@ -256,6 +176,95 @@
     -ms-flexbox-flex-basis: 51%
     -webkit-flex-flex-basis: 51%
     flex-basis: 51%
+
+// EE filter styles
+.pane-filters,
+.pane-app-finder
+  .customSelect
+    width: 210px
+    &:after
+      background-color: #f9f9f9
+      border-left: 1px solid $grey-c
+      color: $red
+      display: inline-block
+      float: right
+      font-size: 14px
+      line-height: 3
+      height: 45px
+      padding: 0 16px
+
+  // Filters across top
+  .form-item
+    margin: 0
+
+  button.ms-choice > span,
+  .isotopify-filter-daterange .placeholder,
+  .form-item-search .placeholder
+    color: $text-black
+    font-family: $font-sans
+    font-size: 16px
+    height: 47px
+    line-height: 2.9
+    padding: 0
+    padding-left: 18px
+    text-align: left
+
+  .ms-choice
+    @extend %border-grey
+    background: $white
+    border-radius: 0
+    color: $text-black
+    height: 47px
+    // Select arrow
+    > div
+      +icon-after("arrow-med-down", true)
+      &:after
+        background-color: #f9f9f9
+        border-left: 1px solid $grey-c
+        color: $red
+        display: inline-block
+        float: right
+        font-size: 14px
+        line-height: 3
+        height: 45px
+        padding: 0 16px
+        position: relative
+        top: 1px
+        left: -1px
+      &:hover
+        &:after
+          background-color: $link-blue
+          color: $white
+      &.open
+        +icon-after("arrow-med-up", true)
+        &:after
+          line-height: 3
+
+  // Select window
+  .ms-drop.bottom
+    @extend %border-grey
+    border-radius: 0
+    min-width: 700px
+    overflow: visible
+
+    // Apply button
+    .checkbox-apply
+      @extend %green-button
+      margin-bottom: 28px
+      margin-left: 24px
+      margin-right: 12px
+
+    // Clear button
+    .checkbox-clear-all
+      @extend %white-button
+      margin-bottom: 28px
+
+    // Inputs
+    input[type="checkbox"]
+      margin-right: 2px
+      vertical-align: text-top
+
+
 
 // Date drop down
 .date-picker-wrapper
