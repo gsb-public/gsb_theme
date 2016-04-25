@@ -12,7 +12,11 @@
 
 <div class="panel-display gsb-full-bleed-page clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div id="top-content"></div>
+  <?php if ($content['full_bleed_header']): ?>
+    <div class="full-bleed-header full-view">
+      <?php print $content['full_bleed_header']; ?>
+    </div>
+  <?php endif; ?>
 
   <?php if ($content['featured_content']): ?>
     <div class="featured-content full-view">
