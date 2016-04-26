@@ -607,17 +607,21 @@ ul.gsb-social-buttons li
   .share
     +border-radius(50%)
     background: $black
-    color: $white
+    color: $black
     display: inline-block
     font-weight: normal
+    line-height: 1
     text-align: center
     overflow: hidden
     height: 40px
     width: 40px
     span
       visibility: hidden
+    &:before
+      color: $white
     &:hover
       background: #8aa8a2
+      color: #8aa8a2
 
   // Counter
   .count
@@ -647,7 +651,7 @@ ul.gsb-social-buttons li
   .sharrre-email .share
     &:before
       font-size: 16px
-
+      top: 10px
 
   // Counter
   .count

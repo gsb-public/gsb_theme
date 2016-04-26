@@ -4994,9 +4994,10 @@ ul.gsb-social-buttons li:last-of-type {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: black;
-  color: white;
+  color: black;
   display: inline-block;
   font-weight: normal;
+  line-height: 1;
   text-align: center;
   overflow: hidden;
   height: 40px;
@@ -5005,8 +5006,12 @@ ul.gsb-social-buttons li:last-of-type {
 .sharrre .box .share span {
   visibility: hidden;
 }
+.sharrre .box .share:before {
+  color: white;
+}
 .sharrre .box .share:hover {
   background: #8aa8a2;
+  color: #8aa8a2;
 }
 .sharrre .box .count {
   color: #7d9395;
@@ -5036,6 +5041,7 @@ ul.gsb-social-buttons li:last-of-type {
 .gsb-social-buttons .sharrre-email .share:before,
 .field-name-social-buttons-top .sharrre-email .share:before {
   font-size: 16px;
+  top: 10px;
 }
 .gsb-social-buttons .count,
 .field-name-social-buttons-top .count {
