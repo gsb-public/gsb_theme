@@ -151,6 +151,12 @@
           color: $green-light
           font-size: 14px
           margin-left: 4px
+        &:hover
+          color: $text-black
+          text-decoration: none
+          border-bottom: 1px solid
+          &:after
+            color: $text-black
 
     // Teasers
     .curriculum-blurb,
@@ -326,8 +332,15 @@
         font-size: 14px
         margin-left: 4px
         margin-top: -8px
+      &:hover
+        &:after
+          color: $text-black
       a
         color: $text-black
+        &:hover
+          color: $text-black
+          text-decoration: none
+          border-bottom: 1px solid
 
     .program-deadline
       margin-bottom: 3px
@@ -408,6 +421,8 @@
       color: $link-green
       &:hover
         color: $link-blue
+        text-decoration: none
+        border-bottom: 1px solid
 
     // Contact Label
     .label-above
