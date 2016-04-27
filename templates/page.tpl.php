@@ -114,6 +114,14 @@
 
     <?php print $messages; ?>
 
+    <?php if ($page['hero']): ?>
+      <div id="hero" class="clearfix"><div class="section">
+        <div class="hero-content">
+          <?php print render($page['hero']); ?>
+        </div> <!-- /.hero-content -->
+      </div></div> <!-- /.section, /#hero -->
+    <?php endif; ?>
+
     <!--googleon: index--><!--googleon: snippet-->
     <div id="content-wrapper" class="clearfix">
 
