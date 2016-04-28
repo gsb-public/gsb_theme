@@ -1,3 +1,7 @@
+.pane-degree-programs .degree-programs-wrapper .degree-program {
+  background: white;
+}
+
 .mini-finder-filters button.mini-filter-daterange-button,
 .mini-finder-filters button.isotopify-filter-daterange-button,
 .pane-filters button.mini-filter-daterange-button,
@@ -13,7 +17,7 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply,
+.pane-degree-programs .degree-programs-wrapper .degree-program, .pane-filters .ms-drop.bottom .checkbox-apply,
 .pane-app-finder .ms-drop.bottom .checkbox-apply,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder .mini-finder-filters input#edit-submit, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all,
@@ -1057,5 +1061,33 @@ h2.isotopify-title {
   width: 170px !important;
 }
 .pane-mini-program-finder .mini-finder-filters #edit-filters .ms-drop.bottom ul > li.multiple label {
+  font-weight: normal;
+}
+
+.pane-degree-programs {
+  background: url('../../../images/gsb_program-finder_bg_01.jpg') no-repeat center center, #72bbaa;
+  max-width: initial !important;
+  height: 250px;
+}
+.pane-degree-programs .degree-programs-wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.pane-degree-programs .degree-programs-wrapper .degree-program {
+  padding: 26px;
+  display: inline-block;
+  width: 334px;
+  vertical-align: top;
+  margin-right: 50px;
+}
+.pane-degree-programs .degree-programs-wrapper .degree-program .title a {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+.pane-degree-programs .degree-programs-wrapper .degree-program .intro {
+  font-size: 16px;
+  line-height: 1.3;
   font-weight: normal;
 }
