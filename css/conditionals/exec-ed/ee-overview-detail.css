@@ -54,6 +54,12 @@
 .node-type-program #content {
   max-width: initial;
 }
+.node-type-program #main {
+  padding: 30px 0;
+}
+.node-type-program #bottom .bottom-content {
+  padding: 0;
+}
 
 .node-program.view-mode-full .ds-main-wrapper,
 .node-program.view-mode-full .learn-wrapper-inner,
@@ -63,6 +69,17 @@
 .node-program.view-mode-full .ds-footer {
   margin: 0 auto;
   max-width: 1170px;
+}
+@media (max-width: 75em) {
+  .node-program.view-mode-full .ds-main-wrapper,
+  .node-program.view-mode-full .learn-wrapper-inner,
+  .node-program.view-mode-full .ds-faculty,
+  .node-program.view-mode-full .cta-wrapper-inner,
+  .node-program.view-mode-full .ds-explore,
+  .node-program.view-mode-full .ds-footer {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 .node-program.view-mode-full .ds-main-wrapper {
   overflow: hidden;
@@ -74,14 +91,37 @@
   display: inline-block;
   max-width: 540px;
   vertical-align: top;
-  width: 100%;
+  width: 50%;
 }
 .node-program.view-mode-full .ds-main-wrapper .ds-left {
   float: left;
-  margin-right: 90px;
+}
+@media (max-width: 73.75em) {
+  .node-program.view-mode-full .ds-main-wrapper .ds-left {
+    width: 40%;
+  }
+}
+@media (max-width: 62.5em) {
+  .node-program.view-mode-full .ds-main-wrapper .ds-left {
+    float: left;
+    max-width: initial;
+    width: 100%;
+  }
 }
 .node-program.view-mode-full .ds-main-wrapper .ds-right {
   float: right;
+}
+@media (max-width: 73.75em) {
+  .node-program.view-mode-full .ds-main-wrapper .ds-right {
+    width: 60%;
+  }
+}
+@media (max-width: 62.5em) {
+  .node-program.view-mode-full .ds-main-wrapper .ds-right {
+    float: left;
+    max-width: initial;
+    width: 100%;
+  }
 }
 .node-program.view-mode-full h2.section-title {
   color: #231f20;
@@ -103,8 +143,13 @@
 .node-program.view-mode-full .ds-learn .field-name-field-learn-more-photo,
 .node-program.view-mode-full .ds-learn .field-name-field-video {
   float: left;
-  margin-right: 44px;
   max-width: 330px;
+}
+@media (max-width: 73.75em) {
+  .node-program.view-mode-full .ds-learn .field-name-field-learn-more-photo,
+  .node-program.view-mode-full .ds-learn .field-name-field-video {
+    max-width: 270px;
+  }
 }
 .node-program.view-mode-full .ds-learn .field-name-field-learn-more-photo {
   max-height: 212px;
@@ -156,16 +201,20 @@
 .node-program.view-mode-full .ds-learn .group-wrapper-application-req,
 .node-program.view-mode-full .ds-learn .field-name-field-additional-pages {
   display: inline-block;
-  margin-bottom: 36px;
-  margin-right: 40px;
-  width: 340px;
+  margin: 0 20px 36px 20px;
+  max-width: 340px;
   vertical-align: top;
 }
 .node-program.view-mode-full .ds-learn .group-wrapper-learn {
   overflow: hidden;
   *zoom: 1;
-  float: left;
+  float: right;
   max-width: 760px;
+}
+@media (max-width: 66.8125em) {
+  .node-program.view-mode-full .ds-learn .group-wrapper-learn {
+    max-width: 645px;
+  }
 }
 .node-program.view-mode-full .ds-learn .group-wrapper-learn h2 {
   color: #231f20;
@@ -173,6 +222,7 @@
   font-weight: normal;
   line-height: 1.3;
   margin-bottom: 26px;
+  margin-left: 20px;
 }
 .node-program.view-mode-full .ds-learn .group-wrapper-learn h3 a {
   color: #231f20;
@@ -215,9 +265,6 @@
 .node-program.view-mode-full .ds-learn .field-name-field-overview {
   font-size: 16px;
   line-height: 1.3;
-}
-.node-program.view-mode-full .ds-faculty {
-  padding: 26px 0;
 }
 .node-program.view-mode-full .ds-faculty h2 {
   font-weight: normal;
@@ -330,6 +377,12 @@
 .node-program.view-mode-full .instance-information .group-right {
   float: left;
   width: 260px;
+}
+@media (max-width: 62.5em) {
+  .node-program.view-mode-full .instance-information .group-left,
+  .node-program.view-mode-full .instance-information .group-right {
+    width: 48%;
+  }
 }
 .node-program.view-mode-full .instance-information .group-left {
   margin-right: 20px;
@@ -777,8 +830,9 @@
   justify-content: space-between;
 }
 .node-program.view-mode-full .ds-cta .field {
-  width: 464px;
+  margin: 0 auto;
   padding: 14px 26px;
+  width: 464px;
 }
 .node-program.view-mode-full .ds-cta .field a,
 .node-program.view-mode-full .ds-cta .field a[target="_blank"] {
@@ -822,8 +876,10 @@
 .node-program.view-mode-full .ds-cta .field a[target="_blank"]:hover:after {
   color: #aac4bf;
 }
-.node-program.view-mode-full .ds-cta .field-name-field-cta1 {
-  margin: 0 auto;
+@media (max-width: 60.3125em) {
+  .node-program.view-mode-full .ds-cta .field-name-field-cta2 {
+    margin-top: 10px;
+  }
 }
 .node-program.view-mode-full .ds-explore {
   overflow: hidden;
@@ -898,6 +954,11 @@
 .node-program.view-mode-full .ds-explore .node-program-instance.view-mode-program_explore_other:nth-of-type(3n) {
   margin-left: 22px;
   margin-right: 0;
+}
+@media (max-width: 75.3125em) {
+  .node-program.view-mode-full .ds-explore .node-program-instance.view-mode-program_explore_other {
+    width: 28%;
+  }
 }
 .node-program.view-mode-full .ds-explore .program-programs-cta {
   display: inline-block;
