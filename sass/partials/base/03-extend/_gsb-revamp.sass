@@ -226,12 +226,12 @@
 // Rounded button
 %rounded-button
   border: none
-  +border-radius(20px)
+  +border-radius(22px)
   color: $white
   font-family: $font-sans
   font-size: 16px
-  line-height: 1
-  padding: 10px 16px
+  line-height: 1.4
+  padding: 10px 17px
   &:after
     color: $white !important
   &:hover
@@ -250,19 +250,16 @@
 %red-button
   @extend %rounded-button
   @extend %gradient-red
-  @extend %box-shadow
 
 // Rounded grey button
 %grey-button
   @extend %rounded-button
   @extend %gradient-grey
-  @extend %box-shadow
   color: $link-green
 
 // Rounded white button
 %white-button
   @extend %rounded-button
-  @extend %box-shadow
   background: $white
   color: $link-green !important
   &:hover
