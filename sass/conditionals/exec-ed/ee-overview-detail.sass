@@ -11,6 +11,10 @@
 .node-type-program
   #content
     max-width: initial
+  #main
+    padding: 30px 0
+  #bottom .bottom-content
+    padding: 0
 
 // Program overview page
 .node-program.view-mode-full
@@ -24,6 +28,9 @@
   .ds-footer
     margin: 0 auto
     max-width: 1170px
+    +breakpoint(1200px max-width)
+      padding-left: 10px !important
+      padding-right: 10px !important
 
   // Main content
   .ds-main-wrapper
@@ -34,14 +41,25 @@
       display: inline-block
       max-width: 540px
       vertical-align: top
-      width: 100%
+      width: 50%
 
     .ds-left
       float: left
-      margin-right: 90px
+      +breakpoint(1180px max-width)
+        width: 40%
+      +breakpoint(1000px max-width)
+        float: left
+        max-width: initial
+        width: 100%
 
     .ds-right
       float: right
+      +breakpoint(1180px max-width)
+        width: 60%
+      +breakpoint(1000px max-width)
+        float: left
+        max-width: initial
+        width: 100%
 
   h2.section-title
     color: $text-black
@@ -63,8 +81,9 @@
     .field-name-field-learn-more-photo,
     .field-name-field-video
       float: left
-      margin-right: 44px
       max-width: 330px
+      +breakpoint(1180px max-width)
+        max-width: 270px
 
     .field-name-field-video
       @extend %bg-and-box-shadow
@@ -123,16 +142,17 @@
     .group-wrapper-application-req,
     .field-name-field-additional-pages
       display: inline-block
-      margin-bottom: 36px
-      margin-right: 40px
-      width: 340px
+      margin: 0 20px 36px 20px
+      max-width: 340px
       vertical-align: top
 
     // Learn more details
     .group-wrapper-learn
       +clearfix
-      float: left
+      float: right
       max-width: 760px
+      +breakpoint(1069px max-width)
+        max-width: 645px
       // Learn more header
       h2
         color: $text-black
@@ -140,6 +160,8 @@
         font-weight: normal
         line-height: 1.3
         margin-bottom: 26px
+        margin-left: 20px
+
       // Block titles
       h3 a
         color: $text-black
@@ -169,7 +191,6 @@
 
   // Faculty
   .ds-faculty
-    padding: $standard-padding 0
     h2
       font-weight: normal
 
@@ -292,6 +313,8 @@
     .group-right
       float: left
       width: 260px
+      +breakpoint(1000px max-width)
+        width: 48%
 
     .group-left
       margin-right: 20px
@@ -667,8 +690,9 @@
     // CTA links
     .field
       @extend %bg-and-box-shadow
-      width: 464px
+      margin: 0 auto
       padding: 14px $standard-padding
+      width: 464px
       a,
       a[target="_blank"]
         color: $link-green
@@ -693,7 +717,10 @@
             color: $teal-light
 
     .field-name-field-cta1
-      margin: 0 auto
+
+    .field-name-field-cta2
+      +breakpoint(965px max-width)
+        margin-top: 10px
 
   // Explore Related Programs
   .ds-explore
@@ -746,7 +773,8 @@
       &:nth-of-type(3n)
         margin-left: 22px
         margin-right: 0
-
+      +breakpoint(1205px max-width)
+        width: 28%
     // See All Programs CTA positioning
     .program-programs-cta
       display: inline-block
