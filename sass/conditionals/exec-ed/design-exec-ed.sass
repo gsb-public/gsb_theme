@@ -438,7 +438,7 @@ h1.ee-section-footer-title
   +breakpoint(1170px max-width)
     font-size: 30px
   +breakpoint(600px max-width)
-    font-size: 22px
+    font-size: 20px
 
 // Header and Bottom Menu
 .ee-section-header-menu,
@@ -474,9 +474,9 @@ h1.ee-section-footer-title
         background: #c2b7a5
         color: $white
 
-
 // Header Icons
 .ee-section-header-social-buttons,
+.ee-section-footer-social-buttons,
 .ee-section-header-follow-us
   float: right
   margin: 0 10px
@@ -505,11 +505,15 @@ h1.ee-section-footer-title
       .share:before
         transform: scale(0.8)
 
+.ee-section-footer-social-buttons
+  .gsb-social-buttons
+    position: relative
+    top: 0
+
 // Hide and show buttons in responsive
 .ee-section-header-social-buttons
   +breakpoint(880px max-width)
     display: none
-
 
 .ee-section-footer-social-buttons
   +breakpoint(881px min-width)
@@ -532,21 +536,39 @@ h1.ee-section-footer-title
   a
     display: inline-block
     font-size: 16px
-    padding: 14px
+    line-height: 1.1
+    padding: 15px 14px
+  +breakpoint(600px max-width)
+    float: none
+    margin: 0 auto
+    max-width: 280px
 
   .apply-button,
   .download-brochure
     display: inline-block
+    float: right
+    height: 47px
     a
       @extend %gradient-red
       color: $white
+    +breakpoint(600px max-width)
+      a
+        padding: 15px $standard-padding
+
+
+  // Pre Assessment link
   .pre-qualication-link
     @extend %box-shadow
     background: $white
     display: inline-block
     float: left
-  .apply-button
-    float: left
+    +breakpoint(600px max-width)
+      display: block
+      float: none
+      margin-top: 10px
+      max-width: 280px
+
+  // Download link
   .download-brochure
     border-left: 1px #d50707 solid
 
@@ -726,6 +748,8 @@ h1.ee-section-footer-title
   margin: 0 auto
   max-width: 1170px
   text-align: right
+  +breakpoint(1000px max-width)
+    padding: 0 10px
 
 // Footer title and menu
 .ee-section-footer-overlay
@@ -827,7 +851,6 @@ h1.ee-section-footer-title
           color: $teal-light
 
 // Need more information block
-
 .pane-need-more-information
   height: 215px
   background: #f4f4f4

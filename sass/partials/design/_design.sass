@@ -127,6 +127,8 @@
   background: $white
   .not-front &
     padding-bottom: 100px
+    +breakpoint(1000px max-width)
+      padding-bottom: 20px
   &:after,
   &:before
     content: "" !important
@@ -166,6 +168,8 @@
   +clearfix
   background: $white
   padding-top: 30px
+  +breakpoint(1000px max-width)
+    padding-top: 10px
   .block-block
     vertical-align: top
   .bottom-content

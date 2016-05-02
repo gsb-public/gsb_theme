@@ -580,7 +580,7 @@ h1.ee-section-footer-title {
 @media (max-width: 37.5em) {
   h1.ee-section-header-title,
   h1.ee-section-footer-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -641,20 +641,24 @@ h1.ee-section-footer-title {
 }
 
 .ee-section-header-social-buttons,
+.ee-section-footer-social-buttons,
 .ee-section-header-follow-us {
   float: right;
   margin: 0 10px;
 }
 .ee-section-header-social-buttons .icon-wrapper,
+.ee-section-footer-social-buttons .icon-wrapper,
 .ee-section-header-follow-us .icon-wrapper {
   overflow: visible;
 }
 .ee-section-header-social-buttons .gsb-social-buttons,
+.ee-section-footer-social-buttons .gsb-social-buttons,
 .ee-section-header-follow-us .gsb-social-buttons {
   position: relative;
   top: -7px;
 }
 .ee-section-header-social-buttons .gsb-social-buttons .share,
+.ee-section-footer-social-buttons .gsb-social-buttons .share,
 .ee-section-header-follow-us .gsb-social-buttons .share {
   background: #7d7465;
   color: #7d7465;
@@ -662,23 +666,32 @@ h1.ee-section-footer-title {
   width: 32px;
 }
 .ee-section-header-social-buttons .gsb-social-buttons .share:before,
+.ee-section-footer-social-buttons .gsb-social-buttons .share:before,
 .ee-section-header-follow-us .gsb-social-buttons .share:before {
   color: white;
   font-size: 15px;
   top: 7px;
 }
 .ee-section-header-social-buttons .gsb-social-buttons .share:hover,
+.ee-section-footer-social-buttons .gsb-social-buttons .share:hover,
 .ee-section-header-follow-us .gsb-social-buttons .share:hover {
   background: #2d6280;
   color: #2d6280;
 }
 .ee-section-header-social-buttons .gsb-social-buttons .count,
+.ee-section-footer-social-buttons .gsb-social-buttons .count,
 .ee-section-header-follow-us .gsb-social-buttons .count {
   display: none;
 }
 .ee-section-header-social-buttons .gsb-social-buttons .sharrre.sharrre-email .share:before,
+.ee-section-footer-social-buttons .gsb-social-buttons .sharrre.sharrre-email .share:before,
 .ee-section-header-follow-us .gsb-social-buttons .sharrre.sharrre-email .share:before {
   transform: scale(0.8);
+}
+
+.ee-section-footer-social-buttons .gsb-social-buttons {
+  position: relative;
+  top: 0;
 }
 
 @media (max-width: 55em) {
@@ -716,23 +729,44 @@ h1.ee-section-footer-title {
 .ee-section-apply-brochure a {
   display: inline-block;
   font-size: 16px;
-  padding: 14px;
+  line-height: 1.1;
+  padding: 15px 14px;
+}
+@media (max-width: 37.5em) {
+  .ee-section-apply-brochure {
+    float: none;
+    margin: 0 auto;
+    max-width: 280px;
+  }
 }
 .ee-section-apply-brochure .apply-button,
 .ee-section-apply-brochure .download-brochure {
   display: inline-block;
+  float: right;
+  height: 47px;
 }
 .ee-section-apply-brochure .apply-button a,
 .ee-section-apply-brochure .download-brochure a {
   color: white;
+}
+@media (max-width: 37.5em) {
+  .ee-section-apply-brochure .apply-button a,
+  .ee-section-apply-brochure .download-brochure a {
+    padding: 15px 26px;
+  }
 }
 .ee-section-apply-brochure .pre-qualication-link {
   background: white;
   display: inline-block;
   float: left;
 }
-.ee-section-apply-brochure .apply-button {
-  float: left;
+@media (max-width: 37.5em) {
+  .ee-section-apply-brochure .pre-qualication-link {
+    display: block;
+    float: none;
+    margin-top: 10px;
+    max-width: 280px;
+  }
 }
 .ee-section-apply-brochure .download-brochure {
   border-left: 1px #d50707 solid;
@@ -919,6 +953,11 @@ h1.ee-section-footer-title {
   margin: 0 auto;
   max-width: 1170px;
   text-align: right;
+}
+@media (max-width: 62.5em) {
+  .ee-section-footer-subject-to-change {
+    padding: 0 10px;
+  }
 }
 
 .ee-section-footer-overlay {

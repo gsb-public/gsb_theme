@@ -4312,6 +4312,11 @@ div.gsb-full-bleed-landing-page .pane-bundle-spotlight .ds-2col .group-right {
 .not-front #content-wrapper {
   padding-bottom: 100px;
 }
+@media (max-width: 62.5em) {
+  .not-front #content-wrapper {
+    padding-bottom: 20px;
+  }
+}
 #content-wrapper:after, #content-wrapper:before {
   content: "" !important;
   position: absolute;
@@ -4364,6 +4369,11 @@ div.gsb-full-bleed-landing-page .pane-bundle-spotlight .ds-2col .group-right {
   *zoom: 1;
   background: white;
   padding-top: 30px;
+}
+@media (max-width: 62.5em) {
+  #bottom {
+    padding-top: 10px;
+  }
 }
 #bottom .block-block {
   vertical-align: top;
@@ -6693,6 +6703,9 @@ input.signup-submit:hover {
 .page-exec-ed #footer .block {
   margin-bottom: 24px;
   max-width: 335px;
+}
+.page-exec-ed #footer .block:last-of-type {
+  margin-bottom: 0;
 }
 @media (max-width: 75.3125em) {
   .page-exec-ed #footer .block {
