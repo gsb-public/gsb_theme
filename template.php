@@ -290,6 +290,14 @@ function gsb_theme_preprocess_page(&$variables) {
     $variables['theme_hook_suggestions'][] = 'page__404';
   }
 
+  $object = menu_get_object();
+  if ($object && !empty($object->path['alias'])) {
+    if ($object->path['alias'] == 'exec-ed/admission') {
+      $fred = 'fred';
+      $variables['theme_hook_suggestions'][] = 'page__ee_program_admission';
+    }
+  }
+
   // Add search and event link to main navigation
   $variables['global_search'] = array(
     '#type' => 'container',
