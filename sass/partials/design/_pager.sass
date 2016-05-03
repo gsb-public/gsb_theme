@@ -7,6 +7,8 @@
   @extend %black-border-top-small
   padding-left: $standard-padding
   margin-bottom: 60px
+  +breakpoint(600px max-width)
+    margin-bottom: 0
   .narrow-view &
     padding-left: 0
   +breakpoint(335px max-width)
@@ -24,7 +26,7 @@
     font-size: 16px
     font-weight: bold
     line-height: 2.2
-    padding: 10px 16px
+    padding: 10px 14px
     &:hover
       background: $link-blue
       text-decoration: underline

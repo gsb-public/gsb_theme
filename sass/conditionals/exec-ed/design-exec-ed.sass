@@ -509,6 +509,7 @@ h1.ee-section-footer-title
         transform: scale(0.8)
 
 .ee-section-footer-social-buttons
+  margin-top: 16px
   .gsb-social-buttons
     position: relative
     top: 0
@@ -542,8 +543,7 @@ h1.ee-section-footer-title
     line-height: 1.1
     padding: 15px 14px
   +breakpoint(600px max-width)
-    float: none
-    margin: 0 auto
+    margin-right: 20px
     max-width: 280px
 
   .apply-button,
@@ -556,7 +556,7 @@ h1.ee-section-footer-title
       color: $white
     +breakpoint(600px max-width)
       a
-        padding: 15px $standard-padding
+        padding: 15px
 
 
   // Pre Assessment link
@@ -748,6 +748,8 @@ h1.ee-section-footer-title
 .page-exec-ed
   #bottom .bottom-content
     max-width: initial
+    +breakpoint($bp-content-max)
+      padding: 0
 
 // Program notice
 .ee-section-footer-subject-to-change
@@ -765,7 +767,7 @@ h1.ee-section-footer-title
     max-width: 1170px
     padding: 20px 0
     +breakpoint(1200px max-width)
-      padding: 20px 10px
+      padding: 20px
 
 // Program 3 across for homepage list
 .pane-bundle-programs-list

@@ -10,7 +10,7 @@
       +breakpoint(768px max-width)
         padding-bottom: 0
     +breakpoint($bp-mobile-max)
-      padding-top: 15px
+      padding: 20px 0
 
 #footer-wrapper
   background: #f4f4f4
@@ -180,8 +180,10 @@ input.signup-submit
   +breakpoint(768px max-width)
     float: none
     margin: 0
-    margin-bottom: 30px
+    margin-bottom: 20px
     width: 100%
+    &:last-of-type
+      margin-bottom: 0
 #block-menu-menu-footer-1
   +breakpoint(768px max-width)
     margin-bottom: 0
@@ -236,6 +238,11 @@ input.signup-submit
     margin-right: 36px
     &:last-of-type
       margin-right: 0
+    +breakpoint(600px max-width)
+      display: block
+      margin-bottom: 6px
+      &:last-of-type
+        margin-bottom: 0
 
 // Second Alumni footer
 #block-menu-menu-section-menu-alumni-footer-

@@ -29,8 +29,8 @@
     margin: 0 auto
     max-width: 1170px
     +breakpoint(1200px max-width)
-      padding-left: 10px !important
-      padding-right: 10px !important
+      padding-left: 20px !important
+      padding-right: 20px !important
 
   // Main content
   .ds-main-wrapper
@@ -149,7 +149,11 @@
       max-width: 340px
       vertical-align: top
       +breakpoint(1105px max-width)
+        max-width: 43%
+      +breakpoint(930px max-width)
         display: block
+        max-width: initial
+        width: 100%
       +breakpoint(656px max-width)
         margin: 0 0 36px 0
 
@@ -176,6 +180,7 @@
 
       // Block titles
       h3 a
+        border-bottom: 1px transparent solid
         color: $text-black
         display: inline-block
         font-size: 24px
@@ -579,7 +584,10 @@
       &:nth-of-type(3n)
         margin-left: 22px
         margin-right: 0
-
+      +breakpoint(900px max-width)
+        margin: 0 !important
+        max-width: inherit
+        width: 100%
 
     // See All Faculty CTA positioning
     .program-faculty-cta
@@ -800,9 +808,11 @@
         margin-right: 0
       +breakpoint(1205px max-width)
         width: 30%
-      +breakpoint(630px max-width)
+      +breakpoint(935px max-width)
         margin: 0 0 18px 0 !important
         width: 100%
+        .gsb-display-image
+          display: none
     // See All Programs CTA positioning
     .program-programs-cta
       display: inline-block
@@ -857,3 +867,5 @@
       &:hover
         text-decoration: none
         border-bottom: 1px solid $link-blue
+      +breakpoint(700px max-width)
+        font-size: 18px

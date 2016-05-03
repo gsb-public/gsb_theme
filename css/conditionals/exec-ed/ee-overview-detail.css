@@ -77,8 +77,8 @@
   .node-program.view-mode-full .cta-wrapper-inner,
   .node-program.view-mode-full .ds-explore,
   .node-program.view-mode-full .ds-footer {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 .node-program.view-mode-full .ds-main-wrapper {
@@ -216,7 +216,17 @@
   .node-program.view-mode-full .ds-learn .group-wrapper-participant,
   .node-program.view-mode-full .ds-learn .group-wrapper-application-req,
   .node-program.view-mode-full .ds-learn .field-name-field-additional-pages {
+    max-width: 43%;
+  }
+}
+@media (max-width: 58.125em) {
+  .node-program.view-mode-full .ds-learn .group-wrapper-curriculum,
+  .node-program.view-mode-full .ds-learn .group-wrapper-participant,
+  .node-program.view-mode-full .ds-learn .group-wrapper-application-req,
+  .node-program.view-mode-full .ds-learn .field-name-field-additional-pages {
     display: block;
+    max-width: initial;
+    width: 100%;
   }
 }
 @media (max-width: 41em) {
@@ -255,6 +265,7 @@
   }
 }
 .node-program.view-mode-full .ds-learn .group-wrapper-learn h3 a {
+  border-bottom: 1px transparent solid;
   color: #231f20;
   display: inline-block;
   font-size: 24px;
@@ -736,6 +747,13 @@
   margin-left: 22px;
   margin-right: 0;
 }
+@media (max-width: 56.25em) {
+  .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership {
+    margin: 0 !important;
+    max-width: inherit;
+    width: 100%;
+  }
+}
 .node-program.view-mode-full .ds-faculty .program-faculty-cta {
   display: inline-block;
   margin: 0 auto;
@@ -1022,10 +1040,13 @@
     width: 30%;
   }
 }
-@media (max-width: 39.375em) {
+@media (max-width: 58.4375em) {
   .node-program.view-mode-full .ds-explore .node-program-instance.view-mode-program_explore_other {
     margin: 0 0 18px 0 !important;
     width: 100%;
+  }
+  .node-program.view-mode-full .ds-explore .node-program-instance.view-mode-program_explore_other .gsb-display-image {
+    display: none;
   }
 }
 .node-program.view-mode-full .ds-explore .program-programs-cta {
@@ -1073,4 +1094,9 @@
 .node-program.view-mode-full .topics-location-category-wrapper a:hover {
   text-decoration: none;
   border-bottom: 1px solid #2d6280;
+}
+@media (max-width: 43.75em) {
+  .node-program.view-mode-full .topics-location-category-wrapper a {
+    font-size: 18px;
+  }
 }
