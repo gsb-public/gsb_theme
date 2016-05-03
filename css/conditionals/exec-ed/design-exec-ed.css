@@ -191,6 +191,11 @@
 .node-type-program-panelized-page .ee-section-header {
   max-height: 256px;
 }
+@media (max-width: 50em) {
+  .node-type-program-panelized-page .ee-section-header {
+    max-height: none;
+  }
+}
 .node-type-program-panelized-page .ee-section-header-overlay {
   bottom: 30px;
 }
@@ -665,6 +670,10 @@ h1.ee-section-footer-title {
     background: #c2b7a5;
     color: white;
   }
+  .ee-section-header-menu a.active,
+  .ee-section-footer-menu a.active {
+    background: #c2b7a5;
+  }
 }
 
 .ee-section-header-social-buttons,
@@ -914,6 +923,12 @@ h1.ee-section-footer-title {
   width: 165px;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 37.5em) {
+  .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-image-single-public {
+    height: 90px;
+    width: 90px;
+  }
 }
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .group-wrapper-info {
   margin-left: -189px;

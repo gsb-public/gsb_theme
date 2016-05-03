@@ -87,6 +87,8 @@
 .node-type-program-panelized-page
   .ee-section-header
     max-height: 256px
+    +breakpoint(800px max-width)
+      max-height: none
   .ee-section-header-overlay
     bottom: 30px
 
@@ -473,7 +475,8 @@ h1.ee-section-footer-title
       &:hover
         background: #c2b7a5
         color: $white
-
+      &.active
+        background: #c2b7a5
 // Header Icons
 .ee-section-header-social-buttons,
 .ee-section-footer-social-buttons,
@@ -678,6 +681,9 @@ h1.ee-section-footer-title
       width: 165px
       position: relative
       z-index: 1
+      +breakpoint(600px max-width)
+        height: 90px
+        width: 90px
 
     // Info wrapper
     .group-wrapper-info
