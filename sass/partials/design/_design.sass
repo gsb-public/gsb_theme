@@ -447,7 +447,20 @@ a.social-block-facebook
 .circle
   @extend %circle
 
-// Show more show less on faculty detail
+// Show more show less
+.show-more-less
+  position: relative
+  bottom: 0
+
+.show-more-less-toggler-wrapper
+  &:before
+    +background(linear-gradient(bottom, rgba($white, 1), rgba($white, 0)))
+    content: " "
+    display: block
+    height: 40px
+    position: relative
+    top: -40px
+
 .show-more-less-toggler
   border: 0 !important
   color: $text-green
@@ -455,11 +468,14 @@ a.social-block-facebook
   line-height: 1.4
   font-size: 18px
   margin-left: 6px
+  position: absolute
+  bottom: 0
   +icon-before("arrow-med-down", true)
   &:before
     color: $green-light
     float: left
     font-size: 12px
+    margin-right: 5px
     position: relative
     top: 3px
   &:hover
