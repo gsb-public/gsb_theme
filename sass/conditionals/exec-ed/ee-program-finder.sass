@@ -8,13 +8,31 @@
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
-// Program finder page hackiness
+$bp-filter-mid: 1115px 915px
+$mid-filter-width: 285px
+
+$bp-filter-small: 914px 569px
+$small-filter-width: 245px
+
+// Exec Ed program finder page hackiness
 .page-node-411861
   #content
     max-width: none
-
+  #main
+    +breakpoint(1199px max-width)
+      padding: 0
   #sidebar
     display: none
+
+  .main-wrapper,
+  .inner-main-wrapper
+    +breakpoint(970px max-width)
+      float: none
+      margin-right: 0
+  .inner-sidebar-wrapper
+    +breakpoint(970px max-width)
+      float: none
+      width: 100%
 
   .title-wrapper,
   .breadcrumb
@@ -26,6 +44,8 @@
     max-width: none
     overflow: visible
     padding: $standard-padding 0
+    +breakpoint(1199px max-width)
+      padding: $standard-padding 20px
     .panel-pane
       margin: 0 auto
       margin-bottom: 0 !important
@@ -35,6 +55,8 @@
   .inner-content-wrapper
     margin: 0 auto
     padding-top: 86px
+    +breakpoint(1199px max-width)
+      padding: 86px 20px 0
 
 // Editing override
 // Program finder page hackiness
@@ -71,7 +93,10 @@
     position: absolute
     right: 0
     top: 138px
-
+    +breakpoint(1115px max-width)
+      top: 210px
+    +breakpoint(754px max-width)
+      top: 290px
     label
       display: none
     .customSelectInner
@@ -88,15 +113,39 @@
     display: inline-block
     max-width: 230px
     position: relative
+    +breakpoint($bp-filter-mid)
+      max-width: $mid-filter-width
+    +breakpoint($bp-filter-small)
+      margin-top: 18px !important
+      max-width: $small-filter-width
+
+  .form-item-filter-leadership-level .ms-parent,
+  .form-item-search
+    +breakpoint(1115px 1060px)
+      margin-top: 20px !important
+      max-width: 500px
+      width: 500px !important
+    +breakpoint(1059px 915px)
+      margin-top: 20px !important
+      max-width: 420px
+      width: 420px !important
 
   // Filter styling
   .ms-parent
     width: 210px !important
+    +breakpoint($bp-filter-mid)
+      width: $mid-filter-width !important
+    +breakpoint($bp-filter-small)
+      width: $small-filter-width !important
 
   button.ms-choice > span,
   .isotopify-filter-daterange .placeholder,
   .form-item-search .placeholder
     width: 210px
+    +breakpoint($bp-filter-mid)
+      width: $mid-filter-width
+    +breakpoint($bp-filter-small)
+      width: $small-filter-width
 
   // Date range button
   button.mini-filter-daterange-button,
@@ -113,6 +162,10 @@
     padding-left: 18px
     text-align: left
     width: 210px
+    +breakpoint($bp-filter-mid)
+      width: $mid-filter-width
+    +breakpoint($bp-filter-small)
+      width: $small-filter-width
     +icon-after("arrow-med-down", true)
     &:after
       background-color: #f9f9f9
@@ -411,6 +464,10 @@
     margin-top: 0
     margin-bottom: 0
     width: 210px
+    +breakpoint(1115px 1060px)
+      width: 500px
+    +breakpoint(1059px 915px)
+      width: 420px !important
 
   #edit-search--2
     @extend %border-grey
@@ -418,6 +475,10 @@
     height: 48px
     margin-right: -46px
     width: 164px
+    +breakpoint(1115px 1060px)
+      width: 454px
+    +breakpoint(1059px 915px)
+      width: 374px
 
   // Search submit button
   .form-submit
@@ -655,6 +716,8 @@ h2.isotopify-title
   width: 100%
   position: relative
   z-index: 1
+  +breakpoint(970px max-width)
+    max-width: initial
 
   .header
     +clearfix

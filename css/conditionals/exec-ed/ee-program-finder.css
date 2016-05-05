@@ -108,8 +108,26 @@
 .page-node-411861 #content {
   max-width: none;
 }
+@media (max-width: 74.9375em) {
+  .page-node-411861 #main {
+    padding: 0;
+  }
+}
 .page-node-411861 #sidebar {
   display: none;
+}
+@media (max-width: 60.625em) {
+  .page-node-411861 .main-wrapper,
+  .page-node-411861 .inner-main-wrapper {
+    float: none;
+    margin-right: 0;
+  }
+}
+@media (max-width: 60.625em) {
+  .page-node-411861 .inner-sidebar-wrapper {
+    float: none;
+    width: 100%;
+  }
 }
 .page-node-411861 .title-wrapper,
 .page-node-411861 .breadcrumb {
@@ -122,6 +140,12 @@
   overflow: visible;
   padding: 26px 0;
 }
+@media (max-width: 74.9375em) {
+  .page-node-411861 .full-header,
+  .page-node-411861 .featured-content {
+    padding: 26px 20px;
+  }
+}
 .page-node-411861 .full-header .panel-pane,
 .page-node-411861 .featured-content .panel-pane {
   margin: 0 auto;
@@ -132,6 +156,11 @@
 .page-node-411861 .inner-content-wrapper {
   margin: 0 auto;
   padding-top: 86px;
+}
+@media (max-width: 74.9375em) {
+  .page-node-411861 .inner-content-wrapper {
+    padding: 86px 20px 0;
+  }
 }
 
 .page-node-411861 .panels-ipe-editing .full-header,
@@ -170,6 +199,18 @@
   right: 0;
   top: 138px;
 }
+@media (max-width: 69.6875em) {
+  .mini-finder-filters .form-item-sort,
+  .pane-filters .form-item-sort {
+    top: 210px;
+  }
+}
+@media (max-width: 47.125em) {
+  .mini-finder-filters .form-item-sort,
+  .pane-filters .form-item-sort {
+    top: 290px;
+  }
+}
 .mini-finder-filters .form-item-sort label,
 .pane-filters .form-item-sort label {
   display: none;
@@ -195,9 +236,70 @@
   max-width: 230px;
   position: relative;
 }
+@media (min-width: 57.1875em) and (max-width: 69.6875em) {
+  .mini-finder-filters .form-item-filter-program-topic,
+  .mini-finder-filters .form-item-filter-leadership-level,
+  .mini-finder-filters .form-item-filter-program-location,
+  .mini-finder-filters .isotopify-filter-daterange,
+  .mini-finder-filters .form-item-search,
+  .pane-filters .form-item-filter-program-topic,
+  .pane-filters .form-item-filter-leadership-level,
+  .pane-filters .form-item-filter-program-location,
+  .pane-filters .isotopify-filter-daterange,
+  .pane-filters .form-item-search {
+    max-width: 285px;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 57.125em) {
+  .mini-finder-filters .form-item-filter-program-topic,
+  .mini-finder-filters .form-item-filter-leadership-level,
+  .mini-finder-filters .form-item-filter-program-location,
+  .mini-finder-filters .isotopify-filter-daterange,
+  .mini-finder-filters .form-item-search,
+  .pane-filters .form-item-filter-program-topic,
+  .pane-filters .form-item-filter-leadership-level,
+  .pane-filters .form-item-filter-program-location,
+  .pane-filters .isotopify-filter-daterange,
+  .pane-filters .form-item-search {
+    margin-top: 18px !important;
+    max-width: 245px;
+  }
+}
+@media (min-width: 66.25em) and (max-width: 69.6875em) {
+  .mini-finder-filters .form-item-filter-leadership-level .ms-parent,
+  .mini-finder-filters .form-item-search,
+  .pane-filters .form-item-filter-leadership-level .ms-parent,
+  .pane-filters .form-item-search {
+    margin-top: 20px !important;
+    max-width: 500px;
+    width: 500px !important;
+  }
+}
+@media (min-width: 57.1875em) and (max-width: 66.1875em) {
+  .mini-finder-filters .form-item-filter-leadership-level .ms-parent,
+  .mini-finder-filters .form-item-search,
+  .pane-filters .form-item-filter-leadership-level .ms-parent,
+  .pane-filters .form-item-search {
+    margin-top: 20px !important;
+    max-width: 420px;
+    width: 420px !important;
+  }
+}
 .mini-finder-filters .ms-parent,
 .pane-filters .ms-parent {
   width: 210px !important;
+}
+@media (min-width: 57.1875em) and (max-width: 69.6875em) {
+  .mini-finder-filters .ms-parent,
+  .pane-filters .ms-parent {
+    width: 285px !important;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 57.125em) {
+  .mini-finder-filters .ms-parent,
+  .pane-filters .ms-parent {
+    width: 245px !important;
+  }
 }
 .mini-finder-filters button.ms-choice > span,
 .mini-finder-filters .isotopify-filter-daterange .placeholder,
@@ -206,6 +308,26 @@
 .pane-filters .isotopify-filter-daterange .placeholder,
 .pane-filters .form-item-search .placeholder {
   width: 210px;
+}
+@media (min-width: 57.1875em) and (max-width: 69.6875em) {
+  .mini-finder-filters button.ms-choice > span,
+  .mini-finder-filters .isotopify-filter-daterange .placeholder,
+  .mini-finder-filters .form-item-search .placeholder,
+  .pane-filters button.ms-choice > span,
+  .pane-filters .isotopify-filter-daterange .placeholder,
+  .pane-filters .form-item-search .placeholder {
+    width: 285px;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 57.125em) {
+  .mini-finder-filters button.ms-choice > span,
+  .mini-finder-filters .isotopify-filter-daterange .placeholder,
+  .mini-finder-filters .form-item-search .placeholder,
+  .pane-filters button.ms-choice > span,
+  .pane-filters .isotopify-filter-daterange .placeholder,
+  .pane-filters .form-item-search .placeholder {
+    width: 245px;
+  }
 }
 .mini-finder-filters button.mini-filter-daterange-button,
 .mini-finder-filters button.isotopify-filter-daterange-button,
@@ -222,6 +344,22 @@
   padding-left: 18px;
   text-align: left;
   width: 210px;
+}
+@media (min-width: 57.1875em) and (max-width: 69.6875em) {
+  .mini-finder-filters button.mini-filter-daterange-button,
+  .mini-finder-filters button.isotopify-filter-daterange-button,
+  .pane-filters button.mini-filter-daterange-button,
+  .pane-filters button.isotopify-filter-daterange-button {
+    width: 285px;
+  }
+}
+@media (min-width: 35.5625em) and (max-width: 57.125em) {
+  .mini-finder-filters button.mini-filter-daterange-button,
+  .mini-finder-filters button.isotopify-filter-daterange-button,
+  .pane-filters button.mini-filter-daterange-button,
+  .pane-filters button.isotopify-filter-daterange-button {
+    width: 245px;
+  }
 }
 .mini-finder-filters button.mini-filter-daterange-button:after,
 .mini-finder-filters button.isotopify-filter-daterange-button:after,
@@ -647,11 +785,31 @@
   margin-bottom: 0;
   width: 210px;
 }
+@media (min-width: 66.25em) and (max-width: 69.6875em) {
+  .isotopify-filters .form-item.form-item-search {
+    width: 500px;
+  }
+}
+@media (min-width: 57.1875em) and (max-width: 66.1875em) {
+  .isotopify-filters .form-item.form-item-search {
+    width: 420px !important;
+  }
+}
 .isotopify-filters #edit-search--2 {
   float: left;
   height: 48px;
   margin-right: -46px;
   width: 164px;
+}
+@media (min-width: 66.25em) and (max-width: 69.6875em) {
+  .isotopify-filters #edit-search--2 {
+    width: 454px;
+  }
+}
+@media (min-width: 57.1875em) and (max-width: 66.1875em) {
+  .isotopify-filters #edit-search--2 {
+    width: 374px;
+  }
 }
 .isotopify-filters .form-submit {
   float: left;
@@ -938,6 +1096,11 @@ h2.isotopify-title {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 60.625em) {
+  .compare-items {
+    max-width: initial;
+  }
 }
 .compare-items .header {
   overflow: hidden;
