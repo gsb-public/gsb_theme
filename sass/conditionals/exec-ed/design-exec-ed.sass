@@ -1076,10 +1076,12 @@ h1.ee-section-footer-title
 
 // Checklist of Programs on initial page
 .webform-component--brochure-list
+  label[for="edit-submitted-brochure-list"]
+    display: none
   #edit-submitted-brochure-list
     .topicSet
       border-bottom: 1px solid $listing-divider
-      padding: $standard-padding 0
+      padding: 20px 0 14px
       .topic-header
         padding-bottom: 8px
         label
@@ -1099,6 +1101,13 @@ h1.ee-section-footer-title
           width: 225px
           display: inline-block
           margin-top: 0
+
+.webform-component--your-contact-information
+  div.webform-component--your-contact-information--company-website-address
+    border-bottom: 1px solid $listing-divider
+    padding-bottom: 30px
+  .webform-component--your-contact-information--address
+    margin-top: 20px
 
 // Brochure results for program
 .pane-ee-brochure-download
