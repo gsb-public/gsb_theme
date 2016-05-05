@@ -4740,6 +4740,23 @@ a.social-block-facebook:after {
   margin-right: 0;
 }
 
+.show-more-less {
+  position: relative;
+  bottom: 0;
+}
+
+.show-more-less-toggler-wrapper:before {
+  background: -moz-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+  content: " ";
+  display: block;
+  height: 40px;
+  position: relative;
+  top: -40px;
+}
+
 .show-more-less-toggler {
   border: 0 !important;
   color: #636f00;
@@ -4747,6 +4764,8 @@ a.social-block-facebook:after {
   line-height: 1.4;
   font-size: 18px;
   margin-left: 6px;
+  position: absolute;
+  bottom: 0;
 }
 .show-more-less-toggler:before {
   content: "\f105";
@@ -4767,6 +4786,7 @@ a.social-block-facebook:after {
   color: #bac405;
   float: left;
   font-size: 12px;
+  margin-right: 5px;
   position: relative;
   top: 3px;
 }
