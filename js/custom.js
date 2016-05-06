@@ -350,6 +350,84 @@
           $('#edit-done').click();
         });
 
+        $('.mm-navbar .mm-title').click(function () {
+          $wrapper.data('mmenu').close();
+        });
+
+      }
+    }
+  };
+
+  /**
+   * Create the responsive side tray for Program Finder
+   */
+  Drupal.behaviors.program_finder = {
+    attach: function () {
+
+      // Check if this is the Program Finder page
+      var program_topic_select = $("edit-filter-program-topic");
+      if (!program_topic_select) {
+        return;
+      }
+
+      if (Modernizr.mq('(max-width: 568px)')) {
+
+        // Get the uniqueID used by Isotopify
+        var uniqueID = '';
+        $('.isotopify').each(function(index) {
+          uniqueID = $this.attr('id');
+        });
+
+        // Wrap up the edit filters to be put into the side tray
+        $("#edit-filters").wrap("<div id='wrapper'></div>");
+        $("#wrapper").wrap("<div id='outer'></div>");
+        $("#outer").prepend("<a id='filters' href='#'>Filters</a>");
+
+        // Create the 'Done' button in the side tray
+        var $doneButton = $('<button class="checkbox-apply">' + Drupal.t('Done') + '</button>').click(function (e) {
+          e.preventDefault();
+          // Set filters for the Topic, Location and Career-level selects
+          selects = ['program-topic', 'program-location', 'career-level'];
+          for (var select_id in selects) {
+            var choices = $("#edit-filter-"+selects[select_id]).val();
+            var filterID = selects[select_id];
+            Drupal.isotopify.setFilter.checkboxes(uniqueID, filterID, choices);
+          }
+          // Update using the set filters
+          Drupal.isotopify.update(uniqueID);
+          // Close the side tray
+          wrapper.data('mmenu').close();
+        });
+        // Add the 'Done' button to the bottom of the side tray
+        $("#edit-filters").append($doneButton);
+
+        // Move the Search outside of the side tray
+        var search = $(".form-item-search").detach();
+        $("#outer").after(search);
+
+        // Create the side tray
+        var wrapper = $('#wrapper');
+        wrapper.mmenu({
+          // Options
+          navbar: {
+            add: true,
+            title: 'Filters',
+            titleLink: parent
+          },
+          offCanvas: {
+            position: 'right',
+          }
+        });
+
+        // Have the Filters link open the side tray
+        $('#filters').click(function () {
+          wrapper.data('mmenu').open();
+        });
+
+        // Set up the Close for the side tray
+        $('.mm-navbar .mm-title').click(function () {
+          wrapper.data('mmenu').close();
+        });
 
       }
     }
@@ -363,6 +441,5 @@
       $('#isotopify-filters #edit-submit').insertAfter($('#isotopify-filters #edit-search--2'));
     }
   };
-
 
 }(jQuery));
