@@ -726,6 +726,10 @@
       margin: 0 auto
       padding: 14px $standard-padding
       width: 465px
+      +breakpoint(530px max-width)
+        width: 100%
+        a:after
+          display: none !important
       a,
       a[target="_blank"]
         color: $link-green
