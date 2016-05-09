@@ -708,7 +708,6 @@ h2.isotopify-title
   margin-bottom: 18px
 
 // Sticky compare tray
-.sticky-wrapper
 
 .compare-items
   @extend %box-shadow
@@ -719,8 +718,11 @@ h2.isotopify-title
   width: 100%
   position: relative
   z-index: 1
+  +breakpoint(1170px max-width)
+    margin-left: -20px
   +breakpoint(970px max-width)
     max-width: initial
+
 
   .header
     +clearfix
@@ -747,6 +749,10 @@ h2.isotopify-title
     width: 260px
     &:nth-of-type(odd)
       margin: 0 19px
+    +breakpoint(885px max-width)
+      display: block
+      margin: 10px 0 0 0 !important
+      width: 100%
 
   .compare-program-title
     font-size: 16px
@@ -760,6 +766,9 @@ h2.isotopify-title
     align-items: center
     min-height: 95px
     width: 186px
+    +breakpoint(885px max-width)
+      min-height: 20px
+      width: inherit
 
   // Remove x
   .remove-item
@@ -769,22 +778,24 @@ h2.isotopify-title
     display: inline-block
     height: 25px
     line-height: 1.5
+    overflow: hidden
     position: absolute
     text-align: center
     top: 53px
     width: 25px
     &:hover
       background: $link-blue
-      border: 1px $link-blue solid
       cursor: pointer
     +icon-before("plus", true)
     &:before
       display: inline-block
       padding: 5px
       transform: rotate(45deg)
+    +breakpoint(885px max-width)
+      top: 15px
+
 
 // Mini program finder block for full bleed homepage
-
 .pane-mini-program-finder
   height: 400px
   .pane-content

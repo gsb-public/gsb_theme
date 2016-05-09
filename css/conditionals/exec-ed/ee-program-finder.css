@@ -1119,6 +1119,11 @@ h2.isotopify-title {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 73.125em) {
+  .compare-items {
+    margin-left: -20px;
+  }
+}
 @media (max-width: 60.625em) {
   .compare-items {
     max-width: initial;
@@ -1149,6 +1154,13 @@ h2.isotopify-title {
 .compare-items .compare-item:nth-of-type(odd) {
   margin: 0 19px;
 }
+@media (max-width: 55.3125em) {
+  .compare-items .compare-item {
+    display: block;
+    margin: 10px 0 0 0 !important;
+    width: 100%;
+  }
+}
 .compare-items .compare-program-title {
   font-size: 16px;
   line-height: 1.2;
@@ -1166,6 +1178,12 @@ h2.isotopify-title {
   min-height: 95px;
   width: 186px;
 }
+@media (max-width: 55.3125em) {
+  .compare-items .compare-program-title {
+    min-height: 20px;
+    width: inherit;
+  }
+}
 .compare-items .remove-item {
   background: #bac405;
   border-radius: 50px;
@@ -1173,6 +1191,7 @@ h2.isotopify-title {
   display: inline-block;
   height: 25px;
   line-height: 1.5;
+  overflow: hidden;
   position: absolute;
   text-align: center;
   top: 53px;
@@ -1180,7 +1199,6 @@ h2.isotopify-title {
 }
 .compare-items .remove-item:hover {
   background: #2d6280;
-  border: 1px #2d6280 solid;
   cursor: pointer;
 }
 .compare-items .remove-item:before {
@@ -1202,6 +1220,11 @@ h2.isotopify-title {
   display: inline-block;
   padding: 5px;
   transform: rotate(45deg);
+}
+@media (max-width: 55.3125em) {
+  .compare-items .remove-item {
+    top: 15px;
+  }
 }
 
 .pane-mini-program-finder {
