@@ -396,8 +396,6 @@
           }
           var fromDate = $('#edit-date-range-from').val();
           var toDate = $('#edit-date-range-to').val();
-          $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
-          $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
           Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
           // Update using the set filters
           Drupal.isotopify.update(uniqueID);
