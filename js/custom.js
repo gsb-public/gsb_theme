@@ -280,6 +280,7 @@
   Drupal.behaviors.mmenu = {
     attach: function () {
       if (Modernizr.mq('(max-width: 568px)')) {
+        //debugger;
         $('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper').wrapInner('<div class="bef-secondary-options"></div>');
         //var $wrapper = $('.fieldset-wrapper').not('#views-exposed-form-gsb-all-research-listing-all-research-panel-pane .fieldset-wrapper');
         var $wrapper = $('#edit-secondary .fieldset-wrapper');
@@ -378,13 +379,6 @@
           uniqueID = $this.attr('id');
         });
 
-        //$('#edit-date-range-from').datepicker();
-        //$('#edit-date-range-from').datepicker("option", "dateFormat", "yyyymmdd");
-        //$('#edit-date-range-to').datepicker();
-        //$('#edit-date-range-to').datepicker("option", "dateFormat", "yyyymmdd");
-        $('#edit-date-range-from').get(0).type = 'date';
-        $('#edit-date-range-to').get(0).type = 'date';
-
         // Wrap up the edit filters to be put into the side tray
         $("#edit-filters").wrap("<div id='wrapper'></div>");
         $("#wrapper").wrap("<div id='outer'></div>");
@@ -400,6 +394,11 @@
             var filterID = selects[select_id];
             Drupal.isotopify.setFilter.checkboxes(uniqueID, filterID, choices);
           }
+          var fromDate = $('#edit-date-range-from').val();
+          var toDate = $('#edit-date-range-to').val();
+          $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
+          $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
+          Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
           // Update using the set filters
           Drupal.isotopify.update(uniqueID);
           // Close the side tray
@@ -407,6 +406,9 @@
         });
         // Add the 'Done' button to the bottom of the side tray
         $("#edit-filters").append($doneButton);
+
+        $('#edit-date-range-from').get(0).type = 'date';
+        $('#edit-date-range-to').get(0).type = 'date';
 
         // Move the Search outside of the side tray
         var search = $(".form-item-search").detach();
