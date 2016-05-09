@@ -85,7 +85,7 @@
     .field-name-field-video
       float: left
       max-width: 330px
-      +breakpoint(1180px max-width)
+      +breakpoint(1180px 655px)
         max-width: 270px
 
     .field-name-field-video
@@ -707,23 +707,25 @@
     .cta-wrapper-inner
       +background(image_url("bg-ee-program-overview-cta-2016-02-22-1.jpg") no-repeat center center, #72bbaa)
       padding: 60px 100px
-      +flex-box
-      -webkit-box-flex-flow: row wrap
-      -moz-box-flex-flow: row wrap
-      -ms-flexbox-flex-flow: row wrap
-      -webkit-flex-flex-flow: row wrap
-      flex-flow: row wrap
-      -webkit-box-justify-content: space-between
-      -moz-box-justify-content: space-between
-      -ms-flexbox-justify-content: space-between
-      -webkit-flex-justify-content: space-between
-      justify-content: space-between
+      +breakpoint(990px min-width)
+        +flex-box
+        -webkit-box-flex-flow: row wrap
+        -moz-box-flex-flow: row wrap
+        -ms-flexbox-flex-flow: row wrap
+        -webkit-flex-flex-flow: row wrap
+        flex-flow: row wrap
+        -webkit-box-justify-content: space-between
+        -moz-box-justify-content: space-between
+        -ms-flexbox-justify-content: space-between
+        -webkit-flex-justify-content: space-between
+        justify-content: space-between
+
     // CTA links
     .field
       @extend %bg-and-box-shadow
       margin: 0 auto
       padding: 14px $standard-padding
-      width: 464px
+      width: 465px
       a,
       a[target="_blank"]
         color: $link-green
@@ -749,10 +751,8 @@
           &:after
             color: $teal-light
 
-    .field-name-field-cta1
-
     .field-name-field-cta2
-      +breakpoint(965px max-width)
+      +breakpoint(989px max-width)
         margin-top: 10px
 
   // Explore Related Programs

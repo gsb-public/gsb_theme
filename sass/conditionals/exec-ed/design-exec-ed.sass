@@ -455,12 +455,12 @@ h1.ee-section-footer-title
     margin-right: 36px
     +breakpoint(600px max-width)
       display: block
-      border-bottom: 1px #c2b7a5 solid
+      border-bottom: 1px $grey-med solid
       margin-right: 0
       &:last-of-type
         border-bottom: 0
   a
-    color: #c2b7a5
+    color: $grey-med
     font-family: $font-demi
     font-size: 18px
     line-height: 1.2
@@ -473,10 +473,10 @@ h1.ee-section-footer-title
       padding: 10px
       text-align: left
       &:hover
-        background: #c2b7a5
+        background: $grey-dark
         color: $white
       &.active
-        background: #c2b7a5
+        background: $grey-dark
 // Header Icons
 .ee-section-header-social-buttons,
 .ee-section-footer-social-buttons,
@@ -541,7 +541,7 @@ h1.ee-section-footer-title
     display: inline-block
     font-size: 16px
     line-height: 1.1
-    padding: 15px 14px
+    padding: 15px
   +breakpoint(600px max-width)
     margin-right: 20px
     max-width: 280px
@@ -550,14 +550,13 @@ h1.ee-section-footer-title
   .download-brochure
     display: inline-block
     float: right
-    height: 47px
+    height: 49px
     a
       @extend %gradient-red
       color: $white
-    +breakpoint(600px max-width)
-      a
-        padding: 15px
 
+  .apply-button a
+    height: 49px
 
   // Pre Assessment link
   .pre-qualication-link
@@ -566,10 +565,8 @@ h1.ee-section-footer-title
     display: inline-block
     float: left
     +breakpoint(600px max-width)
-      display: block
       float: none
-      margin-top: 10px
-      max-width: 280px
+      margin-left: 29px
 
   // Download link
   .download-brochure
