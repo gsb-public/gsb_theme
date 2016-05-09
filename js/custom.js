@@ -407,6 +407,10 @@
         
         $('#edit-date-range-from').get(0).type = 'date';
         $('#edit-date-range-to').get(0).type = 'date';
+        
+        $('#edit-filter-program-topic').multicheckbox();
+        $('#edit-filter-program-location').multicheckbox();
+        $('#edit-filter-career-level').multicheckbox();
 
         // Move the Search outside of the side tray
         var search = $(".form-item-search").detach();
