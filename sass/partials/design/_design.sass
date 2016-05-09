@@ -452,15 +452,6 @@ a.social-block-facebook
   position: relative
   bottom: 0
 
-.show-more-less-toggler-wrapper
-  &:before
-    +background(linear-gradient(bottom, rgba($white, 1), rgba($white, 0)))
-    content: " "
-    display: block
-    height: 40px
-    position: relative
-    top: -40px
-
 .show-more-less-toggler
   border: 0 !important
   color: $text-green
@@ -468,8 +459,6 @@ a.social-block-facebook
   line-height: 1.4
   font-size: 18px
   margin-left: 6px
-  position: absolute
-  bottom: 18px
   +icon-before("arrow-med-down", true)
   &:before
     color: $green-light
