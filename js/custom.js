@@ -378,12 +378,12 @@
           uniqueID = $this.attr('id');
         });
 
-        $('#edit-date-range-from').datepicker();
-        $('#edit-date-range-from').datepicker("option", "dateFormat", "yyyymmdd");
-        $('#edit-date-range-to').datepicker();
-        $('#edit-date-range-to').datepicker("option", "dateFormat", "yyyymmdd");
-        //$('#edit-date-range-from').get(0).type = 'date';
-        //$('#edit-date-range-to').get(0).type = 'date';
+        //$('#edit-date-range-from').datepicker();
+        //$('#edit-date-range-from').datepicker("option", "dateFormat", "yyyymmdd");
+        //$('#edit-date-range-to').datepicker();
+        //$('#edit-date-range-to').datepicker("option", "dateFormat", "yyyymmdd");
+        $('#edit-date-range-from').get(0).type = 'date';
+        $('#edit-date-range-to').get(0).type = 'date';
 
         // Wrap up the edit filters to be put into the side tray
         $("#edit-filters").wrap("<div id='wrapper'></div>");
