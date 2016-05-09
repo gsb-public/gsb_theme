@@ -948,6 +948,50 @@ h1.ee-section-footer-title
 
   .program-find-app-select
     width: 300px !important
+    .ms-choice
+      @extend %border-grey
+      background: $white
+      border-radius: 0
+      color: $text-black
+      height: 47px
+      > span
+        color: $text-black
+        font-family: $font-sans
+        font-size: 16px
+        height: 47px
+        line-height: 2.9
+        padding: 0
+        padding-left: 18px
+        text-align: left
+      // Select arrow
+      > div
+        +icon-after("arrow-med-down", true)
+        &:after
+          background-color: #f9f9f9
+          border-left: 1px solid $grey-c
+          color: $red
+          display: inline-block
+          float: right
+          font-size: 14px
+          line-height: 3
+          height: 45px
+          padding: 0 16px
+          position: relative
+          top: 1px
+          left: -1px
+        &:hover
+          &:after
+            background-color: $link-blue
+            color: $white
+        &.open
+          +icon-after("arrow-med-up", true)
+          &:after
+            line-height: 3
+    .ms-drop.bottom
+      @extend %border-grey
+      border-radius: 0
+      min-width: 700px
+      overflow: visible
 
   // Program info and deadline
   .programs-instance-title,
@@ -966,6 +1010,10 @@ h1.ee-section-footer-title
   .programs-instance-date-select
     .customSelectInner
       width: 301px !important
+      font-size: 16px
+      font-family: $font-sans
+      padding: 8px 6px 6px 18px
+      text-align: left
 
   // Sample application link
   .programs-instance-sample-app-form-url-wrapper a
