@@ -151,7 +151,7 @@
   float: left;
   max-width: 330px;
 }
-@media (max-width: 73.75em) {
+@media (min-width: 40.9375em) and (max-width: 73.75em) {
   .node-program.view-mode-full .ds-learn .field-name-field-learn-more-photo,
   .node-program.view-mode-full .ds-learn .field-name-field-video {
     max-width: 270px;
@@ -887,26 +887,30 @@
 .node-program.view-mode-full .ds-cta .cta-wrapper-inner {
   background: url('../../../images/bg-ee-program-overview-cta-2016-02-22-1.jpg') no-repeat center center, #72bbaa;
   padding: 60px 100px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-flex-flow: row wrap;
-  -moz-box-flex-flow: row wrap;
-  -ms-flexbox-flex-flow: row wrap;
-  -webkit-flex-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-box-justify-content: space-between;
-  -moz-box-justify-content: space-between;
-  -ms-flexbox-justify-content: space-between;
-  -webkit-flex-justify-content: space-between;
-  justify-content: space-between;
+}
+@media (min-width: 61.875em) {
+  .node-program.view-mode-full .ds-cta .cta-wrapper-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-flow: row wrap;
+    -moz-box-flex-flow: row wrap;
+    -ms-flexbox-flex-flow: row wrap;
+    -webkit-flex-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-justify-content: space-between;
+    -moz-box-justify-content: space-between;
+    -ms-flexbox-justify-content: space-between;
+    -webkit-flex-justify-content: space-between;
+    justify-content: space-between;
+  }
 }
 .node-program.view-mode-full .ds-cta .field {
   margin: 0 auto;
   padding: 14px 26px;
-  width: 464px;
+  width: 465px;
 }
 .node-program.view-mode-full .ds-cta .field a,
 .node-program.view-mode-full .ds-cta .field a[target="_blank"] {
@@ -956,7 +960,7 @@
 .node-program.view-mode-full .ds-cta .field a[target="_blank"]:hover:after {
   color: #aac4bf;
 }
-@media (max-width: 60.3125em) {
+@media (max-width: 61.8125em) {
   .node-program.view-mode-full .ds-cta .field-name-field-cta2 {
     margin-top: 10px;
   }
