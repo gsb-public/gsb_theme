@@ -390,10 +390,16 @@
           // Set filters for the Topic, Location and Career-level selects
           selects = ['program-topic', 'program-location', 'career-level'];
           for (var select_id in selects) {
-            var choices = $("#edit-filter-"+selects[select_id]).val();
+            var choices = $('.form-item-filter-' + selects[select_id] + ' input:checked').map(function() {
+              return this.value;
+            }).get().join(",").split(',');
+            if (choices.length == 1 && choices[0] == '') {
+              choices = null;
+            }
             var filterID = selects[select_id];
             Drupal.isotopify.setFilter.checkboxes(uniqueID, filterID, choices);
           }
+          // Set filters for the Date range
           var fromDate = $('#edit-date-range-from').val();
           var toDate = $('#edit-date-range-to').val();
           Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
@@ -404,10 +410,10 @@
         });
         // Add the 'Done' button to the bottom of the side tray
         $("#edit-filters").append($doneButton);
-        
+
         $('#edit-date-range-from').get(0).type = 'date';
         $('#edit-date-range-to').get(0).type = 'date';
-        
+
         $('#edit-filter-program-topic').multicheckbox();
         $('#edit-filter-program-location').multicheckbox();
         $('#edit-filter-career-level').multicheckbox();
