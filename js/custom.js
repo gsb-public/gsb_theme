@@ -388,7 +388,7 @@
         var $doneButton = $('<button class="checkbox-apply">' + Drupal.t('Done') + '</button>').click(function (e) {
           e.preventDefault();
           // Set filters for the Topic, Location and Career-level selects
-          selects = ['program-topic', 'program-location', 'career-level'];
+          selects = ['program-topic', 'program-location', 'career-level', 'leadership-level'];
           for (var select_id in selects) {
             var choices = $('.form-item-filter-' + selects[select_id] + ' input:checked').map(function() {
               return this.value;
@@ -417,6 +417,7 @@
         $('#edit-filter-program-topic').multicheckbox();
         $('#edit-filter-program-location').multicheckbox();
         $('#edit-filter-career-level').multicheckbox();
+        $('#edit-filter-leadership-level').multicheckbox();
 
         // Move the Search outside of the side tray
         var search = $(".form-item-search").detach();
