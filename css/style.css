@@ -1875,6 +1875,78 @@ del {
   }
 }
 
+.panels-layout-gsb-no-sidebar #sidebar .sidebar {
+  margin-left: 80px;
+  margin-right: 105px;
+}
+
+.panel-display.gsb-no-sidebar .panel-pane {
+  margin-bottom: 20px;
+}
+.panels-ipe-editing .panel-display.gsb-no-sidebar .panel-pane {
+  margin-bottom: 0;
+}
+.panel-display.gsb-no-sidebar .content-wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.panel-display.gsb-no-sidebar .content-wrapper {
+  padding: 26px 0;
+}
+.panel-display.gsb-no-sidebar .main-wrapper {
+  float: left;
+  padding-right: 80px;
+  width: 100%;
+}
+@media (max-width: 62.5em) {
+  .panel-display.gsb-no-sidebar .main-wrapper {
+    padding-right: 0;
+  }
+}
+@media (max-width: 41.875em) {
+  .panel-display.gsb-no-sidebar .main-wrapper {
+    float: none;
+    margin: 0;
+  }
+}
+.panel-display.gsb-no-sidebar .inner-main-wrapper {
+  margin-right: 0;
+}
+.panel-display.gsb-no-sidebar .main-middle {
+  *zoom: 1;
+}
+.panel-display.gsb-no-sidebar .main-middle:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel-display.gsb-no-sidebar .main-middle .column-first,
+.panel-display.gsb-no-sidebar .main-middle .column-second {
+  width: 310px;
+}
+.panels-ipe-editing .panel-display.gsb-no-sidebar .main-middle .column-first, #panels-change-layout .panel-display.gsb-no-sidebar .main-middle .column-first, .panels-ipe-editing
+.panel-display.gsb-no-sidebar .main-middle .column-second, #panels-change-layout
+.panel-display.gsb-no-sidebar .main-middle .column-second {
+  width: 270px;
+}
+@media (max-width: 75.625em) {
+  .panel-display.gsb-no-sidebar .main-middle .column-first,
+  .panel-display.gsb-no-sidebar .main-middle .column-second {
+    width: 100%;
+  }
+}
+.panel-display.gsb-no-sidebar .main-middle .column-first {
+  float: left;
+}
+.panel-display.gsb-no-sidebar .main-middle .column-second {
+  float: right;
+}
+@media (max-width: 75.625em) {
+  .panel-display.gsb-no-sidebar .main-middle .column-second {
+    float: left;
+  }
+}
+
 .panel-display.gsb-landing-standard-page-one .full-header .panel-pane,
 .panel-display.gsb-landing-standard-page-one .main-header .panel-pane,
 .panel-display.gsb-landing-standard-page-one .main-middle .panel-pane,
@@ -2829,6 +2901,7 @@ div.label-inline {
 .pane-bundle-video .field-name-field-use-profile-img,
 .pane-bundle-video .field-name-field-file-single-public {
   max-width: 270px;
+  max-width: 310px;
 }
 .pane-bundle-house-ads .field-name-field-image-single-public img,
 .pane-bundle-house-ads .gsb-image-video-popup img,
@@ -7262,6 +7335,9 @@ input.signup-submit:hover {
 }
 .slideshow-slide .gsb-image-video-popup {
   max-width: 627px;
+}
+.panels-layout-gsb-no-sidebar .gsb-image-video-popup, .panels-layout-gsb-full-bleed-page .gsb-image-video-popup {
+  max-width: 310px;
 }
 .gsb-image-video-popup a.fancybox {
   max-width: 100%;
