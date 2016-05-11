@@ -517,6 +517,21 @@ h1.ee-section-footer-title
     position: relative
     top: 0
 
+// Header for panelized pages
+.node-type-program-panelized-page
+  h1.ee-section-header-title,
+  h1.ee-section-footer-title,
+  .ee-section-header-menu,
+  .ee-section-footer-menu
+    margin-left: 80px
+
+  .ee-section-header-social-buttons,
+  .ee-section-footer-social-buttons,
+  .ee-section-header-follow-us,
+  .ee-section-apply-brochure
+    margin-right: 80px
+
+
 // Hide and show buttons in responsive
 .ee-section-header-social-buttons
   +breakpoint(880px max-width)
@@ -1296,7 +1311,8 @@ h1.ee-section-footer-title
         list-style-type: disc
 
   // Contact
-  .views-field-field-program-director-name
+  .views-field-field-program-director-name,
+  .views-field-nothing-1
     div.title
       font-size: 20px
       font-weight: bold
@@ -1326,7 +1342,8 @@ h1.ee-section-footer-title
   // Brochure download
   .views-field-field-brochure-pdf
     border-top: 0
-    #apower-pdf
+    #apower-pdf,
+    #direct-pdf
       @extend %bg-and-box-shadow
       background: $white
       width: 270px
