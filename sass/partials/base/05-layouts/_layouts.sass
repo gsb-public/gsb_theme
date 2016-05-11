@@ -192,6 +192,58 @@
       float: none
       width: 100%
 
+// GSB Full Bleed Page layout
+.panels-layout-gsb-no-sidebar
+
+  #sidebar .sidebar
+    margin-left: 80px
+    margin-right: 105px
+
+.panel-display.gsb-no-sidebar
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  // Content
+  .content-wrapper
+    margin: 0 auto
+    max-width: 1170px
+
+  .content-wrapper
+    padding: $standard-padding 0
+
+  // Main section
+  .main-wrapper
+    float: left
+    padding-right: 80px
+    width: 100%
+    +breakpoint(1000px max-width)
+      padding-right: 0
+    +breakpoint(670px max-width)
+      float: none
+      margin: 0
+
+  .inner-main-wrapper
+    margin-right: 0
+
+  .main-middle
+    +pie-clearfix
+    .column-first,
+    .column-second
+      width: 310px
+      .panels-ipe-editing &,
+      #panels-change-layout &
+        width: 270px
+      +breakpoint(1210px max-width)
+        width: 100%
+    .column-first
+      float: left
+    .column-second
+      float: right
+      +breakpoint(1210px max-width)
+        float: left
+
 // Landing Standard 1 Page layout
 .panel-display.gsb-landing-standard-page-one
   .full-header,
