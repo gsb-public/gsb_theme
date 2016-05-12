@@ -15,7 +15,13 @@ $bp-filter-small: 914px 569px
 $small-filter-width: 245px
 
 // Exec Ed and GSB program finder page hackiness
-.page-node-411861
+.panels-layout-gsb-program-finder
+
+  // Editing override
+  .panels-ipe-editing
+    .featured-content
+      overflow: hidden !important
+
   #content
     max-width: none
   #main
@@ -41,9 +47,7 @@ $small-filter-width: 245px
 
   .full-header,
   .featured-content
-    background: #f4f4f4
     max-width: none
-    overflow: visible
     padding: $standard-padding 0
     +breakpoint(1199px max-width)
       padding: $standard-padding 20px
@@ -53,19 +57,9 @@ $small-filter-width: 245px
       max-width: 1170px
       position: relative
 
-  .inner-content-wrapper
-    margin: 0 auto
-    padding-top: 86px
-    +breakpoint(1199px max-width)
-      padding: 86px 20px 0
-
-// Editing override
-// Program finder page hackiness
-.page-node-411861
-  .panels-ipe-editing
-    .full-header,
-    .featured-content
-      overflow: hidden !important
+  .featured-content
+    background: #f4f4f4
+    overflow: visible
 
 // Page layout
 .pane-program-list
