@@ -116,6 +116,7 @@
       width: 100%
 
 // GSB Full Bleed Page layout
+
 .panel-display.gsb-full-bleed-page
   .panel-pane
     margin-bottom: 20px
@@ -192,7 +193,23 @@
       float: none
       width: 100%
 
-// GSB Full Bleed Page layout
+// GSB full bleed page with sidebar on left
+.one-sidebar.panels-layout-gsb-full-bleed-page
+  #content
+    max-width: $max-width
+  .main-wrapper
+    padding-left: 0
+  .inner-sidebar-wrapper
+    margin-right: 0
+
+// GSB full bleed page no sidebar on left
+.no-sidebars.panels-layout-gsb-full-bleed-page
+  h1.title
+    margin-left: 80px
+    +breakpoint(1000px max-width)
+      margin-left: 0
+
+// GSB No Sidebar layout
 .panels-layout-gsb-no-sidebar
 
   #sidebar .sidebar
