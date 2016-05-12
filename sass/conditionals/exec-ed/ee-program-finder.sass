@@ -108,6 +108,7 @@ $small-filter-width: 245px
 
   .form-item-filter-program-topic,
   .form-item-filter-career-level,
+  .form-item-filter-leadership-level,
   .form-item-filter-program-location,
   .isotopify-filter-daterange,
   .form-item-search
@@ -120,6 +121,7 @@ $small-filter-width: 245px
       margin-top: 18px !important
       max-width: $small-filter-width
 
+  .form-item-filter-leadership-level .ms-parent,
   .form-item-filter-career-level .ms-parent,
   .form-item-search
     +breakpoint(1115px 1060px)
@@ -188,8 +190,9 @@ $small-filter-width: 245px
       &:after
         line-height: 3
 
-  // Location select and career level are smaller
+  // Location select, leadership and career level are smaller
   .form-item-filter-program-location .ms-drop.bottom,
+  .form-item-filter-leadership-level .ms-drop.bottom,
   .form-item-filter-career-level .ms-drop.bottom
     min-width: 330px
 
@@ -225,6 +228,7 @@ $small-filter-width: 245px
   // Location items only need one column
   // Three columns doesn't work for the last filter
   .form-item-filter-program-location li,
+  .form-item-filter-leadership-level li,
   .form-item-filter-career-level li
     -webkit-box-flex-basis: 51%
     -moz-box-flex-basis: 51%
@@ -547,6 +551,13 @@ $small-filter-width: 245px
   // Program date
   .program-date
     font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    margin-bottom: 3px
+
+  // Leadership level
+  .leadership-level
     font-size: 18px
     font-weight: normal
     line-height: 1.3
