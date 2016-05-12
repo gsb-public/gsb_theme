@@ -192,7 +192,7 @@
       float: none
       width: 100%
 
-// GSB Full Bleed Page layout
+// GSB No Sidebar layout
 .panels-layout-gsb-no-sidebar
 
   #sidebar .sidebar
@@ -742,3 +742,52 @@
       .panel-pane
         margin: 0 auto 20px
 // End GSB Full Bleed Home Page
+
+// GSB Program Finder layout
+.panel-display.gsb-program-finder
+  .panel-pane
+    margin-bottom: 20px
+    .panels-ipe-editing &
+      margin-bottom: 0
+
+  .full-bleed-header
+    .panel-pane
+      margin-bottom: 0
+
+  // Featured content
+  .featured-content
+    padding: $standard-padding 0
+
+  // Content
+  .content-wrapper
+    margin: 0 auto
+    max-width: 1170px
+    padding: 86px 0 $standard-padding
+    +breakpoint(1199px max-width)
+      padding: 86px 20px 0
+
+  // Main section
+  .main-wrapper
+    float: left
+    margin-right: -430px
+    width: 100%
+    +breakpoint(1000px max-width)
+      margin-right: -370px
+    +breakpoint(670px max-width)
+      float: none
+      margin: 0
+
+  .inner-main-wrapper
+    margin-right: 320px
+    +breakpoint(1000px max-width)
+      margin-right: 300px
+    +breakpoint(670px max-width)
+      margin: 0
+
+  // Right sidebar
+  .inner-sidebar-wrapper
+    float: right
+    width: 270px
+    +breakpoint(670px max-width)
+      float: none
+      width: 100%
