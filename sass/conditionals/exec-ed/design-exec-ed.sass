@@ -79,10 +79,14 @@
       font-family: $font-sans
       font-weight: normal
 
-// Hide titles and breadcrumbs on program overview and panelized pages
-.node-type-program,
-.node-type-program-panelized-page
+// Hide titles and breadcrumbs on program overview pages
+.node-type-program
   .title-wrapper,
+  .breadcrumb
+    display: none
+
+// Hide breadcrumbs on program panelized pages
+.node-type-program-panelized-page
   .breadcrumb
     display: none
 
@@ -1315,7 +1319,7 @@ h1.ee-section-footer-title
       margin-left: 20px
       ul
         list-style-type: disc
-        li 
+        li
           padding-bottom: 10px
 
   // Contact
@@ -1349,7 +1353,7 @@ h1.ee-section-footer-title
   //Free link field
   .views-field-nothing-1
     a
-      padding-top: 19px    
+      padding-top: 19px
       font-family: $font-sans
       font-size: 16px
       color: $text-green
@@ -1379,7 +1383,7 @@ h1.ee-section-footer-title
           right: 12px
           top: 50%
           margin-top: -10px
-        
+
 
   // tution footnote
   .view-footer
