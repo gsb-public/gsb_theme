@@ -1239,8 +1239,10 @@ h1.ee-section-footer-title
       border-top: 1px solid $listing-divider
       &.views-row-last
         border-top: 0
+      &.views-row-first
+        border-top: 0
       td
-        padding: 1em $standard-padding
+        padding: 2em $standard-padding
         width: 33.33%
         &:first-of-type
           div.title
@@ -1252,6 +1254,9 @@ h1.ee-section-footer-title
     font-size: 26px
     font-weight: bold
     line-height: 1.3
+    &:hover
+      text-decoration: none
+      border-bottom: 1px solid $text-blue
 
   // Instance date and label
   .views-field-field-instance-date,
@@ -1309,6 +1314,8 @@ h1.ee-section-footer-title
       margin-left: 20px
       ul
         list-style-type: disc
+        li
+          padding-bottom: 10px
 
   // Contact
   .views-field-field-program-director-name,
@@ -1339,13 +1346,13 @@ h1.ee-section-footer-title
           color: $text-blue
 
   //Free link field
-  .mba-admission-link
-    margin-top: 12px
+  .views-field-nothing-1
     a
+      padding-top: 19px
       font-family: $font-sans
       font-size: 16px
-      font-weight: bold
       color: $text-green
+      display: block
 
   // Brochure download
   .views-field-field-brochure-pdf
@@ -1361,8 +1368,9 @@ h1.ee-section-footer-title
         line-height: 1.2
         position: relative
         padding: 16px 36px 16px $standard-padding
-        text-decoration: none
         display: block
+        &:hover
+          color: $text-blue
         +icon-after("pdf", true)
         &:after
           position: absolute
@@ -1370,6 +1378,7 @@ h1.ee-section-footer-title
           right: 12px
           top: 50%
           margin-top: -10px
+
 
   // tution footnote
   .view-footer
