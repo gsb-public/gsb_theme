@@ -885,28 +885,37 @@ h1.ee-section-footer-title
 
 // Need more information block
 #block-gsb-public-custom-blocks-gpcb-need-more-information
-  height: 215px
   background: #f4f4f4
+  min-height: 175px
   padding: $standard-padding
-  div.pane-content
-    width: 1170px
-    margin: 0 auto
+  .cta-list-wrapper
     text-align: center
+    width: 100%
+
   h4
     font-size: 32px
     line-height: 1.2
     font-weight: normal
+    margin-bottom: 10px
     text-align: center
+    +breakpoint(640px max-width)
+      font-size: 28px
+    +breakpoint(320px max-width)
+      font-size: 24px
 
-  .cta-list
+  .cta-item
     @extend %bg-and-box-shadow
     display: inline-block
     margin-right: 14px
-    text-align: initial
-    position: relative
-    top: 30px
+    margin-top: 30px
+    text-align: left
     padding: 14px 26px
     width: 270px
+    +breakpoint(640px max-width)
+      margin-right: 0
+      margin-top: 8px
+      padding: 14px 22px
+      width: 100%
     a,
     a[target="_blank"]
       color: $link-green
@@ -919,6 +928,11 @@ h1.ee-section-footer-title
         @extend %arrow-double-big
         color: #e3e3e3
         left: 200px
+        +breakpoint(640px max-width)
+          float: right
+          left: 10px
+          position: relative
+          top: 10px
       &:hover
         color: $link-blue
         border-bottom: 1px $link-blue solid
@@ -947,6 +961,12 @@ h1.ee-section-footer-title
     font-weight: normal
     line-height: 1.2
     margin-bottom: 20px
+    +breakpoint(640px max-width)
+      font-size: 36px
+    +breakpoint(320px max-width)
+      font-size: 32px
+      margin-left: 20px
+      margin-right: 20px
 
   // Instructions
   .programs-instructions,
@@ -954,6 +974,12 @@ h1.ee-section-footer-title
     font-size: 30px
     line-height: 1.3
     margin-bottom: 20px
+    +breakpoint(640px max-width)
+      font-size: 26px
+    +breakpoint(320px max-width)
+      font-size: 24px
+      margin-left: 20px
+      margin-right: 20px
 
   .programs-instructions
     margin: 0 auto 20px
@@ -966,6 +992,9 @@ h1.ee-section-footer-title
     font-style: italic
     line-height: 1.2
     margin-top: 20px
+    +breakpoint(320px max-width)
+      margin-left: 20px
+      margin-right: 20px
 
   // Select box
   .form-item.form-item-programs
@@ -1015,14 +1044,28 @@ h1.ee-section-footer-title
     .ms-drop.bottom
       @extend %border-grey
       border-radius: 0
-      min-width: 700px
+      min-width: 500px
       overflow: visible
+      +breakpoint(640px max-width)
+        min-width: 100%
+  .ms-drop ul > li
+    margin-left: 20px
+    label
+      margin-right: 0
+      text-indent: -18px
+      white-space: inherit
+    input
+      left: -10px
+      position: relative
+
 
   // Program info and deadline
   .programs-instance-title,
   .programs-instance-deadline
     font-size: 20px
     line-height: 1.3
+    +breakpoint(640px max-width)
+      font-size: 18px
 
   .programs-instance-deadline
     margin-bottom: 20px
@@ -1058,6 +1101,9 @@ h1.ee-section-footer-title
     font-size: 18px
     line-height: 1.2
     padding: 10px 14px
+    +breakpoint(320px max-width)
+      position: relative
+      top: 8px
 
   // Select different program
   .programs-different
@@ -1065,6 +1111,8 @@ h1.ee-section-footer-title
     font-size: 18px
     line-height: 1.2
     padding-top: $standard-padding
+    +breakpoint(640px max-width)
+      font-size: 18px
     a
       border-bottom: 1px $white solid
       &:hover
