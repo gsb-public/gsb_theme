@@ -87,11 +87,15 @@ $small-filter-width: 245px
     margin: 0
     position: absolute
     right: 0
-    top: 138px
+    top: 95px
+    +breakpoint(1199px max-width)
+      right: 20px
     +breakpoint(1115px max-width)
-      top: 210px
-    +breakpoint(754px max-width)
-      top: 290px
+      top: 160px
+    +breakpoint(914px max-width)
+      top: 180px
+    +breakpoint(714px max-width)
+      top: 240px
     label
       display: none
     .customSelectInner
