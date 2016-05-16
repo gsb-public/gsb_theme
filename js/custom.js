@@ -366,7 +366,7 @@
     attach: function () {
 
       // Check if this is the Program Finder page
-      var program_topic_select = $("edit-filter-program-topic");
+      var program_topic_select = $("#isotpify .isotopify-filters");
       if (!program_topic_select) {
         return;
       }
