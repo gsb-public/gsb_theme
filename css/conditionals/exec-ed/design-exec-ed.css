@@ -1,6 +1,6 @@
 .pane-bundle-programs-list .field-name-field-cta1 a:after,
-.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:after, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a:after,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"]:after {
+.pane-bundle-programs-list .field-name-field-cta1 a[target="_blank"]:after, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:after,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:after {
   font-size: 21px;
   font-weight: normal;
   line-height: 0;
@@ -11,7 +11,7 @@
 }
 
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
-.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list, .pane-faculty-teaching-list .isotopify-wrapper .isotopify-item, .page-programs-compare .views-field-field-brochure-pdf #apower-pdf,
+.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item, .pane-faculty-teaching-list .isotopify-wrapper .isotopify-item, .page-programs-compare .views-field-field-brochure-pdf #apower-pdf,
 .page-programs-compare .views-field-field-brochure-pdf #direct-pdf,
 .page-exec-ed-programs-compare .views-field-field-brochure-pdf #apower-pdf,
 .page-exec-ed-programs-compare .views-field-field-brochure-pdf #direct-pdf {
@@ -35,7 +35,7 @@
 }
 
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
-.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list, .pane-faculty-teaching-list .isotopify-wrapper .isotopify-item, .page-programs-compare .views-field-field-brochure-pdf #apower-pdf,
+.node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item, .pane-faculty-teaching-list .isotopify-wrapper .isotopify-item, .page-programs-compare .views-field-field-brochure-pdf #apower-pdf,
 .page-programs-compare .views-field-field-brochure-pdf #direct-pdf,
 .page-exec-ed-programs-compare .views-field-field-brochure-pdf #apower-pdf,
 .page-exec-ed-programs-compare .views-field-field-brochure-pdf #direct-pdf, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
@@ -1162,40 +1162,57 @@ h1.ee-section-footer-title {
 }
 
 #block-gsb-public-custom-blocks-gpcb-need-more-information {
-  height: 215px;
   background: #f4f4f4;
+  min-height: 175px;
   padding: 26px;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information div.pane-content {
-  width: 1170px;
-  margin: 0 auto;
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list-wrapper {
   text-align: center;
+  width: 100%;
 }
 #block-gsb-public-custom-blocks-gpcb-need-more-information h4 {
   font-size: 32px;
   line-height: 1.2;
   font-weight: normal;
+  margin-bottom: 10px;
   text-align: center;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list {
+@media (max-width: 40em) {
+  #block-gsb-public-custom-blocks-gpcb-need-more-information h4 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 20em) {
+  #block-gsb-public-custom-blocks-gpcb-need-more-information h4 {
+    font-size: 24px;
+  }
+}
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item {
   display: inline-block;
   margin-right: 14px;
-  text-align: initial;
-  position: relative;
-  top: 30px;
+  margin-top: 30px;
+  text-align: left;
   padding: 14px 26px;
   width: 270px;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"] {
+@media (max-width: 40em) {
+  #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item {
+    margin-right: 0;
+    margin-top: 8px;
+    padding: 14px 22px;
+    width: 100%;
+  }
+}
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"] {
   color: #636f00;
   font-size: 18px;
   line-height: 1.2;
   position: relative;
   text-decoration: none;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a:after,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"]:after {
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:after,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -1210,18 +1227,27 @@ h1.ee-section-footer-title {
   font-weight: normal;
   font-family: 'icons';
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a:after,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"]:after {
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:after,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:after {
   color: #e3e3e3;
   left: 200px;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a:hover,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"]:hover {
+@media (max-width: 40em) {
+  #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:after,
+  #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:after {
+    float: right;
+    left: 10px;
+    position: relative;
+    top: 10px;
+  }
+}
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:hover,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:hover {
   color: #2d6280;
   border-bottom: 1px #2d6280 solid;
 }
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a:hover:after,
-#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-list a[target="_blank"]:hover:after {
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a:hover:after,
+#block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item a[target="_blank"]:hover:after {
   color: #aac4bf;
 }
 
@@ -1251,11 +1277,37 @@ h1.ee-section-footer-title {
   line-height: 1.2;
   margin-bottom: 20px;
 }
+@media (max-width: 40em) {
+  .app-finder-form-wrapper h4 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 20em) {
+  .app-finder-form-wrapper h4 {
+    font-size: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .app-finder-form-wrapper .programs-instructions,
 .app-finder-form-wrapper .programs-text {
   font-size: 30px;
   line-height: 1.3;
   margin-bottom: 20px;
+}
+@media (max-width: 40em) {
+  .app-finder-form-wrapper .programs-instructions,
+  .app-finder-form-wrapper .programs-text {
+    font-size: 26px;
+  }
+}
+@media (max-width: 20em) {
+  .app-finder-form-wrapper .programs-instructions,
+  .app-finder-form-wrapper .programs-text {
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 .app-finder-form-wrapper .programs-instructions {
   margin: 0 auto 20px;
@@ -1267,6 +1319,12 @@ h1.ee-section-footer-title {
   font-style: italic;
   line-height: 1.2;
   margin-top: 20px;
+}
+@media (max-width: 20em) {
+  .app-finder-form-wrapper .programs-disclaim {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 .app-finder-form-wrapper .form-item.form-item-programs {
   margin: 20px 0;
@@ -1343,13 +1401,36 @@ h1.ee-section-footer-title {
 }
 .app-finder-form-wrapper .program-find-app-select .ms-drop.bottom {
   border-radius: 0;
-  min-width: 700px;
+  min-width: 500px;
   overflow: visible;
+}
+@media (max-width: 40em) {
+  .app-finder-form-wrapper .program-find-app-select .ms-drop.bottom {
+    min-width: 100%;
+  }
+}
+.app-finder-form-wrapper .ms-drop ul > li {
+  margin-left: 20px;
+}
+.app-finder-form-wrapper .ms-drop ul > li label {
+  margin-right: 0;
+  text-indent: -18px;
+  white-space: inherit;
+}
+.app-finder-form-wrapper .ms-drop ul > li input {
+  left: -10px;
+  position: relative;
 }
 .app-finder-form-wrapper .programs-instance-title,
 .app-finder-form-wrapper .programs-instance-deadline {
   font-size: 20px;
   line-height: 1.3;
+}
+@media (max-width: 40em) {
+  .app-finder-form-wrapper .programs-instance-title,
+  .app-finder-form-wrapper .programs-instance-deadline {
+    font-size: 18px;
+  }
 }
 .app-finder-form-wrapper .programs-instance-deadline {
   margin-bottom: 20px;
@@ -1382,11 +1463,22 @@ h1.ee-section-footer-title {
   line-height: 1.2;
   padding: 10px 14px;
 }
+@media (max-width: 20em) {
+  .app-finder-form-wrapper .programs-instance-application-url-wrapper a {
+    position: relative;
+    top: 8px;
+  }
+}
 .app-finder-form-wrapper .programs-different {
   border-top: 1px #6d6d6d solid;
   font-size: 18px;
   line-height: 1.2;
   padding-top: 26px;
+}
+@media (max-width: 40em) {
+  .app-finder-form-wrapper .programs-different {
+    font-size: 18px;
+  }
 }
 .app-finder-form-wrapper .programs-different a {
   border-bottom: 1px white solid;
