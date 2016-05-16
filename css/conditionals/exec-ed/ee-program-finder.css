@@ -1,4 +1,4 @@
-.pane-degree-programs .degree-programs-wrapper .degree-program {
+.pane-degree-programs .degree-program {
   background: white;
 }
 
@@ -17,7 +17,7 @@
   border-top: 3px #231f20 solid;
 }
 
-.pane-degree-programs .degree-programs-wrapper .degree-program, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
+.pane-degree-programs .degree-program, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all, .isotopify.program-list .compare,
 .full-time-programs-wrapper .compare, .image-ctas .fieldable-panels-pane, .compare-items {
@@ -181,7 +181,15 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-flex-flow: row wrap;
+  -moz-box-flex-flow: row wrap;
+  -ms-flexbox-flex-flow: row wrap;
+  -webkit-flex-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-justify-content: space-between;
+  -moz-box-justify-content: space-between;
+  -ms-flexbox-justify-content: space-between;
+  -webkit-flex-justify-content: space-between;
   justify-content: space-between;
 }
 .mini-finder-filters .form-item-sort,
@@ -1273,37 +1281,65 @@ h2.isotopify-title {
 
 .pane-degree-programs {
   background: url('../../../images/gsb_program-finder_bg_01.jpg') no-repeat center center, #72bbaa;
-  max-width: initial !important;
-  height: 300px;
+  width: 100%;
+}
+@media (max-width: 73.125em) {
+  .pane-degree-programs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.pane-degree-programs .pane-content {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 26px 0;
 }
 .pane-degree-programs .header {
+  color: white;
   font-size: 24px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.3;
-  color: white;
-  width: 1170px;
-  margin: 0 auto;
-  padding-top: 35px;
 }
 .pane-degree-programs .degree-programs-wrapper {
-  width: 1170px;
   margin: 0 auto;
   padding-top: 26px;
 }
-.pane-degree-programs .degree-programs-wrapper .degree-program {
-  padding: 26px;
-  display: inline-block;
-  width: 334px;
-  vertical-align: top;
-  margin-right: 50px;
-  min-height: 180px;
+@media (min-width: 50em) {
+  .pane-degree-programs .degree-programs-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-flow: row wrap;
+    -moz-box-flex-flow: row wrap;
+    -ms-flexbox-flex-flow: row wrap;
+    -webkit-flex-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-justify-content: space-between;
+    -moz-box-justify-content: space-between;
+    -ms-flexbox-justify-content: space-between;
+    -webkit-flex-justify-content: space-between;
+    justify-content: space-between;
+  }
 }
-.pane-degree-programs .degree-programs-wrapper .degree-program .title a {
+.pane-degree-programs .degree-program {
+  margin-bottom: 10px;
+  padding: 26px;
+}
+@media (min-width: 50em) {
+  .pane-degree-programs .degree-program {
+    min-height: 180px;
+    vertical-align: top;
+    width: 31%;
+  }
+}
+.pane-degree-programs .degree-program .title a {
   font-size: 22px;
   line-height: 1.3;
   font-weight: bold;
 }
-.pane-degree-programs .degree-programs-wrapper .degree-program .intro {
+.pane-degree-programs .degree-program .intro {
   font-size: 16px;
   line-height: 1.3;
   font-weight: normal;
