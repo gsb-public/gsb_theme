@@ -716,11 +716,11 @@ h2.isotopify-title
   width: 100%
   position: relative
   z-index: 1
+  +breakpoint(1200px max-width)
+    min-height: 305px
   +breakpoint(1170px max-width)
     margin-left: -20px
-  +breakpoint(970px max-width)
     max-width: initial
-
 
   .header
     +clearfix
@@ -746,8 +746,8 @@ h2.isotopify-title
     vertical-align: top
     width: 260px
     &:nth-of-type(odd)
-      margin: 0 19px
-    +breakpoint(885px max-width)
+      margin: 0 9px
+    +breakpoint(1200px max-width)
       display: block
       margin: 10px 0 0 0 !important
       width: 100%
@@ -764,7 +764,7 @@ h2.isotopify-title
     align-items: center
     min-height: 95px
     width: 186px
-    +breakpoint(885px max-width)
+    +breakpoint(1200px max-width)
       min-height: 20px
       width: 90%
 
@@ -789,7 +789,7 @@ h2.isotopify-title
       display: inline-block
       padding: 5px
       transform: rotate(45deg)
-    +breakpoint(885px max-width)
+    +breakpoint(1200px max-width)
       top: 15px
 
 
