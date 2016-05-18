@@ -164,7 +164,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-bundle-links .b
   border-bottom: 1px lightgray solid;
 }
 
-.slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta {
+.pane-bundle-social-feed, .pane-bundle-homepage-cta {
   border: 2px white solid;
 }
 
@@ -201,7 +201,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-bundle-links .b
   border-top: 3px #231f20 solid;
 }
 
-.slideshow-wrapper, .pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
+.pane-bundle-social-feed, .pane-bundle-homepage-cta, .pane-bundle-house-ads,
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-full-bleed-page .pane-bundle-house-ads,
 div.gsb-full-bleed-page .pane-bundle-spotlight,
@@ -210,7 +210,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-bundle-links .b
 .inner-sidebar-wrapper [class*="pane-menu-block"], #block-block-26 .cta-wrapper, .pane-bundle-videos, .pane-bundle-accordion, .pane-admission-events-location-panel-pane, .cta-green, .cta-red .field-item, .pane-bundle-existing-node, .pane-gsb-feature-faculty-display-az-list .pane-content, .pane-bundle-files .container, .pane-bundle-featured-content, .pane-bundle-existing-node-list, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
-.webform-client-form .del-btn, #edit-clear-all, .filter-results-wrapper #edit-actions input, .clear-filters, .narrow-view .person-list-view, .narrow-view
+.webform-client-form .del-btn, #edit-clear-all, .filter-results-wrapper #edit-actions input, .clear-filters, .slideshow-wrapper, .narrow-view .person-list-view, .narrow-view
 .person-list-view-container, .person-list-view-container, .page-insights .pane-bundle-social-feed, .pane-bundle-image-cta, .pane-bundle-featured-program {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -848,7 +848,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * ┬⌐ 2012 Bitstream Inc
+ * © 2012 Bitstream Inc
  */
 @font-face {
   font-family: "icons";
@@ -7682,46 +7682,32 @@ ul.slideshow-items {
   padding: 0;
 }
 
-.flex-control-nav {
-  display: none;
-}
-
-.flex-viewport {
-  overflow: visible !important;
-}
-
-.flex-direction-nav {
+.slick-arrow {
+  background-image: none;
   display: block;
   height: 40px;
+  line-height: 6;
+  opacity: 1;
+  overflow: hidden;
   position: absolute;
   right: 0;
+  width: 34px;
 }
-.full-view .flex-direction-nav, .front .flex-direction-nav {
+.full-view .slick-arrow, .front .slick-arrow {
   top: 16px;
 }
 @media (max-width: 43.125em) {
-  .full-view .flex-direction-nav, .front .flex-direction-nav {
+  .full-view .slick-arrow, .front .slick-arrow {
     top: -30px;
   }
 }
-.wide-view .flex-direction-nav {
+.wide-view .slick-arrow {
   top: -30px;
 }
-.flex-direction-nav .flex-next,
-.flex-direction-nav .flex-prev {
-  background-image: none;
-  opacity: 1;
-  width: 34px;
-  height: 32px;
-}
-.flex-direction-nav .flex-next:before, .flex-direction-nav .flex-next:after,
-.flex-direction-nav .flex-prev:before,
-.flex-direction-nav .flex-prev:after {
+.slick-arrow:before, .slick-arrow:after {
   position: absolute;
-  text-indent: 0;
 }
-.flex-direction-nav .flex-next:before,
-.flex-direction-nav .flex-prev:before {
+.slick-arrow:before {
   content: "\f10c";
   display: inline;
   speak: none;
@@ -7736,28 +7722,29 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.flex-direction-nav .flex-next:before,
-.flex-direction-nav .flex-prev:before {
+.slick-arrow:before {
   color: #bac405;
   font-size: 35px;
   top: 0;
   left: 0;
 }
-.flex-direction-nav .flex-next:after,
-.flex-direction-nav .flex-prev:after {
+.slick-arrow:after {
   color: white;
   font-size: 16px;
   top: 9px;
 }
-.flex-direction-nav .flex-next:hover:before,
-.flex-direction-nav .flex-prev:hover:before {
+.slick-arrow:hover:before {
   color: #2d6280;
 }
-.flex-direction-nav .flex-prev {
+.slick-arrow:hover:after {
+  color: white;
+}
+
+.flex-prev {
   left: inherit;
   right: 80px;
 }
-.flex-direction-nav .flex-prev:after {
+.flex-prev:after {
   content: "\f106";
   display: inline;
   speak: none;
@@ -7772,14 +7759,15 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.flex-direction-nav .flex-prev:after {
+.flex-prev:after {
   left: 8px;
 }
-.flex-direction-nav .flex-next {
+
+.flex-next {
   left: inherit;
   right: 20px;
 }
-.flex-direction-nav .flex-next:after {
+.flex-next:after {
   content: "\f107";
   display: inline;
   speak: none;
@@ -7794,7 +7782,7 @@ ul.slideshow-items {
   font-weight: normal;
   font-family: 'icons';
 }
-.flex-direction-nav .flex-next:after {
+.flex-next:after {
   left: 11px;
 }
 
@@ -7845,12 +7833,12 @@ ul.slideshow-items {
 .front .slide-text-wrapper, .full-view .slide-text-wrapper {
   position: relative;
   bottom: -50px;
-  height: 260px;
+  height: 265px;
   bottom: 0;
   float: left;
   max-width: 300px;
   right: 0;
-  width: 34%;
+  width: 34.3%;
 }
 @media (max-width: 62.4375em) {
   .front .slide-text-wrapper, .full-view .slide-text-wrapper {
@@ -7896,6 +7884,7 @@ ul.slideshow-items {
   line-height: 1.2;
 }
 .slide-text-wrapper .slide-superhead {
+  color: white;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1;
@@ -7905,7 +7894,7 @@ ul.slideshow-items {
   content: "";
 }
 .slide-text-wrapper .slide-text {
-  color: #231f20;
+  color: white;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -7926,17 +7915,53 @@ ul.slideshow-items {
 }
 .slide-text-wrapper .slide-text:after {
   color: #bac405;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 3px;
 }
 .slide-text-wrapper .slide-text:hover {
-  color: #2d6280;
+  color: white;
 }
 .slide-text-wrapper .slide-text:hover:after {
-  color: #aac4bf;
+  color: white;
 }
 .slide-text-wrapper .slide-text .field-name-field-text-slide {
   display: inline;
+}
+
+.slide-color-blue {
+  background: #26639d;
+}
+
+.slide-color-purple {
+  background: #97185d;
+}
+
+.slide-color-brightteal {
+  background: #009c84;
+}
+
+.slide-color-pink {
+  background: #dd1880;
+}
+
+.slide-color-charcoal {
+  background: #231f20;
+}
+
+.slide-color-white {
+  background: white;
+}
+.slide-color-white .slide-superhead {
+  color: #990000;
+}
+.slide-color-white .slide-text {
+  color: #231f20;
+}
+.slide-color-white .slide-text:hover {
+  color: #2d6280;
+}
+.slide-color-white .slide-text:hover:after {
+  color: #aac4bf;
 }
 
 .pane-bundle-insights-quote {
@@ -9223,7 +9248,7 @@ ul.slideshow-items {
   width: 100%;
 }
 .pane-bundle-image-cta .image-cta-color-blue a {
-  background: rgba(0, 72, 140, 0.85);
+  background: rgba(38, 99, 157, 0.85);
 }
 .pane-bundle-image-cta .image-cta-color-lime a {
   background: rgba(145, 153, 0, 0.85);
