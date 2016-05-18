@@ -27,7 +27,7 @@
   margin: 1px;
 }
 
-.pane-mini-program-finder .finder-image .apply-mini-finder a {
+.pane-mini-program-finder .mini-program-finder-apply a {
   background-color: #c50000;
   background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
   background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
@@ -1213,46 +1213,52 @@ h2.isotopify-title {
 }
 
 .pane-mini-program-finder {
-  height: 400px;
+  max-height: 400px;
 }
 .pane-mini-program-finder .pane-content {
   overflow: hidden;
-  height: 615px;
+  position: relative;
+  bottom: 0;
 }
-.pane-mini-program-finder .finder-image img {
+.pane-mini-program-finder .mini-program-finder-image img {
   width: 100%;
 }
-.pane-mini-program-finder .finder-image .apply-mini-finder {
+.pane-mini-program-finder .mini-program-finder-apply {
+  margin: 0 auto;
+  max-width: 1170px;
   position: relative;
+  right: 0;
+  width: 100%;
 }
-.pane-mini-program-finder .finder-image .apply-mini-finder a {
+.pane-mini-program-finder .mini-program-finder-apply a {
   color: white;
   font-size: 16px;
   line-height: 1.2;
   padding: 16px 26px;
   position: absolute;
-  top: -356px;
-  right: 89px;
+  right: 0;
+  bottom: 320px;
 }
-.pane-mini-program-finder .content {
-  float: left;
+.pane-mini-program-finder .mini-program-finder-title-filters {
   background: white;
+  padding: 26px;
   position: relative;
-  top: -120px;
-  width: 100%;
-  padding: 24px 89px 26px;
+  top: -115px;
 }
-.pane-mini-program-finder .content h4 {
+.pane-mini-program-finder .mini-program-finder-title-filters .inner {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.pane-mini-program-finder .mini-program-finder-title-filters h1 {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
   font-size: 34px;
   font-weight: bold;
   line-height: 1.2;
 }
 .pane-mini-program-finder .mini-finder-filters {
   float: right;
-  background: white;
-  position: relative;
-  top: -187px;
-  padding-right: 89px;
+  display: inline-block;
 }
 .pane-mini-program-finder .mini-finder-filters .form-item-program-topic,
 .pane-mini-program-finder .mini-finder-filters .isotopify-filter-daterange {
