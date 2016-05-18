@@ -71,7 +71,6 @@ $small-filter-width: 245px
     margin-bottom: 16px
 
 // Exec Ed program finder filters
-.mini-finder-filters,
 .pane-filters
   position: relative
 
@@ -156,46 +155,6 @@ $small-filter-width: 245px
     +breakpoint($bp-filter-small)
       width: $small-filter-width
 
-  // Date range button
-  button.mini-filter-daterange-button,
-  button.isotopify-filter-daterange-button
-    @extend %border-grey
-    background: $white
-    border-radius: 0
-    color: $text-black
-    font-family: $font-sans
-    font-size: 16px
-    height: 47px
-    line-height: 2.9
-    padding: 0
-    padding-left: 18px
-    text-align: left
-    width: 210px
-    +breakpoint($bp-filter-mid)
-      width: $mid-filter-width
-    +breakpoint($bp-filter-small)
-      width: $small-filter-width
-    +icon-after("arrow-med-down", true)
-    &:after
-      background-color: #f9f9f9
-      border-left: 1px solid $grey-c
-      color: $red
-      display: inline-block
-      float: right
-      font-size: 14px
-      line-height: 3
-      height: 45px
-      padding: 0 16px
-      position: relative
-    &:hover
-      &:after
-        background-color: $link-blue
-        color: $white
-    &.open
-      +icon-after("arrow-med-up", true)
-      &:after
-        line-height: 3
-
   // Location select, leadership and career level are smaller
   .form-item-filter-program-location .ms-drop.bottom,
   .form-item-filter-leadership-level .ms-drop.bottom,
@@ -241,6 +200,48 @@ $small-filter-width: 245px
     -ms-flexbox-flex-basis: 51%
     -webkit-flex-flex-basis: 51%
     flex-basis: 51%
+
+// Date range button
+button.isotopify-filter-daterange-button,
+button.mini-filter-daterange-button
+  @extend %border-grey
+  background: $white
+  border-radius: 0
+  color: $text-black
+  font-family: $font-sans
+  font-size: 16px
+  height: 47px
+  line-height: 2.9
+  padding: 0
+  padding-left: 18px
+  text-align: left
+  width: 210px
+  +icon-after("arrow-med-down", true)
+  &:after
+    background-color: #f9f9f9
+    border-left: 1px solid $grey-c
+    color: $red
+    display: inline-block
+    float: right
+    font-size: 14px
+    line-height: 3
+    height: 45px
+    padding: 0 16px
+    position: relative
+  &:hover
+    &:after
+      background-color: $link-blue
+      color: $white
+  &.open
+    +icon-after("arrow-med-up", true)
+    &:after
+      line-height: 3
+// Regular filter responsive
+button.isotopify-filter-daterange-button
+  +breakpoint($bp-filter-mid)
+    width: $mid-filter-width
+  +breakpoint($bp-filter-small)
+    width: $small-filter-width
 
 // EE filter styles
 .pane-filters,
@@ -329,6 +330,20 @@ $small-filter-width: 245px
     input[type="checkbox"]
       margin-right: 2px
       vertical-align: text-top
+
+    ul
+      max-height: none !important
+      max-width: none
+      min-height: 150px
+      padding: $standard-padding $standard-padding 0 $standard-padding
+
+    // Select items
+    li label
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.2
+      margin-bottom: 16px
+      max-width: 180px
 
 // Date drop down
 .date-picker-wrapper
@@ -706,7 +721,6 @@ h2.isotopify-title
   margin-bottom: 18px
 
 // Sticky compare tray
-
 .compare-items
   @extend %box-shadow
   background: #f4f4f4
@@ -792,8 +806,7 @@ h2.isotopify-title
     +breakpoint(1200px max-width)
       top: 15px
 
-
-// Mini program finder block for full bleed homepage
+// Mini program finder block used on exec ed landing
 .pane-mini-program-finder
   max-height: 400px
   .pane-content
@@ -826,9 +839,13 @@ h2.isotopify-title
     padding: $standard-padding
     position: relative
     top: -115px
+    +breakpoint(1170px max-width)
+      border-bottom: 1px $border-grey solid
+      top: 0
     .inner
       margin: 0 auto
       max-width: 1170px
+
     // Title
     h1
       font-family: $font-sans
@@ -836,33 +853,113 @@ h2.isotopify-title
       font-size: 34px
       font-weight: bold
       line-height: 1.2
+      +breakpoint(999px max-width)
+        font-size: 28px
+        margin-bottom: 10px
 
   .mini-finder-filters
     float: right
     display: inline-block
+    +breakpoint(999px max-width)
+      float: none
+      display: block
 
-    .form-item-program-topic,
-    .isotopify-filter-daterange
-      width: 230px
-      position: relative
-      display: inline-block
+  .form-item-program-topic,
+  .isotopify-filter-daterange
+    display: inline-block
+    position: relative
+    width: 230px
+    +breakpoint(1115px max-width)
+      width: inherit
+    +breakpoint(625px max-width)
+      display: block
 
-    .ms-choice
-      width: 100% !important
+  .ms-choice
+    width: 100% !important
 
-    input#edit-submit
+  input#edit-submit
+    @extend %green-button
+    font-size: 17px
+    display: inline-block
+    +breakpoint(625px max-width)
+      display: block
+      margin-top: 10px
+
+  #edit-filters
+    display: inline-block
+
+  // Filter styling
+  .ms-parent
+    width: 210px !important
+
+  ul
+    +flex-box
+    -webkit-box-flex-flow: row wrap
+    -moz-box-flex-flow: row wrap
+    -ms-flexbox-flex-flow: row wrap
+    -webkit-flex-flex-flow: row wrap
+    flex-flow: row wrap
+    -webkit-box-justify-content: space-between
+    -moz-box-justify-content: space-between
+    -ms-flexbox-justify-content: space-between
+    -webkit-flex-justify-content: space-between
+    justify-content: space-between
+    max-height: none !important
+    max-width: none
+    min-height: 150px
+    padding: $standard-padding $standard-padding 0 $standard-padding
+
+  // Select items
+  li
+    -webkit-box-flex-basis: 51%
+    -moz-box-flex-basis: 51%
+    -ms-flexbox-flex-basis: 51%
+    -webkit-flex-flex-basis: 51%
+    flex-basis: 51%
+    font-size: 16px
+    line-height: 1.2
+    margin-bottom: 16px
+    max-width: 180px
+
+  // Select window
+  .ms-drop.bottom
+    @extend %border-grey
+    border-radius: 0
+    min-width: 515px
+    overflow: visible
+
+    // Apply button
+    .checkbox-apply
       @extend %green-button
-      font-size: 17px
-      display: inline-block
+      margin-bottom: 28px
+      margin-left: 24px
+      margin-right: 12px
 
-    #edit-filters
-      display: inline-block
-      .ms-drop.bottom
-        min-width: 600px
-        ul > li.multiple
-          width: 170px !important
-          label
-            font-weight: normal
+    // Clear button
+    .checkbox-clear-all
+      @extend %white-button
+      margin-bottom: 28px
+
+    // Inputs
+    input[type="checkbox"]
+      margin-right: 2px
+      vertical-align: text-top
+
+    ul
+      max-height: none !important
+      max-width: none
+      padding: $standard-padding $standard-padding 0 $standard-padding
+
+    // Select items
+    li label
+      font-size: 16px
+      font-weight: normal
+      line-height: 1.2
+      max-width: 180px
+
+    ul > li.multiple
+      width: 170px !important
+
 
 // Full time degree block in Program finder
 .pane-degree-programs
