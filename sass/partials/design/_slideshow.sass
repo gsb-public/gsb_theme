@@ -5,19 +5,17 @@ ul.slideshow-items
   margin: 0
   padding: 0
 
-// Hide pager
-.flex-control-nav
-  display: none
-
-.flex-viewport
-  overflow: visible !important
-
 // Arrows
-.flex-direction-nav
+.slick-arrow
+  background-image: none
   display: block
   height: 40px
+  line-height: 6
+  opacity: 1
+  overflow: hidden
   position: absolute
   right: 0
+  width: 34px
   .full-view &,
   .front &
     top: 16px
@@ -25,51 +23,44 @@ ul.slideshow-items
       top: -30px
   .wide-view &
     top: -30px
-
-  // Arrows
-  .flex-next,
-  .flex-prev
-    background-image: none
-    opacity: 1
-    width: 34px
-    height: 32px
-    &:before,
-    &:after
-      position: absolute
-      text-indent: 0
-    +icon-before("circle", true)
+  &:before,
+  &:after
+    position: absolute
+  +icon-before("circle", true)
+  &:before
+    color: $green-light
+    font-size: 35px
+    top: 0
+    left: 0
+  &:after
+    color: $white
+    font-size: 16px
+    top: 9px
+  &:hover
     &:before
-      color: $green-light
-      font-size: 35px
-      top: 0
-      left: 0
+      color: $link-blue
     &:after
       color: $white
-      font-size: 16px
-      top: 9px
-    &:hover
-      &:before
-        color: $link-blue
 
-  // Previous arrow
-  .flex-prev
-    left: inherit
-    right: 80px
-    +icon-after("arrow-med-left", true)
-    &:after
-      left: 8px
+// Previous arrow
+.flex-prev
+  left: inherit
+  right: 80px
+  +icon-after("arrow-med-left", true)
+  &:after
+    left: 8px
 
-  // Next arrow
-  .flex-next
-    left: inherit
-    right: 20px
-    +icon-after("arrow-med-right", true)
-    &:after
-      left: 11px
+// Next arrow
+.flex-next
+  left: inherit
+  right: 20px
+  +icon-after("arrow-med-right", true)
+  &:after
+    left: 11px
 
 // Slideshow wrapper
 .slideshow-wrapper
-  @extend %border-and-box-shadow
+  @extend %box-shadow
   +clearfix
   background: $white
   position: relative
@@ -107,12 +98,12 @@ ul.slideshow-items
   .full-view &
     position: relative
     bottom: -50px
-    height: 260px
+    height: 265px
     bottom: 0
     float: left
     max-width: 300px
     right: 0
-    width: 34%
+    width: 34.3%
     +breakpoint(999px max-width)
       height: 243px
     .inner
@@ -149,6 +140,7 @@ ul.slideshow-items
 
   // Superhead - Link
   .slide-superhead
+    color: $white
     font-family: $font-demi
     font-size: 13px
     line-height: 1
@@ -159,17 +151,52 @@ ul.slideshow-items
 
   // Text - Link
   .slide-text
-    color: $text-black
+    color: $white
     font-size: 20px
     line-height: 1.2
     +icon-after("arrow-double-right", true)
     &:after
       color: $green-light
-      font-size: 16px
+      font-size: 14px
       margin-left: 3px
+    &:hover
+      color: $white
+      &:after
+        color: $white
+    .field-name-field-text-slide
+      display: inline
+
+// Color styles
+// Blue
+.slide-color-blue
+  background: $blue-bright
+
+// Purple
+.slide-color-purple
+  background: $purple-bright
+
+// Teal
+.slide-color-brightteal
+  background: $teal-bright
+
+// Pink
+.slide-color-pink
+  background: $pink-bright
+
+// Charcoal
+.slide-color-charcoal
+  background: $text-black
+
+// White
+.slide-color-white
+  background: $white
+  // Superhead - Link
+  .slide-superhead
+    color: $red
+  // Text
+  .slide-text
+    color: $text-black
     &:hover
       color: $link-blue
       &:after
         color: $teal-light
-    .field-name-field-text-slide
-      display: inline
