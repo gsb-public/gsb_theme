@@ -861,6 +861,9 @@
   .ds-footer
     @extend %divider-top
     padding-top: $standard-padding
+    padding-right: 12%
+    +breakpoint(500px max-width)
+      display: none
 
   // Footer Taxonomy
   .topics-location-category-wrapper
