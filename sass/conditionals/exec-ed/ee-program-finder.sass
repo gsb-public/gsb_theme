@@ -795,42 +795,51 @@ h2.isotopify-title
 
 // Mini program finder block for full bleed homepage
 .pane-mini-program-finder
-  height: 400px
+  max-height: 400px
   .pane-content
     overflow: hidden
-    height: 615px
-  .finder-image
+    position: relative
+    bottom: 0
+
+  .mini-program-finder-image
     img
       width: 100%
-    .apply-mini-finder
-      position: relative
-      a
-        @extend %gradient-red
-        color: white
-        font-size: 16px
-        line-height: 1.2
-        padding: 16px 26px
-        position: absolute
-        top: -356px
-        right: 89px
-  .content
-    float: left
-    background: white
+
+  .mini-program-finder-apply
+    margin: 0 auto
+    max-width: 1170px
     position: relative
-    top: -120px
+    right: 0
     width: 100%
-    padding: 24px 89px $standard-padding
-    h4
+    a
+      @extend %gradient-red
+      color: $white
+      font-size: 16px
+      line-height: 1.2
+      padding: 16px $standard-padding
+      position: absolute
+      right: 0
+      bottom: 320px
+
+  .mini-program-finder-title-filters
+    background: $white
+    padding: $standard-padding
+    position: relative
+    top: -115px
+    .inner
+      margin: 0 auto
+      max-width: 1170px
+    // Title
+    h1
+      font-family: $font-sans
+      display: inline-block
       font-size: 34px
       font-weight: bold
       line-height: 1.2
 
   .mini-finder-filters
     float: right
-    background: white
-    position: relative
-    top: -187px
-    padding-right: 89px
+    display: inline-block
 
     .form-item-program-topic,
     .isotopify-filter-daterange
