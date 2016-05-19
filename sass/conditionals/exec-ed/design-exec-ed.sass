@@ -1205,7 +1205,7 @@ h1.ee-section-footer-title
   #edit-submitted-brochure-list
     .topicSet
       border-bottom: 1px solid $listing-divider
-      padding: 20px 0 14px
+      padding: 20px $standard-padding 14px
       .topic-header
         padding-bottom: 8px
         label
@@ -1225,13 +1225,18 @@ h1.ee-section-footer-title
           width: 225px
           display: inline-block
           margin-top: 0
+    .topicSet:last-of-type
+      border-bottom: 0
+
 // Form on checklist page
-.webform-component--your-contact-information
-  div.webform-component--your-contact-information--company-website-address
-    border-bottom: 1px solid $listing-divider
-    padding-bottom: 30px
-  .webform-component--your-contact-information--address
-    margin-top: 20px
+.webform-client-form
+  fieldset.webform-component--your-contact-information--address,
+  fieldset.webform-component--your-contact-information
+    legend
+      padding-top: 30px
+      border-top: 2px solid $grey-dark
+      font-size: 24px
+
 //submit button on form
 .pane-node-webform .form-actions
   input[type="submit"]
