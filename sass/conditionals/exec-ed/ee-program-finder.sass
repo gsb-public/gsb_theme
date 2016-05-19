@@ -809,6 +809,10 @@ h2.isotopify-title
 // Mini program finder block used on exec ed landing
 .pane-mini-program-finder
   max-height: 400px
+  +breakpoint(1170px max-width)
+    border-bottom: 1px $border-grey solid
+    max-height: inherit
+
   .pane-content
     overflow: hidden
     position: relative
@@ -840,7 +844,6 @@ h2.isotopify-title
     position: relative
     top: -115px
     +breakpoint(1170px max-width)
-      border-bottom: 1px $border-grey solid
       top: 0
     .inner
       margin: 0 auto
@@ -853,26 +856,45 @@ h2.isotopify-title
       font-size: 34px
       font-weight: bold
       line-height: 1.2
-      +breakpoint(999px max-width)
+      +breakpoint(1000px max-width)
         font-size: 28px
+      +breakpoint(870px max-width)
+        display: block
         margin-bottom: 10px
 
   .mini-finder-filters
     float: right
     display: inline-block
-    +breakpoint(999px max-width)
+    +breakpoint(870px max-width)
       float: none
       display: block
+    +breakpoint(845px max-width)
+      +clearfix
+
+  .form-item-program-topic
+    left: -290px
+    position: relative
+    +breakpoint(870px max-width)
+      left: 0
+  .isotopify-filter-daterange
+    position: absolute
+    right: 55px
+    top: 0
+    +breakpoint(870px max-width)
+      left: 250px
+      right: 0
 
   .form-item-program-topic,
   .isotopify-filter-daterange
-    display: inline-block
-    position: relative
     width: 230px
-    +breakpoint(1115px max-width)
-      width: inherit
-    +breakpoint(625px max-width)
-      display: block
+    +breakpoint(845px max-width)
+      position: inherit
+      margin-bottom: 10px
+      width: 100% !important
+
+  button.mini-filter-daterange-button
+    +breakpoint(845px max-width)
+      width: 100% !important
 
   .ms-choice
     width: 100% !important
@@ -881,16 +903,25 @@ h2.isotopify-title
     @extend %green-button
     font-size: 17px
     display: inline-block
-    +breakpoint(625px max-width)
+    position: absolute
+    right: 0
+    top: 0
+    +breakpoint(870px max-width)
+      left: 490px
+    +breakpoint(845px max-width)
       display: block
-      margin-top: 10px
+      float: right
+      position: inherit
 
-  #edit-filters
-    display: inline-block
+  #mini-program-finder
+    position: relative
+    top: 0
 
   // Filter styling
   .ms-parent
     width: 210px !important
+    +breakpoint(845px max-width)
+      width: 100% !important
 
   ul
     +flex-box
@@ -906,7 +937,7 @@ h2.isotopify-title
     justify-content: space-between
     max-height: none !important
     max-width: none
-    min-height: 150px
+    min-height: 300px
     padding: $standard-padding $standard-padding 0 $standard-padding
 
   // Select items
@@ -918,15 +949,17 @@ h2.isotopify-title
     flex-basis: 51%
     font-size: 16px
     line-height: 1.2
-    margin-bottom: 16px
+    margin-bottom: 8px
     max-width: 180px
 
   // Select window
   .ms-drop.bottom
     @extend %border-grey
     border-radius: 0
-    min-width: 515px
-    overflow: visible
+    min-width: 519px
+    position: relative
+    +breakpoint(585px max-width)
+      min-width: 270px
 
     // Apply button
     .checkbox-apply
@@ -945,20 +978,15 @@ h2.isotopify-title
       margin-right: 2px
       vertical-align: text-top
 
-    ul
-      max-height: none !important
-      max-width: none
-      padding: $standard-padding $standard-padding 0 $standard-padding
-
     // Select items
     li label
       font-size: 16px
       font-weight: normal
       line-height: 1.2
-      max-width: 180px
+      margin-bottom: 5px
 
     ul > li.multiple
-      width: 170px !important
+      width: inherit !important
 
 
 // Full time degree block in Program finder
