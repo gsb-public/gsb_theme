@@ -135,6 +135,7 @@ ul.slideshow-items
 
   // Text - Not linked
   .field-name-field-text-slide
+    color: $white
     font-size: 20px
     line-height: 1.2
 
@@ -190,13 +191,16 @@ ul.slideshow-items
 // White
 .slide-color-white
   background: $white
-  // Superhead - Link
+  // Superhead - Linked
   .slide-superhead
     color: $red
-  // Text
+  // Text - Linked
   .slide-text
     color: $text-black
     &:hover
       color: $link-blue
       &:after
         color: $teal-light
+  // Text - not linked
+  .field-name-field-text-slide
+    color: $text-black
