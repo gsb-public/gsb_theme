@@ -107,7 +107,7 @@ ul.slideshow-items
     width: 34.3%
     +breakpoint(999px max-width)
       height: 243px
-    .inner
+    .inner-wrapper
       bottom: 26px
       padding-right: 20px
       position: absolute
@@ -118,7 +118,7 @@ ul.slideshow-items
       max-width: 100%
       padding: 4%
       width: 100%
-      .inner
+      .inner-wrapper
         bottom: initial
         padding-right: 0
         position: initial
@@ -129,6 +129,7 @@ ul.slideshow-items
 
   // Superhead - Not linked
   .field-name-field-superhead
+    color: $white
     font-family: $font-demi
     font-size: 13px
     line-height: 1
@@ -163,45 +164,140 @@ ul.slideshow-items
       margin-left: 3px
     &:hover
       color: $white
+      border-bottom: 1px solid
+      text-decoration: none
       &:after
         color: $white
     .field-name-field-text-slide
       display: inline
 
-// Color styles
-// Blue
-.slide-color-blue
-  background: $blue-bright
+// Color styles for opaque
+.pane-bundle-slideshow
+  // Blue
+  .slide-color-blue
+    background: $blue-bright
 
-// Purple
-.slide-color-purple
-  background: $purple-bright
+  // Purple
+  .slide-color-purple
+    background: $purple-bright
 
-// Teal
-.slide-color-brightteal
-  background: $teal-bright
+  // Teal
+  .slide-color-brightteal
+    background: $teal-bright
 
-// Pink
-.slide-color-pink
-  background: $pink-bright
+  // Pink
+  .slide-color-pink
+    background: $pink-bright
 
-// Charcoal
-.slide-color-charcoal
-  background: $text-black
+  // Charcoal
+  .slide-color-charcoal
+    background: $text-black
 
-// White
-.slide-color-white
-  background: $white
-  // Superhead - Linked
-  .slide-superhead
-    color: $red
-  // Text - Linked
-  .slide-text
-    color: $text-black
-    &:hover
-      color: $link-blue
-      &:after
-        color: $teal-light
-  // Text - not linked
+  // White
+  .slide-color-white
+    background: $white
+    .field-name-field-superhead
+      color: $text-black
+    // Superhead - Linked
+    .slide-superhead
+      color: $red
+    // Text - Linked
+    .slide-text
+      color: $text-black
+      &:hover
+        color: $link-blue
+        &:after
+          color: $teal-light
+    // Text - not linked
+    .field-name-field-text-slide
+      color: $text-black
+
+// Hero slideshow
+.hero-region-slideshow-wrapper
+
+  // Arrows
+  .flex-next
+    right: 160px
+    top: 40px
+  .flex-prev
+    right: 220px
+    top: 40px
+  // Slide
+  .slick-slide
+    max-height: 400px
+    position: relative
+    bottom: 0
+
+  // Image wrapper
+  .field-name-field-image-single-public
+    max-height: 400px
+    overflow: hidden
+    img
+      margin: 0 auto
+      width: 100%
+  // Text wrapper
+  .slide-text-wrapper
+    margin: 0 auto
+    max-width: 1170px
+    padding: 0
+    .inner-wrapper
+      margin: 20px 0 20px 700px
+      max-width: 480px
+      min-height: 360px
+      position: relative
+      bottom: 400px
+      +breakpoint(1205px max-width)
+        margin-right: 20px
+      +breakpoint(1150px max-width)
+        margin-left: 50%
+      +breakpoint(999px max-width)
+        margin-left: 40%
+    .text-wrapper
+      max-width: 480px
+      padding: $standard-padding
+      position: absolute
+      bottom: 0
+      right: 0
+
+  // Superhead
+  .slide-superhead,
+  .field-name-field-superhead
+    font-size: 16px
+  // Text
+  .slide-text,
   .field-name-field-text-slide
-    color: $text-black
+    font-size: 30px
+    line-height: 1.4
+    &:after
+      font-size: 18px
+
+  // Color styles
+  // Blue
+  .slide-color-blue .inner-wrapper
+    background: $blue-bright
+    +background(linear-gradient(bottom, rgba($blue-bright, 0.95), rgba($blue-bright, 0.7)))
+
+  // Purple
+  .slide-color-purple .inner-wrapper
+    background: $purple-bright
+    +background(linear-gradient(bottom, rgba($purple-bright, 0.95), rgba($purple-bright, 0.7)))
+
+  // Teal
+  .slide-color-brightteal .inner-wrapper
+    background: $teal-bright
+    +background(linear-gradient(bottom, rgba($teal-bright, 0.95), rgba($teal-bright, 0.7)))
+
+  // Pink
+  .slide-color-pink .inner-wrapper
+    background: $pink-bright
+    +background(linear-gradient(bottom, rgba($pink-bright, 0.95), rgba($pink-bright, 0.7)))
+
+  // Charcoal
+  .slide-color-charcoal .inner-wrapper
+    background: $text-black
+    +background(linear-gradient(bottom, rgba($text-black, 0.95), rgba($text-black, 0.7)))
+
+  // White
+  .slide-color-white .inner-wrapper
+    background: $white
+    +background(linear-gradient(bottom, rgba($white, 0.95), rgba($white, 0.7)))
