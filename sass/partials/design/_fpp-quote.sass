@@ -55,15 +55,15 @@
       font-size: 16px
 
 // Fpp Quotes
-.pane-bundle-quote
+.pane-bundle-quotes
   margin-left: 18px
+  .quotes-title
+    position: relative
   p
     line-height: 0
     margin-bottom: 0
   a
     color: $text-black
-    position: relative
-    top: 0
     &:hover
       color: $link-blue
       text-decoration: none !important
@@ -75,7 +75,6 @@
     font-size: 34px
     position: absolute
     left: -17px
-    top: 6px
     +breakpoint($bp-mobile-max)
       font-size: 38px
       left: -22px
