@@ -64,12 +64,23 @@
     margin-bottom: 0
   a
     color: $text-black
+    .last-double-apostrophe
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 24px
+        margin-left: 8px 
     &:hover
       color: $link-blue
       text-decoration: none !important
       .quote,
-      .attribution
+      .attribution,
+      .attribution-title
         border-bottom: 1px solid
+      .last-double-apostrophe
+        &:after
+          color: $teal-light  
+
   // First quotation mark
   .first-double-apostrophe
     font-size: 34px
@@ -86,9 +97,11 @@
     line-height: 1.4em
     +breakpoint($bp-mobile-max)
       font-size: 26px
+
   // Second quotation mark
   .last-double-apostrophe
     font-size: 34px
+
   // Em dash
   .dash
     margin-right: 8px
