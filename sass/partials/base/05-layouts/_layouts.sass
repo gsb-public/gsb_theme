@@ -204,6 +204,13 @@
 
 // GSB full bleed page no sidebar on left
 .no-sidebars.panels-layout-gsb-full-bleed-page
+  .breadcrumb
+    display: block
+    margin: 0 auto
+    max-width: 1170px
+    padding-left: 80px
+    +breakpoint(1000px max-width)
+      padding-left: 0
   h1.title
     margin-left: 80px
     +breakpoint(1000px max-width)
