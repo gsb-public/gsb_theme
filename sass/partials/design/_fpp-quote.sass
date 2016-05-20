@@ -53,3 +53,60 @@
     line-height: 1.5
     +breakpoint($bp-mobile-max)
       font-size: 16px
+
+// Fpp Quotes
+.pane-bundle-quote
+  margin-left: 18px
+  p
+    line-height: 0
+    margin-bottom: 0
+  a
+    color: $text-black
+    position: relative
+    top: 0
+    &:hover
+      color: $link-blue
+      text-decoration: none !important
+      .quote,
+      .attribution
+        border-bottom: 1px solid
+  // First quotation mark
+  .first-double-apostrophe
+    font-size: 34px
+    position: absolute
+    left: -17px
+    top: 6px
+    +breakpoint($bp-mobile-max)
+      font-size: 38px
+      left: -22px
+      top: -7px
+
+  // Quote text
+  .quote
+    font-size: 34px
+    line-height: 1.4em
+    +breakpoint($bp-mobile-max)
+      font-size: 26px
+  // Second quotation mark
+  .last-double-apostrophe
+    font-size: 34px
+  // Em dash
+  .dash
+    margin-right: 8px
+
+  // Attribution of quote
+  .attribution
+    font-size: 18px
+    line-height: 1.3em
+    font-weight: normal
+    +breakpoint($bp-mobile-max)
+      font-size: 16px
+
+  // Attribution of quote
+  .attribution-title
+    font-size: 18px
+    line-height: 1.3em
+    font-weight: normal
+    font-style: italic
+    +breakpoint($bp-mobile-max)
+      font-size: 16px  
