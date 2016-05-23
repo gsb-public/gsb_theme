@@ -848,7 +848,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * ┬⌐ 2012 Bitstream Inc
+ * © 2012 Bitstream Inc
  */
 @font-face {
   font-family: "icons";
@@ -7982,13 +7982,15 @@ ul.slideshow-items {
   color: #231f20;
 }
 
-.hero-region-slideshow-wrapper .flex-next {
-  right: 160px;
-  top: 40px;
+.hero-region-slideshow-wrapper .arrow-wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  position: relative;
+  top: 32px;
 }
-.hero-region-slideshow-wrapper .flex-prev {
-  right: 220px;
-  top: 40px;
+.hero-region-slideshow-wrapper .flex-next:focus,
+.hero-region-slideshow-wrapper .flex-prev:focus {
+  color: white;
 }
 .hero-region-slideshow-wrapper .slick-slide {
   max-height: 400px;
@@ -8015,19 +8017,14 @@ ul.slideshow-items {
   position: relative;
   bottom: 400px;
 }
+@media (max-width: 88.75em) {
+  .hero-region-slideshow-wrapper .slide-text-wrapper .inner-wrapper {
+    bottom: 400px;
+  }
+}
 @media (max-width: 75.3125em) {
   .hero-region-slideshow-wrapper .slide-text-wrapper .inner-wrapper {
     margin-right: 20px;
-  }
-}
-@media (max-width: 71.875em) {
-  .hero-region-slideshow-wrapper .slide-text-wrapper .inner-wrapper {
-    margin-left: 50%;
-  }
-}
-@media (max-width: 62.4375em) {
-  .hero-region-slideshow-wrapper .slide-text-wrapper .inner-wrapper {
-    margin-left: 40%;
   }
 }
 .hero-region-slideshow-wrapper .slide-text-wrapper .text-wrapper {

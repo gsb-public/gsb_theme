@@ -216,12 +216,17 @@ ul.slideshow-items
 .hero-region-slideshow-wrapper
 
   // Arrows
-  .flex-next
-    right: 160px
-    top: 40px
+  .arrow-wrapper
+    margin: 0 auto
+    max-width: 1170px
+    position: relative
+    top: 32px
+
+  .flex-next,
   .flex-prev
-    right: 220px
-    top: 40px
+    &:focus
+      color: $white
+
   // Slide
   .slick-slide
     max-height: 400px
@@ -246,12 +251,11 @@ ul.slideshow-items
       min-height: 360px
       position: relative
       bottom: 400px
+      +breakpoint(1420px max-width)
+        bottom: 400px
       +breakpoint(1205px max-width)
         margin-right: 20px
-      +breakpoint(1150px max-width)
-        margin-left: 50%
-      +breakpoint(999px max-width)
-        margin-left: 40%
+
     .text-wrapper
       max-width: 480px
       padding: $standard-padding
