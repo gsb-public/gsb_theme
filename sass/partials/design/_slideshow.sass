@@ -301,3 +301,19 @@ ul.slideshow-items
   .slide-color-white .inner-wrapper
     background: $white
     +background(linear-gradient(bottom, rgba($white, 0.95), rgba($white, 0.7)))
+    // Superhead - Not Linked
+    .field-name-field-superhead
+      color: $text-black
+    // Superhead - Linked
+    .slide-superhead
+      color: $red
+    // Text - Linked
+    .slide-text
+      color: $text-black
+      &:hover
+        color: $link-blue
+        &:after
+          color: $teal-light
+    // Text - not linked
+    .field-name-field-text-slide
+      color: $text-black
