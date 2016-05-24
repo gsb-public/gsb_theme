@@ -1205,29 +1205,29 @@ h1.ee-section-footer-title
     display: none
   #edit-submitted-brochure-list
     .topicSet
-      border-bottom: 1px solid $listing-divider
+      @extend %divider-bottom
       padding: 20px $standard-padding 14px
-      .topic-header
-        padding-bottom: 8px
-        label
-          font-weight: bold
-          font-size: 20px
-      .programSet
-        .form-item
-          display: inline-block
-          margin-right: 30px
-          vertical-align: top
-        input[type="checkbox"]
-          vertical-align: top
-          margin-right: 8px
-          position: relative
-          top: 2px
-        label
-          width: 225px
-          display: inline-block
-          margin-top: 0
-    .topicSet:last-of-type
-      border-bottom: 0
+      &:last-of-type
+        border-bottom: 0
+    .topic-header
+      padding-bottom: 8px
+      label
+        font-weight: bold
+        font-size: 20px
+    .programSet
+      .form-item
+        display: inline-block
+        margin-right: 30px
+        vertical-align: top
+      input[type="checkbox"]
+        vertical-align: top
+        margin-right: 8px
+        position: relative
+        top: 2px
+      label
+        width: 225px
+        display: inline-block
+        margin-top: 0
 
 // Brochure results for program
 .pane-ee-brochure-download
