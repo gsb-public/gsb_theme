@@ -214,6 +214,8 @@ ul.slideshow-items
 
 // Hero slideshow
 .hero-region-slideshow-wrapper
+  +breakpoint(1000px max-width)
+    display: none
 
   // Arrows
   .arrow-wrapper
@@ -221,6 +223,8 @@ ul.slideshow-items
     max-width: 1170px
     position: relative
     top: 32px
+    +breakpoint(1210px max-width)
+      margin-right: 20px
 
   .flex-next,
   .flex-prev
@@ -229,19 +233,18 @@ ul.slideshow-items
 
   // Slide
   .slick-slide
-    max-height: 400px
+    height: 400px
     position: relative
     bottom: 0
-
   // Image wrapper
   .field-name-field-image-single-public
-    max-height: 400px
+    height: 400px
     overflow: hidden
     img
-      margin: 0 auto
       width: 100%
   // Text wrapper
   .slide-text-wrapper
+    height: 0
     margin: 0 auto
     max-width: 1170px
     padding: 0
@@ -251,17 +254,20 @@ ul.slideshow-items
       min-height: 360px
       position: relative
       bottom: 400px
-      +breakpoint(1420px max-width)
-        bottom: 400px
+      +breakpoint(1400px max-width)
+        margin-left: 600px
+        max-width: initial
       +breakpoint(1205px max-width)
         margin-right: 20px
+      +breakpoint(1200px max-width)
+        margin-left: 500px
 
     .text-wrapper
-      max-width: 480px
+      max-height: 340px
+      min-width: 470px
       padding: $standard-padding
       position: absolute
       bottom: 0
-      right: 0
 
   // Superhead
   .slide-superhead,
