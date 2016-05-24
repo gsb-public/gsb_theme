@@ -119,7 +119,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-bundle-links .b
   background: white;
 }
 
-.webform-client-form legend, .view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
+.view-mode-media_contact, .field-name-field-body ul.footnotes, .pane-bundle-people .person-row, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
 #views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper, .pane-bundle-featured-content .field-collection-item-field-featured-item, .pane-bundle-featured-content .show-more-less-toggler-wrapper {
   border-top: 1px lightgray solid;
 }
@@ -303,7 +303,8 @@ div.gsb-full-bleed-page .pane-bundle-video .show-more:hover {
 }
 
 .webform-client-form #edit-submit,
-.webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
+.webform-client-form #edit-next,
+.webform-client-form input[type="submit"], .green-rounded-button, #email-mail-page-form #edit-submit,
 #email-contact-mail-page-form #edit-submit, #edit-done, .pane-bundle-image a.image-fpp-enlarge-button, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
@@ -319,7 +320,8 @@ div.gsb-full-bleed-page .pane-bundle-video .show-more:hover {
   padding: 10px 17px;
 }
 .webform-client-form #edit-submit:after,
-.webform-client-form #edit-next:after, .green-rounded-button:after, #email-mail-page-form #edit-submit:after,
+.webform-client-form #edit-next:after,
+.webform-client-form input[type="submit"]:after, .green-rounded-button:after, #email-mail-page-form #edit-submit:after,
 #email-contact-mail-page-form #edit-submit:after, #edit-done:after, .pane-bundle-image a.image-fpp-enlarge-button:after, .webform-client-form #edit-draft:after,
 .webform-client-form #edit-previous:after,
 .webform-client-form .add-more:after,
@@ -327,7 +329,8 @@ div.gsb-full-bleed-page .pane-bundle-video .show-more:hover {
   color: white !important;
 }
 .webform-client-form #edit-submit:hover,
-.webform-client-form #edit-next:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
+.webform-client-form #edit-next:hover,
+.webform-client-form input[type="submit"]:hover, .green-rounded-button:hover, #email-mail-page-form #edit-submit:hover,
 #email-contact-mail-page-form #edit-submit:hover, #edit-done:hover, .pane-bundle-image a.image-fpp-enlarge-button:hover, .webform-client-form #edit-draft:hover,
 .webform-client-form #edit-previous:hover,
 .webform-client-form .add-more:hover,
@@ -337,7 +340,8 @@ div.gsb-full-bleed-page .pane-bundle-video .show-more:hover {
   color: white;
 }
 .webform-client-form #edit-submit:hover:after,
-.webform-client-form #edit-next:hover:after, .green-rounded-button:hover:after, #email-mail-page-form #edit-submit:hover:after,
+.webform-client-form #edit-next:hover:after,
+.webform-client-form input[type="submit"]:hover:after, .green-rounded-button:hover:after, #email-mail-page-form #edit-submit:hover:after,
 #email-contact-mail-page-form #edit-submit:hover:after, #edit-done:hover:after, .pane-bundle-image a.image-fpp-enlarge-button:hover:after, .webform-client-form #edit-draft:hover:after,
 .webform-client-form #edit-previous:hover:after,
 .webform-client-form .add-more:hover:after,
@@ -346,7 +350,8 @@ div.gsb-full-bleed-page .pane-bundle-video .show-more:hover {
 }
 
 .webform-client-form #edit-submit,
-.webform-client-form #edit-next, .green-rounded-button, #email-mail-page-form #edit-submit,
+.webform-client-form #edit-next,
+.webform-client-form input[type="submit"], .green-rounded-button, #email-mail-page-form #edit-submit,
 #email-contact-mail-page-form #edit-submit, #edit-done, .pane-bundle-image a.image-fpp-enlarge-button {
   background: #919900;
 }
@@ -1520,29 +1525,30 @@ select[multiple="multiple"] {
   padding: 0;
 }
 .webform-client-form legend {
+  border-top: 2px #231f20 solid;
   display: block;
-  font-size: 20px;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
   font-weight: bold;
-  padding: 20px 0 0 0;
+  padding: 30px 26px 0 26px;
   width: 100%;
-}
-.webform-client-form fieldset:first-of-type legend {
-  border-top: 0;
-  padding: 0;
 }
 .webform-client-form label {
   margin: 35px 0 8px 0;
 }
+.webform-client-form .fieldset-wrapper {
+  padding: 0 26px;
+}
 .webform-client-form .form-item .description {
   margin-top: 10px;
-}
-.webform-client-form input.form-text {
-  width: 100%;
 }
 .webform-client-form input[type="radio"] {
   margin-left: 1px;
   position: relative;
   top: -1px;
+}
+.webform-client-form .form-actions {
+  margin-left: 26px;
 }
 .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
@@ -1552,7 +1558,8 @@ select[multiple="multiple"] {
   margin-right: 8px;
 }
 .webform-client-form #edit-submit,
-.webform-client-form #edit-next {
+.webform-client-form #edit-next,
+.webform-client-form input[type="submit"] {
   margin-bottom: 8px;
 }
 .webform-client-form .customSelectInner {
