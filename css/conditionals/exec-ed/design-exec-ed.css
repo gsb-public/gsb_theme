@@ -22,7 +22,7 @@
   border-top: 1px lightgray solid;
 }
 
-.node-program.view-mode-idea_story_related, .pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines {
+.node-program.view-mode-idea_story_related, .pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines, .webform-component--brochure-list #edit-submitted-brochure-list .topicSet {
   border-bottom: 1px lightgray solid;
 }
 
@@ -1601,34 +1601,33 @@ h1.ee-section-footer-title {
   display: none;
 }
 .webform-component--brochure-list #edit-submitted-brochure-list .topicSet {
-  border-bottom: 1px solid #c4c4c4;
   padding: 20px 26px 14px;
 }
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet .topic-header {
+.webform-component--brochure-list #edit-submitted-brochure-list .topicSet:last-of-type {
+  border-bottom: 0;
+}
+.webform-component--brochure-list #edit-submitted-brochure-list .topic-header {
   padding-bottom: 8px;
 }
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet .topic-header label {
+.webform-component--brochure-list #edit-submitted-brochure-list .topic-header label {
   font-weight: bold;
   font-size: 20px;
 }
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet .programSet .form-item {
+.webform-component--brochure-list #edit-submitted-brochure-list .programSet .form-item {
   display: inline-block;
   margin-right: 30px;
   vertical-align: top;
 }
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet .programSet input[type="checkbox"] {
+.webform-component--brochure-list #edit-submitted-brochure-list .programSet input[type="checkbox"] {
   vertical-align: top;
   margin-right: 8px;
   position: relative;
   top: 2px;
 }
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet .programSet label {
+.webform-component--brochure-list #edit-submitted-brochure-list .programSet label {
   width: 225px;
   display: inline-block;
   margin-top: 0;
-}
-.webform-component--brochure-list #edit-submitted-brochure-list .topicSet:last-of-type {
-  border-bottom: 0;
 }
 
 .pane-ee-brochure-download .item-list ul {
