@@ -9,33 +9,33 @@
 
   // Label of fieldset
   legend
-    @extend %divider-top
+    border-top: 2px $text-black solid
     display: block
-    font-size: 20px
+    font-family: $font-sans
+    font-size: 24px
     font-weight: bold
-    padding: 20px 0 0 0
+    padding: 30px $standard-padding 0 $standard-padding
     width: 100%
-
-  // No border or padding on the first fieldset
-  fieldset:first-of-type legend
-    border-top: 0
-    padding: 0
 
   label
     margin: 35px 0 8px 0
 
+  // Content
+  .fieldset-wrapper
+    padding: 0 $standard-padding
+
   .form-item .description
     margin-top: 10px
-
-  // Fields
-  input.form-text
-    width: 100%
 
   // Radio buttons
   input[type="radio"]
     margin-left: 1px
     position: relative
     top: -1px
+
+  // Action buttons
+  .form-actions
+    margin-left: 26px
 
   // Edit, previous, add and remove buttons
   #edit-draft,
@@ -48,7 +48,8 @@
 
   // Submit and next buttons
   #edit-submit,
-  #edit-next
+  #edit-next,
+  input[type="submit"]
     @extend %green-button
     margin-bottom: 8px
 
