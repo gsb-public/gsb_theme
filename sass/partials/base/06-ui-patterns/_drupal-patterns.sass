@@ -635,7 +635,8 @@ div.gsb-full-bleed-page
         .field-name-field-house-ads-superhead
           margin-bottom: 26px
 
-div.gsb-full-bleed-landing-page
+// Full Bleed Home Page
+.gsb-full-bleed-home-page
   .pane-bundle-spotlight
     padding: 0
     .ds-2col
@@ -647,3 +648,69 @@ div.gsb-full-bleed-landing-page
             max-width: 408px
       .group-right
         padding: 0 26px 26px
+
+  // Responsive implementation
+  // Wide view
+  .wide-view
+    .pane-bundle-house-ads,
+    .pane-bundle-spotlight,
+    .pane-bundle-video
+      padding-top: 26px
+
+      .feature-spotlight-label,
+      .field-name-field-house-ads-superhead
+        margin-bottom: 26px
+
+      // Stacked
+      +breakpoint(1170px 1000px)
+        max-width: 450px
+        padding: 0
+        .group-left,
+        .group-right
+          clear: both
+          float: none
+          width: 100%
+        .group-left
+          padding: 0
+        .group-right
+          padding: 0 $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+          max-width: 450px
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px
+      +breakpoint(859px max-width)
+        max-width: 450px
+        padding: 0
+        .group-left,
+        .group-right
+          clear: both
+          float: none
+          width: 100%
+        .group-left
+          padding: 0
+        .group-right
+          padding: 0 $standard-padding $standard-padding
+        .field-name-field-image-single-public,
+        .gsb-image-video-popup,
+        .field-name-field-spotlight-person-fid,
+        .field-name-field-use-profile-img,
+        .field-name-field-file-single-public
+          margin-bottom: 0
+          max-width: 450px
+        .feature-spotlight-label,
+        .field-name-field-house-ads-superhead
+          margin-bottom: 0
+        .group-name-wrapper,
+        .field-name-field-link-single,
+        .field-name-field-title
+          margin-top: 26px

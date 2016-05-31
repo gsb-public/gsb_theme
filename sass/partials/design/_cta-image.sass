@@ -6,6 +6,10 @@
   position: relative
   bottom: 0
 
+  .group-right
+    position: absolute
+    bottom: 0
+
   // Hide title
   .pane-title
     display: none
@@ -14,22 +18,6 @@
   img
     display: block
     width: 100%
-
-  // Colors
-  .image-cta-color-blue a
-    background: rgba($blue-bright, 0.85)
-
-  .image-cta-color-lime a
-    background: rgba($lime-bright, 0.85)
-
-  .image-cta-color-pink a
-    background: rgba($pink-bright, 0.85)
-
-  .image-cta-color-purple a
-    background: rgba($purple-bright, 0.85)
-
-  .image-cta-color-teal a
-    background: rgba($teal-bright, 0.85)
 
   // Linked text
   .field-name-field-link-single
@@ -47,19 +35,39 @@
         color: $white
         font-size: 12px
         margin-left: 3px
-      &:hover
-        background: rgba($hover-bright, 0.85) !important
 
 // Narrow view
 .narrow-view .pane-bundle-image-cta
+  // Colors
+  .image-cta-color-blue a
+    background: rgba($blue-bright, 0.85)
+    &:hover
+      background: rgba($hover-bright, 0.85) !important
+
+  .image-cta-color-lime a
+    background: rgba($lime-bright, 0.85)
+    &:hover
+      background: rgba($hover-bright, 0.85) !important
+
+  .image-cta-color-pink a
+    background: rgba($pink-bright, 0.85)
+    &:hover
+      background: rgba($hover-bright, 0.85) !important
+
+  .image-cta-color-purple a
+    background: rgba($purple-bright, 0.85)
+    &:hover
+      background: rgba($hover-bright, 0.85) !important
+
+  .image-cta-color-teal a
+    background: rgba($teal-bright, 0.85)
+    &:hover
+      background: rgba($hover-bright, 0.85) !important
+
   .group-left,
   .group-right
     float: none
     width: 100%
-  // Layout
-  .group-right
-    position: absolute
-    bottom: 0
 
 // Narrow view in non-bleed layouts
 .panel-display.gsb-standard-page-two,
@@ -71,16 +79,25 @@
 .gsb-insights-c
   .narrow-view .pane-bundle-image-cta
     +breakpoint(568px 480px)
-      +clearfix
-      a
-        font-size: 20px
-        position: absolute
-        bottom: 0
-        padding-top: 25%
-        width: 66.66%
-        +breakpoint(532px 481px)
-          width: 62.66%
       // Layout
+      .ds-2col
+        +clearfix
+      // Colors
+      .image-cta-color-blue
+        background: $blue-bright
+
+      .image-cta-color-lime
+        background: $lime-bright
+
+      .image-cta-color-pink
+        background: $pink-bright
+
+      .image-cta-color-purple
+        background: $purple-bright
+
+      .image-cta-color-teal
+        background: $teal-bright
+
       .group-left
         float: left
         width: 190px
@@ -90,34 +107,177 @@
         margin-left: -190px
         padding-left: 190px
         width: 100%
+      // Text
+      a
+        background: none !important
+        font-size: 20px
+        bottom: 0
+        position: relative
+        width: 100%
+        &:hover
+          background: none !important
+
+// Narrow side by side in main content well
+.panel-display.gsb-landing-standard-page-one .main-middle
+  .narrow-view .pane-bundle-image-cta
+    +breakpoint(1210px 1100px)
+      // Layout
+      .ds-2col
+        +clearfix
+      // Colors
+      .image-cta-color-blue
+        background: $blue-bright
+
+      .image-cta-color-lime
+        background: $lime-bright
+
+      .image-cta-color-pink
+        background: $pink-bright
+
+      .image-cta-color-purple
+        background: $purple-bright
+
+      .image-cta-color-teal
+        background: $teal-bright
+
+      .group-left
+        float: left
+        width: 190px
+      .group-right
+        float: left
+        display: inline-block
+        margin-left: -190px
+        padding-left: 190px
+        width: 100%
+      // Text
+      a
+        background: none !important
+        font-size: 20px
+        bottom: 0
+        position: relative
+        width: 100%
+        &:hover
+          background: none !important
+    +breakpoint(999px 845px)
+      // Layout
+      .ds-2col
+        +clearfix
+      // Colors
+      .image-cta-color-blue
+        background: $blue-bright
+
+      .image-cta-color-lime
+        background: $lime-bright
+
+      .image-cta-color-pink
+        background: $pink-bright
+
+      .image-cta-color-purple
+        background: $purple-bright
+
+      .image-cta-color-teal
+        background: $teal-bright
+
+      .group-left
+        float: left
+        width: 190px
+      .group-right
+        float: left
+        display: inline-block
+        margin-left: -190px
+        padding-left: 190px
+        width: 100%
+      // Text
+      a
+        background: none !important
+        font-size: 20px
+        bottom: 0
+        position: relative
+        width: 100%
+        &:hover
+          background: none !important
+
+// Narrow view in full bleed layouts
+.gsb-full-bleed-home-page
+  .narrow-view .pane-bundle-image-cta
+    // Switch to side by side
+    +breakpoint(1023px 480px)
+      // Layout
+      .ds-2col
+        +clearfix
+      // Colors
+      .image-cta-color-blue
+        background: $blue-bright
+
+      .image-cta-color-lime
+        background: $lime-bright
+
+      .image-cta-color-pink
+        background: $pink-bright
+
+      .image-cta-color-purple
+        background: $purple-bright
+
+      .image-cta-color-teal
+        background: $teal-bright
+
+      .group-left
+        float: left
+        width: 190px
+      .group-right
+        float: left
+        display: inline-block
+        margin-left: -190px
+        padding-left: 190px
+        width: 100%
+      // Text
+      a
+        background: none !important
+        font-size: 20px
+        bottom: 0
+        position: relative
+        width: 100%
+        &:hover
+          background: none !important
 
 // Wide view
 .wide-view .pane-bundle-image-cta
-  +clearfix
+  // Layout
+  .ds-2col
+    +clearfix
+  // Colors
+  .image-cta-color-blue
+    background: $blue-bright
+
+  .image-cta-color-lime
+    background: $lime-bright
+
+  .image-cta-color-pink
+    background: $pink-bright
+
+  .image-cta-color-purple
+    background: $purple-bright
+
+  .image-cta-color-teal
+    background: $teal-bright
+
+  // Text
   .field-name-field-link-single
     line-height: 0
     a
       font-size: 20px
-      position: absolute
+      position: relative
       bottom: 0
-      padding-top: 25%
-      width: 66.66%
-      +breakpoint(1155px 1101px)
-        width: 62.66%
+      width: 100%
       +breakpoint(1100px 999px)
         font-size: 18px
         padding: 12px $standard-padding
-        width: 100%
       +breakpoint(845px 569px)
         font-size: 18px
         padding: 12px $standard-padding
-        width: 100%
-      +breakpoint(532px 481px)
-        width: 62.66%
       +breakpoint(479px max-width)
         font-size: 18px
         padding: 12px $standard-padding
-        width: 100%
 
   // Layout
   .group-left
@@ -129,39 +289,118 @@
     margin-left: -190px
     padding-left: 190px
     width: 100%
-  +breakpoint(1100px 999px)
+
+  // Switch to stacked configuration
+  +breakpoint(1100px 1000px)
     position: relative
     bottom: 0
+    // Colors
+    .image-cta-color-blue a
+      background: rgba($blue-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-lime a
+      background: rgba($lime-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-pink a
+      background: rgba($pink-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-purple a
+      background: rgba($purple-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-teal a
+      background: rgba($teal-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+    .fieldable-panels-pane
+      background: none !important
     .group-left,
     .group-right
       float: none
       width: 100%
     .group-right
-      position: absolute
-      bottom: 0
       margin: 0
       padding: 0
   +breakpoint(845px 569px)
     position: relative
     bottom: 0
+    // Colors
+    .image-cta-color-blue a
+      background: rgba($blue-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-lime a
+      background: rgba($lime-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-pink a
+      background: rgba($pink-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-purple a
+      background: rgba($purple-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-teal a
+      background: rgba($teal-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .fieldable-panels-pane
+      background: none !important
     .group-left,
     .group-right
       float: none
       width: 100%
     .group-right
-      position: absolute
-      bottom: 0
       margin: 0
       padding: 0
   +breakpoint(479px max-width)
     position: relative
     bottom: 0
+    // Colors
+    .image-cta-color-blue a
+      background: rgba($blue-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-lime a
+      background: rgba($lime-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-pink a
+      background: rgba($pink-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-purple a
+      background: rgba($purple-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .image-cta-color-teal a
+      background: rgba($teal-bright, 0.85)
+      &:hover
+        background: rgba($hover-bright, 0.85) !important
+
+    .fieldable-panels-pane
+      background: none !important
     .group-left,
     .group-right
       float: none
       width: 100%
     .group-right
-      position: absolute
-      bottom: 0
       margin: 0
       padding: 0

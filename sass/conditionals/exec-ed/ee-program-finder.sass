@@ -821,12 +821,11 @@ h2.isotopify-title
 // Mini program finder block used on exec ed landing
 .pane-mini-program-finder
   max-height: 400px
-  +breakpoint(1170px max-width)
+  +breakpoint(1275px max-width)
     border-bottom: 1px $border-grey solid
     max-height: inherit
 
   .pane-content
-    overflow: hidden
     position: relative
     bottom: 0
 
@@ -853,10 +852,15 @@ h2.isotopify-title
   .mini-program-finder-title-filters
     background: $white
     padding: $standard-padding
-    position: relative
-    top: -115px
-    +breakpoint(1170px max-width)
+    position: absolute
+    top: 260px
+    width: 100%
+    +breakpoint(1275px max-width)
+      min-height: 100px
+      position: relative
       top: 0
+    +breakpoint(845px max-width)
+      min-height: 254px
     .inner
       margin: 0 auto
       max-width: 1170px
@@ -880,8 +884,6 @@ h2.isotopify-title
     +breakpoint(870px max-width)
       float: none
       display: block
-    +breakpoint(845px max-width)
-      +clearfix
 
   .form-item-program-topic
     left: -290px
@@ -969,9 +971,9 @@ h2.isotopify-title
     @extend %border-grey
     border-radius: 0
     min-width: 519px
-    position: relative
-    +breakpoint(585px max-width)
-      min-width: 270px
+    position: absolute
+    +breakpoint(845px max-width)
+      min-width: 100%
 
     // Apply button
     .checkbox-apply
