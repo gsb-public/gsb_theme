@@ -795,7 +795,7 @@ h1.ee-section-footer-title
     +breakpoint(1200px max-width)
       padding: 20px
 
-// Program 3 across for homepage list
+// Program 3 across for EE homepage list
 .pane-bundle-programs-list
   +clearfix
 
@@ -808,8 +808,10 @@ h1.ee-section-footer-title
     margin-bottom: 26px
 
   .gsb-program-explore-more-wrapper
+    display: inline-block
     float: left
     margin-bottom: 20px
+    vertical-align: top
 
   .node-program-instance.view-mode-program_explore_other
     display: inline-block
@@ -822,6 +824,13 @@ h1.ee-section-footer-title
     &:nth-of-type(3n)
       margin-left: 22px
       margin-right: 0
+    +breakpoint(1205px max-width)
+      width: 30%
+    +breakpoint(935px max-width)
+      margin: 0 0 18px 0 !important
+      width: 100%
+      .gsb-display-image
+        display: none
 
   // Individual programs
   .node-program-instance.view-mode-program_explore_other
@@ -853,7 +862,7 @@ h1.ee-section-footer-title
       line-height: 1.3
       margin-top: 3px
 
-  // CTA styling
+  // Program CTA styling
   .gsb-program-fpp-cta-wrapper
     margin-bottom: 1px
     text-align: center

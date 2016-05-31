@@ -709,20 +709,23 @@
     vertical-align: top
     max-width: 360px
     width: 100%
-    +breakpoint(795px max-width)
+    +breakpoint(1200px 1024px)
+      max-width: 270px
+    +breakpoint(1023px max-width)
+      display: block
       max-width: inherit
     &:nth-of-type(1n)
       margin-right: 22px
-      +breakpoint(1200px max-width)
+      +breakpoint(1023px max-width)
         margin-right: 0
     &:nth-of-type(2n)
       margin: 0 18px
-      +breakpoint(795px max-width)
+      +breakpoint(1023px max-width)
         margin: 0
     &:nth-of-type(3n)
       margin-left: 22px
       margin-right: 0
-      +breakpoint(1200px max-width)
+      +breakpoint(1023px max-width)
         margin-left: 0
 
   // 2 across
@@ -748,11 +751,13 @@
   .bottom-right
     max-width: 570px
     width: 100%
+    .pane-content
+      margin-bottom: 10px
     +breakpoint(1180px max-width)
-      max-width: 480px
-    +breakpoint(1110px max-width)
+      max-width: 49%
+    +breakpoint(999px max-width)
       float: none
-      margin: 0 auto 20px
+      margin: 20px auto
       max-width: 570px
 
   // Set width on full green region
@@ -760,8 +765,13 @@
     margin: 0 auto
     max-width: 570px
     width: 100%
+    .panel-pane
+      margin: 0 auto 10px
 
   .top-thirds-wrapper
+    text-align: center
+    div
+      text-align: left
     +breakpoint(1160px max-width)
       .panel-pane
         margin: 0 auto 20px

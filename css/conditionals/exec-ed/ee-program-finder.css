@@ -1172,14 +1172,13 @@ h2.isotopify-title {
 .pane-mini-program-finder {
   max-height: 400px;
 }
-@media (max-width: 73.125em) {
+@media (max-width: 79.6875em) {
   .pane-mini-program-finder {
     border-bottom: 1px lightgray solid;
     max-height: inherit;
   }
 }
 .pane-mini-program-finder .pane-content {
-  overflow: hidden;
   position: relative;
   bottom: 0;
 }
@@ -1205,12 +1204,20 @@ h2.isotopify-title {
 .pane-mini-program-finder .mini-program-finder-title-filters {
   background: white;
   padding: 26px;
-  position: relative;
-  top: -115px;
+  position: absolute;
+  top: 260px;
+  width: 100%;
 }
-@media (max-width: 73.125em) {
+@media (max-width: 79.6875em) {
   .pane-mini-program-finder .mini-program-finder-title-filters {
+    min-height: 100px;
+    position: relative;
     top: 0;
+  }
+}
+@media (max-width: 52.8125em) {
+  .pane-mini-program-finder .mini-program-finder-title-filters {
+    min-height: 254px;
   }
 }
 .pane-mini-program-finder .mini-program-finder-title-filters .inner {
@@ -1243,12 +1250,6 @@ h2.isotopify-title {
   .pane-mini-program-finder .mini-finder-filters {
     float: none;
     display: block;
-  }
-}
-@media (max-width: 52.8125em) {
-  .pane-mini-program-finder .mini-finder-filters {
-    overflow: hidden;
-    *zoom: 1;
   }
 }
 .pane-mini-program-finder .form-item-program-topic {
@@ -1357,11 +1358,11 @@ h2.isotopify-title {
 .pane-mini-program-finder .ms-drop.bottom {
   border-radius: 0;
   min-width: 519px;
-  position: relative;
+  position: absolute;
 }
-@media (max-width: 36.5625em) {
+@media (max-width: 52.8125em) {
   .pane-mini-program-finder .ms-drop.bottom {
-    min-width: 270px;
+    min-width: 100%;
   }
 }
 .pane-mini-program-finder .ms-drop.bottom .checkbox-apply {
