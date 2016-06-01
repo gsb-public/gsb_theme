@@ -137,18 +137,22 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
 .panels-layout-gsb-program-finder .breadcrumb {
   display: none;
 }
-.panels-layout-gsb-program-finder .full-bleed-header,
+.panels-layout-gsb-program-finder .full-bleed-header {
+  max-width: none;
+}
+.panels-layout-gsb-program-finder .full-bleed-header .panel-pane {
+  margin: 0 auto;
+  margin-bottom: 0 !important;
+}
 .panels-layout-gsb-program-finder .featured-content {
   max-width: none;
   padding: 26px 0;
 }
 @media (max-width: 74.9375em) {
-  .panels-layout-gsb-program-finder .full-bleed-header,
   .panels-layout-gsb-program-finder .featured-content {
     padding: 26px 20px;
   }
 }
-.panels-layout-gsb-program-finder .full-bleed-header .panel-pane,
 .panels-layout-gsb-program-finder .featured-content .panel-pane {
   margin: 0 auto;
   margin-bottom: 0 !important;
@@ -1402,7 +1406,7 @@ h2.isotopify-title {
   background: url('../../../images/bg-full-time-programs-2016-05-20-2.jpg') no-repeat center center;
   background-size: cover;
 }
-@media (max-width: 73.125em) {
+@media (max-width: 75em) {
   .pane-degree-programs {
     padding-left: 20px;
     padding-right: 20px;
