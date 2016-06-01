@@ -164,6 +164,7 @@ ul.slideshow-items
       text-decoration: none
       &:after
         color: $white
+        border-bottom: 0
     .field-name-field-text-slide
       display: inline
 
@@ -193,20 +194,28 @@ ul.slideshow-items
   .slide-color-white
     background: $white
     .field-name-field-superhead
-      color: $text-black
+      color: $red
     // Superhead - Linked
     .slide-superhead
       color: $red
+      &:hover
+        .field-name-field-superhead
+          color: $text-blue
+          text-decoration: underline
     // Text - Linked
     .slide-text
       color: $text-black
       &:hover
         color: $link-blue
+        border-bottom: none
         &:after
           color: $teal-light
     // Text - not linked
     .field-name-field-text-slide
       color: $text-black
+      &:hover
+        color: $text-blue
+        border-bottom: 1px solid $teal-light
 
 // Hero slideshow
 .hero-region-slideshow-wrapper

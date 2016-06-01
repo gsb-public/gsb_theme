@@ -853,7 +853,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * © 2012 Bitstream Inc
+ * ┬⌐ 2012 Bitstream Inc
  */
 @font-face {
   font-family: "icons";
@@ -7957,6 +7957,7 @@ ul.slideshow-items {
 }
 .slide-text-wrapper .slide-text:hover:after {
   color: white;
+  border-bottom: 0;
 }
 .slide-text-wrapper .slide-text .field-name-field-text-slide {
   display: inline;
@@ -7981,22 +7982,31 @@ ul.slideshow-items {
   background: white;
 }
 .pane-bundle-slideshow .slide-color-white .field-name-field-superhead {
-  color: #231f20;
+  color: #990000;
 }
 .pane-bundle-slideshow .slide-color-white .slide-superhead {
   color: #990000;
+}
+.pane-bundle-slideshow .slide-color-white .slide-superhead:hover .field-name-field-superhead {
+  color: #2d6280;
+  text-decoration: underline;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text {
   color: #231f20;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text:hover {
   color: #2d6280;
+  border-bottom: none;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text:hover:after {
   color: #aac4bf;
 }
 .pane-bundle-slideshow .slide-color-white .field-name-field-text-slide {
   color: #231f20;
+}
+.pane-bundle-slideshow .slide-color-white .field-name-field-text-slide:hover {
+  color: #2d6280;
+  border-bottom: 1px solid #aac4bf;
 }
 
 @media (max-width: 62.5em) {
