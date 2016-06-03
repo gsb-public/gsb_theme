@@ -1029,6 +1029,29 @@ h2.isotopify-title
     ul > li.multiple
       width: inherit !important
 
+// Responsive date picker for mini finder  on ee home page
+.panels-layout-gsb-full-bleed-home-page
+  .date-picker-wrapper
+    +breakpoint(600px max-width)
+      .no-shortcuts
+        padding: 20px
+      .month-wrapper
+        width: 230px !important
+        .month1
+          float: none
+
+        table.month2
+          margin-top: 10px
+          .caption
+            th:first-of-type
+              display: none
+          .month-name
+            padding-right: 0
+            text-align: left
+        // Spacer
+        .gap
+          display: none
+
 
 // Full time degree block in Program finder
 .pane-degree-programs
