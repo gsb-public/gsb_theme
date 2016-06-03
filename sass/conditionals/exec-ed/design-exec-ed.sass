@@ -1454,6 +1454,17 @@ h1.ee-section-footer-title
       margin-top: 30px
       padding-bottom: 30px
 
+    // Dividing line on each field
+    .views-field
+      @extend %divider-bottom
+      padding: 0 $standard-padding 12px
+      &:first-of-type,
+      &.views-field-field-brochure-pdf,
+      &.views-field-nothing-1
+        border-bottom: 0
+        padding-bottom: 0
+
+
     // Program Title
     .views-field-title
       padding-bottom: 20px
