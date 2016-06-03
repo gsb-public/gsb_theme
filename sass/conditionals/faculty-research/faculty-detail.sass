@@ -252,8 +252,7 @@ $faculty-spacing: 24px
   .group-publications,
   .group-wrapper-research,
   .group-wrapper-academic,
-  .field-name-field-faculty-director-positions,
-  .group-wrapper-aat
+  .field-name-field-faculty-director-positions
     @extend %divider-top
     padding-top: $faculty-spacing
 
@@ -270,14 +269,10 @@ $faculty-spacing: 24px
     @extend %faculty-bullets
 
   // Other administrative titles
-  .field-name-field-faculty-director-positions,
-  .group-wrapper-aat
-    margin-bottom: 12px
-    .label-above,
-    h3
+  .field-name-field-faculty-director-positions
+    .label-above
       @extend %header-large
-    .field-item,
-    li
+    .field-item
       font-size: 16px
       font-weight: normal
       line-height: 1.3
@@ -483,26 +478,7 @@ $faculty-spacing: 24px
       &:first-of-type
         margin-top: 0
 
-    // Executive Education & Other Non-Degree Programs
-    .program-faculty-courses
-      // Header
-      .label-above
-        @extend %header-small
-
-      // Title
-      li:nth-of-type(odd)
-        @extend %faculty-title-text
-        a
-          @extend %faculty-link
-
-      // Description
-      li:nth-of-type(even)
-        font-family: $font-sans
-        font-size: 14px
-        line-height: 1.1
-        margin-bottom: 12px
-
-    // Other Teaching
+    // Non-degree course
     .field-name-field-non-degree-course
       // Header
       .label-above
@@ -519,6 +495,5 @@ $faculty-spacing: 24px
           @extend %faculty-link
       // Description
       .field-name-field-description
-        font-family: $font-sans
         font-size: 14px
         line-height: 1.1
