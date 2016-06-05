@@ -98,6 +98,7 @@
     // Add a link for people to click.
     $wrapper.after('<div class="show-more-less-toggler-wrapper"><a class="show-more-less-toggler show-more-less-toggler-open" data-id="' + counter + '" href="#">' + Drupal.t('Show More') + '</a></div>');
 
+
     // Now create an object for that link.
     $toggler = $wrapper.next('.show-more-less-toggler-wrapper').find('a');
 
@@ -112,9 +113,11 @@
       // need to close the div.  Otherwise open it.
       if ($(this).hasClass('show-more-less-toggler-open')) {
         Drupal.showMoreLess.close($element, type);
+        $(this).parent().removeClass("show-more-open");
       }
       else {
         Drupal.showMoreLess.open($element, type);
+        $(this).parent().addClass("show-more-open");
       }
 
       // We don't want the click event to allow the site to redirect.
