@@ -320,13 +320,19 @@ ul.slideshow-items
     .field-name-field-superhead
       color: $text-black
     // Superhead - Linked
-    .slide-superhead
+    a.slide-superhead
       color: $red
+      .field-name-field-superhead
+        color: $red
     // Text - Linked
     .slide-text
       color: $text-black
       &:hover
         color: $link-blue
+        border-bottom: none
+        .field-name-field-text-slide
+          color: $text-blue
+          border-bottom: 1px solid $text-blue
         &:after
           color: $teal-light
     // Text - not linked
