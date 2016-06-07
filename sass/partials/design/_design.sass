@@ -2,8 +2,19 @@
 
 // Header region
 #header-wrapper
+  position: relative
+  &:after
+    +box-shadow(0 2px 2px rgba($black, 0.3) inset)
+    bottom: -3px
+    content: ""
+    height: 3px
+    left: 0
+    position: absolute
+    width: 100%
+    z-index: 10
   +breakpoint(1170px min-width)
     border-top: $top-border-interval $red-dark solid
+
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
@@ -84,7 +95,7 @@
     min-width: 702px
     // Exec Ed
     .page-exec-ed &
-      min-width: 610px
+      min-width: 608px
     // SEED menu
     .page-seed &
       min-width: 667px
@@ -105,7 +116,7 @@
       margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
-        min-width: 750px
+        min-width: 748px
   // Seed menu
   .page-seed &,
     +breakpoint(1170px min-width)
@@ -120,23 +131,6 @@
     +breakpoint(1169px max-width)
       border-bottom: 3px $black solid
       +box-shadow($black 0 -1px 3px)
-
-// Hero region
-// Drop shadow on top of Hero region
-
-#hero
-  position: relative
-  background: white
-  &:before
-    +box-shadow(0 2px 2px rgba($black, 0.3) inset)
-    top: 0px
-    content: "" !important
-    position: absolute
-    left: 0
-    width: 100%
-    z-index: 99
-    height: 5px !important
-    visibility: visible
 
 // Content wrapper
 #content-wrapper
