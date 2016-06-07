@@ -1188,8 +1188,8 @@ h1.ee-section-footer-title
           font-weight: normal
           a:hover
             color: $link-blue
-        .person-position,
-        .person-area
+        .field-name-field-rank,
+        .field-name-field-academic-area-single
           display: inline-block
           font-family: $font-demi
           font-size: 14px
@@ -1199,13 +1199,14 @@ h1.ee-section-footer-title
           float: left
           color: $text-black
           vertical-align: top
-          &:after
+        .field-name-field-rank
+          .field-item:after
             content: ","
             margin-right: 0.3em
-          &:last-child
-            &:after
-              content: ""
-              margin-right: 0
+        .field-name-field-academic-area-single
+          .field-item:after
+            content: ""
+            margin-right: 0
 
 // Checklist of Programs on initial page
 .webform-component--brochure-list
