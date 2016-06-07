@@ -5,10 +5,12 @@
 #block-menu-menu-mega-menu-seed
   +clearfix
   background: #7d7466
-  float: left
-  +breakpoint(1169px max-width)
-    float: none
-
+  +breakpoint(1170px min-width)
+    float: right
+    margin-right: 60px
+  .search-open &
+    +breakpoint(1170px min-width)
+      float: left
   li
     +breakpoint($bp-wide-min)
       border-top: $top-border-interval $red-dark solid

@@ -3,45 +3,50 @@
 // Global main search
 #google-appliance-block-form,
 #google-appliance-block-form--2
+  .page-insights &
+    +breakpoint(999px max-width)
+      display: none
   +breakpoint(1169px max-width)
-    display: none
     left: 50px
     position: absolute
-    width: 85%
     z-index: 1
-
-  // Search input
-  input
-    height: 59px
-    .page-exec-ed &,
-    .page-seed &
-      height: 78px
-      +breakpoint(1169px max-width)
-        height: 50px
-  .form-item
-    .search-closed &
-      display: none
-    .no-js &,
-    .js .search-open &
+    display: none
+    &.open
       display: block
+
+  // Search input wrapper
+  .form-item
     float: left
-    width: 100%
-    margin-right: -60px
     margin-top: 0
     margin-bottom: 0
     .form-text
       color: $text-black
       font-size: 16px
-      width: 100%
       background: #f4f4f4
       line-height: 1
       padding: 6px 60px 6px 10px
       +breakpoint(1169px max-width)
         height: 50px
         padding: 15px 0px 15px 10px
-  .page-insights &
-    +breakpoint(999px max-width)
-      display: none
+
+  // Search input
+  input
+    display: none
+    height: 59px
+    +breakpoint(1169px max-width)
+      display: block
+    .js .search-open &,
+    .no-js &
+      display: inline-block
+      position: absolute
+      top: 0
+      right: 1px
+      z-index: 1
+    .page-exec-ed &,
+    .page-seed &
+      height: 78px
+      +breakpoint(1169px max-width)
+        height: 50px
 
   // Submit button
   .form-submit
@@ -51,15 +56,20 @@
     border-bottom: 1px $border-grey solid
     border-right: 1px $border-grey solid
     border-top: 1px $border-grey solid
-    display: inline-block
     float: right
     height: 59px
     overflow: hidden
     padding: 0
     text-indent: 1000px
     width: 60px
+    .no-js &
+      display: inline-block
+    +breakpoint(1170px min-width)
+      display: inline-block
     +breakpoint(1169px max-width)
       height: 50px
+      position: relative
+      left: -1px
     .page-exec-ed &,
     .page-seed &
       height: 78px

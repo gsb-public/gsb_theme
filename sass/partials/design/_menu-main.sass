@@ -83,10 +83,11 @@
 // Global search
 .global-search
   +breakpoint(1170px min-width)
-    float: left
     height: 0
     margin-top: $top-border-interval
-    width: 200px
+    position: absolute
+    top: 0
+    right: 0
     .search-closed &,
     .js &
       width: auto
@@ -154,7 +155,7 @@
     display: inline-block
     float: left
     #nav-touch-button
-      +background(linear-gradient(bottom, $red-light, $red-dark))
+      background: $red
       .page-exec-ed &,
       .page-seed &
         background: #7d7466
@@ -166,7 +167,6 @@
     +breakpoint(1169px max-width)
       #nav-touch-button
         background: $white
-        +background(linear-gradient($grey-e, $white))
         &:after
           color: $red
       #navigation
@@ -181,7 +181,7 @@
   &:hover
     text-decoration: none
   +breakpoint(1169px max-width)
-    +background(linear-gradient(bottom, $red-light, $red-dark))
+    background: $red
     .page-exec-ed &,
     .page-seed &
       background: #7d7466
