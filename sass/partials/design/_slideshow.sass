@@ -60,7 +60,6 @@ ul.slideshow-items
 // Slideshow wrapper
 .slideshow-wrapper
   +clearfix
-  background: $white
   position: relative
   bottom: 0
   .front &,
@@ -76,6 +75,11 @@ ul.slideshow-items
   // Slide
   .slick-slide
     @extend %box-shadow
+    .front &
+      -moz-box-shadow: none
+      -webkit-box-shadow: none
+      box-shadow: none
+      position: relative
 
   // Image
   .field-type-image
@@ -83,7 +87,7 @@ ul.slideshow-items
     .full-view &
       float: left
       max-width: 570px
-      width: 66%
+      width: 74%
       +breakpoint(690px max-width)
         float: none
         max-width: 100%
@@ -98,25 +102,23 @@ ul.slideshow-items
   top: 0
   .front &,
   .full-view &
-    position: relative
-    bottom: -50px
     height: 265px
-    bottom: 0
-    float: left
-    max-width: 300px
     right: 0
-    width: 34%
+    position: absolute
+    width: 300px
     +breakpoint(999px max-width)
-      height: 243px
+      height: 242px
     .inner-wrapper
       bottom: 26px
       padding-right: 20px
       position: absolute
     +breakpoint(690px max-width)
+      bottom: 0
       float: none
       height: initial
       max-width: 100%
       padding: 4%
+      position: relative
       width: 100%
       .inner-wrapper
         bottom: initial
