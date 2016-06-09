@@ -461,6 +461,20 @@ a.social-block-facebook
   position: relative
   bottom: 0
 
+.show-more-less-toggler-wrapper
+  position: relative
+  &:before
+    +background(linear-gradient(bottom, rgba($white, 1), rgba($white, 0)))
+    content: " "
+    display: block
+    height: 40px
+    position: absolute
+    top: -40px
+    width: 100%
+  &.show-more-open
+    &:before
+      display: none
+
 .show-more-less-toggler
   border: 0 !important
   color: $text-green
