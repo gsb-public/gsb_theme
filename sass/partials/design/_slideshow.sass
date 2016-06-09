@@ -59,7 +59,6 @@ ul.slideshow-items
 
 // Slideshow wrapper
 .slideshow-wrapper
-  @extend %box-shadow
   +clearfix
   background: $white
   position: relative
@@ -73,6 +72,10 @@ ul.slideshow-items
       height: initial
   li
     background: $white
+
+  // Slide
+  .slick-slide
+    @extend %box-shadow
 
   // Image
   .field-type-image
@@ -238,9 +241,10 @@ ul.slideshow-items
 
   // Slide
   .slick-slide
+    bottom: 0
     height: 400px
     position: relative
-    bottom: 0
+
   // Image wrapper
   .field-name-field-image-single-public
     height: 100%
@@ -248,7 +252,7 @@ ul.slideshow-items
     img
       -o-object-fit: cover
       object-fit: cover
-      height: 100vh
+      height: 52vh
       width: 100vw
   // Text wrapper
   .slide-text-wrapper
