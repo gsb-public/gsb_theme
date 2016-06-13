@@ -726,6 +726,7 @@
   display: inline-block;
   vertical-align: top;
   max-width: 360px;
+  width: 100%;
 }
 .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(1n) {
   margin-right: 22px;
@@ -813,15 +814,26 @@
   margin-bottom: 8px;
   padding-top: 18px;
 }
-.node-program.view-mode-full .ds-faculty .field-name-title a,
-.node-program.view-mode-full .ds-faculty .field-name-field-other-name a {
+.node-program.view-mode-full .ds-faculty .field-name-title a {
   color: #636f00;
 }
-.node-program.view-mode-full .ds-faculty .field-name-title a:hover,
-.node-program.view-mode-full .ds-faculty .field-name-field-other-name a:hover {
+.node-program.view-mode-full .ds-faculty .field-name-title a:hover {
   color: #2d6280;
   text-decoration: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px #2d6280 solid;
+}
+.node-program.view-mode-full .ds-faculty .group-wrapper-name a {
+  border-bottom: 1px transparent solid;
+  color: #636f00;
+}
+.node-program.view-mode-full .ds-faculty .group-wrapper-name a:hover {
+  border-bottom: 1px #2d6280 solid;
+  color: #2d6280;
+  text-decoration: none;
+}
+.node-program.view-mode-full .ds-faculty .group-wrapper-name a .field-name-field-other-name {
+  margin-bottom: 0;
+  padding-top: 0;
 }
 .node-program.view-mode-full .ds-faculty .field-name-field-title-appointment,
 .node-program.view-mode-full .ds-faculty .field-name-senior-associate-dean-title,
