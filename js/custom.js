@@ -384,6 +384,27 @@
         $("#wrapper").wrap("<div id='outer'></div>");
         $("#outer").prepend("<a id='filters' href='#'>Filters</a>");
 
+        selects = ['program-topic', 'program-location', 'career-level', 'leadership-level'];
+        for (var select_id in selects) {
+
+          var choices = $('.form-item-filter-' + selects[select_id]).find('option:selected').map(function() {
+            return this.value;
+          }).get().join(",").split(',');
+          if (choices.length == 1 && choices[0] == '') {
+            choices = null;
+          }
+          var filterID = selects[select_id];
+          Drupal.isotopify.setFilter.checkboxes(uniqueID, filterID, choices);
+        }
+
+        // Set filters for the Date range
+        var fromDate = $('#edit-date-range-from').val();
+        var toDate = $('#edit-date-range-to').val();
+        Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
+        // Update using the set filters
+        Drupal.isotopify.update(uniqueID);
+
+
         // Create the 'Done' button in the side tray
         var $doneButton = $('<button class="checkbox-apply">' + Drupal.t('Done') + '</button>').click(function (e) {
           e.preventDefault();
@@ -393,6 +414,7 @@
             var choices = $('.form-item-filter-' + selects[select_id] + ' input:checked').map(function() {
               return this.value;
             }).get().join(",").split(',');
+
             if (choices.length == 1 && choices[0] == '') {
               choices = null;
             }
@@ -419,6 +441,7 @@
         $('#edit-filter-career-level').multicheckbox();
         $('#edit-filter-leadership-level').multicheckbox();
 
+
         // Move the Search outside of the side tray
         var search = $(".form-item-search").detach();
         $("#outer").after(search);
@@ -439,6 +462,9 @@
 
         // Have the Filters link open the side tray
         $('#filters').click(function () {
+          $('.form-item-filter-program-topic').find('option:selected').each( function(){
+            $('input[value="' + this.value + '"]').prop('checked', true);
+          });
           wrapper.data('mmenu').open();
         });
 
