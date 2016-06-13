@@ -5,6 +5,9 @@ ul.slideshow-items
   margin: 0
   padding: 0
 
+.slick-slide
+  position: relative
+
 // Arrows
 .slick-arrow
   background-image: none
@@ -175,6 +178,7 @@ ul.slideshow-items
 
 // Color styles for opaque
 .pane-bundle-slideshow
+  @extend %divider-bottom
   // Blue
   .slide-color-blue
     background: $blue-bright
@@ -198,29 +202,32 @@ ul.slideshow-items
   // White
   .slide-color-white
     background: $white
+    // Superhead - Not Linked
     .field-name-field-superhead
-      color: $red
+      color: $text-black
     // Superhead - Linked
     .slide-superhead
       color: $red
+      .field-name-field-superhead
+        color: $red
+        &:hover
+          color: $link-blue
       &:hover
-        .field-name-field-superhead
-          color: $text-blue
-          text-decoration: underline
+        border: none
+        color: $link-blue
+        text-decoration: underline
+    // Text - not linked
+    .field-name-field-text-slide
+      color: $text-black
     // Text - Linked
     .slide-text
       color: $text-black
       &:hover
-        color: $link-blue
-        border-bottom: none
+        border-bottom: 1px $link-blue solid
+        .field-name-field-text-slide
+          color: $link-blue
         &:after
           color: $teal-light
-    // Text - not linked
-    .field-name-field-text-slide
-      color: $text-black
-      &:hover
-        color: $text-blue
-        border-bottom: 1px solid $teal-light
 
 // Hero slideshow
 .hero-region-slideshow-wrapper
@@ -245,7 +252,6 @@ ul.slideshow-items
   .slick-slide
     bottom: 0
     height: 400px
-    position: relative
 
   // Image wrapper
   .field-name-field-image-single-public

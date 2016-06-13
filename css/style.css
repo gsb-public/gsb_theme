@@ -124,7 +124,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-bundle-links .b
   border-top: 1px lightgray solid;
 }
 
-#block-gsb-public-custom-blocks-gpcb-follow-us h2, .pane-bundle-videos .field-collection-item-field-video, .pane-bundle-accordion h2.pane-title, .pane-admission-events-location-panel-pane h2.pane-title, .view-faculty-filters .views-exposed-search-wrap,
+#block-gsb-public-custom-blocks-gpcb-follow-us h2, .pane-bundle-videos .field-collection-item-field-video, .pane-bundle-slideshow, .pane-bundle-accordion h2.pane-title, .pane-admission-events-location-panel-pane h2.pane-title, .view-faculty-filters .views-exposed-search-wrap,
 .view-display-id-working_paper_list .views-exposed-search-wrap,
 .view-display-id-case_listing .views-exposed-search-wrap,
 .view-display-id-book_listing .views-exposed-search-wrap,
@@ -7717,6 +7717,10 @@ ul.slideshow-items {
   padding: 0;
 }
 
+.slick-slide {
+  position: relative;
+}
+
 .slick-arrow {
   background-image: none;
   display: block;
@@ -7982,31 +7986,36 @@ ul.slideshow-items {
   background: white;
 }
 .pane-bundle-slideshow .slide-color-white .field-name-field-superhead {
-  color: #990000;
+  color: #231f20;
 }
 .pane-bundle-slideshow .slide-color-white .slide-superhead {
   color: #990000;
 }
-.pane-bundle-slideshow .slide-color-white .slide-superhead:hover .field-name-field-superhead {
+.pane-bundle-slideshow .slide-color-white .slide-superhead .field-name-field-superhead {
+  color: #990000;
+}
+.pane-bundle-slideshow .slide-color-white .slide-superhead .field-name-field-superhead:hover {
+  color: #2d6280;
+}
+.pane-bundle-slideshow .slide-color-white .slide-superhead:hover {
+  border: none;
   color: #2d6280;
   text-decoration: underline;
+}
+.pane-bundle-slideshow .slide-color-white .field-name-field-text-slide {
+  color: #231f20;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text {
   color: #231f20;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text:hover {
+  border-bottom: 1px #2d6280 solid;
+}
+.pane-bundle-slideshow .slide-color-white .slide-text:hover .field-name-field-text-slide {
   color: #2d6280;
-  border-bottom: none;
 }
 .pane-bundle-slideshow .slide-color-white .slide-text:hover:after {
   color: #aac4bf;
-}
-.pane-bundle-slideshow .slide-color-white .field-name-field-text-slide {
-  color: #231f20;
-}
-.pane-bundle-slideshow .slide-color-white .field-name-field-text-slide:hover {
-  color: #2d6280;
-  border-bottom: 1px solid #aac4bf;
 }
 
 @media (max-width: 62.5em) {
@@ -8032,7 +8041,6 @@ ul.slideshow-items {
 .hero-region-slideshow-wrapper .slick-slide {
   bottom: 0;
   height: 400px;
-  position: relative;
 }
 .hero-region-slideshow-wrapper .field-name-field-image-single-public {
   height: 100%;
