@@ -1471,9 +1471,9 @@ h1.ee-section-footer-title
 
     // Each program
     .views-row
-      @extend %divider-bottom
-      margin-top: 30px
-      padding-bottom: 30px
+      @extend %border-grey
+      margin: 0 0 10px 0
+      padding: 18px 10px
 
     // Dividing line on each field
     .views-field
@@ -1485,16 +1485,43 @@ h1.ee-section-footer-title
         border-bottom: 0
         padding-bottom: 0
 
+      &.views-field-field-brochure-pdf
+        margin-top: 16px
+        padding: 0
 
     // Program Title
     .views-field-title
-      padding-bottom: 20px
+      position: relative
+      a
+        font-size: 22px
 
     // Headings
     div.title
       visibility: visible
       margin: 12px 0
       padding-bottom: 0
+
+    // Collapse and expand
+    .fieldset-expand-mark
+      display: inline-block
+      &:before
+        color: $red
+        left: 2px
+        position: absolute
+        top: 5px
+
+    .expanded-row
+      .fieldset-expand-mark
+        +icon-before("arrow-med-up", true)
+        &:before
+          top: 0
+      .views-field-title
+        margin-bottom: 20px
+    .collapsed-row
+      background: #f9f9f9
+      .fieldset-expand-mark
+        +icon-before("arrow-med-down", true)
+
 
   // Compared page as table
   table.views-table
