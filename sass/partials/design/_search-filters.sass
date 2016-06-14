@@ -441,6 +441,7 @@ fieldset.collapsible .fieldset-legend
       font-size: 18px
       font-weight: normal
       line-height: 1
+      width: 100%
       &:hover
         color: $link-blue
     .form-item
@@ -508,12 +509,14 @@ fieldset.collapsible .fieldset-legend
           column-count: 1
 
 // Filter done button
-#edit-done[disabled="disabled"]
+#edit-done[disabled="disabled"],
+.checkbox-apply[disabled="disabled"]
   @extend %rounded-button
   background: #e3e3e3
   border: 1px #e3e3e3 solid
   color: $white
-#edit-done
+#edit-done,
+.checkbox-apply
   @extend %green-button
 
 // Filter clear all button
@@ -817,6 +820,8 @@ fieldset.collapsible .fieldset-legend
 .mm-menu
   label
     margin: 0 0.5em 1em 0
+  .multicheckbox-containerundefined label
+    font-weight: normal
   // Navigation title
   .mm-navbar
     padding: 0 20px 0 14px

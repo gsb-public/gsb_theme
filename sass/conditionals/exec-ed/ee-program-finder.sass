@@ -549,6 +549,54 @@ button.isotopify-filter-daterange-button
       &:hover
         +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, $link-blue, $link-blue))
 
+  // Responsive filters
+  +breakpoint(568px max-width)
+    background: #f4f4f4
+    border-top: 3px $text-black solid
+    margin-bottom: 26px
+    padding: 18px $standard-padding
+    position: relative
+    overflow: hidden
+    width: 100%
+
+    // Filters link
+    #filters
+      color: $text-black
+      display: block
+      font-family: $font-demi
+      font-size: 18px
+      font-weight: normal
+      line-height: 1
+      margin-bottom: 18px
+      +icon-after("arrow-med-right", true)
+      &:after
+        color: $red
+        font-size: 0.8em
+        margin-left: 5px
+        position: relative
+        top: 1px
+      &:hover
+        color: $link-blue
+        &:after
+          color: $link-blue
+
+    // Search
+    .form-item.form-item-search
+      width: 100%
+
+    // Input
+    #edit-search--2
+      float: left
+      margin-right: -65px
+      padding-right: 40px
+      width: 90%
+
+    // Submit
+    #edit-submit
+      float: left
+      width: 40px
+
+
 // Exec Ed program finder list
 .isotopify.program-list,
 .full-time-programs-wrapper

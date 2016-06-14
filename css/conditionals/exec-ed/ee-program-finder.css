@@ -842,6 +842,67 @@ button.mini-filter-daterange-button.open:after {
   background: url('../../../images/search-white.png') no-repeat 11px 11px, -webkit-linear-gradient(top, #2d6280, #2d6280);
   background: url('../../../images/search-white.png') no-repeat 11px 11px, linear-gradient(to bottom, #2d6280, #2d6280);
 }
+@media (max-width: 35.5em) {
+  .isotopify-filters {
+    background: #f4f4f4;
+    border-top: 3px #231f20 solid;
+    margin-bottom: 26px;
+    padding: 18px 26px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .isotopify-filters #filters {
+    color: #231f20;
+    display: block;
+    font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+  .isotopify-filters #filters:after {
+    content: "\f107";
+    display: inline;
+    speak: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: none;
+    line-height: 1;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'icons';
+  }
+  .isotopify-filters #filters:after {
+    color: #990000;
+    font-size: 0.8em;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+  }
+  .isotopify-filters #filters:hover {
+    color: #2d6280;
+  }
+  .isotopify-filters #filters:hover:after {
+    color: #2d6280;
+  }
+  .isotopify-filters .form-item.form-item-search {
+    width: 100%;
+  }
+  .isotopify-filters #edit-search--2 {
+    float: left;
+    margin-right: -65px;
+    padding-right: 40px;
+    width: 90%;
+  }
+  .isotopify-filters #edit-submit {
+    float: left;
+    width: 40px;
+  }
+}
 
 .isotopify.program-list .isotopify-item,
 .isotopify.program-list .full-time-program,
