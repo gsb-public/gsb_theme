@@ -371,7 +371,6 @@
         return;
       }
 
-
       if (Modernizr.mq('(max-width: 568px)')) {
 
         // Get the uniqueID used by Isotopify
@@ -425,6 +424,7 @@
           // Set filters for the Date range
           var fromDate = $('#edit-date-range-from').val();
           var toDate = $('#edit-date-range-to').val();
+
           Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
           // Update using the set filters
           Drupal.isotopify.update(uniqueID);
@@ -466,8 +466,22 @@
           $('.form-item-filter-program-topic').find('option:selected').each( function(){
             $('input[value="' + this.value + '"]').prop('checked', true);
           });
+          $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
+          alert($('#edit-date-range-from').val());
+          $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
           wrapper.data('mmenu').open();
         });
+        $('#edit-date-range-from').on('focus', function() {
+          $(this).get(0).type = 'date';}
+        ).on('blur', function() {
+            $(this).get(0).type = 'text';
+        });
+        $('#edit-date-range-to').on('focus', function() {
+            $(this).get(0).type = 'date';}
+        ).on('blur', function() {
+            $(this).get(0).type = 'text';
+        });
+
 
         // Set up the Close for the side tray
         $('.mm-navbar .mm-title').click(function () {
