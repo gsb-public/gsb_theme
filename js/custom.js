@@ -467,7 +467,6 @@
             $('input[value="' + this.value + '"]').prop('checked', true);
           });
           $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
-          alert($('#edit-date-range-from').val());
           $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
           wrapper.data('mmenu').open();
         });
