@@ -584,7 +584,6 @@ h1.ee-section-footer-title
       @extend %gradient-red
       color: $white
 
-
   // Pre Assessment link
   .pre-qualication-link
     @extend %box-shadow
@@ -1301,9 +1300,42 @@ h1.ee-section-footer-title
     margin: 0 auto
     max-width: 1170px
 
+  .view-header
+    @extend %divider-bottom
+    +clearfix
+    padding: $standard-padding 0
+    +breakpoint(1170px max-width)
+      margin: 0 auto
+      max-width: 990px
+    +breakpoint(999px max-width)
+      border-bottom: none
+      padding: $standard-padding 20px
   // Back to finder link
+  .back-to-programs
+    display: inline-block
+    float: left
+    a
+      color: $link-green
+      font-size: 18px
+      line-height: 1.2
+      +breakpoint(999px max-width)
+        font-size: 16px
+      +icon-before("arrow-med-left", true)
+      &:hover
+        color: $link-blue
+      &:before
+        color: #e4e4e3
+        font-size: 16px
+        margin-right: 3px
+        +breakpoint(999px max-width)
+          font-size: 12px
 
   // Save button
+  .download-pdf
+    display: inline-block
+    float: right
+    a
+      @extend %white-button
 
 // Compared page view
 .view-display-id-compare

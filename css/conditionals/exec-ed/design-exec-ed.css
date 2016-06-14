@@ -20,7 +20,8 @@
   border-top: 1px lightgray solid;
 }
 
-.node-program.view-mode-idea_story_related, .pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines, .webform-component--brochure-list #edit-submitted-brochure-list .topicSet, .view-display-id-compare .compared-page-responsive .views-field {
+.node-program.view-mode-idea_story_related, .pane-ee-programs-upcoming-deadlines .view-display-id-upcoming_deadlines, .webform-component--brochure-list #edit-submitted-brochure-list .topicSet, .page-programs-compare .view-header,
+.page-exec-ed-programs-compare .view-header, .view-display-id-compare .compared-page-responsive .views-field {
   border-bottom: 1px lightgray solid;
 }
 
@@ -34,7 +35,8 @@
 
 .node-program.view-mode-field_program_ctas .field-name-field-application-requirements, .node-program.view-mode-field_program_ctas .field-name-field-cta1,
 .node-program.view-mode-field_program_ctas .field-name-field-cta2, .pane-ee-programs-upcoming-deadlines, .pane-bundle-programs-list .field-name-field-cta1, #block-gsb-public-custom-blocks-gpcb-need-more-information .cta-item, .pane-faculty-teaching-list .isotopify-wrapper .isotopify-item, .view-display-id-compare .views-field-field-brochure-pdf #apower-pdf,
-.view-display-id-compare .views-field-field-brochure-pdf #direct-pdf, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
+.view-display-id-compare .views-field-field-brochure-pdf #direct-pdf, .page-programs-compare .download-pdf a,
+.page-exec-ed-programs-compare .download-pdf a, .node-program.view-mode-field_program_director .node-staff.view-mode-field_program_director, .pane-ee-programs-upcoming-programs, .ee-section-apply-brochure .pre-qualication-link {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -50,7 +52,8 @@
   background: linear-gradient(to top, #c50000 0%, #860000 100%);
 }
 
-.pane-ee-brochure-download a.button {
+.pane-ee-brochure-download a.button, .page-programs-compare .download-pdf a,
+.page-exec-ed-programs-compare .download-pdf a {
   border: none;
   -moz-border-radius: 22px;
   -webkit-border-radius: 22px;
@@ -61,20 +64,34 @@
   line-height: 1.4;
   padding: 10px 17px;
 }
-.pane-ee-brochure-download a.button:after {
+.pane-ee-brochure-download a.button:after, .page-programs-compare .download-pdf a:after,
+.page-exec-ed-programs-compare .download-pdf a:after {
   color: white !important;
 }
-.pane-ee-brochure-download a.button:hover {
+.pane-ee-brochure-download a.button:hover, .page-programs-compare .download-pdf a:hover,
+.page-exec-ed-programs-compare .download-pdf a:hover {
   background-color: #2d6280;
   border: 0;
   color: white;
 }
-.pane-ee-brochure-download a.button:hover:after {
+.pane-ee-brochure-download a.button:hover:after, .page-programs-compare .download-pdf a:hover:after,
+.page-exec-ed-programs-compare .download-pdf a:hover:after {
   color: white !important;
 }
 
 .pane-ee-brochure-download a.button {
   background: #919900;
+}
+
+.page-programs-compare .download-pdf a,
+.page-exec-ed-programs-compare .download-pdf a {
+  background: white;
+  color: #636f00 !important;
+}
+.page-programs-compare .download-pdf a:hover,
+.page-exec-ed-programs-compare .download-pdf a:hover {
+  background: #2d6280;
+  color: white !important;
 }
 
 .pane-ee-programs-upcoming-programs .super-head {
@@ -1705,6 +1722,80 @@ h1.ee-section-footer-title {
 .page-exec-ed-programs-compare #page-title {
   margin: 0 auto;
   max-width: 1170px;
+}
+.page-programs-compare .view-header,
+.page-exec-ed-programs-compare .view-header {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 26px 0;
+}
+@media (max-width: 73.125em) {
+  .page-programs-compare .view-header,
+  .page-exec-ed-programs-compare .view-header {
+    margin: 0 auto;
+    max-width: 990px;
+  }
+}
+@media (max-width: 62.4375em) {
+  .page-programs-compare .view-header,
+  .page-exec-ed-programs-compare .view-header {
+    border-bottom: none;
+    padding: 26px 20px;
+  }
+}
+.page-programs-compare .back-to-programs,
+.page-exec-ed-programs-compare .back-to-programs {
+  display: inline-block;
+  float: left;
+}
+.page-programs-compare .back-to-programs a,
+.page-exec-ed-programs-compare .back-to-programs a {
+  color: #636f00;
+  font-size: 18px;
+  line-height: 1.2;
+}
+@media (max-width: 62.4375em) {
+  .page-programs-compare .back-to-programs a,
+  .page-exec-ed-programs-compare .back-to-programs a {
+    font-size: 16px;
+  }
+}
+.page-programs-compare .back-to-programs a:before,
+.page-exec-ed-programs-compare .back-to-programs a:before {
+  content: "\f106";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.page-programs-compare .back-to-programs a:hover,
+.page-exec-ed-programs-compare .back-to-programs a:hover {
+  color: #2d6280;
+}
+.page-programs-compare .back-to-programs a:before,
+.page-exec-ed-programs-compare .back-to-programs a:before {
+  color: #e4e4e3;
+  font-size: 16px;
+  margin-right: 3px;
+}
+@media (max-width: 62.4375em) {
+  .page-programs-compare .back-to-programs a:before,
+  .page-exec-ed-programs-compare .back-to-programs a:before {
+    font-size: 12px;
+  }
+}
+.page-programs-compare .download-pdf,
+.page-exec-ed-programs-compare .download-pdf {
+  display: inline-block;
+  float: right;
 }
 
 .view-display-id-compare .views-field-title a {
