@@ -470,7 +470,7 @@
           $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
           wrapper.data('mmenu').open();
         });
-        $('#edit-date-range-from').on('focus', function() {
+        $('#edit-date-range-from').on('click', function() {
           $(this).get(0).type = 'date';}
         ).on('blur', function() {
             $(this).get(0).type = 'text';
