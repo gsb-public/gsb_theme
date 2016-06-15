@@ -639,8 +639,7 @@ h1.ee-section-footer-title
 
   // Name
   .field-name-title,
-  .group-wrapper-name,
-  .field-name-field-other-name
+  .group-wrapper-name
     font-family: $font-sans
     font-size: 16px
     font-weight: bold
@@ -652,10 +651,19 @@ h1.ee-section-footer-title
       &:hover
         color: $link-blue
         text-decoration: none
-        border-bottom:  1px solid
+        border-bottom: 1px $link-blue solid
 
   a .field-name-field-other-name
-    padding-top: 0
+    color: $link-green
+    display: inline-block
+    font-family: $font-sans
+    font-size: 16px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 6px
+    &:hover
+      color: $link-blue
+
 
   // Faculty and Other Titles
   .field-name-field-title-appointment,
