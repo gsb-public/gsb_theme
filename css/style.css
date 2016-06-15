@@ -4368,6 +4368,10 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 
 /* Print Defaults */
 @media print {
+  .messages, div.status, div.warning, div.error {
+    display: none;
+  }
+
   body {
     font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 12pt !important;
