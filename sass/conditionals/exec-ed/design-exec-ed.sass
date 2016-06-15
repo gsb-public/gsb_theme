@@ -1310,6 +1310,8 @@ h1.ee-section-footer-title
     +breakpoint(999px max-width)
       border-bottom: none
       padding: $standard-padding 20px
+    @media print
+      display: none !important
   // Back to finder link
   .back-to-programs
     display: inline-block
@@ -1498,6 +1500,8 @@ h1.ee-section-footer-title
     display: none
     +breakpoint(999px max-width)
       display: block
+    @media print
+      display: none !important
   .compared-page-responsive
     padding: 0 20px
 
@@ -1554,12 +1558,13 @@ h1.ee-section-footer-title
       .fieldset-expand-mark
         +icon-before("arrow-med-down", true)
 
-
   // Compared page as table
   table.views-table
     margin: 0 auto
     +breakpoint(999px max-width)
       display: none
+    @media print
+      display: table !important
     tr
       border-top: 1px solid $listing-divider
       &.views-row-last
@@ -1576,6 +1581,3 @@ h1.ee-section-footer-title
       &:first-of-type
         div.title
           visibility: visible
-    +breakpoint(999px max-width)
-      tr, th, td
-        display: block
