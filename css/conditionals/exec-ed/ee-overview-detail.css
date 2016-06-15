@@ -726,7 +726,7 @@
   display: inline-block;
   vertical-align: top;
   max-width: 360px;
-  width: 100%;
+  min-width: 360px;
 }
 .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(1n) {
   margin-right: 22px;
@@ -747,6 +747,11 @@
 .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(3n) {
   margin-left: 22px;
   margin-right: 0;
+}
+@media (max-width: 75em) {
+  .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership:nth-of-type(3n) {
+    margin-left: 0;
+  }
 }
 @media (max-width: 56.25em) {
   .node-program.view-mode-full .ds-faculty .field-collection-item-field-faculty-directors.view-mode-faculty_leadership {
