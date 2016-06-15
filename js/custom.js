@@ -384,9 +384,13 @@
         $("#wrapper").wrap("<div id='outer'></div>");
         $("#outer").prepend("<a id='filters' href='#'>Filters</a>");
 
+        $('#edit-filter-program-topic').multicheckbox();
+        $('#edit-filter-program-location').multicheckbox();
+        $('#edit-filter-career-level').multicheckbox();
+        $('#edit-filter-leadership-level').multicheckbox();
+
         selects = ['program-topic', 'program-location', 'career-level', 'leadership-level'];
         for (var select_id in selects) {
-
           var choices = $('.form-item-filter-' + selects[select_id]).find('option:selected').map(function() {
             return this.value;
           }).get().join(",").split(',');
@@ -433,15 +437,41 @@
         });
         // Add the 'Done' button to the bottom of the side tray
         $("#edit-filters").append($doneButton);
+        $doneButton.attr('disabled', 'disabled');
+
+        var $clearAllButton = $('<button class="checkbox-clear-all">Clear All</button>').click(function(e) {
+          e.preventDefault();
+          $("#edit-filters :checkbox").each(function (){
+            $(this).attr('checked', false);
+          });
+          $doneButton.attr('disabled', 'disabled');
+          // Update using the set filters
+          var filters = ['program-topic', 'program-location', 'career-level', 'leadership-level'];
+          for (var select_id in selects) {
+            Drupal.isotopify.setFilter.checkboxes(uniqueID, selects[select_id], []);
+          }
+          Drupal.isotopify.update(uniqueID);
+        });
+        // Add the 'Done' button to the bottom of the side tray
+        $("#edit-filters").append($clearAllButton);
 
         //$('#edit-date-range-from').get(0).type = 'date';
         //$('#edit-date-range-to').get(0).type = 'date';
 
-        $('#edit-filter-program-topic').multicheckbox();
-        $('#edit-filter-program-location').multicheckbox();
-        $('#edit-filter-career-level').multicheckbox();
-        $('#edit-filter-leadership-level').multicheckbox();
-
+        $("#edit-filters :checkbox").click(function () {
+          var anyChecked = false;
+          $("#edit-filters :checkbox").each(function (){
+            if ($(this).attr('checked') == 'checked') {
+              anyChecked = true;
+            }
+          });
+          if (anyChecked) {
+            $doneButton.removeAttr('disabled');
+          }
+          else {
+            $doneButton.attr('disabled', 'disabled');
+          }
+        });
 
         // Move the Search outside of the side tray
         var search = $(".form-item-search").detach();
@@ -463,9 +493,18 @@
 
         // Have the Filters link open the side tray
         $('#filters').click(function () {
-          $('.form-item-filter-program-topic').find('option:selected').each( function(){
-            $('input[value="' + this.value + '"]').prop('checked', true);
+          var anyChecked = false;
+          $("#edit-filters :checkbox").each(function (){
+            if ($(this).attr('checked') == 'checked') {
+              anyChecked = true;
+            }
           });
+          if (anyChecked) {
+            $doneButton.removeAttr('disabled');
+          }
+          else {
+            $doneButton.attr('disabled', 'disabled');
+          }
           $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
           $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
           wrapper.data('mmenu').open();
