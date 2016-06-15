@@ -76,7 +76,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-admission-events-mba-admission-panel-pane',
     'views-exposed-form-gsb-all-research-listing-all-research-panel-pane',
     'views-exposed-form-admission-events-msx-admission-panel-pane',
-    'views-exposed-form-msx-fellows-list'
+    'views-exposed-form-msx-fellows-list',
+    'views-exposed-form-gsb-act-project-listing-panel-pane-1'
   );
 
 
@@ -109,7 +110,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_publications_listing',
     'admission_events',
     'publication_filters',
-    'msx_fellows'
+    'msx_fellows',
+    'gsb_act_project_listing'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -118,94 +120,99 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['search']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
   }
 
-  // Faculty listing placeholder text
+  // Faculty listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
   }
-  // Working paper listing placeholder text
+  // Working paper listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-working-paper-listing-working-paper-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keywords');
   }
-  // Case study listing placeholder text
+  // Case study listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-case-listing-case-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, date, topic, or other keywords');
   }
-  // Book listing placeholder text
+  // Book listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-book-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, year, topic, or other keywords');
   }
-  // Publication listing placeholder text
+  // Publication listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-publications-listing-publications-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by title, author, year, journal, topic, or other keywords');
   }
-  // Announcement and school story mixed listing placeholder text
+  // Announcement and school story mixed listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-announcement-school-listing-annssh-stories-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, date, topic, or other keywords');
   }
-  // Ranking listing placeholder text
+  // Ranking listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-ranking-listing-ranking-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by publication, date, or other keywords');
   }
-  // Faculty insights listing placeholder text
+  // Faculty insights listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-faculty-insights-listing-faculty-insights-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, date, topic, or other keywords');
   }
-  // In the media listing placeholder text
+  // In the media listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-in-the-media-listing-in-the-media-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, date, topic, or other keywords');
   }
-  // Alumni stories listing placeholder text
+  // Alumni stories listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-stories-alumni-stories-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
-  // Giving stories listing placeholder text
+  // Giving stories listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-stories-giving-stories-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
-  // Alumni book listing placeholder text
+  // Alumni book listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-book-listing-alumni-book-listing') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, program, class year, topic, or other keywords');
   }
-  // Clubs listing placeholder text
+  // Clubs listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-club-filters-club-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('Search Stanford GSB clubs');
   }
-  // Main event listing placeholder text
+  // Main event listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-event-main-event-list-pane') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search for upcoming events');
   }
-  // MBA admission event listing after build customizations
+  // MBA admission event listing after build customizations.
   if ($form['#id'] == 'views-exposed-form-admission-events-mba-admission-panel-pane') {
     $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
   }
-  // All publications listing
+  // All publications listing.
   if ($form['#id'] == 'views-exposed-form-gsb-all-research-listing-all-research-panel-pane') {
     // Add placeholder text.
     $form['field_search_field_value']['#attributes']['placeholder'] = t('search by title, author, journal, topic, or other keywords');
   }
-  // MSx admission events
+  // MSx admission events.
   if ($form['#id'] == 'views-exposed-form-admission-events-msx-admission-panel-pane') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by location, title, or other keywords');
   }
-  // Faculty listing placeholder text
+  // Faculty listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-msx-fellows-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('search by name, research interests, or other keywords');
+  }
+  // Alumni ACT Project listing placeholder text.
+  if ($form['#id'] == 'views-exposed-form-gsb-act-project-listing-panel-pane-1') {
+    // Add placeholder text.
+    $form['search']['#attributes']['placeholder'] = t('search by project, interests, or other keywords');
   }
 }
 

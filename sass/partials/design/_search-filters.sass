@@ -207,6 +207,9 @@
 
 // Filter toggle
 .collapsible
+  // Hide summary
+  .fieldset-legend span.summary
+    margin: 0
   .fieldset-title
     display: inline-block
     +icon-before("minus", true)
@@ -311,7 +314,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-main_event_list_pane,
 .view-display-id-mba_admission_panel_pane,
 .view-display-id-msx_admission_panel_pane,
-.view-id-msx_fellows.view-display-id-list
+.view-id-msx_fellows.view-display-id-list,
+.view-id-gsb_act_project_listing
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -355,11 +359,11 @@ fieldset.collapsible .fieldset-legend
 #views-exposed-form-stories-alumni-stories-listing,
 #views-exposed-form-stories-giving-stories-listing
   .views-exposed-widgets
+    +clearfix
     @extend %divider-bottom
     background: $grey-f
     padding: 18px $standard-padding
     position: relative
-    +clearfix
     width: 100%
     #edit-search
       height: 36px
@@ -373,7 +377,6 @@ fieldset.collapsible .fieldset-legend
   .views-exposed-widgets
     @extend %divider-bottom
     background: $grey-f
-
 
 // Submit button styling
 #edit-submit-faculty-filters,
@@ -391,7 +394,8 @@ fieldset.collapsible .fieldset-legend
 #edit-submit-gsb-event,
 #edit-submit-admission-events,
 #edit-submit-gsb-all-research-listing,
-#edit-submit-msx-fellows
+#edit-submit-msx-fellows,
+#edit-submit-gsb-act-project-listing
   text-indent: 1000px
   -webkit-border-radius: 0
   -moz-border-radius: 0
@@ -420,12 +424,12 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-case_listing,
 .view-display-id-book_listing,
 .view-display-id-publications_listing,
-.view-id-gsb_act_project_listing,
 .view-display-id-club_list,
 .view-display-id-main_event_list_pane,
 .view-display-id-mba_admission_panel_pane,
 .view-display-id-msx_admission_panel_pane,
-.view-id-msx_fellows.view-display-id-list
+.view-id-msx_fellows.view-display-id-list,
+.view-id-gsb_act_project_listing
   .views-widget-filter-secondary
     margin: 18px 0
     // Fieldset title
@@ -647,10 +651,7 @@ fieldset.collapsible .fieldset-legend
       @extend %divider-bottom
       margin-bottom: 18px
       padding-bottom: 18px
-      // &:last-of-type
-      //   border-bottom: 0
-      //   margin-bottom: 0
-      //   padding-bottom: 0
+
       // Category label
       label
         color: $text-black
