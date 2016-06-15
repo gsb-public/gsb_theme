@@ -573,7 +573,7 @@
       display: inline-block
       vertical-align: top
       max-width: 360px
-      width: 100%
+      min-width: 360px
       &:nth-of-type(1n)
         margin-right: 22px
         +breakpoint(776px max-width)
@@ -585,6 +585,8 @@
       &:nth-of-type(3n)
         margin-left: 22px
         margin-right: 0
+        +breakpoint(1200px max-width)
+          margin-left: 0
       +breakpoint(900px max-width)
         margin: 0 !important
         max-width: inherit
