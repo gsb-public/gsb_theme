@@ -783,10 +783,12 @@
 
   // Content
   .content-wrapper
+    +clearfix
     margin: 0 auto
     max-width: 1170px
     padding: 86px 0 $standard-padding
     +breakpoint(1199px max-width)
+      max-width: none
       padding: 86px 20px 0
 
   // Main section

@@ -213,11 +213,6 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   right: 0;
   top: 95px;
 }
-@media (max-width: 74.9375em) {
-  .pane-filters .form-item-sort {
-    right: 20px;
-  }
-}
 @media (max-width: 69.6875em) {
   .pane-filters .form-item-sort {
     top: 160px;
@@ -778,6 +773,17 @@ button.mini-filter-daterange-button.open:after {
 .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
   background: rgba(186, 196, 5, 0.3);
   color: #231f20 !important;
+}
+
+#isotopify-filters-pane #direct-url-link {
+  margin-bottom: 0;
+  position: absolute;
+  top: -30px;
+}
+@media (max-width: 49.9375em) {
+  #isotopify-filters-pane #direct-url-link {
+    top: -55px;
+  }
 }
 
 .isotopify-filters .form-item.form-item-search {
