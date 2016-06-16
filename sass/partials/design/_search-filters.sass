@@ -525,12 +525,13 @@ fieldset.collapsible .fieldset-legend
   @extend %green-button
 
 // Filter clear all button
-#edit-clear-all
+#edit-clear-all,
+button.checkbox-clear-all
   @extend %white-button
   display: none !important
   +breakpoint(568px max-width)
     background: #f4f4f4
-    display: block !important
+    display: inline-block !important
     margin-left: 10px
     &:hover
       background: $link-blue
