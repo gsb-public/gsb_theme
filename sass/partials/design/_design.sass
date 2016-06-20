@@ -548,7 +548,8 @@ a.social-block-facebook
       color: $text-black
 
 // Footnotes
-// Number
+
+// Footnote Number.
 .field-name-field-body
   .see-footnote
     background: $link-green
@@ -569,7 +570,7 @@ a.social-block-facebook
       color: $white
       cursor: pointer
 
-  // List
+  // List of footnotes.
   ul.footnotes
     @extend %divider-top
     padding-top: 12px
@@ -587,10 +588,15 @@ a.social-block-facebook
       padding-right: 6px
     // Text
     .footnote
-      font-size: 14px
+      font-size: 12px
       line-height: 1.2
       &:target
         background-color: rgba($teal-light, 0.3)
+
+// Footnote
+.footnote
+  font-size: 12px !important
+  line-height: 1.2 !important
 
 // Sharrre social buttons
 
