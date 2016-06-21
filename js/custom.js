@@ -404,6 +404,7 @@
         // Set filters for the Date range
         var fromDate = $('#edit-date-range-from').val();
         var toDate = $('#edit-date-range-to').val();
+
         Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
         // Update using the set filters
         Drupal.isotopify.update(uniqueID);
@@ -426,8 +427,8 @@
             Drupal.isotopify.setFilter.checkboxes(uniqueID, filterID, choices);
           }
           // Set filters for the Date range
-          var fromDate = $('#edit-date-range-from').val();
-          var toDate = $('#edit-date-range-to').val();
+         fromDate = $('#edit-date-range-from').val();
+         toDate = $('#edit-date-range-to').val();
 
           Drupal.isotopify.setFilter.daterange(uniqueID, fromDate.replace(/-/g, ''), toDate.replace(/-/g, ''));
           // Update using the set filters
@@ -455,8 +456,9 @@
         // Add the 'Done' button to the bottom of the side tray
         $("#edit-filters").append($clearAllButton);
 
-        //$('#edit-date-range-from').get(0).type = 'date';
-        //$('#edit-date-range-to').get(0).type = 'date';
+
+        $('#edit-date-range-from').get(0).type = 'date';
+        $('#edit-date-range-to').get(0).type = 'date';
 
         $("#edit-filters :checkbox").click(function () {
           var anyChecked = false;
@@ -493,6 +495,8 @@
 
         // Have the Filters link open the side tray
         $('#filters').click(function () {
+          $("label[for='edit-date-range-from']").text("Date From");
+          $("label[for='edit-date-range-to']").text("Date To");
           var anyChecked = false;
           $("#edit-filters :checkbox").each(function (){
             if ($(this).attr('checked') == 'checked') {
@@ -505,21 +509,27 @@
           else {
             $doneButton.attr('disabled', 'disabled');
           }
-          $('#edit-date-range-from').val(fromDate.replace(/-/g, ''));
-          $('#edit-date-range-to').val(toDate.replace(/-/g, ''));
+
+          var startDate ='';
+          var endDate ='';
+          if (fromDate.indexOf("-") > -1) {
+            startDate = fromDate;
+          } else {
+            startDate = fromDate.substring(0, 4) + '-' + fromDate.substring(4, 6) + '-' + fromDate.substring(6, 8);
+          }
+          if (toDate.indexOf("-") > -1) {
+            endDate = toDate;
+          } else {
+            endDate = toDate.substring(0, 4) + '-' + toDate.substring(4, 6) + '-' + toDate.substring(6, 8);
+          }
+          $('#edit-date-range-from').val(startDate);
+          $('#edit-date-range-to').val(endDate);
           wrapper.data('mmenu').open();
         });
-        $('#edit-date-range-from').on('click', function() {
-          $(this).get(0).type = 'date';}
-        ).on('blur', function() {
-            $(this).get(0).type = 'text';
-        });
-        $('#edit-date-range-to').on('focus', function() {
-            $(this).get(0).type = 'date';}
-        ).on('blur', function() {
-            $(this).get(0).type = 'text';
-        });
 
+        $('.isotopify-filter-daterange input').change(function () {
+            $doneButton.removeAttr('disabled');
+        });
 
         // Set up the Close for the side tray
         $('.mm-navbar .mm-title').click(function () {
