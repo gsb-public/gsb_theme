@@ -554,20 +554,23 @@ button.isotopify-filter-daterange-button
     background: #f4f4f4
     border-top: 3px $text-black solid
     margin-bottom: 26px
-    padding: 18px $standard-padding
+    padding: 0
     position: relative
     overflow: hidden
     width: 100%
 
+    #outer
+      border-bottom: 1px $border-grey solid
+
     // Filters link
     #filters
-      color: $text-black
+      color: $red
       display: block
       font-family: $font-demi
       font-size: 18px
       font-weight: normal
       line-height: 1
-      margin-bottom: 18px
+      padding: 18px $standard-padding
       +icon-after("arrow-med-right", true)
       &:after
         color: $red
@@ -582,6 +585,8 @@ button.isotopify-filter-daterange-button
 
     // Search
     .form-item.form-item-search
+      border-bottom: 1px $border-grey solid
+      padding: 18px $standard-padding
       width: 100%
 
     // Input
@@ -589,13 +594,26 @@ button.isotopify-filter-daterange-button
       float: left
       margin-right: -65px
       padding-right: 40px
-      width: 90%
+      width: 95%
 
     // Submit
     #edit-submit
       float: left
       width: 40px
 
+    // Sort filter
+    .customSelect
+      width: 100%
+    .form-item-sort
+      margin: 0
+      padding: 18px $standard-padding
+      label
+        display: none
+      .customSelectInner
+        font-family: $font-sans
+        font-size: 16px
+        padding: 10px 6px 6px 10px
+        width: 180px !important
 
 // Exec Ed program finder list
 .isotopify.program-list,
