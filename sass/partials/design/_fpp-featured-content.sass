@@ -2,6 +2,19 @@
   @extend %bg-and-box-shadow
   padding: $standard-padding
 
+  // Do not show image icon for links in featured content FPP.
+  a
+    &[href$=".png"],
+    &[href$=".jpg"],
+    &[href$=".jpeg"],
+    &[href$=".gif"],
+    &[href$=".tiff"],
+    &[href$=".svg"],
+    &[href$=".odg"],
+    &[href$=".fodg"]
+      &:after
+        content: initial !important
+
   // Pane title
   h1.field-name-field-title
     font-family: $font-demi
