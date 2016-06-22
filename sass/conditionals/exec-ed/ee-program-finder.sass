@@ -469,10 +469,18 @@ button.isotopify-filter-daterange-button
         border: 1px #e5e5e5 solid
         color: #c5c5c5 !important
     .day
+      font-size: 14px
+      font-weight: normal
       height: 26px
+      line-height: 1.2
       margin: 1px
       padding: 5px
       width: 26px
+      // Style for selectable dates
+      &.valid
+        background: #f9f9f9
+        border: 1px #c7c7c7 solid
+        color: $text-black !important
       // Today
       &.real-today
         background: #c4c4c4
@@ -493,7 +501,6 @@ button.isotopify-filter-daterange-button
       &.toMonth.hovering
         background: rgba($green-light, 0.3)
         color: $text-black !important
-
 
 // Program finder search
 .isotopify-filters
