@@ -397,8 +397,21 @@ function gsb_theme_preprocess_field(&$variables, $hook) {
     }
   }
 
-  // Ensure custom DS labels are used for link label formatters.
+  // remove the field_image_single_public image if associated with a person reference (non-other option)
+  if ($variables['element']['#field_name'] = 'field_image_single_public' && !empty($variables['element']['#formatter']) && $variables['element']['#formatter'] == 'field_collection_fields') {
+    if ($variables['element']['#bundle'] == 'program_instance') {
+      foreach($variables['element'] as $key => $item) {
+        if (is_int($key)) {
+          $fc_id = $variables['element']['#items'][$key]['value'];
+          if (!empty($item['entity']['field_collection_item'][$fc_id]) && !empty($item['entity']['field_collection_item'][$fc_id]['field_person_fac_single_ref'])) {
+            unset($variables['items'][$key]['entity']['field_collection_item'][$fc_id]['field_image_single_public']);
+          }
+        }
+      }
+    }
+  }
 
+  // Ensure custom DS labels are used for link label formatters.
   if (isset($variables['ds-config']['lb']) && $variables['element']['#formatter'] == 'link_label') {
     foreach ($variables['items'] as &$item) {
       if (isset($item['#field'])) {
