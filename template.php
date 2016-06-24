@@ -288,6 +288,8 @@ function gsb_theme_preprocess_html(&$variables) {
  * Preprocess page.
  */
 function gsb_theme_preprocess_page(&$variables) {
+  global $theme_info;
+
   // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
@@ -300,7 +302,6 @@ function gsb_theme_preprocess_page(&$variables) {
   $object = menu_get_object();
   if ($object && !empty($object->path['alias'])) {
     if ($object->path['alias'] == 'exec-ed/admission') {
-      $fred = 'fred';
       $variables['theme_hook_suggestions'][] = 'page__ee_program_admission';
     }
   }
@@ -315,6 +316,27 @@ function gsb_theme_preprocess_page(&$variables) {
     ),
     'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
   );
+
+  // Add css stylesheets based on the following settings in gsb_theme.info:
+  // ; GSB Styles
+  // gsb_styles[path][events][] = eventlanding.css
+  // gsb_styles[path][events/*][] = eventsection.css
+
+  $page_path = drupal_get_path_alias();
+
+  if (!empty($theme_info->info['gsb_styles']['path'])) {
+    $module_path = drupal_get_path('theme', $theme_info->name);
+    foreach($theme_info->info['gsb_styles']['path'] as $style_path => $paths) {
+      if (!empty($paths)) {
+        foreach($paths as $key => $sheet) {
+          if (drupal_match_path($page_path, $style_path)) {
+            drupal_add_css($module_path . '/' . $sheet);
+          }
+        }
+      }
+    }
+  }
+
 }
 
 /**
@@ -409,6 +431,28 @@ function gsb_theme_preprocess_menu_link(&$variables) {
 /**
  * Implements hook_process_HOOK() for node.tpl.php.
  */
+function gsb_theme_preprocess_node(&$variables) {
+  global $theme_info;
+
+  // Add css stylesheets based on the following settings in gsb_theme.info:
+  // ; GSB Styles
+  // gsb_styles[node][event][] = css/conditionals/event/test.css
+
+  if (!empty($theme_info->info['gsb_styles']['node'])) {
+    $path = drupal_get_path('theme', $theme_info->name);
+    foreach($theme_info->info['gsb_styles']['node'] as $bundle => $stylesheets) {
+      if ($bundle == $variables['type'] && !empty($stylesheets)) {
+        foreach($stylesheets as $sheet) {
+          drupal_add_css($path . '/' . $sheet);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_process_HOOK() for node.tpl.php.
+ */
 function gsb_theme_process_node(&$variables, $hook) {
   // For teaser listings, if the right column is not empty, add a specific class.
   $types = array(
@@ -462,6 +506,74 @@ function _gsb_theme_prepare_two_column_classes($bundle, $bundles, $view_modes, &
   if (in_array($bundle, $bundles) && in_array($variables['view_mode'], $view_modes)) {
     if (!empty($variables['right'])) {
       $variables['left_classes'] .= ' second-column';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function gsb_theme_preprocess_views_view(&$variables) {
+  global $theme_info;
+
+  // Add css stylesheets based on the following settings in gsb_theme.info:
+  // ; GSB Styles
+  // gsb_styles[view][my_view_name][] = css/conditionals/event/event-view-mode-main-list.css
+  // gsb_styles[view][my_view_name][display_name][] = cssJustForId.css
+
+  if (!empty($theme_info->info['gsb_styles']['view']) && !empty($variables['view'])) {
+    $path = drupal_get_path('theme', $theme_info->name);
+    foreach ($theme_info->info['gsb_styles']['view'] as $view_name => $display_names) {
+      if ($view_name == $variables['view']->name) {
+        foreach($display_names as $display_name => $stylesheets) {
+          if (is_int($display_name)) {
+            if (is_string($stylesheets)) {
+              $sheet = $stylesheets;
+              drupal_add_css($path . '/' . $sheet);
+            }
+          }
+          else if ($variables['view']->current_display === $display_name) {
+            foreach($stylesheets as $sheet) {
+              drupal_add_css($path . '/' . $sheet);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Clean up the panel pane variables for the template.
+ */
+function gsb_theme_preprocess_panels_pane(&$variables) {
+  global $theme_info;
+
+  // Add css stylesheets based on the following settings in gsb_theme.info:
+  // ; GSB Styles
+  // gsb_styles[fpp][name][] = mypanelpane.css
+  // gsb_styles[fpp][links][my_viewmode][] = css/conditionals/block-weather.css
+
+  if (!empty($theme_info->info['gsb_styles']['fpp'])) {
+    $path = drupal_get_path('theme', $theme_info->name);
+    foreach ($theme_info->info['gsb_styles']['fpp'] as $fpp_name => $view_modes) {
+      if (!empty($variables['content']['#bundle']) && $fpp_name == $variables['content']['#bundle']) {
+        if (!empty($view_modes)) {
+          foreach($view_modes as $view_mode => $stylesheets) {
+            if (is_int($view_mode)) {
+              if (is_string($stylesheets)) {
+                $sheet = $stylesheets;
+                drupal_add_css($path . '/' . $sheet);
+              }
+            }
+            else if ($variables['content']['#view_mode'] == $view_mode) {
+              foreach($stylesheets as $sheet) {
+                drupal_add_css($path . '/' . $sheet);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -551,6 +663,29 @@ function gsb_theme_file_link($variables) {
   }
 
   return '<span class="file">' . $icon . ' ' . l($link_text, $url, $options) . '</span>';
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function gsb_theme_preprocess_block(&$variables) {
+  global $theme_info;
+
+  // Add css stylesheets based on the following settings in gsb_theme.info:
+  // ; GSB Styles
+  // gsb_styles[block][1234][] = myblock.css
+
+  if (!empty($theme_info->info['gsb_styles']['block'])) {
+    $path = drupal_get_path('theme', $theme_info->name);
+    foreach($theme_info->info['gsb_styles']['block'] as $block_id => $stylesheets) {
+      if (!empty($variables['block']) && $variables['block']->bid == $block_id) {
+        foreach($stylesheets as $sheet) {
+          drupal_add_css($path . '/' . $sheet);
+        }
+      }
+    }
+  }
+
 }
 
 /**
