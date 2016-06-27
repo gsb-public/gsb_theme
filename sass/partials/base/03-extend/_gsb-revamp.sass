@@ -256,7 +256,9 @@
   @extend %rounded-button
   @extend %box-shadow
   @extend %gradient-grey
-  color: $link-green
+  color: $link-green !important
+  &:hover
+    color: $link-green !important
 
 // Rounded white button
 %white-button
