@@ -599,18 +599,29 @@ button.isotopify-filter-daterange-button
     // Input
     #edit-search--2
       float: left
-      margin-right: -65px
-      padding-right: 40px
-      width: 95%
+      margin-right: -87px
+      max-width: 437px
+      width: 91%
+      +breakpoint(480px max-width)
+        width: 89%
+      +breakpoint(420px max-width)
+        width: 87%
+      +breakpoint(320px max-width)
+        width: 82%
 
     // Submit
     #edit-submit
       float: left
+      margin-left: 41px
       width: 40px
 
     // Sort filter
     .customSelect
       width: 100%
+      &:after
+        height: 48px
+        line-height: 3.2
+        padding: 0 13px
     .form-item-sort
       margin: 0
       padding: 18px $standard-padding
@@ -619,8 +630,8 @@ button.isotopify-filter-daterange-button
       .customSelectInner
         font-family: $font-sans
         font-size: 16px
-        padding: 10px 6px 6px 10px
-        width: 180px !important
+        padding: 14px 6px 14px 8px
+        width: 170px !important
 
 // Exec Ed program finder list
 .isotopify.program-list,

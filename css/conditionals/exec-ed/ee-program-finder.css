@@ -907,16 +907,22 @@ button.mini-filter-daterange-button.open:after {
   }
   .isotopify-filters #edit-search--2 {
     float: left;
-    margin-right: -65px;
-    padding-right: 40px;
-    width: 95%;
+    margin-right: -87px;
+    max-width: 437px;
+    width: 91%;
   }
   .isotopify-filters #edit-submit {
     float: left;
+    margin-left: 41px;
     width: 40px;
   }
   .isotopify-filters .customSelect {
     width: 100%;
+  }
+  .isotopify-filters .customSelect:after {
+    height: 48px;
+    line-height: 3.2;
+    padding: 0 13px;
   }
   .isotopify-filters .form-item-sort {
     margin: 0;
@@ -928,8 +934,23 @@ button.mini-filter-daterange-button.open:after {
   .isotopify-filters .form-item-sort .customSelectInner {
     font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    padding: 10px 6px 6px 10px;
-    width: 180px !important;
+    padding: 14px 6px 14px 8px;
+    width: 170px !important;
+  }
+}
+@media (max-width: 35.5em) and (max-width: 30em) {
+  .isotopify-filters #edit-search--2 {
+    width: 89%;
+  }
+}
+@media (max-width: 35.5em) and (max-width: 26.25em) {
+  .isotopify-filters #edit-search--2 {
+    width: 87%;
+  }
+}
+@media (max-width: 35.5em) and (max-width: 20em) {
+  .isotopify-filters #edit-search--2 {
+    width: 82%;
   }
 }
 
