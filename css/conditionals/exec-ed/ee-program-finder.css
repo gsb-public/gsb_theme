@@ -15,7 +15,9 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   border-top: 3px #231f20 solid;
 }
 
-.pane-degree-programs .degree-program, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
+.pane-degree-programs .degree-program, .pane-filters .ms-drop.bottom .checkbox-apply,
+.pane-app-finder .ms-drop.bottom .checkbox-apply,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all, .isotopify.program-list .compare,
 .full-time-programs-wrapper .compare, .image-ctas .fieldable-panels-pane, .compare-items {
@@ -33,7 +35,9 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   background: linear-gradient(to top, #c50000 0%, #860000 100%);
 }
 
-.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+.pane-filters .ms-drop.bottom .checkbox-apply,
+.pane-app-finder .ms-drop.bottom .checkbox-apply,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
   background: whitesmoke;
   background: -moz-linear-gradient(top, #f5f5f5, #ffffff);
   background: -o-linear-gradient(top, #f5f5f5, #ffffff);
@@ -41,9 +45,9 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   background: linear-gradient(to bottom, #f5f5f5, #ffffff);
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply,
+.compare-items .header .compare-button input, .pane-mini-program-finder input#edit-submit, .pane-filters .ms-drop.bottom .checkbox-apply,
 .pane-app-finder .ms-drop.bottom .checkbox-apply,
-.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder input#edit-submit, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled, .pane-filters .ms-drop.bottom .checkbox-clear-all,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all {
   border: none;
@@ -56,38 +60,43 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   line-height: 1.4;
   padding: 10px 17px;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:after,
+.compare-items .header .compare-button input:after, .pane-mini-program-finder input#edit-submit:after, .pane-filters .ms-drop.bottom .checkbox-apply:after,
 .pane-app-finder .ms-drop.bottom .checkbox-apply:after,
-.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .compare-items .header .compare-button input:after, .pane-mini-program-finder input#edit-submit:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:after,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:after, .date-picker-wrapper .drp_top-bar .apply-btn:after, .date-picker-wrapper .drp_top-bar .apply-btn.disabled:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:after,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all:after,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all:after {
   color: white !important;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover,
+.compare-items .header .compare-button input:hover, .pane-mini-program-finder input#edit-submit:hover, .pane-filters .ms-drop.bottom .checkbox-apply:hover,
 .pane-app-finder .ms-drop.bottom .checkbox-apply:hover,
-.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .compare-items .header .compare-button input:hover, .pane-mini-program-finder input#edit-submit:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all:hover,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all:hover {
   background-color: #2d6280;
   border: 0;
   color: white;
 }
-.pane-filters .ms-drop.bottom .checkbox-apply:hover:after,
+.compare-items .header .compare-button input:hover:after, .pane-mini-program-finder input#edit-submit:hover:after, .pane-filters .ms-drop.bottom .checkbox-apply:hover:after,
 .pane-app-finder .ms-drop.bottom .checkbox-apply:hover:after,
-.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .compare-items .header .compare-button input:hover:after, .pane-mini-program-finder input#edit-submit:hover:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:hover:after, .date-picker-wrapper .drp_top-bar .apply-btn:hover:after, .pane-filters .ms-drop.bottom .checkbox-clear-all:hover:after,
 .pane-app-finder .ms-drop.bottom .checkbox-clear-all:hover:after,
 .pane-mini-program-finder .ms-drop.bottom .checkbox-clear-all:hover:after {
   color: white !important;
 }
 
-.pane-filters .ms-drop.bottom .checkbox-apply,
-.pane-app-finder .ms-drop.bottom .checkbox-apply,
-.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .compare-items .header .compare-button input, .pane-mini-program-finder input#edit-submit {
+.compare-items .header .compare-button input, .pane-mini-program-finder input#edit-submit {
   background: #919900;
 }
 
-.date-picker-wrapper .drp_top-bar .apply-btn.disabled {
-  color: #636f00;
+.pane-filters .ms-drop.bottom .checkbox-apply,
+.pane-app-finder .ms-drop.bottom .checkbox-apply,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply, .date-picker-wrapper .drp_top-bar .apply-btn, .date-picker-wrapper .drp_top-bar .apply-btn.disabled {
+  color: #636f00 !important;
+}
+.pane-filters .ms-drop.bottom .checkbox-apply:hover,
+.pane-app-finder .ms-drop.bottom .checkbox-apply:hover,
+.pane-mini-program-finder .ms-drop.bottom .checkbox-apply:hover, .date-picker-wrapper .drp_top-bar .apply-btn:hover {
+  color: #636f00 !important;
 }
 
 .pane-filters .ms-drop.bottom .checkbox-clear-all,
