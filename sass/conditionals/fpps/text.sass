@@ -1,0 +1,63 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Text FPP
+.pane-bundle-text
+  // Container
+  .default,
+  .mba-highlighted-block
+    @extend %bg-and-box-shadow
+    padding: $standard-padding
+
+  // Blue Bar
+  .mba-highlighted-block .group-wrapper-style
+    border-top: 9px solid $teal-light
+    margin-top: -26px
+    padding-top: 20px
+
+  // Pane title
+  .field-name-field-title
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.2
+    margin-bottom: 14px
+    a
+      color: $red
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $grey-med
+        font-size: 21px
+        margin-left: 10px
+
+  // Narrow styles
+  .narrow-view &
+    +breakpoint($bp-tablet-port-min)
+      .field-name-field-title
+        color: $text-black
+        font-family: $font-sans
+        font-size: 18px
+        font-weight: bold
+        line-height: 1.3
+        margin-bottom: 11px
+      .field-name-field-body
+        p, ul, ol
+          font-size: 16px
+          line-height: 1.4
+          margin-bottom: 10px
+          &:last-child
+            margin-bottom: 0 !important
+        h2
+          font-family: $font-demi
+          font-size: 20px
+          font-weight: normal
+          line-height: 1.2
+          margin: 0 0 6px 0
+        h3
+          font-size: 16px
+          line-height: 1.3

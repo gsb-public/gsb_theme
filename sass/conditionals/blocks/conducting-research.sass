@@ -1,0 +1,35 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Conducting research
+.pane-gsb-public-custom-blocks-gpcb-conducting-research
+  height: 200px
+  padding: $standard-padding
+  +background(linear-gradient(left, rgba(#30759c, 1), rgba(#015280, 0)), image_url("bg-library-conducting-research-2015-05-26-1.jpg") 100% 50% no-repeat)
+  .description
+    color: $white
+    font-size: 32px
+    .narrow-view &
+      font-size: 24px
+    line-height: 1.2
+    margin-bottom: 20px
+    +breakpoint(1000px 1050px)
+      font-size: 28px
+    +breakpoint(751px max-width)
+      font-size: 28px
+    +breakpoint(608px 568px)
+      font-size: 22px
+    +breakpoint($bp-mobile)
+      font-size: 24px
+  a
+    @extend %teal-cta
+    max-width: 245px
+    &:hover
+      &:after
+        color: $white

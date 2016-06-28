@@ -1,0 +1,76 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Spotlight FPP
+.pane-bundle-spotlight
+
+  // Spotlight superhead
+  .feature-spotlight-label
+    @extend %superhead-black
+    margin-bottom: 0
+
+
+  // Name styling
+  .group-name-wrapper
+    color: $black
+    a
+      color: $link-green
+      display: block
+    .field
+      display: inline
+      font-size: 22px
+      font-weight: bold
+      line-height: 1.2
+      margin-right: 5px
+
+  .field-name-field-first-name,
+  .field-name-field-last-name
+    display: inline
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    margin-right: 5px
+
+  .field-name-field-sections
+    display: none
+
+  // Title, program and year
+  .field-name-field-title-position-single,
+  .field-name-field-program-single,
+  .field-name-field-year
+    font-family: $font-demi
+    font-size: 16px
+    line-height: 1.2
+
+  // Program
+  .field-name-field-program-single
+    display: inline
+    margin-right: 3px
+    padding-top: 5px
+
+  // Year
+  .field-name-field-year
+    padding-top: 5px
+
+  // Program and year
+  .field-name-field-program-single,
+  .field-name-field-year
+    color: $grey-dark
+
+  .field-name-field-gsb-spotlight-image-video
+    overflow: hidden
+
+// Always hide the main video for spotlight and teaser mode of video ct, always show preview
+.pane-bundle-spotlight
+  .gsb-responsive-main .file-video
+    display: none !important
+  .gsb-responsive-preview .file-video
+    display: block !important
+  .video-play-icon
+    display: none
