@@ -330,7 +330,7 @@ button.isotopify-filter-daterange-button
 
     // Apply button
     .checkbox-apply
-      @extend %grey-button
+      @extend %green-button
       margin-bottom: 28px
       margin-left: 24px
       margin-right: 12px
@@ -374,7 +374,7 @@ button.isotopify-filter-daterange-button
     .normal-top
       display: none !important
     .apply-btn
-      @extend %grey-button
+      @extend %green-button
       position: relative
       &.disabled
         @extend %grey-button
@@ -490,6 +490,8 @@ button.isotopify-filter-daterange-button
         background: $lime-bright
         border: 2px $green-light solid
         color: $white !important
+      &.real-today.checked
+        background: $green-light
       // First and last of range
       &.first-date-selected,
       &.last-date-selected
