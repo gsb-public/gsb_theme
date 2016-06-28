@@ -206,45 +206,6 @@ div.callout
       border: 1px $border-grey solid
       padding: 3px
 
-// Image FPP
-.pane-bundle-image
-  img
-    width: 100%
-
-  // Caption
-  figcaption
-    color: #595959
-    font-size: 14px
-    line-height: 1.2
-    margin-top: 12px
-    max-width: 570px
-
-  // Infographic expand
-  .file-resource-image figure
-    bottom: 0
-    position: relative
-
-  a.image-fpp-enlarge-button
-    float: right
-    margin: 12px 0
-    @extend %green-button
-    +icon-after("arrow-external", true)
-    &:after
-      content: "\f102" !important
-      font-size: 12px
-
-  // Image and infographic text equivalent
-  .image-text-equivalent
-    font-size: 16px
-    line-height: 1.3
-    margin-bottom: 8px
-    text-align: right
-    a
-      color: $link-green
-      border-bottom: 0
-      &:hover
-        color: $link-blue
-
 // Include body field styling on new text equivalent page
 .field-name-field-text-equivalent
   margin: 0 26px

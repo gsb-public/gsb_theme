@@ -1,0 +1,164 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Video FPP
+.pane-bundle-video
+
+  // Superhead - optional
+  .field-name-field-house-ads-superhead
+    @extend %superhead-black
+    margin-bottom: 0
+
+  // Title
+  .field-name-field-link-single,
+  .field-name-field-title
+    color: $text-black
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    .page-insights &
+      +breakpoint(1170px max-width)
+        font-size: 18px
+    a
+      color: $text-black
+      font-weight: bold
+      line-height: 1.2
+      .page-insights &
+        +breakpoint(1170px max-width)
+          font-size: 18px
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 12px
+        margin-left: 3px
+      &:hover
+        color: $link-blue
+        &:after
+          color: $teal-light
+
+.pane-bundle-video
+  .gsb-responsive-preview
+    position: relative
+    .content img
+      display: block
+      +breakpoint(768px 569px)
+        width: 100%
+      +breakpoint($bp-mobile-480)
+        width: 100%
+  .gsb-responsive-main
+    clear: both
+    .content div
+      margin: 0 auto
+
+.gsb-full-bleed-page
+  .pane-bundle-video
+    .gsb-responsive-preview
+      position: relative
+      .content img
+        display: block
+        +breakpoint(768px 569px)
+          width: 100%
+        +breakpoint($bp-mobile-480)
+          width: 100%
+    .gsb-responsive-main
+      clear: both
+      .content div
+        margin: 0 auto
+
+// Main video responsive play button and width
+.gsb-image-video-popup
+  max-width: 270px
+  .slideshow-slide &
+    max-width: 627px
+  .panels-layout-gsb-no-sidebar &,
+  .panels-layout-gsb-full-bleed-page &
+    max-width: 310px
+
+  a.fancybox
+    max-width: 100%
+    position: relative
+    display: inline-block
+    &:before, &:after
+      position: absolute
+      z-index: 50
+      top: 50%
+      left: 50%
+      .slideshow-cta &
+        +breakpoint($bp-mobile-max)
+          left: 63%
+        +breakpoint($bp-mobile)
+          left: 73%
+
+    +icon-before("circle", true)
+    &:before
+      font-size: 64px
+      color: rgba(0, 0, 0, 0.5)
+      margin-top: -40px
+      margin-left: -32px
+
+    +icon-after("play", true)
+    &:after
+      font-size: 21px
+      color: $white
+      margin-top: -21px
+      margin-left: -10px
+
+    &:hover
+      &:before
+        color: rgba(0,0,0,1)
+      &:after
+        color: $blue-light
+  &.image
+    a
+      display: none
+      &:before,
+      &:after
+        display: none
+
+// CSS to handle the Preview and Video switching
+.field-type-file
+  .gsb-responsive-main .file-video
+    display: none
+    +breakpoint(627px min-width)
+      display: block
+  .gsb-responsive-preview .file-video
+    a
+      position: relative
+      display: inline-block
+      &:before, &:after
+        position: absolute
+        top: 50%
+        left: 50%
+      +icon-before("circle", true)
+      &:before
+        font-size: 64px
+        color: rgba(0, 0, 0, 0.8)
+        margin-top: -40px
+        margin-left: -32px
+      +icon-after("play", true)
+      &:after
+        font-size: 21px
+        color: $white
+        margin-top: -21px
+        margin-left: -10px
+      &:hover
+        &:before
+          color: rgba(0,0,0,1)
+        &:after
+          color: $blue-light
+    +breakpoint(627px min-width)
+      display: none
+
+// Fix only for the landing one layout in sidebar
+.narrow-view
+  .field-type-file
+    .gsb-responsive-main .file-video
+      display: none
+    .gsb-responsive-preview .file-video
+      display: block

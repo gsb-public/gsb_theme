@@ -1,0 +1,63 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Slideshow FPP
+
+// Color styles for opaque
+.pane-bundle-slideshow
+  @extend %divider-bottom
+  // Blue
+  .slide-color-blue
+    background: $blue-bright
+
+  // Purple
+  .slide-color-purple
+    background: $purple-bright
+
+  // Teal
+  .slide-color-brightteal
+    background: $teal-bright
+
+  // Pink
+  .slide-color-pink
+    background: $pink-bright
+
+  // Charcoal
+  .slide-color-charcoal
+    background: $text-black
+
+  // White
+  .slide-color-white
+    background: $white
+    // Superhead - Not Linked
+    .field-name-field-superhead
+      color: $text-black
+    // Superhead - Linked
+    .slide-superhead
+      color: $red
+      .field-name-field-superhead
+        color: $red
+        &:hover
+          color: $link-blue
+      &:hover
+        border: none
+        color: $link-blue
+        text-decoration: underline
+    // Text - not linked
+    .field-name-field-text-slide
+      color: $text-black
+    // Text - Linked
+    .slide-text
+      color: $text-black
+      &:hover
+        border-bottom: 1px $link-blue solid
+        .field-name-field-text-slide
+          color: $link-blue
+        &:after
+          color: $teal-light

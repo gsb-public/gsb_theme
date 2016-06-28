@@ -1,0 +1,27 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Accordion FPP
+
+// FPP container and title
+.pane-bundle-accordion
+  @extend %bg-and-box-shadow
+  padding: 10px $standard-padding
+  h2.pane-title
+    @extend %divider-bottom
+    color: $text-black
+    font-family: $font-sans
+    font-size: 22px
+    font-weight: bold
+    line-height: 1.2
+    margin-top: 10px
+    padding-bottom: 18px
+  .field-collection-item-field-accordion-item:first-of-type
+    .acc-title
+      border-top: 0
