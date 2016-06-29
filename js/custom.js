@@ -371,7 +371,7 @@
         return;
       }
 
-      if (Modernizr.mq('(max-width: 568px)')) {
+      if (Modernizr.mq('(max-width: 920px)')) {
 
         // Get the uniqueID used by Isotopify
         var uniqueID = '';
