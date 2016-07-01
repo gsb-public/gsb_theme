@@ -690,8 +690,8 @@ function gsb_theme_preprocess_block(&$variables) {
 
   if (!empty($theme_info->info['gsb_styles']['block'])) {
     $path = drupal_get_path('theme', $theme_info->name);
-    foreach($theme_info->info['gsb_styles']['block'] as $block_id => $stylesheets) {
-      if (!empty($variables['block']) && $variables['block']->bid == $block_id) {
+    foreach($theme_info->info['gsb_styles']['block'] as $delta => $stylesheets) {
+      if (!empty($variables['block']) && $variables['block']->delta == $delta) {
         foreach($stylesheets as $sheet) {
           drupal_add_css($path . '/' . $sheet);
         }
