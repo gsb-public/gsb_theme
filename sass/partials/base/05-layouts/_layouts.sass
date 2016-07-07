@@ -669,7 +669,7 @@
   .last-full
     margin: 0 auto
     max-width: 1170px
-    padding: 36px 0
+    padding: 36px 0 22px
 
   .top-wrapper,
   .middle-gray-inner-wrapper,
@@ -697,8 +697,8 @@
   .middle-green-inner-wrapper,
   .bottom-wrapper
     +breakpoint(1200px max-width)
-      padding-left: 10px
-      padding-right: 10px
+      padding-left: $standard-padding
+      padding-right: $standard-padding
 
   // 3 across
   .top-left-third,
@@ -716,13 +716,13 @@
     &:nth-of-type(1n)
       margin-right: 22px
       +breakpoint(1023px max-width)
-        margin-right: 0
+        margin-right: 15px
     &:nth-of-type(2n)
-      margin: 0 18px
+      margin: 0 15px
       +breakpoint(1023px max-width)
         margin: 0
     &:nth-of-type(3n)
-      margin-left: 22px
+      margin-left: 15px
       margin-right: 0
       +breakpoint(1023px max-width)
         margin-left: 0
@@ -752,6 +752,8 @@
     width: 100%
     .pane-content
       margin-bottom: 10px
+    +breakpoint(1200px max-width)
+      max-width: 550px
     +breakpoint(1180px max-width)
       max-width: 49%
     +breakpoint(600px max-width)
