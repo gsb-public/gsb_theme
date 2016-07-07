@@ -71,12 +71,12 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-admission-event
   background: white;
 }
 
-.view-mode-media_contact, .field-name-field-body ul.footnotes, .acc-title, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
+.view-mode-media_contact, .field-name-field-body ul.footnotes, .acc-title:first-of-type, #views-exposed-form-admission-events-mba-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value,
 #views-exposed-form-admission-events-msx-admission-panel-pane #edit-secondary-wrapper .form-item-field-event-location-type-value, .view-display-id-all_research_panel_pane .narrow-search-wrapper, .filter-results-wrapper {
   border-top: 1px lightgray solid;
 }
 
-.pane-admission-events-location-panel-pane h2.pane-title, #block-gsb-public-custom-blocks-gpcb-follow-us h2, .view-faculty-filters .views-exposed-search-wrap,
+.acc-title, .accordion-body-wrap, .pane-admission-events-location-panel-pane h2.pane-title, #block-gsb-public-custom-blocks-gpcb-follow-us h2, .view-faculty-filters .views-exposed-search-wrap,
 .view-display-id-working_paper_list .views-exposed-search-wrap,
 .view-display-id-case_listing .views-exposed-search-wrap,
 .view-display-id-book_listing .views-exposed-search-wrap,
@@ -5705,9 +5705,8 @@ ul.gsb-social-buttons li:last-of-type {
   *zoom: 1;
   cursor: pointer;
   font-size: 18px;
-  font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   margin-left: 0;
   padding: 16px 0 12px 36px;
 }
@@ -5740,6 +5739,9 @@ ul.gsb-social-buttons li:last-of-type {
 }
 .acc-title:hover:before {
   color: #2d6280;
+}
+.acc-title.opened {
+  border-bottom: 0;
 }
 .acc-title.opened:before {
   content: "\f117";
