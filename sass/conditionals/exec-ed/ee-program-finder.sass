@@ -108,6 +108,7 @@ $small-filter-width: 245px
     position: absolute
     right: 0
     top: 95px
+    z-index: 1
     +breakpoint(1115px max-width)
       top: 160px
     +breakpoint(914px max-width)
@@ -565,7 +566,7 @@ button.isotopify-filter-daterange-button
         +background(image_url("search-white.png") no-repeat 11px 11px, linear-gradient(top, $link-blue, $link-blue))
 
   // Responsive filters
-  +breakpoint(568px max-width)
+  +breakpoint(920px max-width)
     background: #f4f4f4
     border-top: 3px $text-black solid
     margin-bottom: 26px
@@ -632,6 +633,7 @@ button.isotopify-filter-daterange-button
         padding: 0 13px
     .form-item-sort
       margin: 0
+      max-width: 525px
       padding: 18px $standard-padding
       label
         display: none
