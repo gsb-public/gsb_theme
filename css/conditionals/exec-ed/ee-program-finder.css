@@ -1350,6 +1350,7 @@ h2.isotopify-title {
   max-width: 1170px;
   position: relative;
   right: 0;
+  top: 0;
   width: 100%;
 }
 .pane-mini-program-finder .mini-program-finder-apply a {
@@ -1359,7 +1360,17 @@ h2.isotopify-title {
   padding: 16px 26px;
   position: absolute;
   right: 0;
-  bottom: 320px;
+  top: 26px;
+}
+@media (max-width: 75em) {
+  .pane-mini-program-finder .mini-program-finder-apply a {
+    right: 26px;
+  }
+}
+@media (max-width: 20em) {
+  .pane-mini-program-finder .mini-program-finder-apply a {
+    top: 18px;
+  }
 }
 .pane-mini-program-finder .mini-program-finder-title-filters {
   background: white;
@@ -1394,12 +1405,15 @@ h2.isotopify-title {
 @media (max-width: 62.5em) {
   .pane-mini-program-finder .mini-program-finder-title-filters h1 {
     font-size: 28px;
+    position: relative;
+    top: 10px;
   }
 }
 @media (max-width: 54.375em) {
   .pane-mini-program-finder .mini-program-finder-title-filters h1 {
     display: block;
     margin-bottom: 10px;
+    top: 0;
   }
 }
 .pane-mini-program-finder .mini-finder-filters {

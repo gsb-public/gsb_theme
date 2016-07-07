@@ -957,6 +957,7 @@ h2.isotopify-title
     max-width: 1170px
     position: relative
     right: 0
+    top: 0
     width: 100%
     a
       @extend %gradient-red
@@ -966,7 +967,11 @@ h2.isotopify-title
       padding: 16px $standard-padding
       position: absolute
       right: 0
-      bottom: 320px
+      top: 26px
+      +breakpoint(1200px max-width)
+        right: 26px
+      +breakpoint(320px max-width)
+        top: 18px
 
   .mini-program-finder-title-filters
     background: $white
@@ -993,9 +998,12 @@ h2.isotopify-title
       line-height: 1.2
       +breakpoint(1000px max-width)
         font-size: 28px
+        position: relative
+        top: 10px
       +breakpoint(870px max-width)
         display: block
         margin-bottom: 10px
+        top: 0
 
   .mini-finder-filters
     float: right
