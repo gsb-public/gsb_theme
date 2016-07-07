@@ -864,6 +864,8 @@ ul.gsb-social-buttons li
   .field-items
     display: none
 
+// Accordion styling.
+
 // Toggle Functionality
 .accordion-toggle
   display: none
@@ -880,15 +882,14 @@ ul.gsb-social-buttons li
 .acc-body
   clear: both
 
-// Accordion item styling
+// Accordion item title styling.
 .acc-title
   +clearfix
-  @extend %divider-top
+  @extend %divider-bottom
   cursor: pointer
   font-size: 18px
-  font-weight: bold
   line-height: 1.2
-  margin-bottom: 0
+  margin-bottom: 0 !important
   margin-left: 0
   padding: 16px 0 12px 36px
   +icon-before("plus", true)
@@ -899,6 +900,8 @@ ul.gsb-social-buttons li
     position: relative
     left: -36px
     width: 0
+  &:first-of-type
+    @extend %divider-top
   &:hover
     color: $link-blue
     text-decoration: underline
@@ -906,9 +909,11 @@ ul.gsb-social-buttons li
       color: $link-blue
   &.opened
     +icon-before("minus", true)
+    border-bottom: 0
 
-// Accordion body
+// Accordion body.
 .accordion-body-wrap
+  @extend %divider-bottom
   display: none
   .acc-body
     padding-bottom: 12px

@@ -9,12 +9,13 @@
 
 // Accordion FPP
 
-// FPP container and title
+// Container
 .pane-bundle-accordion
   @extend %bg-and-box-shadow
   padding: 10px $standard-padding
+
+  // Title
   h2.pane-title
-    @extend %divider-bottom
     color: $text-black
     font-family: $font-sans
     font-size: 22px
@@ -22,6 +23,7 @@
     line-height: 1.2
     margin-top: 10px
     padding-bottom: 18px
-  .field-collection-item-field-accordion-item:first-of-type
-    .acc-title
-      border-top: 0
+
+  .acc-title,
+  .accordion-body-wrap
+    border-bottom: 0
