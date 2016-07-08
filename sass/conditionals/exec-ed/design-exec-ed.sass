@@ -1616,3 +1616,32 @@ h1.ee-section-footer-title
       &:first-of-type
         div.title
           visibility: visible
+
+// Who should attend pane
+.pane-program-who-should-attend
+  // Pane title
+  .pane-title
+    font-size: 32px
+    font-weight: normal
+    line-height: 1.3
+    margin-bottom: 18px
+
+  // Pane content.
+  ul, ol
+    @extend %p
+    margin: 0 0 20px 0
+    padding: 0
+    li
+      margin-bottom: 8px
+  ol
+    padding-left: 36px
+  ul
+    position: relative
+    left: 0
+    li
+      padding-left: 15px
+      &:before
+        content: "• "
+        color: $text-black
+        position: absolute
+        left: 0
