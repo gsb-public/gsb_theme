@@ -545,8 +545,6 @@ button.mini-filter-daterange-button
     width: 210px
     +breakpoint(1115px 1060px)
       width: 500px
-    +breakpoint(1059px 915px)
-      width: 420px !important
 
   #edit-search--2
     @extend %border-grey
@@ -624,28 +622,23 @@ button.mini-filter-daterange-button
 
     // Search
     .form-item.form-item-search
-      border-bottom: 1px $border-grey solid
       padding: 18px $standard-padding
       width: 100%
 
     // Input
     #edit-search--2
       float: left
-      margin-right: -87px
-      max-width: 437px
-      width: 91%
-      +breakpoint(480px max-width)
-        width: 89%
-      +breakpoint(420px max-width)
-        width: 87%
-      +breakpoint(320px max-width)
-        width: 82%
+      margin-right: -86px
+      padding-right: 47px
+      width: 100%
 
     // Submit
     #edit-submit
+      border-left: 1px #ccc solid
+      border-radius: 0
       float: left
-      margin-left: 41px
-      width: 40px
+      right: -44px
+      width: 42px
 
     // Sort filter
     .customSelect
@@ -655,8 +648,8 @@ button.mini-filter-daterange-button
         line-height: 3.2
         padding: 0 13px
     .form-item-sort
+      border-top: 1px $border-grey solid
       margin: 0
-      max-width: 525px
       padding: 18px $standard-padding
       label
         display: none
