@@ -691,14 +691,18 @@ function gsb_theme_preprocess_block(&$variables) {
   if (!empty($theme_info->info['gsb_styles']['block'])) {
     $path = drupal_get_path('theme', $theme_info->name);
     foreach($theme_info->info['gsb_styles']['block'] as $delta => $stylesheets) {
-      if (!empty($variables['block']) && $variables['block']->delta == $delta) {
+      if (!empty($variables['block']) && ($variables['block']->delta == $delta || $variables['block']->module == $delta)) {
+        if ($variables['block']->module == $delta) {
+          if (!in_array($variables['block']->delta, array_keys($stylesheets))) {
+            continue;
+          }
+        }
         foreach($stylesheets as $sheet) {
           drupal_add_css($path . '/' . $sheet);
         }
       }
     }
   }
-
 }
 
 /**
