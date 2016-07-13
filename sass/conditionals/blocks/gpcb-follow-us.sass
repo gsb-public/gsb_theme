@@ -1,0 +1,50 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Follow us block in footer.
+#block-gsb-public-custom-blocks-gpcb-follow-us
+  clear: none
+  float: left
+  margin-right: -100%
+  width: 23.077%
+  +breakpoint(767px max-width)
+    float: none
+    margin: 0
+    margin-bottom: 30px
+    width: 100%
+    border-bottom: 1px $grey-c solid
+    margin-bottom: 12px
+    padding-bottom: 12px
+    margin-right: 0
+
+  // Title
+  h2
+    @extend %divider-bottom
+    font-family: $font-demi
+    font-size: 20px
+    font-weight: normal
+    line-height: 1.3
+    margin-bottom: 12px
+    padding-bottom: 12px
+    a
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $grey-med
+        display: inline
+        font-size: 12px
+        font-weight: normal
+        margin-left: 3px
+      &:hover
+        &:after
+          color: $teal-light
+
+  // Icon wrapper
+  .icon-wrapper
+    display: block
+    max-width: 220px

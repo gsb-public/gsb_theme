@@ -7,21 +7,21 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Get Directions
-.cta-get-directions
+// Get Directions map link block
+.map-link
+  @extend %bg-and-box-shadow
+  background: image_url('cta-map.png') repeat-x top left
   clear: both
   display: block
   overflow: hidden
-  padding-bottom: 1px
-  border: 2px $white solid
-  background: image_url('cta-map.png') repeat-x top left
+  padding: 20px
   +breakpoint(480px 568px)
     background: image_url('cta-map-mobile-2015-05-26-1.jpg') repeat-x 80% 30%
-  padding: 20px
   &:hover
     display: block
     overflow: hidden
     border: 2px $white solid
+
   .cta-body
     padding: 13px 15px
     background: rgba(30, 82, 109, 0.9)

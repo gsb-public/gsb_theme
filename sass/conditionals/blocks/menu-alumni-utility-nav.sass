@@ -1,0 +1,24 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Alumni navigation in banner
+#block-menu-menu-alumni-utility-nav
+  position: absolute
+  right: 0
+  top: 8px
+  +breakpoint($bp-tablet-port-max)
+    display: none
+  li
+    display: inline-block
+  a
+    color: $white
+    font-family: $font-demi
+    font-size: 16px
+    line-height: 1.2
+    margin: 0 8px

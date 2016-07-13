@@ -44,17 +44,6 @@ p, .format-body,
   }
 }
 
-#block-block-26 .cta-wrapper a:after,
-#block-block-26 .cta-wrapper a[target="_blank"]:after {
-  font-size: 21px;
-  font-weight: normal;
-  line-height: 0;
-  margin-top: -10px;
-  position: absolute;
-  right: 12px;
-  top: 50%;
-}
-
 .region-sidebar-first {
   background: -moz-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
   background: -o-linear-gradient(top, #f2f2f2, rgba(242, 242, 242, 0));
@@ -66,8 +55,8 @@ p, .format-body,
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-full-bleed-page .pane-bundle-house-ads,
 div.gsb-full-bleed-page .pane-bundle-spotlight,
-div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
-.inner-sidebar-wrapper [class*="pane-menu-block"], #block-block-26 .cta-wrapper, .pane-gsb-feature-faculty-display-az-list .pane-content {
+div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
+.inner-sidebar-wrapper [class*="pane-menu-block"], .pane-gsb-feature-faculty-display-az-list .pane-content {
   background: white;
 }
 
@@ -76,7 +65,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-admission-event
   border-top: 1px lightgray solid;
 }
 
-.acc-title, .accordion-body-wrap, .pane-admission-events-location-panel-pane h2.pane-title, #block-gsb-public-custom-blocks-gpcb-follow-us h2, .view-faculty-filters .views-exposed-search-wrap,
+.acc-title, .accordion-body-wrap, .pane-admission-events-location-panel-pane h2.pane-title, .view-faculty-filters .views-exposed-search-wrap,
 .view-display-id-working_paper_list .views-exposed-search-wrap,
 .view-display-id-case_listing .views-exposed-search-wrap,
 .view-display-id-book_listing .views-exposed-search-wrap,
@@ -153,8 +142,8 @@ div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-admission-event
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-full-bleed-page .pane-bundle-house-ads,
 div.gsb-full-bleed-page .pane-bundle-spotlight,
-div.gsb-full-bleed-page .pane-bundle-video, .designed-box, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
-.inner-sidebar-wrapper [class*="pane-menu-block"], #block-block-26 .cta-wrapper, .pane-gsb-feature-faculty-display-az-list .pane-content, .webform-client-form #edit-draft,
+div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
+.inner-sidebar-wrapper [class*="pane-menu-block"], .pane-gsb-feature-faculty-display-az-list .pane-content, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
 .webform-client-form .del-btn, #edit-clear-all,
@@ -6418,6 +6407,57 @@ ul.slideshow-items {
   color: #231f20;
 }
 
+.pane-gsb-public-custom-blocks-gpcb-follow-us {
+  background: url('../images/cta-follow-us.jpg') no-repeat top left, #89c0c5;
+  height: 144px;
+  position: relative;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us h2 {
+  font-size: 0;
+  line-height: 0;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .social-title {
+  background: rgba(83, 139, 128, 0.85);
+  color: white;
+  display: block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  padding: 12px 26px;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:after {
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 3px;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .social-title:hover {
+  background: rgba(45, 98, 128, 0.85);
+  color: white;
+  text-decoration: underline;
+}
+.pane-gsb-public-custom-blocks-gpcb-follow-us .icon-wrapper {
+  margin-top: 26px;
+  max-width: 270px;
+  padding: 0 26px;
+}
+
 .field-group-gsb_field_formatter_group_comma_separator .entity,
 .field-group-gsb_field_formatter_group_comma_separator .field,
 .field-group-gsb_field_formatter_group_comma_separator .separator {
@@ -7097,62 +7137,6 @@ ul.slideshow-items {
   border-top: 0;
 }
 
-#block-gsb-public-custom-blocks-gpcb-follow-us {
-  clear: none;
-  float: left;
-  margin-right: -100%;
-  width: 23.077%;
-}
-@media (max-width: 47.9375em) {
-  #block-gsb-public-custom-blocks-gpcb-follow-us {
-    float: none;
-    margin: 0;
-    margin-bottom: 30px;
-    width: 100%;
-    border-bottom: 1px #cccccc solid;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    margin-right: 0;
-  }
-}
-#block-gsb-public-custom-blocks-gpcb-follow-us h2 {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.3;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-}
-#block-gsb-public-custom-blocks-gpcb-follow-us h2 a:after {
-  content: "\f101";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-#block-gsb-public-custom-blocks-gpcb-follow-us h2 a:after {
-  color: #c2b7a1;
-  display: inline;
-  font-size: 12px;
-  font-weight: normal;
-  margin-left: 3px;
-}
-#block-gsb-public-custom-blocks-gpcb-follow-us h2 a:hover:after {
-  color: #aac4bf;
-}
-#block-gsb-public-custom-blocks-gpcb-follow-us .icon-wrapper {
-  display: block;
-  max-width: 220px;
-}
-
 #block-menu-menu-footer-1,
 #block-menu-menu-footer-2,
 #block-menu-menu-footer-alumni-section {
@@ -7329,42 +7313,6 @@ input.signup-submit:hover {
   }
 }
 
-#block-menu-menu-footer-3 {
-  float: right;
-  padding: 11px 0;
-}
-@media (max-width: 50em) {
-  #block-menu-menu-footer-3 {
-    float: none;
-    position: relative;
-  }
-}
-#block-menu-menu-footer-3 li {
-  display: inline-block;
-  margin-right: 26px;
-}
-#block-menu-menu-footer-3 li:first-of-type {
-  margin-left: 5px;
-}
-@media (max-width: 50em) {
-  #block-menu-menu-footer-3 li:first-of-type {
-    margin-left: 0;
-  }
-}
-#block-menu-menu-footer-3 li:last-of-type {
-  margin-right: 0;
-}
-@media (max-width: 50em) {
-  #block-menu-menu-footer-3 li {
-    display: block;
-    margin: 4px 0;
-  }
-}
-#block-menu-menu-footer-3 a {
-  color: #656162;
-  font-size: 14px;
-}
-
 .gsb-footer-meta {
   color: #656162;
   font-size: 14px;
@@ -7379,57 +7327,6 @@ input.signup-submit:hover {
 }
 .gsb-footer-meta .copyright {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#block-menu-menu-insights-footer-bottom-menu {
-  border-bottom: 1px #cccccc solid;
-  padding: 20px 0;
-}
-#block-menu-menu-insights-footer-bottom-menu li {
-  display: inline-block;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.3;
-  margin-right: 36px;
-}
-#block-menu-menu-insights-footer-bottom-menu li:last-of-type {
-  margin-right: 0;
-}
-@media (max-width: 37.5em) {
-  #block-menu-menu-insights-footer-bottom-menu li {
-    display: block;
-    margin-bottom: 6px;
-  }
-  #block-menu-menu-insights-footer-bottom-menu li:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-#block-menu-menu-section-menu-alumni-footer- {
-  position: absolute;
-  right: 0;
-  bottom: 14px;
-}
-@media (max-width: 48em) {
-  #block-menu-menu-section-menu-alumni-footer- {
-    bottom: 0;
-    position: relative;
-    margin: 40px 0 15px 0;
-  }
-}
-#block-menu-menu-section-menu-alumni-footer- li {
-  display: inline-block;
-}
-#block-menu-menu-section-menu-alumni-footer- li:first-of-type:after {
-  color: #656162;
-  content: "|";
-  margin: 0 10px 0 14px;
-}
-#block-menu-menu-section-menu-alumni-footer- a {
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
 }
 
 .page-exec-ed #footer .block {
@@ -7469,101 +7366,6 @@ input.signup-submit:hover {
   }
 }
 
-#block-block-26 p {
-  margin-bottom: 0;
-}
-#block-block-26 h2 {
-  color: #231f20;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 2px;
-}
-#block-block-26 h3 {
-  color: #231f20;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.3;
-}
-#block-block-26 .contact-wrapper {
-  margin: 12px 0 24px;
-}
-#block-block-26 .phone {
-  color: #231f20;
-  font-size: 15px;
-  line-height: 1.3;
-  margin-bottom: 3px;
-}
-#block-block-26 .phone a {
-  color: #231f20;
-}
-#block-block-26 .phone .label {
-  font-size: 16px;
-}
-#block-block-26 .email a {
-  color: #636f00;
-  font-size: 16px;
-  line-height: 1.3;
-}
-#block-block-26 .email a:after {
-  content: "\f112";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-#block-block-26 .email a:after {
-  font-size: 10px;
-  margin-left: 3px;
-}
-#block-block-26 .email a:hover {
-  color: #2d6280;
-}
-#block-block-26 .cta-wrapper {
-  color: #c2b7a1;
-  margin-bottom: 8px;
-}
-#block-block-26 .cta-wrapper a,
-#block-block-26 .cta-wrapper a[target="_blank"] {
-  font-size: 16px;
-  padding: 14px 44px 14px 20px;
-  position: relative;
-}
-#block-block-26 .cta-wrapper a:after,
-#block-block-26 .cta-wrapper a[target="_blank"]:after {
-  content: "\f101";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-}
-#block-block-26 .cta-wrapper a:after,
-#block-block-26 .cta-wrapper a[target="_blank"]:after {
-  color: #c2b7a1;
-}
-#block-block-26 .cta-wrapper a:hover:after,
-#block-block-26 .cta-wrapper a[target="_blank"]:hover:after {
-  color: #aac4bf;
-}
-
 #block-menu-menu-executive-education-footer a,
 #block-menu-menu-seed-footer a {
   display: inline-block;
@@ -7596,51 +7398,6 @@ input.signup-submit:hover {
     -webkit-flex-justify-content: space-between;
     justify-content: space-between;
   }
-}
-
-#block-block-31 .logo-wrapper {
-  margin-bottom: 40px;
-}
-.svg #block-block-31 .logo-wrapper .seed-logo {
-  background: url('../images/logo-seed-2016-03-28-1.svg') no-repeat;
-  background-size: 100%;
-  display: block;
-  height: 90px;
-}
-.svg #block-block-31 .logo-wrapper .seed-logo:hover {
-  text-decoration: none;
-}
-.svg #block-block-31 .logo-wrapper h2,
-.svg #block-block-31 .logo-wrapper p {
-  display: none;
-}
-.no-js #block-block-31 .logo-wrapper h2, .no-svg #block-block-31 .logo-wrapper h2 {
-  color: #231f20;
-}
-#block-block-31 p {
-  line-height: 1.3;
-  margin-bottom: 0;
-}
-#block-block-31 h3 {
-  color: #231f20;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
-#block-block-31 em {
-  font-size: 16px;
-  line-height: 1.3;
-}
-#block-block-31 .seed-wrapper {
-  color: #231f20;
-  font-size: 15px;
-  line-height: 1.3;
-  margin: 12px 0 24px;
-}
-#block-block-31 .contact-wrapper {
-  margin-bottom: 12px;
 }
 
 .cp-body {
@@ -9874,33 +9631,6 @@ button.checkbox-clear-all {
   }
 }
 
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs {
-  color: white;
-  font-size: 14px;
-}
-@media (max-width: 62.4375em) {
-  #block-gsb-public-custom-blocks-gpcb-breadcrumbs {
-    display: none;
-  }
-}
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
-  line-height: 1;
-  top: 0;
-  margin-bottom: 0;
-}
-@media (min-width: 35.5625em) {
-  #block-gsb-public-custom-blocks-gpcb-breadcrumbs .breadcrumb {
-    padding-bottom: 8px;
-  }
-}
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs a {
-  color: white;
-}
-#block-gsb-public-custom-blocks-gpcb-breadcrumbs a:hover {
-  border-bottom: 2px solid white;
-  text-decoration: none;
-}
-
 .page-programs #banner {
   background: -moz-linear-gradient(#4c697a, #607c8c);
   background: -o-linear-gradient(#4c697a, #607c8c);
@@ -9956,27 +9686,6 @@ button.checkbox-clear-all {
   -moz-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
   box-shadow: rgba(0, 0, 0, 0.85) 0px 2px 6px -2px inset;
-}
-
-#block-menu-menu-alumni-utility-nav {
-  position: absolute;
-  right: 0;
-  top: 8px;
-}
-@media (max-width: 62.4375em) {
-  #block-menu-menu-alumni-utility-nav {
-    display: none;
-  }
-}
-#block-menu-menu-alumni-utility-nav li {
-  display: inline-block;
-}
-#block-menu-menu-alumni-utility-nav a {
-  color: white;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.2;
-  margin: 0 8px;
 }
 
 #block-menu-block-32 .menu-mlid-37621,

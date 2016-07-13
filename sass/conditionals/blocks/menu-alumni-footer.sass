@@ -1,0 +1,30 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Alumni footer - Help and Standford Alumni Association links.
+#block-menu-menu-section-menu-alumni-footer-
+  position: absolute
+  right: 0
+  bottom: 14px
+  +breakpoint(768px max-width)
+    bottom: 0
+    position: relative
+    margin: 40px 0 15px 0
+  li
+    display: inline-block
+    &:first-of-type
+      &:after
+        color: $text-grey-light
+        content: "|"
+        margin: 0 10px 0 14px
+  // Link style
+  a
+    font-family: $font-demi
+    font-size: 14px
+    font-weight: normal
