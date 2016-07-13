@@ -1,0 +1,109 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Insights search in banner.
+#block-gsb-public-custom-blocks-gpcb-insights-search
+  display: inline
+  float: left
+  height: 66px
+  position: relative
+  vertical-align: top
+  +breakpoint(596px max-width)
+    display: inline
+    float: right
+    position: absolute
+    right: 0
+  .form-container-insights-search
+    margin: 0
+
+  // Placeholder text
+  input.placeholder-text,
+  textarea.placeholder-text
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.2
+    +breakpoint($bp-mobile-max)
+      font-size: 14px
+
+  ::-webkit-input-placeholder
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.2
+    +breakpoint($bp-mobile-max)
+      font-size: 14px
+
+  #insights-search-block-form
+    position: relative
+    top: 0
+
+  // Toggle button
+  #insights-search-touch-button
+    border-right: 1px solid #5e5e5e
+    cursor: pointer
+    display: inline-block
+    height: 66px
+    +breakpoint(596px max-width)
+      border-right: 0
+      border-left: 1px solid #5e5e5e
+      float: right
+    &.open
+      display: none
+    +icon-after("search", true)
+    &:after
+      color: $white
+      font-size: 24px
+      padding: 0 21px
+      position: relative
+      top: 25px
+
+  // Search form
+  #insights-search-block-form
+    display: none
+    &.open
+      display: inline-block
+
+  // Input
+  #edit-insights-search-keys
+    height: 66px
+    border: 1px $border-grey solid
+    background: #f4f4f4
+    color: $grey-6
+    font-size: 20px
+    line-height: 1.5
+    padding: 7px 52px 6px 20px
+    +breakpoint($bp-wide-min)
+      width: 364px
+    +breakpoint($bp-mobile-max)
+      font-size: 14px
+
+  // Search button
+  #edit-submit-insights-toolbar-search
+    display: inline-block
+    width: 45px
+    height: 36px
+    background: transparent
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border: none
+    text-indent: 1000px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    right: 6px
+    top: 15px
+    .svg &
+      background: image_url("search.svg") no-repeat center
+      &:hover
+        background: image_url("search-hover.svg") no-repeat center
+    .no-js &, .no-svg &
+      background: image_url("search.png") no-repeat center 6px transparent
+      &:hover
+        background-position: center -27px

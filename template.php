@@ -565,7 +565,7 @@ function gsb_theme_preprocess_panels_pane(&$variables) {
   // Add css stylesheets based on the following settings in gsb_theme.info:
   // ; GSB Styles
   // gsb_styles[fpp][name][] = mypanelpane.css
-  // gsb_styles[fpp][links][my_viewmode][] = css/conditionals/block-weather.css
+  // gsb_styles[fpp][links][my_viewmode][] = css/conditionals
 
   if (!empty($theme_info->info['gsb_styles']['fpp'])) {
     $path = drupal_get_path('theme', $theme_info->name);
@@ -689,6 +689,7 @@ function gsb_theme_preprocess_block(&$variables) {
   // gsb_styles[block][1234][] = myblock.css
 
   if (!empty($theme_info->info['gsb_styles']['block'])) {
+
     $path = drupal_get_path('theme', $theme_info->name);
     foreach($theme_info->info['gsb_styles']['block'] as $delta => $stylesheets) {
       if (!empty($variables['block']) && ($variables['block']->delta == $delta || $variables['block']->module == $delta)) {

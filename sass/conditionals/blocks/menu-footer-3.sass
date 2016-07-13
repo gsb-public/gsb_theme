@@ -1,0 +1,31 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Privacy menu - Accessibility, Privacy Policy, Terms of Use,  Stanford University links.
+#block-menu-menu-footer-3
+  float: right
+  padding: 11px 0
+  +breakpoint(800px max-width)
+    float: none
+    position: relative
+  li
+    display: inline-block
+    margin-right: 26px
+    &:first-of-type
+      margin-left: 5px
+      +breakpoint(800px max-width)
+        margin-left: 0
+    &:last-of-type
+      margin-right: 0
+    +breakpoint(800px max-width)
+      display: block
+      margin: 4px 0
+  a
+    color: $text-grey-light
+    font-size: 14px

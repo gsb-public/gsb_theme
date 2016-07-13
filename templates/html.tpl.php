@@ -59,13 +59,6 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .designed-box {
-       filter: none 
-    }
-  </style>
-<![endif]-->  
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">

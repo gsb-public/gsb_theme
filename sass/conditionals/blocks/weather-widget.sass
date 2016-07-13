@@ -3,12 +3,11 @@
 // IMPORT COMPASS AND EXTENSIONS
 @import compass
 @import breakpoint
-@import ../../fonts/icons/icons
+@import ../../../fonts/icons/icons
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Weather block
-
+// Weather widget pane in Alumni.
 .pane-gsb-public-custom-blocks-gpcb-weather-widget
   @extend %bg-and-box-shadow
   padding: $standard-padding
@@ -24,7 +23,7 @@
   .station
     font-size: 14px
     line-height: 1
-    text-transform: uppercase
+    text-transform: capitalize
     &:hover
       color: $link-blue
     +icon-after("arrow-double-right", true)

@@ -1,0 +1,34 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Insights section title in banner.
+#block-gsb-public-custom-blocks-gpcb-insights
+  float: left
+  margin-right: 20px
+  position: relative
+  top: 14px
+  +breakpoint($bp-tablet-port-max)
+    padding-left: 15px
+  +breakpoint(999px max-width)
+    span
+      display: none
+  +breakpoint($bp-mobile-max)
+    display: none
+  a
+    color: $white
+    font-size: 34px
+    font-family: $font-sans
+    font-weight: normal
+    line-height: 1.2
+    &:hover
+      color: $white !important
+      text-decoration: none
+      border-bottom: 1px solid $white
+    +breakpoint(650px max-width)
+      font-size: 28px

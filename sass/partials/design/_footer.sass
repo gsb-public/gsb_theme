@@ -18,48 +18,6 @@
     background: $white
     border-top: 0
 
-// Follow us block
-#block-gsb-public-custom-blocks-gpcb-follow-us
-  clear: none
-  float: left
-  margin-right: -100%
-  width: 23.077%
-  +breakpoint(767px max-width)
-    float: none
-    margin: 0
-    margin-bottom: 30px
-    width: 100%
-    border-bottom: 1px $grey-c solid
-    margin-bottom: 12px
-    padding-bottom: 12px
-    margin-right: 0
-
-  // Title
-  h2
-    @extend %divider-bottom
-    font-family: $font-demi
-    font-size: 20px
-    font-weight: normal
-    line-height: 1.3
-    margin-bottom: 12px
-    padding-bottom: 12px
-    a
-      +icon-after("arrow-double-right", true)
-      &:after
-        color: $grey-med
-        display: inline
-        font-size: 12px
-        font-weight: normal
-        margin-left: 3px
-      &:hover
-        &:after
-          color: $teal-light
-
-  // Icon wrapper
-  .icon-wrapper
-    display: block
-    max-width: 220px
-
 // General footer menu styles
 #block-menu-menu-footer-1,
 #block-menu-menu-footer-2,
@@ -169,7 +127,6 @@ input.signup-submit
   &:hover
     background: $link-blue
 
-
 // Footer columns
 #block-gsb-public-custom-blocks-gpcb-follow-us,
 #block-menu-menu-footer-1,
@@ -186,34 +143,12 @@ input.signup-submit
     width: 100%
     &:last-of-type
       margin-bottom: 0
+
 #block-menu-menu-footer-1
   +breakpoint(768px max-width)
     margin-bottom: 0
 
 // Legal and Copyright region
-
-// Privacy menu
-#block-menu-menu-footer-3
-  float: right
-  padding: 11px 0
-  +breakpoint(800px max-width)
-    float: none
-    position: relative
-  li
-    display: inline-block
-    margin-right: 26px
-    &:first-of-type
-      margin-left: 5px
-      +breakpoint(800px max-width)
-        margin-left: 0
-    &:last-of-type
-      margin-right: 0
-    +breakpoint(800px max-width)
-      display: block
-      margin: 4px 0
-  a
-    color: $text-grey-light
-    font-size: 14px
 
 // Copyright and address
 .gsb-footer-meta
@@ -226,47 +161,6 @@ input.signup-submit
     padding-top: 0
   .copyright
     font-family: $font-demi
-
-// Insights Only - News, Alumni, Giving menus
-#block-menu-menu-insights-footer-bottom-menu
-  border-bottom: 1px $grey-c solid
-  padding: 20px 0
-  li
-    display: inline-block
-    font-family: $font-demi
-    font-size: 18px
-    font-weight: normal
-    line-height: 1.3
-    margin-right: 36px
-    &:last-of-type
-      margin-right: 0
-    +breakpoint(600px max-width)
-      display: block
-      margin-bottom: 6px
-      &:last-of-type
-        margin-bottom: 0
-
-// Second Alumni footer
-#block-menu-menu-section-menu-alumni-footer-
-  position: absolute
-  right: 0
-  bottom: 14px
-  +breakpoint(768px max-width)
-    bottom: 0
-    position: relative
-    margin: 40px 0 15px 0
-  li
-    display: inline-block
-    &:first-of-type
-      &:after
-        color: $text-grey-light
-        content: "|"
-        margin: 0 10px 0 14px
-  // Link style
-  a
-    font-family: $font-demi
-    font-size: 14px
-    font-weight: normal
 
 // EE Footer
 .page-exec-ed #footer
@@ -293,65 +187,6 @@ input.signup-submit
       -webkit-flex-justify-content: space-between
       justify-content: space-between
 
-// Contact info
-#block-block-26
-  p
-    margin-bottom: 0
-  h2
-    color: $text-black
-    font-family: $font-sans
-    font-size: 20px
-    font-weight: bold
-    line-height: 1.3
-    margin-bottom: 2px
-  h3
-    color: $text-black
-    font-family: $font-sans
-    font-size: 18px
-    font-weight: normal
-    line-height: 1.3
-
-  .contact-wrapper
-    margin: 12px 0 24px
-
-  .phone
-    color: $text-black
-    font-size: 15px
-    line-height: 1.3
-    margin-bottom: 3px
-    a
-      color: $text-black
-    .label
-      font-size: 16px
-  .email a
-    color: $link-green
-    font-size: 16px
-    line-height: 1.3
-    +icon-after("email-stroke", true)
-    &:after
-      font-size: 10px
-      margin-left: 3px
-    &:hover
-      color: $link-blue
-
-  // CTA
-  .cta-wrapper
-    @extend %bg-and-box-shadow
-    color: $grey-med
-    margin-bottom: 8px
-    a,
-    a[target="_blank"]
-      font-size: 16px
-      padding: 14px 44px 14px 20px
-      position: relative
-      +icon-after("arrow-double-right", true)
-      &:after
-        @extend %arrow-double-big
-        color: $grey-med
-      &:hover
-        &:after
-          color: $teal-light
-
 // Follow links
 #block-menu-menu-executive-education-footer,
 #block-menu-menu-seed-footer
@@ -363,7 +198,7 @@ input.signup-submit
     line-height: 1.3
     margin-bottom: 6px
 
-// SEED Footer
+// Seed Footer
 .page-seed #footer
   .block
     margin-bottom: 24px
@@ -381,51 +216,3 @@ input.signup-submit
       -ms-flexbox-justify-content: space-between
       -webkit-flex-justify-content: space-between
       justify-content: space-between
-
-
-// Contact block
-#block-block-31
-
-  // Logo wrapper
-  .logo-wrapper
-    margin-bottom: 40px
-    .svg &
-      .seed-logo
-        background: image_url("logo-seed-2016-03-28-1.svg") no-repeat
-        background-size: 100%
-        display: block
-        height: 90px
-        &:hover
-          text-decoration: none
-      h2,
-      p
-        display: none
-    .no-js &,
-    .no-svg &
-      h2
-        color: $text-black
-
-  // Info styling
-  p
-    line-height: 1.3
-    margin-bottom: 0
-  h3
-    color: $text-black
-    font-family: $font-sans
-    font-size: 20px
-    font-weight: bold
-    line-height: 1.3
-    margin-bottom: 8px
-  em
-    font-size: 16px
-    line-height: 1.3
-
-  .seed-wrapper
-    color: $text-black
-    font-size: 15px
-    line-height: 1.3
-    margin: 12px 0 24px
-
-  // Address wrappers
-  .contact-wrapper
-    margin-bottom: 12px

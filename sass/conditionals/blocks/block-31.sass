@@ -1,0 +1,55 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+// Contact block in seed footer.
+#block-block-31
+
+  // Logo wrapper
+  .logo-wrapper
+    margin-bottom: 40px
+    .svg &
+      .seed-logo
+        background: image_url("logo-seed-2016-03-28-1.svg") no-repeat
+        background-size: 100%
+        display: block
+        height: 90px
+        &:hover
+          text-decoration: none
+      h2,
+      p
+        display: none
+    .no-js &,
+    .no-svg &
+      h2
+        color: $text-black
+
+  // Info styling
+  p
+    line-height: 1.3
+    margin-bottom: 0
+  h3
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.3
+    margin-bottom: 8px
+  em
+    font-size: 16px
+    line-height: 1.3
+
+  .seed-wrapper
+    color: $text-black
+    font-size: 15px
+    line-height: 1.3
+    margin: 12px 0 24px
+
+  // Address wrappers
+  .contact-wrapper
+    margin-bottom: 12px
