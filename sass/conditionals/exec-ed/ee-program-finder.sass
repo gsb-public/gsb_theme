@@ -1012,39 +1012,44 @@ h2.isotopify-title
       margin: 0 auto
       max-width: 1170px
 
-    // Title
+    // Title - Find an Executive Education Program
     h1
       font-family: $font-sans
       display: inline-block
       font-size: 34px
       font-weight: bold
       line-height: 1.2
-      +breakpoint(1000px max-width)
+      position: relative
+      top: 6px
+      +breakpoint(1155px max-width)
         font-size: 28px
-        position: relative
         top: 10px
-      +breakpoint(870px max-width)
+      +breakpoint(1055px max-width)
         display: block
         margin-bottom: 10px
         top: 0
 
+  // Filters.
   .mini-finder-filters
     float: right
     display: inline-block
-    +breakpoint(870px max-width)
+    +breakpoint(1055px max-width)
       float: none
       display: block
 
+  // Topic select.
   .form-item-program-topic
     left: -290px
     position: relative
-    +breakpoint(870px max-width)
+    +breakpoint(1055px max-width)
       left: 0
+
+  // Date select.
   .isotopify-filter-daterange
     position: absolute
     right: 55px
     top: 0
-    +breakpoint(870px max-width)
+    +breakpoint(1055px max-width)
       left: 250px
       right: 0
 
@@ -1063,6 +1068,7 @@ h2.isotopify-title
   .ms-choice
     width: 100% !important
 
+  // Search button.
   input#edit-submit
     @extend %green-button
     font-size: 17px
@@ -1070,7 +1076,7 @@ h2.isotopify-title
     position: absolute
     right: 0
     top: 0
-    +breakpoint(870px max-width)
+    +breakpoint(1055px max-width)
       left: 490px
     +breakpoint(600px max-width)
       display: block
