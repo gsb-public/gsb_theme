@@ -1506,14 +1506,39 @@ h1.ee-section-footer-title {
 }
 .app-finder-form-wrapper select.programs-instance-date-select {
   width: 382px !important;
-  height: 36px !important;
+  height: 47px !important;
+  z-index: 2;
+}
+@media (max-width: 28.75em) {
+  .app-finder-form-wrapper select.programs-instance-date-select {
+    width: 100% !important;
+  }
 }
 .app-finder-form-wrapper .programs-instance-date-select .customSelectInner {
   width: 360px !important;
   font-size: 16px;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 8px 6px 6px 18px;
+  line-height: 2;
+  padding: 8px 6px 8px 18px;
   text-align: left;
+}
+@media (max-width: 28.75em) {
+  .app-finder-form-wrapper .programs-instance-date-select .customSelectInner {
+    display: inherit !important;
+    width: 250px !important;
+  }
+}
+.app-finder-form-wrapper .form-item-programs-instance-date-select .customSelect {
+  height: 47px;
+  position: relative;
+  right: 0;
+}
+.app-finder-form-wrapper .form-item-programs-instance-date-select .customSelect:after {
+  height: 45px;
+  line-height: 3;
+  padding: 0 16px;
+  position: absolute;
+  right: 0;
 }
 .app-finder-form-wrapper .programs-instance-sample-app-form-url-wrapper a {
   border: 1px #6e6b6c solid;

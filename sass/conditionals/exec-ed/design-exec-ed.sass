@@ -1106,15 +1106,34 @@ h1.ee-section-footer-title
   // Program date
   select.programs-instance-date-select
     width: 382px !important
-    height: 36px !important
+    height: 47px !important
+    z-index: 2
+    +breakpoint(460px max-width)
+      width: 100% !important
 
   .programs-instance-date-select
     .customSelectInner
       width: 360px !important
       font-size: 16px
       font-family: $font-sans
-      padding: 8px 6px 6px 18px
+      line-height: 2
+      padding: 8px 6px 8px 18px
       text-align: left
+      +breakpoint(460px max-width)
+        display: inherit !important
+        width: 250px !important
+
+  .form-item-programs-instance-date-select
+    .customSelect
+      height: 47px
+      position: relative
+      right: 0
+      &:after
+        height: 45px
+        line-height: 3
+        padding: 0 16px
+        position: absolute
+        right: 0
 
   // Sample application link
   .programs-instance-sample-app-form-url-wrapper a
