@@ -7,34 +7,6 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// Club node teaser styling
-.node-club.view-mode-teaser
-  padding: 0
-
-  // Title field
-  h5
-    font-family: $font-sans
-    font-size: 20px
-    font-weight: bold
-    line-height: 1.2
-    margin: 0 0 12px 0
-    +breakpoint(850px max-width)
-      font-size: 18px
-
-  // Description
-  .field-name-field-body
-    font-size: 16px
-    line-height: 1.2
-    margin: 4px 0 8px
-
-  // Email
-  .field-name-field-email
-    a
-      +icon-after("email-stroke", true)
-      &:after
-        font-size: 12px
-        margin-left: 5px
-
 // Clubs - Non-customizable listings
 .view-display-id-club_list,
 .view-display-id-search_club
@@ -72,21 +44,6 @@
       +icon-after("arrow-double-right", true)
       &:after
         @extend %arrow-double-big
-
-
-// Alumni Clubs pane - non-customizable
-.pane-club-filters-club-alumni-list
-  @extend %bg-and-box-shadow
-  // For position absolute pager region to remove background
-  margin-bottom: 58px !important
-  .pane-title
-    @extend %black-border-top
-    color: $text-black
-    font-size: 22px
-    font-weight: normal
-    margin: 0 26px
-    padding-top: 10px
-    padding-top: 5px
 
 // Alumni clubs list - Titles only
 .view-display-id-club_alumni_list

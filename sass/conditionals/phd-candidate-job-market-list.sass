@@ -7,6 +7,46 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+// Academic area jump links pane
+.view-display-id-phd_job_market_jump_links
+  @extend %bg-and-box-shadow
+  margin-bottom: 26px
+  padding: $standard-padding
+  .jump-links-title
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 10px
+  .view-content
+    +clearfix
+    background: none
+    border: 0
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    margin: 0
+  .views-row
+    float: left
+    margin-top: 17px
+    padding-right: 12px
+    width: 33.3%
+    +breakpoint(633px max-width)
+      width: 100%
+    a
+      color: $link-green
+      display: inline-block
+      font-size: 16px
+      font-weight: bold
+      line-height: 1.2
+      &:hover
+        color: $link-blue
+    &:last-of-type
+      clear: left
+      margin-top: 0
+      +breakpoint(999px 927px)
+        margin-top: 17px
+      +breakpoint(633px max-width)
+        margin-top: 17px
+
 $bp-four-column-switch: 768px max-width
 
 // List of job candidates
