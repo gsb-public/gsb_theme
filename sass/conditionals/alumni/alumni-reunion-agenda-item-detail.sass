@@ -109,3 +109,77 @@
   .current-reunion-block,
   .group-wrapper-related
     margin-bottom: 30px
+
+  // Current reunion block
+  .pane-bundle-links
+    a[href*="mailto:"]
+      +icon-after("email-stroke", true)
+      &:after
+        font-size: 12px
+        margin-left: 5px
+
+    // Show more and show less
+    .show-more-less-toggler-wrapper
+      +clearfix
+      border-top: 1px solid #e4e4e4
+      margin-top: 8px
+      padding-top: 10px
+      width: 100%
+    .show-more-less-toggler
+      color: $red
+      float: right
+      font-size: 14px
+      font-family: $font-demi
+      font-weight: normal
+      line-height: 1.3
+      // Add margin for focus state
+      margin: 1px
+      &:before
+        color: $red
+        margin-right: 6px
+        top: 0
+      &:hover
+        color: $link-blue
+        &:before
+          color: $link-blue
+
+    // Black bar with red links
+    .black-bar
+      @extend %bg-and-box-shadow
+
+      // Title
+      .field-name-field-title
+        @extend %black-border-top
+        color: $text-black
+        font-family: $font-sans
+        font-size: 18px
+        font-weight: bold
+        line-height: 1.3
+        margin: 0 $standard-padding
+        padding-top: 12px
+
+      // Links
+      .field-name-field-link-unlimited
+        padding: 14px $standard-padding
+        .field-item
+          line-height: 0
+          padding-bottom: 10px
+          &:last-of-type
+            padding-bottom: 0
+        a
+          font-family: $font-demi
+          font-size: 16px
+          line-height: 1.3
+          &[target=_blank]
+            &:after
+              font-size: 10px
+          &[href$=".pdf"]
+            &:after
+              font-size: 14px
+
+      // Show more link styling
+      .show-more-less-toggler-wrapper
+        a
+          font-family: $font-demi
+          font-size: 14px
+          font-weight: normal
