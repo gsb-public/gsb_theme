@@ -346,6 +346,12 @@
       &.awarded-wrapper
         margin-bottom: 6px
 
+    .program-format-location
+      a
+        color: $link-green
+        &:hover
+          color: $link-blue
+
     .program-format
       font-size: 16px
       font-family: $font-demi
@@ -409,7 +415,7 @@
         font-weight: normal
         line-height: 1.3
 
-    .optional-programing
+    .optional-programming
       p
         font-size: 16px
         font-weight: normal
@@ -424,6 +430,18 @@
             margin-top: -8px
           &:hover
             color: $link-blue
+      ul
+        margin: 0
+        padding: 0
+        position: relative
+        left: 0
+        li
+          padding-left: 15px
+          &:before
+            content: "• "
+            color: $text-black
+            position: absolute
+            left: 0
 
     .payment-cancellation
       margin-bottom: 20px

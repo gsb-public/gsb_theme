@@ -445,6 +445,12 @@
 .node-program.view-mode-full .instance-information .instance-item-wrapper.application-wrapper, .node-program.view-mode-full .instance-information .instance-item-wrapper.awarded-wrapper {
   margin-bottom: 6px;
 }
+.node-program.view-mode-full .instance-information .program-format-location a {
+  color: #636f00;
+}
+.node-program.view-mode-full .instance-information .program-format-location a:hover {
+  color: #2d6280;
+}
 .node-program.view-mode-full .instance-information .program-format {
   font-size: 16px;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -524,15 +530,15 @@
   font-weight: normal;
   line-height: 1.3;
 }
-.node-program.view-mode-full .instance-information .optional-programing p {
+.node-program.view-mode-full .instance-information .optional-programming p {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.3;
 }
-.node-program.view-mode-full .instance-information .optional-programing p a {
+.node-program.view-mode-full .instance-information .optional-programming p a {
   color: #231f20;
 }
-.node-program.view-mode-full .instance-information .optional-programing p a:after {
+.node-program.view-mode-full .instance-information .optional-programming p a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -547,14 +553,29 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.node-program.view-mode-full .instance-information .optional-programing p a:after {
+.node-program.view-mode-full .instance-information .optional-programming p a:after {
   color: #bac405;
   font-size: 14px;
   margin-left: 4px;
   margin-top: -8px;
 }
-.node-program.view-mode-full .instance-information .optional-programing p a:hover {
+.node-program.view-mode-full .instance-information .optional-programming p a:hover {
   color: #2d6280;
+}
+.node-program.view-mode-full .instance-information .optional-programming ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+}
+.node-program.view-mode-full .instance-information .optional-programming ul li {
+  padding-left: 15px;
+}
+.node-program.view-mode-full .instance-information .optional-programming ul li:before {
+  content: "• ";
+  color: #231f20;
+  position: absolute;
+  left: 0;
 }
 .node-program.view-mode-full .instance-information .payment-cancellation {
   margin-bottom: 20px;
