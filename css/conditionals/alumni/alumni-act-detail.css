@@ -41,7 +41,24 @@
   }
 }
 
-.node-act.view-mode-full .group-right .field-name-field-act-project-team-role {
+.node-act.view-mode-full .group-right .cta-red-gradient a:after {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+
+.node-act.view-mode-full .group-right .cta-red-gradient a:after {
+  font-size: 16px;
+  margin-right: 14px;
+  margin-top: -8px;
+  right: 0;
+}
+
+.node-act.view-mode-full .group-right .cta-wrapper, .node-act.view-mode-full .group-right .field-name-field-act-project-team-role {
   background: white;
 }
 
@@ -49,7 +66,7 @@
   border-top: 3px #231f20 solid;
 }
 
-.node-act.view-mode-full .group-right .field-name-field-act-project-team-role {
+.node-act.view-mode-full .group-right .cta-wrapper, .node-act.view-mode-full .group-right .field-name-field-act-project-team-role {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -367,24 +384,68 @@
   position: absolute;
   left: 0;
 }
-.node-act.view-mode-full .group-right .field-name-field-link-unlimited {
+.node-act.view-mode-full .group-right .group-wrapper-related {
   margin-bottom: 30px;
 }
-.node-act.view-mode-full .group-right .field-name-field-link-unlimited a {
+.node-act.view-mode-full .group-right .cta-wrapper {
+  color: #c2b7a1;
+  margin-bottom: 30px;
+}
+.node-act.view-mode-full .group-right .cta-red-gradient .field-item {
+  -moz-box-shadow: black, 0.45, 1px 1px 1px;
+  -webkit-box-shadow: black, 0.45, 1px 1px 1px;
+  box-shadow: black, 0.45, 1px 1px 1px;
+  border: 0;
+  color: white;
+  margin-bottom: 4px;
+  position: relative;
+}
+.node-act.view-mode-full .group-right .cta-red-gradient a {
+  background: #860000;
   background: -moz-linear-gradient(#860000, #8f0000);
   background: -o-linear-gradient(#860000, #8f0000);
   background: -webkit-linear-gradient(#860000, #8f0000);
   background: linear-gradient(#860000, #8f0000);
+  color: white;
+  display: block;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  font-weight: normal;
   line-height: 1.2;
   padding: 14px 55px 11px 26px;
   position: relative;
 }
-.node-act.view-mode-full .group-right .field-name-field-link-unlimited a:hover {
+.node-act.view-mode-full .group-right .cta-red-gradient a[target="_blank"]:after {
+  font-size: 16px;
+}
+.node-act.view-mode-full .group-right .cta-red-gradient a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-act.view-mode-full .group-right .cta-red-gradient a:after {
+  color: white;
+}
+.node-act.view-mode-full .group-right .cta-red-gradient a:hover {
+  background: #2c627c;
   background: -moz-linear-gradient(#194560, #2c6180);
   background: -o-linear-gradient(#194560, #2c6180);
   background: -webkit-linear-gradient(#194560, #2c6180);
   background: linear-gradient(#194560, #2c6180);
+  color: white;
+}
+.node-act.view-mode-full .group-right .cta-red-gradient a:hover a:after {
+  color: white;
 }
 .node-act.view-mode-full .group-right .field-name-field-act-project-team-role {
   margin-bottom: 30px;

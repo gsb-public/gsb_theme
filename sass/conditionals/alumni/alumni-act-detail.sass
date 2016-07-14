@@ -172,17 +172,46 @@
   // Right side
   .group-right
 
-    // Red links
-    .field-name-field-link-unlimited
+    // Related sidebar
+    .group-wrapper-related
       margin-bottom: 30px
+
+    .cta-wrapper
+      @extend %bg-and-box-shadow
+      color: $grey-med
+      margin-bottom: 30px
+
+    .cta-red-gradient
+      .field-item
+        +box-shadow($black, 0.45, 1px 1px 1px)
+        border: 0
+        color: $white
+        margin-bottom: 4px
+        position: relative
       a
+        +background($red-dark)
         +background(linear-gradient($red-dark, #8f0000))
+        color: $white
+        display: block
+        font-family: $font-demi
         font-size: 16px
+        font-weight: normal
         line-height: 1.2
         padding: 14px 55px 11px $standard-padding
         position: relative
+        &[target="_blank"]
+          &:after
+            font-size: 16px
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-small
+          color: $white
         &:hover
+          +background($blue-dark)
           +background(linear-gradient(#194560, #2c6180))
+          color: $white
+          a:after
+            color: $white
 
     // People-like block
     .field-name-field-act-project-team-role
@@ -196,6 +225,7 @@
         font-weight: bold
         padding: 18px 0 11px
         line-height: 1.3
+
     // Team member - alumni
     .field-collection-item-field-act-project-team-role
       border-top: 1px solid #e4e4e4
@@ -216,6 +246,7 @@
             font-size: 14px
         &:hover
           color: $link-blue
+
     // Team member - other
     .field-name-field-act-full-name
       font-family: $font-demi
