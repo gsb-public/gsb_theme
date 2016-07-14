@@ -55,7 +55,7 @@ p, .format-body,
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-full-bleed-page .pane-bundle-house-ads,
 div.gsb-full-bleed-page .pane-bundle-spotlight,
-div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
+div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .pane-club-filters-club-alumni-list, .main-wrapper [class*="pane-menu-block"],
 .inner-sidebar-wrapper [class*="pane-menu-block"], .pane-gsb-feature-faculty-display-az-list .pane-content {
   background: white;
 }
@@ -113,7 +113,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-pane
   border-top: 10px #990000 solid;
 }
 
-.region-sidebar-first {
+.pane-club-filters-club-alumni-list .pane-title, .region-sidebar-first {
   border-top: 10px #231f20 solid;
 }
 
@@ -142,7 +142,7 @@ div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-pane
 .pane-bundle-spotlight,
 .pane-bundle-video, div.gsb-full-bleed-page .pane-bundle-house-ads,
 div.gsb-full-bleed-page .pane-bundle-spotlight,
-div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .main-wrapper [class*="pane-menu-block"],
+div.gsb-full-bleed-page .pane-bundle-video, .pane-admission-events-location-panel-pane, .pane-club-filters-club-alumni-list, .main-wrapper [class*="pane-menu-block"],
 .inner-sidebar-wrapper [class*="pane-menu-block"], .pane-gsb-feature-faculty-display-az-list .pane-content, .webform-client-form #edit-draft,
 .webform-client-form #edit-previous,
 .webform-client-form .add-more,
@@ -6456,6 +6456,58 @@ ul.slideshow-items {
   margin-top: 26px;
   max-width: 270px;
   padding: 0 26px;
+}
+
+.node-club.view-mode-teaser {
+  padding: 0;
+}
+.node-club.view-mode-teaser h5 {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+@media (max-width: 53.125em) {
+  .node-club.view-mode-teaser h5 {
+    font-size: 18px;
+  }
+}
+.node-club.view-mode-teaser .field-name-field-body {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 4px 0 8px;
+}
+.node-club.view-mode-teaser .field-name-field-email a:after {
+  content: "\f112";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.node-club.view-mode-teaser .field-name-field-email a:after {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.pane-club-filters-club-alumni-list {
+  margin-bottom: 58px !important;
+}
+.pane-club-filters-club-alumni-list .pane-title {
+  color: #231f20;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0 26px;
+  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .field-group-gsb_field_formatter_group_comma_separator .entity,
