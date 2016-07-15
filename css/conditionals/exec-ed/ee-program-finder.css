@@ -446,15 +446,13 @@ button.mini-filter-daterange-button.open:after {
   }
 }
 
+button.mini-filter-daterange-button {
+  position: relative;
+}
 button.mini-filter-daterange-button:after {
   position: absolute;
-  right: 21px;
-  top: 1px;
-}
-@media (max-width: 37.5em) {
-  button.mini-filter-daterange-button:after {
-    right: 1px;
-  }
+  right: 0;
+  top: 0;
 }
 
 .pane-filters .customSelect,
@@ -1476,9 +1474,11 @@ h2.isotopify-title {
     width: 100% !important;
   }
 }
-.pane-mini-program-finder button.mini-filter-daterange-button.closed {
-  font-size: 13px;
-  padding-left: 5px;
+@media (min-width: 37.5625em) {
+  .pane-mini-program-finder button.mini-filter-daterange-button.closed {
+    font-size: 13px;
+    padding-left: 5px;
+  }
 }
 @media (max-width: 37.5em) {
   .pane-mini-program-finder button.mini-filter-daterange-button {

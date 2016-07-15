@@ -258,12 +258,11 @@ button.isotopify-filter-daterange-button
 
 // Mini program finder button adjustment.
 button.mini-filter-daterange-button
+  position: relative
   &:after
     position: absolute
-    right: 21px
-    top: 1px
-    +breakpoint(600px max-width)
-      right: 1px
+    right: 0
+    top: 0
 
 // EE filter styles
 .pane-filters,
@@ -1064,9 +1063,10 @@ h2.isotopify-title
       width: 100% !important
 
   button.mini-filter-daterange-button
-    &.closed
-      font-size: 13px
-      padding-left: 5px
+    +breakpoint(601px min-width)
+      &.closed
+        font-size: 13px
+        padding-left: 5px
     +breakpoint(600px max-width)
       width: 100% !important
 
