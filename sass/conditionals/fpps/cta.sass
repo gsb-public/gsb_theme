@@ -153,34 +153,33 @@
     b
       font-weight: normal
     +background($red-light)
+    +background(linear-gradient(#bc0000, $red-light))
+    // Item-specific gradients
+    &.item-0
+      +background(linear-gradient($red-dark, #8f0000))
+
+    &.item-1
+      +background(linear-gradient(#900000, #9d0000))
+
+    &.item-2
+      +background(linear-gradient(#9e0000, #ac0000))
+
+    &.item-3
+      +background(linear-gradient(#ae0000, #bb0000))
+
+    &.item-4
+      +background(linear-gradient(#bc0000, $red-light))
     &:hover
       color: $white
-      a:after
+      +background($blue-dark)
+      +background(linear-gradient(#194560, #2c6180))
+      &:after
         color: $white
-      +background($blue-dark)
-      +background(linear-gradient(#194560, #2c6180))
-
-  // Item-specific gradients
-  .item-0
-    +background(linear-gradient($red-dark, #8f0000))
-
-  .item-1
-    +background(linear-gradient(#900000, #9d0000))
-
-  .item-2
-    +background(linear-gradient(#9e0000, #ac0000))
-
-  .item-3
-    +background(linear-gradient(#ae0000, #bb0000))
-
-  .item-4
-    +background(linear-gradient(#bc0000, $red-light))
-
-  .item-0,
-  .item-1,
-  .item-2,
-  .item-3,
-  .item-4
-    &:hover
-      +background($blue-dark)
-      +background(linear-gradient(#194560, #2c6180))
+    &.item-0,
+    &.item-1,
+    &.item-2,
+    &.item-3,
+    &.item-4
+      &:hover
+        +background($blue-dark)
+        +background(linear-gradient(#194560, #2c6180))
