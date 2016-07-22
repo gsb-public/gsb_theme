@@ -1304,7 +1304,6 @@ h1.ee-section-footer-title
       margin-bottom: 12px
       visibility: hidden
     .view-mode-program_director
-      margin-bottom: 6px
       div
         font-size: 16px
         font-weight: normal
@@ -1329,16 +1328,22 @@ h1.ee-section-footer-title
         color: $link-green
         +icon-after("email-stroke", true)
         &:after
-          font-size: 13px
+          font-size: 12px
           margin-left: 5px
         &:hover
           color: $link-blue
 
     // Phone field
     .field-name-field-phone
+      +clearfix
+      .label-inline
+        display: block
+        float: left
       a
-        display: inline-block
-        font-size: 15px
+        float: left
+        display: block
+        font-size: 14px
+        line-height: 1.5
 
   // Free link field
   .views-field-nothing-1
