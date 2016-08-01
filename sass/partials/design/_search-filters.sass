@@ -314,7 +314,48 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-main_event_list_pane,
 .view-display-id-mba_admission_panel_pane,
 .view-display-id-msx_admission_panel_pane,
-.view-id-msx_fellows.view-display-id-list,
+.view-id-msx_fellows.view-display-id-list
+  position: relative
+  .ajax-progress-throbber
+    position: absolute
+    right: 4px
+    top: 25px
+
+  // Filters container
+  .view-filters
+    @extend %black-border-top-small
+
+  // Search field
+  .form-item.form-item-search,
+  .form-item-field-search-field-value
+    margin-top: 0
+    margin-bottom: 0
+  .views-exposed-search-wrap
+    @extend %divider-bottom
+    background: $grey-f
+    padding: 18px $standard-padding
+    position: relative
+    +clearfix
+    width: 100%
+    #edit-search,
+    #edit-field-search-field-value
+      height: 36px
+      padding-left: 5px
+      width: 100%
+  #edit-search-wrapper,
+  #edit-field-search-field-value-wrapper
+    float: left
+    margin-right: -36px
+    padding-right: 36px
+    width: 100%
+
+  // Search button
+  .views-submit-button
+    float: left
+    width: 36px
+
+// Search and filter styling
+// ACT Project listing only
 .view-id-gsb_act_project_listing
   position: relative
   .ajax-progress-throbber
@@ -327,9 +368,10 @@ fieldset.collapsible .fieldset-legend
     @extend %black-border-top-small
 
   // Search field
-  .form-item.form-item-search
+  .form-item-field-search-field-value
     margin-top: 0
     margin-bottom: 0
+
   .views-exposed-search-wrap
     @extend %divider-bottom
     background: $grey-f
@@ -337,11 +379,13 @@ fieldset.collapsible .fieldset-legend
     position: relative
     +clearfix
     width: 100%
-    #edit-search
+
+    #edit-field-search-field-value
       height: 36px
       padding-left: 5px
       width: 100%
-  #edit-search-wrapper
+
+  #edit-field-search-field-value-wrapper
     float: left
     margin-right: -36px
     padding-right: 36px
@@ -370,9 +414,6 @@ fieldset.collapsible .fieldset-legend
       height: 36px
       width: 100%
 
-#views-exposed-form-gsb-act-project-listing-panel-pane-1,
-#views-exposed-form-gsb-act-project-listing-panel-pane-2,
-#views-exposed-form-gsb-act-project-listing-panel-pane-3,
 #views-exposed-form-admission-events-mba-admission-panel-pane,
 #views-exposed-form-admission-events-msx-admission-panel-pane
   .views-exposed-widgets
