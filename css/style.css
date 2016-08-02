@@ -11021,16 +11021,6 @@ div.callout br {
   position: absolute;
   left: 0;
 }
-.format-body table ul, .format-body table ol,
-.format-wysiwyg table ul,
-.format-wysiwyg table ol,
-.field-name-field-body table ul,
-.field-name-field-body table ol,
-.field-name-field-text-equivalent .field-item table ul,
-.field-name-field-text-equivalent .field-item table ol {
-  font-size: 14px;
-  line-height: 1.2;
-}
 .format-body a,
 .format-wysiwyg a,
 .field-name-field-body a,
@@ -11340,14 +11330,20 @@ div.callout br {
 .format-wysiwyg tbody td a,
 .field-name-field-body tbody td a,
 .field-name-field-text-equivalent .field-item tbody td a {
+  border-bottom: none;
   color: #636f00;
   font-weight: bold;
-  border-bottom: none;
 }
-.format-body tbody td p,
+.format-body tbody td p, .format-body tbody td ul, .format-body tbody td ol,
 .format-wysiwyg tbody td p,
+.format-wysiwyg tbody td ul,
+.format-wysiwyg tbody td ol,
 .field-name-field-body tbody td p,
-.field-name-field-text-equivalent .field-item tbody td p {
+.field-name-field-body tbody td ul,
+.field-name-field-body tbody td ol,
+.field-name-field-text-equivalent .field-item tbody td p,
+.field-name-field-text-equivalent .field-item tbody td ul,
+.field-name-field-text-equivalent .field-item tbody td ol {
   font-size: 15px;
   line-height: 1.2;
 }
