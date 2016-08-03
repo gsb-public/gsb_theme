@@ -139,3 +139,35 @@
   // Red CTA links
   .featured-links
     margin-bottom: 30px
+    // General CTA styles
+    .cta-wrapper
+      margin: 1px 1px 8px 1px
+      a
+        display: block
+    .cta-link
+      font-size: 16px
+      line-height: 1.2
+      padding: 16px 36px 16px $standard-padding
+      position: relative
+      span
+        margin-right: 5px
+    .field-item
+      @extend %bg-and-box-shadow
+      color: $grey-med
+      margin-bottom: 5px
+    a,
+    a[target="_blank"]
+      position: relative
+      +icon-after("arrow-double-right", true)
+      &:after
+        @extend %arrow-double-big
+        color: #e3e3e3
+      &:hover
+        &:after
+          color: $teal-light
+    a[href$=".pdf"]
+      &:after
+        color: $red
+      &:hover
+        &:after
+          color: $teal-light
