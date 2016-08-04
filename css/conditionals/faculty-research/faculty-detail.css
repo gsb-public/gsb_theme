@@ -15,7 +15,8 @@
 .node-faculty.view-mode-full .group-publications,
 .node-faculty.view-mode-full .group-wrapper-research,
 .node-faculty.view-mode-full .group-wrapper-academic,
-.node-faculty.view-mode-full .field-name-field-faculty-director-positions {
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions,
+.node-faculty.view-mode-full .group-wrapper-aat {
   border-top: 1px lightgray solid;
 }
 
@@ -56,11 +57,14 @@
   padding: 0 26px;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .field-name-field-faculty-director-positions .label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .field-name-field-faculty-director-positions .label-above,
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions h3,
+.node-faculty.view-mode-full .group-wrapper-aat .label-above,
+.node-faculty.view-mode-full .group-wrapper-aat h3, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 h2.title,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 h2.title, .node-faculty.view-mode-full .group-courses-taught h2, .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
-.node-faculty.view-mode-full .view-id-gsb_publications_listing h2, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .view-id-gsb_publications_listing h2, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses .label-above, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   color: #231f20;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -69,7 +73,10 @@
   padding: 0;
 }
 
-.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .field-name-field-faculty-director-positions .label-above, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
+.node-faculty.view-mode-full .group-right h2.label-above, .node-faculty.view-mode-full .field-name-field-faculty-director-positions .label-above,
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions h3,
+.node-faculty.view-mode-full .group-wrapper-aat .label-above,
+.node-faculty.view-mode-full .group-wrapper-aat h3, .node-faculty.view-mode-full .group-wrapper-affiliation h2, .node-faculty.view-mode-full .group-publications h2, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view h2.title,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 h2.title,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 h2.title, .node-faculty.view-mode-full .group-courses-taught h2 {
@@ -77,7 +84,7 @@
 }
 
 .node-faculty.view-mode-full .group-right h3.label-above, .node-faculty.view-mode-full .view-display-id-entity_view_1 h2,
-.node-faculty.view-mode-full .view-id-gsb_publications_listing h2, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
+.node-faculty.view-mode-full .view-id-gsb_publications_listing h2, .node-faculty.view-mode-full .group-courses-taught h2.title, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses .label-above, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .label-above {
   font-size: 16px;
 }
 
@@ -156,7 +163,7 @@
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title a,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title-1 a,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title a,
-.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title,
+.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(odd) a, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a, .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title,
 .node-faculty.view-mode-full .view-display-id-case_listing_entity_view .views-field-title-1,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title,
 .node-faculty.view-mode-full .view-display-id-entity_view_1 .views-field-title-1,
@@ -167,7 +174,7 @@
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title-1,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title,
-.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single {
+.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(odd), .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -185,7 +192,7 @@
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title a:after,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title-1 a:after,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title a:after,
-.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
+.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(odd) a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -211,7 +218,7 @@
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title a:after,
 .node-faculty.view-mode-full .view-id-gsb_insights_stanford_business.view-display-id-entity_view_1 .views-field-title-1 a:after,
 .node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title a:after,
-.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
+.node-faculty.view-mode-full .view-id-gsb_school_news.view-display-id-entity_view_1 .views-field-title-1 a:after, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(odd) a:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a:after {
   font-size: 10px;
   margin-left: 3px;
 }
@@ -222,7 +229,7 @@
 .node-faculty.view-mode-full .view-id-gsb_publications_listing .views-field-title a[target=_blank]:after,
 .node-faculty.view-mode-full .view-id-gsb_publications_listing .views-field-title-1 a[target=_blank]:after,
 .node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title a[target=_blank]:after,
-.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
+.node-faculty.view-mode-full .view-display-id-media_mention_listing_entity_view .views-field-title-1 a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(odd) a[target=_blank]:after, .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-link-single a[target=_blank]:after {
   content: "\f102";
   display: inline;
   speak: none;
@@ -517,10 +524,18 @@
 .node-faculty.view-mode-full .group-publications,
 .node-faculty.view-mode-full .group-wrapper-research,
 .node-faculty.view-mode-full .group-wrapper-academic,
-.node-faculty.view-mode-full .field-name-field-faculty-director-positions {
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions,
+.node-faculty.view-mode-full .group-wrapper-aat {
   padding-top: 24px;
 }
-.node-faculty.view-mode-full .field-name-field-faculty-director-positions .field-item {
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions,
+.node-faculty.view-mode-full .group-wrapper-aat {
+  margin-bottom: 12px;
+}
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions .field-item,
+.node-faculty.view-mode-full .field-name-field-faculty-director-positions li,
+.node-faculty.view-mode-full .group-wrapper-aat .field-item,
+.node-faculty.view-mode-full .group-wrapper-aat li {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.3;
@@ -779,6 +794,12 @@
 .node-faculty.view-mode-full .group-courses-taught h3:first-of-type {
   margin-top: 0;
 }
+.node-faculty.view-mode-full .group-courses-taught .program-faculty-courses li:nth-of-type(even) {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
 .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-collection-item-field-non-degree-course {
   margin-bottom: 6px;
 }
@@ -786,6 +807,7 @@
   display: inline;
 }
 .node-faculty.view-mode-full .group-courses-taught .field-name-field-non-degree-course .field-name-field-description {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.1;
 }
