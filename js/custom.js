@@ -376,7 +376,7 @@
         // Get the uniqueID used by Isotopify
         var uniqueID = '';
         $('.isotopify').each(function(index) {
-          uniqueID = $this.attr('id');
+          uniqueID = $(this).attr('id');
         });
 
         // Wrap up the edit filters to be put into the side tray
