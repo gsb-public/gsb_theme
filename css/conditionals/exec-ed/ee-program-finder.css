@@ -473,6 +473,17 @@ button.mini-filter-daterange-button:after {
   height: 45px;
   padding: 0 16px;
 }
+.pane-filters .customSelectHover,
+.pane-app-finder .customSelectHover,
+.pane-mini-program-finder .customSelectHover {
+  cursor: pointer;
+}
+.pane-filters .customSelectHover:after,
+.pane-app-finder .customSelectHover:after,
+.pane-mini-program-finder .customSelectHover:after {
+  background-color: #2d6280;
+  color: white;
+}
 .pane-filters .form-item,
 .pane-app-finder .form-item,
 .pane-mini-program-finder .form-item {
@@ -504,9 +515,9 @@ button.mini-filter-daterange-button:after {
   color: #231f20;
   height: 47px;
 }
-.pane-filters .ms-choice > div:after,
-.pane-app-finder .ms-choice > div:after,
-.pane-mini-program-finder .ms-choice > div:after {
+.pane-filters .ms-choice div:after,
+.pane-app-finder .ms-choice div:after,
+.pane-mini-program-finder .ms-choice div:after {
   content: "\f105";
   display: inline;
   speak: none;
@@ -521,9 +532,9 @@ button.mini-filter-daterange-button:after {
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-filters .ms-choice > div:after,
-.pane-app-finder .ms-choice > div:after,
-.pane-mini-program-finder .ms-choice > div:after {
+.pane-filters .ms-choice div:after,
+.pane-app-finder .ms-choice div:after,
+.pane-mini-program-finder .ms-choice div:after {
   background-color: #f9f9f9;
   border-left: 1px solid #cccccc;
   color: #990000;
@@ -537,15 +548,9 @@ button.mini-filter-daterange-button:after {
   top: 1px;
   left: -1px;
 }
-.pane-filters .ms-choice > div:hover:after,
-.pane-app-finder .ms-choice > div:hover:after,
-.pane-mini-program-finder .ms-choice > div:hover:after {
-  background-color: #2d6280;
-  color: white;
-}
-.pane-filters .ms-choice > div.open:after,
-.pane-app-finder .ms-choice > div.open:after,
-.pane-mini-program-finder .ms-choice > div.open:after {
+.pane-filters .ms-choice div.open:after,
+.pane-app-finder .ms-choice div.open:after,
+.pane-mini-program-finder .ms-choice div.open:after {
   content: "\f108";
   display: inline;
   speak: none;
@@ -560,10 +565,16 @@ button.mini-filter-daterange-button:after {
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-filters .ms-choice > div.open:after,
-.pane-app-finder .ms-choice > div.open:after,
-.pane-mini-program-finder .ms-choice > div.open:after {
+.pane-filters .ms-choice div.open:after,
+.pane-app-finder .ms-choice div.open:after,
+.pane-mini-program-finder .ms-choice div.open:after {
   line-height: 3;
+}
+.pane-filters .ms-choice:hover div:after,
+.pane-app-finder .ms-choice:hover div:after,
+.pane-mini-program-finder .ms-choice:hover div:after {
+  background-color: #2d6280;
+  color: white;
 }
 .pane-filters .ms-drop.bottom,
 .pane-app-finder .ms-drop.bottom,
