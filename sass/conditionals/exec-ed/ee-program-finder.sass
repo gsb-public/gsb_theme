@@ -1079,6 +1079,11 @@ h2.isotopify-title
   .ms-choice
     width: 100% !important
 
+  // Topics should not truncate.
+  .ms-drop ul > li.multiple label
+    overflow: visible
+    text-overflow: initial
+
   // Search button.
   input#edit-submit
     @extend %green-button
