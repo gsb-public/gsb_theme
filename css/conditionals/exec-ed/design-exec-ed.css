@@ -785,6 +785,11 @@ h1.ee-section-footer-title {
   margin-top: 6px;
   margin-left: 189px;
 }
+@media (max-width: 37.5em) {
+  .node-program-instance.view-mode-field_program_faculty .field-collection-item-field-faculty-directors.view-mode-full .field-name-field-description {
+    margin-left: 0;
+  }
+}
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-image-single-public {
   float: left;
   margin-bottom: 24px;
@@ -797,17 +802,33 @@ h1.ee-section-footer-title {
 }
 @media (max-width: 37.5em) {
   .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-image-single-public {
-    height: 90px;
-    width: 90px;
+    float: none;
   }
 }
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .group-wrapper-info {
   margin-left: -189px;
   padding-left: 189px;
 }
+@media (max-width: 37.5em) {
+  .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .group-wrapper-info {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .group-wrapper-name,
-.node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-academic-title {
+.node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-academic-title,
+.node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .gsb-program-faculty-director-title-wrapper {
   padding-left: 189px;
+}
+@media (max-width: 37.5em) {
+  .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .group-wrapper-name,
+  .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-academic-title,
+  .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .gsb-program-faculty-director-title-wrapper {
+    padding-left: 0;
+  }
+}
+.node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .view-mode-faculty_leadership .gsb-program-faculty-director-title-wrapper {
+  padding-left: 0;
 }
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-title,
 .node-program-instance.view-mode-field_program_faculty .field-name-field-faculty-directors .field-name-field-other-name,

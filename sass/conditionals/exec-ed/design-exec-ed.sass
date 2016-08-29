@@ -452,6 +452,7 @@ h1.ee-section-footer-title
     position: relative
     z-index: 1
 
+
   // Info wrapper
   .group-wrapper-info
     float: left
@@ -541,6 +542,8 @@ h1.ee-section-footer-title
       line-height: 1.3
       margin-top: 6px
       margin-left: 189px
+      +breakpoint(600px max-width)
+        margin-left: 0
 
   // Individual faculty directors
   .field-name-field-faculty-directors
@@ -555,18 +558,27 @@ h1.ee-section-footer-title
       position: relative
       z-index: 1
       +breakpoint(600px max-width)
-        height: 90px
-        width: 90px
+        float: none
 
     // Info wrapper
     .group-wrapper-info
       margin-left: -189px
       padding-left: 189px
+      +breakpoint(600px max-width)
+        margin-left: 0
+        padding-left: 0
 
-    // Other fields
+    // Additional title fields.
     .group-wrapper-name,
-    .field-name-field-academic-title
+    .field-name-field-academic-title,
+    .gsb-program-faculty-director-title-wrapper
       padding-left: 189px
+      +breakpoint(600px max-width)
+        padding-left: 0
+    // GSB faculty do not need the left padding because it is on the wrapper.
+    .view-mode-faculty_leadership .gsb-program-faculty-director-title-wrapper
+      padding-left: 0
+
 
     // Name
     .field-name-title,
