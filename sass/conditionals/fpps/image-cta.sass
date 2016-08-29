@@ -248,6 +248,49 @@
         &:hover
           background: none !important
 
+// Program finder layout.
+.gsb-program-finder
+  .narrow-view .pane-bundle-image-cta
+    // Switch to side by side
+    +breakpoint(1000px 480px)
+      // Layout
+      .ds-2col
+        +clearfix
+      // Colors
+      .image-cta-color-blue
+        background: $blue-bright
+
+      .image-cta-color-lime
+        background: $lime-bright
+
+      .image-cta-color-pink
+        background: $pink-bright
+
+      .image-cta-color-purple
+        background: $purple-bright
+
+      .image-cta-color-teal
+        background: $teal-bright
+
+      .group-left
+        float: left
+        width: 190px
+      .group-right
+        float: left
+        display: inline-block
+        margin-left: -190px
+        padding-left: 190px
+        width: 100%
+      // Text
+      a
+        background: none !important
+        font-size: 20px
+        bottom: 0
+        position: relative
+        width: 100%
+        &:hover
+          background: none !important
+
 // Wide view
 .wide-view .pane-bundle-image-cta
   // Layout
