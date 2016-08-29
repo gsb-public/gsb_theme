@@ -71,6 +71,9 @@
     line-height: 1.2
     padding: 0
     margin: 12px 14px
+    .narrow-view &
+      font-size: 20px
+      line-height: 1.4
 
   // Go to reunion link button
   #gotoReunion
@@ -100,7 +103,7 @@
     line-height: 2
     margin-right: 0.6em
     .narrow-view &
-      font-size: 20px
+      font-size: 18px
       line-height: 2.5
       margin-right: 0.4em
       +breakpoint($bp-mobile-max)
@@ -114,12 +117,17 @@
     border: 1px solid $white
     font-size: 18px
     height: 42px
+    line-height: 1.2
     padding: 10px
     width: 70px
 
   // Year error message
   #programYearError
+    font-style: italic
     margin: 12px 0
+    .narrow-view &
+      font-size: 18px
+      line-height: 1.2
 
   // No reunion page message
   #noReunionPage
@@ -128,5 +136,3 @@
     line-height: 1.2
     margin-top: 20px
     text-align: right
-    .narrow-view &
-      font-size: 18px
