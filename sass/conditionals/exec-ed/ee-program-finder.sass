@@ -977,12 +977,13 @@ h2.isotopify-title
     bottom: 4px
 
   .mini-program-finder-image
-    img
-      -o-object-fit: cover
-      object-fit: cover
-      height: 10vh
-      min-height: 400px
-      width: 100vw
+    +breakpoint(1275px min-width)
+      img
+        -o-object-fit: cover
+        object-fit: cover
+        height: 10vh
+        min-height: 400px
+        width: 100vw
 
   .mini-program-finder-apply
     margin: 0 auto
