@@ -1378,12 +1378,14 @@ h2.isotopify-title {
   position: relative;
   bottom: 4px;
 }
-.pane-mini-program-finder .mini-program-finder-image img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 10vh;
-  min-height: 400px;
-  width: 100vw;
+@media (min-width: 79.6875em) {
+  .pane-mini-program-finder .mini-program-finder-image img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 10vh;
+    min-height: 400px;
+    width: 100vw;
+  }
 }
 .pane-mini-program-finder .mini-program-finder-apply {
   margin: 0 auto;
