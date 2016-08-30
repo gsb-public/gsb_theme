@@ -75,6 +75,12 @@ $small-filter-width: 245px
       +breakpoint(800px max-width)
         display: none
 
+// GSB for program finder
+.page-programs.panels-layout-gsb-program-finder
+  .featured-content
+    +breakpoint(920px max-width)
+      padding: 0 20px
+
 // Page layout
 .pane-program-list
   position: relative
@@ -598,6 +604,8 @@ button.mini-filter-daterange-button
     position: relative
     overflow: hidden
     width: 100%
+    .page-programs &
+      margin-top: 26px
 
     #outer
       border-bottom: 1px $border-grey solid
