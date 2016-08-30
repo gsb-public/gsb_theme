@@ -1150,7 +1150,17 @@ ul.slideshow-items
   // Slide
   .slick-slide
     @extend %box-shadow
+    .full-view &
+      border-bottom: 1px #e6e6e6 solid
+      height: 264px
+      overflow: hidden
+      +breakpoint(999px max-width)
+        height: 242px
+      +breakpoint(690px max-width)
+        border-bottom: 0
+        height: initial
     .front &
+      border-bottom: 0
       -moz-box-shadow: none
       -webkit-box-shadow: none
       box-shadow: none
