@@ -766,14 +766,13 @@ button.checkbox-clear-all
     .term
       font-size: 16px
       line-height: 1.3
-      margin-right: 5px
     // Clear "X"
     .filter-exit
       display: inline-block
       height: 30px
       overflow: hidden
       position: relative
-      top: 12px
+      top: 4px
       width: 30px
       +icon-before("plus", true)
       &:before
@@ -791,7 +790,10 @@ button.checkbox-clear-all
     input
       @extend %white-button
       background: #f4f4f4
+      font-size: 16px
+      line-height: 1.3
       margin-bottom: 18px
+      padding: 7px 20px
       &:hover
         background: $link-blue
         color: $white !important
@@ -825,8 +827,8 @@ button.checkbox-clear-all
   .term
     color: $text-black
     font-family: $font-sans
-    font-size: 14px
-    line-height: 1.2
+    font-size: 16px
+    line-height: 1.3
     padding: 11px 0 0 16px
     position: relative
     top: -7px
@@ -837,7 +839,7 @@ button.checkbox-clear-all
     height: 30px
     overflow: hidden
     position: relative
-    top: 5px
+    top: 4px
     width: 36px
     +icon-before("plus", true)
     &:before
