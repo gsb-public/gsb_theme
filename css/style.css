@@ -6128,7 +6128,24 @@ ul.slideshow-items {
 .slideshow-wrapper li {
   background: white;
 }
+.full-view .slideshow-wrapper .slick-slide {
+  border-bottom: 1px #e6e6e6 solid;
+  height: 264px;
+  overflow: hidden;
+}
+@media (max-width: 62.4375em) {
+  .full-view .slideshow-wrapper .slick-slide {
+    height: 242px;
+  }
+}
+@media (max-width: 43.125em) {
+  .full-view .slideshow-wrapper .slick-slide {
+    border-bottom: 0;
+    height: initial;
+  }
+}
 .front .slideshow-wrapper .slick-slide {
+  border-bottom: 0;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
