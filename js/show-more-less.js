@@ -181,6 +181,9 @@
       case 'list':
         // Get the wrapper.
         $wrapper = $element.children('ul');
+        if ($wrapper.length == 0 && $element.children('.item-list')) {
+          $wrapper = $element.children('.item-list').children('ul');
+        }
 
         // Find the last item in the list.
         $lastItem = $wrapper.children(':last');
@@ -247,6 +250,9 @@
       case 'list':
         // Find the wrapper.
         $wrapper = $element.children('ul');
+        if ($wrapper.length == 0 && $element.children('.item-list')) {
+          $wrapper = $element.children('.item-list').children('ul');
+        }
         // Find the last item in the list.
         $bottomItem = $wrapper.children('li:eq(' + numberToShow + ')');
         // Calculate the new height by
