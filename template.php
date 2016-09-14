@@ -28,7 +28,7 @@ function gsb_theme_breadcrumb($variables) {
 
   // Remove the breadcrumb on the 'Search' page
   $root_path = menu_tab_root_path();
-  if ($root_path == 'gsearch') {
+  if ($root_path == 'gsearch' || $root_path == 'exec-ed/search' || $root_path == 'seed/search') {
     unset($variables['breadcrumb']);
     return;
   }
