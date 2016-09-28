@@ -808,4 +808,3 @@ function gsb_theme_js_alter(&$javascript) {
     }
   }
 }
-
