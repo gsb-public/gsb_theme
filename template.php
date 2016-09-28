@@ -786,8 +786,6 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
 /**
  * Implements hook_js_alter()
  */
-
-/*
 function gsb_theme_js_alter(&$javascript) {
   // Collect the scripts we want in to remain in the header scope.
   $header_scripts = array();
@@ -796,8 +794,11 @@ function gsb_theme_js_alter(&$javascript) {
   // We assume if the script is scoped to header it was done so by default.
   foreach ($javascript as $key => &$script) {
     if ($script['scope'] == 'header' && !in_array($script['data'], $header_scripts)) {
-      $script['scope'] = 'footer';
+      // move all js to the footer... except modernizr
+      if (!strpos($key, 'modernizr')) {
+        $script['scope'] = 'footer';
+      }
     }
   }
 }
-*/
+
