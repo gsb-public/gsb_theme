@@ -787,6 +787,7 @@ function gsb_theme_field_group_pre_render_alter(&$element, $group, & $form) {
  * Implements hook_js_alter()
  */
 
+/*
 function gsb_theme_js_alter(&$javascript) {
   // Collect the scripts we want in to remain in the header scope.
   $header_scripts = array();
@@ -799,3 +800,4 @@ function gsb_theme_js_alter(&$javascript) {
     }
   }
 }
+*/
