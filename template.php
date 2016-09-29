@@ -282,6 +282,13 @@ function gsb_theme_preprocess_html(&$variables) {
   if ($display = panels_get_current_page_display()) {
     $variables['classes_array'][] = 'panels-layout-' . $display->layout;
   }
+  
+  if (!empty($parsed_url['path']) && strpos($parsed_url['path'], '/seed/search') !== false) {
+    $variables['classes_array'][] = 'page-gsearch';
+  }
+  else if (!empty($parsed_url['path']) && strpos($parsed_url['path'], '/exec-ed/search') !== false) {
+    $variables['classes_array'][] = 'page-gsearch';
+  }
 }
 
 /**
