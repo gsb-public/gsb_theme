@@ -802,9 +802,9 @@ function gsb_theme_js_alter(&$javascript) {
   foreach ($javascript as $key => &$script) {
     if ($script['scope'] == 'header' && !in_array($script['data'], $header_scripts)) {
       // move all js to the footer... except modernizr
-      if (!strpos($key, 'modernizr')) {
-        $script['scope'] = 'footer';
-      }
+      //if (!strpos($key, 'modernizr')) {
+        //$script['scope'] = 'footer';
+      //}
     }
   }
 }
