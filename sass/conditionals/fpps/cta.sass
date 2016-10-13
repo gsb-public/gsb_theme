@@ -89,14 +89,16 @@
       border-top: 0
     &:last-of-type
       border-bottom: 0
+  a
+    +icon-after("arrow-double-right", true)
   a,
   a[target="_blank"]
     color: $link-green
     position: relative
-    +icon-after("arrow-double-right", true)
     &:after
       @extend %arrow-double-big
       color: #e3e3e3
+      line-height: 1
   a[href$=".pdf"]
     &:after
       color: #636f00
@@ -112,13 +114,15 @@
     @extend %bg-and-box-shadow
     color: $grey-med
     margin-bottom: 5px
+  a
+    +icon-after("arrow-double-right", true)
   a,
   a[target="_blank"]
     position: relative
-    +icon-after("arrow-double-right", true)
     &:after
       @extend %arrow-double-big
       color: #e3e3e3
+      line-height: 1
     &:hover
       &:after
         color: $teal-light

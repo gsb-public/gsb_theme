@@ -136,13 +136,7 @@
 .cta-green .field-item:last-of-type {
   border-bottom: 0;
 }
-.cta-green a,
-.cta-green a[target="_blank"] {
-  color: #636f00;
-  position: relative;
-}
-.cta-green a:after,
-.cta-green a[target="_blank"]:after {
+.cta-green a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -157,9 +151,15 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.cta-green a,
+.cta-green a[target="_blank"] {
+  color: #636f00;
+  position: relative;
+}
 .cta-green a:after,
 .cta-green a[target="_blank"]:after {
   color: #e3e3e3;
+  line-height: 1;
 }
 .cta-green a[href$=".pdf"]:after {
   color: #636f00;
@@ -175,12 +175,7 @@
   color: #c2b7a1;
   margin-bottom: 5px;
 }
-.cta-red a,
-.cta-red a[target="_blank"] {
-  position: relative;
-}
-.cta-red a:after,
-.cta-red a[target="_blank"]:after {
+.cta-red a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -195,9 +190,14 @@
   font-weight: normal;
   font-family: 'icons';
 }
+.cta-red a,
+.cta-red a[target="_blank"] {
+  position: relative;
+}
 .cta-red a:after,
 .cta-red a[target="_blank"]:after {
   color: #e3e3e3;
+  line-height: 1;
 }
 .cta-red a:hover:after,
 .cta-red a[target="_blank"]:hover:after {
