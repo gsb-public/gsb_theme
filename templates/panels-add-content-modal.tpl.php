@@ -17,7 +17,7 @@
               </ul>
             </li>
           </ul>
-        <?php// endif; ?>
+        <?php //endif; ?>
       </div> -->
       <div class="panels-categories-box">
       <?php foreach ($categories_array as $category): ?>
