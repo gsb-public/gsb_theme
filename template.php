@@ -297,6 +297,18 @@ function gsb_theme_preprocess_html(&$variables) {
 function gsb_theme_preprocess_page(&$variables) {
   global $theme_info;
 
+  // turn off google indexing for the page title if we are on the email contact form
+  if (!empty($variables['theme_hook_suggestions'][0] && $variables['theme_hook_suggestions'][0] == 'page__email_contact')) {
+    $variables['title_prefix'] = array(
+       '#type' => 'markup',
+       '#markup' => '<!--googleoff: index--><!--googleoff: snippet-->',
+     );
+    $variables['title_suffix'] = array(
+       '#type' => 'markup',
+       '#markup' => '<!--googleon: snippet--><!--googleon: index-->',
+     );
+  }
+
   // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
