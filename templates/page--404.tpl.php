@@ -30,8 +30,8 @@
           <div class="error-wrapper">
             <h1>Sorry! The page you are looking for could not be found</h1>
             <h2>Try our <a href="/search" title="Search">site search</a> or explore our site using the links below.</h2>
-            <div class="menu-wrapper" width="25%">
-              <h3><a href="http://www.gsb.stanford.edu/">Home</a></h3>
+            <div class="menu-wrapper" width="33%">
+              <h3>Programs & Research</h3>
               <ul class="menu">
                 <li><a href="/programs" title="Our Programs">The Programs</a></li>
                 <li><a href="/exec-ed" title="Executive Education">Executive Education</a></li>
@@ -41,7 +41,7 @@
                 <li><a href="/insights" title="Insights by Stanford Business">Insights by <em>Stanford Business</em></a></li>
               </ul>
             </div>
-            <div class="menu-wrapper" width="25%">
+            <div class="menu-wrapper" width="33%">
               <h3>About Stanford GSB</h3>
               <ul class="menu">
                 <li><a href="/stanford-gsb-experience/news-history" title="School News & History">School News & History</a></li>
@@ -51,7 +51,7 @@
                 <li><a href="/jobs" title="Jobs">Jobs</a></li>
               </ul>
             </div>
-            <div class="menu-wrapper" width="25%">
+            <div class="menu-wrapper" width="34%">
               <h3>Connect With Stanford GSB</h3>
               <ul class="menu">
                 <li><a href="/events" title="Events">Events</a></li>
@@ -63,9 +63,8 @@
                 <li><a href="/library" title="Business Library">Business Library</a></li>
               </ul>
             </div>
-            <div class="menu-wrapper" width="25%">
-              <h3><a href="http://mygsb.stanford.edu" title="MyGSB">Log In to MyGSB</a></h3>
-            </div>
+            <p><a href="http://mygsb.stanford.edu" title="MyGSB" target="_blank">Log In to MyGSB</a></p>
+
 
           </div></div> <!-- /.error-wrapper, /#main -->
 
