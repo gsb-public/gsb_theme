@@ -23,29 +23,67 @@ function gsb_theme_date_display_range($variables) {
 /**
  * Overrides theme_breadcrumb().
  */
-function gsb_theme_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
 
+//function gsb_theme_breadcrumb($variables) {
+//  $breadcrumb = $variables['breadcrumb'];
+//
+//  // Remove the breadcrumb on the 'Search' page
+//  $root_path = menu_tab_root_path();
+//  if ($root_path == 'gsearch' || $root_path == 'exec-ed/search' || $root_path == 'seed/search') {
+//    unset($variables['breadcrumb']);
+//    return;
+//  }
+//
+//  // We can't implement hook_menu_breadcrumb_alter because breadcrumbs_by_path
+//  // are loaded on page_build.
+//  // We assume that Home link is first and remove it.
+//  array_shift($breadcrumb);
+//
+//  if (!empty($breadcrumb)) {
+//    // Provide a navigational heading to give context for breadcrumb links to
+//    // screen-reader users. Make the heading invisible with .element-invisible.
+//    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+//    $output .= '<div class="breadcrumb">' . implode(' &rsaquo; ', $breadcrumb) . '</div>';
+//    return $output;
+//  }
+//}
+
+
+function gsb_theme_breadcrumb($variables) {
+
+  $breadcrumb = $variables['breadcrumb'];
   // Remove the breadcrumb on the 'Search' page
   $root_path = menu_tab_root_path();
   if ($root_path == 'gsearch' || $root_path == 'exec-ed/search' || $root_path == 'seed/search') {
     unset($variables['breadcrumb']);
     return;
   }
-
   // We can't implement hook_menu_breadcrumb_alter because breadcrumbs_by_path
   // are loaded on page_build.
   // We assume that Home link is first and remove it.
   array_shift($breadcrumb);
 
+  $crumbs='';
   if (!empty($breadcrumb)) {
+    $crumbs_prefix = '<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    $crumbs_prefix .= '<h2 class="element-invisible">' . t('You are here') . '</h2>';
 
-    $output .= '<div class="breadcrumb">' . implode(' &rsaquo; ', $breadcrumb) . '</div>';
-    return $output;
+    foreach($breadcrumb as $value) {
+
+      $value = preg_replace('/(<a[^>]*>)(.*)(<\/a>)/i', '$1<span itemprop="title">$2</span>$3', $value);
+      $value = str_replace('<a href', '<a itemprop="url" href', $value);
+      if (empty($crumbs)){
+        $crumbs .=  $value ;
+      } else {
+        $crumbs .= ' &rsaquo; ' . $value ;
+      }
+
+    }
+    $crumbs = $crumbs_prefix . $crumbs .  '</div>';
   }
+  return $crumbs;
 }
 
 /**
