@@ -59,8 +59,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  {quote}<HTML>
-  <HEAD>
+
     <!-- Page hiding snippet (recommended)  -->
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -78,7 +77,7 @@
       ga('create', 'UA-17436788-1', 'auto');  // Update tracker settings
       ga('require', 'GTM-57CTFLR');           // Add this line
       // Remove pageview call
-    </script>{quote}
+    </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <!--googleoff: index--><!--googleoff: snippet-->
