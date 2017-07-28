@@ -115,7 +115,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-all-research-listing-all-research-panel-pane',
     'views-exposed-form-admission-events-msx-admission-panel-pane',
     'views-exposed-form-msx-fellows-list',
-    'views-exposed-form-gsb-act-project-listing-panel-pane-1'
+    'views-exposed-form-gsb-act-project-listing-panel-pane-1',
+	'views-exposed-form-msx-fellows-graduation-year-list'
   );
 
 
@@ -246,6 +247,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   if ($form['#id'] == 'views-exposed-form-msx-fellows-list') {
     // Add placeholder text.
     $form['search']['#attributes']['placeholder'] = t('Search by name, research interests, or other keywords');
+  }
+  // Faculty listing placeholder text for msx-fellows-graduation-year-list.
+  if ($form['#id'] == 'views-exposed-form-msx-fellows-graduation-year-list') {
+    // Add placeholder text.
+    $form['field_search_field_value']['#attributes']['placeholder'] = t('Search by name, research interests, or other keywords');
   }
   // Alumni ACT Project listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-gsb-act-project-listing-panel-pane-1') {
