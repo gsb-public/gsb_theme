@@ -314,7 +314,8 @@ fieldset.collapsible .fieldset-legend
 .view-display-id-main_event_list_pane,
 .view-display-id-mba_admission_panel_pane,
 .view-display-id-msx_admission_panel_pane,
-.view-id-msx_fellows.view-display-id-list
+.view-id-msx_fellows.view-display-id-list,
+.view-id-msx_fellows.view-display-id-graduation_year_list
   position: relative
   .ajax-progress-throbber
     position: absolute
@@ -894,3 +895,29 @@ button.checkbox-clear-all
   // Date fields
   .date-range-field
     min-width: 150px
+
+.view-display-id-graduation_year_list 
+  .gsb-views-exposed-filter
+    .views-exposed-widgets
+      .narrow-search-wrapper
+        padding: 18px 26px
+        .fieldset-wrapper
+          margin-left: 26px
+          padding-top: 18px
+        .form-item
+          margin-bottom: 18px
+          padding-bottom: 18px
+          .bef-checkboxes
+            column-count: 3
+            .form-item
+              border-top: 1px solid transparent
+              margin-top: 0
+              padding-left: 22px
+              position: relative
+              vertical-align: top   
+        .form-type-select
+          border-bottom: 1px lightgray solid
+        label
+          font-size: 16px
+          margin-bottom: 18px
+          text-transform: none
