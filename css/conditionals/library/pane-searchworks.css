@@ -1,20 +1,62 @@
-.pane-library-searchworks-form .searchworks-content {
+.pane-library-searchworks-form, .pane-library-searchworks-form .searchworks-content {
   background: white;
 }
 
-.pane-library-searchworks-form .searchworks-content {
+.pane-library-searchworks-form, .pane-library-searchworks-form .searchworks-content {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   margin: 1px;
 }
 
+.pane-library-searchworks-form {
+  position: relative;
+  padding: 26px;
+}
+@media (max-width: 35.5em) {
+  .pane-library-searchworks-form {
+    height: 194px;
+  }
+}
 .pane-library-searchworks-form .pane-title {
   font-size: 24px;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
+  line-height: 1.2;
   color: #231f20;
-  margin-bottom: 30px;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.pane-library-searchworks-form .pane-content {
+  margin-bottom: 32px;
+}
+.pane-library-searchworks-form .pane-content .search_text {
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: normal;
+  padding: 12px 0;
+}
+.pane-library-searchworks-form .pane-content .searchworks-search {
+  width: 90%;
+  float: left;
+  margin-right: 0;
+  padding-right: 10px;
+  height: 36px;
+  font-size: 14px;
+}
+.pane-library-searchworks-form input[type=text] {
+  border-color: lightgray;
+}
+.pane-library-searchworks-form .submit {
+  float: left;
+  text-indent: 1000px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: none;
+  width: 36px;
+  height: 36px;
 }
 .pane-library-searchworks-form .tabbed_box {
   margin: 0 auto;

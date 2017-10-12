@@ -9,12 +9,47 @@
 
 // Library Search Works Block
 .pane-library-searchworks-form
+  @extend %bg-and-box-shadow
+  position: relative
+  padding: $standard-padding
+  +breakpoint($bp-mobile-max)
+    height: 194px
   .pane-title
     font-size: 24px
-    font-family: $font-demi
-    font-weight: normal
+    font-weight: bold
+    line-height: 1.2
     color: $text-black
-    margin-bottom: 30px
+    font-family: $font-sans
+  .pane-content
+    margin-bottom: 32px
+    .search_text
+      font-size: 19px
+      line-height: 1.2
+      font-weight: normal
+      padding: 12px 0
+    //Search Field
+    .searchworks-search
+      width: 90%
+      float: left
+      margin-right: 0
+      padding-right: 10px
+      height: 36px
+      font-size: 14px
+  // Submit button
+  input[type=text]
+    border-color: $border-grey
+  .submit
+    float: left
+    text-indent: 1000px
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -ms-border-radius: 0
+    border-radius: 0
+    border-top-right-radius: 50%
+    border-bottom-right-radius: 50%
+    border: none
+    width: 36px
+    height: 36px
   .tabbed_box
     margin: 0 auto
     .tabbed_area
