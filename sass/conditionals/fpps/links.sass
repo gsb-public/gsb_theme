@@ -20,7 +20,6 @@
   .show-more-less-toggler-wrapper
     +clearfix
     border-top: 1px solid #e4e4e4
-    margin-top: 8px
     padding-top: 16px
     width: 100%
   .show-more-less-toggler
@@ -57,16 +56,20 @@
 
     // Links
     .field-name-field-link-unlimited
-      padding: 14px $standard-padding
+      padding: 10px $standard-padding 0
       .field-item
+        border-top: 1px solid #d6d6d6
         line-height: 0
-        padding-bottom: 10px
+        padding-bottom: 15px
+        padding-top: 15px
         &:last-of-type
-          padding-bottom: 0
+          padding-bottom: 16px
+        &:first-of-type
+          border-style: none
       a
-        font-family: $font-demi
-        font-size: 16px
-        line-height: 1.3
+        font-family: $font-sans
+        font-size: 15px
+        line-height: 1.2
         &[target=_blank]
           &:after
             font-size: 10px
@@ -76,10 +79,13 @@
 
     // Show more link styling
     .show-more-less-toggler-wrapper
+      padding-bottom: 16px
       a
         font-family: $font-demi
         font-size: 14px
         font-weight: normal
+      &.show-more-open
+        margin-top: 0
 
   // Green links
   .green-bar
@@ -111,32 +117,35 @@
       position: relative
       top: -6px
       width: 100%
+    // Stanford logo
+    &:after
+      content: image_url("stanford_logo.png")
+      position: absolute
+      right: 25px
+      top: 11px
 
     // Links
     .field-name-field-link-unlimited
       +clearfix
-      padding-top: 13px
+      padding-top: 0
       position: relative
       top: 0
       .field-items
         min-height: 41px
-        // Stanford logo
-        &:after
-          content: image_url("stanford_logo.png")
-          position: absolute
-          right: 0
-          top: 12px
 
       .field-item
-        line-height: 0
-        margin-right: 41px
-        padding-bottom: 10px
+        border-top: 1px solid #c2b7a1
+        line-height: 1
+        padding-bottom: 12px
+        padding-top: 12px
         &:last-of-type
-          padding-bottom: 0
+          padding-bottom: 12px
+        &:first-of-type
+          border-top: none
+          padding-top: 22px
     a
-      font-size: 16px
-      font-weight: bold
-      line-height: 1.3
+      font-size: 15px
+      line-height: 1
       &[target=_blank]
         &:after
           color: #949494
@@ -158,6 +167,14 @@
           color: $link-blue
           &:before
             color: $link-blue
+      &.show-more-open
+        margin-top: 0
 
     .field-name-field-title
-      display: none
+      color: $text-black
+      font-family: $font-sans
+      font-size: 18px
+      font-weight: bold
+      line-height: 1.3
+      margin: 0
+      padding-top: 14px
