@@ -9790,12 +9790,15 @@ button.checkbox-clear-all {
   padding-bottom: 18px;
 }
 .view-display-id-graduation_year_list .gsb-views-exposed-filter .views-exposed-widgets .narrow-search-wrapper .form-item .bef-checkboxes {
-  column-count: 3;
+  columns: 3 22px;
 }
 .view-display-id-graduation_year_list .gsb-views-exposed-filter .views-exposed-widgets .narrow-search-wrapper .form-item .bef-checkboxes .form-item {
   border-top: 1px solid transparent;
   margin-top: 0;
   padding-left: 22px;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+  white-space: nowrap;
   position: relative;
   vertical-align: top;
 }
