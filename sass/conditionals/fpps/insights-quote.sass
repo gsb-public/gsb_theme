@@ -9,56 +9,97 @@
 
 // Insights Quote FPP
 .pane-bundle-insights-quote
-  margin-left: 26px
-  margin-top: 20px
-  p
-    line-height: 0
-    margin-bottom: 0
-  a
-    color: $text-black
-    line-height: 1
-    position: relative
-    top: 0
-    &:hover
-      color: $link-blue
-      text-decoration: none !important
-      .quote,
-      .attribution
-        text-decoration: underline
-      .last-double-apostrophe:after
-        color: $teal-light
-  // First quotation mark
-  .first-double-apostrophe
-    font-size: 64px
-    position: absolute
-    left: -30px
-    top: -18px
-    +breakpoint($bp-mobile-max)
-      font-size: 38px
-      left: -22px
-      top: -7px
-  // Quote text
-  .quote
-    font-size: 38px
-    line-height: 1.3
-    +breakpoint($bp-mobile-max)
+  @extend %bg-and-box-shadow
+  padding: 0 $standard-padding 14px
+  position: relative
+
+  .field-name-insight-quote 
+    padding-top: 40px
+    p
+      line-height: 0
+      margin-bottom: 0
+    a
+      color: $text-black
+      &:hover
+        color: $link-blue
+        text-decoration: none !important
+        .quote,
+        .attribution
+          text-decoration: underline
+        .last-double-apostrophe:after
+          color: $teal-light
+    // First quotation mark
+    .first-double-apostrophe
+      display: block
+      font-size: 100px
+      position: relative
+      left: -6px
+      line-height: 70px
+      +breakpoint($bp-mobile-max)
+        font-size: 100px
+        left: -6px
+    // Quote text
+    .quote
       font-size: 26px
-  // Second quotation mark
-  .last-double-apostrophe
-    font-size: 38px
-    +icon-after("arrow-double-right", true)
-    &:after
-      color: $green-light
-      font-size: 24px
-      margin-left: 8px
+      font-weight: bold
+      line-height: 1.2
+      margin-top: -25px
+      margin-bottom: 20px
+      display: inline-block
+      +breakpoint($bp-mobile-max)
+        font-size: 26px
+    // Second quotation mark
+    .last-double-apostrophe
+      font-size: 38px
+      display: none
+      +icon-after("arrow-double-right", true)
+      &:after
+        color: $green-light
+        font-size: 24px
+        margin-left: 8px
 
-  // Em dash
-  .dash
-    margin-right: 8px
+    // Em dash
+    .dash
+      margin-right: 8px
 
-  // Attribution of quote
-  .attribution
-    font-size: 18px
-    line-height: 1.5
-    +breakpoint($bp-mobile-max)
+    // Attribution of quote
+    .attribution
       font-size: 16px
+      line-height: 1.2
+      font-weight: normal
+      margin-bottom: 25px
+      display: inline-block
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
+
+  // Pane title
+  .field-name-field-idea-story-ref
+    background: $white
+    display: block
+    color: $text-black
+    font-family: $font-demi
+    font-size: 16px
+    line-height: 1.3
+    padding-bottom: 26px
+    position: relative
+    a
+      font-family: $font-sans
+      font-size: 16px
+      font-weight: bold
+      line-height: 1.3
+      &:hover
+        text-decoration: none
+        border-bottom: 1px solid $link-blue
+      +breakpoint(850px max-width)
+        font-size: 16px
+      +breakpoint(610px max-width)
+        font-size: 16px
+      &[target="_blank"]
+        &:after
+          font-size: 12px
+      &[href$=".pdf"]
+        &[target="_blank"]
+          &:after
+            display: inline
+            font-size: 14px
+            margin-left: 3px
