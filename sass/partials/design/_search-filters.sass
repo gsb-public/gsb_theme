@@ -908,11 +908,14 @@ button.checkbox-clear-all
           margin-bottom: 18px
           padding-bottom: 18px
           .bef-checkboxes
-            column-count: 3
+            columns: 3 22px
             .form-item
               border-top: 1px solid transparent
               margin-top: 0
               padding-left: 22px
+              break-inside: avoid-column
+              page-break-inside: avoid
+              white-space: nowrap
               position: relative
               vertical-align: top
         .form-type-select
