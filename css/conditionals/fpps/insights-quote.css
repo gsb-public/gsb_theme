@@ -1,54 +1,70 @@
 .pane-bundle-insights-quote {
-  margin-left: 26px;
-  margin-top: 20px;
+  background: white;
 }
-.pane-bundle-insights-quote p {
+
+.pane-bundle-insights-quote {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
+}
+
+.pane-bundle-insights-quote {
+  padding: 0 26px 14px;
+  position: relative;
+}
+.pane-bundle-insights-quote .field-name-insight-quote {
+  padding-top: 40px;
+}
+.pane-bundle-insights-quote .field-name-insight-quote p {
   line-height: 0;
   margin-bottom: 0;
 }
-.pane-bundle-insights-quote a {
+.pane-bundle-insights-quote .field-name-insight-quote a {
   color: #231f20;
-  line-height: 1;
-  position: relative;
-  top: 0;
 }
-.pane-bundle-insights-quote a:hover {
+.pane-bundle-insights-quote .field-name-insight-quote a:hover {
   color: #2d6280;
   text-decoration: none !important;
 }
-.pane-bundle-insights-quote a:hover .quote,
-.pane-bundle-insights-quote a:hover .attribution {
+.pane-bundle-insights-quote .field-name-insight-quote a:hover .quote,
+.pane-bundle-insights-quote .field-name-insight-quote a:hover .attribution {
   text-decoration: underline;
 }
-.pane-bundle-insights-quote a:hover .last-double-apostrophe:after {
+.pane-bundle-insights-quote .field-name-insight-quote a:hover .last-double-apostrophe:after {
   color: #aac4bf;
 }
-.pane-bundle-insights-quote .first-double-apostrophe {
-  font-size: 64px;
-  position: absolute;
-  left: -30px;
-  top: -18px;
+.pane-bundle-insights-quote .field-name-insight-quote .first-double-apostrophe {
+  display: block;
+  font-size: 100px;
+  position: relative;
+  left: -6px;
+  line-height: 70px;
 }
 @media (max-width: 35.5em) {
-  .pane-bundle-insights-quote .first-double-apostrophe {
-    font-size: 38px;
-    left: -22px;
-    top: -7px;
+  .pane-bundle-insights-quote .field-name-insight-quote .first-double-apostrophe {
+    font-size: 100px;
+    left: -6px;
   }
 }
-.pane-bundle-insights-quote .quote {
-  font-size: 38px;
-  line-height: 1.3;
+.pane-bundle-insights-quote .field-name-insight-quote .quote {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 @media (max-width: 35.5em) {
-  .pane-bundle-insights-quote .quote {
+  .pane-bundle-insights-quote .field-name-insight-quote .quote {
     font-size: 26px;
   }
 }
-.pane-bundle-insights-quote .last-double-apostrophe {
+.pane-bundle-insights-quote .field-name-insight-quote .last-double-apostrophe {
   font-size: 38px;
+  display: none;
 }
-.pane-bundle-insights-quote .last-double-apostrophe:after {
+.pane-bundle-insights-quote .field-name-insight-quote .last-double-apostrophe:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -63,20 +79,61 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-bundle-insights-quote .last-double-apostrophe:after {
+.pane-bundle-insights-quote .field-name-insight-quote .last-double-apostrophe:after {
   color: #bac405;
   font-size: 24px;
   margin-left: 8px;
 }
-.pane-bundle-insights-quote .dash {
+.pane-bundle-insights-quote .field-name-insight-quote .dash {
   margin-right: 8px;
 }
-.pane-bundle-insights-quote .attribution {
-  font-size: 18px;
-  line-height: 1.5;
+.pane-bundle-insights-quote .field-name-insight-quote .attribution {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 25px;
+  display: inline-block;
 }
 @media (max-width: 35.5em) {
-  .pane-bundle-insights-quote .attribution {
+  .pane-bundle-insights-quote .field-name-insight-quote .attribution {
     font-size: 16px;
   }
+}
+.pane-bundle-insights-quote .field-name-field-idea-story-ref {
+  background: white;
+  display: block;
+  color: #231f20;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  padding-bottom: 26px;
+  position: relative;
+}
+.pane-bundle-insights-quote .field-name-field-idea-story-ref a {
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.pane-bundle-insights-quote .field-name-field-idea-story-ref a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #2d6280;
+}
+@media (max-width: 53.125em) {
+  .pane-bundle-insights-quote .field-name-field-idea-story-ref a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 38.125em) {
+  .pane-bundle-insights-quote .field-name-field-idea-story-ref a {
+    font-size: 16px;
+  }
+}
+.pane-bundle-insights-quote .field-name-field-idea-story-ref a[target="_blank"]:after {
+  font-size: 12px;
+}
+.pane-bundle-insights-quote .field-name-field-idea-story-ref a[href$=".pdf"][target="_blank"]:after {
+  display: inline;
+  font-size: 14px;
+  margin-left: 3px;
 }
