@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pane-bundle-insights-quote {
   background: white;
 }
@@ -136,4 +137,33 @@
   display: inline;
   font-size: 14px;
   margin-left: 3px;
+}
+
+@media (min-width: 38.125em) {
+  .full-view .pane-bundle-insights-quote .field-name-insight-quote .first-double-apostrophe {
+    display: none;
+  }
+  .full-view .pane-bundle-insights-quote .field-name-insight-quote .quote {
+    position: relative;
+    padding-left: 71px;
+    margin-top: -6px;
+  }
+  .full-view .pane-bundle-insights-quote .field-name-insight-quote .quote::before {
+    content: "“";
+    font-weight: normal;
+    font-size: 100px;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    line-height: 100px;
+  }
+  .full-view .pane-bundle-insights-quote .field-name-insight-quote .last-double-apostrophe {
+    display: none;
+  }
+  .full-view .pane-bundle-insights-quote .field-name-insight-quote .dash {
+    margin-left: 71px;
+  }
+  .full-view .pane-bundle-insights-quote .field-name-field-idea-story-ref {
+    margin-left: 71px;
+  }
 }
