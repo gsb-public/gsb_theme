@@ -103,3 +103,27 @@
             display: inline
             font-size: 14px
             margin-left: 3px
+
+.full-view .pane-bundle-insights-quote
+  +breakpoint(610px min-width)
+    .field-name-insight-quote 
+      .first-double-apostrophe
+        display: none
+      .quote
+        position: relative
+        padding-left: 71px
+        margin-top: -6px
+      .quote::before
+        content: "“"
+        font-weight: normal
+        font-size: 100px
+        position: absolute
+        top: -8px
+        left: 0
+        line-height: 100px
+      .last-double-apostrophe
+        display: none
+      .dash
+        margin-left: 71px
+    .field-name-field-idea-story-ref
+      margin-left: 71px
