@@ -117,12 +117,6 @@
       position: relative
       top: -6px
       width: 100%
-    // Stanford logo
-    &:after
-      content: image_url("stanford_logo.png")
-      position: absolute
-      right: 25px
-      top: 11px
 
     // Links
     .field-name-field-link-unlimited
@@ -143,6 +137,14 @@
         &:first-of-type
           border-top: none
           padding-top: 22px
+          width: 85%
+          // Stanford logo
+          &:after
+            content: image_url("stanford_logo.png")
+            position: absolute
+            right: 0
+            top: 0
+
     a
       font-size: 15px
       line-height: 1
@@ -177,4 +179,17 @@
       font-weight: bold
       line-height: 1.3
       margin: 0
-      padding-top: 14px
+      padding-top: 8px
+      width: 85%
+      &:after
+        content: image_url("stanford_logo.png")
+        position: absolute
+        right: 25px
+        top: 11px
+
+    .field-name-field-title + .field-group-div
+      .field-item
+        &:first-of-type
+          // Removing the Stanford logo if the title exists
+          &:after
+            content: ""
