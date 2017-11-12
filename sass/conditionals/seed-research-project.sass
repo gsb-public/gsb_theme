@@ -110,3 +110,81 @@
     .field-collection-item-field-research-results:last-child
       border-bottom: none !important
       
+// Seed Research Non-Customizable list style
+.view-seed-research-listing
+  @extend %black-border-top-small
+
+  .views-row
+    border-top: 1px $listing-divider solid
+    padding: 26px 0
+    &:first-of-type
+      border-top: 0
+    .field-content
+      font-size: 18px
+      line-height: 1.3
+      font-weight: normal
+      h2
+        font-family: $font-sans
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.3
+        a
+          font-family: $font-sans
+          font-size: 20px
+          font-weight: bold
+          line-height: 1.3
+      .listing-field-title
+        margin-bottom: 6px
+      .listing-field
+        margin-top: 3px
+      span
+        font-weight: bold
+      span.date-display-single
+        font-weight: normal
+
+// Seed Research Customizable list style
+.pane-seed-research-filters-seed-research-filters-pane
+  @extend %bg-and-box-shadow
+  background: #f4f4f4
+  padding: 0 $standard-padding 14px
+  
+  // Pane title
+  h2.pane-title
+    @extend %black-border-top
+    color: $text-black
+    font-family: $font-demi
+    font-size: 18px
+    font-weight: normal
+    line-height: 1.3
+    margin-bottom: 18px
+    padding-top: 12px
+
+  // Row styling
+  .views-row
+    border-bottom: 1px $border-grey solid
+    padding: 12px 0 9px
+    &:first-of-type
+      padding-top: 0
+    &:last-of-type
+      border-bottom: 0
+  .views-field
+    h2
+      font-family: $font-sans
+      font-size: 20px
+      font-weight: bold
+      line-height: 1.3
+      a
+        font-family: $font-sans
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.3
+    .listing-field-title
+      margin-bottom: 6px
+    .listing-field
+      margin-top: 3px
+      font-weight: normal
+      span
+        font-weight: bold
+      span.date-display-single
+        font-weight: normal
+    
