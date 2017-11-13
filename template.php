@@ -146,7 +146,6 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'gsb_working_paper_listing',
     'gsb_case_listing',
     'gsb_book_listing',
-    'seed_research_listing',
     'gsb_publications_listing',
     'admission_events',
     'publication_filters',
