@@ -150,7 +150,8 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'admission_events',
     'publication_filters',
     'msx_fellows',
-    'gsb_act_project_listing'
+    'gsb_act_project_listing',
+    'seed_research_listing'
   );
   if (in_array($form_state['view']->name, $split_search_views)) {
     // Trigger the alternate template, see gsb_theme_preprocess_views_exposed_form().
@@ -159,6 +160,11 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['search']['#attributes']['class'][] = 'ctools-auto-submit-exclude';
   }
 
+  // Seed Research Listing placeholder text.
+  if ($form['#id'] == 'views-exposed-form-seed-research-listing-seed-research-pane') {
+    // Add placeholder text.
+    $form['field_search_field_value']['#attributes']['placeholder'] = t('Search by title or keyword');
+  }
   // Faculty listing placeholder text.
   if ($form['#id'] == 'views-exposed-form-faculty-filters-faculty-list') {
     // Add placeholder text.
