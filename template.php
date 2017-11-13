@@ -106,6 +106,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
     'views-exposed-form-gsb-working-paper-listing-working-paper-list',
     'views-exposed-form-gsb-case-listing-case-listing',
     'views-exposed-form-gsb-book-listing-book-listing',
+    'views-exposed-form-seed-research-listing-seed-research-pane',
     'views-exposed-form-gsb-publications-listing-publications-listing',
     'views-exposed-form-gsb-act-project-listing-panel-pane-1',
     'views-exposed-form-gsb-act-project-listing-panel-pane-2',
