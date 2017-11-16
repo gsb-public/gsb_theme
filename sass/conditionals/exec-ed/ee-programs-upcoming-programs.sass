@@ -18,41 +18,18 @@
     &:hover
       color: $white
 
-  // CTA
-  .list-cta a
-    color: $white
-    display: block
-    font-size: 18px
-    font-weight: normal
-    line-height: 1.2
-    max-width: 270px
-    padding: 14px 16px
-    +icon-after("arrow-double-right", true)
-    &:hover
-      background: $link-blue
-      text-decoration: underline
-      &:after
-        color: $white
-    &:after
-      float: right
-
+  
   // Color options
   // Taupe
   &.taupe
     +background(linear-gradient(bottom, rgba(#655d51, 1), rgba(#655d51, 0.7)), image_url("bg-ee-program-customizable-list-taupe-2016-02-11-1.jpg") no-repeat top left, #655d51)
     padding: 0 $standard-padding $standard-padding
-    .list-cta a
-      background: $teal-dark
-      &:hover
-        background: $link-blue
+    
   // Teal
   &.teal
     +background(linear-gradient(bottom, rgba(#149783, 1), rgba(#149783, 0.7)), image_url("bg-ee-program-customizable-list-teal-2016-02-11-1.jpg") no-repeat top left, #149783)
     padding: 0 $standard-padding $standard-padding
-    .list-cta a
-      background: #655d51
-      &:hover
-        background: $link-blue
+    
 
   // Superhead
   .super-head
