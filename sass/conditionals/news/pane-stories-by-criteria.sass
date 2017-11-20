@@ -116,11 +116,20 @@
     +clearfix
     border-top: 0
     font-family: $font-demi
-    font-size: 16px
+    font-size: 14px
     font-weight: normal
-    line-height: 1.3
-    padding: 10px $standard-padding
+    line-height: 1.2
+    padding: 12.5px $standard-padding
 
+    span
+      display: inline-block
+      padding-top: 0
+      &+ .views-field-field-link-blog
+        padding-top: 8px
+    .views-field
+      padding-bottom: 8px
+      &:last-child
+        padding-bottom: 0
   // Faculty name
   .views-field-title
     line-height: 0
@@ -128,12 +137,34 @@
     a
       color: $link-green
       font-family: $font-sans
-      font-size: 16px
+      font-size: 14px
       font-weight: bold
       line-height: 1.2
       &:hover
         color: $link-blue
-
   // Comma seperator between rank and area
   .separator-comma
     margin-left: -5px
+
+  // Faculty Twitter handle
+  .views-field-field-twitter-handle .field-content
+    padding-top: 8px
+    a
+      +icon-before("twitter", true)
+      color: $link-green
+      &:before
+        color: $twitter
+        display: inline
+        margin-right: 3px
+      +icon-after("arrow-external", true)
+      &:after
+        font-size: 0.7em
+        margin-left: 3px
+  .views-field-field-link-blog
+    a
+      color: $link-green
+
+  // Exceptions
+  // Faculty name followed by Twitter
+  .views-field-title + .views-field-field-twitter-handle .field-content
+    padding-top: 0
