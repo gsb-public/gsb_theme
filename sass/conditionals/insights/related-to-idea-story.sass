@@ -263,7 +263,20 @@
       &[target=_blank]
         &:after
           font-size: 10px
-          
+
+// Related Faculty twitter handle
+.field-name-field-twitter-handle
+  .twitter-handle-text
+    color: $link-green
+    +icon-before("twitter", true)
+      color: $twitter
+      display: inline
+      margin-right: 3px
+    +icon-after("arrow-external", true)
+      font-size: 0.7em
+      margin-left: 3px
+
+
 //faculty name and position alignment fixes
 .group-wrapper-related .field-collection-item-field-related-faculty .field-name-title,
 .group-wrapper-related .field-collection-item-field-related-faculty .person-position,
