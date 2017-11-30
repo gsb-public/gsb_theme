@@ -266,8 +266,13 @@
 
 // Related Faculty twitter handle
 .field-name-field-twitter-handle
+  display: inline-block
+
   .twitter-handle-text
     color: $link-green
+    display: inherit
+    padding-top: 3px
+    word-break: break-word
     +icon-before("twitter", true)
       color: $twitter
       display: inline
@@ -282,10 +287,9 @@
   .person-area + .separator
     display: none
 
-// Related Faculty twitter handle
+// Related Faculty blog should not be displayed
 .field-name-field-link-blog
-  a
-    color: $link-green
+  display: none
 
 .person-subname
   float: left
