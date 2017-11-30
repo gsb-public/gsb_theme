@@ -558,10 +558,6 @@
       $(".pane-ee-programs-upcoming-deadlines").each(function(i, obj) {
         if($(this).find('div.list-cta').length != 0)
         {
-          $(this).find(".view-display-id-upcoming_deadlines").css({"border-bottom": "1px lightgray solid"});
-        }
-        else
-        {
           $(this).css({"padding-bottom": "0px"});
           $(this).find(".view-display-id-upcoming_deadlines").css({"border-bottom": "none","margin-bottom":"0px"});
         }
