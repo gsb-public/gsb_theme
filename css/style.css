@@ -779,7 +779,7 @@ th[align="right"] {
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2322240
  * Webfonts copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  *
- * ┬⌐ 2012 Bitstream Inc
+ * © 2012 Bitstream Inc
  */
 @font-face {
   font-family: "icons";
@@ -2285,12 +2285,16 @@ del {
 }
 @media (max-width: 75.625em) {
   .gsb-insights-b .insights-main-wrapper {
+    float: none;
     margin-right: 0;
     padding-right: 0;
+    margin: 0 auto;
   }
 }
 @media (max-width: 35.5em) {
   .gsb-insights-b .insights-main-wrapper {
+    overflow: hidden;
+    *zoom: 1;
     float: none;
     margin: 0;
   }
@@ -2300,8 +2304,9 @@ del {
 }
 @media (max-width: 73.125em) {
   .gsb-insights-b .insights-sidebar-wrapper {
-    max-width: 570px;
     float: none;
+    margin: 0 auto;
+    max-width: 570px;
     width: 100%;
   }
 }
@@ -2344,6 +2349,7 @@ del {
 @media (max-width: 73.125em) {
   .gsb-insights-b .column.first,
   .gsb-insights-b .column.second {
+    float: none;
     margin-right: 0;
   }
 }
