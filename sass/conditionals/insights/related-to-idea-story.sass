@@ -61,17 +61,24 @@
     .field-name-field-image-single-public
       float: left
       margin-right: 12px
-      max-width: 42px
-      height: 60px
+      width: 42px
+      height: auto
 
     // Name
     .group-wrapper-name,
     .field-name-title
       line-height: 0
-      padding-left: 54px
       a
         font-family: $font-demi
         display: inline-block
+        font-size: 16px
+        line-height: 1.3
+        max-width: 164px
+    .field-name-alumni-name-degree-linked
+      position: relative
+      margin-left: 54px
+      .field-name, .field-degree
+        font-family: $font-demi
         font-size: 16px
         line-height: 1.3
         max-width: 164px
@@ -308,15 +315,13 @@
 .group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title
   padding-left: 0px
 
-.group-wrapper-related .field-name-field-person-ref-unlimited .person-position .field-collection-item-field-staff-item .field-name-field-department-office
-  padding-left: 54px
-
-.field-name-field-related-faculty .node-faculty div.person-position, .field-name-field-related-faculty .node-faculty .person-name, .faculty-author-wrapper .node-faculty div.person-position, .faculty-author-wrapper .node-faculty .person-name, .group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title
+.field-name-field-related-faculty .node-faculty div.person-position, .field-name-field-related-faculty .node-faculty .person-name, .faculty-author-wrapper .node-faculty div.person-position, .faculty-author-wrapper .node-faculty .person-name, .group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title, .group-wrapper-related .field-name-field-person-ref-unlimited div.person-position, .group-wrapper-related .field-name-field-person-ref-unlimited .node-phd-candidate .person-area
   width: 160px
-  float: left
+  position: relative
+  margin-left: 54px
   
 .field-name-field-related-faculty .node-faculty span.person-position, .faculty-author-wrapper .node-faculty span.person-position
   width: auto !important
 
-.group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title
+.group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title, .group-wrapper-related .field-name-field-person-ref-unlimited .node-phd-candidate .person-area
   display: block !important
