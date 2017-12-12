@@ -53,6 +53,8 @@
   .field-name-field-person-fac-ref,
   .field-name-field-alumni-ref,
   .field-name-field-person-ref-unlimited
+    overflow-wrap: break-word
+    word-wrap: break-word
     .node
       +clearfix
       padding: 7px $standard-padding
@@ -113,6 +115,8 @@
     .view-mode-idea_story_related
       @extend %divider-bottom
       padding: 18px $standard-padding
+      overflow-wrap: break-word
+      word-wrap: break-word
       // Date
       .field-name-field-date
         font-size: 14px
@@ -298,11 +302,6 @@
 .field-name-field-link-blog
   display: none
 
-.person-subname
-  float: left
-  width: 160px
-  overflow: hidden
-
 
 //faculty name and position alignment fixes
 .group-wrapper-related .field-collection-item-field-related-faculty .field-name-title,
@@ -319,6 +318,8 @@
   width: 160px
   position: relative
   margin-left: 54px
+  overflow-wrap: break-word
+  word-wrap: break-word
   
 .field-name-field-related-faculty .node-faculty span.person-position, .faculty-author-wrapper .node-faculty span.person-position
   width: auto !important
