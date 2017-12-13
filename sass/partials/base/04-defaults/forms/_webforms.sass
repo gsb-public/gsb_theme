@@ -82,4 +82,32 @@
     font-family: "NewsGothicBT","Avant Garde","Futura","Helvetica Neue",Helvetica,Arial,sans-serif
     border-radius: 22px
     font-size: 18px
-    line-height: 1.4 
+    line-height: 1.4
+
+// Captcha
+.captcha
+  legend
+    display: none
+  .fieldset-wrapper
+    .fieldset-description
+      padding: 0 0 8px 0
+.g-recaptcha
+  margin-bottom: 10px
+
+// Form and Captcha alignment exceptions
+#webform-client-form-304266
+  // Programs/mba/contact/ask-question
+  .captcha
+    .fieldset-wrapper
+      padding: 0
+  .form-actions
+    margin-left: 0
+
+#email-contact-mail-page-form
+  // Email link from the faculty profile page.
+  .captcha
+    border: none
+    margin: 30px 0 0 0
+    padding: 0
+    + .form-submit
+      margin: 1em 0
