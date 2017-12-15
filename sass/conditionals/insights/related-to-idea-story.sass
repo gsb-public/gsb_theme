@@ -276,33 +276,30 @@
           font-size: 10px
 
 // Related Faculty twitter handle
-.field-name-field-twitter-handle
-  display: inline-block
-
-  .twitter-handle-text
-    color: $link-green
-    display: inherit
-    padding-top: 3px
-    margin-left: 54px
-    word-break: break-word
-    +icon-before("twitter", true)
-      color: $twitter
-      display: inline
-      margin-right: 3px
-    +icon-after("arrow-external", true)
-      font-size: 0.7em
-      margin-left: 3px
-  + .separator
+.group-wrapper-related
+  .field-name-field-link-blog
     display: none
+  .field-name-field-twitter-handle
+    margin-left: 54px
+    overflow-wrap: break-word
+    word-wrap: break-word
+    .twitter-handle-text
+      color: $link-green
+      padding-top: 3px
+      word-break: break-word
+      +icon-before("twitter", true)
+        color: $twitter
+        display: inline
+        margin-right: 3px
+      +icon-after("arrow-external", true)
+        font-size: 0.7em
+        margin-left: 3px
+    + .separator
+      display: none
 
 .field-collection-item-field-related-faculty
   .person-area + .separator
     display: none
-
-// Related Faculty blog should not be displayed
-.field-name-field-link-blog
-  display: none
-
 
 //faculty name and position alignment fixes
 .group-wrapper-related .field-collection-item-field-related-faculty .field-name-title,
