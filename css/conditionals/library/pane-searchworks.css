@@ -35,12 +35,22 @@
   padding: 12px 0;
 }
 .pane-library-searchworks-form .pane-content .searchworks-search {
-  width: 90%;
+  width: 88%;
   float: left;
   margin-right: 0;
   padding-right: 10px;
   height: 36px;
   font-size: 14px;
+}
+@media (min-width: 35.5625em) and (max-width: 62.4375em) {
+  .pane-library-searchworks-form .pane-content .searchworks-search {
+    width: 79%;
+  }
+}
+@media (max-width: 35.5em) {
+  .pane-library-searchworks-form .pane-content .searchworks-search {
+    width: 85%;
+  }
 }
 .pane-library-searchworks-form input[type=text] {
   border-color: lightgray;

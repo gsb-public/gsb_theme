@@ -29,12 +29,16 @@
       padding: 12px 0
     //Search Field
     .searchworks-search
-      width: 90%
+      width: 88%
       float: left
       margin-right: 0
       padding-right: 10px
       height: 36px
       font-size: 14px
+      +breakpoint($bp-tablet-port)
+        width: 79%
+      +breakpoint($bp-mobile-max)
+        width: 85%
   // Submit button
   input[type=text]
     border-color: $border-grey
