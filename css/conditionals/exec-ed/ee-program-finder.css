@@ -184,16 +184,16 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   }
 }
 
-.pane-program-list {
+.pane-gsb-all-programs, .pane-program-list {
   position: relative;
   top: -50px;
 }
 @media (max-width: 62.5em) {
-  .pane-program-list {
+  .pane-gsb-all-programs, .pane-program-list {
     margin-bottom: 0 !important;
   }
 }
-.pane-program-list .pills {
+.pane-gsb-all-programs .pills, .pane-program-list .pills {
   margin-bottom: 16px;
 }
 
@@ -300,7 +300,7 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
   }
 }
 .pane-filters .ms-parent {
-  width: 210px !important;
+  width: 270px !important;
 }
 @media (min-width: 57.1875em) and (max-width: 69.6875em) {
   .pane-filters .ms-parent {
@@ -315,7 +315,7 @@ button.mini-filter-daterange-button, .pane-filters .ms-choice,
 .pane-filters button.ms-choice > span,
 .pane-filters .isotopify-filter-daterange .placeholder,
 .pane-filters .form-item-search .placeholder {
-  width: 210px;
+  width: 270px;
 }
 @media (min-width: 57.1875em) and (max-width: 69.6875em) {
   .pane-filters button.ms-choice > span,
@@ -390,7 +390,7 @@ button.mini-filter-daterange-button {
   padding: 0;
   padding-left: 18px;
   text-align: left;
-  width: 210px;
+  width: 270px;
 }
 button.isotopify-filter-daterange-button:after,
 button.mini-filter-daterange-button:after {
@@ -1831,16 +1831,21 @@ h2.isotopify-title {
   width: 270px;
 }
 
-.page-node-417671 .panel-display.gsb-program-finder .panel-pane {
-  padding-right: 0px !important;
-}
-.page-node-417671 .pane-filters .form-item-filter-program-topic,
-.page-node-417671 .pane-filters .isotopify-filter-daterange,
-.page-node-417671 .pane-filters .form-item-filter-program-location,
-.page-node-417671 .pane-filters .form-item-filter-leadership-level {
+.gsb-program-finder .pane-filters .form-item-filter-program-topic,
+.gsb-program-finder .pane-filters .isotopify-filter-daterange,
+.gsb-program-finder .pane-filters .form-item-filter-program-location,
+.gsb-program-finder .pane-filters .form-item-filter-leadership-level {
   max-width: 270px !important;
 }
 
-.page-node-417671 .gsb-program-finder .pane-filters .form-item-sort {
+.page-node-417671 .gsb-program-finder .panel-pane {
+  padding-right: 0px !important;
+}
+
+.gsb-program-finder .pane-filters .form-item-sort {
   right: 320px;
+}
+
+.isotopify-filters .form-item-search {
+  display: none !important;
 }

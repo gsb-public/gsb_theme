@@ -83,7 +83,7 @@ $small-filter-width: 245px
       padding: 0 20px
 
 // Page layout
-.pane-program-list
+.pane-gsb-all-programs, .pane-program-list
   position: relative
   top: -50px
   +breakpoint(1000px max-width)
@@ -161,7 +161,7 @@ $small-filter-width: 245px
 
   // Filter styling
   .ms-parent
-    width: 210px !important
+    width: 270px !important
     +breakpoint($bp-filter-mid)
       width: $mid-filter-width !important
     +breakpoint($bp-filter-small)
@@ -170,7 +170,7 @@ $small-filter-width: 245px
   button.ms-choice > span,
   .isotopify-filter-daterange .placeholder,
   .form-item-search .placeholder
-    width: 210px
+    width: 270px
     +breakpoint($bp-filter-mid)
       width: $mid-filter-width
     +breakpoint($bp-filter-small)
@@ -236,7 +236,7 @@ button.mini-filter-daterange-button
   padding: 0
   padding-left: 18px
   text-align: left
-  width: 210px
+  width: 270px
   +icon-after("arrow-med-down", true)
   &:after
     background-color: #f9f9f9
@@ -1355,9 +1355,7 @@ h2.isotopify-title
   width: 270px
 
 // Program finder changes in only exec-ed/programs and not in programs
-.page-node-417671 
-  .panel-display.gsb-program-finder .panel-pane
-    padding-right: 0px !important
+.gsb-program-finder 
   .pane-filters 
     .form-item-filter-program-topic,
     .isotopify-filter-daterange,
@@ -1365,6 +1363,13 @@ h2.isotopify-title
     .form-item-filter-leadership-level
       max-width: 270px !important
 
-// Sort by field position changes in only exec-ed/programs and not in programs
-.page-node-417671 .gsb-program-finder .pane-filters .form-item-sort
+.page-node-417671 .gsb-program-finder .panel-pane
+  padding-right: 0px !important
+
+// Sort by field position changes
+.gsb-program-finder .pane-filters .form-item-sort
   right: 320px
+
+// Hide search field from program finder
+.isotopify-filters .form-item-search
+  display: none !important
