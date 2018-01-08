@@ -13,6 +13,10 @@
   @extend %box-shadow
   position: relative
   bottom: 0
+  
+  .field-type-image
+    a[target=_blank]:after
+      display: none
 
   .group-right
     position: absolute
@@ -43,7 +47,6 @@
         color: $white
         font-size: 12px
         margin-left: 3px
-
 // Narrow view
 .narrow-view .pane-bundle-image-cta
   // Colors
