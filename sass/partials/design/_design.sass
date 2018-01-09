@@ -215,7 +215,6 @@
     +background(linear-gradient(rgba(#d7e8e5, 0), rgba(#8ea9a4, 0.5)), image_url("bg-quad-standard-2015-05-26-1.png") bottom center no-repeat, linear-gradient($white, #f5f5f5))
 
 // Research and Faculty landing, faculty grid
-.page-node-303566,
 .page-node-300726
   #content-wrapper
     +breakpoint($bp-tablet-port-min)
@@ -235,7 +234,8 @@
 
 // MSx Fellows page
 .page-programs-msx,
-.node-type-msx-fellows
+.node-type-msx-fellows,
+.page-node-301386
   #content-wrapper
     +breakpoint($bp-tablet-port-min)
       +background(image_url("bg-msxfellows-2015-05-26-1.jpg") -290px 0 no-repeat, $white)
@@ -256,9 +256,6 @@
 
 // Special color bg for landing pages with white titles
 .page-node-301056,
-.page-node-301286,
-.page-node-301386,
-.page-node-303566,
 .page-giving
   +breakpoint($bp-tablet-port-min)
     #content-wrapper
@@ -271,9 +268,9 @@
 
 // White background title only
 // Faculty and research, alumni, organizations
-.page-node-303566,
 .page-node-364111,
-.page-node-364421
+.page-node-364421,
+.page-node-301386
   +breakpoint($bp-tablet-port-min)
     #page-title
       background: rgba($white, 0.6)
