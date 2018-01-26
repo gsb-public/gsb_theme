@@ -885,7 +885,7 @@ h2.isotopify-title
   font-size: 28px
   font-weight: bold
   line-height: 1.2
-  margin-bottom: 18px
+  margin-bottom: 22px
 
 // Sticky compare tray
 .compare-items
@@ -1373,3 +1373,24 @@ h2.isotopify-title
 // Hide search field from program finder
 .isotopify-filters .form-item-search
   display: none !important
+
+.isotopify
+  .isotopify-filter-sort-toggle
+    border-top: 1px #c4c4c4 solid
+    padding: 13px 0
+    text-align: right
+    font-size: 18px
+    span
+      cursor: pointer
+      font-weight: bold
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+    span.current
+      color: $text-green
+      font-weight: normal
+    span.divider
+      color: #c4c4c4
+      font-weight: normal
+// .isotopify-filters .isotopify-filter-sort-toggle span.current
