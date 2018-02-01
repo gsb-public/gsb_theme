@@ -24,12 +24,13 @@
   .field-name-field-file-unlimited-private,
   .field-name-field-file-unlimited-public
     div
+      border-bottom: 1px solid #e4e4e4
       line-height: 0
+      padding-bottom: 8px
+      padding-top: 2px
       margin-bottom: 8px
-      &:last-of-type
-        margin-bottom: 0
     a
-      font-family: $font-demi
+      font-family: $font-sans
       font-size: 16px
       line-height: 1.3
       &:after
@@ -40,7 +41,6 @@
 
   // Private file spacing
   .field-name-field-file-unlimited-private
-    padding-top: 8px
 
   // Private files
   .field-name-field-file-unlimited-private
@@ -49,6 +49,10 @@
       &:before
         color: #bcbcbc
         font-size: 14px
+    div:last-of-type
+      border: none
+      margin-bottom: 0
+      padding-top: 0
 
   // Container style
   .container
