@@ -4,7 +4,8 @@
 .node-phd-candidate.view-mode-full .field-name-field-link-single,
 .node-phd-candidate.view-mode-full .field-name-field-description,
 .node-phd-candidate.view-mode-full .field-name-field-body,
-.node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc {
+.node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications {
   font-size: 18px;
   line-height: 1.4;
 }
@@ -15,7 +16,8 @@
   .node-phd-candidate.view-mode-full .field-name-field-link-single,
   .node-phd-candidate.view-mode-full .field-name-field-description,
   .node-phd-candidate.view-mode-full .field-name-field-body,
-  .node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc {
+  .node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc,
+  .node-phd-candidate.view-mode-full .field-collection-item-field-publications {
     font-size: 16px;
   }
 }
@@ -216,38 +218,24 @@
   line-height: 1.3;
   margin: 25px 0 12px;
 }
-.node-phd-candidate.view-mode-full .group-wrapper-name span {
-  content: " ";
-}
 .node-phd-candidate.view-mode-full .field-name-field-phd-research-interests,
 .node-phd-candidate.view-mode-full .field-name-field-research-statement,
 .node-phd-candidate.view-mode-full .field-name-field-teaching-statement,
 .node-phd-candidate.view-mode-full .field-name-field-link-single,
 .node-phd-candidate.view-mode-full .field-name-field-description,
 .node-phd-candidate.view-mode-full .field-name-field-body,
-.node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc {
+.node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc,
+.node-phd-candidate.view-mode-full .field-collection-item-field-publications {
   margin-bottom: 20px;
 }
 .node-phd-candidate.view-mode-full .field-name-field-link-single {
   font-weight: bold;
 }
-.node-phd-candidate.view-mode-full .field-name-field-link-single a:after {
-  content: "\f101";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
+.node-phd-candidate.view-mode-full .field-name-field-link-single a {
+  padding-right: 5px;
 }
 .node-phd-candidate.view-mode-full .field-name-field-link-single a:after {
-  font-size: 12px;
+  content: " ";
 }
 .node-phd-candidate.view-mode-full .field-name-field-faculty-advisors {
   margin-bottom: 20px;
@@ -273,8 +261,15 @@
   margin-bottom: 18px;
 }
 .node-phd-candidate.view-mode-full .field-name-field-job-market-paper-desc {
+  clear: both;
   margin-top: 10px;
   margin-bottom: 35px;
+}
+.node-phd-candidate.view-mode-full .field-label {
+  display: none;
+}
+.node-phd-candidate.view-mode-full .field-collection-item-field-job-market-paper .field.field-name-field-link-single.field-type-link-field.field-label-above {
+  float: left;
 }
 .node-phd-candidate.view-mode-full .field-name-field-publications,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers,
@@ -282,12 +277,21 @@
   margin-top: 35px;
   padding-top: 35px;
 }
+.node-phd-candidate.view-mode-full .field-name-field-publications .label-above,
+.node-phd-candidate.view-mode-full .field-name-field-working-papers .label-above,
+.node-phd-candidate.view-mode-full .field-name-field-work-in-progress .label-above {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
 .node-phd-candidate.view-mode-full .field-name-field-publications .field-name-field-description,
 .node-phd-candidate.view-mode-full .field-name-field-working-papers .field-name-field-body,
 .node-phd-candidate.view-mode-full .field-name-field-work-in-progress .field-name-field-body {
   margin-top: 10px;
 }
 .node-phd-candidate.view-mode-full .field-name-field-publications .field-name-field-phd-citation {
+  clear: both;
   color: #766d5f;
   line-height: 1.2;
 }
