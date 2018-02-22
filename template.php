@@ -298,6 +298,18 @@ function gsb_theme_preprocess_html(&$variables) {
   );
   drupal_add_html_head($selectivizr, 'selectivzr');
 
+  // Setup fb instant articles meta tag
+  $meta_fb_instant_articles = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'property' => 'fb:pages',
+      'content' =>  '208357009185713',
+    )
+  );
+
+  // Add header meta tag for fb instant articles
+  drupal_add_html_head($meta_fb_instant_articles, 'meta_fb_instant_articles');
+
   // Normally template_preprocess_html() will add classes based on the URL, but
   // if this is a node page we have to check the request_uri() directly.
   $allowed_paths = array(
