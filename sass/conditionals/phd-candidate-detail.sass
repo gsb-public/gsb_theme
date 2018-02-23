@@ -7,7 +7,6 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-
 // PhD Candidate - Detail
 
 // Page title
@@ -184,17 +183,14 @@
   .field-name-field-job-market-paper-desc
     margin-top: 10px
     margin-bottom: 35px
-  .field-label
-    display: none
-  .field-collection-item-field-job-market-paper .field.field-name-field-link-single.field-type-link-field.field-label-above
-    float: left
 
   // Publications
   // Working papers
   // Work in progress
   .field-name-field-publications,
   .field-name-field-working-papers,
-  .field-name-field-work-in-progress
+  .field-name-field-work-in-progress,
+  .field-name-field-job-market-paper
     @extend %divider-top
     margin-top: 35px
     padding-top: 35px
@@ -206,7 +202,8 @@
 
   .field-name-field-publications .field-name-field-description,
   .field-name-field-working-papers .field-name-field-body,
-  .field-name-field-work-in-progress .field-name-field-body
+  .field-name-field-work-in-progress .field-name-field-body,
+  .field-name-field-job-market-paper .field-name-field-body
     margin-top: 10px
 
   // Publications
@@ -215,6 +212,3 @@
       clear: both
       color: $grey-dark
       line-height: 1.2
-
-.field.field-name-field-job-market-paper-desc
-  float: left
