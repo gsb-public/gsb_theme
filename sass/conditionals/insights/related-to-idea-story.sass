@@ -331,6 +331,8 @@
   .group-wrapper-related
     .field-name-field-related-programs
       .view-mode-idea_story_related
+        .group-wrapper-title
+          margin-bottom: 0
         @extend %divider-bottom
         padding: 18px $standard-padding
         .field-name-field-related-programs
@@ -347,3 +349,6 @@
             &[target=_blank]
               &:after
                 font-size: 10px
+// Exception for the /Program/curriculum related page
+.group-wrapper-related .field-name-field-related-programs .group-wrapper-title.field-group-div
+  margin-bottom: 0
