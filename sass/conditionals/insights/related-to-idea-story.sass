@@ -258,8 +258,7 @@
   // Related links and files
   .field-name-field-link-unlimited,
   .field-name-field-link-related-unlimited,
-  .field-name-field-file-unlimited-public,
-  .field-name-field-related-programs
+  .field-name-field-file-unlimited-public
     @extend %divider-bottom
     padding: 18px $standard-padding
     div
@@ -325,3 +324,26 @@
 
 .group-wrapper-related .field-name-field-person-ref-unlimited .field-name-title, .group-wrapper-related .field-name-field-person-ref-unlimited .node-phd-candidate .person-area
   display: block !important
+
+.node-type-idea-story,
+.node-type-announcement,
+.node-type-school-story
+  .group-wrapper-related
+    .view-mode-idea_story_related
+      @extend %divider-bottom
+      padding: 18px $standard-padding
+
+    .field-name-field-related-programs
+      div
+        line-height: 0
+        margin-bottom: 10px
+        &:last-of-type
+          margin-bottom: 0
+      a
+        font-family: $font-demi
+        font-size: 16px
+        line-height: 1.3
+        word-break: break-word
+        &[target=_blank]
+          &:after
+            font-size: 10px
