@@ -285,9 +285,23 @@ function gsb_theme_admission_events_mba_list_after_build($form, &$form_state) {
  * Preprocess html.
  *
  * Load selectivizr library for support IE 8, 7 pseudo classes.
+ * Add meta for GTM site owner verification.
  */
 function gsb_theme_preprocess_html(&$variables) {
   global $base_url;
+
+  // Add meta for GTM site owner verification
+  $meta_google_verification = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'google-site-verification',
+      'content' =>  'u7Z-lHDsA7zpu0SiM1e_255JVF1ht59Oly6PSgvQqxA',
+    )
+  );
+
+  // Add header meta tag for GTM site owner verification
+  drupal_add_html_head($meta_google_verification, 'meta_google_verification');
+
   $selectivizr = array(
     '#tag' => 'script',
     '#attributes' => array(
