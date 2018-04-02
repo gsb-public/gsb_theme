@@ -77,15 +77,17 @@
 .pane-bundle-files .unstyled a:after:hover {
   color: #aac4bf;
 }
-
-.field-name-field-file-unlimited-public div:last-of-type,
-.field-name-field-file-unlimited-private div:last-of-type {
+.pane-bundle-files .field-name-field-file-unlimited-public div:last-of-type,
+.pane-bundle-files .field-name-field-file-unlimited-private div:last-of-type {
   border: none;
   margin-bottom: 0;
   padding-top: 0;
 }
-
-.field-name-field-file-unlimited-private div:first-of-type {
+.pane-bundle-files .field-name-field-file-unlimited-public div:first-of-type,
+.pane-bundle-files .field-name-field-file-unlimited-private div:first-of-type {
+  padding-top: 8px;
+}
+.pane-bundle-files .field-name-field-file-unlimited-public + .field-name-field-file-unlimited-private div:first-of-type {
   border-top: 1px solid #e4e4e4;
   line-height: 0;
   padding-top: 8px;
