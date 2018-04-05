@@ -1,0 +1,34 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+.pane-bundle-mission-statement
+  background: $white
+  .mission-statement
+    margin: 0 auto
+    max-width: $max-width
+    padding: 95px 20px 105px
+    text-align: center
+    +breakpoint($bp-mobile-max)
+      padding: 50px 20px
+    h1
+      a
+        color: $red
+        border-bottom: none
+        &:hover
+          border-bottom: 2px solid $red
+      padding-bottom: 55px
+      +breakpoint($bp-mobile-max)
+        font-size: 30px
+        padding-bottom: 25px
+    p
+      color: $mission-hp
+      font-size: 32px
+      +breakpoint($bp-mobile-max)
+        font-size: 18px
