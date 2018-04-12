@@ -7,42 +7,42 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-.front
-  #bottom
-    padding-top: 0
-    .bottom-content
-      .block
-        float: none
+.pane-gsb-public-custom-blocks-gpcb-home-tagline
+  .pane-content
+    background-color: $white
+    height: 310px
+    padding-top: 110px
+    @media (max-width: $wide-view) and (min-width: $narrow-view)
+      padding-top: 70px
 
-  .home-tagline
-    background: #ffffff url("../../../images/home-tagline-d.png") no-repeat center center
-    background-size: contain
-    min-height: 90px
-    margin: 110px auto
-    padding: 0 20px
-
-  // Retina for desktops
-  @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
     .home-tagline
-      background: #ffffff url("../../../images/home-tagline-d@2x.png") no-repeat center center
+      background: #ffffff url("../../../images/home-tagline-d.png") no-repeat center center
       background-size: contain
+      background-position: 110px center
+      min-height: 90px
+      padding: 0 20px
 
-  // Retina Desktop & tablet - single line
-  @media (-webkit-min-device-pixel-ratio: 2) and (max-width: $max-width) and (min-width: $wide-view), (min-resolution: 192dpi) and (max-width: $max-width) and (min-width: $wide-view)
-    .home-tagline
-      background: #ffffff url("../../../images/home-tagline-d@2x.png") no-repeat center center
-      background-size: contain
+    // Retina for desktops
+    @media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+      .home-tagline
+        background: #ffffff url("../../../images/home-tagline-d@2x.png") no-repeat center center
+        background-size: contain
 
-  // Not Retina tablet portrait and small phone
-  @media (max-width: $wide-view) and (min-width: $narrow-view)
-    .home-tagline
-      background: #ffffff url("../../../images/home-tagline-m.png") no-repeat center center
-      background-size: contain
-      margin: 70px auto
+    // Retina Desktop & tablet - single line
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: $max-width) and (min-width: $wide-view), (min-resolution: 192dpi) and (max-width: $max-width) and (min-width: $wide-view)
+      .home-tagline
+        background: #ffffff url("../../../images/home-tagline-d@2x.png") no-repeat center center
+        background-size: contain
 
-  // Retina tablet portrait and small phone
-  @media (-webkit-min-device-pixel-ratio: 2) and (max-width: $wide-view) and (min-width: $narrow-view), (min-resolution: 192dpi) and (max-width: $wide-view) and (min-width: $narrow-view)
-    .home-tagline
-      background: #ffffff url("../../../images/home-tagline-m@2x.png") no-repeat center center
-      background-size: contain
-      margin: 70px auto
+    // Not Retina tablet portrait and small phone
+    @media (max-width: $wide-view) and (min-width: $narrow-view)
+      .home-tagline
+        background: #ffffff url("../../../images/home-tagline-m.png") no-repeat center center
+        background-size: contain
+        min-height: 165px
+
+    // Retina tablet portrait and small phone
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: $wide-view) and (min-width: $narrow-view), (min-resolution: 192dpi) and (max-width: $wide-view) and (min-width: $narrow-view)
+      .home-tagline
+        background: #ffffff url("../../../images/home-tagline-m@2x.png") no-repeat center center
+        background-size: contain
