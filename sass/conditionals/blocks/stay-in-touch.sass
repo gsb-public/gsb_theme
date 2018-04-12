@@ -1,0 +1,60 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+/*Parallax Effect */
+.parallax
+  /* The image used */
+  background-image: url("../../../images/bg-hp-stayintouch-1500x1200.png")
+  /* Set a specific height */
+  min-height: 308px
+  +breakpoint($bp-mobile-max)
+    min-height: 205px
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+
+  .stay-in-touch
+    position: absolute
+    top: 46%
+    left: 50%
+    transform: translate(-50%, -50%)
+    white-space: nowrap
+    +breakpoint($bp-mobile-max)
+      top: 45%
+
+    h2
+      font-size: 36px
+      padding-bottom: 53px
+      text-align: center
+      +breakpoint($bp-mobile-max)
+        font-size: 26px
+        padding-bottom: 40px
+
+    a
+      background-color: $white
+      border: 1px solid #DCDCDC
+      color: $text-green
+      font-size: 20px
+      margin: 0 auto
+      max-width: 408px
+      min-width: 270px
+      padding: 25px 20px 25px 25px
+      &:hover
+        color: $blue-light-hp
+      +icon-after("arrow-double-right", true)
+        display: inline-block
+        line-height: 1.4
+        padding-left: 20px
+        text-decoration: none
+      +breakpoint($bp-mobile-max)
+        font-size: 16px
