@@ -1,0 +1,78 @@
+/*Parallax Effect */
+.parallax {
+  /* The image used */
+  background-image: url("../../../images/bg-hp-stayintouch-1500x1200.png");
+  /* Set a specific height */
+  min-height: 308px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 35.5em) {
+  .parallax {
+    min-height: 205px;
+  }
+}
+.parallax .stay-in-touch {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+@media (max-width: 35.5em) {
+  .parallax .stay-in-touch {
+    top: 45%;
+  }
+}
+.parallax .stay-in-touch h2 {
+  font-size: 36px;
+  padding-bottom: 53px;
+  text-align: center;
+}
+@media (max-width: 35.5em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 26px;
+    padding-bottom: 40px;
+  }
+}
+.parallax .stay-in-touch a {
+  background-color: white;
+  border: 1px solid gainsboro;
+  color: #636f00;
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 408px;
+  min-width: 270px;
+  padding: 25px 20px 25px 25px;
+}
+.parallax .stay-in-touch a:hover {
+  color: #2d6280;
+}
+.parallax .stay-in-touch a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  display: inline-block;
+  line-height: 1.4;
+  padding-left: 20px;
+  text-decoration: none;
+}
+@media (max-width: 35.5em) {
+  .parallax .stay-in-touch a {
+    font-size: 16px;
+  }
+}
