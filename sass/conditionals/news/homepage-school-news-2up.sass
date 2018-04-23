@@ -1,0 +1,53 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/01-mixins/custom
+@import partials/base/03-extend/gsb-revamp
+
+.panels-layout-gsb-homepage
+  .view-gsb-announcement-school-listing
+    margin: 0 auto
+    width: 1172px
+    +breakpoint(320px $max-width)
+      clear: both
+      margin: 0
+      padding: 20px
+      width: 100%
+    .views-row-first
+      margin-right: 48px
+      +breakpoint(320px $max-width)
+        margin-right: 0
+    .views-row-last
+      +breakpoint(320px $max-width)
+        margin-top: 35px
+
+    .views-row
+      background-color: $white
+      border: 1px solid $listing-divider
+      float: left
+      width: 562px
+      +breakpoint(320px $max-width)
+        width: 100%
+      &:hover
+        box-shadow: 0 0 4px 2px #c4c4c4
+        transform: scale(1.01)
+      .field-type-datetime
+        color: $grey-hp-7
+        padding: 32px 40px 15px 40px
+      .field-name-title
+        padding: 0 40px 45px 40px
+        h3
+          a
+            font-size: 32px
+      .field-type-image
+        img
+          width: 100%
+          height: auto
+          &:hover
+            background-color: #2d6280
+            border: none
+            opacity: .6
