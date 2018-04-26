@@ -18,10 +18,9 @@
       padding: 20px
       width: 100%
     h2
-      font-size: 36px
-      padding: 10px 0 50px 0
+      padding-bottom: 50px
       +breakpoint(320px $max-width)
-        padding: 20px 0 25px 0
+        padding-bottom: 25px
     .view-gsb-announcement-school-listing
       .views-row-first
         margin-right: 48px
@@ -43,12 +42,9 @@
           transform: scale(1.01)
         .field-type-datetime
           color: $grey-hp-7
-          padding: 32px 40px 15px 40px
-        .field-name-title
-          padding: 0 40px 45px 40px
-          h3
-            a
-              font-size: 32px
+          padding-bottom: 15px
+          +breakpoint(320px $max-width)
+            padding-bottom: 0
         .field-type-image
           img
             width: 100%
@@ -57,3 +53,18 @@
               background-color: #2d6280
               border: none
               opacity: .6
+    .group-news-wrapper
+      padding: 32px 40px 45px 40px
+      h3
+        font-size: 32px
+        +breakpoint(320px $max-width)
+          font-size: 20px
+          padding: 20px 0 25px 0
+      .field-name-media-icon
+        display: inline
+        float: left
+        font-size: 26px
+        top: 2px
+        position: relative
+        +breakpoint(320px $max-width)
+          top: 17px
