@@ -15,6 +15,7 @@
 }
 @media (min-width: 20em) and (max-width: 73.125em) {
   .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 h2 {
+    font-size: 26px;
     padding-bottom: 25px;
   }
 }
@@ -33,7 +34,6 @@
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row {
   background-color: white;
-  border: 1px solid #c4c4c4;
   float: left;
   width: 562px;
 }
@@ -41,10 +41,6 @@
   .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row {
     width: 100%;
   }
-}
-.panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row:hover {
-  box-shadow: 0 0 4px 2px #c4c4c4;
-  transform: scale(1.01);
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-datetime {
   color: #7d7466;
@@ -56,17 +52,31 @@
     padding-bottom: 0;
   }
 }
+.panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-image {
+  overflow: hidden;
+  postion: relative;
+  width: 562px;
+}
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-image img {
-  width: 100%;
+  display: block;
   height: auto;
+  transition: all 0.3s;
+  width: 100%;
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-image img:hover {
   background-color: #2d6280;
   border: none;
   opacity: 0.6;
+  transform: scale(1.05);
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .group-news-wrapper {
+  border-bottom: 1px solid #c4c4c4;
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
   padding: 32px 40px 45px 40px;
+}
+.panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .group-news-wrapper:hover {
+  box-shadow: 0 0 4px 2px #c4c4c4;
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .group-news-wrapper h3 {
   font-size: 32px;
