@@ -1,3 +1,22 @@
+.panels-layout-gsb-homepage .homepage_across-cta {
+  background: white;
+}
+
+.panels-layout-gsb-homepage .homepage_across-cta {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
+}
+
+.panels-layout-gsb-homepage .homepage_across-cta {
+  background-color: #c50000;
+  background: -moz-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -o-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: -webkit-linear-gradient(bottom, #c50000 0%, #860000 100%);
+  background: linear-gradient(to top, #c50000 0%, #860000 100%);
+}
+
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 {
   margin: 0 auto;
   width: 1172px;
@@ -17,6 +36,17 @@
   .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 h2 {
     font-size: 26px;
     padding-bottom: 25px;
+  }
+}
+.panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .view-content:after {
+  clear: both;
+  content: "";
+  display: block;
+  margin-bottom: 70px;
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .view-content:after {
+    margin-bottom: 35px;
   }
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row-first {
@@ -55,7 +85,7 @@
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-image {
   overflow: hidden;
   postion: relative;
-  width: 562px;
+  width: auto;
 }
 .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .view-gsb-announcement-school-listing .views-row .field-type-image img {
   display: block;
@@ -98,4 +128,50 @@
   .panels-layout-gsb-homepage .pane-gsb-announcement-school-listing-panel-pane-1 .group-news-wrapper .field-name-media-icon {
     top: 17px;
   }
+}
+.panels-layout-gsb-homepage .homepage_across-cta {
+  color: white;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0 auto;
+  padding: 16px 36px 16px 25px;
+  position: relative;
+  width: 205px;
+}
+.panels-layout-gsb-homepage .homepage_across-cta:first-of-type {
+  border-top: 0;
+}
+.panels-layout-gsb-homepage .homepage_across-cta:last-of-type {
+  border-bottom: 0;
+}
+.panels-layout-gsb-homepage .homepage_across-cta a {
+  color: white;
+}
+.panels-layout-gsb-homepage .homepage_across-cta a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.panels-layout-gsb-homepage .homepage_across-cta a:hover {
+  color: white;
+}
+.panels-layout-gsb-homepage .homepage_across-cta a:hover:after {
+  color: white;
 }

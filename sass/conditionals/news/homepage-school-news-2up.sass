@@ -23,6 +23,15 @@
         font-size: 26px
         padding-bottom: 25px
     .view-gsb-announcement-school-listing
+      .view-content
+        &:after
+          clear: both
+          content: ''
+          display: block
+          margin-bottom: 70px
+        +breakpoint(320px $max-width)
+          &:after
+            margin-bottom: 35px
       .views-row-first
         margin-right: 48px
         +breakpoint(320px $max-width)
@@ -46,7 +55,7 @@
         .field-type-image
           overflow: hidden
           postion: relative
-          width: 562px
+          width: auto
           img
             display: block
             height: auto
@@ -77,3 +86,31 @@
         position: relative
         +breakpoint(320px $max-width)
           top: 17px
+  .homepage_across-cta
+    @extend %gradient-red
+    color: $white
+    font-size: 16px
+    line-height: 1.2
+    margin: 0 auto
+    padding: 16px 36px 16px 25px
+    position: relative
+    width: 205px
+    @extend %bg-and-box-shadow
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
+    a
+      color: $white
+      +icon-after("arrow-double-right", true)
+        font-size: 21px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        position: absolute
+        right: 20px
+        top: 50%
+      &:hover
+        color: $white
+        &:after
+          color: $white
