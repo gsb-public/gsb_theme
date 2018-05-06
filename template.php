@@ -402,6 +402,10 @@ function gsb_theme_preprocess_page(&$variables) {
     }
   }
 
+  if (!empty($_GET['q']) && $_GET['q'] == 'coveo-search-page/') {
+    $variables['theme_hook_suggestions'][] = 'page__coveo_search';
+  }
+	
 /*
   // Add search and event link to main navigation
   $variables['global_search'] = array(
