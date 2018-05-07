@@ -1,0 +1,40 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+.pane-bundle-landing-viewport
+  position: relative
+  .viewport-text
+    position: absolute
+    top: 40%
+    left: 10%
+    text-align: left
+    width: 30%
+    span
+      line-height: 2em
+      font-size: 2em
+      color: $white
+      padding: 5px
+      display: inline
+      background: orange
+      box-shadow: 10px 0 0 orange, -10px 0 0 orange /* to get padding at end of lines no matter where it breaks */
+  .scrollLink
+    bottom: 10px
+    color: $white
+    cursor: hand
+    cursor: pointer
+    font-size: 16px
+    font-weight: bold
+    left: 50%
+    position: absolute
+    transform: translate(-50%, -50%)
+    +icon-after("arrow-med-down", true)
+      display: block
+      padding: 20px 45px
+    +breakpoint($bp-mobile-max)
+      font-size: 12px

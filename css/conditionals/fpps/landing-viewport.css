@@ -1,0 +1,52 @@
+.pane-bundle-landing-viewport {
+  position: relative;
+}
+.pane-bundle-landing-viewport .viewport-text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  text-align: left;
+  width: 30%;
+}
+.pane-bundle-landing-viewport .viewport-text span {
+  line-height: 2em;
+  font-size: 2em;
+  color: white;
+  padding: 5px;
+  display: inline;
+  background: orange;
+  box-shadow: 10px 0 0 orange, -10px 0 0 orange;
+}
+.pane-bundle-landing-viewport .scrollLink {
+  bottom: 10px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.pane-bundle-landing-viewport .scrollLink:after {
+  content: "\f105";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  display: block;
+  padding: 20px 45px;
+}
+@media (max-width: 35.5em) {
+  .pane-bundle-landing-viewport .scrollLink {
+    font-size: 12px;
+  }
+}

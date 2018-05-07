@@ -564,5 +564,13 @@
       });
     }
   };
-
+    /* scroll functionality for the 2018 site refresh*/
+    $(function() {
+        // splash scroll
+        $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
+            $('html, body').animate({
+                scrollTop: $('.panel-separator').offset().top
+            }, 800);
+        });
+    });
 }(jQuery));
