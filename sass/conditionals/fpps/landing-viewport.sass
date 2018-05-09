@@ -9,6 +9,63 @@
 
 .pane-bundle-landing-viewport
   position: relative
+  .bg-text-color-blue
+    .viewport-text
+      span
+        background: blue
+        box-shadow: 25px 0 0 blue, -25px 0 0 blue /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
+  .bg-text-color-teal
+    .viewport-text
+      span
+        background: teal
+        box-shadow: 25px 0 0 teal, -25px 0 0 teal /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
+  .bg-text-color-lime
+    .viewport-text
+      span
+        background: $teal-med
+        box-shadow: 25px 0 0 $teal-med, -25px 0 0 $teal-med /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
+  .bg-text-color-purple
+    .viewport-text
+      span
+        background: $purple-bright
+        box-shadow: 25px 0 0 $purple-bright, -25px 0 0 $purple-bright /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
+  .bg-text-color-pink
+    .viewport-text
+      span
+        background: $pink-bright
+        box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
+  .bg-text-color-white
+    .viewport-text
+      span
+        background: $white
+        box-shadow: 25px 0 0 $white, -25px 0 0 $white /* to get padding at end of lines no matter where it breaks */
+        color: $charcoal
+        opacity: .8
+        a
+          color: $charcoal
+  .bg-text-color-charcoal
+    .viewport-text
+      span
+        background: $charcoal
+        box-shadow: 25px 0 0 $charcoal, -25px 0 0 $charcoal /* to get padding at end of lines no matter where it breaks */
+        opacity: .8
+        a
+          color: $white
   .viewport-text
     position: absolute
     top: 40%
@@ -19,10 +76,9 @@
       line-height: 2em
       font-size: 2em
       color: $white
-      padding: 5px
+      padding: 13px
       display: inline
-      background: orange
-      box-shadow: 10px 0 0 orange, -10px 0 0 orange /* to get padding at end of lines no matter where it breaks */
+
   .scrollLink
     bottom: 10px
     color: $white
