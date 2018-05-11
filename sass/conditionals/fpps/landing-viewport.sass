@@ -9,10 +9,8 @@
 
 .pane-bundle-landing-viewport
   position: relative
-  .field-name-field-homepage-image-tablet
-  //display: none
-  .field-name-field-homepage-image-mobile
-  //display: none
+  //.field-name-field-homepage-image-tablet
+  //.field-name-field-homepage-image-mobile
   .bg-text-color-blue
     .viewport-text
       span
@@ -57,9 +55,14 @@
     left: 10%
     text-align: left
     width: 35%
+    +breakpoint($bp-tablet-port)
+      top: 30%
+      width: 80%
     +breakpoint($bp-mobile-max)
       top: 30%
       width: 80%
+    +breakpoint($bp-mobile)
+      top: 10%
     span
       line-height: 2em
       font-size: 36px
@@ -101,3 +104,4 @@
       padding: 10px 45px
     +breakpoint($bp-mobile-max)
       font-size: 12px
+      padding-bottom: 50px
