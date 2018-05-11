@@ -1,51 +1,40 @@
+.pane-bundle-landing-viewport .viewport-text span a:after {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: -10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
+
 .pane-bundle-landing-viewport {
   position: relative;
 }
 .pane-bundle-landing-viewport .bg-text-color-blue .viewport-text span {
   background: blue;
   box-shadow: 25px 0 0 blue, -25px 0 0 blue;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-blue .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .bg-text-color-teal .viewport-text span {
   background: teal;
   box-shadow: 25px 0 0 teal, -25px 0 0 teal;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-teal .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .bg-text-color-lime .viewport-text span {
   background: #006152;
   box-shadow: 25px 0 0 #006152, -25px 0 0 #006152;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-lime .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .bg-text-color-purple .viewport-text span {
   background: #97185d;
   box-shadow: 25px 0 0 #97185d, -25px 0 0 #97185d;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-purple .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .bg-text-color-pink .viewport-text span {
   background: #dd1880;
   box-shadow: 25px 0 0 #dd1880, -25px 0 0 #dd1880;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-pink .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .bg-text-color-white .viewport-text span {
   background: white;
   box-shadow: 25px 0 0 white, -25px 0 0 white;
   color: #231f20;
-  opacity: 0.8;
 }
 .pane-bundle-landing-viewport .bg-text-color-white .viewport-text span a {
   color: #231f20;
@@ -53,33 +42,74 @@
 .pane-bundle-landing-viewport .bg-text-color-charcoal .viewport-text span {
   background: #231f20;
   box-shadow: 25px 0 0 #231f20, -25px 0 0 #231f20;
-  opacity: 0.8;
-}
-.pane-bundle-landing-viewport .bg-text-color-charcoal .viewport-text span a {
-  color: white;
 }
 .pane-bundle-landing-viewport .viewport-text {
   position: absolute;
   top: 40%;
   left: 10%;
   text-align: left;
-  width: 30%;
+  width: 35%;
+}
+@media (max-width: 35.5em) {
+  .pane-bundle-landing-viewport .viewport-text {
+    top: 30%;
+    width: 80%;
+  }
 }
 .pane-bundle-landing-viewport .viewport-text span {
   line-height: 2em;
-  font-size: 2em;
+  font-size: 36px;
   color: white;
-  padding: 13px;
+  padding: 13px 0;
   display: inline;
+  box-decoration-break: clone;
+  opacity: 0.8;
+}
+@media (max-width: 35.5em) {
+  .pane-bundle-landing-viewport .viewport-text span {
+    font-size: 18px;
+  }
+}
+.pane-bundle-landing-viewport .viewport-text span:hover {
+  background-color: #2d6280;
+  box-shadow: 25px 0 0 #2d6280, -25px 0 0 #2d6280;
+  opacity: 1;
+}
+.pane-bundle-landing-viewport .viewport-text span a {
+  color: white;
+}
+.pane-bundle-landing-viewport .viewport-text span a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.pane-bundle-landing-viewport .viewport-text span a:after {
+  color: white;
+  font-weight: normal;
+  position: relative;
+  right: 0;
+}
+.pane-bundle-landing-viewport .viewport-text span a:hover {
+  text-decoration: none;
 }
 .pane-bundle-landing-viewport .scrollLink {
-  bottom: 10px;
   color: white;
   cursor: hand;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   left: 50%;
+  padding-bottom: 80px;
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -98,7 +128,7 @@
   font-weight: normal;
   font-family: 'icons';
   display: block;
-  padding: 20px 45px;
+  padding: 10px 45px;
 }
 @media (max-width: 35.5em) {
   .pane-bundle-landing-viewport .scrollLink {

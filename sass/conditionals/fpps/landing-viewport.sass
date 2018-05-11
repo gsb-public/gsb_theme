@@ -9,53 +9,41 @@
 
 .pane-bundle-landing-viewport
   position: relative
+  .field-name-field-homepage-image-tablet
+  //display: none
+  .field-name-field-homepage-image-mobile
+  //display: none
   .bg-text-color-blue
     .viewport-text
       span
         background: blue
         box-shadow: 25px 0 0 blue, -25px 0 0 blue /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .bg-text-color-teal
     .viewport-text
       span
         background: teal
         box-shadow: 25px 0 0 teal, -25px 0 0 teal /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .bg-text-color-lime
     .viewport-text
       span
         background: $teal-med
         box-shadow: 25px 0 0 $teal-med, -25px 0 0 $teal-med /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .bg-text-color-purple
     .viewport-text
       span
         background: $purple-bright
         box-shadow: 25px 0 0 $purple-bright, -25px 0 0 $purple-bright /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .bg-text-color-pink
     .viewport-text
       span
         background: $pink-bright
         box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .bg-text-color-white
     .viewport-text
       span
         background: $white
         box-shadow: 25px 0 0 $white, -25px 0 0 $white /* to get padding at end of lines no matter where it breaks */
         color: $charcoal
-        opacity: .8
         a
           color: $charcoal
   .bg-text-color-charcoal
@@ -63,34 +51,53 @@
       span
         background: $charcoal
         box-shadow: 25px 0 0 $charcoal, -25px 0 0 $charcoal /* to get padding at end of lines no matter where it breaks */
-        opacity: .8
-        a
-          color: $white
   .viewport-text
     position: absolute
     top: 40%
     left: 10%
     text-align: left
-    width: 30%
+    width: 35%
+    +breakpoint($bp-mobile-max)
+      top: 30%
+      width: 80%
     span
       line-height: 2em
-      font-size: 2em
+      font-size: 36px
       color: $white
-      padding: 13px
+      padding: 13px 0
       display: inline
+      box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
+      opacity: .8
+      +breakpoint($bp-mobile-max)
+        font-size: 18px
+      &:hover
+        background-color: $hover-viewport-blue
+        box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
+        opacity: 1
+      a
+        color: $white
+        +icon-after("arrow-double-right", true)
+        &:after
+          @extend %arrow-double-big
+          color: $white
+          font-weight: normal
+          position: relative
+          right: 0
+        &:hover
+          text-decoration: none
 
   .scrollLink
-    bottom: 10px
     color: $white
     cursor: hand
     cursor: pointer
     font-size: 16px
     font-weight: bold
     left: 50%
+    padding-bottom: 80px
     position: absolute
     transform: translate(-50%, -50%)
     +icon-after("arrow-med-down", true)
       display: block
-      padding: 20px 45px
+      padding: 10px 45px
     +breakpoint($bp-mobile-max)
       font-size: 12px
