@@ -9,7 +9,8 @@
 @import partials/base/03-extend/gsb-revamp
 
 .panels-layout-gsb-homepage
-  .pane-gsb-announcement-school-listing-panel-pane-1
+  .pane-gsb-announcement-school-listing-panel-pane-1,
+  .pane-gsb-insights-stanford-business-panel-pane-1
     margin: 0 auto
     width: 1172px
     +breakpoint(320px $max-width)
@@ -66,6 +67,56 @@
               border: none
               opacity: .6
               transform: scale(1.05)
+    .view-gsb-insights-stanford-business
+      .view-content
+        &:after
+          clear: both
+          content: ''
+          display: block
+          margin-bottom: 70px
+        +breakpoint(320px $max-width)
+          &:after
+            margin-bottom: 35px
+      .views-row-1
+        margin-right: 46px
+        +breakpoint(320px $max-width)
+          margin-right: 0
+      .views-row-2
+        margin-right: 46px
+        +breakpoint(320px $max-width)
+          margin-right: 0
+          margin-top: 35px
+      .views-row-3
+        +breakpoint(320px $max-width)
+          margin-top: 35px
+          margin-right: 0
+
+      .views-row
+        background-color: $white
+        float: left
+        width: 360px
+        +breakpoint(320px $max-width)
+          width: 100%
+        .field-type-datetime
+          color: $grey-hp-7
+          padding-bottom: 15px
+          +breakpoint(320px $max-width)
+            font-size: 12px
+            padding-bottom: 0
+        .field-type-image
+          overflow: hidden
+          postion: relative
+          width: auto
+          img
+            display: block
+            height: auto
+            transition: all 0.3s
+            width: 100%
+            &:hover
+              background-color: #2d6280
+              border: none
+              opacity: .6
+              transform: scale(1.05)
     .group-news-wrapper
       border-bottom: 1px solid $listing-divider
       border-left: 1px solid $listing-divider
@@ -86,7 +137,7 @@
         position: relative
         +breakpoint(320px $max-width)
           top: 17px
-  .homepage_across-cta
+  %homepage_cta
     @extend %gradient-red
     color: $white
     font-size: 16px
@@ -114,3 +165,7 @@
         color: $white
         &:after
           color: $white
+  .homepage_insights-cta
+    @extend %homepage_cta
+  .homepage_across-cta
+    @extend %homepage_cta
