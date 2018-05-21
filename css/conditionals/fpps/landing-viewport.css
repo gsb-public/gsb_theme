@@ -11,17 +11,37 @@
 .pane-bundle-landing-viewport {
   position: relative;
 }
+.pane-bundle-landing-viewport .field-name-field-homepage-image-desktop {
+  display: none;
+}
+@media (min-width: 75em) {
+  .pane-bundle-landing-viewport .field-name-field-homepage-image-desktop {
+    display: block;
+  }
+}
+.pane-bundle-landing-viewport .field-name-field-homepage-image-tablet {
+  display: none;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .pane-bundle-landing-viewport .field-name-field-homepage-image-tablet {
+    display: block;
+  }
+}
+.pane-bundle-landing-viewport .field-name-field-homepage-image-mobile {
+  display: none;
+}
+@media (max-width: 37.4375em) {
+  .pane-bundle-landing-viewport .field-name-field-homepage-image-mobile {
+    display: block;
+  }
+}
 .pane-bundle-landing-viewport .bg-text-color-blue .viewport-text span {
-  background: blue;
-  box-shadow: 25px 0 0 blue, -25px 0 0 blue;
+  background: #26639d;
+  box-shadow: 25px 0 0 #26639d, -25px 0 0 #26639d;
 }
-.pane-bundle-landing-viewport .bg-text-color-teal .viewport-text span {
-  background: teal;
-  box-shadow: 25px 0 0 teal, -25px 0 0 teal;
-}
-.pane-bundle-landing-viewport .bg-text-color-lime .viewport-text span {
-  background: #006152;
-  box-shadow: 25px 0 0 #006152, -25px 0 0 #006152;
+.pane-bundle-landing-viewport .bg-text-color-forest-green .viewport-text span {
+  background: #175e54;
+  box-shadow: 25px 0 0 #175e54, -25px 0 0 #175e54;
 }
 .pane-bundle-landing-viewport .bg-text-color-purple .viewport-text span {
   background: #97185d;
@@ -31,18 +51,6 @@
   background: #dd1880;
   box-shadow: 25px 0 0 #dd1880, -25px 0 0 #dd1880;
 }
-.pane-bundle-landing-viewport .bg-text-color-white .viewport-text span {
-  background: white;
-  box-shadow: 25px 0 0 white, -25px 0 0 white;
-  color: #231f20;
-}
-.pane-bundle-landing-viewport .bg-text-color-white .viewport-text span a {
-  color: #231f20;
-}
-.pane-bundle-landing-viewport .bg-text-color-charcoal .viewport-text span {
-  background: #231f20;
-  box-shadow: 25px 0 0 #231f20, -25px 0 0 #231f20;
-}
 .pane-bundle-landing-viewport .viewport-text {
   position: absolute;
   top: 40%;
@@ -50,21 +58,21 @@
   text-align: left;
   width: 35%;
 }
-@media (min-width: 35.5625em) and (max-width: 62.4375em) {
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
   .pane-bundle-landing-viewport .viewport-text {
     top: 30%;
     width: 80%;
   }
 }
-@media (max-width: 35.5em) {
+@media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .viewport-text {
-    top: 30%;
+    top: 20%;
     width: 80%;
   }
 }
 @media (max-width: 20em) {
   .pane-bundle-landing-viewport .viewport-text {
-    top: 10%;
+    top: 0%;
   }
 }
 .pane-bundle-landing-viewport .viewport-text span {
@@ -76,9 +84,22 @@
   box-decoration-break: clone;
   opacity: 0.8;
 }
-@media (max-width: 35.5em) {
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .pane-bundle-landing-viewport .viewport-text span {
+    font-size: 30px;
+    line-height: 2.5em;
+  }
+}
+@media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .viewport-text span {
     font-size: 18px;
+    line-height: 3em;
+  }
+}
+@media (max-width: 20em) {
+  .pane-bundle-landing-viewport .viewport-text span {
+    font-size: 18px;
+    line-height: 2.8em;
   }
 }
 .pane-bundle-landing-viewport .viewport-text span:hover {
@@ -109,6 +130,17 @@
   font-weight: normal;
   position: relative;
   right: 0;
+  padding-left: 10px;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .pane-bundle-landing-viewport .viewport-text span a:after {
+    top: 2px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .pane-bundle-landing-viewport .viewport-text span a:after {
+    top: 2px;
+  }
 }
 .pane-bundle-landing-viewport .viewport-text span a:hover {
   text-decoration: none;
@@ -141,10 +173,15 @@
   display: block;
   padding: 10px 45px;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 20em) {
+  .pane-bundle-landing-viewport .scrollLink:after {
+    padding: 0 45px;
+  }
+}
+@media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .scrollLink {
     font-size: 12px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 }
 .pane-bundle-landing-viewport video + .scrollLink {

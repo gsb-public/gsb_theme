@@ -9,23 +9,28 @@
 
 .pane-bundle-landing-viewport
   position: relative
-  //.field-name-field-homepage-image-tablet
-  //.field-name-field-homepage-image-mobile
+  .field-name-field-homepage-image-desktop
+    display: none
+    +breakpoint($bp-for-desktop-up)
+      display: block
+  .field-name-field-homepage-image-tablet
+    display: none
+    +breakpoint($bp-for-tablet-range)
+      display: block
+  .field-name-field-homepage-image-mobile
+    display: none
+    +breakpoint($bp-for-phone-only)
+      display: block
   .bg-text-color-blue
     .viewport-text
       span
-        background: blue
-        box-shadow: 25px 0 0 blue, -25px 0 0 blue /* to get padding at end of lines no matter where it breaks */
-  .bg-text-color-teal
+        background: $blue-bright
+        box-shadow: 25px 0 0 $blue-bright, -25px 0 0 $blue-bright /* to get padding at end of lines no matter where it breaks */
+  .bg-text-color-forest-green
     .viewport-text
       span
-        background: teal
-        box-shadow: 25px 0 0 teal, -25px 0 0 teal /* to get padding at end of lines no matter where it breaks */
-  .bg-text-color-lime
-    .viewport-text
-      span
-        background: $teal-med
-        box-shadow: 25px 0 0 $teal-med, -25px 0 0 $teal-med /* to get padding at end of lines no matter where it breaks */
+        background: $forest-green
+        box-shadow: 25px 0 0 $forest-green, -25px 0 0 $forest-green /* to get padding at end of lines no matter where it breaks */
   .bg-text-color-purple
     .viewport-text
       span
@@ -36,33 +41,21 @@
       span
         background: $pink-bright
         box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
-  .bg-text-color-white
-    .viewport-text
-      span
-        background: $white
-        box-shadow: 25px 0 0 $white, -25px 0 0 $white /* to get padding at end of lines no matter where it breaks */
-        color: $charcoal
-        a
-          color: $charcoal
-  .bg-text-color-charcoal
-    .viewport-text
-      span
-        background: $charcoal
-        box-shadow: 25px 0 0 $charcoal, -25px 0 0 $charcoal /* to get padding at end of lines no matter where it breaks */
+
   .viewport-text
     position: absolute
     top: 40%
     left: 10%
     text-align: left
     width: 35%
-    +breakpoint($bp-tablet-port)
+    +breakpoint($bp-for-tablet-range)
       top: 30%
       width: 80%
-    +breakpoint($bp-mobile-max)
-      top: 30%
+    +breakpoint($bp-for-phone-only)
+      top: 20%
       width: 80%
     +breakpoint($bp-mobile)
-      top: 10%
+      top: 0%
     span
       line-height: 2em
       font-size: 36px
@@ -71,8 +64,15 @@
       display: inline
       box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
       opacity: .8
-      +breakpoint($bp-mobile-max)
+      +breakpoint($bp-for-tablet-range)
+        font-size: 30px
+        line-height: 2.5em
+      +breakpoint($bp-for-phone-only)
         font-size: 18px
+        line-height: 3em
+      +breakpoint($bp-mobile)
+        font-size: 18px
+        line-height: 2.8em
       &:hover
         background-color: $hover-viewport-blue
         box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
@@ -86,6 +86,11 @@
           font-weight: normal
           position: relative
           right: 0
+          padding-left: 10px
+          +breakpoint($bp-for-tablet-range)
+            top: 2px
+          +breakpoint($bp-for-phone-only)
+            top: 2px
         &:hover
           text-decoration: none
 
@@ -102,9 +107,11 @@
     +icon-after("arrow-med-down", true)
       display: block
       padding: 10px 45px
-    +breakpoint($bp-mobile-max)
+      +breakpoint($bp-mobile)
+        padding: 0 45px
+    +breakpoint($bp-for-phone-only)
       font-size: 12px
-      padding-bottom: 50px
+      padding-bottom: 40px
   video + .scrollLink
     bottom: 0
     padding-bottom: 10px
