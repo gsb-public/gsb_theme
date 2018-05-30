@@ -573,4 +573,11 @@
             }, 800);
         });
     });
+    /* Voices detail page customization */
+    $(function() {
+        // Adding some wrappers for ease in styling.
+        $(".node-type-voices .breadcrumb").prependTo(".group-left");
+        $(".group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
+        $('.group-left,.group-right').wrapAll('<div class="content-wrapper"></div>');
+    });
 }(jQuery));
