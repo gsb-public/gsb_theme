@@ -44,11 +44,12 @@
   background-color: white;
   border: 1px solid gainsboro;
   color: #636f00;
-  font-size: 20px;
+  display: block;
+  font-size: 18px;
   margin: 0 auto;
   max-width: 408px;
   min-width: 270px;
-  padding: 25px 20px 25px 25px;
+  padding: 20px 20px 20px 25px;
 }
 .parallax .stay-in-touch a:hover {
   color: #2d6280;
@@ -73,7 +74,17 @@
   text-decoration: none;
 }
 @media (max-width: 35.5em) {
+  .parallax .stay-in-touch a:after {
+    float: right;
+    margin-top: -13px;
+  }
+}
+@media (max-width: 35.5em) {
   .parallax .stay-in-touch a {
+    float: right;
     font-size: 16px;
+    margin-top: -13px;
+    width: 282px;
+    white-space: normal;
   }
 }
