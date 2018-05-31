@@ -2831,13 +2831,16 @@ del {
 .panels-layout-gsb-homepage #content #main .breadcrumb {
   display: none;
 }
-.panels-layout-gsb-homepage #content #main .panel-separator {
-  height: 70px;
+.panels-layout-gsb-homepage #content #main .panel-pane {
+  padding-top: 70px;
 }
 @media (min-width: 20em) and (max-width: 73.125em) {
-  .panels-layout-gsb-homepage #content #main .panel-separator {
-    height: 35px;
+  .panels-layout-gsb-homepage #content #main .panel-pane {
+    padding-top: 35px;
   }
+}
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport {
+  padding-top: 0;
 }
 
 .offscreenText {
