@@ -1,3 +1,4 @@
+@charset "UTF-8";
 span.title-wrapper h1 {
   display: none;
 }
@@ -28,19 +29,20 @@ span.title-wrapper h1 {
   font-weight: normal;
   margin: 0 auto;
   margin-top: -83px;
-  padding: 25px 40px;
+  padding: 25px 50px;
   position: relative;
   text-align: left;
   width: 1108px;
 }
-.node-type-voices .field-name-field-quote .first-double-apostrophe {
-  background: white;
-  display: inline-block;
-  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100px;
-  font-weight: normal;
-  line-height: 1;
-  padding-right: 10px;
+.node-type-voices .field-name-field-quote:before {
+  content: "“";
+  position: absolute;
+  left: 13px;
+  font-size: 90px;
+  top: 16px;
+}
+.node-type-voices .field-name-field-quote:after {
+  content: "”";
 }
 .node-type-voices .field-name-field-quote .quote {
   display: inline-block;
@@ -61,7 +63,8 @@ span.title-wrapper h1 {
   width: 430px;
   z-index: 5;
 }
-.node-type-voices fieldset.group-voices-group h1 {
+.node-type-voices fieldset.group-voices-group h1,
+.node-type-voices fieldset.group-voices-group .field-name-field-degree-year {
   color: white;
   font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
@@ -92,64 +95,64 @@ span.title-wrapper h1 {
   border-bottom: 1px solid #979797;
   height: 75px;
 }
-.node-type-voices .ds-2col-stacked {
+.node-type-voices .ds-2col-stacked-fluid {
   margin: 0 auto;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper {
   margin: 0 auto;
   width: 1175px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
   border-top: 1px solid #979797;
   float: left;
   margin: 50px 50px 0 0;
   width: 816px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left .article {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .article {
   padding: 30px 0 0 20px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left .field-name-field-date.field-type-datetime {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
   display: inline;
   float: left;
   font-size: 18px;
   padding: 50px 0;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left .field-name-field-date.field-type-datetime .date-display-single:after {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime .date-display-single:after {
   content: "|";
   padding-left: 10px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left .field-collection-container .byline {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
   display: inline;
   float: left;
   font-size: 18px;
   padding: 50px 0;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-left .field-collection-container .byline .field-collection-view {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline .field-collection-view {
   margin-left: 10px;
   padding: 0;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-right {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right {
   border-top: 1px solid #979797;
   float: left;
   margin: 50px 0 0 0;
   padding-top: 40px;
   width: 273px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-right .field-label {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .field-label {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: normal;
   padding: 15px 0 5px;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-right .field-items div {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .field-items div {
   line-height: 1.5;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-right .background-rail-img {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .background-rail-img {
   margin-left: 5%;
   margin-top: -75px;
   position: absolute;
 }
-.node-type-voices .ds-2col-stacked .content-wrapper .group-right .background-rail-img img {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .background-rail-img img {
   border: 1px solid #979797;
   border-radius: 50%;
   width: 74px;

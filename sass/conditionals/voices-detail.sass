@@ -84,6 +84,7 @@
 span.title-wrapper
   h1
     display: none
+
 /* Container holding the image and the text */
 .node-type-voices
   #content
@@ -93,6 +94,7 @@ span.title-wrapper
     //max-height: calc(100vh - 200px)
     position: relative
     text-align: center
+
     /* Voices header image */
     .field-name-field-image-key-image
       img
@@ -107,22 +109,23 @@ span.title-wrapper
     font-weight: normal
     margin: 0 auto
     margin-top: -83px
-    padding: 25px 40px
+    padding: 25px 50px
     position: relative
     text-align: left
     width: 1108px
-    .first-double-apostrophe
-      background: $white
-      display: inline-block
-      font-family: $font-light
-      font-size: 100px
-      font-weight: normal
-      line-height: 1
-      padding-right: 10px
+    &:before
+      content: "“"
+      position: absolute
+      left: 13px
+      font-size: 90px
+      top: 16px
+    &:after
+      content: "”"
     .quote
       display: inline-block
       position: relative
       top: -46px
+
   /* Voices title box */
   fieldset.group-voices-group
     background-color: hotpink
@@ -137,7 +140,8 @@ span.title-wrapper
     top: 50px
     width: 430px
     z-index: 5
-    h1
+    h1,
+    .field-name-field-degree-year
       color: $white
       font-family: $font-light
       font-size: 36px
@@ -169,7 +173,7 @@ span.title-wrapper
     height: 75px
 
   /* Voices col set up - some comes right from existing code */
-  .ds-2col-stacked
+  .ds-2col-stacked-fluid
     margin: 0 auto
     .content-wrapper
       margin: 0 auto
