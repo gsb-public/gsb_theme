@@ -81,6 +81,15 @@
 //  #mobile-profile-img
 //    display: none
 
+.page-programs-msx.node-type-voices,
+.node-type-msx-fellows.node-type-voices
+  #content-wrapper
+    background: none
+    +breakpoint($bp-tablet-port-min)
+      background: none
+
+
+
 /* Container holding the image and the text */
 .node-type-voices
   span.title-wrapper
@@ -88,6 +97,7 @@
       display: none
   div#sidebar, div#banner
     display: none
+
   #content
     max-width: 100%
   .group-header
@@ -221,7 +231,7 @@
           div
             line-height: 1.5
         .background-rail-img
-          margin-left: 7%
+          margin-left: 102px
           margin-top: -75px
           position: absolute
           img
