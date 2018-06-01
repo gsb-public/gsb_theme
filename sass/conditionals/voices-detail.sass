@@ -84,6 +84,8 @@
 span.title-wrapper
   h1
     display: none
+div#sidebar, div#banner
+  display: none
 
 /* Container holding the image and the text */
 .node-type-voices
@@ -165,8 +167,7 @@ span.title-wrapper
       padding-top: 30px
 
   .breadcrumb
-    background-color: darkgrey
-    padding: 0 0 0 35px
+    padding: 0 0 20px 35px
 
   .field-name-social-buttons-top
     border-bottom: 1px solid $voices-divider
@@ -180,19 +181,18 @@ span.title-wrapper
       width: 1175px
 
       .group-left
-        border-top: 1px solid $voices-divider
         float: left
         margin: 50px 50px 0 0
         width: 816px
 
-        .article
-          padding: 30px 0 0 20px
+        .field-name-field-body
+          padding: 30px 0 0 35px
 
         .field-name-field-date.field-type-datetime
           display: inline
           float: left
           font-size: 18px
-          padding: 50px 0
+          padding: 50px 0 0 35px
           .date-display-single
             &:after
               content: "|"
@@ -222,7 +222,7 @@ span.title-wrapper
           div
             line-height: 1.5
         .background-rail-img
-          margin-left: 5%
+          margin-left: 7%
           margin-top: -75px
           position: absolute
           img
