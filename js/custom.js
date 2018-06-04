@@ -576,8 +576,8 @@
     /* Voices detail page customization */
     $(function() {
         // Adding some wrappers for ease in styling.
-        $(".node-type-voices .breadcrumb").prependTo(".group-left");
-        $(".group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
-        $('.group-left,.group-right').wrapAll('<div class="content-wrapper"></div>');
+        $(".node-type-voices .breadcrumb").prependTo(".node-type-voices .group-left");
+        $(".node-type-voices .group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
+        $('.node-type-voices .group-left, .node-type-voices .group-right').wrapAll('<div class="content-wrapper"></div>');
     });
 }(jQuery));
