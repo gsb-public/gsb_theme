@@ -13,8 +13,12 @@
 /* Container holding the image and the text */
 .node-type-voices {
   /* Voices top quote */
-  /* Voices title box */
   /* Voices col set up - some comes right from existing code */
+}
+@media (min-width: 16.875em) {
+  .node-type-voices #main.column {
+    padding: 0;
+  }
 }
 .node-type-voices span.title-wrapper h1 {
   display: none;
@@ -30,9 +34,92 @@
   position: relative;
   text-align: center;
   /* Voices header image */
+  /* Voices title box */
 }
 .node-type-voices .group-header .field-name-field-image-key-image img {
   max-height: calc(100vh - 200px);
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header .field-name-field-image-key-image img {
+    display: none;
+  }
+}
+.node-type-voices .group-header .mobile-profile-image {
+  display: none;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header .mobile-profile-image {
+    display: block;
+  }
+}
+.node-type-voices .group-header fieldset.group-voices-group {
+  background-color: hotpink;
+  border: none;
+  color: white;
+  height: 380px;
+  margin-left: 15%;
+  opacity: 0.9;
+  padding: 0 45px;
+  position: absolute;
+  text-align: left;
+  top: 50px;
+  width: 430px;
+  z-index: 5;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header fieldset.group-voices-group {
+    background-color: transparent;
+    color: #231f20;
+    height: auto;
+    position: static;
+    padding: 0;
+    margin: 0 18px;
+    width: 100%;
+  }
+}
+.node-type-voices .group-header fieldset.group-voices-group h1,
+.node-type-voices .group-header fieldset.group-voices-group .field-name-field-degree-year {
+  color: white;
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 0;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header fieldset.group-voices-group h1,
+  .node-type-voices .group-header fieldset.group-voices-group .field-name-field-degree-year {
+    background-color: transparent;
+    color: #231f20;
+  }
+}
+.node-type-voices .group-header fieldset.group-voices-group .label {
+  background-color: #231f20;
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  padding: 6px 8px;
+  position: relative;
+  z-index: 6;
+}
+.node-type-voices .group-header fieldset.group-voices-group .field-name-field-title-position-single {
+  font-size: 22px;
+  padding-top: 30px;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header fieldset.group-voices-group .field-name-field-title-position-single {
+    font-size: 16px;
+    padding: 20px 0 30px 0;
+  }
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header .mobile-profile {
+    width: 100%;
+    height: 100%;
+    margin-left: -18px;
+  }
 }
 .node-type-voices .field-name-field-quote {
   background: white;
@@ -47,12 +134,30 @@
   text-align: left;
   width: 1108px;
 }
+@media (max-width: 35.5em) {
+  .node-type-voices .field-name-field-quote {
+    font-size: 24px;
+    left: 18px;
+    padding: 25px 18px 25px 30px;
+    position: relative;
+    top: 10px;
+    width: 100%;
+  }
+  .node-type-voices .field-name-field-quote .mobile-profile {
+    display: block;
+  }
+}
 .node-type-voices .field-name-field-quote:before {
   content: "“";
   position: absolute;
   left: 13px;
   font-size: 90px;
   top: 16px;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .field-name-field-quote:before {
+    font-size: 40px;
+  }
 }
 .node-type-voices .field-name-field-quote:after {
   content: "”";
@@ -61,44 +166,6 @@
   display: inline-block;
   position: relative;
   top: -46px;
-}
-.node-type-voices fieldset.group-voices-group {
-  background-color: hotpink;
-  border: none;
-  color: white;
-  height: 380px;
-  margin-left: 15%;
-  opacity: 0.9;
-  padding: 0 45px;
-  position: absolute;
-  text-align: left;
-  top: 50px;
-  width: 430px;
-  z-index: 5;
-}
-.node-type-voices fieldset.group-voices-group h1,
-.node-type-voices fieldset.group-voices-group .field-name-field-degree-year {
-  color: white;
-  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  margin-top: 0;
-}
-.node-type-voices fieldset.group-voices-group .label {
-  background-color: #231f20;
-  color: white;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.2;
-  margin-bottom: 30px;
-  padding: 6px 8px;
-  position: relative;
-  z-index: 6;
-}
-.node-type-voices fieldset.group-voices-group .field-name-field-title-position-single {
-  font-size: 22px;
-  padding-top: 30px;
 }
 .node-type-voices .breadcrumb {
   padding: 0 0 20px 35px;
@@ -114,13 +181,32 @@
   margin: 0 auto;
   width: 1175px;
 }
+@media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper {
+    padding: 25px 35px;
+    width: 100%;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
   float: left;
   margin: 50px 50px 0 0;
   width: 816px;
 }
+@media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
   padding: 30px 0 0 35px;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
+    padding: 0;
+  }
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
   display: inline;
@@ -132,6 +218,12 @@
   content: "|";
   padding-left: 10px;
 }
+@media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
+    font-size: 14px;
+    padding-left: 0;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
   display: inline;
   float: left;
@@ -141,6 +233,11 @@
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline .field-collection-view {
   margin-left: 10px;
   padding: 0;
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
+    font-size: 14px;
+  }
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right {
   border-top: 1px solid #979797;
