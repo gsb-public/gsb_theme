@@ -52,7 +52,6 @@
         display: none
     /* Voices title box */
     fieldset.group-voices-group
-      background-color: hotpink
       border: none
       color: $white
       height: 380px
@@ -80,6 +79,8 @@
         padding: 0
         margin: 0 18px
         width: 100%
+      .field-name-field-slideshow-style
+        display: none
 
       h1,
       .field-name-field-degree-year
@@ -121,7 +122,23 @@
         width: 100%
         height: 100%
         margin-left: -18px
-
+    // Colors for the voices box.
+    fieldset.group-voices-group.white
+      background-color: $white
+      h1,
+      .field-name-field-degree-year,
+      .field-name-field-title-position-single
+        color: $text-black
+    fieldset.group-voices-group.blue
+      background-color: $voices-blue
+    fieldset.group-voices-group.purple
+      background-color: $purple-bright
+    fieldset.group-voices-group.brightteal
+      background-color: $voices-teal-med
+    fieldset.group-voices-group.pink
+      background-color: $voices-pink
+    fieldset.group-voices-group.charcoal
+      background-color: $voices-charcoal
 
   /* Voices top quote */
   .field-name-field-quote

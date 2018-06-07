@@ -578,6 +578,8 @@
         // Adding some wrappers for ease in styling.
         $(".node-type-voices .breadcrumb").prependTo(".node-type-voices .group-left");
         $(".node-type-voices .group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
-        $('.node-type-voices .group-left, .node-type-voices .group-right').wrapAll('<div class="content-wrapper"></div>');
+        $(".node-type-voices .group-left, .node-type-voices .group-right").wrapAll('<div class="content-wrapper"></div>');
+        var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-slideshow-style").text();
+            $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
     });
 }(jQuery));
