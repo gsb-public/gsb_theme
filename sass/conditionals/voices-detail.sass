@@ -7,6 +7,7 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+/* Removing the background image that is applied to all pages in the msx or sloan directory */
 .page-programs-msx.node-type-voices,
 .node-type-msx-fellows.node-type-voices
   #content-wrapper
@@ -29,7 +30,6 @@
     max-width: 100%
   .group-header
     color: $text-black
-    //max-height: calc(100vh - 200px)
     position: relative
     text-align: center
 
@@ -39,11 +39,17 @@
         max-height: calc(100vh - 200px)
         +breakpoint($bp-mobile-max)
           display: none
-
+        +breakpoint($bp-for-tablet-range)
+          display: block
+          max-height: 100%
+          width: 100%
+    // Using the profile image for the header image on mobile portrait view.
     .mobile-profile-image
       display: none
       +breakpoint($bp-mobile-max)
         display: block
+      +breakpoint($bp-for-tablet-range)
+        display: none
     /* Voices title box */
     fieldset.group-voices-group
       background-color: hotpink
@@ -66,6 +72,14 @@
         padding: 0
         margin: 0 18px
         width: 100%
+      +breakpoint($bp-for-tablet-range)
+        background-color: transparent
+        color: $text-black
+        height: auto
+        position: static
+        padding: 0
+        margin: 0 18px
+        width: 100%
 
       h1,
       .field-name-field-degree-year
@@ -75,6 +89,9 @@
         font-weight: normal
         margin-top: 0
         +breakpoint($bp-mobile-max)
+          background-color: transparent
+          color: $text-black
+        +breakpoint($bp-for-tablet-range)
           background-color: transparent
           color: $text-black
 
@@ -94,6 +111,9 @@
         font-size: 22px
         padding-top: 30px
         +breakpoint($bp-mobile-max)
+          font-size: 16px
+          padding: 20px 0 30px 0
+        +breakpoint($bp-for-tablet-range)
           font-size: 16px
           padding: 20px 0 30px 0
     .mobile-profile
@@ -125,6 +145,13 @@
       width: 100%
       .mobile-profile
         display: block
+    +breakpoint($bp-for-tablet-range)
+      font-size: 24px
+      left: 18px
+      padding: 25px 18px 25px 30px
+      position: relative
+      top: 10px
+      width: 100%
     &:before
       content: "“"
       position: absolute
@@ -132,6 +159,8 @@
       font-size: 90px
       top: 16px
       +breakpoint($bp-mobile-max)
+        font-size: 40px
+      +breakpoint($bp-for-tablet-range)
         font-size: 40px
     &:after
       content: "”"
@@ -148,13 +177,16 @@
     border-bottom: 1px solid $voices-divider
     height: 75px
 
-  /* Voices col set up - some comes right from existing code */
+  /* Voices col set up and adjustment */
   .ds-2col-stacked-fluid
     margin: 0 auto
     .content-wrapper
       margin: 0 auto
       width: 1175px
       +breakpoint($bp-mobile-max)
+        padding: 25px 35px
+        width: 100%
+      +breakpoint($bp-for-tablet-range)
         padding: 25px 35px
         width: 100%
 
@@ -167,10 +199,17 @@
           margin: 0
           padding: 0
           width: 100%
+        +breakpoint($bp-for-tablet-range)
+          float: none
+          margin: 0
+          padding: 0
+          width: 100%
 
         .field-name-field-body
           padding: 30px 0 0 35px
           +breakpoint($bp-mobile-max)
+            padding: 0
+          +breakpoint($bp-for-tablet-range)
             padding: 0
 
         .field-name-field-date.field-type-datetime
@@ -185,6 +224,9 @@
           +breakpoint($bp-mobile-max)
             font-size: 14px
             padding-left: 0
+          +breakpoint($bp-for-tablet-range)
+            font-size: 14px
+            padding-left: 0
         .field-collection-container
           .byline
             display: inline
@@ -196,7 +238,19 @@
               padding: 0
             +breakpoint($bp-mobile-max)
               font-size: 14px
-
+            +breakpoint($bp-for-tablet-range)
+              font-size: 14px
+        ul.field-name-field-tag
+          font-size: 14px
+          list-style: none
+          li
+            display: inline-block
+            padding-left: 3px
+            &:after
+              content: ","
+          li.last
+            &:after
+              content: ""
 
       .group-right
         border-top: 1px solid $voices-divider
@@ -221,7 +275,3 @@
             border-radius: 50%
             width: 74px
             height: 74px
-//div + div:not(:last-of-type)
-//  margin-bottom: 25px
-//span:not(:only-of-type):not(:last-of-type)
-//  margin-bottom: 15px
