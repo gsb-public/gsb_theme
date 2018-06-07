@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Removing the background image that is applied to all pages in the msx or sloan directory */
 .page-programs-msx.node-type-voices #content-wrapper,
 .node-type-msx-fellows.node-type-voices #content-wrapper {
   background: none;
@@ -13,7 +14,7 @@
 /* Container holding the image and the text */
 .node-type-voices {
   /* Voices top quote */
-  /* Voices col set up - some comes right from existing code */
+  /* Voices col set up and adjustment */
 }
 @media (min-width: 16.875em) {
   .node-type-voices #main.column {
@@ -44,12 +45,24 @@
     display: none;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .group-header .field-name-field-image-key-image img {
+    display: block;
+    max-height: 100%;
+    width: 100%;
+  }
+}
 .node-type-voices .group-header .mobile-profile-image {
   display: none;
 }
 @media (max-width: 35.5em) {
   .node-type-voices .group-header .mobile-profile-image {
     display: block;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .group-header .mobile-profile-image {
+    display: none;
   }
 }
 .node-type-voices .group-header fieldset.group-voices-group {
@@ -77,6 +90,17 @@
     width: 100%;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .group-header fieldset.group-voices-group {
+    background-color: transparent;
+    color: #231f20;
+    height: auto;
+    position: static;
+    padding: 0;
+    margin: 0 18px;
+    width: 100%;
+  }
+}
 .node-type-voices .group-header fieldset.group-voices-group h1,
 .node-type-voices .group-header fieldset.group-voices-group .field-name-field-degree-year {
   color: white;
@@ -86,6 +110,13 @@
   margin-top: 0;
 }
 @media (max-width: 35.5em) {
+  .node-type-voices .group-header fieldset.group-voices-group h1,
+  .node-type-voices .group-header fieldset.group-voices-group .field-name-field-degree-year {
+    background-color: transparent;
+    color: #231f20;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .group-header fieldset.group-voices-group h1,
   .node-type-voices .group-header fieldset.group-voices-group .field-name-field-degree-year {
     background-color: transparent;
@@ -109,6 +140,12 @@
   padding-top: 30px;
 }
 @media (max-width: 35.5em) {
+  .node-type-voices .group-header fieldset.group-voices-group .field-name-field-title-position-single {
+    font-size: 16px;
+    padding: 20px 0 30px 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .group-header fieldset.group-voices-group .field-name-field-title-position-single {
     font-size: 16px;
     padding: 20px 0 30px 0;
@@ -147,6 +184,16 @@
     display: block;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .field-name-field-quote {
+    font-size: 24px;
+    left: 18px;
+    padding: 25px 18px 25px 30px;
+    position: relative;
+    top: 10px;
+    width: 100%;
+  }
+}
 .node-type-voices .field-name-field-quote:before {
   content: "“";
   position: absolute;
@@ -155,6 +202,11 @@
   top: 16px;
 }
 @media (max-width: 35.5em) {
+  .node-type-voices .field-name-field-quote:before {
+    font-size: 40px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .field-name-field-quote:before {
     font-size: 40px;
   }
@@ -187,6 +239,12 @@
     width: 100%;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper {
+    padding: 25px 35px;
+    width: 100%;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
   float: left;
   margin: 50px 50px 0 0;
@@ -200,10 +258,23 @@
     width: 100%;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
   padding: 30px 0 0 35px;
 }
 @media (max-width: 35.5em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
+    padding: 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
     padding: 0;
   }
@@ -224,6 +295,12 @@
     padding-left: 0;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
+    font-size: 14px;
+    padding-left: 0;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
   display: inline;
   float: left;
@@ -238,6 +315,25 @@
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
     font-size: 14px;
   }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
+    font-size: 14px;
+  }
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left ul.field-name-field-tag {
+  font-size: 14px;
+  list-style: none;
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left ul.field-name-field-tag li {
+  display: inline-block;
+  padding-left: 3px;
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left ul.field-name-field-tag li:after {
+  content: ",";
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left ul.field-name-field-tag li.last:after {
+  content: "";
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right {
   border-top: 1px solid #979797;
