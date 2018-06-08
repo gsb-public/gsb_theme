@@ -140,6 +140,14 @@
     fieldset.group-voices-group.charcoal
       background-color: $voices-charcoal
 
+    fieldset.group-voices-group.white,
+    fieldset.group-voices-group.blue,
+    fieldset.group-voices-group.purple,
+    fieldset.group-voices-group.brightteal,
+    fieldset.group-voices-group.pink,
+    fieldset.group-voices-group.charcoal
+      +breakpoint($bp-for-phone-tablet-range)
+        background-color: transparent
   /* Voices top quote */
   .field-name-field-quote
     background: $white
