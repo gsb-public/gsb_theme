@@ -218,8 +218,10 @@
         width: 100%
 
       .group-left
+        border-bottom: 1px solid $voices-divider
         float: left
         margin: 50px 50px 0 0
+        padding-bottom: 20px
         width: 816px
         +breakpoint($bp-mobile-max)
           float: none
@@ -332,9 +334,8 @@
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
-    border-bottom: 1px $voices-divider solid
-    margin-top: 30px
-    padding-bottom: 20px
+    margin-top: 10px
+    padding: 0 20px 0 0
 
   .sharrre .box .count
     padding-top: 8px
@@ -345,6 +346,13 @@
   // Wrapper
   .short-url-wrapper
     @extend %short-url-wrapper
+    border-left: solid 1px $voices-divider
+    margin-bottom: 0
+    padding-left: 20px
 
   .short-url
     @extend %short-url
+
+  .field.field-name-social-buttons-bottom,
+  .short-url-wrapper
+    display: inline-block
