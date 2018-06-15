@@ -129,9 +129,13 @@
   /* Voices header image */
   /* Voices title box */
 }
-.node-type-voices .group-header .field-name-field-image-key-image img {
+.node-type-voices .group-header .field-name-field-image-key-image {
   max-height: 600px;
+  overflow: hidden;
   width: 100%;
+}
+.node-type-voices .group-header .field-name-field-image-key-image img {
+  object-fit: cover;
 }
 @media (max-width: 35.5em) {
   .node-type-voices .group-header .field-name-field-image-key-image img {
@@ -588,6 +592,7 @@
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right fieldset.group-wrapper-related .fieldset-wrapper {
   overflow: hidden;
+  padding: 10px;
 }
 .node-type-voices .field-collection-container {
   border-bottom: 1px solid #979797;
