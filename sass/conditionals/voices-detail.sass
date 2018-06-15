@@ -36,10 +36,11 @@
 
     /* Voices header image */
     .field-name-field-image-key-image
+      max-height: 600px
+      overflow: hidden
+      width: 100%
       img
-        max-height: 600px
-        //max-height: calc(100vh - 200px)
-        width: 100%
+        object-fit: cover
         +breakpoint($bp-mobile-max)
           display: none
         +breakpoint($bp-for-tablet-range)
@@ -362,8 +363,10 @@
             &:after
               color: $red
         fieldset.group-wrapper-related
+          margin-top: 30px
           .fieldset-wrapper
             overflow: hidden
+            padding: 10px
 
 
   // Social media buttons
