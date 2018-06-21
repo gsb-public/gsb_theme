@@ -54,7 +54,7 @@ function gsb_theme_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   // Remove the breadcrumb on the 'Search' page
   $root_path = menu_tab_root_path();
-  if ($root_path == 'gsearch' || $root_path == 'exec-ed/search' || $root_path == 'seed/search') {
+  if ($root_path == 'coveo-search-page' || $root_path == 'gsearch' || $root_path == 'exec-ed/search' || $root_path == 'seed/search') {
     unset($variables['breadcrumb']);
     return;
   }
@@ -410,7 +410,7 @@ function gsb_theme_preprocess_page(&$variables) {
         'global-search',
       ),
     ),
-    'search' => module_invoke('google_appliance', 'block_view', 'ga_block_search_form'),
+    'search' => module_invoke('gsb_feature_coveo_search', 'block_view', 'coveo_search_block_form'),
   );
 
   // Add css stylesheets based on the following settings in gsb_theme.info:
