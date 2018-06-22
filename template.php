@@ -414,7 +414,7 @@ function gsb_theme_preprocess_page(&$variables) {
         'global-search',
       ),
     ),
-    'search' => module_invoke('gsb_feature_coveo_search', 'block_view', 'coveo_search_block_form'),
+    'search' => module_invoke('gsb_coveo_search', 'block_view', 'coveo_search_block_form'),
   );
 
   // Add css stylesheets based on the following settings in gsb_theme.info:
