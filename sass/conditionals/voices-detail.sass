@@ -289,8 +289,6 @@
           position: relative
           top: 30px
           width: 100%
-          +breakpoint($bp-for-tablet-range)
-            display: none
           a.cta
             background-color: $red-dark
             color: $white
@@ -298,7 +296,7 @@
             float: right
             font-size: 16px
             margin-top: 50px
-            padding: 15px 20px 20px 25px
+            padding: 20px 20px 20px 25px
             position: relative
             width: 330px
             @extend %bg-and-box-shadow
@@ -321,14 +319,6 @@
         margin: 50px 0 0 0
         padding-top: 40px
         width: 273px
-        +breakpoint($bp-for-tablet-range)
-          align-items: flex-start
-          display: flex
-          flex-direction: row
-          flex-wrap: wrap
-          float: none
-          justify-content: center
-          width: 100%
         .field-label
           font-family: $font-demi
           font-size: 20px
@@ -355,7 +345,7 @@
             margin-top: 30px
             padding: 15px 20px 20px 25px
             position: relative
-            width: 98%
+            width: 100%
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               color: $grey-e3 !important
@@ -374,51 +364,7 @@
           margin-top: 30px
           .fieldset-wrapper
             overflow: hidden
-            padding: 0
-          .field-collection-view
-            margin: 0
-        .group-wrapper-tablet-1
-          .field-name-voices-mobile-full-name,
-          .field-name-voices-mobile-degree-year,
-          .field-name-voices-mobile-job-title-org
-            display: none
-          +breakpoint($bp-for-tablet-range)
-            width: 18%
-            // 18% is 122px out of a width of 675. 82% is left and divided by the other two cols.
-            .field-name-voices-mobile-full-name,
-            .field-name-voices-mobile-degree-year,
-            .field-name-voices-mobile-job-title-org
-              display: block
-            .field-name-voices-mobile-full-name
-              font-size: 14px
-              padding-top: 20px
-            .field-name-voices-mobile-degree-year,
-            .field-name-voices-mobile-job-title-org
-              font-size: 11px
-              padding-top: 10px
-            .background-rail-img
-              margin-left: 0
-              margin-top: 0
-              position: relative
-              width: 122px
-              img
-                height: 121px
-                margin: auto
-                width: 122px
-        .group-wrapper-tablet-2
-          +breakpoint($bp-for-tablet-range)
-            margin: auto 10%
-            width: 30%
-            .field-label
-              padding-top: 25px
-        .group-wrapper-tablet-3
-          +breakpoint($bp-for-tablet-range)
-            width: 30%
-            .field-label
-              padding-top: 25px
-        .group-wrapper-tablet-4
-          +breakpoint($bp-for-tablet-range)
-            padding-top: 35px
+            padding: 10px
 
 
   // Social media buttons
