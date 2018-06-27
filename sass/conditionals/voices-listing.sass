@@ -7,17 +7,17 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-.view-gsb-voices-listing,
-.pane-voices-filters-voices-list-cta-panel-pane
+.view-gsb-voices-listing
   margin: 0 auto
   width: 1172px
   .view-content > div
     vertical-align: top
   .views-row
     display: inline-block
-    //height: 500px
+    height: 500px
     margin: 50px 40px 40px 0
     padding: 0
+    position: relative
     width: 360px
   .views-row-3
     margin-right: 0
@@ -25,102 +25,3 @@
     .field-type-image
       width: 360px
       height: auto
-
-/* Voices 3-across styles*/
-.view-gsb-voices-listing.view-id-gsb_voices_listing
-  .views-row
-    display: inline-block
-    min-height: 500px
-    margin: 0 1em 1em 0
-    position: relative
-    width: 360px
-
-    .field-name-field-quote
-      div
-        div
-          display: table-cell
-          vertical-align: bottom
-          font-size: 20px
-          padding: 20px 20px 150px 20px
-          text-align: left
-
-    .field-name-field-full-name
-      color: $text-black
-      position: relative
-      font-size: 30px
-      width: 360px
-      padding: 40px 0 0 20px
-      text-align: left
-
-    div:hover
-      .field-name-field-full-name,
-      .field-name-field-degree-year
-        color: #fff
-
-    .field-name-field-degree-year
-      display: inherit
-      color: #000
-      font-size: 16px
-      padding-left: 20px
-      position: relative
-    div:hover .field-name-field-quote
-      div
-        .field-item
-          opacity: 1
-    .field-name-field-quote
-      div
-        .field-item
-          color: $white
-          cursor: pointer
-          display: table
-          height: 500px
-          left: 0
-          position: absolute
-          top: 0
-          width: 360px
-          opacity: 0
-          -webkit-transition: opacity 500ms
-          -moz-transition: opacity 500ms
-          -o-transition: opacity 500ms
-          transition: opacity 500ms
-        &.purple
-          background: linear-gradient(transparent, $voices-purple 50%)
-        &.blue
-          background: linear-gradient(transparent, $voices-blue 50%)
-        &.green
-          background: linear-gradient(transparent, $voices-teal-med 50%)
-        &.pink
-          background: linear-gradient(transparent, $voices-pink 50%)
-        &.charcoal
-          background: linear-gradient(transparent, $voices-charcoal 50%)
-
-.pane-gsb-voices-listing-panel-pane-1
-  .homepage_voices_cta
-    background-color: $red-dark
-    color: $white
-    font-size: 18px
-    min-height: 65px
-    line-height: 1.2
-    margin: 0 auto
-    padding: 24px 36px 16px 25px
-    position: relative
-    width: 205px
-    @extend %bg-and-box-shadow
-    &:first-of-type
-      border-top: 0
-    &:last-of-type
-      border-bottom: 0
-    a
-      color: $white
-      +icon-after("arrow-double-right", true)
-        font-size: 18px
-        font-weight: normal
-        line-height: 0
-        margin-top: 0
-        position: absolute
-        right: 20px
-        top: 50%
-      &:hover
-        color: $white
-        &:after
-          color: $white
