@@ -581,6 +581,5 @@
         $(".node-type-voices .group-left, .node-type-voices .group-right").wrapAll('<div class="content-wrapper"></div>');
         var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-slideshow-style").text();
             $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
-        $(".node-type-voices .group-right h1").contents().unwrap().wrap('<div/>');
     });
 }(jQuery));
