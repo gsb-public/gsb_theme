@@ -15,19 +15,20 @@
     vertical-align: top
   .views-row
     display: inline-block
-    //height: 500px
     margin: 50px 40px 40px 0
     padding: 0
     width: 360px
   .views-row-3
     margin-right: 0
 
-    .field-type-image
-      width: 360px
-      height: auto
+  .field-type-image,
+  .views-field-field-image-single-public
+    height: auto
+    width: 360px
 
 /* Voices 3-across styles*/
-.view-gsb-voices-listing.view-id-gsb_voices_listing
+.view-gsb-voices-listing.view-id-gsb_voices_listing,
+.view-id-voices_filters.view-display-id-voices_list_cta_panel_pane
   .views-row
     display: inline-block
     min-height: 500px
@@ -35,29 +36,55 @@
     position: relative
     width: 360px
 
-    .field-name-field-quote
+    .field-name-field-quote,
+    .views-field-field-quote
       div
         div
           display: table-cell
-          vertical-align: bottom
           font-size: 20px
           padding: 20px 20px 150px 20px
           text-align: left
+          vertical-align: bottom
 
-    .field-name-field-full-name
-      color: $text-black
-      position: relative
+    .field-name-field-full-name,
+    .views-field-title,
+    .views-field-title-1
+      color: $link-green
       font-size: 30px
-      width: 360px
       padding: 40px 0 0 20px
+      position: relative
       text-align: left
+      width: 360px
+    .views-field-title,
+    .views-field-title-1
+      a
+        color: $link-green
+        &:hover
+          text-decoration: none
+        +icon-after("arrow-double-right", true)
+          color: $green-light
+          font-size: 18px
+          font-weight: normal
+          line-height: 0
+          margin-top: 0
+          padding-left: 10px
+          &:hover
+            color: $green-light
+            text-decoration: none
+          &:after
+            color: $green-light
+            text-decoration: none
 
     div:hover
       .field-name-field-full-name,
-      .field-name-field-degree-year
+      .field-name-field-degree-year,
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
         color: #fff
 
-    .field-name-field-degree-year
+    .field-name-field-degree-year,
+    .views-field-field-degree-year,
+    .views-field-field-endowed-title-appointment
       display: inherit
       color: #000
       font-size: 16px
@@ -65,11 +92,24 @@
       position: relative
     div:hover .field-name-field-quote
       div
-        .field-item
+        div
           opacity: 1
-    .field-name-field-quote
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            opacity: 1
+      .views-field-title
+        a
+          color: $white
+      .views-field-title-1,
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        color: $white
+    .field-name-field-quote,
+    .views-field-field-quote
       div
-        .field-item
+        div
           color: $white
           cursor: pointer
           display: table
@@ -83,19 +123,25 @@
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-        &.purple
-          background: linear-gradient(transparent, $voices-purple 50%)
+
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
+        &.brightteal
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.charcoal
+          background: linear-gradient(transparent, $voices-charcoal 50%)
         &.green
           background: linear-gradient(transparent, $voices-teal-med 50%)
         &.pink
           background: linear-gradient(transparent, $voices-pink 50%)
-        &.charcoal
-          background: linear-gradient(transparent, $voices-charcoal 50%)
+        &.purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        &.white
+          background: linear-gradient(transparent, $white 50%)
 
-.pane-gsb-voices-listing-panel-pane-1
-  .homepage_voices_cta
+.pane-content
+  .homepage_voices_cta,
+  .voices_display_list_cta
     background-color: $red-dark
     color: $white
     font-size: 18px
