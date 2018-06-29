@@ -1,0 +1,143 @@
+@charset "UTF-8"
+
+// IMPORT COMPASS AND EXTENSIONS
+@import compass
+@import breakpoint
+@import ../../fonts/icons/icons
+@import partials/base/00-variables/all
+@import partials/base/03-extend/gsb-revamp
+
+/*All voices list */
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane
+  width: 100%
+  border: 1px solid red
+  .view-content > div
+    vertical-align: top
+  .views-row
+    display: inline-block
+    margin: 35px 30px 25px 0px
+    position: relative
+    width: 22.10%
+  
+    .views-field-title
+      color: #636f00
+      font-size: 20px
+      padding: 25px 0 10px 20px
+      text-align: left
+      a
+        color: #636f00
+        font-size: 24px
+      a:after
+        content: "\f101"
+        speak: none
+        text-rendering: optimizeLegibility
+        -moz-osx-font-smoothing: grayscale
+        -webkit-font-smoothing: antialiased
+        font-smoothing: antialiased
+        text-transform: none
+        font-style: normal
+        font-variant: normal
+        font-weight: normal
+        font-family: 'icons'
+        font-size: 20px
+        color: #636f00
+        display: inline-block
+        line-height: 1.4
+        padding-left: 5px
+        text-decoration: none
+      a:hover
+        color: #FFFFFF
+        font-size: 14px
+        opacity: 3
+ 
+    .views-field-title-1
+      color: #636f00
+      font-size: 24px
+      text-align: left
+      padding-left: 20px
+      a
+        color: #636f00
+        font-size: 20px
+      a:after
+        content: "\f101"
+        speak: none
+        text-rendering: optimizeLegibility
+        -moz-osx-font-smoothing: grayscale
+        -webkit-font-smoothing: antialiased
+        font-smoothing: antialiased
+        text-transform: none
+        font-style: normal
+        font-variant: normal
+        font-weight: normal
+        font-family: 'icons'
+        font-size: 20px
+        color: #636f00
+        display: inline-block
+        line-height: 1.4
+        padding-left: 5px
+        text-decoration: none
+      a:hover
+        color: #FFFFFF
+        font-size: 14px
+        opacity: 3
+
+    .views-field-field-degree-year,
+    .views-field-field-endowed-title-appointment
+      display: inherit
+      color: #231F10
+      font-size: 14px
+      padding-left: 20px
+      position: relative
+      font-weight: normal
+
+    div:hover
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        color: #FFFFFF
+        font-size: 14px
+
+    .views-field-field-quote div.field-content:hover
+      opacity: 1
+
+    .views-field-field-quote
+      div
+        .text-content
+          display: table-cell
+          vertical-align: top
+          font-size: 16px
+          padding: 110px 10px 30px 10px
+          text-align: left
+
+    .views-field-field-quote
+      div.field-content
+        color: $white
+        cursor: pointer
+        display: table
+        height: 400px
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        opacity: 0
+        -webkit-transition: opacity 500ms
+        -moz-transition: opacity 500ms
+        -o-transition: opacity 500ms
+        transition: opacity 500ms
+      div
+        .purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        .blue
+          background: linear-gradient(transparent, $voices-blue 50%)
+        .brightteal
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        .pink
+          background: linear-gradient(transparent, $voices-pink 50%)
+        .charcoal
+          background: linear-gradient(transparent, $voices-charcoal 50%)
+  
+  .views-row:hover
+    color: #FFFFFF !important
+    opacity: 2
+  .views-row:hover .views-field-title .field-content a
+    color: #FFFFFF !important
+    opacity: 4
