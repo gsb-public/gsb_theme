@@ -154,7 +154,7 @@
         $('.ds-main-wrapper .ds-right').insertBefore($('.ds-main-wrapper .ds-left'));
       }
       if (Modernizr.mq('(max-width: 1169px)')) {
-        $('#google-appliance-block-form').insertBefore($('#nav-touch-wrapper'));
+        $('#coveo-search-block-form').insertBefore($('#nav-touch-wrapper'));
       }
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
