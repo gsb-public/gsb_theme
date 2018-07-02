@@ -7,79 +7,47 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-/*All voices list */
+/*All voices list start*/
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane
   width: 100%
-  border: 1px solid red
+  padding-bottom: 20px
   .view-content > div
     vertical-align: top
   .views-row
     display: inline-block
     margin: 35px 30px 25px 0px
     position: relative
-    width: 22.10%
+    width: 22%
   
     .views-field-title
-      color: #636f00
+      color: $link-green
       font-size: 20px
       padding: 25px 0 10px 20px
+      position: relative
       text-align: left
       a
-        color: #636f00
-        font-size: 24px
-      a:after
-        content: "\f101"
-        speak: none
-        text-rendering: optimizeLegibility
-        -moz-osx-font-smoothing: grayscale
-        -webkit-font-smoothing: antialiased
-        font-smoothing: antialiased
-        text-transform: none
-        font-style: normal
-        font-variant: normal
-        font-weight: normal
-        font-family: 'icons'
+        color: $link-green
         font-size: 20px
-        color: #636f00
-        display: inline-block
-        line-height: 1.4
-        padding-left: 5px
-        text-decoration: none
-      a:hover
-        color: #FFFFFF
-        font-size: 14px
-        opacity: 3
+        &:hover
+          text-decoration: none
+        +icon-after("arrow-double-right", true)
+          color: $green-light
+          font-size: 18px
+          font-weight: normal
+          line-height: 0
+          margin-top: 0
+          padding-left: 10px
+          &:hover
+            color: $green-light
+            text-decoration: none
+          &:after
+            color: $green-light
+            text-decoration: none
  
-    .views-field-title-1
-      color: #636f00
-      font-size: 24px
-      text-align: left
-      padding-left: 20px
-      a
-        color: #636f00
-        font-size: 20px
-      a:after
-        content: "\f101"
-        speak: none
-        text-rendering: optimizeLegibility
-        -moz-osx-font-smoothing: grayscale
-        -webkit-font-smoothing: antialiased
-        font-smoothing: antialiased
-        text-transform: none
-        font-style: normal
-        font-variant: normal
-        font-weight: normal
-        font-family: 'icons'
-        font-size: 20px
-        color: #636f00
-        display: inline-block
-        line-height: 1.4
-        padding-left: 5px
-        text-decoration: none
-      a:hover
-        color: #FFFFFF
-        font-size: 14px
-        opacity: 3
+    div:hover
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        color: #fff
 
     .views-field-field-degree-year,
     .views-field-field-endowed-title-appointment
@@ -88,56 +56,115 @@
       font-size: 14px
       padding-left: 20px
       position: relative
-      font-weight: normal
-
-    div:hover
+    div:hover .field-name-field-quote
+      div
+        div
+          opacity: 1
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            opacity: 1
+      .views-field-title
+        padding-top: 80px
+        a
+          color: $white
+        a:after,
+        a:hover:after
+          color: $white !important
+          
       .views-field-field-degree-year,
       .views-field-field-endowed-title-appointment
-        color: #FFFFFF
-        font-size: 14px
-
-    .views-field-field-quote div.field-content:hover
-      opacity: 1
-
+        color: $white
     .views-field-field-quote
       div
-        .text-content
-          display: table-cell
-          vertical-align: top
+        div
+          color: $white
+          cursor: pointer
+          display: table
+          height: 430px
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+          opacity: 0
+          -webkit-transition: opacity 500ms
+          -moz-transition: opacity 500ms
+          -o-transition: opacity 500ms
+          transition: opacity 500ms
           font-size: 16px
-          padding: 110px 10px 30px 10px
+          padding: 120px 10px 30px 20px
           text-align: left
 
-    .views-field-field-quote
-      div.field-content
-        color: $white
-        cursor: pointer
-        display: table
-        height: 400px
-        left: 0
-        position: absolute
-        top: 0
-        width: 100%
-        opacity: 0
-        -webkit-transition: opacity 500ms
-        -moz-transition: opacity 500ms
-        -o-transition: opacity 500ms
-        transition: opacity 500ms
-      div
-        .purple
-          background: linear-gradient(transparent, $voices-purple 50%)
-        .blue
+        &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
-        .brightteal
+        &.brightteal
           background: linear-gradient(transparent, $voices-teal-med 50%)
-        .pink
-          background: linear-gradient(transparent, $voices-pink 50%)
-        .charcoal
+        &.charcoal
           background: linear-gradient(transparent, $voices-charcoal 50%)
-  
-  .views-row:hover
-    color: #FFFFFF !important
-    opacity: 2
-  .views-row:hover .views-field-title .field-content a
-    color: #FFFFFF !important
-    opacity: 4
+        &.green
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.pink
+          background: linear-gradient(transparent, $voices-pink 50%)
+        &.purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        &.white
+          background: linear-gradient(transparent, $white 50%)
+    .views-field-field-endowed-title-appointment
+      top: -26px
+
+.pane-voices-filters-all-voices-list-panel-pane
+  padding: 0px 0px 35px 30px
+  .pane-title
+    padding: 45px 0px 0px 0px
+    h2
+      color: #231f20
+      font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-size: 22px
+      font-weight: normal
+      line-height: 1.2
+
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey
+  background-color: $grey-light
+
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-white
+  background-color: $white
+/*All voices list end */
+
+/* CTA Button */
+.pane-content
+  .voices_display_all_list_cta,
+  .voices_display_list_cta
+    margin-bottom: 30px
+    margin-top: 30px
+    background-color: $red-dark
+    color: $white
+    font-size: 18px
+    min-height: 60px
+    line-height: 1.2
+    margin: 0 auto
+    padding: 20px 20px 20px 25px
+    position: relative
+    width: 315px
+    @extend %bg-and-box-shadow
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
+    a
+      color: $white
+      +icon-after("arrow-double-right", true)
+        font-size: 18px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        position: absolute
+        right: 20px
+        top: 50%
+      &:hover
+        color: $white
+        &:after
+          color: $white
+
+
+

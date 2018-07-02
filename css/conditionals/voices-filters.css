@@ -1,7 +1,20 @@
-/*All voices list */
+.pane-content .voices_display_all_list_cta,
+.pane-content .voices_display_list_cta {
+  background: white;
+}
+
+.pane-content .voices_display_all_list_cta,
+.pane-content .voices_display_list_cta {
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  margin: 1px;
+}
+
+/*All voices list start */
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane {
   width: 100%;
-  border: 1px solid red;
+  padding-bottom: 20px;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content > div {
   vertical-align: top;
@@ -10,75 +23,54 @@
   display: inline-block;
   margin: 35px 30px 25px 0px;
   position: relative;
-  width: 22.1%;
+  width: 22%;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title {
   color: #636f00;
   font-size: 20px;
   padding: 25px 0 10px 20px;
+  position: relative;
   text-align: left;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a {
   color: #636f00;
-  font-size: 24px;
+  font-size: 20px;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:hover {
+  text-decoration: none;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after {
   content: "\f101";
+  display: inline;
   speak: none;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-transform: none;
+  line-height: 1;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
-  font-family: "icons";
-  font-size: 20px;
-  color: #636f00;
-  display: inline-block;
-  line-height: 1.4;
-  padding-left: 5px;
-  text-decoration: none;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:hover {
-  color: white;
-  font-size: 14px;
-  opacity: 3;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title-1 {
-  color: #636f00;
-  font-size: 24px;
-  text-align: left;
-  padding-left: 20px;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title-1 a {
-  color: #636f00;
-  font-size: 20px;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title-1 a:after {
-  content: "\f101";
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  font-style: normal;
-  font-variant: normal;
+  font-family: 'icons';
+  color: #bac405;
+  font-size: 18px;
   font-weight: normal;
-  font-family: "icons";
-  font-size: 20px;
-  color: #636f00;
-  display: inline-block;
-  line-height: 1.4;
-  padding-left: 5px;
+  line-height: 0;
+  margin-top: 0;
+  padding-left: 10px;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:hover {
+  color: #bac405;
   text-decoration: none;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title-1 a:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:after {
+  color: #bac405;
+  text-decoration: none;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-degree-year,
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment {
   color: white;
-  font-size: 14px;
-  opacity: 3;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
@@ -87,28 +79,32 @@
   font-size: 14px;
   padding-left: 20px;
   position: relative;
-  font-weight: normal;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment {
-  color: white;
-  font-size: 14px;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.field-content:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div {
   opacity: 1;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .text-content {
-  display: table-cell;
-  vertical-align: top;
-  font-size: 16px;
-  padding: 110px 10px 30px 10px;
-  text-align: left;
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-quote div div {
+  opacity: 1;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.field-content {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+  padding-top: 80px;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a {
+  color: white;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:after,
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:hover:after {
+  color: white !important;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-degree-year,
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment {
+  color: white;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
   color: white;
   cursor: pointer;
   display: table;
-  height: 400px;
+  height: 430px;
   left: 0;
   position: absolute;
   top: 0;
@@ -118,27 +114,113 @@
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
+  font-size: 16px;
+  padding: 120px 10px 30px 20px;
+  text-align: left;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .purple {
-  background: linear-gradient(rgba(0, 0, 0, 0), #97185d 50%);
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .blue {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.blue {
   background: linear-gradient(rgba(0, 0, 0, 0), #26639d 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .brightteal {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.brightteal {
   background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .pink {
-  background: linear-gradient(rgba(0, 0, 0, 0), #dd1880 50%);
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div .charcoal {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.charcoal {
   background: linear-gradient(rgba(0, 0, 0, 0), #333333 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover {
-  color: white !important;
-  opacity: 2;
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.green {
+  background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title .field-content a {
-  color: white !important;
-  opacity: 4;
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.pink {
+  background: linear-gradient(rgba(0, 0, 0, 0), #dd1880 50%);
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.purple {
+  background: linear-gradient(rgba(0, 0, 0, 0), #97185d 50%);
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.white {
+  background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+  top: -26px;
+}
+
+.pane-voices-filters-all-voices-list-panel-pane {
+  padding: 0px 0px 35px 30px;
+}
+.pane-voices-filters-all-voices-list-panel-pane .pane-title {
+  padding: 45px 0px 0px 0px;
+}
+.pane-voices-filters-all-voices-list-panel-pane .pane-title h2 {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey {
+  background-color: #f0f0f0;
+}
+
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-white {
+  background-color: white;
+}
+
+/*All voices list end */
+/* CTA Button */
+.pane-content .voices_display_all_list_cta,
+.pane-content .voices_display_list_cta {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: #860000;
+  color: white;
+  font-size: 18px;
+  min-height: 60px;
+  line-height: 1.2;
+  margin: 0 auto;
+  padding: 20px 20px 20px 25px;
+  position: relative;
+  width: 315px;
+}
+.pane-content .voices_display_all_list_cta:first-of-type,
+.pane-content .voices_display_list_cta:first-of-type {
+  border-top: 0;
+}
+.pane-content .voices_display_all_list_cta:last-of-type,
+.pane-content .voices_display_list_cta:last-of-type {
+  border-bottom: 0;
+}
+.pane-content .voices_display_all_list_cta a,
+.pane-content .voices_display_list_cta a {
+  color: white;
+}
+.pane-content .voices_display_all_list_cta a:after,
+.pane-content .voices_display_list_cta a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.pane-content .voices_display_all_list_cta a:hover,
+.pane-content .voices_display_list_cta a:hover {
+  color: white;
+}
+.pane-content .voices_display_all_list_cta a:hover:after,
+.pane-content .voices_display_list_cta a:hover:after {
+  color: white;
 }
