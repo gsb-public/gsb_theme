@@ -15,9 +15,10 @@
     vertical-align: top
   .views-row
     display: inline-block
-    margin: 35px 30px 25px 0px
+    margin: 30px 30px 0px 0px
     position: relative
     width: 22%
+    height: 410px
   
     .views-field-title
       color: $link-green
@@ -51,7 +52,6 @@
 
     .views-field-field-degree-year,
     .views-field-field-endowed-title-appointment
-      display: inherit
       color: #231F10
       font-size: 14px
       padding-left: 20px
@@ -66,7 +66,7 @@
           div
             opacity: 1
       .views-field-title
-        padding-top: 80px
+        padding-top: 55px
         a
           color: $white
         a:after,
@@ -82,7 +82,7 @@
           color: $white
           cursor: pointer
           display: table
-          height: 430px
+          height: 410px
           left: 0
           position: absolute
           top: 0
@@ -93,8 +93,9 @@
           -o-transition: opacity 500ms
           transition: opacity 500ms
           font-size: 16px
-          padding: 120px 10px 30px 20px
+          padding: 80px 10px 30px 20px
           text-align: left
+          font-size: 16px
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -110,8 +111,9 @@
           background: linear-gradient(transparent, $voices-purple 50%)
         &.white
           background: linear-gradient(transparent, $white 50%)
-    .views-field-field-endowed-title-appointment
-      top: -26px
+    .views-field-field-image-single-public
+      img
+        max-height: 270px !important
 
 .pane-voices-filters-all-voices-list-panel-pane
   padding: 0px 0px 35px 30px
@@ -120,7 +122,7 @@
     h2
       color: #231f20
       font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif
-      font-size: 22px
+      font-size: 24px
       font-weight: normal
       line-height: 1.2
 
@@ -129,6 +131,12 @@
 
 .pane-voices-filters-all-voices-list-panel-pane.voices-bg-white
   background-color: $white
+
+#panels-ipe-regionid-maintop 
+  .pane-voices-filters-all-voices-list-panel-pane
+    .views-row
+      width: 29%
+
 /*All voices list end */
 
 /* CTA Button */
@@ -136,7 +144,6 @@
   .voices_display_all_list_cta,
   .voices_display_list_cta
     margin-bottom: 30px
-    margin-top: 30px
     background-color: $red-dark
     color: $white
     font-size: 18px
