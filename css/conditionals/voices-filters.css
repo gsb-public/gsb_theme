@@ -21,9 +21,10 @@
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row {
   display: inline-block;
-  margin: 35px 30px 25px 0px;
+  margin: 30px 30px 0px 0px;
   position: relative;
   width: 22%;
+  height: 410px;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title {
   color: #636f00;
@@ -74,7 +75,6 @@
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
-  display: inherit;
   color: #231f10;
   font-size: 14px;
   padding-left: 20px;
@@ -87,7 +87,7 @@
   opacity: 1;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
-  padding-top: 80px;
+  padding-top: 55px;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a {
   color: white;
@@ -104,7 +104,7 @@
   color: white;
   cursor: pointer;
   display: table;
-  height: 430px;
+  height: 410px;
   left: 0;
   position: absolute;
   top: 0;
@@ -115,8 +115,9 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
   font-size: 16px;
-  padding: 120px 10px 30px 20px;
+  padding: 80px 10px 30px 20px;
   text-align: left;
+  font-size: 16px;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.blue {
   background: linear-gradient(rgba(0, 0, 0, 0), #26639d 50%);
@@ -139,8 +140,8 @@
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.white {
   background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
-  top: -26px;
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img {
+  max-height: 270px !important;
 }
 
 .pane-voices-filters-all-voices-list-panel-pane {
@@ -152,7 +153,7 @@
 .pane-voices-filters-all-voices-list-panel-pane .pane-title h2 {
   color: #231f20;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: normal;
   line-height: 1.2;
 }
@@ -165,12 +166,15 @@
   background-color: white;
 }
 
+#panels-ipe-regionid-maintop .pane-voices-filters-all-voices-list-panel-pane .views-row {
+  width: 29%;
+}
+
 /*All voices list end */
 /* CTA Button */
 .pane-content .voices_display_all_list_cta,
 .pane-content .voices_display_list_cta {
   margin-bottom: 30px;
-  margin-top: 30px;
   background-color: #860000;
   color: white;
   font-size: 18px;
