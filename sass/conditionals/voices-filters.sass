@@ -7,10 +7,12 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-/*All voices list start*/
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane
-  width: 100%
+/*All voices customizable lists start*/
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
+.pane-voices-filters-voices-list-cta-panel-pane,
+.pane-gsb-voices-listing-panel-pane-1
   padding-bottom: 20px
+  width: 100%
   .view-content > div
     vertical-align: top
   .views-row
@@ -20,7 +22,8 @@
     width: 22%
     height: 410px
   
-    .views-field-title
+    .views-field-title,
+    .field-name-title
       color: $link-green
       font-size: 20px
       padding: 25px 0 10px 20px
@@ -47,12 +50,15 @@
  
     div:hover
       .views-field-field-degree-year,
-      .views-field-field-endowed-title-appointment
-        color: #fff
+      .views-field-field-endowed-title-appointment,
+      .field-name-field-degree-year,
+      .field-name-title
+        color: $white
 
     .views-field-field-degree-year,
-    .views-field-field-endowed-title-appointment
-      color: #231F10
+    .views-field-field-endowed-title-appointment,
+    .field-name-field-degree-year
+      color: $text-black
       font-size: 14px
       padding-left: 20px
       position: relative
@@ -65,8 +71,9 @@
         div
           div
             opacity: 1
-      .views-field-title
-        padding-top: 55px
+      .views-field-title,
+      .field-name-title
+        //padding-top: 55px
         a
           color: $white
         a:after,
@@ -74,28 +81,29 @@
           color: $white !important
           
       .views-field-field-degree-year,
-      .views-field-field-endowed-title-appointment
+      .views-field-field-endowed-title-appointment,
+      .field-name-field-degree-year
         color: $white
-    .views-field-field-quote
+    .views-field-field-quote,
+    .field-name-field-quote
       div
         div
           color: $white
           cursor: pointer
           display: table
+          font-size: 16px
           height: 410px
           left: 0
+          padding: 80px 10px 30px 20px
           position: absolute
           top: 0
           width: 100%
           opacity: 0
+          text-align: left
           -webkit-transition: opacity 500ms
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-          font-size: 16px
-          padding: 80px 10px 30px 20px
-          text-align: left
-          font-size: 16px
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -115,20 +123,40 @@
       img
         max-height: 270px !important
 
-.pane-voices-filters-all-voices-list-panel-pane
+.pane-voices-filters-all-voices-list-panel-pane,
+.pane-voices-filters-voices-list-cta-panel-pane,
+.view-gsb-voices-listing.view-id-gsb_voices_listing
   padding: 0px 0px 35px 30px
   .pane-title
     padding: 45px 0px 0px 0px
     h2
-      color: #231f20
+      color: $text-black
       font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif
       font-size: 24px
       font-weight: normal
       line-height: 1.2
 
+// Home page 3 across custom styles
+.pane-gsb-voices-listing-panel-pane-1
+  margin: 0 auto
+  width: 1172px
+  +breakpoint(569px 999px)
+    width: 100%
+.view-gsb-voices-listing.view-id-gsb_voices_listing
+  padding: 0
+  .views-row
+    margin: 30px 45px 0px 0px
+    min-height: 500px
+    width: 29%
+    .field-name-title
+      padding-top: 40px
+    .field-name-field-quote
+      div
+        div
+          min-height: 450px
+
 .pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey
   background-color: $grey-light
-
 .pane-voices-filters-all-voices-list-panel-pane.voices-bg-white
   background-color: $white
 
@@ -142,7 +170,8 @@
 /* CTA Button */
 .pane-content
   .voices_display_all_list_cta,
-  .voices_display_list_cta
+  .voices_display_list_cta,
+  .homepage_voices_cta
     margin-bottom: 30px
     background-color: $red-dark
     color: $white
@@ -172,6 +201,7 @@
         color: $white
         &:after
           color: $white
-
+  .homepage_voices_cta
+    width: 205px
 
 
