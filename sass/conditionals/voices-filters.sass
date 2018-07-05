@@ -13,7 +13,13 @@
 .pane-gsb-voices-listing-panel-pane-1
   padding-bottom: 20px
   width: 100%
-  .view-content > div
+  .view-content
+    +breakpoint($bp-for-phone-tablet-range)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: flex-start
+  > div
     vertical-align: top
   .views-row
     display: inline-block
@@ -21,7 +27,9 @@
     position: relative
     width: 22%
     height: 410px
-  
+    +breakpoint($bp-for-phone-tablet-range)
+      display: block
+      width: auto
     .views-field-title,
     .field-name-title
       color: $link-green
@@ -46,7 +54,10 @@
           &:after
             color: $green-light
             text-decoration: none
- 
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 20px
+
+
     div:hover
       .views-field-field-degree-year,
       .views-field-field-endowed-title-appointment,
@@ -58,9 +69,11 @@
     .views-field-field-endowed-title-appointment,
     .field-name-field-degree-year
       color: $text-black
-      font-size: 14px
+      font-size: 20px
       padding-left: 20px
       position: relative
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 16px
     div:hover .field-name-field-quote
       div
         div
@@ -124,31 +137,50 @@
 
 .pane-voices-filters-all-voices-list-panel-pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
-.view-gsb-voices-listing.view-id-gsb_voices_listing
+.view-gsb-voices-listing.view-id-gsb_voices_listing,
+.pane-gsb-voices-listing-panel-pane-1
   padding: 0px 0px 35px 30px
   .pane-title
     padding: 45px 0px 0px 0px
-    h2
-      color: $text-black
-      font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif
-      font-size: 24px
-      font-weight: normal
-      line-height: 1.2
+    color: $text-black
+    font-family: $font-light
+    font-size: 36px
+    font-weight: normal
+    line-height: 1.2
+    +breakpoint($bp-for-phone-only)
+      font-size: 20px
+.pane-gsb-voices-listing-panel-pane-1
+  +breakpoint($bp-for-phone-tablet-range)
+    .pane-title
+      padding-bottom: 50px
+  +breakpoint($bp-for-phone-only)
+    padding: 0
 
 // Home page 3 across custom styles
 .pane-gsb-voices-listing-panel-pane-1
   margin: 0 auto
   width: 1172px
-  +breakpoint(569px 999px)
-    width: 100%
+  +breakpoint($bp-for-phone-tablet-range)
+    width: auto
+    h2
+      margin-left: 20px
+
 .view-gsb-voices-listing.view-id-gsb_voices_listing
   padding: 0
   .views-row
     margin: 30px 45px 0px 0px
     min-height: 500px
     width: 29%
+    +breakpoint($bp-for-phone-tablet-range)
+      margin: 0 20px
+      width: 40%
+    +breakpoint($bp-for-phone-only)
+      width: 100%
+
     .field-name-title
       padding-top: 40px
+      +breakpoint($bp-for-phone-tablet-range)
+        padding-top: 25px
     .field-name-field-quote
       div
         div
@@ -202,5 +234,6 @@
           color: $white
   .homepage_voices_cta
     width: 205px
-
-
+    +breakpoint($bp-for-phone-only)
+      margin-bottom: 20px
+      width: 90%

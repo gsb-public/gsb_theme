@@ -20,9 +20,19 @@
   padding-bottom: 20px;
   width: 100%;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content > div,
-.pane-voices-filters-voices-list-cta-panel-pane .view-content > div,
-.pane-gsb-voices-listing-panel-pane-1 .view-content > div {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content,
+  .pane-voices-filters-voices-list-cta-panel-pane .view-content,
+  .pane-gsb-voices-listing-panel-pane-1 .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane > div,
+.pane-voices-filters-voices-list-cta-panel-pane > div,
+.pane-gsb-voices-listing-panel-pane-1 > div {
   vertical-align: top;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
@@ -33,6 +43,14 @@
   position: relative;
   width: 22%;
   height: 410px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row {
+    display: block;
+    width: auto;
+  }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title,
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .field-name-title,
@@ -106,6 +124,16 @@
   color: #bac405;
   text-decoration: none;
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a,
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .field-name-title a,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a {
+    font-size: 20px;
+  }
+}
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-degree-year,
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment,
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-degree-year,
@@ -130,9 +158,22 @@
 .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment,
 .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
   color: #231f20;
-  font-size: 14px;
+  font-size: 20px;
   padding-left: 20px;
   position: relative;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .field-name-field-degree-year,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-degree-year,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-degree-year,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
+    font-size: 16px;
+  }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-quote div div,
@@ -264,31 +305,51 @@
 
 .pane-voices-filters-all-voices-list-panel-pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
-.view-gsb-voices-listing.view-id-gsb_voices_listing {
+.view-gsb-voices-listing.view-id-gsb_voices_listing,
+.pane-gsb-voices-listing-panel-pane-1 {
   padding: 0px 0px 35px 30px;
 }
 .pane-voices-filters-all-voices-list-panel-pane .pane-title,
 .pane-voices-filters-voices-list-cta-panel-pane .pane-title,
-.view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title {
+.view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title,
+.pane-gsb-voices-listing-panel-pane-1 .pane-title {
   padding: 45px 0px 0px 0px;
-}
-.pane-voices-filters-all-voices-list-panel-pane .pane-title h2,
-.pane-voices-filters-voices-list-cta-panel-pane .pane-title h2,
-.view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title h2 {
   color: #231f20;
-  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
   font-weight: normal;
   line-height: 1.2;
+}
+@media (max-width: 37.4375em) {
+  .pane-voices-filters-all-voices-list-panel-pane .pane-title,
+  .pane-voices-filters-voices-list-cta-panel-pane .pane-title,
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title,
+  .pane-gsb-voices-listing-panel-pane-1 .pane-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .pane-gsb-voices-listing-panel-pane-1 .pane-title {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .pane-gsb-voices-listing-panel-pane-1 {
+    padding: 0;
+  }
 }
 
 .pane-gsb-voices-listing-panel-pane-1 {
   margin: 0 auto;
   width: 1172px;
 }
-@media (min-width: 35.5625em) and (max-width: 62.4375em) {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
   .pane-gsb-voices-listing-panel-pane-1 {
-    width: 100%;
+    width: auto;
+  }
+  .pane-gsb-voices-listing-panel-pane-1 h2 {
+    margin-left: 20px;
   }
 }
 
@@ -300,8 +361,24 @@
   min-height: 500px;
   width: 29%;
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
+    margin: 0 20px;
+    width: 40%;
+  }
+}
+@media (max-width: 37.4375em) {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
+    width: 100%;
+  }
+}
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
   padding-top: 40px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
+    padding-top: 25px;
+  }
 }
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
   min-height: 450px;
@@ -386,4 +463,10 @@
 }
 .pane-content .homepage_voices_cta {
   width: 205px;
+}
+@media (max-width: 37.4375em) {
+  .pane-content .homepage_voices_cta {
+    margin-bottom: 20px;
+    width: 90%;
+  }
 }
