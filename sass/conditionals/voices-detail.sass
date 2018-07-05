@@ -297,7 +297,6 @@
             display: block
             float: right
             font-size: 16px
-            height: 60px
             margin-top: 50px
             padding: 15px 20px 20px 25px
             position: relative
@@ -306,15 +305,15 @@
             +icon-after("arrow-double-right", true)
               font-size: 18px
               font-weight: normal
-              line-height: 0
-              margin-top: 0
+              line-height: 1
+              margin-top: -10px
               position: absolute
               right: 20px
-              top: 50%
             &:hover
               color: $white
             &:after
               color: $white
+              top: 50%
 
       .group-right
         border-top: 1px solid $voices-divider
@@ -363,15 +362,15 @@
               color: $grey-e3 !important
               font-size: 18px
               font-weight: normal
-              line-height: 0
-              margin-top: 0
+              line-height: 1
+              margin-top: -10px
               position: absolute
               right: 20px
-              top: 50%
             &:hover
               color: $red
             &:after
               color: $red
+              top: 50%
         fieldset.group-wrapper-related
           margin-top: 30px
           .fieldset-wrapper
