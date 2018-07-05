@@ -1,10 +1,8 @@
-.pane-content .voices_display_all_list_cta,
-.pane-content .voices_display_list_cta {
+.pane-content .voices_display_all_list_cta {
   background: white;
 }
 
-.pane-content .voices_display_all_list_cta,
-.pane-content .voices_display_list_cta {
+.pane-content .voices_display_all_list_cta {
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 0 0 0 1px;
@@ -77,8 +75,9 @@
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
   color: #231f10;
   font-size: 14px;
-  padding-left: 20px;
+  padding: 0px 10px 0px 20px;
   position: relative;
+  word-wrap: break-word;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div {
   opacity: 1;
@@ -87,7 +86,7 @@
   opacity: 1;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
-  padding-top: 55px;
+  padding-top: 30px;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a {
   color: white;
@@ -166,14 +165,13 @@
   background-color: white;
 }
 
-#panels-ipe-regionid-maintop .pane-voices-filters-all-voices-list-panel-pane .views-row {
+#panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row {
   width: 29%;
 }
 
 /*All voices list end */
 /* CTA Button */
-.pane-content .voices_display_all_list_cta,
-.pane-content .voices_display_list_cta {
+.pane-content .voices_display_all_list_cta {
   margin-bottom: 30px;
   background-color: #860000;
   color: white;
@@ -185,20 +183,16 @@
   position: relative;
   width: 315px;
 }
-.pane-content .voices_display_all_list_cta:first-of-type,
-.pane-content .voices_display_list_cta:first-of-type {
+.pane-content .voices_display_all_list_cta:first-of-type {
   border-top: 0;
 }
-.pane-content .voices_display_all_list_cta:last-of-type,
-.pane-content .voices_display_list_cta:last-of-type {
+.pane-content .voices_display_all_list_cta:last-of-type {
   border-bottom: 0;
 }
-.pane-content .voices_display_all_list_cta a,
-.pane-content .voices_display_list_cta a {
+.pane-content .voices_display_all_list_cta a {
   color: white;
 }
-.pane-content .voices_display_all_list_cta a:after,
-.pane-content .voices_display_list_cta a:after {
+.pane-content .voices_display_all_list_cta a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -220,11 +214,222 @@
   right: 20px;
   top: 50%;
 }
-.pane-content .voices_display_all_list_cta a:hover,
-.pane-content .voices_display_list_cta a:hover {
+.pane-content .voices_display_all_list_cta a:hover {
   color: white;
 }
-.pane-content .voices_display_all_list_cta a:hover:after,
-.pane-content .voices_display_list_cta a:hover:after {
+.pane-content .voices_display_all_list_cta a:hover:after {
   color: white;
 }
+
+/*voices list with filters start */
+.view-display-id-voices_filters_pane {
+  width: 100%;
+}
+.view-display-id-voices_filters_pane .view-filters {
+  background-color: #f0f0f0;
+}
+.view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_industry_tid {
+  display: inline-block;
+  position: relative;
+  max-width: 370px;
+  padding: 0px 20px 0px 20px;
+}
+.view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_region_of_interest_tid {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  padding: 0px 20px 0px 20px;
+}
+.view-display-id-voices_filters_pane .view-content {
+  margin-left: 26px;
+}
+.view-display-id-voices_filters_pane .view-content > div {
+  vertical-align: top;
+}
+.view-display-id-voices_filters_pane .views-row {
+  display: inline-block;
+  margin: 30px 30px 0px 0px;
+  position: relative;
+  width: 22%;
+  height: 410px;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title {
+  color: #636f00;
+  font-size: 20px;
+  padding: 25px 0 10px 20px;
+  position: relative;
+  text-align: left;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title a {
+  color: #636f00;
+  font-size: 20px;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title a:hover {
+  text-decoration: none;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  color: #bac405;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: 0;
+  padding-left: 10px;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title a:after:hover {
+  color: #bac405;
+  text-decoration: none;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-title a:after:after {
+  color: #bac405;
+  text-decoration: none;
+}
+.view-display-id-voices_filters_pane .views-row div:hover .views-field-field-degree-year,
+.view-display-id-voices_filters_pane .views-row div:hover .views-field-field-endowed-title-appointment {
+  color: white;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment {
+  color: #231f10;
+  font-size: 14px;
+  padding: 0px 10px 0px 20px;
+  position: relative;
+  word-wrap: break-word;
+}
+.view-display-id-voices_filters_pane .views-row div:hover .field-name-field-quote div div {
+  opacity: 1;
+}
+.view-display-id-voices_filters_pane .views-row:hover .views-field-field-quote div div {
+  opacity: 1;
+}
+.view-display-id-voices_filters_pane .views-row:hover .views-field-title {
+  padding-top: 30px;
+}
+.view-display-id-voices_filters_pane .views-row:hover .views-field-title a {
+  color: white;
+}
+.view-display-id-voices_filters_pane .views-row:hover .views-field-title a:after,
+.view-display-id-voices_filters_pane .views-row:hover .views-field-title a:hover:after {
+  color: white !important;
+}
+.view-display-id-voices_filters_pane .views-row:hover .views-field-field-degree-year,
+.view-display-id-voices_filters_pane .views-row:hover .views-field-field-endowed-title-appointment {
+  color: white;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div div {
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 410px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  font-size: 16px;
+  padding: 80px 10px 30px 20px;
+  text-align: left;
+  font-size: 16px;
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.blue {
+  background: linear-gradient(rgba(0, 0, 0, 0), #26639d 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.brightteal {
+  background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.charcoal {
+  background: linear-gradient(rgba(0, 0, 0, 0), #333333 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.green {
+  background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.pink {
+  background: linear-gradient(rgba(0, 0, 0, 0), #dd1880 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.purple {
+  background: linear-gradient(rgba(0, 0, 0, 0), #97185d 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div.white {
+  background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
+}
+.view-display-id-voices_filters_pane .views-row .views-field-field-image-single-public img {
+  max-height: 270px !important;
+}
+
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row {
+  width: 44%;
+  height: 400px;
+}
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+  width: 96%;
+  height: 400px;
+  padding-right: 10px;
+}
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
+  padding: 0px 10px 0px 20px;
+  word-wrap: break-word;
+}
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+  padding: 0px 10px 10px 20px;
+  word-wrap: break-word;
+}
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+  padding-top: 30px;
+}
+.gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .full-bleed-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+  width: 93%;
+}
+
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row {
+  width: 29.38%;
+  height: 400px;
+}
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+  width: 100%;
+  height: 400px;
+  padding-right: 10px;
+}
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
+  padding: 0px 10px 0px 20px;
+  word-wrap: break-word;
+}
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+  padding: 0px 10px 10px 20px;
+  word-wrap: break-word;
+}
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+  padding-top: 50px;
+}
+.gsb-landing-standard-page-one .full-header .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-landing-standard-page-one .full-header .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+  padding-top: 50px;
+}
+
+/*voices list with filters end */
