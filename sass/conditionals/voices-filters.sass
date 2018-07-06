@@ -8,7 +8,379 @@
 @import partials/base/03-extend/gsb-revamp
 
 /*All voices customizable lists start*/
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane
+  padding-bottom: 20px
+  width: 100%
+  .view-content
+    +breakpoint($bp-for-phone-tablet-range)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: flex-start
+  .view-content > div
+    vertical-align: top
+  .views-row
+    display: inline-block
+    margin: 30px 30px 0px 0px
+    position: relative
+    width: 22%
+    height: 410px
+    +breakpoint($bp-for-phone-tablet-range)
+      display: block
+      width: auto
+    .views-field-title
+      color: $link-green
+      font-size: 24px
+      padding: 25px 0 10px 20px
+      position: relative
+      text-align: left
+      a
+        color: $link-green
+        font-size: 24px
+        &:hover
+          text-decoration: none
+        +icon-after("arrow-double-right", true)
+          color: $green-light
+          font-size: 18px
+          font-weight: normal
+          line-height: 0
+          margin-top: 0
+          padding-left: 10px
+          &:hover
+            color: $green-light
+            text-decoration: none
+          &:after
+            color: $green-light
+            text-decoration: none
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 18px
+
+    div:hover
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment,
+      .field-name-field-degree-year,
+      .field-name-title
+        color: $white
+
+    .views-field-field-degree-year,
+    .views-field-field-endowed-title-appointment,
+    .field-name-field-degree-year
+      color: $text-black
+      font-size: 14px
+      padding: 0px 10px 0px 20px
+      position: relative
+      word-wrap: break-word
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 14px
+    div:hover .field-name-field-quote
+      div
+        div
+          opacity: 1
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            opacity: 1
+      .views-field-title
+        padding-top: 30px
+        a
+          color: $white
+        a:after,
+        a:hover:after
+          color: $white !important
+          
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment,
+      .field-name-field-degree-year
+        color: $white
+
+    .views-field-field-quote
+      div
+        div
+          color: $white
+          cursor: pointer
+          display: table
+          font-size: 16px
+          height: 410px
+          left: 0
+          padding: 80px 10px 30px 20px
+          position: absolute
+          top: 0
+          width: 100%
+          opacity: 0
+          text-align: left
+          -webkit-transition: opacity 500ms
+          -moz-transition: opacity 500ms
+          -o-transition: opacity 500ms
+          transition: opacity 500ms
+
+        &.blue
+          background: linear-gradient(transparent, $voices-blue 50%)
+        &.brightteal
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.charcoal
+          background: linear-gradient(transparent, $voices-charcoal 50%)
+        &.pink
+          background: linear-gradient(transparent, $voices-pink 50%)
+        &.purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        &.white
+          background: linear-gradient(transparent, $white 50%)
+    .views-field-field-image-single-public
+      img
+        max-height: 270px !important
+        width: 100%
+
+.pane-voices-filters-all-voices-list-panel-pane
+  padding: 0px 0px 35px 30px
+  .pane-title
+    padding: 45px 0px 0px 0px
+    h2
+      color: $text-black
+      font-family: $font-light
+      font-size: 30px
+      font-weight: normal
+      line-height: 1.2
+      +breakpoint($bp-for-phone-only)
+        font-size: 20px
+
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey
+  background-color: $grey-light
+.pane-voices-filters-all-voices-list-panel-pane.voices-bg-white
+  background-color: $white
+
+#panels-ipe-regionid-maintop 
+  .pane-voices-filters-all-voices-list-panel-pane
+    .views-row
+      width: 29%
+
+/*All voices list end */
+
+/* CTA Button */
+.pane-content
+  .voices_display_all_list_cta,
+  .voices_display_list_cta,
+  .homepage_voices_cta
+    margin-bottom: 30px
+    background-color: $red-dark
+    color: $white
+    font-size: 18px
+    min-height: 60px
+    line-height: 1.2
+    margin: 0 auto
+    padding: 20px 20px 20px 25px
+    position: relative
+    width: 315px
+    @extend %bg-and-box-shadow
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
+    a
+      color: $white
+      +icon-after("arrow-double-right", true)
+        font-size: 18px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        position: absolute
+        right: 20px
+        top: 50%
+      &:hover
+        color: $white
+        &:after
+          color: $white
+  .homepage_voices_cta
+    width: 205px
+    +breakpoint($bp-for-phone-only)
+      margin-bottom: 20px
+      width: 90%
+/* CTA Button End */
+
+/*voices list with filters start */
+
+.view-display-id-voices_filters_pane
+  width: 100%
+  .view-filters
+    background-color: $grey-light
+    .views-widget-filter-field_industry_tid
+      display: inline-block
+      position: relative
+      max-width: 370px
+      padding: 0px 20px 0px 20px
+    .views-widget-filter-field_region_of_interest_tid
+      display: inline-block
+      position: relative
+      width: 250px
+      padding: 0px 20px 0px 20px
+  .view-content
+    margin-left: 26px
+  .view-content > div
+    vertical-align: top
+    
+  .views-row
+    display: inline-block
+    margin: 30px 30px 0px 0px
+    position: relative
+    width: 22%
+    height: 410px
+
+    .views-field-title
+      color: $link-green
+      font-size: 24px
+      padding: 25px 0 10px 20px
+      position: relative
+      text-align: left
+      a
+        color: $link-green
+        font-size: 24px
+        &:hover
+          text-decoration: none
+        +icon-after("arrow-double-right", true)
+          color: $green-light
+          font-size: 24px
+          font-weight: normal
+          line-height: 0
+          margin-top: 0
+          padding-left: 10px
+          &:hover
+            color: $green-light
+            text-decoration: none
+          &:after
+            color: $green-light
+            text-decoration: none
+ 
+    div:hover
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        color: #fff
+
+    .views-field-field-degree-year,
+    .views-field-field-endowed-title-appointment
+      color: #231F10
+      font-size: 14px
+      padding: 0px 10px 0px 20px
+      position: relative
+      word-wrap: break-word
+    div:hover .field-name-field-quote
+      div
+        div
+          opacity: 1
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            opacity: 1
+      .views-field-title
+        padding-top: 30px
+        a
+          color: $white
+        a:after,
+        a:hover:after
+          color: $white !important
+          
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        color: $white
+    .views-field-field-quote
+      div
+        div
+          color: $white
+          cursor: pointer
+          display: table
+          height: 410px
+          left: 0
+          position: absolute
+          top: 0
+          width: 100%
+          opacity: 0
+          -webkit-transition: opacity 500ms
+          -moz-transition: opacity 500ms
+          -o-transition: opacity 500ms
+          transition: opacity 500ms
+          font-size: 16px
+          padding: 80px 10px 30px 20px
+          text-align: left
+          font-size: 16px
+
+        &.blue
+          background: linear-gradient(transparent, $voices-blue 50%)
+        &.brightteal
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.charcoal
+          background: linear-gradient(transparent, $voices-charcoal 50%)
+        &.green
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.pink
+          background: linear-gradient(transparent, $voices-pink 50%)
+        &.purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        &.white
+          background: linear-gradient(transparent, $white 50%)
+    .views-field-field-image-single-public
+      img
+        max-height: 270px !important
+        width: 100%
+
+.gsb-full-bleed-page
+  .content-wrapper
+    .inner-main-wrapper
+      #panels-ipe-regionid-maintop
+        .view-display-id-voices_filters_pane,
+        .view-display-id-all_voices_list_panel_pane
+          .views-row
+            width: 44%
+            height: 410px
+            .views-field-field-quote div div
+              width: 100%
+              height: 410px
+              padding-right: 10px
+            .views-field-field-degree-year
+              padding: 0px 10px 0px 20px
+              word-wrap: break-word
+            .views-field-field-endowed-title-appointment
+              padding: 0px 10px 10px 20px
+              word-wrap: break-word
+          .views-row:hover .views-field-title
+            padding-top: 30px
+  .full-bleed-header
+    .view-display-id-voices_filters_pane,
+    .view-display-id-all_voices_list_panel_pane
+      .views-row
+        .views-field-field-quote div div
+          width: 100%
+
+
+
+.gsb-landing-standard-page-one
+  .inner-content-wrapper
+    .inner-main-wrapper
+      #panels-ipe-regionid-maintop
+        .view-display-id-voices_filters_pane,
+        .view-display-id-all_voices_list_panel_pane
+          .views-row
+            width: 29.38%
+            height: 410px
+            .views-field-field-quote div div
+              width: 100%
+              height: 410px
+              padding-right: 10px
+            .views-field-field-degree-year
+              padding: 0px 10px 0px 20px
+              word-wrap: break-word
+            .views-field-field-endowed-title-appointment
+              padding: 0px 10px 10px 20px
+              word-wrap: break-word
+          .views-row:hover .views-field-title
+            padding-top: 50px
+  .full-header
+    .view-display-id-voices_filters_pane,
+    .view-display-id-all_voices_list_panel_pane
+      .views-row:hover .views-field-title
+        padding-top: 50px
+/*voices list with filters end */
+
+/* Jeniffer voices list code start */
 .pane-voices-filters-voices-list-cta-panel-pane,
 .pane-gsb-voices-listing-panel-pane-1
   padding-bottom: 20px
@@ -19,7 +391,7 @@
       flex-wrap: wrap
       justify-content: center
       align-items: flex-start
-  > div
+  .view-conten > div
     vertical-align: top
   .views-row
     display: inline-block
@@ -123,8 +495,6 @@
           background: linear-gradient(transparent, $voices-teal-med 50%)
         &.charcoal
           background: linear-gradient(transparent, $voices-charcoal 50%)
-        &.green
-          background: linear-gradient(transparent, $voices-teal-med 50%)
         &.pink
           background: linear-gradient(transparent, $voices-pink 50%)
         &.purple
@@ -135,7 +505,6 @@
       img
         max-height: 270px !important
 
-.pane-voices-filters-all-voices-list-panel-pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
 .view-gsb-voices-listing.view-id-gsb_voices_listing,
 .pane-gsb-voices-listing-panel-pane-1
@@ -186,54 +555,10 @@
         div
           min-height: 450px
 
-.pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey
-  background-color: $grey-light
-.pane-voices-filters-all-voices-list-panel-pane.voices-bg-white
-  background-color: $white
-
-#panels-ipe-regionid-maintop 
-  .pane-voices-filters-all-voices-list-panel-pane
-    .views-row
-      width: 29%
-
-/*All voices list end */
-
-/* CTA Button */
-.pane-content
-  .voices_display_all_list_cta,
-  .voices_display_list_cta,
-  .homepage_voices_cta
-    margin-bottom: 30px
-    background-color: $red-dark
-    color: $white
-    font-size: 18px
-    min-height: 60px
-    line-height: 1.2
-    margin: 0 auto
-    padding: 20px 20px 20px 25px
-    position: relative
-    width: 315px
-    @extend %bg-and-box-shadow
-    &:first-of-type
-      border-top: 0
-    &:last-of-type
-      border-bottom: 0
-    a
-      color: $white
-      +icon-after("arrow-double-right", true)
-        font-size: 18px
-        font-weight: normal
-        line-height: 0
-        margin-top: 0
-        position: absolute
-        right: 20px
-        top: 50%
-      &:hover
-        color: $white
-        &:after
-          color: $white
-  .homepage_voices_cta
-    width: 205px
-    +breakpoint($bp-for-phone-only)
-      margin-bottom: 20px
-      width: 90%
+.pane-gsb-voices-listing-panel-pane-1
+  +breakpoint($bp-for-phone-tablet-range)
+    .pane-title
+      padding-bottom: 50px
+  +breakpoint($bp-for-phone-only)
+    padding: 0
+/* Jeniffer code section end */
