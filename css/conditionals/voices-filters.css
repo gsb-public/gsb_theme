@@ -91,14 +91,11 @@
   }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-title {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .field-name-field-degree-year {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
   color: #231f20;
   font-size: 14px;
   padding: 0px 10px 0px 20px;
@@ -107,8 +104,7 @@
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .field-name-field-degree-year {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
     font-size: 14px;
   }
 }
@@ -129,8 +125,7 @@
   color: white !important;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .field-name-field-degree-year {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
@@ -201,10 +196,6 @@
   background-color: white;
 }
 
-#panels-ipe-regionid-maintop .pane-voices-filters-all-voices-list-panel-pane .views-row {
-  width: 29%;
-}
-
 /*All voices list end */
 /* CTA Button */
 .pane-content .voices_display_all_list_cta,
@@ -270,6 +261,14 @@
 .pane-content .homepage_voices_cta a:hover:after {
   color: white;
 }
+@media (max-width: 37.4375em) {
+  .pane-content .voices_display_all_list_cta,
+  .pane-content .voices_display_list_cta,
+  .pane-content .homepage_voices_cta {
+    width: 90%;
+    margin: 0;
+  }
+}
 .pane-content .homepage_voices_cta {
   width: 205px;
 }
@@ -303,6 +302,14 @@
 .view-display-id-voices_filters_pane .view-content {
   margin-left: 26px;
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-display-id-voices_filters_pane .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .view-display-id-voices_filters_pane .view-content > div {
   vertical-align: top;
 }
@@ -312,6 +319,12 @@
   position: relative;
   width: 22%;
   height: 410px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-display-id-voices_filters_pane .views-row {
+    display: block;
+    width: auto;
+  }
 }
 .view-display-id-voices_filters_pane .views-row .views-field-title {
   color: #636f00;
@@ -355,6 +368,11 @@
 .view-display-id-voices_filters_pane .views-row .views-field-title a:after:after {
   color: #bac405;
   text-decoration: none;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-display-id-voices_filters_pane .views-row .views-field-title a {
+    font-size: 18px;
+  }
 }
 .view-display-id-voices_filters_pane .views-row div:hover .views-field-field-degree-year,
 .view-display-id-voices_filters_pane .views-row div:hover .views-field-field-endowed-title-appointment {
@@ -433,29 +451,50 @@
   width: 100%;
 }
 
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row,
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row {
+/*voices list with filters end */
+/* full bleed and landing page one main header and main footer styles start */
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row {
   width: 44%;
   height: 410px;
 }
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row,
+  .gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row,
+  .gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row,
+  .gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row {
+    display: block;
+    width: auto;
+  }
+}
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
   width: 100%;
   height: 410px;
   padding-right: 10px;
 }
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
   padding: 0px 10px 0px 20px;
   word-wrap: break-word;
 }
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
   padding: 0px 10px 10px 20px;
   word-wrap: break-word;
 }
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
-.gsb-full-bleed-page .content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-full-bleed-page .content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
   padding-top: 30px;
 }
 .gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
@@ -463,29 +502,48 @@
   width: 100%;
 }
 
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row,
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row {
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row {
   width: 29.38%;
   height: 410px;
 }
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row,
+  .gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row,
+  .gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row,
+  .gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row {
+    display: block;
+    width: auto;
+  }
+}
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
   width: 100%;
   height: 410px;
   padding-right: 10px;
 }
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year {
   padding: 0px 10px 0px 20px;
   word-wrap: break-word;
 }
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
   padding: 0px 10px 10px 20px;
   word-wrap: break-word;
 }
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
-.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper #panels-ipe-regionid-maintop .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-header .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
+.gsb-landing-standard-page-one .inner-content-wrapper .inner-main-wrapper .main-footer .view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
   padding-top: 50px;
 }
 .gsb-landing-standard-page-one .full-header .view-display-id-voices_filters_pane .views-row:hover .views-field-title,
@@ -493,7 +551,7 @@
   padding-top: 50px;
 }
 
-/*voices list with filters end */
+/* full bleed and landing page one main header and main footer styles end */
 /* Jeniffer voices list code start */
 .pane-voices-filters-voices-list-cta-panel-pane,
 .pane-gsb-voices-listing-panel-pane-1 {
