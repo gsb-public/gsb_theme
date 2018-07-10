@@ -15,7 +15,6 @@
     +breakpoint($bp-for-phone-tablet-range)
       display: flex
       flex-wrap: wrap
-      justify-content: center
       align-items: flex-start
   .view-content > div
     vertical-align: top
@@ -203,17 +202,42 @@
       position: relative
       max-width: 370px
       padding: 0px 20px 0px 20px
+      #edit-field-industry-tid
+        width: 280px !important
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 88% important
+      .form-select
+        +breakpoint($bp-for-phone-tablet-range)
+          display: flex !important
+        .customSelectInner
+          width: 250px !important
+          +breakpoint($bp-for-phone-tablet-range)
+            display: flex !important
+            width: 250px !important
+
     .views-widget-filter-field_region_of_interest_tid
       display: inline-block
       position: relative
-      width: 250px
+      max-width: 370px
       padding: 0px 20px 0px 20px
+      #edit-field-region-of-interest-tid
+        width: 280px !important
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 88% important
+      .form-select
+        +breakpoint($bp-for-phone-tablet-range)
+          display: flex !important
+        .customSelectInner
+          width: 250px !important
+          +breakpoint($bp-for-phone-tablet-range)
+            display: flex !important
+            width: 250px !important
+
   .view-content
     margin-left: 26px
     +breakpoint($bp-for-phone-tablet-range)
       display: flex
       flex-wrap: wrap
-      justify-content: center
       align-items: flex-start
   .view-content > div
     vertical-align: top
@@ -241,7 +265,7 @@
           text-decoration: none
         +icon-after("arrow-double-right", true)
           color: $green-light
-          font-size: 24px
+          font-size: 18px
           font-weight: normal
           line-height: 0
           margin-top: 0
