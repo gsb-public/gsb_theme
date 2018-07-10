@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pane-content .voices_display_all_list_cta,
 .pane-content .voices_display_list_cta,
 .pane-content .homepage_voices_cta {
@@ -14,21 +15,25 @@
 }
 
 /*All voices customizable lists start */
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
+.pane-voices-filters-voices-list-cta-panel-pane {
   padding-bottom: 20px;
   width: 100%;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content,
+  .pane-voices-filters-voices-list-cta-panel-pane .view-content {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content > div {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content > div,
+.pane-voices-filters-voices-list-cta-panel-pane .view-content > div {
   vertical-align: top;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row {
   display: inline-block;
   margin: 30px 30px 0px 0px;
   position: relative;
@@ -36,26 +41,31 @@
   height: 410px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row {
     display: block;
     width: auto;
   }
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title {
   color: #636f00;
   font-size: 24px;
   padding: 25px 0 10px 20px;
   position: relative;
   text-align: left;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a {
   color: #636f00;
   font-size: 24px;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:hover,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:hover {
   text-decoration: none;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -76,25 +86,32 @@
   margin-top: 0;
   padding-left: 10px;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:hover,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:hover {
   color: #bac405;
   text-decoration: none;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:after {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:after {
   color: #bac405;
   text-decoration: none;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a {
     font-size: 18px;
   }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .views-field-field-endowed-title-appointment,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-degree-year,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment {
   color: #231f20;
   font-size: 14px;
   padding: 0px 10px 0px 20px;
@@ -103,31 +120,42 @@
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-endowed-title-appointment,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment {
     font-size: 14px;
   }
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-quote div div {
   opacity: 1;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-quote div div {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-quote div div,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div {
   opacity: 1;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
   padding-top: 30px;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a {
   color: white;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:after,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:hover:after {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:hover:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:hover:after {
   color: white !important;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-degree-year,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
   color: white;
   cursor: pointer;
   display: table;
@@ -145,25 +173,32 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.blue {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.blue,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.blue {
   background: linear-gradient(rgba(0, 0, 0, 0), #26639d 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.brightteal {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.brightteal,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.brightteal {
   background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.charcoal {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.charcoal,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.charcoal {
   background: linear-gradient(rgba(0, 0, 0, 0), #333333 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.pink {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.pink,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.pink {
   background: linear-gradient(rgba(0, 0, 0, 0), #dd1880 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.purple {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.purple,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.purple {
   background: linear-gradient(rgba(0, 0, 0, 0), #97185d 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.white {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div.white,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.white {
   background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img {
   max-height: 270px !important;
   width: 100%;
 }
@@ -594,320 +629,73 @@
 }
 
 /* full bleed and landing page one main header and main footer styles end */
-/* Jeniffer voices list code start */
-.pane-voices-filters-voices-list-cta-panel-pane,
-.pane-gsb-voices-listing-panel-pane-1 {
-  padding-bottom: 20px;
-  width: 100%;
+/* Voices Multiple Criteria with CTA - OVERIDES */
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
+  width: 290px;
+  height: 400px;
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .view-content,
-  .pane-gsb-voices-listing-panel-pane-1 .view-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
+  padding-top: 25px;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .view-conten > div,
-.pane-gsb-voices-listing-panel-pane-1 .view-conten > div {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img {
+  max-height: auto !important;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 30% 25px;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+  content: "”";
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+  content: "“";
+}
+
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
+  height: auto;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title {
+  padding: 25px 0 10px 15px;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a {
+  font-size: 20px;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
+  padding-top: 25px;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: 300px;
+  line-height: 1.5;
+  padding: 30% 25px;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+  content: "”";
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+  content: "“";
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta {
+  margin-top: 25px;
+}
+
+.pane-voices-filters-voices-list-cta-panel-pane div {
   vertical-align: top;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row,
-.pane-gsb-voices-listing-panel-pane-1 .views-row {
-  display: inline-block;
-  margin: 30px 30px 0px 0px;
-  position: relative;
-  width: 22%;
-  height: 410px;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row {
-    display: block;
-    width: auto;
-  }
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title {
-  color: #636f00;
-  padding: 25px 0 10px 20px;
-  position: relative;
-  text-align: left;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a {
-  color: #636f00;
-  font-size: 30px;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:hover,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:hover {
-  text-decoration: none;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after {
-  content: "\f101";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-  color: #bac405;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 0;
-  margin-top: 0;
-  padding-left: 10px;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:hover,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a:after:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after:hover {
-  color: #bac405;
-  text-decoration: none;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a:after:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after:after {
-  color: #bac405;
-  text-decoration: none;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a,
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title a,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a {
-    font-size: 20px;
-  }
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-endowed-title-appointment,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-title,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .views-field-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .views-field-field-endowed-title-appointment,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-title {
-  color: white;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
-  color: #231f20;
-  font-size: 20px;
-  padding-left: 20px;
-  position: relative;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-degree-year,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-degree-year,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
-    font-size: 16px;
-  }
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-field-quote div div {
-  opacity: 1;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-field-quote div div {
-  opacity: 1;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a {
-  color: white;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:hover:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a:hover:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-title a:hover:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a:hover:after {
-  color: white !important;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-endowed-title-appointment,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-field-endowed-title-appointment,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-field-degree-year {
-  color: white;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div div {
-  color: white;
-  cursor: pointer;
-  display: table;
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  height: 410px;
-  left: 0;
-  padding: 80px 10px 30px 20px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  opacity: 0;
-  text-align: left;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
+  line-height: 1.5;
+  padding: 30% 25px;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.blue,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.blue,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.blue,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.blue {
-  background: linear-gradient(rgba(0, 0, 0, 0), #26639d 50%);
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+  content: "”";
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.brightteal,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.brightteal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.brightteal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.brightteal {
-  background: linear-gradient(rgba(0, 0, 0, 0), #006152 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.charcoal,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.charcoal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.charcoal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.charcoal {
-  background: linear-gradient(rgba(0, 0, 0, 0), #333333 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.pink,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.pink,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.pink,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.pink {
-  background: linear-gradient(rgba(0, 0, 0, 0), #dd1880 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.purple,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.purple,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.purple,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.purple {
-  background: linear-gradient(rgba(0, 0, 0, 0), #97185d 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div.white,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.white,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote div.white,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.white {
-  background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-image-single-public img {
-  max-height: 270px !important;
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+  content: "“";
 }
 
-.pane-voices-filters-voices-list-cta-panel-pane,
-.view-gsb-voices-listing.view-id-gsb_voices_listing,
-.pane-gsb-voices-listing-panel-pane-1 {
-  padding: 0px 0px 35px 30px;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .pane-title,
-.view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title,
-.pane-gsb-voices-listing-panel-pane-1 .pane-title {
-  padding: 45px 0px 0px 0px;
-  color: #231f20;
-  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 1.2;
-}
-@media (max-width: 37.4375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .pane-title,
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title,
-  .pane-gsb-voices-listing-panel-pane-1 .pane-title {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-gsb-voices-listing-panel-pane-1 .pane-title {
-    padding-bottom: 50px;
-  }
-}
-@media (max-width: 37.4375em) {
-  .pane-gsb-voices-listing-panel-pane-1 {
-    padding: 0;
-  }
-}
-
-.pane-gsb-voices-listing-panel-pane-1 {
-  margin: 0 auto;
-  width: 1172px;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-gsb-voices-listing-panel-pane-1 {
-    width: auto;
-  }
-  .pane-gsb-voices-listing-panel-pane-1 h2 {
-    margin-left: 20px;
-  }
-}
-
-.view-gsb-voices-listing.view-id-gsb_voices_listing {
-  padding: 0;
-}
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-  margin: 30px 45px 0px 0px;
-  min-height: 500px;
-  width: 29%;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    margin: 0 20px;
-    width: 40%;
-  }
-}
-@media (max-width: 37.4375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    width: 100%;
-  }
-}
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
-  padding-top: 40px;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
-    padding-top: 25px;
-  }
-}
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
-  min-height: 450px;
-}
-
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-gsb-voices-listing-panel-pane-1 .pane-title {
-    padding-bottom: 50px;
-  }
-}
-@media (max-width: 37.4375em) {
-  .pane-gsb-voices-listing-panel-pane-1 {
-    padding: 0;
-  }
-}
-
-/* Jeniffer code section end */
+/* END of Voices Multiple Criteria with CTA - OVERIDES */
