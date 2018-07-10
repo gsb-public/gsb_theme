@@ -630,31 +630,80 @@
 
 /* full bleed and landing page one main header and main footer styles end */
 /* Voices Multiple Criteria with CTA - OVERIDES */
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
   width: 290px;
   height: 400px;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
   padding-top: 25px;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img {
   max-height: auto !important;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   padding: 30% 25px;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
   content: "”";
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
   content: "“";
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta {
+  background-color: white;
+  margin-top: 50px;
+  width: 320px;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a {
+  color: #990000;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  color: #e3e3e3;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:hover,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:hover {
+  color: #aac4bf;
+}
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:after,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:after {
+  color: #aac4bf;
 }
 
 .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
   height: auto;
+  width: 240px;
 }
 .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title {
   padding: 25px 0 10px 15px;
@@ -668,7 +717,7 @@
 .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  height: 300px;
+  height: 350px;
   line-height: 1.5;
   padding: 30% 25px;
 }
@@ -679,7 +728,41 @@
   content: "“";
 }
 .wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta {
-  margin-top: 25px;
+  background-color: white;
+  margin-top: 50px;
+  width: 320px;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a {
+  color: #990000;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  color: #e3e3e3;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:hover {
+  color: #aac4bf;
+}
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a:after:after {
+  color: #aac4bf;
 }
 
 .pane-voices-filters-voices-list-cta-panel-pane div {
@@ -698,4 +781,4 @@
   content: "“";
 }
 
-/* END of Voices Multiple Criteria with CTA - OVERIDES */
+/* END of Voices Multiple Criteria with CTA - OVERRIDES */
