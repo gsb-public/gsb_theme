@@ -4564,23 +4564,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 #header-wrapper {
   position: relative;
 }
-#header-wrapper:after {
-  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3) inset;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3) inset;
-  bottom: -3px;
-  content: "";
-  height: 3px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-}
-@media (min-width: 73.125em) {
-  #header-wrapper {
-    border-top: 3px #860000 solid;
-  }
-}
 @media (min-width: 75em) {
   #header-wrapper #header {
     margin: 0 auto;
@@ -4593,7 +4576,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 
 #logo {
   display: inline-block;
-  margin-top: 29px;
+  margin-top: 20px;
 }
 #logo img {
   display: none;
@@ -4601,15 +4584,15 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 .svg #logo {
   background: url('../images/logo.svg') no-repeat;
   background-size: 96.8%;
-  height: 76px;
-  width: 275px;
+  height: 44px;
+  width: 160px;
 }
 .no-js #logo, .no-svg #logo {
   background: url('../images/logo-2015-05-26-1.png') no-repeat;
   background-size: 100%;
-  height: 80px;
+  height: 44px;
   margin: 26px 0;
-  width: 286px;
+  width: 160px;
 }
 .svg .page-seed #logo, .no-js .page-seed #logo, .no-svg .page-seed #logo, .svg .page-exec-ed #logo, .no-js .page-exec-ed #logo, .no-svg .page-exec-ed #logo {
   background-size: contain;
@@ -4645,25 +4628,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     position: relative;
     width: 100px;
   }
-}
-
-#site-slogan {
-  font-size: 22px;
-  float: right;
-  line-height: 3.4;
-}
-@media (max-width: 74.9375em) {
-  #site-slogan {
-    margin-right: 15px;
-  }
-}
-@media (max-width: 73.0625em) {
-  #site-slogan {
-    display: none;
-  }
-}
-.page-exec-ed #site-slogan, .page-seed #site-slogan, .no-js #site-slogan {
-  display: none;
 }
 
 .js #navigation, #navigation.search-closed {
@@ -7691,6 +7655,97 @@ input.signup-submit:hover {
 .no-image .cp-title a {
   font-size: 130%;
   line-height: 1.2em;
+}
+
+@media (min-width: 75em) {
+  .awemenu-submenu.awemenu-megamenu {
+    width: 1100px !important;
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+.md-style2 {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.md-style2.awemenu-standard .awemenu .awemenu-item > a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.md-style2.awemenu-standard .awemenu > .awemenu-item:hover > a,
+.md-style2.awemenu-standard .awemenu > .awemenu-item > a {
+  border-top: none;
+}
+
+#header-wrapper #header .section {
+  display: inline-block;
+}
+
+.page-exec-ed #header-wrapper #header .section,
+.page-seed #header-wrapper #header .section {
+  display: block;
+}
+
+#md-megamenu-1 {
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 35px 0 35px 180px;
+}
+#md-megamenu-1 a.link-title {
+  color: #231f20;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+#md-megamenu-1 a.link-title:hover {
+  color: #2d6280;
+  text-decoration: underline;
+}
+#md-megamenu-1 .mm-header {
+  padding: 50px 0 30px;
+}
+#md-megamenu-1 .see-all-programs {
+  border-bottom: 1px solid #ededed;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding-bottom: 14px;
+}
+#md-megamenu-1 .see-all-programs:after {
+  padding-left: 35px;
+}
+#md-megamenu-1 .awemenu li .awemenu-item-title {
+  padding-bottom: 20px;
+}
+#md-megamenu-1 .awemenu li .awemenu-item-title:hover {
+  border-bottom: 4px solid #990000;
+}
+#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper {
+  border-top: 1px solid #990000;
+  background-color: white;
+  left: 53%;
+  right: 47%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 25px;
+  padding-top: 0;
+  position: relative;
+  width: 100vw;
+}
+#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row {
+  margin: 0 auto;
+  width: 1170px;
+}
+#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li {
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  padding: 0 0 25px 0;
+}
+#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:hover {
+  color: #2d6280;
+  text-decoration: underline;
 }
 
 .qtip-wrapper ol,
