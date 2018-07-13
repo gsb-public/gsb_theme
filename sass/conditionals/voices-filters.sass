@@ -9,7 +9,8 @@
 
 /*All voices customizable lists start*/
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
-.pane-voices-filters-voices-list-cta-panel-pane
+.pane-voices-filters-voices-list-cta-panel-pane,
+.view-display-id-voices_single_teaser_pane
   padding-bottom: 20px
   width: 100%
   .view-content
@@ -96,6 +97,7 @@
           color: $white
           cursor: pointer
           display: table
+          font-family: $font-demi
           font-size: 16px
           height: 410px
           left: 0
@@ -109,6 +111,10 @@
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
+          &:after
+            content: '”'
+          &:before
+            content: '“'
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -150,26 +156,27 @@
 /* CTA Button */
 .pane-content
   .voices_display_all_list_cta,
-  .voices_display_list_cta,
-  .homepage_voices_cta
+  .homepage_voices_cta,
+  .voices_display_list_cta
     margin-bottom: 30px
-    background-color: $red-dark
-    color: $white
+    background-color: $white
+    color: $red
     font-size: 18px
     min-height: 60px
     line-height: 1.2
     margin: 0 auto
     padding: 20px 20px 20px 25px
     position: relative
-    width: 315px
+    width: 320px
     @extend %bg-and-box-shadow
     &:first-of-type
       border-top: 0
     &:last-of-type
       border-bottom: 0
     a
-      color: $white
+      color: $red
       +icon-after("arrow-double-right", true)
+        color: $grey-e3
         font-size: 18px
         font-weight: normal
         line-height: 0
@@ -177,10 +184,10 @@
         position: absolute
         right: 20px
         top: 50%
-      &:hover
-        color: $white
+        &:hover
+          color: $teal-light
         &:after
-          color: $white
+          color: $teal-light
     +breakpoint($bp-for-phone-only)
       width: 90%
       margin: 0
@@ -332,6 +339,11 @@
           padding: 80px 10px 30px 20px
           text-align: left
           font-size: 16px
+          font-family: $font-demi
+          &:after
+            content: '”'
+          &:before
+            content: '“'
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -353,7 +365,7 @@
         width: 100%
 
 /*voices list with filters end */
-/* full bleed and landing page one main header and main footer styles start*/
+/* full bleed and landing page one main header and main footer regions styles start*/
 .gsb-full-bleed-page
   .content-wrapper
     .inner-main-wrapper
@@ -527,3 +539,34 @@
           &:before
             content: '“'
 /* END of Voices Multiple Criteria with CTA - OVERRIDES */
+
+/* Single Teaser styles start */
+.view-display-id-voices_single_teaser_pane
+  .views-row
+    width: 100%
+    margin-top: 0px
+
+.full-header,
+.full-bleed-header,
+.featured-content
+  .view-display-id-voices_single_teaser_pane
+    .views-row
+      width: 22%
+
+.inner-main-wrapper
+  .main-header,
+  .main-footer
+    .view-display-id-voices_single_teaser_pane
+      .views-row
+        width: 29.38%
+
+.gsb-full-bleed-page
+  .content-wrapper
+    .inner-main-wrapper
+      .main-header,
+      .main-footer
+        .view-display-id-voices_single_teaser_pane
+          .views-row
+            width: 44%
+            height: 410px
+/* Single Teaser styles end */
