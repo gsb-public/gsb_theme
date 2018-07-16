@@ -43,13 +43,6 @@
       text-decoration: underline
   .mm-header
     padding: 50px 0 30px
-  .see-all-programs
-    border-bottom: 1px solid $grey-e
-    font-family: $font-sans
-    font-size: 20px
-    padding-bottom: 14px
-    &:after
-      padding-left: 35px
   .awemenu
     // the top menu bar
     li
@@ -82,3 +75,17 @@
               &:hover
                 color: $text-blue
                 text-decoration: underline
+  // Utility menus
+  #block-menu-menu-md-megamenu-insights-utilit,
+  #block-menu-menu-md-megamenu-programs-utilit,
+  #block-menu-menu-md-megamenu-alumni-utility,
+  #block-menu-menu-md-megamenu-events-utility
+    width: 184px
+    position: relative
+    li
+      border-bottom: 1px solid $grey-e
+      padding: 14px 0
+      +icon-after("arrow-med-right", true)
+        color: $voices-divider
+        float: right
+        font-weight: normal
