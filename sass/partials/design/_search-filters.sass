@@ -20,11 +20,12 @@
     margin-top: 0
     margin-bottom: 0
     .form-text
+      border: 1px solid $red
       color: $text-black
       font-size: 16px
-      background: #f4f4f4
+      background: $white
       line-height: 1
-      padding: 6px 60px 6px 10px
+      padding: 6px 820px 6px 10px
       +breakpoint(1169px max-width)
         height: 50px
         padding: 15px 0px 15px 10px
@@ -39,7 +40,7 @@
     .no-js &
       display: inline-block
       position: absolute
-      top: 0
+      top: 60px
       right: 1px
       z-index: 1
     .page-exec-ed &,
@@ -53,9 +54,6 @@
     background: transparent
     border-radius: 0
     border: 0
-    border-bottom: 1px $border-grey solid
-    border-right: 1px $border-grey solid
-    border-top: 1px $border-grey solid
     float: right
     height: 59px
     overflow: hidden
@@ -76,10 +74,10 @@
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
-      +background((image_url("search.svg") no-repeat center), #f4f4f4)
+      +background((image_url("search.svg") no-repeat center))
       background-size: 150%
       &:hover
-        +background((image_url("search-hover.svg") no-repeat center), #f4f4f4)
+        +background((image_url("search-hover.svg") no-repeat center))
         background-size: 150%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 20px transparent
