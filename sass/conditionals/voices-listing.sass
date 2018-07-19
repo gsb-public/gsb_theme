@@ -7,21 +7,229 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-.view-gsb-voices-listing
-  margin: 0 auto
-  width: 1172px
+// File for the Voices NON-CUSTOMIZABLE LISTS
+.pane-voices-filters-voices-list-cta-panel-pane,
+.pane-gsb-voices-listing-panel-pane-1
+  padding-bottom: 20px
+  width: 100%
+  .view-content
+    +breakpoint($bp-for-phone-tablet-range)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: flex-start
   .view-content > div
     vertical-align: top
   .views-row
     display: inline-block
-    height: 500px
-    margin: 50px 40px 40px 0
-    padding: 0
+    margin: 30px 30px 0px 0px
     position: relative
-    width: 360px
-  .views-row-3
-    margin-right: 0
+    width: 22%
+    height: 410px
+    +breakpoint($bp-for-phone-tablet-range)
+      display: block
+      width: auto
+    .field-name-title
+      color: $link-green
+      padding: 25px 0 10px 20px
+      position: relative
+      text-align: left
+      a
+        color: $link-green
+        font-size: 30px
+        &:hover
+          text-decoration: none
+        +icon-after("arrow-double-right", true)
+          color: $green-light
+          font-size: 18px
+          font-weight: normal
+          line-height: 0
+          margin-top: 0
+          padding-left: 10px
+          &:hover
+            color: $green-light
+            text-decoration: none
+          &:after
+            color: $green-light
+            text-decoration: none
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 20px
 
-    .field-type-image
-      width: 360px
+
+    div:hover
+      .field-name-field-degree-year,
+      .field-name-title
+        color: $white
+
+    .field-name-field-degree-year
+      color: $text-black
+      font-size: 20px
+      padding-left: 20px
+      position: relative
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 16px
+    div:hover .field-name-field-quote
+      div
+        div
+          opacity: 1
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            opacity: 1
+      .field-name-title
+        //padding-top: 55px
+        a
+          color: $white
+        a:after,
+        a:hover:after
+          color: $white !important
+
+      .field-name-field-degree-year
+        color: $white
+    .field-name-field-quote
+      div
+        div
+          color: $white
+          cursor: pointer
+          display: table
+          left: 0
+          padding: 50% 25px
+          position: absolute
+          bottom: 0
+          width: 100%
+          opacity: 0
+          text-align: left
+          -webkit-transition: opacity 500ms
+          -moz-transition: opacity 500ms
+          -o-transition: opacity 500ms
+          transition: opacity 500ms
+
+        &.blue
+          background: linear-gradient(transparent, $voices-blue 50%)
+        &.brightteal
+          background: linear-gradient(transparent, $voices-teal-med 50%)
+        &.charcoal
+          background: linear-gradient(transparent, $voices-charcoal 50%)
+        &.pink
+          background: linear-gradient(transparent, $voices-pink 50%)
+        &.purple
+          background: linear-gradient(transparent, $voices-purple 50%)
+        &.white
+          background: linear-gradient(transparent, $white 50%)
+
+.pane-voices-filters-voices-list-cta-panel-pane,
+.view-gsb-voices-listing.view-id-gsb_voices_listing,
+.pane-gsb-voices-listing-panel-pane-1
+  padding: 0px 0px 35px 30px
+  .pane-title
+    padding: 45px 0px 0px 0px
+    color: $text-black
+    font-family: $font-light
+    font-size: 36px
+    font-weight: normal
+    line-height: 1.2
+    +breakpoint($bp-for-phone-only)
+      font-size: 20px
+.pane-gsb-voices-listing-panel-pane-1
+  +breakpoint($bp-for-phone-tablet-range)
+    .pane-title
+      padding-bottom: 50px
+  +breakpoint($bp-for-phone-only)
+    padding: 0
+
+// Home page 3 across custom styles
+.pane-gsb-voices-listing-panel-pane-1
+  margin: 0 auto
+  width: 1172px
+  +breakpoint($bp-for-phone-tablet-range)
+    width: auto
+    h2
+      margin-left: 20px
+
+.view-gsb-voices-listing.view-id-gsb_voices_listing
+  padding: 0
+  .views-row-1, .views-row-2
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-bottom: 70px
+    +breakpoint($bp-for-phone-only)
+      padding-bottom: 45px
+  .views-row-3
+    +breakpoint($bp-for-phone-only)
+      padding-bottom: 45px
+  .views-row
+    margin: 30px 45px 0px 0px
+    height: 500px
+    width: 29%
+    +breakpoint($bp-for-phone-tablet-range)
       height: auto
+      margin: 0 20px
+      width: 40%
+    +breakpoint($bp-for-phone-only)
+      width: 100%
+
+    .field-name-title
+      padding-top: 40px
+      +breakpoint($bp-for-phone-tablet-range)
+        padding-top: 25px
+    .field-name-field-quote
+      div
+        div
+          font-family: $font-demi
+          font-size: 20px
+          height: 500px
+          line-height: 1.5
+          &:after
+            content: '”'
+          &:before
+            content: '“'
+.pane-gsb-voices-listing-panel-pane-1
+  +breakpoint($bp-for-phone-tablet-range)
+    .pane-title
+      padding-bottom: 50px
+  +breakpoint($bp-for-phone-only)
+    padding: 0
+
+/* CTA Button */
+.pane-content
+  .homepage_voices_cta
+    margin-bottom: 30px
+    background-color: $red-dark
+    color: $white
+    font-size: 18px
+    min-height: 60px
+    line-height: 1.2
+    margin: 70px auto 0
+    padding: 20px 20px 20px 25px
+    position: relative
+    width: 315px
+    @extend %bg-and-box-shadow
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
+    a
+      color: $white
+      +icon-after("arrow-double-right", true)
+        font-size: 18px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        position: absolute
+        right: 20px
+        top: 50%
+      &:hover
+        color: $white
+        &:after
+          color: $white
+    +breakpoint($bp-for-phone-only)
+      width: 90%
+      margin: 0
+
+  .homepage_voices_cta
+    width: 205px
+    +breakpoint($bp-for-phone-only)
+      margin-bottom: 20px
+      margin: 0 auto
+      width: 90%
+/* CTA Button End */
