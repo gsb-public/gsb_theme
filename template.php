@@ -275,6 +275,16 @@ function gsb_theme_admission_events_mba_list_after_build($form, &$form_state) {
   $form['date_search']['min']['#title'] = t('Date from');
   $form['date_search']['max']['#title'] = t('to');
 
+  $form['secondary']['date_search']['#bef_position'] = 9;
+  $form['secondary']['date_search']['min']['#title'] = t('Date from');
+  $form['secondary']['date_search']['max']['#title'] = t('to');
+
+  $form['secondary']['date_search']['value']['date']['#title'] = "Date from";
+  unset($form['secondary']['date_search']['value']['date']['#title_display']);
+
+  $form['secondary']['field_event_date_value']['value']['date']['#title'] = "to";
+  unset($form['secondary']['field_event_date_value']['value']['date']['#title_display']);
+
   // Hide the date descriptions
   unset($form['date_search']['max']['date']['#description'], $form['date_search']['min']['date']['#description']);
 
