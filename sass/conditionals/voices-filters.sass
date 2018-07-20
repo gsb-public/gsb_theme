@@ -29,6 +29,14 @@
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
+    +breakpoint($bp-for-tablet-range)
+      width: 44%
+      display: block
+    +breakpoint($bp-tablet-pot)
+      width: 41%
+    +breakpoint($bp-tablet-land)
+      width: 30%
+
     .views-field-title
       color: $link-green
       font-size: 24px
@@ -144,7 +152,15 @@
       font-weight: normal
       line-height: 1.2
       +breakpoint($bp-for-phone-only)
-        font-size: 20px
+        font-size: 24px
+      +breakpoint($bp-mobile-land)
+        font-size: 21px
+      +breakpoint($bp-tablet-pot)
+        font-size: 24px
+      +breakpoint($bp-tablet-land)
+        font-size: 24px
+      +breakpoint($bp-iphone6p-land)
+        font-size: 24px
 
 .pane-voices-filters-all-voices-list-panel-pane.voices-bg-grey
   background-color: $grey-light
@@ -158,7 +174,6 @@
   .voices_display_all_list_cta,
   .homepage_voices_cta,
   .voices_display_list_cta
-    margin-bottom: 30px
     background-color: $white
     color: $red
     font-size: 18px
@@ -168,6 +183,7 @@
     padding: 20px 20px 20px 25px
     position: relative
     width: 320px
+    margin-bottom: 20px
     @extend %bg-and-box-shadow
     &:first-of-type
       border-top: 0
@@ -197,6 +213,41 @@
     +breakpoint($bp-for-phone-only)
       margin-bottom: 20px
       width: 90%
+   
+.main-header,
+.main-footer
+  .voices_display_all_list_cta,
+  .homepage_voices_cta,
+  .voices_display_list_cta
+    +breakpoint($bp-iphone6p-land)
+      width: 82%
+      margin-left: 0px
+    +breakpoint($bp-tablet-pot)
+      width: 74%
+      margin-left: 0px
+    +breakpoint($bp-tablet-land)
+      width: 64%
+      margin-left: 0px
+    +breakpoint($bp-for-phone-only)
+      width: 85%
+      margin-left: 0px
+
+.gsb-landing-standard-page-one
+  .main-header,
+  .main-footer
+    .voices_display_all_list_cta,
+    .homepage_voices_cta,
+    .voices_display_list_cta
+      +breakpoint($bp-for-phone-range)
+        width: 90%
+        margin-left: 0px
+      +breakpoint($bp-for-phone-only)
+        width: 89%
+        margin-left: 0px
+      +breakpoint($bp-tablet-land)
+        width: 50%
+        margin: 0 auto
+  
 /* CTA Button End */
 
 /*voices list with filters start */
@@ -259,6 +310,13 @@
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
+    +breakpoint($bp-for-tablet-range)
+      width: 44%
+      display: block
+    +breakpoint($bp-tablet-pot)
+      width: 41%
+    +breakpoint($bp-tablet-land)
+      width: 30%
 
     .views-field-title
       color: $link-green
@@ -376,9 +434,22 @@
           .views-row
             width: 44%
             height: 410px
-            +breakpoint($bp-for-phone-tablet-range)
+            +breakpoint($bp-for-phone-only)
               display: block
               width: auto
+            +breakpoint($bp-for-tablet-range)
+              width: 73%
+            +breakpoint($bp-mobile-land)
+              display: block
+              width: 44%
+            +breakpoint($bp-tablet-pot)
+              width: 73%
+            +breakpoint($bp-tablet-land)
+              width: 64%
+            +breakpoint($bp-iphone6p-land)
+              width: 82%
+            
+  
             .views-field-field-quote div div
               width: 100%
               height: 410px
@@ -408,9 +479,21 @@
           .views-row
             width: 29.38%
             height: 410px
-            +breakpoint($bp-for-phone-tablet-range)
+            +breakpoint($bp-for-phone-only)
               display: block
               width: auto
+            +breakpoint($bp-for-tablet-range)
+              width: 73%
+            +breakpoint($bp-mobile-land)
+              display: block
+              width: 90%
+            +breakpoint($bp-tablet-pot)
+              width: 73%
+            +breakpoint($bp-tablet-land)
+              width: 45%
+            +breakpoint($bp-iphone6p-land)
+              width: 82%
+   
             .views-field-field-quote div div
               width: 100%
               height: 410px
@@ -552,6 +635,19 @@
   .view-display-id-voices_single_teaser_pane
     .views-row
       width: 22%
+      +breakpoint($bp-for-phone-tablet-range)
+        width: auto
+        display: block
+        margin-left: 25px
+
+.narrow-view
+  .view-display-id-voices_single_teaser_pane
+    .views-row
+      +breakpoint($bp-for-phone-only)
+        width: auto
+        margin-left: 25px
+      +breakpoint($bp-for-tablet-range)
+        width: auto
 
 .inner-main-wrapper
   .main-header,
@@ -559,6 +655,12 @@
     .view-display-id-voices_single_teaser_pane
       .views-row
         width: 29.38%
+        +breakpoint($bp-for-phone-only)
+          width: auto
+          margin-left: 25px
+        +breakpoint($bp-for-tablet-range)
+          width: auto
+          margin-left: 25px
 
 .gsb-full-bleed-page
   .content-wrapper
@@ -567,6 +669,58 @@
       .main-footer
         .view-display-id-voices_single_teaser_pane
           .views-row
-            width: 44%
+            width: 40%
             height: 410px
+            +breakpoint($bp-for-phone-only)
+              width: auto
+              margin-left: 25px
+            +breakpoint($bp-for-tablet-range)
+              width: auto
+              margin-left: 25px
+
+.view-display-id-voices_single_teaser_pane
+  .views-row
+    .views-field-title
+      a
+        color: $link-green
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 20px
+        &:hover
+          text-decoration: none
+ 
+    div:hover
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        +breakpoint($bp-for-phone-tablet-range)
+          color: $link-green
+
+    div:hover .field-name-field-quote
+      div
+        div
+          +breakpoint($bp-for-phone-tablet-range)
+            opacity: 0
+    &:hover
+      .views-field-field-quote
+        div
+          div
+            +breakpoint($bp-for-phone-tablet-range)
+              opacity: 0
+      .views-field-title
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 20px
+        a
+          +breakpoint($bp-for-phone-tablet-range)
+            color: $link-green
+            font-size: 20px
+        a:after,
+        a:hover:after
+          +breakpoint($bp-for-phone-tablet-range)
+            color: $link-green !important
+
+      .views-field-field-degree-year,
+      .views-field-field-endowed-title-appointment
+        +breakpoint($bp-for-phone-tablet-range)
+          color: $text-black
+
+    
 /* Single Teaser styles end */
