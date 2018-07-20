@@ -122,3 +122,22 @@
       width: auto
     .js .search-open &
       width: 200px
+
+// ExecEd and Seed overrides
+.page-seed,
+.page-exec-ed
+  .global-search
+    +breakpoint(1170px min-width)
+      height: 0
+      position: absolute
+      top: 0
+      right: 0
+      .search-closed &,
+      .js &
+        width: auto
+      .js .search-open &
+        width: 200px
+  #header-wrapper
+    position: relative
+    +breakpoint(1170px min-width)
+      border-top: $top-border-interval $red-dark solid
