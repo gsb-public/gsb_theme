@@ -75,6 +75,9 @@
       display: block
     .js .search-open &,
     .no-js &
+      border-bottom: 1px $red solid
+      border-right: 1px $red solid
+      border-top: 1px $red solid
       display: inline-block
       position: absolute
       top: 60px
@@ -97,6 +100,8 @@
     padding: 0
     text-indent: 1000px
     width: 60px
+    &:hover
+      background-color: #0A647E
     .no-js &
       display: inline-block
     +breakpoint(1170px min-width)
