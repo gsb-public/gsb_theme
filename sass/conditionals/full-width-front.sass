@@ -5,110 +5,16 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-// New MD Megamenu
-// Documentation: https://docs.megadrupal.com/drupal-7/megamenu/
-// OVERRIDES
-.awemenu-submenu.awemenu-megamenu
-  +breakpoint($bp-for-desktop-up)
-    width: 1100px !important
-    left: auto !important
-    right: 0 !important
-    top: 50px !important
-.md-style2
-  background-color: transparent
-  border-bottom: none
-.md-style2.awemenu-standard .awemenu .awemenu-item > a
-  padding-left: 15px
-  padding-right: 15px
-.md-style2.awemenu-standard .awemenu > .awemenu-item:hover > a,
-.md-style2.awemenu-standard .awemenu > .awemenu-item > a
-  border-top: none
-
-// align top items
-#header-wrapper
-  #header
-    .section
+.panels-layout-gsb-homepage
+  .pane-bundle-embed-stackla
+    background: url(/sites/gsb/files/background-image-home-page-social.png) no-repeat
+    border-bottom-width: 0px
+    padding: 80px 0 0 135px
+    height: 600px
+    margin-top: 70px
+    &:before
+      content: "Stanford GSB Community on Social"
+      color: $white
       display: inline-block
-.page-exec-ed,
-.page-seed
-  #header-wrapper
-    #header
-      .section
-        display: block
-
-// Top level buttons
-#md-megamenu-1
-  font-family: $font-light
-  font-size: 18px
-  padding: 35px 0 35px 180px
-  .awemenu-active
-    border-bottom: 4px solid $red
-    padding-bottom: 7px
-    .awemenu-item-title
-      color: $text-black
-  a.link-title
-    color: $text-black
-    font-family: $font-sans
-    font-size: 20px
-    font-weight: bold
-    &:hover
-      color: $text-blue
-      text-decoration: underline
-  .mm-header
-    padding: 50px 0 30px
-  .awemenu
-    // the top menu bar
-    li
-      .awemenu-item-title
-        padding-bottom: 20px
-    // the submenu with all the links
-    .awemenu-megamenu-wrapper
-      border-top: 1px solid $red
-      background-color: $white
-      // styles to get the full white width on a browser
-      left: 53%
-      right: 47%
-      margin-left: -50vw
-      margin-right: -50vw
-      padding-top: 0
-      position: relative
-      width: 100vw
-      .row
-        margin: 0 auto
-        width: 1170px
-        .menu
-          li
-            font-family: $font-light
-            font-size: 18px
-            padding: 0 0 25px 0
-            a
-              &:hover
-                color: $text-blue
-                text-decoration: underline
-  // Utility menus
-  #block-menu-menu-md-megamenu-insights-utilit,
-  #block-menu-menu-md-megamenu-programs-utilit,
-  #block-menu-menu-md-megamenu-alumni-utility,
-  #block-menu-menu-md-megamenu-events-utility
-    width: 184px
-    position: relative
-    li
-      border-bottom: 1px solid $grey-e
-      padding: 14px 0
-      +icon-after("arrow-med-right", true)
-        color: $voices-divider
-        float: right
-        font-weight: normal
-
-// Global search
-.global-search
-  +breakpoint(1170px min-width)
-    height: 0
-    position: absolute
-    top: 10px
-    right: -40px
-    .search-closed &,
-    .js &
-      width: auto
-    .js .search-open &
-      width: 200px
+      font-size: 36px
+      padding-bottom: 50px
