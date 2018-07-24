@@ -207,7 +207,7 @@
           color: $teal-light
     +breakpoint($bp-for-phone-only)
       width: 90%
-      margin: 0
+      margin-left: 0px
 
   .homepage_voices_cta
     width: 205px
@@ -218,8 +218,7 @@
 .main-header,
 .main-footer
   .voices_display_all_list_cta,
-  .homepage_voices_cta,
-  .voices_display_list_cta
+  .homepage_voices_cta
     +breakpoint($bp-iphone6p-land)
       width: 82%
       margin-left: 0px
@@ -230,15 +229,14 @@
       width: 64%
       margin-left: 0px
     +breakpoint($bp-for-phone-only)
-      width: 85%
+      width: 90%
       margin-left: 0px
 
 .gsb-landing-standard-page-one
   .main-header,
   .main-footer
     .voices_display_all_list_cta,
-    .homepage_voices_cta,
-    .voices_display_list_cta
+    .homepage_voices_cta
       +breakpoint($bp-for-phone-range)
         width: 90%
         margin-left: 0px
@@ -451,7 +449,6 @@
             +breakpoint($bp-iphone6p-land)
               width: 82%
             
-  
             .views-field-field-quote div div
               width: 100%
               height: 400px
@@ -526,7 +523,6 @@
       &:hover
         .views-field-title
           padding-top: 30px
-      width: 22%
 
       .views-field-field-image-single-public
         img
@@ -545,8 +541,7 @@
     .pane-content
       .voices_display_list_cta
         background-color: $white
-        margin-top: 50px
-        width: 320px
+        margin-top: 30px
         a
           color: $red
           +icon-after("arrow-double-right", true)
@@ -562,8 +557,13 @@
               color: $teal-light
             &:after
               color: $teal-light
-    .view-content
-      margin-left: 30px
+        +breakpoint($bp-for-phone-only)
+          width: 82%
+          margin-left: 30px  
+           
+
+      .view-content
+        margin-left: 30px
     .pane-title
       margin-left: 30px
 .wide-view
@@ -592,8 +592,7 @@
     .pane-content
       .voices_display_list_cta
         background-color: $white
-        margin-top: 50px
-        width: 320px
+        margin-top: 30px
         a
           color: $red
           +icon-after("arrow-double-right", true)
@@ -609,11 +608,25 @@
               color: $teal-light
             &:after
               color: $teal-light
+      .view-content
+        margin-left: 30px
+    .pane-title
+      margin-left: 30px
 
 .pane-voices-filters-voices-list-cta-panel-pane
   h2
     font-family: $font-light
     font-weight: normal
+    +breakpoint($bp-for-phone-only)
+      font-size: 24px
+    +breakpoint($bp-mobile-land)
+      font-size: 21px
+    +breakpoint($bp-tablet-pot)
+      font-size: 24px
+    +breakpoint($bp-tablet-land)
+      font-size: 24px
+    +breakpoint($bp-iphone6p-land)
+      font-size: 24px
   div
     vertical-align: top
   .views-row
@@ -625,6 +638,39 @@
             content: '”'
           &:before
             content: '“'
+
+.main-header,
+.main-footer
+  .voices_display_list_cta
+    +breakpoint($bp-iphone6p-land)
+      width: 76%
+      margin-left: 30px
+    +breakpoint($bp-tablet-pot)
+      width: 68%
+      margin-left: 30px
+    +breakpoint($bp-tablet-land)
+      width: 60%
+      margin-left: 30px
+    +breakpoint($bp-for-phone-only)
+      width: 82%
+      margin-left: 30px
+
+.gsb-landing-standard-page-one
+  .main-header,
+  .main-footer
+    .voices_display_list_cta
+      +breakpoint($bp-for-phone-range)
+        width: 80%
+        margin-left: 30px
+      +breakpoint($bp-for-phone-only)
+        width: 82%
+        margin-left: 30px
+      +breakpoint($bp-tablet-land)
+        width: 50%
+        margin: 0 auto
+      +breakpoint($bp-tablet-pot)
+        width: 68%
+        margin-left: 30px
 /* END of Voices Multiple Criteria with CTA - OVERRIDES */
 
 /* Single Teaser styles start */
