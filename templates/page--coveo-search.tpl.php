@@ -79,22 +79,18 @@
         <div class="section clearfix">
           <a id="search-touch-button"></a>
 
-          <?php if ($page['navigation']): ?>
-            <div id="nav-touch-wrapper">
-              <a id="nav-touch-button"></a>
+          <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+               <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
+            </a>
+          <?php endif; ?>
+
+            <?php if ($page['navigation']): ?>
               <div id="navigation"><div class="section">
                   <?php print render($page['navigation']); ?>
                   <?php print render($global_search); ?>
-                  <div id="menu-main-footer">
-                    <?php
-                    $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
-                    $footer_2 = module_invoke('menu', 'block_view', 'menu-footer-2');
-                    print render($footer_1['content']);
-                    print render($footer_2['content']);
-                    ?>
-                  </div>
+                  <div id="search-close"></div>
                 </div></div> <!-- /.section, /#navigation -->
-            </div> <!-- /#nav-touch-wrapper-->
           <?php endif; ?>
 
           <?php if ($site_slogan): ?>
