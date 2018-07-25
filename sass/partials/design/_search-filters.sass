@@ -1,29 +1,5 @@
 // Search and filters
 
-// Search close button
-// this div needs to be made visible when the search box is open
-#navigation.search-open
-  .section
-    div#search-close
-      color: $white
-      background-color: $red
-      display: block
-      height: 60px
-      line-height: 60px
-      position: absolute
-      right: -83px
-      top: 20px
-      width: 55px
-      &:after
-        content: "\03A7"
-        display: block
-        left: 40%
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-#search-close
-  display: none
-
 // Global main search
 #coveo-search-block-form,
 #coveo-search-block-form--2
@@ -44,12 +20,11 @@
     margin-top: 0
     margin-bottom: 0
     .form-text
-      border: 1px solid $red
       color: $text-black
       font-size: 16px
-      background: $white
+      background: #f4f4f4
       line-height: 1
-      padding: 6px 820px 6px 10px
+      padding: 6px 60px 6px 10px
       +breakpoint(1169px max-width)
         height: 50px
         padding: 15px 0px 15px 10px
@@ -62,12 +37,9 @@
       display: block
     .js .search-open &,
     .no-js &
-      border-bottom: 1px $red solid
-      border-right: 1px $red solid
-      border-top: 1px $red solid
       display: inline-block
       position: absolute
-      top: 60px
+      top: 0
       right: 1px
       z-index: 1
     .page-exec-ed &,
@@ -81,14 +53,15 @@
     background: transparent
     border-radius: 0
     border: 0
+    border-bottom: 1px $border-grey solid
+    border-right: 1px $border-grey solid
+    border-top: 1px $border-grey solid
     float: right
     height: 59px
     overflow: hidden
     padding: 0
     text-indent: 1000px
     width: 60px
-    &:hover
-      background-color: #0A647E
     .no-js &
       display: inline-block
     +breakpoint(1170px min-width)
@@ -103,10 +76,10 @@
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
-      +background((image_url("search.svg") no-repeat center), $white)
+      +background((image_url("search.svg") no-repeat center), #f4f4f4)
       background-size: 150%
       &:hover
-        +background((image_url("search-white.svg") no-repeat center), #0A647E)
+        +background((image_url("search-hover.svg") no-repeat center), #f4f4f4)
         background-size: 150%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 20px transparent
