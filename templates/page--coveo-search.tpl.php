@@ -86,22 +86,11 @@
           <?php endif; ?>
 
             <?php if ($page['navigation']): ?>
-            <div id="nav-touch-wrapper">
-              <a id="nav-touch-button"></a>
               <div id="navigation"><div class="section">
                   <?php print render($page['navigation']); ?>
                   <?php print render($global_search); ?>
-                      <div id="search-close"></div>
-                      <div id="menu-main-footer">
-                    <?php
-                    $footer_1 = module_invoke('menu', 'block_view', 'menu-footer-1');
-                    $footer_2 = module_invoke('menu', 'block_view', 'menu-footer-2');
-                    print render($footer_1['content']);
-                    print render($footer_2['content']);
-                    ?>
-                  </div>
+                  <div id="search-close"></div>
                 </div></div> <!-- /.section, /#navigation -->
-            </div> <!-- /#nav-touch-wrapper-->
           <?php endif; ?>
 
           <?php if ($page['header']): ?>
