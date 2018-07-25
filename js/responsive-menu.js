@@ -3,7 +3,7 @@
 
 Drupal.behaviors.responsiveMenu = {
   attach: function (context, settings) {
-    $(context).find('#nav-touch-button').click(function() { $(this).parent().toggleClass('open');});
+    // $(context).find('#nav-touch-button').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('#program-links-title').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('#sidebar h2').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('.pane-block h2.pane-title').click(function() { $(this).parent().toggleClass('open');});
