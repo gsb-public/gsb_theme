@@ -1,5 +1,22 @@
 // Search and filters
 
+// Search close button
+// this div needs to be made visible when the search box is open
+#navigation.search-open
+  .section
+    +breakpoint($bp-for-phone-tablet-range)
+      div#search-close
+        background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
+        display: block
+        height: 60px
+        line-height: 60px
+        position: absolute
+        right: -83px
+        top: 20px
+        width: 55px
+#search-close
+  display: none
+
 // Global main search
 #coveo-search-block-form,
 #coveo-search-block-form--2
@@ -13,6 +30,9 @@
     display: none
     &.open
       display: block
+      left: 0
+      top: 0
+      z-index: 300
 
   // Search input wrapper
   .form-item
@@ -24,10 +44,12 @@
       font-size: 16px
       background: #f4f4f4
       line-height: 1
-      padding: 6px 60px 6px 10px
+      padding: 6px 10px 6px 10px
       +breakpoint(1169px max-width)
         height: 50px
         padding: 15px 0px 15px 10px
+        width: 350px
+
 
   // Search input
   input
@@ -83,7 +105,6 @@
         background-size: 150%
     .no-js &, .no-svg &
       background: image_url("search.png") no-repeat center 20px transparent
-
 // General search results page search
 #coveo-search-search-form,
 #coveo-search-search-form--2
@@ -933,3 +954,32 @@ button.checkbox-clear-all
           font-size: 16px
           margin-bottom: 18px
           text-transform: none
+<<<<<<< HEAD
+=======
+
+// Seed and ExecEd overrides
+.js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open #coveo-search-block-form--2 input, .no-js #coveo-search-block-form--2 input
+  color: $text-black
+  font-size: 18px
+  font-family: $font-sans
+  position: absolute
+  top: 76px
+  right: 2px
+
+// Search input overrides for Exec Ed and Seed
+.page-exec-ed,
+.page-seed
+  input.search_keys
+    .js .search-open &,
+    .no-js &
+      top: 76px
+      right: 5px
+  #navigation.search-open
+    .section
+      div#search-close
+        height: 79px
+        line-height: 60px
+        right: 6px
+        top: 0
+        width: 55px
+>>>>>>> d9d316a9... WP-8482 Fixes for the responsive search, Seed Menu, misc
