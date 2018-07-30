@@ -9,10 +9,15 @@
     right: 0 !important
     top: 50px !important
   +breakpoint($bp-for-phone-only)
-    width: auto
-    left: auto
     right: auto
     top: auto
+    width: auto
+    left: auto !important
+  +breakpoint($bp-for-tablet-range)
+    right: auto
+    top: auto
+    width: auto
+    left: auto !important
 // Mobile-only override styles
 #md-megamenu-1.awemenu-mobile-standard
   background: transparent
@@ -21,12 +26,29 @@
   position: absolute
   top: 0
   span.amm-bar
-    color: $black
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/50% $red
+    height: 50px
+    width: 50px
+    &:before
+      content: ""
   // Removal for the mobile version
   .link-secondary,
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
-
+// Changing the alignment and the open close mobile hamburger
+#md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+  .awemenu-bars
+    float: right
+    margin-top: -12px
+    margin-right: 36px
+    padding-bottom: 0
+#md-megamenu-1.awemenu-mobile-standard.awemenu-active
+  span.amm-bar
+    background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $grey-hp
+    height: 50px
+    width: 50px
+    &:before
+      content: ""
 .md-style2
   background-color: transparent
   border-bottom: none
@@ -166,7 +188,9 @@
     .js &
       width: auto
     .js .search-open &
-      width: 200px
+      width: 850px
+    input#edit-search-keys
+      width: 825px
 
 // ExecEd and Seed overrides
 .page-seed,
@@ -198,6 +222,8 @@
 #md-megamenu-1.awemenu-mobile-standard
   .awemenu
     border-bottom: 0
+    margin-top: -7px
+    border-top: 1px solid $red
     .overview-link-mobile-only
       color: $text-black
       display: block
@@ -210,7 +236,7 @@
     .col-md-3.col-xs-12 div
       padding-bottom: 0
     ul
-      margin-bottom: 35px
+      //margin-bottom: 35px
     // Plus and minus on the mobile views
     .awemenu-item-level-1 > a
       +icon-after("plus", true)
@@ -353,6 +379,11 @@
 // Search toggle functionality
 #search-touch-button
   display: none
+  +breakpoint($bp-for-phone-only)
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 100
   &:hover
     text-decoration: none
   +breakpoint(1169px max-width)
@@ -362,9 +393,10 @@
       background: #7d7466
     cursor: pointer
     display: inline-block
-    float: right
+    //float: right
     height: 50px
     width: 50px
+    //z-index: -1
     +icon-after("search", true)
     &:after
       color: $white
