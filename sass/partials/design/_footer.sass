@@ -225,9 +225,19 @@ input.signup-submit
 #footer
   .region-footer
     padding: 60px 0px 34px 0px
+    +breakpoint($bp-tablet-port-max)
+      padding: 10px 0
+      float: left
+      width: 100%
+      margin-top: 20px
+      border-top: 1px solid #c4c4c4
+
 
 //Footer two region
 #gsb-footer-two
+  +breakpoint($bp-tablet-port-max)
+    display: inline-block
+    width: 100%
   .region-footer-two
     +clearfix
     padding: 0
@@ -240,45 +250,77 @@ input.signup-submit
     padding: 0px 0 70px 0
     position: relative
     top: 0
+    +breakpoint($bp-tablet-port-max)
+      padding-bottom: 0px
 
 #block-block-41
   width: 24%
   clear: none
   float: left
+  +breakpoint($bp-tablet-port-max)
+    width: 100%
+    float: left
+    padding-top: 20px
+    padding-bottom: 20px
 
 #block-menu-menu-footer-1
   width: 30%
   margin-left: 23%
+  +breakpoint($bp-tablet-port-max)
+    width: 100%
+    float: left
+    margin: 0
+    padding-top: 15px
   .content
     border-right: 1px solid #c4c4c4
     padding-right: 25px
+    +breakpoint($bp-tablet-port-max)
+      border-right: none
+      padding-right: 0px
 
 #block-menu-menu-footer-2
   margin-left: 50.28205%
+  +breakpoint($bp-tablet-port-max)
+    margin-left: 0px
   .content
     border-right: 1px solid #c4c4c4
     padding-right: 25px
+    +breakpoint($bp-tablet-port-max)
+      border-right: none
+      padding-right: 0px
 
 #block-menu-menu-footer-1 li, 
 #block-menu-menu-footer-2 li
   text-align: right
   margin-bottom: 25px
+  +breakpoint($bp-tablet-port-max)
+    text-align: left
 
 #footer-logo
   width: 39%
   float: left
   padding-top: 30px
+  +breakpoint($bp-tablet-port-max)
+    width: 100%
 
 #block-gsb-public-custom-blocks-gpcb-follow-us
   width: 70%
   margin-right: -10%
   float: right
+  +breakpoint($bp-tablet-port-max)
+    float: left
+    width: 100%
+    margin-bottom: 0px
+    padding-bottom: 25px
   h2
     float: left
     padding-right: 45px
     border-bottom: none
     padding-top: 10px
     font-size: 18px
+    +breakpoint($bp-tablet-port-max)
+      width: 100%
+      float: left
 
   .icon-wrapper
     max-width: 330px
@@ -287,11 +329,48 @@ input.signup-submit
     li:nth-of-type(2n)
       width: 20%
     li:nth-of-type(3n)
-      width: 17%
+      width: 18%
     li:nth-of-type(2n)
       width: 20%
     li:last-of-type
-      width: 14%
+      width: 16%
+    +breakpoint($bp-tablet-port-max)
+      width: 100%
+      float: left
+    a.social-block-twitter
+      +icon-after("twitter", true)
+        color: #990000
+        line-height: 1.2
+        &:hover
+          color: #FFFFFF !important
+    a.social-block-youtube
+      +icon-after("youtube", true)
+        color: #990000
+        line-height: 1.2
+        &:hover
+          color: #FFFFFF !important
+    a.social-block-linkedin
+      +icon-after("linkedin", true)
+        color: #990000
+        line-height: 1.2
+        &:hover
+          color: #FFFFFF !important
+    a.social-block-facebook
+      +icon-after("facebook", true)
+        color: #990000
+        line-height: 1.2
+        &:hover
+          color: #FFFFFF !important
+    .circle
+      border: 2px solid #990000
+      background: none
+      width: 44px
+      height: 44px
+      &:hover
+        background: $link-blue !important
+        border: none !important
+        &:after
+          color: $white !important
 
 #ftr-logo
   margin-top: 20px
@@ -299,6 +378,24 @@ input.signup-submit
     background-size: 98.8%
     height: 75px
     width: 200px
+  +breakpoint($bp-tablet-port-max)
+    .svg &, .no-js &, .no-svg &
+      float: left
+      height: 54px
+      left: 0px
+      position: relative
+      width: 185px
+    .page-insights &,
+    .page-404 &
+      left: 0
+    .page-seed &,
+    .page-exec-ed &
+      .svg &, .no-js &, .no-svg &
+        float: left
+        height: 54px
+        left: 0px
+        position: relative
+        width: 185px
 
 .gsb-footer-address
   .address
@@ -309,6 +406,8 @@ input.signup-submit
     padding-left: 25px
 
 #block-menu-menu-footer-5
+  +breakpoint($bp-tablet-port-max)
+    width: 100%
   li
     float: left
     font-size: 18px
@@ -333,6 +432,8 @@ input.signup-submit
       font-family: $font-demi
       font-weight: normal
       font-size: 14px
+      +breakpoint($bp-tablet-port-max)
+        padding-top: 10px
       .content
         color: #FFFFFF
         a
@@ -341,6 +442,12 @@ input.signup-submit
           color: #FFFFFF
       li
         margin-right: 40px
+        +breakpoint($bp-tablet-port-max)
+          padding-bottom: 20px
+          margin-right: 0px
+    #block-block-1
+      +breakpoint($bp-tablet-port-max)
+        padding-bottom: 20px
 
 #footer-wrapper
   border-top: 3px solid #990000
