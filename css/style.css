@@ -4648,7 +4648,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
   #ftr-logo {
     float: left;
     height: 30px;
-    left: 60px;
+    left: 20px;
     margin: 10px 10px 0 0;
     position: relative;
     width: 100px;
@@ -4696,6 +4696,11 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 
 .js #navigation, #navigation.search-closed {
   min-width: 702px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .js #navigation, #navigation.search-closed {
+    min-width: auto;
+  }
 }
 .page-exec-ed .js #navigation, .page-exec-ed #navigation.search-closed {
   min-width: 534px;
@@ -8260,6 +8265,36 @@ input.signup-submit:hover {
   }
 }
 
+#md-megamenu-2.md-megamenu-seed-main-menu {
+  background: #7d7466;
+  border-bottom: 0;
+}
+#md-megamenu-2.md-megamenu-seed-main-menu .awemenu-item-level-1 {
+  border-right: 1px solid #9b9285;
+}
+#md-megamenu-2.md-megamenu-seed-main-menu .awemenu-item-level-1 a {
+  color: white;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: none;
+  color: white;
+}
+@media (min-width: 75em) {
+  #md-megamenu-2.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu {
+    width: 602px !important;
+    left: auto !important;
+    right: 0 !important;
+    top: 70px !important;
+  }
+}
+#md-megamenu-2.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li {
+  padding: 5px 0;
+}
+#md-megamenu-2.md-megamenu-seed-main-menu .awemenu-item-1-5 span.awemenu-item-title {
+  line-height: 2;
+}
+
 #block-menu-menu-executive-education-mega-me,
 #block-menu-menu-mega-menu-seed {
   overflow: hidden;
@@ -8271,6 +8306,7 @@ input.signup-submit:hover {
   #block-menu-menu-mega-menu-seed {
     float: right;
     margin-right: 60px;
+    overflow: visible;
   }
 }
 @media (min-width: 73.125em) {
@@ -8310,8 +8346,11 @@ input.signup-submit:hover {
   color: white;
   display: block;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
   margin: 0;
   position: relative;
+  text-transform: none;
 }
 @media (min-width: 73.125em) {
   #block-menu-menu-executive-education-mega-me li a,
@@ -8405,6 +8444,10 @@ input.signup-submit:hover {
   }
 }
 
+.md-style1.awemenu-standard.md-megamenu-seed-main-menu .awemenu > .awemenu-item > a {
+  line-height: 1;
+}
+
 @media (min-width: 73.125em) {
   #block-menu-menu-executive-education-mega-me li a {
     max-width: 129px;
@@ -8417,15 +8460,35 @@ input.signup-submit:hover {
 }
 
 @media (min-width: 73.125em) {
-  #block-menu-menu-mega-menu-seed li a {
+  #block-menu-menu-mega-menu-seed li a,
+  #md-megamenu-2.md-megamenu-seed-main-menu li a {
     max-width: 133px;
     min-height: 59px;
     padding: 19px 16px;
   }
   #block-menu-menu-mega-menu-seed li:first-of-type a,
-  #block-menu-menu-mega-menu-seed li:last-of-type a {
+  #block-menu-menu-mega-menu-seed li:last-of-type a,
+  #md-megamenu-2.md-megamenu-seed-main-menu li:first-of-type a,
+  #md-megamenu-2.md-megamenu-seed-main-menu li:last-of-type a {
     max-width: 104px;
   }
+}
+
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #navigation.search-open .section div#search-close {
+    background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% #990000;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    right: -83px;
+    top: 20px;
+    width: 55px;
+  }
+}
+
+#search-close {
+  display: none;
 }
 
 @media (max-width: 62.4375em) {
@@ -8445,6 +8508,9 @@ input.signup-submit:hover {
   #coveo-search-block-form.open,
   #coveo-search-block-form--2.open {
     display: block;
+    left: 0;
+    top: 0;
+    z-index: 300;
   }
 }
 #coveo-search-block-form .form-item,
@@ -8455,17 +8521,19 @@ input.signup-submit:hover {
 }
 #coveo-search-block-form .form-item .form-text,
 #coveo-search-block-form--2 .form-item .form-text {
+  border: 1px solid #990000;
   color: #231f20;
   font-size: 16px;
-  background: #f4f4f4;
+  background: white;
   line-height: 1;
-  padding: 6px 60px 6px 10px;
+  padding: 6px 10px 6px 10px;
 }
 @media (max-width: 73.0625em) {
   #coveo-search-block-form .form-item .form-text,
   #coveo-search-block-form--2 .form-item .form-text {
     height: 50px;
     padding: 15px 0px 15px 10px;
+    width: 350px;
   }
 }
 #coveo-search-block-form input,
@@ -8482,9 +8550,12 @@ input.signup-submit:hover {
 .js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open
 #coveo-search-block-form--2 input, .no-js
 #coveo-search-block-form--2 input {
+  border-bottom: 1px #990000 solid;
+  border-right: 1px #990000 solid;
+  border-top: 1px #990000 solid;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 1px;
   z-index: 1;
 }
@@ -8505,15 +8576,16 @@ input.signup-submit:hover {
   background: transparent;
   border-radius: 0;
   border: 0;
-  border-bottom: 1px lightgray solid;
-  border-right: 1px lightgray solid;
-  border-top: 1px lightgray solid;
   float: right;
   height: 59px;
   overflow: hidden;
   padding: 0;
   text-indent: 1000px;
   width: 60px;
+}
+#coveo-search-block-form .form-submit:hover,
+#coveo-search-block-form--2 .form-submit:hover {
+  background-color: #0a647e;
 }
 .no-js #coveo-search-block-form .form-submit, .no-js
 #coveo-search-block-form--2 .form-submit {
@@ -8547,12 +8619,12 @@ input.signup-submit:hover {
 }
 .svg #coveo-search-block-form .form-submit, .svg
 #coveo-search-block-form--2 .form-submit {
-  background: url('../images/search.svg') no-repeat center, #f4f4f4;
+  background: url('../images/search.svg') no-repeat center, white;
   background-size: 150%;
 }
 .svg #coveo-search-block-form .form-submit:hover, .svg
 #coveo-search-block-form--2 .form-submit:hover {
-  background: url('../images/search-hover.svg') no-repeat center, #f4f4f4;
+  background: url('../images/search-white.svg') no-repeat center, #2d6280;
   background-size: 150%;
 }
 .no-js #coveo-search-block-form .form-submit, .no-svg #coveo-search-block-form .form-submit, .no-js
@@ -10334,6 +10406,30 @@ button.checkbox-clear-all {
   font-size: 16px;
   margin-bottom: 18px;
   text-transform: none;
+}
+
+.js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open #coveo-search-block-form--2 input, .no-js #coveo-search-block-form--2 input {
+  color: #231f20;
+  font-size: 18px;
+  font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 76px;
+  right: 2px;
+}
+
+.js .search-open .page-exec-ed input.search_keys, .no-js .page-exec-ed input.search_keys, .js .search-open
+.page-seed input.search_keys, .no-js
+.page-seed input.search_keys {
+  top: 76px;
+  right: 5px;
+}
+.page-exec-ed #navigation.search-open .section div#search-close,
+.page-seed #navigation.search-open .section div#search-close {
+  height: 79px;
+  line-height: 60px;
+  right: 6px;
+  top: 0;
+  width: 55px;
 }
 
 .pane-gsb-feature-faculty-display-az-list .pane-content {

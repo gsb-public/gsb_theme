@@ -1,0 +1,408 @@
+// New MD Megamenu
+// Documentation: https://docs.megadrupal.com/drupal-7/megamenu/
+
+// OVERRIDES for the desktop
+.awemenu-submenu.awemenu-megamenu
+  +breakpoint($bp-for-desktop-up)
+    width: 1100px !important
+    left: auto !important
+    right: 0 !important
+    top: 50px !important
+  +breakpoint($bp-for-phone-only)
+    right: auto
+    top: auto
+    width: auto
+    left: auto !important
+  +breakpoint($bp-for-tablet-range)
+    right: auto
+    top: auto
+    width: auto
+    left: auto !important
+// Mobile-only override styles
+#md-megamenu-1.awemenu-mobile-standard
+  background: transparent
+  border-bottom: none
+  padding: 0
+  position: absolute
+  top: 0
+  span.amm-bar
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/50% $red
+    height: 50px
+    width: 50px
+    &:before
+      content: ""
+  // Removal for the mobile version
+  .link-secondary,
+  #block-menu-menu-md-megamenu-programs-utilit
+    display: none
+// Changing the alignment and the open close mobile hamburger
+#md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+  .awemenu-bars
+    float: right
+    margin-top: -12px
+    margin-right: 36px
+    padding-bottom: 0
+#md-megamenu-1.awemenu-mobile-standard.awemenu-active
+  span.amm-bar
+    background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $grey-hp
+    height: 50px
+    width: 50px
+    &:before
+      content: ""
+.md-style2
+  background-color: transparent
+  border-bottom: none
+.md-style2.awemenu-standard .awemenu .awemenu-item > a
+  padding-left: 15px
+  padding-right: 15px
+.md-style2.awemenu-standard .awemenu > .awemenu-item:hover > a,
+.md-style2.awemenu-standard .awemenu > .awemenu-item > a
+  border-top: none
+
+// Align Menu Top Items
+#header-wrapper
+  #header
+    .section
+      display: inline-block
+      +breakpoint($bp-for-phone-only)
+        border: none
+        width: 100%
+.page-exec-ed,
+.page-seed
+  #header-wrapper
+    #header
+      .section
+        display: block
+
+// Top Level Links
+#md-megamenu-1
+  font-family: $font-light
+  font-size: 18px
+  padding: 35px 0 35px 180px
+  .awemenu-submenu
+    background-color: transparent
+
+  .awemenu-active
+    border-bottom: 4px solid $red
+    padding-bottom: 7px
+    .awemenu-submenu
+      // hover for background
+      &:after
+        content: ''
+        background-color: $text-black
+        display: inline-block
+        height: 100vh
+        left: 53%
+        margin-left: -50vw
+        margin-right: -50vw
+        opacity: .50
+        position: relative
+        right: 47%
+        width: 100vw
+    .awemenu-item-title
+      color: $text-black
+  a.link-title
+    color: $text-black
+    font-family: $font-sans
+    font-size: 20px
+    font-weight: bold
+    +breakpoint($bp-for-phone-only)
+      font-size: 16px
+    &:hover
+      color: $text-blue
+      text-decoration: underline
+  .mm-header
+    padding: 50px 0 30px
+    +breakpoint($bp-for-phone-only)
+      font-size: 20px
+      padding: 35px 20px
+  .awemenu
+    // the top menu bar
+    li
+      .awemenu-item-title
+        padding-bottom: 20px
+        +breakpoint($bp-for-phone-only)
+          font-face: $font-sans
+          font-size: 16px
+          font-weight: bold
+    // the submenu with all the links
+    .awemenu-megamenu-wrapper
+      border-top: 1px solid $red
+      background-color: $white
+      // styles to get the full white width on a browser
+      left: 53%
+      right: 47%
+      margin-left: -50vw
+      margin-right: -50vw
+      padding-top: 0
+      position: relative
+      width: 100vw
+      // The "All" link for only the mobile view. Hidden on the desktop
+      .overview-link-mobile-only
+        display: none
+      .row
+        margin: 0 auto
+        width: 1170px
+        .menu
+          li
+            font-family: $font-light
+            font-size: 18px
+            padding-bottom: 25px
+            +breakpoint($bp-for-phone-only)
+              font-size: 16px
+            a
+              &:hover
+                color: $text-blue
+                text-decoration: underline
+  // Utility menus
+  #block-menu-menu-md-megamenu-insights-utilit,
+  #block-menu-menu-md-megamenu-programs-utilit,
+  #block-menu-menu-md-megamenu-alumni-utility,
+  #block-menu-menu-md-megamenu-events-utility
+    width: 184px
+    position: relative
+    +breakpoint($bp-for-phone-only)
+      padding-left: 20px
+      width: 31%
+      li:first-of-type
+        border-top: 1px solid $grey-e
+      li.leaf
+        a
+          padding-left: 0
+    li
+      border-bottom: 1px solid $grey-e
+      padding: 14px 0
+      +icon-after("arrow-med-right", true)
+        color: $voices-divider
+        float: right
+        font-weight: normal
+
+// Global search
+.global-search
+  +breakpoint(1170px min-width)
+    height: 0
+    position: absolute
+    top: 20px
+    right: -85px
+    .search-closed &,
+    .js &
+      width: auto
+    .js .search-open &
+      width: 850px
+    input#edit-search-keys
+      width: 825px
+
+// ExecEd and Seed overrides
+.page-seed,
+.page-exec-ed
+  .global-search
+    +breakpoint(1170px min-width)
+      height: 0
+      position: absolute
+      top: 0
+      right: 0
+      .search-closed &,
+      .js &
+        width: auto
+      .js .search-open &
+        width: 200px
+  #header-wrapper
+    position: relative
+    +breakpoint(1170px min-width)
+      border-top: $top-border-interval $red-dark solid
+
+// Responsive Section. Removed the following from _menu-main.sass so can deprecate it as necessary.
+// Mobile menu button
+#nav-touch-wrapper.open
+  #navigation.search-closed
+    +breakpoint($bp-for-phone-only)
+      left: 0
+      min-width: 100%
+
+#md-megamenu-1.awemenu-mobile-standard
+  .awemenu
+    border-bottom: 0
+    margin-top: -7px
+    border-top: 1px solid $red
+    .overview-link-mobile-only
+      color: $text-black
+      display: block
+      font-weight: bold
+      padding: 35px 20px 0 35px
+      font-size: 16px
+    // Adjusting padding for the phone size
+    .content
+      padding-bottom: 0
+    .col-md-3.col-xs-12 div
+      padding-bottom: 0
+    ul
+      //margin-bottom: 35px
+    // Plus and minus on the mobile views
+    .awemenu-item-level-1 > a
+      +icon-after("plus", true)
+      &:after
+        color: $red
+        display: inline-block
+        float: right
+        font-size: 18px
+        margin: 3px 20px
+    .awemenu-item-level-1.awemenu-active > a
+      +icon-after("minus", true)
+      &:after
+        color: $red
+        display: inline-block
+        float: right
+        font-size: 18px
+        margin: 3px 20px
+    // Removal of the grey background on the mobile view.
+    .awemenu-megamenu-wrapper
+      border-top: none
+      background-color: $white
+      left: unset
+      right: unset
+      margin-left: unset
+      margin-right: unset
+      padding-left: 0
+      &:after
+        background-color: transparent
+        left: auto
+        right: auto
+        margin-left: 0
+        margin-right: 0
+        padding-left: 0
+        padding-top: 0
+        position: unset
+        width: 100%
+    .awemenu-active
+      border-bottom: 0
+      padding-bottom: 0
+      .awemenu-item-title
+        +breakpoint($bp-for-phone-only)
+          color: $red
+          font-size: 16px
+          font-weight: bold
+      // Removal of the grey background on the mobile view.
+      .awemenu-submenu
+        &:after
+          content: ""
+          background-color: transparent
+          display: unset
+          height: auto
+          left: 0
+          margin-left: 0
+          margin-right: 0
+          opacity: unset
+          position: unset
+          right: 0
+          width: auto
+    .row
+      .col-xs-12.col-md-12,
+      .col-md-3
+        +breakpoint($bp-for-phone-only)
+          padding-left: 0
+      h3.mm-header
+        +breakpoint($bp-for-phone-only)
+          font-size: 20px
+          margin: 0
+          padding: 0 0 35px 20px
+      h3.mm-header:first-of-type
+        padding-top: 35px
+      .menu
+        li.leaf
+          border-bottom: none
+          padding-bottom: 0
+          a
+            padding-left: 35px
+    li
+      border-bottom: 1px solid $grey-d8
+      padding-left: 0
+    .awemenu-item-link
+      background-color: $grey-hp
+
+#nav-touch-wrapper
+  display: inline
+  +breakpoint(1169px max-width)
+    display: block
+  #nav-touch-button
+    display: none
+    +breakpoint(1169px max-width)
+      border-right: 1px $red-light solid
+      .page-exec-ed &,
+      .page-seed &
+        border-right: 1px #9b9285 solid
+      .page-insights &
+        border-right: 0
+      cursor: pointer
+      display: inline-block
+      height: 50px
+      padding: 3px 12px 9px
+      vertical-align: top
+      position: relative
+      width: 50px
+      z-index: 12
+  #nav-touch-button
+    +icon-after("menu", true)
+    &:after
+      color: $white
+      font-size: 21px
+      position: relative
+      top: 12px
+      right: -2px
+
+// Menu toggle functionality
+#nav-touch-wrapper
+  +breakpoint(1169px max-width)
+    max-height: 50px
+    display: inline-block
+    float: left
+    #nav-touch-button
+      background: $red
+      .page-exec-ed &,
+      .page-seed &
+        background: #7d7466
+      &:hover
+        text-decoration: none
+    #navigation
+      display: none
+  &.open
+    +breakpoint(1169px max-width)
+      #nav-touch-button
+        background: $white
+        &:after
+          color: $red
+      #navigation
+        display: block
+        position: absolute
+        width: 100%
+        z-index: 11
+
+// Search toggle functionality
+#search-touch-button
+  display: none
+  +breakpoint($bp-for-phone-only)
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 100
+  &:hover
+    text-decoration: none
+  +breakpoint(1169px max-width)
+    background: $red
+    .page-exec-ed &,
+    .page-seed &
+      background: #7d7466
+    cursor: pointer
+    display: inline-block
+    //float: right
+    height: 50px
+    width: 50px
+    //z-index: -1
+    +icon-after("search", true)
+    &:after
+      color: $white
+      font-size: 24px
+      padding: 0 12px
+      position: relative
+      top: 16px
+  .page-insights &
+    display: none

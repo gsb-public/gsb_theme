@@ -56,7 +56,7 @@
     .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
-      left: 60px
+      left: 20px
       margin: 10px 10px 0 0
       position: relative
       width: 100px
@@ -94,6 +94,8 @@
   .js &,
   &.search-closed
     min-width: 702px
+    +breakpoint($bp-for-phone-tablet-range)
+      min-width: auto
     // Exec Ed
     .page-exec-ed &
       min-width: 534px
