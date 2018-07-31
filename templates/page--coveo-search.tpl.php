@@ -176,22 +176,10 @@
 
     <?php print $messages; ?>
 
-     <div id="footer-wrapper"><div id="footer"><div class="section">
-           <?php if ($logo): ?>
-            <div id="footer-logo" class="">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="ftr-logo">
-              <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
-            </a>
-          </div>
-          <?php endif; ?>
+    <div id="footer-wrapper"><div id="footer"><div class="section">
           <?php print render($page['footer']); ?>
         </div></div> <!-- /.section, /#footer-->
-        <div id="gsb-footer-two"><div class="section">
-          <?php print render($page['footer_two']); ?>
-        </div></div> 
-         <div id="gsb-footer-three"><div class="section">
-          <?php print render($page['footer_three']); ?>
-        </div></div> 
+
       <?php if ($page['legal']): ?>
         <div id="legal"><div class="section">
             <?php print render($page['legal']); ?>
