@@ -70,6 +70,7 @@
 .page-exec-ed,
 .page-seed
   #header-wrapper
+    border-top: 3px solid $red-dark
     #header
       .section
         display: block
@@ -193,17 +194,23 @@
       width: 825px
 
 // ExecEd and Seed overrides
-.page-seed,
+.page-seed
+  .global-search
+    +breakpoint(1170px min-width)
+      height: 0
+      position: absolute
+      top: 0
+      right: 4px
 .page-exec-ed
   .global-search
     +breakpoint(1170px min-width)
       height: 0
       position: absolute
       top: 0
-      right: 0
+      right: -42px
       .search-closed &,
       .js &
-        width: auto
+        width: 850px
       .js .search-open &
         width: 200px
   #header-wrapper
