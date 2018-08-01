@@ -4,18 +4,22 @@
 // this div needs to be made visible when the search box is open
 #navigation.search-open
   .section
-    +breakpoint($bp-for-phone-tablet-range)
-      div#search-close
-        background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
-        display: block
-        height: 60px
-        line-height: 60px
-        position: absolute
-        right: -83px
-        top: 20px
-        width: 55px
+    div#search-close
+      background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
+      display: block
+      height: 60px
+      line-height: 60px
+      position: absolute
+      right: -83px
+      top: 20px
+      width: 55px
 #search-close
   display: none
+.page-exec-ed
+  #navigation.search-open
+    div.section
+      div#search-close
+        right: -37px
 
 // Global main search
 #coveo-search-block-form,
@@ -954,8 +958,6 @@ button.checkbox-clear-all
           font-size: 16px
           margin-bottom: 18px
           text-transform: none
-<<<<<<< HEAD
-=======
 
 // Seed and ExecEd overrides
 .js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open #coveo-search-block-form--2 input, .no-js #coveo-search-block-form--2 input
@@ -963,12 +965,11 @@ button.checkbox-clear-all
   font-size: 18px
   font-family: $font-sans
   position: absolute
-  top: 76px
-  right: 2px
+  top: 79px
+  right: 5px
 
-// Search input overrides for Exec Ed and Seed
-.page-exec-ed,
-.page-seed
+// Search input overrides for Exec Ed
+.page-exec-ed
   input.search_keys
     .js .search-open &,
     .no-js &
@@ -980,6 +981,20 @@ button.checkbox-clear-all
         height: 79px
         line-height: 60px
         right: 6px
-        top: 0
+        top: 3px
         width: 55px
->>>>>>> d9d316a9... WP-8482 Fixes for the responsive search, Seed Menu, misc
+// Search input overrides for Seed
+.page-seed
+  input.search_keys
+    .js .search-open &,
+    .no-js &
+      top: 76px
+      right: 5px
+  #navigation.search-open
+    .section
+      div#search-close
+        height: 79px
+        line-height: 60px
+        right: 9px
+        top: 3px
+        width: 55px
