@@ -46,7 +46,7 @@
       float: left
       height: 30px
       left: 20px
-      margin: 10px 10px 0 0
+      margin: 18px 10px 0 0
       position: relative
       width: 100px
     .page-insights &,
@@ -77,6 +77,8 @@
     // SEED menu
     .page-seed &
       min-width: 667px
+      +breakpoint($bp-for-phone-tablet-range)
+        min-width: auto
   +breakpoint(1170px min-width)
     float: right
     position: relative
