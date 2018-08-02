@@ -26,9 +26,12 @@
   position: absolute
   top: 0
   span.amm-bar
-    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/50% $red
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% $red
     height: 50px
     width: 50px
+    +breakpoint($bp-for-tablet-range)
+      height: 64px
+      width: 64px
     &:before
       content: ""
   // Removal for the mobile version
@@ -40,13 +43,15 @@
   .awemenu-bars
     float: right
     margin-top: -12px
-    margin-right: 36px
+    margin-right: 50px
     padding-bottom: 0
+    +breakpoint($bp-for-tablet-range)
+      //margin-right: 95px
 #md-megamenu-1.awemenu-mobile-standard.awemenu-active
   span.amm-bar
     background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $grey-hp
-    height: 50px
-    width: 50px
+    height: 63px
+    width: 64px
     &:before
       content: ""
 .md-style2
@@ -61,6 +66,9 @@
 
 // Align Menu Top Items
 #header-wrapper
+  border-bottom: 1px solid $red-dark
+  +breakpoint($bp-for-phone-tablet-range)
+    height: 64px
   #header
     .section
       display: inline-block
@@ -82,9 +90,12 @@
   padding: 35px 0 35px 180px
   .awemenu-submenu
     background-color: transparent
+    padding-top: 35px
 
   .awemenu-active
-    border-bottom: 4px solid $red
+    a
+      span
+        border-bottom: 4px solid $red
     padding-bottom: 7px
     .awemenu-submenu
       // hover for background
@@ -121,7 +132,7 @@
     // the top menu bar
     li
       .awemenu-item-title
-        padding-bottom: 20px
+        padding-bottom: 51px
         +breakpoint($bp-for-phone-only)
           font-face: $font-sans
           font-size: 16px
@@ -155,13 +166,21 @@
               &:hover
                 color: $text-blue
                 text-decoration: underline
+      .row
+        div[class^="col-xs"],
+        div[class^="col-sm"],
+        div[class^="col-md"],
+        div[class^="col-lg"]
+          padding-left: 0
   // Utility menus
   #block-menu-menu-md-megamenu-insights-utilit,
   #block-menu-menu-md-megamenu-programs-utilit,
   #block-menu-menu-md-megamenu-alumni-utility,
   #block-menu-menu-md-megamenu-events-utility
-    width: 184px
+    float: right
     position: relative
+    margin-right: -15px
+    width: 184px
     +breakpoint($bp-for-phone-only)
       padding-left: 20px
       width: 31%
@@ -173,10 +192,19 @@
     li
       border-bottom: 1px solid $grey-e
       padding: 14px 0
-      +icon-after("arrow-med-right", true)
-        color: $voices-divider
-        float: right
-        font-weight: normal
+      &:first-of-type
+        padding-top: 0
+      .svg &
+        background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
+        background-position: right center
+        background-origin: content-box
+        padding-right: 5px
+      .no-js &, .no-svg &
+        +icon-after("arrow-med-right", true)
+          color: $voices-divider
+          float: right
+          font-weight: normal
+
 
 // Global search
 .global-search
@@ -385,31 +413,29 @@
 
 // Search toggle functionality
 #search-touch-button
+  background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/50% $red
   display: none
-  +breakpoint($bp-for-phone-only)
+  +breakpoint($bp-for-tablet-range)
+    height: 64px
     position: absolute
     right: 0
     top: 0
+    width: 64px
     z-index: 100
+  +breakpoint($bp-for-tablet-range)
+    height: 50px
+    right: 50px
+    width: 50px
   &:hover
     text-decoration: none
   +breakpoint(1169px max-width)
-    background: $red
     .page-exec-ed &,
     .page-seed &
       background: #7d7466
     cursor: pointer
     display: inline-block
-    //float: right
-    height: 50px
-    width: 50px
-    //z-index: -1
-    +icon-after("search", true)
-    &:after
-      color: $white
-      font-size: 24px
-      padding: 0 12px
-      position: relative
-      top: 16px
+    height: 64px
+    width: 64px
+
   .page-insights &
     display: none
