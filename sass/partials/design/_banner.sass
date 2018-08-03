@@ -1,8 +1,7 @@
 // Banner region
 
 #banner
-  background: #7d7466
-  +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+  background: $grey-e
   +breakpoint($bp-tablet-land-min)
     overflow: hidden
     padding: 14px 0 11px
@@ -10,13 +9,13 @@
 // Banner title and subtitles
 .banner-title,
 .banner-subtitle
-  color: $white
+  color: $grey-hp-7
   a,
   a:hover,
   a:visited
-    color: $white
+    color: $grey-hp-7
   a:hover
-    border-bottom: 2px solid $white
+    border-bottom: 2px solid $grey-hp-7
     text-decoration: none
 
 .banner-title
@@ -24,10 +23,11 @@
   font-weight: bold
   line-height: 1
   .page-alumni &
-    font-size: 34px
-    a:hover
-      border-bottom: 2px solid $white
-      text-decoration: none
+    a
+      color: $red
+      &:hover
+        border-bottom: 2px solid $red
+        text-decoration: none
     +breakpoint($bp-tablet-port-max)
       font-size: 26px
   +breakpoint($bp-tablet-port-max)
@@ -63,9 +63,14 @@
 // Programs (blue)
 .page-programs
   #banner
-    +background(linear-gradient(#4c697a, $blue))
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
-  .banner-title
+    .banner-title
+      a,
+      a:hover,
+      a:visited
+        color: $teal-light
+      a:hover
+        border-bottom: 2px solid $teal-light
+        text-decoration: none
     +breakpoint(999px max-width)
       min-height: 50px
 
@@ -97,15 +102,15 @@
 // Insights (black)
 .page-insights
   #banner
-    background: $text-black
+    background: #dcdcdc
     overflow: visible
     padding: 0
 
 // Alumni (red)
 .page-alumni
   #banner
-    background: #b00000
-    +box-shadow(rgba($black, 0.85) 0px 2px 6px -2px inset)
+    background: $grey-e
+    color: $red
 
 // Alumni navigation in utility
 #block-menu-block-32
