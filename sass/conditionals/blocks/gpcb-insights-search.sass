@@ -44,19 +44,19 @@
 
   // Toggle button
   #insights-search-touch-button
-    border-right: 1px solid #5e5e5e
+    border-right: 1px solid $listing-divider
     cursor: pointer
     display: inline-block
     height: 66px
     +breakpoint(596px max-width)
       border-right: 0
-      border-left: 1px solid #5e5e5e
+      border-left: 1px solid $listing-divider
       float: right
     &.open
       display: none
     +icon-after("search", true)
     &:after
-      color: $white
+      color: $text-black
       font-size: 24px
       padding: 0 21px
       position: relative
