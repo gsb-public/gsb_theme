@@ -11,18 +11,17 @@
 =insights-topics-menu
   // Topics title
   h2
-    +background(linear-gradient(bottom, #8e0000, $red-dark))
+    background-color: $text-black
     +icon-after("arrow-med-up", true)
   // Menu pane
   .content
     display: block
     left: 0
-    // position: relative
     width: 100%
 
 
     .menu
-      +background(linear-gradient(bottom, $red-light, #8f0000))
+      background-color: $text-black
       -moz-column-count: 3
       -webkit-column-count: 3
       column-count: 3
@@ -53,8 +52,8 @@
 
 // Insights taxonomy menu in banner
 #block-menu-section-27256
-  border-right: 1px solid #5e5e5e
-  border-left: 1px solid #5e5e5e
+  border-right: 1px solid $listing-divider
+  border-left: 1px solid $listing-divider
   float: left
   vertical-align: top
   +breakpoint($bp-mobile-max)
@@ -66,7 +65,7 @@
     width: 100%
   // Topics title
   h2
-    color: $white
+    color: $text-black
     font-size: 22px
     height: 66px
     line-height: 3.5
@@ -82,7 +81,9 @@
       margin-left: 20px
       position: relative
       top: -3px
-    &:hover
+    &:hover,
+    &:active
+      color: $white
       text-decoration: underline
 
   // Hide
