@@ -179,25 +179,35 @@
         </div></div> <!-- /.section, /#bottom -->
     <?php endif; ?>
     <!--googleoff: index--><!--googleoff: snippet-->
-    <div id="footer-wrapper"><div id="footer"><div class="section">
-           <?php if ($logo): ?>
-            <div id="footer-logo" class="">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="ftr-logo">
-              <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
-            </a>
-          </div>
-          <?php endif; ?>
-          <?php print render($page['footer']); ?>
+<div id="footer-wrapper" <?php if ($page['footer_one']): ?>class="footer-border" <?php endif; ?> >
+      <?php if ($page['footer']): ?>
+        <div id="footer"><div class="section">
+        <?php print render($page['footer']); ?>
         </div></div> <!-- /.section, /#footer-->
+        <?php endif; ?>
+         <?php if ($page['footer_one']): ?>
+        <div id="gsb-footer-one"><div class="section">
+          <?php print render($page['footer_one']); ?>
+        </div></div> 
+         <?php endif; ?>
+         <?php if ($page['footer_two']): ?>
         <div id="gsb-footer-two"><div class="section">
           <?php print render($page['footer_two']); ?>
         </div></div> 
+        <?php endif; ?>
+        <?php if ($page['footer_three']): ?>
          <div id="gsb-footer-three"><div class="section">
           <?php print render($page['footer_three']); ?>
         </div></div> 
+        <?php endif; ?>
       <?php if ($page['legal']): ?>
         <div id="legal"><div class="section">
             <?php print render($page['legal']); ?>
+          </div></div> <!-- /.section, /#legal -->
+      <?php endif; ?>
+      <?php if ($page['legal_new']): ?>
+        <div id="legal-new"><div class="section">
+            <?php print render($page['legal_new']); ?>
           </div></div> <!-- /.section, /#legal -->
       <?php endif; ?>
     </div> <!-- /#footer-wrapper -->

@@ -222,15 +222,14 @@ input.signup-submit
       justify-content: space-between
 
 //New footer theming code start
-#footer
-  .region-footer
+#gsb-footer-one
+  .region-footer-one
     padding: 60px 0px 34px 0px
     +breakpoint($bp-tablet-port-max)
       padding: 10px 0 0px 0px
       float: left
       width: 100%
       margin-top: 20px
-      border-top: 1px solid #c4c4c4
       border-bottom: 1px solid #c4c4c4
       margin-bottom: 5px
 
@@ -244,6 +243,7 @@ input.signup-submit
     padding: 0
     position: relative
     top: 0
+    clear: both
 
 #gsb-footer-three
   .region-footer-three
@@ -251,150 +251,184 @@ input.signup-submit
     padding: 0px 0 70px 0
     position: relative
     top: 0
+    clear: both
     +breakpoint($bp-tablet-port-max)
       padding-bottom: 0px
 
-#block-block-41
-  width: 24%
-  clear: none
-  float: left
-  +breakpoint($bp-tablet-port-max)
-    width: 100%
+#gsb-footer-two
+  #block-block-37,
+  #block-block-41
+    width: 24%
+    clear: none
     float: left
-    padding-top: 20px
-    padding-bottom: 20px
-
-#block-menu-menu-footer-1,
-#block-menu-menu-footer-alumni-section
-  width: 30%
-  margin-left: 23%
-  +breakpoint($bp-tablet-port-max)
-    width: 100%
-    float: left
-    margin: 0
-    padding-top: 15px
-  .content
-    border-right: 1px solid #c4c4c4
-    padding-right: 25px
     +breakpoint($bp-tablet-port-max)
-      border-right: none
-      padding-right: 0px
+      width: 100%
+      float: left
+      padding-top: 20px
+      padding-bottom: 20px
 
-#block-menu-menu-footer-2,
-#block-menu-menu-section-menu-alumni-footer-
-  margin-left: 50.28205%
-  top: 0
-  +breakpoint($bp-tablet-port-max)
-    margin-left: 0px
-  .content
-    border-right: 1px solid #c4c4c4
-    padding-right: 25px
+#gsb-footer-two   
+  #block-menu-menu-footer-1,
+  #block-menu-menu-footer-alumni-section
+    width: 30%
+    margin-left: 23%
     +breakpoint($bp-tablet-port-max)
-      border-right: none
-      padding-right: 0px
+      width: 100%
+      float: left
+      margin: 0
+      padding-top: 15px
+    .content
+      border-right: 1px solid #c4c4c4
+      padding-right: 25px
+      +breakpoint($bp-tablet-port-max)
+        border-right: none
+        padding-right: 0px
 
-#block-menu-menu-section-menu-alumni-footer-
-  li
+#gsb-footer-two
+  #block-menu-menu-footer-2,
+  #block-menu-menu-section-menu-alumni-footer-
+    margin-left: 50.28205%
+    top: 0
+    +breakpoint($bp-tablet-port-max)
+      margin-left: 0px
+      float: left
+      width: 100%
+      margin: 0
+    .content
+      border-right: 1px solid #c4c4c4
+      padding-right: 25px
+      +breakpoint($bp-tablet-port-max)
+        border-right: none
+        padding-right: 0px
+
+#gsb-footer-two
+  #block-menu-menu-footer-alumni-section
+    li
+      text-align: right
+      +breakpoint($bp-tablet-port-max)
+        text-align: left
+      a
+        +breakpoint($bp-tablet-port-max)
+          font-size: 14px
+
+#gsb-footer-two
+  #block-menu-menu-section-menu-alumni-footer-
+    li
+      text-align: right
+      margin-bottom: 25px
+      display: block
+      +breakpoint($bp-tablet-port-max)
+        text-align: left
+    a
+      font-family: $font-demi
+      font-size: 18px
+      font-weight: normal
+      line-height: 1.3
+      +breakpoint($bp-tablet-port-max)
+        font-size: 14px
+    li:first-of-type:after
+      content: none
+      margin: 0
+
+#gsb-footer-two
+  #block-menu-menu-footer-1 li, 
+  #block-menu-menu-footer-2 li
     text-align: right
     margin-bottom: 25px
-    display: block
     +breakpoint($bp-tablet-port-max)
       text-align: left
-  a
-    font-family: $font-demi
-    font-size: 18px
-    font-weight: normal
-    line-height: 1.3
-  li:first-of-type:after
-    content: none
-    margin: 0
+    a
+      +breakpoint($bp-tablet-port-max)
+        font-size: 14px
 
-#block-menu-menu-footer-1 li, 
-#block-menu-menu-footer-2 li
-  text-align: right
-  margin-bottom: 25px
-  +breakpoint($bp-tablet-port-max)
-    text-align: left
-
-#footer-logo
-  width: 39%
-  float: left
-  padding-top: 30px
-  +breakpoint($bp-tablet-port-max)
-    width: 100%
-
-#block-gsb-public-custom-blocks-gpcb-follow-us
-  width: 70%
-  margin-right: -10%
-  float: right
-  +breakpoint($bp-tablet-port-max)
+#gsb-footer-one
+  #block-gsb-public-custom-blocks-gpcb-footer-logo
+    width: 40%
     float: left
-    width: 100%
-    margin-bottom: 0px
-    padding-bottom: 25px
-    border-bottom: none
-  h2
-    float: left
-    padding-right: 45px
-    border-bottom: none
-    padding-top: 10px
-    font-size: 18px
+    display: inline-block
     +breakpoint($bp-tablet-port-max)
       width: 100%
-      float: left
-
-  .icon-wrapper
-    max-width: 330px
-    li:first-of-type
-      width: 15%
-    li:nth-of-type(2n)
-      width: 20%
-    li:nth-of-type(3n)
-      width: 18%
-    li:nth-of-type(2n)
-      width: 20%
-    li:last-of-type
-      width: 16%
+      border-bottom: 1px solid #c4c4c4
+      padding-bottom: 20px
+      
+#gsb-footer-one
+  #block-gsb-public-custom-blocks-gpcb-follow-us
+    width: 44%
+    margin-right: -7%
+    float: right
+    display: inline-block
     +breakpoint($bp-tablet-port-max)
-      width: 100%
       float: left
-    a.social-block-twitter
-      +icon-after("twitter", true)
-        color: #990000
-        line-height: 1.2
+      width: 100%
+      margin-bottom: 0px
+      padding-bottom: 25px
+      border-bottom: none
+      padding-top: 10px
+    h2
+      float: left
+      padding-right: 45px
+      border-bottom: none
+      padding-top: 10px
+      font-size: 18px
+      +breakpoint($bp-tablet-port-max)
+        width: 100%
+        float: left
+      a
+        +breakpoint($bp-tablet-port-max)
+          font-size: 14px
+
+    .icon-wrapper
+      max-width: 330px
+      li:first-of-type
+        width: 15%
+      li:nth-of-type(2n)
+        width: 20%
+      li:nth-of-type(3n)
+        width: 18%
+      li:nth-of-type(2n)
+        width: 20%
+      li:last-of-type
+        width: 16%
+      +breakpoint($bp-tablet-port-max)
+        width: 100%
+        float: left
+      a.social-block-twitter
+        +icon-after("twitter", true)
+          color: #990000
+          line-height: 1.2
+          &:hover
+            color: #FFFFFF !important
+      a.social-block-youtube
+        +icon-after("youtube", true)
+          color: #990000
+          line-height: 1.2
+          &:hover
+            color: #FFFFFF !important
+      a.social-block-linkedin
+        +icon-after("linkedin", true)
+          color: #990000
+          line-height: 1.2
+          &:hover
+            color: #FFFFFF !important
+      a.social-block-facebook
+        +icon-after("facebook", true)
+          color: #990000
+          line-height: 1.2
+          &:hover
+            color: #FFFFFF !important
+      .circle
+        border: 2px solid #990000
+        background: none
+        width: 44px
+        height: 44px
         &:hover
-          color: #FFFFFF !important
-    a.social-block-youtube
-      +icon-after("youtube", true)
-        color: #990000
-        line-height: 1.2
-        &:hover
-          color: #FFFFFF !important
-    a.social-block-linkedin
-      +icon-after("linkedin", true)
-        color: #990000
-        line-height: 1.2
-        &:hover
-          color: #FFFFFF !important
-    a.social-block-facebook
-      +icon-after("facebook", true)
-        color: #990000
-        line-height: 1.2
-        &:hover
-          color: #FFFFFF !important
-    .circle
-      border: 2px solid #990000
-      background: none
-      width: 44px
-      height: 44px
-      &:hover
-        background: $link-blue !important
-        border: none !important
-        &:after
-          color: $white !important
+          background: $link-blue !important
+          border: none !important
+          &:after
+            color: $white !important
 
 #ftr-logo
-  margin-top: 20px
+  margin-top: 0px
   .svg &
     background-size: 98.8%
     height: 75px
@@ -409,33 +443,47 @@ input.signup-submit
     .page-insights &,
     .page-404 &
       left: 0
-    .page-seed &,
-    .page-exec-ed &
-      .svg &, .no-js &, .no-svg &
+  +breakpoint($bp-tablet-land)
+    .svg &, .no-js &, .no-svg &
+      float: left
+      height: 54px
+      left: 0px
+      position: relative
+      width: 185px
+    .page-insights &,
+    .page-404 &
+      left: 0
+
+#block-block-41,
+#block-block-37
+  .gsb-footer-address
+    border-left: 1px solid #c4c4c4
+    .address
+      color: $text-black
+      font-size: 18px
+      font-weight: normal
+      line-height: 1.5
+      padding-left: 25px
+      +breakpoint($bp-tablet-port-max)
+        font-size: 14px
         float: left
-        height: 54px
-        left: 0px
-        position: relative
-        width: 185px
+    +breakpoint($bp-tablet-port-max)
+      border-left: none
+      font-size: 14px
+      float: left
+      padding: 20px 0
+      width: 100%
 
-.gsb-footer-address
-  border-left: 1px solid #c4c4c4
-  .address
-    color: $text-black
-    font-size: 18px
-    font-weight: normal
-    line-height: 1.5
-    padding-left: 25px
-  +breakpoint($bp-tablet-port-max)
-    border-left: none
-
-#block-menu-menu-footer-5
+#block-menu-menu-footer-4
   +breakpoint($bp-tablet-port-max)
     width: 100%
+    float: left
   li
     float: left
     font-size: 18px
     color: #990000
+    +breakpoint($bp-tablet-port-max)
+      font-size: 14px
   li:after
     color: #c4c4c4
     content: "|"
@@ -448,24 +496,33 @@ input.signup-submit
       content: none
       margin-left: 0px
 
-
-#legal
+#legal-new
   background-color: #990000
-  .region
-    border-top: none
+  +breakpoint($bp-content-max)
+    padding: 0 20px
+  .region-legal-new
+    margin: 0 auto
+    max-width: $max-width
     padding: 15px 0
+    +breakpoint($bp-content-max)
+      padding-bottom: 20px
     .gsb-footer-meta
       color: #c4c4c4
       font-family: $font-demi
       font-weight: normal
       font-size: 14px
-    #block-menu-menu-footer-3
+    #block-menu-menu-footer-3-new
       color: #FFFFFF
       font-family: $font-demi
       font-weight: normal
       font-size: 14px
+      float: right
+      padding: 11px 0
       +breakpoint($bp-tablet-port-max)
         padding-top: 10px
+        padding-bottom: 0px
+        float: none
+        position: relative
       .content
         color: #FFFFFF
         a
@@ -473,14 +530,21 @@ input.signup-submit
         a:hover:after
           color: #FFFFFF
       li
+        display: inline-block
         margin-right: 40px
         +breakpoint($bp-tablet-port-max)
           padding-bottom: 20px
-          margin-right: 0px
-    #block-block-1
+          display: block
+          margin: 4px 0
+      li:first-of-type
+        margin-left: 5px
+      li:last-of-type
+        margin-right: 0
+
+    #block-block-46,
+    #block-block-38
       +breakpoint($bp-tablet-port-max)
         padding-bottom: 20px
 
-#footer-wrapper
+.footer-border
   border-top: 3px solid #990000
-
