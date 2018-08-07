@@ -9,14 +9,14 @@
     right: 0 !important
     top: 50px !important
   +breakpoint($bp-for-phone-only)
-    right: auto
-    top: auto
-    width: auto
+    right: auto !important
+    top: auto !important
+    width: auto !important
     left: auto !important
   +breakpoint($bp-for-tablet-range)
-    right: auto
-    top: auto
-    width: auto
+    right: auto !important
+    top: auto !important
+    width: auto !important
     left: auto !important
 // Mobile-only override styles
 #md-megamenu-1.awemenu-mobile-standard
@@ -38,15 +38,54 @@
   .link-secondary,
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
-// Changing the alignment and the open close mobile hamburger
+// Search and hamburger menu
+// Changing the search alignment and the open close mobile hamburger
 #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
   .awemenu-bars
-    float: right
     margin-top: -12px
-    margin-right: 50px
     padding-bottom: 0
-    +breakpoint($bp-for-tablet-range)
-      //margin-right: 95px
+    position: absolute
+    right: 160px
+    +breakpoint($bp-for-phone-only)
+      right: 36px
+#navigation.search-open
+  // Phone search open
+  +breakpoint($bp-for-phone-only)
+    #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+      .awemenu-bars
+        display: none
+    #coveo-search-block-form.open
+      width: 100%
+      input#edit-search-keys
+        display: inline-block
+        left: 0
+        position: absolute
+        top: 0
+        width: 87%
+  // Tablet search open
+  +breakpoint($bp-for-phone-tablet-range)
+    .section
+      a#search-touch-button, div#search-close
+        display: none
+    #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+      .awemenu-bars
+        left: 30px
+    #md-megamenu-1.awemenu-mobile-standard .awemenu
+      margin-top: 63px
+      width: 70%
+    #coveo-search-block-form.open
+      width: 100%
+      #edit-search-keys
+        display: inline-block
+        left: 219px
+        position: absolute
+        top: 0
+        width: 74%
+      input
+        position: relative
+        top: 0
+        right: unset
+
 #md-megamenu-1.awemenu-mobile-standard.awemenu-active
   span.amm-bar
     background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $grey-hp
@@ -54,6 +93,9 @@
     width: 64px
     &:before
       content: ""
+    +breakpoint($bp-for-phone-only)
+      height: 50px
+      width: 50px
 .md-style2
   background-color: transparent
   border-bottom: none
@@ -69,11 +111,14 @@
   border-bottom: 1px solid $red-dark
   +breakpoint($bp-for-phone-tablet-range)
     height: 64px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
   #header
     .section
       display: inline-block
       +breakpoint($bp-for-phone-only)
         border: none
+        box-shadow: none
         width: 100%
 .page-exec-ed,
 .page-seed
@@ -87,10 +132,10 @@
 #md-megamenu-1
   font-family: $font-light
   font-size: 18px
-  padding: 35px 0 35px 180px
+  padding: 35px 0 12px 180px
   .awemenu-submenu
     background-color: transparent
-    padding-top: 35px
+    padding-top: 10px
 
   .awemenu-active
     a
@@ -132,7 +177,7 @@
     // the top menu bar
     li
       .awemenu-item-title
-        padding-bottom: 51px
+        padding-bottom: 26px
         +breakpoint($bp-for-phone-only)
           font-face: $font-sans
           font-size: 16px
@@ -259,6 +304,11 @@
     border-bottom: 0
     margin-top: -7px
     border-top: 1px solid $red
+    +breakpoint($bp-for-phone-only)
+      margin-top: 49px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 63px
+      width: 87%
     .overview-link-mobile-only
       color: $text-black
       display: block
@@ -415,27 +465,28 @@
 #search-touch-button
   background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/50% $red
   display: none
+  height: 64px
+  width: 64px
+  &:hover
+    text-decoration: none
   +breakpoint($bp-for-tablet-range)
-    height: 64px
     position: absolute
     right: 0
     top: 0
-    width: 64px
     z-index: 100
-  +breakpoint($bp-for-tablet-range)
+  +breakpoint($bp-for-phone-only)
     height: 50px
-    right: 50px
+    position: absolute
+    top: 0
+    right: 0
     width: 50px
-  &:hover
-    text-decoration: none
   +breakpoint(1169px max-width)
+    cursor: pointer
+    display: inline-block
+
     .page-exec-ed &,
     .page-seed &
       background: #7d7466
-    cursor: pointer
-    display: inline-block
-    height: 64px
-    width: 64px
 
   .page-insights &
     display: none
