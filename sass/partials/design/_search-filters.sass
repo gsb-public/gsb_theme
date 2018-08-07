@@ -115,15 +115,13 @@
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
-      +background((image_url("search.svg") no-repeat center), #f4f4f4)
-      background-size: 150%
+      +background((image_url("../images/icons/icon-search-red.svg") no-repeat center), $white)
+      background-size: 40%
       &:hover
-        +background((image_url("search-white.svg") no-repeat center), $text-blue)
-        background-size: 150%
-        height: 57px
-        width: 53px
+        +background((image_url("../images/icons/icon-search-white.svg") no-repeat center), $text-blue)
+        background-size: 40%
     .no-js &, .no-svg &
-      background: image_url("search.png") no-repeat center 20px transparent
+      background: image_url("../images/icons/icon-search-active-42x42.png") no-repeat center 20px transparent
 // General search results page search
 #coveo-search-search-form,
 #coveo-search-search-form--2
@@ -980,7 +978,7 @@ button.checkbox-clear-all
   font-size: 18px
   font-family: $font-sans
   position: absolute
-  top: 79px
+  top: 69px
   right: 5px
 
 // Search input overrides for Exec Ed
@@ -989,7 +987,7 @@ button.checkbox-clear-all
     .js .search-open &,
     .no-js &
       top: 76px
-      right: 5px
+      right: 2px
   #navigation.search-open
     .section
       div#search-close

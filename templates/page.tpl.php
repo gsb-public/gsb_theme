@@ -75,24 +75,24 @@
 
   <div id="page-wrapper"><div id="page">
     <!--googleoff: index--><!--googleoff: snippet-->
-    <div id="header-wrapper"><div id="header"><div class="section clearfix">
+    <div id="header-wrapper">
+        <div id="header">
+            <div class="section clearfix">
 
+              <?php if ($logo): ?>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+                      <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
+                  </a>
+              <?php endif; ?>
 
-          <?php if ($logo): ?>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-                  <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
-              </a>
-          <?php endif; ?>
-
-
-                <?php if ($page['navigation']): ?>
-                        <div id="navigation"><div class="section">
-                                <?php print render($page['navigation']); ?>
-                                <?php print render($global_search); ?>
-                                <a id="search-touch-button"></a>
-                                <div id="search-close"></div>
-                            </div></div> <!-- /.section, /#navigation -->
-                <?php endif; ?>
+              <?php if ($page['navigation']): ?>
+                <div id="navigation"><div class="section">
+                    <?php print render($page['navigation']); ?>
+                    <?php print render($global_search); ?>
+                    <a id="search-touch-button"></a>
+                    <div id="search-close"></div>
+                </div></div> <!-- /.section, /#navigation -->
+              <?php endif; ?>
 
 
           <?php if ($page['header']): ?>

@@ -75,9 +75,9 @@
 
 <div id="page-wrapper"><div id="page" what="where">
     <!--googleoff: index--><!--googleoff: snippet-->
-    <div id="header-wrapper"><div id="header">
-        <div class="section clearfix">
-          <a id="search-touch-button"></a>
+    <div id="header-wrapper">
+        <div id="header">
+            <div class="section clearfix">
 
           <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -86,9 +86,10 @@
           <?php endif; ?>
 
             <?php if ($page['navigation']): ?>
-              <div id="navigation"><div class="section">
+            <div id="navigation"><div class="section">
                   <?php print render($page['navigation']); ?>
                   <?php print render($global_search); ?>
+                  <a id="search-touch-button"></a>
                   <div id="search-close"></div>
                 </div></div> <!-- /.section, /#navigation -->
           <?php endif; ?>
@@ -107,7 +108,7 @@
             <?php print render($page['header']); ?>
           <?php endif; ?>
 
-        </div>
+          </div></div></div> <!-- /.section, /#header, /#header-wrapper -->
 
         <!--googleon: index--><!--googleon: snippet-->
         <div id="content-wrapper" class="clearfix">
