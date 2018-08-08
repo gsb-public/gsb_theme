@@ -583,6 +583,7 @@
         $(".node-type-voices .group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
         $(".node-type-voices .group-left, .node-type-voices .group-right").wrapAll('<div class="content-wrapper"></div>');
         $(".node-type-voices .group-right h1").contents().unwrap().wrap('<div/>');
+        $(".node-type-voices .group-left .field-name-social-buttons-bottom, .node-type-voices .group-left .short-url-wrapper.field-name-field-link-single").wrapAll('<div class="social-media-wrapper"></div>');
         var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-background-color").text();
           $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
     });
