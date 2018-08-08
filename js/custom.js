@@ -582,8 +582,16 @@
         $(".node-type-voices .breadcrumb").prependTo(".node-type-voices .group-left");
         $(".node-type-voices .group-voices-group .fieldset-wrapper").prepend("<span class='label'>Voices of Stanford GSB</span>");
         $(".node-type-voices .group-left, .node-type-voices .group-right").wrapAll('<div class="content-wrapper"></div>');
-        var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-slideshow-style").text();
-            $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
         $(".node-type-voices .group-right h1").contents().unwrap().wrap('<div/>');
+        var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-background-color").text();
+          $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
+    });
+    /* Homepage 3-across voices color manipulation*/
+    $(function(){
+        $(".view-id-gsb_voices_listing .views-row .field-name-field-background-color").each(function(index){
+          console.log(index + ":" + $(this).text() );
+          var htmlColorHome = $(this).text();
+              $(this).parent().find(".text-content").addClass(htmlColorHome);
+        } );
     });
 }(jQuery));

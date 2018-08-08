@@ -15,7 +15,11 @@
     background: none
     +breakpoint($bp-tablet-port-min)
       background: none
-
+// Removing the background span from display
+.node-type-voices
+  .group-voices-group
+    .field-name-field-background-color
+      display: none
 /* Container holding the image and the text */
 .node-type-voices
   #main.column
@@ -143,6 +147,8 @@
       background-color: $voices-pink
     fieldset.group-voices-group.charcoal
       background-color: $voices-charcoal
+    fieldset.group-voices-group.green
+      background-color: $voices-green
 
     fieldset.group-voices-group.white,
     fieldset.group-voices-group.blue,
