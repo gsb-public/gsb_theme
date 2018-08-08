@@ -265,19 +265,16 @@
           +breakpoint($bp-for-tablet-range)
             font-size: 14px
             padding-left: 0
-        .field-collection-container
-          .byline
-            display: inline
-            float: left
-            font-size: 18px
-            padding: 50px 0
-            .field-collection-view
-              margin-left: 10px
-              padding: 0
-            +breakpoint($bp-mobile-max)
-              font-size: 14px
-            +breakpoint($bp-for-tablet-range)
-              font-size: 14px
+        .field-name-field-authors
+          display: inline
+          float: left
+          font-size: 18px
+          padding: 50px 0
+          .field-collection-item-field-authors
+            &:before
+              content: "by"
+              padding-left: 10px
+            padding: 0
         ul.field-name-field-tag
           font-size: 14px
           list-style: none
@@ -453,6 +450,13 @@
       +social-buttons-small
     +breakpoint(745px max-width)
       +social-buttons-small
+
+  // social media wrapper - fixing floats
+  .social-media-wrapper
+    clear: left
+    display: block
+    border-top: 1px solid $voices-divider
+    padding-top: 25px
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
@@ -476,5 +480,8 @@
     @extend %short-url
 
   .field.field-name-social-buttons-bottom,
+  .short-url-wrapper
+    display: inline-block
+
   .short-url-wrapper
     display: inline-block

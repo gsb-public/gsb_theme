@@ -444,25 +444,18 @@
     padding-left: 0;
   }
 }
-.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-authors {
   display: inline;
   float: left;
   font-size: 18px;
   padding: 50px 0;
 }
-.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline .field-collection-view {
-  margin-left: 10px;
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-authors .field-collection-item-field-authors {
   padding: 0;
 }
-@media (max-width: 35.5em) {
-  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
-    font-size: 14px;
-  }
-}
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-collection-container .byline {
-    font-size: 14px;
-  }
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-authors .field-collection-item-field-authors:before {
+  content: "by";
+  padding-left: 10px;
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left ul.field-name-field-tag {
   font-size: 14px;
@@ -738,6 +731,12 @@
     font-size: 11px;
   }
 }
+.node-type-voices .social-media-wrapper {
+  clear: left;
+  display: block;
+  border-top: 1px solid #979797;
+  padding-top: 25px;
+}
 .node-type-voices .field-name-social-buttons-bottom {
   margin-top: 10px;
   padding: 0 20px 0 0;
@@ -753,6 +752,9 @@
   padding-left: 20px;
 }
 .node-type-voices .field.field-name-social-buttons-bottom,
+.node-type-voices .short-url-wrapper {
+  display: inline-block;
+}
 .node-type-voices .short-url-wrapper {
   display: inline-block;
 }
