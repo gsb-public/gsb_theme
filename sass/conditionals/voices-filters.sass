@@ -130,6 +130,8 @@
           background: linear-gradient(transparent, $voices-teal-med 50%)
         &.charcoal
           background: linear-gradient(transparent, $voices-charcoal 50%)
+        &.green
+          background: linear-gradient(transparent, $voices-green 50%)
         &.pink
           background: linear-gradient(transparent, $voices-pink 50%)
         &.purple
@@ -408,7 +410,7 @@
         &.charcoal
           background: linear-gradient(transparent, $voices-charcoal 50%)
         &.green
-          background: linear-gradient(transparent, $voices-teal-med 50%)
+          background: linear-gradient(transparent, $voices-green 50%)
         &.pink
           background: linear-gradient(transparent, $voices-pink 50%)
         &.purple
@@ -775,3 +777,108 @@
 
     
 /* Single Teaser styles end */
+
+/* side bar fixes for all list*/
+.gsb-landing-standard-page-one,
+.gsb-full-bleed-page
+  .inner-sidebar-wrapper
+    #quicklinks,
+    .sidebar-inner
+      .pane-voices-filters-voices-filters-pane
+        .view-filters
+          .views-widget-filter-field_industry_tid
+            padding: 0px 15px 0px 15px
+            #edit-field-industry-tid
+              width: 238px !important
+              +breakpoint($bp-for-phone-tablet-range)
+                width: 80% important
+            .form-select
+              .customSelectInner
+                width: 206px !important
+                +breakpoint($bp-for-phone-tablet-range)
+                  display: flex !important
+                  width: 190px !important
+
+          .views-widget-filter-field_region_of_interest_tid
+            padding: 0px 15px 0px 15px
+            #edit-field-region-of-interest-tid
+              width: 238px !important
+              +breakpoint($bp-for-phone-tablet-range)
+                width: 80% important
+            .form-select
+              .customSelectInner
+                width: 206px !important
+                +breakpoint($bp-for-phone-tablet-range)
+                  display: flex !important
+                  width: 190px !important
+        .view-content
+          margin-left: 10px
+          .views-row
+            width: 96%
+            height: 390px
+            .views-field-field-quote
+              div
+                div
+                  height: 390px
+
+.gsb-landing-standard-page-one,
+.gsb-full-bleed-page
+  .inner-sidebar-wrapper
+    #quicklinks,
+    .sidebar-inner
+      .pane-voices-filters-voices-list-cta-panel-pane
+        .pane-title
+          font-size: 24px
+        .views-row
+          width: 96%
+          height: 390px
+          .views-field-field-quote
+            div
+              div
+                height: 390px
+        .voices_display_list_cta
+          width: 240px
+          margin: 10px 0px 10px 8px
+          +breakpoint($bp-for-phone-only)
+            width: 80% !important
+            margin-left: 4px
+            margin-top: 20px
+
+.gsb-landing-standard-page-one,
+.gsb-full-bleed-page
+  .inner-sidebar-wrapper
+    #quicklinks,
+    .sidebar-inner
+      .pane-voices-filters-all-voices-list-panel-pane
+        padding: 0px 0px 20px 20px
+        .pane-title
+          padding: 20px 0px 0px 0px
+          h2
+            font-size: 24px
+        .views-row
+          width: 96%
+          height: 390px
+          .views-field-field-quote
+            div
+              div
+                height: 390px
+        .voices_display_all_list_cta
+          width: 240px
+          margin: 10px 0px 10px 0px
+          +breakpoint($bp-for-phone-only)
+            margin-left: 6px
+            width: 84% !important
+
+.gsb-landing-standard-page-one,
+.gsb-full-bleed-page
+  .inner-sidebar-wrapper
+    #quicklinks,
+    .sidebar-inner
+      .view-display-id-voices_single_teaser_pane
+        .views-row
+          width: 96%
+          height: 390px
+          .views-field-field-quote
+            div
+              div
+                height: 390px
