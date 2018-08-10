@@ -1,6 +1,72 @@
 // Executive Education & SEED main menus
+.md-megamenu.md-megamenu-seed-main-menu,
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  background: #7d7466
+  border-bottom: 0
+  border-top: 3px solid $red-dark
+  color: $white
+  .awemenu
+    .awemenu-item-level-1
+      border-right: 1px solid #9b9285
+      a
+        color: $white
+        font-family: $font-demi
+        font-size: 16px
+        font-weight: normal
+        line-height: 1.3
+        text-transform: none
+        &:hover
+          box-shadow: none
 
-// Full width
+  .awemenu-submenu.awemenu-megamenu
+    +breakpoint($bp-for-desktop-up)
+      width: 602px !important
+      left: auto !important
+      right: 0 !important
+      top: 70px !important
+    .awemenu-megamenu-wrapper
+      ul
+        li
+          padding: 5px 0
+          a
+            &:hover
+              box-shadow: none
+
+.md-megamenu.md-megamenu-seed-main-menu
+  .awemenu-item-1-1
+    width: 103px
+  .awemenu-item-1-2
+    width: 133px
+  .awemenu-item-1-3
+    width: 133px
+  .awemenu-item-1-4
+    width: 130px
+  .awemenu-item-1-5
+    width: 104px
+    span.awemenu-item-title
+      line-height: 2
+    a
+      padding-bottom: 28px
+
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  .awemenu-item-1-3,
+  .awemenu-item-1-4
+    span.awemenu-item-title
+      line-height: 2
+  .awemenu-item-1-1
+    max-width: 135px
+  .awemenu-item-1-2
+    max-width: 129px
+  .awemenu-item-1-3
+    max-width: 142px
+    a
+      padding-bottom: 28px
+  .awemenu-item-1-4
+    max-width: 142px
+    a
+      padding-bottom: 28px
+
+// Full width//
 #block-menu-menu-executive-education-mega-me,
 #block-menu-menu-mega-menu-seed
   +clearfix
@@ -8,9 +74,10 @@
   +breakpoint(1170px min-width)
     float: right
     margin-right: 60px
+    overflow: visible
   .search-open &
     +breakpoint(1170px min-width)
-      float: left
+      float: right
   li
     +breakpoint($bp-wide-min)
       border-top: $top-border-interval $red-dark solid
@@ -31,8 +98,11 @@
       color: $white
       display: block
       font-family: $font-demi
+      font-size: 16px
+      font-weight: normal
       margin: 0
       position: relative
+      text-transform: none
       +breakpoint(1170px min-width)
         display: inline-block
         &.active,
@@ -81,6 +151,8 @@
           &:before
             content: ""
 
+
+
 // Exec Ed Menu only
 #block-menu-menu-executive-education-mega-me
   +breakpoint(1170px min-width)
@@ -93,7 +165,11 @@
         max-width: 117px
 
 // SEED Menu only
-#block-menu-menu-mega-menu-seed
+.md-megamenu.md-megamenu-seed-main-menu
+  .awemenu-submenu.awemenu-megamenu
+    +breakpoint($bp-for-desktop-up)
+      margin-top: 8px
+      width: 603px !important
   +breakpoint(1170px min-width)
     li a
       max-width: 133px
@@ -103,3 +179,16 @@
     li:last-of-type
       a
         max-width: 104px
+
+// Executive Education Menu only
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  .awemenu-submenu.awemenu-megamenu
+    +breakpoint($bp-for-desktop-up)
+      width: 550px !important
+      margin-top: 8px
+  +breakpoint(1170px min-width)
+    li a
+      min-height: 59px
+      padding: 19px 16px
+
+  // Search hover override

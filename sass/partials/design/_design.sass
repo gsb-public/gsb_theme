@@ -3,17 +3,6 @@
 // Header region
 #header-wrapper
   position: relative
-  &:after
-    +box-shadow(0 2px 2px rgba($black, 0.3) inset)
-    bottom: -3px
-    content: ""
-    height: 3px
-    left: 0
-    position: absolute
-    width: 100%
-    z-index: 10
-  +breakpoint(1170px min-width)
-    border-top: $top-border-interval $red-dark solid
 
   #header
     +breakpoint(1200px min-width)
@@ -32,8 +21,8 @@
   .svg &
     background: image_url("logo.svg") no-repeat
     background-size: 96.8%
-    height: 76px
-    width: 275px
+    height: 45px
+    width: 160px
   .no-js &,
   .no-svg &
     background: image_url("logo-2015-05-26-1.png") no-repeat
@@ -56,8 +45,8 @@
     .svg &, .no-js &, .no-svg &
       float: left
       height: 30px
-      left: 60px
-      margin: 10px 10px 0 0
+      left: 20px
+      margin: 18px 10px 0 0
       position: relative
       width: 100px
     .page-insights &,
@@ -74,32 +63,22 @@
         position: relative
         width: 100px
 
-// Site slogan
-#site-slogan
-  font-size: 22px
-  float: right
-  line-height: 3.4
-  +breakpoint(1199px max-width)
-    margin-right: 15px
-  +breakpoint(1169px max-width)
-    display: none
-  // Exec Ed & SEED menu
-  .page-exec-ed &,
-  .page-seed &,
-  .no-js &
-    display: none
 
 // Navigation
 #navigation
   .js &,
   &.search-closed
     min-width: 702px
+    +breakpoint($bp-for-phone-tablet-range)
+      min-width: auto
     // Exec Ed
     .page-exec-ed &
       min-width: 534px
     // SEED menu
     .page-seed &
       min-width: 667px
+      +breakpoint($bp-for-phone-tablet-range)
+        min-width: auto
   +breakpoint(1170px min-width)
     float: right
     position: relative
@@ -117,7 +96,7 @@
       margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
-        min-width: 672px
+        min-width: 534px
   // Seed menu
   .page-seed &,
     +breakpoint(1170px min-width)
@@ -127,7 +106,7 @@
       margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
-        min-width: 807px
+        min-width: 667px
   .section
     +breakpoint(1169px max-width)
       border-bottom: 3px $black solid

@@ -99,10 +99,12 @@
           <?php print render($page['footer_three']); ?>
         </div></div> 
         <?php endif; ?>
+
       <?php if ($page['legal']): ?>
         <div id="legal"><div class="section">
             <?php print render($page['legal']); ?>
           </div></div> <!-- /.section, /#legal -->
+
       <?php endif; ?>
       <?php if ($page['legal_new']): ?>
         <div id="legal-new"><div class="section">

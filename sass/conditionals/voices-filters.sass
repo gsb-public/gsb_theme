@@ -25,7 +25,7 @@
     margin: 30px 30px 0px 0px
     position: relative
     width: 22%
-    height: 410px
+    height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -107,9 +107,10 @@
           display: table
           font-family: $font-demi
           font-size: 16px
-          height: 410px
+          line-height: 1.3
+          height: 400px
           left: 0
-          padding: 80px 10px 30px 20px
+          padding: 80px 20px 30px 20px
           position: absolute
           top: 0
           width: 100%
@@ -306,7 +307,7 @@
     margin: 30px 30px 0px 0px
     position: relative
     width: 22%
-    height: 410px
+    height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -383,7 +384,8 @@
           color: $white
           cursor: pointer
           display: table
-          height: 410px
+          height: 400px
+          line-height: 1.3
           left: 0
           position: absolute
           top: 0
@@ -393,8 +395,7 @@
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-          font-size: 16px
-          padding: 80px 10px 30px 20px
+          padding: 80px 20px 30px 20px
           text-align: left
           font-size: 16px
           font-family: $font-demi
@@ -430,7 +431,8 @@
       .main-header,
       .main-footer
         .view-display-id-voices_filters_pane,
-        .view-display-id-all_voices_list_panel_pane
+        .view-display-id-all_voices_list_panel_pane,
+        .pane-voices-filters-voices-list-cta-panel-pane
           .views-row
             width: 44%
             height: 410px
@@ -451,7 +453,7 @@
             
             .views-field-field-quote div div
               width: 100%
-              height: 410px
+              height: 400px
               padding-right: 10px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
@@ -463,7 +465,8 @@
             padding-top: 30px
   .full-bleed-header
     .view-display-id-voices_filters_pane,
-    .view-display-id-all_voices_list_panel_pane
+    .view-display-id-all_voices_list_panel_pane,
+    .pane-voices-filters-voices-list-cta-panel-pane
       .views-row
         .views-field-field-quote div div
           width: 100%
@@ -474,7 +477,8 @@
       .main-header,
       .main-footer
         .view-display-id-voices_filters_pane,
-        .view-display-id-all_voices_list_panel_pane
+        .view-display-id-all_voices_list_panel_pane,
+        .pane-voices-filters-voices-list-cta-panel-pane
           .views-row
             width: 29.38%
             height: 410px
@@ -495,7 +499,7 @@
    
             .views-field-field-quote div div
               width: 100%
-              height: 410px
+              height: 400px
               padding-right: 10px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
@@ -504,12 +508,13 @@
               padding: 0px 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
-            padding-top: 50px
+            padding-top: 30px
   .full-header
     .view-display-id-voices_filters_pane,
-    .view-display-id-all_voices_list_panel_pane
+    .view-display-id-all_voices_list_panel_pane,
+    .pane-voices-filters-voices-list-cta-panel-pane
       .views-row:hover .views-field-title
-        padding-top: 50px
+        padding-top: 30px
 /* full bleed and landing page one main header and main footer styles end*/
 
 /* Voices Multiple Criteria with CTA - OVERIDES */
@@ -519,9 +524,8 @@
     .views-row
       &:hover
         .views-field-title
-          padding-top: 25px
-      width: 290px
-      height: 400px
+          padding-top: 30px
+
       .views-field-field-image-single-public
         img
           max-height: auto !important
@@ -531,8 +535,7 @@
           div
             font-family: $font-demi
             font-size: 16px
-            line-height: 1.5
-            padding: 30% 25px
+            line-height: 1.3
             &:after
               content: '”'
             &:before
@@ -581,10 +584,9 @@
         div
           div
             font-family: $font-demi
-            font-size: 14px
+            font-size: 16px
             height: 350px
-            line-height: 1.5
-            padding: 30% 25px
+            line-height: 1.3
             &:after
               content: '”'
             &:before
@@ -634,9 +636,6 @@
       div
         div
           font-family: $font-demi
-          font-size: 16px
-          line-height: 1.5
-          padding: 30% 25px
           &:after
             content: '”'
           &:before
@@ -774,8 +773,6 @@
       .views-field-field-endowed-title-appointment
         +breakpoint($bp-for-phone-tablet-range)
           color: $text-black
-
-    
 /* Single Teaser styles end */
 
 /* side bar fixes for all list*/

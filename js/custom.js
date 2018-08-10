@@ -154,7 +154,6 @@
         $('.ds-main-wrapper .ds-right').insertBefore($('.ds-main-wrapper .ds-left'));
         $('#block-block-41').insertAfter($('#footer-logo') );
         $('#block-menu-menu-footer-4').insertAfter($('#block-block-41'));
-
       }
       if (Modernizr.mq('(max-width: 1169px)')) {
         $('#coveo-search-block-form').insertBefore($('#nav-touch-wrapper'));
@@ -162,7 +161,6 @@
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
       }
-
     }
   };
 

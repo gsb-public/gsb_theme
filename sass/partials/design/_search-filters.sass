@@ -1,5 +1,36 @@
 // Search and filters
 
+// Search close button
+// this div needs to be made visible when the search box is open
+#navigation.search-open
+  .section
+    div#search-close
+      background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
+      display: block
+      height: 60px
+      line-height: 60px
+      position: absolute
+      right: -83px
+      top: 20px
+      width: 55px
+      +breakpoint($bp-for-tablet-range)
+        height: 64px
+        right: 0
+        top: 0
+        width: 64px
+      +breakpoint($bp-for-phone-only)
+        height: 50px
+        right: 0
+        top: 0
+        width: 50px
+#search-close
+  display: none
+.page-exec-ed
+  #navigation.search-open
+    div.section
+      div#search-close
+        right: -37px
+
 // Global main search
 #coveo-search-block-form,
 #coveo-search-block-form--2
@@ -13,6 +44,9 @@
     display: none
     &.open
       display: block
+      left: 0
+      top: 0
+      z-index: 300
 
   // Search input wrapper
   .form-item
@@ -20,14 +54,17 @@
     margin-top: 0
     margin-bottom: 0
     .form-text
+      border: 1px solid $red
       color: $text-black
       font-size: 16px
-      background: #f4f4f4
+      background: $white
       line-height: 1
-      padding: 6px 60px 6px 10px
+      padding: 6px 10px 6px 10px
       +breakpoint(1169px max-width)
-        height: 50px
+        height: 64px
         padding: 15px 0px 15px 10px
+        width: 315px
+
 
   // Search input
   input
@@ -37,9 +74,12 @@
       display: block
     .js .search-open &,
     .no-js &
+      border-bottom: 1px $red solid
+      border-right: 1px $red solid
+      border-top: 1px $red solid
       display: inline-block
       position: absolute
-      top: 0
+      top: 60px
       right: 1px
       z-index: 1
     .page-exec-ed &,
@@ -53,37 +93,38 @@
     background: transparent
     border-radius: 0
     border: 0
-    border-bottom: 1px $border-grey solid
-    border-right: 1px $border-grey solid
-    border-top: 1px $border-grey solid
     float: right
     height: 59px
     overflow: hidden
     padding: 0
     text-indent: 1000px
     width: 60px
+    &:hover
+      background-color: #0A647E
     .no-js &
       display: inline-block
     +breakpoint(1170px min-width)
       display: inline-block
     +breakpoint(1169px max-width)
-      height: 50px
+      height: 64px
       position: relative
-      left: -1px
+      left: 0
     .page-exec-ed &,
     .page-seed &
-      height: 78px
+      height: 79px
+      &:hover
+        height: 79px !important
+        width: 60px !important
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
-      +background((image_url("search.svg") no-repeat center), #f4f4f4)
-      background-size: 150%
+      +background((image_url("../images/icons/icon-search-red.svg") no-repeat center), $white)
+      background-size: 40%
       &:hover
-        +background((image_url("search-hover.svg") no-repeat center), #f4f4f4)
-        background-size: 150%
+        +background((image_url("../images/icons/icon-search-white.svg") no-repeat center), $text-blue)
+        background-size: 40%
     .no-js &, .no-svg &
-      background: image_url("search.png") no-repeat center 20px transparent
-
+      background: image_url("../images/icons/icon-search-active-42x42.png") no-repeat center 20px transparent
 // General search results page search
 #coveo-search-search-form,
 #coveo-search-search-form--2
@@ -933,3 +974,43 @@ button.checkbox-clear-all
           font-size: 16px
           margin-bottom: 18px
           text-transform: none
+
+// Seed and ExecEd overrides
+.js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open #coveo-search-block-form--2 input, .no-js #coveo-search-block-form--2 input
+  color: $text-black
+  font-size: 18px
+  font-family: $font-sans
+  position: absolute
+  top: 69px
+  right: 5px
+
+// Search input overrides for Exec Ed
+.page-exec-ed
+  input.search_keys
+    .js .search-open &,
+    .no-js &
+      top: 76px
+      right: 2px
+  #navigation.search-open
+    .section
+      div#search-close
+        height: 79px
+        line-height: 60px
+        right: 6px
+        top: 3px
+        width: 55px
+// Search input overrides for Seed
+.page-seed
+  input.search_keys
+    .js .search-open &,
+    .no-js &
+      top: 76px
+      right: 5px
+  #navigation.search-open
+    .section
+      div#search-close
+        height: 79px
+        line-height: 60px
+        right: 9px
+        top: 3px
+        width: 55px
