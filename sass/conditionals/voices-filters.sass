@@ -432,8 +432,8 @@
         .view-display-id-voices_filters_pane,
         .view-display-id-all_voices_list_panel_pane
           .views-row
-            width: 44%
-            height: 410px
+            width: 43%
+            height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -451,7 +451,7 @@
             
             .views-field-field-quote div div
               width: 100%
-              height: 410px
+              height: 400px
               padding-right: 10px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
@@ -816,10 +816,36 @@
           .views-row
             width: 96%
             height: 390px
+            +breakpoint($bp-for-phone-only)
+              width: 85%
+              height: 360px
+              margin-bottom: 20px
+            +breakpoint($bp-for-tablet-range)
+              width: 73%
+            +breakpoint($bp-mobile-land)
+              display: block
+              width: 44%
+            +breakpoint($bp-tablet-pot)
+              width: 94%
+              height: 360px
+            +breakpoint($bp-tablet-land)
+              width: 100%
+              height: 360px
+            +breakpoint($bp-iphone6p-land)
+              width: 100%
+              height: 360px
             .views-field-field-quote
               div
                 div
                   height: 390px
+                  +breakpoint($bp-iphone6p-land)
+                    height: 360px
+                    font-size: 15px
+                  +breakpoint($bp-tablet-pot)
+                    height: 360px
+                    font-size: 15px
+                  +breakpoint($bp-tablet-land)
+                    height: 360px
 
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page
@@ -832,10 +858,36 @@
         .views-row
           width: 96%
           height: 390px
+          +breakpoint($bp-for-phone-only)
+            width: 85%
+            height: 360px
+            margin-bottom: 20px
+          +breakpoint($bp-for-tablet-range)
+            width: 73%
+          +breakpoint($bp-mobile-land)
+            display: block
+            width: 44%
+          +breakpoint($bp-tablet-pot)
+            width: 100%
+            height: 360px
+          +breakpoint($bp-tablet-land)
+            width: 90%
+            height: 370px
+          +breakpoint($bp-iphone6p-land)
+            width: 100%
+            height: 360px
           .views-field-field-quote
             div
               div
                 height: 390px
+                +breakpoint($bp-iphone6p-land)
+                  font-size: 15px
+                  height: 360px
+                +breakpoint($bp-tablet-pot)
+                  font-size: 15px
+                  height: 360px
+                +breakpoint($bp-tablet-land)
+                  height: 370px
         .voices_display_list_cta
           width: 240px
           margin: 10px 0px 10px 8px
@@ -843,6 +895,9 @@
             width: 80% !important
             margin-left: 4px
             margin-top: 20px
+          +breakpoint($bp-mobile-land)
+            margin: 20px auto 0px auto
+            width: 50%
 
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page
@@ -858,16 +913,46 @@
         .views-row
           width: 96%
           height: 390px
+          +breakpoint($bp-for-phone-only)
+            width: 85%
+            height: 360px
+            margin-bottom: 20px
+          +breakpoint($bp-for-tablet-range)
+            width: 73%
+          +breakpoint($bp-mobile-land)
+            display: block
+            width: 44%
+          +breakpoint($bp-tablet-pot)
+            width: 100%
+            height: 360px
+          +breakpoint($bp-tablet-land)
+            width: 90%
+            height: 370px
+          +breakpoint($bp-iphone6p-land)
+            width: 92%
+            height: 360px
           .views-field-field-quote
             div
               div
                 height: 390px
+                +breakpoint($bp-mobile-land)
+                  height: 360px
+                +breakpoint($bp-iphone6p-land)
+                  height: 360px
+                +breakpoint($bp-tablet-pot)
+                  height: 360px
+                +breakpoint($bp-tablet-land)
+                  height: 370px
+
         .voices_display_all_list_cta
           width: 240px
           margin: 10px 0px 10px 0px
           +breakpoint($bp-for-phone-only)
             margin-left: 6px
             width: 84% !important
+          +breakpoint($bp-mobile-land)
+            margin: 10px auto 10px auto
+            width: 50%
 
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page
@@ -878,7 +963,77 @@
         .views-row
           width: 96%
           height: 390px
+          +breakpoint($bp-mobile-land)
+            width: 44%
+          +breakpoint($bp-tablet-pot)
+            width: 100%
+            height: 360px
           .views-field-field-quote
             div
               div
                 height: 390px
+                +breakpoint($bp-mobile-land)
+                  height: 370px
+                +breakpoint($bp-tablet-pot)
+                  height: 360px
+                  font-size: 15px
+
+.gsb-full-bleed-page
+  .inner-main-wrapper
+    .main-header,
+    .main-footer
+      .pane-voices-filters-voices-list-cta-panel-pane
+        .views-row
+          width: 42%
+          +breakpoint($bp-for-phone-only)
+            width: 85%
+            height: 360px
+            margin-bottom: 10px
+          +breakpoint($bp-for-tablet-range)
+            width: 73%
+          +breakpoint($bp-mobile-land)
+            display: block
+            width: 44%
+          +breakpoint($bp-tablet-pot)
+            width: 66%
+            height: 360px
+          +breakpoint($bp-tablet-land)
+            width: 90%
+            height: 370px
+          +breakpoint($bp-iphone6p-land)
+            width: 82%
+          &:hover
+            .views-field-title
+              padding-top: 0px
+            .views-field-field-quote
+              div
+                div
+                  height: 390px
+                  +breakpoint($bp-tablet-pot)
+                    height: 360px
+                  +breakpoint($bp-tablet-land)
+                    height: 370px
+
+.gsb-landing-standard-page-one
+  .inner-sidebar-wrapper
+    #quicklinks,
+    .sidebar-inner
+      .pane-voices-filters-voices-filters-pane,
+      .pane-voices-filters-voices-list-cta-panel-pane,
+      .pane-voices-filters-all-voices-list-panel-pane,
+      .view-display-id-voices_single_teaser_pane
+        .view-content
+          .views-row
+            +breakpoint($bp-mobile-land)
+              display: block
+              width: 90%
+              height: 360px
+            .views-field-field-quote
+              div
+                div
+                  +breakpoint($bp-mobile-land)
+                    height: 360px
+        .voices_display_list_cta
+          +breakpoint($bp-mobile-land)
+            width: 84%
+            margin: 10px 10px 0px 0px
