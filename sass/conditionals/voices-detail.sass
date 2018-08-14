@@ -94,20 +94,23 @@
       .field-name-field-degree-year
         color: $white
         font-family: $font-light
-        font-size: 24px
+        font-size: 36px
         font-weight: normal
         margin-top: 0
         +breakpoint($bp-mobile-max)
           background-color: transparent
           color: $text-black
+          font-size: 24px
         +breakpoint($bp-for-tablet-range)
           background-color: transparent
           color: $text-black
+          font-size: 24px
 
       .label
         background-color: $text-black
         color: $white
         display: inline-block
+        font-family: $font-demi
         font-size: 14px
         font-weight: normal
         line-height: 1.2
@@ -117,7 +120,7 @@
         z-index: 6
 
       .field-name-field-title-position-single
-        font-size: 22px
+        font-size: 24px
         padding-top: 30px
         +breakpoint($bp-mobile-max)
           font-size: 16px
@@ -485,3 +488,15 @@
 
   .short-url-wrapper
     display: inline-block
+
+.node-type-voices 
+  .ds-2col-stacked-fluid 
+    .content-wrapper 
+      .group-left 
+        .field-name-field-body 
+          p:first-of-type
+            font-size: 24px
+            +breakpoint($bp-mobile-max)
+              font-size: 18px
+            +breakpoint($bp-for-tablet-range)
+              font-size: 18px
