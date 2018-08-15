@@ -20,10 +20,14 @@
         padding-top: 22px
     &.collapsed
       +breakpoint($bp-tablet-port-max)
-        +icon-before("plus", true)
+        +icon-after("plus", true)
+          float: right
+          padding-right: 20px
     &.active-trail
       +breakpoint($bp-tablet-port-max)
-        +icon-before("minus", true)
+        +icon-after("minus", true)
+          float: right
+          padding-right: 20px
     &.collapsed,
     &.active-trail
       +breakpoint($bp-tablet-port-max)

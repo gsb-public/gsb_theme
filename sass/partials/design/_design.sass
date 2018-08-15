@@ -107,10 +107,6 @@
       .no-js &,
       &.search-open
         min-width: 667px
-  .section
-    +breakpoint(1169px max-width)
-      border-bottom: 3px $black solid
-      +box-shadow($black 0 -1px 3px)
 
 // Content wrapper
 #content-wrapper
@@ -144,7 +140,10 @@
     padding: 30px 20px
   .page-alumni &
     +breakpoint($bp-tablet-port-max)
-      margin-top: 30px
+      margin-top: 100px
+  .page-faculty-research &
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-top: 50px
   .page-events &
     +breakpoint(568px min-width)
       padding: 0
@@ -1445,6 +1444,7 @@ h2.insights-label
     font-weight: normal
     font-family: 'icons'
     margin-left: 5px
+
 
 // Footer one region
 #gsb-footer-one
