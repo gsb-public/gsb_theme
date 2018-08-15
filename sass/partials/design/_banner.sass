@@ -5,6 +5,8 @@
   +breakpoint($bp-tablet-land-min)
     overflow: hidden
     padding: 14px 0 11px
+  +breakpoint($bp-for-phone-tablet-range)
+    background: $grey-hp
 
 // Banner title and subtitles
 .banner-title,
@@ -22,7 +24,40 @@
   font-size: 30px
   font-weight: bold
   line-height: 1
+  .page-programs-mba &
+    a
+      color: $section-blue-grey
+      &:hover
+        border-bottom: 2px solid $section-blue-grey
+        text-decoration: none
+    +breakpoint($bp-for-phone-only)
+      font-size: 14px
+    +breakpoint($bp-for-tablet-range)
+      font-size: 18px
+  .page-faculty-research &
+    a
+      color: $grey-hp-7
+      &:hover
+        border-bottom: 2px solid $grey-hp-7
+        text-decoration: none
+    +breakpoint($bp-for-phone-only)
+      font-size: 14px
+      top: 10px
+    +breakpoint($bp-for-tablet-range)
+      font-size: 18px
+      top: 10px
+  .page-insights &
+    a
+      color: $text-black
+      &:hover
+        border-bottom: 2px solid $text-black
+        text-decoration: none
+    +breakpoint($bp-for-phone-only)
+      font-size: 14px
+    +breakpoint($bp-for-tablet-range)
+      font-size: 18px
   .page-alumni &
+    top: 0
     a
       color: $red
       &:hover
@@ -30,19 +65,20 @@
         text-decoration: none
     +breakpoint($bp-tablet-port-max)
       font-size: 26px
+      line-height: 1.9
   +breakpoint($bp-tablet-port-max)
     font-size: 100%
     line-height: 0
     padding: 0 15px
     position: relative
-    top: 28px
+    top: -25px
   +breakpoint($bp-mobile-max)
     display: table-cell
-    height: 50px
+    height: 42px
     line-height: 1
-    top: 2px
     vertical-align: middle
     width: 98%
+    top: -44px
   +breakpoint(420px max-width)
     max-width: 210px
     line-height: 1
@@ -124,72 +160,124 @@
   display: none
   +breakpoint($bp-tablet-port-max)
     display: block
-    margin-top: 15px
+    margin-top: 50px
     position: absolute
     right: 0
     li
       display: inline-block
+      +breakpoint($bp-for-phone-only)
+        display: table-cell
     a
       color: $text-black
       font-family: $font-demi
       font-size: 13px
       line-height: 1.2
       margin: 0 8px
+      +breakpoint($bp-for-phone-only)
+        font-size: 7px
+        height: 10px
+        padding-left: 5px
 
 // First Sidebar
 #sidebar
   .sidebar
     h2
       display: none
+  +breakpoint($bp-for-tablet-range)
+    width: 100%
+    .menu
+      display: none
+    .sidebar
+      .block
+        h2
+          font-size: 16px
+          font-weight: normal
+          height: 50px
+          padding: 7px 15px 8px 13px
+          width: 129px
   +breakpoint($bp-tablet-port-max)
     width: 100%
     .menu
       display: none
     .sidebar
+      //margin-top: -50px
       h2
         border-left: 1px solid rgba($white, 0.3)
-        .page-alumni &
-          border-left: 1px solid #eb0202
         color: $white
         cursor: pointer
         display: block
-        font-size: 14px
+        font-size: 12px
         font-weight: normal
-        line-height: 1
-        padding: 12px 0 8px 32px
+        padding: 12px 15px 8px 12px
         position: absolute
         right: 0
         text-transform: capitalize
-        width: 108px
-        +icon-before("plus", true)
-        &:before
-          color: $white
-          font-size: 14px
-          line-height: 0.5
-          position: absolute
-          left: 7px
-          top: 20px
-          text-transform: none
+        top: 0
+        width: 101px
+        .svg &
+          +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
+        .no-js &, .no-svg &
+          +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-blue-grey)
+        // Alumni
+        .page-alumni &
+          background-color: $section-red
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-red)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-red)
+        // MBA
+        .page-programs-mba &
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-blue-grey)
+        // Faculty
+        .page-faculty-research &
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
+        // Insights
+        .page-insights &
+          background-color: $text-black
     .block-menu.open,
     .block-menu-block.open
+      // MBA
+      h2
+        .page-programs-mba &
+          color: $section-blue-grey
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
+      // Faculty and Research
+      .page-faculty-research &
+        .content
+          top: 48px
+        h2
+          color: $grey-hp-7
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
+      // Alumni
+      .page-alumni &
+        .content
+          top: 48px
+        h2
+          color: $section-red
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-red.svg") no-repeat 85% 47% $grey-hp)
       .content
-        margin-top: 50px
         position: absolute
         width: 100%
         z-index: 12
-      h2
-        +box-shadow(rgba($black, 0.75) 0px 3px 7px -3px inset)
-        color: $red
-        +background(linear-gradient(#e6e5e5, #f3f3f3) bottom center)
-        padding-right: 73px
-        +icon-before("minus", false)
-        &:before
-          color: $red
       .menu
         +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
         border-bottom: 10px solid $black
         display: block
         padding-left: 36px
+        +breakpoint($bp-for-tablet-range)
+          width: 60%
+          float: right
         .menu
           background: transparent
           border-bottom: 0
@@ -197,9 +285,11 @@
 // Section menu for responsive
 #sidebar
   +breakpoint($bp-tablet-port-max)
-    +background(linear-gradient(#756b5a, $grey-dark))
-    min-height: 50px
+    +background(none)
+    margin-bottom: -40px
+    height: 42px
+
     .page-programs &
-      +background(linear-gradient(#4c697a, $blue))
+      +background(none)
     .page-alumni &
-      background: #b00000
+      background: transparent

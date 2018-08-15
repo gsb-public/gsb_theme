@@ -4714,14 +4714,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     min-width: 667px;
   }
 }
-@media (max-width: 73.0625em) {
-  #navigation .section {
-    border-bottom: 3px black solid;
-    -moz-box-shadow: black 0 -1px 3px;
-    -webkit-box-shadow: black 0 -1px 3px;
-    box-shadow: black 0 -1px 3px;
-  }
-}
 
 #content-wrapper {
   position: relative;
@@ -4764,7 +4756,12 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 }
 @media (max-width: 62.4375em) {
   .page-alumni #main {
-    margin-top: 30px;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .page-faculty-research #main {
+    margin-top: 50px;
   }
 }
 @media (min-width: 35.5em) {
@@ -6798,7 +6795,7 @@ h2.insights-label {
   }
 }
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.collapsed:before {
+  .region-sidebar-first ul li.collapsed:after {
     content: "\f11b";
     display: inline;
     speak: none;
@@ -6812,10 +6809,12 @@ h2.insights-label {
     font-variant: normal;
     font-weight: normal;
     font-family: 'icons';
+    float: right;
+    padding-right: 20px;
   }
 }
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.active-trail:before {
+  .region-sidebar-first ul li.active-trail:after {
     content: "\f117";
     display: inline;
     speak: none;
@@ -6829,6 +6828,8 @@ h2.insights-label {
     font-variant: normal;
     font-weight: normal;
     font-family: 'icons';
+    float: right;
+    padding-right: 20px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -10597,6 +10598,11 @@ button.checkbox-clear-all {
     padding: 14px 0 11px;
   }
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #banner {
+    background: #f4f4f4;
+  }
+}
 
 .banner-title,
 .banner-subtitle {
@@ -10621,6 +10627,62 @@ button.checkbox-clear-all {
   font-weight: bold;
   line-height: 1;
 }
+.page-programs-mba .banner-title a {
+  color: #5a7688;
+}
+.page-programs-mba .banner-title a:hover {
+  border-bottom: 2px solid #5a7688;
+  text-decoration: none;
+}
+@media (max-width: 37.4375em) {
+  .page-programs-mba .banner-title {
+    font-size: 14px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-programs-mba .banner-title {
+    font-size: 18px;
+  }
+}
+.page-faculty-research .banner-title a {
+  color: #7d7466;
+}
+.page-faculty-research .banner-title a:hover {
+  border-bottom: 2px solid #7d7466;
+  text-decoration: none;
+}
+@media (max-width: 37.4375em) {
+  .page-faculty-research .banner-title {
+    font-size: 14px;
+    top: 10px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-faculty-research .banner-title {
+    font-size: 18px;
+    top: 10px;
+  }
+}
+.page-insights .banner-title a {
+  color: #231f20;
+}
+.page-insights .banner-title a:hover {
+  border-bottom: 2px solid #231f20;
+  text-decoration: none;
+}
+@media (max-width: 37.4375em) {
+  .page-insights .banner-title {
+    font-size: 14px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-insights .banner-title {
+    font-size: 18px;
+  }
+}
+.page-alumni .banner-title {
+  top: 0;
+}
 .page-alumni .banner-title a {
   color: #990000;
 }
@@ -10631,6 +10693,7 @@ button.checkbox-clear-all {
 @media (max-width: 62.4375em) {
   .page-alumni .banner-title {
     font-size: 26px;
+    line-height: 1.9;
   }
 }
 @media (max-width: 62.4375em) {
@@ -10639,17 +10702,17 @@ button.checkbox-clear-all {
     line-height: 0;
     padding: 0 15px;
     position: relative;
-    top: 28px;
+    top: -25px;
   }
 }
 @media (max-width: 35.5em) {
   .banner-title {
     display: table-cell;
-    height: 50px;
+    height: 42px;
     line-height: 1;
-    top: 2px;
     vertical-align: middle;
     width: 98%;
+    top: -44px;
   }
 }
 @media (max-width: 26.25em) {
@@ -10741,7 +10804,7 @@ button.checkbox-clear-all {
 @media (max-width: 62.4375em) {
   .page-alumni #utility {
     display: block;
-    margin-top: 15px;
+    margin-top: 50px;
     position: absolute;
     right: 0;
   }
@@ -10756,9 +10819,36 @@ button.checkbox-clear-all {
     margin: 0 8px;
   }
 }
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  .page-alumni #utility li {
+    display: table-cell;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  .page-alumni #utility a {
+    font-size: 7px;
+    height: 10px;
+    padding-left: 5px;
+  }
+}
 
 #sidebar .sidebar h2 {
   display: none;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar {
+    width: 100%;
+  }
+  #sidebar .menu {
+    display: none;
+  }
+  #sidebar .sidebar .block h2 {
+    font-size: 16px;
+    font-weight: normal;
+    height: 50px;
+    padding: 7px 15px 8px 13px;
+    width: 129px;
+  }
 }
 @media (max-width: 62.4375em) {
   #sidebar {
@@ -10772,68 +10862,87 @@ button.checkbox-clear-all {
     color: white;
     cursor: pointer;
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
-    line-height: 1;
-    padding: 12px 0 8px 32px;
+    padding: 12px 15px 8px 12px;
     position: absolute;
     right: 0;
     text-transform: capitalize;
-    width: 108px;
+    top: 0;
+    width: 101px;
+  }
+  .svg #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #5a7688;
+  }
+  .no-js #sidebar .sidebar h2, .no-svg #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #5a7688;
   }
   .page-alumni #sidebar .sidebar h2 {
-    border-left: 1px solid #eb0202;
+    background-color: #b00000;
   }
-  #sidebar .sidebar h2:before {
-    content: "\f11b";
-    display: inline;
-    speak: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-transform: none;
-    line-height: 1;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-family: 'icons';
+  .svg .page-alumni #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #b00000;
   }
-  #sidebar .sidebar h2:before {
-    color: white;
-    font-size: 14px;
-    line-height: 0.5;
-    position: absolute;
-    left: 7px;
-    top: 20px;
-    text-transform: none;
+  .no-js .page-alumni #sidebar .sidebar h2, .no-svg .page-alumni #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #b00000;
+  }
+  .svg .page-programs-mba #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #5a7688;
+  }
+  .no-js .page-programs-mba #sidebar .sidebar h2, .no-svg .page-programs-mba #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #5a7688;
+  }
+  .svg .page-faculty-research #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
+  }
+  .no-js .page-faculty-research #sidebar .sidebar h2, .no-svg .page-faculty-research #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
+  }
+  .page-insights #sidebar .sidebar h2 {
+    background-color: #231f20;
+  }
+  .page-programs-mba #sidebar .block-menu.open h2, .page-programs-mba
+  #sidebar .block-menu-block.open h2 {
+    color: #5a7688;
+  }
+  .svg .page-programs-mba #sidebar .block-menu.open h2, .svg .page-programs-mba
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .no-js .page-programs-mba #sidebar .block-menu.open h2, .no-svg .page-programs-mba #sidebar .block-menu.open h2, .no-js .page-programs-mba
+  #sidebar .block-menu-block.open h2, .no-svg .page-programs-mba
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
+  }
+  .page-faculty-research #sidebar .block-menu.open .content, .page-faculty-research
+  #sidebar .block-menu-block.open .content {
+    top: 48px;
+  }
+  .page-faculty-research #sidebar .block-menu.open h2, .page-faculty-research
+  #sidebar .block-menu-block.open h2 {
+    color: #7d7466;
+  }
+  .svg .page-faculty-research #sidebar .block-menu.open h2, .svg .page-faculty-research
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-taupe.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .page-alumni #sidebar .block-menu.open .content, .page-alumni
+  #sidebar .block-menu-block.open .content {
+    top: 48px;
+  }
+  .page-alumni #sidebar .block-menu.open h2, .page-alumni
+  #sidebar .block-menu-block.open h2 {
+    color: #b00000;
+  }
+  .svg .page-alumni #sidebar .block-menu.open h2, .svg .page-alumni
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-red.svg') no-repeat 85% 47% #f4f4f4;
   }
   #sidebar .block-menu.open .content,
   #sidebar .block-menu-block.open .content {
-    margin-top: 50px;
     position: absolute;
     width: 100%;
     z-index: 12;
-  }
-  #sidebar .block-menu.open h2,
-  #sidebar .block-menu-block.open h2 {
-    -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
-    box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 7px -3px inset;
-    color: #990000;
-    background: -moz-linear-gradient(#e6e5e5, #f3f3f3) bottom center;
-    background: -o-linear-gradient(#e6e5e5, #f3f3f3) bottom center;
-    background: -webkit-linear-gradient(#e6e5e5, #f3f3f3) bottom center;
-    background: linear-gradient(#e6e5e5, #f3f3f3) bottom center;
-    padding-right: 73px;
-  }
-  #sidebar .block-menu.open h2:before,
-  #sidebar .block-menu-block.open h2:before {
-    content: "\f117";
-  }
-  #sidebar .block-menu.open h2:before,
-  #sidebar .block-menu-block.open h2:before {
-    color: #990000;
   }
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
@@ -10851,23 +10960,25 @@ button.checkbox-clear-all {
     border-bottom: 0;
   }
 }
+@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar .block-menu.open .menu,
+  #sidebar .block-menu-block.open .menu {
+    width: 60%;
+    float: right;
+  }
+}
 
 @media (max-width: 62.4375em) {
   #sidebar {
-    background: -moz-linear-gradient(#756b5a, #766d5f);
-    background: -o-linear-gradient(#756b5a, #766d5f);
-    background: -webkit-linear-gradient(#756b5a, #766d5f);
-    background: linear-gradient(#756b5a, #766d5f);
-    min-height: 50px;
+    background: none;
+    margin-bottom: -40px;
+    height: 42px;
   }
   .page-programs #sidebar {
-    background: -moz-linear-gradient(#4c697a, #607c8c);
-    background: -o-linear-gradient(#4c697a, #607c8c);
-    background: -webkit-linear-gradient(#4c697a, #607c8c);
-    background: linear-gradient(#4c697a, #607c8c);
+    background: none;
   }
   .page-alumni #sidebar {
-    background: #b00000;
+    background: transparent;
   }
 }
 
