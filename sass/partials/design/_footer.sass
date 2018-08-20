@@ -386,7 +386,7 @@ input.signup-submit
       li:nth-of-type(3n)
         width: 18%
       li:nth-of-type(2n)
-        width: 20%
+        width: 18%
       li:last-of-type
         width: 16%
       +breakpoint($bp-tablet-port-max)
@@ -552,3 +552,20 @@ input.signup-submit
 .page-insights
   .footer-border
     border-top: 3px solid #990000 !important
+
+.social-block-insta
+  color: #FFFFFF
+  display: block
+  margin: 0 auto
+  width: 44px
+  height: 44px
+  .svg &
+    background: image_url("icon-insta-active.svg") no-repeat !important
+    background-size: 98% !important
+  &:after
+    content: none !important
+  &:hover
+    .svg &
+      background: image_url("icon-insta-hover.svg") no-repeat !important
+      background-size: 98% !important
+        
