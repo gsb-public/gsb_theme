@@ -590,7 +590,6 @@
     /* Homepage 3-across voices color manipulation*/
     $(function(){
         $(".view-id-gsb_voices_listing .views-row .field-name-field-background-color").each(function(index){
-          console.log(index + ":" + $(this).text() );
           var htmlColorHome = $(this).text();
               $(this).parent().find(".text-content").addClass(htmlColorHome);
         } );
