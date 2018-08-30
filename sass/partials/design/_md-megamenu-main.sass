@@ -109,10 +109,13 @@
 // Align Menu Top Items
 #header-wrapper
   border-bottom: 1px solid $red-dark
+  border-top: 0
   +breakpoint($bp-for-phone-tablet-range)
     height: 64px
   +breakpoint($bp-for-phone-only)
     height: 50px
+  &:after
+    box-shadow: none
   #header
     .section
       display: inline-block
@@ -130,8 +133,8 @@
 
 // Top Level Links
 #md-megamenu-1
-  font-family: $font-light
-  font-size: 18px
+  font-family: $font-demi
+  font-size: 20px
   padding: 35px 0 12px 180px
   .awemenu-submenu
     background-color: transparent
@@ -141,6 +144,7 @@
     a
       span
         border-bottom: 4px solid $red
+        display: inline-block
     padding-bottom: 7px
     .awemenu-submenu
       // hover for background
@@ -177,7 +181,7 @@
     // the top menu bar
     li
       .awemenu-item-title
-        padding-bottom: 26px
+        padding-bottom: 20px
         +breakpoint($bp-for-phone-only)
           font-face: $font-sans
           font-size: 16px
@@ -187,13 +191,14 @@
       border-top: 1px solid $red
       background-color: $white
       // styles to get the full white width on a browser
-      left: 53%
-      right: 47%
+      left: 50%
+      right: 50%
       margin-left: -50vw
       margin-right: -50vw
+      margin-top: 4px
       padding-top: 0
       position: relative
-      width: 100vw
+      width: 101vw
       // The "All" link for only the mobile view. Hidden on the desktop
       .overview-link-mobile-only
         display: none
@@ -321,7 +326,7 @@
     .col-md-3.col-xs-12 div
       padding-bottom: 0
     ul
-      //margin-bottom: 35px
+    //margin-bottom: 35px
     // Plus and minus on the mobile views
     .awemenu-item-level-1 > a
       +icon-after("plus", true)
