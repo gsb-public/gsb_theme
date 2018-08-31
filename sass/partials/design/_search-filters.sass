@@ -19,6 +19,7 @@
         top: 0
         width: 64px
       +breakpoint($bp-for-phone-only)
+        display: none
         height: 50px
         right: 0
         top: 0
@@ -105,10 +106,14 @@
       left: 0
     .page-exec-ed &,
     .page-seed &
-      height: 79px
+      height: 75px
       &:hover
-        height: 79px !important
+        height: 80px !important
+        margin-top: -3px
         width: 60px !important
+        +breakpoint($bp-for-phone-only)
+          height: 50px !important
+          width: 50px !important
       +breakpoint(1169px max-width)
         height: 50px
     .svg &
@@ -117,6 +122,9 @@
       &:hover
         +background((image_url("../images/icons/icon-search-white.svg") no-repeat center), $text-blue)
         background-size: 40%
+        +breakpoint($bp-for-phone-only)
+          background: transparent
+          width: 14%
     .no-js &, .no-svg &
       background: image_url("../images/icons/icon-search-active-42x42.png") no-repeat center 20px transparent
 // General search results page search
@@ -970,7 +978,10 @@ button.checkbox-clear-all
           text-transform: none
 
 // Seed and ExecEd overrides
-.js .search-open #coveo-search-block-form input, .no-js #coveo-search-block-form input, .js .search-open #coveo-search-block-form--2 input, .no-js #coveo-search-block-form--2 input
+.js .search-open #coveo-search-block-form input,
+.no-js #coveo-search-block-form input,
+.js .search-open #coveo-search-block-form--2 input,
+.no-js #coveo-search-block-form--2 input
   color: $text-black
   font-size: 18px
   font-family: $font-sans
