@@ -19,7 +19,9 @@
     width: auto !important
     left: auto !important
 // Mobile-only override styles
-#md-megamenu-1.awemenu-mobile-standard
+#md-megamenu-1.awemenu-mobile-standard,
+.md-megamenu-seed-main-menu.awemenu-mobile,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile
   background: transparent
   border-bottom: none
   padding: 0
@@ -38,9 +40,16 @@
   .link-secondary,
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
+// Change color for the seed and exec-ed
+.md-megamenu-seed-main-menu.awemenu-mobile,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile
+  span.amm-bar
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% $grey-hp-7
 // Search and hamburger menu
 // Changing the search alignment and the open close mobile hamburger
-#md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+#md-megamenu-1.awemenu-mobile-standard.md-mobile-style2,
+.md-megamenu-seed-main-menu.awemenu-mobile,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile
   .awemenu-bars
     margin-top: -12px
     padding-bottom: 0
@@ -48,6 +57,12 @@
     right: 160px
     +breakpoint($bp-for-phone-only)
       right: 36px
+.md-megamenu-executive-edu-main-menu.awemenu-mobile
+  .awemenu-bars
+    +breakpoint($bp-for-phone-only)
+      float: right
+      margin-right: 72px
+
 #navigation.search-open
   // Phone search open
   +breakpoint($bp-for-phone-only)
@@ -58,10 +73,11 @@
       width: 100%
       input#edit-search-keys
         display: inline-block
+        height: 50px
         left: 0
         position: absolute
         top: 0
-        width: 87%
+        width: 86%
   // Tablet search open
   +breakpoint($bp-for-phone-tablet-range)
     .section
@@ -82,9 +98,13 @@
         top: 0
         width: 74%
       input
+        border-bottom: 1px solid $red
         position: relative
         top: 0
         right: unset
+        width: 14%
+        &:hover
+          width: 14%
 
 #md-megamenu-1.awemenu-mobile-standard.awemenu-active
   span.amm-bar
@@ -126,7 +146,6 @@
 .page-exec-ed,
 .page-seed
   #header-wrapper
-    border-top: 3px solid $red-dark
     #header
       .section
         display: block
@@ -293,8 +312,6 @@
         width: 200px
   #header-wrapper
     position: relative
-    +breakpoint(1170px min-width)
-      border-top: $top-border-interval $red-dark solid
 
 // Responsive Section. Removed the following from _menu-main.sass so can deprecate it as necessary.
 // Mobile menu button
@@ -304,7 +321,9 @@
       left: 0
       min-width: 100%
 
-#md-megamenu-1.awemenu-mobile-standard
+#md-megamenu-1.awemenu-mobile-standard,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile-standard
   .awemenu
     border-bottom: 0
     margin-top: -7px
@@ -325,8 +344,6 @@
       padding-bottom: 0
     .col-md-3.col-xs-12 div
       padding-bottom: 0
-    ul
-    //margin-bottom: 35px
     // Plus and minus on the mobile views
     .awemenu-item-level-1 > a
       +icon-after("plus", true)
@@ -449,7 +466,7 @@
       background: $red
       .page-exec-ed &,
       .page-seed &
-        background: #7d7466
+        background: $grey-hp-7
       &:hover
         text-decoration: none
     #navigation
@@ -489,9 +506,8 @@
     cursor: pointer
     display: inline-block
 
-    .page-exec-ed &,
-    .page-seed &
-      background: #7d7466
+    .page-exec-ed &
+      background-color: $red
 
   .page-insights &
     display: none
