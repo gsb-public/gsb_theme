@@ -55,7 +55,6 @@
         +breakpoint($bp-for-phone-tablet-range)
           font-size: 20px
 
-
     div:hover
       .field-name-field-degree-year,
       .field-name-title
@@ -94,7 +93,7 @@
           cursor: pointer
           display: table
           left: 0
-          padding: 50% 25px
+          padding: 44% 25px
           position: absolute
           bottom: 0
           width: 100%
@@ -104,7 +103,7 @@
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-
+          
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
         &.brightteal
@@ -132,13 +131,17 @@
     font-weight: normal
     line-height: 1.2
     +breakpoint($bp-for-phone-only)
-      font-size: 20px
+      font-size: 25px
+    +breakpoint($bp-for-tablet-range)
+      font-size: 28px !important
 .pane-gsb-voices-listing-panel-pane-1
   +breakpoint($bp-for-phone-tablet-range)
     .pane-title
       padding-bottom: 50px
   +breakpoint($bp-for-phone-only)
     padding: 0
+  +breakpoint($bp-for-tablet-range)
+    padding: 0px 0px 0px 10px
 
 // Home page 3 across custom styles
 .pane-gsb-voices-listing-panel-pane-1
@@ -151,6 +154,8 @@
 
 .view-gsb-voices-listing.view-id-gsb_voices_listing
   padding: 0
+  +breakpoint($bp-tablet-land)
+    padding-left: 15px
   .views-row-1, .views-row-2
     +breakpoint($bp-for-phone-tablet-range)
       padding-bottom: 70px
@@ -168,7 +173,17 @@
       margin: 0 20px
       width: 40%
     +breakpoint($bp-for-phone-only)
-      width: 100%
+      width: 86%
+      height: 446px
+      margin: 0px 11px 30px 0px
+    +breakpoint($bp-for-tablet-range)
+      width: 43%
+      height: 410px
+      margin: 0px 30px 30px 0px
+    +breakpoint($bp-tablet-pot)
+      height: 440px
+    +breakpoint($bp-tablet-land)
+      width: 30%
 
     .field-name-title
       padding-top: 40px
@@ -185,10 +200,24 @@
             content: '”'
           &:before
             content: '“'
+          +breakpoint($bp-for-phone-only)
+            padding: 90px 10px 30px 20px
+            width: 100%
+            height: 410px
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 18px
+          +breakpoint($bp-for-tablet-range)
+            padding: 90px 10px 30px 20px
+            width: 100%
+            height: 410px
+          +breakpoint($bp-tablet-pot)
+            padding: 42% 25px
+
 .pane-gsb-voices-listing-panel-pane-1
   +breakpoint($bp-for-phone-tablet-range)
     .pane-title
-      padding-bottom: 50px
+      padding-bottom: 20px
+      padding-top: 10px
   +breakpoint($bp-for-phone-only)
     padding: 0
 
@@ -227,13 +256,16 @@
     +breakpoint($bp-for-phone-only)
       width: 90%
       margin: 0
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 10px
 
   .homepage_voices_cta
     width: 205px
     +breakpoint($bp-for-phone-only)
       margin-bottom: 20px
       margin: 0 auto
-      width: 90%
+      width: 86%
+      margin-left: 20px
 /* CTA Button End */
 // Removing the background span from display
 .view-gsb-voices-listing.view-id-gsb_voices_listing
