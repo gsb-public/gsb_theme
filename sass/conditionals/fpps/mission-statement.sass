@@ -16,7 +16,12 @@
     padding: 25px 20px 105px
     text-align: center
     +breakpoint($bp-mobile-max)
-      padding: 50px 20px
+      padding: 50px 30px
+    +breakpoint($bp-tablet-pot)
+      padding: 40px 35px 65px 35px
+    +breakpoint($bp-tablet-land)
+      padding: 40px 35px 65px 35px
+
     h1
       a
         color: $red
@@ -32,3 +37,7 @@
       font-size: 32px
       +breakpoint($bp-mobile-max)
         font-size: 18px
+      +breakpoint($bp-tablet-pot)
+        line-height: 1.6em
+      +breakpoint($bp-tablet-land)
+        line-height: 1.6em
