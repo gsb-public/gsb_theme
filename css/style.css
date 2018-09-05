@@ -8368,6 +8368,14 @@ input.signup-submit:hover {
     width: 64px;
   }
 }
+@media (max-width: 37.4375em) {
+  #md-megamenu-1.awemenu-mobile-standard span.amm-bar,
+  .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar {
+    height: 50px;
+    width: 50px;
+  }
+}
 #md-megamenu-1.awemenu-mobile-standard span.amm-bar:before,
 .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar:before,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar:before {
@@ -8403,10 +8411,20 @@ input.signup-submit:hover {
   }
 }
 
-@media (max-width: 37.4375em) {
-  .md-megamenu-executive-edu-main-menu.awemenu-mobile .awemenu-bars {
-    float: right;
-    margin-right: 72px;
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile .awemenu-container,
+  .md-megamenu-seed-main-menu.awemenu-mobile .awemenu-container {
+    width: unset !important;
+  }
+}
+.md-megamenu-executive-edu-main-menu.awemenu-mobile .awemenu-bars,
+.md-megamenu-seed-main-menu.awemenu-mobile .awemenu-bars {
+  float: right;
+}
+@media (min-width: 35.5625em) and (max-width: 62.4375em) {
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile .awemenu-bars,
+  .md-megamenu-seed-main-menu.awemenu-mobile .awemenu-bars {
+    right: 50px;
   }
 }
 
@@ -8775,7 +8793,6 @@ input.signup-submit:hover {
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu {
     margin-top: 63px;
-    width: 87%;
   }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
@@ -9379,6 +9396,10 @@ input.signup-submit:hover {
   color: #990000;
 }
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active-trail > a:hover {
+  color: #990000;
+}
+
+.md-mobile-style1.md-megamenu-seed-main-menu.awemenu-mobile-standard .awemenu-item a {
   color: #990000;
 }
 
@@ -11756,6 +11777,24 @@ button.checkbox-clear-all {
   .page-insights #sidebar .sidebar h2 {
     background-color: #231f20;
   }
+  .page-exec-ed #sidebar .block-menu.open .content, .page-exec-ed
+  #sidebar .block-menu-block.open .content {
+    top: 49px;
+    left: 0;
+  }
+  .page-exec-ed #sidebar .block-menu.open h2, .page-exec-ed
+  #sidebar .block-menu-block.open h2 {
+    color: #5a7688;
+  }
+  .svg .page-exec-ed #sidebar .block-menu.open h2, .svg .page-exec-ed
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .no-js .page-exec-ed #sidebar .block-menu.open h2, .no-svg .page-exec-ed #sidebar .block-menu.open h2, .no-js .page-exec-ed
+  #sidebar .block-menu-block.open h2, .no-svg .page-exec-ed
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
+  }
   .page-programs-mba #sidebar .block-menu.open h2, .page-programs-mba
   #sidebar .block-menu-block.open h2 {
     color: #5a7688;
@@ -11766,6 +11805,19 @@ button.checkbox-clear-all {
   }
   .no-js .page-programs-mba #sidebar .block-menu.open h2, .no-svg .page-programs-mba #sidebar .block-menu.open h2, .no-js .page-programs-mba
   #sidebar .block-menu-block.open h2, .no-svg .page-programs-mba
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
+  }
+  .page-programs-msx #sidebar .block-menu.open h2, .page-programs-msx
+  #sidebar .block-menu-block.open h2 {
+    color: #5a7688;
+  }
+  .svg .page-programs-msx #sidebar .block-menu.open h2, .svg .page-programs-msx
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .no-js .page-programs-msx #sidebar .block-menu.open h2, .no-svg .page-programs-msx #sidebar .block-menu.open h2, .no-js .page-programs-msx
+  #sidebar .block-menu-block.open h2, .no-svg .page-programs-msx
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
   }

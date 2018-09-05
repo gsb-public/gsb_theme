@@ -242,9 +242,28 @@
           background-color: $text-black
     .block-menu.open,
     .block-menu-block.open
+      // Executive Education
+      .page-exec-ed &
+        .content
+          top: 49px
+          left: 0
+        h2
+          color: $section-blue-grey
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
       // MBA
       h2
         .page-programs-mba &
+          color: $section-blue-grey
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
+      // MSX
+      h2
+        .page-programs-msx &
           color: $section-blue-grey
           .svg &
             +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
