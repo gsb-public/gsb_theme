@@ -124,10 +124,10 @@
 .pane-gsb-voices-listing-panel-pane-1
   padding: 0px 0px 0px 40px
   .pane-title
-    padding: 10px 0px 0px 0px
+    padding: 10px 0px 20px 0px
     color: $text-black
     font-family: $font-light
-    font-size: 36px
+    font-size: 34px
     font-weight: normal
     line-height: 1.2
     +breakpoint($bp-for-phone-only)
@@ -228,12 +228,13 @@
     background-color: $red-dark
     color: $white
     font-size: 18px
-    min-height: 60px
+    font-family: $font-demi
+    min-height: 55px
     line-height: 1.2
     margin: 50px auto 0
     padding: 20px 20px 20px 25px
     position: relative
-    width: 315px
+    width: 285px
     @extend %bg-and-box-shadow
     &:first-of-type
       border-top: 0
@@ -253,19 +254,13 @@
         color: $white
         &:after
           color: $white
-    +breakpoint($bp-for-phone-only)
-      width: 90%
-      margin: 0
     +breakpoint($bp-for-tablet-range)
       margin-top: 10px
-
-  .homepage_voices_cta
-    width: 205px
     +breakpoint($bp-for-phone-only)
-      margin-bottom: 20px
       margin: 0 auto
       width: 86%
       margin-left: 20px
+    
 /* CTA Button End */
 // Removing the background span from display
 .view-gsb-voices-listing.view-id-gsb_voices_listing
