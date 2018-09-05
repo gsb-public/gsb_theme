@@ -18,6 +18,15 @@
     top: auto !important
     width: auto !important
     left: auto !important
+// spacing overrides
+#md-megamenu-1 .row .col-md-3.col-xs-12 div
+  padding-bottom: 0
+.awemenu-nav .awemenu-megamenu-wrapper ul
+  margin-bottom: 0
+#md-megamenu-1 .awemenu-megamenu-wrapper .row .menu li.last.leaf
+  padding-bottom: 0
+#md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper
+  padding-bottom: 60px
 // Mobile-only override styles
 #md-megamenu-1.awemenu-mobile-standard,
 .md-megamenu-seed-main-menu.awemenu-mobile,
@@ -207,6 +216,8 @@
       color: $text-blue
       text-decoration: underline
   .mm-header
+    font-weight: normal
+    margin: 0
     padding: 50px 0 30px
     +breakpoint($bp-for-phone-only)
       font-size: 20px
@@ -243,7 +254,9 @@
           li
             font-family: $font-light
             font-size: 18px
+            margin-bottom: 0
             padding-bottom: 25px
+            padding-left: 0
             +breakpoint($bp-for-phone-only)
               font-size: 16px
             a
@@ -425,10 +438,10 @@
       h3.mm-header
         +breakpoint($bp-for-phone-only)
           font-size: 20px
-          margin: 0
           padding: 0 0 35px 20px
       h3.mm-header:first-of-type
         padding-top: 35px
+        margin: 0
       .menu
         li.leaf
           border-bottom: none
