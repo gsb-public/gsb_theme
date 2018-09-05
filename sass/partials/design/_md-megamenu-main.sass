@@ -115,11 +115,17 @@
         &:hover
           width: 14%
 
-#md-megamenu-1.awemenu-mobile-standard.awemenu-active
+#md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active
   span.amm-bar
-    background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $grey-hp
+    background: url(../images/icons/icon-nav-close.svg) no-repeat center/50% $grey-hp
     height: 63px
     width: 64px
+    .svg &
+      background: url("../images/icons/icon-nav-close@2x.png") no-repeat center/50% $grey-hp
+      .no-js &, .no-svg &
+        background: url(../images/icons/icon-nav-close@2x.png) no-repeat center/50% $grey-hp
     &:before
       content: ""
     +breakpoint($bp-for-phone-only)

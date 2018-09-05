@@ -8477,16 +8477,34 @@ input.signup-submit:hover {
   }
 }
 
-#md-megamenu-1.awemenu-mobile-standard.awemenu-active span.amm-bar {
-  background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% #f4f4f4;
+#md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar {
+  background: url(../images/icons/icon-nav-close.svg) no-repeat center/50% #f4f4f4;
   height: 63px;
   width: 64px;
 }
-#md-megamenu-1.awemenu-mobile-standard.awemenu-active span.amm-bar:before {
+.svg #md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar, .svg
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar, .svg
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar {
+  background: url("../images/icons/icon-nav-close@2x.png") no-repeat center/50% #f4f4f4;
+}
+.no-js .svg #md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar, .no-svg .svg #md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar, .no-js .svg
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar, .no-svg .svg
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar, .no-js .svg
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar, .no-svg .svg
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar {
+  background: url(../images/icons/icon-nav-close@2x.png) no-repeat center/50% #f4f4f4;
+}
+#md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar:before,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar:before,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar:before {
   content: "";
 }
 @media (max-width: 37.4375em) {
-  #md-megamenu-1.awemenu-mobile-standard.awemenu-active span.amm-bar {
+  #md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active span.amm-bar,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active span.amm-bar,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active span.amm-bar {
     height: 50px;
     width: 50px;
   }
