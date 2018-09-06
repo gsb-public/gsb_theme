@@ -197,8 +197,9 @@
     a
       span
         display: inline-block
-        +breakpoint($bp-for-desktop-up)
+        +breakpoint(999px min-width)
           border-bottom: 4px solid $red
+    padding-bottom: 7px
     .awemenu-submenu
       &:after
         content: ''
