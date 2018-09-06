@@ -69,6 +69,9 @@
     right: 160px
     +breakpoint($bp-for-phone-only)
       right: 36px
+    +breakpoint($bp-for-tablet-range)
+      right: 0
+      margin-right: 50px
 // Executive Ed, Seed mobile menu
 .md-megamenu-executive-edu-main-menu.awemenu-mobile,
 .md-megamenu-seed-main-menu.awemenu-mobile
@@ -77,8 +80,8 @@
       width: unset !important
   .awemenu-bars
     float: right
-    +breakpoint($bp-menus-med)
-      right: 50px
+    //+breakpoint($bp-menus-med)
+    //  right: 50px
 
 
 #navigation.search-open
@@ -95,7 +98,7 @@
         left: 0
         position: absolute
         top: 0
-        width: 86%
+        //width: 86%
   // Tablet search open
   +breakpoint($bp-for-phone-tablet-range)
     .section
@@ -103,7 +106,7 @@
         display: none
     #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
       .awemenu-bars
-        left: 30px
+        left: 115px
     #md-megamenu-1.awemenu-mobile-standard .awemenu
       margin-top: 63px
       width: 70%
@@ -114,13 +117,20 @@
         left: 219px
         position: absolute
         top: 0
-        width: 74%
+        width: 100%
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
       input
         border-bottom: 1px solid $red
         position: relative
         top: 0
         right: unset
-        width: 14%
+        +breakpoint($bp-for-phone-only)
+          width: 50px
+          height: 50px
+        +breakpoint($bp-for-tablet-range)
+          width: 64px
+          height: 64px
         &:hover
           width: 14%
 
@@ -162,7 +172,7 @@
     box-shadow: none
   #header
     .section
-      display: inline-block
+      //display: inline-block
       +breakpoint($bp-for-phone-only)
         border: none
         box-shadow: none
@@ -186,8 +196,9 @@
   .awemenu-active
     a
       span
-        border-bottom: 4px solid $red
         display: inline-block
+        +breakpoint($bp-for-desktop-up)
+          border-bottom: 4px solid $red
     .awemenu-submenu
       &:after
         content: ''
@@ -444,6 +455,10 @@
         li.leaf
           border-bottom: none
           padding-bottom: 0
+          +breakpoint($bp-for-tablet-range)
+            padding-bottom: 40px
+          +breakpoint($bp-for-phone-only)
+            padding-bottom: 35px
           a
             padding-left: 35px
     li
@@ -462,7 +477,7 @@
       border-right: 1px $red-light solid
       .page-exec-ed &,
       .page-seed &
-        border-right: 1px #9b9285 solid
+        border-right: 1px $grey-9b solid
       .page-insights &
         border-right: 0
       cursor: pointer
