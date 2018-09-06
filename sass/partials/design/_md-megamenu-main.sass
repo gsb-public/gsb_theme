@@ -186,8 +186,9 @@
   .awemenu-active
     a
       span
-        border-bottom: 4px solid $red
         display: inline-block
+        +breakpoint(999px min-width)
+          border-bottom: 4px solid $red
     padding-bottom: 7px
     .awemenu-submenu
       // hover for background
