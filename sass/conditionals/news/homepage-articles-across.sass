@@ -24,6 +24,15 @@
       +breakpoint(320px $max-width)
         font-size: 26px
         padding-bottom: 25px
+      +breakpoint($bp-tablet-pot)
+        padding-top: 30px
+        font-size: 30px
+        font-family: $font-light
+      +breakpoint($bp-tablet-land)
+        padding-top: 30px
+        font-size: 30px
+        font-family: $font-light
+
     .view-gsb-announcement-school-listing
       .view-content
         &:after
@@ -122,11 +131,11 @@
       border-bottom: 1px solid $listing-divider
       border-left: 1px solid $listing-divider
       border-right: 1px solid $listing-divider
-      padding: 32px 40px 45px 40px
+      padding: 32px 30px 45px 30px
       &:hover
         box-shadow: 0 0 4px 2px #c4c4c4
       h3
-        font-size: 32px
+        font-size: 26px
         font-weight: normal
         a
           &:hover
@@ -135,6 +144,13 @@
         +breakpoint(320px $max-width)
           font-size: 20px
           padding: 20px 0 25px 0
+        +breakpoint($bp-tablet-pot)
+          font-size: 30px
+        +breakpoint($bp-tablet-land)
+          font-size: 30px
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 0px
+          line-height: 1.3em
       .field-name-media-icon
         display: inline
         float: left
