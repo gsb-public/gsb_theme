@@ -238,11 +238,14 @@
     // the top menu bar
     li
       .awemenu-item-title
-        padding-bottom: 30px
+        padding-bottom: 31px
         +breakpoint($bp-for-phone-only)
           font-face: $font-sans
           font-size: 16px
           font-weight: bold
+          padding-bottom: 0
+        +breakpoint($bp-for-tablet-range)
+          padding-bottom: 0
     // the submenu with all the links
     .awemenu-megamenu-wrapper
       border-top: 1px solid $red
@@ -373,7 +376,6 @@
       margin-top: 49px
     +breakpoint($bp-for-tablet-range)
       margin-top: 63px
-      //width: 87%
     .overview-link-mobile-only
       color: $text-black
       display: block
