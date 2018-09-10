@@ -27,7 +27,22 @@
   padding-bottom: 0
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper
   padding-bottom: 60px
+
+// Tablet overlay for mobile menu
+.awemenu-1-mobile-active
+  +breakpoint($bp-for-tablet-range)
+    #content-wrapper
+      background-color: $text-black
+      display: inline-block
+      opacity: .50
+
 // Mobile-only override styles
+// Seed &  Exec-Ed
+#md-megamenu-2.md-megamenu-seed-main-menu.awemenu-mobile,
+#md-megamenu-3.md-megamenu-executive-edu-main-menu.awemenu-mobile
+  +breakpoint($bp-for-tablet-range)
+    width: 50%
+
 #md-megamenu-1.awemenu-mobile-standard,
 .md-megamenu-seed-main-menu.awemenu-mobile,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile
@@ -36,6 +51,9 @@
   padding: 0
   position: absolute
   top: 0
+  +breakpoint($bp-for-tablet-range)
+    right: 0
+    width: 50%
   span.amm-bar
     background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% $red
     height: 50px
@@ -80,9 +98,6 @@
       width: unset !important
   .awemenu-bars
     float: right
-    //+breakpoint($bp-menus-med)
-    //  right: 50px
-
 
 #navigation.search-open
   // Phone search open
@@ -99,7 +114,6 @@
         left: 0
         position: absolute
         top: 0
-        //width: 86%
   // Tablet search open
   +breakpoint($bp-for-phone-tablet-range)
     .section
@@ -191,6 +205,7 @@
   font-family: $font-demi
   font-size: 20px
   padding: 35px 0 35px 180px
+
   .awemenu-submenu
     background-color: transparent
     padding-top: 20px
@@ -270,11 +285,12 @@
             font-family: $font-light
             font-size: 18px
             margin-bottom: 0
-            padding-bottom: 25px
             padding-left: 0
             +breakpoint($bp-for-phone-only)
               font-size: 16px
             a
+              display: inline-block
+              padding-bottom: 25px
               &:hover
                 color: $text-blue
                 text-decoration: underline
@@ -454,22 +470,22 @@
         +breakpoint($bp-for-phone-only)
           font-size: 20px
           padding: 0 0 35px 20px
+        +breakpoint($bp-for-tablet-range)
+          font-size: 22px
+          padding: 0 0 45px 30px
       h3.mm-header:first-of-type
         padding-top: 35px
         margin: 0
       .menu
         li.leaf
-          border-bottom: none
-          padding-bottom: 0
-          +breakpoint($bp-for-tablet-range)
-            padding-bottom: 40px
-          +breakpoint($bp-for-phone-only)
-            padding-bottom: 35px
           a
+            border-bottom: none
+            padding-bottom: 0
             padding-left: 35px
-    li
-      border-bottom: 1px solid $grey-d8
-      padding-left: 0
+            +breakpoint($bp-for-tablet-range)
+              padding-bottom: 40px
+            +breakpoint($bp-for-phone-only)
+              padding-bottom: 35px
     .awemenu-item-link
       background-color: $grey-hp
 

@@ -16,7 +16,7 @@
         text-transform: none
         &:hover
           box-shadow: none
-        +breakpoint($bp-for-phone-only)
+        +breakpoint($bp-for-phone-tablet-range)
           color: $red
 
   .awemenu-submenu.awemenu-megamenu
@@ -205,6 +205,7 @@
       .leaf
         a
           color: $text-black
+    .awemenu-item.awemenu-active > a,
     .awemenu-item.awemenu-active-trail > a
       background-color: $grey-d8
       color: $red
@@ -215,3 +216,7 @@
   .awemenu-item
     a
       color: $red
+
+
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a
+  color: $red
