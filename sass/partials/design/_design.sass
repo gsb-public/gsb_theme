@@ -7,7 +7,7 @@
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
-      max-width: $max-width
+      max-width: 1095px
     .no-js &
       position: relative
 
@@ -15,13 +15,13 @@
 #logo,
 #ftr-logo
   display: inline-block
-  margin-top: 29px
+  //margin-top: 29px
   img
     display: none
   .svg &
-    background: image_url("logo.svg") no-repeat
-    background-size: 96.8%
-    height: 45px
+    background: image_url("logo.svg") no-repeat 0 20px
+    background-size: 100%
+    padding: 35px 0
     width: 159px
   .no-js &,
   .no-svg &
@@ -43,10 +43,12 @@
         margin-left: 10px
   +breakpoint(1169px max-width)
     .svg &, .no-js &, .no-svg &
+      background-position: center center
       float: left
       height: 30px
       left: 20px
-      margin: 18px 10px 0 0
+      margin: 10px 0 0
+      padding: 0
       position: relative
       width: 100px
     .page-insights &,
@@ -81,9 +83,8 @@
         min-width: auto
   +breakpoint(1170px min-width)
     float: right
+    padding: 30px 0
     position: relative
-    top: -$top-border-interval
-    margin-bottom: -$top-border-interval
     .no-js &,
     &.search-open
       min-width: 842px
