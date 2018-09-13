@@ -3,6 +3,8 @@
 // Search close button
 // this div needs to be made visible when the search box is open
 #navigation.search-open
+  .region.region-navigation
+    float: right
   .section
     div#search-close
       background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
@@ -13,17 +15,19 @@
       right: -83px
       top: 10px
       width: 55px
+      z-index: 9999
       +breakpoint($bp-for-tablet-range)
         height: 64px
         right: 0
         top: 0
         width: 64px
+        z-index: 9999
       +breakpoint($bp-for-phone-only)
-        display: none
         height: 50px
         right: 0
         top: 0
         width: 50px
+        z-index: 9999
 #search-close
   display: none
 .page-exec-ed

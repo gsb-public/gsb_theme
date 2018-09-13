@@ -8459,7 +8459,8 @@ input.signup-submit:hover {
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  #navigation.search-open .section a#search-touch-button, #navigation.search-open .section div#search-close {
+  #navigation.search-open .section a#search-touch-button,
+  #navigation.search-open .section div#search-close {
     display: none;
   }
   #navigation.search-open #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2 .awemenu-bars {
@@ -9487,6 +9488,9 @@ input.signup-submit:hover {
   color: #990000;
 }
 
+#navigation.search-open .region.region-navigation {
+  float: right;
+}
 #navigation.search-open .section div#search-close {
   background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% #990000;
   display: block;
@@ -9496,6 +9500,7 @@ input.signup-submit:hover {
   right: -83px;
   top: 10px;
   width: 55px;
+  z-index: 9999;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   #navigation.search-open .section div#search-close {
@@ -9503,15 +9508,16 @@ input.signup-submit:hover {
     right: 0;
     top: 0;
     width: 64px;
+    z-index: 9999;
   }
 }
 @media (max-width: 37.4375em) {
   #navigation.search-open .section div#search-close {
-    display: none;
     height: 50px;
     right: 0;
     top: 0;
     width: 50px;
+    z-index: 9999;
   }
 }
 
