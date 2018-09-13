@@ -33,10 +33,9 @@
   .page-seed &,
   .page-exec-ed &
     .svg &, .no-js &, .no-svg &
-      background-size: contain
       float: left
       height: 35px
-      margin: 22px 18px 0 0
+      margin: 0 18px 0 0
       position: relative
       width: 130px
       +breakpoint(1199px max-width)
@@ -91,9 +90,10 @@
   .page-exec-ed &
     +breakpoint(1170px min-width)
       float: right
+      margin-bottom: 0
+      padding: 0
       position: relative
       top: 0
-      margin-bottom: 0
       .no-js &,
       &.search-open
         min-width: 534px
@@ -101,9 +101,10 @@
   .page-seed &,
     +breakpoint(1170px min-width)
       float: right
+      padding: 0
       position: relative
-      top: -$top-border-interval
-      margin-bottom: -$top-border-interval
+      //top: -$top-border-interval
+      //margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
         min-width: 667px

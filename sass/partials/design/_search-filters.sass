@@ -32,9 +32,17 @@
   display: none
 .page-exec-ed
   #navigation.search-open
+    .region.region-navigation
+      float: none
     div.section
       div#search-close
-        right: -37px
+        +breakpoint($bp-for-phone-only)
+          height: 50px
+          right: 0
+.page-seed
+  #navigation.search-open
+    .region.region-navigation
+      float: none
 
 // Global main search
 #coveo-search-block-form,
@@ -118,8 +126,7 @@
     .page-seed &
       height: 75px
       &:hover
-        height: 80px !important
-        margin-top: -3px
+        height: 77px !important
         width: 60px !important
         +breakpoint($bp-for-phone-only)
           height: 50px !important
@@ -1010,10 +1017,10 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 79px
+        height: 80px
         line-height: 60px
         right: 6px
-        top: 3px
+        top: 0
         width: 55px
 // Search input overrides for Seed
 .page-seed
@@ -1030,3 +1037,13 @@ button.checkbox-clear-all
         right: 9px
         top: 3px
         width: 55px
+        +breakpoint($bp-for-phone-only)
+          height: 50px
+          right: 0
+          top: 0
+          width: 55px
+        +breakpoint($bp-for-tablet-range)
+          height: 64px
+          right: 0
+          top: 0
+          width: 64px
