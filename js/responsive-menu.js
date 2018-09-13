@@ -3,8 +3,8 @@
 
 Drupal.behaviors.responsiveMenu = {
   attach: function (context, settings) {
-    $(context).find('#search-close').click(function() { $(this).closest('#page').toggleClass('modal-closed modal-open');});
-    $(context).find('#search-close').click(function() { $(this).closest('#navigation').toggleClass('search-closed search-open');});$(context).find('#search-touch-button').click(function() {$('#coveo-search-block-form').addClass('open'); $(this).closest('#navigation').toggleClass('search-closed search-open');});
+    $(context).find('#search-close').click(function() { $(this).closest('#navigation').toggleClass('search-closed search-open');});
+    $(context).find('#search-touch-button').click(function() {$('#coveo-search-block-form').addClass('open'); $(this).closest('#navigation').toggleClass('search-closed search-open');});
     $(context).find('#search-close').click(function() {$('#coveo-search-block-form').removeClass('open');});
     $(context).find('#program-links-title').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('#sidebar h2').click(function() { $(this).parent().toggleClass('open');});
