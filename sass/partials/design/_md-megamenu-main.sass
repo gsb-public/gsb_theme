@@ -37,6 +37,10 @@
       opacity: .50
 
 // Mobile-only override styles
+// Main
+.md-mobile-style2.awemenu-mobile-standard .awemenu .awemenu-submenu .awemenu-item
+  padding-left: 0
+  padding-right: 0
 // Seed &  Exec-Ed
 #md-megamenu-2.md-megamenu-seed-main-menu.awemenu-mobile,
 #md-megamenu-3.md-megamenu-executive-edu-main-menu.awemenu-mobile
@@ -70,6 +74,10 @@
   .link-secondary,
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
+  .awemenu-megamenu-wrapper
+    .row
+      div[class^="col-md"]
+        width: 100%
 // Change color for the seed and exec-ed
 .md-megamenu-seed-main-menu.awemenu-mobile,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile
@@ -216,8 +224,9 @@
     a
       span
         display: inline-block
-        +breakpoint(999px min-width)
-          border-bottom: 4px solid $red
+        +breakpoint($bp-for-desktop-up)
+          border-bottom: 6px solid $red
+          padding-bottom: 20px
     padding-bottom: 7px
     .awemenu-submenu
       &:after
@@ -281,13 +290,17 @@
         display: none
       .row
         margin: 0 auto
-        width: 1170px
+        +breakpoint($bp-for-desktop-up)
+          padding-left: 40px
+          width: 1170px
         .menu
           li
             font-family: $font-light
             font-size: 18px
             margin-bottom: 0
             padding-left: 0
+            +breakpoint($bp-for-tablet-range)
+              padding-left: 15px
             +breakpoint($bp-for-phone-only)
               font-size: 16px
             a
@@ -430,7 +443,8 @@
       right: unset
       margin-left: unset
       margin-right: unset
-      padding-left: 0
+      padding: 0
+      width: unset
       &:after
         background-color: transparent
         left: auto
