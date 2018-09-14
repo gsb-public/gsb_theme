@@ -4656,9 +4656,20 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     float: left;
     height: 30px;
     left: 15px;
-    margin: 10px 10px 0 0;
+    margin: 15px 10px 0 0;
     position: relative;
     width: 100px;
+  }
+}
+@media (max-width: 73.0625em) and (max-width: 37.4375em) {
+  .svg .page-seed #logo, .no-js .page-seed #logo, .no-svg .page-seed #logo, .svg .page-exec-ed #logo, .no-js .page-exec-ed #logo, .no-svg .page-exec-ed #logo, .svg .page-seed
+  #ftr-logo, .no-js .page-seed
+  #ftr-logo, .no-svg .page-seed
+  #ftr-logo, .svg .page-exec-ed
+  #ftr-logo, .no-js .page-exec-ed
+  #ftr-logo, .no-svg .page-exec-ed
+  #ftr-logo {
+    margin-top: 10px;
   }
 }
 
@@ -9489,13 +9500,11 @@ input.signup-submit:hover {
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-submenu .leaf a {
   color: #231f20;
 }
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a,
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active-trail > a {
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a {
   background-color: #d8d8d8;
   color: #990000;
 }
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a:hover,
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active-trail > a:hover {
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a:hover {
   color: #990000;
 }
 
@@ -9675,7 +9684,8 @@ input.signup-submit:hover {
 .page-exec-ed #coveo-search-block-form .form-submit, .page-seed #coveo-search-block-form .form-submit, .page-exec-ed
 #coveo-search-block-form--2 .form-submit, .page-seed
 #coveo-search-block-form--2 .form-submit {
-  height: 75px;
+  border-bottom: 1px solid #990000;
+  height: 78px;
 }
 .page-exec-ed #coveo-search-block-form .form-submit:hover, .page-seed #coveo-search-block-form .form-submit:hover, .page-exec-ed
 #coveo-search-block-form--2 .form-submit:hover, .page-seed
@@ -9719,6 +9729,13 @@ input.signup-submit:hover {
 #coveo-search-block-form--2 .form-submit, .no-svg
 #coveo-search-block-form--2 .form-submit {
   background: url('../images/../images/icons/icon-search-active-42x42.png') no-repeat center 20px transparent;
+}
+
+.page-exec-ed #navigation.search-closed #edit-submit:hover,
+.page-seed #navigation.search-closed #edit-submit:hover {
+  border-bottom: 0;
+  height: 80px !important;
+  margin-top: -3px;
 }
 
 #coveo-search-search-form,
@@ -11504,8 +11521,22 @@ button.checkbox-clear-all {
   font-size: 18px;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
-  top: 87px;
+  top: 73px;
   right: 5px;
+}
+
+.page-seed .js .search-open #coveo-search-block-form input,
+.page-seed .no-js #coveo-search-block-form input,
+.page-seed .js .search-open #coveo-search-block-form--2 input,
+.page-seed .no-js #coveo-search-block-form--2 input {
+  top: 76px;
+}
+
+.page-exec-ed .js .search-open #coveo-search-block-form input,
+.page-exec-ed .no-js #coveo-search-block-form input,
+.page-exec-ed .js .search-open #coveo-search-block-form--2 input,
+.page-exec-ed .no-js #coveo-search-block-form--2 input {
+  top: 77px;
 }
 
 .js .search-open .page-exec-ed input.search_keys, .no-js .page-exec-ed input.search_keys {
@@ -11515,20 +11546,36 @@ button.checkbox-clear-all {
 .page-exec-ed #navigation.search-open .section div#search-close {
   height: 80px;
   line-height: 60px;
-  right: 6px;
+  right: -37px;
   top: 0;
   width: 55px;
 }
+@media (max-width: 37.4375em) {
+  .page-exec-ed #navigation.search-open .section div#search-close {
+    height: 50px;
+    right: 0;
+    top: 0;
+    width: 55px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed #navigation.search-open .section div#search-close {
+    height: 64px;
+    right: 0;
+    top: 0;
+    width: 64px;
+  }
+}
 
 .js .search-open .page-seed input.search_keys, .no-js .page-seed input.search_keys {
-  top: 76px;
+  top: 77px;
   right: 5px;
 }
 .page-seed #navigation.search-open .section div#search-close {
-  height: 79px;
+  height: 80px;
   line-height: 60px;
   right: 9px;
-  top: 3px;
+  top: 0;
   width: 55px;
 }
 @media (max-width: 37.4375em) {

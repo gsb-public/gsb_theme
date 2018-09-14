@@ -124,7 +124,8 @@
       left: 0
     .page-exec-ed &,
     .page-seed &
-      height: 75px
+      border-bottom: 1px solid $red
+      height: 78px
       &:hover
         height: 77px !important
         width: 60px !important
@@ -145,6 +146,14 @@
 
     .no-js &, .no-svg &
       background: image_url("../images/icons/icon-search-active-42x42.png") no-repeat center 20px transparent
+
+// Exec-Ed & Seed overrides
+.page-exec-ed #navigation.search-closed #edit-submit:hover,
+.page-seed #navigation.search-closed #edit-submit:hover
+  border-bottom: 0
+  height: 80px !important
+  margin-top: -3px
+
 // General search results page search
 #coveo-search-search-form,
 #coveo-search-search-form--2
@@ -995,7 +1004,7 @@ button.checkbox-clear-all
           margin-bottom: 18px
           text-transform: none
 
-// Seed and ExecEd overrides
+// Open Search location
 .js .search-open #coveo-search-block-form input,
 .no-js #coveo-search-block-form input,
 .js .search-open #coveo-search-block-form--2 input,
@@ -1004,8 +1013,20 @@ button.checkbox-clear-all
   font-size: 18px
   font-family: $font-sans
   position: absolute
-  top: 87px
+  top: 73px
   right: 5px
+
+.page-seed .js .search-open #coveo-search-block-form input,
+.page-seed .no-js #coveo-search-block-form input,
+.page-seed .js .search-open #coveo-search-block-form--2 input,
+.page-seed .no-js #coveo-search-block-form--2 input
+  top: 76px
+
+.page-exec-ed .js .search-open #coveo-search-block-form input,
+.page-exec-ed .no-js #coveo-search-block-form input,
+.page-exec-ed .js .search-open #coveo-search-block-form--2 input,
+.page-exec-ed .no-js #coveo-search-block-form--2 input
+  top: 77px
 
 // Search input overrides for Exec Ed
 .page-exec-ed
@@ -1019,23 +1040,33 @@ button.checkbox-clear-all
       div#search-close
         height: 80px
         line-height: 60px
-        right: 6px
+        right: -37px
         top: 0
         width: 55px
+        +breakpoint($bp-for-phone-only)
+          height: 50px
+          right: 0
+          top: 0
+          width: 55px
+        +breakpoint($bp-for-tablet-range)
+          height: 64px
+          right: 0
+          top: 0
+          width: 64px
 // Search input overrides for Seed
 .page-seed
   input.search_keys
     .js .search-open &,
     .no-js &
-      top: 76px
+      top: 77px
       right: 5px
   #navigation.search-open
     .section
       div#search-close
-        height: 79px
+        height: 80px
         line-height: 60px
         right: 9px
-        top: 3px
+        top: 0
         width: 55px
         +breakpoint($bp-for-phone-only)
           height: 50px
