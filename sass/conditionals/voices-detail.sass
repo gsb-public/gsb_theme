@@ -223,6 +223,7 @@
       width: 1175px
       +breakpoint($bp-mobile-max)
         padding: 25px 35px
+        padding-top: 10px
         width: 100%
       +breakpoint($bp-for-tablet-range)
         padding: 25px 35px
@@ -232,7 +233,7 @@
         float: left
         margin: 50px 50px 0 0
         padding-bottom: 20px
-        width: 816px
+        width: 850px
         +breakpoint($bp-mobile-max)
           float: none
           margin: 0
@@ -262,9 +263,9 @@
             &:after
               content: "|"
               padding-left: 10px
-          +breakpoint($bp-mobile-max)
+          +breakpoint($bp-for-phone-only)
             font-size: 14px
-            padding-left: 0
+            padding: 35px 0
           +breakpoint($bp-for-tablet-range)
             font-size: 14px
             padding-left: 0
@@ -273,6 +274,9 @@
           float: left
           font-size: 18px
           padding: 50px 0
+          +breakpoint($bp-for-phone-only)
+            font-size: 14px
+            padding: 35px 0
           .field-collection-item-field-authors
             &:before
               content: "by"
@@ -295,18 +299,19 @@
           position: relative
           top: 30px
           width: 100%
-          +breakpoint($bp-for-tablet-range)
+          +breakpoint($bp-for-phone-tablet-range)
             display: none
           a.cta
             background-color: $red-dark
             color: $white
+            font-family: $font-demi
             display: block
             float: right
             font-size: 16px
             margin-top: 50px
-            padding: 15px 20px 20px 25px
+            padding: 20px 20px 20px 25px
             position: relative
-            width: 330px
+            width: 310px
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               font-size: 18px
@@ -334,6 +339,7 @@
           flex-wrap: wrap
           float: none
           justify-content: center
+          margin: 25px 0 0 0
           width: 100%
         .field-label
           font-family: $font-demi
@@ -436,6 +442,8 @@
   .field-name-social-buttons-bottom
     .item-list ul
       margin: 0 0 0 25px
+      +breakpoint($bp-for-phone-only)
+        margin: 0
       li
         margin: 0
     li
@@ -444,6 +452,8 @@
   .field-name-social-buttons-bottom
     .item-list ul
       margin: 0 0 0 50px
+      +breakpoint($bp-for-phone-only)
+        margin: 0
 
   // Top social buttons
   .field-name-social-buttons-top
@@ -455,13 +465,16 @@
       +social-buttons-small
     +breakpoint(745px max-width)
       +social-buttons-small
+      margin-top: 0
+      margin-bottom: 25px
+      padding-left: 0
 
   // social media wrapper - fixing floats
   .social-media-wrapper
     clear: left
     display: block
     border-top: 1px solid $voices-divider
-    padding-top: 25px
+    padding-top: 20px
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
@@ -469,9 +482,7 @@
     padding: 0 20px 0 0
 
   .sharrre .box .count
-    padding-top: 8px
-    padding-right: 10px
-    padding: 8px 10px 0 0
+    padding: 8px 15px 0 0
 
   // Share this short url
   // Wrapper
@@ -480,9 +491,15 @@
     border-left: solid 1px $voices-divider
     margin-bottom: 0
     padding-left: 20px
+    line-height: 2.18
+    +breakpoint($bp-for-phone-only)
+      border-left: 0
+      padding-left: 0
 
   .short-url
     @extend %short-url
+    line-height: .8
+    width: 225px
 
   .field.field-name-social-buttons-bottom,
   .short-url-wrapper
@@ -490,18 +507,27 @@
 
   .short-url-wrapper
     display: inline-block
+    height: 50px
+    padding-top: 5px
 
 .node-type-voices 
   .ds-2col-stacked-fluid 
     .content-wrapper 
       .group-left 
-        .field-name-field-body 
+        .field-name-field-body
+          p
+            margin-bottom: 25px
           p:first-of-type
             font-size: 24px
             +breakpoint($bp-mobile-max)
               font-size: 18px
             +breakpoint($bp-for-tablet-range)
               font-size: 18px
+          .file-resource-pull-quote
+            font-family: $font-light
+            font-size: 24px
+            margin: 5px 30px 30px 0
+            width: 380px
 
 .node-type-voices 
   .ds-2col-stacked-fluid 
