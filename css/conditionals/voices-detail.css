@@ -382,6 +382,7 @@
 @media (max-width: 35.5em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper {
     padding: 25px 35px;
+    padding-top: 10px;
     width: 100%;
   }
 }
@@ -395,7 +396,7 @@
   float: left;
   margin: 50px 50px 0 0;
   padding-bottom: 20px;
-  width: 816px;
+  width: 850px;
 }
 @media (max-width: 35.5em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left {
@@ -439,10 +440,10 @@
   content: "|";
   padding-left: 10px;
 }
-@media (max-width: 35.5em) {
+@media (max-width: 37.4375em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
     font-size: 14px;
-    padding-left: 0;
+    padding: 35px 0;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -456,6 +457,12 @@
   float: left;
   font-size: 18px;
   padding: 50px 0;
+}
+@media (max-width: 37.4375em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-authors {
+    font-size: 14px;
+    padding: 35px 0;
+  }
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-authors .field-collection-item-field-authors {
   padding: 0;
@@ -485,7 +492,7 @@
   top: 30px;
   width: 100%;
 }
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-voices-cta {
     display: none;
   }
@@ -493,13 +500,14 @@
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-voices-cta a.cta {
   background-color: #860000;
   color: white;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: block;
   float: right;
   font-size: 16px;
   margin-top: 50px;
-  padding: 15px 20px 20px 25px;
+  padding: 20px 20px 20px 25px;
   position: relative;
-  width: 330px;
+  width: 310px;
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-voices-cta a.cta:after {
   content: "\f101";
@@ -544,6 +552,7 @@
     flex-wrap: wrap;
     float: none;
     justify-content: center;
+    margin: 25px 0 0 0;
     width: 100%;
   }
 }
@@ -692,6 +701,12 @@
 .node-type-voices .field-name-social-buttons-bottom .item-list ul {
   margin: 0 0 0 25px;
 }
+@media (max-width: 37.4375em) {
+  .node-type-voices .field-name-social-buttons-top .item-list ul,
+  .node-type-voices .field-name-social-buttons-bottom .item-list ul {
+    margin: 0;
+  }
+}
 .node-type-voices .field-name-social-buttons-top .item-list ul li,
 .node-type-voices .field-name-social-buttons-bottom .item-list ul li {
   margin: 0;
@@ -703,6 +718,11 @@
 }
 .node-type-voices .field-name-social-buttons-bottom .item-list ul {
   margin: 0 0 0 50px;
+}
+@media (max-width: 37.4375em) {
+  .node-type-voices .field-name-social-buttons-bottom .item-list ul {
+    margin: 0;
+  }
 }
 .node-type-voices .field-name-social-buttons-top {
   border-top: 1px #979797 solid;
@@ -729,6 +749,11 @@
   }
 }
 @media (max-width: 46.5625em) {
+  .node-type-voices .field-name-social-buttons-top {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
   .node-type-voices .field-name-social-buttons-top .sharrre .share {
     height: 30px;
     width: 30px;
@@ -752,21 +777,30 @@
   clear: left;
   display: block;
   border-top: 1px solid #979797;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 .node-type-voices .field-name-social-buttons-bottom {
   margin-top: 10px;
   padding: 0 20px 0 0;
 }
 .node-type-voices .sharrre .box .count {
-  padding-top: 8px;
-  padding-right: 10px;
-  padding: 8px 10px 0 0;
+  padding: 8px 15px 0 0;
 }
 .node-type-voices .short-url-wrapper {
   border-left: solid 1px #979797;
   margin-bottom: 0;
   padding-left: 20px;
+  line-height: 2.18;
+}
+@media (max-width: 37.4375em) {
+  .node-type-voices .short-url-wrapper {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+.node-type-voices .short-url {
+  line-height: 0.8;
+  width: 225px;
 }
 .node-type-voices .field.field-name-social-buttons-bottom,
 .node-type-voices .short-url-wrapper {
@@ -774,8 +808,13 @@
 }
 .node-type-voices .short-url-wrapper {
   display: inline-block;
+  height: 50px;
+  padding-top: 5px;
 }
 
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body p {
+  margin-bottom: 25px;
+}
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body p:first-of-type {
   font-size: 24px;
 }
@@ -788,6 +827,12 @@
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body p:first-of-type {
     font-size: 18px;
   }
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body .file-resource-pull-quote {
+  font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 5px 30px 30px 0;
+  width: 380px;
 }
 
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .field-academic-degrees,
