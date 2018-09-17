@@ -12,9 +12,28 @@
     height: 600px
     margin-top: 70px
     padding: 80px 0 0 80px
+    +breakpoint($bp-for-phone-only)
+      padding-left: 20px
+      height: 530px
+    +breakpoint($bp-tablet-pot)
+      padding-left: 25px
+      height: 500px
+    +breakpoint($bp-tablet-land)
+      padding-left: 25px
+      height: 500px
     &:before
       content: "Stanford GSB Community on Social"
       color: $white
       display: inline-block
       font-size: 36px
       padding-bottom: 50px
+      +breakpoint($bp-for-phone-only)
+        font-size: 26px
+        padding-bottom: 30px
+      +breakpoint($bp-tablet-pot)
+        font-size: 30px
+        padding-bottom: 35px
+      +breakpoint($bp-tablet-land)
+        font-size: 30px
+        padding-bottom: 35px
+
