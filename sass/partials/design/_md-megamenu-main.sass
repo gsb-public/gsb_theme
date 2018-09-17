@@ -324,19 +324,24 @@
     position: relative
     margin-right: -15px
     width: 184px
-    +breakpoint($bp-for-phone-only)
+    +breakpoint($bp-for-phone-tablet-range)
+      float: unset
       padding-left: 20px
-      width: 31%
+      margin-right: 0
+      width: 100%
       li:first-of-type
         border-top: 1px solid $grey-e
       li.leaf
+        padding: 0
         a
-          padding-left: 0
+          padding: 15px 0
     li
       border-bottom: 1px solid $grey-e
       padding: 14px 0
       &:first-of-type
         padding-top: 0
+      a
+        padding-bottom: 0
       .svg &
         background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
         background-position: right center

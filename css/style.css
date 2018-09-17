@@ -8773,13 +8773,15 @@ input.signup-submit:hover {
   margin-right: -15px;
   width: 184px;
 }
-@media (max-width: 37.4375em) {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit,
   #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility,
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility {
+    float: unset;
     padding-left: 20px;
-    width: 31%;
+    margin-right: 0;
+    width: 100%;
   }
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:first-of-type,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:first-of-type,
@@ -8787,11 +8789,17 @@ input.signup-submit:hover {
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
     border-top: 1px solid #ededed;
   }
+  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf {
+    padding: 0;
+  }
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf a {
-    padding-left: 0;
+    padding: 15px 0;
   }
 }
 #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li,
@@ -8806,6 +8814,12 @@ input.signup-submit:hover {
 #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:first-of-type,
 #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
   padding-top: 0;
+}
+#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li a {
+  padding-bottom: 0;
 }
 .svg #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li, .svg
 #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li, .svg
