@@ -489,7 +489,7 @@ function gsb_theme_form_alter(&$form, &$form_state, $form_id) {
   }
   if ($form_id == 'views_content_views_panes_content_type_edit_form' || $form_id == 'ctools_block_content_type_edit_form' || $form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form') {
     $form['#attributes']['class'][] = 'modal-add-content-form';
-    $form['buttons']['#weight'] = 99;
+    $form['buttons']['#weight'] = 500;
   }
 }
 
