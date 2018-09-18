@@ -226,7 +226,7 @@ input.signup-submit
   .region-footer-one
     padding: 60px 0px 34px 0px
     +breakpoint($bp-tablet-port-max)
-      padding: 10px 0 0px 0px
+      padding: 0px 0 0px 0px
       float: left
       width: 100%
       margin-top: 20px
@@ -248,7 +248,7 @@ input.signup-submit
 #gsb-footer-three
   .region-footer-three
     +clearfix
-    padding: 0px 0 70px 0
+    padding: 0px 0 75px 0
     position: relative
     top: 0
     clear: both
@@ -271,12 +271,13 @@ input.signup-submit
   #block-menu-menu-footer-1,
   #block-menu-menu-footer-alumni-section
     width: 30%
-    margin-left: 23%
+    margin-left: 22%
     +breakpoint($bp-tablet-port-max)
       width: 100%
       float: left
       margin: 0
-      padding-top: 15px
+      padding-top: 18px
+      padding-bottom: 0px
     .content
       border-right: 1px solid #c4c4c4
       padding-right: 25px
@@ -308,6 +309,7 @@ input.signup-submit
       +breakpoint($bp-tablet-port-max)
         text-align: left
       a
+        font-family: $font-sans
         +breakpoint($bp-tablet-port-max)
           font-size: 14px
 
@@ -315,12 +317,13 @@ input.signup-submit
   #block-menu-menu-section-menu-alumni-footer-
     li
       text-align: right
-      margin-bottom: 25px
+      margin-bottom: 20px
       display: block
       +breakpoint($bp-tablet-port-max)
         text-align: left
+        margin-bottom: 25px
     a
-      font-family: $font-demi
+      font-family: $font-sans
       font-size: 18px
       font-weight: normal
       line-height: 1.3
@@ -334,10 +337,12 @@ input.signup-submit
   #block-menu-menu-footer-1 li, 
   #block-menu-menu-footer-2 li
     text-align: right
-    margin-bottom: 25px
+    margin-bottom: 20px
     +breakpoint($bp-tablet-port-max)
       text-align: left
+      margin-bottom: 25px
     a
+      font-family: $font-sans
       +breakpoint($bp-tablet-port-max)
         font-size: 14px
 
@@ -354,7 +359,7 @@ input.signup-submit
 #gsb-footer-one
   #block-gsb-public-custom-blocks-gpcb-follow-us
     width: 44%
-    margin-right: -7%
+    margin-right: -6.5%
     float: right
     display: inline-block
     +breakpoint($bp-tablet-port-max)
@@ -370,6 +375,7 @@ input.signup-submit
       border-bottom: none
       padding-top: 10px
       font-size: 18px
+      font-family: $font-sans
       +breakpoint($bp-tablet-port-max)
         width: 100%
         float: left
@@ -430,7 +436,8 @@ input.signup-submit
 #ftr-logo
   margin-top: 0px
   .svg &
-    background-size: 98.8%
+    background: image_url("logo.svg") no-repeat 0 0px
+    background-size: 100%
     height: 75px
     width: 200px
   +breakpoint($bp-tablet-port-max)
@@ -460,6 +467,7 @@ input.signup-submit
     border-left: 1px solid #c4c4c4
     .address
       color: $text-black
+      font-family: $font-light
       font-size: 18px
       font-weight: normal
       line-height: 1.5
@@ -467,6 +475,7 @@ input.signup-submit
       +breakpoint($bp-tablet-port-max)
         font-size: 14px
         float: left
+        padding-left: 0px
     +breakpoint($bp-tablet-port-max)
       border-left: none
       font-size: 14px
@@ -569,3 +578,6 @@ input.signup-submit
       background: image_url("icon-insta-hover.svg") no-repeat !important
       background-size: 100% !important
         
+.panels-layout-gsb-homepage 
+  div#content-wrapper 
+    padding-bottom: 0
