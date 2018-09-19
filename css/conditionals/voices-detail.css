@@ -170,13 +170,25 @@
     display: none;
   }
 }
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header .mobile-profile-image .background-rail-img {
+    text-align: left;
+    margin-left: 18px;
+  }
+}
+@media (max-width: 35.5em) {
+  .node-type-voices .group-header .mobile-profile-image .background-rail-img img {
+    width: 320px;
+    height: 320px;
+  }
+}
 .node-type-voices .group-header fieldset.group-voices-group {
   border: none;
   color: white;
   height: 380px;
   margin-left: 15%;
   opacity: 0.9;
-  padding: 0 45px;
+  padding: 0 40px;
   position: absolute;
   text-align: left;
   top: 50px;
@@ -237,16 +249,16 @@
   color: white;
   display: inline-block;
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
   margin-bottom: 30px;
-  padding: 6px 8px;
+  padding: 12px 8px;
   position: relative;
   z-index: 6;
 }
 .node-type-voices .group-header fieldset.group-voices-group .field-name-field-title-position-single {
-  font-size: 24px;
+  font-size: 22px;
   padding-top: 30px;
 }
 @media (max-width: 35.5em) {
@@ -300,7 +312,8 @@
   .node-type-voices .group-header fieldset.group-voices-group.purple,
   .node-type-voices .group-header fieldset.group-voices-group.brightteal,
   .node-type-voices .group-header fieldset.group-voices-group.pink,
-  .node-type-voices .group-header fieldset.group-voices-group.charcoal {
+  .node-type-voices .group-header fieldset.group-voices-group.charcoal,
+  .node-type-voices .group-header fieldset.group-voices-group.green {
     background-color: transparent;
   }
 }
@@ -311,8 +324,8 @@
   font-size: 36px;
   font-weight: normal;
   margin: 0 auto;
-  margin-top: -83px;
-  padding: 25px 50px;
+  margin-top: -75px;
+  padding: 35px 40px 0px 73px;
   position: relative;
   text-align: left;
   width: 1108px;
@@ -324,7 +337,9 @@
     padding: 25px 18px 25px 30px;
     position: relative;
     top: 10px;
-    width: 100%;
+    width: 85%;
+    margin-left: 35px;
+    margin-top: -70px;
   }
   .node-type-voices .field-name-field-quote .mobile-profile {
     display: block;
@@ -346,15 +361,18 @@
   left: 13px;
   font-size: 90px;
   top: 16px;
+  padding-left: 23px;
 }
 @media (max-width: 35.5em) {
   .node-type-voices .field-name-field-quote:before {
     font-size: 40px;
+    padding-left: 0px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .field-name-field-quote:before {
     font-size: 40px;
+    padding-left: 0px;
   }
 }
 .node-type-voices .field-name-field-quote:after {
@@ -626,6 +644,9 @@
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .field-voices-explore-program-cta a.cta:after {
   color: #990000;
   top: 50%;
+}
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .field-voices-explore-program-cta a.cta {
+  margin-top: 0px;
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right fieldset.group-wrapper-related {
   margin-top: 30px;

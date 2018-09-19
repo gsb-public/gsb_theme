@@ -58,6 +58,16 @@
         display: block
       +breakpoint($bp-for-tablet-range)
         display: none
+      .background-rail-img
+        +breakpoint($bp-mobile-max)
+          text-align: left
+          margin-left: 18px
+        img
+          +breakpoint($bp-mobile-max)
+            width: 320px
+            height: 320px
+
+
     /* Voices title box */
     fieldset.group-voices-group
       border: none
@@ -65,7 +75,7 @@
       height: 380px
       margin-left: 15%
       opacity: .9
-      padding: 0 45px
+      padding: 0 40px
       position: absolute
       text-align: left
       top: 50px
@@ -111,16 +121,16 @@
         color: $white
         display: inline-block
         font-family: $font-demi
-        font-size: 14px
+        font-size: 16px
         font-weight: normal
         line-height: 1.2
         margin-bottom: 30px
-        padding: 6px 8px
+        padding: 12px 8px
         position: relative
         z-index: 6
 
       .field-name-field-title-position-single
-        font-size: 24px
+        font-size: 22px
         padding-top: 30px
         +breakpoint($bp-mobile-max)
           font-size: 16px
@@ -158,7 +168,8 @@
     fieldset.group-voices-group.purple,
     fieldset.group-voices-group.brightteal,
     fieldset.group-voices-group.pink,
-    fieldset.group-voices-group.charcoal
+    fieldset.group-voices-group.charcoal,
+    fieldset.group-voices-group.green
       +breakpoint($bp-for-phone-tablet-range)
         background-color: transparent
   /* Voices top quote */
@@ -169,8 +180,8 @@
     font-size: 36px
     font-weight: normal
     margin: 0 auto
-    margin-top: -83px
-    padding: 25px 50px
+    margin-top: -75px
+    padding: 35px 40px 0px 73px
     position: relative
     text-align: left
     width: 1108px
@@ -180,7 +191,9 @@
       padding: 25px 18px 25px 30px
       position: relative
       top: 10px
-      width: 100%
+      width: 85%
+      margin-left: 35px
+      margin-top: -70px
       .mobile-profile
         display: block
     +breakpoint($bp-for-tablet-range)
@@ -196,10 +209,13 @@
       left: 13px
       font-size: 90px
       top: 16px
+      padding-left: 23px
       +breakpoint($bp-mobile-max)
         font-size: 40px
+        padding-left: 0px
       +breakpoint($bp-for-tablet-range)
         font-size: 40px
+        padding-left: 0px
     &:after
       content: "”"
     .quote
@@ -384,6 +400,9 @@
             &:after
               color: $red
               top: 50%
+        .field-voices-explore-program-cta
+          a.cta
+            margin-top: 0px
         fieldset.group-wrapper-related
           margin-top: 30px
           .fieldset-wrapper
