@@ -14,6 +14,15 @@
           e.preventDefault();
         }
       });
+        $('#page').addClass('modal-closed');
+        $('.global-search input[type="submit"]').click(function(e) {
+            if ($('#page').hasClass('modal-closed')) {
+                $('#page').removeClass('modal-closed');
+                $('#page').addClass('modal-open');
+                $('.global-search input[name="search_keys"]').focus();
+                e.preventDefault();
+            }
+        });
     }
   };
 

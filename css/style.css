@@ -8323,6 +8323,23 @@ input.signup-submit:hover {
   }
 }
 
+#page.modal-open #content-wrapper,
+#page.modal-open #footer-wrapper {
+  position: relative;
+  content: "";
+  background-color: #231f20;
+  display: inline-block;
+  height: 100vh;
+  left: 55%;
+  margin-left: -55vw;
+  margin-right: -55vw;
+  opacity: 0.5;
+  position: relative;
+  right: 55%;
+  width: 101vw;
+  z-index: -1;
+}
+
 @media (min-width: 75em) {
   .awemenu-submenu.awemenu-megamenu {
     width: 1095px !important;
