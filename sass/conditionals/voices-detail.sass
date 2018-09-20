@@ -225,7 +225,7 @@
 
   // Breadcrumbs
   .breadcrumb
-    padding: 0 0 20px 35px
+    padding: 0 0 10px 35px
 
   .field-name-social-buttons-top
     border-bottom: 1px solid $voices-divider
@@ -238,7 +238,7 @@
       margin: 0 auto
       width: 1175px
       +breakpoint($bp-mobile-max)
-        padding: 25px 35px
+        padding: 25px 18px
         padding-top: 10px
         width: 100%
       +breakpoint($bp-for-tablet-range)
@@ -345,8 +345,8 @@
       .group-right
         border-top: 1px solid $voices-divider
         float: left
-        margin: 50px 0 0 0
-        padding-top: 40px
+        margin: 55px 0 0 0
+        padding-top: 36px
         width: 273px
         +breakpoint($bp-for-tablet-range)
           align-items: flex-start
@@ -357,6 +357,7 @@
           justify-content: center
           margin: 25px 0 0 0
           width: 100%
+          padding-top: 0px
         .field-label
           font-family: $font-demi
           font-size: 20px
@@ -403,6 +404,14 @@
         .field-voices-explore-program-cta
           a.cta
             margin-top: 0px
+            color: $text-green
+            &:hover
+              color: $text-green
+        .field-voices-stay-in-touch-cta
+          a.cta
+            color: $text-green
+            &:hover
+              color: $text-green
         fieldset.group-wrapper-related
           margin-top: 30px
           .fieldset-wrapper
@@ -431,7 +440,7 @@
               padding-top: 10px
             .background-rail-img
               margin-left: 0
-              margin-top: 0
+              margin-top: 10px
               position: relative
               width: 122px
               img
@@ -440,13 +449,13 @@
                 width: 122px
         .group-wrapper-tablet-2
           +breakpoint($bp-for-tablet-range)
-            margin: auto 10%
-            width: 30%
+            margin: auto 5%
+            width: 37%
             .field-label
               padding-top: 25px
         .group-wrapper-tablet-3
           +breakpoint($bp-for-tablet-range)
-            width: 30%
+            width: 34.5%
             .field-label
               padding-top: 25px
         .group-wrapper-tablet-4
