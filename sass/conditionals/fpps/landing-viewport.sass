@@ -7,8 +7,14 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+
 .pane-bundle-landing-viewport
+  align-items: center
+  display: flex
+  justify-content: center
+  overflow: hidden
   position: relative
+
   .field-name-field-homepage-image-desktop
     display: none
     +breakpoint($bp-for-desktop-up)
@@ -101,7 +107,7 @@
     font-size: 16px
     font-weight: bold
     left: 50%
-    padding-bottom: 80px
+    padding-bottom: 25%
     position: absolute
     transform: translate(-50%, -50%)
     +icon-after("arrow-med-down", true)
@@ -111,7 +117,9 @@
         padding: 0 45px
     +breakpoint($bp-for-phone-only)
       font-size: 12px
-      padding-bottom: 40px
+      padding-bottom: 15%
+    +breakpoint($bp-for-tablet-range)
+      padding-bottom: 15%
   video + .scrollLink
     bottom: 0
     padding-bottom: 10px

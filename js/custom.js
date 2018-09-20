@@ -567,6 +567,19 @@
       });
     }
   };
+    /* viewport sizing */
+    $(function() {
+      function setHeight() {
+        windowHeight = $(window).innerHeight()-75;
+        $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
+        // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
+      };
+      setHeight();
+
+      $(window).resize(function() {
+        setHeight();
+      });
+    });
     /* scroll functionality for the 2018 site refresh*/
     $(function() {
         // splash scroll
