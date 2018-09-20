@@ -20,6 +20,7 @@
     border-bottom: 2px solid $grey-hp-7
     text-decoration: none
 
+
 .banner-title
   font-size: 30px
   font-weight: bold
@@ -98,17 +99,16 @@
 
 // Programs (blue)
 .page-programs
-  #banner
-    .banner-title
-      a,
-      a:hover,
-      a:visited
-        color: $teal-light
-      a:hover
-        border-bottom: 2px solid $teal-light
-        text-decoration: none
-    +breakpoint(999px max-width)
-      min-height: 50px
+  .banner-title
+    a,
+    a:hover,
+    a:visited
+      color: $section-blue-grey
+    a:hover
+      border-bottom: 2px solid $section-blue-grey
+      text-decoration: none
+  +breakpoint(999px max-width)
+    min-height: 50px
 
 // Events (taupe)
 .page-events
