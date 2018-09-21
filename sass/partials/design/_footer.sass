@@ -254,6 +254,8 @@ input.signup-submit
     clear: both
     +breakpoint($bp-tablet-port-max)
       padding-bottom: 0px
+    +breakpoint($bp-tablet-land)
+      padding-bottom: 50px
 
 #gsb-footer-two
   #block-block-37,
@@ -278,6 +280,8 @@ input.signup-submit
       margin: 0
       padding-top: 18px
       padding-bottom: 0px
+    +breakpoint($bp-tablet-land)
+      margin-left: 21%
     .content
       border-right: 1px solid #c4c4c4
       padding-right: 25px
@@ -345,6 +349,8 @@ input.signup-submit
       font-family: $font-sans
       +breakpoint($bp-tablet-port-max)
         font-size: 14px
+      +breakpoint($bp-tablet-land)
+        font-size: 16px
 
 #gsb-footer-one
   #block-gsb-public-custom-blocks-gpcb-footer-logo
@@ -369,6 +375,8 @@ input.signup-submit
       padding-bottom: 25px
       border-bottom: none
       padding-top: 10px
+    +breakpoint($bp-tablet-land)
+      margin-right: -3%
     h2
       float: left
       padding-right: 45px
@@ -453,10 +461,11 @@ input.signup-submit
   +breakpoint($bp-tablet-land)
     .svg &, .no-js &, .no-svg &
       float: left
-      height: 54px
+      height: 70px
       left: 0px
       position: relative
       width: 185px
+      margin-top: 5px
     .page-insights &,
     .page-404 &
       left: 0
@@ -476,6 +485,8 @@ input.signup-submit
         font-size: 14px
         float: left
         padding-left: 0px
+      +breakpoint($bp-tablet-land)
+        font-size: 16px
     +breakpoint($bp-tablet-port-max)
       border-left: none
       font-size: 14px
@@ -493,6 +504,8 @@ input.signup-submit
     color: #990000
     +breakpoint($bp-tablet-port-max)
       font-size: 14px
+    +breakpoint($bp-tablet-land)
+      font-size: 16px
   li:after
     color: #c4c4c4
     content: "|"
@@ -520,6 +533,10 @@ input.signup-submit
       font-family: $font-demi
       font-weight: normal
       font-size: 14px
+      +breakpoint($bp-tablet-port-max)
+        font-size: 13px
+      +breakpoint($bp-tablet-land)
+        font-size: 13px
     #block-menu-menu-footer-3-new
       color: #FFFFFF
       font-family: $font-demi
@@ -532,6 +549,9 @@ input.signup-submit
         padding-bottom: 0px
         float: none
         position: relative
+        font-size: 13px
+      +breakpoint($bp-tablet-land)
+        font-size: 13px
       .content
         color: #FFFFFF
         a
@@ -545,6 +565,8 @@ input.signup-submit
           padding-bottom: 20px
           display: block
           margin: 4px 0
+        +breakpoint($bp-tablet-land)
+          margin-right: 25px
       li:first-of-type
         margin-left: 5px
       li:last-of-type
