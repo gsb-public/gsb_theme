@@ -148,6 +148,9 @@
       if (Modernizr.mq('(max-width: 655px)')) {
         $('.node-program.view-mode-full .ds-learn .field-name-field-video').insertAfter($('.node-program.view-mode-full .ds-learn .group-wrapper-learn'));
         $('.node-program.view-mode-full .ds-learn .field-name-field-learn-more-photo').insertAfter($('.node-program.view-mode-full .ds-learn .group-wrapper-learn'));
+        $(".field-name-social-buttons-bottom").insertBefore($('.group-wrapper-tablet-4'));
+        $(".short-url-wrapper").insertBefore($('.group-wrapper-tablet-4'));
+        //$(".social-media-wrapper").insertBefore($(".group-wrapper-tablet-4") );
       }
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
