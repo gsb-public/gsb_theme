@@ -15,6 +15,16 @@ Drupal.behaviors.responsiveMenu = {
     $(context).find('#block-menu-menu-executive-education-mega-me li').click(function() { $(this).toggleClass('open');});
     $(context).find('#block-menu-menu-mega-menu-seed li').click(function() { $(this).toggleClass('open');});
     $(context).find('#block-menu-section-27256').click(function() { $(this).toggleClass('open');});
+    $(context).find('#sidebar .menu li.expanded.active-trail').addClass('open');
+    $(context).find('#sidebar .menu li.expanded').addClass('collapsed')
+        .click(function (e){
+          if($(this).hasClass('collapsed')) {
+              e.preventDefault();
+              $(this).removeClass('collapsed');
+          } else {
+              $(this).addClass('open');
+          }
+      });
   }
 };
 
