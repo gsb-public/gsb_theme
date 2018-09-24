@@ -295,11 +295,40 @@
         display: block
         padding-left: 36px
         +breakpoint($bp-for-tablet-range)
-          width: 60%
           float: right
+          padding-left: 30px
+          width: 60%
+          .menu
+            width: 100%
+        +breakpoint($bp-for-phone-only)
+          padding-left: 35px
+
+
         .menu
           background: transparent
           border-bottom: 0
+      .expanded.active-trail
+        .menu
+          +breakpoint($bp-for-tablet-range)
+            float: unset
+            padding-left: 15px // 50px in
+            width:  100%
+          +breakpoint($bp-for-phone-only)
+            float: unset
+            padding-left: 15px // 50px in
+            width:  100%
+          .expanded.active-trail
+            .menu
+              +breakpoint($bp-for-tablet-range)
+                padding-left: 25px // 75px in
+              +breakpoint($bp-for-phone-only)
+                padding-left: 15px // 65px in
+              .expanded.active-trail
+                .menu
+                  +breakpoint($bp-for-tablet-range)
+                    padding-left: 20px // 95px in
+                  +breakpoint($bp-for-phone-only)
+                    padding-left: 15px // 85px in
 
 // Section menu for responsive
 #sidebar
@@ -312,3 +341,15 @@
       +background(none)
     .page-alumni &
       background: transparent
+  //+breakpoint($bp-for-phone-tablet-range)
+  ul.menu
+    .active-trail
+      //background-color: red
+    li.expanded.collapsed
+      ul.menu
+        display: none
+    li.expanded.collapsed.open
+      ul.menu
+        display: block
+        +breakpoint($bp-for-tablet-range)
+          width: 100%

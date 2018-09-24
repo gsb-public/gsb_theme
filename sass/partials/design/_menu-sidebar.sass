@@ -15,19 +15,28 @@
     margin-bottom: 16px
     line-height: 1.2
     +breakpoint($bp-tablet-port-max)
+      font-size: 14px
       margin-bottom: 22px
       &.first
         padding-top: 22px
+    +breakpoint($bp-for-phone-only)
+      font-size: 14px
     &.collapsed
       +breakpoint($bp-tablet-port-max)
-        +icon-after("plus", true)
-          float: right
-          padding-right: 20px
+        a
+          +icon-after("plus", true)
+          &:after
+            color: $red
+            display: inline-block
+            float: right
+            font-size: 18px
+            padding-right: 20px
     &.active-trail
       +breakpoint($bp-tablet-port-max)
-        +icon-after("minus", true)
-          float: right
-          padding-right: 20px
+        a.active-trail.active
+          +icon-after("minus", true)
+            float: right
+            padding-right: 20px
     &.collapsed,
     &.active-trail
       +breakpoint($bp-tablet-port-max)
@@ -47,6 +56,7 @@
       +breakpoint($bp-tablet-port-max)
         display: inline-block
         margin-bottom: 10px
+        width: 100%
     // Secondary children
     ul
       padding-left: 16px
@@ -72,12 +82,15 @@
             font-family: $font-sans
     a.active
       color: $text-blue
-      +breakpoint($bp-wide-min)
-        +icon-before("arrow-double-right", true)
-        &:before
-          float: left
-          font-size: 12px
-          line-height: 1.5
-          position: relative
-          left: -16px
-          width: 0
+      +icon-before("arrow-double-right", true)
+      &:before
+        float: left
+        font-size: 12px
+        line-height: 1.5
+        position: relative
+        left: -16px
+        width: 0
+
+    +breakpoint($bp-for-tablet-range)
+      .menu
+        background-color: $white
