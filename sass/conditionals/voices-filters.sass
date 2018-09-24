@@ -40,7 +40,7 @@
     .views-field-title
       color: $link-green
       font-size: 24px
-      padding: 25px 0 10px 20px
+      padding: 30px 0 10px 20px
       position: relative
       text-align: left
       a
@@ -106,7 +106,8 @@
           cursor: pointer
           display: table
           font-family: $font-demi
-          font-size: 16px
+          font-size: 18px
+          line-height: 1.4
           height: 410px
           left: 0
           padding: 80px 10px 30px 20px
@@ -146,7 +147,7 @@
 .pane-voices-filters-all-voices-list-panel-pane
   padding: 0px 0px 35px 30px
   .pane-title
-    padding: 45px 0px 0px 0px
+    padding: 45px 0px 5px 0px
     h2
       color: $text-black
       font-family: $font-light
@@ -210,6 +211,9 @@
       width: 90%
       margin-left: 0px
 
+  .voices_display_all_list_cta
+    margin-bottom: 0px
+    margin-top: 10px
   .homepage_voices_cta
     width: 205px
     +breakpoint($bp-for-phone-only)
@@ -305,7 +309,7 @@
     display: inline-block
     margin: 30px 30px 0px 0px
     position: relative
-    width: 22%
+    width: 22.06%
     height: 410px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
@@ -321,7 +325,7 @@
     .views-field-title
       color: $link-green
       font-size: 24px
-      padding: 25px 0 10px 20px
+      padding: 30px 0 10px 20px
       position: relative
       text-align: left
       a
@@ -396,7 +400,8 @@
           font-size: 16px
           padding: 80px 10px 30px 20px
           text-align: left
-          font-size: 16px
+          font-size: 18px
+          line-height: 1.4
           font-family: $font-demi
           &:after
             content: '”'
@@ -519,7 +524,7 @@
     .views-row
       &:hover
         .views-field-title
-          padding-top: 25px
+          padding-top: 30px
       width: 290px
       height: 400px
       .views-field-field-image-single-public
@@ -531,8 +536,8 @@
           div
             font-family: $font-demi
             font-size: 16px
-            line-height: 1.5
-            padding: 30% 25px
+            line-height: 1.4
+            padding: 30% 20px
             &:after
               content: '”'
             &:before
@@ -568,23 +573,23 @@
 .wide-view
   .pane-voices-filters-voices-list-cta-panel-pane
     .views-row
-      height: auto
+      height: 400px
       width: 240px
       .views-field-title
-        padding: 25px 0 10px 15px
+        padding: 30px 0 10px 20px
         a
           font-size: 20px
       &:hover
         .views-field-title
-          padding-top: 25px
+          padding-top: 30px
       .views-field-field-quote
         div
           div
             font-family: $font-demi
-            font-size: 14px
-            height: 350px
-            line-height: 1.5
-            padding: 30% 25px
+            font-size: 16px
+            height: 400px
+            line-height: 1.4
+            padding: 30% 20px
             &:after
               content: '”'
             &:before
@@ -634,8 +639,8 @@
       div
         div
           font-family: $font-demi
-          font-size: 16px
-          line-height: 1.5
+          font-size: 18px
+          line-height: 1.4
           padding: 30% 25px
           &:after
             content: '”'
@@ -1037,3 +1042,29 @@
           +breakpoint($bp-mobile-land)
             width: 84%
             margin: 10px 10px 0px 0px
+
+.gsb-full-bleed-page
+  .full-bleed-header,
+  .featured-content
+    .pane-voices-filters-all-voices-list-panel-pane
+      padding-left: 0px
+      .pane-title
+        width: 1170px
+        margin: 0 auto
+    .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
+    .view-display-id-voices_filters_pane
+      width: 1170px
+      margin: 0 auto
+      .views-row
+        width: 22.12%
+        .views-field-field-quote
+          div
+            div
+              font-size: 18px
+              padding: 36% 20px
+              line-height: 1.4
+              width: 100.5%
+    .pane-voices-filters-voices-filters-pane
+      .view-content
+        margin-left: 0px
+  
