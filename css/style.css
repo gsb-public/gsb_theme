@@ -6813,14 +6813,20 @@ h2.insights-label {
 }
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li {
+    font-size: 14px;
     margin-bottom: 22px;
   }
   .region-sidebar-first ul li.first {
     padding-top: 22px;
   }
 }
+@media (max-width: 37.4375em) {
+  .region-sidebar-first ul li {
+    font-size: 14px;
+  }
+}
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.collapsed:after {
+  .region-sidebar-first ul li.collapsed a:after {
     content: "\f11b";
     display: inline;
     speak: none;
@@ -6834,12 +6840,17 @@ h2.insights-label {
     font-variant: normal;
     font-weight: normal;
     font-family: 'icons';
+  }
+  .region-sidebar-first ul li.collapsed a:after {
+    color: #990000;
+    display: inline-block;
     float: right;
+    font-size: 18px;
     padding-right: 20px;
   }
 }
 @media (max-width: 62.4375em) {
-  .region-sidebar-first ul li.active-trail:after {
+  .region-sidebar-first ul li.active-trail a.active-trail.active:after {
     content: "\f117";
     display: inline;
     speak: none;
@@ -6878,6 +6889,7 @@ h2.insights-label {
   .region-sidebar-first ul li a {
     display: inline-block;
     margin-bottom: 10px;
+    width: 100%;
   }
 }
 .region-sidebar-first ul li ul {
@@ -6912,29 +6924,32 @@ h2.insights-label {
 .region-sidebar-first ul li a.active {
   color: #2d6280;
 }
-@media (min-width: 62.5em) {
-  .region-sidebar-first ul li a.active:before {
-    content: "\f101";
-    display: inline;
-    speak: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-transform: none;
-    line-height: 1;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-family: 'icons';
-  }
-  .region-sidebar-first ul li a.active:before {
-    float: left;
-    font-size: 12px;
-    line-height: 1.5;
-    position: relative;
-    left: -16px;
-    width: 0;
+.region-sidebar-first ul li a.active:before {
+  content: "\f101";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+}
+.region-sidebar-first ul li a.active:before {
+  float: left;
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  left: -16px;
+  width: 0;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .region-sidebar-first ul li .menu {
+    background-color: white;
   }
 }
 
@@ -12171,8 +12186,59 @@ button.checkbox-clear-all {
 @media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
-    width: 60%;
     float: right;
+    padding-left: 30px;
+    width: 60%;
+  }
+  #sidebar .block-menu.open .menu .menu,
+  #sidebar .block-menu-block.open .menu .menu {
+    width: 100%;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .block-menu.open .menu,
+  #sidebar .block-menu-block.open .menu {
+    padding-left: 35px;
+  }
+}
+@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu {
+    float: unset;
+    padding-left: 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu {
+    float: unset;
+    padding-left: 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu {
+    padding-left: 25px;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu,
+  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu {
+    padding-left: 15px;
   }
 }
 
@@ -12187,6 +12253,17 @@ button.checkbox-clear-all {
   }
   .page-alumni #sidebar {
     background: transparent;
+  }
+}
+#sidebar ul.menu li.expanded.collapsed ul.menu {
+  display: none;
+}
+#sidebar ul.menu li.expanded.collapsed.open ul.menu {
+  display: block;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #sidebar ul.menu li.expanded.collapsed.open ul.menu {
+    width: 100%;
   }
 }
 
