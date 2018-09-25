@@ -242,6 +242,11 @@
           background-color: $text-black
     .block-menu.open,
     .block-menu-block.open
+      .content
+        position: absolute
+        top: 48px
+        width: 100%
+        z-index: 12
       // Executive Education
       .page-exec-ed &
         .content
@@ -285,10 +290,7 @@
           color: $section-red
           .svg &
             +background(image_url("icons/inThisSection-arrow-up-red.svg") no-repeat 85% 47% $grey-hp)
-      .content
-        position: absolute
-        width: 100%
-        z-index: 12
+
       .menu
         +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
         border-bottom: 10px solid $black
