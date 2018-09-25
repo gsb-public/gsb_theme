@@ -12093,6 +12093,13 @@ button.checkbox-clear-all {
   .page-insights #sidebar .sidebar h2 {
     background-color: #231f20;
   }
+  #sidebar .block-menu.open .content,
+  #sidebar .block-menu-block.open .content {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    z-index: 12;
+  }
   .page-exec-ed #sidebar .block-menu.open .content, .page-exec-ed
   #sidebar .block-menu-block.open .content {
     top: 49px;
@@ -12160,12 +12167,6 @@ button.checkbox-clear-all {
   .svg .page-alumni #sidebar .block-menu.open h2, .svg .page-alumni
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-red.svg') no-repeat 85% 47% #f4f4f4;
-  }
-  #sidebar .block-menu.open .content,
-  #sidebar .block-menu-block.open .content {
-    position: absolute;
-    width: 100%;
-    z-index: 12;
   }
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
