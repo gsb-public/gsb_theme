@@ -8393,21 +8393,17 @@ input.signup-submit:hover {
   }
 }
 
-#page.modal-open #content-wrapper,
-#page.modal-open #footer-wrapper {
-  position: relative;
-  content: "";
-  background-color: #231f20;
-  display: inline-block;
-  height: 100vh;
-  left: 55%;
-  margin-left: -55vw;
-  margin-right: -55vw;
-  opacity: 0.5;
-  position: relative;
-  right: 55%;
-  width: 101vw;
-  z-index: -1;
+@media (min-width: 75em) {
+  #page.modal-open #hero,
+  #page.modal-open #content-wrapper,
+  #page.modal-open #footer-wrapper {
+    background-size: cover;
+    text-rendering: optimizeLegibility;
+    background: #231f20 !important;
+    opacity: 0.1;
+    position: relative;
+    z-index: -1;
+  }
 }
 
 @media (min-width: 75em) {
@@ -8448,7 +8444,7 @@ input.signup-submit:hover {
 }
 
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .md-style2.awemenu-standard .awemenu > .awemenu-item > a {
@@ -8503,6 +8499,7 @@ input.signup-submit:hover {
   #md-megamenu-1.awemenu-mobile-standard span.amm-bar,
   .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar {
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/49.5% #990000;
     height: 64px;
     width: 64px;
   }
@@ -8511,6 +8508,7 @@ input.signup-submit:hover {
   #md-megamenu-1.awemenu-mobile-standard span.amm-bar,
   .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar {
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% #990000;
     height: 50px;
     width: 50px;
   }
@@ -8775,7 +8773,7 @@ input.signup-submit:hover {
 #md-megamenu-1 .mm-header {
   font-weight: normal;
   margin: 0;
-  padding: 50px 0 30px;
+  padding: 30px 0 30px;
 }
 @media (max-width: 37.4375em) {
   #md-megamenu-1 .mm-header {
@@ -8839,7 +8837,7 @@ input.signup-submit:hover {
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
   display: inline-block;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:hover {
   color: #2d6280;
@@ -9301,6 +9299,7 @@ input.signup-submit:hover {
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   #search-touch-button {
+    background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/42% #990000;
     position: absolute;
     right: 0;
     top: 0;
@@ -9309,6 +9308,7 @@ input.signup-submit:hover {
 }
 @media (max-width: 37.4375em) {
   #search-touch-button {
+    background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/48% #990000;
     height: 50px;
     position: absolute;
     top: 0;
