@@ -9652,9 +9652,9 @@ input.signup-submit:hover {
   height: 60px;
   line-height: 60px;
   position: absolute;
-  right: -83px;
-  top: 20px;
-  width: 55px;
+  right: -84px;
+  top: 13px;
+  width: 60px;
   z-index: 9999;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -13684,6 +13684,19 @@ div.callout br {
 }
 
 @media (min-width: 75em) {
+  #page.modal-open #hero,
+  #page.modal-open #content-wrapper,
+  #page.modal-open #footer-wrapper {
+    background-size: cover;
+    text-rendering: optimizeLegibility;
+    background: #231f20 !important;
+    opacity: 0.1;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 75em) {
   .awemenu-submenu.awemenu-megamenu {
     width: 1095px !important;
     left: auto !important;
@@ -13721,7 +13734,7 @@ div.callout br {
 }
 
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .md-style2.awemenu-standard .awemenu > .awemenu-item > a {
@@ -13776,6 +13789,7 @@ div.callout br {
   #md-megamenu-1.awemenu-mobile-standard span.amm-bar,
   .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar {
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/49.5% #990000;
     height: 64px;
     width: 64px;
   }
@@ -13784,6 +13798,7 @@ div.callout br {
   #md-megamenu-1.awemenu-mobile-standard span.amm-bar,
   .md-megamenu-seed-main-menu.awemenu-mobile span.amm-bar,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar {
+    background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% #990000;
     height: 50px;
     width: 50px;
   }
@@ -14048,7 +14063,7 @@ div.callout br {
 #md-megamenu-1 .mm-header {
   font-weight: normal;
   margin: 0;
-  padding: 50px 0 30px;
+  padding: 30px 0 30px;
 }
 @media (max-width: 37.4375em) {
   #md-megamenu-1 .mm-header {
@@ -14112,7 +14127,7 @@ div.callout br {
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
   display: inline-block;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:hover {
   color: #2d6280;
@@ -14133,13 +14148,15 @@ div.callout br {
   margin-right: -15px;
   width: 184px;
 }
-@media (max-width: 37.4375em) {
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit,
   #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility,
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility {
+    float: unset;
     padding-left: 20px;
-    width: 31%;
+    margin-right: 0;
+    width: 100%;
   }
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:first-of-type,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:first-of-type,
@@ -14147,11 +14164,17 @@ div.callout br {
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
     border-top: 1px solid #ededed;
   }
+  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf,
+  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf {
+    padding: 0;
+  }
   #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf a,
   #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf a {
-    padding-left: 0;
+    padding: 15px 0;
   }
 }
 #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li,
@@ -14166,6 +14189,12 @@ div.callout br {
 #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:first-of-type,
 #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
   padding-top: 0;
+}
+#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li a,
+#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li a {
+  padding-bottom: 0;
 }
 .svg #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li, .svg
 #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li, .svg
@@ -14560,6 +14589,7 @@ div.callout br {
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   #search-touch-button {
+    background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/42% #990000;
     position: absolute;
     right: 0;
     top: 0;
@@ -14568,6 +14598,7 @@ div.callout br {
 }
 @media (max-width: 37.4375em) {
   #search-touch-button {
+    background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/48% #990000;
     height: 50px;
     position: absolute;
     top: 0;
