@@ -25,7 +25,7 @@
     margin: 30px 30px 0px 0px
     position: relative
     width: 22%
-    height: 410px
+    height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -62,7 +62,7 @@
             color: $green-light
             text-decoration: none
         +breakpoint($bp-for-phone-tablet-range)
-          font-size: 18px
+          font-size: 20px
 
     div:hover
       .views-field-field-degree-year,
@@ -108,12 +108,12 @@
           font-family: $font-demi
           font-size: 18px
           line-height: 1.4
-          height: 410px
+          height: 400px
           left: 0
-          padding: 80px 10px 30px 20px
+          padding: 36% 20px
           position: absolute
           top: 0
-          width: 100%
+          width: 100.5%
           opacity: 0
           text-align: left
           -webkit-transition: opacity 500ms
@@ -157,7 +157,7 @@
       +breakpoint($bp-for-phone-only)
         font-size: 24px
       +breakpoint($bp-mobile-land)
-        font-size: 21px
+        font-size: 20px
       +breakpoint($bp-tablet-pot)
         font-size: 24px
       +breakpoint($bp-tablet-land)
@@ -302,6 +302,7 @@
       display: flex
       flex-wrap: wrap
       align-items: flex-start
+      margin-left: 20px
   .view-content > div
     vertical-align: top
 
@@ -310,7 +311,7 @@
     margin: 30px 30px 0px 0px
     position: relative
     width: 22.06%
-    height: 410px
+    height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -347,7 +348,7 @@
             color: $green-light
             text-decoration: none
         +breakpoint($bp-for-phone-tablet-range)
-          font-size: 18px
+          font-size: 20px
 
     div:hover
       .views-field-field-degree-year,
@@ -387,18 +388,17 @@
           color: $white
           cursor: pointer
           display: table
-          height: 410px
+          height: 400px
           left: 0
           position: absolute
           top: 0
-          width: 100%
+          width: 100.5%
           opacity: 0
           -webkit-transition: opacity 500ms
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-          font-size: 16px
-          padding: 80px 10px 30px 20px
+          padding: 36% 20px
           text-align: left
           font-size: 18px
           line-height: 1.4
@@ -482,7 +482,7 @@
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 29.38%
-            height: 410px
+            height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -500,7 +500,7 @@
    
             .views-field-field-quote div div
               width: 100%
-              height: 410px
+              height: 400px
               padding-right: 10px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
@@ -509,12 +509,12 @@
               padding: 0px 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
-            padding-top: 50px
+            padding-top: 30px
   .full-header
     .view-display-id-voices_filters_pane,
     .view-display-id-all_voices_list_panel_pane
       .views-row:hover .views-field-title
-        padding-top: 50px
+        padding-top: 30px
 /* full bleed and landing page one main header and main footer styles end*/
 
 /* Voices Multiple Criteria with CTA - OVERIDES */
@@ -575,10 +575,15 @@
     .views-row
       height: 400px
       width: 240px
+      +breakpoint($bp-for-phone-tablet-range)
+        width: 90%
+        height: 390px
       .views-field-title
         padding: 30px 0 10px 20px
         a
-          font-size: 20px
+          font-size: 24px
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 20px
       &:hover
         .views-field-title
           padding-top: 30px
@@ -586,7 +591,7 @@
         div
           div
             font-family: $font-demi
-            font-size: 16px
+            font-size: 18px
             height: 400px
             line-height: 1.4
             padding: 30% 20px
@@ -594,6 +599,10 @@
               content: '”'
             &:before
               content: '“'
+            +breakpoint($bp-for-phone-tablet-range)
+              font-size: 16px
+              line-height: 1.5
+              height: 390px
     .pane-content
       .voices_display_list_cta
         background-color: $white
@@ -615,8 +624,12 @@
               color: $teal-light
       .view-content
         margin-left: 30px
+        +breakpoint($bp-for-phone-tablet-range)
+          margin-left: 25px
     .pane-title
       margin-left: 30px
+      +breakpoint($bp-for-phone-tablet-range)
+        margin-left: 25px
 
 .pane-voices-filters-voices-list-cta-panel-pane
   h2
@@ -641,7 +654,7 @@
           font-family: $font-demi
           font-size: 18px
           line-height: 1.4
-          padding: 30% 25px
+          padding: 30% 20px
           &:after
             content: '”'
           &:before
@@ -706,6 +719,12 @@
         margin-left: 25px
       +breakpoint($bp-for-tablet-range)
         width: auto
+  .pane-voices-filters-voices-list-cta-panel-pane
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-left: 25px
+  .pane-voices-filters-all-voices-list-panel-pane
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-left: 30px
 
 .inner-main-wrapper
   .main-header,
@@ -728,7 +747,7 @@
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 40%
-            height: 410px
+            height: 400px
             +breakpoint($bp-for-phone-only)
               width: auto
               margin-left: 25px
@@ -822,9 +841,10 @@
             width: 96%
             height: 390px
             +breakpoint($bp-for-phone-only)
-              width: 85%
+              width: 86%
               height: 360px
               margin-bottom: 20px
+              margin-left: 10px
             +breakpoint($bp-for-tablet-range)
               width: 73%
             +breakpoint($bp-mobile-land)
@@ -886,10 +906,10 @@
               div
                 height: 390px
                 +breakpoint($bp-iphone6p-land)
-                  font-size: 15px
+                  font-size: 16px
                   height: 360px
                 +breakpoint($bp-tablet-pot)
-                  font-size: 15px
+                  font-size: 16px
                   height: 360px
                 +breakpoint($bp-tablet-land)
                   height: 370px
@@ -1009,7 +1029,7 @@
             width: 82%
           &:hover
             .views-field-title
-              padding-top: 0px
+              padding-top: 30px
             .views-field-field-quote
               div
                 div
@@ -1048,15 +1068,32 @@
   .featured-content
     .pane-voices-filters-all-voices-list-panel-pane
       padding-left: 0px
+      +breakpoint($bp-for-phone-tablet-range)
+        padding-left: 30px  
       .pane-title
         width: 1170px
         margin: 0 auto
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
+          
     .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
     .view-display-id-voices_filters_pane
       width: 1170px
       margin: 0 auto
+      +breakpoint($bp-for-phone-tablet-range)
+        width: 100%
       .views-row
         width: 22.12%
+        +breakpoint($bp-for-phone-tablet-range)
+          display: block
+          width: auto
+        +breakpoint($bp-for-tablet-range)
+          width: 44%
+          display: block
+        +breakpoint($bp-tablet-pot)
+          width: 41%
+        +breakpoint($bp-tablet-land)
+          width: 30%
         .views-field-field-quote
           div
             div
@@ -1064,7 +1101,44 @@
               padding: 36% 20px
               line-height: 1.4
               width: 100.5%
-    .pane-voices-filters-voices-filters-pane
+              +breakpoint($bp-for-phone-tablet-range)
+                font-size: 16px
+                line-height: 1.5
+    .pane-voices-filters-voices-filters-pane,
+    .pane-voices-filters-voices-list-cta-panel-pane
       .view-content
         margin-left: 0px
-  
+        +breakpoint($bp-for-phone-tablet-range)
+          margin-left: 30px
+    .pane-voices-filters-voices-list-cta-panel-pane
+      .pane-title
+        width: 1170px
+        margin: 0 auto
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
+    .view-display-id-voices_list_cta_panel_pane
+      width: 1170px
+      margin: 0 auto
+      +breakpoint($bp-for-phone-tablet-range)
+        width: 100%
+      .views-row
+        width: 22.12%
+        +breakpoint($bp-for-phone-tablet-range)
+          display: block
+          width: auto
+        +breakpoint($bp-for-tablet-range)
+          width: 44%
+          display: block
+        +breakpoint($bp-tablet-pot)
+          width: 41%
+        +breakpoint($bp-tablet-land)
+          width: 30%
+        .views-field-field-quote
+          div
+            div
+              font-size: 18px
+              +breakpoint($bp-for-phone-tablet-range)
+                font-size: 16px
+                line-height: 1.5
+
+
