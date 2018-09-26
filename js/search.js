@@ -23,6 +23,12 @@
                 e.preventDefault();
             }
         });
+        $(document).keydown(function(event) {
+            if (event.keyCode == 27) {
+                $('#page').removeClass('modal-open');
+                $('#navigation').removeClass('search-open');
+            }
+        });
     }
   };
 
