@@ -603,3 +603,50 @@ input.signup-submit
 .panels-layout-gsb-homepage 
   div#content-wrapper 
     padding-bottom: 0
+
+#gsb-footer-one
+  .region-footer-one
+    #block-block-26
+      .exed-title
+        font-size: 28px
+      .exed-sub-title
+        font-size: 18px
+        font-family: $font-demi
+
+#gsb-footer-two
+  .region-footer-two
+    #block-menu-menu-executive-education-footer
+      float: right
+      .content
+        border-right: 1px solid #c4c4c4
+        padding-right: 25px
+        li
+          text-align: right
+          margin-bottom: 15px
+        li.last
+          margin-bottom: 0px
+
+#gsb-footer-three
+  #block-menu-menu-footer-5
+    +breakpoint($bp-tablet-port-max)
+      width: 100%
+      float: left
+    li
+      float: left
+      font-size: 18px
+      color: #990000
+      +breakpoint($bp-tablet-port-max)
+        font-size: 14px
+      +breakpoint($bp-tablet-land)
+        font-size: 16px
+    li:after
+      color: #c4c4c4
+      content: "|"
+      margin-left: 15px
+    li:nth-of-type(2n)
+      padding-left: 15px
+    li.last
+      padding-left: 15px
+      &:after
+        content: none
+        margin-left: 0px
