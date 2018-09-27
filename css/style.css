@@ -8495,6 +8495,14 @@ input.signup-submit:hover {
     z-index: -1;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #page.modal-open #hero,
+  #page.modal-open #content-wrapper,
+  #page.modal-open #footer-wrapper {
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
 
 @media (min-width: 75em) {
   .awemenu-submenu.awemenu-megamenu {
@@ -8537,16 +8545,14 @@ input.signup-submit:hover {
   padding-bottom: 30px;
 }
 
-.md-style2.awemenu-standard .awemenu > .awemenu-item > a {
-  line-height: 1.3;
+@media (min-width: 75em) {
+  #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper .overview-link-mobile-only {
+    display: none;
+  }
 }
 
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .awemenu-1-mobile-active #content-wrapper {
-    background-color: #231f20;
-    display: inline-block;
-    opacity: 0.5;
-  }
+.md-style2.awemenu-standard .awemenu > .awemenu-item > a {
+  line-height: 1.3;
 }
 
 .md-mobile-style2.awemenu-mobile-standard .awemenu .awemenu-submenu .awemenu-item {
@@ -8831,19 +8837,6 @@ input.signup-submit:hover {
     padding-bottom: 20px;
   }
 }
-#md-megamenu-1 .awemenu-active .awemenu-submenu:after {
-  content: "";
-  background-color: #231f20;
-  display: inline-block;
-  height: 100vh;
-  left: 55%;
-  margin-left: -55vw;
-  margin-right: -55vw;
-  opacity: 0.5;
-  position: relative;
-  right: 55%;
-  width: 101vw;
-}
 #md-megamenu-1 .awemenu-active .awemenu-item-title {
   color: #231f20;
 }
@@ -8899,9 +8892,6 @@ input.signup-submit:hover {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .overview-link-mobile-only {
-  display: none;
-}
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row {
   margin: 0 auto;
 }
@@ -8925,6 +8915,14 @@ input.signup-submit:hover {
 @media (max-width: 37.4375em) {
   #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li {
     font-size: 16px;
+  }
+}
+#md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li .overview-link-mobile-only {
+  display: none;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li .overview-link-mobile-only {
+    display: block;
   }
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
