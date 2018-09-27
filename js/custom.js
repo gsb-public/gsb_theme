@@ -610,4 +610,10 @@
               $(this).parent().find(".text-content").addClass(htmlColorHome);
         } );
     });
+    /* Overlay */
+    $(function(){
+      $('#md-megamenu-1').hover( function(){
+        $(this).closest('#page').toggleClass('modal-closed modal-open');
+      } );
+    });
 }(jQuery));
