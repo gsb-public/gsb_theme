@@ -230,7 +230,7 @@ input.signup-submit
       float: left
       width: 100%
       margin-top: 20px
-      border-bottom: 1px solid #c4c4c4
+      border-bottom: none
       margin-bottom: 5px
 
 //Footer two region
@@ -266,8 +266,6 @@ input.signup-submit
     +breakpoint($bp-tablet-port-max)
       width: 100%
       float: left
-      padding-top: 20px
-      padding-bottom: 20px
 
 #gsb-footer-two   
   #block-menu-menu-footer-1,
@@ -373,8 +371,9 @@ input.signup-submit
       width: 100%
       margin-bottom: 0px
       padding-bottom: 25px
-      border-bottom: none
+      border-bottom: 1px solid #c4c4c4
       padding-top: 10px
+      max-width: 100%
     +breakpoint($bp-tablet-land)
       margin-right: -3%
     h2
@@ -617,20 +616,37 @@ input.signup-submit
   .region-footer-two
     #block-menu-menu-executive-education-footer
       float: right
+      +breakpoint($bp-tablet-port-max)
+        float: left
+        width: 100%
+        font-size: 14px
+        padding: 20px 0px 20px 0px
       .content
         border-right: 1px solid #c4c4c4
         padding-right: 25px
+        +breakpoint($bp-tablet-port-max)
+          padding-right: 0px
+          border-right: 0px
         li
           text-align: right
           margin-bottom: 15px
+          +breakpoint($bp-tablet-port-max)
+            text-align: left
+          a
+            +breakpoint($bp-tablet-port-max)
+              font-size: 14px
+              font-family: $font-sans
         li.last
           margin-bottom: 0px
 
-#gsb-footer-three
+#gsb-footer-three,
+#gsb-footer-two
   #block-menu-menu-footer-5
     +breakpoint($bp-tablet-port-max)
       width: 100%
       float: left
+      padding-bottom: 20px
+      border-bottom: 1px solid #c4c4c4
     li
       float: left
       font-size: 18px
