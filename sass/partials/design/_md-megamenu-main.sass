@@ -47,16 +47,17 @@
       opacity: .50
 
 // Mobile-only override styles
-// Main
+// Main Menu
 .md-mobile-style2.awemenu-mobile-standard .awemenu .awemenu-submenu .awemenu-item
   padding-left: 0
   padding-right: 0
-// Seed &  Exec-Ed
+// Seed &  Exec-Ed menus
 #md-megamenu-2.md-megamenu-seed-main-menu.awemenu-mobile,
 #md-megamenu-3.md-megamenu-executive-edu-main-menu.awemenu-mobile
   +breakpoint($bp-for-tablet-range)
     width: 50%
 
+// Mobile menus
 #md-megamenu-1.awemenu-mobile-standard,
 .md-megamenu-seed-main-menu.awemenu-mobile,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile
@@ -83,18 +84,23 @@
     &:before
       content: ""
   // Removal for the mobile version
-  .link-secondary,
+  .block.block-menu
+    li.leaf
+      .link-secondary
+        display: none
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
   .awemenu-megamenu-wrapper
     .row
       div[class^="col-md"]
         width: 100%
-// Change color for the seed and exec-ed
+
+// Change color for the Seed and Exec-Ed
 .md-megamenu-seed-main-menu.awemenu-mobile,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile
   span.amm-bar
     background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% $grey-hp-7
+
 // Search and hamburger menu
 // Changing the search alignment and the open close mobile menu
 #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2,
@@ -110,7 +116,8 @@
     +breakpoint($bp-for-tablet-range)
       right: 0
       margin-right: 50px
-// Executive Ed, Seed mobile menu
+
+// Exec-Ed and Seed mobile menu
 .md-megamenu-executive-edu-main-menu.awemenu-mobile,
 .md-megamenu-seed-main-menu.awemenu-mobile
   .awemenu-container
@@ -172,6 +179,7 @@
         &:hover
           width: 14%
 
+// Mobile menu - open
 #md-megamenu-1.md-megamenu.awemenu-mobile-standard.awemenu-active,
 .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-active,
 .md-megamenu-executive-edu-main-menu.awemenu-mobile.awemenu-active
@@ -210,7 +218,6 @@
     box-shadow: none
   #header
     .section
-      //display: inline-block
       +breakpoint($bp-for-phone-only)
         border: none
         box-shadow: none
@@ -222,16 +229,14 @@
       .section
         display: block
 
-// Top Level Links
+// Top level main menu links
 #md-megamenu-1
   font-family: $font-demi
   font-size: 20px
-  //padding: 35px 0 35px 180px
-
   .awemenu-submenu
     background-color: transparent
     padding-top: 20px
-
+  // Open top level main menu
   .awemenu-active
     a
       span
@@ -429,7 +434,7 @@
       color: $text-black
       display: block
       font-weight: bold
-      padding: 35px 20px 0 35px
+      padding-left: 35px
       font-size: 16px
     // Adjusting padding for the phone size
     .content
