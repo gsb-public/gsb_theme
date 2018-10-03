@@ -592,6 +592,21 @@
             }, 800);
         });
     });
+    /* Scroll up/down navigation becomes sticky */
+    $(function() {
+        var scrollPos = 0;
+        $(window).scroll(function () {
+            var curScrollPos = $(this).scrollTop();
+            if (curScrollPos > scrollPos) {
+                //Scrolling down - remove the fixed position menu
+              $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+            } else {
+                //Scrolling up - add the fixed position menu
+                $('#header-wrapper').addClass('awemenu-sticky');
+            }
+            scrollPos = curScrollPos;
+        });
+    });
     /* Voices detail page customization */
     $(function() {
         // Adding some wrappers for ease in styling.
