@@ -19,6 +19,9 @@
   .featured-label
     @extend %superhead-black
 
+  .featured-label
+    margin-bottom: 0px
+
 .pane-bundle-existing-node,
 .node-program.view-mode-full .field-name-field-featured-event
   // Date
@@ -174,6 +177,11 @@
     .field-name-field-image-single-public
       max-width: 150px
 
+.pane-bundle-existing-node
+  .field-name-title
+    padding-top: 26px
+    +breakpoint(610px max-width)
+      padding-top: 20px
 // Responsive book teaser
 
 // Narrow view
