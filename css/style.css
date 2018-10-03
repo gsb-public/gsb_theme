@@ -8787,7 +8787,21 @@ input.signup-submit:hover {
   border-top: none;
 }
 
+#header-wrapper.awemenu-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #header-wrapper.awemenu-sticky {
+    position: relative;
+  }
+}
+
 #header-wrapper {
+  background-color: white;
   border-bottom: 1px solid #860000;
   border-top: 0;
 }

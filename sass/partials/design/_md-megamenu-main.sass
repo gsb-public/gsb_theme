@@ -204,8 +204,19 @@
 .md-style2.awemenu-standard .awemenu > .awemenu-item > a
   border-top: none
 
+// Sticky menus
+#header-wrapper.awemenu-sticky
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 999999
+  +breakpoint($bp-for-phone-tablet-range)
+    position: relative
+
 // Align Menu Top Items
 #header-wrapper
+  background-color: $white
   border-bottom: 1px solid $red-dark
   border-top: 0
   +breakpoint($bp-for-phone-tablet-range)
