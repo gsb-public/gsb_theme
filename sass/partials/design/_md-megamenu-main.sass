@@ -43,6 +43,13 @@
     display: none
 .md-style2.awemenu-standard .awemenu > .awemenu-item > a
   line-height: 1.3
+// setting up special widths for faculty & research menu
+#md-megamenu-1
+  .faculty-research .row > div:nth-child(-n + 2),
+  .faculty-research .row > div:nth-last-child(-n + 1)
+    width: 20%
+  .faculty-research .row > div:nth-child(3)
+    width: 40%
 
 // Mobile-only override styles
 // Main Menu
@@ -196,9 +203,9 @@
     height: 63px
     width: 64px
     .svg &
-      background: url("../images/icons/icon-nav-close@2x.png") no-repeat center/50% $grey-hp
+      background: url("../images/icons/icon-nav-close@2x.png") no-repeat center/30% $grey-hp
       .no-js &, .no-svg &
-        background: url(../images/icons/icon-nav-close@2x.png) no-repeat center/50% $grey-hp
+        background: url(../images/icons/icon-nav-close@2x.png) no-repeat center/30% $grey-hp
     &:before
       content: ""
     +breakpoint($bp-for-phone-only)
@@ -300,11 +307,11 @@
       border-top: 1px solid $red
       background-color: $white
       // styles to get the full white width on a browser
-      width: 100vw
+      width: 101vw
       position: relative
-      left: 50%
-      right: 50%
-      margin-left: -50vw
+      left: 47%
+      right: 53%
+      margin-left: -51vw
       margin-right: -50vw
       .row
         margin: 0 auto
