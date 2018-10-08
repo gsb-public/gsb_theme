@@ -4769,11 +4769,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     margin-top: 100px;
   }
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .page-faculty-research #main {
-    margin-top: 50px;
-  }
-}
 @media (min-width: 35.5em) {
   .page-events #main {
     padding: 0;
@@ -8820,6 +8815,24 @@ input.signup-submit:hover {
   }
 }
 
+div#header-wrapper.awemenu-sticky + #content-wrapper {
+  position: relative;
+}
+@media (min-width: 75em) {
+  div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 85px;
+  }
+}
+
+div#header-wrapper.awemenu-sticky + div#hero {
+  position: relative;
+}
+@media (min-width: 75em) {
+  div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 87px;
+  }
+}
+
 #header-wrapper {
   background-color: white;
   border-bottom: 1px solid #860000;
@@ -8919,10 +8932,10 @@ input.signup-submit:hover {
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper {
   border-top: 1px solid #990000;
   background-color: white;
-  width: 101vw;
+  width: 100vw;
   position: relative;
   left: 47%;
-  right: 53%;
+  right: 50%;
   margin-left: -51vw;
   margin-right: -50vw;
 }
@@ -11908,6 +11921,7 @@ button.checkbox-clear-all {
 
 #banner {
   background: #ededed;
+  position: relative;
 }
 @media (min-width: 62.5em) {
   #banner {
@@ -11971,13 +11985,11 @@ button.checkbox-clear-all {
 @media (max-width: 37.4375em) {
   .page-faculty-research .banner-title {
     font-size: 14px;
-    top: 10px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .page-faculty-research .banner-title {
     font-size: 18px;
-    top: 10px;
   }
 }
 .page-insights .banner-title a {
@@ -12165,6 +12177,12 @@ button.checkbox-clear-all {
     height: 50px;
     padding: 7px 15px 8px 13px;
     width: 129px;
+  }
+}
+@media (min-width: 18.75em) and (max-width: 45.9375em) {
+  #sidebar .menu .sidebar h2 {
+    max-height: 42px;
+    padding-top: 7px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -12370,9 +12388,12 @@ button.checkbox-clear-all {
 
 @media (max-width: 62.4375em) {
   #sidebar {
-    background: none;
-    margin-bottom: -40px;
-    height: 42px;
+    height: 60px;
+  }
+}
+@media (max-width: 37.4375em) {
+  #sidebar {
+    height: 40px;
   }
   .page-programs #sidebar {
     background: none;

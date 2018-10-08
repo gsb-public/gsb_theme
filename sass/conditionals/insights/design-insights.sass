@@ -25,6 +25,10 @@
     #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper
       left: 46%
       right: 54%
+      +breakpoint($bp-for-phone-tablet-range)
+        // Without the unset the responsive menus were moved over to the left and right
+        left: unset
+        right: unset
   // Insights will not show in Insights section
   .insights-label.insights
     display: none

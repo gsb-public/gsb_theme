@@ -230,6 +230,14 @@
   z-index: 99
   +breakpoint($bp-for-phone-tablet-range)
     position: relative
+div#header-wrapper.awemenu-sticky + #content-wrapper
+  position: relative
+  +breakpoint($bp-for-desktop-up)
+    margin-top: 85px
+div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
+  +breakpoint($bp-for-desktop-up)
+    margin-top: 87px
 
 // Align Menu Top Items
 #header-wrapper
@@ -307,10 +315,10 @@
       border-top: 1px solid $red
       background-color: $white
       // styles to get the full white width on a browser
-      width: 101vw
+      width: 100vw
       position: relative
       left: 47%
-      right: 53%
+      right: 50%
       margin-left: -51vw
       margin-right: -50vw
       .row
