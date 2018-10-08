@@ -2,6 +2,7 @@
 
 #banner
   background: $grey-e
+  position: relative
   +breakpoint($bp-tablet-land-min)
     overflow: hidden
     padding: 14px 0 11px
@@ -43,10 +44,8 @@
         text-decoration: none
     +breakpoint($bp-for-phone-only)
       font-size: 14px
-      top: 10px
     +breakpoint($bp-for-tablet-range)
       font-size: 18px
-      top: 10px
   .page-insights &
     a
       color: $text-black
@@ -195,6 +194,12 @@
           height: 50px
           padding: 7px 15px 8px 13px
           width: 129px
+  +breakpoint($bp-for-phone-range)
+    .menu
+      .sidebar
+        h2
+          max-height: 42px
+          padding-top: 7px
   +breakpoint($bp-tablet-port-max)
     width: 100%
     .menu
@@ -335,15 +340,14 @@
 // Section menu for responsive
 #sidebar
   +breakpoint($bp-tablet-port-max)
-    +background(none)
-    margin-bottom: -40px
-    height: 42px
+    height: 60px
+  +breakpoint($bp-for-phone-only)
+    height: 40px
 
     .page-programs &
       +background(none)
     .page-alumni &
       background: transparent
-  //+breakpoint($bp-for-phone-tablet-range)
   ul.menu
     .active-trail
       //background-color: red
