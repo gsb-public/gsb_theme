@@ -124,6 +124,9 @@
             content: '”'
           &:before
             content: '“'
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 16px
+            line-height: 1.5
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -665,6 +668,9 @@
             content: '”'
           &:before
             content: '“'
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 16px
+            line-height: 1.5
 
 .main-header,
 .main-footer

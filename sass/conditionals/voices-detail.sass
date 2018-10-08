@@ -561,6 +561,8 @@
   .ds-2col-stacked-fluid 
     .content-wrapper
       .group-right
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
         .field-academic-degrees,
         .field-professional-experience,
         .field-related-programs
@@ -591,6 +593,7 @@
         .field-related-programs-wrapper
           .field-related-programs
             border-bottom: 1px solid lightgray
+            padding: 15px 26px
             .view-mode-idea_story_related
               padding: 18px 26px 10px 26px
           .label-above
