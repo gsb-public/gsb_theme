@@ -121,7 +121,13 @@
     +breakpoint($bp-for-tablet-range)
       right: 0
       margin-right: 50px
-
+.page-insights
+  #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
+    .awemenu-bars
+      +breakpoint($bp-for-phone-only)
+        right: -15px
+      +breakpoint($bp-for-tablet-range)
+        margin-right: -15px
 // Exec-Ed and Seed mobile menu
 .md-megamenu-executive-edu-main-menu.awemenu-mobile,
 .md-megamenu-seed-main-menu.awemenu-mobile
