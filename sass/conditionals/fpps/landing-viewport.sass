@@ -120,11 +120,7 @@
       padding-bottom: 15%
     +breakpoint($bp-for-tablet-range)
       padding-bottom: 15%
-  video + .scrollLink
-    bottom: 0
-    padding-bottom: 10px
 
-//testing
 #edit-field-homepage-image-url
   #field-homepage-image-url-add-more-wrapper
     .link-field-column
@@ -133,3 +129,42 @@
     .form-item-field-homepage-image-url-und-0-title
       input#edit-field-homepage-image-url-und-0-title
         width: 585px
+
+// Video customizations
+.panels-layout-gsb-homepage
+  #content #main .panel-pane.pane-landingpage-video
+    padding-top: 0
+
+  .pane-landingpage-video
+    align-items: center
+    display: flex
+    justify-content: center
+    position: relative
+
+    video.splash__video__media
+      height: 100%
+      width: 100%
+
+    .scrollLink
+      color: $white
+      cursor: hand
+      cursor: pointer
+      font-size: 16px
+      font-weight: bold
+      left: 50%
+      padding-bottom: 10%
+      position: absolute
+      transform: translate(-50%, -50%)
+      +icon-after("arrow-med-down", true)
+        display: block
+        padding: 10px 45px
+        +breakpoint($bp-mobile)
+          padding: 0 45px
+      +breakpoint($bp-for-phone-only)
+        font-size: 12px
+        padding-bottom: 15%
+      +breakpoint($bp-for-tablet-range)
+        padding-bottom: 15%
+    video + .scrollLink
+      bottom: 0
+      padding-bottom: 10px
