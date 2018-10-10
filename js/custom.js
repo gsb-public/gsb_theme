@@ -575,6 +575,7 @@
       function setHeight() {
         windowHeight = $(window).innerHeight()-75;
         $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
+        $('.pane-landingpage-video').css('max-height', windowHeight);
         // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
       };
       setHeight();
@@ -585,10 +586,16 @@
     });
     /* scroll functionality for the 2018 site refresh*/
     $(function() {
-        // splash scroll
+        // Image splash scroll
         $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
             $('html, body').animate({
                 scrollTop: $('.panel-separator').offset().top
+            }, 800);
+        });
+        // video splash scroll
+        $('.pane-landingpage-video .scrollLink').on('click', function() {
+            $('html, body').animate({
+                scrollTop: $('.pane-bundle-mission-statement').offset().top
             }, 800);
         });
     });
