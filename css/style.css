@@ -4675,6 +4675,9 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 
 .js #navigation, #navigation.search-closed {
   min-width: 702px;
+  float: right;
+  padding: 30px 0;
+  position: relative;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .js #navigation, #navigation.search-closed {
@@ -4692,15 +4695,8 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     min-width: auto;
   }
 }
-@media (min-width: 73.125em) {
-  #navigation {
-    float: right;
-    padding: 30px 0;
-    position: relative;
-  }
-  .no-js #navigation, #navigation.search-open {
-    min-width: 842px;
-  }
+.no-js .js #navigation, .js #navigation.search-open, .no-js #navigation.search-closed, #navigation.search-closed.search-open {
+  min-width: 842px;
 }
 @media (min-width: 73.125em) {
   .page-exec-ed #navigation {
@@ -4819,15 +4815,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 }
 .page-insights #legal .region {
   border-top: 0;
-}
-
-@media (min-width: 35.5625em) {
-  .front #content-wrapper {
-    background: url('../images/bg-quad-home-2015-05-26-1.png') top center no-repeat, -moz-linear-gradient(#ffffff, #e4e4e4);
-    background: url('../images/bg-quad-home-2015-05-26-1.png') top center no-repeat, -o-linear-gradient(#ffffff, #e4e4e4);
-    background: url('../images/bg-quad-home-2015-05-26-1.png') top center no-repeat, -webkit-linear-gradient(#ffffff, #e4e4e4);
-    background: url('../images/bg-quad-home-2015-05-26-1.png') top center no-repeat, linear-gradient(#ffffff, #e4e4e4);
-  }
 }
 
 @media (min-width: 35.5625em) {
@@ -8874,6 +8861,21 @@ div#header-wrapper.awemenu-sticky + div#hero {
 .page-seed #header-wrapper #header .section {
   display: block;
 }
+.page-exec-ed #header-wrapper #header a.link-title,
+.page-seed #header-wrapper #header a.link-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 37.4375em) {
+  .page-exec-ed #header-wrapper #header a.link-title,
+  .page-seed #header-wrapper #header a.link-title {
+    font-size: 16px;
+  }
+}
+.page-exec-ed #header-wrapper #header a.link-title:hover,
+.page-seed #header-wrapper #header a.link-title:hover {
+  text-decoration: underline;
+}
 
 #md-megamenu-1 {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8998,79 +9000,46 @@ div#header-wrapper.awemenu-sticky + div#hero {
   padding-left: 0;
   padding-right: 20px;
 }
-#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit,
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit,
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility,
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility {
+#md-megamenu-1 div[id*="-utility"] {
   float: right;
   position: relative;
   margin-right: -15px;
   width: 184px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility {
+  #md-megamenu-1 div[id*="-utility"] {
     float: unset;
     padding-left: 20px;
     margin-right: 0;
     width: 100%;
   }
-  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:first-of-type,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:first-of-type,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:first-of-type,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
+  #md-megamenu-1 div[id*="-utility"] li:first-of-type {
     border-top: 1px solid #ededed;
   }
-  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf {
+  #md-megamenu-1 div[id*="-utility"] li.leaf {
     padding: 0;
   }
-  #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li.leaf a,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li.leaf a,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li.leaf a,
-  #md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li.leaf a {
+  #md-megamenu-1 div[id*="-utility"] li.leaf a {
     padding: 15px 0;
   }
 }
-#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li,
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li,
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li,
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li {
+#md-megamenu-1 div[id*="-utility"] li {
   border-bottom: 1px solid #ededed;
   padding: 14px 0;
 }
-#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:first-of-type,
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:first-of-type,
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:first-of-type,
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:first-of-type {
+#md-megamenu-1 div[id*="-utility"] li:first-of-type {
   padding-top: 0;
 }
-#md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li a,
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li a,
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li a,
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li a {
+#md-megamenu-1 div[id*="-utility"] li a {
   padding-bottom: 0;
 }
-.svg #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li, .svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li, .svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li, .svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li {
+.svg #md-megamenu-1 div[id*="-utility"] li {
   background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent;
   background-position: right center;
   background-origin: content-box;
   padding-right: 5px;
 }
-.no-js #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:after, .no-svg #md-megamenu-1 #block-menu-menu-md-megamenu-insights-utilit li:after, .no-js
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:after, .no-svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-programs-utilit li:after, .no-js
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:after, .no-svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-alumni-utility li:after, .no-js
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:after, .no-svg
-#md-megamenu-1 #block-menu-menu-md-megamenu-events-utility li:after {
+.no-js #md-megamenu-1 div[id*="-utility"] li:after, .no-svg #md-megamenu-1 div[id*="-utility"] li:after {
   content: "\f107";
   display: inline;
   speak: none;
