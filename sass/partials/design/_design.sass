@@ -1,5 +1,4 @@
 // Global styling
-
 // Header region
 #header-wrapper
   position: relative
@@ -71,6 +70,9 @@
   .js &,
   &.search-closed
     min-width: 702px
+    float: right
+    padding: 30px 0
+    position: relative
     +breakpoint($bp-for-phone-tablet-range)
       min-width: auto
     // Exec Ed
@@ -81,10 +83,6 @@
       min-width: 667px
       +breakpoint($bp-for-phone-tablet-range)
         min-width: auto
-  +breakpoint(1170px min-width)
-    float: right
-    padding: 30px 0
-    position: relative
     .no-js &,
     &.search-open
       min-width: 842px
@@ -105,8 +103,6 @@
       float: right
       padding: 0
       position: relative
-      //top: -$top-border-interval
-      //margin-bottom: -$top-border-interval
       .no-js &,
       &.search-open
         min-width: 667px
@@ -185,12 +181,6 @@
       border-top: 0
 
 // Page Background images
-
-// Front page courtyard image
-.front #content-wrapper
-  +breakpoint($bp-tablet-port-min)
-    +background(image_url("bg-quad-home-2015-05-26-1.png") top center no-repeat, linear-gradient($white, #e4e4e4))
-
 // MSx Fellows page
 .page-programs-msx,
 .node-type-msx-fellows,
