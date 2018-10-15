@@ -97,9 +97,12 @@
       z-index: 1
     .page-exec-ed &,
     .page-seed &
-      height: 78px
+      height: 76px
+      top: 75px !important
       +breakpoint(1169px max-width)
         height: 50px
+      +breakpoint($bp-for-phone-tablet-range)
+        top: 0 !important
 
   // Submit button
   .form-submit
@@ -122,12 +125,23 @@
       height: 64px
       position: relative
       left: 0
-    .page-exec-ed &,
+    .page-exec-ed &
+      border-bottom: 1px solid $red
+      height: 76px
+      &:hover
+        height: 80px !important
+        margin-top: -4px
+        width: 60px !important
+        +breakpoint($bp-for-phone-only)
+          height: 50px !important
+          width: 50px !important
+      +breakpoint(1169px max-width)
+        height: 50px
     .page-seed &
       border-bottom: 1px solid $red
-      height: 78px
+      height: 76px
       &:hover
-        height: 77px !important
+        height: 76px !important
         width: 60px !important
         +breakpoint($bp-for-phone-only)
           height: 50px !important
@@ -152,7 +166,7 @@
 .page-seed #navigation.search-closed #edit-submit:hover
   border-bottom: 0
   height: 80px !important
-  margin-top: -3px
+  margin-top: -4px
 
 // General search results page search
 #coveo-search-search-form,
@@ -1014,7 +1028,6 @@ button.checkbox-clear-all
   font-family: $font-sans
   position: absolute
   top: 73px
-  right: 5px
 
 .page-seed .js .search-open #coveo-search-block-form input,
 .page-seed .no-js #coveo-search-block-form input,
@@ -1038,11 +1051,11 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 79px
         line-height: 60px
-        right: -37px
+        right: -60px
         top: 0
-        width: 55px
+        width: 60px
         +breakpoint($bp-for-phone-only)
           height: 50px
           right: 0
@@ -1063,11 +1076,11 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 79px
         line-height: 60px
-        right: 9px
+        right: -60px
         top: 0
-        width: 55px
+        width: 60px
         +breakpoint($bp-for-phone-only)
           height: 50px
           right: 0

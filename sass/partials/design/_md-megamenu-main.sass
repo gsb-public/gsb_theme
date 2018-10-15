@@ -237,6 +237,9 @@
   +breakpoint($bp-for-phone-tablet-range)
     position: relative
 div#header-wrapper.awemenu-sticky + #content-wrapper
+  .page-seed &
+    +breakpoint($bp-for-desktop-up)
+      margin-top: 79px
   position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 85px
@@ -244,6 +247,15 @@ div#header-wrapper.awemenu-sticky + div#hero
   position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 87px
+.page-seed div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
+  +breakpoint($bp-for-desktop-up)
+    margin-top: 79px
+.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
+.page-exec-ed div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
+  +breakpoint($bp-for-desktop-up)
+    margin-top: 0
 
 // Align Menu Top Items
 #header-wrapper
@@ -426,14 +438,14 @@ div#header-wrapper.awemenu-sticky + div#hero
       height: 0
       position: absolute
       top: 0
-      right: 4px
+      right: -60px
 .page-exec-ed
   .global-search
     +breakpoint(1170px min-width)
       height: 0
       position: absolute
-      top: 0
-      right: -42px
+      top: 1px
+      right: -60px
       .search-closed &,
       .js &
         width: 850px
