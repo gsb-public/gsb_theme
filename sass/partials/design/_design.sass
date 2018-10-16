@@ -7,7 +7,10 @@
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
-      max-width: 1170px
+      // 1065 (max width) + 35 (neg margin to left) + 70 (search icon width with padding)
+      max-width: 1065px
+      &> .section
+        margin-left: -35px
     .no-js &
       position: relative
 
