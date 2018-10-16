@@ -583,19 +583,17 @@
       $(window).resize(function() {
         setHeight();
       });
-    });
     /* scroll functionality for the 2018 site refresh*/
-    $(function() {
         // Image splash scroll
         $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: $('.panel-separator').offset().top
+                scrollTop: $('.pane-bundle-mission-statement').offset().top
             }, 800);
         });
-        // video splash scroll
+        // video splash scroll - want it to come further down for the video.
         $('.pane-landingpage-video .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: $('.pane-bundle-mission-statement').offset().top
+                scrollTop: ( $('.pane-bundle-mission-statement').offset().top+ 130)
             }, 800);
         });
     });
