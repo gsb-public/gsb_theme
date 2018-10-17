@@ -572,30 +572,28 @@
   };
     /* viewport sizing */
     $(function() {
-      function setHeight() {
-        windowHeight = $(window).innerHeight()-75;
-        $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
-        $('.pane-landingpage-video').css('max-height', windowHeight);
-        // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
-      };
-      setHeight();
-
-      $(window).resize(function() {
+        function setHeight() {
+            windowHeight = $(window).innerHeight()-75;
+            $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
+            $('.pane-landingpage-video').css('max-height', windowHeight);
+            // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
+        };
         setHeight();
-      });
-    });
-    /* scroll functionality for the 2018 site refresh*/
-    $(function() {
+
+        $(window).resize(function() {
+            setHeight();
+        });
+        /* scroll functionality for the 2018 site refresh*/
         // Image splash scroll
         $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: $('.panel-separator').offset().top
+                scrollTop: $('.pane-bundle-mission-statement').offset().top
             }, 800);
         });
-        // video splash scroll
+        // video splash scroll - want it to come further down for the video.
         $('.pane-landingpage-video .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: $('.pane-bundle-mission-statement').offset().top
+                scrollTop: ( $('.pane-bundle-mission-statement').offset().top+ 130)
             }, 800);
         });
     });
