@@ -229,33 +229,32 @@
 
 // Sticky menus
 #header-wrapper.awemenu-sticky
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  z-index: 99
-  +breakpoint($bp-for-phone-tablet-range)
-    position: relative
+  +breakpoint($bp-for-desktop-up)
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 99
 div#header-wrapper.awemenu-sticky + #content-wrapper
   .page-seed &
     +breakpoint($bp-for-desktop-up)
       margin-top: 79px
-  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 85px
+    position: relative
 div#header-wrapper.awemenu-sticky + div#hero
-  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 87px
+    position: relative
 .page-seed div#header-wrapper.awemenu-sticky + div#hero
-  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 79px
+    position: relative
 .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
 .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero
-  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 0
+    position: relative
 
 // Align Menu Top Items
 #header-wrapper
@@ -342,9 +341,9 @@ div#header-wrapper.awemenu-sticky + div#hero
       // styles to get the full white width on a browser
       width: 101vw
       position: relative
-      left: 47%
+      left: 50%
       right: 51%
-      margin-left: -51vw
+      margin-left: -49vw
       margin-right: -50vw
       .row
         margin: 0 auto
@@ -421,7 +420,7 @@ div#header-wrapper.awemenu-sticky + div#hero
     height: 0
     position: absolute
     top: 10px
-    right: -85px
+    margin-right: -75px
     .search-closed &,
     .js &
       width: auto
