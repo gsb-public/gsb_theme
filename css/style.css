@@ -4571,7 +4571,6 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 @media (min-width: 75em) {
   #header-wrapper #header {
     margin: 0 auto;
-    max-width: 1170px;
     max-width: 1065px;
     position: relative;
   }
@@ -4581,6 +4580,11 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 }
 .no-js #header-wrapper #header {
   position: relative;
+}
+@media (min-width: 75em) {
+  .page-seed #header-wrapper #header, .page-exec-ed #header-wrapper #header {
+    max-width: 1170px;
+  }
 }
 
 #logo,
@@ -4693,52 +4697,33 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
     min-width: 100%;
   }
 }
-.page-exec-ed .js #navigation, .page-exec-ed #navigation.search-closed {
+.page-exec-ed .js #navigation, .page-seed .js #navigation, .page-exec-ed #navigation.search-closed, .page-seed #navigation.search-closed {
   min-width: auto;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .page-exec-ed .js #navigation, .page-exec-ed #navigation.search-closed {
+  .page-exec-ed .js #navigation, .page-seed .js #navigation, .page-exec-ed #navigation.search-closed, .page-seed #navigation.search-closed {
     min-width: auto;
-    position: relative;
-  }
-}
-.page-seed .js #navigation, .page-seed #navigation.search-closed {
-  min-width: auto;
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .page-seed .js #navigation, .page-seed #navigation.search-closed {
-    min-width: auto;
-    position: relative;
   }
 }
 .no-js .js #navigation, .js #navigation.search-open, .no-js #navigation.search-closed, #navigation.search-closed.search-open {
   min-width: 842px;
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
+@media (max-width: 37.4375em) {
   .page-seed .js #navigation, .page-seed #navigation.search-closed {
-    position: relative;
-  }
-}
-@media (min-width: 73.125em) {
-  .page-exec-ed #navigation {
-    float: right;
-    margin-bottom: 0;
-    padding: 0;
-    position: relative;
+    position: absolute;
     top: 0;
-  }
-  .no-js .page-exec-ed #navigation, .page-exec-ed #navigation.search-open {
-    min-width: auto;
+    right: 0;
+    width: 100%;
   }
 }
 @media (min-width: 73.125em) {
-  .page-seed #navigation {
+  .page-seed #navigation, .page-exec-ed #navigation {
     float: right;
     padding: 0;
     position: relative;
     margin-right: 50px;
   }
-  .no-js .page-seed #navigation, .page-seed #navigation.search-open {
+  .no-js .page-seed #navigation, .page-seed #navigation.search-open, .no-js .page-exec-ed #navigation, .page-exec-ed #navigation.search-open {
     min-width: auto;
   }
 }
@@ -9116,8 +9101,8 @@ input.signup-submit:hover {
   .page-seed .global-search {
     height: 0;
     position: absolute;
-    top: 0;
-    right: -60px;
+    top: 3px;
+    right: 15px;
   }
 }
 
@@ -9125,8 +9110,8 @@ input.signup-submit:hover {
   .page-exec-ed .global-search {
     height: 0;
     position: absolute;
-    top: 1px;
-    right: -60px;
+    top: 3px;
+    right: 15px;
   }
   .search-closed .page-exec-ed .global-search, .js .page-exec-ed .global-search {
     width: 850px;
@@ -9980,8 +9965,8 @@ input.signup-submit:hover {
 }
 .page-exec-ed #coveo-search-block-form .form-submit:hover, .page-exec-ed
 #coveo-search-block-form--2 .form-submit:hover {
-  height: 80px !important;
-  margin-top: -4px;
+  height: 82px !important;
+  margin-top: -6px;
   width: 60px !important;
 }
 @media (max-width: 37.4375em) {
@@ -10046,8 +10031,8 @@ input.signup-submit:hover {
 .page-exec-ed #navigation.search-closed #edit-submit:hover,
 .page-seed #navigation.search-closed #edit-submit:hover {
   border-bottom: 0;
-  height: 80px !important;
-  margin-top: -4px;
+  height: 82px !important;
+  margin-top: -6px;
 }
 
 #coveo-search-search-form,
@@ -11855,7 +11840,7 @@ button.checkbox-clear-all {
   right: 2px;
 }
 .page-exec-ed #navigation.search-open .section div#search-close {
-  height: 79px;
+  height: 81px;
   line-height: 60px;
   right: -60px;
   top: 0;
@@ -11883,7 +11868,7 @@ button.checkbox-clear-all {
   right: 5px;
 }
 .page-seed #navigation.search-open .section div#search-close {
-  height: 79px;
+  height: 81px;
   line-height: 60px;
   right: -60px;
   top: 0;
