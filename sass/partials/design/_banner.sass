@@ -64,16 +64,16 @@
         border-bottom: 2px solid $red
         text-decoration: none
     +breakpoint($bp-tablet-port-max)
-      font-size: 26px
       line-height: 1.9
   +breakpoint($bp-tablet-port-max)
-    font-size: 100%
+    font-size: 18px
     line-height: 0
-    padding: 0 15px
+    padding: 5px 15px
     position: relative
     top: 20px
   +breakpoint($bp-mobile-max)
     display: table-cell
+    font-size: 14px
     height: 42px
     line-height: 1
     vertical-align: middle
@@ -192,20 +192,19 @@
           font-size: 16px
           font-weight: normal
           height: 50px
-          padding: 7px 15px 8px 13px
+          padding: 5px 16px 8px 12px
           width: 129px
-  +breakpoint($bp-for-phone-range)
+  +breakpoint($bp-for-phone-only)
     .menu
       .sidebar
         h2
           max-height: 42px
-          padding-top: 7px
+          padding: 6px 15px 8px 12px
   +breakpoint($bp-tablet-port-max)
     width: 100%
     .menu
       display: none
     .sidebar
-      //margin-top: -50px
       h2
         border-left: 1px solid rgba($white, 0.3)
         color: $white
@@ -219,6 +218,8 @@
         text-transform: capitalize
         top: 0
         width: 101px
+        +breakpoint($bp-for-phone-only)
+          padding: 6px 15px 8px 12px
         .svg &
           +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
         .no-js &, .no-svg &
@@ -226,6 +227,7 @@
         // Alumni
         .page-alumni &
           background-color: $section-red
+          z-index: 9
           .svg &
             +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-red)
           .no-js &, .no-svg &
@@ -252,6 +254,8 @@
         top: 48px
         width: 100%
         z-index: 12
+        +breakpoint($bp-for-phone-only)
+          top: 42px
       // Executive Education
       .page-exec-ed &
         .content
@@ -340,14 +344,15 @@
 // Section menu for responsive
 #sidebar
   +breakpoint($bp-tablet-port-max)
-    height: 60px
+    background: $grey-hp
+    height: 50px
   +breakpoint($bp-for-phone-only)
-    height: 40px
+    background: $grey-hp
+    height: unset
+  .page-alumni &
+    +breakpoint($bp-for-phone-only)
+      height: 42px
 
-    .page-programs &
-      +background(none)
-    .page-alumni &
-      background: transparent
   ul.menu
     .active-trail
       //background-color: red

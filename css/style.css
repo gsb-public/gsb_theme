@@ -12052,15 +12052,14 @@ button.checkbox-clear-all {
 }
 @media (max-width: 62.4375em) {
   .page-alumni .banner-title {
-    font-size: 26px;
     line-height: 1.9;
   }
 }
 @media (max-width: 62.4375em) {
   .banner-title {
-    font-size: 100%;
+    font-size: 18px;
     line-height: 0;
-    padding: 0 15px;
+    padding: 5px 15px;
     position: relative;
     top: 20px;
   }
@@ -12068,6 +12067,7 @@ button.checkbox-clear-all {
 @media (max-width: 35.5em) {
   .banner-title {
     display: table-cell;
+    font-size: 14px;
     height: 42px;
     line-height: 1;
     vertical-align: middle;
@@ -12206,14 +12206,14 @@ button.checkbox-clear-all {
     font-size: 16px;
     font-weight: normal;
     height: 50px;
-    padding: 7px 15px 8px 13px;
+    padding: 5px 16px 8px 12px;
     width: 129px;
   }
 }
-@media (min-width: 18.75em) and (max-width: 45.9375em) {
+@media (max-width: 37.4375em) {
   #sidebar .menu .sidebar h2 {
     max-height: 42px;
-    padding-top: 7px;
+    padding: 6px 15px 8px 12px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -12245,6 +12245,7 @@ button.checkbox-clear-all {
   }
   .page-alumni #sidebar .sidebar h2 {
     background-color: #b00000;
+    z-index: 9;
   }
   .svg .page-alumni #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #b00000;
@@ -12358,6 +12359,17 @@ button.checkbox-clear-all {
     border-bottom: 0;
   }
 }
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .sidebar h2 {
+    padding: 6px 15px 8px 12px;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  #sidebar .block-menu.open .content,
+  #sidebar .block-menu-block.open .content {
+    top: 42px;
+  }
+}
 @media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
@@ -12419,18 +12431,19 @@ button.checkbox-clear-all {
 
 @media (max-width: 62.4375em) {
   #sidebar {
-    height: 60px;
+    background: #f4f4f4;
+    height: 50px;
   }
 }
 @media (max-width: 37.4375em) {
   #sidebar {
-    height: 40px;
+    background: #f4f4f4;
+    height: unset;
   }
-  .page-programs #sidebar {
-    background: none;
-  }
+}
+@media (max-width: 37.4375em) {
   .page-alumni #sidebar {
-    background: transparent;
+    height: 42px;
   }
 }
 #sidebar ul.menu li.expanded.collapsed ul.menu {
