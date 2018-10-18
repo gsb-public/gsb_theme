@@ -244,6 +244,13 @@
             +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
           .no-js &, .no-svg &
             +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
+        // Exec-Ed and Seed
+        .page-exec-ed &,
+        .page-seed &
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
         // Insights
         .page-insights &
           background-color: $text-black
@@ -257,16 +264,19 @@
         +breakpoint($bp-for-phone-only)
           top: 42px
       // Executive Education
-      .page-exec-ed &
+      .page-exec-ed &,
+      .page-seed &
         .content
           top: 49px
           left: 0
+          +breakpoint($bp-for-phone-only)
+            top: 42px
         h2
-          color: $section-blue-grey
+          color: $grey-hp-7
           .svg &
-            +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
+            +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
           .no-js &, .no-svg &
-            +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
+            +background(image_url("icons/inThisSection-arrow-up-taupe-@2x.png") no-repeat 11px 11px $grey-hp)
       // MBA
       h2
         .page-programs-mba &

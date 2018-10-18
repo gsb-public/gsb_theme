@@ -12265,6 +12265,12 @@ button.checkbox-clear-all {
   .no-js .page-faculty-research #sidebar .sidebar h2, .no-svg .page-faculty-research #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
   }
+  .svg .page-exec-ed #sidebar .sidebar h2, .svg .page-seed #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
+  }
+  .no-js .page-exec-ed #sidebar .sidebar h2, .no-svg .page-exec-ed #sidebar .sidebar h2, .no-js .page-seed #sidebar .sidebar h2, .no-svg .page-seed #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
+  }
   .page-insights #sidebar .sidebar h2 {
     background-color: #231f20;
   }
@@ -12275,23 +12281,28 @@ button.checkbox-clear-all {
     width: 100%;
     z-index: 12;
   }
-  .page-exec-ed #sidebar .block-menu.open .content, .page-exec-ed
+  .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
+  #sidebar .block-menu-block.open .content, .page-seed
   #sidebar .block-menu-block.open .content {
     top: 49px;
     left: 0;
   }
-  .page-exec-ed #sidebar .block-menu.open h2, .page-exec-ed
+  .page-exec-ed #sidebar .block-menu.open h2, .page-seed #sidebar .block-menu.open h2, .page-exec-ed
+  #sidebar .block-menu-block.open h2, .page-seed
   #sidebar .block-menu-block.open h2 {
-    color: #5a7688;
+    color: #7d7466;
   }
-  .svg .page-exec-ed #sidebar .block-menu.open h2, .svg .page-exec-ed
+  .svg .page-exec-ed #sidebar .block-menu.open h2, .svg .page-seed #sidebar .block-menu.open h2, .svg .page-exec-ed
+  #sidebar .block-menu-block.open h2, .svg .page-seed
   #sidebar .block-menu-block.open h2 {
-    background: url('../images/icons/inThisSection-arrow-up-grayblue.svg') no-repeat 85% 47% #f4f4f4;
+    background: url('../images/icons/inThisSection-arrow-up-taupe.svg') no-repeat 85% 47% #f4f4f4;
   }
-  .no-js .page-exec-ed #sidebar .block-menu.open h2, .no-svg .page-exec-ed #sidebar .block-menu.open h2, .no-js .page-exec-ed
+  .no-js .page-exec-ed #sidebar .block-menu.open h2, .no-svg .page-exec-ed #sidebar .block-menu.open h2, .no-js .page-seed #sidebar .block-menu.open h2, .no-svg .page-seed #sidebar .block-menu.open h2, .no-js .page-exec-ed
   #sidebar .block-menu-block.open h2, .no-svg .page-exec-ed
+  #sidebar .block-menu-block.open h2, .no-js .page-seed
+  #sidebar .block-menu-block.open h2, .no-svg .page-seed
   #sidebar .block-menu-block.open h2 {
-    background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
+    background: url('../images/icons/inThisSection-arrow-up-taupe-@2x.png') no-repeat 11px 11px #f4f4f4;
   }
   .page-programs-mba #sidebar .block-menu.open h2, .page-programs-mba
   #sidebar .block-menu-block.open h2 {
@@ -12366,6 +12377,13 @@ button.checkbox-clear-all {
 }
 @media (max-width: 62.4375em) and (max-width: 37.4375em) {
   #sidebar .block-menu.open .content,
+  #sidebar .block-menu-block.open .content {
+    top: 42px;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
+  #sidebar .block-menu-block.open .content, .page-seed
   #sidebar .block-menu-block.open .content {
     top: 42px;
   }
