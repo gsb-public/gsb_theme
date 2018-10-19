@@ -23,6 +23,8 @@
                 e.preventDefault();
             }
         });
+        $('#search-close').click(function(e){ $('#page').removeClass('modal-open').addClass('modal-closed')});
+
         $(document).keydown(function(event) {
             if (event.keyCode == 27) {
                 $('#page').removeClass('modal-open');
