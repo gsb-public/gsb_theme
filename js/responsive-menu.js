@@ -18,11 +18,12 @@ Drupal.behaviors.responsiveMenu = {
     $(context).find('#sidebar .menu li.expanded.active-trail').addClass('open');
     $(context).find('#sidebar .menu li.expanded').addClass('collapsed')
         .click(function (e){
-          if($(this).hasClass('collapsed')) {
+          if ($(this).hasClass('collapsed')) {
+              $(this).removeClass('collapsed').addClass('open');
+              e.stopPropagation();
               e.preventDefault();
-              $(this).removeClass('collapsed');
-          } else {
-              $(this).addClass('open');
+          } else if ($(this).hasClass('open')) {
+              $(this).removeClass('open').addClass('collapsed');
           }
       });
   }
