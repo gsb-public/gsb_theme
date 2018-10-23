@@ -10,7 +10,11 @@
 /*Parallax Effect */
 .parallax
   /* The image used */
-  background-image: url("../../../images/parallax-image-stayintouch-2800x1620.png")
+  background-image: url("../../../images/parallax-image-stayintouch-2800x1620-desktop.jpg")
+  +breakpoint($bp-for-tablet-range)
+    background-image: url("../../../images/parallax-image-stayintouch-tablet-2800x1400.png")
+  +breakpoint($bp-for-phone-only)
+    background-image: url("../../../images/parallax-image-stayintouch-mobile-1200x700.png")
   /* Set a specific height */
   min-height: 330px
   +breakpoint($bp-mobile-max)

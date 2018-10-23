@@ -1,7 +1,7 @@
 /*Parallax Effect */
 .parallax {
   /* The image used */
-  background-image: url("../../../images/parallax-image-stayintouch-2800x1620.png");
+  background-image: url("../../../images/parallax-image-stayintouch-2800x1620-desktop.jpg");
   /* Set a specific height */
   min-height: 330px;
   /* Create the parallax scrolling effect */
@@ -10,6 +10,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .parallax {
+    background-image: url("../../../images/parallax-image-stayintouch-tablet-2800x1400.png");
+  }
+}
+@media (max-width: 37.4375em) {
+  .parallax {
+    background-image: url("../../../images/parallax-image-stayintouch-mobile-1200x700.png");
+  }
 }
 @media (max-width: 35.5em) {
   .parallax {
