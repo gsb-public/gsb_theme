@@ -80,7 +80,7 @@
       height: 64px
       width: 64px
     +breakpoint($bp-for-phone-only)
-      background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/65% $red
+      background: url(../images/icons/icon-menu-white-54x54.png) no-repeat center/45% $red
       height: 50px
       width: 50px
     &:before
@@ -378,38 +378,43 @@ div#header-wrapper.awemenu-sticky + div#hero
           padding-right: 20px
   // Utility menus
   div[id*="-utility"]
-    float: right
-    position: relative
-    margin-right: -15px
-    width: 184px
-    +breakpoint($bp-for-phone-tablet-range)
-      float: unset
-      padding-left: 20px
-      margin-right: 0
-      width: 100%
-      li:first-of-type
-        border-top: 1px solid $grey-e
-      li.leaf
-        padding: 0
-        a
-          padding: 15px 0
-    li
-      border-bottom: 1px solid $grey-e
-      padding: 14px 0
-      &:first-of-type
-        padding-top: 0
-      a
-        padding-bottom: 0
-      .svg &
-        background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
-        background-position: right center
-        background-origin: content-box
-        padding-right: 5px
-      .no-js &, .no-svg &
-        +icon-after("arrow-med-right", true)
-          color: $voices-divider
-          float: right
-          font-weight: normal
+    .content
+      float: right
+      position: relative
+      margin-right: -15px
+      width: 184px
+      +breakpoint($bp-for-phone-tablet-range)
+        float: unset
+        padding-left: 20px
+        margin-right: 0
+        width: 100%
+        ul.menu
+          li:first-of-type
+            border-top: 1px solid $grey-e
+          li.leaf
+            padding: 0
+            a
+              padding: 15px 0
+      ul.menu
+        li.leaf
+          border-bottom: 1px solid $grey-e
+          padding: 14px 0
+          &:first-of-type
+            padding-top: 0
+          &:last-of-type
+            padding-bottom: 15px
+          a
+            padding-bottom: 0
+          .svg &
+            background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
+            background-position: right center
+            background-origin: content-box
+            padding-right: 5px
+          .no-js &, .no-svg &
+            +icon-after("arrow-med-right", true)
+              color: $voices-divider
+              float: right
+              font-weight: normal
 
 
 // Global search
