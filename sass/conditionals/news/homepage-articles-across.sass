@@ -37,6 +37,10 @@
         font-family: $font-light
 
     .view-gsb-announcement-school-listing
+      +breakpoint($bp-for-tablet-range)
+        padding: 0 103px
+      +breakpoint(1199px width)
+        padding: 0 200px
       .view-content
         &:after
           clear: both
@@ -58,7 +62,9 @@
         background-color: $white
         float: left
         width: 562px
-        +breakpoint(320px $max-width)
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
+        +breakpoint(1199px width)
           width: 100%
         .field-type-datetime
           color: $grey-hp-7
@@ -81,6 +87,10 @@
               opacity: .6
               transform: scale(1.05)
     .view-gsb-insights-stanford-business
+      +breakpoint($bp-for-tablet-range)
+        padding: 0 103px
+      +breakpoint(1199px width)
+        padding: 0 200px
       .view-content
         &:after
           clear: both
