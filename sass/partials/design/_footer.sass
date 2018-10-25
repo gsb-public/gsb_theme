@@ -673,19 +673,33 @@ input.signup-submit
   #gsb-footer-three 
     .region-footer-three
       padding-bottom: 50px
+      +breakpoint($bp-tablet-port-max)
+        padding-bottom: 0px
   #gsb-footer-one 
     .region-footer-one
       padding-top: 40px
+      +breakpoint($bp-tablet-port-max)
+        padding-top: 0px
+  #gsb-footer-two
+    .region-footer-two
+      #block-menu-menu-executive-education-footer
+        +breakpoint($bp-tablet-port-max)
+          border-bottom: 1px #cccccc solid
   #legal-new
     background-color: #f4f4f4
     border-top: 1px #cccccc solid
     max-width: 1170px
     margin: 0 auto
+    +breakpoint($bp-tablet-port-max)
+      border-top: none
 
     .region-legal-new
       .gsb-footer-meta
         color: #656162
 
       #block-menu-menu-footer-3-new 
-        .content a
-          color: #656162
+        .content 
+          a
+            color: #656162
+          a:hover:after
+            color: #656162
