@@ -286,6 +286,9 @@ input.signup-submit
       +breakpoint($bp-tablet-port-max)
         border-right: none
         padding-right: 0px
+      li a
+        +breakpoint($bp-tablet-pot)
+          font-size: 16px
 
 #gsb-footer-two
   #block-menu-menu-footer-2,
@@ -297,12 +300,27 @@ input.signup-submit
       float: left
       width: 100%
       margin: 0
+    +breakpoint($bp-tablet-pot)
+      display: inline-block
+      padding-top: 19px
+      width: 50%
     .content
       border-right: 1px solid #c4c4c4
       padding-right: 25px
       +breakpoint($bp-tablet-port-max)
         border-right: none
         padding-right: 0px
+      +breakpoint($bp-tablet-land)
+        padding-right: 10px
+      li a
+        +breakpoint($bp-tablet-pot)
+          font-size: 16px
+
+  #block-menu-menu-footer-2
+    +breakpoint($bp-tablet-pot)
+      width: 100%
+      position: absolute
+
 
 #gsb-footer-two
   #block-menu-menu-footer-alumni-section
@@ -389,6 +407,8 @@ input.signup-submit
       a
         +breakpoint($bp-tablet-port-max)
           font-size: 14px
+        +breakpoint($bp-tablet-pot)
+          font-size: 16px
 
     .icon-wrapper
       max-width: 330px
@@ -505,6 +525,8 @@ input.signup-submit
       font-size: 14px
     +breakpoint($bp-tablet-land)
       font-size: 16px
+    +breakpoint($bp-tablet-pot)
+      font-size: 16px
   li:after
     color: #c4c4c4
     content: "|"
@@ -566,8 +588,14 @@ input.signup-submit
           margin: 4px 0
         +breakpoint($bp-tablet-land)
           margin-right: 25px
+        +breakpoint($bp-tablet-pot)
+          display: inline-block
+          padding-right: 32px
+          padding-bottom: 25px
       li:first-of-type
         margin-left: 5px
+        +breakpoint($bp-tablet-port-max)
+          margin-left: 0px
       li:last-of-type
         margin-right: 0
 
@@ -575,6 +603,8 @@ input.signup-submit
     #block-block-38
       +breakpoint($bp-tablet-port-max)
         padding-bottom: 20px
+      +breakpoint($bp-tablet-pot)
+        padding-bottom: 0px
 
 .footer-border
   border-top: 3px solid #990000
