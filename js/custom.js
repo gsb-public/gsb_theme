@@ -636,4 +636,19 @@
         $(this).closest('#page').toggleClass('modal-closed modal-open');
       } );
     });
+    /* Mobile menu manipulation*/
+    $(function(){
+        updateMenutitles();
+        $(window).resize(function() {
+            updateMenutitles();
+        });
+        function updateMenutitles() {
+            var width = $(window).width();
+            if (width < 1199) {
+                $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
+                $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
+                $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-online")
+            };
+        };
+    });
 }(jQuery));

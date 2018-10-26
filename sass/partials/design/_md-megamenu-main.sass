@@ -37,6 +37,8 @@
 #md-megamenu-1 .awemenu-megamenu-wrapper .row .menu li.last.leaf
   padding-bottom: 0
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper
+  box-shadow: 0 4px 10px -2px #808080
+  border-bottom: 3px solid $text-black
   padding-bottom: 30px
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper .overview-link-mobile-only
   +breakpoint($bp-for-desktop-up)
@@ -471,13 +473,17 @@ div#header-wrapper.awemenu-sticky + div#hero
       margin-top: 49px
     +breakpoint($bp-for-tablet-range)
       border-bottom: 3px solid $text-black
+      border-left: 1px $grey-db solid
       margin-top: 63px
     .overview-link-mobile-only
       color: $text-black
       display: block
       font-weight: bold
       padding-left: 35px
-      font-size: 16px
+      +breakpoint($bp-for-phone-only)
+        font-size: 16px
+      +breakpoint($bp-for-tablet-range)
+        font-size: 18px
     // Adjusting padding for the phone size
     .content
       padding-bottom: 0
