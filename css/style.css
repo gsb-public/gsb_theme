@@ -8617,6 +8617,8 @@ input.signup-submit:hover {
 }
 
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper {
+  box-shadow: 0 4px 10px -2px gray;
+  border-bottom: 3px solid #231f20;
   padding-bottom: 30px;
 }
 
@@ -9245,6 +9247,7 @@ input.signup-submit:hover {
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu {
     border-bottom: 3px solid #231f20;
+    border-left: 1px #dbdbdb solid;
     margin-top: 63px;
   }
 }
@@ -9255,7 +9258,20 @@ input.signup-submit:hover {
   display: block;
   font-weight: bold;
   padding-left: 35px;
-  font-size: 16px;
+}
+@media (max-width: 37.4375em) {
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .overview-link-mobile-only {
+    font-size: 16px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .overview-link-mobile-only {
+    font-size: 18px;
+  }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .content,
 .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .content,
