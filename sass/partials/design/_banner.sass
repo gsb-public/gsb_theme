@@ -57,6 +57,10 @@
     +breakpoint($bp-for-tablet-range)
       font-size: 18px
   .page-alumni &
+    +breakpoint($bp-for-tablet-range)
+      height: 50px
+    +breakpoint($bp-for-phone-only)
+      height: 42px
     top: 0
     a
       color: $red
@@ -72,6 +76,7 @@
     position: relative
     top: 20px
   +breakpoint($bp-mobile-max)
+    border-bottom: 1px solid $grey-db
     display: table-cell
     font-size: 14px
     height: 42px
@@ -159,7 +164,7 @@
   display: none
   +breakpoint($bp-tablet-port-max)
     display: block
-    margin-top: 50px
+    margin-top: 2px
     position: absolute
     right: 0
     li
@@ -167,15 +172,20 @@
       +breakpoint($bp-for-phone-only)
         display: table-cell
     a
-      color: $text-black
+      color: $red-dark
       font-family: $font-demi
-      font-size: 13px
+      font-size: 12px
       line-height: 1.2
       margin: 0 8px
       +breakpoint($bp-for-phone-only)
         font-size: 7px
         height: 10px
         padding-left: 5px
+    .menu
+      +breakpoint($bp-for-tablet-range)
+        margin-right: 140px
+        margin-top: -35px
+        position: relative
 
 // First Sidebar
 #sidebar
@@ -361,6 +371,7 @@
     height: unset
   .page-alumni &
     +breakpoint($bp-for-phone-only)
+      border-bottom: 1px solid $grey-db
       height: 42px
 
   ul.menu
