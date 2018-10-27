@@ -390,6 +390,16 @@
   border-bottom: 1px solid #979797;
   height: 75px;
 }
+@media (min-width: 75em) {
+  .node-type-voices .field-name-social-buttons-top {
+    margin-left: 35px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .field-name-social-buttons-top {
+    margin-top: 30px;
+  }
+}
 .node-type-voices .ds-2col-stacked-fluid {
   margin: 0 auto;
 }
@@ -445,7 +455,7 @@
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-body {
-    padding: 0;
+    padding: 30px 0 0 0;
   }
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-date.field-type-datetime {
@@ -508,7 +518,11 @@
   height: 150px;
   position: relative;
   top: 30px;
-  width: 100%;
+}
+@media (min-width: 75em) {
+  .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-voices-cta {
+    margin-left: 35px;
+  }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-left .field-name-field-voices-cta {
@@ -585,7 +599,7 @@
   line-height: 1.5;
 }
 .node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right .background-rail-img {
-  margin-left: 102px;
+  margin-left: 36%;
   margin-top: -75px;
   position: absolute;
 }
@@ -731,7 +745,7 @@
 }
 .node-type-voices .field-name-social-buttons-top .item-list ul,
 .node-type-voices .field-name-social-buttons-bottom .item-list ul {
-  margin: 0 0 0 25px;
+  margin: 0 0 0 -10px;
 }
 @media (max-width: 37.4375em) {
   .node-type-voices .field-name-social-buttons-top .item-list ul,
@@ -749,7 +763,7 @@
   vertical-align: top;
 }
 .node-type-voices .field-name-social-buttons-bottom .item-list ul {
-  margin: 0 0 0 50px;
+  margin: 0;
 }
 @media (max-width: 37.4375em) {
   .node-type-voices .field-name-social-buttons-bottom .item-list ul {
@@ -807,9 +821,25 @@
 }
 .node-type-voices .social-media-wrapper {
   clear: left;
-  display: block;
   border-top: 1px solid #979797;
+  display: block;
   padding-top: 20px;
+}
+@media (min-width: 75em) {
+  .node-type-voices .social-media-wrapper {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .node-type-voices .social-media-wrapper {
+    margin-top: 35px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .node-type-voices .social-media-wrapper {
+    margin-top: 50px;
+    width: 95%;
+  }
 }
 .node-type-voices .field-name-social-buttons-bottom {
   margin-top: 10px;
