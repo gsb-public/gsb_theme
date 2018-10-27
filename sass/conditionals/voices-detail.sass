@@ -229,6 +229,10 @@
   .field-name-social-buttons-top
     border-bottom: 1px solid $voices-divider
     height: 75px
+    +breakpoint($bp-for-desktop-up)
+      margin-left: 35px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 30px
 
   /* Voices col set up and adjustment */
   .ds-2col-stacked-fluid
@@ -267,7 +271,7 @@
           +breakpoint($bp-mobile-max)
             padding: 0
           +breakpoint($bp-for-tablet-range)
-            padding: 0
+            padding: 30px 0 0 0
 
         .field-name-field-date.field-type-datetime
           display: inline
@@ -313,7 +317,8 @@
           height: 150px
           position: relative
           top: 30px
-          width: 100%
+          +breakpoint($bp-for-desktop-up)
+            margin-left: 35px
           +breakpoint($bp-for-phone-tablet-range)
             display: none
           a.cta
@@ -366,7 +371,7 @@
           div
             line-height: 1.5
         .background-rail-img
-          margin-left: 102px
+          margin-left: 36%
           margin-top: -75px
           position: absolute
           img
@@ -468,7 +473,7 @@
   .field-name-social-buttons-top,
   .field-name-social-buttons-bottom
     .item-list ul
-      margin: 0 0 0 25px
+      margin: 0 0 0 -10px
       +breakpoint($bp-for-phone-only)
         margin: 0
       li
@@ -478,7 +483,7 @@
       vertical-align: top
   .field-name-social-buttons-bottom
     .item-list ul
-      margin: 0 0 0 50px
+      margin: 0
       +breakpoint($bp-for-phone-only)
         margin: 0
 
@@ -499,9 +504,16 @@
   // social media wrapper - fixing floats
   .social-media-wrapper
     clear: left
-    display: block
     border-top: 1px solid $voices-divider
+    display: block
     padding-top: 20px
+    +breakpoint($bp-for-desktop-up)
+      margin-left: 35px
+    +breakpoint($bp-for-phone-only)
+      margin-top: 35px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 50px
+      width: 95%
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
