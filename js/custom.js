@@ -652,7 +652,7 @@
             if (width < 599) {
                 $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
             };
-            if (width >= 600) {
+            if (width >= 600 && width < 1199) {
                 $(".social-media-wrapper").insertBefore(".group-wrapper-tablet-3");
             };
         };
