@@ -207,9 +207,19 @@
           color: $white
   .homepage_insights-cta
     @extend %homepage_cta
+    width: 205px
+    +breakpoint($bp-for-tablet-range)
+      width: 205px
+    +breakpoint($bp-for-phone-only)
+      width: 280px
   .homepage_across-cta
     @extend %homepage_cta
     padding-right: 30px
     padding-left: 20px
+    width: 205px
+    +breakpoint($bp-for-tablet-range)
+      width: 205px
+    +breakpoint($bp-for-phone-only)
+      width: 280px
     a:after
       right: 15px
