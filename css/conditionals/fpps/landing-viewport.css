@@ -15,14 +15,6 @@
   overflow: hidden;
   position: relative;
 }
-@media (max-width: 37.4375em) {
-  .pane-bundle-landing-viewport {
-    padding-top: 0;
-    display: inline-block;
-    max-width: 100%;
-    height: 100%;
-  }
-}
 .pane-bundle-landing-viewport .field-name-field-homepage-image-desktop {
   display: none;
 }
@@ -232,6 +224,15 @@
   display: flex;
   justify-content: center;
   position: relative;
+}
+@media (max-width: 37.4375em) {
+  .panels-layout-gsb-homepage .pane-landingpage-video,
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport {
+    padding-top: 0;
+    display: inline-block;
+    max-width: 100%;
+    height: 100%;
+  }
 }
 .panels-layout-gsb-homepage .pane-landingpage-video img,
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
