@@ -465,6 +465,13 @@
         .group-wrapper-tablet-4
           +breakpoint($bp-for-tablet-range)
             padding-top: 10px
+            width: 100%
+            .field-voices-stay-in-touch-cta,
+            .field-voices-explore-program-cta,
+            .field-name-voices-ct-background-rail
+              width: 45%
+              margin: 0 auto
+
 
 
   // Social media buttons
@@ -619,4 +626,49 @@
         .field-related-programs-wrapper
           div:last-child
             border-bottom: none !important
+
+      .group-wrapper-related
+        legend
+          +breakpoint($bp-idea-story-detail)
+            display: block
+            float: left
+            font-family: $font-demi
+            font-size: 20px
+            line-height: 1.2
+            padding-top: 20px
+            padding-left: $standard-padding
+            padding-bottom: 18px
+
+        // Fieldset wrapper
+        .fieldset-wrapper
+          +breakpoint(1211px min-width)
+            display: block !important
+          +breakpoint($bp-idea-story-detail)
+            clear: left
+
+        // Superhead
+        .superhead
+          +breakpoint($bp-idea-story-detail)
+            display: none
+
+        // Related faculty
+        .field-name-field-person-fac-ref
+          +breakpoint($bp-idea-story-detail)
+            padding: 0 $standard-padding 20px
+
+        // Related Idea stories
+        .field-name-field-related-idea-story
+          .node-idea-story
+            +breakpoint($bp-idea-story-detail)
+              padding: 20px $standard-padding
+
+        // Related other content
+        .field-collection-item-field-related-other-unlimited
+          +breakpoint($bp-idea-story-detail)
+            padding: 20px $standard-padding
+
+        // Related links
+        .field-name-field-link-unlimited
+          +breakpoint($bp-idea-story-detail)
+            padding: 20px $standard-padding
 
