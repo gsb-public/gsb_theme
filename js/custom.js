@@ -572,28 +572,25 @@
   };
     /* viewport sizing */
     $(function() {
-        function setHeight() {
-            windowHeight = $(window).innerHeight()-75;
-            $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
-            $('.pane-landingpage-video').css('max-height', windowHeight);
-            // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
-        };
         setHeight();
-
         $(window).resize(function() {
             setHeight();
         });
+        function setHeight() {
+            windowHeight = $(window).innerHeight();
+            $('.pane-landingpage-video, .pane-bundle-landing-viewport, .field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css('max-height', windowHeight);
+        };
         /* scroll functionality for the 2018 site refresh*/
         // Image splash scroll
         $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: $('.pane-bundle-mission-statement').offset().top
+                scrollTop: $('.pane-bundle-mission-statement').offset().top+100
             }, 800);
         });
         // video splash scroll - want it to come further down for the video.
         $('.pane-landingpage-video .scrollLink').on('click', function() {
             $('html, body').animate({
-                scrollTop: ( $('.pane-bundle-mission-statement').offset().top+ 130)
+                scrollTop: ( $('.pane-bundle-mission-statement').offset().top)
             }, 800);
         });
     });

@@ -149,6 +149,9 @@
 .pane-bundle-landing-viewport .viewport-text span a:hover {
   text-decoration: none;
 }
+.pane-bundle-landing-viewport .field-name-field-homepage-image-desktop.field-type-image ~ .scrollLink {
+  bottom: 0;
+}
 .pane-bundle-landing-viewport .scrollLink {
   color: white;
   cursor: hand;
@@ -156,9 +159,8 @@
   font-size: 16px;
   font-weight: bold;
   left: 50%;
-  padding-bottom: 25%;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%);
 }
 .pane-bundle-landing-viewport .scrollLink:after {
   content: "\f105";
@@ -177,25 +179,32 @@
   display: block;
   padding: 10px 45px;
 }
-@media (max-width: 20em) {
+@media (max-width: 35.5em) {
   .pane-bundle-landing-viewport .scrollLink:after {
-    padding: 0 45px;
+    padding: 10px 35px;
   }
 }
 @media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .scrollLink {
     font-size: 12px;
-    padding-bottom: 15%;
-  }
-}
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .pane-bundle-landing-viewport .scrollLink {
-    padding-bottom: 15%;
   }
 }
 .pane-bundle-landing-viewport video + .scrollLink {
   bottom: 0;
-  padding-bottom: 10px;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .pane-bundle-landing-viewport video + .scrollLink {
+    bottom: 50px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .pane-bundle-landing-viewport video + .scrollLink {
+    bottom: 50px;
+  }
+}
+
+.pane-bundle-landing-viewport .scrollLink:hover:after {
+  padding-top: 5px;
 }
 
 #edit-field-homepage-image-url #field-homepage-image-url-add-more-wrapper .link-field-column {
@@ -209,61 +218,21 @@
 .panels-layout-gsb-homepage #content #main .panel-pane.pane-landingpage-video {
   padding-top: 0;
 }
-.panels-layout-gsb-homepage .pane-landingpage-video {
+.panels-layout-gsb-homepage .pane-landingpage-video,
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport {
   align-items: center;
   display: flex;
   justify-content: center;
   position: relative;
 }
-.panels-layout-gsb-homepage .pane-landingpage-video video.splash__video__media {
+.panels-layout-gsb-homepage .pane-landingpage-video img,
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
+  object-fit: contain;
+}
+.panels-layout-gsb-homepage .pane-landingpage-video video.splash__video__media,
+.panels-layout-gsb-homepage .pane-landingpage-video .field-type-image,
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport video.splash__video__media,
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport .field-type-image {
   height: 100%;
   width: 100%;
-}
-.panels-layout-gsb-homepage .pane-landingpage-video .scrollLink {
-  color: white;
-  cursor: hand;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  left: 50%;
-  padding-bottom: 10%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-.panels-layout-gsb-homepage .pane-landingpage-video .scrollLink:after {
-  content: "\f105";
-  display: inline;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-transform: none;
-  line-height: 1;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-family: 'icons';
-  display: block;
-  padding: 10px 45px;
-}
-@media (max-width: 20em) {
-  .panels-layout-gsb-homepage .pane-landingpage-video .scrollLink:after {
-    padding: 0 45px;
-  }
-}
-@media (max-width: 37.4375em) {
-  .panels-layout-gsb-homepage .pane-landingpage-video .scrollLink {
-    font-size: 12px;
-    padding-bottom: 15%;
-  }
-}
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .panels-layout-gsb-homepage .pane-landingpage-video .scrollLink {
-    padding-bottom: 15%;
-  }
-}
-.panels-layout-gsb-homepage .pane-landingpage-video video + .scrollLink {
-  bottom: 0;
-  padding-bottom: 10px;
 }
