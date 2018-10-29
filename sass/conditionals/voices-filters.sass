@@ -262,24 +262,46 @@
 .view-display-id-voices_filters_pane
   width: 100%
   .view-filters
-    background-color: $grey-light
+    background-color: $grey-hp
+    .views-exposed-widgets
+      height: 88px
+      +breakpoint($bp-for-phone-tablet-range)
+        height: auto
     .views-widget-filter-field_industry_tid
       display: inline-block
       position: relative
       max-width: 370px
       padding: 0px 20px 0px 20px
       #edit-field-industry-tid
-        width: 280px !important
+        width: 275px !important
+        height: 40px !important
+        font-size: 16px !important
+        font-family: $font-sans
         +breakpoint($bp-for-phone-tablet-range)
           width: 88% important
       .form-select
         +breakpoint($bp-for-phone-tablet-range)
           display: flex !important
         .customSelectInner
-          width: 250px !important
+          width: 230px !important
+          padding: 0px !important
+          padding-left: 15px !important
+          line-height: 2.9 !important
+          font-size: 16px !important
+          font-weight: normal !important
+          font-family: $font-sans
           +breakpoint($bp-for-phone-tablet-range)
             display: flex !important
             width: 250px !important
+      .customSelect
+        height: 47px
+      .customSelect:after
+        font-size: 15px !important
+        line-height: 3 !important
+        height: 43px !important
+        padding: 1px 14px !important
+        top: 1px !important
+        left: -1px !important
 
     .views-widget-filter-field_region_of_interest_tid
       display: inline-block
@@ -287,17 +309,35 @@
       max-width: 370px
       padding: 0px 20px 0px 20px
       #edit-field-region-of-interest-tid
-        width: 280px !important
+        width: 275px !important
+        height: 40px !important
+        font-size: 16px !important
+        font-family: $font-sans
         +breakpoint($bp-for-phone-tablet-range)
           width: 88% important
       .form-select
         +breakpoint($bp-for-phone-tablet-range)
           display: flex !important
         .customSelectInner
-          width: 250px !important
+          width: 230px !important
+          padding: 0px !important
+          padding-left: 15px !important
+          line-height: 2.9 !important
+          font-size: 16px !important
+          font-weight: normal !important
+          font-family: $font-sans
           +breakpoint($bp-for-phone-tablet-range)
             display: flex !important
             width: 250px !important
+      .customSelect
+        height: 47px
+      .customSelect:after
+        font-size: 15px !important
+        line-height: 3 !important
+        height: 43px !important
+        padding: 1px 14px !important
+        top: 1px !important
+        left: -1px !important
 
   .view-content
     margin-left: 26px
@@ -1169,4 +1209,52 @@
                 font-size: 16px
                 line-height: 1.5
 
-
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one 
+    .full-header,
+    .full-bleed-header,
+    .featured-content
+      .view-display-id-voices_filters_pane
+        .views-row
+          width: 29.40%
+          +breakpoint($bp-for-phone-tablet-range)
+            width: 86%
+          +breakpoint($bp-mobile-land)
+            width: 45%
+          +breakpoint($bp-tablet-pot)
+            width: 39%
+          +breakpoint($bp-tablet-land)
+            width: 41%
+    .inner-main-wrapper
+      .main-header,
+      .main-middle,
+      .main-footer
+        .view-display-id-voices_filters_pane,
+        .view-display-id-all_voices_list_panel_pane
+          .views-row
+            width: 44%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 89%
+            +breakpoint($bp-tablet-pot)
+              width: 68%
+            +breakpoint($bp-tablet-land)
+              width: 77%
+        .view-display-id-voices_single_teaser_pane
+          .views-row
+            width: 50%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 81%
+            +breakpoint($bp-tablet-pot)
+              width: 64%
+            +breakpoint($bp-tablet-land)
+              width: 71%
+        .view-display-id-voices_filters_pane
+          .views-widget-filter-field_industry_tid,
+          .views-widget-filter-field_region_of_interest_tid
+            #edit-field-industry-tid
+              width: 250px !important
+            #edit-field-region-of-interest-tid
+              width: 240px !important
+            .form-select
+              .customSelectInner
+                width: 195px !important
