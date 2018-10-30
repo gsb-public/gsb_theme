@@ -1214,27 +1214,61 @@
     .full-header,
     .full-bleed-header,
     .featured-content
-      .view-display-id-voices_filters_pane
+      .view-display-id-voices_filters_pane,
+      .view-display-id-all_voices_list_panel_pane
         .views-row
           width: 29.40%
           +breakpoint($bp-for-phone-tablet-range)
             width: 86%
           +breakpoint($bp-mobile-land)
-            width: 45%
+            width: 44%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
           +breakpoint($bp-tablet-pot)
             width: 39%
           +breakpoint($bp-tablet-land)
             width: 41%
+      .view-display-id-voices_list_cta_panel_pane
+        .views-row
+          width: 29.51%
+          +breakpoint($bp-for-phone-tablet-range)
+            width: 86%
+          +breakpoint($bp-mobile-land)
+            width: 44%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
+          +breakpoint($bp-tablet-pot)
+            width: 39%
+          +breakpoint($bp-tablet-land)
+            width: 41%
+      .pane-voices-filters-voices-list-cta-panel-pane 
+        .pane-title
+          margin-left: 0px
+          +breakpoint($bp-for-phone-tablet-range)
+            margin-left: 26px
+        .view-content
+          margin-left: 0px
+          +breakpoint($bp-for-phone-tablet-range)
+            margin-left: 26px
+      .view-display-id-voices_filters_pane
+        .views-widget-filter-field_industry_tid,
+        .views-widget-filter-field_region_of_interest_tid
+          .form-select
+            .customSelectInner
+              +breakpoint($bp-mobile-land)
+                width: 225px !important
     .inner-main-wrapper
       .main-header,
-      .main-middle,
       .main-footer
         .view-display-id-voices_filters_pane,
+        .view-display-id-voices_list_cta_panel_pane,
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 44%
             +breakpoint($bp-for-phone-tablet-range)
               width: 89%
+            +breakpoint($bp-iphone6p-land)
+              width: 74%
             +breakpoint($bp-tablet-pot)
               width: 68%
             +breakpoint($bp-tablet-land)
@@ -1258,3 +1292,79 @@
             .form-select
               .customSelectInner
                 width: 195px !important
+                +breakpoint($bp-mobile-land)
+                  width: 225px !important
+
+.sidebar-first.panels-layout-gsb-no-sidebar
+  .gsb-no-sidebar
+    .content-wrapper
+      .main-header,
+      .main-footer
+        .view-display-id-voices_filters_pane,
+        .view-display-id-all_voices_list_panel_pane
+          .views-row
+            width: 42%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 89%
+            +breakpoint($bp-tablet-pot)
+              width: 40%
+            +breakpoint($bp-tablet-land)
+              width: 62%
+            +breakpoint($bp-mobile-land)
+              width: 44%
+            +breakpoint($bp-iphone6p-land)
+              width: 42%
+        .view-display-id-voices_single_teaser_pane
+          .views-row
+            width: 40.50%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 81%
+            +breakpoint($bp-tablet-pot)
+              width: 40%
+            +breakpoint($bp-tablet-land)
+              width: 58%
+            +breakpoint($bp-mobile-land)
+              width: 44%
+            +breakpoint($bp-iphone6p-land)
+              width: 42%
+        .view-display-id-voices_list_cta_panel_pane,
+        .view-display-id-all_voices_list_panel_pane
+          .views-row
+            width: 42.30%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 89%
+            +breakpoint($bp-tablet-pot)
+              width: 40%
+            +breakpoint($bp-tablet-land)
+              width: 62%
+            +breakpoint($bp-mobile-land)
+              width: 44%
+            +breakpoint($bp-iphone6p-land)
+              width: 42%
+
+        .view-display-id-voices_filters_pane
+          .views-widget-filter-field_industry_tid,
+          .views-widget-filter-field_region_of_interest_tid
+            #edit-field-industry-tid
+              width: 250px !important
+            #edit-field-region-of-interest-tid
+              width: 240px !important
+            .form-select
+              .customSelectInner
+                width: 240px !important
+
+      .main-middle
+        .view-display-id-voices_single_teaser_pane
+          .views-row
+            width: 88%
+            +breakpoint($bp-for-phone-tablet-range)
+              width: 96%
+            +breakpoint($bp-tablet-pot)
+              width: 38%
+            +breakpoint($bp-tablet-land)
+              width: 62%
+            +breakpoint($bp-mobile-land)
+              width: 44%
+            +breakpoint($bp-iphone6p-land)
+              width: 42%
+
