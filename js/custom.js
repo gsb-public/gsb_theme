@@ -594,6 +594,10 @@
             }, 800);
         });
     });
+    /* Viewport text */
+    $(function() {
+      $('div.viewport-text').wrapAll('<div class="viewport-text-wrapper"></div>');
+    });
     /* Scroll up/down navigation becomes sticky */
     $(function() {
         var scrollPos = 0;

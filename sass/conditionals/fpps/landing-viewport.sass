@@ -7,14 +7,7 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-
 .pane-bundle-landing-viewport
-  align-items: center
-  display: flex
-  justify-content: center
-  overflow: hidden
-  position: relative
-
   .field-name-field-homepage-image-desktop
     display: none
     +breakpoint($bp-for-desktop-up)
@@ -47,62 +40,67 @@
       span
         background: $pink-bright
         box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
-
-  .viewport-text
-    position: absolute
-    top: 40%
-    left: 10%
-    text-align: left
-    width: 35%
+  .viewport-text-wrapper
+    bottom: 200px
+    left: 0
+    margin: 0 auto
+    position: relative
+    width: 1065px
     +breakpoint($bp-for-tablet-range)
-      top: 30%
-      width: 80%
+      width: 100%
+      left: 40px
     +breakpoint($bp-for-phone-only)
-      top: 20%
-      width: 80%
+      bottom: 50px
+      left: 40px
+      width: 90%
     +breakpoint($bp-mobile)
-      top: 0%
-    span
-      line-height: 2em
-      font-size: 36px
-      color: $white
-      padding: 13px 0
-      display: inline
-      box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
-      opacity: .8
-      +breakpoint($bp-for-tablet-range)
-        font-size: 30px
-        line-height: 2.5em
+      left: 25px
+      width: 90%
+    .viewport-text
+      text-align: left
+      max-width: 620px
       +breakpoint($bp-for-phone-only)
-        font-size: 18px
-        line-height: 3em
-      +breakpoint($bp-mobile)
-        font-size: 18px
-        line-height: 2.8em
-      &:hover
-        background-color: $hover-viewport-blue
-        box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
-        opacity: 1
-      a
+        max-width: 90%
+      span
+        line-height: 2em
+        font-size: 36px
         color: $white
-        +icon-after("arrow-double-right", true)
-        &:after
-          @extend %arrow-double-big
-          color: $white
-          font-weight: normal
-          position: relative
-          right: 0
-          padding-left: 10px
-          +breakpoint($bp-for-tablet-range)
-            top: 2px
-          +breakpoint($bp-for-phone-only)
-            top: 2px
+        padding: 13px 0
+        display: inline
+        box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
+        opacity: .8
+        +breakpoint($bp-for-tablet-range)
+          font-size: 30px
+          line-height: 2.5em
+        +breakpoint($bp-for-phone-only)
+          font-size: 18px
+          line-height: 3em
+        +breakpoint($bp-mobile)
+          font-size: 18px
+          line-height: 2.8em
         &:hover
-          text-decoration: none
-  .field-name-field-homepage-image-desktop.field-type-image ~ .scrollLink
-    bottom: 0
+          background-color: $hover-viewport-blue
+          box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
+          opacity: 1
+        a
+          color: $white
+          +icon-after("arrow-double-right", true)
+          &:after
+            @extend %arrow-double-big
+            color: $white
+            font-weight: normal
+            position: relative
+            right: 0
+            padding-left: 10px
+            +breakpoint($bp-for-tablet-range)
+              top: 2px
+            +breakpoint($bp-for-phone-only)
+              top: 2px
+          &:hover
+            text-decoration: none
 
   .scrollLink
+    bottom: 0px
     color: $white
     cursor: hand
     cursor: pointer
@@ -116,14 +114,17 @@
       padding: 10px 45px
       +breakpoint($bp-mobile-max)
         padding: 10px 35px
+    +breakpoint($bp-for-tablet-range)
+      bottom: 70px
     +breakpoint($bp-for-phone-only)
       font-size: 12px
+
   video + .scrollLink
     bottom: 0
     +breakpoint($bp-for-tablet-range)
-      bottom: 50px
+      bottom: 0
     +breakpoint($bp-for-phone-only)
-      bottom: 50px
+      bottom: 0
 
 .pane-bundle-landing-viewport .scrollLink:hover:after
   padding-top: 5px
@@ -144,9 +145,10 @@
 
   .pane-landingpage-video,
   .pane-bundle-landing-viewport
-    align-items: center
+    align-items: baseline
     display: flex
     justify-content: center
+    overflow: hidden
     position: relative
     +breakpoint($bp-for-phone-only)
       padding-top: 0

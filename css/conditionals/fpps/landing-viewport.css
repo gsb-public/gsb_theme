@@ -1,4 +1,4 @@
-.pane-bundle-landing-viewport .viewport-text span a:after {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:after {
   font-size: 21px;
   font-weight: normal;
   line-height: 0;
@@ -8,13 +8,6 @@
   top: 50%;
 }
 
-.pane-bundle-landing-viewport {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
 .pane-bundle-landing-viewport .field-name-field-homepage-image-desktop {
   display: none;
 }
@@ -55,31 +48,42 @@
   background: #dd1880;
   box-shadow: 25px 0 0 #dd1880, -25px 0 0 #dd1880;
 }
-.pane-bundle-landing-viewport .viewport-text {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  text-align: left;
-  width: 35%;
+.pane-bundle-landing-viewport .viewport-text-wrapper {
+  bottom: 200px;
+  left: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 1065px;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .pane-bundle-landing-viewport .viewport-text {
-    top: 30%;
-    width: 80%;
+  .pane-bundle-landing-viewport .viewport-text-wrapper {
+    width: 100%;
+    left: 40px;
   }
 }
 @media (max-width: 37.4375em) {
-  .pane-bundle-landing-viewport .viewport-text {
-    top: 20%;
-    width: 80%;
+  .pane-bundle-landing-viewport .viewport-text-wrapper {
+    bottom: 50px;
+    left: 40px;
+    width: 90%;
   }
 }
 @media (max-width: 20em) {
-  .pane-bundle-landing-viewport .viewport-text {
-    top: 0%;
+  .pane-bundle-landing-viewport .viewport-text-wrapper {
+    left: 25px;
+    width: 90%;
   }
 }
-.pane-bundle-landing-viewport .viewport-text span {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text {
+  text-align: left;
+  max-width: 620px;
+}
+@media (max-width: 37.4375em) {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text {
+    max-width: 90%;
+  }
+}
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span {
   line-height: 2em;
   font-size: 36px;
   color: white;
@@ -89,32 +93,32 @@
   opacity: 0.8;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .pane-bundle-landing-viewport .viewport-text span {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span {
     font-size: 30px;
     line-height: 2.5em;
   }
 }
 @media (max-width: 37.4375em) {
-  .pane-bundle-landing-viewport .viewport-text span {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span {
     font-size: 18px;
     line-height: 3em;
   }
 }
 @media (max-width: 20em) {
-  .pane-bundle-landing-viewport .viewport-text span {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span {
     font-size: 18px;
     line-height: 2.8em;
   }
 }
-.pane-bundle-landing-viewport .viewport-text span:hover {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span:hover {
   background-color: #2d6280;
   box-shadow: 25px 0 0 #2d6280, -25px 0 0 #2d6280;
   opacity: 1;
 }
-.pane-bundle-landing-viewport .viewport-text span a {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a {
   color: white;
 }
-.pane-bundle-landing-viewport .viewport-text span a:after {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -129,7 +133,7 @@
   font-weight: normal;
   font-family: 'icons';
 }
-.pane-bundle-landing-viewport .viewport-text span a:after {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:after {
   color: white;
   font-weight: normal;
   position: relative;
@@ -137,22 +141,20 @@
   padding-left: 10px;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .pane-bundle-landing-viewport .viewport-text span a:after {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:after {
     top: 2px;
   }
 }
 @media (max-width: 37.4375em) {
-  .pane-bundle-landing-viewport .viewport-text span a:after {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:after {
     top: 2px;
   }
 }
-.pane-bundle-landing-viewport .viewport-text span a:hover {
+.pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span a:hover {
   text-decoration: none;
 }
-.pane-bundle-landing-viewport .field-name-field-homepage-image-desktop.field-type-image ~ .scrollLink {
-  bottom: 0;
-}
 .pane-bundle-landing-viewport .scrollLink {
+  bottom: 0px;
   color: white;
   cursor: hand;
   cursor: pointer;
@@ -184,6 +186,11 @@
     padding: 10px 35px;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .pane-bundle-landing-viewport .scrollLink {
+    bottom: 70px;
+  }
+}
 @media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .scrollLink {
     font-size: 12px;
@@ -194,12 +201,12 @@
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .pane-bundle-landing-viewport video + .scrollLink {
-    bottom: 50px;
+    bottom: 0;
   }
 }
 @media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport video + .scrollLink {
-    bottom: 50px;
+    bottom: 0;
   }
 }
 
@@ -220,9 +227,10 @@
 }
 .panels-layout-gsb-homepage .pane-landingpage-video,
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport {
-  align-items: center;
+  align-items: baseline;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   position: relative;
 }
 @media (max-width: 37.4375em) {
