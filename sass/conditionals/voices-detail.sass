@@ -196,12 +196,14 @@
       .mobile-profile
         display: block
     +breakpoint($bp-for-tablet-range)
-      font-size: 24px
-      left: 18px
-      padding: 25px 18px 25px 30px
+      font-size: 28px
+      left: 0px
+      padding: 35px 15px 25px 50px
       position: relative
       top: 10px
-      width: 100%
+      width: 97%
+      margin-left: 11px
+      margin-right: 15px
     &:before
       content: "“"
       position: absolute
@@ -213,8 +215,8 @@
         font-size: 40px
         padding-left: 0px
       +breakpoint($bp-for-tablet-range)
-        font-size: 40px
-        padding-left: 0px
+        font-size: 50px
+        padding-left: 5px
     &:after
       content: "”"
     .quote
@@ -671,4 +673,9 @@
         .field-name-field-link-unlimited
           +breakpoint($bp-idea-story-detail)
             padding: 20px $standard-padding
+
+//hiding last updated from voice details page
+.node-type-voices
+  #block-gsb-public-custom-blocks-gpcb-last-updated
+    display: none
 
