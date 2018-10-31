@@ -17,6 +17,10 @@
       background: none
 // Removing the background span from display
 .node-type-voices
+  .voices-header-group-wrapper
+    width: 1170px
+    margin: 0 auto
+    padding-left: 30px
   .group-voices-group
     .field-name-field-background-color
       display: none
@@ -71,15 +75,16 @@
     fieldset.group-voices-group
       border: none
       color: $white
-      height: 60%
-      margin-left: 15%
+      height: 380px
       opacity: .9
       padding: 0 40px
       position: absolute
       text-align: left
       top: 50px
-      width: 26%
+      width: 430px
       z-index: 5
+      +breakpoint($bp-voices-header-box)
+        height: 330px
       +breakpoint($bp-mobile-max)
         background-color: transparent
         color: $text-black

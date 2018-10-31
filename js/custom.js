@@ -622,7 +622,7 @@
         $(".node-type-voices .group-right h1").contents().unwrap().wrap('<div/>');
         $(".node-type-voices .group-left .field-name-social-buttons-bottom, .node-type-voices .group-left .short-url-wrapper.field-name-field-link-single").wrapAll('<div class="social-media-wrapper"></div>');
         var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-background-color").text();
-          $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
+        $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString).wrapAll('<div class="voices-header-group-wrapper"></div>');
     });
     /* Homepage 3-across voices color manipulation*/
     $(function(){
