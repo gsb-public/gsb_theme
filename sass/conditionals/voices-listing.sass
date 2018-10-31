@@ -148,12 +148,13 @@
   +breakpoint($bp-for-phone-only)
     padding: 0
   +breakpoint($bp-for-tablet-range)
-    padding: 0px 0px 0px 10px
+    padding: 0 0 0 10px
 
 // Home page 3 across custom styles
 .pane-gsb-voices-listing-panel-pane-1
   margin: 0 auto
-  width: 85%
+  padding-left: 0
+  width: 1180px
   +breakpoint($bp-for-phone-tablet-range)
     width: auto
     h2
@@ -178,17 +179,15 @@
     +breakpoint($bp-for-phone-tablet-range)
       height: auto
       margin: 0 20px
-      width: 40%
     +breakpoint($bp-for-phone-only)
       width: 86%
       height: 446px
       margin: 0px 11px 30px 0px
     +breakpoint($bp-for-tablet-range)
-      width: 43%
       height: 410px
       margin: 0px 30px 30px 0px
     +breakpoint($bp-tablet-pot)
-      height: 440px
+      width: 282px
     +breakpoint($bp-tablet-land)
       width: 30%
 
