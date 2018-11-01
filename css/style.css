@@ -6827,8 +6827,7 @@ h2.insights-label {
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li.active-trail a.active-trail.active {
     background: url('../images/minus.png') no-repeat 97% center, transparent;
-    float: right;
-    float-padding-right: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 62.4375em) {
@@ -12199,7 +12198,6 @@ button.checkbox-clear-all {
 }
 @media (max-width: 35.5em) {
   .banner-title {
-    border-bottom: 1px solid #dbdbdb;
     display: table-cell;
     font-size: 14px;
     height: 42px;
@@ -12422,6 +12420,14 @@ button.checkbox-clear-all {
     width: 100%;
     z-index: 12;
   }
+  #sidebar .block-menu.open .content > ul.menu,
+  #sidebar .block-menu-block.open .content > ul.menu {
+    border-left: 1px solid gainsboro;
+  }
+  #sidebar .block-menu.open .content > ul.menu > li,
+  #sidebar .block-menu-block.open .content > ul.menu > li {
+    padding-left: 30px;
+  }
   .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
   #sidebar .block-menu-block.open .content, .page-seed
   #sidebar .block-menu-block.open .content {
@@ -12501,7 +12507,7 @@ button.checkbox-clear-all {
     background: -o-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
     background: -webkit-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
     background: linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
-    border-bottom: 10px solid black;
+    border-bottom: 3px solid black;
     display: block;
     padding-left: 36px;
   }
@@ -12533,7 +12539,7 @@ button.checkbox-clear-all {
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
     float: right;
-    padding-left: 30px;
+    padding-left: 0;
     width: 60%;
   }
   #sidebar .block-menu.open .menu .menu,
@@ -12544,14 +12550,13 @@ button.checkbox-clear-all {
 @media (max-width: 62.4375em) and (max-width: 37.4375em) {
   #sidebar .block-menu.open .menu,
   #sidebar .block-menu-block.open .menu {
-    padding-left: 35px;
+    padding-left: 0;
   }
 }
 @media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
   #sidebar .block-menu.open .expanded.active-trail .menu,
   #sidebar .block-menu-block.open .expanded.active-trail .menu {
     float: unset;
-    padding-left: 15px;
     width: 100%;
   }
 }
@@ -12559,44 +12564,21 @@ button.checkbox-clear-all {
   #sidebar .block-menu.open .expanded.active-trail .menu,
   #sidebar .block-menu-block.open .expanded.active-trail .menu {
     float: unset;
-    padding-left: 15px;
     width: 100%;
-  }
-}
-@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
-  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu,
-  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu {
-    padding-left: 25px;
-  }
-}
-@media (max-width: 62.4375em) and (max-width: 37.4375em) {
-  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu,
-  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu {
-    padding-left: 15px;
-  }
-}
-@media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
-  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu,
-  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu {
-    padding-left: 20px;
-  }
-}
-@media (max-width: 62.4375em) and (max-width: 37.4375em) {
-  #sidebar .block-menu.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu,
-  #sidebar .block-menu-block.open .expanded.active-trail .menu .expanded.active-trail .menu .expanded.active-trail .menu {
-    padding-left: 15px;
   }
 }
 
 @media (max-width: 62.4375em) {
   #sidebar {
     background: #f4f4f4;
+    border-bottom: 1px solid #dbdbdb;
     height: 50px;
   }
 }
 @media (max-width: 37.4375em) {
   #sidebar {
     background: #f4f4f4;
+    border-bottom: 1px solid #dbdbdb;
     height: unset;
   }
 }
@@ -12615,6 +12597,28 @@ button.checkbox-clear-all {
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   #sidebar ul.menu li.expanded.collapsed.open ul.menu {
     width: 100%;
+  }
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #sidebar .menu .expanded.open .menu,
+  #sidebar .menu .active-trail.open .menu {
+    background-color: white;
+  }
+  #sidebar .menu .expanded.open .menu li,
+  #sidebar .menu .active-trail.open .menu li {
+    padding-left: 30px;
+  }
+  #sidebar .menu .expanded.open .expanded.open .menu,
+  #sidebar .menu .expanded.open .active-trail.open .menu,
+  #sidebar .menu .active-trail.open .expanded.open .menu,
+  #sidebar .menu .active-trail.open .active-trail.open .menu {
+    background-color: #f4f4f4;
+  }
+  #sidebar .menu .expanded.open .expanded.open .menu li,
+  #sidebar .menu .expanded.open .active-trail.open .menu li,
+  #sidebar .menu .active-trail.open .expanded.open .menu li,
+  #sidebar .menu .active-trail.open .active-trail.open .menu li {
+    padding-left: 30px;
   }
 }
 

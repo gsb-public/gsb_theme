@@ -658,4 +658,7 @@
             };
         };
     });
+    $(function(){
+      $("#sidebar .expanded.active-trail.open.collapsed").removeClass("collapsed");
+    });
 }(jQuery));
