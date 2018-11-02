@@ -6914,6 +6914,12 @@ h2.insights-label {
     background-color: white;
   }
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .region-sidebar-first .content .open > a {
+    background: url('../images/minus.png') no-repeat 97% center, transparent;
+    padding-right: 20px;
+  }
+}
 
 .item-list .pager li {
   padding: 0;
@@ -7030,6 +7036,12 @@ h2.insights-label {
 .main-wrapper [class*="pane-menu-block"] .menu li a:hover:after,
 .inner-sidebar-wrapper [class*="pane-menu-block"] .menu li a:hover:after {
   color: #aac4bf;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .main-wrapper .gsb-image-video-popup a.fancybox:before,
+  .inner-sidebar-wrapper .gsb-image-video-popup a.fancybox:before {
+    z-index: 9;
+  }
 }
 
 #block-system-main-menu {
@@ -12525,7 +12537,7 @@ button.checkbox-clear-all {
 @media (max-width: 62.4375em) and (max-width: 37.4375em) {
   #sidebar .block-menu.open .content,
   #sidebar .block-menu-block.open .content {
-    top: 42px;
+    top: 30px;
   }
 }
 @media (max-width: 62.4375em) and (max-width: 37.4375em) {
@@ -12533,6 +12545,12 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open .content, .page-seed
   #sidebar .block-menu-block.open .content {
     top: 42px;
+  }
+}
+@media (max-width: 62.4375em) and (max-width: 37.4375em) {
+  .page-faculty-research #sidebar .block-menu.open .content, .page-faculty-research
+  #sidebar .block-menu-block.open .content {
+    top: 30px;
   }
 }
 @media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -12600,19 +12618,9 @@ button.checkbox-clear-all {
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  #sidebar .menu .expanded.open .menu,
-  #sidebar .menu .active-trail.open .menu {
-    background-color: white;
-  }
   #sidebar .menu .expanded.open .menu li,
   #sidebar .menu .active-trail.open .menu li {
     padding-left: 30px;
-  }
-  #sidebar .menu .expanded.open .expanded.open .menu,
-  #sidebar .menu .expanded.open .active-trail.open .menu,
-  #sidebar .menu .active-trail.open .expanded.open .menu,
-  #sidebar .menu .active-trail.open .active-trail.open .menu {
-    background-color: #f4f4f4;
   }
   #sidebar .menu .expanded.open .expanded.open .menu li,
   #sidebar .menu .expanded.open .active-trail.open .menu li,

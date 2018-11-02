@@ -48,7 +48,6 @@
           line-height: 1.4
           position: absolute
           left: 12px
-
     a
       color: $red
       line-height: 1.2
@@ -95,3 +94,10 @@
     +breakpoint($bp-for-tablet-range)
       .menu
         background-color: $white
+  // Minus for the close on section menus
+  +breakpoint($bp-for-phone-tablet-range)
+    .content
+      .open
+        & > a
+          +background(image_url("minus.png") no-repeat 97% center, transparent)
+          padding-right: 20px

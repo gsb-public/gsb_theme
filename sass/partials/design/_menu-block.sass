@@ -27,3 +27,7 @@
             color: $link-blue
             &:after
               color: $teal-light
+  // Removing the video arrow from the Tablet view of the sidebar
+  +breakpoint($bp-for-tablet-range)
+    .gsb-image-video-popup a.fancybox:before
+      z-index: 9
