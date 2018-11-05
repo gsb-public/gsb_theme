@@ -191,24 +191,30 @@
     width: 1108px
     +breakpoint($bp-mobile-max)
       font-size: 24px
-      left: 2px
+      left: -1px
       padding: 25px 18px 25px 30px
       position: relative
       top: 10px
       width: 95%
-      margin-left: 15px
+      margin-left: 0px
       margin-top: -70px
       .mobile-profile
         display: block
     +breakpoint($bp-for-tablet-range)
       font-size: 28px
-      left: 0px
+      left: -2px
       padding: 35px 15px 25px 50px
       position: relative
       top: 10px
       width: 97%
       margin-left: 11px
       margin-right: 15px
+    +breakpoint($bp-iphone6p-land)
+      left: -1px
+    +breakpoint($bp-tablet-pot)
+      left: -1px
+    +breakpoint($bp-tablet-land)
+      left: 0px
     &:before
       content: "“"
       position: absolute
