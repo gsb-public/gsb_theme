@@ -4587,8 +4587,13 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
   position: relative;
 }
 @media (min-width: 75em) {
-  .page-seed #header-wrapper #header, .page-exec-ed #header-wrapper #header {
-    max-width: 1170px;
+  .page-seed #header-wrapper #header {
+    max-width: 1127px;
+  }
+}
+@media (min-width: 75em) {
+  .page-exec-ed #header-wrapper #header {
+    max-width: 1163px;
   }
 }
 
@@ -4625,7 +4630,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 #ftr-logo {
   float: left;
   height: 35px;
-  margin: 0 18px 0 0;
+  margin: 0 18px 0 30px;
   position: relative;
   width: 130px;
 }
@@ -4639,6 +4644,12 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
   #ftr-logo {
     margin-left: 10px;
   }
+}
+.svg .page-exec-ed #logo, .no-js .page-exec-ed #logo, .no-svg .page-exec-ed #logo, .svg .page-exec-ed
+#ftr-logo, .no-js .page-exec-ed
+#ftr-logo, .no-svg .page-exec-ed
+#ftr-logo {
+  margin: 0 18px 0 50px;
 }
 @media (max-width: 73.0625em) {
   .svg #logo, .no-js #logo, .no-svg #logo, .svg
@@ -8987,24 +8998,21 @@ input.signup-submit:hover {
 .page-seed #header-wrapper #header .section {
   display: block;
 }
-.page-exec-ed #header-wrapper #header a,
-.page-seed #header-wrapper #header a {
-  font-weight: bold;
-}
 @media (max-width: 37.4375em) {
-  .page-exec-ed #header-wrapper #header a,
-  .page-seed #header-wrapper #header a {
+  .page-exec-ed #header-wrapper #header .md-megamenu a,
+  .page-seed #header-wrapper #header .md-megamenu a {
     font-size: 16px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .page-exec-ed #header-wrapper #header a,
-  .page-seed #header-wrapper #header a {
+  .page-exec-ed #header-wrapper #header .md-megamenu a,
+  .page-seed #header-wrapper #header .md-megamenu a {
     font-size: 18px;
   }
 }
-.page-exec-ed #header-wrapper #header a:hover,
-.page-seed #header-wrapper #header a:hover {
+.page-exec-ed #header-wrapper #header .md-megamenu a:hover,
+.page-seed #header-wrapper #header .md-megamenu a:hover {
+  background-color: #231f20;
   text-decoration: underline;
 }
 
@@ -9649,7 +9657,7 @@ input.signup-submit:hover {
 }
 .md-megamenu.md-megamenu-seed-main-menu .awemenu .awemenu-item-level-1 .menu a,
 .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu .awemenu-item-level-1 .menu a {
-  font-size: 20px;
+  font-size: 18px;
 }
 @media (min-width: 75em) {
   .md-megamenu.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu,
@@ -9661,6 +9669,7 @@ input.signup-submit:hover {
 }
 .md-megamenu.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper,
 .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper {
+  background-color: #231f20;
   padding: 40px 25px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
@@ -10035,7 +10044,7 @@ input.signup-submit:hover {
   display: inline-block;
   position: absolute;
   top: 60px;
-  right: 1px;
+  right: 0;
   z-index: 1;
 }
 .page-exec-ed #coveo-search-block-form input, .page-seed #coveo-search-block-form input, .page-exec-ed
@@ -10165,7 +10174,7 @@ input.signup-submit:hover {
 .page-exec-ed #navigation.search-closed #edit-submit:hover,
 .page-seed #navigation.search-closed #edit-submit:hover {
   border-bottom: 0;
-  height: 82px !important;
+  height: 80px !important;
   margin-top: -6px;
 }
 
@@ -11974,7 +11983,7 @@ button.checkbox-clear-all {
   right: 2px;
 }
 .page-exec-ed #navigation.search-open .section div#search-close {
-  height: 81px;
+  height: 80px;
   line-height: 60px;
   right: -60px;
   top: 0;
@@ -12002,7 +12011,7 @@ button.checkbox-clear-all {
   right: 5px;
 }
 .page-seed #navigation.search-open .section div#search-close {
-  height: 81px;
+  height: 80px;
   line-height: 60px;
   right: -60px;
   top: 0;

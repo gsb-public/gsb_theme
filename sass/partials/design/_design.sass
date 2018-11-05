@@ -13,10 +13,12 @@
         margin-left: -50px
     .no-js &
       position: relative
-    .page-seed &,
+    .page-seed &
+      +breakpoint(1200px min-width)
+        max-width: 1127px
     .page-exec-ed &
       +breakpoint(1200px min-width)
-        max-width: 1170px
+        max-width: 1163px
 
 // Logo
 #logo,
@@ -42,11 +44,14 @@
     .svg &, .no-js &, .no-svg &
       float: left
       height: 35px
-      margin: 0 18px 0 0
+      margin: 0 18px 0 30px
       position: relative
       width: 130px
       +breakpoint(1199px max-width)
         margin-left: 10px
+  .page-exec-ed &
+    .svg &, .no-js &, .no-svg &
+      margin: 0 18px 0 50px
   +breakpoint(1169px max-width)
     .svg &, .no-js &, .no-svg &
       background-position: center center
