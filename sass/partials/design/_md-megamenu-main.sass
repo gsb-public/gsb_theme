@@ -239,6 +239,9 @@ div#header-wrapper.awemenu-sticky + #content-wrapper
   .page-seed &
     +breakpoint($bp-for-desktop-up)
       margin-top: 79px
+  .page-exec-ed &
+    +breakpoint($bp-for-desktop-up)
+      margin-top: 81px
   +breakpoint($bp-for-desktop-up)
     margin-top: 85px
     position: relative
@@ -250,10 +253,13 @@ div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-desktop-up)
     margin-top: 79px
     position: relative
+
 .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
+//.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper .panel-display.gsb-full-bleed-home-page,
+//.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper .panel-display.gsb-program-finder,
 .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-desktop-up)
-    margin-top: 0
+    margin-top: 79px
     position: relative
 
 // Align Menu Top Items
@@ -296,6 +302,7 @@ div#header-wrapper.awemenu-sticky + div#hero
   .awemenu-submenu
     background-color: transparent
     padding-top: 20px
+
   // Open top level main menu
   .awemenu-active
     a
@@ -344,8 +351,8 @@ div#header-wrapper.awemenu-sticky + div#hero
       width: 101vw
       position: relative
       left: 50%
-      right: 51%
-      margin-left: -49vw
+      right: 50%
+      margin-left: -50vw
       margin-right: -50vw
       .row
         margin: 0 auto
@@ -457,8 +464,6 @@ div#header-wrapper.awemenu-sticky + div#hero
         width: 850px
       .js .search-open &
         width: 200px
-  #header-wrapper
-    position: relative
 
 // Responsive Section. Removed the following from _menu-main.sass so can deprecate it as necessary.
 // Mobile menu button
