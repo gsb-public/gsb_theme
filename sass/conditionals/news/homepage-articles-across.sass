@@ -69,9 +69,11 @@
         .field-type-datetime
           color: $grey-hp-7
           padding-bottom: 15px
-          +breakpoint(320px $max-width)
+          +breakpoint($bp-for-phone-only)
             font-size: 12px
             padding-bottom: 0
+          +breakpoint($bp-for-tablet-range)
+            font-size: 16px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
@@ -123,9 +125,11 @@
         .field-type-datetime
           color: $grey-hp-7
           padding-bottom: 15px
-          +breakpoint(320px $max-width)
+          +breakpoint($bp-for-phone-only)
             font-size: 12px
             padding-bottom: 0
+          +breakpoint($bp-for-tablet-range)
+            font-size: 16px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
