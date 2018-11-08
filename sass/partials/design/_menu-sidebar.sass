@@ -4,7 +4,7 @@
   @extend %black-border-top
   @extend %bg-grey-gradient
   padding: 20px 20px 0 24px
-  +breakpoint($bp-tablet-port-max)
+  +breakpoint($bp-for-phone-tablet-range)
     border-top: 0
     padding: 0
   // Menu styling
@@ -23,9 +23,11 @@
     +breakpoint($bp-for-phone-only)
       font-size: 14px
     &.collapsed
-      +breakpoint($bp-tablet-port-max)
+      +breakpoint($bp-for-tablet-range)
         a
           +background(image_url("plus.png") no-repeat 97% center, transparent)
+          display: inherit
+          margin-right: 20px
           &:after
             color: $red
             display: inline-block
@@ -33,11 +35,11 @@
             font-size: 18px
             padding-right: 20px
     &.active-trail
-      +breakpoint($bp-tablet-port-max)
+      +breakpoint($bp-for-tablet-range)
         a.active-trail.active
           +background(image_url("minus.png") no-repeat 97% center, transparent)
-          //float: right
-          padding-right: 20px
+          display: inherit
+          margin-right: 20px
     &.collapsed,
     &.active-trail
       +breakpoint($bp-tablet-port-max)
@@ -100,4 +102,5 @@
       .open
         & > a
           +background(image_url("minus.png") no-repeat 97% center, transparent)
-          padding-right: 20px
+          display: inherit
+          margin-right: 20px
