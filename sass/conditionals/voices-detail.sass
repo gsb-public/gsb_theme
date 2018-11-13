@@ -384,9 +384,11 @@
           div
             line-height: 1.5
         .background-rail-img
-          margin-left: 36%
+          margin-left: 100px
           margin-top: -75px
           position: absolute
+          +breakpoint($bp-for-phone-only)
+            margin-left: 35%
           img
             border: 1px solid $voices-divider
             border-radius: 50%
