@@ -46,7 +46,8 @@
       right: 0 !important
       top: 70px !important
     .awemenu-megamenu-wrapper
-      background-color: $text-black
+      +breakpoint($bp-for-desktop-up)
+        background-color: $text-black
       padding: 40px 25px
       +breakpoint($bp-for-phone-tablet-range)
         padding: 20px 0
