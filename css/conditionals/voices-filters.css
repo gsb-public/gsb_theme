@@ -339,7 +339,7 @@
   background-color: white;
   color: #990000;
   font-size: 18px;
-  min-height: 60px;
+  min-height: 58px;
   line-height: 1.2;
   margin: 0 auto;
   padding: 20px 20px 20px 25px;
@@ -484,6 +484,40 @@
   }
 }
 
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-header .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
+    width: 46%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-header .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
+    width: 34%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-header .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-header .voices_display_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_all_list_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .homepage_voices_cta,
+  .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
+    width: 46%;
+    margin: 0 auto;
+  }
+}
+
 /* CTA Button End */
 /*voices list with filters start */
 .view-display-id-voices_filters_pane {
@@ -514,7 +548,7 @@
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid {
-    width: 88% important;
+    width: 88% !important;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
@@ -534,7 +568,7 @@
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
     display: flex !important;
-    width: 250px !important;
+    width: 240px !important;
   }
 }
 .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_industry_tid .customSelect {
@@ -565,7 +599,7 @@
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid {
-    width: 88% important;
+    width: 88% !important;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
@@ -585,7 +619,7 @@
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
     display: flex !important;
-    width: 250px !important;
+    width: 240px !important;
   }
 }
 .view-display-id-voices_filters_pane .view-filters .views-widget-filter-field_region_of_interest_tid .customSelect {
@@ -603,7 +637,7 @@
   display: none;
 }
 .view-display-id-voices_filters_pane .view-content {
-  margin-left: 26px;
+  margin-left: 22px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .view-content {
@@ -978,7 +1012,7 @@
 /* Voices Multiple Criteria with CTA - OVERIDES */
 .full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row,
 .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
-  width: 290px;
+  width: 270px;
   height: 400px;
 }
 .full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title,
@@ -1268,6 +1302,20 @@
 }
 
 /* END of Voices Multiple Criteria with CTA - OVERRIDES */
+.gsb-landing-standard-page-one .full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-title,
+.gsb-landing-standard-page-one .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-title {
+  margin-left: 0px;
+}
+.gsb-landing-standard-page-one .full-view .pane-voices-filters-voices-list-cta-panel-pane .view-content,
+.gsb-landing-standard-page-one .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .view-content {
+  margin-left: 0px;
+}
+.gsb-landing-standard-page-one .full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row,
+.gsb-landing-standard-page-one .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row {
+  width: 22.983%;
+  margin-right: 15px;
+}
+
 /* Single Teaser styles start */
 .view-display-id-voices_single_teaser_pane .views-row {
   width: 100%;
@@ -1403,6 +1451,12 @@
 
 /* Single Teaser styles end */
 /* side bar fixes for all list */
+.gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets {
+  height: auto;
+}
 .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
 .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
 .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
@@ -1420,14 +1474,14 @@
   .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
   .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
   .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid {
-    width: 80% important;
+    width: 88% !important;
   }
 }
 .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
 .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
 .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
 .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
-  width: 206px !important;
+  width: 194px !important;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
@@ -1435,7 +1489,31 @@
   .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
   .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
     display: flex !important;
-    width: 190px !important;
+    width: 240px !important;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+    width: 195px !important;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+    width: 195px !important;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+    width: 195px !important;
   }
 }
 .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
@@ -1455,14 +1533,14 @@
   .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
   .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
   .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid {
-    width: 80% important;
+    width: 88% !important;
   }
 }
 .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
 .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
 .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
 .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
-  width: 206px !important;
+  width: 194px !important;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
@@ -1470,7 +1548,31 @@
   .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
   .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
     display: flex !important;
-    width: 190px !important;
+    width: 240px !important;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+    width: 195px !important;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+    width: 195px !important;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+    width: 195px !important;
   }
 }
 .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content,
@@ -2679,3 +2781,281 @@
 }
 
 /* no side bar Layout code changes end */
+/* fixes for voices list in single column */
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-exposed-widgets {
+  height: auto;
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid {
+  padding: 0px 15px 0px 15px;
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid {
+  width: 238px !important;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid {
+    width: 88% !important;
+  }
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+  width: 192px !important;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+    display: flex !important;
+    width: 240px !important;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid .form-select .customSelectInner {
+    width: 230px !important;
+  }
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid {
+  padding: 0px 15px 0px 15px;
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid {
+  width: 238px !important;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid {
+    width: 88% !important;
+  }
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+  width: 192px !important;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+    display: flex !important;
+    width: 240px !important;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid .form-select .customSelectInner {
+    width: 230px !important;
+  }
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content {
+  margin-left: 10px;
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+  width: 96%;
+  height: 390px;
+}
+@media (max-width: 37.4375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 86%;
+    height: 360px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 73%;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    display: block;
+    width: 44%;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 39%;
+    height: 360px;
+  }
+}
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 28%;
+    height: 360px;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 40.5%;
+    height: 360px;
+  }
+}
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+  height: 390px;
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+    height: 360px;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+    height: 360px;
+  }
+}
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+    height: 360px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 86%;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 70%;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 67.5%;
+  }
+}
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row {
+    width: 40.5%;
+  }
+}
