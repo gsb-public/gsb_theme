@@ -227,6 +227,20 @@
 .md-style2.awemenu-standard .awemenu > .awemenu-item > a
   border-top: none
 
+// Skip to link at the top of the page.
+.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus
+  background-color: $red-dark
+  clip: auto
+  color: white
+  height: auto
+  overflow: visible
+  padding: 4px
+  position: absolute !important
+  text-align: center
+  top: 0
+  width: 115px
+  z-index: 999
+
 // Sticky menus
 #header-wrapper.awemenu-sticky
   +breakpoint($bp-for-desktop-up)
@@ -582,7 +596,9 @@ div#header-wrapper.awemenu-sticky + div#hero
             +breakpoint($bp-for-tablet-range)
               padding-bottom: 40px
             +breakpoint($bp-for-phone-only)
+              display: inline-block
               padding-bottom: 35px
+              white-space: normal
     .awemenu-item-link
       background-color: $grey-hp
       padding: 20px

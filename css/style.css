@@ -413,7 +413,7 @@ body {
 }
 
 a:focus {
-  outline: thin dotted;
+  outline: 1px solid #231f20;
 }
 
 a:hover,
@@ -8925,6 +8925,20 @@ input.signup-submit:hover {
   border-top: none;
 }
 
+.element-invisible.element-focusable:active, .element-invisible.element-focusable:focus {
+  background-color: #860000;
+  clip: auto;
+  color: white;
+  height: auto;
+  overflow: visible;
+  padding: 4px;
+  position: absolute !important;
+  text-align: center;
+  top: 0;
+  width: 115px;
+  z-index: 999;
+}
+
 @media (min-width: 75em) {
   #header-wrapper.awemenu-sticky {
     position: fixed;
@@ -9466,7 +9480,9 @@ input.signup-submit:hover {
   #md-megamenu-1.awemenu-mobile-standard .awemenu .row .menu li.leaf a,
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .menu li.leaf a,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .menu li.leaf a {
+    display: inline-block;
     padding-bottom: 35px;
+    white-space: normal;
   }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .awemenu-item-link,

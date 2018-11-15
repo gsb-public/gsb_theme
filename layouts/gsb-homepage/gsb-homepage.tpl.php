@@ -13,7 +13,7 @@
 <div class="panel-display panels-layout-gsb-homepage <?php if (!empty($class)) { print $class; } ?>">
 
   <div id="top-content"></div>
-
+  <a id="main-content"></a>
   <?php if ($content['mainbody']): ?>
     <div class="full-view">
       <?php print $content['mainbody']; ?>
