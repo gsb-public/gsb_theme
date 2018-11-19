@@ -40,7 +40,7 @@
     .views-field-title
       color: $link-green
       font-size: 24px
-      padding: 30px 0 10px 20px
+      padding: 25px 0 10px 20px
       position: relative
       text-align: left
       a
@@ -88,7 +88,7 @@
           div
             opacity: 1
       .views-field-title
-        padding-top: 30px
+        padding-top: 25px
         a
           color: $white
         a:after,
@@ -374,7 +374,7 @@
     .views-field-title
       color: $link-green
       font-size: 24px
-      padding: 30px 0 10px 20px
+      padding: 25px 0 10px 20px
       position: relative
       text-align: left
       a
@@ -420,7 +420,7 @@
           div
             opacity: 1
       .views-field-title
-        padding-top: 30px
+        padding-top: 25px
         a
           color: $white
         a:after,
@@ -519,7 +519,7 @@
               padding: 0px 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
-            padding-top: 30px
+            padding-top: 25px
   .full-bleed-header
     .view-display-id-voices_filters_pane,
     .view-display-id-all_voices_list_panel_pane
@@ -563,12 +563,12 @@
               padding: 0px 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
-            padding-top: 30px
+            padding-top: 25px
   .full-header
     .view-display-id-voices_filters_pane,
     .view-display-id-all_voices_list_panel_pane
       .views-row:hover .views-field-title
-        padding-top: 30px
+        padding-top: 25px
 /* full bleed and landing page one main header and main footer styles end*/
 
 /* Voices Multiple Criteria with CTA - OVERIDES */
@@ -578,7 +578,7 @@
     .views-row
       &:hover
         .views-field-title
-          padding-top: 30px
+          padding-top: 25px
       width: 270px
       height: 400px
       .views-field-field-image-single-public
@@ -589,7 +589,7 @@
         div
           div
             font-family: $font-demi
-            font-size: 16px
+            font-size: 18px
             line-height: 1.4
             padding: 30% 20px
             &:after
@@ -633,14 +633,14 @@
         width: 90%
         height: 390px
       .views-field-title
-        padding: 30px 0 10px 20px
+        padding: 25px 0 10px 20px
         a
           font-size: 24px
           +breakpoint($bp-for-phone-tablet-range)
             font-size: 20px
       &:hover
         .views-field-title
-          padding-top: 30px
+          padding-top: 25px
       .views-field-field-quote
         div
           div
@@ -1158,7 +1158,7 @@
             width: 82%
           &:hover
             .views-field-title
-              padding-top: 30px
+              padding-top: 25px
             .views-field-field-quote
               div
                 div
@@ -1281,7 +1281,7 @@
       .view-display-id-voices_filters_pane,
       .view-display-id-all_voices_list_panel_pane
         .views-row
-          width: 29.40%
+          width: 29.38%
           +breakpoint($bp-for-phone-tablet-range)
             width: 88%
           +breakpoint($bp-mobile-land)
@@ -1291,7 +1291,7 @@
           +breakpoint($bp-tablet-pot)
             width: 39%
           +breakpoint($bp-tablet-land)
-            width: 41%
+            width: 28.5%
       .view-display-id-voices_list_cta_panel_pane
         .views-row
           width: 29.51%
@@ -1379,7 +1379,7 @@
         .view-display-id-voices_filters_pane,
         .view-display-id-all_voices_list_panel_pane
           .views-row
-            width: 29.33%
+            width: 29.23%
             +breakpoint($bp-for-phone-tablet-range)
               width: 86%
             +breakpoint($bp-tablet-pot)
@@ -1441,7 +1441,7 @@
               .customSelectInner
                 width: 240px !important
           .view-content
-            margin-left: 0px
+            margin-left: 20px
             +breakpoint($bp-for-phone-tablet-range)
               margin-left: 20px
       .main-middle
@@ -1689,6 +1689,73 @@
               width: 40.5%
               height: 360px
 
+.gsb-full-bleed-page
+  .inner-main-wrapper
+    .main-middle
+      .column-first,
+      .column-second
+        .view-display-id-all_voices_list_panel_pane,
+        .pane-voices-filters-voices-list-cta-panel-pane,
+          .views-row
+            +breakpoint($bp-tablet-pot)
+              width: 65.7%
+            +breakpoint($bp-tablet-land)
+              width: 55.8%
+          .voices_display_all_list_cta,
+          .homepage_voices_cta,
+          .voices_display_list_cta
+            +breakpoint($bp-tablet-pot)
+              margin-left: 0px
+              width: 65%
+            +breakpoint($bp-tablet-land)
+              margin-left: 0px
+              width: 56%
+
+        .voices_display_all_list_cta,
+        .homepage_voices_cta,
+        .voices_display_list_cta
+          +breakpoint($bp-tablet-pot)
+            margin-left: 0px
+            width: 65%
+          +breakpoint($bp-tablet-land)
+            margin-left: 0px
+            width: 56%
+
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one
+    .inner-main-wrapper
+      .main-middle
+        .column-first,
+        .column-second
+          .view-display-id-all_voices_list_panel_pane,
+          .pane-voices-filters-voices-list-cta-panel-pane,
+            .views-row
+              +breakpoint($bp-tablet-pot)
+                width: 66%
+              +breakpoint($bp-tablet-land)
+                width: 39.5%
+            .voices_display_all_list_cta,
+            .homepage_voices_cta,
+            .voices_display_list_cta
+              +breakpoint($bp-tablet-pot)
+                margin-left: 0px
+                width: 63%
+              +breakpoint($bp-tablet-land)
+                margin: 0 auto
+                width: 46%
+                margin-top: 30px
+
+          .voices_display_all_list_cta,
+          .homepage_voices_cta,
+          .voices_display_list_cta
+            +breakpoint($bp-tablet-pot)
+              margin-left: 0px
+              width: 63%
+            +breakpoint($bp-tablet-land)
+              margin: 0 auto
+              width: 46%
+              margin-top: 30px
+
 .gsb-landing-standard-page-one
   .inner-main-wrapper
     .main-middle
@@ -1731,6 +1798,9 @@
             +breakpoint($bp-iphone6p-land)
               width: 70%
               margin-left: 0px
+            +breakpoint($bp-tablet-pot)
+              margin-left: 0px
+              width: 67%
 
 .panels-layout-gsb-no-sidebar 
   .inner-main-wrapper 
