@@ -52,7 +52,6 @@
       width: 100%
       left: 40px
     +breakpoint($bp-for-phone-only)
-      bottom: 50px
       left: 40px
       width: 90%
     +breakpoint($bp-mobile)
@@ -108,10 +107,12 @@
     cursor: pointer
     font-size: 16px
     font-weight: bold
+    height: 200px
     left: 50%
     position: absolute
     transform: translate(-50%, -20%)
-    top: 80%
+    +breakpoint($bp-for-desktop-up)
+      top: 84%
     +icon-after("arrow-med-down", true)
       display: block
       padding: 10px 45px
@@ -121,6 +122,18 @@
       bottom: 70px
     +breakpoint($bp-for-phone-only)
       font-size: 12px
+    .svg &
+      +background((image_url("/images/icons/background-scroll-explore-video.svg") no-repeat center), transparent)
+      padding: 86px 18px
+      position: absolute
+      width: 150px
+      +breakpoint($bp-for-phone-only)
+        padding: 86px 32px
+    .no-js &, .no-svg &
+      background: image_url("/images/icons/background-scroll-explore-video.png") no-repeat center transparent
+      padding: 86px 18px
+      position: absolute
+      width: 150px
 
   video + .scrollLink
     bottom: 0
@@ -148,7 +161,7 @@
   .pane-landingpage-video,
   .pane-bundle-landing-viewport
     align-items: baseline
-    display: flex
+    //display: flex
     justify-content: center
     overflow: hidden
     position: relative
@@ -163,5 +176,5 @@
 
     video.splash__video__media,
     .field-type-image
-      height: 100%
-      width: 100%
+      min-height: 100%
+      min-width: 100%

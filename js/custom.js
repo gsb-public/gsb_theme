@@ -573,13 +573,13 @@
     /* viewport sizing */
     $(function() {
         setHeight();
-        $(window).resize(function() {
-            setHeight();
-        });
         function setHeight() {
             windowHeight = $(window).innerHeight();
             $('.pane-landingpage-video, .pane-bundle-landing-viewport, .field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css('max-height', windowHeight);
         };
+        $(window).resize(function() {
+            setHeight();
+        });
         /* scroll functionality for the 2018 site refresh*/
         // Image splash scroll
         $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
