@@ -9629,12 +9629,6 @@ input.signup-submit:hover {
   }
 }
 
-@media (min-width: 75em) {
-  .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu-submenu.awemenu-megamenu {
-    width: 895px !important;
-  }
-}
-
 .md-megamenu.md-megamenu-seed-main-menu,
 .md-megamenu.md-megamenu-executive-edu-main-menu {
   background: #7d7466;
@@ -9646,7 +9640,7 @@ input.signup-submit:hover {
   color: #b2b2b2;
   font-size: 24px;
   font-weight: normal;
-  padding: 0px 0 10px 15px;
+  padding: 0 0 10px 0;
   text-transform: none;
 }
 .md-megamenu.md-megamenu-seed-main-menu .awemenu .awemenu-item-level-1,
@@ -9927,6 +9921,9 @@ input.signup-submit:hover {
     min-height: 59px;
     padding: 20px 16px;
   }
+  .md-megamenu.md-megamenu-executive-edu-main-menu .row {
+    padding: 0 40px;
+  }
 }
 
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-submenu {
@@ -9949,6 +9946,97 @@ input.signup-submit:hover {
 
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a {
   color: #990000;
+}
+
+#block-menu-menu-md-mm-exec-ed-indiv-all .content,
+#block-menu-menu-md-mm-exec-ed-admission-int .content {
+  float: right;
+  position: relative;
+  margin-right: -15px;
+  width: 184px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #block-menu-menu-md-mm-exec-ed-indiv-all .content,
+  #block-menu-menu-md-mm-exec-ed-admission-int .content {
+    float: unset;
+    padding-left: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+  #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li:first-of-type,
+  #block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li:first-of-type {
+    border-top: 1px solid #ededed;
+    padding: 10px 0;
+  }
+  #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf,
+  #block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf {
+    padding: 0;
+  }
+  #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf a,
+  #block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf a {
+    padding: 15px 0;
+  }
+}
+#block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf,
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf {
+  padding: 14px 0;
+}
+@media (min-width: 75em) {
+  #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf,
+  #block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf {
+    border-bottom: 1px solid #686868;
+  }
+}
+#block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf:first-of-type,
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf:first-of-type {
+  padding-top: 0;
+}
+#block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf:last-of-type,
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf:last-of-type {
+  padding-bottom: 15px;
+}
+#block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf a,
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf a {
+  padding-bottom: 0;
+}
+.svg #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf, .svg
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf {
+  background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent;
+  background-position: right center;
+  background-origin: content-box;
+  padding-right: 5px;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .svg #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf, .svg
+  #block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf {
+    padding: 20px;
+  }
+}
+.no-js #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf:after, .no-svg #block-menu-menu-md-mm-exec-ed-indiv-all .content ul.menu li.leaf:after, .no-js
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf:after, .no-svg
+#block-menu-menu-md-mm-exec-ed-admission-int .content ul.menu li.leaf:after {
+  content: "\f107";
+  display: inline;
+  speak: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: 'icons';
+  color: #979797;
+  float: right;
+  font-weight: normal;
+}
+
+.md-megamenu.md-megamenu-executive-edu-main-menu .awemenu .awemenu-item-level-1 .menu a {
+  padding: 0;
+  margin: 0;
+  white-space: normal;
 }
 
 #navigation.search-open .region.region-navigation {

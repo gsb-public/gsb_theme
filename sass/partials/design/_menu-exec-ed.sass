@@ -6,10 +6,10 @@
       right: 0 !important
       top: 70px !important
       width: 665px !important
-.md-megamenu.md-megamenu-executive-edu-main-menu
-  .awemenu-submenu.awemenu-megamenu
-    +breakpoint($bp-for-desktop-up)
-      width: 895px !important
+//.md-megamenu.md-megamenu-executive-edu-main-menu
+//  .awemenu-submenu.awemenu-megamenu
+//    +breakpoint($bp-for-desktop-up)
+      //width: 895px !important
 .md-megamenu.md-megamenu-seed-main-menu,
 .md-megamenu.md-megamenu-executive-edu-main-menu
   background: $grey-hp-7
@@ -19,7 +19,7 @@
     color: #b2b2b2
     font-size: 24px
     font-weight: normal
-    padding: 0px 0 10px 15px
+    padding: 0 0 10px 0
     text-transform: none
   .awemenu
     .awemenu-item-level-1
@@ -202,6 +202,8 @@
     li a
       min-height: 59px
       padding: 20px 16px
+    .row
+      padding: 0 40px
 
   // Mobile overrides
 .md-mobile-style1.awemenu-mobile-standard
@@ -222,6 +224,54 @@
     a
       color: $red
 
-
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a
   color: $red
+
+#block-menu-menu-md-mm-exec-ed-indiv-all,
+#block-menu-menu-md-mm-exec-ed-admission-int
+  .content
+    float: right
+    position: relative
+    margin-right: -15px
+    width: 184px
+    +breakpoint($bp-for-phone-tablet-range)
+      float: unset
+      padding-left: 20px
+      margin-right: 0
+      width: 100%
+      ul.menu
+        li:first-of-type
+          border-top: 1px solid $grey-e
+          padding: 10px 0
+        li.leaf
+          padding: 0
+          a
+            padding: 15px 0
+    ul.menu
+      li.leaf
+        +breakpoint($bp-for-desktop-up)
+          border-bottom: 1px solid #686868
+        padding: 14px 0
+        &:first-of-type
+          padding-top: 0
+        &:last-of-type
+          padding-bottom: 15px
+        a
+          padding-bottom: 0
+        .svg &
+          background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
+          background-position: right center
+          background-origin: content-box
+          padding-right: 5px
+          +breakpoint($bp-for-phone-tablet-range)
+            padding: 20px
+        .no-js &, .no-svg &
+          +icon-after("arrow-med-right", true)
+            color: $voices-divider
+            float: right
+            font-weight: normal
+
+.md-megamenu.md-megamenu-executive-edu-main-menu .awemenu .awemenu-item-level-1 .menu a
+  padding: 0
+  margin: 0
+  white-space: normal
