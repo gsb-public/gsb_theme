@@ -147,6 +147,9 @@
       img
         max-height: 270px !important
         width: 100%
+        +breakpoint($bp-tablet-land)
+          width: auto
+
   // Border for the Cards.
   .views-row
     border: 1px solid $listing-divider
@@ -189,11 +192,12 @@
     font-size: 18px
     min-height: 58px
     line-height: 1.2
-    margin: 0 auto
     padding: 20px 20px 20px 25px
     position: relative
     width: 320px
+    margin: 10px auto
     margin-bottom: 20px
+
     @extend %bg-and-box-shadow
     &:first-of-type
       border-top: 0
@@ -761,6 +765,22 @@
         width: 68%
         margin-left: 30px
 
+// Margin overrides for the main-middle content with voice content
+.panels-layout-gsb-landing-standard-page-one,
+.panels-layout-gsb-no-sidebar
+  .content
+    .main-middle
+      margin-left: 30px
+      .views-row
+        margin-right: 0
+        width: 100%
+.panels-layout-gsb-landing-standard-page-one
+  .content
+    .main-middle
+      .views-row
+        width: 88%
+
+
 .panels-layout-gsb-no-sidebar
   .main-header,
   .main-footer
@@ -806,6 +826,7 @@
           +breakpoint($bp-tablet-land)
             width: 28%
             margin-right: 30px
+
 /* END of Voices Multiple Criteria with CTA - OVERRIDES */
 
 /* Single Teaser styles start */
@@ -830,7 +851,7 @@
     .views-row
       +breakpoint($bp-for-phone-only)
         width: auto
-        margin-left: 25px
+        //margin-left: 25px
       +breakpoint($bp-for-tablet-range)
         width: auto
   .pane-voices-filters-voices-list-cta-panel-pane
@@ -1460,10 +1481,11 @@
           .views-row
             width: 88%
             +breakpoint($bp-for-phone-tablet-range)
-              width: 96%
+              //width: 96%
             +breakpoint($bp-tablet-pot)
               width: 38%
             +breakpoint($bp-tablet-land)
+              margin: auto
               width: 62%
             +breakpoint($bp-mobile-land)
               width: 44%

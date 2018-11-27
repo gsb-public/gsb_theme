@@ -284,6 +284,13 @@
   max-height: 270px !important;
   width: 100%;
 }
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img,
+  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img {
+    width: auto;
+  }
+}
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row,
 .view-display-id-voices_single_teaser_pane .views-row {
@@ -347,10 +354,10 @@
   font-size: 18px;
   min-height: 58px;
   line-height: 1.2;
-  margin: 0 auto;
   padding: 20px 20px 20px 25px;
   position: relative;
   width: 320px;
+  margin: 10px auto;
   margin-bottom: 20px;
 }
 .pane-content .voices_display_all_list_cta:first-of-type,
@@ -1280,6 +1287,20 @@
   }
 }
 
+.panels-layout-gsb-landing-standard-page-one .content .main-middle,
+.panels-layout-gsb-no-sidebar .content .main-middle {
+  margin-left: 30px;
+}
+.panels-layout-gsb-landing-standard-page-one .content .main-middle .views-row,
+.panels-layout-gsb-no-sidebar .content .main-middle .views-row {
+  margin-right: 0;
+  width: 100%;
+}
+
+.panels-layout-gsb-landing-standard-page-one .content .main-middle .views-row {
+  width: 88%;
+}
+
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .panels-layout-gsb-no-sidebar .main-header .voices_display_all_list_cta,
   .panels-layout-gsb-no-sidebar .main-header .homepage_voices_cta,
@@ -1398,7 +1419,6 @@
 @media (max-width: 37.4375em) {
   .narrow-view .view-display-id-voices_single_teaser_pane .views-row {
     width: auto;
-    margin-left: 25px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -2804,11 +2824,6 @@
 .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
   width: 88%;
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
-    width: 96%;
-  }
-}
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     width: 38%;
@@ -2816,6 +2831,7 @@
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
+    margin: auto;
     width: 62%;
   }
 }
