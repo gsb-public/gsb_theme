@@ -659,6 +659,14 @@
         };
     });
     $(function(){
+        $('.view-voices-filters .views-row').each(function(){
+            if ($(this).has(".views-field-title").length) {
+              $link = $(this).find("a").clone().text("");
+              $(this).wrap($link);
+            }
+        });
+    });
+    $(function(){
       $("#sidebar .expanded.active-trail.open.collapsed").removeClass("collapsed");
     });
 }(jQuery));
