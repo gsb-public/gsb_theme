@@ -195,6 +195,11 @@
   .sidebar
     h2
       display: none
+    // The "All" link for only the mobile view. Hidden on the desktop
+    .overview-link-mobile-only
+      display: none
+      +breakpoint($bp-for-phone-tablet-range)
+        display: block
   +breakpoint($bp-for-tablet-range)
     width: 100%
     .menu
