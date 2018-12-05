@@ -10,6 +10,7 @@
   // Menu styling
   ul li
     color: $red
+    cursor: pointer
     font-size: 16px
     font-weight: bold
     margin-bottom: 16px
@@ -22,34 +23,22 @@
         padding-top: 22px
     +breakpoint($bp-for-phone-only)
       font-size: 14px
-    &.collapsed
+    .sub-menus
       +breakpoint($bp-for-tablet-range)
-        a
-          +background(image_url("plus.png") no-repeat 97% center, transparent)
-          display: inherit
-          margin-right: 20px
-          &:after
-            color: $red
-            display: inline-block
-            float: right
-            font-size: 18px
-            padding-right: 20px
-    &.active-trail
-      +breakpoint($bp-for-tablet-range)
-        a.active-trail.active
-          +background(image_url("minus.png") no-repeat 97% center, transparent)
-          display: inherit
-          margin-right: 20px
-    &.collapsed,
-    &.active-trail
-      +breakpoint($bp-tablet-port-max)
-        &:before
+        +background(image_url("plus.png") no-repeat 97% center, transparent)
+        display: inherit
+        margin-right: 20px
+        &:after
           color: $red
-          font-size: 14px
-          font-weight: normal
-          line-height: 1.4
-          position: absolute
-          left: 12px
+          display: inline-block
+          float: right
+          font-size: 18px
+          padding-right: 20px
+      +breakpoint($bp-for-phone-only)
+        +background(image_url("plus.png") no-repeat 97% center, transparent)
+        display: inherit
+        margin-right: 20px
+
     a
       color: $red
       line-height: 1.2
@@ -57,7 +46,7 @@
         color: $link-blue
       +breakpoint($bp-tablet-port-max)
         display: inline-block
-        margin-bottom: 10px
+        //margin-bottom: 10px
         width: 100%
     // Secondary children
     ul
@@ -100,7 +89,51 @@
   +breakpoint($bp-for-phone-tablet-range)
     .content
       .open
-        & > a
+        & > span
           +background(image_url("minus.png") no-repeat 97% center, transparent)
-          display: inherit
-          margin-right: 20px
+
+// Section menu for responsive
+// The .open is for the mobile/tablet only and the Desktop doesn't use the open class.
+#sidebar
+  +breakpoint($bp-tablet-port-max)
+    background: $grey-hp
+    border-bottom: 1px solid $grey-db
+    height: 50px
+  +breakpoint($bp-for-phone-only)
+    background: $grey-hp
+    border-bottom: 1px solid $grey-db
+    height: unset
+  .page-alumni &
+    +breakpoint($bp-for-phone-only)
+      border-bottom: 1px solid $grey-db
+      height: 42px
+
+  ul.menu
+    li.expanded
+      ul.menu
+        display: none
+
+  .menu
+    +breakpoint($bp-for-phone-tablet-range)
+      .expanded,
+      .active-trail
+        li
+          padding-left: 30px
+
+    li.expanded ul
+      display: none
+
+    // active class displays
+    li.expanded.open > ul
+      display: block
+
+    li.expanded.open > ul:first-of-type,
+    li.expanded.active-trail > ul:first-of-type
+      display: block
+
+    // This does the hiding of the open menu when you are on a particular page. We may want to remove it.
+    //+breakpoint($bp-for-phone-tablet-range)
+    //  li.expanded.active-trail.top-level > ul
+    //    display: none
+    //  li.expanded.active-trail.top-level.open > ul
+    //    display: block

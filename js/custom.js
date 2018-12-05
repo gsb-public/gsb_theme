@@ -659,6 +659,24 @@
         };
     });
     $(function(){
-      $("#sidebar .expanded.active-trail.open.collapsed").removeClass("collapsed");
+        var width = $(window).width();
+        if (width > 1199) {
+          //desktop only functionality
+        };
+        if (width <= 1199) {
+            //phone/tablet only functionality
+            $("#sidebar").find(".content > .menu li.expanded > a")
+                .replaceWith(function(){
+                  return $("<span class='sub-menus'>" + $(this).html() + "</span>");
+                });
+            $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
+            $("#sidebar").find(".menu li.expanded")
+                .click(function(e) {
+                    if ($(this).hasClass("expanded")) {
+                        $(this).toggleClass("open");
+                        $(".top-level").not($(this)).removeClass('open');
+                    }
+                });
+        };
     });
 }(jQuery));

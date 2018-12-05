@@ -294,6 +294,10 @@
           left: 0
           +breakpoint($bp-for-phone-only)
             top: 42px
+          .menu
+            padding-left: 35px
+            .menu
+              padding-left: 0
         h2
           color: $grey-hp-7
           .svg &
@@ -348,8 +352,6 @@
             width: 100%
         +breakpoint($bp-for-phone-only)
           padding-left: 0
-
-
         .menu
           background: transparent
           border-bottom: 0
@@ -375,45 +377,3 @@
                     //padding-left: 20px // 95px in
                   +breakpoint($bp-for-phone-only)
                     //padding-left: 15px // 85px in
-
-// Section menu for responsive
-#sidebar
-  +breakpoint($bp-tablet-port-max)
-    background: $grey-hp
-    border-bottom: 1px solid $grey-db
-    height: 50px
-  +breakpoint($bp-for-phone-only)
-    background: $grey-hp
-    border-bottom: 1px solid $grey-db
-    height: unset
-  .page-alumni &
-    +breakpoint($bp-for-phone-only)
-      border-bottom: 1px solid $grey-db
-      height: 42px
-
-  ul.menu
-    .active-trail
-      //background-color: red
-    li.expanded.collapsed
-      ul.menu
-        display: none
-    li.expanded.collapsed.open
-      ul.menu
-        display: block
-        +breakpoint($bp-for-tablet-range)
-          width: 100%
-  .menu
-    +breakpoint($bp-for-phone-tablet-range)
-      .expanded.open,
-      .active-trail.open
-        .menu
-          //background-color: $white
-          li
-            padding-left: 30px
-
-        .expanded.open,
-        .active-trail.open
-          .menu
-            //background-color: $grey-hp
-            li
-              padding-left: 30px
