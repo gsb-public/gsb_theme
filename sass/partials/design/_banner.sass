@@ -365,15 +365,26 @@
             float: unset
             //padding-left: 15px // 50px in
             width:  100%
-          .expanded.active-trail
-            .menu
-              +breakpoint($bp-for-tablet-range)
-                //padding-left: 25px // 75px in
+  .block-menu.open
+    .expanded
+      .menu
+        +breakpoint($bp-for-tablet-range)
+          padding-left: 0 // 75px in
+        +breakpoint($bp-for-phone-only)
+          padding-left: 0 // 60px in
+        li
+          +breakpoint($bp-for-phone-tablet-range)
+            padding-left: 20px
+        .menu
+          +breakpoint($bp-for-tablet-range)
+            padding-left: 5px // 95px in
+          +breakpoint($bp-for-phone-only)
+            padding-left: 0
+          .menu
+            +breakpoint($bp-for-tablet-range)
+              padding-left: 0 // 95px in
+            li
               +breakpoint($bp-for-phone-only)
-                //padding-left: 15px // 65px in
-              .expanded.active-trail
-                .menu
-                  +breakpoint($bp-for-tablet-range)
-                    //padding-left: 20px // 95px in
-                  +breakpoint($bp-for-phone-only)
-                    //padding-left: 15px // 85px in
+                padding-left: 15px // 85px in
+            li
+              padding-left: 15px
