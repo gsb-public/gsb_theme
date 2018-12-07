@@ -23,8 +23,13 @@
         padding-top: 22px
     +breakpoint($bp-for-phone-only)
       font-size: 14px
+    .sub-menus-desktop
+      +breakpoint($bp-for-phone-tablet-range)
+        display: none
     .sub-menus
-      +breakpoint($bp-for-tablet-range)
+      +breakpoint($bp-for-desktop-up)
+      display: none
+      +breakpoint($bp-for-phone-tablet-range)
         +background(image_url("plus.png") no-repeat 97% center, transparent)
         display: inherit
         margin-right: 20px
@@ -35,7 +40,6 @@
           font-size: 18px
           padding-right: 20px
       +breakpoint($bp-for-phone-only)
-        +background(image_url("plus.png") no-repeat 97% center, transparent)
         display: inherit
         margin-right: 20px
 
@@ -88,6 +92,7 @@
   // Minus for the close on section menus
   +breakpoint($bp-for-phone-tablet-range)
     .content
+      .expanded.active-trail,
       .open
         & > span
           +background(image_url("minus.png") no-repeat 97% center, transparent)
