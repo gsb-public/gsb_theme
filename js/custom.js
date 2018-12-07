@@ -574,7 +574,7 @@
     $(function() {
         setHeight();
         function setHeight() {
-            windowHeight = $(window).innerHeight();
+            windowHeight = $(window).innerHeight()-80;
             $('.pane-landingpage-video, .pane-bundle-landing-viewport, .field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css('max-height', windowHeight);
         };
         $(window).resize(function() {
