@@ -53,8 +53,6 @@
   box-shadow: 25px 0 0 #dd1880, -25px 0 0 #dd1880;
 }
 .pane-bundle-landing-viewport .viewport-text-wrapper {
-  bottom: 450px;
-  left: 0;
   margin: 0 auto;
   position: relative;
   width: 1065px;
@@ -194,7 +192,7 @@
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .pane-bundle-landing-viewport .scrollLink {
-    bottom: 70px;
+    bottom: 0;
   }
 }
 @media (max-width: 37.4375em) {
@@ -213,9 +211,14 @@
     padding: 86px 32px;
   }
 }
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .svg .pane-bundle-landing-viewport .scrollLink {
+    bottom: 50px;
+  }
+}
 @media (min-width: 75em) {
   .svg .pane-bundle-landing-viewport .scrollLink {
-    bottom: 75px;
+    bottom: 0;
   }
 }
 .no-js .pane-bundle-landing-viewport .scrollLink, .no-svg .pane-bundle-landing-viewport .scrollLink {

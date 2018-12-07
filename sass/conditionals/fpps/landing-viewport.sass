@@ -43,8 +43,6 @@
         background: $pink-bright
         box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
   .viewport-text-wrapper
-    bottom: 450px
-    left: 0
     margin: 0 auto
     position: relative
     width: 1065px
@@ -120,7 +118,7 @@
       +breakpoint($bp-mobile-max)
         padding: 10px 35px
     +breakpoint($bp-for-tablet-range)
-      bottom: 70px
+      bottom: 0
     +breakpoint($bp-for-phone-only)
       font-size: 12px
     .svg &
@@ -130,8 +128,10 @@
       width: 150px
       +breakpoint($bp-for-phone-only)
         padding: 86px 32px
+      +breakpoint($bp-mobile-land)
+        bottom: 50px
       +breakpoint($bp-for-desktop-up)
-        bottom: 75px
+        bottom: 0
     .no-js &, .no-svg &
       background: image_url("/images/icons/background-scroll-explore-video.png") no-repeat center transparent
       padding: 86px 18px
