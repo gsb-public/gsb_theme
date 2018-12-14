@@ -674,11 +674,15 @@
             var width = $(window).width();
             if (width <= 1199) {
                 $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
-                $("#sidebar").find(".menu li.expanded")
+                $("#sidebar").find(".menu > li.expanded")
                     .click(function (e) {
-                        if ($(this).hasClass("expanded")) {
-                            $(this).toggleClass("open");
-                            $(".top-level").not($(this)).removeClass('open');
+                        var self = $(this);
+                        if ((self).hasClass("expanded")) {
+                            self.toggleClass("open");
+                            $(".top-level").not(self).removeClass('open');
+                        }
+                        if (self.closest(".expanded").length){
+                            self.addClass("open");
                         }
                     });
             };

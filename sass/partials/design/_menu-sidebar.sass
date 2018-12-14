@@ -113,32 +113,33 @@
       border-bottom: 1px solid $grey-db
       height: 42px
 
-  ul.menu
-    li.expanded
-      ul.menu
-        display: none
-
-  .menu
-    +breakpoint($bp-for-phone-tablet-range)
-      .expanded,
-      .active-trail
-        li
-          padding-left: 30px
-
-    li.expanded ul
+#sidebar
+  .expanded
+    .menu
       display: none
-
-    // active class displays
-    li.expanded.open > ul
+  .expanded.active-trail
+    & > .menu
       display: block
+  +breakpoint($bp-for-phone-tablet-range)
+    // setting everything to closed
+    .block-menu.open
+      .expanded
+        ul
+          display: none
+          //border: 1px solid red
+          .expanded.open
+            & > ul:first-of-type
+              display: block
+              //border: 1px solid lime
+              .expanded.open
+                & > ul:first-of-type
+                  display: block
+                  //border: 1px solid yellowgreen
 
-    li.expanded.open > ul:first-of-type,
-    li.expanded.active-trail > ul:first-of-type
-      display: block
+      .expanded.top-level.active-trail,
+      .expanded.active-trail,
+      .expanded.top-level.open
+        & > .menu
+          display: block
 
-    // This does the hiding of the open menu when you are on a particular page. We may want to remove it.
-    //+breakpoint($bp-for-phone-tablet-range)
-    //  li.expanded.active-trail.top-level > ul
-    //    display: none
-    //  li.expanded.active-trail.top-level.open > ul
-    //    display: block
+
