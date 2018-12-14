@@ -6949,24 +6949,28 @@ h2.insights-label {
     height: 42px;
   }
 }
-#sidebar ul.menu li.expanded ul.menu {
+
+#sidebar .expanded .menu {
   display: none;
+}
+#sidebar .expanded.active-trail > .menu {
+  display: block;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  #sidebar .menu .expanded li,
-  #sidebar .menu .active-trail li {
-    padding-left: 30px;
+  #sidebar .block-menu.open .expanded ul {
+    display: none;
   }
-}
-#sidebar .menu li.expanded ul {
-  display: none;
-}
-#sidebar .menu li.expanded.open > ul {
-  display: block;
-}
-#sidebar .menu li.expanded.open > ul:first-of-type,
-#sidebar .menu li.expanded.active-trail > ul:first-of-type {
-  display: block;
+  #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type {
+    display: block;
+  }
+  #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type .expanded.open > ul:first-of-type {
+    display: block;
+  }
+  #sidebar .block-menu.open .expanded.top-level.active-trail > .menu,
+  #sidebar .block-menu.open .expanded.active-trail > .menu,
+  #sidebar .block-menu.open .expanded.top-level.open > .menu {
+    display: block;
+  }
 }
 
 .item-list .pager li {
