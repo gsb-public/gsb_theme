@@ -39,9 +39,8 @@
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-for-phone-only)
-      height: 325px
-      &:nth-child(even)
-        margin-right: 0
+      height: 400px
+      margin-left: 25px
 
     .views-field-title
       color: $link-green
@@ -134,7 +133,7 @@
             font-size: 16px
             line-height: 1.5
           +breakpoint($bp-for-phone-only)
-            height: 325px
+            height: 400px
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -171,6 +170,8 @@
     padding: 0
   .pane-title
     padding: 45px 0px 5px 0px
+    +breakpoint($bp-for-phone-only)
+      padding-left: 20px
     h2
       color: $text-black
       font-family: $font-light
@@ -232,8 +233,8 @@
         &:after
           color: $teal-light
     +breakpoint($bp-for-phone-only)
-      width: 100%
-      margin-left: 0
+      width: 83%
+      margin-left: 25px
 
   .voices_display_all_list_cta
     margin-bottom: 0px
@@ -276,6 +277,14 @@
         width: 50%
         margin: 0 auto
 
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one
+    .main-header,
+    .main-footer
+      .voices_display_all_list_cta
+        +breakpoint($bp-for-phone-only)
+        width: 84%
+        margin-left: 25px
 
 /* CTA Button End */
 
@@ -402,10 +411,8 @@
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-for-phone-only)
-      height: 325px
-      width: 45%
-      &:nth-child(even)
-        margin-right: 0
+      height: 400px
+      width: 86%
 
     .views-field-title
       color: $link-green
@@ -495,7 +502,7 @@
             font-size: 16px
             line-height: 1.5
           +breakpoint($bp-for-phone-only)
-            height: 325px
+            height: 400px
 
         &.blue
           background: linear-gradient(transparent, $voices-blue 50%)
@@ -590,15 +597,15 @@
             +breakpoint($bp-iphone6p-land)
               width: 82%
             +breakpoint($bp-for-phone-only)
-              height: 325px
-              width: 45%
+              height: 400px
+              width: 80.60%
    
             .views-field-field-quote div div
-              width: 100%
+              width: 100.2%
               height: 400px
               padding-right: 10px
               +breakpoint($bp-for-phone-only)
-                height: 325px
+                height: 400px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
               word-wrap: break-word
@@ -676,8 +683,8 @@
         width: auto
         height: 390px
       +breakpoint($bp-for-phone-only)
-        height: 325px
-        width: 45%
+        height: 400px
+        width: 80.60%
       .views-field-title
         padding: 25px 0 10px 20px
         a
@@ -704,7 +711,7 @@
               line-height: 1.5
               height: 390px
             +breakpoint($bp-for-phone-only)
-              height: 325px
+              height: 400px
     .pane-content
       .voices_display_list_cta
         background-color: $white
@@ -890,8 +897,8 @@
   .view-display-id-voices_single_teaser_pane
     .views-row
       +breakpoint($bp-for-phone-only)
-        width: auto
-        //margin-left: 25px
+        width: 80.60%
+        margin-left: 25px
       +breakpoint($bp-for-tablet-range)
         width: auto
   .pane-voices-filters-voices-list-cta-panel-pane
@@ -900,6 +907,15 @@
   .pane-voices-filters-all-voices-list-panel-pane
     +breakpoint($bp-for-phone-tablet-range)
       padding-left: 30px
+
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .main-middle
+    .narrow-view
+      .view-display-id-voices_single_teaser_pane
+        .views-row
+          +breakpoint($bp-for-phone-only)
+            margin-left: 0px
+            height: 390px
 
 .inner-main-wrapper
   .main-header,
@@ -1417,8 +1433,8 @@
             +breakpoint($bp-tablet-land)
               width: 43%
             +breakpoint($bp-for-phone-only)
-              &:nth-child(even)
-                margin-right: 0
+              width: 86%
+
         .view-display-id-voices_list_cta_panel_pane,
         .view-display-id-all_voices_list_panel_pane
           .views-row
@@ -1431,7 +1447,8 @@
             +breakpoint($bp-tablet-land)
               width: 43%
             +breakpoint($bp-for-phone-only)
-              width: 45%
+              width: 85%
+              margin-left: 25px
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 48%
@@ -1918,3 +1935,23 @@
           +breakpoint($bp-iphone6p-land)
             width: 46%
             margin: 0 auto
+
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one
+    .main-header,
+    .main-footer
+      .pane-voices-filters-voices-list-cta-panel-pane,
+      .pane-voices-filters-all-voices-list-panel-pane
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 30px
+
+.no-sidebars.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one
+    .main-middle
+      .view-display-id-voices_single_teaser_pane
+        .views-row
+          +breakpoint($bp-for-phone-only)
+            margin-left: 0px
+
+
+
