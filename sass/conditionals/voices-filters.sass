@@ -53,6 +53,7 @@
         font-size: 24px
         &:hover
           text-decoration: none
+          border-bottom: 2px solid $white
         +icon-after("arrow-double-right", true)
           color: $green-light
           font-size: 18px
@@ -88,6 +89,7 @@
         div
           opacity: 1
     &:hover
+      box-shadow: 0 0 4px 2px #c4c4c4
       .views-field-field-quote
         div
           div
@@ -136,17 +138,17 @@
             height: 400px
 
         &.blue
-          background: linear-gradient(transparent, $voices-blue 50%)
+          background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
         &.brightteal
-          background: linear-gradient(transparent, $voices-teal-med 50%)
+          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
         &.charcoal
-          background: linear-gradient(transparent, $voices-charcoal 50%)
+          background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
         &.green
-          background: linear-gradient(transparent, $voices-green 50%)
+          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
         &.pink
-          background: linear-gradient(transparent, $voices-pink 50%)
+          background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
         &.purple
-          background: linear-gradient(transparent, $voices-purple 50%)
+          background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
         &.white
           background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
@@ -283,7 +285,7 @@
     .main-footer
       .voices_display_all_list_cta
         +breakpoint($bp-for-phone-only)
-        width: 84%
+        width: 80.60%
         margin-left: 25px
 
 /* CTA Button End */
@@ -425,6 +427,7 @@
         font-size: 24px
         &:hover
           text-decoration: none
+          border-bottom: 2px solid $white
         +icon-after("arrow-double-right", true)
           color: $green-light
           font-size: 18px
@@ -458,6 +461,7 @@
         div
           opacity: 1
     &:hover
+      box-shadow: 0 0 4px 2px #c4c4c4
       .views-field-field-quote
         div
           div
@@ -505,17 +509,17 @@
             height: 400px
 
         &.blue
-          background: linear-gradient(transparent, $voices-blue 50%)
+          background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
         &.brightteal
-          background: linear-gradient(transparent, $voices-teal-med 50%)
+          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
         &.charcoal
-          background: linear-gradient(transparent, $voices-charcoal 50%)
+          background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
         &.green
-          background: linear-gradient(transparent, $voices-green 50%)
+          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
         &.pink
-          background: linear-gradient(transparent, $voices-pink 50%)
+          background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
         &.purple
-          background: linear-gradient(transparent, $voices-purple 50%)
+          background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
         &.white
           background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
@@ -666,7 +670,7 @@
             &:after
               color: $teal-light
         +breakpoint($bp-for-phone-only)
-          width: 82%
+          width: 81%
           margin-left: 30px  
            
 
@@ -742,7 +746,7 @@
       +breakpoint($bp-for-phone-tablet-range)
         margin-left: 25px
       +breakpoint($bp-for-phone-only)
-        margin-left: 0
+        margin-left: 20px
 
 .pane-voices-filters-voices-list-cta-panel-pane
   h2
@@ -907,6 +911,22 @@
   .pane-voices-filters-all-voices-list-panel-pane
     +breakpoint($bp-for-phone-tablet-range)
       padding-left: 30px
+
+.sidebar-first.panels-layout-gsb-no-sidebar
+  .narrow-view
+    .view-display-id-voices_single_teaser_pane
+      .views-row
+        +breakpoint($bp-for-phone-only)
+          margin-left: 0px
+  .wide-view
+    .pane-voices-filters-all-voices-list-panel-pane
+      .pane-content
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 25px
+        .voices_display_all_list_cta
+          +breakpoint($bp-for-phone-only)
+            margin-left: 25px
+            width: 79%
 
 .sidebar-first.panels-layout-gsb-landing-standard-page-one
   .main-middle
@@ -1108,7 +1128,7 @@
             width: 100%
             height: 360px
           +breakpoint($bp-for-phone-only)
-            width: 45%
+            width: 80.60%
           .views-field-field-quote
             div
               div
@@ -1167,8 +1187,7 @@
           +breakpoint($bp-iphone6p-land)
             width: 92%
             height: 360px
-          +breakpoint($bp-for-phone-only)
-            width: 45%
+
           .views-field-field-quote
             div
               div
@@ -1208,6 +1227,9 @@
         .views-row
           width: 96%
           height: 390px
+          +breakpoint($bp-for-phone-tablet-range)
+            height: 400px
+            width: 80.6%
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-tablet-pot)
@@ -1358,7 +1380,7 @@
         +breakpoint($bp-tablet-land)
           width: 30%
         +breakpoint($bp-for-phone-only)
-          width: 45%
+          width: 80.60%
         .views-field-field-quote
           div
             div
@@ -1378,6 +1400,8 @@
           width: 29.38%
           +breakpoint($bp-for-phone-tablet-range)
             width: 88%
+          +breakpoint($bp-for-phone-only)
+            width: 86%
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-iphone6p-land)
@@ -1390,7 +1414,11 @@
         .views-row
           width: 29.51%
           +breakpoint($bp-for-phone-tablet-range)
-            width: 90%
+            width: 87.70%
+            margin-left: 0px
+          +breakpoint($bp-for-phone-only)
+            width: 87.60%
+            margin-right: 10px
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-iphone6p-land)
@@ -1447,13 +1475,13 @@
             +breakpoint($bp-tablet-land)
               width: 43%
             +breakpoint($bp-for-phone-only)
-              width: 85%
+              width: 80.60%
               margin-left: 25px
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 48%
             +breakpoint($bp-for-phone-tablet-range)
-              width: 81%
+              width: 80.60%
             +breakpoint($bp-tablet-pot)
               width: 64%
             +breakpoint($bp-tablet-land)
@@ -1517,7 +1545,7 @@
             +breakpoint($bp-iphone6p-land)
               width: 42%
             +breakpoint($bp-for-phone-only)
-              width: 45%
+              width: 80.60%
         .view-display-id-voices_list_cta_panel_pane
           .views-row
             width: 29.1%
@@ -1532,7 +1560,7 @@
             +breakpoint($bp-iphone6p-land)
               width: 42%
             +breakpoint($bp-for-phone-only)
-              width: 45%
+              width: 80.60%
 
         .view-display-id-voices_filters_pane
           .views-widget-filter-field_industry_tid,
@@ -1906,6 +1934,10 @@
             +breakpoint($bp-tablet-pot)
               margin-left: 0px
               width: 67%
+  .full-header
+    .pane-voices-filters-all-voices-list-panel-pane
+      .pane-content
+        padding-bottom: 25px
 
 .panels-layout-gsb-no-sidebar 
   .inner-main-wrapper 
