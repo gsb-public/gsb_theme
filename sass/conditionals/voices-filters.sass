@@ -282,6 +282,8 @@
       +breakpoint($bp-for-phone-only)
         width: 89%
         margin-left: 0px
+      +breakpoint($bp-mobile-land)
+        width: 88%
       +breakpoint($bp-tablet-land)
         width: 50%
         margin: 0 auto
@@ -292,8 +294,9 @@
     .main-footer
       .voices_display_all_list_cta
         +breakpoint($bp-for-phone-only)
-        width: 80.60%
-        margin-left: 25px
+          width: 80.60%
+          margin-left: 25px
+
 
 /* CTA Button End */
 
@@ -801,12 +804,9 @@
 .main-header,
 .main-footer
   .voices_display_list_cta
-    +breakpoint($bp-iphone6p-land)
-      width: 76%
-      margin-left: 30px
     +breakpoint($bp-tablet-pot)
-      width: 68%
-      margin-left: 30px
+      width: 63%
+      margin-left: 25px
     +breakpoint($bp-tablet-land)
       width: 60%
       margin-left: 30px
@@ -815,6 +815,9 @@
       margin-left: 30px
     +breakpoint($bp-iphone6p-port)
       width: 73%
+    +breakpoint($bp-iphone6p-land)
+      width: 70%
+      margin-left: 25px
 
 .gsb-landing-standard-page-one
   .main-header,
@@ -830,8 +833,8 @@
         width: 50%
         margin: 0 auto
       +breakpoint($bp-tablet-pot)
-        width: 68%
-        margin-left: 30px
+        width: 62%
+        margin-left: 25px
 
 // Margin overrides for the main-middle content with voice content
 .panels-layout-gsb-landing-standard-page-one,
@@ -1455,7 +1458,7 @@
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-iphone6p-land)
-            width: 42%
+            width: 40.50%
           +breakpoint($bp-tablet-pot)
             width: 39%
           +breakpoint($bp-tablet-land)
@@ -1501,15 +1504,17 @@
           .views-row
             +breakpoint($bp-for-phone-tablet-range)
               width: 88%
-            +breakpoint($bp-iphone6p-land)
-              width: 74%
-            +breakpoint($bp-tablet-pot)
-              width: 68%
-            +breakpoint($bp-tablet-land)
-              width: 43%
             +breakpoint($bp-for-phone-only)
               width: 80.60%
               margin-left: 25px
+            +breakpoint($bp-tablet-pot)
+              width: 68%
+            +breakpoint($bp-tablet-land)
+              width: 41%
+            +breakpoint($bp-mobile-land)
+              width: 91%
+            +breakpoint($bp-iphone6p-land)
+              width: 73%
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 48%
@@ -1518,7 +1523,11 @@
             +breakpoint($bp-tablet-pot)
               width: 64%
             +breakpoint($bp-tablet-land)
-              width: 71%
+              width: 39.50%
+        .view-display-id-voices_list_cta_panel_pane
+          .views-row
+            +breakpoint($bp-mobile-land)
+              width: 89.50%
         .view-display-id-voices_filters_pane
           .views-widget-filter-field_industry_tid,
           .views-widget-filter-field_region_of_interest_tid
@@ -1544,9 +1553,9 @@
             +breakpoint($bp-for-phone-tablet-range)
               width: 86%
             +breakpoint($bp-tablet-pot)
-              width: 40%
+              width: 38.50%
             +breakpoint($bp-tablet-land)
-              width: 28.5%
+              width: 28.4%
             +breakpoint($bp-mobile-land)
               width: 44%
             +breakpoint($bp-iphone6p-land)
@@ -1557,26 +1566,26 @@
             +breakpoint($bp-for-phone-tablet-range)
               width: 81%
             +breakpoint($bp-tablet-pot)
-              width: 40%
+              width: 37.40%
             +breakpoint($bp-tablet-land)
               width: 28%
             +breakpoint($bp-mobile-land)
               width: 44%
             +breakpoint($bp-iphone6p-land)
-              width: 42%
+              width: 39%
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 29.1%
             +breakpoint($bp-for-phone-tablet-range)
               width: 89%
             +breakpoint($bp-tablet-pot)
-              width: 40%
+              width: 39%
             +breakpoint($bp-tablet-land)
               width: 28.5%
             +breakpoint($bp-mobile-land)
               width: 44%
             +breakpoint($bp-iphone6p-land)
-              width: 42%
+              width: 40.60%
             +breakpoint($bp-for-phone-only)
               width: 80.60%
         .view-display-id-voices_list_cta_panel_pane
@@ -1591,7 +1600,7 @@
             +breakpoint($bp-mobile-land)
               width: 44%
             +breakpoint($bp-iphone6p-land)
-              width: 42%
+              width: 40.50%
             +breakpoint($bp-for-phone-only)
               width: 80.60%
 
@@ -1617,11 +1626,11 @@
               width: 38%
             +breakpoint($bp-tablet-land)
               margin: auto
-              width: 62%
+              width: 28.50%
             +breakpoint($bp-mobile-land)
               width: 44%
             +breakpoint($bp-iphone6p-land)
-              width: 42%
+              width: 40.50%
             +breakpoint($bp-for-phone-only)
               height: 400px
 
