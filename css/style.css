@@ -4573,7 +4573,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 @media (min-width: 75em) {
   #header-wrapper #header {
     margin: 0 auto;
-    max-width: 1070px;
+    max-width: 960px;
     position: relative;
   }
   #header-wrapper #header > .section {
@@ -4606,6 +4606,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 #ftr-logo {
   background: url('../images/logo.svg') no-repeat 0 20px;
   background-size: 100%;
+  margin-left: -55px;
   padding: 35px 0;
   width: 159px;
 }
@@ -8769,10 +8770,12 @@ input.signup-submit:hover {
 .md-megamenu-executive-edu-main-menu.awemenu-mobile span.amm-bar:before {
   content: "";
 }
-#md-megamenu-1.awemenu-mobile-standard .block.block-menu li.leaf .link-secondary,
-.md-megamenu-seed-main-menu.awemenu-mobile .block.block-menu li.leaf .link-secondary,
-.md-megamenu-executive-edu-main-menu.awemenu-mobile .block.block-menu li.leaf .link-secondary {
-  display: none;
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #md-megamenu-1.awemenu-mobile-standard .row .block.block-menu li.leaf a.link-secondary,
+  .md-megamenu-seed-main-menu.awemenu-mobile .row .block.block-menu li.leaf a.link-secondary,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile .row .block.block-menu li.leaf a.link-secondary {
+    display: none;
+  }
 }
 #md-megamenu-1.awemenu-mobile-standard #block-menu-menu-md-megamenu-programs-utilit,
 .md-megamenu-seed-main-menu.awemenu-mobile #block-menu-menu-md-megamenu-programs-utilit,
@@ -9259,6 +9262,11 @@ input.signup-submit:hover {
   font-weight: normal;
 }
 
+#md-megamenu-1.awemenu-mobile-standard div[id*="-utility"] .content ul.menu li.leaf a {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
 @media (min-width: 73.125em) {
   .global-search {
     height: 0;
@@ -9339,13 +9347,14 @@ input.signup-submit:hover {
   color: #231f20;
   display: block;
   font-weight: bold;
-  padding-left: 35px;
+  padding-bottom: 35px;
 }
 @media (max-width: 37.4375em) {
   #md-megamenu-1.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .overview-link-mobile-only {
     font-size: 16px;
+    padding: 20px 20px 35px 35px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -9353,6 +9362,7 @@ input.signup-submit:hover {
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .overview-link-mobile-only,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .overview-link-mobile-only {
     font-size: 18px;
+    padding: 20px 20px 35px 50px;
   }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .content,
@@ -9471,6 +9481,14 @@ input.signup-submit:hover {
   right: 0;
   width: auto;
 }
+#md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header,
+#md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header,
+.md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header,
+.md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header {
+  padding-top: 0;
+}
 @media (max-width: 37.4375em) {
   #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-xs-12.col-md-12,
   #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3,
@@ -9494,7 +9512,7 @@ input.signup-submit:hover {
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row h3.mm-header,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row h3.mm-header {
     font-size: 22px;
-    padding: 0 0 45px 30px;
+    padding: 0 0 35px 30px;
   }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .row h3.mm-header:first-of-type,

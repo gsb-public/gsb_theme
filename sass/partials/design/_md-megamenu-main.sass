@@ -88,11 +88,13 @@
       width: 50px
     &:before
       content: ""
-  // Removal for the mobile version
-  .block.block-menu
-    li.leaf
-      .link-secondary
-        display: none
+  // Removal for the mobile phone/tablet version
+  +breakpoint($bp-for-phone-tablet-range)
+    .row
+      .block.block-menu
+        li.leaf
+          a.link-secondary
+            display: none
   #block-menu-menu-md-megamenu-programs-utilit
     display: none
   .awemenu-megamenu-wrapper
@@ -440,7 +442,10 @@ div#header-wrapper.awemenu-sticky + div#hero
               color: $voices-divider
               float: right
               font-weight: normal
-
+// Override
+#md-megamenu-1.awemenu-mobile-standard div[id*="-utility"] .content ul.menu li.leaf a
+  padding-bottom: 0
+  padding-left: 0
 
 // Global search
 .global-search
@@ -505,11 +510,13 @@ div#header-wrapper.awemenu-sticky + div#hero
       color: $text-black
       display: block
       font-weight: bold
-      padding-left: 35px
+      padding-bottom: 35px
       +breakpoint($bp-for-phone-only)
         font-size: 16px
+        padding: 20px 20px 35px 35px
       +breakpoint($bp-for-tablet-range)
         font-size: 18px
+        padding: 20px 20px 35px 50px
     // Adjusting padding for the phone size
     .content
       padding-bottom: 0
@@ -574,6 +581,10 @@ div#header-wrapper.awemenu-sticky + div#hero
           right: 0
           width: auto
     .row
+      //.col-md-3.col-xs-12 + .col-md-3.col-xs-12 h3.mm-header,
+      .col-md-12.col-xs-12 h3.mm-header,
+      .col-md-3.col-xs-12 h3.mm-header
+        padding-top:  0
       .col-xs-12.col-md-12,
       .col-md-3
         +breakpoint($bp-for-phone-only)
@@ -584,7 +595,7 @@ div#header-wrapper.awemenu-sticky + div#hero
           padding: 0 0 35px 20px
         +breakpoint($bp-for-tablet-range)
           font-size: 22px
-          padding: 0 0 45px 30px
+          padding: 0 0 35px 30px
       h3.mm-header:first-of-type
         padding-top: 35px
         margin: 0
