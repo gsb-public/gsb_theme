@@ -4699,7 +4699,7 @@ div.gsb-full-bleed-page .main-middle .narrow-view .pane-bundle-video {
 .js #navigation, #navigation.search-closed {
   min-width: 702px;
   float: right;
-  padding: 30px 0 0;
+  padding: 30px 0 38px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .js #navigation, #navigation.search-closed {
@@ -8984,12 +8984,22 @@ input.signup-submit:hover {
 
 @media (min-width: 75em) {
   #header-wrapper.awemenu-sticky {
+    height: 87px;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 99;
-    height: 87px;
+  }
+}
+@media (min-width: 75em) {
+  .page-seed #header-wrapper.awemenu-sticky {
+    height: 81px;
+  }
+}
+@media (min-width: 75em) {
+  .page-exec-ed #header-wrapper.awemenu-sticky {
+    height: 81px;
   }
 }
 
@@ -9146,7 +9156,7 @@ input.signup-submit:hover {
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper {
   border-top: 1px solid #990000;
   background-color: white;
-  width: 101vw;
+  width: 105vw;
   position: relative;
   left: 50%;
   right: 50%;
@@ -9272,7 +9282,7 @@ input.signup-submit:hover {
     height: 0;
     position: absolute;
     top: 10px;
-    margin-right: -75px;
+    margin-right: -80px;
   }
   .search-closed .global-search, .js .global-search {
     width: auto;
@@ -9289,6 +9299,7 @@ input.signup-submit:hover {
 @media (min-width: 73.125em) {
   .page-seed .global-search {
     height: 0;
+    margin-right: -75px;
     position: absolute;
     top: 3px;
     right: 15px;
@@ -9298,6 +9309,7 @@ input.signup-submit:hover {
 @media (min-width: 73.125em) {
   .page-exec-ed .global-search {
     height: 0;
+    margin-right: -75px;
     position: absolute;
     top: 3px;
     right: 15px;
@@ -10107,7 +10119,7 @@ input.signup-submit:hover {
   height: 60px;
   line-height: 60px;
   position: absolute;
-  right: -75px;
+  right: -80px;
   top: 13px;
   width: 60px;
   z-index: 9999;
