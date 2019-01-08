@@ -246,12 +246,18 @@
 // Sticky menus
 #header-wrapper.awemenu-sticky
   +breakpoint($bp-for-desktop-up)
+    height: 87px
     position: fixed
     left: 0
     right: 0
     top: 0
     z-index: 99
-    height: 87px
+  .page-seed &
+    +breakpoint($bp-for-desktop-up)
+      height: 81px
+  .page-exec-ed &
+    +breakpoint($bp-for-desktop-up)
+      height: 81px
 div#header-wrapper.awemenu-sticky + #content-wrapper
   .page-seed &
     +breakpoint($bp-for-desktop-up)
@@ -364,7 +370,7 @@ div#header-wrapper.awemenu-sticky + div#hero
       border-top: 1px solid $red
       background-color: $white
       // styles to get the full white width on a browser
-      width: 101vw
+      width: 105vw
       position: relative
       left: 50%
       right: 50%
@@ -453,7 +459,7 @@ div#header-wrapper.awemenu-sticky + div#hero
     height: 0
     position: absolute
     top: 10px
-    margin-right: -75px
+    margin-right: -80px
     .search-closed &,
     .js &
       width: auto
@@ -468,6 +474,7 @@ div#header-wrapper.awemenu-sticky + div#hero
   .global-search
     +breakpoint(1170px min-width)
       height: 0
+      margin-right: -75px
       position: absolute
       top: 3px
       right: 15px
@@ -475,6 +482,7 @@ div#header-wrapper.awemenu-sticky + div#hero
   .global-search
     +breakpoint(1170px min-width)
       height: 0
+      margin-right: -75px
       position: absolute
       top: 3px
       right: 15px
