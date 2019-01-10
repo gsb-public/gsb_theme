@@ -7,7 +7,11 @@ Drupal.behaviors.responsiveMenu = {
     $(context).find('#search-touch-button').click(function() {$('#coveo-search-block-form').addClass('open'); $(this).closest('#navigation').toggleClass('search-closed search-open');});
     $(context).find('#search-close').click(function() {$('#coveo-search-block-form').removeClass('open');});
     $(context).find('#program-links-title').click(function() { $(this).parent().toggleClass('open');});
-    $(context).find('#sidebar h2').click(function() { $(this).parent().toggleClass('open');});
+    $(context).find('#sidebar h2').click(
+        function() {
+          $(this).parent().toggleClass('open');
+          $(this).parent().find(".menu > li.open").removeClass("open");
+        });
     $(context).find('.pane-block h2.pane-title').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('#views-exposed-form-gsb-event-event-listing-pane .views-exposed-widget label').click(function() { $(this).parent().toggleClass('open');});
     $(context).find('#insights-search-touch-button').click(function() { $('#insights-search-block-form').toggleClass('open'); $(this).toggleClass('open');});

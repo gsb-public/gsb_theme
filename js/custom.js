@@ -674,16 +674,33 @@
             var width = $(window).width();
             if (width <= 1199) {
                 $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
+                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded").addClass("sec-level");
+                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("third-level");
+                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fourth-level");
+
                 $("#sidebar").find(".menu > li.expanded")
                     .click(function (e) {
+                        // Creating variables for the different levels of navigation
                         var self = $(this);
+                        var second = $(this).find(".sec-level");
+                        var third = $(this).find(".third-level");
+                        var fourth = $(this).find(".fourth-level");
+
                         if ((self).hasClass("expanded")) {
-                            self.toggleClass("open");
-                            $(".top-level").not(self).removeClass('open');
-                        }
-                        if (self.closest(".expanded").length){
-                            self.addClass("open");
-                        }
+                          // allows only one top-level and active-trail open at the same time.
+                          $(".top-level").not(self).removeClass('open');
+                        };
+                        if (self.length) {
+                            // Toggles the open.
+                            $(this).toggleClass("open");
+                            // Toggles the open and makes sure the parent stays open
+                            if ($(this).hasClass("third-level")) {
+                              $(this).parent().closest("li").toggleClass("open");
+                            }
+                            if ($(this).hasClass("fourth-level")) {
+                                $(this).parent().closest("li").toggleClass("open");
+                            }
+                        };
                     });
             };
         };
