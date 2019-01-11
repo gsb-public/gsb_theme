@@ -682,9 +682,6 @@
                     .click(function (e) {
                         // Creating variables for the different levels of navigation
                         var self = $(this);
-                        var second = $(this).find(".sec-level");
-                        var third = $(this).find(".third-level");
-                        var fourth = $(this).find(".fourth-level");
 
                         if ((self).hasClass("expanded")) {
                           // allows only one top-level and active-trail open at the same time.
