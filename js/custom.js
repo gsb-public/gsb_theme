@@ -677,6 +677,7 @@
                 $("#sidebar").find(".menu > li.expanded")
                     .click(function (e) {
                         var self = $(this);
+
                         if ((self).hasClass("expanded")) {
                             self.toggleClass("open");
                             $(".top-level").not(self).removeClass('open');
