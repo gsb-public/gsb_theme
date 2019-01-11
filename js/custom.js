@@ -665,19 +665,21 @@
         });
         // Duplicating the top level link to a span.
         $("#sidebar").find(".content > .menu li.expanded > a").each(function(i) {
-            $(this).clone()
-                .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
-                .insertAfter(this);
-            $(this).addClass("sub-menus-desktop");
+          $(this).clone()
+              .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
+              .insertAfter(this);
+          $(this).addClass("sub-menus-desktop");
         });
+        // adding classes for the mobile version
+        $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
+        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded").addClass("sec-level");
+        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("third-level");
+        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fourth-level");
+        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fifth-level");
+
         function updateMenuLinks() {
             var width = $(window).width();
             if (width <= 1199) {
-                $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
-                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded").addClass("sec-level");
-                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("third-level");
-                $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fourth-level");
-
                 $("#sidebar").find(".menu > li.expanded")
                     .click(function (e) {
                         // Creating variables for the different levels of navigation
@@ -692,14 +694,18 @@
                             $(this).toggleClass("open");
                             // Toggles the open and makes sure the parent stays open
                             if ($(this).hasClass("third-level")) {
-                              $(this).parent().closest("li").toggleClass("open");
+                              $(this).parent().closest("li").toggleClass("open").css("background", "lime");
                             }
                             if ($(this).hasClass("fourth-level")) {
-                                $(this).parent().closest("li").toggleClass("open");
+                                $(this).parent().closest("li").toggleClass("open").css("border", "2px solid purple");
+                            }
+                            if ($(this).hasClass("fifth-level")) {
+                                $(this).parent().closest("li").toggleClass("open").css("border", "2px solid orange");
                             }
                         };
                     });
             };
         };
     });
+
 }(jQuery));
