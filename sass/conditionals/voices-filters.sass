@@ -607,11 +607,11 @@
               display: block
               width: 90%
             +breakpoint($bp-tablet-pot)
-              width: 73%
+              width: 68%
             +breakpoint($bp-tablet-land)
-              width: 45%
+              width: 41%
             +breakpoint($bp-iphone6p-land)
-              width: 82%
+              width: 74%
             +breakpoint($bp-for-phone-only)
               height: 400px
               width: 80.60%
@@ -845,7 +845,6 @@
 .panels-layout-gsb-no-sidebar
   .content
     .main-middle
-      margin-left: 30px
       .views-row
         margin-right: 0
         width: 100%
@@ -917,6 +916,9 @@
   .views-row
     width: 100%
     margin-top: 0px
+    .views-field-field-image-single-public
+      img
+        height: auto
 
 .full-header,
 .full-bleed-header,
@@ -1267,19 +1269,20 @@
       .view-display-id-voices_single_teaser_pane
         .views-row
           width: 100%
-          height: 390px
+          height: 400px
           +breakpoint($bp-for-phone-tablet-range)
             height: 400px
-            width: 80.6%
+            width: 99%
+            margin-right: 0px
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            height: 360px
+            height: 400px
           .views-field-field-quote
             div
               div
-                height: 390px
+                height: 400px
                 +breakpoint($bp-mobile-land)
                   height: 370px
                   font-size: 16px
@@ -1353,6 +1356,18 @@
           +breakpoint($bp-mobile-land)
             width: 84%
             margin: 10px 10px 0px 0px
+      .view-display-id-voices_single_teaser_pane
+        .view-content
+          .views-row
+            +breakpoint($bp-mobile-land)
+              width: 100%
+              height: 400px
+              margin-right: 0px
+            .views-field-field-quote
+              div
+                div
+                  +breakpoint($bp-mobile-land)
+                    height: 400px
 
 .gsb-full-bleed-page
   .full-bleed-header,
@@ -2188,7 +2203,8 @@
           margin-top: 20px
 
 .gsb-landing-standard-page-one,
-.panels-layout-gsb-landing-standard-page-one
+.panels-layout-gsb-landing-standard-page-one,
+.no-sidebars.panels-layout-gsb-full-bleed-page
   .content
     .main-middle
       .view-display-id-voices_single_teaser_pane
@@ -2199,6 +2215,32 @@
           +breakpoint($bp-mobile-land)
             padding-left: 25px
             padding-right: 25px
+          +breakpoint($bp-iphone6p-land)
+            width: 100%
+            margin-right: 0px
+            padding-left: 26px
+            padding-right: 26px
+          +breakpoint($bp-tablet-pot)
+            width: 100%
+            padding-left: 26px
+            padding-right: 26px
+            height: auto
+            margin-right: 0px
+          +breakpoint($bp-tablet-land)
+            width: 100%
+            padding-left: 26px
+            padding-right: 26px
+            height: auto
+            margin-right: 0px
+          .views-field-field-image-single-public
+            img
+              +breakpoint($bp-tablet-pot)
+                max-height: 100% !important
+                width: 100%
+              +breakpoint($bp-tablet-land)
+                max-height: 100% !important
+                width: 100%
+
     .inner-sidebar-wrapper 
       .sidebar-inner
         .view-display-id-voices_single_teaser_pane 
@@ -2213,5 +2255,108 @@
               height: 400px
               margin-right: 0px
 
+.no-sidebars.panels-layout-gsb-full-bleed-page
+  .content
+    .main-middle
+      .view-display-id-voices_single_teaser_pane 
+        .views-row
+          +breakpoint($bp-mobile-land)
+            width: 100%
+            margin-right: 0px
+            height: auto
+          +breakpoint($bp-iphone6p-land)
+            height: auto
+          .views-field-field-image-single-public
+            img
+              +breakpoint($bp-mobile-land)
+                height: auto
+                width: 100%
+                max-height: 100% !important
+              +breakpoint($bp-iphone6p-land)
+                height: auto
+                width: 100%
+                max-height: 100% !important
 
+    .inner-sidebar-wrapper 
+      .sidebar-inner
+        .view-display-id-voices_single_teaser_pane 
+          .views-row
+            +breakpoint($bp-mobile-land)
+              width: 100%
+              padding-left: 26px
+              padding-right: 26px
+              height: auto
+            .views-field-field-image-single-public
+              img
+                +breakpoint($bp-mobile-land)
+                  height: auto
+                  width: 100%
+                  max-height: 100% !important
+      #quicklinks
+        .view-display-id-voices_single_teaser_pane 
+          .views-row
+            +breakpoint($bp-mobile-land)
+              width: 100%
+              height: auto
+              margin-right: 0px
+              padding-left: 26px
+              padding-right: 26px
+            .views-field-field-image-single-public
+              img
+                +breakpoint($bp-mobile-land)
+                  height: auto
+                  width: 100%
+                  max-height: 100% !important
 
+.sidebar-first.panels-layout-gsb-landing-standard-page-one
+  .gsb-landing-standard-page-one 
+    .inner-main-wrapper
+      .main-header,
+      .main-footer 
+        .view-display-id-voices_single_teaser_pane 
+          .views-row
+            +breakpoint($bp-for-phone-only)
+              width: 100%
+              padding-left: 26px
+              padding-right: 26px
+              margin-left: 0px
+              margin-right: 0px
+    .content
+      .main-middle
+        .view-display-id-voices_single_teaser_pane 
+          .views-row
+            +breakpoint($bp-iphone6p-land)
+              height: auto
+            .views-field-field-image-single-public
+              img
+                +breakpoint($bp-iphone6p-land)
+                  height: auto
+                  width: 100%
+                  max-height: 100% !important
+
+    .inner-content-wrapper
+      .inner-main-wrapper
+        .main-header,
+        .main-footer
+          .view-display-id-voices_filters_pane
+            .views-row
+              +breakpoint($bp-iphone6p-land)
+                width: 78%
+          .view-display-id-all_voices_list_panel_pane
+            .views-row
+              +breakpoint($bp-iphone6p-land)
+                width: 74%
+
+.sidebar-first.panels-layout-gsb-landing-standard-page-one,
+.no-sidebars.panels-layout-gsb-landing-standard-page-one
+  .main-middle
+    .view-display-id-voices_single_teaser_pane 
+      .views-row
+        +breakpoint($bp-iphone6p-land)
+          height: auto
+        .views-field-field-image-single-public
+          img
+            +breakpoint($bp-iphone6p-land)
+              height: auto
+              width: 100%
+              max-height: 100% !important
