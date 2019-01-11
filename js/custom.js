@@ -664,12 +664,12 @@
             updateMenuLinks();
         });
         // Duplicating the top level link to a span.
-            $("#sidebar").find(".content > .menu li.expanded > a").each(function(i) {
-                $(this).clone()
-                    .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
-                    .insertAfter(this);
-                $(this).addClass("sub-menus-desktop");
-            });
+        $("#sidebar").find(".content > .menu li.expanded > a").each(function(i) {
+            $(this).clone()
+                .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
+                .insertAfter(this);
+            $(this).addClass("sub-menus-desktop");
+        });
         function updateMenuLinks() {
             var width = $(window).width();
             if (width <= 1199) {
