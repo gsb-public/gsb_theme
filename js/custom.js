@@ -658,6 +658,35 @@
             };
         };
     });
+    function updateMenuLinks() {
+        var width = $(window).width();
+        if (width <= 1199) {
+            $("#sidebar").find(".menu > li.expanded")
+                .click(function (e) {
+                    // Creating variables for the different levels of navigation
+                    var self = $(this);
+
+                    if ((self).hasClass("expanded")) {
+                        // allows only one top-level and active-trail open at the same time.
+                        $(".level-1").not(self).removeClass('open');
+                    };
+                    if (self.length) {
+                        // Toggles the open.
+                        self.toggleClass("open");
+                        // Toggles the open and makes sure the parent stays open
+                        if (self.hasClass("level-3")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                        if (self.hasClass("level-4")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                        if (self.hasClass("level-5")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                    };
+                });
+        };
+    };
     $(function(){
         updateMenuLinks();
         $(window).resize(function() {
@@ -671,41 +700,10 @@
           $(this).addClass("sub-menus-desktop");
         });
         // adding classes for the mobile version
-        $("#sidebar").find(".content > .menu > li.expanded").addClass("top-level");
-        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded").addClass("sec-level");
-        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("third-level");
-        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fourth-level");
-        $("#sidebar").find(".content > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded > .menu > li.expanded").addClass("fifth-level");
+        $("#sidebar li.expanded").each(function() {
+            $(this).addClass("level-" + ($(this).parents("li").length +1));
+        });
 
-        function updateMenuLinks() {
-            var width = $(window).width();
-            if (width <= 1199) {
-                $("#sidebar").find(".menu > li.expanded")
-                    .click(function (e) {
-                        // Creating variables for the different levels of navigation
-                        var self = $(this);
-
-                        if ((self).hasClass("expanded")) {
-                          // allows only one top-level and active-trail open at the same time.
-                          $(".top-level").not(self).removeClass('open');
-                        };
-                        if (self.length) {
-                            // Toggles the open.
-                            $(this).toggleClass("open");
-                            // Toggles the open and makes sure the parent stays open
-                            if ($(this).hasClass("third-level")) {
-                              $(this).parent().closest("li").toggleClass("open").css("background", "lime");
-                            }
-                            if ($(this).hasClass("fourth-level")) {
-                                $(this).parent().closest("li").toggleClass("open").css("border", "2px solid purple");
-                            }
-                            if ($(this).hasClass("fifth-level")) {
-                                $(this).parent().closest("li").toggleClass("open").css("border", "2px solid orange");
-                            }
-                        };
-                    });
-            };
-        };
     });
 
 }(jQuery));
