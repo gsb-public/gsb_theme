@@ -704,6 +704,59 @@
             $(this).addClass("level-" + ($(this).parents("li").length +1));
         });
 
+        // Make md-megamenu (main, exec-ed, and seed) accessible by tab keys
+        $(function(){
+            $("#md-megamenu-1, .md-megamenu-executive-edu-main-menu, .md-megamenu-seed-main-menu").attr("role", "navigation");
+            /*  Each event assigned to a variable for easy implementation.  */
+            var myEvents = {
+                click: function(e) {
+                    $(this)
+                        .addClass("awemenu-active")
+                        .children("ul")
+                        .show()
+                        .end()
+                        .siblings("li")
+                        .find("ul")
+                        .css("display", "")
+                        .css("z-index", "")
+                        .closest("li")
+                        .removeClass("awemenu-active");
+                },
+                keydown: function(e) {
+                    e.stopPropagation();
+                    if (e.keyCode == 9) {
+                        if (!e.shiftKey && $("nav li").index($(this)) == $("nav li").length - 1)
+                            $("nav li:first").focus();
+                        else if (e.shiftKey && $("nav li").index($(this)) === 0)
+                            $("nav ul:first > li:last")
+                                .focus()
+                                .blur();
+                    }
+                },
+                keyup: function(e) {
+                    e.stopPropagation();
+                    if (e.keyCode == 9) {
+                        if (myEvents.cancelKeyup) myEvents.cancelKeyup = false;
+                        else myEvents.click.apply(this, arguments);
+                    }
+
+                }
+            };
+            $("#navigation")
+                .on("click", "li", myEvents.click)
+                .on("keydown", "li", myEvents.keydown)
+                .on("keyup", "li", myEvents.keyup);
+
+            //  this is needed to keep tabbing focus correct
+            $("nav li").each(function(i) {
+                this.tabIndex = i;
+            });
+
+            /* Below is to remove the active class at the end of cycling through the menu  */
+            // $('li').each(function(i) { if ($(this).children('ul').length) $(this).removeClass("awemenu-active"); });
+        }); // close of accessibilty modification for menus
+
+
     });
 
 }(jQuery));
