@@ -1754,7 +1754,7 @@
     padding-right: 0px !important
 /* no side bar Layout code changes end */
 
-/* fixes for voices list in single column
+/* fixes for voices list in single column */
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page,
 .panels-layout-gsb-no-sidebar
@@ -2201,6 +2201,13 @@
       .voices_display_list_cta
         +breakpoint($bp-iphone6p-land)
           margin-top: 20px
+
+/* voice teaser fixes for different layout */
+.view-display-id-voices_single_teaser_pane 
+  .views-row 
+    .views-field-field-image-single-public 
+      img
+        max-height: 100% !important
 
 .gsb-landing-standard-page-one,
 .panels-layout-gsb-landing-standard-page-one,
