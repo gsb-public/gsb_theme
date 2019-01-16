@@ -145,10 +145,18 @@
     +breakpoint($bp-for-phone-only)
       bottom: 0
 
-.pane-bundle-landing-viewport .scrollLink:hover
-  text-decoration: none
-  &:after
-    margin-bottom: -10px
+.pane-bundle-landing-viewport 
+  .scrollLink
+    &:hover
+      text-decoration: underline
+      &:after
+        text-decoration: none
+    &:after
+      margin-bottom: -10px
+      text-decoration: none
+      &:hover
+        text-decoration: none
+
 
 #edit-field-homepage-image-url
   #field-homepage-image-url-add-more-wrapper
