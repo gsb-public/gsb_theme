@@ -739,7 +739,6 @@
                         if (myEvents.cancelKeyup) myEvents.cancelKeyup = false;
                         else myEvents.click.apply(this, arguments);
                     }
-
                 }
             };
             $("#navigation")
@@ -752,8 +751,6 @@
                 this.tabIndex = i;
             });
 
-            /* Below is to remove the active class at the end of cycling through the menu  */
-            // $('li').each(function(i) { if ($(this).children('ul').length) $(this).removeClass("awemenu-active"); });
         }); // close of accessibilty modification for menus
 
 
