@@ -658,40 +658,40 @@
             };
         };
     });
-    function updateMenuLinks() {
-        var width = $(window).width();
-        if (width <= 1199) {
-            $("#sidebar").find(".menu > li.expanded")
-                .click(function (e) {
-                    // Creating variables for the different levels of navigation
-                    var self = $(this);
 
-                    if ((self).hasClass("expanded")) {
-                        // allows only one top-level and active-trail open at the same time.
-                        $(".level-1").not(self).removeClass('open');
-                    };
-                    if (self.length) {
-                        // Toggles the open.
-                        self.toggleClass("open");
-                        // Toggles the open and makes sure the parent stays open
-                        if (self.hasClass("level-3")) {
-                            self.parent().closest("li").toggleClass("open");
-                        }
-                        if (self.hasClass("level-4")) {
-                            self.parent().closest("li").toggleClass("open");
-                        }
-                        if (self.hasClass("level-5")) {
-                            self.parent().closest("li").toggleClass("open");
-                        }
-                    };
-                });
-        };
-    };
     $(function(){
+        function updateMenuLinks() {
+            var width = $(window).width();
+            if (width <= 1199) {
+                $("#sidebar").find(".menu > li.expanded")
+                    .click(function (e) {
+                        // Creating variables for the different levels of navigation
+                        var self = $(this);
+
+                        if ((self).hasClass("expanded")) {
+                            // allows only one top-level and active-trail open at the same time.
+                            $(".level-1").not(self).removeClass('open');
+                        };
+                        if (self.length) {
+                            // Toggles the open.
+                            self.toggleClass("open");
+                            // Toggles the open and makes sure the parent stays open
+                            if (self.hasClass("level-3")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                            if (self.hasClass("level-4")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                            if (self.hasClass("level-5")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                        };
+                    });
+            };
+        };
+
         updateMenuLinks();
-        $(window).resize(function() {
-            updateMenuLinks();
-        });
+
         // Duplicating the top level link to a span.
         $("#sidebar").find(".content > .menu li.expanded > a").each(function(i) {
           $(this).clone()
@@ -703,57 +703,55 @@
         $("#sidebar li.expanded").each(function() {
             $(this).addClass("level-" + ($(this).parents("li").length +1));
         });
-
-        // Make md-megamenu (main, exec-ed, and seed) accessible by tab keys
-        $(function(){
-            $("#md-megamenu-1, .md-megamenu-executive-edu-main-menu, .md-megamenu-seed-main-menu").attr("role", "navigation");
-            /*  Each event assigned to a variable for easy implementation.  */
-            var myEvents = {
-                click: function(e) {
-                    $(this)
-                        .addClass("awemenu-active")
-                        .children("ul")
-                        .show()
-                        .end()
-                        .siblings("li")
-                        .find("ul")
-                        .css("display", "")
-                        .css("z-index", "")
-                        .closest("li")
-                        .removeClass("awemenu-active");
-                },
-                keydown: function(e) {
-                    e.stopPropagation();
-                    if (e.keyCode == 9) {
-                        if (!e.shiftKey && $("nav li").index($(this)) == $("nav li").length - 1)
-                            $("nav li:first").focus();
-                        else if (e.shiftKey && $("nav li").index($(this)) === 0)
-                            $("nav ul:first > li:last")
-                                .focus()
-                                .blur();
-                    }
-                },
-                keyup: function(e) {
-                    e.stopPropagation();
-                    if (e.keyCode == 9) {
-                        if (myEvents.cancelKeyup) myEvents.cancelKeyup = false;
-                        else myEvents.click.apply(this, arguments);
-                    }
-                }
-            };
-            $("#navigation")
-                .on("click", "li", myEvents.click)
-                .on("keydown", "li", myEvents.keydown)
-                .on("keyup", "li", myEvents.keyup);
-
-            //  this is needed to keep tabbing focus correct
-            $("nav li").each(function(i) {
-                this.tabIndex = i;
-            });
-
-        }); // close of accessibilty modification for menus
-
-
     });
+
+    // Make md-megamenu (main, exec-ed, and seed) accessible by tab keys
+    $(function(){
+        $("#md-megamenu-1, .md-megamenu-executive-edu-main-menu, .md-megamenu-seed-main-menu").attr("role", "navigation");
+        /*  Each event assigned to a variable for easy implementation.  */
+        var myEvents = {
+            click: function(e) {
+                $(this)
+                    .addClass("awemenu-active")
+                    .children("ul")
+                    .show()
+                    .end()
+                    .siblings("li")
+                    .find("ul")
+                    .css("display", "")
+                    .css("z-index", "")
+                    .closest("li")
+                    .removeClass("awemenu-active");
+            },
+            keydown: function(e) {
+                e.stopPropagation();
+                if (e.keyCode == 9) {
+                    if (!e.shiftKey && $("nav li").index($(this)) == $("nav li").length - 1)
+                        $("nav li:first").focus();
+                    else if (e.shiftKey && $("nav li").index($(this)) === 0)
+                        $("nav ul:first > li:last")
+                            .focus()
+                            .blur();
+                }
+            },
+            keyup: function(e) {
+                e.stopPropagation();
+                if (e.keyCode == 9) {
+                    if (myEvents.cancelKeyup) myEvents.cancelKeyup = false;
+                    else myEvents.click.apply(this, arguments);
+                }
+            }
+        };
+        $("#navigation")
+            .on("click", "li", myEvents.click)
+            .on("keydown", "li", myEvents.keydown)
+            .on("keyup", "li", myEvents.keyup);
+
+        //  this is needed to keep tabbing focus correct
+        $("nav li").each(function(i) {
+            this.tabIndex = i;
+        });
+
+    }); // close of accessibilty modification for menus
 
 }(jQuery));
