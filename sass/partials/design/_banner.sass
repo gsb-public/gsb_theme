@@ -338,23 +338,23 @@
           color: $section-red
           .svg &
             +background(image_url("icons/inThisSection-arrow-up-red.svg") no-repeat 85% 47% $grey-hp)
-
-      .menu
-        +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
-        border-bottom: 3px solid $black
-        display: block
-        padding-left: 36px
-        +breakpoint($bp-for-tablet-range)
-          float: right
-          padding-left: 0
-          width: 60%
+      .content
+        & > .menu
+          +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
+          border-bottom: 3px solid $black
+          display: block
+          padding-left: 36px
+          +breakpoint($bp-for-tablet-range)
+            float: right
+            padding-left: 0
+            width: 60%
+            .menu
+              width: 100%
+          +breakpoint($bp-for-phone-only)
+            padding-left: 0
           .menu
-            width: 100%
-        +breakpoint($bp-for-phone-only)
-          padding-left: 0
-        .menu
-          background: transparent
-          border-bottom: 0
+            background: transparent
+            border-bottom: 0
       .expanded.active-trail
         .menu
           +breakpoint($bp-for-tablet-range)
