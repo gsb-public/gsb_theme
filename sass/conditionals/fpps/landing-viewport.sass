@@ -116,20 +116,30 @@
       display: block
       padding: 10px 45px
       +breakpoint($bp-mobile-max)
-        padding: 10px 35px
+        padding: 10px 12px
     +breakpoint($bp-for-tablet-range)
       bottom: 0
     +breakpoint($bp-for-phone-only)
       font-size: 12px
+      height: 122px
+      text-align: center
     .svg &
       +background((image_url("/images/icons/background-scroll-explore-video.svg") no-repeat center), transparent)
       padding: 86px 18px
       position: absolute
       width: 150px
       +breakpoint($bp-for-phone-only)
-        padding: 86px 32px
+        padding: 30px 30px
+        +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
+        width: 96px
       +breakpoint($bp-mobile-land)
-        bottom: 50px
+        +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
+        bottom: 0px
+        font-size: 12px
+        padding: 43px 17px
+        width: 119px
+        height: 114px
+        left: 51%
       +breakpoint($bp-for-desktop-up)
         bottom: 0
     .no-js &, .no-svg &
@@ -137,6 +147,8 @@
       padding: 86px 18px
       position: absolute
       width: 150px
+      +breakpoint($bp-for-phone-only)
+        +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
 
   video + .scrollLink
     bottom: 0
@@ -154,6 +166,8 @@
     &:after
       margin-bottom: -10px
       text-decoration: none
+      +breakpoint($bp-mobile-land)
+        padding: 10px 33px
       &:hover
         text-decoration: none
 

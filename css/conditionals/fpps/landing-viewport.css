@@ -187,7 +187,7 @@
 }
 @media (max-width: 35.5em) {
   .pane-bundle-landing-viewport .scrollLink:after {
-    padding: 10px 35px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -198,6 +198,8 @@
 @media (max-width: 37.4375em) {
   .pane-bundle-landing-viewport .scrollLink {
     font-size: 12px;
+    height: 122px;
+    text-align: center;
   }
 }
 .svg .pane-bundle-landing-viewport .scrollLink {
@@ -208,12 +210,20 @@
 }
 @media (max-width: 37.4375em) {
   .svg .pane-bundle-landing-viewport .scrollLink {
-    padding: 86px 32px;
+    padding: 30px 30px;
+    background: url('../../../images/icons/scroll-explore-video-small-mobile.svg') no-repeat center, transparent;
+    width: 96px;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
   .svg .pane-bundle-landing-viewport .scrollLink {
-    bottom: 50px;
+    background: url('../../../images/icons/scroll-explore-video-small-mobile.svg') no-repeat center, transparent;
+    bottom: 0px;
+    font-size: 12px;
+    padding: 43px 17px;
+    width: 119px;
+    height: 114px;
+    left: 51%;
   }
 }
 @media (min-width: 75em) {
@@ -226,6 +236,11 @@
   padding: 86px 18px;
   position: absolute;
   width: 150px;
+}
+@media (max-width: 37.4375em) {
+  .no-js .pane-bundle-landing-viewport .scrollLink, .no-svg .pane-bundle-landing-viewport .scrollLink {
+    background: url('../../../images/icons/scroll-explore-video-small-mobile.svg') no-repeat center, transparent;
+  }
 }
 .pane-bundle-landing-viewport video + .scrollLink {
   bottom: 0;
@@ -250,6 +265,11 @@
 .pane-bundle-landing-viewport .scrollLink:after {
   margin-bottom: -10px;
   text-decoration: none;
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .pane-bundle-landing-viewport .scrollLink:after {
+    padding: 10px 33px;
+  }
 }
 .pane-bundle-landing-viewport .scrollLink:after:hover {
   text-decoration: none;
