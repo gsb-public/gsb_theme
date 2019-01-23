@@ -98,7 +98,7 @@
     .page-exec-ed &,
     .page-seed &
       height: 75px
-      top: 75px !important
+      top: 82px !important
       +breakpoint(1169px max-width)
         height: 50px
       +breakpoint($bp-for-phone-tablet-range)
@@ -127,9 +127,9 @@
       left: 0
     .page-exec-ed &
       border-bottom: 1px solid $red
-      height: 75px
+      height: 83px
       &:hover
-        height: 82px !important
+        height: 89px
         margin-top: -6px
         width: 60px !important
         +breakpoint($bp-for-phone-only)
@@ -139,9 +139,8 @@
         height: 50px
     .page-seed &
       border-bottom: 1px solid $red
-      height: 75px
+      height: 83px
       &:hover
-        height: 76px !important
         width: 60px !important
         +breakpoint($bp-for-phone-only)
           height: 50px !important
@@ -165,7 +164,7 @@
 .page-exec-ed #navigation.search-closed #edit-submit:hover,
 .page-seed #navigation.search-closed #edit-submit:hover
   border-bottom: 0
-  height: 80px !important
+  height: 88px
   margin-top: -6px
 
 // General search results page search
@@ -1054,7 +1053,7 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 88px
         line-height: 60px
         right: -60px
         top: 0
@@ -1069,6 +1068,10 @@ button.checkbox-clear-all
           right: 0
           top: 0
           width: 64px
+  .search-open #coveo-search-block-form .form-submit
+    height: 75px
+    &:hover
+      height: 81px
 // Search input overrides for Seed
 .page-seed
   input.search_keys
@@ -1079,7 +1082,7 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 88px
         line-height: 60px
         right: -60px
         top: 0
@@ -1094,3 +1097,5 @@ button.checkbox-clear-all
           right: 0
           top: 0
           width: 64px
+  .search-open #coveo-search-block-form .form-submit
+    height: 75px
