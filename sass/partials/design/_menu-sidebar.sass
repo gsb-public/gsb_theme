@@ -20,7 +20,7 @@
       margin-bottom: 22px
       //padding-right: 15px
       &.first
-        padding-top: 22px
+        padding-top: 20px
     +breakpoint($bp-for-phone-only)
       font-size: 14px
     .sub-menus-desktop
@@ -126,11 +126,9 @@
       .expanded
         ul
           display: none
-          //border: 1px solid red
           .expanded.open
             & > ul:first-of-type
               display: block
-              //border: 1px solid lime
               .expanded.open
                 & > ul:first-of-type
                   display: block
@@ -140,5 +138,56 @@
       .expanded.level-1.open
         & > .menu
           display: block
+.page-exec-ed,
+.page-seed
+  // Section menu for responsive
+  // The .open is for the mobile/tablet only and the Desktop doesn't use the open class.
+  #sidebar
+    +breakpoint($bp-tablet-port-max)
+      background: $grey-hp
+      border-bottom: 1px solid $grey-db
+      height: 50px
+    +breakpoint($bp-for-phone-only)
+      background: $grey-hp
+      border-bottom: 1px solid $grey-db
+      height: unset
+
+  #sidebar
+    .expanded
+      .menu
+        display: none
+    .expanded.active-trail
+      & > .menu
+        display: block
+    +breakpoint($bp-for-phone-tablet-range)
+      // setting everything to closed
+      .block-menu.open
+        .expanded
+          ul
+            display: none
+            border: 1px solid red
+            .expanded.open
+              & > ul:first-of-type
+                display: block
+                border: 1px solid lime
+                .expanded.open
+                  & > ul:first-of-type
+                    display: block
+
+
+  #sidebar
+    .block-menu-block.open
+      .menu-block-wrapper
+        & > .menu
+          +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
+          border-bottom: 3px solid $black
+          display: block
+          padding-left: 36px
+
+        .expanded.level-1.active-trail,
+        .expanded.active-trail,
+        .expanded.level-1.open
+          & > .menu
+            display: block
 
 

@@ -6824,7 +6824,7 @@ h2.insights-label {
     margin-bottom: 22px;
   }
   .region-sidebar-first ul li.first {
-    padding-top: 22px;
+    padding-top: 20px;
   }
 }
 @media (max-width: 37.4375em) {
@@ -6982,6 +6982,65 @@ h2.insights-label {
   #sidebar .block-menu.open .expanded.level-1.open > .menu {
     display: block;
   }
+}
+
+@media (max-width: 62.4375em) {
+  .page-exec-ed #sidebar,
+  .page-seed #sidebar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #dbdbdb;
+    height: 50px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-exec-ed #sidebar,
+  .page-seed #sidebar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #dbdbdb;
+    height: unset;
+  }
+}
+.page-exec-ed #sidebar .expanded .menu,
+.page-seed #sidebar .expanded .menu {
+  display: none;
+}
+.page-exec-ed #sidebar .expanded.active-trail > .menu,
+.page-seed #sidebar .expanded.active-trail > .menu {
+  display: block;
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .page-exec-ed #sidebar .block-menu.open .expanded ul,
+  .page-seed #sidebar .block-menu.open .expanded ul {
+    display: none;
+    border: 1px solid red;
+  }
+  .page-exec-ed #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type,
+  .page-seed #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type {
+    display: block;
+    border: 1px solid lime;
+  }
+  .page-exec-ed #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type .expanded.open > ul:first-of-type,
+  .page-seed #sidebar .block-menu.open .expanded ul .expanded.open > ul:first-of-type .expanded.open > ul:first-of-type {
+    display: block;
+  }
+}
+.page-exec-ed #sidebar .block-menu-block.open .menu-block-wrapper > .menu,
+.page-seed #sidebar .block-menu-block.open .menu-block-wrapper > .menu {
+  background: -moz-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
+  background: -o-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
+  background: -webkit-linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
+  background: linear-gradient(rgba(231, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), white;
+  border-bottom: 3px solid black;
+  display: block;
+  padding-left: 36px;
+}
+.page-exec-ed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.level-1.active-trail > .menu,
+.page-exec-ed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.active-trail > .menu,
+.page-exec-ed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.level-1.open > .menu,
+.page-seed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.level-1.active-trail > .menu,
+.page-seed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.active-trail > .menu,
+.page-seed #sidebar .block-menu-block.open .menu-block-wrapper .expanded.level-1.open > .menu {
+  display: block;
 }
 
 .item-list .pager li {
@@ -12745,16 +12804,6 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open .content {
     top: 49px;
     left: 0;
-  }
-  .page-exec-ed #sidebar .block-menu.open .content .menu, .page-seed #sidebar .block-menu.open .content .menu, .page-exec-ed
-  #sidebar .block-menu-block.open .content .menu, .page-seed
-  #sidebar .block-menu-block.open .content .menu {
-    padding-left: 35px;
-  }
-  .page-exec-ed #sidebar .block-menu.open .content .menu .menu, .page-seed #sidebar .block-menu.open .content .menu .menu, .page-exec-ed
-  #sidebar .block-menu-block.open .content .menu .menu, .page-seed
-  #sidebar .block-menu-block.open .content .menu .menu {
-    padding-left: 0;
   }
   .page-exec-ed #sidebar .block-menu.open h2, .page-seed #sidebar .block-menu.open h2, .page-exec-ed
   #sidebar .block-menu-block.open h2, .page-seed

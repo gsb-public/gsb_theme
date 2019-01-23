@@ -694,7 +694,7 @@
         updateMenuLinks();
 
         // Duplicating the top level link to a span.
-        $("#sidebar").find(".content > .menu li.expanded > a").each(function(i) {
+        $("#sidebar").find(".content .menu li.expanded > a").each(function(i) {
           $(this).clone()
               .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
               .insertAfter(this);
