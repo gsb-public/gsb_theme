@@ -161,11 +161,14 @@
     width: auto
     h2
       margin-left: 20px
+  +breakpoint($bp-iphone6p-port)
+    h2
+      margin-left: 30px
 
 .view-gsb-voices-listing.view-id-gsb_voices_listing
   padding: 0
   +breakpoint($bp-tablet-land)
-    padding-left: 15px
+    padding-left: 0px
   .views-row-1, .views-row-2
     +breakpoint($bp-for-phone-tablet-range)
       padding-bottom: 70px
@@ -197,8 +200,12 @@
       width: 42.4%
     +breakpoint($bp-iphone6p-land)
       width: 38.4%
+    +breakpoint($bp-iphone6p-port)
+      width: 80%
     +breakpoint($bp-tablet-pot)
       height: 435px
+    +breakpoint($bp-nexus-land)
+      width: 44%
     .field-name-title
       padding-top: 25px
       +breakpoint($bp-for-phone-tablet-range)
@@ -219,16 +226,22 @@
             width: 100.3%
             height: 446px
           +breakpoint($bp-iphone-range-port)
-            width: 104.7%
+            width: 104.8%
           +breakpoint($bp-for-phone-tablet-range)
             font-size: 18px
           +breakpoint($bp-for-tablet-range)
             padding: 90px 10px 30px 20px
             width: 100.3%
             height: 410px
+          +breakpoint($bp-iphone-range-land)
+            width: 110%
+          +breakpoint($bp-other-phones-land)
+            width: 100.3%
           +breakpoint($bp-tablet-pot)
             padding: 38% 25px
             height: 435px
+          +breakpoint($bp-nexus-port)
+            width: 100.3%
 
   .views-row-last
     margin-right: 0
