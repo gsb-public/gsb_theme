@@ -9,6 +9,21 @@
 
 .panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport
   padding-top: 0
+
+.pane-bundle-landing-viewport
+  & ~ .pane-bundle-landing-viewport.landing-image
+    .field-name-field-homepage-image-tablet,
+    .field-name-field-homepage-image-desktop
+      display: none
+    .field-name-field-homepage-image-tablet
+      +breakpoint(600px 767px)
+        display: block
+
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport.landing-video
+  #landing-video
+    +breakpoint(320px 767px)
+      display: none
+
 .pane-bundle-landing-viewport
   .field-name-field-homepage-image-desktop
     display: none

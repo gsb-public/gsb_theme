@@ -754,5 +754,11 @@
         });
 
     }); // close of accessibilty modification for menus
+    // Landing viewport
+    $(function() {
+      $(".pane-bundle-landing-viewport").find("#landing-video").closest(".pane-bundle-landing-viewport").addClass("landing-video");
+      $(".pane-bundle-landing-viewport").find(".field-name-field-homepage-image-desktop").closest(".pane-bundle-landing-viewport").addClass("landing-image");
+    })
+
 
 }(jQuery));
