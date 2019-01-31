@@ -125,6 +125,7 @@
     height: 200px
     left: 50%
     position: absolute
+    text-align: center
     transform: translate(-50%, 10px)
     +breakpoint($bp-for-desktop-up)
     +icon-after("arrow-med-down", true)
@@ -133,8 +134,9 @@
       +breakpoint($bp-mobile-max)
         padding: 10px 12px
     +breakpoint($bp-for-tablet-range)
-      bottom: 0
+      bottom: 10px
     +breakpoint($bp-for-phone-only)
+      bottom: 10px
       font-size: 10px
       height: 116px
       text-align: center
@@ -145,10 +147,14 @@
       width: 150px
       +breakpoint($bp-for-phone-tablet-range)
         +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
+        padding: 40px 30px
+        //width: 108px
+        height: 115px
+        font-size: 12px
       +breakpoint($bp-for-phone-only)
-        padding: 38px 30px
-        width: 94px
         font-size: 11px
+        padding: 50px 30px
+        width: 150px
       +breakpoint($bp-mobile-land)
         bottom: 0px
         font-size: 11px
@@ -162,7 +168,7 @@
         height: 115px
         font-size: 12px
       +breakpoint($bp-tablet-pot)
-        padding: 36px 34px
+        padding: 57px 10px
         width: 127px
         height: 125px
       +breakpoint($bp-tablet-land)
