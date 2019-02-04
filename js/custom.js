@@ -631,9 +631,9 @@
               $(this).parent().find(".text-content").addClass(htmlColorHome);
         } );
     });
-    /* Overlay */
+    /* Overlay for the MD Megamenu hovers */
     $(function(){
-      $('#md-megamenu-1').hover( function(){
+      $('#md-megamenu-1 .awemenu-item-level-1').hover( function(){
         $(this).closest('#page').toggleClass('modal-closed modal-open');
       } );
     });
