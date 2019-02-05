@@ -633,9 +633,25 @@
     });
     /* Overlay for the MD Megamenu hovers */
     $(function(){
-      $('#md-megamenu-1 .awemenu-item-level-1').hover( function(){
-        $(this).closest('#page').toggleClass('modal-closed modal-open');
-      } );
+        var width = $(window).width();
+        if (width > 1199) {
+            $('#md-megamenu-1 li.awemenu-item-level-1 a').hover( function(){
+                if ( $(this).next('ul').is(':visible') ){
+                    $(this).closest('#page').toggleClass('modal-closed modal-open');
+                }
+                else if ( $(this).next('ul').is(':hidden') ) {
+                    $(this).closest('#page').toggleClass('modal-closed modal-open');
+                }
+            });
+            $('#md-megamenu-1 li.awemenu-item-level-1 ul.awemenu-submenu.awemenu-megamenu').hover( function(){
+                if ( $(this).is(':visible') ){
+                    $(this).closest('#page').toggleClass('modal-closed modal-open');
+                }
+                else if ( $(this).is(':hidden') ) {
+                    $(this).closest('#page').toggleClass('modal-closed modal-open');
+                }
+            });
+        }
     });
     /* Mobile menu manipulation*/
     $(function(){
