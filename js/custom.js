@@ -165,7 +165,9 @@
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
       }
-
+      // if (Modernizr.mq('(max-width: 599px)')) {
+      //   $(".group-wrapper-taxonomy").insertBefore($('.field-name-social-buttons-bottom'));
+      // }
     }
   };
 
