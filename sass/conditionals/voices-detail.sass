@@ -22,8 +22,7 @@
     margin: 0 auto
     padding-left: 30px
     +breakpoint($bp-for-phone-only)
-      overflow: hidden
-      width: auto
+      width: unset
   .group-voices-group
     .field-name-field-background-color
       display: none
@@ -95,7 +94,7 @@
         position: static
         padding: 0
         margin: 0 18px
-        width: 100%
+        width: auto
       +breakpoint($bp-for-tablet-range)
         background-color: transparent
         color: $text-black
@@ -103,7 +102,7 @@
         position: static
         padding: 0
         margin: 0 18px
-        width: 100%
+        width: auto
       .field-name-field-slideshow-style
         display: none
 
@@ -141,7 +140,9 @@
         padding-top: 30px
         +breakpoint($bp-mobile-max)
           font-size: 16px
+          overflow-wrap: break-word
           padding: 20px 0 30px 0
+          word-wrap: break-word
         +breakpoint($bp-for-tablet-range)
           font-size: 16px
           padding: 20px 0 30px 0
