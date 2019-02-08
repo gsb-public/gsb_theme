@@ -91,6 +91,10 @@
     .field-name-field-quote
       .text-content
         padding: 90px 10px 30px 20px
+        &:after
+          content: '”'
+        &:before
+          content: '“'
       div
         div
           color: $white
@@ -222,10 +226,6 @@
           font-size: 20px
           height: 500px
           line-height: 1.5
-          &:after
-            content: '”'
-          &:before
-            content: '“'
           +breakpoint($bp-for-phone-only)
             padding: 0
             //width: 100.3%
