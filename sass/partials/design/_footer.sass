@@ -645,9 +645,13 @@ input.signup-submit
     #block-block-26
       .exed-title
         font-size: 28px
+        +breakpoint($bp-tablet-port-max)
+          font-size: 22px
       .exed-sub-title
         font-size: 18px
         font-family: $font-demi
+        +breakpoint($bp-tablet-port-max)
+          font-size: 16px
 
 #gsb-footer-two
   .region-footer-two
@@ -716,27 +720,19 @@ input.signup-submit
     .region-footer-one
       padding-top: 40px
       +breakpoint($bp-tablet-port-max)
-        padding-top: 0px
-  #gsb-footer-two
-    .region-footer-two
-      #block-menu-menu-executive-education-footer
-        +breakpoint($bp-tablet-port-max)
-          border-bottom: 1px #cccccc solid
+        padding-top: 20px
   #legal-new
-    background-color: #f4f4f4
-    border-top: 1px #cccccc solid
-    max-width: 1170px
     margin: 0 auto
     +breakpoint($bp-tablet-port-max)
       border-top: none
 
     .region-legal-new
       .gsb-footer-meta
-        color: #656162
+        color: #c4c4c4
 
       #block-menu-menu-footer-3-new 
         .content 
           a
-            color: #656162
+            color: #FFFFFF
           a:hover:after
-            color: #656162
+            color: #FFFFFF
