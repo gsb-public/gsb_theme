@@ -22,7 +22,11 @@
     margin: 0 auto
     padding-left: 30px
     +breakpoint($bp-for-phone-only)
+      padding-left: 0
+    +breakpoint($bp-for-phone-only)
       width: unset
+    +breakpoint($bp-for-tablet-range)
+      padding-left: 37px //Supposed to be 55px so 55px - 18px = 37px
   .group-voices-group
     .field-name-field-background-color
       display: none
@@ -105,6 +109,9 @@
         width: auto
       .field-name-field-slideshow-style
         display: none
+      +breakpoint($bp-for-phone-tablet-range)
+        &> div:last-of-type
+          margin-bottom: 30px
 
       h1,
       .field-name-field-degree-year
@@ -141,11 +148,11 @@
         +breakpoint($bp-mobile-max)
           font-size: 16px
           overflow-wrap: break-word
-          padding: 20px 0 30px 0
+          padding: 20px 0 0 0
           word-wrap: break-word
         +breakpoint($bp-for-tablet-range)
           font-size: 16px
-          padding: 20px 0 30px 0
+          padding: 20px 0 0 0
     .mobile-profile
       +breakpoint($bp-mobile-max)
         width: 100%
@@ -216,9 +223,9 @@
     +breakpoint($bp-iphone6p-land)
       left: -1px
     +breakpoint($bp-tablet-pot)
-      left: -1px
+      left: 25px
     +breakpoint($bp-tablet-land)
-      left: 0px
+      left: 25px
     &:before
       content: "“"
       position: absolute
@@ -313,6 +320,9 @@
           +breakpoint($bp-for-phone-only)
             font-size: 14px
             padding: 35px 0
+          +breakpoint($bp-for-tablet-range)
+            font-size: 14px
+            padding-left: 0
           .field-collection-item-field-authors
             &:before
               content: "by"
@@ -348,7 +358,7 @@
             margin-top: 50px
             padding: 20px 20px 20px 25px
             position: relative
-            width: 310px
+            width: 300px
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               font-size: 18px
@@ -386,7 +396,7 @@
           font-family: $font-demi
           font-size: 20px
           font-weight: normal
-          padding: 15px 0 5px
+          padding: 15px 0
         .field-items
           div
             line-height: 1.5
@@ -412,7 +422,6 @@
             margin-top: 30px
             padding: 15px 20px 20px 25px
             position: relative
-            width: 98%
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               color: $grey-e3 !important
@@ -488,6 +497,7 @@
             .field-label
               padding-top: 10px
         .group-wrapper-tablet-4
+          padding-bottom: 35px
           +breakpoint($bp-for-tablet-range)
             padding-top: 10px
             width: 100%
@@ -535,6 +545,8 @@
       margin-top: 0
       margin-bottom: 25px
       padding-left: 0
+    +breakpoint($bp-for-tablet-range)
+      padding-left: 10px
 
   // social media wrapper - fixing floats
   .social-media-wrapper
@@ -558,6 +570,8 @@
     @extend %social-buttons-bottom
     margin-top: 10px
     padding: 0 20px 0 0
+    +breakpoint($bp-for-tablet-range)
+      padding: 0 20px 0 2px
 
   .sharrre .box .count
     padding: 8px 15px 0 0
@@ -615,6 +629,8 @@
               font-size: 24px
               margin: 5px 30px 30px 0
               width: 380px
+              +breakpoint($bp-for-phone-only)
+                width: 100%
             .field-name-field-description
               font-size: 24px
             .field-name-field-quote-author
