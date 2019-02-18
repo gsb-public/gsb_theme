@@ -511,11 +511,16 @@
     li
       display: inline-block
       vertical-align: top
-  .field-name-social-buttons-bottom
+  div.field-name-social-buttons-bottom
     .item-list ul
       margin: 0
       +breakpoint($bp-for-phone-only)
         margin: 0
+    +breakpoint($bp-for-phone-only)
+      border-top: 1px solid $voices-divider
+      margin-top: 35px
+      padding-top: 20px
+      width: 100%
 
   // Top social buttons
   .field-name-social-buttons-top
@@ -547,7 +552,7 @@
       border-bottom: 1px solid $voices-divider
       margin-top: 50px
       padding-bottom: 20px
-      width: 95%
+      width: 100%
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
@@ -559,15 +564,23 @@
 
   // Share this short url
   // Wrapper
-  .short-url-wrapper
+  div.short-url-wrapper
     @extend %short-url-wrapper
-    border-left: solid 1px $voices-divider
+    border-left: 1px solid $voices-divider
     margin-bottom: 0
     padding-left: 20px
     line-height: 2.18
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-bottom: 20px
     +breakpoint($bp-for-phone-only)
+      border-bottom: 1px solid $voices-divider
       border-left: 0
+      height: unset
+      margin-bottom: 5px
+      margin-left: 0
       padding-left: 0
+      width: 100%
+
 
   .short-url
     @extend %short-url
