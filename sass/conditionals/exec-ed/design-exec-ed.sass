@@ -42,7 +42,11 @@
 
 // Exe Ed title only.
 #block-gsb-public-custom-blocks-gpcb-exec-ed
-  height: 78px
+  height: 88px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
+  +breakpoint($bp-for-tablet-range)
+    height: 63px
   h2 a
     +breakpoint(1170px 1184px)
       font-size: 26px
