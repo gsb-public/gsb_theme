@@ -214,7 +214,7 @@
     +breakpoint($bp-for-tablet-range)
       font-size: 28px
       left: -2px
-      padding: 35px 15px 25px 50px
+      padding: 35px 15px 0 40px
       position: relative
       top: 10px
       width: 97%
@@ -223,9 +223,9 @@
     +breakpoint($bp-iphone6p-land)
       left: -1px
     +breakpoint($bp-tablet-pot)
-      left: 25px
+      left: -1px
     +breakpoint($bp-tablet-land)
-      left: 25px
+      left: 0
     &:before
       content: "“"
       position: absolute
@@ -256,7 +256,7 @@
     +breakpoint($bp-for-desktop-up)
       margin-left: 35px
     +breakpoint($bp-for-tablet-range)
-      margin-top: 30px
+      margin-top: 25px
 
   /* Voices col set up and adjustment */
   .ds-2col-stacked-fluid
@@ -488,11 +488,13 @@
         .group-wrapper-tablet-2
           +breakpoint($bp-for-tablet-range)
             margin: auto 5.4%
+            padding-top: 35px
             width: 36%
             .field-label
               padding-top: 10px
         .group-wrapper-tablet-3
           +breakpoint($bp-for-tablet-range)
+            padding-top: 35px
             width: 34.5%
             .field-label
               padding-top: 10px
@@ -506,6 +508,8 @@
             .field-name-voices-ct-background-rail
               width: 45%
               margin: 0 auto
+            .field-name-field-voices-cta
+              margin-bottom: 30px
 
 
 
@@ -627,7 +631,7 @@
             div
               font-family: $font-light
               font-size: 24px
-              margin: 5px 30px 30px 0
+              margin: 0 26px 10px 0
               width: 380px
               +breakpoint($bp-for-phone-only)
                 width: 100%

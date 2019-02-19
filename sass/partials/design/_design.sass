@@ -58,7 +58,7 @@
       float: left
       height: 30px
       left: 20px
-      margin: 10px 0 0
+      margin: 15px 0 0
       padding: 0
       position: relative
       width: 100px
@@ -77,6 +77,9 @@
         width: 100px
         +breakpoint($bp-for-phone-only)
           margin-top: 10px
+  +breakpoint($bp-for-phone-only)
+    .svg &, .no-js &, .no-svg &
+      margin: 10px 0 0
 
 // Navigation
 #navigation
@@ -125,6 +128,8 @@
   .not-front &
     padding-bottom: 100px
     +breakpoint(1000px max-width)
+      padding-bottom: 20px
+    +breakpoint($bp-for-tablet-range)
       padding-bottom: 20px
   &:after,
   &:before
