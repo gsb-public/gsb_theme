@@ -8,12 +8,28 @@
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
+//Exec Ed & Seed centered line
+a#logo:after
+  content: ''
+  height: 90%
+  width: 1px
+  position: absolute
+  right: -19px
+  top: 10px
+  background: #d6d6d6
+  +breakpoint($bp-for-phone-only)
+    height: 100%
+    right: -10px
+    top: 0
+  +breakpoint($bp-for-tablet-range)
+    height: 100%
+    top: 0
+
 // Exec Ed & SEED section title next to logo
 #block-gsb-public-custom-blocks-gpcb-exec-ed,
 #block-gsb-public-custom-blocks-gpcb-seed
-  border-left: 1px solid #d6d6d6
   display: inline-block
-  height: 76px
+  height: 88px
   padding-top: 26px
   +breakpoint(1169px max-width)
     height: 64px
@@ -39,6 +55,16 @@
       +breakpoint(568px max-width)
         font-size: 18px
         max-width: 80px
+
+// Seed Title only.
+#block-gsb-public-custom-blocks-gpcb-seed
+  +breakpoint(1169px max-width)
+    padding-top: 18px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
+    padding-top: 6px
+  +breakpoint($bp-for-tablet-range)
+    height: 63px
 
 // Exe Ed title only.
 #block-gsb-public-custom-blocks-gpcb-exec-ed
