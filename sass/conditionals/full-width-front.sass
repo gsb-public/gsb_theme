@@ -26,9 +26,8 @@
       height: 500px
 
     .pane-content
-      +breakpoint($bp-for-desktop-up)
-        margin: 0 auto
-        width: 1170px
+      margin: 0 auto
+      width: 90%
       &:before
         content: "Stanford GSB Community on Social"
         color: $white
@@ -44,7 +43,3 @@
         +breakpoint($bp-tablet-land)
           font-size: 30px
           padding-bottom: 35px
-
-    +breakpoint($bp-for-desktop-up)
-      .stackla-widget
-        min-width: 85vw
