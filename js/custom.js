@@ -623,6 +623,10 @@
         $(".node-type-voices .group-left .field-name-social-buttons-bottom, .node-type-voices .group-left .short-url-wrapper.field-name-field-link-single").wrapAll('<div class="social-media-wrapper"></div>');
         var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-background-color").text();
         $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString).wrapAll('<div class="voices-header-group-wrapper"></div>');
+        var tabletName = $("fieldset.group-voices-group").find("h1").text();
+        $("<div class='tabletname'>" + tabletName + "</div>").appendTo(".group-wrapper-tablet-1");
+        $("fieldset.group-voices-group .field-name-field-degree-year").clone().appendTo(".group-wrapper-tablet-1");
+        $("fieldset.group-voices-group .field-name-field-title-position-single").clone().appendTo(".group-wrapper-tablet-1");
     });
     /* Homepage 3-across voices color manipulation*/
     $(function(){
@@ -662,16 +666,16 @@
         function updateMenutitles() {
             var width = $(window).width();
             if (width < 1199) {
-                $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
-                $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
-                $(".mm-header.featured-programs").prependTo("#block-menu-menu-md-mm-exec-ed-featured-prog");
-                $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-online");
+              $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
+              $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
+              $(".mm-header.featured-programs").prependTo("#block-menu-menu-md-mm-exec-ed-featured-prog");
+              $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-online");
             };
             if (width < 599) {
-                $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
+              $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
             };
             if (width >= 600 && width < 1199) {
-                $(".social-media-wrapper").insertBefore(".group-wrapper-tablet-4");
+              $(".social-media-wrapper").insertBefore(".group-wrapper-tablet-4");
             };
         };
     });

@@ -460,15 +460,24 @@
         .group-wrapper-tablet-1
           .field-name-voices-mobile-full-name,
           .field-name-voices-mobile-degree-year,
-          .field-name-voices-mobile-job-title-org
+          .field-name-voices-mobile-job-title-org,
+          .field-name-field-degree-year,
+          .field-name-field-title-position-single,
+          .tabletname
             display: none
           +breakpoint($bp-for-tablet-range)
+            padding-top: 20px
             width: 18%
             // 18% is 122px out of a width of 675. 82% is left and divided by the other two cols.
             .field-name-voices-mobile-full-name,
             .field-name-voices-mobile-degree-year,
-            .field-name-voices-mobile-job-title-org
+            .field-name-voices-mobile-job-title-org,
+            .field-name-field-degree-year,
+            .field-name-field-title-position-single,
+            .tabletname
               display: block
+            .field-name-field-degree-year + .field-name-field-title-position-single
+              display: none
             .field-name-voices-mobile-full-name
               font-size: 14px
               padding-top: 20px
@@ -477,6 +486,8 @@
               font-size: 11px
               padding-top: 10px
             .background-rail-img
+              font-size: 14px
+              padding-bottom: 15px
               margin-left: 0
               margin-top: 15px
               position: relative
@@ -485,16 +496,21 @@
                 height: 121px
                 margin: auto
                 width: 122px
+            .field-name-field-degree-year,
+            .field-name-field-title-position-single
+              font-size: 11px
+              padding-top: 10px
+
         .group-wrapper-tablet-2
           +breakpoint($bp-for-tablet-range)
             margin: auto 5.4%
-            padding-top: 35px
+            padding-top: 20px
             width: 36%
             .field-label
               padding-top: 10px
         .group-wrapper-tablet-3
           +breakpoint($bp-for-tablet-range)
-            padding-top: 35px
+            padding-top: 20px
             width: 34.5%
             .field-label
               padding-top: 10px
