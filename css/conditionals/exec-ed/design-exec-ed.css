@@ -90,11 +90,33 @@
   color: white !important;
 }
 
+a#logo:after {
+  content: "";
+  height: 90%;
+  width: 1px;
+  position: absolute;
+  right: -19px;
+  top: 10px;
+  background: #d6d6d6;
+}
+@media (max-width: 37.4375em) {
+  a#logo:after {
+    height: 100%;
+    right: -10px;
+    top: 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  a#logo:after {
+    height: 100%;
+    top: 0;
+  }
+}
+
 #block-gsb-public-custom-blocks-gpcb-exec-ed,
 #block-gsb-public-custom-blocks-gpcb-seed {
-  border-left: 1px solid #d6d6d6;
   display: inline-block;
-  height: 76px;
+  height: 88px;
   padding-top: 26px;
 }
 @media (max-width: 73.0625em) {
@@ -137,6 +159,23 @@
   #block-gsb-public-custom-blocks-gpcb-seed h2 a {
     font-size: 18px;
     max-width: 80px;
+  }
+}
+
+@media (max-width: 73.0625em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    padding-top: 18px;
+  }
+}
+@media (max-width: 37.4375em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    height: 50px;
+    padding-top: 6px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    height: 63px;
   }
 }
 
