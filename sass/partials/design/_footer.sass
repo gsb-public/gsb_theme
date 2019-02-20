@@ -283,7 +283,10 @@ input.signup-submit
       padding-top: 18px
       padding-bottom: 0px
     +breakpoint($bp-tablet-land)
-      margin-left: 21%
+      margin-left: 18%
+    +breakpoint($bp-tablet-pro-port)
+      margin-left: 15%
+      width: 33%
     .content
       border-right: 1px solid #c4c4c4
       padding-right: 25px
@@ -304,10 +307,14 @@ input.signup-submit
       float: left
       width: 100%
       margin: 0
+    +breakpoint($bp-tablet-land)
+      margin-left: 48.5%
     +breakpoint($bp-tablet-pot)
       display: inline-block
       padding-top: 19px
       width: 50%
+    +breakpoint($bp-tablet-pro-port)
+      margin-left: 49%
     .content
       border-right: 1px solid #c4c4c4
       padding-right: 25px
@@ -400,6 +407,15 @@ input.signup-submit
       margin-right: -3%
     +breakpoint(1000px 1199px)
       margin-right: 0
+    +breakpoint($bp-mobile-land)
+      padding-bottom: 15px
+      padding-top: 25px
+    +breakpoint($bp-iphone6p-land)
+      padding-bottom: 15px
+      padding-top: 25px
+    +breakpoint($bp-tablet-pot)
+      padding-bottom: 15px
+      padding-top: 25px
     h2
       float: left
       padding-right: 45px
@@ -410,6 +426,15 @@ input.signup-submit
       +breakpoint($bp-tablet-port-max)
         width: 100%
         float: left
+      +breakpoint($bp-mobile-land)
+        width: 15%
+        padding-right: 10px
+      +breakpoint($bp-iphone6p-land)
+        width: 15%
+        padding-right: 10px
+      +breakpoint($bp-tablet-pot)
+        width: 17%
+        padding-right: 30px
       a
         +breakpoint($bp-tablet-port-max)
           font-size: 14px
@@ -495,7 +520,17 @@ input.signup-submit
     .page-insights &,
     .page-404 &
       left: 0
-
+  +breakpoint($bp-tablet-pro-port)
+    .svg &, .no-js &, .no-svg &
+      float: left
+      height: 70px
+      left: 0px
+      position: relative
+      width: 185px
+      margin-top: 5px
+    .page-insights &,
+    .page-404 &
+      left: 0
 #block-block-41,
 #block-block-37
   .gsb-footer-address
@@ -513,13 +548,27 @@ input.signup-submit
         padding-left: 0px
       +breakpoint($bp-tablet-land)
         font-size: 16px
+        float: left
+        padding-left: 0px
+      +breakpoint($bp-tablet-pro-port)
+        padding-left: 0px
+      +breakpoint($bp-tablet-pro-land)
+        padding-left: 0px
     +breakpoint($bp-tablet-port-max)
       border-left: none
       font-size: 14px
       float: left
       padding: 20px 0
       width: 100%
-
+    +breakpoint($bp-tablet-land)
+      border-left: none
+      float: left
+    +breakpoint($bp-tablet-pro-port)
+      border-left: none
+      float: left
+    +breakpoint($bp-tablet-pro-land)
+      border-left: none
+      float: left
 #block-menu-menu-footer-4
   +breakpoint($bp-tablet-port-max)
     width: 100%
@@ -736,3 +785,7 @@ input.signup-submit
             color: #FFFFFF
           a:hover:after
             color: #FFFFFF
+.page-insights
+  #ftr-logo
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-left: 0px !important
