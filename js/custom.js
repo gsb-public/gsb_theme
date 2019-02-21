@@ -570,6 +570,7 @@
       });
     }
   };
+
     /* viewport sizing */
     $(function() {
         setHeight();
@@ -634,6 +635,27 @@
           var htmlColorHome = $(this).text();
               $(this).parent().find(".text-content").addClass(htmlColorHome);
         } );
+    });
+    /* Getting the active-trail deeper into the site. */
+    $(function() {
+        if (window.location.href.indexOf("experience") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("programs") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("faculty-research") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("insights") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("alumni") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-5").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("events") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-6").addClass("awemenu-active-trail");
+        }
     });
     /* Overlay for the MD Megamenu hovers */
     $(function(){
