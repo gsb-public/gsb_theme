@@ -638,23 +638,53 @@
     });
     /* Getting the active-trail deeper into the site. */
     $(function() {
-        if (window.location.href.indexOf("experience") > -1) {
+        /* MD Megamenu */
+        if (window.location.href.indexOf("/experience/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
         }
-        else if (window.location.href.indexOf("programs") > -1) {
+        else if (window.location.href.indexOf("/programs/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
         }
-        else if (window.location.href.indexOf("faculty-research") > -1) {
+        else if (window.location.href.indexOf("/faculty-research/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
         }
-        else if (window.location.href.indexOf("insights") > -1) {
+        else if (window.location.href.indexOf("/insights/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
         }
-        else if (window.location.href.indexOf("alumni") > -1) {
+        else if (window.location.href.indexOf("/alumni/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-5").addClass("awemenu-active-trail");
         }
-        else if (window.location.href.indexOf("events") > -1) {
+        else if (window.location.href.indexOf("/events/") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-6").addClass("awemenu-active-trail");
+        }
+        /* Exec-ed menus */
+        if (window.location.href.indexOf("/exec-ed/programs/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/organizations/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/difference/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/admission/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        /* Seed menus */
+        if (window.location.href.indexOf("/seed/mission/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/transformation-program/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/coaches-consultants/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/student-internships/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/news-events/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
         }
     });
     /* Overlay for the MD Megamenu hovers */
