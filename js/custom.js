@@ -639,7 +639,7 @@
     /* Getting the active-trail deeper into the site. */
     $(function() {
         /* MD Megamenu */
-        if (window.location.href.indexOf("/experience/") > -1) {
+        if (window.location.href.indexOf("/experience") > -1) {
           $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
         }
         else if (window.location.href.indexOf("/programs/") > -1) {
