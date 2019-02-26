@@ -24,12 +24,12 @@
 #logo,
 #ftr-logo
   display: inline-block
+  border: 3px solid transparent  // fix for the IE 11 logo cutoff
   img
     display: none
   .svg &
     background: image_url("logo.svg") no-repeat 0 20px
     background-size: 100%
-    border: 1px solid transparent // fix for IE Edge where logo cut off.
     margin-left: -55px
     padding: 35px 0
     width: 159px
@@ -43,7 +43,6 @@
   .page-seed &,
   .page-exec-ed &
     .svg &, .no-js &, .no-svg &
-      border: 1px solid transparent // fix for IE Edge where logo cut off.
       float: left
       height: 35px
       margin: 0 18px 0 30px
