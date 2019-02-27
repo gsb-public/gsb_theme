@@ -248,6 +248,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // MSx admission events.
   if ($form['#id'] == 'views-exposed-form-admission-events-msx-admission-panel-pane') {
     // Add placeholder text.
+    $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
     $form['search']['#attributes']['placeholder'] = t('Search by location, title, or other keywords');
   }
   // Faculty listing placeholder text.
