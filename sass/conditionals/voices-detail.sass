@@ -558,9 +558,9 @@
     @extend %social-buttons-top
     border-top: 1px $voices-divider solid
     margin-bottom: 0
-    +breakpoint(1080px 999px)
+    +breakpoint(687px max-width)
       +social-buttons-small
-    +breakpoint(745px max-width)
+    +breakpoint($bp-mobile-max)
       +social-buttons-small
       margin-top: 0
       margin-bottom: 25px
