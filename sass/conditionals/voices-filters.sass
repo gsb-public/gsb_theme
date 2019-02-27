@@ -227,6 +227,8 @@
       border-bottom: 0
     a
       color: $red
+      padding-right: 20px
+      display: block
       +icon-after("arrow-double-right", true)
         color: $grey-e3
         font-size: 18px
@@ -296,7 +298,7 @@
       .voices_display_all_list_cta
         +breakpoint($bp-for-phone-only)
           width: 80.60%
-          margin-left: 25px
+          margin-left: 30px
         +breakpoint($bp-iphone6p-port)
           width: 80%
           margin-left: 36px
@@ -989,7 +991,7 @@
         .voices_display_all_list_cta
           +breakpoint($bp-for-phone-only)
             margin-left: 30px
-            width: 84%
+            width: 81%
 
 .sidebar-first.panels-layout-gsb-landing-standard-page-one
   .main-middle
@@ -1575,8 +1577,11 @@
               +breakpoint($bp-mobile-land)
                 width: 225px !important
         .views-row
+          +breakpoint($bp-for-phone-only)
+            margin-left: 15px
           +breakpoint($bp-iphone6p-port)
             margin-left: 30px
+
     .inner-main-wrapper
       .main-header,
       .main-footer
@@ -1605,7 +1610,7 @@
               width: 88%
             +breakpoint($bp-for-phone-only)
               width: 80.60%
-              margin-left: 25px
+              margin-left: 30px
             +breakpoint($bp-tablet-pot)
               width: 67%
             +breakpoint($bp-tablet-land)
@@ -1627,6 +1632,7 @@
               margin-left: 25px
             +breakpoint($bp-tablet-pot)
               width: 67%
+              margin-left: 45px
             +breakpoint($bp-tablet-land)
               width: 41%
             +breakpoint($bp-mobile-land)
@@ -1636,6 +1642,11 @@
             +breakpoint($bp-iphone6p-port)
               width: 80%
               margin-left: 36px
+        .pane-voices-filters-all-voices-list-panel-pane
+          .voices_display_all_list_cta
+            +breakpoint($bp-tablet-pot)
+              width: 67%
+              margin-left: 45px
 
         .view-display-id-voices_single_teaser_pane
           .views-row
@@ -1765,6 +1776,7 @@
               width: 40.60%
             +breakpoint($bp-for-phone-only)
               width: 80.60%
+              margin-left: 32px
             +breakpoint($bp-iphone6p-port)
               width: 84%
         .view-display-id-voices_list_cta_panel_pane
@@ -1772,6 +1784,9 @@
             width: 29.1%
             +breakpoint($bp-for-phone-tablet-range)
               width: 89%
+            +breakpoint($bp-for-phone-only)
+              width: 84%
+              margin-left: 30px
             +breakpoint($bp-tablet-pot)
               width: 38.50%
             +breakpoint($bp-tablet-land)
@@ -1780,10 +1795,17 @@
               width: 44%
             +breakpoint($bp-iphone6p-land)
               width: 40.50%
+    
+        .pane-voices-filters-voices-list-cta-panel-pane
+          .voices_display_list_cta
             +breakpoint($bp-for-phone-only)
-              width: 80.60%
-
+              width: 83%
+              margin-left: 30px
         .view-display-id-voices_filters_pane
+          .views-row
+            +breakpoint($bp-for-phone-only)
+              width: 90%
+              margin-left: 15px
           .views-widget-filter-field_industry_tid,
           .views-widget-filter-field_region_of_interest_tid
             #edit-field-industry-tid
@@ -2238,6 +2260,7 @@
           +breakpoint($bp-iphone6p-land)
             width: 46%
             margin: 0 auto
+            margin-top: 25px
 
 .sidebar-first.panels-layout-gsb-landing-standard-page-one
   .gsb-landing-standard-page-one
@@ -2488,7 +2511,7 @@
               padding-right: 0px
               margin-left: 0px
               margin-right: 0px
-              height: 430px
+              height: 445px
             +breakpoint($bp-mobile-land)
               height: 430px
             +breakpoint($bp-iphone6p-port)
@@ -2514,7 +2537,7 @@
         .view-display-id-voices_single_teaser_pane 
           .views-row
             +breakpoint($bp-for-phone-only)
-              height: 425px
+              height: 445px
             +breakpoint($bp-mobile-land)
               height: 425px
             +breakpoint($bp-iphone6p-port)
@@ -2523,7 +2546,7 @@
       .view-display-id-voices_single_teaser_pane 
         .views-row
           +breakpoint($bp-for-phone-only)
-            height: 425px
+            height: 445px
           +breakpoint($bp-mobile-land)
             height: 400px
           +breakpoint($bp-iphone6p-port)
@@ -2540,7 +2563,12 @@
             .views-row
               +breakpoint($bp-iphone6p-land)
                 width: 74%
-
+                margin-left: 30px
+          .pane-voices-filters-all-voices-list-panel-pane
+            .voices_display_all_list_cta
+              +breakpoint($bp-iphone6p-land)
+                width: 74%
+                margin-left: 30px
 .sidebar-first.panels-layout-gsb-landing-standard-page-one,
 .no-sidebars.panels-layout-gsb-landing-standard-page-one
   .main-middle
@@ -2572,6 +2600,9 @@
           width: 80%
     .view-display-id-all_voices_list_panel_pane
       .views-row
+        +breakpoint($bp-for-phone-only)
+          width: 82%
+          margin-left: 30px 
         +breakpoint($bp-iphone6p-port)
           width: 80%
           margin-left: 37px
@@ -2584,7 +2615,12 @@
       .views-row
         +breakpoint($bp-iphone6p-port)
           width: 80%
-          margin-left: 37px      
+          margin-left: 37px  
+    .pane-voices-filters-all-voices-list-panel-pane
+      .voices_display_all_list_cta
+        +breakpoint($bp-for-phone-only)
+          width: 82%
+          margin-left: 30px
 
   .inner-content-wrapper 
     .inner-main-wrapper
@@ -2609,6 +2645,27 @@
               height: auto
             +breakpoint($bp-tablet-land)
               height: auto
+      .main-header,
+      .main-footer
+        .view-display-id-voices_filters_pane
+          .views-row
+            +breakpoint($bp-for-phone-only)
+              width: 87%
+              margin-left: 15px
+              margin-right: 20px
+
+        .pane-voices-filters-voices-list-cta-panel-pane
+          .voices_display_list_cta
+            +breakpoint($bp-iphone6p-port)
+              margin-left: 45px
+              width: 76%
+            +breakpoint($bp-mobile-land)
+              width: 76%
+              margin-left: 25px
+          .views-row
+            +breakpoint($bp-iphone6p-port)
+              margin-left: 45px
+              width: 76%
 
   .inner-sidebar-wrapper 
     #quicklinks 
@@ -2654,3 +2711,35 @@
         +breakpoint($bp-iphone6p-port)
           width: 80%
           margin-left: 30px
+
+.no-sidebars.panels-layout-gsb-full-bleed-page
+  .full-bleed-header
+    .pane-voices-filters-all-voices-list-panel-pane
+      .pane-content
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 20px
+        .voices_display_all_list_cta
+          +breakpoint($bp-iphone6p-port)
+            margin-left: 45px
+      .views-row
+        +breakpoint($bp-iphone6p-port)
+          margin-left: 45px
+          width: 76%
+
+
+    .pane-voices-filters-voices-list-cta-panel-pane
+      .views-row
+        +breakpoint($bp-iphone6p-port)
+          margin-left: 45px
+      .pane-content
+        .voices_display_list_cta
+          +breakpoint($bp-iphone6p-port)
+            margin-left: 45px
+            width: 76%
+
+    .view-display-id-voices_filters_pane
+      .views-row
+        +breakpoint($bp-iphone6p-port)
+          margin-left: 20px
+          width: 82%
+
