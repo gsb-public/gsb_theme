@@ -31,21 +31,32 @@
     //  padding: 40px 35px 65px 35px
 
     h1
+      padding-bottom: 55px
       a
         color: $red
         border-bottom: none
         &:hover
           border-bottom: 2px solid $red
-      padding-bottom: 55px
       +breakpoint($bp-mobile-max)
         font-size: 30px
         padding: 0 40px 20px 40px
       +breakpoint($bp-iphone6-7-8p-land)
-        padding-bottom: 21px
+        padding-bottom: 30px
       +breakpoint($bp-ipad-range)
-        font-size: 42px
         word-spacing: -5px
         padding-bottom: 52px
+      +breakpoint($bp-for-phone-only)
+        font-size: 30px
+      +breakpoint($bp-mobile-land)
+        font-size: 30px
+      +breakpoint($bp-iphone6p-land)
+        font-size: 30px
+      +breakpoint($bp-iphone6-7-8p-land)
+        font-size: 30px
+      +breakpoint($bp-tablet-pot)
+        font-size: 36px
+      +breakpoint($bp-tablet-land)
+        font-size: 36px
     p
       color: $mission-hp
       font-size: 32px
