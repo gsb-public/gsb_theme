@@ -8,19 +8,19 @@
   padding: 25px 20px 105px;
   text-align: center;
 }
-@media (max-width: 35.5em) {
+@media (min-width: 23.4375em) and (max-width: 41.6875em) and (orientation: portrait) {
   .pane-bundle-mission-statement .mission-statement {
-    padding: 50px 30px;
+    padding: 42px 20px 50px;
   }
 }
-@media (min-width: 48em) and (max-width: 63.9375em) {
+@media (min-width: 41.6875em) and (max-width: 46em) {
   .pane-bundle-mission-statement .mission-statement {
-    padding: 40px 35px 65px 35px;
+    padding: 22px 20px 50px;
   }
 }
-@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+@media (min-width: 48em) and (max-width: 64em) {
   .pane-bundle-mission-statement .mission-statement {
-    padding: 40px 35px 65px 35px;
+    padding: 0 20px 65px;
   }
 }
 .pane-bundle-mission-statement .mission-statement h1 {
@@ -36,7 +36,19 @@
 @media (max-width: 35.5em) {
   .pane-bundle-mission-statement .mission-statement h1 {
     font-size: 30px;
-    padding-bottom: 25px;
+    padding: 0 40px 20px 40px;
+  }
+}
+@media (min-width: 41.6875em) and (max-width: 46em) {
+  .pane-bundle-mission-statement .mission-statement h1 {
+    padding-bottom: 21px;
+  }
+}
+@media (min-width: 48em) and (max-width: 64em) {
+  .pane-bundle-mission-statement .mission-statement h1 {
+    font-size: 42px;
+    word-spacing: -5px;
+    padding-bottom: 52px;
   }
 }
 .pane-bundle-mission-statement .mission-statement p {
@@ -46,6 +58,8 @@
 @media (max-width: 35.5em) {
   .pane-bundle-mission-statement .mission-statement p {
     font-size: 18px;
+    padding: 0 28px;
+    line-height: 30px;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -56,5 +70,10 @@
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .pane-bundle-mission-statement .mission-statement p {
     line-height: 1.6em;
+  }
+}
+@media (min-width: 48em) and (max-width: 64em) {
+  .pane-bundle-mission-statement .mission-statement p {
+    font-size: 25px;
   }
 }

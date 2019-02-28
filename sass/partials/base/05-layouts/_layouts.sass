@@ -563,7 +563,7 @@
     float: left
     +breakpoint($max-width max-width)
       float: none
-      
+
   .full-header,
   .wide-narrow-narrow,
   .narrow-wide,
@@ -848,5 +848,10 @@
         display: none
       .panel-pane
         padding-top: 70px
-        +breakpoint(320px $max-width)
-          padding-top: 35px
+        +breakpoint($bp-iphone-range-port)
+          padding-top: 0
+          padding-bottom: 0
+        +breakpoint($bp-iphone6-7-8p-land)
+          padding-top: 24px
+        +breakpoint($bp-ipad-range)
+          padding-top: 56px

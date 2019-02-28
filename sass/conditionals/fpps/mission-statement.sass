@@ -16,12 +16,19 @@
     max-width: $max-width
     padding: 25px 20px 105px
     text-align: center
-    +breakpoint($bp-mobile-max)
-      padding: 50px 30px
-    +breakpoint($bp-tablet-pot)
-      padding: 40px 35px 65px 35px
-    +breakpoint($bp-tablet-land)
-      padding: 40px 35px 65px 35px
+    +breakpoint($bp-iphone-range-port)
+      padding: 42px 20px 50px
+    +breakpoint($bp-iphone6-7-8p-land)
+      padding: 22px 20px 50px
+    +breakpoint($bp-ipad-range)
+      padding: 0 20px 65px
+
+    //+breakpoint($bp-mobile-max)
+    //  padding: 44px 30px 50px 30px
+    //+breakpoint($bp-tablet-pot)
+    //  padding: 40px 35px 65px 35px
+    //+breakpoint($bp-tablet-land)
+    //  padding: 40px 35px 65px 35px
 
     h1
       a
@@ -32,13 +39,23 @@
       padding-bottom: 55px
       +breakpoint($bp-mobile-max)
         font-size: 30px
-        padding-bottom: 25px
+        padding: 0 40px 20px 40px
+      +breakpoint($bp-iphone6-7-8p-land)
+        padding-bottom: 21px
+      +breakpoint($bp-ipad-range)
+        font-size: 42px
+        word-spacing: -5px
+        padding-bottom: 52px
     p
       color: $mission-hp
       font-size: 32px
       +breakpoint($bp-mobile-max)
         font-size: 18px
+        padding: 0 28px
+        line-height: 30px
       +breakpoint($bp-tablet-pot)
         line-height: 1.6em
       +breakpoint($bp-tablet-land)
         line-height: 1.6em
+      +breakpoint($bp-ipad-range)
+        font-size: 25px
