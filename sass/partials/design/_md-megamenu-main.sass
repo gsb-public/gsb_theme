@@ -336,6 +336,8 @@ div#header-wrapper.awemenu-sticky + div#hero
     background-color: transparent
     padding-left: 50px
     padding-top: 20px
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-left: 0
   // Open top level main menu
   .awemenu-active,
   .awemenu-active-trail
@@ -424,8 +426,12 @@ div#header-wrapper.awemenu-sticky + div#hero
         div[class^="col-lg"]
           padding-left: 0
           padding-right: 20px
-  // Utility menus
-  div[id*="-utility"]
+// Utility menus
+#md-megamenu-1,
+.md-megamenu.md-megamenu-executive-edu-main-menu,
+.md-megamenu.md-megamenu-seed-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
     .content
       float: right
       position: relative
@@ -442,18 +448,22 @@ div#header-wrapper.awemenu-sticky + div#hero
           li.leaf
             padding: 0
             a
-              padding: 15px 0
+              padding: 18px 0
       ul.menu
         li.leaf
           border-bottom: 1px solid $grey-e
-          padding: 14px 0
+          +breakpoint($bp-for-desktop-up)
+            padding: 14px 0
           &:first-of-type
             padding-top: 0
           &:last-of-type
-            padding-bottom: 15px
+            +breakpoint($bp-for-desktop-up)
+              padding-bottom: 15px
           a
             font-size: 20px
             padding-bottom: 0
+            +breakpoint($bp-for-phone-only)
+              font-size: 14px
           .svg &
             background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
             background-position: right center
@@ -464,10 +474,31 @@ div#header-wrapper.awemenu-sticky + div#hero
               color: $voices-divider
               float: right
               font-weight: normal
+// Exec-ed utility menu overrides
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
+    +breakpoint($bp-for-desktop-up)
+      .content
+        width: 225px
+        ul.menu
+          li.leaf
+            padding-right: 0
 // Override
-#md-megamenu-1.awemenu-mobile-standard div[id*="-utility"] .content ul.menu li.leaf a
-  padding-bottom: 0
-  padding-left: 0
+#md-megamenu-1.awemenu-mobile-standard,
+.awemenu-mobile-standard.md-megamenu-executive-edu-main-menu,
+.awemenu-mobile-standard.md-megamenu-seed-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
+    .content
+      ul.menu
+        li.last.leaf
+          margin-bottom: 35px
+          padding-bottom: 0
+        li.leaf
+          a
+            padding-bottom: 18px
+            padding-left: 0
 
 // Global search
 .global-search
