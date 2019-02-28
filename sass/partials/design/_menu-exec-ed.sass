@@ -282,6 +282,11 @@
 .md-megamenu.md-megamenu-executive-edu-main-menu
   .awemenu
     .awemenu-item-level-1
+      div[id*="-utility"],
+      div[id*="-uti"]
+        a
+          +breakpoint($bp-for-desktop-up)
+            font-weight: normal
       .menu
         a
           font-size: 20px
