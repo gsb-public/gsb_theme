@@ -313,6 +313,12 @@ div#header-wrapper.awemenu-sticky + div#hero
         border: none
         box-shadow: none
         width: 100%
++breakpoint($bp-for-phone-only)
+  .page-exec-ed
+    #header-wrapper
+      overflow: auto
+    #main
+      overflow: auto
 .page-exec-ed,
 .page-seed
   #header-wrapper
@@ -412,7 +418,10 @@ div#header-wrapper.awemenu-sticky + div#hero
                 display: block
             a
               display: inline-block
-              padding-bottom: 15px
+              +breakpoint($bp-for-desktop-up)
+                padding-bottom: 30px
+              +breakpoint($bp-for-phone-tablet-range)
+                padding-bottom: 15px
               &:hover
                 color: $text-blue
                 text-decoration: underline

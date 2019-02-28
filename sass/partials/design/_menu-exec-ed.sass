@@ -31,6 +31,7 @@
           box-shadow: none
         +breakpoint($bp-for-phone-tablet-range)
           color: $red
+          height: auto
       .menu
         a
           font-size: 20px
@@ -50,7 +51,8 @@
         padding: 20px 0
       ul
         li
-          padding: 5px 0
+          +breakpoint($bp-for-desktop-up)
+            padding: 0 0 25px 0
           a
             &:hover
               box-shadow: none

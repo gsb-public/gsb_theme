@@ -9293,6 +9293,14 @@ input.signup-submit:hover {
   }
 }
 
+@media (max-width: 37.4375em) {
+  .page-exec-ed #header-wrapper {
+    overflow: auto;
+  }
+  .page-exec-ed #main {
+    overflow: auto;
+  }
+}
 .page-exec-ed #header-wrapper #header .section,
 .page-seed #header-wrapper #header .section {
   display: block;
@@ -9430,7 +9438,16 @@ input.signup-submit:hover {
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
   display: inline-block;
-  padding-bottom: 15px;
+}
+@media (min-width: 75em) {
+  #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
+    padding-bottom: 15px;
+  }
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:hover {
   color: #2d6280;
@@ -10079,6 +10096,7 @@ input.signup-submit:hover {
   .md-megamenu.md-megamenu-seed-main-menu .awemenu .awemenu-item-level-1 a,
   .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu .awemenu-item-level-1 a {
     color: #990000;
+    height: auto;
   }
 }
 .md-megamenu.md-megamenu-seed-main-menu .awemenu .awemenu-item-level-1 .menu a,
@@ -10111,9 +10129,11 @@ input.signup-submit:hover {
     padding: 20px 0;
   }
 }
-.md-megamenu.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li,
-.md-megamenu.md-megamenu-executive-edu-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li {
-  padding: 5px 0;
+@media (min-width: 75em) {
+  .md-megamenu.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li,
+  .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li {
+    padding: 0 0 25px 0;
+  }
 }
 .md-megamenu.md-megamenu-seed-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li a:hover,
 .md-megamenu.md-megamenu-executive-edu-main-menu .awemenu-submenu.awemenu-megamenu .awemenu-megamenu-wrapper ul li a:hover {
