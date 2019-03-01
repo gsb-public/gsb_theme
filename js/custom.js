@@ -155,12 +155,14 @@
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
         $('.ds-main-wrapper .ds-right').insertBefore($('.ds-main-wrapper .ds-left'));
-        $('#block-block-41').insertAfter($('#footer-logo') );
-        $('#block-menu-menu-footer-4').insertAfter($('#block-block-41'));
-        $('#block-menu-menu-footer-5').insertAfter($('#block-block-41'));
       }
       if (Modernizr.mq('(max-width: 1169px)')) {
         $('#coveo-search-block-form').insertBefore($('#nav-touch-wrapper'));
+      }
+      if (Modernizr.mq('(max-width: 1024px)')) {
+        $('#block-block-41').insertAfter($('#footer-logo') );
+        $('#block-menu-menu-footer-4').insertAfter($('#block-block-41'));
+        $('#block-menu-menu-footer-5').insertAfter($('#block-block-41'));
       }
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
@@ -685,28 +687,6 @@
         }
         else if (window.location.href.indexOf("/seed/news-events/") > -1) {
             $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
-        }
-    });
-    /* Overlay for the MD Megamenu hovers */
-    $(function(){
-        var width = $(window).width();
-        if (width > 1199) {
-            $('#md-megamenu-1 li.awemenu-item-level-1 a').hover( function(){
-                if ( $(this).next('ul').is(':visible') ){
-                    $(this).closest('#page').toggleClass('modal-closed modal-open');
-                }
-                else if ( $(this).next('ul').is(':hidden') ) {
-                    $(this).closest('#page').toggleClass('modal-closed modal-open');
-                }
-            });
-            $('#md-megamenu-1 li.awemenu-item-level-1 ul.awemenu-submenu.awemenu-megamenu').hover( function(){
-                if ( $(this).is(':visible') ){
-                    $(this).closest('#page').toggleClass('modal-closed modal-open');
-                }
-                else if ( $(this).is(':hidden') ) {
-                    $(this).closest('#page').toggleClass('modal-closed modal-open');
-                }
-            });
         }
     });
     /* Mobile menu manipulation*/

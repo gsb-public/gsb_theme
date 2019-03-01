@@ -49,7 +49,7 @@
   padding-bottom: 0
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper
   +breakpoint($bp-for-desktop-up)
-    box-shadow: 0 4px 10px -2px #808080
+    box-shadow: 0 10px 15px 1px #808080
     border-bottom: 3px solid $text-black
   padding-bottom: 30px
 #md-megamenu-1 li.awemenu-item .awemenu-megamenu-wrapper .overview-link-mobile-only
@@ -138,9 +138,11 @@
   #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2
     .awemenu-bars
       +breakpoint($bp-for-phone-only)
-        right: -15px
+        right: 0px
+        padding-right: 0px
       +breakpoint($bp-for-tablet-range)
-        margin-right: -15px
+        margin-right: 0x
+        padding-right: 0px
 // Exec-Ed and Seed mobile menu
 .md-megamenu-executive-edu-main-menu.awemenu-mobile,
 .md-megamenu-seed-main-menu.awemenu-mobile
@@ -277,7 +279,7 @@ div#header-wrapper.awemenu-sticky + #content-wrapper
     +breakpoint($bp-for-desktop-up)
       margin-top: 81px
   +breakpoint($bp-for-desktop-up)
-    margin-top: 76px
+    margin-top: 87px
     position: relative
 div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-desktop-up)
@@ -285,15 +287,13 @@ div#header-wrapper.awemenu-sticky + div#hero
     position: relative
 .page-seed div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-desktop-up)
-    margin-top: 79px
+    margin-top: 89px
     position: relative
 
 .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
-//.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper .panel-display.gsb-full-bleed-home-page,
-//.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper .panel-display.gsb-program-finder,
 .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-desktop-up)
-    margin-top: 79px
+    margin-top: 89px
     position: relative
 
 // Align Menu Top Items
@@ -313,6 +313,10 @@ div#header-wrapper.awemenu-sticky + div#hero
         border: none
         box-shadow: none
         width: 100%
++breakpoint($bp-for-phone-only)
+  .page-exec-ed
+    #main
+      overflow: auto
 .page-exec-ed,
 .page-seed
   #header-wrapper
@@ -336,6 +340,8 @@ div#header-wrapper.awemenu-sticky + div#hero
     background-color: transparent
     padding-left: 50px
     padding-top: 20px
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-left: 0
   // Open top level main menu
   .awemenu-active,
   .awemenu-active-trail
@@ -410,7 +416,10 @@ div#header-wrapper.awemenu-sticky + div#hero
                 display: block
             a
               display: inline-block
-              padding-bottom: 15px
+              +breakpoint($bp-for-desktop-up)
+                padding-bottom: 30px
+              +breakpoint($bp-for-phone-tablet-range)
+                padding-bottom: 15px
               &:hover
                 color: $text-blue
                 text-decoration: underline
@@ -424,8 +433,12 @@ div#header-wrapper.awemenu-sticky + div#hero
         div[class^="col-lg"]
           padding-left: 0
           padding-right: 20px
-  // Utility menus
-  div[id*="-utility"]
+// Utility menus
+#md-megamenu-1,
+.md-megamenu.md-megamenu-executive-edu-main-menu,
+.md-megamenu.md-megamenu-seed-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
     .content
       float: right
       position: relative
@@ -442,17 +455,22 @@ div#header-wrapper.awemenu-sticky + div#hero
           li.leaf
             padding: 0
             a
-              padding: 15px 0
+              padding: 18px 0
       ul.menu
         li.leaf
           border-bottom: 1px solid $grey-e
-          padding: 14px 0
+          +breakpoint($bp-for-desktop-up)
+            padding: 14px 0
           &:first-of-type
             padding-top: 0
           &:last-of-type
-            padding-bottom: 15px
+            +breakpoint($bp-for-desktop-up)
+              padding-bottom: 15px
           a
+            font-size: 20px
             padding-bottom: 0
+            +breakpoint($bp-for-phone-only)
+              font-size: 14px
           .svg &
             background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
             background-position: right center
@@ -463,10 +481,31 @@ div#header-wrapper.awemenu-sticky + div#hero
               color: $voices-divider
               float: right
               font-weight: normal
+// Exec-ed utility menu overrides
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
+    +breakpoint($bp-for-desktop-up)
+      .content
+        width: 225px
+        ul.menu
+          li.leaf
+            padding-right: 0
 // Override
-#md-megamenu-1.awemenu-mobile-standard div[id*="-utility"] .content ul.menu li.leaf a
-  padding-bottom: 0
-  padding-left: 0
+#md-megamenu-1.awemenu-mobile-standard,
+.awemenu-mobile-standard.md-megamenu-executive-edu-main-menu,
+.awemenu-mobile-standard.md-megamenu-seed-main-menu
+  div[id*="-utility"],
+  div[id*="-uti"]
+    .content
+      ul.menu
+        li.last.leaf
+          margin-bottom: 35px
+          padding-bottom: 0
+        li.leaf
+          a
+            padding-bottom: 18px
+            padding-left: 0
 
 // Global search
 .global-search

@@ -31,15 +31,25 @@
       &:before
         content: "Stanford GSB Community on Social"
         color: $white
-        display: inline-block
+        display: block
         font-size: 36px
         padding-bottom: 50px
+        text-align: center
         +breakpoint($bp-for-phone-only)
           font-size: 26px
           padding-bottom: 30px
+        +breakpoint($bp-mobile-land)
+          font-size: 26px
+          padding-bottom: 30px
+        +breakpoint($bp-iphone6p-land)
+          font-size: 26px
+          padding-bottom: 30px
+        +breakpoint($bp-iphone6-7-8p-land)
+          font-size: 26px
+          padding-bottom: 30px
         +breakpoint($bp-tablet-pot)
-          font-size: 30px
+          font-size: 36px
           padding-bottom: 35px
         +breakpoint($bp-tablet-land)
-          font-size: 30px
+          font-size: 36px
           padding-bottom: 35px
