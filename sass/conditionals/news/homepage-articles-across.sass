@@ -223,8 +223,12 @@
       cursor: pointer
     +breakpoint($bp-for-tablet-range)
       width: 205px
-    +breakpoint($bp-for-phone-only)
-      width: 280px
+    +breakpoint($bp-mobile)
+      min-width: 280px
+    +breakpoint($bp-mobile-range-375)
+      min-width: 330px
+    +breakpoint($bp-mobile-range-414)
+      min-width: 374px
   .homepage_across-cta
     @extend %homepage_cta
     padding-right: 30px
@@ -236,7 +240,11 @@
       cursor: pointer
     +breakpoint($bp-for-tablet-range)
       width: 205px
-    +breakpoint($bp-for-phone-only)
-      width: 280px
+    +breakpoint($bp-mobile)
+      min-width: 280px
+    +breakpoint($bp-mobile-range-375)
+      min-width: 330px
+    +breakpoint($bp-mobile-range-414)
+      min-width: 374px
     a:after
       right: 15px

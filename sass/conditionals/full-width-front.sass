@@ -14,6 +14,10 @@
     border-bottom-width: 0
     height: 600px
     margin-top: 70px
+    +breakpoint($bp-mobile)
+      margin-top: 25px
+    +breakpoint($bp-mobile-large-range)
+      margin-top: 45px
     +breakpoint($bp-for-phone-only)
       height: auto
       padding-bottom: 40px

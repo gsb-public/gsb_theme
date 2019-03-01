@@ -111,7 +111,7 @@
           -moz-transition: opacity 500ms
           -o-transition: opacity 500ms
           transition: opacity 500ms
-          
+
         &.blue
           background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
           //width: 100.3%
@@ -290,6 +290,14 @@
       border-top: 0
     &:last-of-type
       border-bottom: 0
+      +breakpoint($bp-mobile)
+        border-bottom: 0
+        margin-top: 4px
+        margin-bottom: 20px
+      +breakpoint($bp-mobile-large-range)
+        border-bottom: 0
+        margin-top: 4px
+        margin-bottom: 45px
     a
       color: $white
       +icon-after("arrow-double-right", true)
@@ -310,9 +318,15 @@
       cursor: pointer
     +breakpoint($bp-for-tablet-range)
       margin-top: 10px
-    +breakpoint($bp-for-phone-only)
+    +breakpoint($bp-mobile)
       margin: 0 auto
       width: 280px
+    +breakpoint($bp-mobile-range-375)
+      margin: 0 auto
+      width: 320px
+    +breakpoint($bp-mobile-range-414)
+      margin: 0 auto
+      width: 330px
 
 /* CTA Button End */
 // Removing the background span from display
