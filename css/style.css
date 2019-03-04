@@ -13003,13 +13003,11 @@ button.checkbox-clear-all {
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .page-alumni .banner-title {
     height: 50px;
-    padding: 10px 15px;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .page-alumni .banner-title {
     height: 26px;
-    padding: 0 15px;
   }
 }
 @media (max-width: 37.4375em) {
@@ -13167,7 +13165,7 @@ button.checkbox-clear-all {
   .page-alumni #utility a {
     font-size: 7px;
     height: 10px;
-    white-space: nowrap;
+    padding-left: 5px;
   }
 }
 @media (max-width: 62.4375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -13178,6 +13176,14 @@ button.checkbox-clear-all {
   }
 }
 
+@media (max-width: 37.4375em) {
+  #sidebar {
+    margin-bottom: 10px;
+  }
+  .page-alumni #sidebar {
+    margin-bottom: 0;
+  }
+}
 #sidebar .sidebar h2 {
   display: none;
 }
@@ -13232,10 +13238,10 @@ button.checkbox-clear-all {
     width: 101px;
   }
   .svg #sidebar .sidebar h2 {
-    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #5a7688;
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
   }
   .no-js #sidebar .sidebar h2, .no-svg #sidebar .sidebar h2 {
-    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #5a7688;
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
   }
   .page-alumni #sidebar .sidebar h2 {
     background-color: #b00000;
@@ -13253,6 +13259,12 @@ button.checkbox-clear-all {
   .no-js .page-programs-mba #sidebar .sidebar h2, .no-svg .page-programs-mba #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #5a7688;
   }
+  .svg .page-programs-phd #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #5a7688;
+  }
+  .no-js .page-programs-phd #sidebar .sidebar h2, .no-svg .page-programs-phd #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #5a7688;
+  }
   .svg .page-faculty-research #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
   }
@@ -13263,6 +13275,12 @@ button.checkbox-clear-all {
     background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
   }
   .no-js .page-exec-ed #sidebar .sidebar h2, .no-svg .page-exec-ed #sidebar .sidebar h2, .no-js .page-seed #sidebar .sidebar h2, .no-svg .page-seed #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
+  }
+  .svg .page-library #sidebar .sidebar h2 {
+    background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
+  }
+  .no-js .page-library #sidebar .sidebar h2, .no-svg .page-library #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
   }
   .page-insights #sidebar .sidebar h2 {
@@ -13282,6 +13300,19 @@ button.checkbox-clear-all {
   #sidebar .block-menu.open .content > ul.menu > li,
   #sidebar .block-menu-block.open .content > ul.menu > li {
     padding-left: 30px;
+  }
+  #sidebar .block-menu.open h2,
+  #sidebar .block-menu-block.open h2 {
+    color: #7d7466;
+  }
+  .svg #sidebar .block-menu.open h2, .svg
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-taupe.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .no-js #sidebar .block-menu.open h2, .no-svg #sidebar .block-menu.open h2, .no-js
+  #sidebar .block-menu-block.open h2, .no-svg
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-taupe-@2x.png') no-repeat 11px 11px #f4f4f4;
   }
   .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
   #sidebar .block-menu-block.open .content, .page-seed
@@ -13332,6 +13363,19 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
   }
+  .page-programs-phd #sidebar .block-menu.open h2, .page-programs-phd
+  #sidebar .block-menu-block.open h2 {
+    color: #5a7688;
+  }
+  .svg .page-programs-phd #sidebar .block-menu.open h2, .svg .page-programs-phd
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .no-js .page-programs-phd #sidebar .block-menu.open h2, .no-svg .page-programs-phd #sidebar .block-menu.open h2, .no-js .page-programs-phd
+  #sidebar .block-menu-block.open h2, .no-svg .page-programs-phd
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-grayblue-@2x.png') no-repeat 11px 11px #5a7688;
+  }
   .page-faculty-research #sidebar .block-menu.open .content, .page-faculty-research
   #sidebar .block-menu-block.open .content {
     top: 48px;
@@ -13344,9 +13388,21 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-taupe.svg') no-repeat 85% 47% #f4f4f4;
   }
-  .page-alumni #sidebar .block-menu.open .content, .page-alumni
+  .page-library #sidebar .block-menu.open .content, .page-library
   #sidebar .block-menu-block.open .content {
     top: 48px;
+  }
+  .page-library #sidebar .block-menu.open h2, .page-library
+  #sidebar .block-menu-block.open h2 {
+    color: #7d7466;
+  }
+  .svg .page-library #sidebar .block-menu.open h2, .svg .page-library
+  #sidebar .block-menu-block.open h2 {
+    background: url('../images/icons/inThisSection-arrow-up-taupe.svg') no-repeat 85% 47% #f4f4f4;
+  }
+  .page-alumni #sidebar .block-menu.open .content, .page-alumni
+  #sidebar .block-menu-block.open .content {
+    top: 40px;
   }
   .page-alumni #sidebar .block-menu.open h2, .page-alumni
   #sidebar .block-menu-block.open h2 {
@@ -13392,6 +13448,12 @@ button.checkbox-clear-all {
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) and (max-width: 37.4375em) {
   .page-faculty-research #sidebar .block-menu.open .content, .page-faculty-research
+  #sidebar .block-menu-block.open .content {
+    top: 42px;
+  }
+}
+@media (min-width: 14.375em) and (max-width: 74.9375em) and (max-width: 37.4375em) {
+  .page-library #sidebar .block-menu.open .content, .page-library
   #sidebar .block-menu-block.open .content {
     top: 42px;
   }
