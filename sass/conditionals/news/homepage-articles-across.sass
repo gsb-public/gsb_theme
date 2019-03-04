@@ -26,7 +26,7 @@
       font-size: 36px
       +breakpoint(320px $max-width)
         font-size: 26px
-        padding-bottom: 25px
+        padding-bottom: 30px
       +breakpoint($bp-for-phone-only)
         font-size: 26px
       +breakpoint($bp-mobile-land)
@@ -36,10 +36,12 @@
       +breakpoint($bp-iphone6-7-8p-land)
         font-size: 26px
       +breakpoint($bp-tablet-pot)
-        padding-top: 30px
+        padding-top: 9px
+        margin-bottom: 20px
         font-size: 36px
       +breakpoint($bp-tablet-land)
-        padding-top: 36px
+        padding-top: 9px
+        margin-bottom: 20px
         font-size: 36px
 
     .view-gsb-announcement-school-listing
@@ -61,8 +63,10 @@
         +breakpoint(320px $max-width)
           margin-right: 0
       .views-row-last
-        +breakpoint(320px $max-width)
+        +breakpoint(320px 599px)
           margin-top: 35px
+        +breakpoint($bp-for-tablet-range)
+          margin-top: 50px
 
       .views-row
         background-color: $white
@@ -78,6 +82,7 @@
           +breakpoint($bp-for-phone-only)
             font-size: 12px
             padding-bottom: 0
+            margin-bottom: 5px
           +breakpoint($bp-for-tablet-range)
             font-size: 16px
         .field-type-image
@@ -154,28 +159,26 @@
       border-bottom: 1px solid $listing-divider
       border-left: 1px solid $listing-divider
       border-right: 1px solid $listing-divider
-      padding: 32px 30px 45px 30px
+      padding: 32px 30px 45px 40px
+      +breakpoint($bp-for-tablet-range)
+        padding: 32px 30px 39px 40px
       &:hover
         box-shadow: 0 0 4px 2px #c4c4c4
       h3,
       span.story-title
-        font-size: 26px
+        font-size: 20px
         font-weight: normal
         font-family: $font-sans
         a
           &:hover
             border-bottom: 2px solid $link-blue
             text-decoration: none
-        +breakpoint(320px $max-width)
-          font-size: 20px
-          padding: 20px 0 25px 0
         +breakpoint($bp-tablet-pot)
           font-size: 30px
         +breakpoint($bp-tablet-land)
           font-size: 30px
-        +breakpoint($bp-for-phone-only)
-          padding-bottom: 0px
-          line-height: 1.3em
+        +breakpoint(1101px min-width)
+          font-size: 32px
       .field-name-media-icon
         display: inline
         float: left
@@ -184,6 +187,9 @@
         position: relative
         +breakpoint(320px $max-width)
           top: 17px
+        +breakpoint($bp-ipad-range)
+          position: inherit
+          padding-top: 4px
   %homepage_cta
     background-color: $red-dark
     color: $white
@@ -240,6 +246,7 @@
       cursor: pointer
     +breakpoint($bp-for-tablet-range)
       width: 205px
+      margin-top: 14px
     +breakpoint($bp-mobile)
       min-width: 280px
     +breakpoint($bp-mobile-range-375)
