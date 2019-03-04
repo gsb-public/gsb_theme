@@ -59,10 +59,8 @@
   .page-alumni &
     +breakpoint($bp-for-tablet-range)
       height: 50px
-      padding: 10px 15px
     +breakpoint($bp-tablet-land)
       height: 26px
-      padding: 0 15px
     +breakpoint($bp-for-phone-only)
       height: 42px
     top: 0
@@ -185,7 +183,7 @@
       +breakpoint($bp-for-phone-only)
         font-size: 7px
         height: 10px
-        white-space: nowrap
+        padding-left: 5px
     .menu
       +breakpoint($bp-for-tablet-range)
         margin-right: 140px
@@ -194,6 +192,11 @@
 
 // First Sidebar
 #sidebar
+  +breakpoint($bp-for-phone-only)
+    margin-bottom: 10px
+    // Alumni
+    .page-alumni &
+      margin-bottom: 0
   .sidebar
     h2
       display: none
@@ -241,9 +244,9 @@
         +breakpoint($bp-for-phone-only)
           padding: 6px 15px 8px 12px
         .svg &
-          +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
+          +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
         .no-js &, .no-svg &
-          +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-blue-grey)
+          +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
         // Alumni
         .page-alumni &
           background-color: $section-red
@@ -258,6 +261,12 @@
             +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
           .no-js &, .no-svg &
             +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-blue-grey)
+        // PHD
+        .page-programs-phd &
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $section-blue-grey)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $section-blue-grey)
         // Faculty
         .page-faculty-research &
           .svg &
@@ -267,6 +276,12 @@
         // Exec-Ed and Seed
         .page-exec-ed &,
         .page-seed &
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
+        // Library
+        .page-library &
           .svg &
             +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
           .no-js &, .no-svg &
@@ -287,6 +302,13 @@
           border-left: 1px solid $grey-dc
           & > li
             padding-left: 30px
+      h2
+        color: $grey-hp-7
+        .svg &
+          +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
+        .no-js &, .no-svg &
+          +background(image_url("icons/inThisSection-arrow-up-taupe-@2x.png") no-repeat 11px 11px $grey-hp)
+
 
       // Executive Education
       .page-exec-ed &,
@@ -318,8 +340,26 @@
             +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
           .no-js &, .no-svg &
             +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
+      // PHD
+      h2
+        .page-programs-phd &
+          color: $section-blue-grey
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue.svg") no-repeat 85% 47% $grey-hp)
+          .no-js &, .no-svg &
+            +background(image_url("icons/inThisSection-arrow-up-grayblue-@2x.png") no-repeat 11px 11px $section-blue-grey)
       // Faculty and Research
       .page-faculty-research &
+        .content
+          top: 48px
+          +breakpoint($bp-for-phone-only)
+            top: 42px
+        h2
+          color: $grey-hp-7
+          .svg &
+            +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
+      // Faculty and Research
+      .page-library &
         .content
           top: 48px
           +breakpoint($bp-for-phone-only)
@@ -331,7 +371,7 @@
       // Alumni
       .page-alumni &
         .content
-          top: 48px
+          top: 40px
         h2
           color: $section-red
           .svg &
