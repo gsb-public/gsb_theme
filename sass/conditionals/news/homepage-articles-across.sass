@@ -24,13 +24,16 @@
       font-family: $font-light
       padding-bottom: 50px
       font-size: 36px
-      +breakpoint(320px $max-width)
+      +breakpoint($bp-mobile)
+        font-size: 26px
+        padding-bottom: 24px
+      +breakpoint(321px $max-width)
         font-size: 26px
         padding-bottom: 30px
-      +breakpoint($bp-for-phone-only)
+      +breakpoint(321px $bp-for-phone-only)
         font-size: 26px
         margin-top: 25px
-        padding-top: 2px
+        padding-top: 5px
       +breakpoint($bp-mobile-land)
         font-size: 26px
       +breakpoint($bp-iphone6p-land)

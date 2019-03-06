@@ -359,9 +359,13 @@
         h2.pane-title
           padding-top: 0px
           padding-bottom: 0px
-          +breakpoint($bp-for-phone-tablet-range)
+          +breakpoint($bp-mobile)
+            padding-bottom: 25px
+            margin-top: 3px
+          +breakpoint($bp-for-medium-phone-tablet-range)
             padding-top: 30px
             padding-bottom: 25px
+            margin-top: 1px
           +breakpoint($bp-mobile-land)
             padding-top: 0px
           +breakpoint($bp-tablet-land)
