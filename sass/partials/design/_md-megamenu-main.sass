@@ -417,15 +417,19 @@ div#header-wrapper.awemenu-sticky + div#hero
             a
               display: inline-block
               +breakpoint($bp-for-desktop-up)
-                padding-bottom: 30px
+                padding: 15px 0
               +breakpoint($bp-for-phone-tablet-range)
-                padding-bottom: 15px
+                padding: 7.5px 0
               &:hover
                 color: $text-blue
                 text-decoration: underline
               &:focus
                 border: 1px dotted $text-black
                 outline: none
+          li.first
+            a.link-title
+              +breakpoint($bp-for-desktop-up)
+                padding-top: 0
       .row
         div[class^="col-xs"],
         div[class^="col-sm"],
@@ -651,10 +655,17 @@ div#header-wrapper.awemenu-sticky + div#hero
       .col-md-3
         +breakpoint($bp-for-phone-only)
           padding-left: 0
+      .col-md-12.col-xs-12 h3.mm-header.non-degree-programs,
+      .col-md-3.col-xs-12 h3.mm-header.research,
+      .col-md-3.col-xs-12 h3.mm-header.centers-initiatives,
+      .col-md-3.col-xs-12 h3.mm-header.faculty-institutes,
+      .col-md-3.col-xs-12 h3.mm-header.about-degree-programs
+        +breakpoint($bp-for-phone-only)
+          padding-top: 17.5px
       h3.mm-header
         +breakpoint($bp-for-phone-only)
           font-size: 20px
-          padding: 0 0 35px 20px
+          padding: 35px 20px 17.5px 20px
         +breakpoint($bp-for-tablet-range)
           font-size: 22px
           padding: 0 0 35px 30px
@@ -668,11 +679,15 @@ div#header-wrapper.awemenu-sticky + div#hero
             padding-bottom: 0
             padding-left: 35px
             +breakpoint($bp-for-tablet-range)
-              padding-bottom: 40px
+              padding-bottom: 20px
+              padding-top: 20px
+              width: 100%
             +breakpoint($bp-for-phone-only)
               display: inline-block
-              padding-bottom: 35px
+              padding-bottom: 17.5px
+              padding-top: 17.5px
               white-space: normal
+              width: 100%
     .awemenu-item-link
       background-color: $grey-hp
       padding: 20px

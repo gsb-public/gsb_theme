@@ -4940,13 +4940,6 @@ a.no-border:hover {
   display: none;
 }
 
-@media (max-width: 62.4375em) {
-  .page-node-300216 #page-title,
-  .page-node-303566 #page-title {
-    display: none;
-  }
-}
-
 .page-node-301121 .breadcrumb,
 .page-node-301356 .breadcrumb,
 .page-node-303111 .breadcrumb,
@@ -6856,10 +6849,8 @@ h2.insights-label {
 @media (max-width: 62.4375em) {
   .region-sidebar-first ul li {
     font-size: 14px;
-    margin-bottom: 22px;
-  }
-  .region-sidebar-first ul li.first {
-    padding-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 35px;
   }
 }
 @media (max-width: 37.4375em) {
@@ -6919,6 +6910,9 @@ h2.insights-label {
   text-transform: none;
 }
 @media (max-width: 62.4375em) {
+  .region-sidebar-first ul li ul li {
+    margin: 0;
+  }
   .region-sidebar-first ul li ul li.first {
     padding-top: 0;
   }
@@ -9645,12 +9639,12 @@ input.signup-submit:hover {
 }
 @media (min-width: 75em) {
   #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
-    padding-bottom: 30px;
+    padding: 15px 0;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a {
-    padding-bottom: 15px;
+    padding: 7.5px 0;
   }
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:hover {
@@ -9660,6 +9654,11 @@ input.signup-submit:hover {
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li a:focus {
   border: 1px dotted #231f20;
   outline: none;
+}
+@media (min-width: 75em) {
+  #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row .menu li.first a.link-title {
+    padding-top: 0;
+  }
 }
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row div[class^="col-xs"],
 #md-megamenu-1 .awemenu .awemenu-megamenu-wrapper .row div[class^="col-sm"],
@@ -10077,11 +10076,30 @@ input.signup-submit:hover {
   }
 }
 @media (max-width: 37.4375em) {
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header.non-degree-programs,
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.research,
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.centers-initiatives,
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.faculty-institutes,
+  #md-megamenu-1.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.about-degree-programs,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header.non-degree-programs,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.research,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.centers-initiatives,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.faculty-institutes,
+  .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.about-degree-programs,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-12.col-xs-12 h3.mm-header.non-degree-programs,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.research,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.centers-initiatives,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.faculty-institutes,
+  .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .col-md-3.col-xs-12 h3.mm-header.about-degree-programs {
+    padding-top: 17.5px;
+  }
+}
+@media (max-width: 37.4375em) {
   #md-megamenu-1.awemenu-mobile-standard .awemenu .row h3.mm-header,
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row h3.mm-header,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row h3.mm-header {
     font-size: 20px;
-    padding: 0 0 35px 20px;
+    padding: 35px 20px 17.5px 20px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -10109,7 +10127,9 @@ input.signup-submit:hover {
   #md-megamenu-1.awemenu-mobile-standard .awemenu .row .menu li.leaf a,
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .menu li.leaf a,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .menu li.leaf a {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
   }
 }
 @media (max-width: 37.4375em) {
@@ -10117,8 +10137,10 @@ input.signup-submit:hover {
   .md-megamenu-seed-main-menu.awemenu-mobile.awemenu-mobile-standard .awemenu .row .menu li.leaf a,
   .md-megamenu-executive-edu-main-menu.awemenu-mobile-standard .awemenu .row .menu li.leaf a {
     display: inline-block;
-    padding-bottom: 35px;
+    padding-bottom: 17.5px;
+    padding-top: 17.5px;
     white-space: normal;
+    width: 100%;
   }
 }
 #md-megamenu-1.awemenu-mobile-standard .awemenu .awemenu-item-link,
@@ -13183,7 +13205,7 @@ button.checkbox-clear-all {
 
 @media (max-width: 37.4375em) {
   #sidebar {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .page-alumni #sidebar {
     margin-bottom: 0;
@@ -13533,14 +13555,15 @@ button.checkbox-clear-all {
 #sidebar .block-menu.open .expanded .menu .menu .menu li {
   padding-left: 15px;
 }
+#sidebar .region-sidebar-first ul li.first {
+  padding-top: 35px;
+}
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   #sidebar .region-sidebar-first ul li ul li {
-    margin: 35px 0;
+    padding: 17.5px 0;
   }
-}
-@media (max-width: 37.4375em) {
-  #sidebar .region-sidebar-first ul li ul li {
-    margin: 30px 0;
+  #sidebar .region-sidebar-first ul li ul li.first {
+    padding-top: 35px;
   }
 }
 

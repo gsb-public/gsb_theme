@@ -193,7 +193,7 @@
 // First Sidebar
 #sidebar
   +breakpoint($bp-for-phone-only)
-    margin-bottom: 10px
+    margin-bottom: 20px
     // Alumni
     .page-alumni &
       margin-bottom: 0
@@ -426,8 +426,15 @@
                 padding-left: 15px // 85px in
             li
               padding-left: 15px
-  .region-sidebar-first ul li ul li
-    +breakpoint($bp-for-phone-tablet-range)
-      margin: 35px 0
-    +breakpoint($bp-for-phone-only)
-      margin: 30px 0
+  .region-sidebar-first
+    ul
+      li
+        &.first
+          padding-top: 35px
+        ul
+          li
+            +breakpoint($bp-for-phone-tablet-range)
+              padding: 17.5px 0
+              &.first
+                padding-top: 35px
+
