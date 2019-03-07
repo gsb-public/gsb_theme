@@ -6957,11 +6957,6 @@ h2.insights-label {
   left: -16px;
   width: 0;
 }
-@media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .region-sidebar-first ul li .menu {
-    background-color: white;
-  }
-}
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .region-sidebar-first .content .expanded.active-trail > .sub-menus,
   .region-sidebar-first .content .open > .sub-menus {
@@ -9507,12 +9502,14 @@ input.signup-submit:hover {
   .page-exec-ed #header-wrapper #header .md-megamenu a,
   .page-seed #header-wrapper #header .md-megamenu a {
     font-size: 16px;
+    font-weight: bold;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .page-exec-ed #header-wrapper #header .md-megamenu a,
   .page-seed #header-wrapper #header .md-megamenu a {
     font-size: 18px;
+    font-weight: bold;
   }
 }
 .page-exec-ed #header-wrapper #header .md-megamenu a:hover,
@@ -10597,11 +10594,16 @@ input.signup-submit:hover {
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-submenu .leaf a {
   color: #231f20;
 }
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a {
-  background-color: #d8d8d8;
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item > a {
+  background-color: #f4f4f4;
+}
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a,
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active-trail > a {
+  background-color: #f4f4f4;
   color: #990000;
 }
-.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a:hover {
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a:hover,
+.md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active-trail > a:hover {
   color: #990000;
 }
 
@@ -13341,12 +13343,6 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-taupe-@2x.png') no-repeat 11px 11px #f4f4f4;
   }
-  .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
-  #sidebar .block-menu-block.open .content, .page-seed
-  #sidebar .block-menu-block.open .content {
-    top: 49px;
-    left: 0;
-  }
   .page-exec-ed #sidebar .block-menu.open h2, .page-seed #sidebar .block-menu.open h2, .page-exec-ed
   #sidebar .block-menu-block.open h2, .page-seed
   #sidebar .block-menu-block.open h2 {
@@ -13466,11 +13462,12 @@ button.checkbox-clear-all {
     top: 42px;
   }
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) and (max-width: 37.4375em) {
-  .page-exec-ed #sidebar .block-menu.open .content, .page-seed #sidebar .block-menu.open .content, .page-exec-ed
-  #sidebar .block-menu-block.open .content, .page-seed
-  #sidebar .block-menu-block.open .content {
-    top: 42px;
+@media (min-width: 14.375em) and (max-width: 74.9375em) and (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed #sidebar .block-menu.open .content .menu, .page-seed #sidebar .block-menu.open .content .menu, .page-exec-ed
+  #sidebar .block-menu-block.open .content .menu, .page-seed
+  #sidebar .block-menu-block.open .content .menu {
+    float: right;
+    width: 60%;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) and (max-width: 37.4375em) {
@@ -13555,14 +13552,20 @@ button.checkbox-clear-all {
 #sidebar .block-menu.open .expanded .menu .menu .menu li {
   padding-left: 15px;
 }
-#sidebar .region-sidebar-first ul li.first {
-  padding-top: 35px;
-}
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
+  #sidebar .region-sidebar-first ul li.first {
+    padding-top: 35px;
+  }
   #sidebar .region-sidebar-first ul li ul li {
     padding: 17.5px 0;
   }
   #sidebar .region-sidebar-first ul li ul li.first {
+    padding-top: 35px;
+  }
+  #sidebar .region-sidebar-first ul li ul li ul li {
+    padding: 17.5px 0;
+  }
+  #sidebar .region-sidebar-first ul li ul li ul li.first {
     padding-top: 35px;
   }
 }

@@ -314,16 +314,18 @@
       .page-exec-ed &,
       .page-seed &
         .content
-          top: 49px
-          left: 0
-          +breakpoint($bp-for-phone-only)
-            top: 42px
+          .menu
+            +breakpoint($bp-for-tablet-range)
+              float: right
+              width: 60%
+
         h2
           color: $grey-hp-7
           .svg &
             +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
           .no-js &, .no-svg &
             +background(image_url("icons/inThisSection-arrow-up-taupe-@2x.png") no-repeat 11px 11px $grey-hp)
+
       // MBA
       h2
         .page-programs-mba &
@@ -426,15 +428,19 @@
                 padding-left: 15px // 85px in
             li
               padding-left: 15px
-  .region-sidebar-first
-    ul
-      li
-        &.first
-          padding-top: 35px
-        ul
-          li
-            +breakpoint($bp-for-phone-tablet-range)
+  +breakpoint($bp-for-phone-tablet-range)
+    .region-sidebar-first
+      ul
+        li
+          &.first
+            padding-top: 35px
+          ul
+            li
               padding: 17.5px 0
               &.first
                 padding-top: 35px
-
+              ul
+                li
+                  padding: 17.5px 0
+                  &.first
+                    padding-top: 35px

@@ -217,8 +217,11 @@
       .leaf
         a
           color: $text-black
-    .awemenu-item.awemenu-active > a
-      background-color: $grey-d8
+    .awemenu-item > a
+      background-color: $grey-hp
+    .awemenu-item.awemenu-active > a,
+    .awemenu-item.awemenu-active-trail > a
+      background-color: $grey-hp
       color: $red
       &:hover
         color: $red
