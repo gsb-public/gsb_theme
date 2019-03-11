@@ -9,11 +9,14 @@
 
 .panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport
   padding-top: 0
+  +breakpoint($bp-iphone6-7-8p-land)
+    padding-top: 50px
 
 .pane-bundle-landing-viewport
   & ~ .pane-bundle-landing-viewport.landing-image
     .field-name-field-homepage-image-tablet,
     .field-name-field-homepage-image-desktop
+      //toggle below for seeing image instead of video
       display: none
     .field-name-field-homepage-image-tablet
       +breakpoint(600px 767px)
@@ -21,6 +24,8 @@
 
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport.landing-video
   #landing-video
+    //toggle below for seeing image instead of video
+    //display: none
     +breakpoint(320px 767px)
       display: none
 
@@ -77,6 +82,8 @@
       text-align: left
       +breakpoint($bp-for-phone-only)
         max-width: 90%
+      +breakpoint(568px 667px)
+        bottom: 100px
       span
         line-height: 2em
         font-size: 36px
@@ -193,7 +200,7 @@
     +breakpoint($bp-for-phone-only)
       bottom: 0
 
-.pane-bundle-landing-viewport 
+.pane-bundle-landing-viewport
   .scrollLink
     &:hover
       text-decoration: underline
@@ -237,9 +244,17 @@
       height: 100%
 
     img
-      object-fit: contain
-      height: auto
-      width: 100%
+      transform: scale(2, 2)
+      transform-origin: 50% 10%
+      +breakpoint(568px 736px)
+        transform: scale(1, 1)
+        transform-origin: 50% 40%
+      +breakpoint($bp-ipad-range)
+        transform: scale(4, 4)
+        transform-origin: 48% 35%
+      +breakpoint(1025px min-width)
+        transform: scale(1.5, 1.5)
+        transform-origin: 50% 50%
 
     video.splash__video__media,
     .field-type-image
@@ -257,10 +272,32 @@
       display: inline-block
       position: relative
       #kaltura-player1
-        width: 100%
-        height: 100%
-        position: relative
-        padding-top: 56.25%
+        +breakpoint($bp-ipad-range (orientation landscape))
+          width: 130%
+          height: 130%
+          margin-top: -62px
+          margin-left: -150px
+        +breakpoint($bp-ipad-pro-range (orientation landscape))
+          width: 130%
+          height: 130%
+          margin-top: -100px
+          margin-left: -150px
+        +breakpoint((min-height 1024px) (max-height 1365px) (orientation portrait))
+          width: 225%
+          height: 225%
+          margin-top: -79%
+          margin-left: -25%
+        +breakpoint((min-height 1366px) (orientation portrait))
+          width: 260%
+          height: 260%
+          margin-top: -100%
+          margin-left: -60%
+        +breakpoint(1367px min-width)
+          width: 100%
+          height: 100%
+          position: relative
+          padding-top: 56.25%
+
         #kaltura-player1_ifp
           position: absolute
           top: 0px
