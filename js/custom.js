@@ -575,26 +575,81 @@
 
     /* viewport sizing */
     $(function() {
-        setHeight();
-        function setHeight() {
-            windowHeight = $(window).innerHeight()-80;
-            $('.pane-landingpage-video, .pane-bundle-landing-viewport, .field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css('max-height', windowHeight);
+
+        function setWidthHeight(type, vpWidth, vpHeight, windowWidth) {
+            if (type === 'video') {
+                $('.pane-landingpage-video, #landing-video').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
+                $('#kaltura-player1').css({'overflow': 'visible', 'bottom': '300px'});
+
+                if ((windowWidth >= 600) && (windowWidth < 1200)) {
+                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '30px'})
+                }
+                else if ((windowWidth >= 1200) && (windowWidth < 1400)){
+                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '59px', 'margin-bottom': '-85px'});
+                }
+                else if ((windowWidth >= 1400) && (windowWidth < 1920)){
+                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '53px', 'margin-bottom': '-70px'});
+                }
+                else if (windowWidth >= 1920) {
+                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '54px', 'margin-bottom': '-10px'});
+                }
+            }
+            else if (type === 'image') {
+                $('.field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
+
+                if ((windowWidth >= 320) && (windowWidth < 768)) {
+                    $('.field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'bottom': '50px', 'margin-top': '-50px'});
+                }
+                else if ((windowWidth >= 768) && (windowWidth < 1366)){
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '5px'});
+                }
+                else if ((windowWidth >= 1366)){
+                    $('.field-name-field-homepage-image-desktop').css({'margin-bottom': '-19px'});
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '4px'});
+                }
+            }
         };
-        $(window).resize(function() {
-            setHeight();
-        });
-        /* scroll functionality for the 2018 site refresh*/
-        // Image splash scroll
-        $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
-            $('html, body').animate({
-                scrollTop: $('.pane-bundle-mission-statement').offset().top+100
-            }, 800);
-        });
-        // video splash scroll - want it to come further down for the video.
-        $('.pane-landingpage-video .scrollLink').on('click', function() {
-            $('html, body').animate({
-                scrollTop: ( $('.pane-bundle-mission-statement').offset().top)
-            }, 800);
+
+        function inspectViewPort() {
+            windowHeight = $(window).innerHeight();
+            windowWidth = $(window).innerWidth();
+            if ((windowWidth >= 600) && (windowHeight >= 600)) {
+                //toggle below for seeing image instead of video
+                setWidthHeight('video', 100, 100, windowWidth);
+            }
+            else {
+                $(function() {
+                    //removes video div so not to overlap image div with blank screen
+                    $('div.landing-video').wrapAll('<div class="video-scale"></div>').remove();
+                });
+                setWidthHeight('image', 100, 100, windowWidth);
+            }
+        };
+
+        inspectViewPort();
+
+        /* updated scroll functionality for the 2019 site refresh */
+        $('.scrollLink').on('click', function() {
+            windowHeight = $(window).innerHeight();
+            windowWidth = $(window).innerWidth();
+            if ((windowWidth >= 600) && (windowWidth < 1280) && (windowHeight >= 600)) {
+                // video splash scroll - tablet
+                $('html, body').animate({
+                    scrollTop: ( $('.pane-bundle-mission-statement').offset().top+70)
+                }, 800);
+            }
+            else if ((windowWidth >= 1280) && (windowHeight >= 600)) {
+                // video splash scroll - desktop
+                $('html, body').animate({
+                    scrollTop: ( $('.pane-bundle-mission-statement').offset().top+100)
+                }, 800);
+            }
+            else {
+                // Image splash scroll
+                $('html, body').animate({
+                    scrollTop: ( $('.pane-bundle-mission-statement').offset().top+45)
+                }, 800);
+            }
         });
     });
     /* Viewport text */
