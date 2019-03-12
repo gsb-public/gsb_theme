@@ -677,9 +677,10 @@ div#header-wrapper.awemenu-sticky + div#hero
       .menu
         li.leaf
           a
-            border-bottom: none
             padding-bottom: 0
             padding-left: 35px
+            +breakpoint($bp-for-desktop-up)
+              border-bottom: none
             +breakpoint($bp-for-tablet-range)
               padding-bottom: 20px
               padding-top: 20px
