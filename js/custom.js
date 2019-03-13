@@ -598,7 +598,8 @@
                 $('.field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
 
                 if ((windowWidth >= 320) && (windowWidth < 768)) {
-                    $('.field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'bottom': '50px', 'margin-top': '-50px'});
+                    $('.field-name-field-homepage-image-mobile').css({'bottom': '50px', 'margin-top': '-120px'});
+                    $('.field-name-field-homepage-image-tablet').css({'bottom': '50px', 'margin-top': '-35px'});
                 }
                 else if ((windowWidth >= 768) && (windowWidth < 1366)){
                     $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '5px'});
@@ -610,23 +611,69 @@
             }
         };
 
+        // encapsulates video div so not to overlap image div with blank screen when not in use
+        var video = $('div.landing-video').wrapAll('<div class="video-scale"></div>');
+
         function inspectViewPort() {
             windowHeight = $(window).innerHeight();
             windowWidth = $(window).innerWidth();
             if ((windowWidth >= 600) && (windowHeight >= 600)) {
+                $(this).append(video);
                 //toggle below for seeing image instead of video
                 setWidthHeight('video', 100, 100, windowWidth);
             }
             else {
-                $(function() {
-                    //removes video div so not to overlap image div with blank screen
-                    $('div.landing-video').wrapAll('<div class="video-scale"></div>').remove();
-                });
+                video.detach();
                 setWidthHeight('image', 100, 100, windowWidth);
             }
         };
 
-        inspectViewPort();
+        // declares initial sizes for viewports on first page load
+        $(function() {
+            inspectViewPort();
+        });
+
+        // jQuery function literal for smart resizing
+        (function($,sr){
+            // http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
+            // detection period 'threshold', and a boolean indicating whether the signal should happen at the beginning of the detection period (true) or at the end 'execAsap'
+            var debounce = function (func, threshold, execAsap) {
+
+                // handle to setTimeout async task (detection period)
+                var timeout;
+
+                // return the new debounced function which executes the original function only once until the detection period expires
+                return function debounced () {
+                    var obj = this; // reference to original context object
+                    var args = arguments; // arguments object at execution time
+
+                    // detection is executed if/when the threshold expires
+                    function delayed () {
+                        // if we're executing at the end of the detection period
+                        if (!execAsap)
+                            func.apply(obj, args); // execute now
+                        timeout = null; // clear timeout handle
+                    };
+
+                    // stop any current detection period
+                    if (timeout)
+                        clearTimeout(timeout);
+                    // if we're not waiting, and we're executing at the beginning of the detection period
+                    else if (execAsap)
+                        func.apply(obj, args); // execute now
+
+                    // reset the detection period
+                    timeout = setTimeout(delayed, threshold || 100);
+                };
+            };
+            // extending jQuery for smartresize (sr is argument initially passed in from function literal) operation
+            jQuery.prototype[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+        })(jQuery,'smartresize');
+
+        // will now recognize orientation change with throttling and debouncing checks
+        $(window).smartresize(function(){
+            inspectViewPort();
+        });
 
         /* updated scroll functionality for the 2019 site refresh */
         $('.scrollLink').on('click', function() {
