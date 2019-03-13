@@ -528,6 +528,12 @@ div#header-wrapper.awemenu-sticky + div#hero
     input#edit-search-keys,
     input#edit-search-keys--3
       width: 825px
+  @media (max-width: 1199px) and (min-width: 1169px)
+    .js div.search-open &
+      margin-right: 0
+      margin-top: -10px
+      width: 100%
+      z-index: 1000
 
 // ExecEd and Seed overrides
 .page-seed
@@ -538,6 +544,11 @@ div#header-wrapper.awemenu-sticky + div#hero
       position: absolute
       top: 3px
       right: 15px
+  @media (max-width: 1199px) and (min-width: 1169px)
+    div.search-open
+      .global-search
+        margin-top: -4px
+        margin-right: -15px
 .page-exec-ed
   .global-search
     +breakpoint(1170px min-width)
@@ -551,6 +562,11 @@ div#header-wrapper.awemenu-sticky + div#hero
         width: 850px
       .js .search-open &
         width: 200px
+  @media (max-width: 1199px) and (min-width: 1169px)
+    div.search-open
+      .global-search
+        margin-top: -4px
+        margin-right: -15px
 
 // Responsive Section. Removed the following from _menu-main.sass so can deprecate it as necessary.
 // Mobile menu button
@@ -762,12 +778,14 @@ div#header-wrapper.awemenu-sticky + div#hero
     text-decoration: none
   +breakpoint($bp-for-tablet-range)
     background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/42% $red
+    display: inline-block
     position: absolute
     right: 0
     top: 0
     z-index: 100
   +breakpoint($bp-for-phone-only)
     background: url(../images/icons/icon-search-white-54x54-tablet-mobile.png) no-repeat center/48% $red
+    display: inline-block
     height: 50px
     position: absolute
     top: 0
