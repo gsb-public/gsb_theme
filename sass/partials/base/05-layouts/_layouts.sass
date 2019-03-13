@@ -867,3 +867,20 @@
 .no-sidebars.page-exec-ed.panels-layout-gsb-full-bleed-page
   h1.title
     margin-left: 80px
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-left: 0px
+    +breakpoint($bp-tablet-land)
+      margin-left: 80px
+
+.no-sidebars.page-seed.panels-layout-gsb-full-bleed-page,
+.no-sidebars.page-exec-ed.panels-layout-gsb-full-bleed-page
+  .ee-section-header-overlay
+    .overlay-inner-wrapper
+      .ee-section-header-title
+        padding-left: 80px
+        +breakpoint($bp-for-phone-tablet-range)
+          padding-left: 10px
+        +breakpoint($bp-for-tablet-range)
+          padding-left: 0px
+        +breakpoint($bp-tablet-land)
+          padding-left: 80px
