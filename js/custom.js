@@ -812,7 +812,7 @@
     $(function(){
         $(".view-id-gsb_voices_listing .views-row .field-name-field-background-color").each(function(index){
           var htmlColorHome = $(this).text();
-              $(this).parent().find(".text-content").addClass(htmlColorHome);
+              $(this).closest(".views-row").addClass(htmlColorHome);
         } );
     });
     /* Getting the active-trail deeper into the site. */

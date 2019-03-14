@@ -10,6 +10,44 @@
   margin: 1px;
 }
 
+.views-row:hover:before {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.views-row.blue:hover:before {
+  background: linear-gradient(to bottom, rgba(38, 99, 157, 0.5), #26639d 50%);
+  background-size: cover;
+}
+
+.views-row.brightteal:hover:before {
+  background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
+  background-size: cover;
+}
+
+.views-row.charcoal:hover:before {
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), #333433 50%);
+  background-size: cover;
+}
+
+.views-row.pink:hover:before {
+  background: linear-gradient(to bottom, rgba(221, 24, 128, 0.5), #dd1880 50%);
+  background-size: cover;
+}
+
+.views-row.purple:hover:before {
+  background: linear-gradient(to bottom, rgba(151, 24, 93, 0.5), #97185d 50%);
+  background-size: cover;
+}
+
+.views-row.green:hover:before {
+  background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
+  background-size: cover;
+}
+
 .pane-voices-filters-voices-list-cta-panel-pane,
 .pane-gsb-voices-listing-panel-pane-1 {
   padding-bottom: 20px;
@@ -52,7 +90,6 @@
   margin: 50px 45px 0px 0px;
   position: relative;
   width: 22%;
-  height: 410px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
@@ -189,34 +226,6 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.blue,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.blue {
-  background: linear-gradient(to bottom, rgba(38, 99, 157, 0.5), #26639d 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.brightteal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.brightteal {
-  background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.charcoal,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.charcoal {
-  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), #333433 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.pink,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.pink {
-  background: linear-gradient(to bottom, rgba(221, 24, 128, 0.5), #dd1880 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.purple,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.purple {
-  background: linear-gradient(to bottom, rgba(151, 24, 93, 0.5), #97185d 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.white,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.white {
-  background: linear-gradient(rgba(0, 0, 0, 0), #ffffff 50%);
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div.green,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div.green {
-  background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
-}
 
 .pane-voices-filters-voices-list-cta-panel-pane,
 .view-gsb-voices-listing.view-id-gsb_voices_listing,
@@ -349,7 +358,6 @@
 }
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
   border: 1px solid #c4c4c4;
-  height: 500px;
   margin: 50px 45px 0px 0px;
   width: 30%;
 }
@@ -362,13 +370,11 @@
 @media (max-width: 37.4375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
     width: 86%;
-    height: 446px;
     margin: 0px 0px 35px 5px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    height: 410px;
     margin: 0px 30px 35px 0px;
   }
 }
@@ -380,7 +386,6 @@
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
     width: 30%;
-    height: 435px;
   }
 }
 @media (min-width: 23.4375em) and (max-width: 41.6875em) and (orientation: landscape) {
@@ -400,18 +405,12 @@
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    height: 435px;
     margin: 0px 46px 50px 0px;
   }
 }
 @media (min-width: 25.75em) and (max-width: 45.75em) and (orientation: landscape) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
     width: 44%;
-  }
-}
-@media (min-width: 64em) and (max-width: 85.375em) and (orientation: portrait) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    height: 435px;
   }
 }
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
@@ -430,13 +429,11 @@
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
-  height: 500px;
   line-height: 1.5;
 }
 @media (max-width: 37.4375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
     padding: 0;
-    height: 446px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
@@ -448,27 +445,11 @@
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
     padding: 0;
     width: 100.29%;
-    height: 410px;
-  }
-}
-@media (min-width: 48em) and (max-width: 63.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
-    height: 435px;
-  }
-}
-@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
-    height: 435px;
   }
 }
 @media (min-width: 60.0625em) and (max-width: 60.1875em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
     font-size: 15px;
-  }
-}
-@media (min-width: 64em) and (max-width: 85.375em) and (orientation: portrait) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
-    height: 435px;
   }
 }
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-last {
