@@ -656,7 +656,7 @@
             if ((windowWidth >= 600) && (windowHeight >= 600)) {
                 $(this).append(vid_container);
                 //toggle below for seeing image instead of video
-                setWidthHeight('image', 100, 100, windowWidth);
+                setWidthHeight('video', 100, 100, windowWidth);
             }
             else {
                 vid_container.detach();
