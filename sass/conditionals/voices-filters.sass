@@ -7,6 +7,47 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+//Hover gradients
+
+.views-row:hover
+  &:before
+    content: ''
+    height: 100%
+    position: absolute
+    top: 0
+    width: 100%
+
+.views-row.blue:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
+    background-size: cover
+
+.views-row.brightteal:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+    background-size: cover
+
+.views-row.charcoal:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
+    background-size: cover
+
+.views-row.pink:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
+    background-size: cover
+
+.views-row.purple:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
+    background-size: cover
+
+.views-row.green:hover
+  &:before
+    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+    background-size: cover
+    width: 100%
+
 /*All voices customizable lists start*/
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
@@ -25,9 +66,10 @@
     background: $white
     display: inline-block
     margin: 30px 30px 0px 0px
+    padding-bottom: 45px
     position: relative
     width: 22%
-    height: 400px
+    //height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -39,13 +81,16 @@
     +breakpoint($bp-tablet-land)
       width: 28.5%
     +breakpoint($bp-for-phone-only)
-      height: 400px
+      //height: 400px
       margin-left: 25px
+      padding-bottom: 35px
     +breakpoint($bp-iphone6p-port)
       width: 86%
       margin-left: 25px
       margin-right: 25px
+      padding-bottom: 35px
     +breakpoint($bp-iphone6p-land)
+      padding-bottom: 35px
       width: 40.60%
 
     .views-field-title
@@ -121,7 +166,7 @@
           font-family: $font-demi
           font-size: 18px
           line-height: 1.4
-          height: 400px
+          //height: 400px
           left: 0
           padding: 36% 20px
           position: absolute
@@ -141,32 +186,32 @@
             font-size: 16px
             line-height: 1.5
           +breakpoint($bp-for-phone-only)
-            height: 400px
+            //height: 400px
 
-        &.blue
-          background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-        &.brightteal
-          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        &.charcoal
-          background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-        &.green
-          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        &.pink
-          background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-        &.purple
-          background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-        &.white
-          background: linear-gradient(transparent, $white 50%)
+        //&.blue
+        //  background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
+        //&.brightteal
+        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+        //&.charcoal
+        //  background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
+        //&.green
+        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+        //&.pink
+        //  background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
+        //&.purple
+        //  background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
+        //&.white
+        //  background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
       img
-        max-height: 270px !important
+        //max-height: 270px !important
         width: 100%
         +breakpoint($bp-for-tablet-range)
-          width: auto
+          width: 100%
         +breakpoint($bp-for-phone-only)
-          max-height: 300px !important
+          //max-height: 300px !important
         +breakpoint($bp-iphone6p-land)
-          max-height: 300px !important
+          //max-height: 300px !important
 
   // Border for the Cards.
   .views-row
@@ -421,9 +466,10 @@
     background: $white
     display: inline-block
     margin: 30px 30px 0px 0px
+    padding-bottom: 45px
     position: relative
     width: 22.06%
-    height: 400px
+    //height: 400px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -435,7 +481,8 @@
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-for-phone-only)
-      height: 400px
+      //height: 400px
+      padding-bottom: 35px
       width: 86%
 
     .views-field-title
@@ -505,7 +552,7 @@
           color: $white
           cursor: pointer
           display: table
-          height: 400px
+          //height: 400px
           left: 0
           position: absolute
           top: 0
@@ -528,25 +575,25 @@
             font-size: 16px
             line-height: 1.5
           +breakpoint($bp-for-phone-only)
-            height: 400px
+            //height: 400px
 
-        &.blue
-          background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-        &.brightteal
-          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        &.charcoal
-          background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-        &.green
-          background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        &.pink
-          background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-        &.purple
-          background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-        &.white
-          background: linear-gradient(transparent, $white 50%)
+        //&.blue
+        //  background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
+        //&.brightteal
+        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+        //&.charcoal
+        //  background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
+        //&.green
+        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+        //&.pink
+        //  background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
+        //&.purple
+        //  background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
+        //&.white
+        //  background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
       img
-        max-height: 270px !important
+        //max-height: 270px !important
         width: 100%
 
 /*voices list with filters end */
@@ -560,7 +607,7 @@
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 43%
-            height: 400px
+            //height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -578,7 +625,7 @@
             
             .views-field-field-quote div div
               width: 100%
-              height: 400px
+              //height: 400px
               padding-right: 10px
               +breakpoint($bp-for-phone-tablet-range)
                 font-size: 16px
@@ -607,7 +654,7 @@
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 29.39%
-            height: 400px
+            //height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -623,7 +670,7 @@
             +breakpoint($bp-iphone6p-land)
               width: 74%
             +breakpoint($bp-for-phone-only)
-              height: 400px
+              //height: 400px
               width: 80.60%
             +breakpoint($bp-iphone6p-port)
               width: 86%
@@ -634,7 +681,7 @@
               height: 400px
               padding-right: 10px
               +breakpoint($bp-for-phone-only)
-                height: 400px
+                //height: 400px
             .views-field-field-degree-year
               padding: 0px 10px 0px 20px
               word-wrap: break-word
@@ -663,7 +710,7 @@
         .views-field-title
           padding-top: 25px
       width: 270px
-      height: 400px
+      //height: 400px
       .views-field-field-image-single-public
         img
           max-height: auto !important
@@ -712,13 +759,13 @@
 .wide-view
   .pane-voices-filters-voices-list-cta-panel-pane
     .views-row
-      height: 400px
+      //height: 400px
       width: 240px
       +breakpoint($bp-for-phone-tablet-range)
         width: auto
-        height: 400px
+        //height: 400px
       +breakpoint($bp-for-phone-only)
-        height: 400px
+        //height: 400px
         width: 88.60%
         margin-right: 25px
       +breakpoint($bp-iphone6p-port)
@@ -746,7 +793,7 @@
           div
             font-family: $font-demi
             font-size: 18px
-            height: 400px
+            //height: 400px
             line-height: 1.4
             padding: 30% 20px
             &:after
@@ -756,9 +803,9 @@
             +breakpoint($bp-for-phone-tablet-range)
               font-size: 16px
               line-height: 1.5
-              height: 400px
+              //height: 400px
             +breakpoint($bp-for-phone-only)
-              height: 400px
+              //height: 400px
     .pane-content
       .voices_display_list_cta
         background-color: $white
@@ -869,7 +916,7 @@
         margin-right: 0
         width: 100%
         +breakpoint($bp-for-phone-only)
-          height: 400px
+          //height: 400px
 .panels-layout-gsb-landing-standard-page-one
   .content
     .main-middle
@@ -1025,7 +1072,7 @@
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 40%
-            height: 400px
+            //height: 400px
             +breakpoint($bp-for-phone-only)
               width: auto
               margin-left: 25px
@@ -1132,10 +1179,10 @@
           margin-left: 10px
           .views-row
             width: 96%
-            height: 390px
+            //height: 390px
             +breakpoint($bp-for-phone-only)
               width: 86%
-              height: 360px
+              //height: 360px
               margin-bottom: 20px
               margin-left: 10px
             +breakpoint($bp-for-tablet-range)
@@ -1145,23 +1192,23 @@
               width: 44%
             +breakpoint($bp-tablet-pot)
               width: 94%
-              height: 360px
+              //height: 360px
             +breakpoint($bp-tablet-land)
               width: 100%
-              height: 360px
+              //height: 360px
             +breakpoint($bp-iphone6p-land)
               width: 100%
-              height: 360px
+              //height: 360px
             .views-field-field-quote
               div
                 div
-                  height: 390px
+                  //height: 390px
                   +breakpoint($bp-iphone6p-land)
-                    height: 360px
+                    //height: 360px
                   +breakpoint($bp-tablet-pot)
-                    height: 360px
+                    //height: 360px
                   +breakpoint($bp-tablet-land)
-                    height: 360px
+                    //height: 360px
                     font-size: 15px
                   +breakpoint($bp-for-phone-tablet-range)
                     font-size: 16px
@@ -1177,10 +1224,10 @@
           font-size: 24px
         .views-row
           width: 96%
-          height: 390px
+          //height: 390px
           +breakpoint($bp-for-phone-only)
             width: 85%
-            height: 360px
+            //height: 360px
             margin-bottom: 20px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1189,27 +1236,27 @@
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            height: 360px
+            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 90%
-            height: 370px
+            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 100%
-            height: 360px
+            //height: 360px
           +breakpoint($bp-for-phone-only)
             width: 80.60%
           .views-field-field-quote
             div
               div
-                height: 390px
+                //height: 390px
                 +breakpoint($bp-iphone6p-land)
                   font-size: 16px
-                  height: 360px
+                  //height: 360px
                 +breakpoint($bp-tablet-pot)
                   font-size: 16px
-                  height: 360px
+                  //height: 360px
                 +breakpoint($bp-tablet-land)
-                  height: 370px
+                  //height: 370px
                 +breakpoint($bp-for-phone-tablet-range)
                   font-size: 16px
                   line-height: 1.5
@@ -1237,10 +1284,10 @@
             font-size: 24px
         .views-row
           width: 96%
-          height: 390px
+          //height: 390px
           +breakpoint($bp-for-phone-only)
             width: 85%
-            height: 360px
+            //height: 360px
             margin-bottom: 20px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1249,29 +1296,29 @@
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            height: 360px
+            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 90%
-            height: 370px
+            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 92%
-            height: 360px
+            //height: 360px
 
           .views-field-field-quote
             div
               div
-                height: 390px
+                //height: 390px
                 +breakpoint($bp-mobile-land)
-                  height: 360px
+                  //height: 360px
                   font-size: 16px
                 +breakpoint($bp-iphone6p-land)
-                  height: 360px
+                  //height: 360px
                   font-size: 16px
                 +breakpoint($bp-tablet-pot)
-                  height: 360px
+                  //height: 360px
                   font-size: 16px
                 +breakpoint($bp-tablet-land)
-                  height: 370px
+                  //height: 370px
                   font-size: 16px
                 +breakpoint($bp-for-phone-tablet-range)
                   font-size: 16px
@@ -1295,9 +1342,9 @@
       .view-display-id-voices_single_teaser_pane
         .views-row
           width: 100%
-          height: 400px
+          //height: 400px
           +breakpoint($bp-for-phone-tablet-range)
-            height: 400px
+            //height: 400px
             width: 99%
             margin-right: 0px
           +breakpoint($bp-for-phone-only)
@@ -1308,11 +1355,11 @@
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            height: 400px
+            //height: 400px
           .views-field-field-quote
             div
               div
-                height: 400px
+                //height: 400px
                 +breakpoint($bp-mobile-land)
                   height: 370px
                   font-size: 16px
@@ -1371,17 +1418,17 @@
             +breakpoint($bp-mobile-land)
               display: block
               width: 90%
-              height: 360px
+              //height: 360px
             +breakpoint($bp-iphone6p-port)
-              height: 400px
+              //height: 400px
             .views-field-field-quote
               div
                 div
                   +breakpoint($bp-mobile-land)
-                    height: 360px
+                    //height: 360px
                     font-size: 16px
                   +breakpoint($bp-iphone6p-port)
-                    height: 400px
+                    //height: 400px
         .voices_display_list_cta
           +breakpoint($bp-mobile-land)
             width: 84%
@@ -1520,6 +1567,8 @@
             width: 38%
           +breakpoint($bp-tablet-land)
             width: 28.5%
+          +breakpoint($bp-tablet-gap)
+            width: 29.38%
 
       .pane-voices-filters-all-voices-list-panel-pane
         .views-row
@@ -1622,6 +1671,8 @@
             +breakpoint($bp-iphone6p-port)
               width: 80%
               margin-left: 36px
+            +breakpoint($bp-tablet-gap)
+              width: 41%
 
         .view-display-id-all_voices_list_panel_pane
           .views-row
@@ -1642,6 +1693,8 @@
             +breakpoint($bp-iphone6p-port)
               width: 80%
               margin-left: 36px
+            +breakpoint($bp-tablet-gap)
+              width: 41%
         .pane-voices-filters-all-voices-list-panel-pane
           .voices_display_all_list_cta
             +breakpoint($bp-tablet-pot)
@@ -1697,6 +1750,8 @@
               width: 42%
             +breakpoint($bp-iphone6p-port)
               width: 77%
+            +breakpoint($bp-tablet-gap)
+              width: 28.4%
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 33%
@@ -1708,7 +1763,7 @@
               margin-right: 0px
               padding-left: 0px
               padding-right: 0px
-              height: 420px
+              //height: 420px
             +breakpoint($bp-tablet-pot)
               height: auto
               width: 100%
@@ -1779,6 +1834,8 @@
               margin-left: 32px
             +breakpoint($bp-iphone6p-port)
               width: 84%
+            +breakpoint($bp-tablet-gap)
+              width: 28.5%
 
           .view-content
             +breakpoint($bp-mobile-land)
@@ -1853,7 +1910,7 @@
         .view-display-id-voices_single_teaser_pane
           .views-row
             width: 100%
-            height: 420px
+            //height: 420px
             +breakpoint($bp-for-phone-only)
               height: 435px
             +breakpoint($bp-tablet-pot)
@@ -1876,7 +1933,7 @@
               padding-left: 0px
               padding-right: 0px
             +breakpoint($bp-iphone6p-port)
-              height: 450px
+              //height: 450px
               margin-left: 25px
               margin-right: 25px
             +breakpoint($bp-iphone6p-land)
@@ -1911,7 +1968,7 @@
             .views-field-field-quote
               div
                 div
-                  height: 420px
+                  //height: 420px
 /* no side bar Layout code changes */
 .panels-layout-gsb-no-sidebar 
   #sidebar 
@@ -2316,7 +2373,7 @@
           .views-row
             +breakpoint($bp-iphone6p-port)
               width: 99%
-              height: 470px
+              //height: 470px
 
     .inner-main-wrapper 
       .main-footer,
@@ -2328,7 +2385,7 @@
         .view-display-id-voices_single_teaser_pane
           .views-row
             +breakpoint($bp-iphone6p-land)
-              height: 430px
+              //height: 430px
 
 .no-sidebars.panels-layout-gsb-no-sidebar
   .wide-view
@@ -2354,15 +2411,15 @@
     .pane-voices-filters-voices-single-teaser-pane
       .views-row
         width: 100%
-        height: 420px
+        //height: 420px
         .views-field-field-quote
           div
             div
-              height: 420px
+              //height: 420px
         +breakpoint($bp-for-phone-only)
           width: 89%
           margin-left: 20px
-          height: 435px
+          //height: 435px
         +breakpoint($bp-mobile-land)
           width: 45.50%
         +breakpoint($bp-iphone6p-land)
@@ -2424,12 +2481,12 @@
           width: 100%
           +breakpoint($bp-for-phone-only)
             width: 99%
-            height: 420px
+            //height: 420px
           +breakpoint($bp-mobile-land)
             padding-left: 0px
             padding-right: 0px
           +breakpoint($bp-iphone6p-port)
-            height: 435px
+            //height: 435px
           +breakpoint($bp-iphone6p-land)
             width: 100%
             margin-right: 0px
@@ -2467,7 +2524,7 @@
           .views-row
             +breakpoint($bp-mobile-land)
               width: 99%
-              height: 400px
+              //height: 400px
               margin-right: 0px
 
 .no-sidebars.panels-layout-gsb-full-bleed-page
@@ -2480,7 +2537,7 @@
             margin-right: 0px
             height: auto
           +breakpoint($bp-iphone6p-port)
-            height: 455px
+            //height: 455px
           +breakpoint($bp-iphone6p-land)
             height: auto
 
@@ -2520,7 +2577,7 @@
               padding-left: 0px
               padding-right: 0px
             +breakpoint($bp-iphone6p-port)
-              height: 470px
+              //height: 470px
             .views-field-field-image-single-public
               img
                 +breakpoint($bp-mobile-land)
@@ -2541,19 +2598,19 @@
               padding-right: 0px
               margin-left: 0px
               margin-right: 0px
-              height: 445px
+              //height: 445px
             +breakpoint($bp-mobile-land)
-              height: 430px
+              //height: 430px
             +breakpoint($bp-iphone6p-port)
-              height: 470px
+              //height: 470px
     .content
       .main-middle
         .view-display-id-voices_single_teaser_pane 
           .views-row
             +breakpoint($bp-for-phone-only)
-              height: 425px
+              //height: 425px
             +breakpoint($bp-mobile-land)
-              height: 425px
+              //height: 425px
             +breakpoint($bp-iphone6p-land)
               height: auto
             .views-field-field-image-single-public
@@ -2567,20 +2624,20 @@
         .view-display-id-voices_single_teaser_pane 
           .views-row
             +breakpoint($bp-for-phone-only)
-              height: 445px
+              //height: 445px
             +breakpoint($bp-mobile-land)
-              height: 425px
+              //height: 425px
             +breakpoint($bp-iphone6p-port)
-              height: 470px
+              //height: 470px
     #quicklinks
       .view-display-id-voices_single_teaser_pane 
         .views-row
           +breakpoint($bp-for-phone-only)
-            height: 445px
+            //height: 445px
           +breakpoint($bp-mobile-land)
-            height: 400px
+            //height: 400px
           +breakpoint($bp-iphone6p-port)
-            height: 470px
+            //height: 470px
     .inner-content-wrapper
       .inner-main-wrapper
         .main-header,
@@ -2607,7 +2664,7 @@
         +breakpoint($bp-iphone6p-land)
           height: auto
         +breakpoint($bp-mobile-land)
-          height: 425px
+          //height: 425px
         .views-field-field-image-single-public
           img
             +breakpoint($bp-iphone6p-land)
@@ -2620,9 +2677,9 @@
     .view-display-id-voices_single_teaser_pane 
       .views-row
         +breakpoint($bp-for-phone-only)
-          height: 430px
+          //height: 430px
         +breakpoint($bp-iphone6p-port)
-          height: 470px
+          //height: 470px
   .full-header
     .view-display-id-voices_filters_pane
       .views-row
@@ -2663,7 +2720,7 @@
         .view-display-id-voices_single_teaser_pane 
           .views-row
             +breakpoint($bp-iphone6p-land)
-              height: 450px
+              //height: 450px
             +breakpoint($bp-tablet-pot)
               height: auto
             +breakpoint($bp-tablet-land)
@@ -2703,13 +2760,13 @@
         .view-content 
           .views-row
             +breakpoint($bp-iphone6p-port)
-              height: 460px
+              //height: 460px
 
   .main-middle
     .view-display-id-voices_single_teaser_pane 
       .views-row
         +breakpoint($bp-iphone6p-land)
-          height: 450px
+          //height: 450px
           margin-left: 25px
           margin-right: 25px
 
