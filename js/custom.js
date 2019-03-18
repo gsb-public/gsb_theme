@@ -576,77 +576,105 @@
     /* viewport sizing */
     $(function() {
 
+        // tagging video player div
+        var vid = $('#kaltura-player1');
+        // tagging image div
+        var img = $('.panels-layout-gsb-homepage .pane-landingpage-video img, .panels-layout-gsb-homepage .pane-bundle-landing-viewport img');
+        // setting default video resolution
+        var vid_w_orig = 2800;
+        var vid_h_orig = 1600;
+        // setting default mobile img resolution
+        var mob_w_orig = 1200;
+        var mob_h_orig = 1600;
+        // setting default tablet img resolution
+        var tab_w_orig = 2398;
+        var tab_h_orig = 1440;
+
+        function setVideoScale(choice, width, height) {
+              // get the parent element size
+              var container_w = choice.parent().width();
+              var container_h = choice.parent().height();
+              // use largest scale factor of horizontal/vertical
+              var scale_w = container_w / width;
+              var scale_h = container_h / height;
+              var scale = scale_w > scale_h ? scale_w : scale_h;
+              // scale the component
+              vid.width(scale * width);
+              vid.height(scale * height);
+        };
+
         function setWidthHeight(type, vpWidth, vpHeight, windowWidth) {
             if (type === 'video') {
                 $('.pane-landingpage-video, #landing-video').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
-                $('#kaltura-player1').css({'overflow': 'visible', 'bottom': '300px'});
-
-                if ((windowWidth >= 600) && (windowWidth < 1200)) {
-                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '30px'})
-                }
-                else if ((windowWidth >= 1200) && (windowWidth < 1400)){
-                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '59px', 'margin-bottom': '-85px'});
-                }
-                else if ((windowWidth >= 1400) && (windowWidth < 1920)){
-                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '53px', 'margin-bottom': '-70px'});
-                }
-                else if (windowWidth >= 1920) {
-                    $('.pane-bundle-landing-viewport, .landing-video').css({'bottom': '54px', 'margin-bottom': '-10px'});
-                }
+                $('#kaltura-player1').css({'bottom': '15%'});
+                setVideoScale(vid, vid_w_orig, vid_h_orig);
             }
             else if (type === 'image') {
                 $('.field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
 
-                if ((windowWidth >= 320) && (windowWidth < 768)) {
-                    $('.field-name-field-homepage-image-mobile').css({'bottom': '50px', 'margin-top': '-120px'});
-                    $('.field-name-field-homepage-image-tablet').css({'bottom': '50px', 'margin-top': '-35px'});
+                if ((windowWidth >= 320) && (windowWidth < 600)) {
+                    $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-50px'});
+                    setVideoScale(img, mob_w_orig, mob_h_orig);
                 }
-                else if ((windowWidth >= 768) && (windowWidth < 1366)){
+                else if ((windowWidth >= 600) && (windowWidth < 667)) {
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-64px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
+                }
+                else if ((windowWidth >= 667) && (windowWidth < 737)) {
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-35px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
+                }
+                else if ((windowWidth >= 737) && (windowWidth < 768)) {
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-64px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
+                }
+                else if ((windowWidth >= 768) && (windowWidth < 1025)){
                     $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '5px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
                 }
-                else if ((windowWidth >= 1366)){
+                else if ((windowWidth >= 1025) && (windowWidth < 1200)){
+                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-65px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
+                }
+                else if ((windowWidth >= 1200) && (windowWidth < 1365)){
+                    $('.field-name-field-homepage-image-desktop').css({'margin-bottom': '-20px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
+                }
+                else if ((windowWidth >= 1365)){
                     $('.field-name-field-homepage-image-desktop').css({'margin-bottom': '-19px'});
-                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '4px'});
+                    setVideoScale(img, tab_w_orig, tab_h_orig);
                 }
             }
         };
 
         // encapsulates video div so not to overlap image div with blank screen when not in use
-        var video = $('div.landing-video').wrapAll('<div class="video-scale"></div>');
+        var vid_container = $('div.landing-video').wrapAll('<div class="video-scale"></div>');
 
         function inspectViewPort() {
             windowHeight = $(window).innerHeight();
             windowWidth = $(window).innerWidth();
             if ((windowWidth >= 600) && (windowHeight >= 600)) {
-                $(this).append(video);
+                $(this).append(vid_container);
                 //toggle below for seeing image instead of video
                 setWidthHeight('video', 100, 100, windowWidth);
             }
             else {
-                video.detach();
+                vid_container.detach();
                 setWidthHeight('image', 100, 100, windowWidth);
             }
         };
-
-        // declares initial sizes for viewports on first page load
-        $(function() {
-            inspectViewPort();
-        });
 
         // jQuery function literal for smart resizing
         (function($,sr){
             // http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
             // detection period 'threshold', and a boolean indicating whether the signal should happen at the beginning of the detection period (true) or at the end 'execAsap'
             var debounce = function (func, threshold, execAsap) {
-
                 // handle to setTimeout async task (detection period)
                 var timeout;
-
                 // return the new debounced function which executes the original function only once until the detection period expires
                 return function debounced () {
                     var obj = this; // reference to original context object
                     var args = arguments; // arguments object at execution time
-
                     // detection is executed if/when the threshold expires
                     function delayed () {
                         // if we're executing at the end of the detection period
@@ -654,14 +682,12 @@
                             func.apply(obj, args); // execute now
                         timeout = null; // clear timeout handle
                     };
-
                     // stop any current detection period
                     if (timeout)
                         clearTimeout(timeout);
                     // if we're not waiting, and we're executing at the beginning of the detection period
                     else if (execAsap)
                         func.apply(obj, args); // execute now
-
                     // reset the detection period
                     timeout = setTimeout(delayed, threshold || 100);
                 };
@@ -670,6 +696,8 @@
             jQuery.prototype[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
         })(jQuery,'smartresize');
 
+        // declares initial sizes for viewports on first page load
+        inspectViewPort();
         // will now recognize orientation change with throttling and debouncing checks
         $(window).smartresize(function(){
             inspectViewPort();

@@ -83,7 +83,9 @@
       +breakpoint($bp-for-phone-only)
         max-width: 90%
       +breakpoint(568px 667px)
-        bottom: 100px
+        bottom: 120px
+      +breakpoint(668px 736px)
+        bottom: 160px
       span
         line-height: 2em
         font-size: 36px
@@ -233,7 +235,6 @@
   .pane-landingpage-video,
   .pane-bundle-landing-viewport
     align-items: baseline
-    //display: flex
     justify-content: center
     overflow: hidden
     position: relative
@@ -244,17 +245,17 @@
       height: 100%
 
     img
-      transform: scale(2, 2)
-      transform-origin: 50% 10%
-      +breakpoint(568px 736px)
-        transform: scale(1, 1)
-        transform-origin: 50% 40%
-      +breakpoint($bp-ipad-range)
-        transform: scale(4, 4)
-        transform-origin: 48% 35%
+      position: absolute
+      top: 50%
+      left: 50%
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      -ms-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      transform-origin: 50% 40%
       +breakpoint(1025px min-width)
-        transform: scale(1.5, 1.5)
-        transform-origin: 50% 50%
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
+        -ms-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
+        transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
 
     video.splash__video__media,
     .field-type-image
@@ -268,39 +269,41 @@
       display: block
     #landing-video
       width: 100%
-      height: 100%
+      height: 100vh
       display: inline-block
       position: relative
+      overflow: hidden
+      +breakpoint(0px 319px)
+        display: none
+      +breakpoint(768px 879px)
+        margin-bottom: -4%
+      +breakpoint(880px 1024px)
+        margin-bottom: -3.5%
+      +breakpoint(1025px 1083px)
+        margin-bottom: -6.5%
+      +breakpoint(1084px 1100px)
+        margin-bottom: -6.4%
+      +breakpoint(1101px 1154px)
+        margin-bottom: -6.1%
+      +breakpoint(1155px 1199px)
+        margin-bottom: -5.8%
+      +breakpoint(1200px 1237px)
+        margin-bottom: -4.8%
+      +breakpoint(1238px 1381px)
+        margin-bottom: -4.3%
+      +breakpoint(1382px 1485px)
+        margin-bottom: -4%
+      +breakpoint(1485px min-width)
+        margin-bottom: -55px
       #kaltura-player1
-        +breakpoint($bp-ipad-range (orientation landscape))
-          width: 130%
-          height: 130%
-          margin-top: -62px
-          margin-left: -150px
-        +breakpoint($bp-ipad-pro-range (orientation landscape))
-          width: 130%
-          height: 130%
-          margin-top: -100px
-          margin-left: -150px
-        +breakpoint((min-height 1024px) (max-height 1365px) (orientation portrait))
-          width: 225%
-          height: 225%
-          margin-top: -79%
-          margin-left: -25%
-        +breakpoint((min-height 1366px) (orientation portrait))
-          width: 260%
-          height: 260%
-          margin-top: -100%
-          margin-left: -60%
-        +breakpoint(1367px min-width)
-          width: 100%
-          height: 100%
-          position: relative
-          padding-top: 56.25%
-
+        padding-bottom: 56.25%
+        -webkit-transform: scale(1.2, 1.2)
+        -ms-transform: scale(1.2, 1.2)
+        transform: scale(1.2, 1.2)
         #kaltura-player1_ifp
           position: absolute
-          top: 0px
-          left: 0px
-          width: 100%
-          height: 100%
+          top: 50%
+          left: 50%
+          -webkit-transform: translateX(-50%) translateY(-50%)
+          -ms-transform: translateX(-50%) translateY(-50%)
+          transform: translateX(-50%) translateY(-50%)
