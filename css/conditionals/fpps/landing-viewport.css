@@ -109,7 +109,12 @@
 }
 @media (min-width: 35.5em) and (max-width: 41.6875em) {
   .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text {
-    bottom: 100px;
+    bottom: 120px;
+  }
+}
+@media (min-width: 41.75em) and (max-width: 46em) {
+  .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text {
+    bottom: 160px;
   }
 }
 .pane-bundle-landing-viewport .viewport-text-wrapper .viewport-text span {
@@ -369,28 +374,20 @@
 }
 .panels-layout-gsb-homepage .pane-landingpage-video img,
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
-  transform: scale(2, 2);
-  transform-origin: 50% 10%;
-}
-@media (min-width: 35.5em) and (max-width: 46em) {
-  .panels-layout-gsb-homepage .pane-landingpage-video img,
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
-    transform: scale(1, 1);
-    transform-origin: 50% 40%;
-  }
-}
-@media (min-width: 48em) and (max-width: 64em) {
-  .panels-layout-gsb-homepage .pane-landingpage-video img,
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
-    transform: scale(4, 4);
-    transform-origin: 48% 35%;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5);
+  transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5);
+  transform-origin: 50% 40%;
 }
 @media (min-width: 64.0625em) {
   .panels-layout-gsb-homepage .pane-landingpage-video img,
   .panels-layout-gsb-homepage .pane-bundle-landing-viewport img {
-    transform: scale(1.5, 1.5);
-    transform-origin: 50% 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5);
+    transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5);
   }
 }
 .panels-layout-gsb-homepage .pane-landingpage-video video.splash__video__media,
@@ -409,82 +406,77 @@
 }
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: inline-block;
   position: relative;
+  overflow: hidden;
+}
+@media (min-width: 0em) and (max-width: 19.9375em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    display: none;
+  }
+}
+@media (min-width: 48em) and (max-width: 54.9375em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -4%;
+  }
+}
+@media (min-width: 55em) and (max-width: 64em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -3.5%;
+  }
+}
+@media (min-width: 64.0625em) and (max-width: 67.6875em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -6.5%;
+  }
+}
+@media (min-width: 67.75em) and (max-width: 68.75em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -6.4%;
+  }
+}
+@media (min-width: 68.8125em) and (max-width: 72.125em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -6.1%;
+  }
+}
+@media (min-width: 72.1875em) and (max-width: 74.9375em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -5.8%;
+  }
+}
+@media (min-width: 75em) and (max-width: 77.3125em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -4.8%;
+  }
+}
+@media (min-width: 77.375em) and (max-width: 86.3125em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -4.3%;
+  }
+}
+@media (min-width: 86.375em) and (max-width: 92.8125em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -4%;
+  }
+}
+@media (min-width: 92.8125em) {
+  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video {
+    margin-bottom: -55px;
+  }
 }
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-  min-width: 100vw;
-  min-height: 100vh;
-  margin-top: 5%;
-}
-@media (min-height: 48em) and (max-height: 83.4375em) and (min-width: 64em) and (max-width: 83.5em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 150%;
-    height: 150%;
-    margin-top: -10%;
-    margin-left: -20%;
-  }
-}
-@media (min-height: 64em) and (max-height: 83.5em) and (min-width: 48em) and (max-width: 64em) and (orientation: portrait) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 295%;
-    height: 295%;
-    margin-top: -145%;
-    margin-left: -30%;
-  }
-}
-@media (min-height: 83.5625em) and (min-width: 48em) and (orientation: portrait) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 300%;
-    height: 300%;
-    margin-top: -150%;
-    margin-left: -100%;
-  }
-}
-@media (min-height: 0em) and (max-height: 20.5625em) and (min-width: 48em) and (max-width: 85.375em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 600vw;
-    height: 600vh;
-    margin-top: -30%;
-    margin-left: -250%;
-  }
-}
-@media (min-height: 20.625em) and (max-height: 47.9375em) and (min-width: 48em) and (max-width: 62.5em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 135%;
-    height: 135%;
-    margin-top: -10%;
-    margin-left: -18%;
-  }
-}
-@media (min-height: 20.6875em) and (max-height: 47.9375em) and (min-width: 62.5625em) and (max-width: 81.25em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 190%;
-    height: 190%;
-    margin-top: -10%;
-    margin-left: -45%;
-  }
-}
-@media (min-height: 20.625em) and (max-height: 47.9375em) and (min-width: 48em) and (max-width: 81.3125em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 220%;
-    height: 220%;
-    margin-top: -10%;
-    margin-left: -60%;
-  }
-}
-@media (min-height: 37.5em) and (max-height: 47.9375em) and (min-width: 81.3125em) and (max-width: 85.3125em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 {
-    width: 120%;
-    height: 120%;
-    margin-left: -10%;
-  }
+  padding-bottom: 56.25%;
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport #landing-video #kaltura-player1 #kaltura-player1_ifp {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
