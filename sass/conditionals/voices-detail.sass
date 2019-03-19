@@ -436,10 +436,15 @@
             &:after
               color: $red
               top: 50%
+            +breakpoint($bp-tablet-land)
+              width: 85%  
         .field-voices-explore-program-cta
           a.cta
             margin-top: 0px
             color: $text-green
+            padding-right: 26px
+            +breakpoint($bp-for-phone-tablet-range)
+              padding-right: 30px
             &:hover
               color: $text-green
         .field-voices-stay-in-touch-cta
@@ -450,6 +455,9 @@
               color: $text-green
         .field-name-voices-ct-background-rail
           margin-bottom: 30px
+          a.cta
+            +breakpoint($bp-tablet-pot)
+              padding-right: 34px
         fieldset.group-wrapper-related
           margin-top: 30px
           .fieldset-wrapper
