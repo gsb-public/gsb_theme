@@ -54,9 +54,6 @@ a[class^="bg-"]:hover
 .view-display-id-voices_single_teaser_pane,
 .view-display-id-voices_filters_pane,
 .view-voices-filters
-  //view-id-voices_filters view-display-id-voices_filters_pane view-dom-id-f6a56932071db25c30241c9955169fd7 jquery-once-2-processed
-
-  //padding-bottom: 20px
   width: 100%
   .view-content
     +breakpoint($bp-for-phone-tablet-range)
@@ -75,11 +72,15 @@ a[class^="bg-"]:hover
     width: 22%
     &:hover
       box-shadow: 0 0 4px 2px #c4c4c4
-      // Hover for the quote
+      // Hover for the quote for all the Cards.
       div.views-field-field-quote
         opacity: 1
       div.views-field-title
         color: $white
+        text-decoration: underline
+        &:after
+          color: $white
+
 
     +breakpoint($bp-for-phone-tablet-range)
       display: block
@@ -92,7 +93,6 @@ a[class^="bg-"]:hover
     +breakpoint($bp-tablet-land)
       width: 28.5%
     +breakpoint($bp-for-phone-only)
-      //height: 400px
       margin-left: 25px
       padding-bottom: 35px
     +breakpoint($bp-iphone6p-port)
@@ -142,27 +142,6 @@ a[class^="bg-"]:hover
       word-wrap: break-word
       +breakpoint($bp-for-phone-tablet-range)
         font-size: 14px
-    //div:hover .field-name-field-quote
-    //  div
-    //    div
-    //      opacity: 1
-    //&:hover
-    //  box-shadow: 0 0 4px 2px #c4c4c4
-    //  .views-field-field-quote
-    //    div
-    //      div
-    //        opacity: 1
-    //  .views-field-title
-    //    padding-top: 25px
-    //    a
-    //      color: $white
-    //    a:after,
-    //    a:hover:after
-    //      color: $white !important
-    //
-    //  .views-field-field-degree-year,
-    //  .views-field-field-endowed-title-appointment
-    //    color: $white
 
     .views-field-field-quote
       color: $white
@@ -171,7 +150,6 @@ a[class^="bg-"]:hover
       font-family: $font-demi
       font-size: 18px
       line-height: 1.4
-      //height: 400px
       left: 0
       padding: 36% 20px
       position: absolute
@@ -194,21 +172,16 @@ a[class^="bg-"]:hover
 
     .views-field-field-image-single-public
       img
-        //max-height: 270px !important
         width: 100%
         +breakpoint($bp-for-tablet-range)
           width: 100%
-        +breakpoint($bp-for-phone-only)
-          //max-height: 300px !important
-        +breakpoint($bp-iphone6p-land)
-          //max-height: 300px !important
 
   // Border for the Cards.
   .views-row
     border: 1px solid $listing-divider
 
 .pane-voices-filters-all-voices-list-panel-pane
-  padding: 0px 0px 35px 30px
+  padding: 0 0 35px 30px
   +breakpoint($bp-for-phone-only)
     padding: 0
   .pane-title
@@ -337,7 +310,6 @@ a[class^="bg-"]:hover
         +breakpoint($bp-iphone6p-port)
           width: 80%
           margin-left: 36px
-
 
 /* CTA Button End */
 
@@ -470,7 +442,6 @@ a[class^="bg-"]:hover
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-for-phone-only)
-      //height: 400px
       padding-bottom: 35px
       width: 86%
 
@@ -515,15 +486,11 @@ a[class^="bg-"]:hover
       position: relative
       word-wrap: break-word
     div:hover .field-name-field-quote
-      div
-        div
-          opacity: 1
+      opacity: 1
     &:hover
       box-shadow: 0 0 4px 2px #c4c4c4
       .views-field-field-quote
-        div
-          div
-            opacity: 1
+        opacity: 1
       .views-field-title
         padding-top: 25px
         a
@@ -535,51 +502,7 @@ a[class^="bg-"]:hover
       .views-field-field-degree-year,
       .views-field-field-endowed-title-appointment
         color: $white
-    .views-field-field-quote
-      div
-        div
-          color: $white
-          cursor: pointer
-          display: table
-          //height: 400px
-          left: 0
-          position: absolute
-          top: 0
-          width: 100.5%
-          opacity: 0
-          -webkit-transition: opacity 500ms
-          -moz-transition: opacity 500ms
-          -o-transition: opacity 500ms
-          transition: opacity 500ms
-          padding: 36% 20px
-          text-align: left
-          font-size: 18px
-          line-height: 1.4
-          font-family: $font-demi
-          &:after
-            content: '”'
-          &:before
-            content: '“'
-          +breakpoint($bp-for-phone-tablet-range)
-            font-size: 16px
-            line-height: 1.5
-          +breakpoint($bp-for-phone-only)
-            //height: 400px
 
-        //&.blue
-        //  background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-        //&.brightteal
-        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        //&.charcoal
-        //  background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-        //&.green
-        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        //&.pink
-        //  background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-        //&.purple
-        //  background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-        //&.white
-        //  background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
       img
         //max-height: 270px !important
@@ -597,7 +520,6 @@ a[class^="bg-"]:hover
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 43%
-            //height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -615,16 +537,15 @@ a[class^="bg-"]:hover
             
             .views-field-field-quote div div
               width: 100%
-              //height: 400px
               padding-right: 10px
               +breakpoint($bp-for-phone-tablet-range)
                 font-size: 16px
                 line-height: 1.5
             .views-field-field-degree-year
-              padding: 0px 10px 0px 20px
+              padding: 0 10px 0 20px
               word-wrap: break-word
             .views-field-field-endowed-title-appointment
-              padding: 0px 10px 10px 20px
+              padding: 0 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
             padding-top: 25px
@@ -644,7 +565,6 @@ a[class^="bg-"]:hover
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 29.39%
-            //height: 400px
             +breakpoint($bp-for-phone-only)
               display: block
               width: auto
@@ -660,7 +580,6 @@ a[class^="bg-"]:hover
             +breakpoint($bp-iphone6p-land)
               width: 74%
             +breakpoint($bp-for-phone-only)
-              //height: 400px
               width: 80.60%
             +breakpoint($bp-iphone6p-port)
               width: 86%
@@ -671,12 +590,11 @@ a[class^="bg-"]:hover
               height: 400px
               padding-right: 10px
               +breakpoint($bp-for-phone-only)
-                //height: 400px
             .views-field-field-degree-year
-              padding: 0px 10px 0px 20px
+              padding: 0 10px 0 20px
               word-wrap: break-word
             .views-field-field-endowed-title-appointment
-              padding: 0px 10px 10px 20px
+              padding: 0 10px 10px 20px
               word-wrap: break-word
           .views-row:hover .views-field-title
             padding-top: 25px
@@ -700,7 +618,6 @@ a[class^="bg-"]:hover
         .views-field-title
           padding-top: 25px
       width: 270px
-      //height: 400px
       .views-field-field-image-single-public
         img
           max-height: auto !important
@@ -743,19 +660,16 @@ a[class^="bg-"]:hover
           margin-left: 20px
 
       .view-content
-        margin-left: 0px
+        margin-left: 0
     .pane-title
-      margin-left: 0px
+      margin-left: 0
 .wide-view
   .pane-voices-filters-voices-list-cta-panel-pane
     .views-row
-      //height: 400px
       width: 240px
       +breakpoint($bp-for-phone-tablet-range)
         width: auto
-        //height: 400px
       +breakpoint($bp-for-phone-only)
-        //height: 400px
         width: 88.60%
         margin-right: 25px
       +breakpoint($bp-iphone6p-port)
@@ -937,11 +851,11 @@ a[class^="bg-"]:hover
     .superwide-view
       .pane-voices-filters-voices-list-cta-panel-pane
         .pane-title
-          margin-left: 0px
+          margin-left: 0
           +breakpoint($bp-for-phone-range)
             margin-left: 20px 
         .view-content
-          margin-left: 0px
+          margin-left: 0
           +breakpoint($bp-for-phone-range)
             margin-left: 20px 
         .views-row
@@ -949,7 +863,7 @@ a[class^="bg-"]:hover
           margin-right: 20px
           +breakpoint($bp-for-phone-range)
             width: 90.7%
-            margin-left: 0px
+            margin-left: 0
           +breakpoint($bp-mobile-land)
             width: 44.5%
           +breakpoint($bp-iphone6p-land)
@@ -970,7 +884,7 @@ a[class^="bg-"]:hover
 .view-display-id-voices_single_teaser_pane
   .views-row
     width: 100%
-    margin-top: 0px
+    margin-top: 0
     .views-field-field-image-single-public
       img
         height: auto
@@ -991,10 +905,10 @@ a[class^="bg-"]:hover
     .views-row
       +breakpoint($bp-for-phone-only)
         width: 99%
-        margin-left: 0px
-        margin-right: 0px
-        padding-left: 0px
-        padding-right: 0px
+        margin-left: 0
+        margin-right: 0
+        padding-left: 0
+        padding-right: 0
       +breakpoint($bp-for-tablet-range)
         width: auto
       +breakpoint($bp-iphone6p-port)
@@ -1011,15 +925,14 @@ a[class^="bg-"]:hover
     .view-display-id-voices_single_teaser_pane
       .views-row
         +breakpoint($bp-for-phone-only)
-          margin-left: 0px
-          height: 435px
+          margin-left: 0
   .wide-view
     .pane-voices-filters-all-voices-list-panel-pane
       .pane-content
         +breakpoint($bp-for-phone-only)
           padding-bottom: 25px
         +breakpoint($bp-mobile-land)
-          padding-bottom: 0px
+          padding-bottom: 0
         .voices_display_all_list_cta
           +breakpoint($bp-for-phone-only)
             margin-left: 30px
@@ -1031,10 +944,10 @@ a[class^="bg-"]:hover
       .view-display-id-voices_single_teaser_pane
         .views-row
           +breakpoint($bp-for-phone-only)
-            margin-left: 0px
-            height: 430px
+            margin-left: 0
+            //height: 430px
           +breakpoint($bp-iphone6p-port)
-            height: 470px
+            //height: 470px
 
 .inner-main-wrapper
   .main-header,
@@ -1204,13 +1117,13 @@ a[class^="bg-"]:hover
               line-height: 1.5
         .voices_display_list_cta
           width: 240px
-          margin: 10px 0px 10px 8px
+          margin: 10px 0 10px 8px
           +breakpoint($bp-for-phone-only)
             width: 80% !important
             margin-left: 4px
             margin-top: 20px
           +breakpoint($bp-mobile-land)
-            margin: 20px auto 0px auto
+            margin: 20px auto 0 auto
             width: 50%
 
 .gsb-landing-standard-page-one,
@@ -1221,7 +1134,7 @@ a[class^="bg-"]:hover
       .pane-voices-filters-all-voices-list-panel-pane
         padding: 0px 0px 20px 20px
         .pane-title
-          padding: 20px 0px 0px 0px
+          padding: 20px 0 0 0
           h2
             font-size: 24px
         .views-row
@@ -1261,7 +1174,7 @@ a[class^="bg-"]:hover
 
         .voices_display_all_list_cta
           width: 240px
-          margin: 10px 0px 10px 0px
+          margin: 10px 0 10px 0
           +breakpoint($bp-for-phone-only)
             margin-left: 6px
             width: 84% !important
@@ -1279,7 +1192,7 @@ a[class^="bg-"]:hover
           width: 100%
           +breakpoint($bp-for-phone-tablet-range)
             width: 99%
-            margin-right: 0px
+            margin-right: 0
           +breakpoint($bp-for-phone-only)
             height: 430px
           +breakpoint($bp-iphone6p-port)
@@ -1303,7 +1216,7 @@ a[class^="bg-"]:hover
           width: 42%
           +breakpoint($bp-for-phone-only)
             width: 85%
-            height: 360px
+            //height: 360px
             margin-bottom: 10px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1312,22 +1225,22 @@ a[class^="bg-"]:hover
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 66%
-            height: 360px
+            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 60%
-            height: 370px
+            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 82%
           &:hover
             .views-field-title
               padding-top: 25px
             .views-field-field-quote
-              height: 390px
+              //height: 390px
               +breakpoint($bp-tablet-pot)
-                height: 360px
+                //height: 360px
                 font-size: 16px
               +breakpoint($bp-tablet-land)
-                height: 370px
+                //height: 370px
                 font-size: 16px
 
 .gsb-landing-standard-page-one
@@ -1352,25 +1265,25 @@ a[class^="bg-"]:hover
     .voices_display_list_cta
       +breakpoint($bp-mobile-land)
         width: 84%
-        margin: 10px 10px 0px 0px
+        margin: 10px 10px 0 0
       .view-display-id-voices_single_teaser_pane
         .view-content
           .views-row
             +breakpoint($bp-mobile-land)
               width: 100%
-              height: 400px
-              margin-right: 0px
+              //height: 400px
+              margin-right: 0
             .views-field-field-quote
               +breakpoint($bp-mobile-land)
-                height: 400px
+                //height: 400px
 
 .gsb-full-bleed-page
   .full-bleed-header,
   .featured-content
     .pane-voices-filters-all-voices-list-panel-pane
-      padding-left: 0px
+      padding-left: 0
       +breakpoint($bp-for-phone-tablet-range)
-        padding-left: 0px
+        padding-left: 0
       +breakpoint($bp-mobile-land)
         padding-left: 30px
       +breakpoint($bp-iphone6p-land)
@@ -1416,13 +1329,13 @@ a[class^="bg-"]:hover
     .pane-voices-filters-voices-filters-pane,
     .pane-voices-filters-voices-list-cta-panel-pane
       .view-content
-        margin-left: 0px
+        margin-left: 0
         +breakpoint($bp-for-phone-tablet-range)
           margin-left: 30px
     .pane-voices-filters-voices-list-cta-panel-pane
       .view-content
         +breakpoint($bp-for-phone-only)
-          margin-left: 0px
+          margin-left: 0
       .pane-title
         width: 1170px
         margin: 0 auto
@@ -1502,7 +1415,7 @@ a[class^="bg-"]:hover
           width: 29.51%
           +breakpoint($bp-for-phone-tablet-range)
             width: 87.70%
-            margin-left: 0px
+            margin-left: 0
           +breakpoint($bp-for-phone-only)
             width: 87.60%
             margin-right: 10px
@@ -1525,11 +1438,11 @@ a[class^="bg-"]:hover
               margin-left: 36px
       .pane-voices-filters-voices-list-cta-panel-pane 
         .pane-title
-          margin-left: 0px
+          margin-left: 0
           +breakpoint($bp-for-phone-tablet-range)
             margin-left: 26px
         .view-content
-          margin-left: 0px
+          margin-left: 0
           +breakpoint($bp-for-phone-tablet-range)
             margin-left: 26px
       .view-display-id-voices_filters_pane
