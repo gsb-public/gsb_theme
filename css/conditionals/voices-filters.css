@@ -14,7 +14,10 @@
   margin: 1px;
 }
 
-.views-row:hover:before {
+a[class^="bg-"]:hover {
+  text-decoration: none;
+}
+a[class^="bg-"]:hover:before {
   content: "";
   height: 100%;
   position: absolute;
@@ -22,32 +25,32 @@
   width: 100%;
 }
 
-.views-row.blue:hover:before {
+.views-row .bg-blue:hover:before {
   background: linear-gradient(to bottom, rgba(38, 99, 157, 0.5), #26639d 50%);
   background-size: cover;
 }
 
-.views-row.brightteal:hover:before {
+.views-row .bg-brightteal:hover:before {
   background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
   background-size: cover;
 }
 
-.views-row.charcoal:hover:before {
+.views-row .bg-charcoal:hover:before {
   background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), #333433 50%);
   background-size: cover;
 }
 
-.views-row.pink:hover:before {
+.views-row .bg-pink:hover:before {
   background: linear-gradient(to bottom, rgba(221, 24, 128, 0.5), #dd1880 50%);
   background-size: cover;
 }
 
-.views-row.purple:hover:before {
+.views-row .bg-purple:hover:before {
   background: linear-gradient(to bottom, rgba(151, 24, 93, 0.5), #97185d 50%);
   background-size: cover;
 }
 
-.views-row.green:hover:before {
+.views-row .bg-green:hover:before {
   background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
   background-size: cover;
   width: 100%;
@@ -56,14 +59,17 @@
 /*All voices customizable lists start */
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
-.view-display-id-voices_single_teaser_pane {
-  padding-bottom: 20px;
+.view-display-id-voices_single_teaser_pane,
+.view-display-id-voices_filters_pane,
+.view-voices-filters {
   width: 100%;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content,
   .pane-voices-filters-voices-list-cta-panel-pane .view-content,
-  .view-display-id-voices_single_teaser_pane .view-content {
+  .view-display-id-voices_single_teaser_pane .view-content,
+  .view-display-id-voices_filters_pane .view-content,
+  .view-voices-filters .view-content {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -71,12 +77,16 @@
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .view-content > div,
 .pane-voices-filters-voices-list-cta-panel-pane .view-content > div,
-.view-display-id-voices_single_teaser_pane .view-content > div {
+.view-display-id-voices_single_teaser_pane .view-content > div,
+.view-display-id-voices_filters_pane .view-content > div,
+.view-voices-filters .view-content > div {
   vertical-align: top;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-.view-display-id-voices_single_teaser_pane .views-row {
+.view-display-id-voices_single_teaser_pane .views-row,
+.view-display-id-voices_filters_pane .views-row,
+.view-voices-filters .views-row {
   border: 1px solid #c4c4c4;
   background: white;
   display: inline-block;
@@ -85,10 +95,33 @@
   position: relative;
   width: 22%;
 }
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover,
+.view-display-id-voices_single_teaser_pane .views-row:hover,
+.view-display-id-voices_filters_pane .views-row:hover,
+.view-voices-filters .views-row:hover {
+  box-shadow: 0 0 4px 2px #c4c4c4;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover div.views-field-field-quote,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover div.views-field-field-quote,
+.view-display-id-voices_single_teaser_pane .views-row:hover div.views-field-field-quote,
+.view-display-id-voices_filters_pane .views-row:hover div.views-field-field-quote,
+.view-voices-filters .views-row:hover div.views-field-field-quote {
+  opacity: 1;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover div.views-field-title,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover div.views-field-title,
+.view-display-id-voices_single_teaser_pane .views-row:hover div.views-field-title,
+.view-display-id-voices_filters_pane .views-row:hover div.views-field-title,
+.view-voices-filters .views-row:hover div.views-field-title {
+  color: white;
+}
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     display: block;
     width: auto;
   }
@@ -96,7 +129,9 @@
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     width: 44%;
     display: block;
   }
@@ -104,21 +139,27 @@
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     width: 39%;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     width: 28.5%;
   }
 }
 @media (max-width: 37.4375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     margin-left: 25px;
     padding-bottom: 35px;
   }
@@ -126,7 +167,9 @@
 @media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     width: 86%;
     margin-left: 25px;
     margin-right: 25px;
@@ -136,35 +179,36 @@
 @media (min-width: 46em) and (max-width: 47.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-  .view-display-id-voices_single_teaser_pane .views-row {
+  .view-display-id-voices_single_teaser_pane .views-row,
+  .view-display-id-voices_filters_pane .views-row,
+  .view-voices-filters .views-row {
     padding-bottom: 35px;
     width: 40.6%;
   }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title {
+.view-display-id-voices_single_teaser_pane .views-row .views-field-title,
+.view-display-id-voices_filters_pane .views-row .views-field-title,
+.view-voices-filters .views-row .views-field-title {
   color: #636f00;
   font-size: 24px;
   padding: 25px 0 10px 20px;
   position: relative;
   text-align: left;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title a {
-  color: #636f00;
-  font-size: 24px;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:hover,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:hover,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title a:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title:hover,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:hover,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-title:hover,
+.view-display-id-voices_filters_pane .views-row .views-field-title:hover,
+.view-voices-filters .views-row .views-field-title:hover {
   text-decoration: none;
-  border-bottom: 2px solid white;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title a:after {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-title:after,
+.view-display-id-voices_filters_pane .views-row .views-field-title:after,
+.view-voices-filters .views-row .views-field-title:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -185,22 +229,28 @@
   margin-top: 0;
   padding-left: 10px;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:hover,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:hover,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title a:after:hover {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title:after:hover,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after:hover,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-title:after:hover,
+.view-display-id-voices_filters_pane .views-row .views-field-title:after:hover,
+.view-voices-filters .views-row .views-field-title:after:hover {
   color: #bac405;
   text-decoration: none;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a:after:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a:after:after,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-title a:after:after {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title:after:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after:after,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-title:after:after,
+.view-display-id-voices_filters_pane .views-row .views-field-title:after:after,
+.view-voices-filters .views-row .views-field-title:after:after {
   color: #bac405;
   text-decoration: none;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title a,
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title a,
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-title a {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-title:after,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after,
+  .view-display-id-voices_single_teaser_pane .views-row .views-field-title:after,
+  .view-display-id-voices_filters_pane .views-row .views-field-title:after,
+  .view-voices-filters .views-row .views-field-title:after {
     font-size: 20px;
   }
 }
@@ -209,7 +259,11 @@
 .pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-degree-year,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-endowed-title-appointment,
 .view-display-id-voices_single_teaser_pane .views-row div:hover .views-field-field-degree-year,
-.view-display-id-voices_single_teaser_pane .views-row div:hover .views-field-field-endowed-title-appointment {
+.view-display-id-voices_single_teaser_pane .views-row div:hover .views-field-field-endowed-title-appointment,
+.view-display-id-voices_filters_pane .views-row div:hover .views-field-field-degree-year,
+.view-display-id-voices_filters_pane .views-row div:hover .views-field-field-endowed-title-appointment,
+.view-voices-filters .views-row div:hover .views-field-field-degree-year,
+.view-voices-filters .views-row div:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-degree-year,
@@ -217,7 +271,11 @@
 .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
 .view-display-id-voices_single_teaser_pane .views-row .views-field-field-degree-year,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-field-endowed-title-appointment {
+.view-display-id-voices_single_teaser_pane .views-row .views-field-field-endowed-title-appointment,
+.view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+.view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+.view-voices-filters .views-row .views-field-field-degree-year,
+.view-voices-filters .views-row .views-field-field-endowed-title-appointment {
   color: #231f20;
   font-size: 14px;
   padding: 0px 10px 0px 20px;
@@ -230,54 +288,19 @@
   .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
   .view-display-id-voices_single_teaser_pane .views-row .views-field-field-degree-year,
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-endowed-title-appointment {
+  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-endowed-title-appointment,
+  .view-display-id-voices_filters_pane .views-row .views-field-field-degree-year,
+  .view-display-id-voices_filters_pane .views-row .views-field-field-endowed-title-appointment,
+  .view-voices-filters .views-row .views-field-field-degree-year,
+  .view-voices-filters .views-row .views-field-field-endowed-title-appointment {
     font-size: 14px;
   }
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row div:hover .field-name-field-quote div div,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-quote div div,
-.view-display-id-voices_single_teaser_pane .views-row div:hover .field-name-field-quote div div {
-  opacity: 1;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover,
-.view-display-id-voices_single_teaser_pane .views-row:hover {
-  box-shadow: 0 0 4px 2px #c4c4c4;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-quote div div,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-quote div div {
-  opacity: 1;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title {
-  padding-top: 25px;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a {
-  color: white;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:after,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-title a:hover:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title a:hover:after,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a:after,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a:hover:after {
-  color: white !important;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-degree-year,
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row:hover .views-field-field-endowed-title-appointment,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-endowed-title-appointment,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-degree-year,
-.view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-endowed-title-appointment {
-  color: white;
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div {
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote,
+.view-voices-filters .views-row .views-field-field-quote {
   color: white;
   cursor: pointer;
   display: table;
@@ -296,39 +319,51 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
 }
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div:after {
-  content: "”";
-}
-.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div:before,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div:before {
-  content: "“";
-}
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .view-display-id-voices_filters_pane .views-row .views-field-field-quote,
+  .view-voices-filters .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
 }
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div:after,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:after,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div:after,
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div:after,
+.view-voices-filters .views-row .views-field-field-quote div:after {
+  content: "”";
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div:before,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:before,
+.view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div:before,
+.view-display-id-voices_filters_pane .views-row .views-field-field-quote div:before,
+.view-voices-filters .views-row .views-field-field-quote div:before {
+  content: "“";
+}
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img,
-.view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img {
+.view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img,
+.view-display-id-voices_filters_pane .views-row .views-field-field-image-single-public img,
+.view-voices-filters .views-row .views-field-field-image-single-public img {
   width: 100%;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-image-single-public img,
   .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img,
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img {
+  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img,
+  .view-display-id-voices_filters_pane .views-row .views-field-field-image-single-public img,
+  .view-voices-filters .views-row .views-field-field-image-single-public img {
     width: 100%;
   }
 }
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
 .pane-voices-filters-voices-list-cta-panel-pane .views-row,
-.view-display-id-voices_single_teaser_pane .views-row {
+.view-display-id-voices_single_teaser_pane .views-row,
+.view-display-id-voices_filters_pane .views-row,
+.view-voices-filters .views-row {
   border: 1px solid #c4c4c4;
 }
 
@@ -1105,19 +1140,19 @@
 .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-image-single-public img {
   max-height: auto !important;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   padding: 30% 20px;
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after,
-.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:after,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:after {
   content: "”";
 }
-.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before,
-.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+.full-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:before,
+.superwide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:before {
   content: "“";
 }
 .full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta,
@@ -1237,20 +1272,20 @@
 .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
   padding-top: 25px;
 }
-.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   padding: 30% 20px;
 }
-.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:after {
   content: "”";
 }
-.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+.wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:before {
   content: "“";
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .wide-view .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1350,20 +1385,20 @@
 .pane-voices-filters-voices-list-cta-panel-pane div {
   vertical-align: top;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   padding: 30% 20px;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:after {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:after {
   content: "”";
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div:before {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div:before {
   content: "“";
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1715,39 +1750,6 @@
     color: #636f00;
   }
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row div:hover .field-name-field-quote div div {
-    opacity: 0;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-quote div div {
-    opacity: 0;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title {
-    font-size: 20px;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a {
-    color: #636f00;
-    font-size: 20px;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a:after,
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-title a:hover:after {
-    color: #636f00 !important;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-degree-year,
-  .view-display-id-voices_single_teaser_pane .views-row:hover .views-field-field-endowed-title-appointment {
-    color: #231f20;
-  }
-}
 
 /* Single Teaser styles end */
 /* side bar fixes for all list */
@@ -1939,18 +1941,18 @@
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div {
     font-size: 15px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -2027,26 +2029,26 @@
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -2153,42 +2155,42 @@
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -2267,20 +2269,18 @@
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div {
-    height: 370px;
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div div {
-    height: 360px;
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
@@ -2334,20 +2334,20 @@
 .gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-title {
   padding-top: 25px;
 }
-.gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div {
+.gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote,
+.gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote {
   height: 390px;
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div {
+  .gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote {
     height: 360px;
     font-size: 16px;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div {
+  .gsb-full-bleed-page .inner-main-wrapper .main-header .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-footer .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote {
     height: 370px;
     font-size: 16px;
   }
@@ -2367,41 +2367,32 @@
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote {
     font-size: 16px;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-filters-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-voices-list-cta-panel-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .pane-voices-filters-all-voices-list-panel-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-filters-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-voices-list-cta-panel-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .pane-voices-filters-all-voices-list-panel-pane .voices_display_list_cta,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .voices_display_list_cta {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .voices_display_list_cta {
     width: 84%;
     margin: 10px 10px 0px 0px;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .view-content .views-row,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .view-content .views-row {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .voices_display_list_cta .view-display-id-voices_single_teaser_pane .view-content .views-row {
     width: 100%;
     height: 400px;
     margin-right: 0px;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-sidebar-wrapper .voices_display_list_cta .view-display-id-voices_single_teaser_pane .view-content .views-row .views-field-field-quote {
     height: 400px;
   }
 }
@@ -2514,20 +2505,20 @@
     width: 40.6%;
   }
 }
-.gsb-full-bleed-page .full-bleed-header .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .featured-content .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .featured-content .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div {
+.gsb-full-bleed-page .full-bleed-header .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+.gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote,
+.gsb-full-bleed-page .featured-content .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+.gsb-full-bleed-page .featured-content .view-display-id-voices_filters_pane .views-row .views-field-field-quote {
   font-size: 18px;
   padding: 36% 20px;
   line-height: 1.4;
   width: 100.5%;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-full-bleed-page .full-bleed-header .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .featured-content .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .featured-content .view-display-id-voices_filters_pane .views-row .views-field-field-quote div div {
+  .gsb-full-bleed-page .full-bleed-header .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .full-bleed-header .view-display-id-voices_filters_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .featured-content .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .featured-content .view-display-id-voices_filters_pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -2622,13 +2613,13 @@
     width: 76%;
   }
 }
-.gsb-full-bleed-page .full-bleed-header .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .featured-content .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote div div {
+.gsb-full-bleed-page .full-bleed-header .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote,
+.gsb-full-bleed-page .featured-content .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote {
   font-size: 18px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-full-bleed-page .full-bleed-header .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .featured-content .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote div div {
+  .gsb-full-bleed-page .full-bleed-header .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .featured-content .view-display-id-voices_list_cta_panel_pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -3179,10 +3170,10 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-header .view-display-id-voices_single_teaser_pane .views-row,
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -3190,8 +3181,8 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
     height: auto;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
@@ -3200,8 +3191,8 @@
     width: 69%;
     margin-left: 25px;
     margin-right: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
   }
 }
@@ -3210,16 +3201,10 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
     height: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-@media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
-  .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-header .view-display-id-voices_single_teaser_pane .views-row,
-  .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
-    height: 460px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
@@ -3227,10 +3212,10 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
     height: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
@@ -3514,8 +3499,8 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     height: auto;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 25px;
     margin-right: 25px;
   }
@@ -3525,8 +3510,8 @@
     width: 95%;
     margin-left: 25px;
     margin-right: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
   }
 }
@@ -3534,8 +3519,8 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     height: auto;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
@@ -3548,8 +3533,8 @@
   .sidebar-first.panels-layout-gsb-no-sidebar .gsb-no-sidebar .content-wrapper .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     height: auto;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 25px;
     margin-right: 25px;
   }
@@ -3621,7 +3606,7 @@
 .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
 .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid,
 .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid {
-  padding: 0px 15px 0px 15px;
+  padding: 0 15px 0 15px;
 }
 .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
 .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_industry_tid #edit-field-industry-tid,
@@ -3676,7 +3661,7 @@
 .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
 .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid,
 .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid {
-  padding: 0px 15px 0px 15px;
+  padding: 0 15px 0 15px;
 }
 .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
 .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-filters .views-widget-filter-field_region_of_interest_tid #edit-field-region-of-interest-tid,
@@ -3809,52 +3794,23 @@
     height: 360px;
   }
 }
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
-  height: 390px;
-}
-@media (min-width: 46em) and (max-width: 47.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
-    height: 360px;
-  }
-}
-@media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
-    height: 360px;
-  }
-}
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
-    height: 360px;
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote {
     font-size: 15px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-filters-pane .view-content .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -4003,82 +3959,35 @@
     height: 360px;
   }
 }
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-.panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
-  height: 390px;
-}
-@media (min-width: 46em) and (max-width: 47.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
-    height: 360px;
-  }
-}
-@media (min-width: 48em) and (max-width: 63.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
-    height: 360px;
-  }
-}
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
-    height: 360px;
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 15px;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote div div,
-  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote div div {
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .gsb-full-bleed-page .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-first .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .view-display-id-all_voices_list_panel_pane .views-row .views-field-field-quote,
+  .panels-layout-gsb-no-sidebar .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -4415,7 +4324,7 @@
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .voices_display_all_list_cta,
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .homepage_voices_cta,
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-voices-list-cta-panel-pane .voices_display_list_cta {
-    margin-left: 0px;
+    margin-left: 0;
     width: 63%;
   }
 }
@@ -4444,7 +4353,7 @@
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .voices_display_all_list_cta,
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .homepage_voices_cta,
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .voices_display_list_cta {
-    margin-left: 0px;
+    margin-left: 0;
     width: 63%;
   }
 }
@@ -4540,7 +4449,7 @@
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-all-voices-list-panel-pane .homepage_voices_cta,
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-all-voices-list-panel-pane .voices_display_list_cta {
     width: 70%;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -4556,7 +4465,7 @@
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-all-voices-list-panel-pane .voices_display_all_list_cta,
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-all-voices-list-panel-pane .homepage_voices_cta,
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .inner-main-wrapper .main-middle .column-second .pane-voices-filters-all-voices-list-panel-pane .voices_display_list_cta {
-    margin-left: 0px;
+    margin-left: 0;
     width: 67%;
   }
 }
@@ -4567,7 +4476,7 @@
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .full-header .pane-voices-filters-all-voices-list-panel-pane .pane-content {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
@@ -4636,7 +4545,7 @@
 
 @media (max-width: 37.4375em) {
   .no-sidebars.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .main-middle .view-display-id-voices_single_teaser_pane .views-row {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 @media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
@@ -4734,41 +4643,6 @@
 .view-display-id-voices_single_teaser_pane .views-row .views-field-field-image-single-public img {
   max-height: 100% !important;
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.blue {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.brightteal {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.charcoal {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.green {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.pink {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.purple {
-    display: none;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-display-id-voices_single_teaser_pane .views-row .views-field-field-quote div.white {
-    display: none;
-  }
-}
 
 .gsb-landing-standard-page-one .content .main-middle .view-display-id-voices_single_teaser_pane .views-row,
 .panels-layout-gsb-landing-standard-page-one .content .main-middle .view-display-id-voices_single_teaser_pane .views-row,
@@ -4795,9 +4669,9 @@
   .panels-layout-gsb-landing-standard-page-one .content .main-middle .view-display-id-voices_single_teaser_pane .views-row,
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -4805,10 +4679,10 @@
   .panels-layout-gsb-landing-standard-page-one .content .main-middle .view-display-id-voices_single_teaser_pane .views-row,
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
@@ -4816,10 +4690,10 @@
   .panels-layout-gsb-landing-standard-page-one .content .main-middle .view-display-id-voices_single_teaser_pane .views-row,
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -4850,14 +4724,14 @@
   .panels-layout-gsb-landing-standard-page-one .content .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row,
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row {
     width: 99%;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 30em) and (max-width: 45.9375em) {
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .main-middle .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    margin-right: 0px;
+    margin-right: 0;
     height: auto;
   }
 }
@@ -4883,8 +4757,8 @@
 @media (min-width: 30em) and (max-width: 45.9375em) {
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .inner-sidebar-wrapper .sidebar-inner .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     height: auto;
   }
 }
@@ -4899,9 +4773,9 @@
   .no-sidebars.panels-layout-gsb-full-bleed-page .content .inner-sidebar-wrapper #quicklinks .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
     height: auto;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
@@ -4916,10 +4790,10 @@
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-header .view-display-id-voices_single_teaser_pane .views-row,
   .sidebar-first.panels-layout-gsb-landing-standard-page-one .gsb-landing-standard-page-one .inner-main-wrapper .main-footer .view-display-id-voices_single_teaser_pane .views-row {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
