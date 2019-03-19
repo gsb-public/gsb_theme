@@ -8,8 +8,8 @@
 @import partials/base/03-extend/gsb-revamp
 
 //Hover gradients
-
-.views-row:hover
+a[class^="bg-"]:hover
+  text-decoration: none
   &:before
     content: ''
     height: 100%
@@ -17,32 +17,32 @@
     top: 0
     width: 100%
 
-.views-row.blue:hover
+.views-row .bg-blue:hover
   &:before
     background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
     background-size: cover
 
-.views-row.brightteal:hover
+.views-row .bg-brightteal:hover
   &:before
     background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
     background-size: cover
 
-.views-row.charcoal:hover
+.views-row .bg-charcoal:hover
   &:before
     background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
     background-size: cover
 
-.views-row.pink:hover
+.views-row .bg-pink:hover
   &:before
     background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
     background-size: cover
 
-.views-row.purple:hover
+.views-row .bg-purple:hover
   &:before
     background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
     background-size: cover
 
-.views-row.green:hover
+.views-row .bg-green:hover
   &:before
     background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
     background-size: cover
@@ -51,8 +51,12 @@
 /*All voices customizable lists start*/
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
 .pane-voices-filters-voices-list-cta-panel-pane,
-.view-display-id-voices_single_teaser_pane
-  padding-bottom: 20px
+.view-display-id-voices_single_teaser_pane,
+.view-display-id-voices_filters_pane,
+.view-voices-filters
+  //view-id-voices_filters view-display-id-voices_filters_pane view-dom-id-f6a56932071db25c30241c9955169fd7 jquery-once-2-processed
+
+  //padding-bottom: 20px
   width: 100%
   .view-content
     +breakpoint($bp-for-phone-tablet-range)
@@ -69,7 +73,14 @@
     padding-bottom: 45px
     position: relative
     width: 22%
-    //height: 400px
+    &:hover
+      box-shadow: 0 0 4px 2px #c4c4c4
+      // Hover for the quote
+      div.views-field-field-quote
+        opacity: 1
+      div.views-field-title
+        color: $white
+
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -99,25 +110,21 @@
       padding: 25px 0 10px 20px
       position: relative
       text-align: left
-      a
-        color: $link-green
-        font-size: 24px
+      &:hover
+        text-decoration: none
+      +icon-after("arrow-double-right", true)
+        color: $green-light
+        font-size: 18px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        padding-left: 10px
         &:hover
-          text-decoration: none
-          border-bottom: 2px solid $white
-        +icon-after("arrow-double-right", true)
           color: $green-light
-          font-size: 18px
-          font-weight: normal
-          line-height: 0
-          margin-top: 0
-          padding-left: 10px
-          &:hover
-            color: $green-light
-            text-decoration: none
-          &:after
-            color: $green-light
-            text-decoration: none
+          text-decoration: none
+        &:after
+          color: $green-light
+          text-decoration: none
         +breakpoint($bp-for-phone-tablet-range)
           font-size: 20px
 
@@ -135,73 +142,56 @@
       word-wrap: break-word
       +breakpoint($bp-for-phone-tablet-range)
         font-size: 14px
-    div:hover .field-name-field-quote
-      div
-        div
-          opacity: 1
-    &:hover
-      box-shadow: 0 0 4px 2px #c4c4c4
-      .views-field-field-quote
-        div
-          div
-            opacity: 1
-      .views-field-title
-        padding-top: 25px
-        a
-          color: $white
-        a:after,
-        a:hover:after
-          color: $white !important
-
-      .views-field-field-degree-year,
-      .views-field-field-endowed-title-appointment
-        color: $white
+    //div:hover .field-name-field-quote
+    //  div
+    //    div
+    //      opacity: 1
+    //&:hover
+    //  box-shadow: 0 0 4px 2px #c4c4c4
+    //  .views-field-field-quote
+    //    div
+    //      div
+    //        opacity: 1
+    //  .views-field-title
+    //    padding-top: 25px
+    //    a
+    //      color: $white
+    //    a:after,
+    //    a:hover:after
+    //      color: $white !important
+    //
+    //  .views-field-field-degree-year,
+    //  .views-field-field-endowed-title-appointment
+    //    color: $white
 
     .views-field-field-quote
+      color: $white
+      cursor: pointer
+      display: table
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.4
+      //height: 400px
+      left: 0
+      padding: 36% 20px
+      position: absolute
+      top: 0
+      width: 100.5%
+      opacity: 0
+      text-align: left
+      -webkit-transition: opacity 500ms
+      -moz-transition: opacity 500ms
+      -o-transition: opacity 500ms
+      transition: opacity 500ms
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 16px
+        line-height: 1.5
       div
-        div
-          color: $white
-          cursor: pointer
-          display: table
-          font-family: $font-demi
-          font-size: 18px
-          line-height: 1.4
-          //height: 400px
-          left: 0
-          padding: 36% 20px
-          position: absolute
-          top: 0
-          width: 100.5%
-          opacity: 0
-          text-align: left
-          -webkit-transition: opacity 500ms
-          -moz-transition: opacity 500ms
-          -o-transition: opacity 500ms
-          transition: opacity 500ms
-          &:after
-            content: '”'
-          &:before
-            content: '“'
-          +breakpoint($bp-for-phone-tablet-range)
-            font-size: 16px
-            line-height: 1.5
-          +breakpoint($bp-for-phone-only)
-            //height: 400px
+        &:after
+          content: '”'
+        &:before
+          content: '“'
 
-        //&.blue
-        //  background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-        //&.brightteal
-        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        //&.charcoal
-        //  background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-        //&.green
-        //  background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-        //&.pink
-        //  background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-        //&.purple
-        //  background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-        //&.white
-        //  background: linear-gradient(transparent, $white 50%)
     .views-field-field-image-single-public
       img
         //max-height: 270px !important
@@ -352,7 +342,6 @@
 /* CTA Button End */
 
 /*voices list with filters start */
-
 .view-display-id-voices_filters_pane
   width: 100%
   .view-filters
@@ -597,6 +586,7 @@
         width: 100%
 
 /*voices list with filters end */
+
 /* full bleed and landing page one main header and main footer regions styles start*/
 .gsb-full-bleed-page
   .content-wrapper
@@ -716,17 +706,17 @@
           max-height: auto !important
 
       .views-field-field-quote
+        font-family: $font-demi
+        font-size: 18px
+        line-height: 1.4
+        padding: 30% 20px
         div
-          div
-            font-family: $font-demi
-            font-size: 18px
-            line-height: 1.4
-            padding: 30% 20px
-            &:after
-              content: '”'
-            &:before
-              content: '“'
+          &:after
+            content: '”'
+          &:before
+            content: '“'
     .pane-content
+      // CTA
       .voices_display_list_cta
         background-color: $white
         margin-top: 30px
@@ -789,24 +779,21 @@
         .views-field-title
           padding-top: 25px
       .views-field-field-quote
+        font-family: $font-demi
+        font-size: 18px
+        line-height: 1.4
+        padding: 30% 20px
         div
-          div
-            font-family: $font-demi
-            font-size: 18px
-            //height: 400px
-            line-height: 1.4
-            padding: 30% 20px
-            &:after
-              content: '”'
-            &:before
-              content: '“'
-            +breakpoint($bp-for-phone-tablet-range)
-              font-size: 16px
-              line-height: 1.5
-              //height: 400px
-            +breakpoint($bp-for-phone-only)
-              //height: 400px
+          &:after
+            content: '”'
+          &:before
+            content: '“'
+        +breakpoint($bp-for-phone-tablet-range)
+          font-size: 16px
+          line-height: 1.5
+
     .pane-content
+      // CTA
       .voices_display_list_cta
         background-color: $white
         margin-top: 30px
@@ -856,19 +843,18 @@
     vertical-align: top
   .views-row
     .views-field-field-quote
+      font-family: $font-demi
+      font-size: 18px
+      line-height: 1.4
+      padding: 30% 20px
       div
-        div
-          font-family: $font-demi
-          font-size: 18px
-          line-height: 1.4
-          padding: 30% 20px
-          &:after
-            content: '”'
-          &:before
-            content: '“'
-          +breakpoint($bp-for-phone-tablet-range)
-            font-size: 16px
-            line-height: 1.5
+        &:after
+          content: '”'
+        &:before
+          content: '“'
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 16px
+        line-height: 1.5
 
 .main-header,
 .main-footer
@@ -915,8 +901,7 @@
       .views-row
         margin-right: 0
         width: 100%
-        +breakpoint($bp-for-phone-only)
-          //height: 400px
+
 .panels-layout-gsb-landing-standard-page-one
   .content
     .main-middle
@@ -1097,35 +1082,6 @@
       .views-field-field-endowed-title-appointment
         +breakpoint($bp-for-phone-tablet-range)
           color: $link-green
-
-    div:hover .field-name-field-quote
-      div
-        div
-          +breakpoint($bp-for-phone-tablet-range)
-            opacity: 0
-    &:hover
-      .views-field-field-quote
-        div
-          div
-            +breakpoint($bp-for-phone-tablet-range)
-              opacity: 0
-      .views-field-title
-        +breakpoint($bp-for-phone-tablet-range)
-          font-size: 20px
-        a
-          +breakpoint($bp-for-phone-tablet-range)
-            color: $link-green
-            font-size: 20px
-        a:after,
-        a:hover:after
-          +breakpoint($bp-for-phone-tablet-range)
-            color: $link-green !important
-
-      .views-field-field-degree-year,
-      .views-field-field-endowed-title-appointment
-        +breakpoint($bp-for-phone-tablet-range)
-          color: $text-black
-   
 /* Single Teaser styles end */
   
 /* side bar fixes for all list*/
@@ -1201,18 +1157,11 @@
               //height: 360px
             .views-field-field-quote
               div
-                div
-                  //height: 390px
-                  +breakpoint($bp-iphone6p-land)
-                    //height: 360px
-                  +breakpoint($bp-tablet-pot)
-                    //height: 360px
-                  +breakpoint($bp-tablet-land)
-                    //height: 360px
-                    font-size: 15px
-                  +breakpoint($bp-for-phone-tablet-range)
-                    font-size: 16px
-                    line-height: 1.5
+                +breakpoint($bp-tablet-land)
+                  font-size: 15px
+                +breakpoint($bp-for-phone-tablet-range)
+                  font-size: 16px
+                  line-height: 1.5
 
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page
@@ -1246,20 +1195,13 @@
           +breakpoint($bp-for-phone-only)
             width: 80.60%
           .views-field-field-quote
-            div
-              div
-                //height: 390px
-                +breakpoint($bp-iphone6p-land)
-                  font-size: 16px
-                  //height: 360px
-                +breakpoint($bp-tablet-pot)
-                  font-size: 16px
-                  //height: 360px
-                +breakpoint($bp-tablet-land)
-                  //height: 370px
-                +breakpoint($bp-for-phone-tablet-range)
-                  font-size: 16px
-                  line-height: 1.5
+            +breakpoint($bp-iphone6p-land)
+              font-size: 16px
+            +breakpoint($bp-tablet-pot)
+              font-size: 16px
+            +breakpoint($bp-for-phone-tablet-range)
+              font-size: 16px
+              line-height: 1.5
         .voices_display_list_cta
           width: 240px
           margin: 10px 0px 10px 8px
@@ -1305,24 +1247,17 @@
             //height: 360px
 
           .views-field-field-quote
-            div
-              div
-                //height: 390px
-                +breakpoint($bp-mobile-land)
-                  //height: 360px
-                  font-size: 16px
-                +breakpoint($bp-iphone6p-land)
-                  //height: 360px
-                  font-size: 16px
-                +breakpoint($bp-tablet-pot)
-                  //height: 360px
-                  font-size: 16px
-                +breakpoint($bp-tablet-land)
-                  //height: 370px
-                  font-size: 16px
-                +breakpoint($bp-for-phone-tablet-range)
-                  font-size: 16px
-                  line-height: 1.5
+            +breakpoint($bp-mobile-land)
+              font-size: 16px
+            +breakpoint($bp-iphone6p-land)
+              font-size: 16px
+            +breakpoint($bp-tablet-pot)
+              font-size: 16px
+            +breakpoint($bp-tablet-land)
+              font-size: 16px
+            +breakpoint($bp-for-phone-tablet-range)
+              font-size: 16px
+              line-height: 1.5
 
         .voices_display_all_list_cta
           width: 240px
@@ -1342,9 +1277,7 @@
       .view-display-id-voices_single_teaser_pane
         .views-row
           width: 100%
-          //height: 400px
           +breakpoint($bp-for-phone-tablet-range)
-            //height: 400px
             width: 99%
             margin-right: 0px
           +breakpoint($bp-for-phone-only)
@@ -1355,17 +1288,11 @@
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            //height: 400px
           .views-field-field-quote
-            div
-              div
-                //height: 400px
-                +breakpoint($bp-mobile-land)
-                  height: 370px
-                  font-size: 16px
-                +breakpoint($bp-tablet-pot)
-                  height: 360px
-                  font-size: 16px
+            +breakpoint($bp-mobile-land)
+              font-size: 16px
+            +breakpoint($bp-tablet-pot)
+              font-size: 16px
 
 .gsb-full-bleed-page
   .inner-main-wrapper
@@ -1395,15 +1322,13 @@
             .views-field-title
               padding-top: 25px
             .views-field-field-quote
-              div
-                div
-                  height: 390px
-                  +breakpoint($bp-tablet-pot)
-                    height: 360px
-                    font-size: 16px
-                  +breakpoint($bp-tablet-land)
-                    height: 370px
-                    font-size: 16px
+              height: 390px
+              +breakpoint($bp-tablet-pot)
+                height: 360px
+                font-size: 16px
+              +breakpoint($bp-tablet-land)
+                height: 370px
+                font-size: 16px
 
 .gsb-landing-standard-page-one
   .inner-sidebar-wrapper
@@ -1422,17 +1347,12 @@
             +breakpoint($bp-iphone6p-port)
               //height: 400px
             .views-field-field-quote
-              div
-                div
-                  +breakpoint($bp-mobile-land)
-                    //height: 360px
-                    font-size: 16px
-                  +breakpoint($bp-iphone6p-port)
-                    //height: 400px
-        .voices_display_list_cta
-          +breakpoint($bp-mobile-land)
-            width: 84%
-            margin: 10px 10px 0px 0px
+              +breakpoint($bp-mobile-land)
+                font-size: 16px
+    .voices_display_list_cta
+      +breakpoint($bp-mobile-land)
+        width: 84%
+        margin: 10px 10px 0px 0px
       .view-display-id-voices_single_teaser_pane
         .view-content
           .views-row
@@ -1441,10 +1361,8 @@
               height: 400px
               margin-right: 0px
             .views-field-field-quote
-              div
-                div
-                  +breakpoint($bp-mobile-land)
-                    height: 400px
+              +breakpoint($bp-mobile-land)
+                height: 400px
 
 .gsb-full-bleed-page
   .full-bleed-header,
@@ -1488,15 +1406,13 @@
         +breakpoint($bp-iphone6p-land)
           width: 40.6%
         .views-field-field-quote
-          div
-            div
-              font-size: 18px
-              padding: 36% 20px
-              line-height: 1.4
-              width: 100.5%
-              +breakpoint($bp-for-phone-tablet-range)
-                font-size: 16px
-                line-height: 1.5
+          font-size: 18px
+          padding: 36% 20px
+          line-height: 1.4
+          width: 100.5%
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 16px
+            line-height: 1.5
     .pane-voices-filters-voices-filters-pane,
     .pane-voices-filters-voices-list-cta-panel-pane
       .view-content
@@ -1536,12 +1452,10 @@
         +breakpoint($bp-iphone6p-port)
           width: 76%
         .views-field-field-quote
-          div
-            div
-              font-size: 18px
-              +breakpoint($bp-for-phone-tablet-range)
-                font-size: 16px
-                line-height: 1.5
+          font-size: 18px
+          +breakpoint($bp-for-phone-tablet-range)
+            font-size: 16px
+            line-height: 1.5
 
 .sidebar-first.panels-layout-gsb-landing-standard-page-one
   .gsb-landing-standard-page-one 
@@ -1759,39 +1673,39 @@
               width: 81%
             +breakpoint($bp-for-phone-only)
               width: 100%
-              margin-left: 0px
-              margin-right: 0px
-              padding-left: 0px
-              padding-right: 0px
-              //height: 420px
+              margin-left: 0
+              margin-right: 0
+              padding-left: 0
+              padding-right: 0
+
             +breakpoint($bp-tablet-pot)
               height: auto
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
             +breakpoint($bp-tablet-land)
               width: 69%
               margin-left: 25px
               margin-right: 25px
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
               height: auto
             +breakpoint($bp-mobile-land)
               width: 100%
               height: auto
-              padding-left: 0px
-              padding-right: 0px
-              margin-left: 0px
-              margin-right: 0px
-            +breakpoint($bp-iphone6p-port)
-              height: 460px
+              padding-left: 0
+              padding-right: 0
+              margin-left: 0
+              margin-right: 0
+            //+breakpoint($bp-iphone6p-port)
+            //  height: 460px
             +breakpoint($bp-iphone6p-land)
               width: 100%
               height: auto
-              padding-left: 0px
-              padding-right: 0px
-              margin-left: 0px
-              margin-right: 0px
+              padding-left: 0
+              padding-right: 0
+              margin-left: 0
+              margin-right: 0
             .views-field-field-image-single-public 
               img
                 +breakpoint($bp-mobile-land)
@@ -1916,31 +1830,30 @@
             +breakpoint($bp-tablet-pot)
               height: auto
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
               margin-left: 25px
               margin-right: 25px
             +breakpoint($bp-tablet-land)
               width: 95%
               margin-left: 25px
               margin-right: 25px
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
               height: auto
             +breakpoint($bp-mobile-land)
               height: auto
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
             +breakpoint($bp-iphone6p-port)
-              //height: 450px
               margin-left: 25px
               margin-right: 25px
             +breakpoint($bp-iphone6p-land)
               height: auto
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
               margin-left: 25px
               margin-right: 25px
             .views-field-field-image-single-public 
@@ -1965,10 +1878,7 @@
                 padding-bottom: 10px
               +breakpoint($bp-tablet-pot)
                 padding-bottom: 10px
-            .views-field-field-quote
-              div
-                div
-                  //height: 420px
+
 /* no side bar Layout code changes */
 .panels-layout-gsb-no-sidebar 
   #sidebar 
@@ -1991,7 +1901,7 @@
             .views-exposed-widgets
               height: auto
             .views-widget-filter-field_industry_tid
-              padding: 0px 15px 0px 15px
+              padding: 0 15px 0 15px
               #edit-field-industry-tid
                 width: 238px !important
                 +breakpoint($bp-for-phone-tablet-range)
@@ -2006,7 +1916,7 @@
                     width: 230px !important
 
             .views-widget-filter-field_region_of_interest_tid
-              padding: 0px 15px 0px 15px
+              padding: 0 15px 0 15px
               #edit-field-region-of-interest-tid
                 width: 238px !important
                 +breakpoint($bp-for-phone-tablet-range)
@@ -2044,19 +1954,17 @@
                 width: 40.5%
                 height: 360px
               .views-field-field-quote
-                div
-                  div
-                    height: 390px
-                    +breakpoint($bp-iphone6p-land)
-                      height: 360px
-                    +breakpoint($bp-tablet-pot)
-                      height: 360px
-                    +breakpoint($bp-tablet-land)
-                      height: 360px
-                      font-size: 15px
-                    +breakpoint($bp-for-phone-tablet-range)
-                      font-size: 16px
-                      line-height: 1.5
+                //height: 390px
+                //+breakpoint($bp-iphone6p-land)
+                //  height: 360px
+                //+breakpoint($bp-tablet-pot)
+                //  height: 360px
+                +breakpoint($bp-tablet-land)
+                  //height: 360px
+                  font-size: 15px
+                +breakpoint($bp-for-phone-tablet-range)
+                  font-size: 16px
+                  line-height: 1.5
 
 .gsb-landing-standard-page-one
   .inner-main-wrapper
@@ -2107,19 +2015,17 @@
               width: 40.5%
               height: 360px
             .views-field-field-quote
-              div
-                div
-                  height: 390px
-                  +breakpoint($bp-iphone6p-land)
-                    height: 360px
-                  +breakpoint($bp-tablet-pot)
-                    height: 360px
-                  +breakpoint($bp-tablet-land)
-                    height: 360px
-                    font-size: 15px
-                  +breakpoint($bp-for-phone-tablet-range)
-                    font-size: 16px
-                    line-height: 1.5
+              //height: 390px
+              //+breakpoint($bp-iphone6p-land)
+              //  height: 360px
+              //+breakpoint($bp-tablet-pot)
+              //  height: 360px
+              +breakpoint($bp-tablet-land)
+                //height: 360px
+                font-size: 15px
+              +breakpoint($bp-for-phone-tablet-range)
+                font-size: 16px
+                line-height: 1.5
 
 .gsb-landing-standard-page-one,
 .gsb-full-bleed-page,
@@ -2248,7 +2154,7 @@
             .homepage_voices_cta,
             .voices_display_list_cta
               +breakpoint($bp-tablet-pot)
-                margin-left: 0px
+                margin-left: 0
                 width: 63%
               +breakpoint($bp-tablet-land)
                 margin: 0 auto
@@ -2259,7 +2165,7 @@
           .homepage_voices_cta,
           .voices_display_list_cta
             +breakpoint($bp-tablet-pot)
-              margin-left: 0px
+              margin-left: 0
               width: 63%
             +breakpoint($bp-tablet-land)
               margin: 0 auto
@@ -2307,9 +2213,9 @@
           .voices_display_list_cta
             +breakpoint($bp-iphone6p-land)
               width: 70%
-              margin-left: 0px
+              margin-left: 0
             +breakpoint($bp-tablet-pot)
-              margin-left: 0px
+              margin-left: 0
               width: 67%
   .full-header
     .pane-voices-filters-all-voices-list-panel-pane
@@ -2317,7 +2223,7 @@
         +breakpoint($bp-for-phone-only)
           padding-bottom: 25px
         +breakpoint($bp-mobile-land)
-          padding-bottom: 0px
+          padding-bottom: 0
 
 .panels-layout-gsb-no-sidebar 
   .inner-main-wrapper 
@@ -2364,7 +2270,7 @@
       .view-display-id-voices_single_teaser_pane
         .views-row
           +breakpoint($bp-for-phone-only)
-            margin-left: 0px
+            margin-left: 0
           +breakpoint($bp-iphone6p-port)
             width: 99%
     .inner-sidebar-wrapper 
@@ -2373,7 +2279,6 @@
           .views-row
             +breakpoint($bp-iphone6p-port)
               width: 99%
-              //height: 470px
 
     .inner-main-wrapper 
       .main-footer,
@@ -2382,9 +2287,9 @@
           .views-row
             +breakpoint($bp-tablet-pot)
               width: 66.50%
-        .view-display-id-voices_single_teaser_pane
-          .views-row
-            +breakpoint($bp-iphone6p-land)
+        //.view-display-id-voices_single_teaser_pane
+        //  .views-row
+        //    +breakpoint($bp-iphone6p-land)
               //height: 430px
 
 .no-sidebars.panels-layout-gsb-no-sidebar
@@ -2412,14 +2317,9 @@
       .views-row
         width: 100%
         //height: 420px
-        .views-field-field-quote
-          div
-            div
-              //height: 420px
         +breakpoint($bp-for-phone-only)
           width: 89%
           margin-left: 20px
-          //height: 435px
         +breakpoint($bp-mobile-land)
           width: 45.50%
         +breakpoint($bp-iphone6p-land)
@@ -2447,29 +2347,6 @@
     .views-field-field-image-single-public 
       img
         max-height: 100% !important
-    .views-field-field-quote
-      div
-        &.blue
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.brightteal
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.charcoal
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.green
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.pink
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.purple
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
-        &.white
-          +breakpoint($bp-for-phone-tablet-range)
-            display: none
 
 .gsb-landing-standard-page-one,
 .panels-layout-gsb-landing-standard-page-one,
@@ -2481,29 +2358,28 @@
           width: 100%
           +breakpoint($bp-for-phone-only)
             width: 99%
-            //height: 420px
           +breakpoint($bp-mobile-land)
             padding-left: 0px
             padding-right: 0px
-          +breakpoint($bp-iphone6p-port)
+          //+breakpoint($bp-iphone6p-port)
             //height: 435px
           +breakpoint($bp-iphone6p-land)
             width: 100%
-            margin-right: 0px
-            padding-left: 0px
-            padding-right: 0px
+            margin-right: 0
+            padding-left: 0
+            padding-right: 0
           +breakpoint($bp-tablet-pot)
             width: 100%
-            padding-left: 0px
-            padding-right: 0px
+            padding-left: 0
+            padding-right: 0
             height: auto
-            margin-right: 0px
+            margin-right: 0
           +breakpoint($bp-tablet-land)
             width: 100%
-            padding-left: 0px
-            padding-right: 0px
+            padding-left: 0
+            padding-right: 0
             height: auto
-            margin-right: 0px
+            margin-right: 0
           .views-field-field-image-single-public
             img
               +breakpoint($bp-tablet-pot)
@@ -2524,8 +2400,7 @@
           .views-row
             +breakpoint($bp-mobile-land)
               width: 99%
-              //height: 400px
-              margin-right: 0px
+              margin-right: 0
 
 .no-sidebars.panels-layout-gsb-full-bleed-page
   .content
@@ -2534,9 +2409,9 @@
         .views-row
           +breakpoint($bp-mobile-land)
             width: 100%
-            margin-right: 0px
+            margin-right: 0
             height: auto
-          +breakpoint($bp-iphone6p-port)
+          //+breakpoint($bp-iphone6p-port)
             //height: 455px
           +breakpoint($bp-iphone6p-land)
             height: auto
@@ -2558,8 +2433,8 @@
           .views-row
             +breakpoint($bp-mobile-land)
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
+              padding-left: 0
+              padding-right: 0
               height: auto
             .views-field-field-image-single-public
               img
@@ -2573,10 +2448,10 @@
             +breakpoint($bp-mobile-land)
               width: 100%
               height: auto
-              margin-right: 0px
-              padding-left: 0px
-              padding-right: 0px
-            +breakpoint($bp-iphone6p-port)
+              margin-right: 0
+              padding-left: 0
+              padding-right: 0
+            //+breakpoint($bp-iphone6p-port)
               //height: 470px
             .views-field-field-image-single-public
               img
@@ -2594,23 +2469,15 @@
           .views-row
             +breakpoint($bp-for-phone-only)
               width: 100%
-              padding-left: 0px
-              padding-right: 0px
-              margin-left: 0px
-              margin-right: 0px
-              //height: 445px
-            +breakpoint($bp-mobile-land)
-              //height: 430px
-            +breakpoint($bp-iphone6p-port)
-              //height: 470px
+              padding-left: 0
+              padding-right: 0
+              margin-left: 0
+              margin-right: 0
+
     .content
       .main-middle
         .view-display-id-voices_single_teaser_pane 
           .views-row
-            +breakpoint($bp-for-phone-only)
-              //height: 425px
-            +breakpoint($bp-mobile-land)
-              //height: 425px
             +breakpoint($bp-iphone6p-land)
               height: auto
             .views-field-field-image-single-public
@@ -2619,25 +2486,20 @@
                   height: auto
                   width: 100%
                   max-height: 100% !important
-    .inner-sidebar-wrapper 
-      .sidebar-inner
-        .view-display-id-voices_single_teaser_pane 
-          .views-row
-            +breakpoint($bp-for-phone-only)
-              //height: 445px
-            +breakpoint($bp-mobile-land)
-              //height: 425px
-            +breakpoint($bp-iphone6p-port)
-              //height: 470px
-    #quicklinks
-      .view-display-id-voices_single_teaser_pane 
-        .views-row
-          +breakpoint($bp-for-phone-only)
-            //height: 445px
-          +breakpoint($bp-mobile-land)
-            //height: 400px
-          +breakpoint($bp-iphone6p-port)
-            //height: 470px
+    //.inner-sidebar-wrapper
+    //  .sidebar-inner
+    //    .view-display-id-voices_single_teaser_pane
+    //      .views-row
+
+    //#quicklinks
+    //  .view-display-id-voices_single_teaser_pane
+    //    .views-row
+    //      +breakpoint($bp-for-phone-only)
+    //        //height: 445px
+    //      +breakpoint($bp-mobile-land)
+    //        //height: 400px
+    //      +breakpoint($bp-iphone6p-port)
+    //        //height: 470px
     .inner-content-wrapper
       .inner-main-wrapper
         .main-header,
@@ -2663,7 +2525,7 @@
       .views-row
         +breakpoint($bp-iphone6p-land)
           height: auto
-        +breakpoint($bp-mobile-land)
+        //+breakpoint($bp-mobile-land)
           //height: 425px
         .views-field-field-image-single-public
           img
@@ -2675,11 +2537,11 @@
 .no-sidebars.panels-layout-gsb-landing-standard-page-one
   .narrow-view 
     .view-display-id-voices_single_teaser_pane 
-      .views-row
-        +breakpoint($bp-for-phone-only)
-          //height: 430px
-        +breakpoint($bp-iphone6p-port)
-          //height: 470px
+      //.views-row
+      //  +breakpoint($bp-for-phone-only)
+      //    //height: 430px
+      //  +breakpoint($bp-iphone6p-port)
+      //    //height: 470px
   .full-header
     .view-display-id-voices_filters_pane
       .views-row
@@ -2719,7 +2581,7 @@
 
         .view-display-id-voices_single_teaser_pane 
           .views-row
-            +breakpoint($bp-iphone6p-land)
+            //+breakpoint($bp-iphone6p-land)
               //height: 450px
             +breakpoint($bp-tablet-pot)
               height: auto
@@ -2759,7 +2621,7 @@
       .view-display-id-voices_single_teaser_pane 
         .view-content 
           .views-row
-            +breakpoint($bp-iphone6p-port)
+            //+breakpoint($bp-iphone6p-port)
               //height: 460px
 
   .main-middle
