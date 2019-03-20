@@ -14,14 +14,18 @@
   .mission-statement
     margin: 0 auto
     max-width: $max-width
-    padding: 15px 20px 105px
+    padding: 0 20px 100px
     text-align: center
+    +breakpoint(374px max-width)
+      padding: 13px 20px 50px
+    +breakpoint($bp-iphone5-land)
+      padding: 13px 20px 50px
     +breakpoint($bp-iphone-range-port)
       padding: 42px 20px 50px
     +breakpoint($bp-iphone6-7-8p-land)
-      padding: 22px 20px 50px
+      padding: 17px 20px 50px
     +breakpoint($bp-ipad-range)
-      padding: 0 20px 65px
+      padding: 58px 20px 65px
 
     //+breakpoint($bp-mobile-max)
     //  padding: 44px 30px 50px 30px
@@ -34,15 +38,19 @@
       padding-bottom: 55px
       +breakpoint($bp-for-desktop-up)
         margin-top: 70px
+        padding-bottom: 70px
       a
         color: $red
         border-bottom: none
         &:hover
           border-bottom: 2px solid $red
           padding-bottom: 55px
-      +breakpoint($bp-mobile-max)
-        font-size: 30px
+      +breakpoint($bp-mobile)
         line-height: 1.2em
+        padding: 0 0 20px
+      +breakpoint(321px $bp-mobile-max)
+        line-height: 1.2em
+        word-spacing: -2px
         padding: 0 40px 20px 40px
       +breakpoint($bp-iphone6-7-8p-land)
         padding-bottom: 21px
