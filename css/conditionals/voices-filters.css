@@ -91,7 +91,6 @@ a[class^="bg-"]:hover:before {
   background: white;
   display: inline-block;
   margin: 30px 30px 0px 0px;
-  padding-bottom: 45px;
   position: relative;
   width: 22%;
 }
@@ -123,6 +122,40 @@ a[class^="bg-"]:hover:before {
 .view-display-id-voices_filters_pane .views-row:hover div.views-field-title:after,
 .view-voices-filters .views-row:hover div.views-field-title:after {
   color: white;
+}
+.view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row a > div:last-child,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+.view-display-id-voices_single_teaser_pane .views-row a > div:last-child,
+.view-display-id-voices_filters_pane .views-row a > div:last-child,
+.view-voices-filters .views-row a > div:last-child {
+  padding-bottom: 45px;
+}
+@media (max-width: 37.4375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row a > div:last-child,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+  .view-display-id-voices_single_teaser_pane .views-row a > div:last-child,
+  .view-display-id-voices_filters_pane .views-row a > div:last-child,
+  .view-voices-filters .views-row a > div:last-child {
+    padding-bottom: 35px;
+  }
+}
+@media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row a > div:last-child,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+  .view-display-id-voices_single_teaser_pane .views-row a > div:last-child,
+  .view-display-id-voices_filters_pane .views-row a > div:last-child,
+  .view-voices-filters .views-row a > div:last-child {
+    padding-bottom: 35px;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row a > div:last-child,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+  .view-display-id-voices_single_teaser_pane .views-row a > div:last-child,
+  .view-display-id-voices_filters_pane .views-row a > div:last-child,
+  .view-voices-filters .views-row a > div:last-child {
+    padding-bottom: 35px;
+  }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-id-voices_filters.view-display-id-all_voices_list_panel_pane .views-row,
@@ -169,7 +202,6 @@ a[class^="bg-"]:hover:before {
   .view-display-id-voices_filters_pane .views-row,
   .view-voices-filters .views-row {
     margin-left: 25px;
-    padding-bottom: 35px;
   }
 }
 @media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
@@ -181,7 +213,6 @@ a[class^="bg-"]:hover:before {
     width: 86%;
     margin-left: 25px;
     margin-right: 25px;
-    padding-bottom: 35px;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
@@ -190,7 +221,6 @@ a[class^="bg-"]:hover:before {
   .view-display-id-voices_single_teaser_pane .views-row,
   .view-display-id-voices_filters_pane .views-row,
   .view-voices-filters .views-row {
-    padding-bottom: 35px;
     width: 40.6%;
   }
 }
@@ -445,7 +475,7 @@ a[class^="bg-"]:hover:before {
   padding: 20px 20px 20px 25px;
   position: relative;
   width: 320px;
-  margin: 10px auto;
+  margin: 35px auto;
   margin-bottom: 20px;
 }
 .pane-content .voices_display_all_list_cta:first-of-type,
@@ -516,8 +546,7 @@ a[class^="bg-"]:hover:before {
   }
 }
 .pane-content .voices_display_all_list_cta {
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin-bottom: 0;
 }
 .pane-content .homepage_voices_cta {
   width: 205px;
@@ -768,9 +797,16 @@ a[class^="bg-"]:hover:before {
   background: white;
   display: inline-block;
   margin: 30px 30px 0px 0px;
-  padding-bottom: 45px;
   position: relative;
   width: 22.06%;
+}
+.view-display-id-voices_filters_pane .views-row a > div:last-child {
+  padding-bottom: 45px;
+}
+@media (max-width: 37.4375em) {
+  .view-display-id-voices_filters_pane .views-row a > div:last-child {
+    padding-bottom: 35px;
+  }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .view-display-id-voices_filters_pane .views-row {
@@ -796,7 +832,6 @@ a[class^="bg-"]:hover:before {
 }
 @media (max-width: 37.4375em) {
   .view-display-id-voices_filters_pane .views-row {
-    padding-bottom: 35px;
     width: 86%;
   }
 }
@@ -1135,7 +1170,6 @@ a[class^="bg-"]:hover:before {
 .full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta,
 .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta {
   background-color: white;
-  margin-top: 30px;
 }
 .full-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a,
 .superwide-view .pane-voices-filters-voices-list-cta-panel-pane .pane-content .voices_display_list_cta a {
@@ -1486,6 +1520,7 @@ a[class^="bg-"]:hover:before {
   .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
     width: 46%;
     margin: 0 auto;
+    margin-top: 35px;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
@@ -1497,6 +1532,7 @@ a[class^="bg-"]:hover:before {
   .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
     width: 34%;
     margin: 0 auto;
+    margin-top: 35px;
   }
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
@@ -1508,6 +1544,7 @@ a[class^="bg-"]:hover:before {
   .panels-layout-gsb-no-sidebar .main-footer .voices_display_list_cta {
     width: 46%;
     margin: 0 auto;
+    margin-top: 35px;
   }
 }
 

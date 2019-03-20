@@ -67,7 +67,6 @@ a[class^="bg-"]:hover
     background: $white
     display: inline-block
     margin: 30px 30px 0px 0px
-    padding-bottom: 45px
     position: relative
     width: 22%
     &:hover
@@ -80,7 +79,14 @@ a[class^="bg-"]:hover
         text-decoration: underline
         &:after
           color: $white
-
+    a > div:last-child
+      padding-bottom: 45px
+      +breakpoint($bp-for-phone-only)
+        padding-bottom: 35px
+      +breakpoint($bp-iphone6p-port)
+        padding-bottom: 35px
+      +breakpoint($bp-iphone6p-land)
+        padding-bottom: 35px
 
     +breakpoint($bp-for-phone-tablet-range)
       display: block
@@ -94,14 +100,11 @@ a[class^="bg-"]:hover
       width: 28.5%
     +breakpoint($bp-for-phone-only)
       margin-left: 25px
-      padding-bottom: 35px
     +breakpoint($bp-iphone6p-port)
       width: 86%
       margin-left: 25px
       margin-right: 25px
-      padding-bottom: 35px
     +breakpoint($bp-iphone6p-land)
-      padding-bottom: 35px
       width: 40.60%
 
     .views-field-title
@@ -225,7 +228,7 @@ a[class^="bg-"]:hover
     padding: 20px 20px 20px 25px
     position: relative
     width: 320px
-    margin: 10px auto
+    margin: 35px auto
     margin-bottom: 20px
 
     @extend %bg-and-box-shadow
@@ -257,8 +260,7 @@ a[class^="bg-"]:hover
       width: 76%
 
   .voices_display_all_list_cta
-    margin-bottom: 0px
-    margin-top: 10px
+    margin-bottom: 0
   .homepage_voices_cta
     width: 205px
     +breakpoint($bp-for-phone-only)
@@ -427,10 +429,13 @@ a[class^="bg-"]:hover
     background: $white
     display: inline-block
     margin: 30px 30px 0px 0px
-    padding-bottom: 45px
     position: relative
     width: 22.06%
-    //height: 400px
+    a > div:last-child
+      padding-bottom: 45px
+      +breakpoint($bp-for-phone-only)
+        padding-bottom: 35px
+
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
@@ -442,7 +447,6 @@ a[class^="bg-"]:hover
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-for-phone-only)
-      padding-bottom: 35px
       width: 86%
 
     .views-field-title
@@ -636,7 +640,6 @@ a[class^="bg-"]:hover
       // CTA
       .voices_display_list_cta
         background-color: $white
-        margin-top: 30px
         a
           color: $red
           +icon-after("arrow-double-right", true)
@@ -838,12 +841,15 @@ a[class^="bg-"]:hover
       +breakpoint($bp-tablet-pot)
         width: 46%
         margin: 0 auto
+        margin-top: 35px
       +breakpoint($bp-tablet-land)
         width: 34%
         margin: 0 auto
+        margin-top: 35px
       +breakpoint($bp-mobile-land)
         width: 46%
         margin: 0 auto
+        margin-top: 35px
 
 .no-sidebars.panels-layout-gsb-landing-standard-page-one
   .gsb-landing-standard-page-one
