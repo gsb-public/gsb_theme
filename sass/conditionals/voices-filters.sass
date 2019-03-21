@@ -17,36 +17,36 @@ a[class^="bg-"]:hover
     top: 0
     width: 100%
 
-.views-row .bg-blue:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-    background-size: cover
+.views-row
+  .bg-blue:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
+      background-size: cover
 
-.views-row .bg-brightteal:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-    background-size: cover
+  .bg-brightteal:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+      background-size: cover
 
-.views-row .bg-charcoal:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-    background-size: cover
+  .bg-charcoal:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
+      background-size: cover
 
-.views-row .bg-pink:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-    background-size: cover
+  .bg-pink:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
+      background-size: cover
 
-.views-row .bg-purple:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-    background-size: cover
+  .bg-purple:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
+      background-size: cover
 
-.views-row .bg-green:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-    background-size: cover
-    width: 100%
+  .bg-green:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+      background-size: cover
 
 /*All voices customizable lists start*/
 .view-id-voices_filters.view-display-id-all_voices_list_panel_pane,
@@ -72,6 +72,7 @@ a[class^="bg-"]:hover
     &:hover
       box-shadow: 0 0 4px 2px #c4c4c4
       // Hover for the quote for all the Cards.
+      // This turns on & off the opacity to show the quote.
       div.views-field-field-quote
         opacity: 1
       div.views-field-title
@@ -140,7 +141,7 @@ a[class^="bg-"]:hover
     .views-field-field-endowed-title-appointment
       color: $text-black
       font-size: 14px
-      padding: 0px 10px 0px 20px
+      padding: 0 10px 0 20px
       position: relative
       word-wrap: break-word
       +breakpoint($bp-for-phone-tablet-range)
@@ -546,11 +547,24 @@ a[class^="bg-"]:hover
                 font-size: 16px
                 line-height: 1.5
             .views-field-field-degree-year
-              padding: 0 10px 0 20px
+              padding: 0 10px 45px 20px
               word-wrap: break-word
+              +breakpoint($bp-for-phone-only)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-port)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-land)
+                padding-bottom: 35px
             .views-field-field-endowed-title-appointment
-              padding: 0 10px 10px 20px
+              padding: 0 10px 45px 20px
               word-wrap: break-word
+              +breakpoint($bp-for-phone-only)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-port)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-land)
+                padding-bottom: 35px
+
           .views-row:hover .views-field-title
             padding-top: 25px
   .full-bleed-header
@@ -595,11 +609,23 @@ a[class^="bg-"]:hover
               padding-right: 10px
               +breakpoint($bp-for-phone-only)
             .views-field-field-degree-year
-              padding: 0 10px 0 20px
+              padding: 0 10px 45px 20px
               word-wrap: break-word
+              +breakpoint($bp-for-phone-only)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-port)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-land)
+                padding-bottom: 35px
             .views-field-field-endowed-title-appointment
-              padding: 0 10px 10px 20px
+              padding: 0 10px 45px 20px
               word-wrap: break-word
+              +breakpoint($bp-for-phone-only)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-port)
+                padding-bottom: 35px
+              +breakpoint($bp-iphone6p-land)
+                padding-bottom: 35px
           .views-row:hover .views-field-title
             padding-top: 25px
         .pane-voices-filters-all-voices-list-panel-pane

@@ -9,8 +9,8 @@
 
 // File for the Voices NON-CUSTOMIZABLE LISTS
 //Hover gradients
-
-.views-row:hover
+a[class^="bg-"]:hover
+  text-decoration: none
   &:before
     content: ''
     height: 100%
@@ -18,35 +18,36 @@
     top: 0
     width: 100%
 
-.views-row.blue:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
-    background-size: cover
+.views-row
+  .bg-blue:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(38,99,157,0.5), rgb(38,99,157) 50% )
+      background-size: cover
 
-.views-row.brightteal:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-    background-size: cover
+  .bg-brightteal:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+      background-size: cover
 
-.views-row.charcoal:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
-    background-size: cover
+  .bg-charcoal:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(51,51,51,0.5), rgb(51,52,51) 50% )
+      background-size: cover
 
-.views-row.pink:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
-    background-size: cover
+  .bg-pink:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(221,24,128,0.5), rgb(221,24,128) 50% )
+      background-size: cover
 
-.views-row.purple:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
-    background-size: cover
+  .bg-purple:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(151,24,93,0.5), rgb(151,24,93) 50% )
+      background-size: cover
 
-.views-row.green:hover
-  &:before
-    background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
-    background-size: cover
+  .bg-green:hover
+    &:before
+      background: linear-gradient( to bottom, rgba(0,97,82,0.5), rgb(0,97,82) 50% )
+      background-size: cover
 
 .pane-voices-filters-voices-list-cta-panel-pane,
 .pane-gsb-voices-listing-panel-pane-1
@@ -68,101 +69,97 @@
     vertical-align: top
   .views-row
     display: inline-block
-    margin: 50px 45px 0px 0px
+    margin: 50px 45px 0 0
     position: relative
     width: 22%
-    //height: 410px
     +breakpoint($bp-for-phone-tablet-range)
       display: block
       width: auto
-    .field-name-title
+    &:hover
+      box-shadow: 0 0 4px 2px #c4c4c4
+
+      // Hover for the quote for all the Cards.
+      // This turns on & off the opacity to show the quote.
+      div.views-field-field-quote
+        opacity: 1
+      div.views-field-title
+        color: $white
+        text-decoration: underline
+        &:after
+          color: $white
+
+    .views-field-title
       color: $link-green
       padding: 25px 0 10px 20px
       position: relative
       text-align: left
-      a
-        color: $link-green
-        font-size: 26px
+      color: $link-green
+      font-size: 26px
+      &:hover
+        text-decoration: none
+      +icon-after("arrow-double-right", true)
+        color: $green-light
+        font-size: 18px
+        font-weight: normal
+        line-height: 0
+        margin-top: 0
+        padding-left: 10px
         &:hover
-          text-decoration: none
-          border-bottom: 2px solid $white
-        +icon-after("arrow-double-right", true)
           color: $green-light
-          font-size: 18px
-          font-weight: normal
-          line-height: 0
-          margin-top: 0
-          padding-left: 10px
-          &:hover
-            color: $green-light
-            text-decoration: none
-          &:after
-            color: $green-light
-            text-decoration: none
+          text-decoration: none
+        &:after
+          color: $green-light
+          text-decoration: none
         +breakpoint($bp-for-phone-tablet-range)
           font-size: 22px
-
+    a > div:last-child
+      padding-bottom: 45px
+      +breakpoint($bp-for-phone-only)
+        padding-bottom: 35px
     div:hover
-      .field-name-field-degree-year,
-      .field-name-title
+      .views-field-field-degree-year,
+      .views-field-title,
+      .views-field-field-endowed-title-appointment
         color: $white
 
-    .field-name-field-degree-year
+    .views-field-field-degree-year,
+    .views-field-field-endowed-title-appointment
       color: $text-black
       font-size: 16px
-      padding-left: 20px
+      padding: 0 20px
       position: relative
       +breakpoint($bp-for-phone-tablet-range)
         font-size: 14px
-    div:hover .field-name-field-quote
-      div
-        div
-          opacity: 1
+
     &:hover
       box-shadow: 0 0 4px 2px #c4c4c4
-      .views-field-field-quote
-        div
-          div
-            opacity: 1
-      .field-name-title
-        //padding-top: 55px
-        a
-          color: $white
-        a:after,
-        a:hover:after
-          color: $white !important
 
-      .field-name-field-degree-year
-        color: $white
-    .field-name-field-quote
-      .text-content
-        padding: 90px 10px 30px 20px
-        &:after
-          content: '”'
-        &:before
-          content: '“'
-      div
-        div
-          color: $white
-          cursor: pointer
-          display: table
-          left: 0
-          position: absolute
-          top: 0
-          width: 100%
-          opacity: 0
-          text-align: left
-          -webkit-transition: opacity 500ms
-          -moz-transition: opacity 500ms
-          -o-transition: opacity 500ms
-          transition: opacity 500ms
+    .views-field-field-quote
+      padding: 90px 10px 30px 20px
+      &:after
+        content: '”'
+      &:before
+        content: '“'
+      color: $white
+      cursor: pointer
+      display: table
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      opacity: 0
+      text-align: left
+      -webkit-transition: opacity 500ms
+      -moz-transition: opacity 500ms
+      -o-transition: opacity 500ms
+      transition: opacity 500ms
 
 .pane-voices-filters-voices-list-cta-panel-pane,
 .view-gsb-voices-listing.view-id-gsb_voices_listing,
 .pane-gsb-voices-listing-panel-pane-1
   padding-left: 35px
   .pane-title
-    padding: 10px 0px 20px 0px
+    padding: 10px 0 20px 0
     color: $text-black
     font-family: $font-light
     font-size: 36px
@@ -199,7 +196,7 @@
   margin: 0 auto
   padding-left: 0
   width: 1170px
-  padding-bottom: 0px
+  padding-bottom: 0
   +breakpoint($bp-for-phone-tablet-range)
     width: auto
     h2
@@ -211,91 +208,66 @@
 .view-gsb-voices-listing.view-id-gsb_voices_listing
   padding: 0
   +breakpoint($bp-tablet-land)
-    padding-left: 0px
+    padding-left: 0
   .views-row-1, .views-row-2
     +breakpoint($bp-for-phone-tablet-range)
-      padding-bottom: 70px
+      //padding-bottom: 70px
     +breakpoint($bp-for-phone-only)
-      padding-bottom: 45px
+      padding-bottom: inherit
     +breakpoint($bp-tablet-pot)
       margin-bottom: 50px
   .views-row-3
     +breakpoint($bp-for-phone-only)
-      padding-bottom: 45px
+      padding-bottom: inherit
     +breakpoint($bp-tablet-pot)
       margin-bottom: 50px
   .views-row
     border: 1px solid $listing-divider
-    margin: 50px 45px 0px 0px
-    padding-bottom: 45px
+    margin: 50px 45px 0 0
     width: 30% //360px
     +breakpoint($bp-for-phone-tablet-range)
       height: auto
       margin: 0 20px
     +breakpoint($bp-for-phone-only)
-      margin: 0px 0px 35px 5px
-      padding-bottom: 35px
+      margin: 0 0 35px 5px
       width: 86%
     +breakpoint($bp-for-tablet-range)
-      margin: 0px 30px 35px 0px
+      margin: 0 30px 35px 0
     +breakpoint($bp-tablet-pot)
       width: 43%
     +breakpoint($bp-tablet-land)
       width: 30%
     +breakpoint($bp-iphone-range-land)
-      padding-bottom: 35px
+      padding-bottom: inherit
       width: 42.4%
     +breakpoint($bp-iphone6p-land)
-      padding-bottom: 35px
       width: 42%
     +breakpoint($bp-iphone6p-port)
-      padding-bottom: 35px
       width: 80%
     +breakpoint($bp-tablet-pot)
-      padding-bottom: 35px
-      margin: 0px 46px 50px 0px
+      margin: 0 46px 50px 0
     +breakpoint($bp-nexus-land)
-      padding-bottom: 35px
+      margin: 0 30px 35px 0
       width: 44%
-    +breakpoint($bp-tablet-pro-port)
-      //height: 435px
-    .field-name-title
+    .views-field-title
       padding-top: 25px
       +breakpoint($bp-for-phone-tablet-range)
         padding-top: 25px
-    .field-name-field-quote
+    .views-field-field-quote
       +breakpoint($bp-for-phone-tablet-range)
-        .text-content
-          padding: 90px 10px 30px 20px
-      div
-        div
-          font-family: $font-demi
-          font-size: 20px
-          //height: 500px
-          line-height: 1.5
-          +breakpoint($bp-for-phone-only)
-            padding: 0
-            //width: 100.3%
-            //height: 446px
-          +breakpoint($bp-iphone-range-port)
-            //width: 100%
-          +breakpoint($bp-for-phone-tablet-range)
-            font-size: 18px
-          +breakpoint($bp-for-tablet-range)
-            padding: 0
-            width: 100.29%
-            //height: 410px
-          +breakpoint($bp-tablet-pot)
-            //padding: 38% 25px
-            //height: 435px
-          +breakpoint($bp-nexus-port)
-            //width: 100.3%
-          +breakpoint($bp-tablet-land)
-            //height: 435px
-          +breakpoint($bp-nexus-landscape)
-            font-size: 15px
-          +breakpoint($bp-tablet-pro-port)
-            //height: 435px
+        padding: 90px 10px 30px 20px
+      font-family: $font-demi
+      font-size: 20px
+      line-height: 1.5
+      +breakpoint($bp-for-phone-only)
+        padding: 0
+      +breakpoint($bp-for-phone-tablet-range)
+        font-size: 18px
+      +breakpoint($bp-for-tablet-range)
+        padding: 0
+        width: 100.29%
+      +breakpoint($bp-nexus-landscape)
+        font-size: 15px
 
   .views-row-last
     margin-right: 0
@@ -363,21 +335,15 @@
     +breakpoint($bp-mobile-range-414)
       margin: 0 auto
       width: 330px
-
 /* CTA Button End */
-// Removing the background span from display
-.view-gsb-voices-listing.view-id-gsb_voices_listing
-  .views-row
-    .field-name-field-background-color
-      display: none
 
 .panels-layout-gsb-homepage
   #content
     #main
       .pane-gsb-voices-listing-panel-pane-1
         h2.pane-title
-          padding-top: 0px
-          padding-bottom: 0px
+          padding-top: 0
+          padding-bottom: 0
           +breakpoint($bp-mobile)
             padding-bottom: 25px
             margin-top: 3px
@@ -386,15 +352,15 @@
             padding-bottom: 25px
             margin-top: 1px
           +breakpoint($bp-mobile-land)
-            padding-top: 0px
+            padding-top: 0
           +breakpoint($bp-tablet-land)
-            padding-top: 0px
+            padding-top: 0
             padding-bottom: 50px
           +breakpoint($bp-iphone6p-land)
-            padding-top: 0px
+            padding-top: 0
           +breakpoint($bp-tablet-pot)
-            padding-top: 0px
+            padding-top: 0
             padding-bottom: 50px
           +breakpoint($bp-tablet-pro-port)
-            padding-top: 0px
+            padding-top: 0
             padding-bottom: 50px

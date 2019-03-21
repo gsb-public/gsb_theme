@@ -10,7 +10,10 @@
   margin: 1px;
 }
 
-.views-row:hover:before {
+a[class^="bg-"]:hover {
+  text-decoration: none;
+}
+a[class^="bg-"]:hover:before {
   content: "";
   height: 100%;
   position: absolute;
@@ -18,32 +21,27 @@
   width: 100%;
 }
 
-.views-row.blue:hover:before {
+.views-row .bg-blue:hover:before {
   background: linear-gradient(to bottom, rgba(38, 99, 157, 0.5), #26639d 50%);
   background-size: cover;
 }
-
-.views-row.brightteal:hover:before {
+.views-row .bg-brightteal:hover:before {
   background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
   background-size: cover;
 }
-
-.views-row.charcoal:hover:before {
+.views-row .bg-charcoal:hover:before {
   background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), #333433 50%);
   background-size: cover;
 }
-
-.views-row.pink:hover:before {
+.views-row .bg-pink:hover:before {
   background: linear-gradient(to bottom, rgba(221, 24, 128, 0.5), #dd1880 50%);
   background-size: cover;
 }
-
-.views-row.purple:hover:before {
+.views-row .bg-purple:hover:before {
   background: linear-gradient(to bottom, rgba(151, 24, 93, 0.5), #97185d 50%);
   background-size: cover;
 }
-
-.views-row.green:hover:before {
+.views-row .bg-green:hover:before {
   background: linear-gradient(to bottom, rgba(0, 97, 82, 0.5), #006152 50%);
   background-size: cover;
 }
@@ -87,7 +85,7 @@
 .pane-voices-filters-voices-list-cta-panel-pane .views-row,
 .pane-gsb-voices-listing-panel-pane-1 .views-row {
   display: inline-block;
-  margin: 50px 45px 0px 0px;
+  margin: 50px 45px 0 0;
   position: relative;
   width: 22%;
 }
@@ -98,25 +96,38 @@
     width: auto;
   }
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover,
+.pane-gsb-voices-listing-panel-pane-1 .views-row:hover {
+  box-shadow: 0 0 4px 2px #c4c4c4;
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover div.views-field-field-quote,
+.pane-gsb-voices-listing-panel-pane-1 .views-row:hover div.views-field-field-quote {
+  opacity: 1;
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover div.views-field-title,
+.pane-gsb-voices-listing-panel-pane-1 .views-row:hover div.views-field-title {
+  color: white;
+  text-decoration: underline;
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover div.views-field-title:after,
+.pane-gsb-voices-listing-panel-pane-1 .views-row:hover div.views-field-title:after {
+  color: white;
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title {
   color: #636f00;
   padding: 25px 0 10px 20px;
   position: relative;
   text-align: left;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a {
   color: #636f00;
   font-size: 26px;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:hover {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:hover,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title:hover {
   text-decoration: none;
-  border-bottom: 2px solid white;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title:after {
   content: "\f101";
   display: inline;
   speak: none;
@@ -137,81 +148,64 @@
   margin-top: 0;
   padding-left: 10px;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after:hover,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after:hover {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after:hover,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title:after:hover {
   color: #bac405;
   text-decoration: none;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a:after:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a:after:after {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after:after,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title:after:after {
   color: #bac405;
   text-decoration: none;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-title a,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-title a {
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-title:after,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-title:after {
     font-size: 22px;
   }
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-degree-year,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-title,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-title {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+.pane-gsb-voices-listing-panel-pane-1 .views-row a > div:last-child {
+  padding-bottom: 45px;
+}
+@media (max-width: 37.4375em) {
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row a > div:last-child,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row a > div:last-child {
+    padding-bottom: 35px;
+  }
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-degree-year,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-title,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .views-field-field-endowed-title-appointment,
+.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .views-field-field-degree-year,
+.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .views-field-title,
+.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .views-field-field-endowed-title-appointment {
   color: white;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-degree-year,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment {
   color: #231f20;
   font-size: 16px;
-  padding-left: 20px;
+  padding: 0 20px;
   position: relative;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-degree-year,
-  .pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-degree-year {
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-degree-year,
+  .pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-endowed-title-appointment,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-degree-year,
+  .pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-endowed-title-appointment {
     font-size: 14px;
   }
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row div:hover .field-name-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row div:hover .field-name-field-quote div div {
-  opacity: 1;
 }
 .pane-voices-filters-voices-list-cta-panel-pane .views-row:hover,
 .pane-gsb-voices-listing-panel-pane-1 .views-row:hover {
   box-shadow: 0 0 4px 2px #c4c4c4;
 }
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .views-field-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .views-field-field-quote div div {
-  opacity: 1;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a {
-  color: white;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a:after,
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-title a:hover:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-title a:hover:after {
-  color: white !important;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row:hover .field-name-field-degree-year,
-.pane-gsb-voices-listing-panel-pane-1 .views-row:hover .field-name-field-degree-year {
-  color: white;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote .text-content,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote .text-content {
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote {
   padding: 90px 10px 30px 20px;
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote .text-content:after,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote .text-content:after {
-  content: "”";
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote .text-content:before,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote .text-content:before {
-  content: "“";
-}
-.pane-voices-filters-voices-list-cta-panel-pane .views-row .field-name-field-quote div div,
-.pane-gsb-voices-listing-panel-pane-1 .views-row .field-name-field-quote div div {
   color: white;
   cursor: pointer;
   display: table;
@@ -226,6 +220,14 @@
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
 }
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote:after,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote:after {
+  content: "”";
+}
+.pane-voices-filters-voices-list-cta-panel-pane .views-row .views-field-field-quote:before,
+.pane-gsb-voices-listing-panel-pane-1 .views-row .views-field-field-quote:before {
+  content: "“";
+}
 
 .pane-voices-filters-voices-list-cta-panel-pane,
 .view-gsb-voices-listing.view-id-gsb_voices_listing,
@@ -235,7 +237,7 @@
 .pane-voices-filters-voices-list-cta-panel-pane .pane-title,
 .view-gsb-voices-listing.view-id-gsb_voices_listing .pane-title,
 .pane-gsb-voices-listing-panel-pane-1 .pane-title {
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0 20px 0;
   color: #231f20;
   font-family: "NewsGothicBT-Light", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 36px;
@@ -307,7 +309,7 @@
   margin: 0 auto;
   padding-left: 0;
   width: 1170px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   .pane-gsb-voices-listing-panel-pane-1 {
@@ -328,17 +330,12 @@
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing {
-    padding-left: 0px;
-  }
-}
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-1, .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-2 {
-    padding-bottom: 70px;
+    padding-left: 0;
   }
 }
 @media (max-width: 37.4375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-1, .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-2 {
-    padding-bottom: 45px;
+    padding-bottom: inherit;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -348,7 +345,7 @@
 }
 @media (max-width: 37.4375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row-3 {
-    padding-bottom: 45px;
+    padding-bottom: inherit;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -358,8 +355,7 @@
 }
 .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
   border: 1px solid #c4c4c4;
-  margin: 50px 45px 0px 0px;
-  padding-bottom: 45px;
+  margin: 50px 45px 0 0;
   width: 30%;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
@@ -370,14 +366,13 @@
 }
 @media (max-width: 37.4375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    margin: 0px 0px 35px 5px;
-    padding-bottom: 35px;
+    margin: 0 0 35px 5px;
     width: 86%;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    margin: 0px 30px 35px 0px;
+    margin: 0 30px 35px 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
@@ -392,70 +387,67 @@
 }
 @media (min-width: 23.4375em) and (max-width: 41.6875em) and (orientation: landscape) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    padding-bottom: 35px;
+    padding-bottom: inherit;
     width: 42.4%;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    padding-bottom: 35px;
     width: 42%;
   }
 }
 @media (min-width: 25.625em) and (max-width: 46em) and (orientation: portrait) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    padding-bottom: 35px;
     width: 80%;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    padding-bottom: 35px;
-    margin: 0px 46px 50px 0px;
+    margin: 0 46px 50px 0;
   }
 }
 @media (min-width: 25.75em) and (max-width: 45.75em) and (orientation: landscape) {
   .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row {
-    padding-bottom: 35px;
+    margin: 0 30px 35px 0;
     width: 44%;
   }
 }
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
+.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-title {
   padding-top: 25px;
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-title {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-title {
     padding-top: 25px;
   }
 }
-@media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote .text-content {
-    padding: 90px 10px 30px 20px;
-  }
-}
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
+.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
   font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.5;
 }
+@media (min-width: 14.375em) and (max-width: 74.9375em) {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
+    padding: 90px 10px 30px 20px;
+  }
+}
 @media (max-width: 37.4375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
     padding: 0;
   }
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
     font-size: 18px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
     padding: 0;
     width: 100.29%;
   }
 }
 @media (min-width: 60.0625em) and (max-width: 60.1875em) {
-  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-quote div div {
+  .view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .views-field-field-quote {
     font-size: 15px;
   }
 }
@@ -570,13 +562,9 @@
 }
 
 /* CTA Button End */
-.view-gsb-voices-listing.view-id-gsb_voices_listing .views-row .field-name-field-background-color {
-  display: none;
-}
-
 .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 @media (max-width: 20em) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
@@ -593,29 +581,29 @@
 }
 @media (min-width: 30em) and (max-width: 45.9375em) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 @media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 50px;
   }
 }
 @media (min-width: 46em) and (max-width: 47.9375em) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 @media (min-width: 48em) and (max-width: 63.9375em) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 50px;
   }
 }
 @media (min-width: 64em) and (max-width: 85.375em) and (orientation: portrait) {
   .panels-layout-gsb-homepage #content #main .pane-gsb-voices-listing-panel-pane-1 h2.pane-title {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 50px;
   }
 }

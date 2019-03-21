@@ -808,13 +808,6 @@
         $("fieldset.group-voices-group .field-name-field-degree-year").clone().appendTo(".group-wrapper-tablet-1");
         $("fieldset.group-voices-group .field-name-field-title-position-single").clone().appendTo(".group-wrapper-tablet-1");
     });
-    /* Homepage 3-across voices color manipulation*/
-    $(function(){
-        $(".view-id-gsb_voices_listing .views-row .field-name-field-background-color").each(function(index){
-          var htmlColorHome = $(this).text();
-              $(this).closest(".views-row").addClass(htmlColorHome);
-        } );
-    });
     /* Getting the active-trail deeper into the site. */
     $(function() {
         /* MD Megamenu */
