@@ -56,10 +56,35 @@ a[class^="bg-"]:hover
 .view-voices-filters
   width: 100%
   .view-content
-    +breakpoint($bp-for-phone-tablet-range)
-      display: flex
-      flex-wrap: wrap
-      align-items: flex-start
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+
+  // To get the orphan to center
+  // 2 across and 1 centered below
+  +breakpoint($bp-mobile-land)
+    .views-row.views-row-last.views-row-odd
+      align-items: center
+      margin: 0 auto
+      margin-top: 30px
+      border: 2px solid hotpink
+  +breakpoint($bp-iphone6p-land)
+    .views-row.views-row-last.views-row-odd
+      align-items: center
+      margin: 0 auto
+      margin-top: 30px
+      border: 2px solid hotpink
+  +breakpoint($bp-iphone6-7-8p-land)
+    .views-row.views-row-last.views-row-odd
+      align-items: center
+      margin: 0 auto
+      margin-top: 30px
+  +breakpoint($bp-tablet-pot)
+    .views-row.views-row-last.views-row-odd
+      align-items: center
+      margin: 0 auto
+      margin-top: 30px
+
   .view-content > div
     vertical-align: top
   .views-row
@@ -107,6 +132,8 @@ a[class^="bg-"]:hover
       margin-right: 25px
     +breakpoint($bp-iphone6p-land)
       width: 40.60%
+    +breakpoint($bp-tablet-gap)
+      width: 28.5%
 
     .views-field-title
       color: $link-green
@@ -1432,6 +1459,9 @@ a[class^="bg-"]:hover
             width: 38%
           +breakpoint($bp-tablet-land)
             width: 28.5%
+          +breakpoint($bp-tablet-gap)
+            width: 28.5%
+
       .pane-voices-filters-voices-list-cta-panel-pane
         .pane-content
           .voices_display_list_cta
@@ -1680,6 +1710,8 @@ a[class^="bg-"]:hover
               width: 44%
             +breakpoint($bp-iphone6p-land)
               width: 40.50%
+            +breakpoint($bp-tablet-gap)
+              width: 28.5%
           .view-content
             +breakpoint($bp-mobile-land)
               margin-left: 40px
