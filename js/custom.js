@@ -641,7 +641,7 @@
                 if (isMobile.any() != null) {
                     if ((windowWidth >= 768) && (windowWidth < 1367)){
                         $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-67px'});
-                        $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-20%) translateY(-2%)'});
+                        $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-17%) translateY(-2%)'});
                     }
                 }
             }
