@@ -68,7 +68,7 @@ a[class^="bg-"]:hover
     display: inline-block
     margin: 30px 30px 0px 0px
     position: relative
-    width: 22%
+    width: 22.06%
     &:hover
       box-shadow: 0 0 4px 2px #c4c4c4
       // Hover for the quote for all the Cards.
@@ -431,7 +431,7 @@ a[class^="bg-"]:hover
     display: inline-block
     margin: 30px 30px 0px 0px
     position: relative
-    width: 22.06%
+    width: 22%
     a > div:last-child
       padding-bottom: 45px
       +breakpoint($bp-for-phone-only)
@@ -481,7 +481,7 @@ a[class^="bg-"]:hover
     div:hover
       .views-field-field-degree-year,
       .views-field-field-endowed-title-appointment
-        color: #fff
+        color: $white
 
     .views-field-field-degree-year,
     .views-field-field-endowed-title-appointment
@@ -1021,12 +1021,6 @@ a[class^="bg-"]:hover
           font-size: 20px
         &:hover
           text-decoration: none
- 
-    div:hover
-      .views-field-field-degree-year,
-      .views-field-field-endowed-title-appointment
-        +breakpoint($bp-for-phone-tablet-range)
-          color: $link-green
 /* Single Teaser styles end */
   
 /* side bar fixes for all list*/
@@ -1080,10 +1074,8 @@ a[class^="bg-"]:hover
           margin-left: 10px
           .views-row
             width: 96%
-            //height: 390px
             +breakpoint($bp-for-phone-only)
               width: 86%
-              //height: 360px
               margin-bottom: 20px
               margin-left: 10px
             +breakpoint($bp-for-tablet-range)
@@ -1093,13 +1085,10 @@ a[class^="bg-"]:hover
               width: 44%
             +breakpoint($bp-tablet-pot)
               width: 94%
-              //height: 360px
             +breakpoint($bp-tablet-land)
               width: 100%
-              //height: 360px
             +breakpoint($bp-iphone6p-land)
               width: 100%
-              //height: 360px
             .views-field-field-quote
               div
                 +breakpoint($bp-tablet-land)
@@ -1118,10 +1107,8 @@ a[class^="bg-"]:hover
           font-size: 24px
         .views-row
           width: 96%
-          //height: 390px
           +breakpoint($bp-for-phone-only)
             width: 85%
-            //height: 360px
             margin-bottom: 20px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1130,13 +1117,10 @@ a[class^="bg-"]:hover
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 90%
-            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 100%
-            //height: 360px
           +breakpoint($bp-for-phone-only)
             width: 80.60%
           .views-field-field-quote
@@ -1171,10 +1155,8 @@ a[class^="bg-"]:hover
             font-size: 24px
         .views-row
           width: 96%
-          //height: 390px
           +breakpoint($bp-for-phone-only)
             width: 85%
-            //height: 360px
             margin-bottom: 20px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1183,13 +1165,10 @@ a[class^="bg-"]:hover
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 100%
-            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 90%
-            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 92%
-            //height: 360px
 
           .views-field-field-quote
             +breakpoint($bp-mobile-land)
@@ -1226,9 +1205,9 @@ a[class^="bg-"]:hover
             width: 99%
             margin-right: 0
           +breakpoint($bp-for-phone-only)
-            height: 430px
+            //height: 430px
           +breakpoint($bp-iphone6p-port)
-            height: 455px
+            //height: 455px
           +breakpoint($bp-mobile-land)
             width: 44%
           +breakpoint($bp-tablet-pot)
@@ -1248,7 +1227,6 @@ a[class^="bg-"]:hover
           width: 42%
           +breakpoint($bp-for-phone-only)
             width: 85%
-            //height: 360px
             margin-bottom: 10px
           +breakpoint($bp-for-tablet-range)
             width: 73%
@@ -1257,22 +1235,17 @@ a[class^="bg-"]:hover
             width: 44%
           +breakpoint($bp-tablet-pot)
             width: 66%
-            //height: 360px
           +breakpoint($bp-tablet-land)
             width: 60%
-            //height: 370px
           +breakpoint($bp-iphone6p-land)
             width: 82%
           &:hover
             .views-field-title
               padding-top: 25px
             .views-field-field-quote
-              //height: 390px
               +breakpoint($bp-tablet-pot)
-                //height: 360px
                 font-size: 16px
               +breakpoint($bp-tablet-land)
-                //height: 370px
                 font-size: 16px
 
 .gsb-landing-standard-page-one
@@ -1288,9 +1261,6 @@ a[class^="bg-"]:hover
             +breakpoint($bp-mobile-land)
               display: block
               width: 90%
-              //height: 360px
-            +breakpoint($bp-iphone6p-port)
-              //height: 400px
             .views-field-field-quote
               +breakpoint($bp-mobile-land)
                 font-size: 16px
@@ -1665,16 +1635,7 @@ a[class^="bg-"]:hover
                 +breakpoint($bp-tablet-land)
                   max-height: 100% !important
                   width: 100%
-            .views-field-field-degree-year,
-            .views-field-field-endowed-title-appointment
-              +breakpoint($bp-mobile-land)
-                padding-bottom: 10px
-              +breakpoint($bp-iphone6p-land)
-                padding-bottom: 10px
-              +breakpoint($bp-tablet-pot)
-                padding-bottom: 10px
-              +breakpoint($bp-tablet-land)
-                padding-bottom: 10px
+
         .view-display-id-all_voices_list_panel_pane
           .views-row
             width: 29.1%
@@ -1815,14 +1776,7 @@ a[class^="bg-"]:hover
                 +breakpoint($bp-tablet-land)
                   max-height: 100% !important
                   width: 100%
-            .views-field-field-degree-year,
-            .views-field-field-endowed-title-appointment
-              +breakpoint($bp-mobile-land)
-                padding-bottom: 10px
-              +breakpoint($bp-iphone6p-land)
-                padding-bottom: 10px
-              +breakpoint($bp-tablet-pot)
-                padding-bottom: 10px
+
 
 /* no side bar Layout code changes */
 .panels-layout-gsb-no-sidebar 
@@ -1878,10 +1832,8 @@ a[class^="bg-"]:hover
             margin-left: 10px
             .views-row
               width: 96%
-              height: 390px
               +breakpoint($bp-for-phone-only)
                 width: 86%
-                height: 360px
                 margin-bottom: 20px
                 margin-left: 10px
               +breakpoint($bp-for-tablet-range)
@@ -1891,21 +1843,12 @@ a[class^="bg-"]:hover
                 width: 44%
               +breakpoint($bp-tablet-pot)
                 width: 39%
-                height: 360px
               +breakpoint($bp-tablet-land)
                 width: 28%
-                height: 360px
               +breakpoint($bp-iphone6p-land)
                 width: 40.5%
-                height: 360px
               .views-field-field-quote
-                //height: 390px
-                //+breakpoint($bp-iphone6p-land)
-                //  height: 360px
-                //+breakpoint($bp-tablet-pot)
-                //  height: 360px
                 +breakpoint($bp-tablet-land)
-                  //height: 360px
                   font-size: 15px
                 +breakpoint($bp-for-phone-tablet-range)
                   font-size: 16px
@@ -1939,10 +1882,8 @@ a[class^="bg-"]:hover
         .pane-voices-filters-voices-list-cta-panel-pane
           .views-row
             width: 96%
-            height: 390px
             +breakpoint($bp-for-phone-only)
               width: 86%
-              height: 360px
               margin-bottom: 20px
               margin-left: 10px
             +breakpoint($bp-for-tablet-range)
@@ -1952,21 +1893,12 @@ a[class^="bg-"]:hover
               width: 44%
             +breakpoint($bp-tablet-pot)
               width: 39%
-              height: 360px
             +breakpoint($bp-tablet-land)
               width: 28%
-              height: 360px
             +breakpoint($bp-iphone6p-land)
               width: 40.5%
-              height: 360px
             .views-field-field-quote
-              //height: 390px
-              //+breakpoint($bp-iphone6p-land)
-              //  height: 360px
-              //+breakpoint($bp-tablet-pot)
-              //  height: 360px
               +breakpoint($bp-tablet-land)
-                //height: 360px
                 font-size: 15px
               +breakpoint($bp-for-phone-tablet-range)
                 font-size: 16px
@@ -2032,7 +1964,6 @@ a[class^="bg-"]:hover
             width: 87.5%
             +breakpoint($bp-for-phone-only)
               width: 81%
-              height: 360px
               margin-bottom: 20px
               margin-left: 10px
             +breakpoint($bp-for-tablet-range)
@@ -2042,13 +1973,10 @@ a[class^="bg-"]:hover
               width: 44%
             +breakpoint($bp-tablet-pot)
               width: 39%
-              height: 360px
             +breakpoint($bp-tablet-land)
               width: 28%
-              height: 360px
             +breakpoint($bp-iphone6p-land)
               width: 40.5%
-              height: 360px
 
 .gsb-full-bleed-page
   .inner-main-wrapper
