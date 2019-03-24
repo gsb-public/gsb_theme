@@ -621,6 +621,9 @@
             }
         };
 
+        // custom check for ipad using chrome browser
+        var chrome = navigator.userAgent.match('CriOS');
+
         function setVideoScale(choice, width, height) {
             // get the parent element size
             var container_w = choice.parent().width();
@@ -642,6 +645,9 @@
                     if ((windowWidth >= 768) && (windowWidth < 1367)){
                         $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-67px'});
                         $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-17%) translateY(-2%)'});
+                        if (chrome != null) {
+                            $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-105px'});
+                        }
                     }
                 }
             }
