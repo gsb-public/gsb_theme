@@ -397,6 +397,11 @@ function gsb_theme_preprocess_page(&$variables) {
      );
   }
 
+  // load viewport sizing on homepage
+  if (request_uri() === url('<front>')) {
+    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/landing-viewport.js');
+  }
+
   // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
@@ -412,7 +417,7 @@ function gsb_theme_preprocess_page(&$variables) {
       $variables['theme_hook_suggestions'][] = 'page__ee_program_admission';
     }
   }
-	
+
   if (!empty($_GET['q']) && $_GET['q'] == 'coveo-search-page/') {
     $variables['theme_hook_suggestions'][] = 'page__coveo_search';
   }
