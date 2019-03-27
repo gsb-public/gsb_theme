@@ -90,7 +90,7 @@
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-105px'});
                                 break;
                             case ((windowWidth >= 663) && (windowWidth < 736)): //i6/i7/i8 landscape
-                                $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-60px'});
+                                $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-80px'});
                                 break;
                             case (windowWidth === 736): //i6+ landscape
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-85px'});
