@@ -308,6 +308,31 @@
   .pane-bundle-landing-viewport
     +breakpoint($bp-for-phone-only)
       display: block
+    //+breakpoint(374px max-width)
+    //  padding-top: 35px
+    //+breakpoint($bp-iphone-range-port)
+    //  padding-top: 5px
+    //  padding-bottom: 0
+    //+breakpoint($bp-iphone5-land)
+    //  padding-top: 33px
+    //+breakpoint($bp-iphone6-7-8p-land)
+    //  padding-top: 95px
+    //  margin-top: -64px
+    //+breakpoint($bp-ipad-range)
+    //  padding-top: 75px
+    //  margin-top: -34px
+    //+breakpoint($bp-for-desktop-up)
+    //  padding-top: 95px
+    //  margin-top: -34px
+
+    +breakpoint($bp-iphone6-7-8p-land)
+      margin-top: -64px
+    +breakpoint($bp-ipad-range)
+      margin-top: -34px
+    +breakpoint($bp-for-desktop-up)
+      margin-top: -34px
+
+
     #landing-video
       width: 100%
       height: 100vh
