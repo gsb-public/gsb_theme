@@ -170,9 +170,6 @@ a[class^="bg-"]:hover
     +breakpoint($bp-for-tablet-range)
       font-size: 28px !important
 .pane-gsb-voices-listing-panel-pane-1
-  +breakpoint($bp-for-phone-tablet-range)
-    .pane-title
-      padding-bottom: 50px
   +breakpoint($bp-for-phone-only)
     padding: 0
   +breakpoint($bp-for-tablet-range)
@@ -268,28 +265,26 @@ a[class^="bg-"]:hover
 
   .views-row-last
     margin-right: 0
-.pane-gsb-voices-listing-panel-pane-1
-  +breakpoint($bp-for-phone-tablet-range)
-    .pane-title
-      padding-bottom: 20px
-      padding-top: 10px
-  +breakpoint($bp-for-phone-only)
-    padding: 0
 
 /* CTA Button */
 .pane-content
   .homepage_voices_cta
-    margin-bottom: 30px
     background-color: $red-dark
     color: $white
     font-size: 18px
     font-family: $font-demi
     min-height: 55px
     line-height: 1.2
-    margin: 70px auto 0
     padding: 20px 28px 20px 20px
     position: relative
     width: 205px
+    +breakpoint($bp-iphone-port-to-land-range)
+      margin: 0 auto 0
+    +breakpoint($bp-tablet-range)
+      margin: 10px auto 25px
+    +breakpoint($bp-for-desktop-up)
+      margin: 70px auto 35px
+
     @extend %bg-and-box-shadow
     &:first-of-type
       border-top: 0
@@ -297,12 +292,10 @@ a[class^="bg-"]:hover
       border-bottom: 0
       +breakpoint($bp-mobile)
         border-bottom: 0
-        margin-top: 4px
-        margin-bottom: 20px
       +breakpoint($bp-mobile-large-range)
         border-bottom: 0
-        margin-top: 4px
-        margin-bottom: 45px
+      +breakpoint(1024px 1199px)
+        margin: 25px auto 25px
     a
       color: $white
       +icon-after("arrow-double-right", true)
@@ -321,8 +314,6 @@ a[class^="bg-"]:hover
       background-color: #2D6280
       color: $white
       cursor: pointer
-    +breakpoint($bp-for-tablet-range)
-      margin-top: 10px
     +breakpoint($bp-mobile)
       margin: 0 auto
       width: 280px
@@ -339,25 +330,14 @@ a[class^="bg-"]:hover
     #main
       .pane-gsb-voices-listing-panel-pane-1
         h2.pane-title
-          padding-top: 0
-          padding-bottom: 0
-          +breakpoint($bp-mobile)
-            padding-bottom: 25px
-            margin-top: 3px
-          +breakpoint($bp-for-medium-phone-tablet-range)
-            padding-top: 30px
-            padding-bottom: 25px
-            margin-top: 1px
-          +breakpoint($bp-mobile-land)
+          +breakpoint(736px max-width)
             padding-top: 0
-          +breakpoint($bp-tablet-land)
-            padding-top: 0
-            padding-bottom: 50px
-          +breakpoint($bp-iphone6p-land)
-            padding-top: 0
-          +breakpoint($bp-tablet-pot)
-            padding-top: 0
-            padding-bottom: 50px
-          +breakpoint($bp-tablet-pro-port)
-            padding-top: 0
-            padding-bottom: 50px
+            margin-top: -4px
+            margin-bottom: -4px
+          +breakpoint($bp-tablet-range)
+            padding-top: 25px
+            padding-bottom: 40px
+          +breakpoint($bp-for-desktop-up)
+            padding-top: 40px
+            padding-bottom: 0
+            margin-bottom: -10px
