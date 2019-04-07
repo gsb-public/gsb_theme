@@ -2861,41 +2861,7 @@ del {
   display: none;
 }
 .panels-layout-gsb-homepage #content #main .panel-pane {
-  padding-top: 65px;
-}
-@media (max-width: 23.375em) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 35px;
-  }
-}
-@media (min-width: 23.4375em) and (max-width: 41.6875em) and (orientation: portrait) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 5px;
-    padding-bottom: 0;
-  }
-}
-@media (max-width: 35.5em) and (max-height: 20em) and (orientation: landscape) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 33px;
-  }
-}
-@media (min-width: 41.6875em) and (max-width: 46em) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 95px;
-    margin-top: -64px;
-  }
-}
-@media (min-width: 48em) and (max-width: 64em) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 75px;
-    margin-top: -34px;
-  }
-}
-@media (min-width: 75em) {
-  .panels-layout-gsb-homepage #content #main .panel-pane {
-    padding-top: 95px;
-    margin-top: -34px;
-  }
+  padding-top: 35px;
 }
 
 .no-sidebars.page-seed.panels-layout-gsb-full-bleed-page h1.title,
@@ -14673,12 +14639,14 @@ div.callout br {
   vertical-align: top;
 }
 
-.format-body,
-.format-wysiwyg,
-.field-name-field-body,
-.field-name-field-text-equivalent .field-item {
-  overflow: hidden;
-  *zoom: 1;
+@media (min-width: 46.0625em) {
+  .format-body,
+  .format-wysiwyg,
+  .field-name-field-body,
+  .field-name-field-text-equivalent .field-item {
+    overflow: hidden;
+    *zoom: 1;
+  }
 }
 .format-body p.paragraph,
 .format-wysiwyg p.paragraph,
