@@ -22,8 +22,10 @@
     div.pane-title
       font-weight: normal
       font-family: $font-light
-      padding: 38px 0 37px
+      padding: 38px 0 38px
       font-size: 36px
+      &:last-of-type
+        padding: 38px 0 43px
       +breakpoint($bp-mobile)
         margin-top: -5px
         padding-top: 0
@@ -32,7 +34,7 @@
         font-size: 26px
       +breakpoint(321px $max-width)
         font-size: 26px
-        padding-bottom: 30px // here
+        padding-bottom: 30px
       +breakpoint(321px $bp-for-phone-only)
         font-size: 26px
         margin-top: -5px
@@ -62,7 +64,7 @@
         font-size: 36px
       +breakpoint($bp-tablet-land)
         margin-top: -16px
-        margin-bottom: 9px // here
+        margin-bottom: 9px
         font-size: 36px
 
     .view-gsb-announcement-school-listing
@@ -244,18 +246,26 @@
   .homepage_insights-cta
     @extend %homepage_cta
     width: 205px
+    margin-bottom: 35px
     &:hover
       background-color: #2D6280
       color: $white
       cursor: pointer
-    +breakpoint($bp-for-tablet-range)
+    +breakpoint($bp-tablet-range)
       width: 205px
+      margin-top: 25px
+      margin-bottom: 5px
     +breakpoint($bp-mobile)
       min-width: 280px
+      margin-bottom: -20px
     +breakpoint($bp-mobile-range-375)
       min-width: 330px
+      margin-bottom: -65px
     +breakpoint($bp-mobile-range-414)
       min-width: 374px
+      margin-bottom: -65px
+    +breakpoint(568px 736px)
+      margin-bottom: -20px
   .homepage_across-cta
     @extend %homepage_cta
     padding-right: 30px
