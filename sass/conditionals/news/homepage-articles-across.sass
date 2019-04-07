@@ -22,29 +22,47 @@
     div.pane-title
       font-weight: normal
       font-family: $font-light
-      padding-bottom: 50px
+      padding: 38px 0 37px
       font-size: 36px
       +breakpoint($bp-mobile)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
         font-size: 26px
-        padding-bottom: 24px
       +breakpoint(321px $max-width)
         font-size: 26px
-        padding-bottom: 30px
+        padding-bottom: 30px // here
       +breakpoint(321px $bp-for-phone-only)
         font-size: 26px
-        margin-top: 25px
-        padding-top: 5px
+        margin-top: -5px
+        padding-bottom: 16px
+        padding-top: 0
       +breakpoint($bp-mobile-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
         font-size: 26px
       +breakpoint($bp-iphone6p-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
         font-size: 26px
       +breakpoint($bp-iphone6-7-8p-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
         font-size: 26px
       +breakpoint($bp-tablet-pot)
-        margin-bottom: 20px
+        margin-top: -16px
+        margin-bottom: 9px
         font-size: 36px
       +breakpoint($bp-tablet-land)
-        margin-bottom: 20px
+        margin-top: -16px
+        margin-bottom: 9px // here
         font-size: 36px
 
     .view-gsb-announcement-school-listing
@@ -248,16 +266,21 @@
       color: $white
       cursor: pointer
     +breakpoint($bp-for-desktop-up)
-      margin-bottom: 105px
-    +breakpoint($bp-for-tablet-range)
+      margin-bottom: 70px
+    +breakpoint($bp-tablet-range)
       width: 205px
-      margin-top: 14px
-      margin-bottom: 80px
+      margin-top: 25px
+      margin-bottom: -5px
     +breakpoint($bp-mobile)
       min-width: 280px
+      margin-bottom: -10px
     +breakpoint($bp-mobile-range-375)
       min-width: 330px
+      margin-bottom: -30px
     +breakpoint($bp-mobile-range-414)
       min-width: 374px
+      margin-bottom: -30px
+    +breakpoint(568px 736px)
+      margin-bottom: -55px
     a:after
       right: 15px
