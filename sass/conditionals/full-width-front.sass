@@ -12,7 +12,7 @@
   .pane-bundle-embed-stackla
     background: url(/sites/gsb/files/background-image-home-page-social.png) no-repeat
     border-bottom-width: 0
-    height: 600px
+    height: 650px
     margin-top: 70px
     +breakpoint($bp-mobile)
       margin-top: 25px
@@ -22,40 +22,49 @@
       height: auto
       padding-bottom: 40px
       padding-left: 20px
+    +breakpoint(568px 736px)
+      height: 328px
     +breakpoint($bp-tablet-pot)
       margin-top: 45px
       padding-left: 25px
-      height: 500px
+      height: 539px
     +breakpoint($bp-tablet-land)
       margin-top: 45px
       padding-left: 25px
-      height: 500px
+      height: 636px
 
     .pane-content
       margin: 0 auto
       width: 90%
+      padding-top: 40px
+      +breakpoint($bp-iphone-port-to-land-range)
+        padding-top: 0
+        margin-top: -3px
+        padding-bottom: 5px
+      +breakpoint($bp-tablet-pot)
+        padding-top: 25px
+      +breakpoint($bp-tablet-land)
+        padding-top: 25px
       &:before
         content: "Stanford GSB Community on Social"
         color: $white
         display: block
         font-size: 36px
-        padding-bottom: 50px
+        padding-bottom: 45px
         text-align: center
         +breakpoint($bp-for-phone-only)
           font-size: 26px
-          padding-bottom: 30px
+          padding-bottom: 20px
         +breakpoint($bp-mobile-land)
           font-size: 26px
-          padding-bottom: 30px
+          padding-bottom: 20px
         +breakpoint($bp-iphone6p-land)
           font-size: 26px
-          padding-bottom: 30px
+          padding-bottom: 20px
         +breakpoint($bp-iphone6-7-8p-land)
           font-size: 26px
-          padding-bottom: 30px
+          padding-bottom: 20px
         +breakpoint($bp-tablet-pot)
           font-size: 36px
-          padding-bottom: 35px
         +breakpoint($bp-tablet-land)
           font-size: 36px
-          padding-bottom: 35px
