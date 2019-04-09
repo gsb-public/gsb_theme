@@ -321,9 +321,9 @@ a[class^="bg-"]:hover
 .view-display-id-voices_filters_pane
   width: 100%
   .view-filters
-    background-color: $grey-hp
     .views-exposed-widgets
-      height: 88px
+      height: auto
+      background-color: $grey-hp
       +breakpoint($bp-for-phone-tablet-range)
         height: auto
     .views-widget-filter-field_industry_tid
@@ -2594,3 +2594,33 @@ a[class^="bg-"]:hover
           margin-left: 20px
           width: 82%
 
+.no-sidebars.panels-layout-gsb-no-sidebar,
+.no-sidebars.panels-layout-gsb-full-bleed-page
+  .view-display-id-voices_filters_pane 
+    .view-filters 
+      .views-widget-filter-field_industry_tid 
+        .form-select 
+          .customSelectInner
+            +breakpoint($bp-iphone-range-land)
+              width: 230px !important
+            +breakpoint($bp-other-phones-land)
+              width: 215px !important
+            +breakpoint($bp-nexus-land)
+              width: 230px !important
+            +breakpoint($bp-iphone6p-land)
+              width: 230px !important
+            +breakpoint($bp-tablet-land)
+              width: 230px !important
+      .views-widget-filter-field_region_of_interest_tid 
+        .form-select 
+          .customSelectInner
+            +breakpoint($bp-iphone-range-land)
+              width: 230px !important
+            +breakpoint($bp-other-phones-land)
+              width: 215px !important
+            +breakpoint($bp-nexus-land)
+              width: 230px !important
+            +breakpoint($bp-iphone6p-land)
+              width: 230px !important
+            +breakpoint($bp-tablet-land)
+              width: 230px !important
