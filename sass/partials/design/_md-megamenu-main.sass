@@ -672,10 +672,11 @@ div#header-wrapper.awemenu-sticky + div#hero
           right: 0
           width: auto
     .row
-      //.col-md-3.col-xs-12 + .col-md-3.col-xs-12 h3.mm-header,
       .col-md-12.col-xs-12 h3.mm-header,
       .col-md-3.col-xs-12 h3.mm-header
         padding-top:  0
+        +breakpoint($bp-for-tablet-range)
+          padding-top: 10px
       .col-xs-12.col-md-12,
       .col-md-3
         +breakpoint($bp-for-phone-only)
@@ -693,10 +694,12 @@ div#header-wrapper.awemenu-sticky + div#hero
           padding: 35px 20px 17.5px 20px
         +breakpoint($bp-for-tablet-range)
           font-size: 22px
-          padding: 0 0 35px 30px
+          padding: 0 0 20px 30px
       h3.mm-header:first-of-type
         padding-top: 35px
         margin: 0
+        +breakpoint($bp-for-tablet-range)
+          padding-top: 0
       .menu
         li.leaf
           a
