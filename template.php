@@ -397,9 +397,18 @@ function gsb_theme_preprocess_page(&$variables) {
      );
   }
 
-  // load viewport sizing on homepage
+  // load homepage viewport sizing and custom scrollbar
   if (request_uri() === url('<front>')) {
-    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/landing-viewport.js');
+    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/landing-viewport.js', array(
+       'type' => 'file',
+       'scope' => 'header',
+       'weight' => 4,
+    ));
+    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/jquery.nicescroll.js', array(
+       'type' => 'file',
+       'scope' => 'header',
+       'weight' => 5,
+    ));
   }
 
   // 403 page
