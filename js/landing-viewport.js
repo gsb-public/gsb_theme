@@ -52,7 +52,7 @@
                 var scale_h = container_h / height;
                 var scale = scale_w > scale_h ? scale_w : scale_h;
                 // scale the component
-                choice.width(scale * width);
+                choice.width(scale * width + 25);
                 choice.height(scale * height);
             };
 
@@ -62,7 +62,7 @@
                     setVideoScale(vid, vid_w_orig, vid_h_orig);
                     if (isMobile.any() != null) {
                         if ((windowWidth >= 768) && (windowWidth < 1337)){
-                            $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-16%) translateY(-2%)'});
+                            $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-10%) translateY(-2%)'});
                             $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-67px'});
                             if (chrome != null) {
                                 $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-105px'});
@@ -185,6 +185,26 @@
 
             /* Viewport text */
             $('div.viewport-text').wrapAll('<div class="viewport-text-wrapper"></div>');
+
+            /* custom scrollbar */
+            if (isMobile.any() === null) {
+                $("body").niceScroll({
+                    cursorborder: "none", // css definition for cursor border
+                    cursorwidth: "6px", // cursor width in pixel
+                    cursorborderradius: "18px", // border radius in pixel for cursor
+                    cursoropacitymax: .6, // change opacity when cursor is active range from 1 to 0
+                    zindex: 100, // change z-index for scrollbar div
+                    scrollspeed: 70, // scrolling speed
+                    mousescrollstep: 70, // scrolling speed with mouse wheel (pixel)
+                    hwacceleration: true, // use hardware accelerated scroll when supported
+                    preservenativescrolling: true, // you can scroll native scrollable areas with mouse, bubbling mouse wheel event
+                    enablekeyboard: true, // nicescroll can manage keyboard events
+                    smoothscroll: true, // scroll with ease movement
+                    enablemousewheel: true, // nicescroll can manage mouse wheel events
+                    enablekeyboard: true, // nicescroll can manage keyboard events
+                    smoothscroll: true // scroll with ease movement
+                });
+            }
         }
     }
 })(jQuery);
