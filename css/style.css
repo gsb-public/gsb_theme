@@ -9476,30 +9476,45 @@ input.signup-submit:hover {
   z-index: 999;
 }
 
-@media (min-width: 75em) {
-  #header-wrapper.awemenu-sticky {
-    height: 87px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 99;
-  }
-}
-@media (min-width: 75em) {
-  .page-seed #header-wrapper.awemenu-sticky {
-    height: 89px;
-  }
-}
-@media (min-width: 75em) {
-  .page-exec-ed #header-wrapper.awemenu-sticky {
-    height: 89px;
-  }
+#header-wrapper.awemenu-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
+div#header-wrapper.awemenu-sticky + #content-wrapper {
+  position: relative;
+}
+@media (min-width: 75em) {
+  div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 87px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 50px;
+  }
+}
 @media (min-width: 75em) {
   .page-seed div#header-wrapper.awemenu-sticky + #content-wrapper {
     margin-top: 88px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-seed div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-seed div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 50px;
   }
 }
 @media (min-width: 75em) {
@@ -9507,10 +9522,14 @@ input.signup-submit:hover {
     margin-top: 81px;
   }
 }
-@media (min-width: 75em) {
-  div#header-wrapper.awemenu-sticky + #content-wrapper {
-    margin-top: 87px;
-    position: relative;
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper {
+    margin-top: 50px;
   }
 }
 
@@ -9519,26 +9538,75 @@ input.signup-submit:hover {
     margin-top: 87px;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-alumni #header-wrapper.awemenu-sticky ~ #content-wrapper {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-alumni #header-wrapper.awemenu-sticky ~ #content-wrapper {
+    margin-top: 50px;
+  }
+}
 
+div#header-wrapper.awemenu-sticky + div#hero {
+  position: relative;
+}
 @media (min-width: 75em) {
   div#header-wrapper.awemenu-sticky + div#hero {
     margin-top: 87px;
-    position: relative;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 50px;
   }
 }
 
+.page-seed div#header-wrapper.awemenu-sticky + div#hero {
+  position: relative;
+}
 @media (min-width: 75em) {
   .page-seed div#header-wrapper.awemenu-sticky + div#hero {
     margin-top: 89px;
-    position: relative;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-seed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-seed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 50px;
   }
 }
 
+.page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
+.page-exec-ed div#header-wrapper.awemenu-sticky + div#hero {
+  position: relative;
+}
 @media (min-width: 75em) {
   .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
   .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero {
     margin-top: 89px;
-    position: relative;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
+  .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
+  .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 50px;
   }
 }
 
