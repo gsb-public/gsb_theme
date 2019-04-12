@@ -263,49 +263,74 @@
   width: 115px
   z-index: 999
 
-// Sticky menus
+// Sticky menus Start
 #header-wrapper.awemenu-sticky
-  +breakpoint($bp-for-desktop-up)
-    height: 87px
-    position: fixed
-    left: 0
-    right: 0
-    top: 0
-    z-index: 99
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 99
   .page-seed &
-    +breakpoint($bp-for-desktop-up)
-      height: 89px
+    //height: 89px
   .page-exec-ed &
-    +breakpoint($bp-for-desktop-up)
-      height: 89px
+    //height: 89px
 div#header-wrapper.awemenu-sticky + #content-wrapper
+  position: relative
+  +breakpoint($bp-for-desktop-up)
+    margin-top: 87px
+  +breakpoint($bp-for-tablet-range)
+    margin-top: 64px
+  +breakpoint($bp-for-phone-only)
+    margin-top: 50px
   .page-seed &
     +breakpoint($bp-for-desktop-up)
       margin-top: 88px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 64px
+    +breakpoint($bp-for-phone-only)
+      margin-top: 50px
   .page-exec-ed &
     +breakpoint($bp-for-desktop-up)
       margin-top: 81px
-  +breakpoint($bp-for-desktop-up)
-    margin-top: 87px
-    position: relative
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 64px
+    +breakpoint($bp-for-phone-only)
+      margin-top: 50px
 #header-wrapper.awemenu-sticky ~ #content-wrapper
   .page-alumni &
     +breakpoint($bp-for-desktop-up)
       margin-top: 87px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 64px
+    +breakpoint($bp-for-phone-only)
+      margin-top: 50px
 div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 87px
-    position: relative
+  +breakpoint($bp-for-tablet-range)
+    margin-top: 64px
+  +breakpoint($bp-for-phone-only)
+    margin-top: 50px
 .page-seed div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 89px
-    position: relative
+  +breakpoint($bp-for-tablet-range)
+    margin-top: 64px
+  +breakpoint($bp-for-phone-only)
+    margin-top: 50px
 
 .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper,
 .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero
+  position: relative
   +breakpoint($bp-for-desktop-up)
     margin-top: 89px
-    position: relative
+  +breakpoint($bp-for-tablet-range)
+    margin-top: 64px
+  +breakpoint($bp-for-phone-only)
+    margin-top: 50px
+// Sticky menus End
 
 // Align Menu Top Items
 #header-wrapper
