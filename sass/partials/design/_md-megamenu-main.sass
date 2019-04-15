@@ -538,7 +538,18 @@ div#header-wrapper.awemenu-sticky + div#hero
   #block-menu-menu-md-mm-exec-ed-indiv-utility
     +breakpoint($bp-for-desktop-up)
       .content
-        width: 235px // special width for the long link
+        width: 200px
+        ul.menu
+          li.leaf
+            padding-right: 10px
+  .col-md-3.col-xs-12
+    width: 26%
+  div.col-md-3.col-xs-12:last-of-type
+    width: 22%
+  div.col-md-6.col-xs-12
+    width: 52%
+  div.col-md-6.col-xs-12:last-of-type
+    width: 48%
 
 // Override
 #md-megamenu-1.awemenu-mobile-standard,
