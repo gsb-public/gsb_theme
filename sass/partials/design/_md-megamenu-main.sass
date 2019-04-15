@@ -331,6 +331,13 @@ div#header-wrapper.awemenu-sticky + div#hero
   +breakpoint($bp-for-phone-only)
     margin-top: 50px
 // Sticky menus End
+// Fix for sticky menus on devices
+#navigation
+  .awemenu-mobile-standard
+    -webkit-overflow-scrolling: touch
+    -webkit-transform: translateZ(0px)
+    -webkit-transform: translate3d(0,0,0)
+    -webkit-perspective: 1000
 
 // Align Menu Top Items
 #header-wrapper
