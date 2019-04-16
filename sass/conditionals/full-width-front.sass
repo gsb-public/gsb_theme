@@ -12,30 +12,29 @@
   .pane-bundle-embed-stackla
     background: url(/sites/gsb/files/background-image-home-page-social.png) no-repeat
     border-bottom-width: 0
-    height: 650px
+    height: auto
     margin-top: 70px
     +breakpoint($bp-mobile)
       margin-top: 25px
-      padding-bottom: 18px
-    +breakpoint($bp-mobile-range-375)
-      padding-bottom: 14px
-    +breakpoint($bp-mobile-range-414)
-      padding-bottom: 8px
+      padding-bottom: 45px
     +breakpoint($bp-mobile-large-range)
       margin-top: 45px
+      padding-bottom: 45px
     +breakpoint($bp-for-phone-only)
-      height: auto
       padding-left: 20px
     +breakpoint(568px 736px)
-      height: 427px
+      padding-bottom: 50px
+      min-height: 328px
     +breakpoint($bp-tablet-pot)
       margin-top: 45px
       padding-left: 25px
-      height: 539px
+      padding-bottom: 85px
     +breakpoint($bp-tablet-land)
       margin-top: 45px
       padding-left: 25px
-      height: 636px
+      padding-bottom: 135px
+    +breakpoint($bp-for-desktop-up)
+      min-height: 650px
 
     .pane-content
       margin: 0 auto
