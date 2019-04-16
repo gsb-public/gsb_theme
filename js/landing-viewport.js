@@ -186,10 +186,13 @@
             /* Viewport text */
             $('div.viewport-text').wrapAll('<div class="viewport-text-wrapper"></div>');
 
+            // hack for iframe touchpad scroll issue, cover iframe with a transparent div
+            $('#landing-video').append('<div class="iframe-wrapper"></div>');
+
             /* custom scrollbar */
             if (isMobile.any() === null) {
                 // future reference to chrome fix => https://github.com/inuyaksa/jquery.nicescroll/issues/799
-                $("body").niceScroll({
+                $("html").niceScroll({
                     cursorborder: "none", // css definition for cursor border
                     cursorwidth: "6px", // cursor width in pixel
                     cursorborderradius: "18px", // border radius in pixel for cursor
