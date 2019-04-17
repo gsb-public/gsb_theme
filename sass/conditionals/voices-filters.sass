@@ -2786,3 +2786,51 @@ a[class^="bg-"]:hover
               width: 230px !important
             +breakpoint($bp-tablet-land)
               width: 230px !important
+
+.no-sidebars.panels-layout-gsb-no-sidebar
+  .main-header,
+  .main-footer
+    .view-display-id-voices_filters_pane
+      .view-filters
+        .views-widget-filter-field_industry_tid
+          +breakpoint($bp-iphone-range-land)
+            width: 47%
+          +breakpoint($bp-other-phones-land)
+            width: 47%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
+          +breakpoint($bp-tablet-land)
+            width: 30%
+        .views-widget-filter-field_region_of_interest_tid
+          +breakpoint($bp-iphone-range-land)
+            width: 47%
+          +breakpoint($bp-other-phones-land)
+            width: 47%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
+          +breakpoint($bp-tablet-land)
+            width: 30%
+
+.no-sidebars.panels-layout-gsb-full-bleed-page,
+.no-sidebars.panels-layout-gsb-landing-standard-page-one
+  .full-view
+    .view-display-id-voices_filters_pane
+      .view-filters
+        .views-widget-filter-field_industry_tid
+          +breakpoint($bp-iphone-range-land)
+            width: 47%
+          +breakpoint($bp-other-phones-land)
+            width: 47%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
+          +breakpoint($bp-tablet-land)
+            width: 30%
+        .views-widget-filter-field_region_of_interest_tid
+          +breakpoint($bp-iphone-range-land)
+            width: 47%
+          +breakpoint($bp-other-phones-land)
+            width: 47%
+          +breakpoint($bp-iphone6p-land)
+            width: 42%
+          +breakpoint($bp-tablet-land)
+            width: 30%
