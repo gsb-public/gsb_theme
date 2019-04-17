@@ -192,7 +192,7 @@
             /* custom scrollbar */
             if (isMobile.any() === null) {
                 // future reference to chrome fix => https://github.com/inuyaksa/jquery.nicescroll/issues/799
-                $("html").niceScroll({
+                $("body").niceScroll({
                     cursorborder: "none", // css definition for cursor border
                     cursorwidth: "6px", // cursor width in pixel
                     cursorborderradius: "18px", // border radius in pixel for cursor
