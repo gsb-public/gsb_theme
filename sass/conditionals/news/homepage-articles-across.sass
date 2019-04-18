@@ -101,13 +101,17 @@
           width: 100%
         .field-type-datetime
           color: $grey-hp-7
-          padding-bottom: 15px
+          padding-bottom: 10px
           +breakpoint($bp-for-phone-only)
             font-size: 12px
-            padding-bottom: 0
+            padding-bottom: 5px
             margin-bottom: 5px
-          +breakpoint($bp-for-tablet-range)
+          +breakpoint(600px 979px)
             font-size: 16px
+            padding-bottom: 12px
+          +breakpoint(980px 1199px)
+            font-size: 16px
+            padding-bottom: 17px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
@@ -158,12 +162,16 @@
           width: 100%
         .field-type-datetime
           color: $grey-hp-7
-          padding-bottom: 15px
+          padding-bottom: 10px
           +breakpoint($bp-for-phone-only)
             font-size: 12px
-            padding-bottom: 0
-          +breakpoint($bp-for-tablet-range)
+            padding-bottom: 10px
+          +breakpoint(600px 979px)
             font-size: 16px
+            padding-bottom: 12px
+          +breakpoint(980px 1199px)
+            font-size: 16px
+            padding-bottom: 17px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
@@ -182,8 +190,12 @@
       border-bottom: 1px solid $listing-divider
       border-left: 1px solid $listing-divider
       border-right: 1px solid $listing-divider
-      padding: 32px 30px 45px 40px
-      +breakpoint($bp-for-tablet-range)
+      padding: 27px 30px 45px 40px
+      +breakpoint($bp-iphone-port-to-land-range)
+        padding: 24px 30px 39px 40px
+      +breakpoint(600px 979px)
+        padding: 27px 30px 39px 40px
+      +breakpoint(980px 1199px)
         padding: 32px 30px 39px 40px
       &:hover
         box-shadow: 0 0 4px 2px #c4c4c4
