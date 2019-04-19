@@ -185,32 +185,6 @@
 
             /* Viewport text */
             $('div.viewport-text').wrapAll('<div class="viewport-text-wrapper"></div>');
-
-            // hack for iframe touchpad scroll issue, cover iframe with a transparent div
-            $('#landing-video').append('<div class="iframe-wrapper"></div>');
-
-            /* custom scrollbar */
-            if (isMobile.any() === null) {
-                // future reference to chrome fix => https://github.com/inuyaksa/jquery.nicescroll/issues/799
-                /*
-                $("body").niceScroll({
-                    cursorborder: "none", // css definition for cursor border
-                    cursorwidth: "6px", // cursor width in pixel
-                    cursorborderradius: "18px", // border radius in pixel for cursor
-                    cursoropacitymax: .6, // change opacity when cursor is active range from 1 to 0
-                    zindex: 100, // change z-index for scrollbar div
-                    scrollspeed: 70, // scrolling speed
-                    mousescrollstep: 70, // scrolling speed with mouse wheel (pixel)
-                    hwacceleration: true, // use hardware accelerated scroll when supported
-                    preservenativescrolling: true, // you can scroll native scrollable areas with mouse, bubbling mouse wheel event
-                    enablekeyboard: true, // nicescroll can manage keyboard events
-                    smoothscroll: true, // scroll with ease movement
-                    enablemousewheel: true, // nicescroll can manage mouse wheel events
-                    enablekeyboard: true, // nicescroll can manage keyboard events
-                    smoothscroll: true // scroll with ease movement
-                });
-                */
-            }
         }
     }
 })(jQuery);
