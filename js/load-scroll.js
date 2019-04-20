@@ -1,6 +1,16 @@
 (function($) {
 
     $(document).ready(function () {
+        // https://www.chromestatus.com/feature/5745543795965952
+        jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ){
+                if ( ns.includes("noPreventDefault") ) {
+                    this.addEventListener("touchstart", handle, { passive: false });
+                } else {
+                    this.addEventListener("touchstart", handle, { passive: true });
+                }
+            }
+        };
 
         var isMobile = {
             KindleSilk: function() {
@@ -29,8 +39,10 @@
             }
         };
 
+        // hack for iframe touchpad scroll issue, cover iframe with a transparent div
         $('#landing-video').append('<div class="iframe-wrapper"></div>');
 
+        /* custom scrollbar */
         if (isMobile.any() === null) {
             // future reference to chrome fix => https://github.com/inuyaksa/jquery.nicescroll/issues/799
             $("body").niceScroll({
@@ -47,9 +59,7 @@
                 smoothscroll: true, // scroll with ease movement
                 enablemousewheel: true, // nicescroll can manage mouse wheel events
                 enablekeyboard: true, // nicescroll can manage keyboard events
-                smoothscroll: true // scroll with ease movement
             });
         }
-
     });
-}) (jQuery);
+})(jQuery);
