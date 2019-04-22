@@ -574,19 +574,28 @@
   };
 
     /* Scroll up/down navigation becomes sticky */
+    //document.getElementsByClassName("example")
+    // document.getElementsByClassName( "awemenu-mobile-standard awemenu-active" )
+
     $(function() {
-        var scrollPos = 0;
-        $(window).scroll(function () {
-            var curScrollPos = $(this).scrollTop();
-            if (curScrollPos > scrollPos) {
-                //Scrolling down - remove the fixed position menu
-              $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
-            } else {
-                //Scrolling up - add the fixed position menu
-                $('#header-wrapper').addClass('awemenu-sticky');
-            }
-            scrollPos = curScrollPos;
-        });
+        var width = $(window).width();
+        var mobileMenuOpen = $("div.awemenu-mobile-standard.awemenu-active");
+        if ( width < 1199 && mobileMenuOpen.length ) {
+            $('#header-wrapper').css("border","2px solid lime");
+        } else {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                } else {
+                    //Scrolling up - add the fixed position menu
+                    $('#header-wrapper').addClass('awemenu-sticky');
+                }
+                scrollPos = curScrollPos;
+            });
+        }
     });
     /* Voices detail page customization */
     $(function() {
