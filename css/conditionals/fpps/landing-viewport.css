@@ -8,11 +8,16 @@
   top: 50%;
 }
 
-.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport {
-  padding-top: 0;
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-video {
+  padding: 0;
+}
+@media (min-width: 75em) {
+  .panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-video {
+    padding-top: 7px;
+  }
 }
 @media (min-width: 41.6875em) and (max-width: 46em) {
-  .panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport {
+  .panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-video {
     padding-top: 50px;
   }
 }
@@ -470,11 +475,6 @@
 @media (min-width: 41.6875em) and (max-width: 46em) {
   .panels-layout-gsb-homepage .pane-bundle-landing-viewport {
     margin-top: -64px;
-  }
-}
-@media (min-width: 48em) and (max-width: 64em) {
-  .panels-layout-gsb-homepage .pane-bundle-landing-viewport {
-    margin-top: -34px;
   }
 }
 @media (min-width: 75em) {
