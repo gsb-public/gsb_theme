@@ -2606,6 +2606,27 @@ a[class^="bg-"]:hover
           +breakpoint($bp-iphone6p-land)
             margin-left: 30px
             width: 75%
+          +breakpoint($bp-tablet-pot)
+            margin-left: 45px
+
+        .view-display-id-voices_list_cta_panel_pane
+          .view-content
+            +breakpoint($bp-tablet-pot)
+              margin-left: 65px
+          .views-row
+            +breakpoint($bp-tablet-pot)
+              width: 78%
+        .voices_display_list_cta
+          +breakpoint($bp-tablet-pot)
+            margin-left: 65px
+            width: 66%
+        .view-display-id-all_voices_list_panel_pane
+          .view-content
+            +breakpoint($bp-tablet-pot)
+              margin-left: 45px
+          .views-row
+            +breakpoint($bp-tablet-pot)
+              width: 78%
   .inner-sidebar-wrapper 
     #quicklinks 
       .view-display-id-voices_single_teaser_pane 
@@ -2682,7 +2703,8 @@ a[class^="bg-"]:hover
           margin-left: 35px
     
 .no-sidebars.panels-layout-gsb-full-bleed-page
-  .full-bleed-header
+  .full-bleed-header,
+  .featured-content
     .pane-voices-filters-all-voices-list-panel-pane
       .pane-content
         +breakpoint($bp-for-phone-only)
@@ -2767,6 +2789,9 @@ a[class^="bg-"]:hover
             margin-left: 30px
           +breakpoint($bp-tablet-pot)
             margin-left: 40px
+          +breakpoint($bp-tablet-land)
+            margin-left: 65px
+            width: 60%
     .pane-voices-filters-voices-list-cta-panel-pane
       .voices_display_list_cta
         +breakpoint($bp-iphone6p-port)
@@ -2784,9 +2809,13 @@ a[class^="bg-"]:hover
           margin-left: 30px
         +breakpoint($bp-tablet-pot)
           margin-left: 40px
+        +breakpoint($bp-tablet-land)
+          margin-left: 65px
         .views-row
           +breakpoint($bp-tablet-pot)
             width: 77%
+          +breakpoint($bp-tablet-land)
+            width: 71%
     .view-display-id-voices_list_cta_panel_pane
       .view-content
         +breakpoint($bp-iphone6p-land)
