@@ -574,15 +574,10 @@
   };
 
     /* Scroll up/down navigation becomes sticky */
-    //document.getElementsByClassName("example")
-    // document.getElementsByClassName( "awemenu-mobile-standard awemenu-active" )
-
     $(function() {
         var width = $(window).width();
-        var mobileMenuOpen = $("div.awemenu-mobile-standard.awemenu-active");
-        if ( width < 1199 && mobileMenuOpen.length ) {
-            $('#header-wrapper').css("border","2px solid lime");
-        } else {
+        //First, the functions for the three different scrolls. 1. desktop, 2. mobile check 3. mobile, 4. open mobile, 5. always give the scrolling to the desktop.
+        function updateDesktopMenuPositioning() {
             var scrollPos = 0;
             $(window).scroll(function () {
                 var curScrollPos = $(this).scrollTop();
@@ -596,7 +591,57 @@
                 scrollPos = curScrollPos;
             });
         }
+        // Check to see if the mobile menu is open. Only on the mobile.
+        function checkForChanges() {
+            var mut = new MutationObserver(function(mutations, mut){
+                // If attribute changed === do your changes here
+                if ($('.awemenu-mobile').hasClass('awemenu-active')) {
+                    updateMobileOpenMenuPositioning();
+                } else {
+                    updateMobileMenuPositioning();
+                }
+            });
+            // Check to see if the .awemenu-mobile node changes.
+            mut.observe(document.querySelector(".awemenu-mobile"),{
+                'attributes': true
+            });
+        }
+        // If menu is not open then follow the scroll like the desktop.
+        function updateMobileMenuPositioning() {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                } else {
+                    //Scrolling up - add the fixed position menu
+                    $('#header-wrapper').addClass('awemenu-sticky');
+                }
+                scrollPos = curScrollPos;
+            });
+        }
+        // If menu IS open then DO NOT follow the scroll like the desktop.
+        function updateMobileOpenMenuPositioning() {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                }
+            });
+        }
+        // If Desktop always have the scroll functionality
+        if (width > 1199) {
+            updateDesktopMenuPositioning();
+        }
+        // If mobile then check to see if the menu is open.
+        else if (width < 1200) {
+            checkForChanges();
+        }
     });
+
     /* Voices detail page customization */
     $(function() {
         // Adding some wrappers for ease in styling.
