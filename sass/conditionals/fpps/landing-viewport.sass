@@ -7,8 +7,11 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
-.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport
-  padding-top: 0
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-video,
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-image
+  padding: 0
+  +breakpoint($bp-for-desktop-up)
+    padding-top: 6px
   +breakpoint($bp-iphone6-7-8p-land)
     padding-top: 50px
 
@@ -316,7 +319,7 @@
     +breakpoint($bp-iphone6-7-8p-land)
       margin-top: -64px
     +breakpoint($bp-ipad-range)
-      margin-top: -34px
+      //margin-top: -34px
     +breakpoint($bp-for-desktop-up)
       margin-top: -34px
 
