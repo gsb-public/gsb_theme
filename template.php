@@ -404,16 +404,6 @@ function gsb_theme_preprocess_page(&$variables) {
        'scope' => 'header',
        'weight' => 4,
     ));
-    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/jquery.nicescroll.min.js', array(
-       'type' => 'file',
-       'scope' => 'header',
-       'weight' => 5,
-    ));
-    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/load-scroll.js', array(
-       'type' => 'file',
-       'scope' => 'header',
-       'weight' => 6,
-    ));
   }
 
   // 403 page
