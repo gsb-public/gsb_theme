@@ -82,9 +82,6 @@
                                 break;
                             case ((windowWidth >= 414) && (windowWidth < 540)): //i6+ portrait
                                 $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-124px'});
-                                if (chrome != null) {
-                                    $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-50px'});
-                                }
                                 break;
                             case ((windowWidth >= 540) && (windowWidth < 601)): //i5 landscape
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-105px'});
@@ -98,7 +95,7 @@
                             case (windowWidth === 736): //i6+ landscape
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-85px'});
                                 if (chrome != null) {
-                                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-36px'});
+                                    $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-65px'});
                                 }
                                 break;
                         }
