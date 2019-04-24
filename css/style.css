@@ -9492,11 +9492,48 @@ input.signup-submit:hover {
 }
 
 #header-wrapper.awemenu-sticky {
-  position: fixed;
+  height: 87px;
   left: 0;
   right: 0;
+  position: fixed;
   top: 0;
   z-index: 99;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #header-wrapper.awemenu-sticky {
+    height: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  #header-wrapper.awemenu-sticky {
+    height: 50px;
+  }
+}
+.page-seed #header-wrapper.awemenu-sticky {
+  height: 89px;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-seed #header-wrapper.awemenu-sticky {
+    height: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-seed #header-wrapper.awemenu-sticky {
+    height: 50px;
+  }
+}
+.page-exec-ed #header-wrapper.awemenu-sticky {
+  height: 89px;
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed #header-wrapper.awemenu-sticky {
+    height: 64px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .page-exec-ed #header-wrapper.awemenu-sticky {
+    height: 50px;
+  }
 }
 
 div#header-wrapper.awemenu-sticky + #content-wrapper {
@@ -9504,7 +9541,7 @@ div#header-wrapper.awemenu-sticky + #content-wrapper {
 }
 @media (min-width: 75em) {
   div#header-wrapper.awemenu-sticky + #content-wrapper {
-    margin-top: 82px;
+    margin-top: 87px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -9519,7 +9556,7 @@ div#header-wrapper.awemenu-sticky + #content-wrapper {
 }
 @media (min-width: 75em) {
   .page-seed div#header-wrapper.awemenu-sticky + #content-wrapper {
-    margin-top: 88px;
+    margin-top: 89px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -9534,7 +9571,7 @@ div#header-wrapper.awemenu-sticky + #content-wrapper {
 }
 @media (min-width: 75em) {
   .page-exec-ed div#header-wrapper.awemenu-sticky + #content-wrapper {
-    margin-top: 81px;
+    margin-top: 89px;
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
@@ -9564,6 +9601,16 @@ div#header-wrapper.awemenu-sticky + div#hero {
 @media (max-width: 37.4375em) {
   div#header-wrapper.awemenu-sticky + div#hero {
     margin-top: 50px;
+  }
+}
+@media (min-width: 75em) {
+  .page-seed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 89px;
+  }
+}
+@media (min-width: 75em) {
+  .page-exec-ed div#header-wrapper.awemenu-sticky + div#hero {
+    margin-top: 89px;
   }
 }
 
