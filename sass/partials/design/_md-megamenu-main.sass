@@ -267,33 +267,46 @@
 
 // Sticky menus Start
 #header-wrapper.awemenu-sticky
-  position: fixed
+  height: 87px
   left: 0
   right: 0
+  position: fixed
   top: 0
   z-index: 99
+  +breakpoint($bp-for-tablet-range)
+    height: 64px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
   .page-seed &
-    //height: 89px
+    height: 89px
+    +breakpoint($bp-for-tablet-range)
+      height: 64px
+    +breakpoint($bp-for-phone-only)
+      height: 50px
   .page-exec-ed &
-    //height: 89px
+    height: 89px
+    +breakpoint($bp-for-tablet-range)
+      height: 64px
+    +breakpoint($bp-for-phone-only)
+      height: 50px
 div#header-wrapper.awemenu-sticky + #content-wrapper
   position: relative
   +breakpoint($bp-for-desktop-up)
-    margin-top: 82px
+    margin-top: 87px
   +breakpoint($bp-for-tablet-range)
     margin-top: 64px
   +breakpoint($bp-for-phone-only)
     margin-top: 50px
   .page-seed &
     +breakpoint($bp-for-desktop-up)
-      margin-top: 88px
+      margin-top: 89px
     +breakpoint($bp-for-tablet-range)
       margin-top: 64px
     +breakpoint($bp-for-phone-only)
       margin-top: 50px
   .page-exec-ed &
     +breakpoint($bp-for-desktop-up)
-      margin-top: 81px
+      margin-top: 89px
     +breakpoint($bp-for-tablet-range)
       margin-top: 64px
     +breakpoint($bp-for-phone-only)
@@ -306,6 +319,12 @@ div#header-wrapper.awemenu-sticky + div#hero
     margin-top: 64px
   +breakpoint($bp-for-phone-only)
     margin-top: 50px
+  .page-seed &
+    +breakpoint($bp-for-desktop-up)
+      margin-top: 89px
+  .page-exec-ed &
+    +breakpoint($bp-for-desktop-up)
+      margin-top: 89px
 .page-seed div#header-wrapper.awemenu-sticky + div#hero
   position: relative
   +breakpoint($bp-for-desktop-up)
