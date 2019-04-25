@@ -543,6 +543,8 @@ div#header-wrapper.awemenu-sticky + div#hero
           .svg &
             background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
             background-position: right center
+            +breakpoint($bp-for-desktop-up)
+              background-position: right 20px
             background-origin: content-box
             padding-right: 5px
           .no-js &, .no-svg &
@@ -560,6 +562,8 @@ div#header-wrapper.awemenu-sticky + div#hero
         ul.menu
           li.leaf
             padding-right: 0
+            .svg &
+              background-position: right center
   #block-menu-menu-md-mm-exec-ed-indiv-utility
     +breakpoint($bp-for-desktop-up)
       .content
