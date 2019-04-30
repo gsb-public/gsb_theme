@@ -80,13 +80,19 @@
                             case ((windowWidth >= 375) && (windowWidth < 414)): //i6 portrait
                                 $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-115px'});
                                 break;
-                            case ((windowWidth >= 414) && (windowWidth < 540)): //i6+ portrait
+                            case ((windowWidth >= 414) && (windowWidth < 568)): //i6+ portrait
                                 $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-124px'});
                                 break;
-                            case ((windowWidth >= 540) && (windowWidth < 601)): //i5 landscape
+                            case ((windowWidth >= 568) && (windowWidth < 592)): //i5 landscape
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-105px'});
                                 break;
-                            case ((windowWidth >= 663) && (windowWidth < 736)): //i6/i7/i8 landscape
+                            case (windowWidth === 592): //Samsung s4 landscape
+                                $('.field-name-field-homepage-image-mobile').css({'margin-bottom': '-106px'});
+                                break;
+                            case ((windowWidth >= 640) && (windowWidth < 652)): //Samsung s5/s6/s7 landscape
+                                $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-110px'});
+                                break;
+                            case ((windowWidth >= 667) && (windowWidth < 736)): //i6/i7/i8 landscape
                                 $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-35px'});
                                 if (chrome != null) {
                                     $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-10px'});
