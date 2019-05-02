@@ -241,6 +241,9 @@
       if ($('#header-wrapper').length) {
         $('.go-to-top-link').find('a').attr('href', '#header-wrapper');
       }
+      $('.go-to-top-link').click(
+          function() { $("html, body").animate({ scrollTop: 0 }, "fast"); return false; }
+      )
     }
   };
 
