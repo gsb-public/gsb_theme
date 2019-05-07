@@ -636,7 +636,7 @@
             });
         }
         // If Desktop always have the scroll functionality
-        if (width > 1199) {
+        if (width > 1199 && !$("body").hasClass("admin-menu")) {
             updateDesktopMenuPositioning();
         }
         // If mobile then check to see if the menu is open.
