@@ -3076,6 +3076,8 @@ a[class^="bg-"]:hover
         .views-row
           +breakpoint($bp-for-phone-only)
             margin-left: 0px
+          +breakpoint($bp-iphone6p-port)
+            margin-left: 5px
         .voices_display_all_list_cta
           +breakpoint($bp-tablet-pot)
             width: 87%
@@ -3084,12 +3086,12 @@ a[class^="bg-"]:hover
       .pane-voices-filters-voices-list-cta-panel-pane
         .voices_display_list_cta
           +breakpoint($bp-tablet-pot)
-            margin-left: 0px
-            width: 88%
+            width: 50%
+            margin: 0 auto
             margin-top: 25px
           +breakpoint($bp-tablet-land)
-            margin-left: 0px
-            width: 88%
+            width: 50%
+            margin: 0 auto
             margin-top: 25px
 
       .pane-voices-filters-voices-filters-pane 
@@ -3141,6 +3143,8 @@ a[class^="bg-"]:hover
 
       .pane-voices-filters-voices-list-cta-panel-pane
         .voices_display_list_cta
+          +breakpoint($bp-for-phone-only)
+            margin-left: 25px 
           +breakpoint($bp-tablet-pot)
             margin-left: 0px
             width: 88%
@@ -3157,6 +3161,8 @@ a[class^="bg-"]:hover
               width: 100%
             .views-widget 
               .form-item-field-industry-tid
+                +breakpoint($bp-for-phone-only)
+                  padding-left: 10px
                 +breakpoint($bp-mobile-land)
                   padding-left: 0px
                 +breakpoint($bp-tablet-pot)
@@ -3171,6 +3177,8 @@ a[class^="bg-"]:hover
               width: 100%
             .views-widget 
               .form-item-field-region-of-interest-tid
+                +breakpoint($bp-for-phone-only)
+                  padding-left: 10px
                 +breakpoint($bp-mobile-land)
                   padding-left: 0px
                 +breakpoint($bp-tablet-pot)
@@ -3186,50 +3194,199 @@ a[class^="bg-"]:hover
       margin-right: 0
 
 .no-sidebars.panels-layout-gsb-landing-standard-page-one
-  .inner-sidebar-wrapper
-    #quicklinks,
-    .sidebar-inner
-      .pane-voices-filters-all-voices-list-panel-pane
-        .views-row
-          +breakpoint($bp-for-desktop-up)
-            width: 100%
-            margin-right: 20px
+  #quicklinks
+    .pane-voices-filters-all-voices-list-panel-pane
+      +breakpoint($bp-for-phone-only)
+        padding-left: 0px
+      .pane-content
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 30px
+      .views-row
+        +breakpoint($bp-for-desktop-up)
+          width: 100%
+          margin-right: 20px
+        +breakpoint($bp-mobile-land)
+          width: 95%
+          margin-right: 10px
+        +breakpoint($bp-tablet-pot)
+          margin-right: 10px
 
-        .voices_display_all_list_cta
-          +breakpoint($bp-for-desktop-up)
-            width: 92%
-            margin-top: 25px
+      .voices_display_all_list_cta
+        +breakpoint($bp-for-desktop-up)
+          width: 92%
+          margin-top: 25px
+        +breakpoint($bp-for-phone-only)
+          margin-left: 25px
+        +breakpoint($bp-mobile-land)
+          margin-left: 0px
+          width: 88%
 
-      .pane-voices-filters-voices-filters-pane 
-        .view-filters 
-          .views-widget-filter-field_industry_tid 
-            .views-widget 
-              .form-item-field-industry-tid
-                +breakpoint($bp-for-desktop-up)
-                  padding-left: 0px
+    .pane-voices-filters-voices-filters-pane 
+      .view-filters 
+        .views-widget-filter-field_industry_tid 
+          .views-widget 
+            .form-item-field-industry-tid
+              +breakpoint($bp-for-desktop-up)
+                padding-left: 0px
+              +breakpoint($bp-mobile-land)
+                padding-left: 0px
+              +breakpoint($bp-iphone6p-land)
+                padding-left: 0px
+              +breakpoint($bp-tablet-land)
+                padding-left: 0px
+                width: 82%
 
-          .views-widget-filter-field_region_of_interest_tid 
-            .views-widget 
-              .form-item-field-region-of-interest-tid
-                +breakpoint($bp-for-desktop-up)
-                  padding-left: 0px
+        .views-widget-filter-field_region_of_interest_tid 
+          .views-widget 
+            .form-item-field-region-of-interest-tid
+              +breakpoint($bp-for-desktop-up)
+                padding-left: 0px
+              +breakpoint($bp-mobile-land)
+                padding-left: 0px
+              +breakpoint($bp-iphone6p-land)
+                padding-left: 0px
+              +breakpoint($bp-tablet-land)
+                padding-left: 0px
+                width: 82%
 
-        .view-content 
-          .views-row
-            +breakpoint($bp-for-desktop-up)
-              margin-left: 15px
-              margin-right: 15px
-              width: 100%
-
-      .pane-voices-filters-voices-list-cta-panel-pane
+      .view-content 
         .views-row
           +breakpoint($bp-for-desktop-up)
             margin-left: 15px
             margin-right: 15px
-        .voices_display_list_cta
+            width: 100%
+          +breakpoint($bp-mobile-land)
+            width: 95%
+            margin-right: 10px
+            margin-left: 10px
+
+    .pane-voices-filters-voices-list-cta-panel-pane
+      +breakpoint($bp-for-phone-only)
+        margin-left: 0px
+      .pane-title
+        +breakpoint($bp-for-phone-only)
+          padding-left: 20px
+        +breakpoint($bp-mobile-land)
+          padding-right: 15px
+          font-size: 20px
+        +breakpoint($bp-iphone6p-land)
+          padding-right: 15px
+          font-size: 20px
+        +breakpoint($bp-tablet-pot)
+          padding-right: 15px
+        +breakpoint($bp-tablet-land)
+          padding-right: 15px
+      .views-row
+        +breakpoint($bp-for-desktop-up)
+          margin-left: 15px
+          margin-right: 15px
+      .voices_display_list_cta
+        +breakpoint($bp-for-desktop-up)
+          margin-left: 15px
+          margin-top: 25px
+        +breakpoint($bp-mobile-land)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-iphone6p-land)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-tablet-pot)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-tablet-land)
+          margin-left: 0px
+          width: 88%
+  .sidebar-inner
+    .pane-voices-filters-all-voices-list-panel-pane
+      +breakpoint($bp-for-phone-only)
+        padding-left: 0px
+      .pane-title
+        +breakpoint($bp-for-phone-only)
+          padding-left: 20px
+      .pane-content
+        +breakpoint($bp-for-phone-only)
+          padding-bottom: 30px
+      .views-row
+        +breakpoint($bp-for-desktop-up)
+          width: 100%
+          margin-right: 20px
+
+      .voices_display_all_list_cta
+        +breakpoint($bp-for-desktop-up)
+          width: 92%
+          margin-top: 25px
+        +breakpoint($bp-for-phone-only)
+          margin-left: 25px
+        +breakpoint($bp-mobile-land)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-tablet-land)
+          margin-left: 0px
+          width: 88%
+
+    .pane-voices-filters-voices-filters-pane 
+      .view-filters 
+        .views-widget-filter-field_industry_tid 
+          .views-widget 
+            .form-item-field-industry-tid
+              +breakpoint($bp-for-desktop-up)
+                padding-left: 0px
+              +breakpoint($bp-mobile-land)
+                padding-left: 0px
+              +breakpoint($bp-iphone6p-land)
+                padding-left: 0px
+              +breakpoint($bp-tablet-pot)
+                padding-left: 0px
+              +breakpoint($bp-tablet-land)
+                padding-left: 0px
+                width: 82%
+
+        .views-widget-filter-field_region_of_interest_tid 
+          .views-widget 
+            .form-item-field-region-of-interest-tid
+              +breakpoint($bp-for-desktop-up)
+                padding-left: 0px
+              +breakpoint($bp-mobile-land)
+                padding-left: 0px
+              +breakpoint($bp-iphone6p-land)
+                padding-left: 0px
+              +breakpoint($bp-tablet-pot)
+                padding-left: 0px
+              +breakpoint($bp-tablet-land)
+                padding-left: 0px
+                width: 82%
+      .view-content 
+        .views-row
           +breakpoint($bp-for-desktop-up)
             margin-left: 15px
-            margin-top: 25px
+            margin-right: 15px
+            width: 100%
+
+    .pane-voices-filters-voices-list-cta-panel-pane
+      +breakpoint($bp-for-phone-only)
+        margin-left: 0px
+      .pane-title
+        +breakpoint($bp-for-phone-only)
+          padding-left: 20px
+      .views-row
+        +breakpoint($bp-for-desktop-up)
+          margin-left: 15px
+          margin-right: 15px
+      .voices_display_list_cta
+        +breakpoint($bp-for-desktop-up)
+          margin-left: 15px
+          margin-top: 25px
+        +breakpoint($bp-for-phone-only)
+          margin-left: 25px
+        +breakpoint($bp-mobile-land)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-tablet-pot)
+          margin-left: 0px
+          width: 88%
+        +breakpoint($bp-tablet-land)
+          margin-left: 0px
+          width: 88%
 
   .inner-main-wrapper 
     .main-middle 
@@ -3239,12 +3396,36 @@ a[class^="bg-"]:hover
           +breakpoint($bp-for-desktop-up)
             padding-left: 20px
             padding-right: 10px
-
+          .pane-content
+            +breakpoint($bp-for-phone-only)
+              padding-bottom: 30px
+            +breakpoint($bp-tablet-pot)
+              padding-left: 40px
           .voices_display_all_list_cta
             +breakpoint($bp-for-desktop-up)
               margin-left: 0px
               width: 95%
-
+            +breakpoint($bp-for-phone-only)
+              width: 88%
+              margin-left: 2px
+              margin-top: 10px
+            +breakpoint($bp-mobile-land)
+              margin-left: 0px
+              margin-top: 20px
+            +breakpoint($bp-tablet-pot)
+              width: 80%
+              margin-top: 20px
+          .pane-title
+            +breakpoint($bp-for-phone-only)
+              padding-left: 0px
+          .views-row
+            +breakpoint($bp-for-phone-only)
+              margin-left: 0px
+              width: 89%
+            +breakpoint($bp-tablet-pot)
+              width: 80%
+            +breakpoint($bp-tablet-land)
+              margin-right: 30px
         .pane-voices-filters-voices-filters-pane 
           .view-filters 
             .views-widget-filter-field_industry_tid 
@@ -3252,17 +3433,26 @@ a[class^="bg-"]:hover
                 .form-item-field-industry-tid
                   +breakpoint($bp-for-desktop-up)
                     padding-left: 0px
+                  +breakpoint($bp-for-phone-only)
+                    padding-left: 10px
 
             .views-widget-filter-field_region_of_interest_tid 
               .views-widget 
                 .form-item-field-region-of-interest-tid
                   +breakpoint($bp-for-desktop-up)
                     padding-left: 0px
+                  +breakpoint($bp-for-phone-only)
+                    padding-left: 10px
+          .views-row
+            +breakpoint($bp-tablet-land)
+              margin-right: 30px
 
         .pane-voices-filters-voices-list-cta-panel-pane
           .views-row
             +breakpoint($bp-for-desktop-up)
               margin-left: 15px
+            +breakpoint($bp-tablet-land)
+              margin-right: 30px
           .voices_display_list_cta
             +breakpoint($bp-for-desktop-up)
               margin-left: 15px
@@ -3273,7 +3463,10 @@ a[class^="bg-"]:hover
     .main-middle 
       .column-first,
       .column-second
-        .pane-voices-filters-all-voices-list-panel-pane 
+        .pane-voices-filters-all-voices-list-panel-pane
+          .view-content
+            +breakpoint($bp-tablet-pot)
+              margin-left: 100px
           .views-row
             +breakpoint($bp-for-desktop-up)
               margin-right: 30px
@@ -3311,6 +3504,8 @@ a[class^="bg-"]:hover
             +breakpoint($bp-for-desktop-up)
               margin-left: 18px
               margin-right: 18px
+            +breakpoint($bp-tablet-pot)
+              margin-left: 100px
           .views-row
             +breakpoint($bp-for-desktop-up)
               width: 100%
@@ -3329,11 +3524,22 @@ a[class^="bg-"]:hover
             .views-widget-filter-field_industry_tid 
               +breakpoint($bp-mobile-land)
                 width: 48%
+              .views-widget 
+                .form-item-field-industry-tid
+                  +breakpoint($bp-for-phone-only)
+                    padding-left: 0px
             .views-widget-filter-field_region_of_interest_tid
               +breakpoint($bp-mobile-land)
                 width: 48%
+              .views-widget 
+                .form-item-field-region-of-interest-tid
+                  +breakpoint($bp-for-phone-only)
+                    padding-left: 0px
  
         .pane-voices-filters-voices-list-cta-panel-pane
+          .view-content
+            +breakpoint($bp-tablet-pot)
+              margin-left: 100px
           .views-row
             +breakpoint($bp-for-desktop-up)
               margin-left: 20px
@@ -3356,8 +3562,25 @@ a[class^="bg-"]:hover
             +breakpoint($bp-mobile-land)
               margin-top: 30px
             +breakpoint($bp-tablet-pot)
+              margin: 0 auto
               margin-top: 30px
+              width: 50%
             +breakpoint($bp-tablet-land)
               width: 40%
               margin: 0 auto
               margin-top: 30px
+
+.no-sidebars.panels-layout-gsb-full-bleed-page
+  .inner-main-wrapper 
+    .main-middle 
+      .column-first,
+      .column-second
+        .pane-voices-filters-all-voices-list-panel-pane
+          .voices_display_all_list_cta
+            +breakpoint($bp-for-phone-only)
+              margin-left: 10px
+              margin-top: 0px
+              width: 86%
+          .pane-content
+            +breakpoint($bp-for-phone-only)
+              padding-bottom: 30px
