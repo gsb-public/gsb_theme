@@ -676,10 +676,10 @@ div#header-wrapper.awemenu-sticky + div#hero
       padding-bottom: 35px
       +breakpoint($bp-for-phone-only)
         font-size: 16px
-        padding: 20px 20px 35px 35px
+        padding: 20px 20px 17.5px 35px
       +breakpoint($bp-for-tablet-range)
         font-size: 18px
-        padding: 20px 20px 35px 50px
+        padding: 20px 20px 17.5px 50px
     // Adjusting padding for the phone size
     .content
       padding-bottom: 0
@@ -748,7 +748,9 @@ div#header-wrapper.awemenu-sticky + div#hero
       .col-md-3.col-xs-12 h3.mm-header
         padding-top:  0
         +breakpoint($bp-for-tablet-range)
-          padding-top: 10px
+          padding-top: 17.5px
+        +breakpoint($bp-for-phone-range)
+          padding-top: 17.5px
       .col-xs-12.col-md-12,
       .col-md-3
         +breakpoint($bp-for-phone-only)
