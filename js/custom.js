@@ -723,7 +723,7 @@
               $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
               $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
               $(".mm-header.featured-programs").prependTo("#block-menu-menu-md-mm-exec-ed-featured-prog");
-              $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-online");
+              $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-seed");
             };
             if (width < 599) {
               $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
