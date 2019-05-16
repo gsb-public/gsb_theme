@@ -110,7 +110,7 @@
             };
 
             /* landing viewport tagline */
-            $('#landing-video').append("<p class='landing-video-tagline'>Change Lives. <br class='tagline-break'/>Change Organizations. <br class='tagline-break'/>Change the world.</p>");
+            $('#landing-video').append("<p class='landing-video-tagline'>Change Lives. <br class='tagline-break'/>Change Organizations. <br class='tagline-break'/>Change the World.</p>");
 
             function inspectViewPort() {
                 windowWidth = $(window).innerWidth();
