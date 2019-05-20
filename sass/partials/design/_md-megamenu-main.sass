@@ -533,13 +533,15 @@ div#header-wrapper.awemenu-sticky + div#hero
           a
             font-size: 20px
             padding-bottom: 0
+            +breakpoint($bp-for-desktop-up)
+              padding-top: 0
             +breakpoint($bp-for-phone-only)
               font-size: 14px
           .svg &
             background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
             background-position: right center
             +breakpoint($bp-for-desktop-up)
-              background-position: right 21px
+              background-position: right center
             background-origin: content-box
             padding-right: 5px
           .no-js &, .no-svg &
