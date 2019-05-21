@@ -12,6 +12,8 @@
   // Topics title
   h2
     background-color: $text-black
+    color: $white
+    text-decoration: underline
     +icon-after("arrow-med-up", true)
   // Menu pane
   .content
@@ -62,7 +64,7 @@
     display: block
     margin-right: -67px
     padding-right: 67px
-    width: 100%
+    width: 0
   // Topics title
   h2
     color: $text-black
@@ -74,7 +76,6 @@
     +breakpoint($bp-mobile-max)
       padding-left: 15px
       text-align: left
-      width: 100%
     +icon-after("arrow-med-down", true)
     &:after
       font-size: 14px

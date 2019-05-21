@@ -12,7 +12,7 @@
       height: 60px
       line-height: 60px
       position: absolute
-      right: -84px
+      right: -80px
       top: 13px
       width: 60px
       z-index: 9999
@@ -28,8 +28,6 @@
         top: 0
         width: 50px
         z-index: 9999
-#search-close
-  display: none
 .page-exec-ed
   #navigation.search-open
     .region.region-navigation
@@ -50,7 +48,7 @@
   .page-insights &
     +breakpoint(999px max-width)
       display: none
-  +breakpoint(1169px max-width)
+  +breakpoint(1199px max-width)
     left: 50px
     position: absolute
     z-index: 1
@@ -73,7 +71,7 @@
       background: $white
       line-height: 1
       padding: 6px 10px 6px 10px
-      +breakpoint(1169px max-width)
+      +breakpoint(1199px max-width)
         height: 64px
         padding: 15px 0px 15px 10px
         width: 315px
@@ -83,7 +81,7 @@
   input
     display: none
     height: 59px
-    +breakpoint(1169px max-width)
+    +breakpoint(1199px max-width)
       display: block
     .js .search-open &,
     .no-js &
@@ -93,13 +91,16 @@
       display: inline-block
       position: absolute
       top: 60px
-      right: 1px
+      right: 0
       z-index: 1
     .page-exec-ed &,
     .page-seed &
-      height: 78px
-      +breakpoint(1169px max-width)
+      height: 75px
+      top: 82px !important
+      +breakpoint(1199px max-width)
         height: 50px
+      +breakpoint($bp-for-phone-tablet-range)
+        top: 0 !important
 
   // Submit button
   .form-submit
@@ -116,23 +117,35 @@
       background-color: #0A647E
     .no-js &
       display: inline-block
-    +breakpoint(1170px min-width)
+    +breakpoint(1200px min-width)
       display: inline-block
-    +breakpoint(1169px max-width)
+    +breakpoint(1199px max-width)
       height: 64px
       position: relative
       left: 0
-    .page-exec-ed &,
-    .page-seed &
+    .page-exec-ed &
       border-bottom: 1px solid $red
-      height: 78px
+      height: 83px
       &:hover
-        height: 77px !important
+        height: 89px
+        margin-top: -6px
         width: 60px !important
         +breakpoint($bp-for-phone-only)
           height: 50px !important
           width: 50px !important
-      +breakpoint(1169px max-width)
+        +breakpoint($bp-for-phone-tablet-range)
+          margin-top: 0
+      +breakpoint(1199px max-width)
+        height: 50px
+    .page-seed &
+      border-bottom: 1px solid $red
+      height: 83px
+      &:hover
+        width: 60px !important
+        +breakpoint($bp-for-phone-only)
+          height: 50px !important
+          width: 50px !important
+      +breakpoint(1199px max-width)
         height: 50px
     .svg &
       +background((image_url("../images/icons/icon-search-red.svg") no-repeat center), $white)
@@ -151,8 +164,8 @@
 .page-exec-ed #navigation.search-closed #edit-submit:hover,
 .page-seed #navigation.search-closed #edit-submit:hover
   border-bottom: 0
-  height: 80px !important
-  margin-top: -3px
+  height: 88px
+  margin-top: -6px
 
 // General search results page search
 #coveo-search-search-form,
@@ -984,19 +997,22 @@ button.checkbox-clear-all
           padding-bottom: 18px
           .bef-checkboxes
             columns: 3 22px
+            +breakpoint($bp-for-phone-tablet-range)
+              columns: 1 22px
             .form-item
               border-top: 1px solid transparent
               margin-top: 0
               padding-left: 22px
               break-inside: avoid-column
               page-break-inside: avoid
-              white-space: nowrap
               position: relative
               vertical-align: top
+              margin-left: 18px
               input[type="checkbox"]
                 vertical-align: baseline
                 top: -1px
                 position: relative
+                margin-left: -18px
         .form-type-select
           border-bottom: 1px lightgray solid
         label
@@ -1014,7 +1030,6 @@ button.checkbox-clear-all
   font-family: $font-sans
   position: absolute
   top: 73px
-  right: 5px
 
 .page-seed .js .search-open #coveo-search-block-form input,
 .page-seed .no-js #coveo-search-block-form input,
@@ -1038,11 +1053,11 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 88px
         line-height: 60px
-        right: -37px
+        right: -60px
         top: 0
-        width: 55px
+        width: 60px
         +breakpoint($bp-for-phone-only)
           height: 50px
           right: 0
@@ -1053,6 +1068,10 @@ button.checkbox-clear-all
           right: 0
           top: 0
           width: 64px
+  .search-open #coveo-search-block-form .form-submit
+    height: 75px
+    &:hover
+      height: 81px
 // Search input overrides for Seed
 .page-seed
   input.search_keys
@@ -1063,11 +1082,11 @@ button.checkbox-clear-all
   #navigation.search-open
     .section
       div#search-close
-        height: 80px
+        height: 88px
         line-height: 60px
-        right: 9px
+        right: -60px
         top: 0
-        width: 55px
+        width: 60px
         +breakpoint($bp-for-phone-only)
           height: 50px
           right: 0
@@ -1078,3 +1097,5 @@ button.checkbox-clear-all
           right: 0
           top: 0
           width: 64px
+  .search-open #coveo-search-block-form .form-submit
+    height: 75px

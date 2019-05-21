@@ -7,26 +7,88 @@
 @import partials/base/00-variables/all
 @import partials/base/03-extend/gsb-revamp
 
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-video,
+.panels-layout-gsb-homepage #content #main .panel-pane.pane-bundle-landing-viewport.landing-image
+  padding: 0
+  +breakpoint($bp-for-desktop-up)
+    padding-top: 6px
+  +breakpoint($bp-iphone6-7-8p-land)
+    padding-top: 50px
 
 .pane-bundle-landing-viewport
-  align-items: center
-  display: flex
-  justify-content: center
-  overflow: hidden
-  position: relative
+  & ~ .pane-bundle-landing-viewport.landing-image
+    //toggle 'display: block' to on below for seeing image instead of video
+    .field-name-field-homepage-image-desktop
+      +breakpoint($bp-for-desktop-up)
+        //display: block
+        margin-bottom: -19px
+    .field-name-field-homepage-image-tablet
+      height: 100vh
+      +breakpoint(600px 666px)
+        display: block
+        margin-bottom: -64px
+      +breakpoint(667px 736px)
+        display: block
+        margin-bottom: -36px
+      +breakpoint(737px 767px)
+        display: block
+        margin-bottom: -64px
+      +breakpoint(768px 1024px)
+        //display: block
+        margin-bottom: 4px
+      +breakpoint(1025px 1199px)
+        //display: block
+        margin-bottom: -64px
+    .field-name-field-homepage-image-mobile
+      +breakpoint($bp-for-phone-only)
+        display: block
+        margin-bottom: -50px
 
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport.landing-video
+  #landing-video
+    //toggle 'display: none' below to on for seeing image instead of video
+    //display: none
+    +breakpoint(320px 767px)
+      display: none
+    .landing-video-tagline
+      font-size: 45px
+      font-family: 'CrimsonText-SemiBold', sans-serif
+      letter-spacing: -1px
+      padding-left: 10px
+      padding-right: 12px
+      margin-top: -10px
+      white-space: nowrap
+      color: $white
+      text-shadow: 1px 1px 2px $black
+      position: absolute
+      top: 50%
+      left: 50%
+      -webkit-transform: translateX(-50%) translateY(-50%)
+      -ms-transform: translateX(-50%) translateY(-50%)
+      transform: translateX(-50%) translateY(-50%)
+      +breakpoint(1024px 1199px)
+        font-size: 45px
+        padding: 0 5px 100px 0
+        margin-top: 5px
+      +breakpoint(768px 1023px)
+        font-size: 55px
+        padding: 0 0 100px
+        margin-top: 4px
+        text-align: center
+      +breakpoint(320px 767px)
+        display: none
+      .tagline-break
+        +breakpoint(1024px)
+          display: none
+
+.pane-bundle-landing-viewport
   .field-name-field-homepage-image-desktop
     display: none
-    +breakpoint($bp-for-desktop-up)
-      display: block
   .field-name-field-homepage-image-tablet
     display: none
-    +breakpoint($bp-for-tablet-range)
-      display: block
   .field-name-field-homepage-image-mobile
     display: none
-    +breakpoint($bp-for-phone-only)
-      display: block
+
   .bg-text-color-blue
     .viewport-text
       span
@@ -47,79 +109,166 @@
       span
         background: $pink-bright
         box-shadow: 25px 0 0 $pink-bright, -25px 0 0 $pink-bright /* to get padding at end of lines no matter where it breaks */
-
-  .viewport-text
-    position: absolute
-    top: 40%
-    left: 10%
-    text-align: left
-    width: 35%
+  .viewport-text-wrapper
+    margin: 0 auto
+    position: relative
+    width: 1065px
     +breakpoint($bp-for-tablet-range)
-      top: 30%
-      width: 80%
+      margin: 0 auto
+      width: 75vw
     +breakpoint($bp-for-phone-only)
-      top: 20%
-      width: 80%
+      margin: 0 auto
+      width: 85vw
     +breakpoint($bp-mobile)
-      top: 0%
-    span
-      line-height: 2em
-      font-size: 36px
-      color: $white
-      padding: 13px 0
-      display: inline
-      box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
-      opacity: .8
-      +breakpoint($bp-for-tablet-range)
-        font-size: 30px
-        line-height: 2.5em
+      margin: 0 auto
+      width: 85vw
+    .viewport-text
+      bottom: 200px
+      left: 10px
+      max-width: 620px
+      position: absolute
+      text-align: left
       +breakpoint($bp-for-phone-only)
-        font-size: 18px
-        line-height: 3em
-      +breakpoint($bp-mobile)
-        font-size: 18px
-        line-height: 2.8em
-      &:hover
-        background-color: $hover-viewport-blue
-        box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
-        opacity: 1
-      a
+        max-width: 90%
+      +breakpoint(568px 667px)
+        bottom: 90px
+      +breakpoint(668px 736px)
+        bottom: 85px
+      span
+        line-height: 2em
+        font-size: 36px
         color: $white
-        +icon-after("arrow-double-right", true)
-        &:after
-          @extend %arrow-double-big
-          color: $white
-          font-weight: normal
-          position: relative
-          right: 0
-          padding-left: 10px
-          +breakpoint($bp-for-tablet-range)
-            top: 2px
-          +breakpoint($bp-for-phone-only)
-            top: 2px
+        padding: 13px 0
+        display: inline
+        box-decoration-break: clone /* Fix for Firefox to get the padding on multiline */
+        opacity: .8
+        +breakpoint($bp-for-tablet-range)
+          font-size: 30px
+          line-height: 2.5em
+        +breakpoint($bp-for-phone-only)
+          font-size: 18px
+          line-height: 3em
+        +breakpoint($bp-mobile)
+          font-size: 18px
+          line-height: 2.8em
         &:hover
-          text-decoration: none
+          background-color: $hover-viewport-blue
+          box-shadow: 25px 0 0 $hover-viewport-blue, -25px 0 0 $hover-viewport-blue
+          opacity: 1
+        a
+          color: $white
+          +icon-after("arrow-double-right", true)
+          &:after
+            @extend %arrow-double-big
+            color: $white
+            font-weight: normal
+            position: relative
+            right: 0
+            padding-left: 10px
+            +breakpoint($bp-for-tablet-range)
+              top: 2px
+            +breakpoint($bp-for-phone-only)
+              top: 2px
+          &:hover
+            text-decoration: none
 
   .scrollLink
+    bottom: 0px
     color: $white
     cursor: hand
     cursor: pointer
     font-size: 16px
     font-weight: bold
+    height: 200px
     left: 50%
-    padding-bottom: 25%
     position: absolute
-    transform: translate(-50%, -50%)
+    text-align: center
+    transform: translate(-50%, 10px)
+    +breakpoint($bp-for-desktop-up)
     +icon-after("arrow-med-down", true)
       display: block
       padding: 10px 45px
-      +breakpoint($bp-mobile)
-        padding: 0 45px
-    +breakpoint($bp-for-phone-only)
-      font-size: 12px
-      padding-bottom: 15%
+      +breakpoint($bp-mobile-max)
+        padding: 10px 12px
     +breakpoint($bp-for-tablet-range)
-      padding-bottom: 15%
+      bottom: 10px
+    +breakpoint($bp-for-phone-only)
+      bottom: 10px
+      font-size: 10px
+      height: 116px
+      text-align: center
+    .svg &
+      +background((image_url("/images/icons/background-scroll-explore-video.svg") no-repeat center), transparent)
+      padding: 86px 18px
+      position: absolute
+      width: 150px
+      +breakpoint($bp-for-phone-tablet-range)
+        +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
+        padding: 45px 25px
+        height: 115px
+        font-size: 12px
+      +breakpoint($bp-for-phone-only)
+        font-size: 11px
+        padding: 42px 37px
+        width: 150px
+      +breakpoint($bp-mobile-land)
+        bottom: 15px
+        font-size: 11px
+        padding: 35px 17px
+        width: 110px
+        height: 106px
+        left: 51%
+      +breakpoint($bp-iphone6p-land)
+        padding: 35px 30px
+        width: 108px
+        height: 115px
+        font-size: 12px
+      +breakpoint($bp-tablet-pot)
+        padding: 52px 10px
+        width: 127px
+        height: 125px
+        bottom: 10px
+      +breakpoint($bp-tablet-land)
+        +background((image_url("/images/icons/background-scroll-explore-video.svg") no-repeat center), transparent)
+        padding: 75px 15px
+        width: 148px
+        height: 170px
+        bottom: 10px
+      +breakpoint($bp-for-desktop-up)
+        bottom: -5px
+    .no-js &, .no-svg &
+      background: image_url("/images/icons/background-scroll-explore-video.png") no-repeat center transparent
+      padding: 86px 18px
+      position: absolute
+      width: 150px
+      +breakpoint($bp-for-phone-only)
+        +background((image_url("/images/icons/scroll-explore-video-small-mobile.svg") no-repeat center), transparent)
+
+  video + .scrollLink
+    bottom: 0
+    +breakpoint($bp-for-tablet-range)
+      bottom: 0
+    +breakpoint($bp-for-phone-only)
+      bottom: 0
+
+.pane-bundle-landing-viewport
+  .scrollLink
+    &:hover
+      text-decoration: underline
+      &:after
+        text-decoration: none
+    &:after
+      margin-bottom: -10px
+      text-decoration: none
+      +breakpoint($bp-mobile-land)
+        padding: 10px 33px
+      +breakpoint($bp-iphone6p-land)
+        padding: 10px 15px
+      +breakpoint($bp-tablet-pot)
+        padding: 10px 20px
+      &:hover
+        text-decoration: none
+
 
 #edit-field-homepage-image-url
   #field-homepage-image-url-add-more-wrapper
@@ -132,39 +281,97 @@
 
 // Video customizations
 .panels-layout-gsb-homepage
-  #content #main .panel-pane.pane-landingpage-video
-    padding-top: 0
-
-  .pane-landingpage-video
-    align-items: center
-    display: flex
+  .pane-landingpage-video,
+  .pane-bundle-landing-viewport
+    align-items: baseline
     justify-content: center
+    overflow: hidden
     position: relative
-
-    video.splash__video__media
+    +breakpoint($bp-for-phone-only)
+      padding-top: 0
+      display: inline-block
+      max-width: 100%
       height: 100%
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      -ms-transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      transform: translateX(-50%) translateY(-50%) scale(2.5, 2.5)
+      transform-origin: 50% 40%
+      +breakpoint(1025px min-width)
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
+        -ms-transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
+        transform: translateX(-50%) translateY(-50%) scale(1.5, 1.5)
+
+    video.splash__video__media,
+    .field-type-image
+      height: auto
       width: 100%
 
-    .scrollLink
-      color: $white
-      cursor: hand
-      cursor: pointer
-      font-size: 16px
-      font-weight: bold
-      left: 50%
-      padding-bottom: 10%
-      position: absolute
-      transform: translate(-50%, -50%)
-      +icon-after("arrow-med-down", true)
-        display: block
-        padding: 10px 45px
-        +breakpoint($bp-mobile)
-          padding: 0 45px
-      +breakpoint($bp-for-phone-only)
-        font-size: 12px
-        padding-bottom: 15%
-      +breakpoint($bp-for-tablet-range)
-        padding-bottom: 15%
-    video + .scrollLink
-      bottom: 0
-      padding-bottom: 10px
+/* Kaltura video display */
+.panels-layout-gsb-homepage
+  .pane-bundle-landing-viewport
+    +breakpoint($bp-for-phone-only)
+      display: block
+    +breakpoint($bp-iphone6-7-8p-land)
+      margin-top: -64px
+    +breakpoint($bp-ipad-range)
+      //margin-top: -34px
+    +breakpoint($bp-for-desktop-up)
+      margin-top: -34px
+
+
+    #landing-video
+      width: 100%
+      height: 100vh
+      display: inline-block
+      position: relative
+      overflow: hidden
+      +breakpoint(0px 319px)
+        display: none
+      +breakpoint(768px 879px)
+        margin-bottom: -4%
+      +breakpoint(880px 1024px)
+        margin-bottom: -3.5%
+      +breakpoint(1025px 1083px)
+        margin-bottom: -6.5%
+      +breakpoint(1084px 1100px)
+        margin-bottom: -6.4%
+      +breakpoint(1101px 1154px)
+        margin-bottom: -6.1%
+      +breakpoint(1155px 1199px)
+        margin-bottom: -5.8%
+      +breakpoint(1200px 1237px)
+        margin-bottom: -4.8%
+      +breakpoint(1238px 1381px)
+        margin-bottom: -4.3%
+      +breakpoint(1382px 1485px)
+        margin-bottom: -4%
+      +breakpoint(1485px min-width)
+        margin-bottom: -55px
+      #kaltura-player1
+        padding-bottom: 50%
+        -webkit-transform: scale(1, 1) translateX(-1%) translateY(-2%)
+        -ms-transform: scale(1, 1) translateX(-1%) translateY(-2%)
+        transform: scale(1, 1) translateX(-1%) translateY(-2%)
+        #kaltura-player1_ifp
+          position: absolute
+          top: 50%
+          left: 50%
+          -webkit-transform: translateX(-50%) translateY(-50%)
+          -ms-transform: translateX(-50%) translateY(-50%)
+          transform: translateX(-50%) translateY(-50%)
+
+.iframe-wrapper
+  background: rgba(0,0,0,0)
+  width: 100vw
+  height: 100vh
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  -ms-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)

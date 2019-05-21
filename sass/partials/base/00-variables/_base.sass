@@ -27,10 +27,13 @@ $wide-view: 570px
 
 $breakpoint-to-ems: true
 
-$bp-mobile-480: 480px max-width
 $bp-mobile: 320px max-width
+$bp-mobile-480: 480px max-width
 $bp-mobile-max: 568px max-width
 $bp-mobile-min: 569px min-width
+$bp-mobile-range-375: 321px 375px
+$bp-mobile-range-414: 376px 414px
+$bp-mobile-large-range: 321px 414px
 
 $bp-tablet-port-min: 569px min-width
 $bp-tablet-port: 569px 999px
@@ -57,14 +60,34 @@ $seed-coach: "Seed Coach"
 $bp-for-phone-only: 599px max-width
 $bp-for-tablet-range: 600px 1199px
 $bp-for-phone-tablet-range: 230px 1199px
+$bp-for-medium-phone-tablet-range: 321px 1199px
 $bp-for-desktop-up: 1200px min-width
 
 $bp-mobile-land: 480px 735px
 $bp-tablet-pot: 768px 1023px
 $bp-tablet-land: (min-width 960px) (max-width 1100px) (orientation landscape)
 $bp-iphone6p-land: 736px 767px
-$bp-for-phone-range: 300px 735px
+$bp-iphone6-7-8p-land: 667px 736px
+$bp-ipad-range: 768px 1024px
+$bp-ipad-pro-range: 1025px 1366px
 
+$bp-for-phone-range: 300px 735px
+$bp-iphone6p-port: (min-width 410px) (max-width 736px) (orientation portrait)
 //$bp-menus-large: min-width 1000px
 $bp-menus-med: 569px 999px
 //$bp-menus-sm: 320px 480px
+
+$bp-voices-header-box: 1200px 1310px
+
+$bp-iphone-port-to-land-range: 736px max-width
+$bp-iphone5-land:(max-width 568px) (max-height 320px) (orientation landscape)
+$bp-iphone-range-port: (min-width 375px) (max-width 667px) (orientation portrait)
+$bp-iphone-range-land: (min-width 375px) (max-width 667px) (orientation landscape)
+$bp-other-phones-land: (min-width 360px) (max-width 640px) (orientation landscape)
+$bp-nexus-port: (min-width 412px) (max-width 732px) (orientation portrait)
+$bp-nexus-land: (min-width 412px) (max-width 732px) (orientation landscape)
+$bp-tablet-pro-port: (min-width 1024px) (max-width 1366px) (orientation portrait)
+$bp-tablet-pro-land: (min-width 1024px) (max-width 1366px) (orientation landscape)
+$bp-tablet-gap: 1101px 1199px
+$bp-tablet-range: 768px 1199px
+$bp-desktop-custom-width: (min-width 1200px) (max-width 1320px)

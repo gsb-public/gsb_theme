@@ -10,34 +10,64 @@
 // STACKLA overrides
 .panels-layout-gsb-homepage
   .pane-bundle-embed-stackla
-    background: url(/sites/gsb/files/background-image-home-page-social.png) no-repeat
+    background: url(../../images/background-image-home-page-social.jpg) no-repeat
     border-bottom-width: 0
-    height: 600px
+    height: auto
     margin-top: 70px
-    padding: 80px 0 0 80px
+    +breakpoint($bp-mobile)
+      margin-top: 25px
+      padding-bottom: 45px
+    +breakpoint($bp-mobile-large-range)
+      margin-top: 45px
+      padding-bottom: 45px
     +breakpoint($bp-for-phone-only)
-      height: auto
-      padding-bottom: 40px
       padding-left: 20px
-    +breakpoint($bp-tablet-pot)
-      padding-left: 25px
-      height: 500px
-    +breakpoint($bp-tablet-land)
-      padding-left: 25px
-      height: 500px
-    &:before
-      content: "Stanford GSB Community on Social"
-      color: $white
-      display: inline-block
-      font-size: 36px
+    +breakpoint(568px 736px)
       padding-bottom: 50px
-      +breakpoint($bp-for-phone-only)
-        font-size: 26px
-        padding-bottom: 30px
-      +breakpoint($bp-tablet-pot)
-        font-size: 30px
-        padding-bottom: 35px
-      +breakpoint($bp-tablet-land)
-        font-size: 30px
-        padding-bottom: 35px
+      min-height: 328px
+    +breakpoint($bp-tablet-pot)
+      margin-top: 45px
+      padding-left: 25px
+      padding-bottom: 85px
+    +breakpoint($bp-tablet-land)
+      margin-top: 45px
+      padding-left: 25px
+      padding-bottom: 135px
+    +breakpoint($bp-for-desktop-up)
+      min-height: 650px
 
+    .pane-content
+      margin: 0 auto
+      width: 90%
+      padding-top: 40px
+      +breakpoint($bp-iphone-port-to-land-range)
+        padding-top: 0
+        margin-top: -3px
+        padding-bottom: 5px
+      +breakpoint($bp-tablet-pot)
+        padding-top: 25px
+      +breakpoint($bp-tablet-land)
+        padding-top: 25px
+      &:before
+        content: "Stanford GSB Community on Social"
+        color: $white
+        display: block
+        font-size: 36px
+        padding-bottom: 45px
+        text-align: center
+        +breakpoint($bp-for-phone-only)
+          font-size: 26px
+          padding-bottom: 20px
+        +breakpoint($bp-mobile-land)
+          font-size: 26px
+          padding-bottom: 20px
+        +breakpoint($bp-iphone6p-land)
+          font-size: 26px
+          padding-bottom: 20px
+        +breakpoint($bp-iphone6-7-8p-land)
+          font-size: 26px
+          padding-bottom: 20px
+        +breakpoint($bp-tablet-pot)
+          font-size: 36px
+        +breakpoint($bp-tablet-land)
+          font-size: 36px

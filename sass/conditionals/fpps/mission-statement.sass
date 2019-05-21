@@ -10,35 +10,75 @@
 
 .pane-bundle-mission-statement
   background: $white
-  margin-top: 70px
+  padding-top: 70px
   .mission-statement
     margin: 0 auto
     max-width: $max-width
-    padding: 25px 20px 105px
+    padding: 27px 20px 92px
     text-align: center
-    +breakpoint($bp-mobile-max)
-      padding: 50px 30px
-    +breakpoint($bp-tablet-pot)
-      padding: 40px 35px 65px 35px
-    +breakpoint($bp-tablet-land)
-      padding: 40px 35px 65px 35px
+    //+breakpoint(374px max-width)
+    //  padding: 28px 20px 44px
+    //  margin-top: -19px
+    //+breakpoint($bp-iphone5-land)
+    //  padding: 28px 20px 44px
+    //  margin-top: -19px
+    //+breakpoint($bp-iphone-range-port)
+    //  padding: 28px 20px 44px
+    //  margin-top: -19px
+    +breakpoint($bp-iphone-port-to-land-range)
+      padding: 28px 20px 44px
+      margin-top: -19px
+    +breakpoint($bp-ipad-range)
+      padding: 87px 20px 57px
+      margin-top: -28px
 
     h1
+      padding-bottom: 55px
+      +breakpoint($bp-for-desktop-up)
+        margin-top: 65px
+        padding-bottom: 47px
       a
         color: $red
         border-bottom: none
         &:hover
           border-bottom: 2px solid $red
-      padding-bottom: 55px
-      +breakpoint($bp-mobile-max)
+          padding-bottom: 55px
+      +breakpoint($bp-mobile)
+        line-height: 1.2em
+        padding: 0 0 10px
+      +breakpoint(321px $bp-mobile-max)
+        line-height: 1.2em
+        word-spacing: -2px
+        padding: 0 40px 10px 40px
+      +breakpoint($bp-iphone6-7-8p-land)
+        padding-bottom: 9px
+      +breakpoint($bp-ipad-range)
+        font-size: 42px
+        word-spacing: -5px
+        padding-bottom: 36px
+      +breakpoint($bp-for-phone-only)
         font-size: 30px
-        padding-bottom: 25px
+      +breakpoint($bp-mobile-land)
+        font-size: 30px
+      +breakpoint($bp-iphone6p-land)
+        font-size: 30px
+      +breakpoint($bp-iphone6-7-8p-land)
+        font-size: 30px
+      +breakpoint($bp-tablet-pot)
+        font-size: 36px
+      +breakpoint($bp-tablet-land)
+        font-size: 36px
     p
       color: $mission-hp
       font-size: 32px
       +breakpoint($bp-mobile-max)
         font-size: 18px
+        padding: 0 28px
+        line-height: 30px
       +breakpoint($bp-tablet-pot)
         line-height: 1.6em
       +breakpoint($bp-tablet-land)
         line-height: 1.6em
+      +breakpoint($bp-ipad-range)
+        font-size: 25px
+        word-spacing: -3px

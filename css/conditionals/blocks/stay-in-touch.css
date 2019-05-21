@@ -1,7 +1,7 @@
 /*Parallax Effect */
 .parallax {
   /* The image used */
-  background-image: url("../../../images/parallax-image-stayintouch-2800x1620.png");
+  background-image: url("../../../images/parallax-image-stayintouch-2800x1620-desktop.jpg");
   /* Set a specific height */
   min-height: 330px;
   /* Create the parallax scrolling effect */
@@ -11,9 +11,25 @@
   background-size: cover;
   position: relative;
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .parallax {
+    background-image: url("../../../images/parallax-image-stayintouch-2800x1620-tablet.jpg");
+    background-position: bottom right;
+    background-size: cover;
+    background-attachment: initial;
+  }
+}
+@media (max-width: 37.4375em) {
+  .parallax {
+    background-image: url("../../../images/parallax-image-stayintouch-1080x620.png");
+    background-position: bottom right;
+    background-size: cover;
+    background-attachment: initial;
+  }
+}
 @media (max-width: 35.5em) {
   .parallax {
-    min-height: 236px;
+    min-height: 225px;
   }
 }
 .parallax .stay-in-touch {
@@ -26,6 +42,7 @@
 @media (max-width: 35.5em) {
   .parallax .stay-in-touch {
     top: 45%;
+    margin-top: 10px;
   }
 }
 .parallax .stay-in-touch h2 {
@@ -37,7 +54,39 @@
 @media (max-width: 35.5em) {
   .parallax .stay-in-touch h2 {
     font-size: 26px;
+    padding-top: 25px;
     padding-bottom: 40px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 37.4375em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 30em) and (max-width: 45.9375em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 46em) and (max-width: 47.9375em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 41.6875em) and (max-width: 46em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 48em) and (max-width: 63.9375em) {
+  .parallax .stay-in-touch h2 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 60em) and (max-width: 68.75em) and (orientation: landscape) {
+  .parallax .stay-in-touch h2 {
+    font-size: 36px;
   }
 }
 .parallax .stay-in-touch a {
@@ -53,6 +102,21 @@
 }
 .parallax .stay-in-touch a:hover {
   color: #2d6280;
+}
+@media (max-width: 20em) {
+  .parallax .stay-in-touch a {
+    margin-bottom: 23px;
+  }
+}
+@media (min-width: 20.0625em) and (max-width: 23.4375em) {
+  .parallax .stay-in-touch a {
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 23.5em) and (max-width: 25.875em) {
+  .parallax .stay-in-touch a {
+    margin-bottom: 27px;
+  }
 }
 .parallax .stay-in-touch a:after {
   content: "\f101";
@@ -77,7 +141,6 @@
 @media (max-width: 35.5em) {
   .parallax .stay-in-touch a:after {
     float: right;
-    margin-top: -13px;
   }
 }
 @media (max-width: 35.5em) {
@@ -85,7 +148,8 @@
     float: right;
     font-size: 16px;
     margin-top: -13px;
-    width: 282px;
+    padding-left: 16px;
+    width: 310px;
     white-space: normal;
   }
 }

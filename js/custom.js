@@ -155,12 +155,14 @@
       if (Modernizr.mq('(max-width: 999px)')) {
         $('.banner-title').insertAfter($('#sidebar .sidebar'));
         $('.ds-main-wrapper .ds-right').insertBefore($('.ds-main-wrapper .ds-left'));
-        $('#block-block-41').insertAfter($('#footer-logo') );
-        $('#block-menu-menu-footer-4').insertAfter($('#block-block-41'));
-        $('#block-menu-menu-footer-5').insertAfter($('#block-block-41'));
       }
       if (Modernizr.mq('(max-width: 1169px)')) {
         $('#coveo-search-block-form').insertBefore($('#nav-touch-wrapper'));
+      }
+      if (Modernizr.mq('(max-width: 1024px)')) {
+        $('#block-block-41').insertAfter($('#footer-logo') );
+        $('#block-menu-menu-footer-4').insertAfter($('#block-block-41'));
+        $('#block-menu-menu-footer-5').insertAfter($('#block-block-41'));
       }
       if (Modernizr.mq('(max-width: 850px)')) {
         $('.front #quicklinks').insertBefore($('.front-slider-pane'));
@@ -239,6 +241,9 @@
       if ($('#header-wrapper').length) {
         $('.go-to-top-link').find('a').attr('href', '#header-wrapper');
       }
+      $('.go-to-top-link').click(
+          function() { $("html, body").animate({ scrollTop: 0 }, "fast"); return false; }
+      )
     }
   };
 
@@ -570,50 +575,76 @@
       });
     }
   };
-    /* viewport sizing */
-    $(function() {
-      function setHeight() {
-        windowHeight = $(window).innerHeight()-75;
-        $('.pane-bundle-landing-viewport').css('max-height', windowHeight);
-        $('.pane-landingpage-video').css('max-height', windowHeight);
-        // $('.pane-bundle-landing-viewport img').css('max-height', windowHeight);
-      };
-      setHeight();
 
-      $(window).resize(function() {
-        setHeight();
-      });
-    });
-    /* scroll functionality for the 2018 site refresh*/
-    $(function() {
-        // Image splash scroll
-        $('.pane-bundle-landing-viewport .scrollLink').on('click', function() {
-            $('html, body').animate({
-                scrollTop: $('.panel-separator').offset().top
-            }, 800);
-        });
-        // video splash scroll
-        $('.pane-landingpage-video .scrollLink').on('click', function() {
-            $('html, body').animate({
-                scrollTop: $('.pane-bundle-mission-statement').offset().top
-            }, 800);
-        });
-    });
     /* Scroll up/down navigation becomes sticky */
     $(function() {
-        var scrollPos = 0;
-        $(window).scroll(function () {
-            var curScrollPos = $(this).scrollTop();
-            if (curScrollPos > scrollPos) {
-                //Scrolling down - remove the fixed position menu
-              $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
-            } else {
-                //Scrolling up - add the fixed position menu
-                $('#header-wrapper').addClass('awemenu-sticky');
-            }
-            scrollPos = curScrollPos;
-        });
+        var width = $(window).width();
+        //First, the functions for the three different scrolls. 1. desktop, 2. mobile check 3. mobile, 4. open mobile, 5. always give the scrolling to the desktop.
+        function updateDesktopMenuPositioning() {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                } else {
+                    //Scrolling up - add the fixed position menu
+                    $('#header-wrapper').addClass('awemenu-sticky');
+                }
+                scrollPos = curScrollPos;
+            });
+        }
+        // Check to see if the mobile menu is open. Only on the mobile.
+        function checkForChanges() {
+            var mut = new MutationObserver(function(mutations, mut){
+                // If attribute changed === do your changes here
+                if ($('.awemenu-mobile').hasClass('awemenu-active')) {
+                    updateMobileOpenMenuPositioning();
+                } else {
+                    updateMobileMenuPositioning();
+                }
+            });
+            // Check to see if the .awemenu-mobile node changes.
+            mut.observe(document.querySelector(".awemenu-mobile"),{
+                'attributes': true
+            });
+        }
+        // If menu is not open then follow the scroll like the desktop.
+        function updateMobileMenuPositioning() {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                } else {
+                    //Scrolling up - add the fixed position menu
+                    $('#header-wrapper').addClass('awemenu-sticky');
+                }
+                scrollPos = curScrollPos;
+            });
+        }
+        // If menu IS open then DO NOT follow the scroll like the desktop.
+        function updateMobileOpenMenuPositioning() {
+            var scrollPos = 0;
+            $(window).scroll(function () {
+                var curScrollPos = $(this).scrollTop();
+                if (curScrollPos > scrollPos) {
+                    //Scrolling down - remove the fixed position menu
+                    $('#header-wrapper.awemenu-sticky').removeClass('awemenu-sticky');
+                }
+            });
+        }
+        // If Desktop always have the scroll functionality
+        if (width > 1199 && !$("body").hasClass("admin-menu")) {
+            updateDesktopMenuPositioning();
+        }
+        // If mobile then check to see if the menu is open.
+        else if (width < 1200) {
+            checkForChanges();
+        }
     });
+
     /* Voices detail page customization */
     $(function() {
         // Adding some wrappers for ease in styling.
@@ -623,19 +654,185 @@
         $(".node-type-voices .group-right h1").contents().unwrap().wrap('<div/>');
         $(".node-type-voices .group-left .field-name-social-buttons-bottom, .node-type-voices .group-left .short-url-wrapper.field-name-field-link-single").wrapAll('<div class="social-media-wrapper"></div>');
         var htmlColorString = $(".node-type-voices .group-voices-group .field-name-field-background-color").text();
-          $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString);
+        $(".node-type-voices .group-header fieldset.group-voices-group ").addClass(htmlColorString).wrapAll('<div class="voices-header-group-wrapper"></div>');
+        var tabletName = $("fieldset.group-voices-group").find("h1").text();
+        $("<div class='tabletname'>" + tabletName + "</div>").appendTo(".group-wrapper-tablet-1");
+        $("fieldset.group-voices-group .field-name-field-degree-year").clone().appendTo(".group-wrapper-tablet-1");
+        $("fieldset.group-voices-group .field-name-field-title-position-single").clone().appendTo(".group-wrapper-tablet-1");
     });
-    /* Homepage 3-across voices color manipulation*/
+    /* Getting the active-trail deeper into the site. */
+    $(function() {
+        /* MD Megamenu */
+        if (window.location.href.indexOf("/experience") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/programs/") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/faculty-research/") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/insights/") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/alumni/") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-5").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/events/") > -1) {
+          $("#md-megamenu-1 .awemenu-item-level-1.awemenu-item-1-6").addClass("awemenu-active-trail");
+        }
+        /* Exec-ed menus */
+        if (window.location.href.indexOf("/exec-ed/programs/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/organizations/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/difference/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/exec-ed/admission/") > -1) {
+            $(".md-megamenu-executive-edu-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        /* Seed menus */
+        if (window.location.href.indexOf("/seed/mission/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-1").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/transformation-program/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-2").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/coaches-consultants/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-3").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/student-internships/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+        else if (window.location.href.indexOf("/seed/news-events/") > -1) {
+            $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
+        }
+    });
+    /* Mobile menu manipulation*/
     $(function(){
-        $(".view-id-gsb_voices_listing .views-row .field-name-field-background-color").each(function(index){
-          var htmlColorHome = $(this).text();
-              $(this).parent().find(".text-content").addClass(htmlColorHome);
-        } );
+        updateMenutitles();
+        $(window).resize(function() {
+            updateMenutitles();
+        });
+        function updateMenutitles() {
+            var width = $(window).width();
+            if (width < 1199) {
+              $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
+              $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
+              $(".mm-header.featured-programs").prependTo("#block-menu-menu-md-mm-exec-ed-featured-prog");
+              $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-seed");
+            };
+            if (width < 599) {
+              $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
+            };
+            if (width >= 600 && width < 1199) {
+              $(".social-media-wrapper").insertBefore(".group-wrapper-tablet-4");
+            };
+        };
     });
-    /* Overlay */
+
     $(function(){
-      $('#md-megamenu-1').hover( function(){
-        $(this).closest('#page').toggleClass('modal-closed modal-open');
-      } );
+        function updateMenuLinks() {
+            var width = $(window).width();
+            if (width <= 1199) {
+                $("#sidebar").find(".menu > li.expanded")
+                    .click(function (e) {
+                        // Creating variables for the different levels of navigation
+                        var self = $(this);
+
+                        if ((self).hasClass("expanded")) {
+                            // allows only one top-level and active-trail open at the same time.
+                            $(".level-1").not(self).removeClass('open');
+                        };
+                        if (self.length) {
+                            // Toggles the open.
+                            self.toggleClass("open");
+                            // Toggles the open and makes sure the parent stays open
+                            if (self.hasClass("level-3")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                            if (self.hasClass("level-4")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                            if (self.hasClass("level-5")) {
+                                self.parent().closest("li").toggleClass("open");
+                            }
+                        };
+                    });
+            };
+        };
+
+        updateMenuLinks();
+
+        // Duplicating the top level link to a span.
+        $("#sidebar").find(".content .menu li.expanded > a").each(function(i) {
+          $(this).clone()
+              .replaceWith("<span class='sub-menus'>" + $(this).html() + "</span>")
+              .insertAfter(this);
+          $(this).addClass("sub-menus-desktop");
+        });
+        // adding classes for the mobile version
+        $("#sidebar li.expanded").each(function() {
+            $(this).addClass("level-" + ($(this).parents("li").length +1));
+        });
     });
+
+    // Make md-megamenu (main, exec-ed, and seed) accessible by tab keys
+    $(function(){
+        $("#md-megamenu-1, .md-megamenu-executive-edu-main-menu, .md-megamenu-seed-main-menu").attr("role", "navigation");
+        /*  Each event assigned to a variable for easy implementation.  */
+        var myEvents = {
+            click: function(e) {
+                $(this)
+                    .addClass("awemenu-active")
+                    .children("ul")
+                    .show()
+                    .end()
+                    .siblings("li")
+                    .find("ul")
+                    .css("display", "")
+                    .css("z-index", "")
+                    .closest("li")
+                    .removeClass("awemenu-active");
+            },
+            keydown: function(e) {
+                e.stopPropagation();
+                if (e.keyCode == 9) {
+                    if (!e.shiftKey && $("nav li").index($(this)) == $("nav li").length - 1)
+                        $("nav li:first").focus();
+                    else if (e.shiftKey && $("nav li").index($(this)) === 0)
+                        $("nav ul:first > li:last")
+                            .focus()
+                            .blur();
+                }
+            },
+            keyup: function(e) {
+                e.stopPropagation();
+                if (e.keyCode == 9) {
+                    if (myEvents.cancelKeyup) myEvents.cancelKeyup = false;
+                    else myEvents.click.apply(this, arguments);
+                }
+            }
+        };
+        $("#navigation")
+            .on("click", "li", myEvents.click)
+            .on("keydown", "li", myEvents.keydown)
+            .on("keyup", "li", myEvents.keyup);
+
+        //  this is needed to keep tabbing focus correct
+        $("nav li").each(function(i) {
+            this.tabIndex = i;
+        });
+
+    }); // close of accessibilty modification for menus
+    // Landing viewport
+    $(function() {
+      $(".pane-bundle-landing-viewport").find("#landing-video").closest(".pane-bundle-landing-viewport").addClass("landing-video");
+      $(".pane-bundle-landing-viewport").find(".field-name-field-homepage-image-desktop").closest(".pane-bundle-landing-viewport").addClass("landing-image");
+    })
+
+
 }(jQuery));

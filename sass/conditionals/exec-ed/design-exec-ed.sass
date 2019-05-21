@@ -8,14 +8,32 @@
 @import partials/base/01-mixins/custom
 @import partials/base/03-extend/gsb-revamp
 
+//Exec Ed & Seed centered line
+a#logo:after
+  content: ''
+  height: 100%
+  width: 1px
+  position: absolute
+  right: -19px
+  top: 10px
+  background: #d6d6d6
+  +breakpoint($bp-for-phone-only)
+    height: 125%
+    right: -10px
+    top: -6px
+  +breakpoint($bp-for-tablet-range)
+    height: 160%
+    top: -8px
+  .page-programs-compare &
+    background: transparent
+
 // Exec Ed & SEED section title next to logo
 #block-gsb-public-custom-blocks-gpcb-exec-ed,
 #block-gsb-public-custom-blocks-gpcb-seed
-  border-left: 1px solid #d6d6d6
   display: inline-block
-  height: 76px
+  height: 88px
   padding-top: 26px
-  +breakpoint(1169px max-width)
+  +breakpoint(1200px max-width)
     height: 64px
     left: 60px
     padding-top: 15px
@@ -40,9 +58,23 @@
         font-size: 18px
         max-width: 80px
 
+// Seed Title only.
+#block-gsb-public-custom-blocks-gpcb-seed
+  +breakpoint(1199px max-width)
+    padding-top: 18px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
+    padding-top: 6px
+  +breakpoint($bp-for-tablet-range)
+    height: 63px
+
 // Exe Ed title only.
 #block-gsb-public-custom-blocks-gpcb-exec-ed
-  height: 78px
+  height: 88px
+  +breakpoint($bp-for-phone-only)
+    height: 50px
+  +breakpoint($bp-for-tablet-range)
+    height: 63px
   h2 a
     +breakpoint(1170px 1184px)
       font-size: 26px
@@ -74,14 +106,18 @@
     border-top: 1px $border-grey solid
     +breakpoint(1000px max-width)
       border-top: 0
+    +breakpoint($bp-for-tablet-range)
+      border-top: none
     ul li
-      color: #7d7466
+      color: #70685B
       font-family: $font-sans
       font-size: 16px
-      font-weight: normal
+      font-weight: bold
       line-height: 1.2
+      +breakpoint($bp-for-desktop-up)
+        font-weight: normal
       a
-        color: #7d7466
+        color: #70685B
         &:hover
           color: $text-black
         &.active

@@ -11,9 +11,27 @@
   .pane-content
     background-color: $white
     height: 310px
-    padding-top: 110px
+    padding-top: 95px
+    margin-bottom: -33px
     @media (max-width: $wide-view) and (min-width: $narrow-view)
       padding-top: 70px
+    +breakpoint($bp-mobile)
+      margin-top: 45px
+      margin-bottom: 0
+    +breakpoint($bp-mobile-large-range)
+      margin-top: 45px
+      margin-bottom: 0
+    +breakpoint(568px 666px)
+      margin-bottom: 0
+    +breakpoint(667px 736px)
+      margin-bottom: -78px
+      padding-top: 71px
+    +breakpoint($bp-tablet-pot)
+      margin-bottom: -51px
+      padding-top: 85px
+    +breakpoint($bp-tablet-land)
+      margin-bottom: -34px
+      padding-top: 95px
 
     .home-tagline
       background: #ffffff url("../../../images/home-tagline-d.png") no-repeat center center

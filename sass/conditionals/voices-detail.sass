@@ -17,6 +17,16 @@
       background: none
 // Removing the background span from display
 .node-type-voices
+  .voices-header-group-wrapper
+    width: 1170px
+    margin: 0 auto
+    padding-left: 30px
+    +breakpoint($bp-for-phone-only)
+      padding-left: 0
+    +breakpoint($bp-for-phone-only)
+      width: unset
+    +breakpoint($bp-for-tablet-range)
+      padding-left: 37px //Supposed to be 55px so 55px - 18px = 37px
   .group-voices-group
     .field-name-field-background-color
       display: none
@@ -71,15 +81,16 @@
     fieldset.group-voices-group
       border: none
       color: $white
-      height: 60%
-      margin-left: 15%
+      height: 380px
       opacity: .9
       padding: 0 40px
       position: absolute
       text-align: left
       top: 50px
-      width: 26%
+      width: 430px
       z-index: 5
+      +breakpoint($bp-voices-header-box)
+        height: 330px
       +breakpoint($bp-mobile-max)
         background-color: transparent
         color: $text-black
@@ -87,7 +98,7 @@
         position: static
         padding: 0
         margin: 0 18px
-        width: 100%
+        width: auto
       +breakpoint($bp-for-tablet-range)
         background-color: transparent
         color: $text-black
@@ -95,9 +106,12 @@
         position: static
         padding: 0
         margin: 0 18px
-        width: 100%
+        width: auto
       .field-name-field-slideshow-style
         display: none
+      +breakpoint($bp-for-phone-tablet-range)
+        &> div:last-of-type
+          margin-bottom: 30px
 
       h1,
       .field-name-field-degree-year
@@ -133,10 +147,12 @@
         padding-top: 30px
         +breakpoint($bp-mobile-max)
           font-size: 16px
-          padding: 20px 0 30px 0
+          overflow-wrap: break-word
+          padding: 20px 0 0 0
+          word-wrap: break-word
         +breakpoint($bp-for-tablet-range)
           font-size: 16px
-          padding: 20px 0 30px 0
+          padding: 20px 0 0 0
     .mobile-profile
       +breakpoint($bp-mobile-max)
         width: 100%
@@ -186,22 +202,30 @@
     width: 1108px
     +breakpoint($bp-mobile-max)
       font-size: 24px
-      left: 2px
+      left: 0
       padding: 25px 18px 25px 30px
       position: relative
       top: 10px
       width: 95%
-      margin-left: 15px
+      margin-left: 0px
       margin-top: -70px
       .mobile-profile
         display: block
     +breakpoint($bp-for-tablet-range)
-      font-size: 24px
-      left: 18px
-      padding: 25px 18px 25px 30px
+      font-size: 28px
+      left: -2px
+      padding: 35px 15px 0 40px
       position: relative
       top: 10px
-      width: 100%
+      width: 97%
+      margin-left: 11px
+      margin-right: 15px
+    +breakpoint($bp-iphone6p-land)
+      left: -1px
+    +breakpoint($bp-tablet-pot)
+      left: -1px
+    +breakpoint($bp-tablet-land)
+      left: 0
     &:before
       content: "“"
       position: absolute
@@ -213,8 +237,8 @@
         font-size: 40px
         padding-left: 0px
       +breakpoint($bp-for-tablet-range)
-        font-size: 40px
-        padding-left: 0px
+        font-size: 50px
+        padding-left: 5px
     &:after
       content: "”"
     .quote
@@ -224,11 +248,15 @@
 
   // Breadcrumbs
   .breadcrumb
-    padding: 0 0 10px 35px
+    padding: 0 0 0 35px
 
   .field-name-social-buttons-top
     border-bottom: 1px solid $voices-divider
     height: 75px
+    +breakpoint($bp-for-desktop-up)
+      margin-left: 35px
+    +breakpoint($bp-for-tablet-range)
+      margin-top: 25px
 
   /* Voices col set up and adjustment */
   .ds-2col-stacked-fluid
@@ -265,9 +293,9 @@
           h2, h3, h4, h5, h6, blockquote, ul, li, p
             max-width: 670px
           +breakpoint($bp-mobile-max)
-            padding: 0
+            padding: 0 0 35px 0
           +breakpoint($bp-for-tablet-range)
-            padding: 0
+            padding: 30px 0 0 0
 
         .field-name-field-date.field-type-datetime
           display: inline
@@ -280,7 +308,7 @@
               padding-left: 10px
           +breakpoint($bp-for-phone-only)
             font-size: 14px
-            padding: 35px 0
+            padding: 0
           +breakpoint($bp-for-tablet-range)
             font-size: 14px
             padding-left: 0
@@ -291,7 +319,10 @@
           padding: 50px 0
           +breakpoint($bp-for-phone-only)
             font-size: 14px
-            padding: 35px 0
+            padding: 0
+          +breakpoint($bp-for-tablet-range)
+            font-size: 14px
+            padding-left: 0
           .field-collection-item-field-authors
             &:before
               content: "by"
@@ -310,10 +341,8 @@
               content: ""
         .field-name-field-voices-cta
           border-top: 1px solid $voices-divider
-          height: 150px
-          position: relative
-          top: 30px
-          width: 100%
+          +breakpoint($bp-for-desktop-up)
+            margin-left: 35px
           +breakpoint($bp-for-phone-tablet-range)
             display: none
           a.cta
@@ -326,7 +355,7 @@
             margin-top: 50px
             padding: 20px 20px 20px 25px
             position: relative
-            width: 310px
+            width: 300px
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               font-size: 18px
@@ -344,9 +373,11 @@
       .group-right
         border-top: 1px solid $voices-divider
         float: left
-        margin: 55px 0 0 0
+        margin: 88px 0 0 0
         padding-top: 36px
         width: 273px
+        +breakpoint($bp-for-phone-only)
+          margin-top: 90px
         +breakpoint($bp-for-tablet-range)
           align-items: flex-start
           display: flex
@@ -357,18 +388,21 @@
           margin: 25px 0 0 0
           width: 100%
           padding-top: 0px
-        .field-label
+        .field-label,
+        .field-label-prof-exps
           font-family: $font-demi
           font-size: 20px
           font-weight: normal
-          padding: 15px 0 5px
+          padding: 20px 0 10px 0
         .field-items
           div
             line-height: 1.5
         .background-rail-img
-          margin-left: 102px
+          margin-left: 100px
           margin-top: -75px
           position: absolute
+          +breakpoint($bp-for-phone-only)
+            margin-left: 35%
           img
             border: 1px solid $voices-divider
             border-radius: 50%
@@ -377,15 +411,16 @@
         .field-name-voices-ct-background-rail,
         .field-voices-stay-in-touch-cta,
         .field-voices-explore-program-cta
+          margin-bottom: -1px
+          position: relative
           width: 100%
           a.cta
             color: $red
             display: block
             font-size: 16px
             margin-top: 30px
-            padding: 15px 20px 20px 25px
+            padding: 15px 22px 20px 25px
             position: relative
-            width: 98%
             @extend %bg-and-box-shadow
             +icon-after("arrow-double-right", true)
               color: $grey-e3 !important
@@ -400,17 +435,28 @@
             &:after
               color: $red
               top: 50%
+            +breakpoint($bp-tablet-land)
+              width: 85%
         .field-voices-explore-program-cta
           a.cta
             margin-top: 0px
             color: $text-green
+            padding-right: 26px
+            +breakpoint($bp-for-phone-tablet-range)
+              padding-right: 30px
             &:hover
               color: $text-green
         .field-voices-stay-in-touch-cta
           a.cta
             color: $text-green
+            margin-top: 0
             &:hover
               color: $text-green
+        .field-name-voices-ct-background-rail
+          margin-bottom: 30px
+          a.cta
+            +breakpoint($bp-tablet-pot)
+              padding-right: 34px
         fieldset.group-wrapper-related
           margin-top: 30px
           .fieldset-wrapper
@@ -421,15 +467,24 @@
         .group-wrapper-tablet-1
           .field-name-voices-mobile-full-name,
           .field-name-voices-mobile-degree-year,
-          .field-name-voices-mobile-job-title-org
+          .field-name-voices-mobile-job-title-org,
+          .field-name-field-degree-year,
+          .field-name-field-title-position-single,
+          .tabletname
             display: none
           +breakpoint($bp-for-tablet-range)
+            padding-top: 20px
             width: 18%
             // 18% is 122px out of a width of 675. 82% is left and divided by the other two cols.
             .field-name-voices-mobile-full-name,
             .field-name-voices-mobile-degree-year,
-            .field-name-voices-mobile-job-title-org
+            .field-name-voices-mobile-job-title-org,
+            .field-name-field-degree-year,
+            .field-name-field-title-position-single,
+            .tabletname
               display: block
+            .field-name-field-degree-year + .field-name-field-title-position-single
+              display: none
             .field-name-voices-mobile-full-name
               font-size: 14px
               padding-top: 20px
@@ -438,6 +493,8 @@
               font-size: 11px
               padding-top: 10px
             .background-rail-img
+              font-size: 14px
+              padding-bottom: 15px
               margin-left: 0
               margin-top: 15px
               position: relative
@@ -446,20 +503,37 @@
                 height: 121px
                 margin: auto
                 width: 122px
+            .field-name-field-degree-year,
+            .field-name-field-title-position-single
+              font-size: 11px
+              padding-top: 10px
+
         .group-wrapper-tablet-2
           +breakpoint($bp-for-tablet-range)
             margin: auto 5.4%
+            padding-top: 20px
             width: 36%
             .field-label
               padding-top: 10px
         .group-wrapper-tablet-3
           +breakpoint($bp-for-tablet-range)
+            padding-top: 20px
             width: 34.5%
             .field-label
               padding-top: 10px
         .group-wrapper-tablet-4
+          padding-bottom: 35px
           +breakpoint($bp-for-tablet-range)
             padding-top: 10px
+            width: 100%
+            .field-voices-stay-in-touch-cta,
+            .field-voices-explore-program-cta,
+            .field-name-voices-ct-background-rail
+              width: 45%
+              margin: 0 auto -1px
+            .field-name-field-voices-cta
+              margin-bottom: 30px
+
 
 
   // Social media buttons
@@ -468,19 +542,22 @@
   .field-name-social-buttons-top,
   .field-name-social-buttons-bottom
     .item-list ul
-      margin: 0 0 0 25px
+      margin: 0 0 0 -10px
       +breakpoint($bp-for-phone-only)
-        margin: 0
-      li
         margin: 0
     li
       display: inline-block
       vertical-align: top
-  .field-name-social-buttons-bottom
+  div.field-name-social-buttons-bottom
     .item-list ul
-      margin: 0 0 0 50px
+      margin: 0
       +breakpoint($bp-for-phone-only)
         margin: 0
+    +breakpoint($bp-for-phone-only)
+      border-top: 1px solid $voices-divider
+      margin-top: 35px
+      padding-top: 20px
+      width: 100%
 
   // Top social buttons
   .field-name-social-buttons-top
@@ -488,40 +565,63 @@
     @extend %social-buttons-top
     border-top: 1px $voices-divider solid
     margin-bottom: 0
-    +breakpoint(1080px 999px)
+    +breakpoint(687px max-width)
       +social-buttons-small
-    +breakpoint(745px max-width)
+    +breakpoint($bp-mobile-max)
       +social-buttons-small
       margin-top: 0
       margin-bottom: 25px
       padding-left: 0
+    +breakpoint($bp-for-tablet-range)
+      padding-left: 10px
 
   // social media wrapper - fixing floats
   .social-media-wrapper
     clear: left
-    display: block
     border-top: 1px solid $voices-divider
-    padding-top: 20px
+    display: block
+    padding: 20px 0
+    +breakpoint($bp-for-desktop-up)
+      margin-left: 35px
+    +breakpoint($bp-for-phone-only)
+      border-bottom: 1px solid $voices-divider
+      margin-top: 35px
+      padding-bottom: 20px
+    +breakpoint($bp-for-tablet-range)
+      border-bottom: 1px solid $voices-divider
+      margin-top: 50px
+      padding-bottom: 20px
+      width: 100%
   // Bottom social buttons
   .field-name-social-buttons-bottom
     @extend %social-buttons-bottom
     margin-top: 10px
     padding: 0 20px 0 0
+    +breakpoint($bp-for-tablet-range)
+      padding: 0 20px 0 2px
 
   .sharrre .box .count
     padding: 8px 15px 0 0
 
   // Share this short url
   // Wrapper
-  .short-url-wrapper
+  div.short-url-wrapper
     @extend %short-url-wrapper
-    border-left: solid 1px $voices-divider
+    border-left: 1px solid $voices-divider
     margin-bottom: 0
     padding-left: 20px
     line-height: 2.18
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-bottom: 20px
     +breakpoint($bp-for-phone-only)
+      border-bottom: 1px solid $voices-divider
       border-left: 0
+      height: unset
+      margin-bottom: 5px
+      margin-left: 0
       padding-left: 0
+      width: 100%
+
 
   .short-url
     @extend %short-url
@@ -537,10 +637,10 @@
     height: 50px
     padding-top: 5px
 
-.node-type-voices 
-  .ds-2col-stacked-fluid 
-    .content-wrapper 
-      .group-left 
+.node-type-voices
+  .ds-2col-stacked-fluid
+    .content-wrapper
+      .group-left
         .field-name-field-body
           p
             margin-bottom: 25px
@@ -554,11 +654,19 @@
             div
               font-family: $font-light
               font-size: 24px
-              margin: 5px 30px 30px 0
+              margin: 0 26px 10px 0
               width: 380px
+              +breakpoint($bp-for-phone-only)
+                width: 100%
+            .field-name-field-description
+              font-size: 24px
+            .field-name-field-quote-author
+              font-size: 16px
+              font-family: $font-sans
+              width: auto
 
-.node-type-voices 
-  .ds-2col-stacked-fluid 
+.node-type-voices
+  .ds-2col-stacked-fluid
     .content-wrapper
       .group-right
         +breakpoint($bp-for-phone-tablet-range)
@@ -573,6 +681,17 @@
           a
             color: #636F00
             font-size: 16px
+        .faculty-prof-link
+          padding-top: 0px
+          a
+            +icon-after("arrow-double-right", true)
+              color: $grey-e3 !important
+              font-size: 14px
+              font-weight: normal
+              line-height: 1
+              margin-top: 3px
+              position: absolute
+              padding-left: 5px
         fieldset.group-wrapper-related
           .field-label
             padding-left: 20px
@@ -608,3 +727,73 @@
           div:last-child
             border-bottom: none !important
 
+      .group-wrapper-related
+        legend
+          +breakpoint($bp-idea-story-detail)
+            display: block
+            float: left
+            font-family: $font-demi
+            font-size: 20px
+            line-height: 1.2
+            padding-top: 20px
+            padding-left: $standard-padding
+            padding-bottom: 18px
+
+        // Fieldset wrapper
+        .fieldset-wrapper
+          +breakpoint(1211px min-width)
+            display: block !important
+          +breakpoint($bp-idea-story-detail)
+            clear: left
+
+        // Superhead
+        .superhead
+          +breakpoint($bp-idea-story-detail)
+            display: none
+
+        // Related faculty
+        .field-name-field-person-fac-ref
+          +breakpoint($bp-idea-story-detail)
+            padding: 0 $standard-padding 20px
+
+        // Related Idea stories
+        .field-name-field-related-idea-story
+          .node-idea-story
+            +breakpoint($bp-idea-story-detail)
+              padding: 20px $standard-padding
+
+        // Related other content
+        .field-collection-item-field-related-other-unlimited
+          +breakpoint($bp-idea-story-detail)
+            padding: 20px $standard-padding
+
+        // Related links
+        .field-name-field-link-unlimited
+          +breakpoint($bp-idea-story-detail)
+            padding: 20px $standard-padding
+
+//hiding last updated from voice details page
+.node-type-voices
+  #block-gsb-public-custom-blocks-gpcb-last-updated
+    display: none
+
+.node-type-voices
+  fieldset.group-wrapper-related.collapse-processed
+    .fieldset-legend
+      .fieldset-title
+        text-decoration: none
+        &:hover
+          text-decoration: none
+
+.node-type-voices.page-faculty-research-faculty-voices
+  .content-wrapper
+    .group-right
+      .field-label-prof-exps,
+      .field-professional-experience
+        display: none
+
+//Spacing override for the desktop view of the right background sidebar.
+.node-type-voices .ds-2col-stacked-fluid .content-wrapper .group-right
+  .group-wrapper-tablet-2
+    div.field-label:nth-child(2)
+      padding-top: 30px

@@ -1,54 +1,61 @@
 // Executive Education & SEED main menus
+.md-megamenu.md-megamenu-seed-main-menu
+  .awemenu-submenu.awemenu-megamenu
+    +breakpoint($bp-for-desktop-up)
+      left: auto !important
+      right: 0 !important
+      top: 79px !important
+      width: 665px !important
 .md-megamenu.md-megamenu-seed-main-menu,
 .md-megamenu.md-megamenu-executive-edu-main-menu
   background: $grey-hp-7
   border-bottom: 0
   color: $white
+  h3.mm-header
+    color: #b2b2b2
+    font-size: 24px
+    font-weight: normal
+    padding: 0 0 10px 0
+    text-transform: none
   .awemenu
     .awemenu-item-level-1
       border-right: 1px solid $grey-9b
       a
         color: $white
-        font-family: $font-demi
         font-size: 16px
         font-weight: normal
+        height: 88px
         line-height: 1.3
         text-transform: none
         &:hover
           box-shadow: none
         +breakpoint($bp-for-phone-tablet-range)
           color: $red
+          height: auto
+      .menu
+        a
+          font-size: 20px
+          white-space: nowrap
 
   .awemenu-submenu.awemenu-megamenu
     +breakpoint($bp-for-desktop-up)
-      width: 602px !important
       left: auto !important
+      margin-right: -53px
       right: 0 !important
-      top: 70px !important
+      top: 78px !important
     .awemenu-megamenu-wrapper
+      +breakpoint($bp-for-desktop-up)
+        background-color: $text-black
+      padding: 40px 25px
+      +breakpoint($bp-for-phone-tablet-range)
+        padding: 20px 0
       ul
         li
-          padding: 5px 0
+          +breakpoint($bp-for-desktop-up)
+            padding: 0 0 15px 0
           a
             &:hover
               box-shadow: none
-
-.md-megamenu.md-megamenu-seed-main-menu
-  +breakpoint($bp-for-desktop-up)
-    .awemenu-item-1-1
-      width: 103px
-    .awemenu-item-1-2
-      width: 133px
-    .awemenu-item-1-3
-      width: 133px
-    .awemenu-item-1-4
-      width: 130px
-    .awemenu-item-1-5
-      width: 104px
-      span.awemenu-item-title
-        line-height: 2
-      a
-        padding-bottom: 28px
 
 .md-megamenu.md-megamenu-executive-edu-main-menu
   +breakpoint($bp-for-desktop-up)
@@ -171,31 +178,36 @@
 .md-megamenu.md-megamenu-seed-main-menu
   .awemenu-submenu.awemenu-megamenu
     +breakpoint($bp-for-desktop-up)
-      margin-top: 8px
-      width: 603px !important
+      margin-top: 10px
   .awemenu-container
-    +breakpoint($bp-for-phone-only)
-      width: 100% !important
-  +breakpoint(1170px min-width)
-    li a
-      max-width: 133px
-      min-height: 59px
-      padding: 19px 16px
-    li:first-of-type,
-    li:last-of-type
-      a
-        max-width: 104px
+    .awemenu
+      +breakpoint($bp-for-phone-only)
+        width: 100% !important
+      +breakpoint($bp-for-desktop-up)
+        li
+          a
+            max-width: 133px
+            min-height: 59px
+            padding: 25px 15px
+        li:first-of-type,
+        li:last-of-type
+          a
+            max-width: 104px
 
 // Executive Education Menu only
 .md-megamenu.md-megamenu-executive-edu-main-menu
+  .awemenu
+    .awemenu-item > a
+      padding: 25px 15px
   .awemenu-submenu.awemenu-megamenu
     +breakpoint($bp-for-desktop-up)
-      width: 550px !important
-      margin-top: 8px
+      margin-top: 10px
   +breakpoint(1170px min-width)
     li a
       min-height: 59px
-      padding: 19px 16px
+      padding: 20px 16px
+    .row
+      padding: 0 40px
 
   // Mobile overrides
 .md-mobile-style1.awemenu-mobile-standard
@@ -205,8 +217,11 @@
       .leaf
         a
           color: $text-black
-    .awemenu-item.awemenu-active > a
-      background-color: $grey-d8
+    .awemenu-item > a
+      background-color: $grey-hp
+    .awemenu-item.awemenu-active > a,
+    .awemenu-item.awemenu-active-trail > a
+      background-color: $grey-hp
       color: $red
       &:hover
         color: $red
@@ -216,6 +231,95 @@
     a
       color: $red
 
-
 .md-mobile-style1.awemenu-mobile-standard .awemenu .awemenu-item.awemenu-active > a
   color: $red
+
+#block-menu-menu-md-mm-exec-ed-indiv-all,
+#block-menu-menu-md-mm-exec-ed-admission-int
+  .content
+    float: right
+    position: relative
+    margin-right: -15px
+    width: 184px
+    +breakpoint($bp-for-desktop-up)
+      float: unset
+      position: relative
+      margin-right: 0
+      width: 240px
+    +breakpoint($bp-for-phone-tablet-range)
+      float: unset
+      padding-left: 20px
+      margin-right: 0
+      width: 100%
+      ul.menu
+        li:first-of-type
+          border-top: 1px solid $grey-e
+          padding: 10px 0
+        li.leaf
+          padding: 0
+          a
+            padding: 15px 0
+    ul.menu
+      li.leaf
+        +breakpoint($bp-for-desktop-up)
+          border-bottom: 1px solid #686868
+        padding: 14px 0
+        &:first-of-type
+          padding-top: 0
+        &:last-of-type
+          padding-bottom: 15px
+        a
+          padding-bottom: 0
+        .svg &
+          background: url("../images/icons/arrow-utility-nav.svg") no-repeat transparent
+          background-position: right center
+          background-origin: content-box
+          padding-right: 5px
+          +breakpoint($bp-for-phone-tablet-range)
+            padding: 20px
+        .no-js &, .no-svg &
+          +icon-after("arrow-med-right", true)
+            color: $voices-divider
+            float: right
+            font-weight: normal
+
+.md-megamenu.md-megamenu-seed-main-menu,
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  .awemenu
+    .awemenu-item-level-1
+      div[id*="-utility"],
+      div[id*="-uti"]
+        a
+          +breakpoint($bp-for-desktop-up)
+            font-weight: normal
+      .menu
+        a
+          font-size: 20px
+          font-weight: normal
+          +breakpoint($bp-for-desktop-up)
+            font-weight: bold
+        .link-secondary
+          font-weight: normal
+          +breakpoint($bp-for-phone-tablet-range)
+            display: none !important
+
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  .awemenu
+    .awemenu-item-level-1
+      .menu
+        a
+          padding: 0
+          margin: 0
+          white-space: normal
+
+.md-megamenu.md-megamenu-seed-main-menu,
+.md-megamenu.md-megamenu-executive-edu-main-menu
+  +breakpoint($bp-for-phone-tablet-range)
+    .awemenu-submenu.awemenu-megamenu
+      .awemenu-megamenu-wrapper
+        ul
+          li
+            padding: 0
+            margin: 0
+            a
+              display: inline-block

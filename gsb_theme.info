@@ -68,6 +68,8 @@ stylesheets[all][] = css/conditionals/alumni/alumni-book-listing.css
 stylesheets[all][] = css/conditionals/alumni/alumni-reunion-finder.css
 
 ; Content Types
+; WP-7387 New code to dynamically add css stylesheets based on the GSB Styles settings in gsb_theme.info
+; see: https://github.com/gsb-public/gsb_theme/commit/4dec845579b8847c3796947de69009c002032947
 gsb_styles[node][act][] = css/conditionals/alumni/alumni-act-detail.css
 gsb_styles[node][admission_event][] = css/conditionals/event/admission-event-detail.css
 gsb_styles[node][alumni][] = css/conditionals/alumni/alumni-detail.css
@@ -187,9 +189,9 @@ gsb_styles[view][seed_research_listing][] = css/conditionals/seed-research-proje
 gsb_styles[view][seed_research_filters][] = css/conditionals/seed-research-project.css
 gsb_styles[view][voices_filters][] = css/conditionals/voices-filters.css
 gsb_styles[view][gsb_voices_listing][] = css/conditionals/voices-listing.css
+gsb_styles[view][voices_filters][voices_single_teaser_pane][] = css/conditionals/voices-teaser.css
 
 ; Paths
-gsb_styles[path][home][] = css/conditionals/front.css
 gsb_styles[path][exec-ed][] = css/conditionals/exec-ed/design-exec-ed.css
 gsb_styles[path][exec-ed][] = css/conditionals/exec-ed/ee-program-finder.css
 gsb_styles[path][exec-ed/*][] = css/conditionals/exec-ed/design-exec-ed.css

@@ -1,5 +1,4 @@
 // Global styling
-
 // Header region
 #header-wrapper
   position: relative
@@ -7,21 +6,32 @@
   #header
     +breakpoint(1200px min-width)
       margin: 0 auto
-      max-width: 1170px
+      // 1065 (max width) + 35 (neg margin to left) + 70 (search icon width with padding)
+      max-width: 960px
+      position: relative
+      &> .section
+        margin-left: -50px
     .no-js &
       position: relative
+    .page-seed &
+      +breakpoint(1200px min-width)
+        max-width: 1127px
+    .page-exec-ed &
+      +breakpoint(1200px min-width)
+        max-width: 1163px
 
 // Logo
 #logo,
 #ftr-logo
   display: inline-block
-  margin-top: 29px
+  border: 3px solid transparent  // fix for the IE 11 logo cutoff
   img
     display: none
   .svg &
-    background: image_url("logo.svg") no-repeat
-    background-size: 96.8%
-    height: 45px
+    background: image_url("logo.svg") no-repeat 0 20px
+    background-size: 100%
+    margin-left: -55px
+    padding: 35px 0
     width: 159px
   .no-js &,
   .no-svg &
@@ -35,19 +45,24 @@
     .svg &, .no-js &, .no-svg &
       float: left
       height: 35px
-      margin: 0 18px 0 0
+      margin: 0 18px 0 30px
       position: relative
       width: 130px
       +breakpoint(1199px max-width)
         margin-left: 10px
-  +breakpoint(1169px max-width)
+  .page-exec-ed &
     .svg &, .no-js &, .no-svg &
+      margin: 0 18px 0 50px
+  +breakpoint(1199px max-width)
+    .svg &, .no-js &, .no-svg &
+      background-position: center center
       float: left
-      height: 30px
+      height: 35px
       left: 20px
-      margin: 18px 10px 0 0
+      margin: 15px 0 0
+      padding: 0
       position: relative
-      width: 100px
+      width: 110px
     .page-insights &,
     .page-404 &
       left: 0
@@ -63,60 +78,59 @@
         width: 100px
         +breakpoint($bp-for-phone-only)
           margin-top: 10px
+  +breakpoint($bp-for-phone-only)
+    .svg &, .no-js &, .no-svg &
+      margin: 7px 0 0
 
 // Navigation
 #navigation
   .js &,
   &.search-closed
     min-width: 702px
+    float: right
+    padding: 30px 0 0
     +breakpoint($bp-for-phone-tablet-range)
       min-width: auto
+    +breakpoint($bp-for-phone-only)
+      min-width: 100%
+      padding: 0
     // Exec Ed
-    .page-exec-ed &
-      min-width: 534px
-    // SEED menu
+    .page-exec-ed &,
     .page-seed &
-      min-width: 667px
+      min-width: auto
       +breakpoint($bp-for-phone-tablet-range)
         min-width: auto
-  +breakpoint(1170px min-width)
-    float: right
-    position: relative
-    top: -$top-border-interval
-    margin-bottom: -$top-border-interval
     .no-js &,
     &.search-open
       min-width: 842px
-  // Exec Ed menu
-  .page-exec-ed &
-    +breakpoint(1170px min-width)
-      float: right
-      margin-bottom: 0
-      padding: 0
-      position: relative
-      top: 0
-      .no-js &,
-      &.search-open
-        min-width: 534px
-  // Seed menu
+    // SEED menu
+    .page-seed &
+      +breakpoint($bp-for-phone-only)
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+  // Seed menu and Exec-Ed
   .page-seed &,
-    +breakpoint(1170px min-width)
+  .page-exec-ed &
+    +breakpoint(1200px min-width)
       float: right
       padding: 0
       position: relative
-      //top: -$top-border-interval
-      //margin-bottom: -$top-border-interval
+      margin-right: 50px
       .no-js &,
       &.search-open
-        min-width: 667px
+        min-width: auto
 
 // Content wrapper
 #content-wrapper
   position: relative
   background: $white
   .not-front &
-    padding-bottom: 100px
+    padding-bottom: 80px
     +breakpoint(1000px max-width)
+      padding-bottom: 20px
+    +breakpoint($bp-for-phone-tablet-range)
       padding-bottom: 20px
   &:after,
   &:before
@@ -141,8 +155,8 @@
   +breakpoint(1199px max-width)
     padding: 30px 20px
   .page-alumni &
-    +breakpoint($bp-tablet-port-max)
-      margin-top: 100px
+    +breakpoint($bp-for-phone-only)
+      margin-top: 50px
   .page-faculty-research &
     +breakpoint($bp-for-phone-tablet-range)
       //margin-top: 50px
@@ -184,12 +198,6 @@
       border-top: 0
 
 // Page Background images
-
-// Front page courtyard image
-.front #content-wrapper
-  +breakpoint($bp-tablet-port-min)
-    +background(image_url("bg-quad-home-2015-05-26-1.png") top center no-repeat, linear-gradient($white, #e4e4e4))
-
 // MSx Fellows page
 .page-programs-msx,
 .node-type-msx-fellows,
@@ -246,14 +254,6 @@ a.no-border
 .page-node-368466
   #page-title
     display: none
-
-// Hide page title when section is in banner on mobile
-// Stanford GSB Experience, Faculty & Research
-.page-node-300216,
-.page-node-303566
-  #page-title
-    +breakpoint($bp-tablet-port-max)
-      display: none
 
 // Hide Breadcrumbs on landing pages
 .page-node-301121,
@@ -579,7 +579,7 @@ ul.gsb-social-buttons li
   // Counter
   .count
     color: #7d9395
-    display: inline-block
+    display: none
     font-family: $font-demi
     font-weight: normal
     float: right
@@ -646,8 +646,7 @@ ul.gsb-social-buttons li
 .node-book.view-mode-full,
 .node-publication.view-mode-full,
 .node-working-paper.view-mode-full,
-.node-case.view-mode-full,
-.node-voices.view-mode-full
+.node-case.view-mode-full
   .group-wrapper-related
 
     // Toggle open and closed

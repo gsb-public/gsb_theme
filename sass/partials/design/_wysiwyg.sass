@@ -60,7 +60,8 @@ div.callout
 .format-wysiwyg,
 .field-name-field-body,
 .field-name-field-text-equivalent .field-item
-  +clearfix
+  +breakpoint(737px min-width)
+    +clearfix
   @extend %p
   p.paragraph
     margin-bottom: 24px

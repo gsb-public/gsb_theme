@@ -12,9 +12,11 @@
       padding-top: 30px
     +breakpoint($bp-content)
       padding-left: 20px
+    +breakpoint($bp-for-phone-tablet-range)
+      padding-left: 0
     h2
       display: none
-    +breakpoint($bp-tablet-port-max)
+    +breakpoint($bp-for-phone-tablet-range)
       float: none
       margin: 0
       width: 100%
@@ -22,6 +24,8 @@
 // Main region
 #main
   overflow: hidden
+  +breakpoint($bp-for-phone-only)
+    overflow: unset
 
 // Bottom spacing for items in sidebars
 .inner-sidebar-wrapper
@@ -221,6 +225,8 @@
   #sidebar .sidebar
     margin-left: 80px
     margin-right: 105px
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-left: 0
 
 .panel-display.gsb-no-sidebar
   .panel-pane
@@ -557,7 +563,7 @@
     float: left
     +breakpoint($max-width max-width)
       float: none
-      
+
   .full-header,
   .wide-narrow-narrow,
   .narrow-wide,
@@ -841,8 +847,26 @@
       .breadcrumb
         display: none
       .panel-pane
-        padding-top: 70px
-        +breakpoint(320px $max-width)
-          padding-top: 35px
-      .panel-pane.pane-bundle-landing-viewport
-        padding-top: 0
+        padding-top: 35px
+
+.no-sidebars.page-seed.panels-layout-gsb-full-bleed-page,
+.no-sidebars.page-exec-ed.panels-layout-gsb-full-bleed-page
+  h1.title
+    margin-left: 80px
+    +breakpoint($bp-for-phone-tablet-range)
+      margin-left: 0px
+    +breakpoint($bp-tablet-land)
+      margin-left: 80px
+
+.no-sidebars.page-seed.panels-layout-gsb-full-bleed-page,
+.no-sidebars.page-exec-ed.panels-layout-gsb-full-bleed-page
+  .ee-section-header-overlay
+    .overlay-inner-wrapper
+      .ee-section-header-title
+        padding-left: 80px
+        +breakpoint($bp-for-phone-tablet-range)
+          padding-left: 10px
+        +breakpoint($bp-for-tablet-range)
+          padding-left: 0px
+        +breakpoint($bp-tablet-land)
+          padding-left: 80px

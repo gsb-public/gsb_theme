@@ -12,7 +12,7 @@
   .pane-gsb-announcement-school-listing-panel-pane-1,
   .pane-gsb-insights-stanford-business-panel-pane-1
     margin: 0 auto
-    width: 1172px
+    width: 1170px
     +breakpoint(320px $max-width)
       clear: both
       margin: 0
@@ -21,22 +21,57 @@
     h2,
     div.pane-title
       font-weight: normal
-      font-family: $font-sans
-      padding-bottom: 50px
+      font-family: $font-light
+      padding: 38px 0 50px
       font-size: 36px
-      +breakpoint(320px $max-width)
+      &:last-of-type
+        padding: 38px 0 50px
+      +breakpoint($bp-mobile)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
         font-size: 26px
-        padding-bottom: 25px
+      +breakpoint(321px $max-width)
+        font-size: 26px
+        padding-bottom: 30px
+      +breakpoint(321px $bp-for-phone-only)
+        font-size: 26px
+        margin-top: -5px
+        padding-bottom: 16px
+        padding-top: 0
+      +breakpoint($bp-mobile-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
+        font-size: 26px
+      +breakpoint($bp-iphone6p-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
+        font-size: 26px
+      +breakpoint($bp-iphone6-7-8p-land)
+        margin-top: -5px
+        padding-top: 0
+        padding-bottom: 20px
+        margin-bottom: -5px
+        font-size: 26px
       +breakpoint($bp-tablet-pot)
-        padding-top: 30px
-        font-size: 30px
-        font-family: $font-light
+        margin-top: -16px
+        margin-bottom: 9px
+        font-size: 36px
       +breakpoint($bp-tablet-land)
-        padding-top: 30px
-        font-size: 30px
-        font-family: $font-light
+        margin-top: -16px
+        margin-bottom: 9px
+        font-size: 36px
 
     .view-gsb-announcement-school-listing
+      +breakpoint($bp-for-tablet-range)
+        padding: 0 103px
+      +breakpoint(1199px width)
+        padding: 0 200px
       .view-content
         &:after
           clear: both
@@ -47,25 +82,36 @@
           &:after
             margin-bottom: 35px
       .views-row-first
-        margin-right: 48px
+        margin-right: 45px
         +breakpoint(320px $max-width)
           margin-right: 0
       .views-row-last
-        +breakpoint(320px $max-width)
+        +breakpoint(320px 599px)
           margin-top: 35px
+        +breakpoint($bp-for-tablet-range)
+          margin-top: 50px
 
       .views-row
         background-color: $white
         float: left
         width: 562px
-        +breakpoint(320px $max-width)
+        +breakpoint($bp-for-phone-tablet-range)
+          width: 100%
+        +breakpoint(1199px width)
           width: 100%
         .field-type-datetime
           color: $grey-hp-7
-          padding-bottom: 15px
-          +breakpoint(320px $max-width)
+          padding-bottom: 10px
+          +breakpoint($bp-for-phone-only)
             font-size: 12px
-            padding-bottom: 0
+            padding-bottom: 5px
+            margin-bottom: 5px
+          +breakpoint(600px 979px)
+            font-size: 16px
+            padding-bottom: 12px
+          +breakpoint(980px 1199px)
+            font-size: 16px
+            padding-bottom: 17px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
@@ -81,6 +127,10 @@
               opacity: .6
               transform: scale(1.05)
     .view-gsb-insights-stanford-business
+      +breakpoint($bp-for-tablet-range)
+        padding: 0 103px
+      +breakpoint(1199px width)
+        padding: 0 200px
       .view-content
         &:after
           clear: both
@@ -91,7 +141,7 @@
           &:after
             margin-bottom: 35px
       .views-row-1
-        margin-right: 46px
+        margin-right: 44px
         +breakpoint(320px $max-width)
           margin-right: 0
       .views-row-2
@@ -112,10 +162,16 @@
           width: 100%
         .field-type-datetime
           color: $grey-hp-7
-          padding-bottom: 15px
-          +breakpoint(320px $max-width)
+          padding-bottom: 10px
+          +breakpoint($bp-for-phone-only)
             font-size: 12px
-            padding-bottom: 0
+            padding-bottom: 10px
+          +breakpoint(600px 979px)
+            font-size: 16px
+            padding-bottom: 12px
+          +breakpoint(980px 1199px)
+            font-size: 16px
+            padding-bottom: 17px
         .field-type-image
           background: rgba(45,98,128,0.5)
           overflow: hidden
@@ -134,28 +190,30 @@
       border-bottom: 1px solid $listing-divider
       border-left: 1px solid $listing-divider
       border-right: 1px solid $listing-divider
-      padding: 32px 30px 45px 30px
+      padding: 27px 30px 45px 40px
+      +breakpoint($bp-iphone-port-to-land-range)
+        padding: 24px 30px 39px 40px
+      +breakpoint(600px 979px)
+        padding: 27px 30px 39px 40px
+      +breakpoint(980px 1199px)
+        padding: 32px 30px 39px 40px
       &:hover
         box-shadow: 0 0 4px 2px #c4c4c4
       h3,
       span.story-title
-        font-size: 26px
+        font-size: 20px
         font-weight: normal
         font-family: $font-sans
         a
           &:hover
             border-bottom: 2px solid $link-blue
             text-decoration: none
-        +breakpoint(320px $max-width)
-          font-size: 20px
-          padding: 20px 0 25px 0
         +breakpoint($bp-tablet-pot)
-          font-size: 30px
+          font-size: 26px
         +breakpoint($bp-tablet-land)
-          font-size: 30px
-        +breakpoint($bp-for-phone-only)
-          padding-bottom: 0px
-          line-height: 1.3em
+          font-size: 26px
+        +breakpoint(1101px min-width)
+          font-size: 26px
       .field-name-media-icon
         display: inline
         float: left
@@ -164,6 +222,9 @@
         position: relative
         +breakpoint(320px $max-width)
           top: 17px
+        +breakpoint($bp-ipad-range)
+          position: inherit
+          padding-top: 4px
   %homepage_cta
     background-color: $red-dark
     color: $white
@@ -172,7 +233,7 @@
     min-height: 55px
     line-height: 1.2
     margin: 0 auto
-    padding: 20px 20px 20px 25px
+    padding: 20px 20px 20px 23px
     position: relative
     width: 285px
     @extend %bg-and-box-shadow
@@ -196,9 +257,51 @@
           color: $white
   .homepage_insights-cta
     @extend %homepage_cta
+    width: 205px
+    margin-bottom: 35px
+    &:hover
+      background-color: #2D6280
+      color: $white
+      cursor: pointer
+    +breakpoint($bp-tablet-range)
+      width: 205px
+      margin-top: 25px
+      margin-bottom: 5px
+    +breakpoint($bp-mobile)
+      min-width: 280px
+      margin-bottom: -20px
+    +breakpoint($bp-mobile-range-375)
+      min-width: 330px
+      margin-bottom: -65px
+    +breakpoint($bp-mobile-range-414)
+      min-width: 374px
+      margin-bottom: -65px
+    +breakpoint(568px 736px)
+      margin-bottom: -20px
   .homepage_across-cta
     @extend %homepage_cta
     padding-right: 30px
-    padding-left: 20px
+    width: 205px
+    &:hover
+      background-color: #2D6280
+      color: $white
+      cursor: pointer
+    +breakpoint($bp-for-desktop-up)
+      margin-bottom: 70px
+    +breakpoint($bp-tablet-range)
+      width: 205px
+      margin-top: 25px
+      margin-bottom: -5px
+    +breakpoint($bp-mobile)
+      min-width: 280px
+      margin-bottom: -10px
+    +breakpoint($bp-mobile-range-375)
+      min-width: 330px
+      margin-bottom: -30px
+    +breakpoint($bp-mobile-range-414)
+      min-width: 374px
+      margin-bottom: -30px
+    +breakpoint(568px 736px)
+      margin-bottom: -55px
     a:after
       right: 15px

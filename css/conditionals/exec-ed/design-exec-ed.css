@@ -90,14 +90,39 @@
   color: white !important;
 }
 
+a#logo:after {
+  content: "";
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: -19px;
+  top: 10px;
+  background: #d6d6d6;
+}
+@media (max-width: 37.4375em) {
+  a#logo:after {
+    height: 125%;
+    right: -10px;
+    top: -6px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  a#logo:after {
+    height: 160%;
+    top: -8px;
+  }
+}
+.page-programs-compare a#logo:after {
+  background: transparent;
+}
+
 #block-gsb-public-custom-blocks-gpcb-exec-ed,
 #block-gsb-public-custom-blocks-gpcb-seed {
-  border-left: 1px solid #d6d6d6;
   display: inline-block;
-  height: 76px;
+  height: 88px;
   padding-top: 26px;
 }
-@media (max-width: 73.0625em) {
+@media (max-width: 75em) {
   #block-gsb-public-custom-blocks-gpcb-exec-ed,
   #block-gsb-public-custom-blocks-gpcb-seed {
     height: 64px;
@@ -140,8 +165,35 @@
   }
 }
 
+@media (max-width: 74.9375em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    padding-top: 18px;
+  }
+}
+@media (max-width: 37.4375em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    height: 50px;
+    padding-top: 6px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #block-gsb-public-custom-blocks-gpcb-seed {
+    height: 63px;
+  }
+}
+
 #block-gsb-public-custom-blocks-gpcb-exec-ed {
-  height: 78px;
+  height: 88px;
+}
+@media (max-width: 37.4375em) {
+  #block-gsb-public-custom-blocks-gpcb-exec-ed {
+    height: 50px;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  #block-gsb-public-custom-blocks-gpcb-exec-ed {
+    height: 63px;
+  }
 }
 @media (min-width: 73.125em) and (max-width: 74em) {
   #block-gsb-public-custom-blocks-gpcb-exec-ed h2 a {
@@ -180,17 +232,29 @@
     border-top: 0;
   }
 }
+@media (min-width: 37.5em) and (max-width: 74.9375em) {
+  .page-exec-ed .region-sidebar-first,
+  .page-seed .region-sidebar-first {
+    border-top: none;
+  }
+}
 .page-exec-ed .region-sidebar-first ul li,
 .page-seed .region-sidebar-first ul li {
-  color: #7d7466;
+  color: #70685b;
   font-family: "NewsGothicBT", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.2;
+}
+@media (min-width: 75em) {
+  .page-exec-ed .region-sidebar-first ul li,
+  .page-seed .region-sidebar-first ul li {
+    font-weight: normal;
+  }
 }
 .page-exec-ed .region-sidebar-first ul li a,
 .page-seed .region-sidebar-first ul li a {
-  color: #7d7466;
+  color: #70685b;
 }
 .page-exec-ed .region-sidebar-first ul li a:hover,
 .page-seed .region-sidebar-first ul li a:hover {

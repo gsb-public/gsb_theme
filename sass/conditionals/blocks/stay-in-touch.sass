@@ -10,11 +10,21 @@
 /*Parallax Effect */
 .parallax
   /* The image used */
-  background-image: url("../../../images/parallax-image-stayintouch-2800x1620.png")
+  background-image: url("../../../images/parallax-image-stayintouch-2800x1620-desktop.jpg")
+  +breakpoint($bp-for-tablet-range)
+    background-image: url("../../../images/parallax-image-stayintouch-2800x1620-tablet.jpg")
+    background-position: bottom right
+    background-size: cover
+    background-attachment: initial
+  +breakpoint($bp-for-phone-only)
+    background-image: url("../../../images/parallax-image-stayintouch-1080x620.png")
+    background-position: bottom right
+    background-size: cover
+    background-attachment: initial
   /* Set a specific height */
   min-height: 330px
   +breakpoint($bp-mobile-max)
-    min-height: 236px
+    min-height: 225px
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed
@@ -31,6 +41,7 @@
     white-space: nowrap
     +breakpoint($bp-mobile-max)
       top: 45%
+      margin-top: 10px
 
     h2
       font-size: 36px
@@ -39,7 +50,22 @@
       text-align: center
       +breakpoint($bp-mobile-max)
         font-size: 26px
+        padding-top: 25px
         padding-bottom: 40px
+        margin-bottom: 5px
+      +breakpoint($bp-for-phone-only)
+        font-size: 26px
+      +breakpoint($bp-mobile-land)
+        font-size: 26px
+      +breakpoint($bp-iphone6p-land)
+        font-size: 26px
+      +breakpoint($bp-iphone6-7-8p-land)
+        font-size: 26px
+      +breakpoint($bp-tablet-pot)
+        font-size: 36px
+      +breakpoint($bp-tablet-land)
+        font-size: 36px
+
 
     a
       background-color: $white
@@ -53,6 +79,12 @@
       padding: 20px 20px 20px 25px
       &:hover
         color: $blue-light-hp
+      +breakpoint($bp-mobile)
+        margin-bottom: 23px
+      +breakpoint($bp-mobile-range-375)
+        margin-bottom: 25px
+      +breakpoint($bp-mobile-range-414)
+        margin-bottom: 27px
       +icon-after("arrow-double-right", true)
         color: $green-light
         display: inline-block
@@ -61,10 +93,10 @@
         text-decoration: none
         +breakpoint($bp-mobile-max)
           float: right
-          margin-top: -13px
       +breakpoint($bp-mobile-max)
         float: right
         font-size: 16px
         margin-top: -13px
-        width: 282px
+        padding-left: 16px
+        width: 310px
         white-space: normal

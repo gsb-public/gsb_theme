@@ -248,6 +248,7 @@ function gsb_theme_form_views_exposed_form_alter(&$form, &$form_state) {
   // MSx admission events.
   if ($form['#id'] == 'views-exposed-form-admission-events-msx-admission-panel-pane') {
     // Add placeholder text.
+    $form['#after_build'][] = 'gsb_theme_admission_events_mba_list_after_build';
     $form['search']['#attributes']['placeholder'] = t('Search by location, title, or other keywords');
   }
   // Faculty listing placeholder text.
@@ -396,6 +397,15 @@ function gsb_theme_preprocess_page(&$variables) {
      );
   }
 
+  // load homepage viewport sizing and custom scrollbar
+  if (request_uri() === url('<front>')) {
+    drupal_add_js(drupal_get_path('theme', 'gsb_theme') . '/js/landing-viewport.js', array(
+       'type' => 'file',
+       'scope' => 'header',
+       'weight' => 4,
+    ));
+  }
+
   // 403 page
   if(drupal_get_http_header('status') == "403 Forbidden") {
     $variables['theme_hook_suggestions'][] = 'page__403';
@@ -411,7 +421,7 @@ function gsb_theme_preprocess_page(&$variables) {
       $variables['theme_hook_suggestions'][] = 'page__ee_program_admission';
     }
   }
-	
+
   if (!empty($_GET['q']) && $_GET['q'] == 'coveo-search-page/') {
     $variables['theme_hook_suggestions'][] = 'page__coveo_search';
   }
