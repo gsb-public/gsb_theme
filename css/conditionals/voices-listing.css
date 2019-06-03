@@ -446,15 +446,8 @@ a[class^="bg-"]:hover:before {
 
 /* CTA Button */
 .pane-content .homepage_voices_cta {
-  background-color: #860000;
-  color: white;
-  font-size: 18px;
-  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  min-height: 55px;
-  line-height: 1.2;
-  padding: 20px 28px 20px 20px;
-  position: relative;
   width: 205px;
+  margin: 0 auto;
 }
 @media (max-width: 46em) {
   .pane-content .homepage_voices_cta {
@@ -493,8 +486,15 @@ a[class^="bg-"]:hover:before {
   }
 }
 .pane-content .homepage_voices_cta a {
+  background-color: #860000;
   color: white;
-  padding-left: 3px;
+  font-size: 18px;
+  font-family: "NewsGothicBT-Demi", "Avant Garde", "Futura", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 55px;
+  line-height: 1.2;
+  padding: 20px 28px 20px 20px;
+  display: block;
+  position: relative;
 }
 .pane-content .homepage_voices_cta a:after {
   content: "\f101";
@@ -514,12 +514,15 @@ a[class^="bg-"]:hover:before {
   font-weight: normal;
   line-height: 0;
   margin-top: 0;
-  position: absolute;
+  display: inline-block;
   right: 20px;
   top: 50%;
+  position: absolute;
 }
 .pane-content .homepage_voices_cta a:hover {
   color: white;
+  cursor: pointer;
+  background-color: #2d6280;
 }
 .pane-content .homepage_voices_cta a:hover:after {
   color: white;

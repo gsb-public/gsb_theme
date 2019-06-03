@@ -269,15 +269,8 @@ a[class^="bg-"]:hover
 /* CTA Button */
 .pane-content
   .homepage_voices_cta
-    background-color: $red-dark
-    color: $white
-    font-size: 18px
-    font-family: $font-demi
-    min-height: 55px
-    line-height: 1.2
-    padding: 20px 28px 20px 20px
-    position: relative
     width: 205px
+    margin: 0 auto
     +breakpoint($bp-iphone-port-to-land-range)
       margin: 0 auto 0
     +breakpoint($bp-tablet-range)
@@ -297,18 +290,28 @@ a[class^="bg-"]:hover
       +breakpoint(1024px 1199px)
         margin: 25px auto 25px
     a
+      background-color: $red-dark
       color: $white
-      padding-left: 3px
+      font-size: 18px
+      font-family: $font-demi
+      min-height: 55px
+      line-height: 1.2
+      padding: 20px 28px 20px 20px
+      display: block
+      position: relative
       +icon-after("arrow-double-right", true)
         font-size: 18px
         font-weight: normal
         line-height: 0
         margin-top: 0
-        position: absolute
+        display: inline-block
         right: 20px
         top: 50%
+        position: absolute
       &:hover
         color: $white
+        cursor: pointer
+        background-color: #2D6280
         &:after
           color: $white
     &:hover
