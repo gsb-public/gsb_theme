@@ -110,7 +110,7 @@
             };
 
             /* landing viewport tagline */
-            $('#landing-video').append("<p class='landing-video-tagline'>Change Lives. <br class='tagline-break'/>Change Organizations. <br class='tagline-break'/>Change the World.</p>");
+            $('.viewport-kaltura-video-text').addClass('landing-video-tagline').appendTo('#landing-video');
 
             function inspectViewPort() {
                 windowWidth = $(window).innerWidth();
