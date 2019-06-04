@@ -8,6 +8,12 @@
     padding: 14px 0 11px
   +breakpoint($bp-for-phone-tablet-range)
     background: $grey-hp
+  +breakpoint(1199px 1000px)
+    border-bottom: 1px solid $grey-db
+    height: 50px
+  .page-alumni &
+    +breakpoint(1199px max-width)
+      border-bottom: 1px solid $grey-db
 
 // Banner title and subtitles
 .banner-title,
@@ -62,9 +68,9 @@
     +breakpoint($bp-for-tablet-range)
       height: 50px
     +breakpoint($bp-tablet-land)
-      height: 26px
+      height: 25px
     +breakpoint($bp-tablet-gap)
-      height: 26px
+      height: 25px
     +breakpoint($bp-for-phone-only)
       height: 42px
     top: 0
@@ -249,8 +255,10 @@
           padding: 6px 15px 8px 12px
         .svg &
           +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
+          border-left: 1px solid gainsboro
         .no-js &, .no-svg &
           +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
+          border-left: 1px solid gainsboro
         // Alumni
         .page-alumni &
           background-color: $section-red
@@ -297,7 +305,7 @@
     .block-menu-block.open
       .content
         position: absolute
-        top: 48px
+        top: 50px
         width: 100%
         z-index: 12
         +breakpoint($bp-for-phone-only)
@@ -308,11 +316,13 @@
             padding-left: 30px
           .page-alumni &
             +breakpoint($bp-for-phone-tablet-range)
-              margin-top: 9px
+              margin-top: 18px
             +breakpoint($bp-for-phone-only)
               margin-top: 9px
             +breakpoint($bp-iphone-range-port)
               margin-top: 0
+            +breakpoint($bp-tablet-gap)
+              margin-top: 9px
 
       h2
         color: $grey-hp-7
@@ -366,7 +376,7 @@
       // Faculty and Research
       .page-faculty-research &
         .content
-          top: 48px
+          top: 50px
           +breakpoint($bp-for-phone-only)
             top: 42px
         h2
@@ -376,7 +386,7 @@
       // Faculty and Research
       .page-library &
         .content
-          top: 48px
+          top: 50px
           +breakpoint($bp-for-phone-only)
             top: 42px
         h2
@@ -386,11 +396,24 @@
       // Alumni
       .page-alumni &
         .content
-          top: 40px
+          top: 42px
+          +breakpoint($bp-for-phone-range)
+            top: 43px
+          +breakpoint($bp-for-tablet-range)
+            top: 51px
+          +breakpoint(1199px 1101px)
+            top: 41px
+          +breakpoint(1100px 1000px)
+            top: 32px
+          +breakpoint(999px 669px)
+            top: 33px
+          +breakpoint(374px 320px)
+            top: 34px
         h2
           color: $section-red
           .svg &
             +background(image_url("icons/inThisSection-arrow-up-red.svg") no-repeat 85% 47% $grey-hp)
+            height: 51px
       .content
         & > .menu
           +background(linear-gradient(rgba(#e7e7e7, 0.5), rgba($white, 0.5)), $white)
