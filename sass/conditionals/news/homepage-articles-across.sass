@@ -226,15 +226,7 @@
           position: inherit
           padding-top: 4px
   %homepage_cta
-    background-color: $red-dark
-    color: $white
-    font-size: 18px
-    font-family: $font-demi
-    min-height: 55px
-    line-height: 1.2
     margin: 0 auto
-    padding: 20px 20px 20px 23px
-    position: relative
     width: 285px
     @extend %bg-and-box-shadow
     &:first-of-type
@@ -242,6 +234,15 @@
     &:last-of-type
       border-bottom: 0
     a
+      background-color: $red-dark
+      color: $white
+      font-size: 18px
+      font-family: $font-demi
+      min-height: 55px
+      line-height: 1.2
+      padding: 20px 20px 20px 23px
+      display: block
+      position: relative
       color: $white
       +icon-after("arrow-double-right", true)
         font-size: 18px
@@ -253,6 +254,8 @@
         top: 50%
       &:hover
         color: $white
+        cursor: pointer
+        background-color: #2D6280
         &:after
           color: $white
   .homepage_insights-cta
@@ -280,7 +283,6 @@
       margin-bottom: -20px
   .homepage_across-cta
     @extend %homepage_cta
-    padding-right: 30px
     width: 205px
     &:hover
       background-color: #2D6280
