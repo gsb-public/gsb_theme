@@ -2887,11 +2887,15 @@ a[class^="bg-"]:hover
             +breakpoint($bp-for-desktop-up)
               margin-left: 15px
               margin-right: 15px
+            +breakpoint($bp-iphone6p-land)
+              width: 69%
           .voices_display_list_cta
             +breakpoint($bp-for-desktop-up)
               margin-left: 15px
               width: 87%
-
+            +breakpoint($bp-iphone6p-land)
+              width: 69%
+              margin-left: 0px
 .no-sidebars.panels-layout-gsb-no-sidebar,
 .no-sidebars.panels-layout-gsb-full-bleed-page
   .view-display-id-voices_filters_pane 
@@ -2986,6 +2990,8 @@ a[class^="bg-"]:hover
                 width: 30%
         .pane-voices-filters-all-voices-list-panel-pane
           .pane-content
+            +breakpoint($bp-for-phone-only)
+              padding-bottom: 30px
             +breakpoint($bp-iphone6p-port)
               padding-bottom: 30px
           .view-content
@@ -2994,6 +3000,12 @@ a[class^="bg-"]:hover
             +breakpoint($bp-tablet-pot)
               margin-left: 30px
             .views-row
+              +breakpoint($bp-for-desktop-up)
+                margin-right: 30px
+              +breakpoint($bp-for-phone-only)
+                margin-left: 0px
+                margin-bottom: 0px
+                width: 90%
               +breakpoint($bp-mobile-land)
                 margin-right: 30px
               +breakpoint($bp-iphone6p-land)
@@ -3006,6 +3018,11 @@ a[class^="bg-"]:hover
                 width: 30%
 
           .voices_display_all_list_cta
+            +breakpoint($bp-for-desktop-up)
+              margin-left: 0px
+            +breakpoint($bp-for-phone-only)
+              width: 89%
+              margin-left: 0px
             +breakpoint($bp-mobile-land)
               margin-top: 30px
             +breakpoint($bp-iphone6p-port)
@@ -3644,6 +3661,8 @@ a[class^="bg-"]:hover
             +breakpoint($bp-tablet-pot)
               width: 80%
               margin-top: 20px
+            +breakpoint($bp-tablet-land)
+              margin-top: 20px
           .pane-title
             +breakpoint($bp-for-phone-only)
               padding-left: 0px
@@ -3836,6 +3855,8 @@ a[class^="bg-"]:hover
               margin-left: 10px
               margin-top: 0px
               width: 86%
+            +breakpoint($bp-mobile-land)
+              margin-top: 25px
           .pane-content
             +breakpoint($bp-for-phone-only)
               padding-bottom: 30px
@@ -3854,6 +3875,9 @@ a[class^="bg-"]:hover
 
       .pane-voices-filters-all-voices-list-panel-pane 
         .voices_display_all_list_cta
+          +breakpoint($bp-for-phone-only)
+            margin-left: 10px
+            margin-top: 20px
           +breakpoint($bp-iphone6p-port)
             margin-left: 25px
           +breakpoint($bp-iphone6p-land)
@@ -3890,8 +3914,11 @@ a[class^="bg-"]:hover
     .sidebar-inner 
       .pane-voices-filters-all-voices-list-panel-pane 
         .voices_display_all_list_cta
+          +breakpoint($bp-for-phone-only)
+            margin-left: 10px
+            margin-top: 20px
           +breakpoint($bp-iphone6p-port)
-            margin-left: 25px
+            margin-left: 15px
           +breakpoint($bp-iphone6p-land)
             width: 88%
           +breakpoint($bp-tablet-land)
@@ -3900,8 +3927,17 @@ a[class^="bg-"]:hover
           +breakpoint($bp-for-phone-only)
             margin-left: 10px
             margin-bottom: 0px
-      .pane-voices-filters-voices-list-cta-panel-pane 
+          +breakpoint($bp-iphone6p-port)
+            margin-left: 15px
+      .pane-voices-filters-voices-list-cta-panel-pane
+        .views-row
+          +breakpoint($bp-for-phone-only)
+            margin-left: 0px
+            margin-bottom: 0px
         .voices_display_list_cta
+          +breakpoint($bp-for-phone-only)
+            margin-left: 0px
+            margin-top: 25px
           +breakpoint($bp-iphone6p-land)
             margin-left: 0px
           +breakpoint($bp-tablet-pot)
