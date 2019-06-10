@@ -3857,15 +3857,52 @@ a[class^="bg-"]:hover
               width: 86%
             +breakpoint($bp-mobile-land)
               margin-top: 25px
+            +breakpoint($bp-iphone6p-land)
+              width: 73%
+              margin-left: 30px
+            +breakpoint($bp-tablet-pot)
+              margin-left: 50px
+              width: 68%
+              margin-top: 25px
+            +breakpoint($bp-tablet-land)
+              width: 60%
+              margin-left: 80px
+              margin-top: 30px
           .pane-content
             +breakpoint($bp-for-phone-only)
               padding-bottom: 30px
+          .views-row
+            +breakpoint($bp-iphone6p-land)
+              width: 74%
+              margin-left: 30px
+            +breakpoint($bp-tablet-pot)
+              margin-left: 50px
+              width: 68%
+            +breakpoint($bp-tablet-land)
+              width: 60%
+              margin-left: 80px
+
+        .pane-voices-filters-voices-filters-pane
+          .views-row
+            +breakpoint($bp-iphone6p-land)
+              margin-left: 60px
+              width: 70% 
+            +breakpoint($bp-tablet-pot)
+              margin-left: 60px
+              width: 65% 
+            +breakpoint($bp-tablet-land)
+              width: 57%
+              margin-left: 100px
+
   .inner-sidebar-wrapper 
     #quicklinks 
       .pane-voices-filters-voices-list-cta-panel-pane 
         .voices_display_list_cta
           +breakpoint($bp-iphone6p-port)
-            margin-left: 25px
+            margin-left: 12px
+          +breakpoint($bp-tablet-pot)
+            margin-left: 0px
+            margin-top: 25px
           +breakpoint($bp-tablet-land)
             margin-left: 0px
         .views-row
@@ -3882,8 +3919,13 @@ a[class^="bg-"]:hover
             margin-left: 25px
           +breakpoint($bp-iphone6p-land)
             width: 88%
+          +breakpoint($bp-tablet-pot)
+            width: 88%
+            margin-top: 25px
           +breakpoint($bp-tablet-land)
             margin-left: 0px
+            width: 87%
+            margin-top: 25px
         .views-row
           +breakpoint($bp-for-phone-only)
             margin-left: 10px
@@ -3921,8 +3963,13 @@ a[class^="bg-"]:hover
             margin-left: 15px
           +breakpoint($bp-iphone6p-land)
             width: 88%
+          +breakpoint($bp-tablet-pot)
+            width: 88%
+            margin-top: 25px
           +breakpoint($bp-tablet-land)
             margin-left: 0px
+            width: 87%
+            margin-top: 25px
         .views-row
           +breakpoint($bp-for-phone-only)
             margin-left: 10px
