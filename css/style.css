@@ -13715,6 +13715,9 @@ button.checkbox-clear-all {
   .no-js .page-exec-ed #sidebar .sidebar h2, .no-svg .page-exec-ed #sidebar .sidebar h2, .no-js .page-seed #sidebar .sidebar h2, .no-svg .page-seed #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white-@2x.png') no-repeat 11px 11px #7d7466;
   }
+  .page-exec-ed #sidebar .sidebar h2 {
+    border-left: 1px solid #7d7466;
+  }
   .svg .page-library #sidebar .sidebar h2 {
     background: url('../images/icons/inThisSection-arrow-down-white.svg') no-repeat 85% 47% #7d7466;
   }
@@ -13751,6 +13754,10 @@ button.checkbox-clear-all {
   #sidebar .block-menu-block.open h2, .no-svg
   #sidebar .block-menu-block.open h2 {
     background: url('../images/icons/inThisSection-arrow-up-taupe-@2x.png') no-repeat 11px 11px #f4f4f4;
+  }
+  .page-exec-ed #sidebar .block-menu.open h2, .page-exec-ed
+  #sidebar .block-menu-block.open h2 {
+    border-left: 1px solid gainsboro;
   }
   .page-exec-ed #sidebar .block-menu.open h2, .page-seed #sidebar .block-menu.open h2, .page-exec-ed
   #sidebar .block-menu-block.open h2, .page-seed
@@ -14038,6 +14045,25 @@ button.checkbox-clear-all {
   }
   #sidebar .region-sidebar-first ul li ul li ul li.first {
     padding-top: 35px;
+  }
+}
+
+@media (max-width: 74.9375em) {
+  .page-exec-ed.page-exec-ed-admission.panels-layout-gsb-landing-standard-page-one #sidebar {
+    background: transparent;
+    border-bottom: none;
+    position: relative;
+    top: -260px;
+  }
+}
+@media (max-width: 74.9375em) and (max-width: 40em) {
+  .page-exec-ed.page-exec-ed-admission.panels-layout-gsb-landing-standard-page-one #sidebar {
+    top: -327px;
+  }
+}
+@media (max-width: 74.9375em) and (max-width: 20em) {
+  .page-exec-ed.page-exec-ed-admission.panels-layout-gsb-landing-standard-page-one #sidebar {
+    font-size: 24px;
   }
 }
 

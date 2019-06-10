@@ -292,6 +292,8 @@
             +background(image_url("icons/inThisSection-arrow-down-white.svg") no-repeat 85% 47% $grey-hp-7)
           .no-js &, .no-svg &
             +background(image_url("icons/inThisSection-arrow-down-white-@2x.png") no-repeat 11px 11px $grey-hp-7)
+        .page-exec-ed &
+          border-left: 1px solid #7d7466
         // Library
         .page-library &
           .svg &
@@ -330,6 +332,8 @@
           +background(image_url("icons/inThisSection-arrow-up-taupe.svg") no-repeat 85% 47% $grey-hp)
         .no-js &, .no-svg &
           +background(image_url("icons/inThisSection-arrow-up-taupe-@2x.png") no-repeat 11px 11px $grey-hp)
+        .page-exec-ed &
+          border-left: 1px solid gainsboro
 
 
       // Executive Education
@@ -480,3 +484,16 @@
                   padding: 17.5px 0
                   &.first
                     padding-top: 35px
+
+// Exec-ed panel page overrides
++breakpoint(1199px max-width)
+  .page-exec-ed.page-exec-ed-admission.panels-layout-gsb-landing-standard-page-one
+    #sidebar
+      background: transparent
+      border-bottom: none
+      position: relative
+      top: -260px
+      +breakpoint(640px max-width)
+        top: -327px
+      +breakpoint(320px max-width)
+        font-size: 24px
