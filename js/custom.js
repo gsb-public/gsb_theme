@@ -833,6 +833,21 @@
       $(".pane-bundle-landing-viewport").find("#landing-video").closest(".pane-bundle-landing-viewport").addClass("landing-video");
       $(".pane-bundle-landing-viewport").find(".field-name-field-homepage-image-desktop").closest(".pane-bundle-landing-viewport").addClass("landing-image");
     })
+  // Changing layout for Exec-Ed Programs page only.
+    $(function(){
+        moveExecEdSection();
+        $(window).resize(function() {
+            moveExecEdSection();
+        });
+
+        function moveExecEdSection() {
+            var width = $(window).width();
+            if (width <= 1199) {
+                $(".page-exec-ed.page-exec-ed-admission.panels-layout-gsb-landing-standard-page-one").find("#sidebar.column").appendTo("#hero");
+            }
+        };
+    });
+
 
 
 }(jQuery));
