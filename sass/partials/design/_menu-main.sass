@@ -117,11 +117,14 @@
   .page-exec-ed &
     display: none
 
-
-
 #coveo-search-block-form.open
   +breakpoint(1169px max-width)
     display: block
+
+// fix for when search gets in a funny state.
++breakpoint(1199px max-width)
+  #navigation.search-closed #coveo-search-block-form.open
+    display: none
 
 // Display menu items in 3 columns
 .qtip
