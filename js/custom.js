@@ -714,11 +714,17 @@
     /* Mobile menu manipulation*/
     $(function(){
         updateMenutitles();
+        // Adding an ID to the programs util parent so can put it back after moving it for mobile.
+        $("#block-menu-menu-md-mm-programs-utility").parent().attr("id", "programs-util-parent");
         $(window).resize(function() {
             updateMenutitles();
         });
+
         function updateMenutitles() {
             var width = $(window).width();
+            if (width > 1199) {
+                $("#block-menu-menu-md-mm-programs-utility").appendTo("#programs-util-parent");
+            }
             if (width < 1199) {
               $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
               $(".mm-header.about-degree-programs").prependTo("#block-menu-menu-md-mm-experience-learning");
