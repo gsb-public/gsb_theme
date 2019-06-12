@@ -711,6 +711,22 @@
             $(".md-megamenu-seed-main-menu .awemenu-item-level-1.awemenu-item-1-4").addClass("awemenu-active-trail");
         }
     });
+    /* Manipulating open search when resizing */
+    $(function() {
+        $(window).resize(function () {
+            updateOpenSearch();
+        });
+
+        function updateOpenSearch() {
+            var width = $(window).width();
+            var openSearch = ("#navigation.search-open");
+            var openModal = ("#page.modal-open");
+            if (width < 1199 && openSearch) {
+                $(openSearch).toggleClass("search-open search-closed");
+                $(openModal).toggleClass("modal-open modal-closed");
+            }
+        }
+    });
     /* Mobile menu manipulation*/
     $(function(){
         updateMenutitles();
