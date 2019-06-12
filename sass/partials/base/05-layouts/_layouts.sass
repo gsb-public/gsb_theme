@@ -882,9 +882,19 @@
     +breakpoint($bp-tablet-land)
       padding-left: 80px
 
-.panel-display.gsb-full-bleed-page
+.panel-display.gsb-full-bleed-page,
+.panel-display.gsb-landing-standard-page-one 
   .wide-view
     .pane-bundle-house-ads
       margin-bottom: 30px
       +breakpoint($bp-mobile-max)
         margin-bottom: 15px
+
+.panel-display.gsb-full-bleed-page,
+.panel-display.gsb-landing-standard-page-one 
+  .main-middle
+    .narrow-view
+      .pane-bundle-house-ads
+        margin-bottom: 30px
+        +breakpoint($bp-mobile-max)
+          margin-bottom: 15px
