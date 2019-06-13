@@ -3623,8 +3623,17 @@ a[class^="bg-"]:hover
         +breakpoint($bp-for-phone-only)
           margin-left: 25px
         +breakpoint($bp-mobile-land)
-          margin-left: 0px
+          margin-left: 25px
           width: 88%
+        +breakpoint(568px 500px)
+          width: 90% !important
+        +breakpoint(500px 480px)
+          width: 89% !important
+        +breakpoint(735px 600px)
+          width: 81%
+        +breakpoint(1101px 1199px)
+          margin: 10px 0 10px 0
+          width: 73%
         +breakpoint($bp-iphone6p-land)
           margin-left: 0px
         +breakpoint($bp-tablet-pot)
