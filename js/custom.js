@@ -729,9 +729,9 @@
     });
     /* Mobile menu manipulation*/
     $(function(){
-        updateMenutitles();
         // Adding an ID to the programs util parent so can put it back after moving it for mobile.
         $("#block-menu-menu-md-mm-programs-utility").parent().attr("id", "programs-util-parent");
+        updateMenutitles();
         $(window).resize(function() {
             updateMenutitles();
         });
