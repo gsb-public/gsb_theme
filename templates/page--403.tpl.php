@@ -6,31 +6,32 @@
  */
 ?>
 
-  <div id="page-wrapper"><div id="page">
-    <div id="header-wrapper"><div id="header"><div class="section clearfix">
-      <a id="search-touch-button"></a>
+  <div id="page-wrapper">
+      <div id="page">
+          <div id="header-wrapper">
+              <div id="header"><div class="section clearfix">
+                <?php if ($logo): ?>
+                          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+                              <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
+                          </a>
+                      <?php endif; ?>
 
-      <?php if ($page['navigation']): ?>
-        <div id="nav-touch-wrapper">
-          <a id="nav-touch-button"></a>
-          <div id="navigation"><div class="section">
-            <?php print render($page['navigation']); ?>
-            <?php print render($event_and_search); ?>
-          </div></div> <!-- /.section, /#navigation -->
-        </div> <!-- /#nav-touch-wrapper-->
-      <?php endif; ?>
+                      <?php if ($page['navigation']): ?>
+                          <div id="navigation"><div class="section">
+                                  <?php print render($page['navigation']); ?>
+                                  <?php print render($global_search); ?>
+                                  <a id="search-touch-button"></a>
+                                  <div id="search-close"></div>
+                              </div></div> <!-- /.section, /#navigation -->
+                      <?php endif; ?>
 
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="/<?php print drupal_get_path('theme', 'gsb_theme'); ?>/images/logo-print.jpg" alt="Home">
-        </a>
-      <?php endif; ?>
 
-      <?php if ($page['header']): ?>
-        <?php print render($page['header']); ?>
-      <?php endif; ?>
-
-    </div></div></div> <!-- /.section, /#header, /#header-wrapper -->
+                      <?php if ($page['header']): ?>
+                          <?php print render($page['header']); ?>
+                      <?php endif; ?>
+              </div>
+          </div>
+      </div> <!-- /.section, /#header, /#header-wrapper -->
 
     <?php print $messages; ?>
 
@@ -75,17 +76,17 @@
          <?php if ($page['footer_one']): ?>
         <div id="gsb-footer-one"><div class="section">
           <?php print render($page['footer_one']); ?>
-        </div></div> 
+        </div></div>
          <?php endif; ?>
          <?php if ($page['footer_two']): ?>
         <div id="gsb-footer-two"><div class="section">
           <?php print render($page['footer_two']); ?>
-        </div></div> 
+        </div></div>
         <?php endif; ?>
         <?php if ($page['footer_three']): ?>
          <div id="gsb-footer-three"><div class="section">
           <?php print render($page['footer_three']); ?>
-        </div></div> 
+        </div></div>
         <?php endif; ?>
       <?php if ($page['legal']): ?>
         <div id="legal"><div class="section">
