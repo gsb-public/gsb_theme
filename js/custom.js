@@ -740,6 +740,7 @@
             var width = $(window).width();
             if (width > 1199) {
                 $("#block-menu-menu-md-mm-programs-utility").appendTo("#programs-util-parent");
+                $(".social-media-wrapper").insertAfter(".field-name-field-authors.field-type-field-collection");
             }
             if (width < 1199) {
               $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
