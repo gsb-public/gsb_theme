@@ -728,6 +728,7 @@
     $(function(){
         // Adding an ID to the programs util parent so can put it back after moving it for mobile.
         $("#block-menu-menu-md-mm-programs-utility").parent().attr("id", "programs-util-parent");
+        $(".social-media-wrapper").wrap("<div id='desktop-social-icons'></div>");
         updateMenutitles();
         $(window).resize(function() {
             updateMenutitles();
@@ -737,7 +738,7 @@
             var width = $(window).width();
             if (width > 1199) {
                 $("#block-menu-menu-md-mm-programs-utility").appendTo("#programs-util-parent");
-                $(".social-media-wrapper").insertAfter(".field-name-field-authors.field-type-field-collection");
+                $(".group-right .social-media-wrapper").appendTo("#desktop-social-icons");
             }
             if (width < 1199) {
               $(".mm-header.about-GSB").prependTo("#block-menu-menu-md-mm-experience-leadership");
@@ -746,7 +747,7 @@
               $("#block-menu-menu-md-mm-programs-utility").appendTo("#block-menu-menu-md-mm-programs-seed");
             };
             if (width < 599) {
-              $(".social-media-wrapper").appendTo(".group-wrapper-tablet-2");
+              $(".social-media-wrapper").appendTo(".group-wrapper-tablet-3");
             };
             if (width >= 600 && width < 1199) {
               $(".social-media-wrapper").insertBefore(".group-wrapper-tablet-4");
