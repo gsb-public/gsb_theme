@@ -24,9 +24,12 @@
 // Main region
 #main
   overflow: hidden
-  +breakpoint(1199px max-width)
+  +breakpoint($bp-for-phone-only)
     overflow: unset
-
+  .page-insights &
+    +breakpoint(1199px max-width)
+      overflow: unset
+      
 // Bottom spacing for items in sidebars
 .inner-sidebar-wrapper
   .panel-pane
