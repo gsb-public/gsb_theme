@@ -2,6 +2,9 @@
 .pane-msx-fellows-graduation-year-list .view-content {
   overflow: hidden;
   *zoom: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin-top: 30px;
   padding-top: 1px;
 }
@@ -15,12 +18,18 @@
   margin-left: 6px;
   margin-right: 6px;
   margin-bottom: 24px;
-  overflow: hidden;
-  width: 133px;
+  overflow: scroll;
+  max-width: 150px;
+}
+@media (max-width: 74.9375em) {
+  .pane-msx-fellows-list .views-row,
+  .pane-msx-fellows-graduation-year-list .views-row {
+    max-width: 133px;
+  }
 }
 .pane-msx-fellows-list .node-msx-fellows .field-name-title,
 .pane-msx-fellows-graduation-year-list .node-msx-fellows .field-name-title {
-  margin: 8px 8px 6px 8px;
+  margin: 10px;
 }
 .pane-msx-fellows-list .node-msx-fellows .field-name-title h2,
 .pane-msx-fellows-graduation-year-list .node-msx-fellows .field-name-title h2 {
@@ -40,14 +49,14 @@
 .pane-msx-fellows-list .node-msx-fellows .field-name-field-title-position-unlimited,
 .pane-msx-fellows-graduation-year-list .node-msx-fellows .field-name-field-title-position-unlimited {
   font-size: 14px;
-  line-height: 1.2;
-  margin: 0 8px;
+  line-height: 1.25em;
+  margin: 10px;
 }
 .pane-msx-fellows-list .node-msx-fellows .field-name-field-company-organization,
 .pane-msx-fellows-graduation-year-list .node-msx-fellows .field-name-field-company-organization {
   font-size: 14px;
-  line-height: 1.2;
-  margin: 5px 8px 0;
+  line-height: 1.25em;
+  margin: 10px;
 }
 .pane-msx-fellows-list .node-msx-fellows .field-name-field-location,
 .pane-msx-fellows-graduation-year-list .node-msx-fellows .field-name-field-location {

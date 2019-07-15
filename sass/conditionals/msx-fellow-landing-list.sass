@@ -12,6 +12,9 @@
 .pane-msx-fellows-graduation-year-list
   .view-content
     +clearfix
+    display: flex
+    flex-wrap: wrap
+    justify-content:  space-evenly
     margin-top: 30px
     padding-top: 1px
   // Row styling
@@ -24,15 +27,16 @@
     margin-left: 6px
     margin-right: 6px
     margin-bottom: 24px
-    overflow: hidden
-    width: 133px
-
+    overflow: scroll
+    max-width: 150px
+    +breakpoint(1199px max-width)
+      max-width: 133px
   // Each fellow
   .node-msx-fellows
 
     // Name
     .field-name-title
-      margin: 8px 8px 6px 8px
+      margin: 10px
       h2
         font-size: 15px
         line-height: 1.1
@@ -45,13 +49,13 @@
     // Position or title
     .field-name-field-title-position-unlimited
       font-size: 14px
-      line-height: 1.2
-      margin: 0 8px
+      line-height: 1.25em
+      margin: 10px
     // Company or organization
     .field-name-field-company-organization
       font-size: 14px
-      line-height: 1.2
-      margin: 5px 8px 0
+      line-height: 1.25em
+      margin: 10px
     // Location
     .field-name-field-location
       font-size: 13px
