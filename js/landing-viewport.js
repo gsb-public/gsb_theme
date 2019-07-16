@@ -99,7 +99,7 @@
                                 }
                                 break;
                             case (windowWidth === 736): //i6+ landscape
-                                $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-85px'});
+                                // $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-85px'});
                                 if (chrome != null) {
                                     $('.field-name-field-homepage-image-tablet').css({'margin-bottom': '-65px'});
                                 }
