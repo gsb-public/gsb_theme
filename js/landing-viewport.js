@@ -60,15 +60,6 @@
                 if (type === 'video') {
                     $('.pane-landingpage-video, #landing-video').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
                     setVideoScale(vid, vid_w_orig, vid_h_orig);
-                    if (isMobile.any() != null) {
-                        if ((windowWidth >= 768) && (windowWidth < 1337)){
-                            $('#kaltura-player1').css({'transform': 'scale(1, 1) translateX(-10%) translateY(-2%)'});
-                            $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-101px'});
-                            if (chrome != null) {
-                                $('.pane-landingpage-video, #landing-video').css({'margin-bottom': '-139px'});
-                            }
-                        }
-                    }
                 }
                 else if (type === 'image') {
                     $('.field-name-field-homepage-image-desktop, .field-name-field-homepage-image-tablet, .field-name-field-homepage-image-mobile').css({'width': vpWidth +'vw', 'height': vpHeight + 'vh'});
