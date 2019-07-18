@@ -299,9 +299,10 @@
       position: absolute
       top: 50%
       left: 50%
-      -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5)
-      -ms-transform: translateX(-50%) translateY(-50%) scale(2.5)
-      transform: translateX(-50%) translateY(-50%) scale(2.5)
+      // move and load the image as is without scaling size.
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(1)
+      -ms-transform: translateX(-50%) translateY(-50%) scale(1)
+      transform: translateX(-50%) translateY(-50%) scale(1)
       transform-origin: 50% 52%
       +breakpoint(1025px min-width)
         -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5)
