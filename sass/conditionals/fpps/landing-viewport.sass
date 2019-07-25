@@ -82,14 +82,45 @@
       .tagline-break
         +breakpoint(1024px)
           display: none
-
+.panels-layout-gsb-homepage .pane-bundle-landing-viewport .field-type-image
+  height: 100vh
 .pane-bundle-landing-viewport
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    // move and load the image as is without scaling size.
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1)
+    -ms-transform: translateX(-50%) translateY(-50%) scale(1)
+    transform: translateX(-50%) translateY(-50%) scale(1)
+    transform-origin: 50% 52%
+    +breakpoint(1199px max-width)
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(2)
+      -ms-transform: translateX(-50%) translateY(-50%) scale(2)
+      transform: translateX(-50%) translateY(-50%) scale(2)
+    +breakpoint($bp-iphone6-7-8p-land)
+      transform-origin: 52% 35%
+
   .field-name-field-homepage-image-desktop
-    display: none
+    display: block
+    img
+      position: unset
+      top: unset
+      left: unset
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(1)
+      -ms-transform: translateX(-50%) translateY(-50%) scale(1)
+      transform: unset
+      transform-origin: unset
+    +breakpoint(1199px max-width)
+      display: none
   .field-name-field-homepage-image-tablet
     display: none
+    +breakpoint(1199px 600px)
+      display: block
   .field-name-field-homepage-image-mobile
     display: none
+    +breakpoint(599px max-width)
+      display: block
 
   .bg-text-color-blue
     .viewport-text
@@ -237,7 +268,7 @@
         height: 170px
         bottom: 10px
       +breakpoint($bp-for-desktop-up)
-        bottom: -5px
+        bottom: 40px
     .no-js &, .no-svg &
       background: image_url("/images/icons/background-scroll-explore-video.png") no-repeat center transparent
       padding: 86px 18px
@@ -295,6 +326,25 @@
       max-width: 100%
       height: 100%
 
+    video.splash__video__media,
+    .field-type-image
+      //height: auto
+      width: 100%
+
+  /// Selector to access the images used for the replacement of the video on mobile devices.
+  .pane-bundle-landing-viewport.landing-video ~ .panel-separator ~ .pane-bundle-landing-viewport
+    .field-name-field-homepage-image-tablet.field-type-image
+      +breakpoint($bp-for-tablet-range)
+        display: none
+      +breakpoint($bp-iphone6-7-8p-land)
+        display: block
+      +breakpoint($bp-iphone6p-land)
+        display: block
+      +breakpoint($bp-iphone-range-land)
+        display: block
+      +breakpoint($bp-other-phones-land)
+        display: block
+
     img
       position: absolute
       top: 50%
@@ -315,10 +365,6 @@
       +breakpoint($bp-iphone6-7-8p-land)
         transform-origin: 52% 35%
 
-    video.splash__video__media,
-    .field-type-image
-      height: auto
-      width: 100%
 
 /* Kaltura video display */
 .panels-layout-gsb-homepage
