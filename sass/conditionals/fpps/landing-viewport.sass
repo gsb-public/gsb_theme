@@ -15,39 +15,8 @@
   +breakpoint($bp-iphone6-7-8p-land)
     padding-top: 50px
 
-.pane-bundle-landing-viewport
-  & ~ .pane-bundle-landing-viewport.landing-image
-    //toggle 'display: block' to on below for seeing image instead of video
-    .field-name-field-homepage-image-desktop
-      +breakpoint($bp-for-desktop-up)
-        //display: block
-        margin-bottom: -19px
-    .field-name-field-homepage-image-tablet
-      height: 100vh
-      +breakpoint(600px 666px)
-        display: block
-        margin-bottom: -64px
-      +breakpoint(667px 736px)
-        display: block
-        margin-bottom: -36px
-      +breakpoint(737px 767px)
-        display: block
-        margin-bottom: -64px
-      +breakpoint(768px 1024px)
-        //display: block
-        margin-bottom: 4px
-      +breakpoint(1025px 1199px)
-        //display: block
-        margin-bottom: -64px
-    .field-name-field-homepage-image-mobile
-      +breakpoint($bp-for-phone-only)
-        display: block
-        margin-bottom: -50px
-
 .panels-layout-gsb-homepage .pane-bundle-landing-viewport.landing-video
   #landing-video
-    //toggle 'display: none' below to on for seeing image instead of video
-    //display: none
     +breakpoint(320px 767px)
       display: none
     .landing-video-tagline > *
@@ -89,7 +58,7 @@
     position: absolute
     top: 50%
     left: 50%
-    // move and load the image as is without scaling size.
+    // Move and load the image as is without scaling size. This is the image size of just image viewport without a video.
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1)
     -ms-transform: translateX(-50%) translateY(-50%) scale(1)
     transform: translateX(-50%) translateY(-50%) scale(1)
@@ -100,6 +69,8 @@
       transform: translateX(-50%) translateY(-50%) scale(2)
     +breakpoint($bp-iphone6-7-8p-land)
       transform-origin: 52% 35%
+    +breakpoint($bp-ipad-range)
+      transform-origin: 50% 62%
 
   .field-name-field-homepage-image-desktop
     display: block
@@ -328,11 +299,14 @@
 
     video.splash__video__media,
     .field-type-image
-      //height: auto
       width: 100%
 
-  /// Selector to access the images used for the replacement of the video on mobile devices.
+  /* Selector to access the images used for the replacement of the video on mobile devices. The Desktop image will not
+     be visible when there is a video. */
   .pane-bundle-landing-viewport.landing-video ~ .panel-separator ~ .pane-bundle-landing-viewport
+    .field-name-field-homepage-image-desktop.field-type-image
+      +breakpoint($bp-for-desktop-up)
+        display: none
     .field-name-field-homepage-image-tablet.field-type-image
       +breakpoint($bp-for-tablet-range)
         display: none
@@ -349,7 +323,7 @@
       position: absolute
       top: 50%
       left: 50%
-      // move and load the image as is without scaling size.
+      // Move and load the image as is without scaling size. Then later scale as necessary for devices.
       -webkit-transform: translateX(-50%) translateY(-50%) scale(1)
       -ms-transform: translateX(-50%) translateY(-50%) scale(1)
       transform: translateX(-50%) translateY(-50%) scale(1)
@@ -365,7 +339,6 @@
       +breakpoint($bp-iphone6-7-8p-land)
         transform-origin: 52% 35%
 
-
 /* Kaltura video display */
 .panels-layout-gsb-homepage
   .pane-bundle-landing-viewport
@@ -373,8 +346,6 @@
       display: block
     +breakpoint($bp-iphone6-7-8p-land)
       margin-top: -64px
-    +breakpoint($bp-ipad-range)
-      //margin-top: -34px
     +breakpoint($bp-for-desktop-up)
       margin-top: -34px
 
