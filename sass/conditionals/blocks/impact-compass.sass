@@ -192,9 +192,44 @@
       .item
         +breakpoint($bp-for-phone-only)
           width: 99%
+        +breakpoint($bp-mobile-land)
+          width: 48%
+          padding-left: 20px
+        +breakpoint($bp-iphone6p-land)
+          width: 48%
         +breakpoint($bp-tablet-pot)
           width: 48%
-
+        +breakpoint($bp-tablet-land)
+          width: 48%
+        #tooltip-1
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+        #tooltip-2
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 25%
+          +breakpoint($bp-iphone6p-land)
+            left: 25%
+          +breakpoint($bp-tablet-pot)
+            left: 25%
+        #tooltip-3
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 25%
+        #tooltip-4
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+        #tooltip-5
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 24%
+          +breakpoint($bp-iphone6p-land)
+            left: 25%
+          +breakpoint($bp-tablet-pot)
+            left: 25%
 
 .sidebar-first.panels-layout-gsb-landing-standard-page-one
   #imapct-compass-container
