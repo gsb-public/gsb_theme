@@ -8,6 +8,7 @@
 
 #imapct-compass-container
   .imapct-compass-title
+    padding: 15px 0px 10px 0px
     h2
       font-size: 30px
       +breakpoint($bp-for-phone-only)
@@ -77,21 +78,8 @@
     float: left
     text-align: center
     margin-bottom: 0px
-  .buttonSubmit
-    background: #919900
-    cursor: pointer
-    font-family: "NewsGothicBT","Avant Garde","Futura","Helvetica Neue",Helvetica,Arial,sans-serif
-    font-size: 18px
-    width: auto
-    overflow: visible
-    border: none
-    -moz-border-radius: 22px
-    -webkit-border-radius: 22px
-    border-radius: 22px
-    color: white
-    line-height: 1.4
-    padding: 10px 20px 8px 20px
-            
+  #errorMessage
+    display: none         
   .buttonReset
     background: #8C1515
     cursor: pointer
@@ -237,6 +225,8 @@
       width: 34%
     #company
       width: 62%
+      +breakpoint($bp-for-phone-only)
+        margin-bottom: 10px
       +breakpoint($bp-mobile-land)
         margin-top: 10px
       +breakpoint($bp-iphone6p-port)
@@ -247,7 +237,8 @@
         margin-top: 10px
     .form-checkboxes 
       .item-check
-        width: 30%
+        width: 40%
+        padding-bottom: 10px
         +breakpoint($bp-for-phone-only)
           width: 80%
           margin-bottom: 10px
@@ -314,12 +305,17 @@
     #imapct-compass-container
       .control-label
         width: 42%
+        +breakpoint($bp-for-phone-only)
+          width: 33%
         +breakpoint($bp-iphone6p-port)
           width: 30%
         +breakpoint($bp-iphone6p-land)
           width: 30%
       #company
         width: 56%
+        +breakpoint($bp-for-phone-only)
+          width: 60%
+          margin-top: 10px
         +breakpoint($bp-iphone6p-port)
           width: 68%
           margin-top: 10px
@@ -339,6 +335,44 @@
             width: 90%
           +breakpoint($bp-tablet-pot)
             width: 90%
+          #tooltip-1
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+          #tooltip-2
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 25%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
+          #tooltip-3
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 25%
+          #tooltip-4
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+          #tooltip-5
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 24%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
+          #tooltip-6
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 24%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
       .select-width
         width: 95%
         .hasCustomSelect
@@ -368,8 +402,107 @@
           left: 21%
         .esg-tooltptxt
           left: 21%
-
-
-
-
-
+      .form-group-row 
+        .item
+          width: 32.669%
+        .item-check
+          width: 30%
+      .control-label
+        width: 24%
+        +breakpoint($bp-for-phone-only)
+          width: 33%
+        +breakpoint($bp-mobile-land)
+          width: 33%
+        +breakpoint($bp-iphone6p-port)
+          width: 30%
+        +breakpoint($bp-iphone6p-land)
+          width: 30%
+      #company
+        width: 40%
+        +breakpoint($bp-for-phone-only)
+          width: 60%
+          margin-top: 10px
+        +breakpoint($bp-iphone6p-port)
+          width: 68%
+          margin-top: 10px
+        +breakpoint($bp-iphone6p-land)
+          width: 68%
+          margin-top: 10px
+      .chart-container
+        +breakpoint($bp-iphone6p-land)
+          width: 100%
+          height: 100%
+      .form-group-row 
+        .item
+          +breakpoint($bp-for-phone-only)
+            width: 98%
+          +breakpoint($bp-mobile-land)
+            width: 48%
+          +breakpoint($bp-iphone6p-land)
+            width: 90%
+          +breakpoint($bp-tablet-pot)
+            width: 90%
+          #tooltip-1
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+          #tooltip-2
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 25%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
+          #tooltip-3
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 25%
+          #tooltip-4
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+          #tooltip-5
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 24%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
+          #tooltip-6
+            +breakpoint($bp-for-phone-only)
+              left: 26%
+            +breakpoint($bp-mobile-land)
+              left: 24%
+            +breakpoint($bp-iphone6p-land)
+              left: 25%
+            +breakpoint($bp-tablet-pot)
+              left: 25%
+      .select-width
+        width: 95%
+        .hasCustomSelect
+          width: 99% !important
+        .customSelect 
+          .customSelectInner
+            max-width: 90% !important
+            width: 85% !important
+      #impactText
+        font-size: 20px
+      #impactScore
+        font-size: 20px
+      .form-checkboxes
+        .item-check
+          +breakpoint($bp-for-phone-only)
+            width: 80%
+            padding-bottom: 10px
+          +breakpoint($bp-mobile-land)
+            width: 38%
+            padding-bottom: 10px
+          +breakpoint($bp-iphone6p-land)
+            width: 35%
+            padding-bottom: 10px
+          +breakpoint($bp-tablet-pot)
+            width: 80%
+            padding-bottom: 10px
