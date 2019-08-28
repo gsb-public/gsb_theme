@@ -14,9 +14,10 @@
       +breakpoint($bp-for-phone-tablet-range)
         font-size: 24px
   .chart-container
-    width: 95%
-    height: 60%
-    +breakpoint($bp-for-phone-only)
+    +breakpoint($bp-for-desktop-up)
+      width: 95%
+      height: 60%
+    +breakpoint($bp-for-medium-phone-tablet-range)
       width: 100%
       height: 100%
   label
@@ -123,12 +124,12 @@
     display: inline
     font-weight: bold
     font-size: 22px
-    +breakpoint($bp-for-phone-only)
+    +breakpoint($bp-for-medium-phone-tablet-range)
       font-size: 16px
   #impactScore
     display: inline-block
     font-size: 22px
-    +breakpoint($bp-for-phone-only)
+    +breakpoint($bp-for-medium-phone-tablet-range)
       font-size: 16px
   .chart-score
     margin-top: 0px
@@ -140,7 +141,7 @@
       padding-top: 5px
   .form-item
     h4
-      +breakpoint($bp-for-phone-only)
+      +breakpoint($bp-for-medium-phone-tablet-range)
         font-size: 18px
     
 .sidebar-first.panels-layout-gsb-no-sidebar
@@ -565,7 +566,9 @@
         +breakpoint($bp-tablet-land)
           width: 65%
       .chart-container
-        +breakpoint($bp-iphone6p-land)
+        width: 75%
+        height: 50%
+        +breakpoint($bp-for-medium-phone-tablet-range)
           width: 100%
           height: 100%
       .form-checkboxes
@@ -673,7 +676,9 @@
         +breakpoint($bp-tablet-land)
           width: 60%
       .chart-container
-        +breakpoint($bp-iphone6p-land)
+        width: 65%
+        height: 50%
+        +breakpoint($bp-for-medium-phone-tablet-range)
           width: 100%
           height: 100%
       .form-checkboxes
@@ -749,114 +754,116 @@
               left: 25%
 
 .no-sidebars.panels-layout-gsb-no-sidebar
-  .wide-view
-    #imapct-compass-container
-      .control-label
+  #imapct-compass-container
+    .control-label
+      +breakpoint($bp-for-phone-only)
+        width: 30%
+      +breakpoint($bp-mobile-land)
+        width: 34%
+      +breakpoint($bp-iphone6p-port)
+        width: 30%
+      +breakpoint($bp-iphone6p-land)
+        width: 30%
+      +breakpoint($bp-tablet-pot)
+        width: 28%
+      +breakpoint($bp-iphonex-land)
+        width: 26%
+      +breakpoint($bp-tablet-land)
+        width: 24%
+    #company
+      +breakpoint($bp-for-phone-only)
+        width: 65%
+        margin-top: 10px
+      +breakpoint($bp-mobile-land)
+        width: 65%
+      +breakpoint($bp-iphone6p-port)
+        width: 68%
+        margin-top: 10px
+      +breakpoint($bp-iphone6p-land)
+        width: 55%
+      +breakpoint($bp-tablet-pot)
+        width: 50%
+      +breakpoint($bp-iphonex-land)
+        width: 50%
+      +breakpoint($bp-for-phone-tablet-range)
+        width: 55%
+    .chart-container
+      +breakpoint($bp-for-desktop-up)
+        width: 65%
+        height: 50%
+      +breakpoint($bp-for-medium-phone-tablet-range)
+        width: 100%
+        height: 100%
+    .form-checkboxes
+      .item-check
         +breakpoint($bp-for-phone-only)
-          width: 30%
+          width: 80%
+          padding-bottom: 10px
         +breakpoint($bp-mobile-land)
-          width: 34%
-        +breakpoint($bp-iphone6p-port)
-          width: 30%
+          width: 40%
+          padding-bottom: 10px
         +breakpoint($bp-iphone6p-land)
-          width: 30%
+          width: 40%
+          padding-bottom: 10px
         +breakpoint($bp-tablet-pot)
-          width: 28%
+          width: 32%
+          padding-bottom: 10px
         +breakpoint($bp-iphonex-land)
-          width: 26%
+          width: 32%
         +breakpoint($bp-tablet-land)
-          width: 24%
-      #company
+          width: 32%
+    .form-group-row 
+      .item
         +breakpoint($bp-for-phone-only)
-          width: 65%
-          margin-top: 10px
+          width: 98%
         +breakpoint($bp-mobile-land)
-          width: 65%
-        +breakpoint($bp-iphone6p-port)
-          width: 68%
-          margin-top: 10px
+          width: 48%
         +breakpoint($bp-iphone6p-land)
-          width: 55%
+          width: 48%
         +breakpoint($bp-tablet-pot)
-          width: 50%
+          width: 48%
         +breakpoint($bp-iphonex-land)
-          width: 50%
-        +breakpoint($bp-for-phone-tablet-range)
-          width: 55%
-      .chart-container
-        +breakpoint($bp-iphone6p-land)
-          width: 100%
-          height: 100%
-      .form-checkboxes
-        .item-check
+          width: 48%
+        +breakpoint($bp-tablet-land)
+          width: 48%
+        #tooltip-1
           +breakpoint($bp-for-phone-only)
-            width: 80%
-            padding-bottom: 10px
-          +breakpoint($bp-mobile-land)
-            width: 40%
-            padding-bottom: 10px
-          +breakpoint($bp-iphone6p-land)
-            width: 40%
-            padding-bottom: 10px
-          +breakpoint($bp-tablet-pot)
-            width: 32%
-            padding-bottom: 10px
-          +breakpoint($bp-iphonex-land)
-            width: 32%
-          +breakpoint($bp-tablet-land)
-            width: 32%
-      .form-group-row 
-        .item
+            left: 26%
+        #tooltip-2
           +breakpoint($bp-for-phone-only)
-            width: 98%
+            left: 26%
           +breakpoint($bp-mobile-land)
-            width: 48%
+            left: 25%
           +breakpoint($bp-iphone6p-land)
-            width: 48%
+            left: 25%
           +breakpoint($bp-tablet-pot)
-            width: 48%
-          +breakpoint($bp-iphonex-land)
-            width: 48%
-          +breakpoint($bp-tablet-land)
-            width: 48%
-          #tooltip-1
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-          #tooltip-2
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-            +breakpoint($bp-mobile-land)
-              left: 25%
-            +breakpoint($bp-iphone6p-land)
-              left: 25%
-            +breakpoint($bp-tablet-pot)
-              left: 25%
-          #tooltip-3
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-            +breakpoint($bp-mobile-land)
-              left: 25%
-          #tooltip-4
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-          #tooltip-5
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-            +breakpoint($bp-mobile-land)
-              left: 24%
-            +breakpoint($bp-iphone6p-land)
-              left: 25%
-            +breakpoint($bp-tablet-pot)
-              left: 25%
-          #tooltip-6
-            +breakpoint($bp-for-phone-only)
-              left: 26%
-            +breakpoint($bp-mobile-land)
-              left: 24%
-            +breakpoint($bp-iphone6p-land)
-              left: 25%
-            +breakpoint($bp-tablet-pot)
-              left: 25%
+            left: 25%
+        #tooltip-3
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 25%
+        #tooltip-4
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+        #tooltip-5
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 24%
+          +breakpoint($bp-iphone6p-land)
+            left: 25%
+          +breakpoint($bp-tablet-pot)
+            left: 25%
+        #tooltip-6
+          +breakpoint($bp-for-phone-only)
+            left: 26%
+          +breakpoint($bp-mobile-land)
+            left: 24%
+          +breakpoint($bp-iphone6p-land)
+            left: 25%
+          +breakpoint($bp-tablet-pot)
+            left: 25%
 
 .no-sidebars.panels-layout-gsb-full-bleed-page
   .wide-view
@@ -896,7 +903,9 @@
         +breakpoint($bp-tablet-land)
           width: 60%
       .chart-container
-        +breakpoint($bp-for-phone-tablet-range)
+        width: 75%
+        height: 50%
+        +breakpoint($bp-for-medium-phone-tablet-range)
           width: 100%
           height: 100%
       .form-checkboxes
@@ -1011,6 +1020,8 @@
         +breakpoint($bp-tablet-land)
           width: 60%
       .chart-container
+        width: 65%
+        height: 50%
         +breakpoint($bp-for-phone-tablet-range)
           width: 100%
           height: 100%
