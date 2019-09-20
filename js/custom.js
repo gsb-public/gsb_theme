@@ -730,6 +730,7 @@
         $("#block-menu-menu-md-mm-programs-utility").parent().attr("id", "programs-util-parent");
         $(".social-media-wrapper").wrap("<div id='desktop-social-icons'></div>");
         updateMenutitles();
+
         $(window).resize(function() {
             updateMenutitles();
         });
@@ -785,8 +786,10 @@
                     });
             };
         };
-
         updateMenuLinks();
+        $(window).resize(function() {
+            updateMenuLinks();
+        });
 
         // Duplicating the top level link to a span.
         $("#sidebar").find(".content .menu li.expanded > a").each(function(i) {
