@@ -759,37 +759,33 @@
     $(function(){
         function updateMenuLinks() {
             var width = $(window).width();
-            if (width <= 1199) {
-                $("#sidebar").find(".menu > li.expanded")
-                    .click(function (e) {
-                        // Creating variables for the different levels of navigation
-                        var self = $(this);
+            $("#sidebar").find(".menu > li.expanded")
+                .click(function (e) {
+                    // Creating variables for the different levels of navigation
+                    var self = $(this);
 
-                        if ((self).hasClass("expanded")) {
-                            // allows only one top-level and active-trail open at the same time.
-                            $(".level-1").not(self).removeClass('open');
-                        };
-                        if (self.length) {
-                            // Toggles the open.
-                            self.toggleClass("open");
-                            // Toggles the open and makes sure the parent stays open
-                            if (self.hasClass("level-3")) {
-                                self.parent().closest("li").toggleClass("open");
-                            }
-                            if (self.hasClass("level-4")) {
-                                self.parent().closest("li").toggleClass("open");
-                            }
-                            if (self.hasClass("level-5")) {
-                                self.parent().closest("li").toggleClass("open");
-                            }
-                        };
-                    });
-            };
+                    if ((self).hasClass("expanded")) {
+                        // allows only one top-level and active-trail open at the same time.
+                        $(".level-1").not(self).removeClass('open');
+                    };
+                    if (self.length) {
+                        // Toggles the open.
+                        self.toggleClass("open");
+                        // Toggles the open and makes sure the parent stays open
+                        if (self.hasClass("level-3")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                        if (self.hasClass("level-4")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                        if (self.hasClass("level-5")) {
+                            self.parent().closest("li").toggleClass("open");
+                        }
+                    };
+                });
         };
         updateMenuLinks();
-        $(window).resize(function() {
-            updateMenuLinks();
-        });
+
 
         // Duplicating the top level link to a span.
         $("#sidebar").find(".content .menu li.expanded > a").each(function(i) {
