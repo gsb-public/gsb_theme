@@ -5,8 +5,8 @@
    */
   Drupal.behaviors.spotlight_seemore = {
     attach: function () {
-      $(window).bind('load ready resize', function () {
-        // Check if spotlight exists.
+      $(window).bind("load", function () {
+          // Check if spotlight exists.
         var $spotlight = $('.pane-bundle-spotlight, .pane-bundle-house-ads');
         if ($spotlight.length) {
           // If the line height of the body text changes, adjust this.
@@ -17,7 +17,13 @@
             var $this = $(this),
               $spotlightContent = $this.siblings('.field-name-field-body'),
               contentHeight = $spotlightContent.find('p').height();
-            // Remove .show-more if the body is less than the defined max height.
+              // Recaculating the height if the window resized.
+              var calculateHeights = function (event) {
+                  contentHeight = $spotlightContent.find('p').height();
+              };
+
+              window.addEventListener('resize', calculateHeights, false);
+              // Remove .show-more if the body is less than the defined max height.
             $spotlightContent.css('height', visibleHeight);
             if (contentHeight <= visibleHeight) {
               $this.remove();
