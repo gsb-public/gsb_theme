@@ -8,7 +8,8 @@
 @import partials/base/03-extend/gsb-revamp
 
 // Soundcloud resource
-.file-resource-soundcloud
+.file-resource-soundcloud,
+.file-resource-art19
   // Optional title
   .field-name-field-title
     font-size: 18px
@@ -22,7 +23,8 @@
   // Add grey background to mini players
   &.file-resource_soundcloud--full_width_mini,
   &.file-resource_soundcloud--1_2_width_mini,
-  &.file-resource_soundcloud--1_3_width_mini
+  &.file-resource_soundcloud--1_3_width_mini,
+  &.file-resource_art19--1_2_width
     .resource-soundcloud
       background: #f4f4f4
       padding: 12px
@@ -33,7 +35,8 @@
   // Large cover and Classic style - full width
   &.file-resource_soundcloud--large_cover,
   &.file-resource_soundcloud--full_width,
-  &.file-resource_soundcloud--full_width_mini
+  &.file-resource_soundcloud--full_width_mini,
+  &.file-resource_art19--full_width
     margin-bottom: 20px
     max-width: 670px
 
@@ -41,12 +44,14 @@
   &.file-resource_soundcloud--1_2_width,
   &.file-resource_soundcloud--1_3_width,
   &.file-resource_soundcloud--1_2_width_mini,
-  &.file-resource_soundcloud--1_3_width_mini
+  &.file-resource_soundcloud--1_3_width_mini,
+  &.file-resource_art19--1_3_width
     @extend %insights-resource-right
 
   // Classic and mini player style - half width
   &.file-resource_soundcloud--1_2_width,
-  &.file-resource_soundcloud--1_2_width_mini
+  &.file-resource_soundcloud--1_2_width_mini,
+  &.file-resource_art19--1_2_width
     max-width: 408px
     width: 100%
     +breakpoint(780px max-width)
@@ -57,10 +62,21 @@
 
   // Classic and mini player style - third width
   &.file-resource_soundcloud--1_3_width,
-  &.file-resource_soundcloud--1_3_width_mini
+  &.file-resource_soundcloud--1_3_width_mini,
+  &.file-resource_art19--1_3_width
     max-width: 270px
     +breakpoint(640px max-width)
       float: none
       margin-left: 0
       max-width: 100%
       text-align: center
+
+// Customizations for Art 19
+.file-resource-art19
+  .art19-web-player .awp .awp-control, div.art19-web-player .awp .awp-control
+    border-color: #fff //button border color
+  .art19-web-player .awp-volume-slider .ui-slider-range
+    background: #fff !important
+
+    
+    
