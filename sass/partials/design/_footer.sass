@@ -559,29 +559,49 @@ input.signup-submit
         width: 100%
         float: left
       a.social-block-twitter
+        position: relative
         +icon-after("twitter", true)
           color: #990000
           line-height: 1.2
+          margin-left: -20%
+          position: absolute
           &:hover
             color: #FFFFFF !important
+        span
+          visibility: hidden
       a.social-block-youtube
+        position: relative
         +icon-after("youtube", true)
           color: #990000
           line-height: 1.2
+          margin-left: -20%
+          position: absolute
           &:hover
             color: #FFFFFF !important
+        span
+          visibility: hidden
       a.social-block-linkedin
+        position: relative
         +icon-after("linkedin", true)
           color: #990000
           line-height: 1.2
+          margin-left: -20%
+          position: absolute
           &:hover
             color: #FFFFFF !important
+        span
+          visibility: hidden
       a.social-block-facebook
+        position: relative
         +icon-after("facebook", true)
           color: #990000
           line-height: 1.2
+          margin-left: -20%
+          position: absolute
           &:hover
             color: #FFFFFF !important
+        span
+          visibility: hidden
       .circle
         border: 1px solid #990000
         background: none
@@ -790,6 +810,8 @@ input.signup-submit
     .svg &
       background: image_url("icon-insta-hover.svg") no-repeat !important
       background-size: 100% !important
+  span
+    visibility: hidden
         
 .panels-layout-gsb-homepage 
   div#content-wrapper 
