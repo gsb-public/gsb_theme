@@ -88,8 +88,8 @@
                     <div id="navigation"><div class="section">
                             <?php print render($page['navigation']); ?>
                             <?php print render($global_search); ?>
-                            <a id="search-touch-button"></a>
-                            <div id="search-close"></div>
+                            <a id="search-touch-button" aria-label="Open the search field"></a>
+                            <button id="search-close" aria-label="Close the search field"></button>
                         </div></div> <!-- /.section, /#navigation -->
                 <?php endif; ?>
 

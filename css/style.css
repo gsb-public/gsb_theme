@@ -9454,7 +9454,7 @@ input.signup-submit:hover {
 }
 @media (min-width: 14.375em) and (max-width: 74.9375em) {
   #navigation.search-open .section a#search-touch-button,
-  #navigation.search-open .section div#search-close {
+  #navigation.search-open .section button#search-close {
     display: none;
   }
   #navigation.search-open #md-megamenu-1.awemenu-mobile-standard.md-mobile-style2 .awemenu-bars {
@@ -11178,11 +11178,18 @@ div#header-wrapper.awemenu-sticky + div#hero {
   }
 }
 
+button#search-close {
+  background: transparent;
+  border: transparent;
+  padding: 0;
+}
+
 #navigation.search-open .region.region-navigation {
   float: right;
 }
-#navigation.search-open .section div#search-close {
+#navigation.search-open .section button#search-close {
   background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% #990000;
+  border-radius: 0;
   display: block;
   height: 60px;
   line-height: 60px;
@@ -11193,7 +11200,7 @@ div#header-wrapper.awemenu-sticky + div#hero {
   z-index: 9999;
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  #navigation.search-open .section div#search-close {
+  #navigation.search-open .section button#search-close {
     height: 64px;
     right: 0;
     top: 0;
@@ -11202,7 +11209,7 @@ div#header-wrapper.awemenu-sticky + div#hero {
   }
 }
 @media (max-width: 37.4375em) {
-  #navigation.search-open .section div#search-close {
+  #navigation.search-open .section button#search-close {
     height: 50px;
     right: 0;
     top: 0;
@@ -11215,7 +11222,7 @@ div#header-wrapper.awemenu-sticky + div#hero {
   float: none;
 }
 @media (max-width: 37.4375em) {
-  .page-exec-ed #navigation.search-open div.section div#search-close {
+  .page-exec-ed #navigation.search-open div.section button#search-close {
     height: 50px;
     right: 0;
   }
@@ -13240,7 +13247,7 @@ button.checkbox-clear-all {
   top: 76px;
   right: 2px;
 }
-.page-exec-ed #navigation.search-open .section div#search-close {
+.page-exec-ed #navigation.search-open .section button#search-close {
   height: 88px;
   line-height: 60px;
   right: -60px;
@@ -13248,7 +13255,7 @@ button.checkbox-clear-all {
   width: 60px;
 }
 @media (max-width: 37.4375em) {
-  .page-exec-ed #navigation.search-open .section div#search-close {
+  .page-exec-ed #navigation.search-open .section button#search-close {
     height: 50px;
     right: 0;
     top: 0;
@@ -13256,7 +13263,7 @@ button.checkbox-clear-all {
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .page-exec-ed #navigation.search-open .section div#search-close {
+  .page-exec-ed #navigation.search-open .section button#search-close {
     height: 64px;
     right: 0;
     top: 0;
@@ -13274,7 +13281,7 @@ button.checkbox-clear-all {
   top: 77px;
   right: 5px;
 }
-.page-seed #navigation.search-open .section div#search-close {
+.page-seed #navigation.search-open .section button#search-close {
   height: 88px;
   line-height: 60px;
   right: -60px;
@@ -13282,7 +13289,7 @@ button.checkbox-clear-all {
   width: 60px;
 }
 @media (max-width: 37.4375em) {
-  .page-seed #navigation.search-open .section div#search-close {
+  .page-seed #navigation.search-open .section button#search-close {
     height: 50px;
     right: 0;
     top: 0;
@@ -13290,7 +13297,7 @@ button.checkbox-clear-all {
   }
 }
 @media (min-width: 37.5em) and (max-width: 74.9375em) {
-  .page-seed #navigation.search-open .section div#search-close {
+  .page-seed #navigation.search-open .section button#search-close {
     height: 64px;
     right: 0;
     top: 0;

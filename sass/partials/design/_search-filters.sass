@@ -1,13 +1,17 @@
 // Search and filters
-
-// Search close button
+// Search close button  overriedes
+button#search-close
+  background: transparent
+  border: transparent
+  padding: 0
 // this div needs to be made visible when the search box is open
 #navigation.search-open
   .region.region-navigation
     float: right
   .section
-    div#search-close
+    button#search-close
       background: url(../images/icons/icon-cancel-search.png) no-repeat center/50% $red
+      border-radius: 0
       display: block
       height: 60px
       line-height: 60px
@@ -33,7 +37,7 @@
     .region.region-navigation
       float: none
     div.section
-      div#search-close
+      button#search-close
         +breakpoint($bp-for-phone-only)
           height: 50px
           right: 0
@@ -1053,7 +1057,7 @@ button.checkbox-clear-all
       right: 2px
   #navigation.search-open
     .section
-      div#search-close
+      button#search-close
         height: 88px
         line-height: 60px
         right: -60px
@@ -1082,7 +1086,7 @@ button.checkbox-clear-all
       right: 5px
   #navigation.search-open
     .section
-      div#search-close
+      button#search-close
         height: 88px
         line-height: 60px
         right: -60px
